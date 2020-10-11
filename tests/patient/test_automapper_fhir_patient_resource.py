@@ -1,6 +1,9 @@
 from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
+from pyspark.sql.functions import lit, struct, array, coalesce, to_date
+# noinspection PyUnresolvedReferences
+from pyspark.sql.functions import col
 from spark_auto_mapper.automapper_helpers import AutoMapperHelpers as A
 
 from spark_auto_mapper_fhir.automapper_fhir import AutoMapperFhir
@@ -38,7 +41,8 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
                     use="usual",
                     family=A.column("last_name")
                 )
-            )
+            ),
+            gender="female"
         )
     )
 
@@ -49,22 +53,24 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
     result_df: DataFrame = mapper.transform(df=df)
 
     # Assert
-    # assert str(sql_expression) == str(
-    #     struct(
-    #         col("a.member_id").alias("id"),
-    #         coalesce(
-    #             to_date(col("date_of_birth"), 'yyyy-MM-dd'),
-    #             to_date(col("date_of_birth"), 'yyyyMMdd'),
-    #             to_date(col("date_of_birth"), 'MM/dd/yy')
-    #         ).alias("birthDate"),
-    #         array(
-    #             struct(
-    #                 lit("usual").alias("use"),
-    #                 col("last_name").alias("family"),
-    #             )
-    #         ).alias("name"),
-    #     ).alias("patient")
-    # )
+    assert len(sql_expressions) == 4
+    assert str(sql_expressions["id"]) == str(col("a.member_id").alias("id"))
+    assert str(sql_expressions["birthDate"]) == str(
+        coalesce(
+            to_date(col("date_of_birth"), 'yyyy-MM-dd'),
+            to_date(col("date_of_birth"), 'yyyyMMdd'),
+            to_date(col("date_of_birth"), 'MM/dd/yy')
+        ).alias("birthDate")
+    )
+    assert str(sql_expressions["name"]) == str(
+        array(
+            struct(
+                lit("usual").alias("use"),
+                col("last_name").alias("family"),
+            )
+        ).alias("name")
+    )
+    assert str(sql_expressions["gender"]) == str(lit("female").alias("gender"))
 
     result_df.printSchema()
     result_df.show()

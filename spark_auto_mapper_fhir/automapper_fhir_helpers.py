@@ -10,12 +10,14 @@ class AutoMapperFhirHelpers:
     @staticmethod
     def patient(id_: AutomapperTextType,
                 birthDate: AutoMapperDataTypeDate,
-                name: AutoMapperDataTypeList
+                name: AutoMapperDataTypeList,
+                gender: AutomapperTextType
                 ) -> AutoMapperFhirDataTypePatient:
         return AutoMapperFhirDataTypePatient(
             id_=id_,
             birthDate=birthDate,
-            name=name
+            name=name,
+            gender=gender
         )
 
     @staticmethod

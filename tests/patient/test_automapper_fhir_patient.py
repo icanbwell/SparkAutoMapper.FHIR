@@ -1,5 +1,7 @@
 from pyspark.sql import SparkSession, Column, DataFrame
-from pyspark.sql.functions import lit, struct, col, array, coalesce, to_date
+from pyspark.sql.functions import lit, struct, array, coalesce, to_date
+# noinspection PyUnresolvedReferences
+from pyspark.sql.functions import col
 
 from spark_auto_mapper.automapper import AutoMapper
 from spark_auto_mapper.automapper_helpers import AutoMapperHelpers as A
@@ -38,7 +40,8 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                     use="usual",
                     family=A.column("last_name")
                 )
-            )
+            ),
+            gender="female"
         )
     )
 
@@ -62,6 +65,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                     col("last_name").alias("family"),
                 )
             ).alias("name"),
+            lit("female").alias("gender")
         ).alias("patient")
     )
 

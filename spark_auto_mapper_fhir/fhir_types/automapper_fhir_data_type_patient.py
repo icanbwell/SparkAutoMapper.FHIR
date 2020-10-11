@@ -10,11 +10,13 @@ class AutoMapperFhirDataTypePatient(AutoMapperFhirDataTypeComplexBase):
     def __init__(self,
                  id_: AutomapperTextType,
                  birthDate: AutoMapperDataTypeDate,
-                 name: AutoMapperDataTypeList
+                 name: AutoMapperDataTypeList,
+                 gender: AutomapperTextType
                  ) -> None:
         super().__init__()
         self.value = dict(
             id=AutoMapperValueParser.parse_value(id_),
             birthDate=AutoMapperValueParser.parse_value(birthDate),
-            name=AutoMapperValueParser.parse_value(name)
+            name=AutoMapperValueParser.parse_value(name),
+            gender=AutoMapperValueParser.parse_value(gender)
         )
