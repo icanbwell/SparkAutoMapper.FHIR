@@ -10,8 +10,11 @@ class AutoMapperFhir(AutoMapper):
     def __init__(self, view: str, source_view: str, keys: List[str]):
         super().__init__(view=view, source_view=source_view, keys=keys)
 
-    # noinspection PyPep8Naming
+    # noinspection PyPep8Naming,PyMethodMayBeStatic
     def withResource(self,
                      resource: AutoMapperFhirDataTypeComplexBase
-                     ) -> AutoMapperWithResource:
-        return AutoMapperWithResource(parent=self, resource=resource)
+                     ) -> 'AutoMapperFhir':
+        resource_mapper: AutoMapperWithResource = AutoMapperWithResource(resource=resource)
+        for column_name, child_mapper in resource_mapper.mappers.items():
+            self.register_child(dst_column=column_name, child=child_mapper)
+        return self

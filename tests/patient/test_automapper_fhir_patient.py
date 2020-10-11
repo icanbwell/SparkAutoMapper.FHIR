@@ -1,11 +1,12 @@
+from typing import Dict
+
 from pyspark.sql import SparkSession, Column, DataFrame
-from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 # noinspection PyUnresolvedReferences
 from pyspark.sql.functions import col
-
+from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
-from spark_auto_mapper.automappers.automapper_with_column import AutoMapperWithColumn
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
+
 from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
 
 
@@ -30,8 +31,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
         source_view="patients",
         keys=["member_id"]
     ).withColumn(
-        dst_column="patient",
-        value=F.patient(
+        patient=F.patient(
             id_=A.column("a.member_id"),
             birthDate=A.date(
                 A.column("date_of_birth")
@@ -46,14 +46,15 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
         )
     )
 
-    assert isinstance(mapper, AutoMapperWithColumn)
-    sql_expression: Column = mapper.get_column_spec()
-    print(sql_expression)
+    assert isinstance(mapper, AutoMapper)
+    sql_expressions: Dict[str, Column] = mapper.get_column_specs()
+    for column_name, sql_expression in sql_expressions.items():
+        print(f"{column_name}: {sql_expression}")
 
     result_df: DataFrame = mapper.transform(df=df)
 
     # Assert
-    assert str(sql_expression) == str(
+    assert str(sql_expressions["patient"]) == str(
         struct(
             col("a.member_id").alias("id"),
             coalesce(

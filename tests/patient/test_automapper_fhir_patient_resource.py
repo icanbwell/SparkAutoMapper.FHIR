@@ -46,6 +46,7 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
         )
     )
 
+    assert isinstance(mapper, AutoMapperFhir)
     sql_expressions: Dict[str, Column] = mapper.get_column_specs()
     for column_name, sql_expression in sql_expressions.items():
         print(f"{column_name}: {sql_expression}")
