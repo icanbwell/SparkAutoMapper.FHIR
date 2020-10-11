@@ -5,7 +5,7 @@ from os import path, getcwd
 # from https://packaging.python.org/tutorials/packaging-projects/
 
 # noinspection SpellCheckingInspection
-package_name = 'sparkautomapper'
+package_name = 'sparkautomapper.fhir'
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -57,10 +57,10 @@ setup(
     version=version,
     author="Imran Qureshi",
     author_email="imranq2@hotmail.com",
-    description="AutoMapper for Spark",
+    description="FHIR extensions for SparkAutoMapper",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/imranq2/SparkAutoMapper",
+    url="https://github.com/imranq2/SparkAutoMapper.FHIR",
     packages=find_packages(),
     install_requires=requirements,
     tests_require=test_requirements,
