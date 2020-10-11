@@ -1,6 +1,6 @@
 from typing import List
 
-from spark_auto_mapper.automapper import AutoMapper
+from spark_auto_mapper.automappers.automapper import AutoMapper
 
 from spark_auto_mapper_fhir.automapper_with_resource import AutoMapperWithResource
 from spark_auto_mapper_fhir.fhir_types.automapper_fhir_data_type_complex_base import AutoMapperFhirDataTypeComplexBase
