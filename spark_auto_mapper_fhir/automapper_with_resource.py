@@ -1,4 +1,4 @@
-from spark_auto_mapper.automappers.automapper_container import AutoMapperContainer
+from spark_auto_mapper.automappers.container import AutoMapperContainer
 
 from spark_auto_mapper_fhir.fhir_types.automapper_fhir_data_type_complex_base import AutoMapperFhirDataTypeComplexBase
 
