@@ -4,9 +4,9 @@ from pyspark.sql import SparkSession, Column, DataFrame
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 # noinspection PyUnresolvedReferences
 from pyspark.sql.functions import col
+from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.automapper_fhir import AutoMapperFhir
 from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
 
 
@@ -26,7 +26,7 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
     df.createOrReplaceTempView("members")
 
     # Act
-    mapper = AutoMapperFhir(
+    mapper = AutoMapper(
         view="members",
         source_view="patients",
         keys=["member_id"]
@@ -46,7 +46,7 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
         )
     )
 
-    assert isinstance(mapper, AutoMapperFhir)
+    assert isinstance(mapper, AutoMapper)
     sql_expressions: Dict[str, Column] = mapper.get_column_specs()
     for column_name, sql_expression in sql_expressions.items():
         print(f"{column_name}: {sql_expression}")

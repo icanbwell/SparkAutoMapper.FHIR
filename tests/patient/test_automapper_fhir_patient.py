@@ -30,7 +30,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
         view="members",
         source_view="patients",
         keys=["member_id"]
-    ).withColumn(
+    ).columns(
         patient=F.patient(
             id_=A.column("a.member_id"),
             birthDate=A.date(
