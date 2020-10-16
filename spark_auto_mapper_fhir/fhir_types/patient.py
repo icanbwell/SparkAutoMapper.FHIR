@@ -15,6 +15,7 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
             parameter_name if parameter_name != "id_" else "id": AutoMapperValueParser.parse_value(parameter_value)
             for parameter_name, parameter_value
             in kwargs.items()
+            if parameter_value is not None
         }
 
     # noinspection PyPep8Naming

@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.helpers.value_parser import AutoMapperValueParser
@@ -7,18 +7,15 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 
 class AutoMapperFhirDataTypeHumanName(AutoMapperDataTypeComplexBase):
     def __init__(self,
-                 use: Optional[AutoMapperTextInputType],
-                 text: Optional[AutoMapperTextInputType],
-                 family: Optional[AutoMapperTextInputType]
+                 **kwargs: Any
                  ) -> None:
         super().__init__()
-        self.value = dict()
-        if use:
-            self.value["use"] = AutoMapperValueParser.parse_value(use)
-        if text:
-            self.value["text"] = AutoMapperValueParser.parse_value(text)
-        if family:
-            self.value["family"] = AutoMapperValueParser.parse_value(family)
+        self.value = {
+            parameter_name if parameter_name != "id_" else "id": AutoMapperValueParser.parse_value(parameter_value)
+            for parameter_name, parameter_value
+            in kwargs.items()
+            if parameter_value is not None
+        }
 
     @classmethod
     def map(cls,
