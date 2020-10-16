@@ -37,7 +37,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                 A.column("date_of_birth")
             ),
             name=A.list(
-                F.human_name(
+                F.human_name.map(
                     use="usual",
                     family=A.column("last_name")
                 )
