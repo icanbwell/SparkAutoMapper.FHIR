@@ -8,18 +8,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     def __init__(self,
-                 id_: AutoMapperTextInputType,
-                 birthDate: AutoMapperDateDataType,
-                 name: AutoMapperDataTypeList,
-                 gender: AutoMapperTextInputType
+                 **kwargs
                  ) -> None:
         super().__init__()
-        self.value = dict(
-            id=AutoMapperValueParser.parse_value(id_),
-            birthDate=AutoMapperValueParser.parse_value(birthDate),
-            name=AutoMapperValueParser.parse_value(name),
-            gender=AutoMapperValueParser.parse_value(gender)
-        )
+        self.value = {
+            parameter_name if parameter_name != "id_" else "id": AutoMapperValueParser.parse_value(parameter_value)
+            for parameter_name, parameter_value
+            in kwargs.items()
+        }
 
     # noinspection PyPep8Naming
     @classmethod
