@@ -20,3 +20,28 @@ class AutoMapperFhirDataTypePatient(AutoMapperFhirDataTypeComplexBase):
             name=AutoMapperValueParser.parse_value(name),
             gender=AutoMapperValueParser.parse_value(gender)
         )
+
+    # noinspection PyPep8Naming
+    @classmethod
+    def map(cls,
+            id_: AutoMapperTextInputType,
+            birthDate: AutoMapperDateDataType,
+            name: AutoMapperDataTypeList,
+            gender: AutoMapperTextInputType
+            ) -> 'AutoMapperFhirDataTypePatient':
+        """
+        Patient Resource in FHIR
+        https://hl7.org/FHIR/patient.html
+
+
+        :param id_: id of resource
+        :param birthDate: The date of birth for the individual
+        :param name: A name associated with the patient
+        :param gender: 	male | female | other | unknown (https://hl7.org/FHIR/valueset-administrative-gender.html)
+        """
+        return AutoMapperFhirDataTypePatient(
+            id_=id_,
+            birthDate=birthDate,
+            name=name,
+            gender=gender
+        )
