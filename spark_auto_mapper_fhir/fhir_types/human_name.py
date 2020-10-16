@@ -1,11 +1,11 @@
 from typing import Optional
 
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
+from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.helpers.value_parser import AutoMapperValueParser
-from spark_auto_mapper_fhir.fhir_types.automapper_fhir_data_type_complex_base import AutoMapperFhirDataTypeComplexBase
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 
-class AutoMapperFhirDataTypeHumanName(AutoMapperFhirDataTypeComplexBase):
+class AutoMapperFhirDataTypeHumanName(AutoMapperDataTypeComplexBase):
     def __init__(self,
                  use: Optional[AutoMapperTextInputType],
                  text: Optional[AutoMapperTextInputType],

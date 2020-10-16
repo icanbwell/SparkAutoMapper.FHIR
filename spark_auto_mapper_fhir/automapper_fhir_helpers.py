@@ -1,7 +1,7 @@
 from typing import Type
 
-from spark_auto_mapper_fhir.fhir_types.automapper_fhir_data_type_human_name import AutoMapperFhirDataTypeHumanName
-from spark_auto_mapper_fhir.fhir_types.automapper_fhir_data_type_patient import AutoMapperFhirDataTypePatient
+from spark_auto_mapper_fhir.fhir_types.human_name import AutoMapperFhirDataTypeHumanName
+from spark_auto_mapper_fhir.fhir_types.patient import AutoMapperFhirDataTypePatient
 
 
 class AutoMapperFhirHelpers:
