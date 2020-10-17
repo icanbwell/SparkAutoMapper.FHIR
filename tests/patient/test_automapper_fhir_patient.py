@@ -50,7 +50,13 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
             name=A.list(
                 F.human_name.map(
                     use="usual",
-                    family=A.column("last_name")
+                    family=A.column("last_name"),
+                    given=A.list(
+                        [
+                            "first_name",
+                            "middle_name"
+                        ]
+                    )
                 )
             ),
             gender="female"
@@ -88,6 +94,10 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                 struct(
                     lit("usual").alias("use"),
                     col("last_name").alias("family"),
+                    array(
+                        lit("first_name"),
+                        lit("middle_name")
+                    ).alias("given")
                 )
             ).alias("name"),
             lit("female").alias("gender")
