@@ -31,7 +31,7 @@ class AutoMapperFhirDataTypeIdentifier(AutoMapperDataTypeComplexBase):
 
 
         :param use: usual | official | temp | secondary | old (If known) (https://hl7.org/FHIR/valueset-identifier-use.html)
-        :param type_: Description of identifier (https://hl7.org/FHIR/valueset-identifier-type.html)
+        :param type_: Description of identifier https://hl7.org/FHIR/valueset-identifier-type.html
         :param system: 	The namespace for the identifier value
         :param value: The value that is unique
         :param period: Time period when id is/was valid for use
