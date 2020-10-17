@@ -7,16 +7,21 @@ from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
+from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.human_name import AutoMapperFhirDataTypeHumanName
+
 
 class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
             id_: AutoMapperTextInputType,
-            birthDate: AutoMapperDateDataType,
-            name: AutoMapperDataTypeList,
-            gender: AutoMapperTextInputType,
-            address: Optional[AutoMapperDataTypeList] = None
+            birthDate: Optional[AutoMapperDateDataType] = None,
+            name: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeHumanName]] = None,
+            gender: Optional[AutoMapperFhirCodeInputType] = None,
+            address: Optional[AutoMapperDataTypeList] = None,
+            maritalStatus: Optional[AutoMapperFhirDataTypeCodeableConcept] = None
             ) -> 'AutoMapperFhirDataTypePatient':
         """
         Patient Resource in FHIR
@@ -28,14 +33,17 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
         :param name: A name associated with the patient
         :param gender: 	male | female | other | unknown (https://hl7.org/FHIR/valueset-administrative-gender.html)
         :param address: An address for the individual
+        :param maritalStatus: Marital (civil) status of a patient (https://hl7.org/FHIR/valueset-marital-status.html)
         """
         return AutoMapperFhirDataTypePatient(
             id_=id_,
             birthDate=birthDate,
             name=name,
             gender=gender,
-            address=address
+            address=address,
+            maritalStatus=maritalStatus
         )
 
-    birthDate: AutoMapperDataTypeColumn = A.column("birthDate")
-    gender: AutoMapperTextInputType = A.column("gender")
+    birthDate: AutoMapperDateDataType = A.date(A.column("birthDate"))
+    gender: AutoMapperDataTypeColumn = A.column("gender")
+    maritalStatus: AutoMapperDataTypeColumn = A.column("maritalStatus")

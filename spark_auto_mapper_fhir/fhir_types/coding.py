@@ -1,48 +1,37 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType, AutoMapperBooleanInputType
+
+from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
+from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
 
 
 class AutoMapperFhirDataTypeCoding(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            use: Optional[AutoMapperTextInputType] = None,
-            type_: Optional[AutoMapperTextInputType] = None,
-            text: Optional[AutoMapperTextInputType] = None,
-            line: Optional[AutoMapperDataTypeList] = None,
-            city: Optional[AutoMapperTextInputType] = None,
-            district: Optional[AutoMapperTextInputType] = None,
-            state: Optional[AutoMapperTextInputType] = None,
-            postalCode: Optional[AutoMapperTextInputType] = None,
-            country: Optional[AutoMapperTextInputType] = None
+            system: Optional[AutoMapperFhirUriInputType] = None,
+            version: Optional[AutoMapperTextInputType] = None,
+            code: Optional[AutoMapperFhirCodeInputType] = None,
+            display: Optional[AutoMapperTextInputType] = None,
+            userSelected: Optional[AutoMapperBooleanInputType] = None
             ) -> 'AutoMapperFhirDataTypeCoding':
         """
         Coding Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Coding
 
 
-        :param use: usual | official | temp | nickname | anonymous | old | maiden (https://hl7.org/FHIR/valueset-name-use.html)
-        :param type_: postal | physical | both (https://hl7.org/FHIR/valueset-address-type.html)
-        :param text: Text representation of the full name
-        :param line: Street name, number, direction & P.O. Box etc.
-                This repeating element order: The order in which lines should appear in an address label
-        :param city: Name of city, town etc.
-        :param district: District name (aka county)
-        :param state: Sub-unit of country (abbreviations ok)
-        :param postalCode: 	Postal code for area
-        :param country: Country (e.g. can be ISO 3166 2 or 3 letter code)
+        :param system: Identity of the terminology system
+        :param version: Version of the system - if relevant
+        :param code: 	Symbol in syntax defined by the system
+        :param display: Representation defined by the system
+        :param userSelected: If this coding was chosen directly by the user
         """
         return AutoMapperFhirDataTypeCoding(
-            use=use,
-            type=type_,
-            text=text,
-            line=line,
-            city=city,
-            district=district,
-            state=state,
-            postalCode=postalCode,
-            country=country
+            system=system,
+            version=version,
+            code=code,
+            display=display,
+            userSelected=userSelected
         )
