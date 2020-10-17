@@ -10,6 +10,7 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.human_name import AutoMapperFhirDataTypeHumanName
+from spark_auto_mapper_fhir.fhir_types.identifier import AutoMapperFhirDataTypeIdentifier
 
 
 class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
@@ -17,6 +18,7 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             id_: AutoMapperTextInputType,
+            identifier: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeIdentifier]] = None,
             birthDate: Optional[AutoMapperDateDataType] = None,
             name: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeHumanName]] = None,
             gender: Optional[AutoMapperFhirCodeInputType] = None,
@@ -26,9 +28,11 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
         """
         Patient Resource in FHIR
         https://hl7.org/FHIR/patient.html
+        Information about an individual or animal receiving health care services
 
 
         :param id_: id of resource
+        :param identifier: An identifier for this patient
         :param birthDate: The date of birth for the individual
         :param name: A name associated with the patient
         :param gender: 	male | female | other | unknown (https://hl7.org/FHIR/valueset-administrative-gender.html)
@@ -37,6 +41,7 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
         """
         return AutoMapperFhirDataTypePatient(
             id_=id_,
+            identifier=identifier,
             birthDate=birthDate,
             name=name,
             gender=gender,
