@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.human_name import AutoMapperFhirDataTypeHumanName
 from spark_auto_mapper_fhir.fhir_types.identifier import AutoMapperFhirDataTypeIdentifier
+from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
 
 
 class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
@@ -23,7 +24,9 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
             name: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeHumanName]] = None,
             gender: Optional[AutoMapperFhirCodeInputType] = None,
             address: Optional[AutoMapperDataTypeList] = None,
-            maritalStatus: Optional[AutoMapperFhirDataTypeCodeableConcept] = None
+            maritalStatus: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
+            generalPractitioner: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeReference]] = None,
+            managingOrganization: Optional[AutoMapperFhirDataTypeReference] = None
             ) -> 'AutoMapperFhirDataTypePatient':
         """
         Patient Resource in FHIR
@@ -38,6 +41,8 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
         :param gender: 	male | female | other | unknown (https://hl7.org/FHIR/valueset-administrative-gender.html)
         :param address: An address for the individual
         :param maritalStatus: Marital (civil) status of a patient (https://hl7.org/FHIR/valueset-marital-status.html)
+        :param generalPractitioner: Patient's nominated primary care provider
+        :param managingOrganization: Organization that is the custodian of the patient record
         """
         return AutoMapperFhirDataTypePatient(
             id_=id_,
@@ -46,7 +51,9 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
             name=name,
             gender=gender,
             address=address,
-            maritalStatus=maritalStatus
+            maritalStatus=maritalStatus,
+            generalPractitioner=generalPractitioner,
+            managingOrganization=managingOrganization
         )
 
     birthDate: AutoMapperDateDataType = A.date(A.column("birthDate"))
