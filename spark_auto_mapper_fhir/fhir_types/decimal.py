@@ -1,0 +1,3 @@
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperAmountInputType
+
+FhirDecimal = AutoMapperAmountInputType

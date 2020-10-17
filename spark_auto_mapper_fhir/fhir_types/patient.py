@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
@@ -11,6 +11,9 @@ from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.human_name import AutoMapperFhirDataTypeHumanName
 from spark_auto_mapper_fhir.fhir_types.identifier import AutoMapperFhirDataTypeIdentifier
+from spark_auto_mapper_fhir.fhir_types.organization import AutoMapperFhirDataTypeOrganization
+from spark_auto_mapper_fhir.fhir_types.practitioner import AutoMapperFhirDataTypePractitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import AutoMapperFhirDataTypePractitionerRole
 from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
 
 
@@ -25,7 +28,15 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
             gender: Optional[AutoMapperFhirCodeInputType] = None,
             address: Optional[AutoMapperDataTypeList] = None,
             maritalStatus: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            generalPractitioner: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeReference]] = None,
+            generalPractitioner: Optional[AutoMapperDataTypeList[
+                AutoMapperFhirDataTypeReference[
+                    Union[
+                        AutoMapperFhirDataTypeOrganization,
+                        AutoMapperFhirDataTypePractitioner,
+                        AutoMapperFhirDataTypePractitionerRole
+                    ]
+                ]
+            ]] = None,
             managingOrganization: Optional[AutoMapperFhirDataTypeReference] = None
             ) -> 'AutoMapperFhirDataTypePatient':
         """

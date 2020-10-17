@@ -6,6 +6,7 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
 # noinspection SpellCheckingInspection
+from spark_auto_mapper_fhir.fhir_types.organization import AutoMapperFhirDataTypeOrganization
 from spark_auto_mapper_fhir.fhir_types.period import AutoMapperFhirDataTypePeriod
 
 from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
@@ -22,7 +23,7 @@ class AutoMapperFhirDataTypeIdentifier(AutoMapperDataTypeComplexBase):
             system: Optional[AutoMapperFhirUriInputType] = None,
             value: Optional[AutoMapperTextInputType] = None,
             period: Optional[AutoMapperFhirDataTypePeriod] = None,
-            assigner: Optional['AutoMapperFhirDataTypeReference'] = None
+            assigner: Optional['AutoMapperFhirDataTypeReference[AutoMapperFhirDataTypeOrganization]'] = None
             ) -> 'AutoMapperFhirDataTypeIdentifier':
         """
         Identifier Resource in FHIR

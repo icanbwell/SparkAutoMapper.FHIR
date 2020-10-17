@@ -1,15 +1,17 @@
 # flake8: noqa
 # turning off flake8 on this file because of the circular reference
 #   Identifier includes Reference which includes Identifier
-from typing import Optional
+from typing import Optional, TypeVar, Generic
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
 
+_T = TypeVar("_T")
 
-class AutoMapperFhirDataTypeReference(AutoMapperDataTypeComplexBase):
+
+class AutoMapperFhirDataTypeReference(Generic[_T], AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
