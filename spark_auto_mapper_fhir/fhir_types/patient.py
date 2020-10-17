@@ -1,14 +1,19 @@
+from typing import Any
+
+from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.data_types.date import AutoMapperDateDataType
 from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 from spark_auto_mapper.helpers.value_parser import AutoMapperValueParser
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
+from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
+
 
 class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     def __init__(self,
-                 **kwargs
+                 **kwargs: Any
                  ) -> None:
         super().__init__()
         self.value = {
@@ -42,3 +47,6 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
             name=name,
             gender=gender
         )
+
+    birthDate: AutoMapperDataTypeColumn = A.column("birthDate")
+    gender: AutoMapperTextInputType = A.column("gender")
