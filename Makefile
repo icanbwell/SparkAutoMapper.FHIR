@@ -65,6 +65,21 @@ tests:
 	pip install --upgrade -r requirements-test.txt && \
 	pytest tests
 
+.PHONY:clean-pre-commit
+clean-pre-commit:
+	pre-commit clean
+
+.PHONY:setup-pre-commit
+setup-pre-commit:
+	pre-commit install
+
+.PHONY:run-pre-commit
+run-pre-commit:
+	pre-commit run --all-files
+
+.PHONY:reset-pre-commit
+reset-pre-commit: clean-pre-commit run-pre-commit
+
 .PHONY:init
 init: installspark up devsetup tests
 

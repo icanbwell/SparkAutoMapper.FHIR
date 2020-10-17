@@ -31,13 +31,24 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
         source_view="patients",
         keys=["member_id"]
     ).columns(
-        patient=F.patient(
+        patient=F.patient.map(
             id_=A.column("a.member_id"),
+            identifier=A.list(
+                F.identifier.map(
+                    use="usual",
+                    value=A.column("a.member_id"),
+                    type_=F.codeableConcept.map(
+                        coding=F.coding.map(
+                            code="MR"
+                        )
+                    )
+                )
+            ),
             birthDate=A.date(
                 A.column("date_of_birth")
             ),
             name=A.list(
-                F.human_name(
+                F.human_name.map(
                     use="usual",
                     family=A.column("last_name")
                 )
@@ -47,7 +58,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
     )
 
     assert isinstance(mapper, AutoMapper)
-    sql_expressions: Dict[str, Column] = mapper.get_column_specs()
+    sql_expressions: Dict[str, Column] = mapper.get_column_specs(source_df=source_df)
     for column_name, sql_expression in sql_expressions.items():
         print(f"{column_name}: {sql_expression}")
 
@@ -57,6 +68,17 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
     assert str(sql_expressions["patient"]) == str(
         struct(
             col("a.member_id").alias("id"),
+            array(
+                struct(
+                    lit("usual").alias("use"),
+                    struct(
+                        struct(
+                            lit("MR").alias("code")
+                        ).alias("coding")
+                    ).alias("type"),
+                    col("a.member_id").alias("value"),
+                )
+            ).alias("identifier"),
             coalesce(
                 to_date(col("date_of_birth"), 'yyyy-MM-dd'),
                 to_date(col("date_of_birth"), 'yyyyMMdd'),

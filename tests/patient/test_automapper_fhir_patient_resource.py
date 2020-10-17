@@ -31,13 +31,13 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
         source_view="patients",
         keys=["member_id"]
     ).complex(
-        F.patient(
+        F.patient.map(
             id_=A.column("a.member_id"),
             birthDate=A.date(
                 A.column("date_of_birth")
             ),
             name=A.list(
-                F.human_name(
+                F.human_name.map(
                     use="usual",
                     family=A.column("last_name")
                 )
@@ -47,7 +47,7 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
     )
 
     assert isinstance(mapper, AutoMapper)
-    sql_expressions: Dict[str, Column] = mapper.get_column_specs()
+    sql_expressions: Dict[str, Column] = mapper.get_column_specs(source_df=source_df)
     for column_name, sql_expression in sql_expressions.items():
         print(f"{column_name}: {sql_expression}")
 
