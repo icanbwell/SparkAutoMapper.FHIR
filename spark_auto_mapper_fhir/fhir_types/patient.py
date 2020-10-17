@@ -3,32 +3,34 @@ from typing import Optional, Union
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.data_types.date import AutoMapperDateDataType
-from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
+from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
 from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
 from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 class FhirPatient(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            id_: AutoMapperTextInputType,
-            identifier: Optional[AutoMapperDataTypeList[FhirIdentifier]] = None,
-            birthDate: Optional[AutoMapperDateDataType] = None,
-            name: Optional[AutoMapperDataTypeList[FhirHumanName]] = None,
+            id_: FhirString,
+            identifier: Optional[FhirList[FhirIdentifier]] = None,
+            birthDate: Optional[FhirDate] = None,
+            name: Optional[FhirList[FhirHumanName]] = None,
             gender: Optional[FhirCode] = None,
-            address: Optional[AutoMapperDataTypeList] = None,
+            address: Optional[FhirList[FhirAddress]] = None,
             maritalStatus: Optional[FhirCodeableConcept] = None,
-            generalPractitioner: Optional[AutoMapperDataTypeList[
+            generalPractitioner: Optional[FhirList[
                 FhirReference[
                     Union[
                         FhirOrganization,

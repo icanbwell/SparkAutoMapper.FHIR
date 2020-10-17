@@ -1,17 +1,17 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 class FhirHumanName(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             use: Optional[FhirCode] = None,
-            text: Optional[AutoMapperTextInputType] = None,
-            family: Optional[AutoMapperTextInputType] = None
+            text: Optional[FhirString] = None,
+            family: Optional[FhirString] = None
             ) -> 'FhirHumanName':
         """
         HumanName Resource in FHIR

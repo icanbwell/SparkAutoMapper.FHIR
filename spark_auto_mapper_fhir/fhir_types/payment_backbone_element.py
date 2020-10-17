@@ -1,9 +1,9 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperDateInputType
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 
@@ -15,7 +15,7 @@ class FhirPaymentBackboneElement(AutoMapperDataTypeComplexBase):
             type_: Optional[FhirCodeableConcept] = None,
             adjustment: Optional[FhirMoney] = None,
             adjustmentReason: Optional[FhirCodeableConcept] = None,
-            date: Optional[AutoMapperDateInputType] = None,
+            date: Optional[FhirDate] = None,
             amount: Optional[FhirMoney] = None,
             identifier: Optional[FhirIdentifier] = None
             ) -> 'FhirPaymentBackboneElement':

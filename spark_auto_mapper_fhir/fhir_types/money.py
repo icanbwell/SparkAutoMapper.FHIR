@@ -1,15 +1,15 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperAmountInputType
 
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
 
 class FhirMoney(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            value: Optional[AutoMapperAmountInputType] = None,
+            value: Optional[FhirDecimal] = None,
             currency: Optional[FhirCode] = None
             ) -> 'FhirMoney':
         """

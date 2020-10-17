@@ -1,9 +1,9 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 # noinspection SpellCheckingInspection
@@ -12,7 +12,7 @@ class FhirCodeableConcept(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             coding: Optional[FhirCoding] = None,
-            text: Optional[AutoMapperTextInputType] = None
+            text: Optional[FhirString] = None
             ) -> 'FhirCodeableConcept':
         """
         CodeableConcept Resource in FHIR

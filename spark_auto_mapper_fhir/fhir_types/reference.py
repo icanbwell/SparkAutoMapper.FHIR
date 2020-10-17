@@ -4,8 +4,9 @@
 from typing import Optional, TypeVar, Generic
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
+from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 _T = TypeVar("_T")
@@ -15,11 +16,11 @@ class FhirReference(Generic[_T], AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            reference: Optional[AutoMapperTextInputType] = None,
+            reference: Optional[FhirString] = None,
             type_: Optional[FhirUri] = None,
             # noqa: F821
-            identifier: Optional['AutoMapperFhirDataTypeIdentifier'] = None,  # type: ignore
-            display: Optional[AutoMapperTextInputType] = None
+            identifier: Optional['FhirIdentifier'] = None,  # type: ignore
+            display: Optional[FhirString] = None
             ) -> 'FhirReference':
         """
         Reference Resource in FHIR

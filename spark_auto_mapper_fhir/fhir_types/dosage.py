@@ -1,10 +1,10 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 class FhirDosage(AutoMapperDataTypeComplexBase):
@@ -12,9 +12,9 @@ class FhirDosage(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             sequence: Optional[FhirPositiveInt] = None,
-            text: Optional[AutoMapperTextInputType] = None,
+            text: Optional[FhirString] = None,
             additionalInstruction: Optional[FhirCodeableConcept] = None,
-            patientInstruction: Optional[AutoMapperTextInputType] = None,
+            patientInstruction: Optional[FhirString] = None,
             ) -> 'FhirDosage':
         """
         Dosage Resource in FHIR

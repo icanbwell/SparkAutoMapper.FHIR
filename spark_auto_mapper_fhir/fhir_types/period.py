@@ -1,16 +1,18 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperDateInputType
 
 
 # noinspection SpellCheckingInspection
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+
+
 class FhirPeriod(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            start: Optional[AutoMapperDateInputType] = None,
-            end: Optional[AutoMapperDateInputType] = None
+            start: Optional[FhirDate] = None,
+            end: Optional[FhirDate] = None
             ) -> 'FhirPeriod':
         """
         Period Resource in FHIR

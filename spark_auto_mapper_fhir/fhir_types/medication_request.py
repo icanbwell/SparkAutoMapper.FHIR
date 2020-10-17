@@ -1,7 +1,6 @@
 from typing import Optional, Union, Any
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 
 from spark_auto_mapper_fhir.fhir_types.annotation import FhirAnnotation
 from spark_auto_mapper_fhir.fhir_types.care_plan import FhirCarePlan
@@ -21,6 +20,7 @@ from spark_auto_mapper_fhir.fhir_types.encounter import FhirEncounter
 from spark_auto_mapper_fhir.fhir_types.group import FhirGroup
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.immunization_recommendation import FhirImmunizationRecommendation
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.medication_backbone_element import \
     FhirMedicationBackboneElement
 from spark_auto_mapper_fhir.fhir_types.observation import FhirObservation
@@ -44,15 +44,15 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
             intent: FhirCode,
             medication: FhirMedicationBackboneElement,
             statusReason: Optional[FhirCodeableConcept] = None,
-            category: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
+            category: Optional[FhirList[FhirCodeableConcept]] = None,
             priority: Optional[FhirCode] = None,
             reported: Optional[FhirReportedBackboneElement] = None,
             subject: FhirReference[
                 Union[FhirPatient, FhirGroup]
             ] = None,
-            identifier: Optional[AutoMapperDataTypeList[FhirIdentifier]] = None,
+            identifier: Optional[FhirList[FhirIdentifier]] = None,
             encounter: Optional[FhirEncounter] = None,
-            supportingInformation: Optional[AutoMapperDataTypeList[Any]] = None,
+            supportingInformation: Optional[FhirList[Any]] = None,
             authoredOn: Optional[FhirDateTime] = None,
             requester: Optional[FhirReference[
                 Union[
@@ -82,8 +82,8 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
                     FhirPractitionerRole
                 ]
             ]] = None,
-            reasonCode: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
-            reasonReference: Optional[AutoMapperDataTypeList[
+            reasonCode: Optional[FhirList[FhirCodeableConcept]] = None,
+            reasonReference: Optional[FhirList[
                 FhirReference[
                     Union[
                         FhirCondition,
@@ -91,7 +91,7 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
                     ]
                 ]
             ]] = None,
-            basedOn: Optional[AutoMapperDataTypeList[
+            basedOn: Optional[FhirList[
                 Union[
                     FhirCarePlan,
                     'FhirMedicationRequest',
@@ -101,7 +101,7 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
             ]] = None,
             groupIdentifier: Optional[FhirIdentifier] = None,
             courseOfTherapyType: Optional[FhirCodeableConcept] = None,
-            insurance: Optional[AutoMapperDataTypeList[
+            insurance: Optional[FhirList[
                 FhirReference[
                     Union[
                         FhirCoverage,
@@ -109,16 +109,16 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
                     ]
                 ]
             ]] = None,
-            note: Optional[AutoMapperDataTypeList[
+            note: Optional[FhirList[
                 FhirAnnotation
             ]] = None,
-            dosageInstruction: Optional[AutoMapperDataTypeList[FhirDosage]] = None,
+            dosageInstruction: Optional[FhirList[FhirDosage]] = None,
             dispenseRequest: Optional[FhirDispenseRequestBackboneElement] = None,
             substitution: Optional[FhirSubstitutionBackboneElement] = None,
             priorPrescription: Optional[
                 FhirReference['FhirMedicationRequest']
             ] = None,
-            detectedIssue: Optional[AutoMapperDataTypeList[
+            detectedIssue: Optional[FhirList[
                 FhirReference[FhirDetectedIssue]
             ]] = None
             ) -> 'FhirMedicationRequest':

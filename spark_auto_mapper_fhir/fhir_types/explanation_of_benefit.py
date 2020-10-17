@@ -1,7 +1,6 @@
 from typing import Optional, Union
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperDateInputType
 
 from spark_auto_mapper_fhir.fhir_types.accident_backbone_element import FhirAccidentBackboneElement
 from spark_auto_mapper_fhir.fhir_types.add_item_backbone_element import FhirAddItemBackboneElement
@@ -13,6 +12,7 @@ from spark_auto_mapper_fhir.fhir_types.claim import FhirClaim
 from spark_auto_mapper_fhir.fhir_types.claim_response import FhirClaimResponse
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.diagnosis_backbone_element import FhirDiagnosisBackboneElement
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.insurance_backbone_element import FhirInsuranceBackboneElement
@@ -48,7 +48,7 @@ class FhirExplanationOfBenefit(AutoMapperDataTypeComplexBase):
             type_: FhirCodeableConcept,
             use: FhirCode,
             patient: FhirReference[FhirPatient],
-            created: AutoMapperDateInputType,
+            created: FhirDate,
             insurer: FhirReference[FhirOrganization],
             insurance: FhirList[FhirInsuranceBackboneElement],
             outcome: FhirCode,

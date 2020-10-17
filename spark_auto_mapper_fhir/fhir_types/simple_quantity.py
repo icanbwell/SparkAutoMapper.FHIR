@@ -1,17 +1,18 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperAmountInputType, AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
 class FhirSimpleQuantity(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            value: Optional[AutoMapperAmountInputType] = None,
-            unit: Optional[AutoMapperTextInputType] = None,
+            value: Optional[FhirDecimal] = None,
+            unit: Optional[FhirString] = None,
             system: Optional[FhirUri] = None,
             code: Optional[FhirCode] = None
             ) -> 'FhirSimpleQuantity':

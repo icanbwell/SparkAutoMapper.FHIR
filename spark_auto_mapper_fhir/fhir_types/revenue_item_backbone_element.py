@@ -1,13 +1,13 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperNumberInputType, AutoMapperAmountInputType, \
-    AutoMapperDateInputType
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.adjudication import FhirAdjudication
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -19,15 +19,15 @@ class FhirRevenueItemBackboneElement(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,
-            sequence: AutoMapperNumberInputType,
-            productOrService: AutoMapperDataTypeList[FhirCodeableConcept],
-            informationSequence: Optional[AutoMapperDataTypeList[FhirPositiveInt]] = None,
-            revenue: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
-            modifier: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
-            quantity: Optional[AutoMapperDataTypeList[FhirSimpleQuantity]] = None,
-            factor: Optional[AutoMapperAmountInputType] = None,
-            adjudication: Optional[AutoMapperDataTypeList[FhirAdjudication]] = None,
-            servicedDate: Optional[AutoMapperDateInputType] = None,
+            sequence: FhirPositiveInt,
+            productOrService: FhirList[FhirCodeableConcept],
+            informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
+            revenue: Optional[FhirList[FhirCodeableConcept]] = None,
+            modifier: Optional[FhirList[FhirCodeableConcept]] = None,
+            quantity: Optional[FhirList[FhirSimpleQuantity]] = None,
+            factor: Optional[FhirDecimal] = None,
+            adjudication: Optional[FhirList[FhirAdjudication]] = None,
+            servicedDate: Optional[FhirDate] = None,
             servicedPeriod: Optional[FhirPeriod] = None,
             locationCodeableConcept: Optional[FhirCodeableConcept] = None,
             locationAddress: Optional[FhirAddress] = None,

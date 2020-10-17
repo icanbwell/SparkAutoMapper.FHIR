@@ -1,10 +1,10 @@
 from typing import Optional, Union
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper_fhir.fhir_types.automapper_fhir_data_type_patient import AutoMapperFhirDataTypePatient
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
+from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
 from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
 from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
@@ -20,7 +20,7 @@ class FhirPayeeBackboneElement(AutoMapperDataTypeComplexBase):
                     FhirPractitioner,
                     FhirPractitionerRole,
                     FhirOrganization,
-                    AutoMapperFhirDataTypePatient,
+                    FhirPatient,
                     FhirRelatedPerson
                 ]
             ]] = None
