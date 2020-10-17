@@ -5,13 +5,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperDateInput
 
 
 # noinspection SpellCheckingInspection
-class AutoMapperFhirDataTypePeriod(AutoMapperDataTypeComplexBase):
+class FhirPeriod(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
             start: Optional[AutoMapperDateInputType] = None,
             end: Optional[AutoMapperDateInputType] = None
-            ) -> 'AutoMapperFhirDataTypePeriod':
+            ) -> 'FhirPeriod':
         """
         Period Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Period
@@ -21,7 +21,7 @@ class AutoMapperFhirDataTypePeriod(AutoMapperDataTypeComplexBase):
         :param start: Starting time with inclusive boundary
         :param end: End time with inclusive boundary, if not ongoing
         """
-        return AutoMapperFhirDataTypePeriod(
+        return FhirPeriod(
             start=start,
             end=end
         )

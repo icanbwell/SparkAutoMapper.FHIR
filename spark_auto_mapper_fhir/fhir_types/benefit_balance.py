@@ -3,7 +3,7 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.financial_benefit import FhirFinancialBenefit
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -12,13 +12,13 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 class FhirBenefitBalance(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            category: AutoMapperFhirDataTypeCodeableConcept,
+            category: FhirCodeableConcept,
             excluded: Optional[FhirBoolean] = None,
             name: Optional[FhirString] = None,
             description: Optional[FhirString] = None,
-            network: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            unit: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            term: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
+            network: Optional[FhirCodeableConcept] = None,
+            unit: Optional[FhirCodeableConcept] = None,
+            term: Optional[FhirCodeableConcept] = None,
             financial: Optional[FhirList[FhirFinancialBenefit]] = None
             ) -> 'FhirBenefitBalance':
         """

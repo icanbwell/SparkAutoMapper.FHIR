@@ -3,25 +3,25 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.base64Binary import FhirBase64Binary
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
-from spark_auto_mapper_fhir.fhir_types.date_time import AutoMapperFhirDateTimeType
+from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.unsigned_int import AutoMapperFhirUnsignedIntInputType
-from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
+from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
 class FhirAttachment(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            contentType: Optional[AutoMapperFhirCodeInputType] = None,
-            language: Optional[AutoMapperFhirCodeInputType] = None,
+            contentType: Optional[FhirCode] = None,
+            language: Optional[FhirCode] = None,
             data: Optional[FhirBase64Binary] = None,
-            url: Optional[AutoMapperFhirUriInputType] = None,
-            size: Optional[AutoMapperFhirUnsignedIntInputType] = None,
+            url: Optional[FhirUri] = None,
+            size: Optional[FhirUnsignedInt] = None,
             hash_: Optional[FhirBase64Binary] = None,
             title: Optional[FhirString] = None,
-            creation: Optional[AutoMapperFhirDateTimeType] = None
+            creation: Optional[FhirDateTime] = None
             ) -> 'FhirAttachment':
         """
         Attachment Resource in FHIR

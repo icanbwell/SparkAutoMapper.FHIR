@@ -1,13 +1,13 @@
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 
-class AutoMapperFhirDataTypeObservation(AutoMapperDataTypeComplexBase):
+class FhirObservation(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            ) -> 'AutoMapperFhirDataTypeObservation':
+            ) -> 'FhirObservation':
         """
         Observation Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Observation
         """
-        return AutoMapperFhirDataTypeObservation(
+        return FhirObservation(
         )

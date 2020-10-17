@@ -2,11 +2,11 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
-from spark_auto_mapper_fhir.fhir_types.address import AutoMapperFhirDataTypeAddress
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.location import AutoMapperFhirDataTypeLocation
-from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
+from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 
 class FhirAccidentBackboneElement(AutoMapperDataTypeComplexBase):
@@ -14,9 +14,9 @@ class FhirAccidentBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             date: Optional[FhirDate] = None,
-            type_: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            locationAddress: Optional[AutoMapperFhirDataTypeAddress] = None,
-            locationReference: Optional[AutoMapperFhirDataTypeReference[AutoMapperFhirDataTypeLocation]] = None
+            type_: Optional[FhirCodeableConcept] = None,
+            locationAddress: Optional[FhirAddress] = None,
+            locationReference: Optional[FhirReference[FhirLocation]] = None
             ) -> 'FhirAccidentBackboneElement':
         """
         AccidentBackboneElement Resource in FHIR

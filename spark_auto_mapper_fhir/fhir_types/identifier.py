@@ -3,28 +3,28 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 # noinspection SpellCheckingInspection
-from spark_auto_mapper_fhir.fhir_types.organization import AutoMapperFhirDataTypeOrganization
-from spark_auto_mapper_fhir.fhir_types.period import AutoMapperFhirDataTypePeriod
+from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
+from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 
-from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
-class AutoMapperFhirDataTypeIdentifier(AutoMapperDataTypeComplexBase):
+class FhirIdentifier(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
-    from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
+    from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
     @classmethod
     def map(cls,
-            use: Optional[AutoMapperFhirCodeInputType] = None,
-            type_: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            system: Optional[AutoMapperFhirUriInputType] = None,
+            use: Optional[FhirCode] = None,
+            type_: Optional[FhirCodeableConcept] = None,
+            system: Optional[FhirUri] = None,
             value: Optional[AutoMapperTextInputType] = None,
-            period: Optional[AutoMapperFhirDataTypePeriod] = None,
-            assigner: Optional['AutoMapperFhirDataTypeReference[AutoMapperFhirDataTypeOrganization]'] = None
-            ) -> 'AutoMapperFhirDataTypeIdentifier':
+            period: Optional[FhirPeriod] = None,
+            assigner: Optional['FhirReference[FhirOrganization]'] = None
+            ) -> 'FhirIdentifier':
         """
         Identifier Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Identifier
@@ -38,7 +38,7 @@ class AutoMapperFhirDataTypeIdentifier(AutoMapperDataTypeComplexBase):
         :param period: Time period when id is/was valid for use
         :param assigner: Organization that issued id (may be just text)
         """
-        return AutoMapperFhirDataTypeIdentifier(
+        return FhirIdentifier(
             use=use,
             type_=type_,
             system=system,

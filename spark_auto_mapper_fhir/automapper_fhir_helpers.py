@@ -2,28 +2,28 @@ from typing import Type
 
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
-from spark_auto_mapper_fhir.fhir_types.address import AutoMapperFhirDataTypeAddress
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.coding import AutoMapperFhirDataTypeCoding
-from spark_auto_mapper_fhir.fhir_types.human_name import AutoMapperFhirDataTypeHumanName
-from spark_auto_mapper_fhir.fhir_types.identifier import AutoMapperFhirDataTypeIdentifier
-from spark_auto_mapper_fhir.fhir_types.patient import AutoMapperFhirDataTypePatient
-from spark_auto_mapper_fhir.fhir_types.period import AutoMapperFhirDataTypePeriod
-from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
+from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
+from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
+from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
+from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
+from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 
 class AutoMapperFhirHelpers:
-    patient: Type[AutoMapperFhirDataTypePatient] = AutoMapperFhirDataTypePatient
-    human_name: Type[AutoMapperFhirDataTypeHumanName] = AutoMapperFhirDataTypeHumanName
-    address: Type[AutoMapperFhirDataTypeAddress] = AutoMapperFhirDataTypeAddress
+    patient: Type[FhirPatient] = FhirPatient
+    human_name: Type[FhirHumanName] = FhirHumanName
+    address: Type[FhirAddress] = FhirAddress
     # noinspection SpellCheckingInspection
-    codeableConcept: Type[AutoMapperFhirDataTypeCodeableConcept] = AutoMapperFhirDataTypeCodeableConcept
-    coding: Type[AutoMapperFhirDataTypeCoding] = AutoMapperFhirDataTypeCoding
-    identifier: Type[AutoMapperFhirDataTypeIdentifier] = AutoMapperFhirDataTypeIdentifier
-    period: Type[AutoMapperFhirDataTypePeriod] = AutoMapperFhirDataTypePeriod
-    reference: Type[AutoMapperFhirDataTypeReference] = AutoMapperFhirDataTypeReference
+    codeableConcept: Type[FhirCodeableConcept] = FhirCodeableConcept
+    coding: Type[FhirCoding] = FhirCoding
+    identifier: Type[FhirIdentifier] = FhirIdentifier
+    period: Type[FhirPeriod] = FhirPeriod
+    reference: Type[FhirReference] = FhirReference
 
     @classmethod
-    def code(cls, value: AutoMapperTextInputType) -> AutoMapperFhirCodeInputType:
+    def code(cls, value: AutoMapperTextInputType) -> FhirCode:
         return value

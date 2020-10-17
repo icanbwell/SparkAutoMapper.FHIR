@@ -3,16 +3,16 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
+from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 
 
-class AutoMapperFhirDataTypeHumanName(AutoMapperDataTypeComplexBase):
+class FhirHumanName(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            use: Optional[AutoMapperFhirCodeInputType] = None,
+            use: Optional[FhirCode] = None,
             text: Optional[AutoMapperTextInputType] = None,
             family: Optional[AutoMapperTextInputType] = None
-            ) -> 'AutoMapperFhirDataTypeHumanName':
+            ) -> 'FhirHumanName':
         """
         HumanName Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#HumanName
@@ -22,7 +22,7 @@ class AutoMapperFhirDataTypeHumanName(AutoMapperDataTypeComplexBase):
         :param text: Text representation of the full name
         :param family: Family name (often called 'Surname')
         """
-        return AutoMapperFhirDataTypeHumanName(
+        return FhirHumanName(
             use=use,
             text=text,
             family=family

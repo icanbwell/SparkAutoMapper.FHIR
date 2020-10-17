@@ -1,38 +1,62 @@
-from typing import Optional, Union
+from typing import Optional, Any
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType, AutoMapperBooleanInputType
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperDateInputType
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.coding import AutoMapperFhirDataTypeCoding
-from spark_auto_mapper_fhir.fhir_types.positive_int import AutoMapperFhirPositiveIntInputType
-from spark_auto_mapper_fhir.fhir_types.simple_quantity import AutoMapperFhirDataTypeSimpleQuantity
-from spark_auto_mapper_fhir.fhir_types.timing_date_or_period import AutoMapperFhirDataTypeTimingDateOrPeriod
+from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
+from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
+from spark_auto_mapper_fhir.fhir_types.quantity import FhirQuantity
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class AutoMapperFhirDataTypeSupportingInfoBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirSupportingInfoBackboneElement(AutoMapperDataTypeComplexBase):
+    # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            sequence: AutoMapperFhirPositiveIntInputType,
-            category: AutoMapperFhirDataTypeCodeableConcept,
-            code: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            timing: Optional[AutoMapperFhirDataTypeTimingDateOrPeriod] = None,
-            value: Optional[Union[
-                AutoMapperTextInputType,
-                AutoMapperBooleanInputType,
-                AutoMapperFhirDataTypeSimpleQuantity
-            ]] = None,
-            reason: Optional[AutoMapperFhirDataTypeCoding] = None
-            ) -> 'AutoMapperFhirDataTypeSupportingInfoBackboneElement':
+            sequence: FhirPositiveInt,
+            category: FhirCodeableConcept,
+            code: Optional[FhirCodeableConcept] = None,
+            timingDate: Optional[AutoMapperDateInputType] = None,
+            timingPeriod: Optional[FhirPeriod] = None,
+            valueBoolean: Optional[FhirBoolean] = None,
+            valueString: Optional[FhirString] = None,
+            valueQuantity: Optional[FhirQuantity] = None,
+            valueAttachment: Optional[FhirAttachment] = None,
+            valueReference: Optional[FhirReference[Any]] = None,
+            reason: Optional[FhirCoding] = None
+            ) -> 'FhirSupportingInfoBackboneElement':
         """
         SupportingInfoBackboneElement Resource in FHIR
-        https://hl7.org/FHIR/datatypes.html#SupportingInfoBackboneElement
+        https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.supportingInfo
+
+
+        :param sequence: Information instance identifier
+        :param category: Classification of the supplied information. https://hl7.org/FHIR/valueset-claim-informationcategory.html
+        :param code: Type of information. https://hl7.org/FHIR/valueset-claim-exception.html
+        :param timingDate: When it occurred
+        :param timingPeriod: When it occurred
+        :param valueBoolean: Data to be provided
+        :param valueString: Data to be provided
+        :param valueQuantity: Data to be provided
+        :param valueAttachment: Data to be provided
+        :param valueReference: Data to be provided
+        :param reason: Explanation for the information. https://hl7.org/FHIR/valueset-missing-tooth-reason.html
         """
-        return AutoMapperFhirDataTypeSupportingInfoBackboneElement(
+        return FhirSupportingInfoBackboneElement(
             sequence=sequence,
             category=category,
             code=code,
-            timing=timing,
-            value=value,
+            timingDate=timingDate,
+            timingPeriod=timingPeriod,
+            valueBoolean=valueBoolean,
+            valueString=valueString,
+            valueQuantity=valueQuantity,
+            valueAttachment=valueAttachment,
+            valueReference=valueReference,
             reason=reason
         )

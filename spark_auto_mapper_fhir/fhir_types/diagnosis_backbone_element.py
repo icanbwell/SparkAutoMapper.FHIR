@@ -3,19 +3,19 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperNumberInputType
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 
 
-class AutoMapperFhirDataTypeDiagnosisBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirDiagnosisBackboneElement(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,
             sequence: AutoMapperNumberInputType,
-            diagnosisCodeableConcept: AutoMapperFhirDataTypeCodeableConcept,
-            type_: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            onAdmission: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            packageCode: Optional[AutoMapperFhirDataTypeCodeableConcept] = None
-            ) -> 'AutoMapperFhirDataTypeDiagnosisBackboneElement':
+            diagnosisCodeableConcept: FhirCodeableConcept,
+            type_: Optional[FhirCodeableConcept] = None,
+            onAdmission: Optional[FhirCodeableConcept] = None,
+            packageCode: Optional[FhirCodeableConcept] = None
+            ) -> 'FhirDiagnosisBackboneElement':
         """
         DiagnosisBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#DiagnosisBackboneElement
@@ -28,7 +28,7 @@ class AutoMapperFhirDataTypeDiagnosisBackboneElement(AutoMapperDataTypeComplexBa
         :param onAdmission: Present on admission https://hl7.org/FHIR/valueset-ex-diagnosis-on-admission.html
         :param packageCode: Package billing code https://hl7.org/FHIR/valueset-ex-diagnosisrelatedgroup.html
         """
-        return AutoMapperFhirDataTypeDiagnosisBackboneElement(
+        return FhirDiagnosisBackboneElement(
             sequence=sequence,
             diagnosisCodeableConcept=diagnosisCodeableConcept,
             type_=type_,

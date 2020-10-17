@@ -5,7 +5,7 @@ from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 
-class AutoMapperFhirDataTypeAddress(AutoMapperDataTypeComplexBase):
+class FhirAddress(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
@@ -18,7 +18,7 @@ class AutoMapperFhirDataTypeAddress(AutoMapperDataTypeComplexBase):
             state: Optional[AutoMapperTextInputType] = None,
             postalCode: Optional[AutoMapperTextInputType] = None,
             country: Optional[AutoMapperTextInputType] = None
-            ) -> 'AutoMapperFhirDataTypeAddress':
+            ) -> 'FhirAddress':
         """
         Address Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Address
@@ -35,7 +35,7 @@ class AutoMapperFhirDataTypeAddress(AutoMapperDataTypeComplexBase):
         :param postalCode: 	Postal code for area
         :param country: Country (e.g. can be ISO 3166 2 or 3 letter code)
         """
-        return AutoMapperFhirDataTypeAddress(
+        return FhirAddress(
             use=use,
             type=type_,
             text=text,

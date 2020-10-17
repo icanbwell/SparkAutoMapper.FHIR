@@ -1,13 +1,13 @@
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 
-class AutoMapperFhirDataTypeDevice(AutoMapperDataTypeComplexBase):
+class FhirDevice(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            ) -> 'AutoMapperFhirDataTypeDevice':
+            ) -> 'FhirDevice':
         """
         Device Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Device
         """
-        return AutoMapperFhirDataTypeDevice(
+        return FhirDevice(
         )

@@ -7,38 +7,38 @@ from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.human_name import AutoMapperFhirDataTypeHumanName
-from spark_auto_mapper_fhir.fhir_types.identifier import AutoMapperFhirDataTypeIdentifier
-from spark_auto_mapper_fhir.fhir_types.organization import AutoMapperFhirDataTypeOrganization
-from spark_auto_mapper_fhir.fhir_types.practitioner import AutoMapperFhirDataTypePractitioner
-from spark_auto_mapper_fhir.fhir_types.practitioner_role import AutoMapperFhirDataTypePractitionerRole
-from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
+from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
+from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
+from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 
-class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
+class FhirPatient(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
             id_: AutoMapperTextInputType,
-            identifier: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeIdentifier]] = None,
+            identifier: Optional[AutoMapperDataTypeList[FhirIdentifier]] = None,
             birthDate: Optional[AutoMapperDateDataType] = None,
-            name: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeHumanName]] = None,
-            gender: Optional[AutoMapperFhirCodeInputType] = None,
+            name: Optional[AutoMapperDataTypeList[FhirHumanName]] = None,
+            gender: Optional[FhirCode] = None,
             address: Optional[AutoMapperDataTypeList] = None,
-            maritalStatus: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
+            maritalStatus: Optional[FhirCodeableConcept] = None,
             generalPractitioner: Optional[AutoMapperDataTypeList[
-                AutoMapperFhirDataTypeReference[
+                FhirReference[
                     Union[
-                        AutoMapperFhirDataTypeOrganization,
-                        AutoMapperFhirDataTypePractitioner,
-                        AutoMapperFhirDataTypePractitionerRole
+                        FhirOrganization,
+                        FhirPractitioner,
+                        FhirPractitionerRole
                     ]
                 ]
             ]] = None,
-            managingOrganization: Optional[AutoMapperFhirDataTypeReference] = None
-            ) -> 'AutoMapperFhirDataTypePatient':
+            managingOrganization: Optional[FhirReference] = None
+            ) -> 'FhirPatient':
         """
         Patient Resource in FHIR
         https://hl7.org/FHIR/patient.html
@@ -55,7 +55,7 @@ class AutoMapperFhirDataTypePatient(AutoMapperDataTypeComplexBase):
         :param generalPractitioner: Patient's nominated primary care provider
         :param managingOrganization: Organization that is the custodian of the patient record
         """
-        return AutoMapperFhirDataTypePatient(
+        return FhirPatient(
             id_=id_,
             identifier=identifier,
             birthDate=birthDate,

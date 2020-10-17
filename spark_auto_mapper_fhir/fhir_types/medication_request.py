@@ -5,106 +5,106 @@ from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 
 from spark_auto_mapper_fhir.fhir_types.annotation import FhirAnnotation
 from spark_auto_mapper_fhir.fhir_types.care_plan import FhirCarePlan
-from spark_auto_mapper_fhir.fhir_types.care_team import AutoMapperFhirDataTypeCareTeam
+from spark_auto_mapper_fhir.fhir_types.care_team import FhirCareTeam
 from spark_auto_mapper_fhir.fhir_types.claim_response import FhirClaimResponse
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.condition import AutoMapperFhirDataTypeCondition
-from spark_auto_mapper_fhir.fhir_types.coverage import AutoMapperFhirDataTypeCoverage
-from spark_auto_mapper_fhir.fhir_types.date_time import AutoMapperFhirDateTimeType
+from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.condition import FhirCondition
+from spark_auto_mapper_fhir.fhir_types.coverage import FhirCoverage
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.detected_issue import FhirDetectedIssue
-from spark_auto_mapper_fhir.fhir_types.device import AutoMapperFhirDataTypeDevice
+from spark_auto_mapper_fhir.fhir_types.device import FhirDevice
 from spark_auto_mapper_fhir.fhir_types.dispense_request_backbone_element import \
-    AutoMapperFhirDataTypeDispenseRequestBackboneElement
-from spark_auto_mapper_fhir.fhir_types.dosage import AutoMapperFhirDataTypeDosage
-from spark_auto_mapper_fhir.fhir_types.encounter import AutoMapperFhirDataTypeEncounter
-from spark_auto_mapper_fhir.fhir_types.group import AutoMapperFhirDataTypeGroup
-from spark_auto_mapper_fhir.fhir_types.identifier import AutoMapperFhirDataTypeIdentifier
+    FhirDispenseRequestBackboneElement
+from spark_auto_mapper_fhir.fhir_types.dosage import FhirDosage
+from spark_auto_mapper_fhir.fhir_types.encounter import FhirEncounter
+from spark_auto_mapper_fhir.fhir_types.group import FhirGroup
+from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.immunization_recommendation import FhirImmunizationRecommendation
 from spark_auto_mapper_fhir.fhir_types.medication_backbone_element import \
-    AutoMapperFhirDataTypeMedicationBackboneElement
-from spark_auto_mapper_fhir.fhir_types.observation import AutoMapperFhirDataTypeObservation
-from spark_auto_mapper_fhir.fhir_types.organization import AutoMapperFhirDataTypeOrganization
-from spark_auto_mapper_fhir.fhir_types.patient import AutoMapperFhirDataTypePatient
-from spark_auto_mapper_fhir.fhir_types.practitioner import AutoMapperFhirDataTypePractitioner
-from spark_auto_mapper_fhir.fhir_types.practitioner_role import AutoMapperFhirDataTypePractitionerRole
-from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
-from spark_auto_mapper_fhir.fhir_types.related_person import AutoMapperFhirDataTypeRelatedPerson
-from spark_auto_mapper_fhir.fhir_types.reported_backbone_element import AutoMapperFhirDataTypeReportedBackboneElement
+    FhirMedicationBackboneElement
+from spark_auto_mapper_fhir.fhir_types.observation import FhirObservation
+from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
+from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
+from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
+from spark_auto_mapper_fhir.fhir_types.reported_backbone_element import FhirReportedBackboneElement
 from spark_auto_mapper_fhir.fhir_types.service_request import FhirServiceRequest
 from spark_auto_mapper_fhir.fhir_types.substitution_backbone_element import \
-    AutoMapperFhirDataTypeSubstitutionBackboneElement
+    FhirSubstitutionBackboneElement
 
 
-class AutoMapperFhirDataTypeMedicationRequest(AutoMapperDataTypeComplexBase):
+class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            status: AutoMapperFhirCodeInputType,
-            intent: AutoMapperFhirCodeInputType,
-            medication: AutoMapperFhirDataTypeMedicationBackboneElement,
-            statusReason: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            category: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeCodeableConcept]] = None,
-            priority: Optional[AutoMapperFhirCodeInputType] = None,
-            reported: Optional[AutoMapperFhirDataTypeReportedBackboneElement] = None,
-            subject: AutoMapperFhirDataTypeReference[
-                Union[AutoMapperFhirDataTypePatient, AutoMapperFhirDataTypeGroup]
+            status: FhirCode,
+            intent: FhirCode,
+            medication: FhirMedicationBackboneElement,
+            statusReason: Optional[FhirCodeableConcept] = None,
+            category: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
+            priority: Optional[FhirCode] = None,
+            reported: Optional[FhirReportedBackboneElement] = None,
+            subject: FhirReference[
+                Union[FhirPatient, FhirGroup]
             ] = None,
-            identifier: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeIdentifier]] = None,
-            encounter: Optional[AutoMapperFhirDataTypeEncounter] = None,
+            identifier: Optional[AutoMapperDataTypeList[FhirIdentifier]] = None,
+            encounter: Optional[FhirEncounter] = None,
             supportingInformation: Optional[AutoMapperDataTypeList[Any]] = None,
-            authoredOn: Optional[AutoMapperFhirDateTimeType] = None,
-            requester: Optional[AutoMapperFhirDataTypeReference[
+            authoredOn: Optional[FhirDateTime] = None,
+            requester: Optional[FhirReference[
                 Union[
-                    AutoMapperFhirDataTypePractitioner,
-                    AutoMapperFhirDataTypePractitionerRole,
-                    AutoMapperFhirDataTypeOrganization,
-                    AutoMapperFhirDataTypePatient,
-                    AutoMapperFhirDataTypeRelatedPerson,
-                    AutoMapperFhirDataTypeDevice
+                    FhirPractitioner,
+                    FhirPractitionerRole,
+                    FhirOrganization,
+                    FhirPatient,
+                    FhirRelatedPerson,
+                    FhirDevice
                 ]
             ]] = None,
-            performer: Optional[AutoMapperFhirDataTypeReference[
+            performer: Optional[FhirReference[
                 Union[
-                    AutoMapperFhirDataTypePractitioner,
-                    AutoMapperFhirDataTypePractitionerRole,
-                    AutoMapperFhirDataTypeOrganization,
-                    AutoMapperFhirDataTypePatient,
-                    AutoMapperFhirDataTypeRelatedPerson,
-                    AutoMapperFhirDataTypeDevice,
-                    AutoMapperFhirDataTypeCareTeam
+                    FhirPractitioner,
+                    FhirPractitionerRole,
+                    FhirOrganization,
+                    FhirPatient,
+                    FhirRelatedPerson,
+                    FhirDevice,
+                    FhirCareTeam
                 ]
             ]] = None,
-            performerType: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            recorder: Optional[AutoMapperFhirDataTypeReference[
+            performerType: Optional[FhirCodeableConcept] = None,
+            recorder: Optional[FhirReference[
                 Union[
-                    AutoMapperFhirDataTypePractitioner,
-                    AutoMapperFhirDataTypePractitionerRole
+                    FhirPractitioner,
+                    FhirPractitionerRole
                 ]
             ]] = None,
-            reasonCode: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeCodeableConcept]] = None,
+            reasonCode: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
             reasonReference: Optional[AutoMapperDataTypeList[
-                AutoMapperFhirDataTypeReference[
+                FhirReference[
                     Union[
-                        AutoMapperFhirDataTypeCondition,
-                        AutoMapperFhirDataTypeObservation
+                        FhirCondition,
+                        FhirObservation
                     ]
                 ]
             ]] = None,
             basedOn: Optional[AutoMapperDataTypeList[
                 Union[
                     FhirCarePlan,
-                    'AutoMapperFhirDataTypeMedicationRequest',
+                    'FhirMedicationRequest',
                     FhirServiceRequest,
                     FhirImmunizationRecommendation
                 ]
             ]] = None,
-            groupIdentifier: Optional[AutoMapperFhirDataTypeIdentifier] = None,
-            courseOfTherapyType: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
+            groupIdentifier: Optional[FhirIdentifier] = None,
+            courseOfTherapyType: Optional[FhirCodeableConcept] = None,
             insurance: Optional[AutoMapperDataTypeList[
-                AutoMapperFhirDataTypeReference[
+                FhirReference[
                     Union[
-                        AutoMapperFhirDataTypeCoverage,
+                        FhirCoverage,
                         FhirClaimResponse
                     ]
                 ]
@@ -112,16 +112,16 @@ class AutoMapperFhirDataTypeMedicationRequest(AutoMapperDataTypeComplexBase):
             note: Optional[AutoMapperDataTypeList[
                 FhirAnnotation
             ]] = None,
-            dosageInstruction: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeDosage]] = None,
-            dispenseRequest: Optional[AutoMapperFhirDataTypeDispenseRequestBackboneElement] = None,
-            substitution: Optional[AutoMapperFhirDataTypeSubstitutionBackboneElement] = None,
+            dosageInstruction: Optional[AutoMapperDataTypeList[FhirDosage]] = None,
+            dispenseRequest: Optional[FhirDispenseRequestBackboneElement] = None,
+            substitution: Optional[FhirSubstitutionBackboneElement] = None,
             priorPrescription: Optional[
-                AutoMapperFhirDataTypeReference['AutoMapperFhirDataTypeMedicationRequest']
+                FhirReference['FhirMedicationRequest']
             ] = None,
             detectedIssue: Optional[AutoMapperDataTypeList[
-                AutoMapperFhirDataTypeReference[FhirDetectedIssue]
+                FhirReference[FhirDetectedIssue]
             ]] = None
-            ) -> 'AutoMapperFhirDataTypeMedicationRequest':
+            ) -> 'FhirMedicationRequest':
         """
         MedicationRequest Resource in FHIR
         https://hl7.org/FHIR/medicationrequest.html
@@ -162,7 +162,7 @@ class AutoMapperFhirDataTypeMedicationRequest(AutoMapperDataTypeComplexBase):
         :param priorPrescription: An order/prescription that is being replaced
         :param detectedIssue: Clinical Issue with action
         """
-        return AutoMapperFhirDataTypeMedicationRequest(
+        return FhirMedicationRequest(
             status=status,
             intent=intent,
             medication=medication,

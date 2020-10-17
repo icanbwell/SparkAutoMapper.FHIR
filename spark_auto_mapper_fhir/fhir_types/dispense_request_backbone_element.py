@@ -2,27 +2,27 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
-from spark_auto_mapper_fhir.fhir_types.duration import AutoMapperFhirDataTypeDuration
-from spark_auto_mapper_fhir.fhir_types.fill import AutoMapperFhirDataTypeFill
-from spark_auto_mapper_fhir.fhir_types.organization import AutoMapperFhirDataTypeOrganization
-from spark_auto_mapper_fhir.fhir_types.period import AutoMapperFhirDataTypePeriod
-from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
-from spark_auto_mapper_fhir.fhir_types.simple_quantity import AutoMapperFhirDataTypeSimpleQuantity
-from spark_auto_mapper_fhir.fhir_types.unsigned_int import AutoMapperFhirUnsignedIntInputType
+from spark_auto_mapper_fhir.fhir_types.duration import FhirDuration
+from spark_auto_mapper_fhir.fhir_types.fill import FhirFill
+from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
+from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
+from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 
 
-class AutoMapperFhirDataTypeDispenseRequestBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirDispenseRequestBackboneElement(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            initialFill: Optional[AutoMapperFhirDataTypeFill] = None,
-            dispenseInterval: Optional[AutoMapperFhirDataTypeDuration] = None,
-            validityPeriod: Optional[AutoMapperFhirDataTypePeriod] = None,
-            numberOfRepeatsAllowed: Optional[AutoMapperFhirUnsignedIntInputType] = None,
-            quantity: Optional[AutoMapperFhirDataTypeSimpleQuantity] = None,
-            expectedSupplyDuration: Optional[AutoMapperFhirDataTypeDuration] = None,
-            performer: Optional[AutoMapperFhirDataTypeReference[AutoMapperFhirDataTypeOrganization]] = None
-            ) -> 'AutoMapperFhirDataTypeDispenseRequestBackboneElement':
+            initialFill: Optional[FhirFill] = None,
+            dispenseInterval: Optional[FhirDuration] = None,
+            validityPeriod: Optional[FhirPeriod] = None,
+            numberOfRepeatsAllowed: Optional[FhirUnsignedInt] = None,
+            quantity: Optional[FhirSimpleQuantity] = None,
+            expectedSupplyDuration: Optional[FhirDuration] = None,
+            performer: Optional[FhirReference[FhirOrganization]] = None
+            ) -> 'FhirDispenseRequestBackboneElement':
         """
         DispenseRequestBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#DispenseRequestBackboneElement
@@ -36,7 +36,7 @@ class AutoMapperFhirDataTypeDispenseRequestBackboneElement(AutoMapperDataTypeCom
         :param expectedSupplyDuration: Number of days supply per dispense
         :param performer: Intended dispenser
         """
-        return AutoMapperFhirDataTypeDispenseRequestBackboneElement(
+        return FhirDispenseRequestBackboneElement(
             initialFill=initialFill,
             dispenseInterval=dispenseInterval,
             validityPeriod=validityPeriod,

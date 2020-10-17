@@ -4,21 +4,21 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperNumberInputType, AutoMapperDateInputType
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.procedure import AutoMapperFhirDataTypeProcedure
-from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.procedure import FhirProcedure
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 
-class AutoMapperFhirDataTypeProcedureBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirProcedureBackboneElement(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,
             sequence: AutoMapperNumberInputType,
-            procedureCodeableConcept: AutoMapperFhirDataTypeCodeableConcept,
-            type_: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeCodeableConcept]] = None,
+            procedureCodeableConcept: FhirCodeableConcept,
+            type_: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
             date: Optional[AutoMapperDateInputType] = None,
-            procedureReference: Optional[AutoMapperFhirDataTypeReference[AutoMapperFhirDataTypeProcedure]] = None
-            ) -> 'AutoMapperFhirDataTypeProcedureBackboneElement':
+            procedureReference: Optional[FhirReference[FhirProcedure]] = None
+            ) -> 'FhirProcedureBackboneElement':
         """
         ProcedureBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#ProcedureBackboneElement
@@ -30,7 +30,7 @@ class AutoMapperFhirDataTypeProcedureBackboneElement(AutoMapperDataTypeComplexBa
         :param date: When the procedure was performed
         :param procedureReference:
         """
-        return AutoMapperFhirDataTypeProcedureBackboneElement(
+        return FhirProcedureBackboneElement(
             sequence=sequence,
             procedureCodeableConcept=procedureCodeableConcept,
             type_=type_,

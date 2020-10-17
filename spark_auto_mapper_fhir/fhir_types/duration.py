@@ -3,19 +3,19 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperAmountInputType, AutoMapperTextInputType
 
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
-from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
+from spark_auto_mapper_fhir.fhir_types.code import FhirCode
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
-class AutoMapperFhirDataTypeDuration(AutoMapperDataTypeComplexBase):
+class FhirDuration(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             value: Optional[AutoMapperAmountInputType] = None,
-            comparator: Optional[AutoMapperFhirCodeInputType] = None,
+            comparator: Optional[FhirCode] = None,
             unit: Optional[AutoMapperTextInputType] = None,
-            system: Optional[AutoMapperFhirUriInputType] = None,
-            code: Optional[AutoMapperFhirCodeInputType] = None
-            ) -> 'AutoMapperFhirDataTypeDuration':
+            system: Optional[FhirUri] = None,
+            code: Optional[FhirCode] = None
+            ) -> 'FhirDuration':
         """
         Duration Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Duration
@@ -28,7 +28,7 @@ class AutoMapperFhirDataTypeDuration(AutoMapperDataTypeComplexBase):
         :param system: System that defines coded unit form
         :param code: Coded form of the unit
         """
-        return AutoMapperFhirDataTypeDuration(
+        return FhirDuration(
             value=value,
             comparator=comparator,
             unit=unit,

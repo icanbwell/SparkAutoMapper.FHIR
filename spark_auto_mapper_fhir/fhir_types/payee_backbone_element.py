@@ -3,28 +3,28 @@ from typing import Optional, Union
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper_fhir.fhir_types.automapper_fhir_data_type_patient import AutoMapperFhirDataTypePatient
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.organization import AutoMapperFhirDataTypeOrganization
-from spark_auto_mapper_fhir.fhir_types.practitioner import AutoMapperFhirDataTypePractitioner
-from spark_auto_mapper_fhir.fhir_types.practitioner_role import AutoMapperFhirDataTypePractitionerRole
-from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
-from spark_auto_mapper_fhir.fhir_types.related_person import AutoMapperFhirDataTypeRelatedPerson
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
+from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
 
 
-class AutoMapperFhirDataTypePayeeBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirPayeeBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            type_: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            party: Optional[AutoMapperFhirDataTypeReference[
+            type_: Optional[FhirCodeableConcept] = None,
+            party: Optional[FhirReference[
                 Union[
-                    AutoMapperFhirDataTypePractitioner,
-                    AutoMapperFhirDataTypePractitionerRole,
-                    AutoMapperFhirDataTypeOrganization,
+                    FhirPractitioner,
+                    FhirPractitionerRole,
+                    FhirOrganization,
                     AutoMapperFhirDataTypePatient,
-                    AutoMapperFhirDataTypeRelatedPerson
+                    FhirRelatedPerson
                 ]
             ]] = None
-            ) -> 'AutoMapperFhirDataTypePayeeBackboneElement':
+            ) -> 'FhirPayeeBackboneElement':
         """
         PayeeBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#PayeeBackboneElement
@@ -33,7 +33,7 @@ class AutoMapperFhirDataTypePayeeBackboneElement(AutoMapperDataTypeComplexBase):
         :param type_: Category of recipient https://hl7.org/FHIR/valueset-payeetype.html
         :param party: Recipient reference
         """
-        return AutoMapperFhirDataTypePayeeBackboneElement(
+        return FhirPayeeBackboneElement(
             type_=type_,
             party=party
         )

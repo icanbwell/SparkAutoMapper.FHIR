@@ -2,31 +2,37 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperNumberInputType, AutoMapperAmountInputType
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperNumberInputType, AutoMapperAmountInputType, \
+    AutoMapperDateInputType
 
-from spark_auto_mapper_fhir.fhir_types.adjudication import AutoMapperFhirDataTypeAdjudication
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.location_backbone_element import AutoMapperFhirDataTypeLocationBackboneElement
-from spark_auto_mapper_fhir.fhir_types.positive_int import AutoMapperFhirPositiveIntInputType
-from spark_auto_mapper_fhir.fhir_types.service_date_or_period import AutoMapperFhirDataTypeServiceDateOrPeriod
-from spark_auto_mapper_fhir.fhir_types.simple_quantity import AutoMapperFhirDataTypeSimpleQuantity
+from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
+from spark_auto_mapper_fhir.fhir_types.adjudication import FhirAdjudication
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
+from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
+from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
 
 
-class AutoMapperFhirDataTypeRevenueItemBackboneElement(AutoMapperDataTypeComplexBase):
-    # noinspection PyPep8Naming
+class FhirRevenueItemBackboneElement(AutoMapperDataTypeComplexBase):
+    # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,
             sequence: AutoMapperNumberInputType,
-            productOrService: AutoMapperDataTypeList[AutoMapperFhirDataTypeCodeableConcept],
-            informationSequence: Optional[AutoMapperDataTypeList[AutoMapperFhirPositiveIntInputType]] = None,
-            revenue: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeCodeableConcept]] = None,
-            modifier: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeCodeableConcept]] = None,
-            quantity: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeSimpleQuantity]] = None,
+            productOrService: AutoMapperDataTypeList[FhirCodeableConcept],
+            informationSequence: Optional[AutoMapperDataTypeList[FhirPositiveInt]] = None,
+            revenue: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
+            modifier: Optional[AutoMapperDataTypeList[FhirCodeableConcept]] = None,
+            quantity: Optional[AutoMapperDataTypeList[FhirSimpleQuantity]] = None,
             factor: Optional[AutoMapperAmountInputType] = None,
-            adjudication: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeAdjudication]] = None,
-            serviced: Optional[AutoMapperFhirDataTypeServiceDateOrPeriod] = None,
-            location: Optional[AutoMapperFhirDataTypeLocationBackboneElement] = None
-            ) -> 'AutoMapperFhirDataTypeRevenueItemBackboneElement':
+            adjudication: Optional[AutoMapperDataTypeList[FhirAdjudication]] = None,
+            servicedDate: Optional[AutoMapperDateInputType] = None,
+            servicedPeriod: Optional[FhirPeriod] = None,
+            locationCodeableConcept: Optional[FhirCodeableConcept] = None,
+            locationAddress: Optional[FhirAddress] = None,
+            locationReference: Optional[FhirReference[FhirLocation]] = None
+            ) -> 'FhirRevenueItemBackboneElement':
         """
         RevenueItemBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.item
@@ -40,10 +46,13 @@ class AutoMapperFhirDataTypeRevenueItemBackboneElement(AutoMapperDataTypeComplex
         :param quantity: Count of products or services
         :param factor: Price scaling factor
         :param adjudication: Added items adjudication. https://hl7.org/FHIR/explanationofbenefit.html#ExplanationOfBenefit.item.adjudication
-        :param serviced: Date or dates of service or product delivery
-        :param location: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
+        :param servicedDate: Date or dates of service or product delivery
+        :param servicedPeriod: Date or dates of service or product delivery
+        :param locationCodeableConcept: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
+        :param locationAddress: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
+        :param locationReference: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
         """
-        return AutoMapperFhirDataTypeRevenueItemBackboneElement(
+        return FhirRevenueItemBackboneElement(
             sequence=sequence,
             informationSequence=informationSequence,
             productOrService=productOrService,
@@ -52,6 +61,9 @@ class AutoMapperFhirDataTypeRevenueItemBackboneElement(AutoMapperDataTypeComplex
             quantity=quantity,
             factor=factor,
             adjudication=adjudication,
-            serviced=serviced,
-            location=location
+            servicedDate=servicedDate,
+            servicedPeriod=servicedPeriod,
+            locationCodeableConcept=locationCodeableConcept,
+            locationAddress=locationAddress,
+            locationReference=locationReference
         )

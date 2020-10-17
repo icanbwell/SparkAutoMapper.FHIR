@@ -1,13 +1,13 @@
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 
-class AutoMapperFhirDataTypeCareTeam(AutoMapperDataTypeComplexBase):
+class FhirCareTeam(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            ) -> 'AutoMapperFhirDataTypeCareTeam':
+            ) -> 'FhirCareTeam':
         """
         CareTeam Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#CareTeam
         """
-        return AutoMapperFhirDataTypeCareTeam(
+        return FhirCareTeam(
         )

@@ -1,13 +1,13 @@
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 
-class AutoMapperFhirDataTypeCondition(AutoMapperDataTypeComplexBase):
+class FhirCondition(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            ) -> 'AutoMapperFhirDataTypeCondition':
+            ) -> 'FhirCondition':
         """
         Condition Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Condition
         """
-        return AutoMapperFhirDataTypeCondition(
+        return FhirCondition(
         )

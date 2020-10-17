@@ -1,13 +1,13 @@
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 
-class AutoMapperFhirDataTypeProcedure(AutoMapperDataTypeComplexBase):
+class FhirProcedure(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            ) -> 'AutoMapperFhirDataTypeProcedure':
+            ) -> 'FhirProcedure':
         """
         Procedure Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Procedure
         """
-        return AutoMapperFhirDataTypeProcedure(
+        return FhirProcedure(
         )

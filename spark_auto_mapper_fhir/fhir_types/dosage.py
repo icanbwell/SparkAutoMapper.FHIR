@@ -3,19 +3,19 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.positive_int import AutoMapperFhirPositiveIntInputType
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
 
-class AutoMapperFhirDataTypeDosage(AutoMapperDataTypeComplexBase):
+class FhirDosage(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            sequence: Optional[AutoMapperFhirPositiveIntInputType] = None,
+            sequence: Optional[FhirPositiveInt] = None,
             text: Optional[AutoMapperTextInputType] = None,
-            additionalInstruction: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
+            additionalInstruction: Optional[FhirCodeableConcept] = None,
             patientInstruction: Optional[AutoMapperTextInputType] = None,
-            ) -> 'AutoMapperFhirDataTypeDosage':
+            ) -> 'FhirDosage':
         """
         Dosage Resource in FHIR
         https://hl7.org/FHIR/dosage.html#Dosage
@@ -28,7 +28,7 @@ class AutoMapperFhirDataTypeDosage(AutoMapperDataTypeComplexBase):
                                         https://hl7.org/FHIR/valueset-additional-instruction-codes.html
         :param patientInstruction: Patient or consumer oriented instructions
         """
-        return AutoMapperFhirDataTypeDosage(
+        return FhirDosage(
             sequence=sequence,
             text=text,
             additionalInstruction=additionalInstruction,

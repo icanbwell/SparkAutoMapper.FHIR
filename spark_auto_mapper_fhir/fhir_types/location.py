@@ -4,22 +4,22 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
-from spark_auto_mapper_fhir.fhir_types.identifier import AutoMapperFhirDataTypeIdentifier
+from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 
 
-class AutoMapperFhirDataTypeLocation(AutoMapperDataTypeComplexBase):
+class FhirLocation(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            identifier: Optional[AutoMapperDataTypeList[AutoMapperFhirDataTypeIdentifier]] = None,
+            identifier: Optional[AutoMapperDataTypeList[FhirIdentifier]] = None,
             name: Optional[AutoMapperTextInputType] = None
-            ) -> 'AutoMapperFhirDataTypeLocation':
+            ) -> 'FhirLocation':
         """
         Location Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Location
 
 
         """
-        return AutoMapperFhirDataTypeLocation(
+        return FhirLocation(
             identifier=identifier,
             name=name
         )

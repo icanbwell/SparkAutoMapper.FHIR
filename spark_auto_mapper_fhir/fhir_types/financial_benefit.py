@@ -2,22 +2,22 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.money import AutoMapperFhirDataTypeMoney
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.unsigned_int import AutoMapperFhirUnsignedIntInputType
+from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 
 
 class FhirFinancialBenefit(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            type_: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            allowedUnsignedInt: Optional[AutoMapperFhirUnsignedIntInputType] = None,
+            type_: Optional[FhirCodeableConcept] = None,
+            allowedUnsignedInt: Optional[FhirUnsignedInt] = None,
             allowedString: Optional[FhirString] = None,
-            allowedMoney: Optional[AutoMapperFhirDataTypeMoney] = None,
-            usedUnsignedInt: Optional[AutoMapperFhirUnsignedIntInputType] = None,
-            usedMoney: Optional[AutoMapperFhirDataTypeMoney] = None
+            allowedMoney: Optional[FhirMoney] = None,
+            usedUnsignedInt: Optional[FhirUnsignedInt] = None,
+            usedMoney: Optional[FhirMoney] = None
             ) -> 'FhirFinancialBenefit':
         """
         FinancialBenefit Resource in FHIR
