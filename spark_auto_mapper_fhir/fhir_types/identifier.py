@@ -1,14 +1,9 @@
-# flake8: noqa
-# turning off flake8 on this file because of the circular reference
-#   Identifier includes Reference which includes Identifier
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-# noinspection SpellCheckingInspection
 from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod

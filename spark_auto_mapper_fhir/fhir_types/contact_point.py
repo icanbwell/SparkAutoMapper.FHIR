@@ -2,18 +2,19 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.valuesets.contact_point_system import FhirContactPointSystemCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.contact_point_use import FhirContactPointUseCode
 
 
 class FhirContactPoint(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            system: Optional[FhirCode] = None,
+            system: Optional[FhirContactPointSystemCode] = None,
             value: Optional[FhirString] = None,
-            use: Optional[FhirCode] = None,
+            use: Optional[FhirContactPointUseCode] = None,
             rank: Optional[FhirPositiveInt] = None,
             period: Optional[FhirPeriod] = None
             ) -> 'FhirContactPoint':

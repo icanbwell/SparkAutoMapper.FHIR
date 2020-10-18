@@ -9,6 +9,7 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
 from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
 
 
 def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession) -> None:
@@ -39,7 +40,7 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession) -> None:
             ),
             name=FhirList(
                 F.human_name.map(
-                    use="usual",
+                    use=FhirNameUseCode.map("usual"),
                     family=A.column("last_name")
                 )
             ),

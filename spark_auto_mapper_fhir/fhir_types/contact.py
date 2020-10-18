@@ -3,8 +3,8 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.patient_contact_relationship import FhirPatientContactRelationshipCode
 from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
@@ -21,7 +21,7 @@ class FhirContact(AutoMapperDataTypeComplexBase):
             name: Optional[FhirHumanName] = None,
             telecom: Optional[FhirList[FhirContactPoint]] = None,
             address: Optional[FhirAddress] = None,
-            gender: Optional[FhirCode] = None,
+            gender: Optional[FhirAdministrativeGenderCode] = None,
             organization: Optional[FhirReference[FhirOrganization]] = None,
             period: Optional[FhirPeriod] = None
             ) -> 'FhirContact':

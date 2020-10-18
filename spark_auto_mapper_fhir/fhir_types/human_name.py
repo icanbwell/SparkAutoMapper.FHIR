@@ -2,16 +2,16 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
 
 
 class FhirHumanName(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            use: Optional[FhirCode] = None,
+            use: Optional[FhirNameUseCode] = None,
             text: Optional[FhirString] = None,
             family: Optional[FhirString] = None,
             given: Optional[FhirList[FhirString]] = None,

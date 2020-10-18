@@ -2,20 +2,21 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
+from spark_auto_mapper_fhir.fhir_types.valuesets.duration_unit import FhirDurationUnitCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.quantity_comparator import FhirQuantityComparatorCode
 
 
 class FhirDuration(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             value: Optional[FhirDecimal] = None,
-            comparator: Optional[FhirCode] = None,
+            comparator: Optional[FhirQuantityComparatorCode] = None,
             unit: Optional[FhirString] = None,
             system: Optional[FhirUri] = None,
-            code: Optional[FhirCode] = None
+            code: Optional[FhirDurationUnitCode] = None
             ) -> 'FhirDuration':
         """
         Duration Resource in FHIR

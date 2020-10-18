@@ -6,41 +6,42 @@ from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirValueSetBase
 
+
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class Fhir${ClassName}Code(FhirValueSetBase):
+class FhirContactPointSystemCode(FhirValueSetBase):
     """
-    $Documentation
+    https://hl7.org/FHIR/valueset-contact-point-system.html
     """
 
     @classmethod
     def map(cls,
             value: AutoMapperNativeSimpleType
-            ) -> 'Fhir${ClassName}Code':
+            ) -> 'FhirContactPointSystemCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'Fhir${ClassName}Code']) -> None:
-            self.f: Callable[..., 'Fhir${ClassName}Code'] = f
+        def __init__(self, f: Callable[..., 'FhirContactPointSystemCode']) -> None:
+            self.f: Callable[..., 'FhirContactPointSystemCode'] = f
 
-        def __get__(self, obj: Any, 
-                    owner: Type['Fhir${ClassName}Code']
-                    ) -> 'Fhir${ClassName}Code':
+        def __get__(self, obj: Any,
+                    owner: Type['FhirContactPointSystemCode']
+                    ) -> 'FhirContactPointSystemCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'Fhir${ClassName}Code':
+    def NameOfYourFirstValue(cls) -> 'FhirContactPointSystemCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return Fhir${ClassName}Code("A")
+        return FhirContactPointSystemCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
-        return "$SystemUri"
+        return "http://hl7.org/fhir/contact-point-system"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
-        return "$OID"
+        return "2.16.840.1.113883.4.642.3.71"
