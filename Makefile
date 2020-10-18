@@ -29,7 +29,7 @@ checks:venv
     flake8 spark_auto_mapper_fhir && \
     mypy spark_auto_mapper_fhir --strict && \
     flake8 tests && \
-    mypy tests
+    mypy tests --strict
 
 .PHONY:update
 update:

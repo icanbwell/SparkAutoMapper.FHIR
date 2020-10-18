@@ -15,7 +15,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdent
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
 
 
-def test_auto_mapper_fhir_patient(spark_session: SparkSession):
+def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     # Arrange
     spark_session.createDataFrame(
         [
