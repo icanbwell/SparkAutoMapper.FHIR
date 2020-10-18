@@ -30,7 +30,7 @@ class FhirCoding(Generic[_T], AutoMapperDataTypeComplexBase):
         :param display: Representation defined by the system
         :param userSelected: If this coding was chosen directly by the user
         """
-        return FhirCoding(
+        return FhirCoding[_T](
             system=system,
             version=version,
             code=code,

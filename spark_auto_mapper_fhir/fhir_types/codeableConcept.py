@@ -24,7 +24,7 @@ class FhirCodeableConcept(Generic[_T], AutoMapperDataTypeComplexBase):
         :param coding: Code defined by a terminology system
         :param text: Plain text representation of the concept
         """
-        return FhirCodeableConcept(
+        return FhirCodeableConcept[_T](
             coding=coding,
             text=text
         )
