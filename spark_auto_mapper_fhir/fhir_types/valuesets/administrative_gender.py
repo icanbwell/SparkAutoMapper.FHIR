@@ -1,10 +1,11 @@
 from typing import Callable, Type, Any
 
-from spark_auto_mapper.data_types.literal import AutoMapperDataTypeLiteral
 from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
 
+from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirValueSetBase
 
-class FhirAdministrativeGenderCode(AutoMapperDataTypeLiteral):
+
+class FhirAdministrativeGenderCode(FhirValueSetBase):
     @classmethod
     def map(cls,
             value: AutoMapperNativeSimpleType
