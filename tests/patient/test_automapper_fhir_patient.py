@@ -60,6 +60,12 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
             birthDate=A.date(
                 A.column("date_of_birth")
             ),
+            maritalStatus=F.codeableConcept.map(
+                coding=F.coding.map(
+                    code=F.codes.marital_status.Married,
+                    system=F.codes.marital_status.codeset
+                )
+            )
         )
     )
 
@@ -100,7 +106,13 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                 to_date(col("date_of_birth"), 'yyyy-MM-dd'),
                 to_date(col("date_of_birth"), 'yyyyMMdd'),
                 to_date(col("date_of_birth"), 'MM/dd/yy')
-            ).alias("birthDate")
+            ).alias("birthDate"),
+            struct(
+                struct(
+                    lit("http://terminology.hl7.org/CodeSystem/v3-MaritalStatus").alias("system"),
+                    lit("M").alias("code"),
+                ).alias("coding")
+            ).alias("maritalStatus")
         ).alias("patient")
     )
 

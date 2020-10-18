@@ -1,20 +1,21 @@
-from typing import Optional
+from typing import Optional, TypeVar, Generic
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
+_T = TypeVar("_T")
 
-class FhirCoding(AutoMapperDataTypeComplexBase):
+
+class FhirCoding(Generic[_T], AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
             system: Optional[FhirUri] = None,
             version: Optional[FhirString] = None,
-            code: Optional[FhirCode] = None,
+            code: Optional[_T] = None,
             display: Optional[FhirString] = None,
             userSelected: Optional[FhirBoolean] = None
             ) -> 'FhirCoding':

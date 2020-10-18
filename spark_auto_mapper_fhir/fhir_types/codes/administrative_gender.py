@@ -4,11 +4,11 @@ from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimp
 from spark_auto_mapper_fhir.classproperty import classproperty
 
 
-class FhirAdministrativeGender(AutoMapperDataTypeLiteral):
+class FhirAdministrativeGenderCode(AutoMapperDataTypeLiteral):
     @classmethod
     def map(cls,
             value: AutoMapperNativeSimpleType
-            ) -> 'FhirAdministrativeGender':
+            ) -> 'FhirAdministrativeGenderCode':
         assert value in ["male", "female", "other", "unknown"]
         return cls(value=value)
 
