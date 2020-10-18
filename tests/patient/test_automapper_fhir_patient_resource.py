@@ -1,9 +1,9 @@
 from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
-from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 # noinspection PyUnresolvedReferences
 from pyspark.sql.functions import col
+from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
@@ -42,7 +42,8 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession):
                     family=A.column("last_name")
                 )
             ),
-            gender="female"
+            # gender=FhirAdministrativeGender("female")
+            gender=F.codes.administrative_gender.map("female")
         )
     )
 

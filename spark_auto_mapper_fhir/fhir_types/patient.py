@@ -8,8 +8,8 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.administrative_gender import FhirAdministrativeGender
 from spark_auto_mapper_fhir.fhir_types.communication import FhirCommunication
 from spark_auto_mapper_fhir.fhir_types.contact import FhirContact
 from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
@@ -36,7 +36,7 @@ class FhirPatient(AutoMapperDataTypeComplexBase):
             active: Optional[FhirBoolean] = None,
             name: Optional[FhirList[FhirHumanName]] = None,
             telecom: Optional[FhirList[FhirContactPoint]] = None,
-            gender: Optional[FhirCode] = None,
+            gender: Optional[FhirAdministrativeGender] = None,
             birthDate: Optional[FhirDate] = None,
             deceasedBoolean: Optional[FhirBoolean] = None,
             deceasedDateTime: Optional[FhirDateTime] = None,

@@ -56,7 +56,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                     )
                 )
             ),
-            gender="female",
+            gender=F.codes.administrative_gender.female,
             birthDate=A.date(
                 A.column("date_of_birth")
             ),
@@ -112,3 +112,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
 
     assert result_df.where("member_id == 1").selectExpr("patient.name[0].use").collect()[0][0] == "usual"
     assert result_df.where("member_id == 1").selectExpr("patient.name[0].family").collect()[0][0] == "Qureshi"
+
+    # foo = FhirAdministrativeGender.male
+    #
+    # print(foo)

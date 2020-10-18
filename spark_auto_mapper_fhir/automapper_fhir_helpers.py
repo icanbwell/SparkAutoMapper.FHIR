@@ -1,10 +1,8 @@
 from typing import Type
 
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
-
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.code_list import FhirCodeList
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
@@ -23,7 +21,4 @@ class AutoMapperFhirHelpers:
     identifier: Type[FhirIdentifier] = FhirIdentifier
     period: Type[FhirPeriod] = FhirPeriod
     reference: Type[FhirReference] = FhirReference
-
-    @classmethod
-    def code(cls, value: AutoMapperTextInputType) -> FhirCode:
-        return value
+    codes: Type[FhirCodeList] = FhirCodeList
