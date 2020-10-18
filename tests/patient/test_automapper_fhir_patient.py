@@ -10,8 +10,8 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.identifier_type import FhirIdentifierTypeCode
-from spark_auto_mapper_fhir.fhir_types.codes.identifier_use import FhirIdentifierUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
 
 

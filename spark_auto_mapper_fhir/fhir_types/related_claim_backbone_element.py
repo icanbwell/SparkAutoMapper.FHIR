@@ -3,7 +3,7 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.related_claim_relationship import FhirRelatedClaimRelationshipCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.related_claim_relationship import FhirRelatedClaimRelationshipCode
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 

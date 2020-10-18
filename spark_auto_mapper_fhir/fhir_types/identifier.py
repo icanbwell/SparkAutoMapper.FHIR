@@ -9,8 +9,8 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 # noinspection SpellCheckingInspection
-from spark_auto_mapper_fhir.fhir_types.codes.identifier_type import FhirIdentifierTypeCode
-from spark_auto_mapper_fhir.fhir_types.codes.identifier_use import FhirIdentifierUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri

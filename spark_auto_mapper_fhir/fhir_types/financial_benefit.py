@@ -3,7 +3,7 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.benefit_type import FhirBenefitTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_type import FhirBenefitTypeCode
 from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt

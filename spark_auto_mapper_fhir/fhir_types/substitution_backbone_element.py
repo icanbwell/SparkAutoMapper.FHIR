@@ -4,9 +4,9 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.act_substance_admin_substitution_code import \
+from spark_auto_mapper_fhir.fhir_types.valuesets.act_substance_admin_substitution_code import \
     FhirActSubstanceAdminSubstitutionCode
-from spark_auto_mapper_fhir.fhir_types.codes.substance_admin_substitution_reason import \
+from spark_auto_mapper_fhir.fhir_types.valuesets.substance_admin_substitution_reason import \
     FhirSubstanceAdminSubstitutionReason
 
 

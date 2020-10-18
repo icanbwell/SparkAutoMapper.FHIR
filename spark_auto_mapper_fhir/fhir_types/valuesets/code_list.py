@@ -1,7 +1,7 @@
 from typing import Type
 
-from spark_auto_mapper_fhir.fhir_types.codes.administrative_gender import FhirAdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.codes.marital_status import FhirMaritalStatusCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMaritalStatusCode
 
 
 class FhirCodeList:

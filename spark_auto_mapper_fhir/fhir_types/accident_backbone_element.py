@@ -4,7 +4,7 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.accident_incident import FhirAccidentIncidentCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.accident_incident import FhirAccidentIncidentCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference

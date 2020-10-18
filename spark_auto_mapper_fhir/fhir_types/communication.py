@@ -4,7 +4,7 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.common_language import FhirCommonLanguageCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirCommonLanguageCode
 
 
 class FhirCommunication(AutoMapperDataTypeComplexBase):

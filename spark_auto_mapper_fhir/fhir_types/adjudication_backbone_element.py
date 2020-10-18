@@ -3,8 +3,8 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.adjudication_reason import FhirAdjudicationReasonCode
-from spark_auto_mapper_fhir.fhir_types.codes.adjudication_value import FhirAdjudicationValueCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.adjudication_reason import FhirAdjudicationReasonCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.adjudication_value import FhirAdjudicationValueCode
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 

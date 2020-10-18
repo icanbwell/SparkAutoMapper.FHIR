@@ -3,7 +3,7 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.coverage_financial_exception import FhirCoverageFinancialExceptionCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_financial_exception import FhirCoverageFinancialExceptionCode
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 
 

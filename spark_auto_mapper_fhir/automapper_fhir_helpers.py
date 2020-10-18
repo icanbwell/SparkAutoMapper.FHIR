@@ -1,7 +1,7 @@
 from typing import Type
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.codes.code_list import FhirCodeList
+from spark_auto_mapper_fhir.fhir_types.valuesets.code_list import FhirCodeList
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient

@@ -1,7 +1,7 @@
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.codes.adjudication import FhirAdjudicationCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.adjudication import FhirAdjudicationCode
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 
