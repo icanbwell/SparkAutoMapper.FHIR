@@ -44,9 +44,6 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                     )
                 )
             ),
-            birthDate=A.date(
-                A.column("date_of_birth")
-            ),
             name=A.list(
                 F.human_name.map(
                     use="usual",
@@ -59,7 +56,10 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                     )
                 )
             ),
-            gender="female"
+            gender="female",
+            birthDate=A.date(
+                A.column("date_of_birth")
+            ),
         )
     )
 
@@ -85,11 +85,6 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                     col("a.member_id").alias("value"),
                 )
             ).alias("identifier"),
-            coalesce(
-                to_date(col("date_of_birth"), 'yyyy-MM-dd'),
-                to_date(col("date_of_birth"), 'yyyyMMdd'),
-                to_date(col("date_of_birth"), 'MM/dd/yy')
-            ).alias("birthDate"),
             array(
                 struct(
                     lit("usual").alias("use"),
@@ -100,7 +95,12 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
                     ).alias("given")
                 )
             ).alias("name"),
-            lit("female").alias("gender")
+            lit("female").alias("gender"),
+            coalesce(
+                to_date(col("date_of_birth"), 'yyyy-MM-dd'),
+                to_date(col("date_of_birth"), 'yyyyMMdd'),
+                to_date(col("date_of_birth"), 'MM/dd/yy')
+            ).alias("birthDate")
         ).alias("patient")
     )
 
