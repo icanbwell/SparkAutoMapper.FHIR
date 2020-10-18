@@ -4,14 +4,20 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.accident_backbone_element import FhirAccidentBackboneElement
 from spark_auto_mapper_fhir.fhir_types.add_item_backbone_element import FhirAddItemBackboneElement
-from spark_auto_mapper_fhir.fhir_types.adjudication import FhirAdjudication
+from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import FhirAdjudicationBackboneElement
 from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
 from spark_auto_mapper_fhir.fhir_types.benefit_balance import FhirBenefitBalance
 from spark_auto_mapper_fhir.fhir_types.care_team_backbone_element import FhirCareTeamBackboneElement
 from spark_auto_mapper_fhir.fhir_types.claim import FhirClaim
 from spark_auto_mapper_fhir.fhir_types.claim_response import FhirClaimResponse
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.claim_sub_type import FhirClaimSubTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.claim_type import FhirClaimTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.explanation_of_benefit_status import FhirExplanationOfBenefitStatusCode
+from spark_auto_mapper_fhir.fhir_types.codes.form import FhirFormCode
+from spark_auto_mapper_fhir.fhir_types.codes.process_priority import FhirProcessPriorityCode
+from spark_auto_mapper_fhir.fhir_types.codes.remittance_outcome import FhirRemittanceOutcomeCode
+from spark_auto_mapper_fhir.fhir_types.codes.claim_use import FhirClaimUseCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.diagnosis_backbone_element import FhirDiagnosisBackboneElement
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
@@ -44,14 +50,14 @@ class FhirExplanationOfBenefit(AutoMapperDataTypeComplexBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
     @classmethod
     def map(cls,
-            status: FhirCode,
-            type_: FhirCodeableConcept,
-            use: FhirCode,
+            status: FhirExplanationOfBenefitStatusCode,
+            type_: FhirCodeableConcept[FhirClaimTypeCode],
+            use: FhirClaimUseCode,
             patient: FhirReference[FhirPatient],
             created: FhirDate,
             insurer: FhirReference[FhirOrganization],
             insurance: FhirList[FhirInsuranceBackboneElement],
-            outcome: FhirCode,
+            outcome: FhirRemittanceOutcomeCode,
             enterer: Optional[FhirReference[
                 Union[
                     FhirPractitioner,
@@ -68,9 +74,9 @@ class FhirExplanationOfBenefit(AutoMapperDataTypeComplexBase):
                 ]
             ]] = None,
             billablePeriod: Optional[FhirPeriod] = None,
-            subType: Optional[FhirCodeableConcept] = None,
+            subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
             identifier: Optional[FhirList[FhirIdentifier]] = None,
-            priority: Optional[FhirCodeableConcept] = None,
+            priority: Optional[FhirCodeableConcept[FhirProcessPriorityCode]] = None,
             prescription: Optional[FhirReference[
                 Union[
                     FhirMedicationRequest,
@@ -98,10 +104,10 @@ class FhirExplanationOfBenefit(AutoMapperDataTypeComplexBase):
             accident: Optional[FhirAccidentBackboneElement] = None,
             item: Optional[FhirList[FhirRevenueItemBackboneElement]] = None,
             addItem: Optional[FhirList[FhirAddItemBackboneElement]] = None,
-            adjudication: Optional[FhirAdjudication] = None,
+            adjudication: Optional[FhirAdjudicationBackboneElement] = None,
             total: Optional[FhirList[FhirTotalBackBoneElement]] = None,
             payment: Optional[FhirPaymentBackboneElement] = None,
-            formCode: Optional[FhirCodeableConcept] = None,
+            formCode: Optional[FhirCodeableConcept[FhirFormCode]] = None,
             form: Optional[FhirAttachment] = None,
             processNote: Optional[FhirNote] = None,
             benefitPeriod: Optional[FhirPeriod] = None,
@@ -111,6 +117,10 @@ class FhirExplanationOfBenefit(AutoMapperDataTypeComplexBase):
         ExplanationOfBenefit Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#ExplanationOfBenefit
         Explanation of Benefit resource
+        For reporting out to patients or transferring data to patient centered applications,
+        such as patient health Record (PHR) application, the ExplanationOfBenefit should be used instead of the
+        Claim and ClaimResponse resources as those resources may contain provider and payer specific information
+        which is not appropriate for sharing with the patient.
 
         :param status: active | cancelled | draft | entered-in-error.
                         https://hl7.org/FHIR/valueset-explanationofbenefit-status.html

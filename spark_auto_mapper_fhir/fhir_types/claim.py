@@ -4,8 +4,13 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.accident_backbone_element import FhirAccidentBackboneElement
 from spark_auto_mapper_fhir.fhir_types.care_team_backbone_element import FhirCareTeamBackboneElement
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.claim_sub_type import FhirClaimSubTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.claim_type import FhirClaimTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.claim_use import FhirClaimUseCode
+from spark_auto_mapper_fhir.fhir_types.codes.financial_resource_status import FhirFinancialResourceStatusCode
+from spark_auto_mapper_fhir.fhir_types.codes.funds_reservation import FhirFundsReservationCode
+from spark_auto_mapper_fhir.fhir_types.codes.process_priority import FhirProcessPriorityCode
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.device_request import FhirDeviceRequest
 from spark_auto_mapper_fhir.fhir_types.diagnosis_backbone_element import FhirDiagnosisBackboneElement
@@ -36,9 +41,9 @@ class FhirClaim(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             id_: FhirString,
-            status: FhirCode,
-            type_: FhirCodeableConcept,
-            use: FhirCode,
+            status: FhirFinancialResourceStatusCode,
+            type_: FhirCodeableConcept[FhirClaimTypeCode],
+            use: FhirClaimUseCode,
             patient: FhirReference[FhirPatient],
             created: FhirDateTime,
             provider: FhirReference[
@@ -48,10 +53,10 @@ class FhirClaim(AutoMapperDataTypeComplexBase):
                     FhirOrganization
                 ]
             ],
-            priority: FhirCodeableConcept,
+            priority: FhirCodeableConcept[FhirProcessPriorityCode],
             insurance: FhirList[FhirInsuranceBackboneElement],
             identifier: Optional[FhirList[FhirIdentifier]] = None,
-            subType: Optional[FhirCodeableConcept] = None,
+            subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
             billablePeriod: Optional[FhirPeriod] = None,
             enterer: Optional[FhirReference[
                 Union[
@@ -60,7 +65,7 @@ class FhirClaim(AutoMapperDataTypeComplexBase):
                 ]
             ]] = None,
             insurer: Optional[FhirReference[FhirOrganization]] = None,
-            fundsReserve: Optional[FhirCodeableConcept] = None,
+            fundsReserve: Optional[FhirCodeableConcept[FhirFundsReservationCode]] = None,
             related: Optional[FhirList[FhirRelatedClaimBackboneElement]] = None,
             prescription: Optional[FhirReference[
                 Union[
@@ -107,7 +112,7 @@ class FhirClaim(AutoMapperDataTypeComplexBase):
         :param billablePeriod: Relevant time frame for the claim
         :param enterer: Author of the claim
         :param insurer: Target
-        :param fundsReserve: For whom to reserve funds
+        :param fundsReserve: For whom to reserve funds. https://hl7.org/FHIR/valueset-fundsreserve.html
         :param related: Prior or corollary claims
         :param prescription: Prescription authorizing services and products
         :param originalPrescription: Original prescription if superseded by fulfiller

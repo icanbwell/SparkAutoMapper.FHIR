@@ -6,8 +6,17 @@ from spark_auto_mapper_fhir.fhir_types.annotation import FhirAnnotation
 from spark_auto_mapper_fhir.fhir_types.care_plan import FhirCarePlan
 from spark_auto_mapper_fhir.fhir_types.care_team import FhirCareTeam
 from spark_auto_mapper_fhir.fhir_types.claim_response import FhirClaimResponse
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.condition import FhirConditionCode
+from spark_auto_mapper_fhir.fhir_types.codes.medication_request_category import FhirMedicationRequestCategoryCode
+from spark_auto_mapper_fhir.fhir_types.codes.medication_request_course_of_therapy import \
+    FhirMedicationRequestCourseOfTherapyCode
+from spark_auto_mapper_fhir.fhir_types.codes.medication_request_intent import FhirMedicationRequestIntent
+from spark_auto_mapper_fhir.fhir_types.codes.medication_request_status import FhirMedicationRequestStatusCode
+from spark_auto_mapper_fhir.fhir_types.codes.medication_request_status_reason import \
+    FhirMedicationRequestStatusReasonCode
+from spark_auto_mapper_fhir.fhir_types.codes.procedure_performer_role import FhirProcedurePerformerRoleCode
+from spark_auto_mapper_fhir.fhir_types.codes.request_priority import FhirRequestPriorityCode
 from spark_auto_mapper_fhir.fhir_types.condition import FhirCondition
 from spark_auto_mapper_fhir.fhir_types.coverage import FhirCoverage
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
@@ -40,16 +49,16 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            status: FhirCode,
-            intent: FhirCode,
+            status: FhirMedicationRequestStatusCode,
+            intent: FhirMedicationRequestIntent,
             medication: FhirMedicationBackboneElement,
-            statusReason: Optional[FhirCodeableConcept] = None,
-            category: Optional[FhirList[FhirCodeableConcept]] = None,
-            priority: Optional[FhirCode] = None,
-            reported: Optional[FhirReportedBackboneElement] = None,
             subject: FhirReference[
                 Union[FhirPatient, FhirGroup]
-            ] = None,
+            ],
+            statusReason: Optional[FhirCodeableConcept[FhirMedicationRequestStatusReasonCode]] = None,
+            category: Optional[FhirList[FhirCodeableConcept[FhirMedicationRequestCategoryCode]]] = None,
+            priority: Optional[FhirRequestPriorityCode] = None,
+            reported: Optional[FhirReportedBackboneElement] = None,
             identifier: Optional[FhirList[FhirIdentifier]] = None,
             encounter: Optional[FhirEncounter] = None,
             supportingInformation: Optional[FhirList[Any]] = None,
@@ -75,14 +84,14 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
                     FhirCareTeam
                 ]
             ]] = None,
-            performerType: Optional[FhirCodeableConcept] = None,
+            performerType: Optional[FhirCodeableConcept[FhirProcedurePerformerRoleCode]] = None,
             recorder: Optional[FhirReference[
                 Union[
                     FhirPractitioner,
                     FhirPractitionerRole
                 ]
             ]] = None,
-            reasonCode: Optional[FhirList[FhirCodeableConcept]] = None,
+            reasonCode: Optional[FhirList[FhirCodeableConcept[FhirConditionCode]]] = None,
             reasonReference: Optional[FhirList[
                 FhirReference[
                     Union[
@@ -100,7 +109,7 @@ class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
                 ]
             ]] = None,
             groupIdentifier: Optional[FhirIdentifier] = None,
-            courseOfTherapyType: Optional[FhirCodeableConcept] = None,
+            courseOfTherapyType: Optional[FhirCodeableConcept[FhirMedicationRequestCourseOfTherapyCode]] = None,
             insurance: Optional[FhirList[
                 FhirReference[
                     Union[

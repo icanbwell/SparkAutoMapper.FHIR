@@ -3,8 +3,12 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.adjudication import FhirAdjudication
+from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import FhirAdjudicationBackboneElement
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.claim_modifiers import FhirClaimModifiersCode
+from spark_auto_mapper_fhir.fhir_types.codes.ex_revenue_center import FhirExRevenueCenterCode
+from spark_auto_mapper_fhir.fhir_types.codes.service_place import FhirServicePlaceCode
+from spark_auto_mapper_fhir.fhir_types.codes.service_uscls import FhirServiceUSCLSCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -20,16 +24,16 @@ class FhirRevenueItemBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             sequence: FhirPositiveInt,
-            productOrService: FhirList[FhirCodeableConcept],
+            productOrService: FhirList[FhirCodeableConcept[FhirServiceUSCLSCode]],
             informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
-            revenue: Optional[FhirList[FhirCodeableConcept]] = None,
-            modifier: Optional[FhirList[FhirCodeableConcept]] = None,
+            revenue: Optional[FhirList[FhirCodeableConcept[FhirExRevenueCenterCode]]] = None,
+            modifier: Optional[FhirList[FhirCodeableConcept[FhirClaimModifiersCode]]] = None,
             quantity: Optional[FhirList[FhirSimpleQuantity]] = None,
             factor: Optional[FhirDecimal] = None,
-            adjudication: Optional[FhirList[FhirAdjudication]] = None,
+            adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]] = None,
             servicedDate: Optional[FhirDate] = None,
             servicedPeriod: Optional[FhirPeriod] = None,
-            locationCodeableConcept: Optional[FhirCodeableConcept] = None,
+            locationCodeableConcept: Optional[FhirCodeableConcept[FhirServicePlaceCode]] = None,
             locationAddress: Optional[FhirAddress] = None,
             locationReference: Optional[FhirReference[FhirLocation]] = None
             ) -> 'FhirRevenueItemBackboneElement':
@@ -45,12 +49,13 @@ class FhirRevenueItemBackboneElement(AutoMapperDataTypeComplexBase):
         :param modifier: Product or service billing modifiers. https://hl7.org/FHIR/valueset-claim-modifiers.html
         :param quantity: Count of products or services
         :param factor: Price scaling factor
-        :param adjudication: Added items adjudication. https://hl7.org/FHIR/explanationofbenefit.html#ExplanationOfBenefit.item.adjudication
+        :param adjudication: Added items adjudication.
+                            https://hl7.org/FHIR/explanationofbenefit.html#ExplanationOfBenefit.item.adjudication
         :param servicedDate: Date or dates of service or product delivery
         :param servicedPeriod: Date or dates of service or product delivery
         :param locationCodeableConcept: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
-        :param locationAddress: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
-        :param locationReference: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
+        :param locationAddress: Place of service or where product was supplied.
+        :param locationReference: Place of service or where product was supplied.
         """
         return FhirRevenueItemBackboneElement(
             sequence=sequence,

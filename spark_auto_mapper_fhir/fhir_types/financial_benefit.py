@@ -3,6 +3,7 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.benefit_type import FhirBenefitTypeCode
 from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
@@ -12,7 +13,7 @@ class FhirFinancialBenefit(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            type_: Optional[FhirCodeableConcept] = None,
+            type_: Optional[FhirCodeableConcept[FhirBenefitTypeCode]] = None,
             allowedUnsignedInt: Optional[FhirUnsignedInt] = None,
             allowedString: Optional[FhirString] = None,
             allowedMoney: Optional[FhirMoney] = None,

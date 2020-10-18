@@ -9,6 +9,11 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
 from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
 
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.identifier_type import FhirIdentifierTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.identifier_use import FhirIdentifierUseCode
+from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
+
 
 def test_auto_mapper_fhir_patient(spark_session: SparkSession):
     # Arrange
@@ -35,11 +40,11 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
             id_=A.column("a.member_id"),
             identifier=A.list(
                 F.identifier.map(
-                    use="usual",
+                    use=FhirIdentifierUseCode.Usual,
                     value=A.column("a.member_id"),
-                    type_=F.codeableConcept.map(
-                        coding=F.coding.map(
-                            code="MR"
+                    type_=FhirCodeableConcept.map(
+                        coding=FhirCoding.map(
+                            code=FhirIdentifierTypeCode.map("MR")
                         )
                     )
                 )
@@ -60,8 +65,8 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession):
             birthDate=A.date(
                 A.column("date_of_birth")
             ),
-            maritalStatus=F.codeableConcept.map(
-                coding=F.coding.map(
+            maritalStatus=FhirCodeableConcept.map(
+                coding=FhirCoding.map(
                     code=F.codes.marital_status.Married,
                     system=F.codes.marital_status.codeset
                 )

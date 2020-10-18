@@ -1,4 +1,4 @@
-from typing import Callable, Type
+from typing import Callable, Type, Any
 
 from spark_auto_mapper.data_types.literal import AutoMapperDataTypeLiteral
 from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
@@ -25,7 +25,7 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         def __init__(self, f: Callable[..., 'FhirMaritalStatusCode']) -> None:
             self.f: Callable[..., 'FhirMaritalStatusCode'] = f
 
-        def __get__(self, obj, owner: Type['FhirMaritalStatusCode']) -> 'FhirMaritalStatusCode':
+        def __get__(self, obj: Any, owner: Type['FhirMaritalStatusCode']) -> 'FhirMaritalStatusCode':
             return self.f(owner)
 
     @classproperty

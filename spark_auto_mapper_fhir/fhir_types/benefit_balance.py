@@ -4,6 +4,10 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.benefit_category import FhirBenefitCategoryCode
+from spark_auto_mapper_fhir.fhir_types.codes.benefit_term import FhirBenefitTermCode
+from spark_auto_mapper_fhir.fhir_types.codes.benefit_unit_type import FhirBenefitUnitTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.network_type import FhirNetworkTypeCode
 from spark_auto_mapper_fhir.fhir_types.financial_benefit import FhirFinancialBenefit
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -12,13 +16,13 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 class FhirBenefitBalance(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            category: FhirCodeableConcept,
+            category: FhirCodeableConcept[FhirBenefitCategoryCode],
             excluded: Optional[FhirBoolean] = None,
             name: Optional[FhirString] = None,
             description: Optional[FhirString] = None,
-            network: Optional[FhirCodeableConcept] = None,
-            unit: Optional[FhirCodeableConcept] = None,
-            term: Optional[FhirCodeableConcept] = None,
+            network: Optional[FhirCodeableConcept[FhirNetworkTypeCode]] = None,
+            unit: Optional[FhirCodeableConcept[FhirBenefitUnitTypeCode]] = None,
+            term: Optional[FhirCodeableConcept[FhirBenefitTermCode]] = None,
             financial: Optional[FhirList[FhirFinancialBenefit]] = None
             ) -> 'FhirBenefitBalance':
         """

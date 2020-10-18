@@ -3,6 +3,10 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.diagnosis_on_admission import FhirDiagnosisOnAdmissionCode
+from spark_auto_mapper_fhir.fhir_types.codes.diagnosis_related_group import FhirDiagnosisRelatedGroupCode
+from spark_auto_mapper_fhir.fhir_types.codes.diagnosis_type import FhirDiagnosisType
+from spark_auto_mapper_fhir.fhir_types.codes.icd_10 import FhirIcd10Code
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
 
@@ -11,10 +15,10 @@ class FhirDiagnosisBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             sequence: FhirPositiveInt,
-            diagnosisCodeableConcept: FhirCodeableConcept,
-            type_: Optional[FhirCodeableConcept] = None,
-            onAdmission: Optional[FhirCodeableConcept] = None,
-            packageCode: Optional[FhirCodeableConcept] = None
+            diagnosisCodeableConcept: FhirCodeableConcept[FhirIcd10Code],
+            type_: Optional[FhirCodeableConcept[FhirDiagnosisType]] = None,
+            onAdmission: Optional[FhirCodeableConcept[FhirDiagnosisOnAdmissionCode]] = None,
+            packageCode: Optional[FhirCodeableConcept[FhirDiagnosisRelatedGroupCode]] = None
             ) -> 'FhirDiagnosisBackboneElement':
         """
         DiagnosisBackboneElement Resource in FHIR

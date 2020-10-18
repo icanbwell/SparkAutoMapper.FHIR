@@ -4,6 +4,7 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.accident_incident import FhirAccidentIncidentCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
@@ -14,7 +15,7 @@ class FhirAccidentBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             date: Optional[FhirDate] = None,
-            type_: Optional[FhirCodeableConcept] = None,
+            type_: Optional[FhirCodeableConcept[FhirAccidentIncidentCode]] = None,
             locationAddress: Optional[FhirAddress] = None,
             locationReference: Optional[FhirReference[FhirLocation]] = None
             ) -> 'FhirAccidentBackboneElement':

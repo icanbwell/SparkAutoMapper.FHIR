@@ -15,7 +15,7 @@ class FhirCodeableConcept(Generic[_T], AutoMapperDataTypeComplexBase):
     def map(cls,
             coding: Optional[FhirCoding[_T]] = None,
             text: Optional[FhirString] = None
-            ) -> 'FhirCodeableConcept':
+            ) -> 'FhirCodeableConcept[_T]':
         """
         CodeableConcept Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#CodeableConcept

@@ -15,10 +15,9 @@ class FhirReference(Generic[_T], AutoMapperDataTypeComplexBase):
     def map(cls,
             reference: Optional[FhirString] = None,
             type_: Optional[FhirUri] = None,
-            # noqa: F821
-            identifier: Optional[FhirIdentifier] = None,  # type: ignore
+            identifier: Optional[FhirIdentifier] = None,
             display: Optional[FhirString] = None
-            ) -> 'FhirReference':
+            ) -> 'FhirReference[_T]':
         """
         Reference Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Reference

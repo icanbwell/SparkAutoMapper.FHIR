@@ -5,6 +5,9 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.claim_exception import FhirClaimExceptionCode
+from spark_auto_mapper_fhir.fhir_types.codes.claim_information_category import FhirClaimInformationCategoryCode
+from spark_auto_mapper_fhir.fhir_types.codes.missing_tooth_reason import FhirMissingToothReasonCode
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
@@ -19,8 +22,8 @@ class FhirSupportingInfoBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             sequence: FhirPositiveInt,
-            category: FhirCodeableConcept,
-            code: Optional[FhirCodeableConcept] = None,
+            category: FhirCodeableConcept[FhirClaimInformationCategoryCode],
+            code: Optional[FhirCodeableConcept[FhirClaimExceptionCode]] = None,
             timingDate: Optional[FhirDate] = None,
             timingPeriod: Optional[FhirPeriod] = None,
             valueBoolean: Optional[FhirBoolean] = None,
@@ -28,7 +31,7 @@ class FhirSupportingInfoBackboneElement(AutoMapperDataTypeComplexBase):
             valueQuantity: Optional[FhirQuantity] = None,
             valueAttachment: Optional[FhirAttachment] = None,
             valueReference: Optional[FhirReference[Any]] = None,
-            reason: Optional[FhirCoding] = None
+            reason: Optional[FhirCoding[FhirMissingToothReasonCode]] = None
             ) -> 'FhirSupportingInfoBackboneElement':
         """
         SupportingInfoBackboneElement Resource in FHIR

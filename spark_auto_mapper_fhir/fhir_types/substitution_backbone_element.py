@@ -4,6 +4,10 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.act_substance_admin_substitution_code import \
+    FhirActSubstanceAdminSubstitutionCode
+from spark_auto_mapper_fhir.fhir_types.codes.substance_admin_substitution_reason import \
+    FhirSubstanceAdminSubstitutionReason
 
 
 class FhirSubstitutionBackboneElement(AutoMapperDataTypeComplexBase):
@@ -11,8 +15,8 @@ class FhirSubstitutionBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             allowedBoolean: Optional[FhirBoolean] = None,
-            allowedCodeableConcept: Optional[FhirCodeableConcept] = None,
-            reason: Optional[FhirCodeableConcept] = None
+            allowedCodeableConcept: Optional[FhirCodeableConcept[FhirActSubstanceAdminSubstitutionCode]] = None,
+            reason: Optional[FhirCodeableConcept[FhirSubstanceAdminSubstitutionReason]] = None
             ) -> 'FhirSubstitutionBackboneElement':
         """
         SubstitutionBackboneElement Resource in FHIR

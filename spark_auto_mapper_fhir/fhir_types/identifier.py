@@ -9,6 +9,8 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 # noinspection SpellCheckingInspection
+from spark_auto_mapper_fhir.fhir_types.codes.identifier_type import FhirIdentifierTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.identifier_use import FhirIdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -18,8 +20,8 @@ class FhirIdentifier(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            use: Optional[FhirCode] = None,
-            type_: Optional[FhirCodeableConcept] = None,
+            use: Optional[FhirIdentifierUseCode] = None,
+            type_: Optional[FhirCodeableConcept[FhirIdentifierTypeCode]] = None,
             system: Optional[FhirUri] = None,
             value: Optional[FhirString] = None,
             period: Optional[FhirPeriod] = None,

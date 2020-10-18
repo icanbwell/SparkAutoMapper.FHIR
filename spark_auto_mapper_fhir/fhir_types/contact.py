@@ -5,6 +5,7 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.patient_contact_relationship import FhirPatientContactRelationshipCode
 from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -16,7 +17,7 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 class FhirContact(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
-            relationship: Optional[FhirList[FhirCodeableConcept]] = None,
+            relationship: Optional[FhirList[FhirCodeableConcept[FhirPatientContactRelationshipCode]]] = None,
             name: Optional[FhirHumanName] = None,
             telecom: Optional[FhirList[FhirContactPoint]] = None,
             address: Optional[FhirAddress] = None,

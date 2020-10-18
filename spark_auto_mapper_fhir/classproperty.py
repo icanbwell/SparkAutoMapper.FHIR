@@ -1,13 +1,16 @@
+from typing import Callable, Any
+
+
 # noinspection PyPep8Naming,SpellCheckingInspection
 class genericclassproperty(object):
     """
     Attribute to have a method treated as class property
     """
 
-    def __init__(self, f) -> None:
+    def __init__(self, f: Callable[..., Any]) -> None:
         self.f = f
 
-    def __get__(self, obj, owner):
+    def __get__(self, obj: Any, owner: Any) -> Any:
         return self.f(owner)
 
 # _T = TypeVar("_T")

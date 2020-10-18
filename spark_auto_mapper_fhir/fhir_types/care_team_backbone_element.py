@@ -4,6 +4,8 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.claim_care_team_role import FhirClaimCareTeamRoleCode
+from spark_auto_mapper_fhir.fhir_types.codes.provider_qualification import FhirProviderQualificationCode
 from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
@@ -23,13 +25,13 @@ class FhirCareTeamBackboneElement(AutoMapperDataTypeComplexBase):
                 ]
             ],
             responsible: Optional[FhirBoolean] = None,
-            role: Optional[FhirCodeableConcept] = None,
-            qualification: Optional[FhirCodeableConcept] = None
+            role: Optional[FhirCodeableConcept[FhirClaimCareTeamRoleCode]] = None,
+            qualification: Optional[FhirCodeableConcept[FhirProviderQualificationCode]] = None
             ) -> 'FhirCareTeamBackboneElement':
         """
         CareTeamBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.careTeam
-
+        The members of the team who provided the products and services.
 
         :param sequence: Order of care team
         :param provider: Practitioner or organization

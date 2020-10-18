@@ -3,6 +3,8 @@ from typing import Optional
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.ex_procedure_type import FhirExProcedureTypeCode
+from spark_auto_mapper_fhir.fhir_types.codes.icd10_procedure import FhirIcd10ProcedureCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -15,8 +17,8 @@ class FhirProcedureBackboneElement(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             sequence: FhirPositiveInt,
-            procedureCodeableConcept: FhirCodeableConcept,
-            type_: Optional[FhirList[FhirCodeableConcept]] = None,
+            procedureCodeableConcept: FhirCodeableConcept[FhirIcd10ProcedureCode],
+            type_: Optional[FhirList[FhirCodeableConcept[FhirExProcedureTypeCode]]] = None,
             date: Optional[FhirDate] = None,
             procedureReference: Optional[FhirReference[FhirProcedure]] = None
             ) -> 'FhirProcedureBackboneElement':

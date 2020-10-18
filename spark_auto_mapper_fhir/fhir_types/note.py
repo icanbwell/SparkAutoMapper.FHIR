@@ -2,8 +2,9 @@ from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
 
-from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codes.common_language import FhirCommonLanguageCode
+from spark_auto_mapper_fhir.fhir_types.codes.note_type import FhirNoteTypeCode
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
@@ -13,9 +14,9 @@ class FhirNote(AutoMapperDataTypeComplexBase):
     @classmethod
     def map(cls,
             number: Optional[FhirPositiveInt] = None,
-            type_: Optional[FhirCode] = None,
+            type_: Optional[FhirNoteTypeCode] = None,
             text: Optional[FhirString] = None,
-            language: Optional[FhirCodeableConcept] = None
+            language: Optional[FhirCodeableConcept[FhirCommonLanguageCode]] = None
             ) -> 'FhirNote':
         """
         Note Resource in FHIR

@@ -27,7 +27,7 @@ checks:venv
 	. $(VENV_NAME)/bin/activate && \
     pip install --upgrade -r requirements.txt && \
     flake8 spark_auto_mapper_fhir && \
-    mypy spark_auto_mapper_fhir && \
+    mypy spark_auto_mapper_fhir --strict && \
     flake8 tests && \
     mypy tests
 

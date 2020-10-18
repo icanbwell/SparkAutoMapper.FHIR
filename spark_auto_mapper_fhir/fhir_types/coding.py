@@ -18,7 +18,7 @@ class FhirCoding(Generic[_T], AutoMapperDataTypeComplexBase):
             code: Optional[_T] = None,
             display: Optional[FhirString] = None,
             userSelected: Optional[FhirBoolean] = None
-            ) -> 'FhirCoding':
+            ) -> 'FhirCoding[_T]':
         """
         Coding Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Coding
