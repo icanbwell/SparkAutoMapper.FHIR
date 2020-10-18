@@ -22,7 +22,8 @@ class FhirIdentifier(AutoMapperDataTypeComplexBase):
             system: Optional[FhirUri] = None,
             value: Optional[FhirString] = None,
             period: Optional[FhirPeriod] = None,
-            # assigner: Optional[FhirReference[FhirOrganization]] = None  # this is causing circular import
+            assigner: Optional[AutoMapperDataTypeComplexBase] = None
+            # should be FhirReference[FhirOrganization] but this is causing circular import
             ) -> 'FhirIdentifier':
         """
         Identifier Resource in FHIR
@@ -36,7 +37,7 @@ class FhirIdentifier(AutoMapperDataTypeComplexBase):
         :param system: 	The namespace for the identifier value
         :param value: The value that is unique
         :param period: Time period when id is/was valid for use
-        # :param assigner: Organization that issued id (may be just text)
+        :param assigner: Organization that issued id (may be just text)
         """
         return FhirIdentifier(
             use=use,
@@ -44,5 +45,5 @@ class FhirIdentifier(AutoMapperDataTypeComplexBase):
             system=system,
             value=value,
             period=period,
-            # assigner=assigner
+            assigner=assigner
         )

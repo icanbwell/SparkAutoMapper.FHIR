@@ -1,6 +1,3 @@
-# flake8: noqa
-# turning off flake8 on this file because of the circular reference
-#   Identifier includes Reference which includes Identifier
 from typing import Optional, TypeVar, Generic
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
@@ -19,7 +16,7 @@ class FhirReference(Generic[_T], AutoMapperDataTypeComplexBase):
             reference: Optional[FhirString] = None,
             type_: Optional[FhirUri] = None,
             # noqa: F821
-            identifier: Optional['FhirIdentifier'] = None,  # type: ignore
+            identifier: Optional[FhirIdentifier] = None,  # type: ignore
             display: Optional[FhirString] = None
             ) -> 'FhirReference':
         """
