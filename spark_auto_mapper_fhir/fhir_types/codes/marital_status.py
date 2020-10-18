@@ -1,7 +1,9 @@
+from typing import Callable, Type
+
 from spark_auto_mapper.data_types.literal import AutoMapperDataTypeLiteral
 from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
 
-from spark_auto_mapper_fhir.classproperty import classproperty
+from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
@@ -17,6 +19,14 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
             value: AutoMapperNativeSimpleType
             ) -> 'FhirMaritalStatusCode':
         return cls(value=value)
+
+    # noinspection PyPep8Naming,SpellCheckingInspection
+    class classproperty(object):
+        def __init__(self, f: Callable[..., 'FhirMaritalStatusCode']) -> None:
+            self.f: Callable[..., 'FhirMaritalStatusCode'] = f
+
+        def __get__(self, obj, owner: Type['FhirMaritalStatusCode']) -> 'FhirMaritalStatusCode':
+            return self.f(owner)
 
     @classproperty
     def Annulled(cls) -> 'FhirMaritalStatusCode':
@@ -51,7 +61,7 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         return FhirMaritalStatusCode("L")
 
     @classproperty
-    def Married(cls) -> 'FhirMaritalStatusCode':
+    def Married(self) -> 'FhirMaritalStatusCode':
         """
         A current marriage contract is active
         """
@@ -59,7 +69,7 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         return FhirMaritalStatusCode("M")
 
     @classproperty
-    def Polygamous(cls) -> 'FhirMaritalStatusCode':
+    def Polygamous(self) -> 'FhirMaritalStatusCode':
         """
         More than 1 current spouse
         """
@@ -77,7 +87,7 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         return FhirMaritalStatusCode("S")
 
     @classproperty
-    def Domestic_partner(cls) -> 'FhirMaritalStatusCode':
+    def Domestic_partner(self) -> 'FhirMaritalStatusCode':
         """
         Person declares that a domestic partner relationship exists.
         """
@@ -85,7 +95,7 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         return FhirMaritalStatusCode("T")
 
     @classproperty
-    def unmarried(cls) -> 'FhirMaritalStatusCode':
+    def unmarried(self) -> 'FhirMaritalStatusCode':
         """
         Currently not in a marriage contract.
         """
@@ -93,7 +103,7 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         return FhirMaritalStatusCode("U")
 
     @classproperty
-    def Widowed(cls) -> 'FhirMaritalStatusCode':
+    def Widowed(self) -> 'FhirMaritalStatusCode':
         """
         The spouse has died
         """
@@ -101,7 +111,7 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         return FhirMaritalStatusCode("W")
 
     @classproperty
-    def unknown(cls) -> 'FhirMaritalStatusCode':
+    def unknown(self) -> 'FhirMaritalStatusCode':
         """
         Description:A proper value is applicable, but not known. Usage Notes: This means the actual value is not known.
         If the only thing that is unknown is how to properly express the value in the necessary
@@ -110,6 +120,6 @@ class FhirMaritalStatusCode(AutoMapperDataTypeLiteral):
         # noinspection PyCallingNonCallable
         return FhirMaritalStatusCode("UNK")
 
-    @classproperty
+    @genericclassproperty
     def codeset(cls) -> FhirUri:
         return "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
