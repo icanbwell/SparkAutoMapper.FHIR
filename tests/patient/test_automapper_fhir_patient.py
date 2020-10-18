@@ -10,6 +10,7 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
@@ -38,7 +39,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     ).columns(
         patient=F.patient.map(
             id_=A.column("a.member_id"),
-            identifier=A.list(
+            identifier=FhirList(
                 F.identifier.map(
                     use=FhirIdentifierUseCode.Usual,
                     value=A.column("a.member_id"),
@@ -49,11 +50,11 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                     )
                 )
             ),
-            name=A.list(
+            name=FhirList(
                 F.human_name.map(
                     use="usual",
                     family=A.column("last_name"),
-                    given=A.list(
+                    given=FhirList(
                         [
                             "first_name",
                             "middle_name"
