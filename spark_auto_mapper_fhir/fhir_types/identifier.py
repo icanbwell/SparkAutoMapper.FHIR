@@ -4,6 +4,7 @@
 from typing import Optional
 
 from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
 from spark_auto_mapper_fhir.fhir_types.code import FhirCode
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
@@ -47,3 +48,10 @@ class FhirIdentifier(AutoMapperDataTypeComplexBase):
             period=period,
             assigner=assigner
         )
+
+    use = A.column("use")
+    type_ = A.column("type")
+    system = A.column("system")
+    # value = A.column("value")
+    period = A.column("period")
+    assigner = A.column("assigner")
