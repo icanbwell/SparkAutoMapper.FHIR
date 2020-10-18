@@ -8,3 +8,8 @@ repos:
     hooks:
     -   id: mypy
         args: [--ignore-missing-imports]
+        additional_dependencies:
+            - numpy>=1.19.2
+            - pyspark>=2.4.0
+            - logger
+            - sparkautomapper>=0.1.27
