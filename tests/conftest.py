@@ -62,7 +62,7 @@ def clean_close(session: SparkSession) -> None:
     session.stop()
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session")  # type: ignore
 def spark_session(request: Any) -> SparkSession:
     # make sure env variables are set correctly
     if 'SPARK_HOME' not in os.environ:
@@ -91,7 +91,7 @@ def spark_session(request: Any) -> SparkSession:
     return session
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="function")  # type: ignore
 def spark_session_per_function(request: Any) -> SparkSession:
     # make sure env variables are set correctly
     if 'SPARK_HOME' not in os.environ:
