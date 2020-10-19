@@ -24,4 +24,4 @@ jobs:
 
       # setup and install everything and run tests
       - name: init
-        run: make init
+        run: make continuous_integration
