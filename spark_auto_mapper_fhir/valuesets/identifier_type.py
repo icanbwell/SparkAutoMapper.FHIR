@@ -27,12 +27,28 @@ class IdentifierTypeCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'IdentifierTypeCode':
+    def SocialSecurityNumber(cls) -> 'IdentifierTypeCode':
         """
-        Comment
+        Social Security number
         """
         # noinspection PyCallingNonCallable
-        return IdentifierTypeCode("A")
+        return IdentifierTypeCode("SS")
+
+    @classproperty
+    def MedicalRecordNumber(cls) -> 'IdentifierTypeCode':
+        """
+        An identifier that is unique to a patient within a set of medical records, not necessarily unique within an application.
+        """
+        # noinspection PyCallingNonCallable
+        return IdentifierTypeCode("MR")
+
+    @classproperty
+    def EmployeeId(cls) -> 'IdentifierTypeCode':
+        """
+        A number that uniquely identifies an employee to an employer.
+        """
+        # noinspection PyCallingNonCallable
+        return IdentifierTypeCode("EI")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
