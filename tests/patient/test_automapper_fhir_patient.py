@@ -7,14 +7,17 @@ from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
-
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.resources.human_name import HumanName
+from spark_auto_mapper_fhir.resources.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
-from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
-from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
+from spark_auto_mapper_fhir.resources.patient import Patient
+from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.valuesets.identifier_type import IdentifierTypeCode
+from spark_auto_mapper_fhir.valuesets.identifier_use import IdentifierUseCode
+from spark_auto_mapper_fhir.resources.coding import Coding
+from spark_auto_mapper_fhir.valuesets.marital_status import MaritalStatusCode
+from spark_auto_mapper_fhir.valuesets.name_use import NameUseCode
 
 
 def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
@@ -35,32 +38,30 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     mapper = AutoMapper(
         view="members", source_view="patients", keys=["member_id"]
     ).columns(
-        patient=F.patient.map(
+        patient=Patient(
             id_=A.column("a.member_id"),
             identifier=FhirList(
-                F.identifier.map(
-                    use=FhirIdentifierUseCode.Usual,
+                Identifier(
+                    use=IdentifierUseCode.Usual,
                     value=A.column("a.member_id"),
-                    type_=FhirCodeableConcept.map(
-                        coding=FhirCoding.map(
-                            code=FhirIdentifierTypeCode.map("MR")
-                        )
+                    type_=CodeableConcept(
+                        coding=Coding(code=IdentifierTypeCode("MR"))
                     )
                 )
             ),
             name=FhirList(
-                F.human_name.map(
-                    use=FhirNameUseCode.map("usual"),
+                HumanName(
+                    use=NameUseCode("usual"),
                     family=A.column("last_name"),
                     given=FhirList(["first_name", "middle_name"])
                 )
             ),
-            gender=F.codes.administrative_gender.female,
+            gender=AdministrativeGenderCode.female,
             birthDate=A.date(A.column("date_of_birth")),
-            maritalStatus=FhirCodeableConcept.map(
-                coding=FhirCoding.map(
-                    code=F.codes.marital_status.Married,
-                    system=F.codes.marital_status.codeset
+            maritalStatus=CodeableConcept(
+                coding=Coding(
+                    code=MaritalStatusCode.Married,
+                    system=MaritalStatusCode.codeset
                 )
             )
         )

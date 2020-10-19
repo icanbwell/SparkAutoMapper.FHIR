@@ -7,9 +7,11 @@ from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
+from spark_auto_mapper_fhir.resources.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
+from spark_auto_mapper_fhir.resources.patient import Patient
+from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.valuesets.name_use import NameUseCode
 
 
 def test_auto_mapper_fhir_patient_resource(
@@ -18,9 +20,10 @@ def test_auto_mapper_fhir_patient_resource(
     # Arrange
     spark_session.createDataFrame(
         [
-            (1, 'Qureshi', 'Imran', '1970-01-01'),
-            (2, 'Vidal', 'Michael', '1970-02-02'),
-        ], ['member_id', 'last_name', 'first_name', 'date_of_birth']
+            (1, 'Qureshi', 'Imran', '1970-01-01', "female"),
+            (2, 'Vidal', 'Michael', '1970-02-02', "male"),
+        ],
+        ['member_id', 'last_name', 'first_name', 'date_of_birth', "my_gender"]
     ).createOrReplaceTempView("patients")
 
     source_df: DataFrame = spark_session.table("patients")
@@ -32,17 +35,15 @@ def test_auto_mapper_fhir_patient_resource(
     mapper = AutoMapper(
         view="members", source_view="patients", keys=["member_id"]
     ).complex(
-        F.patient.map(
+        Patient(
             id_=A.column("a.member_id"),
             birthDate=A.date(A.column("date_of_birth")),
             name=FhirList(
-                F.human_name.map(
-                    use=FhirNameUseCode.map("usual"),
-                    family=A.column("last_name")
+                HumanName(
+                    use=NameUseCode("usual"), family=A.column("last_name")
                 )
             ),
-            # gender=FhirAdministrativeGender("female")
-            gender=F.codes.administrative_gender.map("female")
+            gender=AdministrativeGenderCode(A.column("my_gender"))
         )
     )
 
@@ -73,7 +74,8 @@ def test_auto_mapper_fhir_patient_resource(
             )
         ).alias("name")
     )
-    assert str(sql_expressions["gender"]) == str(lit("female").alias("gender"))
+    assert str(sql_expressions["gender"]
+               ) == str(col("my_gender").alias("gender"))
 
     result_df.printSchema()
     result_df.show()
