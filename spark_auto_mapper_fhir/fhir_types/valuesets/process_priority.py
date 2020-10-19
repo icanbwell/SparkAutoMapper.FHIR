@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirProcessPriorityCode(FhirValueSetBase):
+class ProcessPriorityCode(FhirValueSetBase):
     """
     https://terminology.hl7.org/1.0.0/CodeSystem-processpriority.html
     """
@@ -18,23 +18,21 @@ class FhirProcessPriorityCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'FhirProcessPriorityCode']
-        ) -> None:
-            self.f: Callable[..., 'FhirProcessPriorityCode'] = f
+        def __init__(self, f: Callable[..., 'ProcessPriorityCode']) -> None:
+            self.f: Callable[..., 'ProcessPriorityCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirProcessPriorityCode']
-        ) -> 'FhirProcessPriorityCode':
+            self, obj: Any, owner: Type['ProcessPriorityCode']
+        ) -> 'ProcessPriorityCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirProcessPriorityCode':
+    def NameOfYourFirstValue(cls) -> 'ProcessPriorityCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirProcessPriorityCode("A")
+        return ProcessPriorityCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

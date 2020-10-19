@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirRemittanceOutcomeCode(FhirValueSetBase):
+class RemittanceOutcomeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-remittance-outcome.html
     """
@@ -18,23 +18,21 @@ class FhirRemittanceOutcomeCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'FhirRemittanceOutcomeCode']
-        ) -> None:
-            self.f: Callable[..., 'FhirRemittanceOutcomeCode'] = f
+        def __init__(self, f: Callable[..., 'RemittanceOutcomeCode']) -> None:
+            self.f: Callable[..., 'RemittanceOutcomeCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirRemittanceOutcomeCode']
-        ) -> 'FhirRemittanceOutcomeCode':
+            self, obj: Any, owner: Type['RemittanceOutcomeCode']
+        ) -> 'RemittanceOutcomeCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirRemittanceOutcomeCode':
+    def NameOfYourFirstValue(cls) -> 'RemittanceOutcomeCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirRemittanceOutcomeCode("A")
+        return RemittanceOutcomeCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

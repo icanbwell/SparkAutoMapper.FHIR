@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirCommonLanguageCode(FhirValueSetBase):
+class CommonLanguageCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-languages.html
     """
@@ -18,21 +18,21 @@ class FhirCommonLanguageCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirCommonLanguageCode']) -> None:
-            self.f: Callable[..., 'FhirCommonLanguageCode'] = f
+        def __init__(self, f: Callable[..., 'CommonLanguageCode']) -> None:
+            self.f: Callable[..., 'CommonLanguageCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirCommonLanguageCode']
-        ) -> 'FhirCommonLanguageCode':
+            self, obj: Any, owner: Type['CommonLanguageCode']
+        ) -> 'CommonLanguageCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirCommonLanguageCode':
+    def NameOfYourFirstValue(cls) -> 'CommonLanguageCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirCommonLanguageCode("A")
+        return CommonLanguageCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

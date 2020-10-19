@@ -3,7 +3,7 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.additional_dosage_instruction import FhirAdditionalDosageInstructionCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.additional_dosage_instruction import AdditionalDosageInstructionCode
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
@@ -15,7 +15,7 @@ class FhirDosage(FhirResourceBase):
         sequence: Optional[FhirPositiveInt] = None,
         text: Optional[FhirString] = None,
         additionalInstruction: Optional[
-            FhirCodeableConcept[FhirAdditionalDosageInstructionCode]] = None,
+            FhirCodeableConcept[AdditionalDosageInstructionCode]] = None,
         patientInstruction: Optional[FhirString] = None,
     ):
         """

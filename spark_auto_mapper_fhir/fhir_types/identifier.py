@@ -4,8 +4,8 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import IdentifierTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import IdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -15,8 +15,8 @@ class FhirIdentifier(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        use: Optional[FhirIdentifierUseCode] = None,
-        type_: Optional[FhirCodeableConcept[FhirIdentifierTypeCode]] = None,
+        use: Optional[IdentifierUseCode] = None,
+        type_: Optional[FhirCodeableConcept[IdentifierTypeCode]] = None,
         system: Optional[FhirUri] = None,
         value: Optional[FhirString] = None,
         period: Optional[FhirPeriod] = None,

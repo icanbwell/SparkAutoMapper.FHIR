@@ -3,10 +3,10 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.diagnosis_on_admission import FhirDiagnosisOnAdmissionCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.diagnosis_related_group import FhirDiagnosisRelatedGroupCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.diagnosis_type import FhirDiagnosisType
-from spark_auto_mapper_fhir.fhir_types.valuesets.icd_10 import FhirIcd10Code
+from spark_auto_mapper_fhir.fhir_types.valuesets.diagnosis_on_admission import DiagnosisOnAdmissionCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.diagnosis_related_group import DiagnosisRelatedGroupCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.diagnosis_type import DiagnosisTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.icd_10 import Icd10Code
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
 
@@ -15,12 +15,12 @@ class FhirDiagnosisBackboneElement(FhirResourceBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        diagnosisCodeableConcept: FhirCodeableConcept[FhirIcd10Code],
-        type_: Optional[FhirCodeableConcept[FhirDiagnosisType]] = None,
-        onAdmission: Optional[FhirCodeableConcept[FhirDiagnosisOnAdmissionCode]
+        diagnosisCodeableConcept: FhirCodeableConcept[Icd10Code],
+        type_: Optional[FhirCodeableConcept[DiagnosisTypeCode]] = None,
+        onAdmission: Optional[FhirCodeableConcept[DiagnosisOnAdmissionCode]
                               ] = None,
-        packageCode: Optional[
-            FhirCodeableConcept[FhirDiagnosisRelatedGroupCode]] = None
+        packageCode: Optional[FhirCodeableConcept[DiagnosisRelatedGroupCode]
+                              ] = None
     ):
         """
         DiagnosisBackboneElement Resource in FHIR

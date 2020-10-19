@@ -7,16 +7,16 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
-from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirCommonLanguageCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.mime_type import FhirMimeTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import CommonLanguageCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.mime_type import MimeTypeCode
 
 
 class FhirAttachment(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        contentType: Optional[FhirMimeTypeCode] = None,
-        language: Optional[FhirCommonLanguageCode] = None,
+        contentType: Optional[MimeTypeCode] = None,
+        language: Optional[CommonLanguageCode] = None,
         data: Optional[FhirBase64Binary] = None,
         url: Optional[FhirUri] = None,
         size: Optional[FhirUnsignedInt] = None,

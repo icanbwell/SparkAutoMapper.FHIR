@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirProcedurePerformerRoleCode(FhirValueSetBase):
+class ProcedurePerformerRoleCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-performer-role.html
     """
@@ -19,22 +19,22 @@ class FhirProcedurePerformerRoleCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'FhirProcedurePerformerRoleCode']
+            self, f: Callable[..., 'ProcedurePerformerRoleCode']
         ) -> None:
-            self.f: Callable[..., 'FhirProcedurePerformerRoleCode'] = f
+            self.f: Callable[..., 'ProcedurePerformerRoleCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirProcedurePerformerRoleCode']
-        ) -> 'FhirProcedurePerformerRoleCode':
+            self, obj: Any, owner: Type['ProcedurePerformerRoleCode']
+        ) -> 'ProcedurePerformerRoleCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirProcedurePerformerRoleCode':
+    def NameOfYourFirstValue(cls) -> 'ProcedurePerformerRoleCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirProcedurePerformerRoleCode("A")
+        return ProcedurePerformerRoleCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

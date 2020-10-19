@@ -11,13 +11,13 @@ from spark_auto_mapper_fhir.fhir_types.care_team_backbone_element import FhirCar
 from spark_auto_mapper_fhir.fhir_types.claim import FhirClaim
 from spark_auto_mapper_fhir.fhir_types.claim_response import FhirClaimResponse
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_sub_type import FhirClaimSubTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_type import FhirClaimTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.explanation_of_benefit_status import FhirExplanationOfBenefitStatusCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.form import FhirFormCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import FhirProcessPriorityCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.remittance_outcome import FhirRemittanceOutcomeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_use import FhirClaimUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_sub_type import ClaimSubTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_type import ClaimTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.explanation_of_benefit_status import ExplanationOfBenefitStatusCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.form import FormCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import ProcessPriorityCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.remittance_outcome import RemittanceOutcomeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_use import ClaimUseCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.diagnosis_backbone_element import FhirDiagnosisBackboneElement
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
@@ -50,14 +50,14 @@ class FhirExplanationOfBenefit(FhirResourceBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
     def __init__(
         self,
-        status: FhirExplanationOfBenefitStatusCode,
-        type_: FhirCodeableConcept[FhirClaimTypeCode],
-        use: FhirClaimUseCode,
+        status: ExplanationOfBenefitStatusCode,
+        type_: FhirCodeableConcept[ClaimTypeCode],
+        use: ClaimUseCode,
         patient: FhirReference[FhirPatient],
         created: FhirDate,
         insurer: FhirReference[FhirOrganization],
         insurance: FhirList[FhirInsuranceBackboneElement],
-        outcome: FhirRemittanceOutcomeCode,
+        outcome: RemittanceOutcomeCode,
         enterer: Optional[FhirReference[Union[FhirPractitioner,
                                               FhirPractitionerRole]]] = None,
         provider: Optional[FhirList[FhirReference[Union[FhirOrganization,
@@ -65,10 +65,9 @@ class FhirExplanationOfBenefit(FhirResourceBase):
                                                         FhirPractitionerRole]]]
                            ] = None,
         billablePeriod: Optional[FhirPeriod] = None,
-        subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
+        subType: Optional[FhirCodeableConcept[ClaimSubTypeCode]] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
-        priority: Optional[FhirCodeableConcept[FhirProcessPriorityCode]
-                           ] = None,
+        priority: Optional[FhirCodeableConcept[ProcessPriorityCode]] = None,
         prescription: Optional[FhirReference[Union[FhirMedicationRequest,
                                                    FhirVisionPrescription]]
                                ] = None,
@@ -94,7 +93,7 @@ class FhirExplanationOfBenefit(FhirResourceBase):
         adjudication: Optional[FhirAdjudicationBackboneElement] = None,
         total: Optional[FhirList[FhirTotalBackBoneElement]] = None,
         payment: Optional[FhirPaymentBackboneElement] = None,
-        formCode: Optional[FhirCodeableConcept[FhirFormCode]] = None,
+        formCode: Optional[FhirCodeableConcept[FormCode]] = None,
         form: Optional[FhirAttachment] = None,
         processNote: Optional[FhirNote] = None,
         benefitPeriod: Optional[FhirPeriod] = None,

@@ -5,13 +5,13 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import NameUseCode
 
 
 class FhirHumanName(FhirResourceBase):
     def __init__(
         self,
-        use: Optional[FhirNameUseCode] = None,
+        use: Optional[NameUseCode] = None,
         text: Optional[FhirString] = None,
         family: Optional[FhirString] = None,
         given: Optional[FhirList[FhirString]] = None,

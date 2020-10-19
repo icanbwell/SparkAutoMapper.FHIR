@@ -24,8 +24,8 @@ from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
 from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMaritalStatusCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import MaritalStatusCode
 
 
 class FhirPatient(FhirResourceBase):
@@ -37,13 +37,12 @@ class FhirPatient(FhirResourceBase):
         active: Optional[FhirBoolean] = None,
         name: Optional[FhirList[FhirHumanName]] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
-        gender: Optional[FhirAdministrativeGenderCode] = None,
+        gender: Optional[AdministrativeGenderCode] = None,
         birthDate: Optional[FhirDate] = None,
         deceasedBoolean: Optional[FhirBoolean] = None,
         deceasedDateTime: Optional[FhirDateTime] = None,
         address: Optional[FhirList[FhirAddress]] = None,
-        maritalStatus: Optional[FhirCodeableConcept[FhirMaritalStatusCode]
-                                ] = None,
+        maritalStatus: Optional[FhirCodeableConcept[MaritalStatusCode]] = None,
         multipleBirthBoolean: Optional[FhirBoolean] = None,
         multipleBirthInteger: Optional[FhirPositiveInt] = None,
         photo: Optional[FhirList[FhirAttachment]] = None,

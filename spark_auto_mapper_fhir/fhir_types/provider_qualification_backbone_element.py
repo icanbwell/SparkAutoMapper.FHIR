@@ -8,13 +8,13 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.valuesets.provider_qualification import FhirProviderQualificationCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.provider_qualification import ProviderQualificationCode
 
 
 class FhirProviderQualificationBackboneElement(FhirResourceBase):
     def __init__(
         self,
-        code: FhirCodeableConcept[FhirProviderQualificationCode],
+        code: FhirCodeableConcept[ProviderQualificationCode],
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         period: Optional[FhirPeriod] = None,
         issuer: Optional[FhirReference[FhirOrganization]] = None

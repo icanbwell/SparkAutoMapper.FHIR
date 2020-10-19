@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirMaritalStatusCode(FhirValueSetBase):
+class MaritalStatusCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-marital-status.html
     """
@@ -18,105 +18,105 @@ class FhirMaritalStatusCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirMaritalStatusCode']) -> None:
-            self.f: Callable[..., 'FhirMaritalStatusCode'] = f
+        def __init__(self, f: Callable[..., 'MaritalStatusCode']) -> None:
+            self.f: Callable[..., 'MaritalStatusCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirMaritalStatusCode']
-        ) -> 'FhirMaritalStatusCode':
+            self, obj: Any, owner: Type['MaritalStatusCode']
+        ) -> 'MaritalStatusCode':
             return self.f(owner)
 
     @classproperty
-    def Annulled(cls) -> 'FhirMaritalStatusCode':
+    def Annulled(cls) -> 'MaritalStatusCode':
         """
         Marriage contract has been declared null and to not have existed
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("A")
+        return MaritalStatusCode("A")
 
     @classproperty
-    def Divorced(cls) -> 'FhirMaritalStatusCode':
+    def Divorced(cls) -> 'MaritalStatusCode':
         """
         Marriage contract has been declared dissolved and inactive
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("D")
+        return MaritalStatusCode("D")
 
     @classproperty
-    def Interlocutory(cls) -> 'FhirMaritalStatusCode':
+    def Interlocutory(cls) -> 'MaritalStatusCode':
         """
         Subject to an Interlocutory Decree.
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("I")
+        return MaritalStatusCode("I")
 
     @classproperty
-    def Legally_Separated(cls) -> 'FhirMaritalStatusCode':
+    def Legally_Separated(cls) -> 'MaritalStatusCode':
         """
         Legally Separated
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("L")
+        return MaritalStatusCode("L")
 
     @classproperty
-    def Married(self) -> 'FhirMaritalStatusCode':
+    def Married(self) -> 'MaritalStatusCode':
         """
         A current marriage contract is active
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("M")
+        return MaritalStatusCode("M")
 
     @classproperty
-    def Polygamous(self) -> 'FhirMaritalStatusCode':
+    def Polygamous(self) -> 'MaritalStatusCode':
         """
         More than 1 current spouse
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("P")
+        return MaritalStatusCode("P")
 
     @classproperty
-    def Never_Married(cls) -> 'FhirMaritalStatusCode':
+    def Never_Married(cls) -> 'MaritalStatusCode':
         """
         No marriage contract has ever been entered
         :return:
         :rtype:
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("S")
+        return MaritalStatusCode("S")
 
     @classproperty
-    def Domestic_partner(self) -> 'FhirMaritalStatusCode':
+    def Domestic_partner(self) -> 'MaritalStatusCode':
         """
         Person declares that a domestic partner relationship exists.
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("T")
+        return MaritalStatusCode("T")
 
     @classproperty
-    def unmarried(self) -> 'FhirMaritalStatusCode':
+    def unmarried(self) -> 'MaritalStatusCode':
         """
         Currently not in a marriage contract.
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("U")
+        return MaritalStatusCode("U")
 
     @classproperty
-    def Widowed(self) -> 'FhirMaritalStatusCode':
+    def Widowed(self) -> 'MaritalStatusCode':
         """
         The spouse has died
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("W")
+        return MaritalStatusCode("W")
 
     @classproperty
-    def unknown(self) -> 'FhirMaritalStatusCode':
+    def unknown(self) -> 'MaritalStatusCode':
         """
         Description:A proper value is applicable, but not known. Usage Notes: This means the actual value is not known.
         If the only thing that is unknown is how to properly express the value in the necessary
         constraints (value set, datatype, etc.), then the OTH or UNC flavor should be used
         """
         # noinspection PyCallingNonCallable
-        return FhirMaritalStatusCode("UNK")
+        return MaritalStatusCode("UNK")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

@@ -3,14 +3,14 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_financial_exception import FhirCoverageFinancialExceptionCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_financial_exception import CoverageFinancialExceptionCode
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 
 
 class FhirCoverageFinancialExceptionBackboneElement(FhirResourceBase):
     def __init__(
         self,
-        type_: FhirCodeableConcept[FhirCoverageFinancialExceptionCode],
+        type_: FhirCodeableConcept[CoverageFinancialExceptionCode],
         period: Optional[FhirPeriod] = None
     ):
         """

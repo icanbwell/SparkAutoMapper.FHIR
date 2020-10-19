@@ -3,14 +3,14 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_class import FhirCoverageClassCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_class import CoverageClassCode
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 class FhirCoverageClassificationBackboneElement(FhirResourceBase):
     def __init__(
         self,
-        type_: FhirCodeableConcept[FhirCoverageClassCode],
+        type_: FhirCodeableConcept[CoverageClassCode],
         value: FhirString,
         name: Optional[FhirString] = None
     ):

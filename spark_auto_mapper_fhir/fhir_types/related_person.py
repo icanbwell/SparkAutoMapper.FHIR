@@ -14,9 +14,9 @@ from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.relatedperson_relationshiptype import \
-    FhirRelatedPersonRelationshipTypeCode
+    RelatedPersonRelationshipTypeCode
 
 
 class FhirRelatedPerson(FhirResourceBase):
@@ -30,11 +30,10 @@ class FhirRelatedPerson(FhirResourceBase):
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         active: Optional[FhirBoolean] = None,
         relationship: Optional[FhirList[
-            FhirCodeableConcept[FhirRelatedPersonRelationshipTypeCode]]
-                               ] = None,
+            FhirCodeableConcept[RelatedPersonRelationshipTypeCode]]] = None,
         name: Optional[FhirList[FhirHumanName]] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
-        gender: Optional[FhirAdministrativeGenderCode] = None,
+        gender: Optional[AdministrativeGenderCode] = None,
         birthDate: Optional[FhirDate] = None,
         address: Optional[FhirList[FhirAddress]] = None,
         photo: Optional[FhirList[FhirAttachment]] = None,

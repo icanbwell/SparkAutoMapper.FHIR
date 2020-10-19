@@ -4,10 +4,10 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_category import FhirBenefitCategoryCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_term import FhirBenefitTermCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_unit_type import FhirBenefitUnitTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.network_type import FhirNetworkTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_category import BenefitCategoryCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_term import BenefitTermCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_unit_type import BenefitUnitTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.network_type import NetworkTypeCode
 from spark_auto_mapper_fhir.fhir_types.financial_benefit import FhirFinancialBenefit
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -16,13 +16,13 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 class FhirBenefitBalance(FhirResourceBase):
     def __init__(
         self,
-        category: FhirCodeableConcept[FhirBenefitCategoryCode],
+        category: FhirCodeableConcept[BenefitCategoryCode],
         excluded: Optional[FhirBoolean] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
-        network: Optional[FhirCodeableConcept[FhirNetworkTypeCode]] = None,
-        unit: Optional[FhirCodeableConcept[FhirBenefitUnitTypeCode]] = None,
-        term: Optional[FhirCodeableConcept[FhirBenefitTermCode]] = None,
+        network: Optional[FhirCodeableConcept[NetworkTypeCode]] = None,
+        unit: Optional[FhirCodeableConcept[BenefitUnitTypeCode]] = None,
+        term: Optional[FhirCodeableConcept[BenefitTermCode]] = None,
         financial: Optional[FhirList[FhirFinancialBenefit]] = None
     ):
         """

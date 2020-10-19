@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirSubstanceAdminSubstitutionReason(FhirValueSetBase):
+class SubstanceAdminSubstitutionReason(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v3/SubstanceAdminSubstitutionReason/vs.html
     """
@@ -19,22 +19,22 @@ class FhirSubstanceAdminSubstitutionReason(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'FhirSubstanceAdminSubstitutionReason']
+            self, f: Callable[..., 'SubstanceAdminSubstitutionReason']
         ) -> None:
-            self.f: Callable[..., 'FhirSubstanceAdminSubstitutionReason'] = f
+            self.f: Callable[..., 'SubstanceAdminSubstitutionReason'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirSubstanceAdminSubstitutionReason']
-        ) -> 'FhirSubstanceAdminSubstitutionReason':
+            self, obj: Any, owner: Type['SubstanceAdminSubstitutionReason']
+        ) -> 'SubstanceAdminSubstitutionReason':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirSubstanceAdminSubstitutionReason':
+    def NameOfYourFirstValue(cls) -> 'SubstanceAdminSubstitutionReason':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirSubstanceAdminSubstitutionReason("A")
+        return SubstanceAdminSubstitutionReason("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

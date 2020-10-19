@@ -4,8 +4,8 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.patient_contact_relationship import FhirPatientContactRelationshipCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.patient_contact_relationship import PatientContactRelationshipCode
 from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -18,11 +18,11 @@ class FhirContact(FhirResourceBase):
     def __init__(
         self,
         relationship: Optional[FhirList[
-            FhirCodeableConcept[FhirPatientContactRelationshipCode]]] = None,
+            FhirCodeableConcept[PatientContactRelationshipCode]]] = None,
         name: Optional[FhirHumanName] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
         address: Optional[FhirAddress] = None,
-        gender: Optional[FhirAdministrativeGenderCode] = None,
+        gender: Optional[AdministrativeGenderCode] = None,
         organization: Optional[FhirReference[FhirOrganization]] = None,
         period: Optional[FhirPeriod] = None
     ):

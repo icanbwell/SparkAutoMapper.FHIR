@@ -4,9 +4,9 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_type_and_self_pay import FhirCoverageTypeAndSelfPayCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.financial_resource_status import FhirFinancialResourceStatusCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.subscriber_relationship import FhirSubscriberRelationshipCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_type_and_self_pay import CoverageTypeAndSelfPayCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.financial_resource_status import FinancialResourceStatusCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.subscriber_relationship import SubscriberRelationshipCode
 from spark_auto_mapper_fhir.fhir_types.contract import FhirContract
 from spark_auto_mapper_fhir.fhir_types.cost_to_beneficiary_backbone_element import FhirCostToBeneficiaryBackboneElement
 from spark_auto_mapper_fhir.fhir_types.coverage_classification_backbone_element import \
@@ -26,12 +26,12 @@ class FhirCoverage(FhirResourceBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
     def __init__(
         self,
-        status: FhirFinancialResourceStatusCode,
+        status: FinancialResourceStatusCode,
         payor: FhirList[FhirReference[Union[FhirOrganization, FhirPatient,
                                             FhirRelatedPerson]]],
         beneficiary: FhirReference[FhirPatient],
         identifier: Optional[FhirList[FhirIdentifier]] = None,
-        type_: Optional[FhirCodeableConcept[FhirCoverageTypeAndSelfPayCode]
+        type_: Optional[FhirCodeableConcept[CoverageTypeAndSelfPayCode]
                         ] = None,
         policyHolder: Optional[FhirReference[Union[FhirPatient,
                                                    FhirRelatedPerson,
@@ -40,8 +40,8 @@ class FhirCoverage(FhirResourceBase):
                                                  FhirRelatedPerson]]] = None,
         subscriberId: Optional[FhirString] = None,
         dependent: Optional[FhirString] = None,
-        relationship: Optional[
-            FhirCodeableConcept[FhirSubscriberRelationshipCode]] = None,
+        relationship: Optional[FhirCodeableConcept[SubscriberRelationshipCode]
+                               ] = None,
         period: Optional[FhirPeriod] = None,
         class_: Optional[FhirList[FhirCoverageClassificationBackboneElement]
                          ] = None,

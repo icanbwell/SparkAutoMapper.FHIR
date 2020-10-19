@@ -3,14 +3,14 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
-from spark_auto_mapper_fhir.fhir_types.valuesets.currency import FhirCurrencyCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.currency import CurrencyCode
 
 
 class FhirMoney(FhirResourceBase):
     def __init__(
         self,
         value: Optional[FhirDecimal] = None,
-        currency: Optional[FhirCurrencyCode] = None
+        currency: Optional[CurrencyCode] = None
     ):
         """
         Money Resource in FHIR

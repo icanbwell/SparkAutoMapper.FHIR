@@ -5,9 +5,9 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.act_substance_admin_substitution_code import \
-    FhirActSubstanceAdminSubstitutionCode
+    ActSubstanceAdminSubstitutionCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.substance_admin_substitution_reason import \
-    FhirSubstanceAdminSubstitutionReason
+    SubstanceAdminSubstitutionReason
 
 
 class FhirSubstitutionBackboneElement(FhirResourceBase):
@@ -16,9 +16,9 @@ class FhirSubstitutionBackboneElement(FhirResourceBase):
         self,
         allowedBoolean: Optional[FhirBoolean] = None,
         allowedCodeableConcept: Optional[
-            FhirCodeableConcept[FhirActSubstanceAdminSubstitutionCode]] = None,
-        reason: Optional[
-            FhirCodeableConcept[FhirSubstanceAdminSubstitutionReason]] = None
+            FhirCodeableConcept[ActSubstanceAdminSubstitutionCode]] = None,
+        reason: Optional[FhirCodeableConcept[SubstanceAdminSubstitutionReason]
+                         ] = None
     ):
         """
         SubstitutionBackboneElement Resource in FHIR

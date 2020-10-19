@@ -6,14 +6,13 @@ from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.valuesets.contactentity_type import FhirContactEntityTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.contactentity_type import ContactEntityTypeCode
 
 
 class FhirOrganizationContactBackboneElement(FhirResourceBase):
     def __init__(
         self,
-        purpose: Optional[FhirCodeableConcept[FhirContactEntityTypeCode]
-                          ] = None,
+        purpose: Optional[FhirCodeableConcept[ContactEntityTypeCode]] = None,
         name: Optional[FhirHumanName] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
         address: Optional[FhirAddress] = None

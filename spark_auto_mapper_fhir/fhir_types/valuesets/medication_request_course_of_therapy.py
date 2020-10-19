@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirMedicationRequestCourseOfTherapyCode(FhirValueSetBase):
+class MedicationRequestCourseOfTherapyCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-medicationrequest-course-of-therapy.html
     """
@@ -19,26 +19,22 @@ class FhirMedicationRequestCourseOfTherapyCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'FhirMedicationRequestCourseOfTherapyCode']
+            self, f: Callable[..., 'MedicationRequestCourseOfTherapyCode']
         ) -> None:
-            self.f: Callable[...,
-                             'FhirMedicationRequestCourseOfTherapyCode'] = f
+            self.f: Callable[..., 'MedicationRequestCourseOfTherapyCode'] = f
 
         def __get__(
-            self, obj: Any,
-            owner: Type['FhirMedicationRequestCourseOfTherapyCode']
-        ) -> 'FhirMedicationRequestCourseOfTherapyCode':
+            self, obj: Any, owner: Type['MedicationRequestCourseOfTherapyCode']
+        ) -> 'MedicationRequestCourseOfTherapyCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(
-        cls
-    ) -> 'FhirMedicationRequestCourseOfTherapyCode':
+    def NameOfYourFirstValue(cls) -> 'MedicationRequestCourseOfTherapyCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirMedicationRequestCourseOfTherapyCode("A")
+        return MedicationRequestCourseOfTherapyCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

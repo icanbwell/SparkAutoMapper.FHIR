@@ -4,8 +4,8 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_care_team_role import FhirClaimCareTeamRoleCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.provider_qualification import FhirProviderQualificationCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_care_team_role import ClaimCareTeamRoleCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.provider_qualification import ProviderQualificationCode
 from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
@@ -20,9 +20,9 @@ class FhirCareTeamBackboneElement(FhirResourceBase):
         provider: FhirReference[Union[FhirPractitioner, FhirPractitionerRole,
                                       FhirOrganization]],
         responsible: Optional[FhirBoolean] = None,
-        role: Optional[FhirCodeableConcept[FhirClaimCareTeamRoleCode]] = None,
-        qualification: Optional[
-            FhirCodeableConcept[FhirProviderQualificationCode]] = None
+        role: Optional[FhirCodeableConcept[ClaimCareTeamRoleCode]] = None,
+        qualification: Optional[FhirCodeableConcept[ProviderQualificationCode]
+                                ] = None
     ):
         """
         CareTeamBackboneElement Resource in FHIR

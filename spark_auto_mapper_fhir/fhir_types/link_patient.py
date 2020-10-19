@@ -4,7 +4,7 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
-from spark_auto_mapper_fhir.fhir_types.valuesets.link_type import FhirLinkTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.link_type import LinkTypeCode
 
 
 class FhirLinkPatient(FhirResourceBase):
@@ -12,7 +12,7 @@ class FhirLinkPatient(FhirResourceBase):
         self,
         other: FhirReference[Union[Any, FhirRelatedPerson]],
         # "Any" should be "FhirPatient" but causes a circular import
-        type_: FhirLinkTypeCode
+        type_: LinkTypeCode
     ):
         """
         LinkPatient Resource in FHIR

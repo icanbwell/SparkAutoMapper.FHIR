@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.provider_qualification_backbone_element import \
     FhirProviderQualificationBackboneElement
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirCommonLanguageCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import CommonLanguageCode
 
 
 class FhirPractitioner(FhirResourceBase):
@@ -26,13 +26,13 @@ class FhirPractitioner(FhirResourceBase):
         name: Optional[FhirList[FhirHumanName]] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
         address: Optional[FhirList[FhirAddress]] = None,
-        gender: Optional[FhirAdministrativeGenderCode] = None,
+        gender: Optional[AdministrativeGenderCode] = None,
         birthDate: Optional[FhirDate] = None,
         photo: Optional[FhirList[FhirAttachment]] = None,
         qualification: Optional[
             FhirList[FhirProviderQualificationBackboneElement]] = None,
         communication: Optional[FhirList[
-            FhirCodeableConcept[FhirCommonLanguageCode]]] = None
+            FhirCodeableConcept[CommonLanguageCode]]] = None
     ):
         """
         Practitioner Resource in FHIR

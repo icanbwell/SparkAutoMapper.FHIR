@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.fhir_types.organization_contact_backbone_element imp
     FhirOrganizationContactBackboneElement
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.valuesets.organization_type import FhirOrganizationTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.organization_type import OrganizationTypeCode
 
 
 class FhirOrganization(FhirResourceBase):
@@ -23,7 +23,7 @@ class FhirOrganization(FhirResourceBase):
         id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         active: Optional[FhirBoolean] = None,
-        type_: Optional[FhirList[FhirCodeableConcept[FhirOrganizationTypeCode]]
+        type_: Optional[FhirList[FhirCodeableConcept[OrganizationTypeCode]]
                         ] = None,
         alias: Optional[FhirList[FhirString]] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,

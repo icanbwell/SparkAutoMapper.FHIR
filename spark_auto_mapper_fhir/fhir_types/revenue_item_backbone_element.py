@@ -5,10 +5,10 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import FhirAdjudicationBackboneElement
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_modifiers import FhirClaimModifiersCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.ex_revenue_center import FhirExRevenueCenterCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.service_place import FhirServicePlaceCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.service_uscls import FhirServiceUSCLSCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_modifiers import ClaimModifiersCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.ex_revenue_center import ExRevenueCenterCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.service_place import ServicePlaceCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.service_uscls import ServiceUSCLSCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -24,20 +24,20 @@ class FhirRevenueItemBackboneElement(FhirResourceBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        productOrService: FhirList[FhirCodeableConcept[FhirServiceUSCLSCode]],
+        productOrService: FhirList[FhirCodeableConcept[ServiceUSCLSCode]],
         informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        revenue: Optional[FhirList[FhirCodeableConcept[FhirExRevenueCenterCode]
-                                   ]] = None,
-        modifier: Optional[FhirList[FhirCodeableConcept[FhirClaimModifiersCode]
-                                    ]] = None,
+        revenue: Optional[FhirList[FhirCodeableConcept[ExRevenueCenterCode]]
+                          ] = None,
+        modifier: Optional[FhirList[FhirCodeableConcept[ClaimModifiersCode]]
+                           ] = None,
         quantity: Optional[FhirList[FhirSimpleQuantity]] = None,
         factor: Optional[FhirDecimal] = None,
         adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]
                                ] = None,
         servicedDate: Optional[FhirDate] = None,
         servicedPeriod: Optional[FhirPeriod] = None,
-        locationCodeableConcept: Optional[
-            FhirCodeableConcept[FhirServicePlaceCode]] = None,
+        locationCodeableConcept: Optional[FhirCodeableConcept[ServicePlaceCode]
+                                          ] = None,
         locationAddress: Optional[FhirAddress] = None,
         locationReference: Optional[FhirReference[FhirLocation]] = None
     ):

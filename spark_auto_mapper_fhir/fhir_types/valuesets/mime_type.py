@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirMimeTypeCode(FhirValueSetBase):
+class MimeTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-mimetypes.html
     """
@@ -18,21 +18,21 @@ class FhirMimeTypeCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirMimeTypeCode']) -> None:
-            self.f: Callable[..., 'FhirMimeTypeCode'] = f
+        def __init__(self, f: Callable[..., 'MimeTypeCode']) -> None:
+            self.f: Callable[..., 'MimeTypeCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirMimeTypeCode']
-        ) -> 'FhirMimeTypeCode':
+            self, obj: Any, owner: Type['MimeTypeCode']
+        ) -> 'MimeTypeCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirMimeTypeCode':
+    def NameOfYourFirstValue(cls) -> 'MimeTypeCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirMimeTypeCode("A")
+        return MimeTypeCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

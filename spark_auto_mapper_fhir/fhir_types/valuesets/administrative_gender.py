@@ -5,7 +5,7 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirValueSetBase
 
 
-class FhirAdministrativeGenderCode(FhirValueSetBase):
+class AdministrativeGenderCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         assert not isinstance(value, str) or value in [
             "male", "female", "other", "unknown"
@@ -15,47 +15,47 @@ class FhirAdministrativeGenderCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'FhirAdministrativeGenderCode']
+            self, f: Callable[..., 'AdministrativeGenderCode']
         ) -> None:
-            self.f: Callable[..., 'FhirAdministrativeGenderCode'] = f
+            self.f: Callable[..., 'AdministrativeGenderCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirAdministrativeGenderCode']
-        ) -> 'FhirAdministrativeGenderCode':
+            self, obj: Any, owner: Type['AdministrativeGenderCode']
+        ) -> 'AdministrativeGenderCode':
             return self.f(owner)
 
     # noinspection PyMethodParameters
     @classproperty
-    def male(cls) -> 'FhirAdministrativeGenderCode':
+    def male(cls) -> 'AdministrativeGenderCode':
         """
         Male
         """
         # noinspection PyCallingNonCallable
-        return FhirAdministrativeGenderCode("male")
+        return AdministrativeGenderCode("male")
 
     # noinspection PyMethodParameters
     @classproperty
-    def female(cls) -> 'FhirAdministrativeGenderCode':
+    def female(cls) -> 'AdministrativeGenderCode':
         """
         Female
         """
         # noinspection PyCallingNonCallable
-        return FhirAdministrativeGenderCode("female")
+        return AdministrativeGenderCode("female")
 
     # noinspection PyMethodParameters
     @classproperty
-    def other(cls) -> 'FhirAdministrativeGenderCode':
+    def other(cls) -> 'AdministrativeGenderCode':
         """
         Other
         """
         # noinspection PyCallingNonCallable
-        return FhirAdministrativeGenderCode("other")
+        return AdministrativeGenderCode("other")
 
     # noinspection PyMethodParameters
     @classproperty
-    def unknown(cls) -> 'FhirAdministrativeGenderCode':
+    def unknown(cls) -> 'AdministrativeGenderCode':
         """
         Unknown
         """
         # noinspection PyCallingNonCallable
-        return FhirAdministrativeGenderCode("unknown")
+        return AdministrativeGenderCode("unknown")

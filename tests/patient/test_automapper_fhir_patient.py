@@ -12,12 +12,12 @@ from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import IdentifierTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import IdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
-from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMaritalStatusCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import MaritalStatusCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import NameUseCode
 
 
 def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
@@ -42,26 +42,26 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             id_=A.column("a.member_id"),
             identifier=FhirList(
                 FhirIdentifier(
-                    use=FhirIdentifierUseCode.Usual,
+                    use=IdentifierUseCode.Usual,
                     value=A.column("a.member_id"),
                     type_=FhirCodeableConcept(
-                        coding=FhirCoding(code=FhirIdentifierTypeCode("MR"))
+                        coding=FhirCoding(code=IdentifierTypeCode("MR"))
                     )
                 )
             ),
             name=FhirList(
                 FhirHumanName(
-                    use=FhirNameUseCode("usual"),
+                    use=NameUseCode("usual"),
                     family=A.column("last_name"),
                     given=FhirList(["first_name", "middle_name"])
                 )
             ),
-            gender=FhirAdministrativeGenderCode.female,
+            gender=AdministrativeGenderCode.female,
             birthDate=A.date(A.column("date_of_birth")),
             maritalStatus=FhirCodeableConcept(
                 coding=FhirCoding(
-                    code=FhirMaritalStatusCode.Married,
-                    system=FhirMaritalStatusCode.codeset
+                    code=MaritalStatusCode.Married,
+                    system=MaritalStatusCode.codeset
                 )
             )
         )

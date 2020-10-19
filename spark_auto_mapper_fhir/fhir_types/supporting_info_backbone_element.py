@@ -5,9 +5,9 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_exception import FhirClaimExceptionCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_information_category import FhirClaimInformationCategoryCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.missing_tooth_reason import FhirMissingToothReasonCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_exception import ClaimExceptionCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_information_category import ClaimInformationCategoryCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.missing_tooth_reason import MissingToothReasonCode
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
@@ -22,8 +22,8 @@ class FhirSupportingInfoBackboneElement(FhirResourceBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        category: FhirCodeableConcept[FhirClaimInformationCategoryCode],
-        code: Optional[FhirCodeableConcept[FhirClaimExceptionCode]] = None,
+        category: FhirCodeableConcept[ClaimInformationCategoryCode],
+        code: Optional[FhirCodeableConcept[ClaimExceptionCode]] = None,
         timingDate: Optional[FhirDate] = None,
         timingPeriod: Optional[FhirPeriod] = None,
         valueBoolean: Optional[FhirBoolean] = None,
@@ -31,7 +31,7 @@ class FhirSupportingInfoBackboneElement(FhirResourceBase):
         valueQuantity: Optional[FhirQuantity] = None,
         valueAttachment: Optional[FhirAttachment] = None,
         valueReference: Optional[FhirReference[Any]] = None,
-        reason: Optional[FhirCoding[FhirMissingToothReasonCode]] = None
+        reason: Optional[FhirCoding[MissingToothReasonCode]] = None
     ):
         """
         SupportingInfoBackboneElement Resource in FHIR

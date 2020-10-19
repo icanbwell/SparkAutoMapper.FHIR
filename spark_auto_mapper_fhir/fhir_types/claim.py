@@ -27,12 +27,12 @@ from spark_auto_mapper_fhir.fhir_types.related_claim_backbone_element import Fhi
 from spark_auto_mapper_fhir.fhir_types.revenue_item_backbone_element import FhirRevenueItemBackboneElement
 from spark_auto_mapper_fhir.fhir_types.service_request import FhirServiceRequest
 from spark_auto_mapper_fhir.fhir_types.supporting_info_backbone_element import FhirSupportingInfoBackboneElement
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_sub_type import FhirClaimSubTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_type import FhirClaimTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_use import FhirClaimUseCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.financial_resource_status import FhirFinancialResourceStatusCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.funds_reservation import FhirFundsReservationCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import FhirProcessPriorityCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_sub_type import ClaimSubTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_type import ClaimTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_use import ClaimUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.financial_resource_status import FinancialResourceStatusCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.funds_reservation import FundsReservationCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import ProcessPriorityCode
 from spark_auto_mapper_fhir.fhir_types.vision_prescription import FhirVisionPrescription
 
 
@@ -40,23 +40,23 @@ class FhirClaim(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
-        status: FhirFinancialResourceStatusCode,
-        type_: FhirCodeableConcept[FhirClaimTypeCode],
-        use: FhirClaimUseCode,
+        status: FinancialResourceStatusCode,
+        type_: FhirCodeableConcept[ClaimTypeCode],
+        use: ClaimUseCode,
         patient: FhirReference[FhirPatient],
         created: FhirDateTime,
         provider: FhirReference[Union[FhirPractitioner, FhirPractitionerRole,
                                       FhirOrganization]],
-        priority: FhirCodeableConcept[FhirProcessPriorityCode],
+        priority: FhirCodeableConcept[ProcessPriorityCode],
         insurance: FhirList[FhirInsuranceBackboneElement],
         id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
-        subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
+        subType: Optional[FhirCodeableConcept[ClaimSubTypeCode]] = None,
         billablePeriod: Optional[FhirPeriod] = None,
         enterer: Optional[FhirReference[Union[FhirPractitioner,
                                               FhirPractitionerRole]]] = None,
         insurer: Optional[FhirReference[FhirOrganization]] = None,
-        fundsReserve: Optional[FhirCodeableConcept[FhirFundsReservationCode]
+        fundsReserve: Optional[FhirCodeableConcept[FundsReservationCode]
                                ] = None,
         related: Optional[FhirList[FhirRelatedClaimBackboneElement]] = None,
         prescription: Optional[FhirReference[Union[FhirDeviceRequest,

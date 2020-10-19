@@ -7,16 +7,16 @@ from spark_auto_mapper_fhir.fhir_types.care_plan import FhirCarePlan
 from spark_auto_mapper_fhir.fhir_types.care_team import FhirCareTeam
 from spark_auto_mapper_fhir.fhir_types.claim_response import FhirClaimResponse
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.condition import FhirConditionCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_category import FhirMedicationRequestCategoryCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.condition import ConditionCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_category import MedicationRequestCategoryCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_course_of_therapy import \
-    FhirMedicationRequestCourseOfTherapyCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_intent import FhirMedicationRequestIntent
-from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_status import FhirMedicationRequestStatusCode
+    MedicationRequestCourseOfTherapyCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_intent import MedicationRequestIntent
+from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_status import MedicationRequestStatusCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.medication_request_status_reason import \
-    FhirMedicationRequestStatusReasonCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.procedure_performer_role import FhirProcedurePerformerRoleCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.request_priority import FhirRequestPriorityCode
+    MedicationRequestStatusReasonCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.procedure_performer_role import ProcedurePerformerRoleCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.request_priority import RequestPriorityCode
 from spark_auto_mapper_fhir.fhir_types.condition import FhirCondition
 from spark_auto_mapper_fhir.fhir_types.coverage import FhirCoverage
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
@@ -49,15 +49,15 @@ class FhirMedicationRequest(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        status: FhirMedicationRequestStatusCode,
-        intent: FhirMedicationRequestIntent,
+        status: MedicationRequestStatusCode,
+        intent: MedicationRequestIntent,
         medication: FhirMedicationBackboneElement,
         subject: FhirReference[Union[FhirPatient, FhirGroup]],
         statusReason: Optional[
-            FhirCodeableConcept[FhirMedicationRequestStatusReasonCode]] = None,
+            FhirCodeableConcept[MedicationRequestStatusReasonCode]] = None,
         category: Optional[FhirList[
-            FhirCodeableConcept[FhirMedicationRequestCategoryCode]]] = None,
-        priority: Optional[FhirRequestPriorityCode] = None,
+            FhirCodeableConcept[MedicationRequestCategoryCode]]] = None,
+        priority: Optional[RequestPriorityCode] = None,
         reported: Optional[FhirReportedBackboneElement] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         encounter: Optional[FhirEncounter] = None,
@@ -73,11 +73,11 @@ class FhirMedicationRequest(FhirResourceBase):
                                                 FhirOrganization, FhirPatient,
                                                 FhirRelatedPerson, FhirDevice,
                                                 FhirCareTeam]]] = None,
-        performerType: Optional[
-            FhirCodeableConcept[FhirProcedurePerformerRoleCode]] = None,
+        performerType: Optional[FhirCodeableConcept[ProcedurePerformerRoleCode]
+                                ] = None,
         recorder: Optional[FhirReference[Union[FhirPractitioner,
                                                FhirPractitionerRole]]] = None,
-        reasonCode: Optional[FhirList[FhirCodeableConcept[FhirConditionCode]]
+        reasonCode: Optional[FhirList[FhirCodeableConcept[ConditionCode]]
                              ] = None,
         reasonReference: Optional[FhirList[FhirReference[Union[FhirCondition,
                                                                FhirObservation]
@@ -88,8 +88,7 @@ class FhirMedicationRequest(FhirResourceBase):
                           ] = None,
         groupIdentifier: Optional[FhirIdentifier] = None,
         courseOfTherapyType: Optional[
-            FhirCodeableConcept[FhirMedicationRequestCourseOfTherapyCode]
-        ] = None,
+            FhirCodeableConcept[MedicationRequestCourseOfTherapyCode]] = None,
         insurance: Optional[FhirList[FhirReference[Union[FhirCoverage,
                                                          FhirClaimResponse]]]
                             ] = None,

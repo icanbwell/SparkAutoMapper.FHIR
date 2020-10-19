@@ -4,7 +4,7 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.accident_incident import FhirAccidentIncidentCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.accident_incident import AccidentIncidentCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
@@ -15,7 +15,7 @@ class FhirAccidentBackboneElement(FhirResourceBase):
     def __init__(
         self,
         date: Optional[FhirDate] = None,
-        type_: Optional[FhirCodeableConcept[FhirAccidentIncidentCode]] = None,
+        type_: Optional[FhirCodeableConcept[AccidentIncidentCode]] = None,
         locationAddress: Optional[FhirAddress] = None,
         locationReference: Optional[FhirReference[FhirLocation]] = None
     ) -> None:

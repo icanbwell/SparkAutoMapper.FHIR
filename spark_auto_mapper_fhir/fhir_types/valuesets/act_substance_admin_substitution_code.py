@@ -4,13 +4,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
-
-# noinspection PyMethodParameters
-# noinspection PyPep8Naming
 from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirValueSetBase
 
 
-class FhirActSubstanceAdminSubstitutionCode(FhirValueSetBase):
+# noinspection PyMethodParameters
+# noinspection PyPep8Naming
+class ActSubstanceAdminSubstitutionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v3/ActSubstanceAdminSubstitutionCode/vs.html
     """
@@ -20,23 +19,22 @@ class FhirActSubstanceAdminSubstitutionCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'FhirActSubstanceAdminSubstitutionCode']
+            self, f: Callable[..., 'ActSubstanceAdminSubstitutionCode']
         ) -> None:
-            self.f: Callable[..., 'FhirActSubstanceAdminSubstitutionCode'] = f
+            self.f: Callable[..., 'ActSubstanceAdminSubstitutionCode'] = f
 
         def __get__(
-            self, obj: Any,
-            owner: Type['FhirActSubstanceAdminSubstitutionCode']
-        ) -> 'FhirActSubstanceAdminSubstitutionCode':
+            self, obj: Any, owner: Type['ActSubstanceAdminSubstitutionCode']
+        ) -> 'ActSubstanceAdminSubstitutionCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirActSubstanceAdminSubstitutionCode':
+    def NameOfYourFirstValue(cls) -> 'ActSubstanceAdminSubstitutionCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirActSubstanceAdminSubstitutionCode("A")
+        return ActSubstanceAdminSubstitutionCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

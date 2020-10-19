@@ -3,8 +3,8 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirCommonLanguageCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.note_type import FhirNoteTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import CommonLanguageCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.note_type import NoteTypeCode
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
@@ -14,9 +14,9 @@ class FhirNote(FhirResourceBase):
     def __init__(
         self,
         number: Optional[FhirPositiveInt] = None,
-        type_: Optional[FhirNoteTypeCode] = None,
+        type_: Optional[NoteTypeCode] = None,
         text: Optional[FhirString] = None,
-        language: Optional[FhirCodeableConcept[FhirCommonLanguageCode]] = None
+        language: Optional[FhirCodeableConcept[CommonLanguageCode]] = None
     ):
         """
         Note Resource in FHIR

@@ -10,8 +10,8 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import NameUseCode
 
 
 def test_auto_mapper_fhir_patient_resource(
@@ -40,10 +40,10 @@ def test_auto_mapper_fhir_patient_resource(
             birthDate=A.date(A.column("date_of_birth")),
             name=FhirList(
                 FhirHumanName(
-                    use=FhirNameUseCode("usual"), family=A.column("last_name")
+                    use=NameUseCode("usual"), family=A.column("last_name")
                 )
             ),
-            gender=FhirAdministrativeGenderCode(A.column("my_gender"))
+            gender=AdministrativeGenderCode(A.column("my_gender"))
         )
     )
 

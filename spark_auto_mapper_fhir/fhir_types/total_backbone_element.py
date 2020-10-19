@@ -1,14 +1,14 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.adjudication import FhirAdjudicationCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.adjudication import AdjudicationCode
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 
 
 class FhirTotalBackBoneElement(FhirResourceBase):
     def __init__(
-        self, category: FhirList[FhirCodeableConcept[FhirAdjudicationCode]],
+        self, category: FhirList[FhirCodeableConcept[AdjudicationCode]],
         amount: FhirMoney
     ):
         """

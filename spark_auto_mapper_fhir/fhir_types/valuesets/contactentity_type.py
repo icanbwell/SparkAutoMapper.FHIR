@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class FhirContactEntityTypeCode(FhirValueSetBase):
+class ContactEntityTypeCode(FhirValueSetBase):
     """
     http://hl7.org/fhir/valueset-contactentity-type.html
     """
@@ -18,23 +18,21 @@ class FhirContactEntityTypeCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'FhirContactEntityTypeCode']
-        ) -> None:
-            self.f: Callable[..., 'FhirContactEntityTypeCode'] = f
+        def __init__(self, f: Callable[..., 'ContactEntityTypeCode']) -> None:
+            self.f: Callable[..., 'ContactEntityTypeCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FhirContactEntityTypeCode']
-        ) -> 'FhirContactEntityTypeCode':
+            self, obj: Any, owner: Type['ContactEntityTypeCode']
+        ) -> 'ContactEntityTypeCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirContactEntityTypeCode':
+    def NameOfYourFirstValue(cls) -> 'ContactEntityTypeCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirContactEntityTypeCode("A")
+        return ContactEntityTypeCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
