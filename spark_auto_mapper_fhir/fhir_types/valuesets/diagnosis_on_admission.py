@@ -13,11 +13,8 @@ class FhirDiagnosisOnAdmissionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-ex-diagnosis-on-admission.html
     """
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirDiagnosisOnAdmissionCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

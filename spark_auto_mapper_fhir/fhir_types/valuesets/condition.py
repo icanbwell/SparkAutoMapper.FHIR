@@ -13,9 +13,8 @@ class FhirConditionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-condition-code.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirConditionCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

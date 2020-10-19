@@ -7,13 +7,16 @@ from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.automapper_fhir_helpers import AutoMapperFhirHelpers as F
-
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
+from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
 from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
+from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMaritalStatusCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
 
 
@@ -35,32 +38,30 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     mapper = AutoMapper(
         view="members", source_view="patients", keys=["member_id"]
     ).columns(
-        patient=F.patient.map(
+        patient=FhirPatient(
             id_=A.column("a.member_id"),
             identifier=FhirList(
-                F.identifier.map(
+                FhirIdentifier(
                     use=FhirIdentifierUseCode.Usual,
                     value=A.column("a.member_id"),
-                    type_=FhirCodeableConcept.map(
-                        coding=FhirCoding.map(
-                            code=FhirIdentifierTypeCode.map("MR")
-                        )
+                    type_=FhirCodeableConcept(
+                        coding=FhirCoding(code=FhirIdentifierTypeCode("MR"))
                     )
                 )
             ),
             name=FhirList(
-                F.human_name.map(
-                    use=FhirNameUseCode.map("usual"),
+                FhirHumanName(
+                    use=FhirNameUseCode("usual"),
                     family=A.column("last_name"),
                     given=FhirList(["first_name", "middle_name"])
                 )
             ),
-            gender=F.codes.administrative_gender.female,
+            gender=FhirAdministrativeGenderCode.female,
             birthDate=A.date(A.column("date_of_birth")),
-            maritalStatus=FhirCodeableConcept.map(
-                coding=FhirCoding.map(
-                    code=F.codes.marital_status.Married,
-                    system=F.codes.marital_status.codeset
+            maritalStatus=FhirCodeableConcept(
+                coding=FhirCoding(
+                    code=FhirMaritalStatusCode.Married,
+                    system=FhirMaritalStatusCode.codeset
                 )
             )
         )
@@ -82,9 +83,9 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             array(
                 struct(
                     lit("usual").alias("use"),
+                    col("a.member_id").alias("value"),
                     struct(struct(lit("MR").alias("code")).alias("coding")
                            ).alias("type"),
-                    col("a.member_id").alias("value"),
                 )
             ).alias("identifier"),
             array(
@@ -103,10 +104,10 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             ).alias("birthDate"),
             struct(
                 struct(
+                    lit("M").alias("code"),
                     lit(
                         "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
                     ).alias("system"),
-                    lit("M").alias("code"),
                 ).alias("coding")
             ).alias("maritalStatus")
         ).alias("patient")

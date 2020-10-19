@@ -13,9 +13,8 @@ class FhirClaimTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-claim-type.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirClaimTypeCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

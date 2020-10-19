@@ -13,11 +13,8 @@ class FhirAdjudicationReasonCode(FhirValueSetBase):
     """
     http://hl7.org/fhir/valueset-adjudication-reason.html
     """
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirAdjudicationReasonCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

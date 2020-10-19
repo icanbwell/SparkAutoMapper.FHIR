@@ -6,14 +6,11 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 
 
 class FhirAdministrativeGenderCode(FhirValueSetBase):
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirAdministrativeGenderCode':
+    def __init__(self, value: AutoMapperTextInputType):
         assert not isinstance(value, str) or value in [
             "male", "female", "other", "unknown"
         ]
-        return FhirAdministrativeGenderCode(value=value)
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

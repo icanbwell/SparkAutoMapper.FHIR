@@ -14,11 +14,8 @@ class FhirActSubstanceAdminSubstitutionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v3/ActSubstanceAdminSubstitutionCode/vs.html
     """
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirActSubstanceAdminSubstitutionCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

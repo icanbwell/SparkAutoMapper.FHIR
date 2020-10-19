@@ -13,9 +13,8 @@ class FhirNameUseCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-name-use.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirNameUseCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
@@ -28,12 +27,12 @@ class FhirNameUseCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirNameUseCode':
+    def usual(cls) -> 'FhirNameUseCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return FhirNameUseCode("A")
+        return FhirNameUseCode("usual")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

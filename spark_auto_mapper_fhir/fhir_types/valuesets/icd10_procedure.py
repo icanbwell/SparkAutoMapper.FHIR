@@ -13,9 +13,8 @@ class FhirIcd10ProcedureCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-icd-10-procedures.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirIcd10ProcedureCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

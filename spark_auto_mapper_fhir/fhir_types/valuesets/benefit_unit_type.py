@@ -13,9 +13,8 @@ class FhirBenefitUnitTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-benefit-unit.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirBenefitUnitTypeCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

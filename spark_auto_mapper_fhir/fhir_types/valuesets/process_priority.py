@@ -13,9 +13,8 @@ class FhirProcessPriorityCode(FhirValueSetBase):
     """
     https://terminology.hl7.org/1.0.0/CodeSystem-processpriority.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirProcessPriorityCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

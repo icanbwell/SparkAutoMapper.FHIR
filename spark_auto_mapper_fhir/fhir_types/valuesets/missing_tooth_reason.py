@@ -13,11 +13,8 @@ class FhirMissingToothReasonCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-missing-tooth-reason.html
     """
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirMissingToothReasonCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

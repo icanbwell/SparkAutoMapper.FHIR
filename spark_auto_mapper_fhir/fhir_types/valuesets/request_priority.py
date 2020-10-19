@@ -13,9 +13,8 @@ class FhirRequestPriorityCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-request-priority.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirRequestPriorityCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

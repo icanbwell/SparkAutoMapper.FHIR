@@ -13,9 +13,8 @@ class FhirOrganizationTypeCode(FhirValueSetBase):
     """
     http://hl7.org/fhir/valueset-organization-type.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirOrganizationTypeCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

@@ -13,9 +13,8 @@ class FhirSurfaceCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-surface.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirSurfaceCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

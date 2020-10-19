@@ -13,9 +13,8 @@ class FhirFundsReservationCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-fundsreserve.html
     """
-    @classmethod
-    def map(cls, value: AutoMapperTextInputType) -> 'FhirFundsReservationCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

@@ -13,11 +13,8 @@ class FhirSubscriberRelationshipCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-subscriber-relationship.html
     """
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirSubscriberRelationshipCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

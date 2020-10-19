@@ -13,11 +13,8 @@ class FhirProviderQualificationCode(FhirValueSetBase):
     """
     http://hl7.org/fhir/v2/0360/2.7/index.html
     """
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirProviderQualificationCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

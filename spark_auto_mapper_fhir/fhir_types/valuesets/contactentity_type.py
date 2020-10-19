@@ -13,11 +13,8 @@ class FhirContactEntityTypeCode(FhirValueSetBase):
     """
     http://hl7.org/fhir/valueset-contactentity-type.html
     """
-    @classmethod
-    def map(
-        cls, value: AutoMapperTextInputType
-    ) -> 'FhirContactEntityTypeCode':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
