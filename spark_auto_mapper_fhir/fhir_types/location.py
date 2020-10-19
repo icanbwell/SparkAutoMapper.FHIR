@@ -11,15 +11,11 @@ class FhirLocation(FhirResourceBase):
     @classmethod
     def map(cls,
             identifier: Optional[FhirList[FhirIdentifier]] = None,
-            name: Optional[FhirString] = None
-            ) -> 'FhirLocation':
+            name: Optional[FhirString] = None) -> 'FhirLocation':
         """
         Location Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Location
 
 
         """
-        return FhirLocation(
-            identifier=identifier,
-            name=name
-        )
+        return FhirLocation(identifier=identifier, name=name)

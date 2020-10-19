@@ -13,20 +13,23 @@ class FhirSubstanceAdminSubstitutionReason(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v3/SubstanceAdminSubstitutionReason/vs.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirSubstanceAdminSubstitutionReason':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirSubstanceAdminSubstitutionReason':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirSubstanceAdminSubstitutionReason']) -> None:
+        def __init__(
+                self,
+                f: Callable[...,
+                            'FhirSubstanceAdminSubstitutionReason']) -> None:
             self.f: Callable[..., 'FhirSubstanceAdminSubstitutionReason'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirSubstanceAdminSubstitutionReason']) -> 'FhirSubstanceAdminSubstitutionReason':
+        def __get__(
+            self, obj: Any, owner: Type['FhirSubstanceAdminSubstitutionReason']
+        ) -> 'FhirSubstanceAdminSubstitutionReason':
             return self.f(owner)
 
     @classproperty

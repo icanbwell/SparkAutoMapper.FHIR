@@ -20,19 +20,20 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 class FhirSupportingInfoBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            sequence: FhirPositiveInt,
-            category: FhirCodeableConcept[FhirClaimInformationCategoryCode],
-            code: Optional[FhirCodeableConcept[FhirClaimExceptionCode]] = None,
-            timingDate: Optional[FhirDate] = None,
-            timingPeriod: Optional[FhirPeriod] = None,
-            valueBoolean: Optional[FhirBoolean] = None,
-            valueString: Optional[FhirString] = None,
-            valueQuantity: Optional[FhirQuantity] = None,
-            valueAttachment: Optional[FhirAttachment] = None,
-            valueReference: Optional[FhirReference[Any]] = None,
-            reason: Optional[FhirCoding[FhirMissingToothReasonCode]] = None
-            ) -> 'FhirSupportingInfoBackboneElement':
+    def map(
+        cls,
+        sequence: FhirPositiveInt,
+        category: FhirCodeableConcept[FhirClaimInformationCategoryCode],
+        code: Optional[FhirCodeableConcept[FhirClaimExceptionCode]] = None,
+        timingDate: Optional[FhirDate] = None,
+        timingPeriod: Optional[FhirPeriod] = None,
+        valueBoolean: Optional[FhirBoolean] = None,
+        valueString: Optional[FhirString] = None,
+        valueQuantity: Optional[FhirQuantity] = None,
+        valueAttachment: Optional[FhirAttachment] = None,
+        valueReference: Optional[FhirReference[Any]] = None,
+        reason: Optional[FhirCoding[FhirMissingToothReasonCode]] = None
+    ) -> 'FhirSupportingInfoBackboneElement':
         """
         SupportingInfoBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.supportingInfo
@@ -61,5 +62,4 @@ class FhirSupportingInfoBackboneElement(FhirResourceBase):
             valueQuantity=valueQuantity,
             valueAttachment=valueAttachment,
             valueReference=valueReference,
-            reason=reason
-        )
+            reason=reason)

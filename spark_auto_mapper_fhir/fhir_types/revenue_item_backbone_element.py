@@ -22,21 +22,26 @@ from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
 class FhirRevenueItemBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
-    def map(cls,
-            sequence: FhirPositiveInt,
-            productOrService: FhirList[FhirCodeableConcept[FhirServiceUSCLSCode]],
-            informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
-            revenue: Optional[FhirList[FhirCodeableConcept[FhirExRevenueCenterCode]]] = None,
-            modifier: Optional[FhirList[FhirCodeableConcept[FhirClaimModifiersCode]]] = None,
-            quantity: Optional[FhirList[FhirSimpleQuantity]] = None,
-            factor: Optional[FhirDecimal] = None,
-            adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]] = None,
-            servicedDate: Optional[FhirDate] = None,
-            servicedPeriod: Optional[FhirPeriod] = None,
-            locationCodeableConcept: Optional[FhirCodeableConcept[FhirServicePlaceCode]] = None,
-            locationAddress: Optional[FhirAddress] = None,
-            locationReference: Optional[FhirReference[FhirLocation]] = None
-            ) -> 'FhirRevenueItemBackboneElement':
+    def map(
+        cls,
+        sequence: FhirPositiveInt,
+        productOrService: FhirList[FhirCodeableConcept[FhirServiceUSCLSCode]],
+        informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        revenue: Optional[FhirList[
+            FhirCodeableConcept[FhirExRevenueCenterCode]]] = None,
+        modifier: Optional[FhirList[
+            FhirCodeableConcept[FhirClaimModifiersCode]]] = None,
+        quantity: Optional[FhirList[FhirSimpleQuantity]] = None,
+        factor: Optional[FhirDecimal] = None,
+        adjudication: Optional[
+            FhirList[FhirAdjudicationBackboneElement]] = None,
+        servicedDate: Optional[FhirDate] = None,
+        servicedPeriod: Optional[FhirPeriod] = None,
+        locationCodeableConcept: Optional[
+            FhirCodeableConcept[FhirServicePlaceCode]] = None,
+        locationAddress: Optional[FhirAddress] = None,
+        locationReference: Optional[FhirReference[FhirLocation]] = None
+    ) -> 'FhirRevenueItemBackboneElement':
         """
         RevenueItemBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.item
@@ -70,5 +75,4 @@ class FhirRevenueItemBackboneElement(FhirResourceBase):
             servicedPeriod=servicedPeriod,
             locationCodeableConcept=locationCodeableConcept,
             locationAddress=locationAddress,
-            locationReference=locationReference
-        )
+            locationReference=locationReference)

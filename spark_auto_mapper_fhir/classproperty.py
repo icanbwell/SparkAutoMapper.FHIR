@@ -6,12 +6,12 @@ class genericclassproperty(object):
     """
     Attribute to have a method treated as class property
     """
-
     def __init__(self, f: Callable[..., Any]) -> None:
         self.f = f
 
     def __get__(self, obj: Any, owner: Any) -> Any:
         return self.f(owner)
+
 
 # _T = TypeVar("_T")
 #

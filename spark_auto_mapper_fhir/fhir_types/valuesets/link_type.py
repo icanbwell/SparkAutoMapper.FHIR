@@ -13,11 +13,8 @@ class FhirLinkTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-link-type.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirLinkTypeCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirLinkTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirLinkTypeCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirLinkTypeCode'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirLinkTypeCode']
-                    ) -> 'FhirLinkTypeCode':
+                    owner: Type['FhirLinkTypeCode']) -> 'FhirLinkTypeCode':
             return self.f(owner)
 
     @classproperty

@@ -25,44 +25,34 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 class FhirCoverage(FhirResourceBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
     @classmethod
-    def map(cls,
-            status: FhirFinancialResourceStatusCode,
-            payor: FhirList[
-                FhirReference[
-                    Union[
-                        FhirOrganization,
-                        FhirPatient,
-                        FhirRelatedPerson
-                    ]
-                ]
-            ],
-            beneficiary: FhirReference[FhirPatient],
-            identifier: Optional[FhirList[FhirIdentifier]] = None,
-            type_: Optional[FhirCodeableConcept[FhirCoverageTypeAndSelfPayCode]] = None,
-            policyHolder: Optional[FhirReference[
-                Union[
-                    FhirPatient,
-                    FhirRelatedPerson,
-                    FhirOrganization
-                ]
-            ]] = None,
-            subscriber: Optional[FhirReference[
-                Union[
-                    FhirPatient,
-                    FhirRelatedPerson
-                ]
-            ]] = None,
-            subscriberId: Optional[FhirString] = None,
-            dependent: Optional[FhirString] = None,
-            relationship: Optional[FhirCodeableConcept[FhirSubscriberRelationshipCode]] = None,
-            period: Optional[FhirPeriod] = None,
-            class_: Optional[FhirList[FhirCoverageClassificationBackboneElement]] = None,
-            order: Optional[FhirPositiveInt] = None,
-            network: Optional[FhirString] = None,
-            costToBeneficiary: Optional[FhirList[FhirCostToBeneficiaryBackboneElement]] = None,
-            subrogation: Optional[FhirBoolean] = None,
-            contract: Optional[FhirList[FhirReference[FhirContract]]] = None
-            ) -> 'FhirCoverage':
+    def map(
+        cls,
+        status: FhirFinancialResourceStatusCode,
+        payor: FhirList[FhirReference[Union[FhirOrganization, FhirPatient,
+                                            FhirRelatedPerson]]],
+        beneficiary: FhirReference[FhirPatient],
+        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        type_: Optional[
+            FhirCodeableConcept[FhirCoverageTypeAndSelfPayCode]] = None,
+        policyHolder: Optional[FhirReference[Union[FhirPatient,
+                                                   FhirRelatedPerson,
+                                                   FhirOrganization]]] = None,
+        subscriber: Optional[FhirReference[Union[FhirPatient,
+                                                 FhirRelatedPerson]]] = None,
+        subscriberId: Optional[FhirString] = None,
+        dependent: Optional[FhirString] = None,
+        relationship: Optional[
+            FhirCodeableConcept[FhirSubscriberRelationshipCode]] = None,
+        period: Optional[FhirPeriod] = None,
+        class_: Optional[
+            FhirList[FhirCoverageClassificationBackboneElement]] = None,
+        order: Optional[FhirPositiveInt] = None,
+        network: Optional[FhirString] = None,
+        costToBeneficiary: Optional[
+            FhirList[FhirCostToBeneficiaryBackboneElement]] = None,
+        subrogation: Optional[FhirBoolean] = None,
+        contract: Optional[FhirList[FhirReference[FhirContract]]] = None
+    ) -> 'FhirCoverage':
         """
         Coverage Resource in FHIR
         https://hl7.org/FHIR/coverage.html
@@ -89,22 +79,20 @@ class FhirCoverage(FhirResourceBase):
         :param subrogation: Reimbursement to insurer
         :param contract: Contract details
         """
-        return FhirCoverage(
-            status=status,
-            payor=payor,
-            beneficiary=beneficiary,
-            identifier=identifier,
-            type_=type_,
-            policyHolder=policyHolder,
-            subscriber=subscriber,
-            subscriberId=subscriberId,
-            dependent=dependent,
-            relationship=relationship,
-            period=period,
-            class_=class_,
-            order=order,
-            network=network,
-            costToBeneficiary=costToBeneficiary,
-            subrogation=subrogation,
-            contract=contract
-        )
+        return FhirCoverage(status=status,
+                            payor=payor,
+                            beneficiary=beneficiary,
+                            identifier=identifier,
+                            type_=type_,
+                            policyHolder=policyHolder,
+                            subscriber=subscriber,
+                            subscriberId=subscriberId,
+                            dependent=dependent,
+                            relationship=relationship,
+                            period=period,
+                            class_=class_,
+                            order=order,
+                            network=network,
+                            costToBeneficiary=costToBeneficiary,
+                            subrogation=subrogation,
+                            contract=contract)

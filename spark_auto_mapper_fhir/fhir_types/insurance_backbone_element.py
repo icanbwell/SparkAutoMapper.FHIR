@@ -12,11 +12,12 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 class FhirInsuranceBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            focal: FhirBoolean,
-            coverage: FhirReference[FhirCoverage],
-            preAuthRef: Optional[FhirList[FhirString]] = None
-            ) -> 'FhirInsuranceBackboneElement':
+    def map(
+        cls,
+        focal: FhirBoolean,
+        coverage: FhirReference[FhirCoverage],
+        preAuthRef: Optional[FhirList[FhirString]] = None
+    ) -> 'FhirInsuranceBackboneElement':
         """
         InsuranceBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#InsuranceBackboneElement
@@ -27,8 +28,6 @@ class FhirInsuranceBackboneElement(FhirResourceBase):
         :param coverage: Insurance information
         :param preAuthRef: 	Prior authorization reference number
         """
-        return FhirInsuranceBackboneElement(
-            focal=focal,
-            coverage=coverage,
-            preAuthRef=preAuthRef
-        )
+        return FhirInsuranceBackboneElement(focal=focal,
+                                            coverage=coverage,
+                                            preAuthRef=preAuthRef)

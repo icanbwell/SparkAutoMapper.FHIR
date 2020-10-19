@@ -17,8 +17,7 @@ class FhirCoding(Generic[_T], FhirResourceBase):
             version: Optional[FhirString] = None,
             code: Optional[_T] = None,
             display: Optional[FhirString] = None,
-            userSelected: Optional[FhirBoolean] = None
-            ) -> 'FhirCoding[_T]':
+            userSelected: Optional[FhirBoolean] = None) -> 'FhirCoding[_T]':
         """
         Coding Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Coding
@@ -30,10 +29,8 @@ class FhirCoding(Generic[_T], FhirResourceBase):
         :param display: Representation defined by the system
         :param userSelected: If this coding was chosen directly by the user
         """
-        return FhirCoding[_T](
-            system=system,
-            version=version,
-            code=code,
-            display=display,
-            userSelected=userSelected
-        )
+        return FhirCoding[_T](system=system,
+                              version=version,
+                              code=code,
+                              display=display,
+                              userSelected=userSelected)

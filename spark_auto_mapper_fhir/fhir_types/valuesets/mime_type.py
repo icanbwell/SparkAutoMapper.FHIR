@@ -13,11 +13,8 @@ class FhirMimeTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-mimetypes.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirMimeTypeCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirMimeTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirMimeTypeCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirMimeTypeCode'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirMimeTypeCode']
-                    ) -> 'FhirMimeTypeCode':
+                    owner: Type['FhirMimeTypeCode']) -> 'FhirMimeTypeCode':
             return self.f(owner)
 
     @classproperty

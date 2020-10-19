@@ -13,11 +13,14 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.substance_admin_substitution_re
 class FhirSubstitutionBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
-    def map(cls,
-            allowedBoolean: Optional[FhirBoolean] = None,
-            allowedCodeableConcept: Optional[FhirCodeableConcept[FhirActSubstanceAdminSubstitutionCode]] = None,
-            reason: Optional[FhirCodeableConcept[FhirSubstanceAdminSubstitutionReason]] = None
-            ) -> 'FhirSubstitutionBackboneElement':
+    def map(
+        cls,
+        allowedBoolean: Optional[FhirBoolean] = None,
+        allowedCodeableConcept: Optional[
+            FhirCodeableConcept[FhirActSubstanceAdminSubstitutionCode]] = None,
+        reason: Optional[
+            FhirCodeableConcept[FhirSubstanceAdminSubstitutionReason]] = None
+    ) -> 'FhirSubstitutionBackboneElement':
         """
         SubstitutionBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#SubstitutionBackboneElement
@@ -30,5 +33,4 @@ class FhirSubstitutionBackboneElement(FhirResourceBase):
         return FhirSubstitutionBackboneElement(
             allowedBoolean=allowedBoolean,
             allowedCodeableConcept=allowedCodeableConcept,
-            reason=reason
-        )
+            reason=reason)

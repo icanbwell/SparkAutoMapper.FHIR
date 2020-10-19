@@ -13,11 +13,8 @@ class FhirConditionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-condition-code.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirConditionCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirConditionCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,7 +22,8 @@ class FhirConditionCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirConditionCode']) -> None:
             self.f: Callable[..., 'FhirConditionCode'] = f
 
-        def __get__(self, obj: Any, owner: Type['FhirConditionCode']) -> 'FhirConditionCode':
+        def __get__(self, obj: Any,
+                    owner: Type['FhirConditionCode']) -> 'FhirConditionCode':
             return self.f(owner)
 
     @classproperty

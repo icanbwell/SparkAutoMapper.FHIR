@@ -13,21 +13,20 @@ class FhirQuantityComparatorCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-quantity-comparator.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirQuantityComparatorCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirQuantityComparatorCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirQuantityComparatorCode']) -> None:
+        def __init__(self, f: Callable[...,
+                                       'FhirQuantityComparatorCode']) -> None:
             self.f: Callable[..., 'FhirQuantityComparatorCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirQuantityComparatorCode']
-                    ) -> 'FhirQuantityComparatorCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirQuantityComparatorCode']
+        ) -> 'FhirQuantityComparatorCode':
             return self.f(owner)
 
     @classproperty

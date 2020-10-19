@@ -13,19 +13,20 @@ class FhirRequestPriorityCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-request-priority.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirRequestPriorityCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirRequestPriorityCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirRequestPriorityCode']) -> None:
+        def __init__(self, f: Callable[...,
+                                       'FhirRequestPriorityCode']) -> None:
             self.f: Callable[..., 'FhirRequestPriorityCode'] = f
 
-        def __get__(self, obj: Any, owner: Type['FhirRequestPriorityCode']) -> 'FhirRequestPriorityCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirRequestPriorityCode']
+        ) -> 'FhirRequestPriorityCode':
             return self.f(owner)
 
     @classproperty

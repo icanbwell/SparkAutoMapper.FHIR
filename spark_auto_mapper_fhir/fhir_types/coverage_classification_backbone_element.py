@@ -9,11 +9,12 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 class FhirCoverageClassificationBackboneElement(FhirResourceBase):
     @classmethod
-    def map(cls,
-            type_: FhirCodeableConcept[FhirCoverageClassCode],
-            value: FhirString,
-            name: Optional[FhirString] = None
-            ) -> 'FhirCoverageClassificationBackboneElement':
+    def map(
+        cls,
+        type_: FhirCodeableConcept[FhirCoverageClassCode],
+        value: FhirString,
+        name: Optional[FhirString] = None
+    ) -> 'FhirCoverageClassificationBackboneElement':
         """
         CoverageClassificationBackboneElement Resource in FHIR
         https://hl7.org/FHIR/coverage-definitions.html#Coverage.class
@@ -23,8 +24,6 @@ class FhirCoverageClassificationBackboneElement(FhirResourceBase):
         :param value: Value associated with the type
         :param name: Human readable description of the type and value
         """
-        return FhirCoverageClassificationBackboneElement(
-            type_=type_,
-            value=value,
-            name=name
-        )
+        return FhirCoverageClassificationBackboneElement(type_=type_,
+                                                         value=value,
+                                                         name=name)

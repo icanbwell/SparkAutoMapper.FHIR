@@ -13,11 +13,8 @@ class FhirToothCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-tooth.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirToothCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirToothCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirToothCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirToothCode'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirToothCode']
-                    ) -> 'FhirToothCode':
+                    owner: Type['FhirToothCode']) -> 'FhirToothCode':
             return self.f(owner)
 
     @classproperty

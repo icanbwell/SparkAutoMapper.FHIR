@@ -28,34 +28,36 @@ from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
 class FhirAddItemBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
-    def map(cls,
-            productOrService: FhirCodeableConcept[FhirServiceUSCLSCode],
-            itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
-            detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
-            subDetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
-            provider: Optional[FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole,
-                    FhirOrganization
-                ]
-            ]] = None,
-            modifier: Optional[FhirList[FhirCodeableConcept[FhirClaimModifiersCode]]] = None,
-            programCode: Optional[FhirList[FhirCodeableConcept[FhirExProgramReasonCode]]] = None,
-            servicedDate: Optional[FhirDate] = None,
-            servicedPeriod: Optional[FhirPeriod] = None,
-            locationCodeableConcept: Optional[FhirCodeableConcept[FhirServicePlaceCode]] = None,
-            locationAddress: Optional[FhirAddress] = None,
-            locationReference: Optional[FhirReference[FhirLocation]] = None,
-            quantity: Optional[FhirSimpleQuantity] = None,
-            unitPrice: Optional[FhirMoney] = None,
-            factor: Optional[FhirDecimal] = None,
-            net: Optional[FhirMoney] = None,
-            bodySite: Optional[FhirCodeableConcept[FhirToothCode]] = None,
-            subSite: Optional[FhirList[FhirCodeableConcept[FhirSurfaceCode]]] = None,
-            noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
-            adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]] = None
-            ) -> 'FhirAddItemBackboneElement':
+    def map(
+        cls,
+        productOrService: FhirCodeableConcept[FhirServiceUSCLSCode],
+        itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        subDetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        provider: Optional[FhirReference[Union[FhirPractitioner,
+                                               FhirPractitionerRole,
+                                               FhirOrganization]]] = None,
+        modifier: Optional[FhirList[
+            FhirCodeableConcept[FhirClaimModifiersCode]]] = None,
+        programCode: Optional[FhirList[
+            FhirCodeableConcept[FhirExProgramReasonCode]]] = None,
+        servicedDate: Optional[FhirDate] = None,
+        servicedPeriod: Optional[FhirPeriod] = None,
+        locationCodeableConcept: Optional[
+            FhirCodeableConcept[FhirServicePlaceCode]] = None,
+        locationAddress: Optional[FhirAddress] = None,
+        locationReference: Optional[FhirReference[FhirLocation]] = None,
+        quantity: Optional[FhirSimpleQuantity] = None,
+        unitPrice: Optional[FhirMoney] = None,
+        factor: Optional[FhirDecimal] = None,
+        net: Optional[FhirMoney] = None,
+        bodySite: Optional[FhirCodeableConcept[FhirToothCode]] = None,
+        subSite: Optional[FhirList[
+            FhirCodeableConcept[FhirSurfaceCode]]] = None,
+        noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
+        adjudication: Optional[
+            FhirList[FhirAdjudicationBackboneElement]] = None
+    ) -> 'FhirAddItemBackboneElement':
         """
         AddItemBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.addItem
@@ -102,5 +104,4 @@ class FhirAddItemBackboneElement(FhirResourceBase):
             bodySite=bodySite,
             subSite=subSite,
             noteNumber=noteNumber,
-            adjudication=adjudication
-        )
+            adjudication=adjudication)

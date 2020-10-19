@@ -14,15 +14,16 @@ from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 class FhirDispenseRequestBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            initialFill: Optional[FhirFill] = None,
-            dispenseInterval: Optional[FhirDuration] = None,
-            validityPeriod: Optional[FhirPeriod] = None,
-            numberOfRepeatsAllowed: Optional[FhirUnsignedInt] = None,
-            quantity: Optional[FhirSimpleQuantity] = None,
-            expectedSupplyDuration: Optional[FhirDuration] = None,
-            performer: Optional[FhirReference[FhirOrganization]] = None
-            ) -> 'FhirDispenseRequestBackboneElement':
+    def map(
+        cls,
+        initialFill: Optional[FhirFill] = None,
+        dispenseInterval: Optional[FhirDuration] = None,
+        validityPeriod: Optional[FhirPeriod] = None,
+        numberOfRepeatsAllowed: Optional[FhirUnsignedInt] = None,
+        quantity: Optional[FhirSimpleQuantity] = None,
+        expectedSupplyDuration: Optional[FhirDuration] = None,
+        performer: Optional[FhirReference[FhirOrganization]] = None
+    ) -> 'FhirDispenseRequestBackboneElement':
         """
         DispenseRequestBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#DispenseRequestBackboneElement
@@ -43,5 +44,4 @@ class FhirDispenseRequestBackboneElement(FhirResourceBase):
             numberOfRepeatsAllowed=numberOfRepeatsAllowed,
             quantity=quantity,
             expectedSupplyDuration=expectedSupplyDuration,
-            performer=performer
-        )
+            performer=performer)

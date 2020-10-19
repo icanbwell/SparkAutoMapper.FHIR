@@ -13,11 +13,9 @@ class FhirIdentifierTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-identifier-type.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirIdentifierTypeCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirIdentifierTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +23,9 @@ class FhirIdentifierTypeCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirIdentifierTypeCode']) -> None:
             self.f: Callable[..., 'FhirIdentifierTypeCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirIdentifierTypeCode']
-                    ) -> 'FhirIdentifierTypeCode':
+        def __get__(
+                self, obj: Any, owner: Type['FhirIdentifierTypeCode']
+        ) -> 'FhirIdentifierTypeCode':
             return self.f(owner)
 
     @classproperty

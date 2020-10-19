@@ -13,11 +13,9 @@ class FhirCommonLanguageCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-languages.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirCommonLanguageCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirCommonLanguageCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +23,9 @@ class FhirCommonLanguageCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirCommonLanguageCode']) -> None:
             self.f: Callable[..., 'FhirCommonLanguageCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirCommonLanguageCode']
-                    ) -> 'FhirCommonLanguageCode':
+        def __get__(
+                self, obj: Any, owner: Type['FhirCommonLanguageCode']
+        ) -> 'FhirCommonLanguageCode':
             return self.f(owner)
 
     @classproperty

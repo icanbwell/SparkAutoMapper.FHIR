@@ -13,11 +13,9 @@ class FhirClaimPayeeTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-payeetype.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirClaimPayeeTypeCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirClaimPayeeTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +23,9 @@ class FhirClaimPayeeTypeCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirClaimPayeeTypeCode']) -> None:
             self.f: Callable[..., 'FhirClaimPayeeTypeCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirClaimPayeeTypeCode']
-                    ) -> 'FhirClaimPayeeTypeCode':
+        def __get__(
+                self, obj: Any, owner: Type['FhirClaimPayeeTypeCode']
+        ) -> 'FhirClaimPayeeTypeCode':
             return self.f(owner)
 
     @classproperty

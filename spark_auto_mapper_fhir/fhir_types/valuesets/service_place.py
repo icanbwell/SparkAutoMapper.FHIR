@@ -13,11 +13,8 @@ class FhirServicePlaceCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-service-place.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirServicePlaceCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirServicePlaceCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +22,9 @@ class FhirServicePlaceCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirServicePlaceCode']) -> None:
             self.f: Callable[..., 'FhirServicePlaceCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirServicePlaceCode']
-                    ) -> 'FhirServicePlaceCode':
+        def __get__(
+                self, obj: Any,
+                owner: Type['FhirServicePlaceCode']) -> 'FhirServicePlaceCode':
             return self.f(owner)
 
     @classproperty

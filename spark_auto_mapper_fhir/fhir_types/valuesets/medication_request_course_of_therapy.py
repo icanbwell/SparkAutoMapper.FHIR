@@ -13,25 +13,30 @@ class FhirMedicationRequestCourseOfTherapyCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-medicationrequest-course-of-therapy.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirMedicationRequestCourseOfTherapyCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirMedicationRequestCourseOfTherapyCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirMedicationRequestCourseOfTherapyCode']) -> None:
-            self.f: Callable[..., 'FhirMedicationRequestCourseOfTherapyCode'] = f
+        def __init__(
+            self,
+            f: Callable[...,
+                        'FhirMedicationRequestCourseOfTherapyCode']) -> None:
+            self.f: Callable[...,
+                             'FhirMedicationRequestCourseOfTherapyCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type[
-                        'FhirMedicationRequestCourseOfTherapyCode']) -> 'FhirMedicationRequestCourseOfTherapyCode':
+        def __get__(
+            self, obj: Any,
+            owner: Type['FhirMedicationRequestCourseOfTherapyCode']
+        ) -> 'FhirMedicationRequestCourseOfTherapyCode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FhirMedicationRequestCourseOfTherapyCode':
+    def NameOfYourFirstValue(
+            cls) -> 'FhirMedicationRequestCourseOfTherapyCode':
         """
         Comment
         """

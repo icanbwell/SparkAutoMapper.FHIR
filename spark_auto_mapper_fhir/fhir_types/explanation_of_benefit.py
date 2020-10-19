@@ -49,70 +49,56 @@ from spark_auto_mapper_fhir.fhir_types.vision_prescription import FhirVisionPres
 class FhirExplanationOfBenefit(FhirResourceBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
     @classmethod
-    def map(cls,
-            status: FhirExplanationOfBenefitStatusCode,
-            type_: FhirCodeableConcept[FhirClaimTypeCode],
-            use: FhirClaimUseCode,
-            patient: FhirReference[FhirPatient],
-            created: FhirDate,
-            insurer: FhirReference[FhirOrganization],
-            insurance: FhirList[FhirInsuranceBackboneElement],
-            outcome: FhirRemittanceOutcomeCode,
-            enterer: Optional[FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole
-                ]
-            ]] = None,
-            provider: Optional[FhirList[
-                FhirReference[
-                    Union[
-                        FhirOrganization,
-                        FhirPractitioner,
-                        FhirPractitionerRole
-                    ]
-                ]
-            ]] = None,
-            billablePeriod: Optional[FhirPeriod] = None,
-            subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
-            identifier: Optional[FhirList[FhirIdentifier]] = None,
-            priority: Optional[FhirCodeableConcept[FhirProcessPriorityCode]] = None,
-            prescription: Optional[FhirReference[
-                Union[
-                    FhirMedicationRequest,
-                    FhirVisionPrescription
-                ]
-            ]] = None,
-            originalPrescription: Optional[FhirReference[
-                Union[
-                    FhirMedicationRequest
-                ]
-            ]] = None,
-            payee: Optional[FhirPayeeBackboneElement] = None,
-            referral: Optional[FhirReference[FhirServiceRequest]] = None,
-            facility: Optional[FhirLocation] = None,
-            claim: Optional[FhirReference[FhirClaim]] = None,
-            claimResponse: Optional[FhirReference[FhirClaimResponse]] = None,
-            disposition: Optional[FhirString] = None,
-            preAuthRef: Optional[FhirList[FhirString]] = None,
-            preAuthRefPeriod: Optional[FhirList[FhirPeriod]] = None,
-            careTeam: Optional[FhirList[FhirCareTeamBackboneElement]] = None,
-            supportingInfo: Optional[FhirList[FhirSupportingInfoBackboneElement]] = None,
-            diagnosis: Optional[FhirList[FhirDiagnosisBackboneElement]] = None,
-            procedure: Optional[FhirList[FhirProcedureBackboneElement]] = None,
-            precedence: Optional[FhirPositiveInt] = None,
-            accident: Optional[FhirAccidentBackboneElement] = None,
-            item: Optional[FhirList[FhirRevenueItemBackboneElement]] = None,
-            addItem: Optional[FhirList[FhirAddItemBackboneElement]] = None,
-            adjudication: Optional[FhirAdjudicationBackboneElement] = None,
-            total: Optional[FhirList[FhirTotalBackBoneElement]] = None,
-            payment: Optional[FhirPaymentBackboneElement] = None,
-            formCode: Optional[FhirCodeableConcept[FhirFormCode]] = None,
-            form: Optional[FhirAttachment] = None,
-            processNote: Optional[FhirNote] = None,
-            benefitPeriod: Optional[FhirPeriod] = None,
-            benefitBalance: Optional[FhirList[FhirBenefitBalance]] = None
-            ) -> 'FhirExplanationOfBenefit':
+    def map(
+        cls,
+        status: FhirExplanationOfBenefitStatusCode,
+        type_: FhirCodeableConcept[FhirClaimTypeCode],
+        use: FhirClaimUseCode,
+        patient: FhirReference[FhirPatient],
+        created: FhirDate,
+        insurer: FhirReference[FhirOrganization],
+        insurance: FhirList[FhirInsuranceBackboneElement],
+        outcome: FhirRemittanceOutcomeCode,
+        enterer: Optional[FhirReference[Union[FhirPractitioner,
+                                              FhirPractitionerRole]]] = None,
+        provider: Optional[FhirList[FhirReference[
+            Union[FhirOrganization, FhirPractitioner,
+                  FhirPractitionerRole]]]] = None,
+        billablePeriod: Optional[FhirPeriod] = None,
+        subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
+        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        priority: Optional[
+            FhirCodeableConcept[FhirProcessPriorityCode]] = None,
+        prescription: Optional[FhirReference[Union[
+            FhirMedicationRequest, FhirVisionPrescription]]] = None,
+        originalPrescription: Optional[FhirReference[
+            Union[FhirMedicationRequest]]] = None,
+        payee: Optional[FhirPayeeBackboneElement] = None,
+        referral: Optional[FhirReference[FhirServiceRequest]] = None,
+        facility: Optional[FhirLocation] = None,
+        claim: Optional[FhirReference[FhirClaim]] = None,
+        claimResponse: Optional[FhirReference[FhirClaimResponse]] = None,
+        disposition: Optional[FhirString] = None,
+        preAuthRef: Optional[FhirList[FhirString]] = None,
+        preAuthRefPeriod: Optional[FhirList[FhirPeriod]] = None,
+        careTeam: Optional[FhirList[FhirCareTeamBackboneElement]] = None,
+        supportingInfo: Optional[
+            FhirList[FhirSupportingInfoBackboneElement]] = None,
+        diagnosis: Optional[FhirList[FhirDiagnosisBackboneElement]] = None,
+        procedure: Optional[FhirList[FhirProcedureBackboneElement]] = None,
+        precedence: Optional[FhirPositiveInt] = None,
+        accident: Optional[FhirAccidentBackboneElement] = None,
+        item: Optional[FhirList[FhirRevenueItemBackboneElement]] = None,
+        addItem: Optional[FhirList[FhirAddItemBackboneElement]] = None,
+        adjudication: Optional[FhirAdjudicationBackboneElement] = None,
+        total: Optional[FhirList[FhirTotalBackBoneElement]] = None,
+        payment: Optional[FhirPaymentBackboneElement] = None,
+        formCode: Optional[FhirCodeableConcept[FhirFormCode]] = None,
+        form: Optional[FhirAttachment] = None,
+        processNote: Optional[FhirNote] = None,
+        benefitPeriod: Optional[FhirPeriod] = None,
+        benefitBalance: Optional[FhirList[FhirBenefitBalance]] = None
+    ) -> 'FhirExplanationOfBenefit':
         """
         ExplanationOfBenefit Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#ExplanationOfBenefit
@@ -205,5 +191,4 @@ class FhirExplanationOfBenefit(FhirResourceBase):
             form=form,
             processNote=processNote,
             benefitPeriod=benefitPeriod,
-            benefitBalance=benefitBalance
-        )
+            benefitBalance=benefitBalance)

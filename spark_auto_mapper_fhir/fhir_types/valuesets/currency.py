@@ -13,11 +13,8 @@ class FhirCurrencyCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-currencies.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirCurrencyCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirCurrencyCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirCurrencyCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirCurrencyCode'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirCurrencyCode']
-                    ) -> 'FhirCurrencyCode':
+                    owner: Type['FhirCurrencyCode']) -> 'FhirCurrencyCode':
             return self.f(owner)
 
     @classproperty

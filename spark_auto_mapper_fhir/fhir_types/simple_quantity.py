@@ -14,8 +14,7 @@ class FhirSimpleQuantity(FhirResourceBase):
             value: Optional[FhirDecimal] = None,
             unit: Optional[FhirString] = None,
             system: Optional[FhirUri] = None,
-            code: Optional[FhirValueSetBase] = None
-            ) -> 'FhirSimpleQuantity':
+            code: Optional[FhirValueSetBase] = None) -> 'FhirSimpleQuantity':
         """
         SimpleQuantity Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#SimpleQuantity
@@ -26,9 +25,7 @@ class FhirSimpleQuantity(FhirResourceBase):
         :param system: System that defines coded unit form
         :param code: Coded form of the unit
         """
-        return FhirSimpleQuantity(
-            value=value,
-            unit=unit,
-            system=system,
-            code=code
-        )
+        return FhirSimpleQuantity(value=value,
+                                  unit=unit,
+                                  system=system,
+                                  code=code)

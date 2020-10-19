@@ -13,11 +13,8 @@ class FhirFormCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-forms.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirFormCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirFormCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,7 +22,8 @@ class FhirFormCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirFormCode']) -> None:
             self.f: Callable[..., 'FhirFormCode'] = f
 
-        def __get__(self, obj: Any, owner: Type['FhirFormCode']) -> 'FhirFormCode':
+        def __get__(self, obj: Any,
+                    owner: Type['FhirFormCode']) -> 'FhirFormCode':
             return self.f(owner)
 
     @classproperty

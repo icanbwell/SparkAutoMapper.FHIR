@@ -22,8 +22,7 @@ class FhirAttachment(FhirResourceBase):
             size: Optional[FhirUnsignedInt] = None,
             hash_: Optional[FhirBase64Binary] = None,
             title: Optional[FhirString] = None,
-            creation: Optional[FhirDateTime] = None
-            ) -> 'FhirAttachment':
+            creation: Optional[FhirDateTime] = None) -> 'FhirAttachment':
         """
         Attachment Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Attachment
@@ -39,13 +38,11 @@ class FhirAttachment(FhirResourceBase):
         :param title: Label to display in place of the data
         :param creation: Date attachment was first created
         """
-        return FhirAttachment(
-            contentType=contentType,
-            language=language,
-            data=data,
-            url=url,
-            size=size,
-            hash_=hash_,
-            title=title,
-            creation=creation
-        )
+        return FhirAttachment(contentType=contentType,
+                              language=language,
+                              data=data,
+                              url=url,
+                              size=size,
+                              hash_=hash_,
+                              title=title,
+                              creation=creation)

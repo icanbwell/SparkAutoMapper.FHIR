@@ -13,11 +13,8 @@ class FhirPaymentTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-ex-paymenttype.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirPaymentTypeCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirPaymentTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +22,9 @@ class FhirPaymentTypeCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirPaymentTypeCode']) -> None:
             self.f: Callable[..., 'FhirPaymentTypeCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirPaymentTypeCode']
-                    ) -> 'FhirPaymentTypeCode':
+        def __get__(
+                self, obj: Any,
+                owner: Type['FhirPaymentTypeCode']) -> 'FhirPaymentTypeCode':
             return self.f(owner)
 
     @classproperty

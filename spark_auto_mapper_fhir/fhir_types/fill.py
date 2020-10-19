@@ -10,8 +10,7 @@ class FhirFill(FhirResourceBase):
     @classmethod
     def map(cls,
             quantity: Optional[FhirQuantity] = None,
-            duration: Optional[FhirDuration] = None
-            ) -> 'FhirFill':
+            duration: Optional[FhirDuration] = None) -> 'FhirFill':
         """
         Fill Resource in FHIR
         https://hl7.org/FHIR/medicationrequest.html
@@ -20,7 +19,4 @@ class FhirFill(FhirResourceBase):
         :param quantity: fill quantity
         :param duration: fill duration
         """
-        return FhirFill(
-            quantity=quantity,
-            duration=duration
-        )
+        return FhirFill(quantity=quantity, duration=duration)

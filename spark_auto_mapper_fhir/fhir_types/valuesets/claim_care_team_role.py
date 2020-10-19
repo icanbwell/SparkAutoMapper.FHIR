@@ -13,21 +13,20 @@ class FhirClaimCareTeamRoleCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-claim-careteamrole.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirClaimCareTeamRoleCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirClaimCareTeamRoleCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirClaimCareTeamRoleCode']) -> None:
+        def __init__(self, f: Callable[...,
+                                       'FhirClaimCareTeamRoleCode']) -> None:
             self.f: Callable[..., 'FhirClaimCareTeamRoleCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirClaimCareTeamRoleCode']
-                    ) -> 'FhirClaimCareTeamRoleCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirClaimCareTeamRoleCode']
+        ) -> 'FhirClaimCareTeamRoleCode':
             return self.f(owner)
 
     @classproperty

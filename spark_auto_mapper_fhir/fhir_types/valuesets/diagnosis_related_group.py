@@ -13,21 +13,21 @@ class FhirDiagnosisRelatedGroupCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-ex-diagnosisrelatedgroup.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
+    def map(cls, value: AutoMapperNativeSimpleType
             ) -> 'FhirDiagnosisRelatedGroupCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirDiagnosisRelatedGroupCode']) -> None:
+        def __init__(
+                self, f: Callable[...,
+                                  'FhirDiagnosisRelatedGroupCode']) -> None:
             self.f: Callable[..., 'FhirDiagnosisRelatedGroupCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirDiagnosisRelatedGroupCode']
-                    ) -> 'FhirDiagnosisRelatedGroupCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirDiagnosisRelatedGroupCode']
+        ) -> 'FhirDiagnosisRelatedGroupCode':
             return self.f(owner)
 
     @classproperty

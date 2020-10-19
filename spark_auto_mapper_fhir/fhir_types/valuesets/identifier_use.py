@@ -13,11 +13,8 @@ class FhirIdentifierUseCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-identifier-use.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirIdentifierUseCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirIdentifierUseCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +22,9 @@ class FhirIdentifierUseCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirIdentifierUseCode']) -> None:
             self.f: Callable[..., 'FhirIdentifierUseCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirIdentifierUseCode']
-                    ) -> 'FhirIdentifierUseCode':
+        def __get__(
+                self, obj: Any, owner: Type['FhirIdentifierUseCode']
+        ) -> 'FhirIdentifierUseCode':
             return self.f(owner)
 
     @classproperty

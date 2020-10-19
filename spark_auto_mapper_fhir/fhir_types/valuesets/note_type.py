@@ -13,11 +13,8 @@ class FhirNoteTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-note-type.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirNoteTypeCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirNoteTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirNoteTypeCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirNoteTypeCode'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirNoteTypeCode']
-                    ) -> 'FhirNoteTypeCode':
+                    owner: Type['FhirNoteTypeCode']) -> 'FhirNoteTypeCode':
             return self.f(owner)
 
     @classproperty

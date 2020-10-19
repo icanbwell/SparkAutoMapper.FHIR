@@ -16,8 +16,7 @@ class FhirDuration(FhirResourceBase):
             comparator: Optional[FhirQuantityComparatorCode] = None,
             unit: Optional[FhirString] = None,
             system: Optional[FhirUri] = None,
-            code: Optional[FhirDurationUnitCode] = None
-            ) -> 'FhirDuration':
+            code: Optional[FhirDurationUnitCode] = None) -> 'FhirDuration':
         """
         Duration Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Duration
@@ -30,10 +29,8 @@ class FhirDuration(FhirResourceBase):
         :param system: System that defines coded unit form
         :param code: Coded form of the unit
         """
-        return FhirDuration(
-            value=value,
-            comparator=comparator,
-            unit=unit,
-            system=system,
-            code=code
-        )
+        return FhirDuration(value=value,
+                            comparator=comparator,
+                            unit=unit,
+                            system=system,
+                            code=code)

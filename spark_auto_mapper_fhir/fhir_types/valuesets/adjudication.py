@@ -13,11 +13,8 @@ class FhirAdjudicationCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-marital-status.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirAdjudicationCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirAdjudicationCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,7 +22,9 @@ class FhirAdjudicationCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirAdjudicationCode']) -> None:
             self.f: Callable[..., 'FhirAdjudicationCode'] = f
 
-        def __get__(self, obj: Any, owner: Type['FhirAdjudicationCode']) -> 'FhirAdjudicationCode':
+        def __get__(
+                self, obj: Any,
+                owner: Type['FhirAdjudicationCode']) -> 'FhirAdjudicationCode':
             return self.f(owner)
 
     @classproperty

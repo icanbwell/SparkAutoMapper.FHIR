@@ -13,11 +13,8 @@ class FhirDurationUnitCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-duration-units.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirDurationUnitCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirDurationUnitCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +22,9 @@ class FhirDurationUnitCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirDurationUnitCode']) -> None:
             self.f: Callable[..., 'FhirDurationUnitCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirDurationUnitCode']
-                    ) -> 'FhirDurationUnitCode':
+        def __get__(
+                self, obj: Any,
+                owner: Type['FhirDurationUnitCode']) -> 'FhirDurationUnitCode':
             return self.f(owner)
 
     @classproperty

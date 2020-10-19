@@ -20,18 +20,21 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirComm
 class FhirPractitioner(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            identifier: Optional[FhirList[FhirIdentifier]] = None,
-            active: Optional[FhirBoolean] = None,
-            name: Optional[FhirList[FhirHumanName]] = None,
-            telecom: Optional[FhirList[FhirContactPoint]] = None,
-            address: Optional[FhirList[FhirAddress]] = None,
-            gender: Optional[FhirAdministrativeGenderCode] = None,
-            birthDate: Optional[FhirDate] = None,
-            photo: Optional[FhirList[FhirAttachment]] = None,
-            qualification: Optional[FhirList[FhirProviderQualificationBackboneElement]] = None,
-            communication: Optional[FhirList[FhirCodeableConcept[FhirCommonLanguageCode]]] = None
-            ) -> 'FhirPractitioner':
+    def map(
+        cls,
+        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        active: Optional[FhirBoolean] = None,
+        name: Optional[FhirList[FhirHumanName]] = None,
+        telecom: Optional[FhirList[FhirContactPoint]] = None,
+        address: Optional[FhirList[FhirAddress]] = None,
+        gender: Optional[FhirAdministrativeGenderCode] = None,
+        birthDate: Optional[FhirDate] = None,
+        photo: Optional[FhirList[FhirAttachment]] = None,
+        qualification: Optional[
+            FhirList[FhirProviderQualificationBackboneElement]] = None,
+        communication: Optional[FhirList[
+            FhirCodeableConcept[FhirCommonLanguageCode]]] = None
+    ) -> 'FhirPractitioner':
         """
         Practitioner Resource in FHIR
         http://hl7.org/fhir/practitioner.html
@@ -50,15 +53,13 @@ class FhirPractitioner(FhirResourceBase):
         :param communication: A language the practitioner can use in patient communication.
                             http://hl7.org/fhir/valueset-languages.html
         """
-        return FhirPractitioner(
-            identifier=identifier,
-            active=active,
-            name=name,
-            telecom=telecom,
-            address=address,
-            gender=gender,
-            birthDate=birthDate,
-            photo=photo,
-            qualification=qualification,
-            communication=communication
-        )
+        return FhirPractitioner(identifier=identifier,
+                                active=active,
+                                name=name,
+                                telecom=telecom,
+                                address=address,
+                                gender=gender,
+                                birthDate=birthDate,
+                                photo=photo,
+                                qualification=qualification,
+                                communication=communication)

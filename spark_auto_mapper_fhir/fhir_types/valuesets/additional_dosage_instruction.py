@@ -13,21 +13,23 @@ class FhirAdditionalDosageInstructionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-additional-instruction-codes.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirAdditionalDosageInstructionCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirAdditionalDosageInstructionCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirAdditionalDosageInstructionCode']) -> None:
+        def __init__(
+                self,
+                f: Callable[...,
+                            'FhirAdditionalDosageInstructionCode']) -> None:
             self.f: Callable[..., 'FhirAdditionalDosageInstructionCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirAdditionalDosageInstructionCode']
-                    ) -> 'FhirAdditionalDosageInstructionCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirAdditionalDosageInstructionCode']
+        ) -> 'FhirAdditionalDosageInstructionCode':
             return self.f(owner)
 
     @classproperty

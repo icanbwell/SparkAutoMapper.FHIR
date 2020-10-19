@@ -13,11 +13,8 @@ class FhirNetworkTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-benefit-network.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirNetworkTypeCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirNetworkTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -25,9 +22,9 @@ class FhirNetworkTypeCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirNetworkTypeCode']) -> None:
             self.f: Callable[..., 'FhirNetworkTypeCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirNetworkTypeCode']
-                    ) -> 'FhirNetworkTypeCode':
+        def __get__(
+                self, obj: Any,
+                owner: Type['FhirNetworkTypeCode']) -> 'FhirNetworkTypeCode':
             return self.f(owner)
 
     @classproperty

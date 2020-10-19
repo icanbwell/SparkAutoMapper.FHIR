@@ -13,21 +13,23 @@ class FhirCoverageFinancialExceptionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-coverage-financial-exception.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirCoverageFinancialExceptionCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirCoverageFinancialExceptionCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirCoverageFinancialExceptionCode']) -> None:
+        def __init__(
+                self,
+                f: Callable[...,
+                            'FhirCoverageFinancialExceptionCode']) -> None:
             self.f: Callable[..., 'FhirCoverageFinancialExceptionCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirCoverageFinancialExceptionCode']
-                    ) -> 'FhirCoverageFinancialExceptionCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirCoverageFinancialExceptionCode']
+        ) -> 'FhirCoverageFinancialExceptionCode':
             return self.f(owner)
 
     @classproperty

@@ -8,10 +8,8 @@ from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 
 class FhirTotalBackBoneElement(FhirResourceBase):
     @classmethod
-    def map(cls,
-            category: FhirList[FhirCodeableConcept[FhirAdjudicationCode]],
-            amount: FhirMoney
-            ) -> 'FhirTotalBackBoneElement':
+    def map(cls, category: FhirList[FhirCodeableConcept[FhirAdjudicationCode]],
+            amount: FhirMoney) -> 'FhirTotalBackBoneElement':
         """
         TotalBackBoneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.total
@@ -20,7 +18,4 @@ class FhirTotalBackBoneElement(FhirResourceBase):
         :param category: Type of adjudication information. https://hl7.org/FHIR/valueset-adjudication.html
         :param amount: Financial total for the category
         """
-        return FhirTotalBackBoneElement(
-            category=category,
-            amount=amount
-        )
+        return FhirTotalBackBoneElement(category=category, amount=amount)

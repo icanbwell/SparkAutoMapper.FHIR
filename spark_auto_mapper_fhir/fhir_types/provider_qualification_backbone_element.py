@@ -13,12 +13,13 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.provider_qualification import F
 
 class FhirProviderQualificationBackboneElement(FhirResourceBase):
     @classmethod
-    def map(cls,
-            code: FhirCodeableConcept[FhirProviderQualificationCode],
-            identifier: Optional[FhirList[FhirIdentifier]] = None,
-            period: Optional[FhirPeriod] = None,
-            issuer: Optional[FhirReference[FhirOrganization]] = None
-            ) -> 'FhirProviderQualificationBackboneElement':
+    def map(
+        cls,
+        code: FhirCodeableConcept[FhirProviderQualificationCode],
+        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        period: Optional[FhirPeriod] = None,
+        issuer: Optional[FhirReference[FhirOrganization]] = None
+    ) -> 'FhirProviderQualificationBackboneElement':
         """
         ProviderQualificationBackboneElement Resource in FHIR
         http://hl7.org/fhir/practitioner-definitions.html#Practitioner.qualification
@@ -29,9 +30,7 @@ class FhirProviderQualificationBackboneElement(FhirResourceBase):
         :param period: Period during which the qualification is valid
         :param issuer: Organization that regulates and issues the qualification
         """
-        return FhirProviderQualificationBackboneElement(
-            code=code,
-            identifier=identifier,
-            period=period,
-            issuer=issuer
-        )
+        return FhirProviderQualificationBackboneElement(code=code,
+                                                        identifier=identifier,
+                                                        period=period,
+                                                        issuer=issuer)

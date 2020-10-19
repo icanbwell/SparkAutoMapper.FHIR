@@ -5,7 +5,8 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMarit
 
 
 class FhirCodeList:
-    administrative_gender: Type[FhirAdministrativeGenderCode] = FhirAdministrativeGenderCode
+    administrative_gender: Type[
+        FhirAdministrativeGenderCode] = FhirAdministrativeGenderCode
     """
     The gender of a person used for administrative purposes.
     https://hl7.org/FHIR/valueset-administrative-gender.html

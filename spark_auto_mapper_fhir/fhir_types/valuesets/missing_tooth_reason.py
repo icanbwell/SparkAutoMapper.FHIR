@@ -13,21 +13,20 @@ class FhirMissingToothReasonCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-missing-tooth-reason.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirMissingToothReasonCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirMissingToothReasonCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirMissingToothReasonCode']) -> None:
+        def __init__(self, f: Callable[...,
+                                       'FhirMissingToothReasonCode']) -> None:
             self.f: Callable[..., 'FhirMissingToothReasonCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirMissingToothReasonCode']
-                    ) -> 'FhirMissingToothReasonCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirMissingToothReasonCode']
+        ) -> 'FhirMissingToothReasonCode':
             return self.f(owner)
 
     @classproperty

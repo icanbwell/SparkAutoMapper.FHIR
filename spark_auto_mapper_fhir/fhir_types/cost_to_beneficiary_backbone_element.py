@@ -14,12 +14,14 @@ from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
 class FhirCostToBeneficiaryBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            type_: Optional[FhirCodeableConcept[FhirCoverageCopayTypeCode]] = None,
-            valueQuantity: Optional[FhirSimpleQuantity] = None,
-            valueMoney: Optional[FhirMoney] = None,
-            exception: Optional[FhirList[FhirCoverageFinancialExceptionBackboneElement]] = None
-            ) -> 'FhirCostToBeneficiaryBackboneElement':
+    def map(
+        cls,
+        type_: Optional[FhirCodeableConcept[FhirCoverageCopayTypeCode]] = None,
+        valueQuantity: Optional[FhirSimpleQuantity] = None,
+        valueMoney: Optional[FhirMoney] = None,
+        exception: Optional[
+            FhirList[FhirCoverageFinancialExceptionBackboneElement]] = None
+    ) -> 'FhirCostToBeneficiaryBackboneElement':
         """
         CostToBeneficiaryBackboneElement Resource in FHIR
         https://hl7.org/FHIR/coverage-definitions.html#Coverage.costToBeneficiary
@@ -34,5 +36,4 @@ class FhirCostToBeneficiaryBackboneElement(FhirResourceBase):
             type_=type_,
             valueQuantity=valueQuantity,
             valueMoney=valueMoney,
-            exception=exception
-        )
+            exception=exception)

@@ -14,18 +14,14 @@ from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
 
 class FhirPayeeBackboneElement(FhirResourceBase):
     @classmethod
-    def map(cls,
-            type_: Optional[FhirCodeableConcept[FhirClaimPayeeTypeCode]] = None,
-            party: Optional[FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole,
-                    FhirOrganization,
-                    FhirPatient,
-                    FhirRelatedPerson
-                ]
-            ]] = None
-            ) -> 'FhirPayeeBackboneElement':
+    def map(
+        cls,
+        type_: Optional[FhirCodeableConcept[FhirClaimPayeeTypeCode]] = None,
+        party: Optional[FhirReference[Union[FhirPractitioner,
+                                            FhirPractitionerRole,
+                                            FhirOrganization, FhirPatient,
+                                            FhirRelatedPerson]]] = None
+    ) -> 'FhirPayeeBackboneElement':
         """
         PayeeBackboneElement Resource in FHIR
         http://hl7.org/fhir/claim-definitions.html#Claim.payee
@@ -34,7 +30,4 @@ class FhirPayeeBackboneElement(FhirResourceBase):
         :param type_: Category of recipient https://hl7.org/FHIR/valueset-payeetype.html
         :param party: Recipient reference
         """
-        return FhirPayeeBackboneElement(
-            type_=type_,
-            party=party
-        )
+        return FhirPayeeBackboneElement(type_=type_, party=party)

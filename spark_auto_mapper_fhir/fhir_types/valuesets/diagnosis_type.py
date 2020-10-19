@@ -13,11 +13,8 @@ class FhirDiagnosisType(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-ex-diagnosistype.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirDiagnosisType':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirDiagnosisType':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirDiagnosisType(FhirValueSetBase):
             self.f: Callable[..., 'FhirDiagnosisType'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirDiagnosisType']
-                    ) -> 'FhirDiagnosisType':
+                    owner: Type['FhirDiagnosisType']) -> 'FhirDiagnosisType':
             return self.f(owner)
 
     @classproperty

@@ -13,11 +13,8 @@ class FhirIcd10Code(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-icd-10.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirIcd10Code':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirIcd10Code':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirIcd10Code(FhirValueSetBase):
             self.f: Callable[..., 'FhirIcd10Code'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirIcd10Code']
-                    ) -> 'FhirIcd10Code':
+                    owner: Type['FhirIcd10Code']) -> 'FhirIcd10Code':
             return self.f(owner)
 
     @classproperty

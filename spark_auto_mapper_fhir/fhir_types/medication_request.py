@@ -48,89 +48,57 @@ from spark_auto_mapper_fhir.fhir_types.substitution_backbone_element import \
 class FhirMedicationRequest(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            status: FhirMedicationRequestStatusCode,
-            intent: FhirMedicationRequestIntent,
-            medication: FhirMedicationBackboneElement,
-            subject: FhirReference[
-                Union[FhirPatient, FhirGroup]
-            ],
-            statusReason: Optional[FhirCodeableConcept[FhirMedicationRequestStatusReasonCode]] = None,
-            category: Optional[FhirList[FhirCodeableConcept[FhirMedicationRequestCategoryCode]]] = None,
-            priority: Optional[FhirRequestPriorityCode] = None,
-            reported: Optional[FhirReportedBackboneElement] = None,
-            identifier: Optional[FhirList[FhirIdentifier]] = None,
-            encounter: Optional[FhirEncounter] = None,
-            supportingInformation: Optional[FhirList[Any]] = None,
-            authoredOn: Optional[FhirDateTime] = None,
-            requester: Optional[FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole,
-                    FhirOrganization,
-                    FhirPatient,
-                    FhirRelatedPerson,
-                    FhirDevice
-                ]
-            ]] = None,
-            performer: Optional[FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole,
-                    FhirOrganization,
-                    FhirPatient,
-                    FhirRelatedPerson,
-                    FhirDevice,
-                    FhirCareTeam
-                ]
-            ]] = None,
-            performerType: Optional[FhirCodeableConcept[FhirProcedurePerformerRoleCode]] = None,
-            recorder: Optional[FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole
-                ]
-            ]] = None,
-            reasonCode: Optional[FhirList[FhirCodeableConcept[FhirConditionCode]]] = None,
-            reasonReference: Optional[FhirList[
-                FhirReference[
-                    Union[
-                        FhirCondition,
-                        FhirObservation
-                    ]
-                ]
-            ]] = None,
-            basedOn: Optional[FhirList[
-                Union[
-                    FhirCarePlan,
-                    'FhirMedicationRequest',
-                    FhirServiceRequest,
-                    FhirImmunizationRecommendation
-                ]
-            ]] = None,
-            groupIdentifier: Optional[FhirIdentifier] = None,
-            courseOfTherapyType: Optional[FhirCodeableConcept[FhirMedicationRequestCourseOfTherapyCode]] = None,
-            insurance: Optional[FhirList[
-                FhirReference[
-                    Union[
-                        FhirCoverage,
-                        FhirClaimResponse
-                    ]
-                ]
-            ]] = None,
-            note: Optional[FhirList[
-                FhirAnnotation
-            ]] = None,
-            dosageInstruction: Optional[FhirList[FhirDosage]] = None,
-            dispenseRequest: Optional[FhirDispenseRequestBackboneElement] = None,
-            substitution: Optional[FhirSubstitutionBackboneElement] = None,
-            priorPrescription: Optional[
-                FhirReference['FhirMedicationRequest']
-            ] = None,
-            detectedIssue: Optional[FhirList[
-                FhirReference[FhirDetectedIssue]
-            ]] = None
-            ) -> 'FhirMedicationRequest':
+    def map(
+        cls,
+        status: FhirMedicationRequestStatusCode,
+        intent: FhirMedicationRequestIntent,
+        medication: FhirMedicationBackboneElement,
+        subject: FhirReference[Union[FhirPatient, FhirGroup]],
+        statusReason: Optional[
+            FhirCodeableConcept[FhirMedicationRequestStatusReasonCode]] = None,
+        category: Optional[FhirList[
+            FhirCodeableConcept[FhirMedicationRequestCategoryCode]]] = None,
+        priority: Optional[FhirRequestPriorityCode] = None,
+        reported: Optional[FhirReportedBackboneElement] = None,
+        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        encounter: Optional[FhirEncounter] = None,
+        supportingInformation: Optional[FhirList[Any]] = None,
+        authoredOn: Optional[FhirDateTime] = None,
+        requester: Optional[FhirReference[Union[FhirPractitioner,
+                                                FhirPractitionerRole,
+                                                FhirOrganization, FhirPatient,
+                                                FhirRelatedPerson,
+                                                FhirDevice]]] = None,
+        performer: Optional[FhirReference[Union[FhirPractitioner,
+                                                FhirPractitionerRole,
+                                                FhirOrganization, FhirPatient,
+                                                FhirRelatedPerson, FhirDevice,
+                                                FhirCareTeam]]] = None,
+        performerType: Optional[
+            FhirCodeableConcept[FhirProcedurePerformerRoleCode]] = None,
+        recorder: Optional[FhirReference[Union[FhirPractitioner,
+                                               FhirPractitionerRole]]] = None,
+        reasonCode: Optional[FhirList[
+            FhirCodeableConcept[FhirConditionCode]]] = None,
+        reasonReference: Optional[FhirList[FhirReference[Union[
+            FhirCondition, FhirObservation]]]] = None,
+        basedOn: Optional[FhirList[
+            Union[FhirCarePlan, 'FhirMedicationRequest', FhirServiceRequest,
+                  FhirImmunizationRecommendation]]] = None,
+        groupIdentifier: Optional[FhirIdentifier] = None,
+        courseOfTherapyType: Optional[FhirCodeableConcept[
+            FhirMedicationRequestCourseOfTherapyCode]] = None,
+        insurance: Optional[FhirList[FhirReference[Union[
+            FhirCoverage, FhirClaimResponse]]]] = None,
+        note: Optional[FhirList[FhirAnnotation]] = None,
+        dosageInstruction: Optional[FhirList[FhirDosage]] = None,
+        dispenseRequest: Optional[FhirDispenseRequestBackboneElement] = None,
+        substitution: Optional[FhirSubstitutionBackboneElement] = None,
+        priorPrescription: Optional[
+            FhirReference['FhirMedicationRequest']] = None,
+        detectedIssue: Optional[FhirList[
+            FhirReference[FhirDetectedIssue]]] = None
+    ) -> 'FhirMedicationRequest':
         """
         MedicationRequest Resource in FHIR
         https://hl7.org/FHIR/medicationrequest.html
@@ -199,5 +167,4 @@ class FhirMedicationRequest(FhirResourceBase):
             dispenseRequest=dispenseRequest,
             substitution=substitution,
             priorPrescription=priorPrescription,
-            detectedIssue=detectedIssue
-        )
+            detectedIssue=detectedIssue)

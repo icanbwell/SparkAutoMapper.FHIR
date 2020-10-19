@@ -16,8 +16,7 @@ class FhirReference(Generic[_T], FhirResourceBase):
             reference: Optional[FhirString] = None,
             type_: Optional[FhirUri] = None,
             identifier: Optional[FhirIdentifier] = None,
-            display: Optional[FhirString] = None
-            ) -> 'FhirReference[_T]':
+            display: Optional[FhirString] = None) -> 'FhirReference[_T]':
         """
         Reference Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Reference
@@ -30,9 +29,7 @@ class FhirReference(Generic[_T], FhirResourceBase):
         :param identifier: Logical reference, when literal reference is not known
         :param display: Text alternative for the resource
         """
-        return FhirReference(
-            reference=reference,
-            type_=type_,
-            identifier=identifier,
-            display=display
-        )
+        return FhirReference(reference=reference,
+                             type_=type_,
+                             identifier=identifier,
+                             display=display)

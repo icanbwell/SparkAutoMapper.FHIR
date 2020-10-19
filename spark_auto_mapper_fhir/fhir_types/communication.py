@@ -11,8 +11,7 @@ class FhirCommunication(FhirResourceBase):
     @classmethod
     def map(cls,
             language: FhirCodeableConcept[FhirCommonLanguageCode],
-            preferred: Optional[FhirBoolean] = None
-            ) -> 'FhirCommunication':
+            preferred: Optional[FhirBoolean] = None) -> 'FhirCommunication':
         """
         Communication Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Communication
@@ -23,7 +22,4 @@ class FhirCommunication(FhirResourceBase):
                         https://hl7.org/FHIR/valueset-languages.html
         :param preferred: Language preference indicator
         """
-        return FhirCommunication(
-            language=language,
-            preferred=preferred
-        )
+        return FhirCommunication(language=language, preferred=preferred)

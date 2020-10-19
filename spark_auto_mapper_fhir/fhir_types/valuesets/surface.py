@@ -13,11 +13,8 @@ class FhirSurfaceCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-surface.html
     """
-
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirSurfaceCode':
+    def map(cls, value: AutoMapperNativeSimpleType) -> 'FhirSurfaceCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -26,8 +23,7 @@ class FhirSurfaceCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirSurfaceCode'] = f
 
         def __get__(self, obj: Any,
-                    owner: Type['FhirSurfaceCode']
-                    ) -> 'FhirSurfaceCode':
+                    owner: Type['FhirSurfaceCode']) -> 'FhirSurfaceCode':
             return self.f(owner)
 
     @classproperty

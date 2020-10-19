@@ -13,21 +13,20 @@ class FhirAccidentIncidentCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v3/ActIncidentCode/vs.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirAccidentIncidentCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirAccidentIncidentCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirAccidentIncidentCode']) -> None:
+        def __init__(self, f: Callable[...,
+                                       'FhirAccidentIncidentCode']) -> None:
             self.f: Callable[..., 'FhirAccidentIncidentCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirAccidentIncidentCode']
-                    ) -> 'FhirAccidentIncidentCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirAccidentIncidentCode']
+        ) -> 'FhirAccidentIncidentCode':
             return self.f(owner)
 
     @classproperty

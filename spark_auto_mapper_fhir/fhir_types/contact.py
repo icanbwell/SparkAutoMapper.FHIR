@@ -17,14 +17,14 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 class FhirContact(FhirResourceBase):
     @classmethod
     def map(cls,
-            relationship: Optional[FhirList[FhirCodeableConcept[FhirPatientContactRelationshipCode]]] = None,
+            relationship: Optional[FhirList[FhirCodeableConcept[
+                FhirPatientContactRelationshipCode]]] = None,
             name: Optional[FhirHumanName] = None,
             telecom: Optional[FhirList[FhirContactPoint]] = None,
             address: Optional[FhirAddress] = None,
             gender: Optional[FhirAdministrativeGenderCode] = None,
             organization: Optional[FhirReference[FhirOrganization]] = None,
-            period: Optional[FhirPeriod] = None
-            ) -> 'FhirContact':
+            period: Optional[FhirPeriod] = None) -> 'FhirContact':
         """
         Contact Resource in FHIR
         https://hl7.org/FHIR/patient-definitions.html#Patient.contact
@@ -40,12 +40,10 @@ class FhirContact(FhirResourceBase):
         :param organization: Organization that is associated with the contact
         :param period: The period during which this contact person or organization is valid to be contacted relating to this patient
         """
-        return FhirContact(
-            relationship=relationship,
-            name=name,
-            telecom=telecom,
-            address=address,
-            gender=gender,
-            organization=organization,
-            period=period
-        )
+        return FhirContact(relationship=relationship,
+                           name=name,
+                           telecom=telecom,
+                           address=address,
+                           gender=gender,
+                           organization=organization,
+                           period=period)

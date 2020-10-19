@@ -1,6 +1,5 @@
 from typing import Callable, Type, Any
 
-
 from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
@@ -14,21 +13,20 @@ class FhirContactPointUseCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-contact-point-use.html
     """
-
     @classmethod
     def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'FhirContactPointUseCode':
+            value: AutoMapperNativeSimpleType) -> 'FhirContactPointUseCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FhirContactPointUseCode']) -> None:
+        def __init__(self, f: Callable[...,
+                                       'FhirContactPointUseCode']) -> None:
             self.f: Callable[..., 'FhirContactPointUseCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirContactPointUseCode']
-                    ) -> 'FhirContactPointUseCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirContactPointUseCode']
+        ) -> 'FhirContactPointUseCode':
             return self.f(owner)
 
     @classproperty

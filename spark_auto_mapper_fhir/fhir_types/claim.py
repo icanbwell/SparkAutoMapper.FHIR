@@ -45,53 +45,40 @@ class FhirClaim(FhirResourceBase):
             use: FhirClaimUseCode,
             patient: FhirReference[FhirPatient],
             created: FhirDateTime,
-            provider: FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole,
-                    FhirOrganization
-                ]
-            ],
+            provider: FhirReference[Union[FhirPractitioner,
+                                          FhirPractitionerRole,
+                                          FhirOrganization]],
             priority: FhirCodeableConcept[FhirProcessPriorityCode],
             insurance: FhirList[FhirInsuranceBackboneElement],
             id_: Optional[FhirId] = None,
             identifier: Optional[FhirList[FhirIdentifier]] = None,
-            subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
+            subType: Optional[
+                FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
             billablePeriod: Optional[FhirPeriod] = None,
-            enterer: Optional[FhirReference[
-                Union[
-                    FhirPractitioner,
-                    FhirPractitionerRole
-                ]
-            ]] = None,
+            enterer: Optional[FhirReference[Union[
+                FhirPractitioner, FhirPractitionerRole]]] = None,
             insurer: Optional[FhirReference[FhirOrganization]] = None,
-            fundsReserve: Optional[FhirCodeableConcept[FhirFundsReservationCode]] = None,
-            related: Optional[FhirList[FhirRelatedClaimBackboneElement]] = None,
+            fundsReserve: Optional[
+                FhirCodeableConcept[FhirFundsReservationCode]] = None,
+            related: Optional[
+                FhirList[FhirRelatedClaimBackboneElement]] = None,
             prescription: Optional[FhirReference[
-                Union[
-                    FhirDeviceRequest,
-                    FhirMedicationRequest,
-                    FhirVisionPrescription
-                ]
-            ]] = None,
+                Union[FhirDeviceRequest, FhirMedicationRequest,
+                      FhirVisionPrescription]]] = None,
             originalPrescription: Optional[FhirReference[
-                Union[
-                    FhirDeviceRequest,
-                    FhirMedicationRequest,
-                    FhirVisionPrescription
-                ]
-            ]] = None,
+                Union[FhirDeviceRequest, FhirMedicationRequest,
+                      FhirVisionPrescription]]] = None,
             payee: Optional[FhirPayeeBackboneElement] = None,
             referral: Optional[FhirReference[FhirServiceRequest]] = None,
             facility: Optional[FhirReference[FhirLocation]] = None,
             careTeam: Optional[FhirList[FhirCareTeamBackboneElement]] = None,
-            supportingInfo: Optional[FhirList[FhirSupportingInfoBackboneElement]] = None,
+            supportingInfo: Optional[
+                FhirList[FhirSupportingInfoBackboneElement]] = None,
             diagnosis: Optional[FhirList[FhirDiagnosisBackboneElement]] = None,
             procedure: Optional[FhirList[FhirProcedureBackboneElement]] = None,
             accident: Optional[FhirAccidentBackboneElement] = None,
             item: Optional[FhirList[FhirRevenueItemBackboneElement]] = None,
-            total: Optional[FhirMoney] = None
-            ) -> 'FhirClaim':
+            total: Optional[FhirMoney] = None) -> 'FhirClaim':
         """
         Claim Resource in FHIR
         https://hl7.org/FHIR/claim.html
@@ -127,33 +114,31 @@ class FhirClaim(FhirResourceBase):
         :param item: Product or service provided
         :param total: Total claim cost
         """
-        return FhirClaim(
-            id_=id_,
-            status=status,
-            type_=type_,
-            use=use,
-            patient=patient,
-            created=created,
-            provider=provider,
-            priority=priority,
-            insurance=insurance,
-            identifier=identifier,
-            subType=subType,
-            billablePeriod=billablePeriod,
-            enterer=enterer,
-            insurer=insurer,
-            fundsReserve=fundsReserve,
-            related=related,
-            prescription=prescription,
-            originalPrescription=originalPrescription,
-            payee=payee,
-            referral=referral,
-            facility=facility,
-            careTeam=careTeam,
-            supportingInfo=supportingInfo,
-            diagnosis=diagnosis,
-            procedure=procedure,
-            accident=accident,
-            item=item,
-            total=total
-        )
+        return FhirClaim(id_=id_,
+                         status=status,
+                         type_=type_,
+                         use=use,
+                         patient=patient,
+                         created=created,
+                         provider=provider,
+                         priority=priority,
+                         insurance=insurance,
+                         identifier=identifier,
+                         subType=subType,
+                         billablePeriod=billablePeriod,
+                         enterer=enterer,
+                         insurer=insurer,
+                         fundsReserve=fundsReserve,
+                         related=related,
+                         prescription=prescription,
+                         originalPrescription=originalPrescription,
+                         payee=payee,
+                         referral=referral,
+                         facility=facility,
+                         careTeam=careTeam,
+                         supportingInfo=supportingInfo,
+                         diagnosis=diagnosis,
+                         procedure=procedure,
+                         accident=accident,
+                         item=item,
+                         total=total)
