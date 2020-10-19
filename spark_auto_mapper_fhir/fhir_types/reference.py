@@ -1,24 +1,24 @@
-# flake8: noqa
-# turning off flake8 on this file because of the circular reference
-#   Identifier includes Reference which includes Identifier
-from typing import Optional
+from typing import Optional, TypeVar, Generic
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
+from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
+
+_T = TypeVar("_T")
 
 
-class AutoMapperFhirDataTypeReference(AutoMapperDataTypeComplexBase):
+class FhirReference(Generic[_T], FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            reference: Optional[AutoMapperTextInputType] = None,
-            type_: Optional[AutoMapperFhirUriInputType] = None,
-            # noqa: F821
-            identifier: Optional['AutoMapperFhirDataTypeIdentifier'] = None,  # type: ignore
-            display: Optional[AutoMapperTextInputType] = None
-            ) -> 'AutoMapperFhirDataTypeReference':
+    def map(
+        cls,
+        reference: Optional[FhirString] = None,
+        type_: Optional[FhirUri] = None,
+        identifier: Optional[FhirIdentifier] = None,
+        display: Optional[FhirString] = None
+    ) -> 'FhirReference[_T]':
         """
         Reference Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Reference
@@ -31,7 +31,7 @@ class AutoMapperFhirDataTypeReference(AutoMapperDataTypeComplexBase):
         :param identifier: Logical reference, when literal reference is not known
         :param display: Text alternative for the resource
         """
-        return AutoMapperFhirDataTypeReference(
+        return FhirReference(
             reference=reference,
             type_=type_,
             identifier=identifier,

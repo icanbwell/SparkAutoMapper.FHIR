@@ -1,24 +1,26 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.data_types.list import AutoMapperDataTypeList
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
+
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class AutoMapperFhirDataTypeAddress(AutoMapperDataTypeComplexBase):
+class FhirAddress(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            use: Optional[AutoMapperTextInputType] = None,
-            type_: Optional[AutoMapperTextInputType] = None,
-            text: Optional[AutoMapperTextInputType] = None,
-            line: Optional[AutoMapperDataTypeList] = None,
-            city: Optional[AutoMapperTextInputType] = None,
-            district: Optional[AutoMapperTextInputType] = None,
-            state: Optional[AutoMapperTextInputType] = None,
-            postalCode: Optional[AutoMapperTextInputType] = None,
-            country: Optional[AutoMapperTextInputType] = None
-            ) -> 'AutoMapperFhirDataTypeAddress':
+    def map(
+        cls,
+        use: Optional[FhirString] = None,
+        type_: Optional[FhirString] = None,
+        text: Optional[FhirString] = None,
+        line: Optional[FhirList[FhirString]] = None,
+        city: Optional[FhirString] = None,
+        district: Optional[FhirString] = None,
+        state: Optional[FhirString] = None,
+        postalCode: Optional[FhirString] = None,
+        country: Optional[FhirString] = None
+    ) -> 'FhirAddress':
         """
         Address Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Address
@@ -35,7 +37,7 @@ class AutoMapperFhirDataTypeAddress(AutoMapperDataTypeComplexBase):
         :param postalCode: 	Postal code for area
         :param country: Country (e.g. can be ISO 3166 2 or 3 letter code)
         """
-        return AutoMapperFhirDataTypeAddress(
+        return FhirAddress(
             use=use,
             type=type_,
             text=text,

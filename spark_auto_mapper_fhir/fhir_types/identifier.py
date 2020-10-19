@@ -1,43 +1,44 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
-from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.fhir_types.code import AutoMapperFhirCodeInputType
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import AutoMapperFhirDataTypeCodeableConcept
-# noinspection SpellCheckingInspection
-from spark_auto_mapper_fhir.fhir_types.period import AutoMapperFhirDataTypePeriod
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import FhirIdentifierTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import FhirIdentifierUseCode
+from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.fhir_types.uri import AutoMapperFhirUriInputType
 
-
-class AutoMapperFhirDataTypeIdentifier(AutoMapperDataTypeComplexBase):
+class FhirIdentifier(FhirResourceBase):
     # noinspection PyPep8Naming
-    from spark_auto_mapper_fhir.fhir_types.reference import AutoMapperFhirDataTypeReference
-
     @classmethod
-    def map(cls,
-            use: Optional[AutoMapperFhirCodeInputType] = None,
-            type_: Optional[AutoMapperFhirDataTypeCodeableConcept] = None,
-            system: Optional[AutoMapperFhirUriInputType] = None,
-            value: Optional[AutoMapperTextInputType] = None,
-            period: Optional[AutoMapperFhirDataTypePeriod] = None,
-            assigner: Optional['AutoMapperFhirDataTypeReference'] = None
-            ) -> 'AutoMapperFhirDataTypeIdentifier':
+    def map(
+        cls,
+        use: Optional[FhirIdentifierUseCode] = None,
+        type_: Optional[FhirCodeableConcept[FhirIdentifierTypeCode]] = None,
+        system: Optional[FhirUri] = None,
+        value: Optional[FhirString] = None,
+        period: Optional[FhirPeriod] = None,
+        assigner: Optional[FhirResourceBase] = None
+        # should be FhirReference[FhirOrganization] but this is causing circular import
+    ) -> 'FhirIdentifier':
         """
         Identifier Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Identifier
         An identifier intended for computation
 
 
-        :param use: usual | official | temp | secondary | old (If known) (https://hl7.org/FHIR/valueset-identifier-use.html)
+        :param use: usual | official | temp | secondary | old (If known)
+                    (https://hl7.org/FHIR/valueset-identifier-use.html)
         :param type_: Description of identifier https://hl7.org/FHIR/valueset-identifier-type.html
         :param system: 	The namespace for the identifier value
         :param value: The value that is unique
         :param period: Time period when id is/was valid for use
         :param assigner: Organization that issued id (may be just text)
         """
-        return AutoMapperFhirDataTypeIdentifier(
+        return FhirIdentifier(
             use=use,
             type_=type_,
             system=system,
@@ -45,3 +46,10 @@ class AutoMapperFhirDataTypeIdentifier(AutoMapperDataTypeComplexBase):
             period=period,
             assigner=assigner
         )
+
+    use = A.column("use")
+    type_ = A.column("type")
+    system = A.column("system")
+    # value = A.column("value")
+    period = A.column("period")
+    assigner = A.column("assigner")

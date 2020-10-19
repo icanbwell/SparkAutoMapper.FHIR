@@ -27,9 +27,9 @@ checks:venv
 	. $(VENV_NAME)/bin/activate && \
     pip install --upgrade -r requirements.txt && \
     flake8 spark_auto_mapper_fhir && \
-    mypy spark_auto_mapper_fhir && \
     flake8 tests && \
-    mypy tests
+    mypy . --strict --show-error-codes --allow-untyped-decorators
+
 
 .PHONY:update
 update:
@@ -83,3 +83,11 @@ reset-pre-commit: clean-pre-commit run-pre-commit
 .PHONY:init
 init: installspark up devsetup tests
 
+.PHONY:continuous_integration
+continuous_integration:
+	pip install --upgrade pip && \
+    pip install --upgrade -r requirements.txt && \
+    pip install --upgrade -r requirements-test.txt && \
+    python setup.py install && \
+    pre-commit run --all-files && \
+    pytest tests
