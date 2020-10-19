@@ -1,12 +1,12 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.duration import FhirDuration
 from spark_auto_mapper_fhir.fhir_types.quantity import FhirQuantity
 
 
-class FhirFill(AutoMapperDataTypeComplexBase):
+class FhirFill(FhirResourceBase):
     @classmethod
     def map(cls,
             quantity: Optional[FhirQuantity] = None,

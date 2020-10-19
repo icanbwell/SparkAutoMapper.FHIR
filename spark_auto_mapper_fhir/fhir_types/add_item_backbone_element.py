@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import FhirAdjudicationBackboneElement
@@ -25,7 +25,7 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
 
 
-class FhirAddItemBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirAddItemBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,

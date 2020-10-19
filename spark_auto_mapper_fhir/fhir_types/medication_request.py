@@ -1,6 +1,6 @@
 from typing import Optional, Union, Any
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.annotation import FhirAnnotation
 from spark_auto_mapper_fhir.fhir_types.care_plan import FhirCarePlan
@@ -45,7 +45,7 @@ from spark_auto_mapper_fhir.fhir_types.substitution_backbone_element import \
     FhirSubstitutionBackboneElement
 
 
-class FhirMedicationRequest(AutoMapperDataTypeComplexBase):
+class FhirMedicationRequest(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

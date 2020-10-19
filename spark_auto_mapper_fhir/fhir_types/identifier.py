@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
-class FhirIdentifier(AutoMapperDataTypeComplexBase):
+class FhirIdentifier(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
@@ -20,7 +20,7 @@ class FhirIdentifier(AutoMapperDataTypeComplexBase):
             system: Optional[FhirUri] = None,
             value: Optional[FhirString] = None,
             period: Optional[FhirPeriod] = None,
-            assigner: Optional[AutoMapperDataTypeComplexBase] = None
+            assigner: Optional[FhirResourceBase] = None
             # should be FhirReference[FhirOrganization] but this is causing circular import
             ) -> 'FhirIdentifier':
         """

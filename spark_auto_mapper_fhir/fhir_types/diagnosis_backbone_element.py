@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.diagnosis_on_admission import FhirDiagnosisOnAdmissionCode
@@ -10,7 +10,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.icd_10 import FhirIcd10Code
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
 
-class FhirDiagnosisBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirDiagnosisBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,

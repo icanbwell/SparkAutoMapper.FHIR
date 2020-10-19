@@ -1,13 +1,13 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
 # noinspection SpellCheckingInspection
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 
 
-class FhirPeriod(AutoMapperDataTypeComplexBase):
+class FhirPeriod(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

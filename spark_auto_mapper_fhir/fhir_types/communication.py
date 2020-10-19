@@ -1,13 +1,13 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirCommonLanguageCode
 
 
-class FhirCommunication(AutoMapperDataTypeComplexBase):
+class FhirCommunication(FhirResourceBase):
     @classmethod
     def map(cls,
             language: FhirCodeableConcept[FhirCommonLanguageCode],

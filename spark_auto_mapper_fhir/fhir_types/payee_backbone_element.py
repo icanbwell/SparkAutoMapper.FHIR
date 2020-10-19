@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_payee_type import FhirClaimPayeeTypeCode
@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
 
 
-class FhirPayeeBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirPayeeBackboneElement(FhirResourceBase):
     @classmethod
     def map(cls,
             type_: Optional[FhirCodeableConcept[FhirClaimPayeeTypeCode]] = None,

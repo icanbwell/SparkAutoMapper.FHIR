@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.valuesets.provider_qualification import FhirProviderQualificationCode
 
 
-class FhirProviderQualificationBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirProviderQualificationBackboneElement(FhirResourceBase):
     @classmethod
     def map(cls,
             code: FhirCodeableConcept[FhirProviderQualificationCode],

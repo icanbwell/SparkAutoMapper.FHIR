@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.additional_dosage_instruction import FhirAdditionalDosageInstructionCode
@@ -8,7 +8,7 @@ from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirDosage(AutoMapperDataTypeComplexBase):
+class FhirDosage(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

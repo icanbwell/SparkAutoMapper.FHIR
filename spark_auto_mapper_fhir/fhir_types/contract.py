@@ -1,7 +1,7 @@
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirContract(AutoMapperDataTypeComplexBase):
+class FhirContract(FhirResourceBase):
     @classmethod
     def map(cls,
             ) -> 'FhirContract':

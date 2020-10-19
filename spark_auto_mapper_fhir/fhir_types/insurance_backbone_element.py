@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.coverage import FhirCoverage
@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirInsuranceBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirInsuranceBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
@@ -22,7 +22,7 @@ from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirCoverage(AutoMapperDataTypeComplexBase):
+class FhirCoverage(FhirResourceBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
     @classmethod
     def map(cls,

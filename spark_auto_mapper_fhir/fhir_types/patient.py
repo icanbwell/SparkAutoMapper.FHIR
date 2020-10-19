@@ -1,7 +1,7 @@
 from typing import Optional, Union
 
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.data_types.date import AutoMapperDateDataType
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
@@ -28,7 +28,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import Fh
 from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMaritalStatusCode
 
 
-class FhirPatient(AutoMapperDataTypeComplexBase):
+class FhirPatient(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
@@ -10,7 +10,7 @@ from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 
-class FhirAccidentBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirAccidentBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

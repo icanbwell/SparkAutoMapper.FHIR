@@ -1,13 +1,13 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirLocation(AutoMapperDataTypeComplexBase):
+class FhirLocation(FhirResourceBase):
     @classmethod
     def map(cls,
             identifier: Optional[FhirList[FhirIdentifier]] = None,

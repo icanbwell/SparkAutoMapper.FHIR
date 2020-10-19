@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 from spark_auto_mapper_fhir.fhir_types.valuesets.quantity_comparator import FhirQuantityComparatorCode
 
 
-class FhirQuantity(AutoMapperDataTypeComplexBase):
+class FhirQuantity(FhirResourceBase):
     @classmethod
     def map(cls,
             value: Optional[FhirDecimal] = None,

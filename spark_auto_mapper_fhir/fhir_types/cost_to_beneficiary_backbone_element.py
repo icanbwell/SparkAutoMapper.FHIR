@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_copay_type import FhirCoverageCopayTypeCode
@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
 
 
-class FhirCostToBeneficiaryBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirCostToBeneficiaryBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

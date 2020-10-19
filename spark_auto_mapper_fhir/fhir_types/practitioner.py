@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
@@ -17,7 +17,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import Fh
 from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirCommonLanguageCode
 
 
-class FhirPractitioner(AutoMapperDataTypeComplexBase):
+class FhirPractitioner(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

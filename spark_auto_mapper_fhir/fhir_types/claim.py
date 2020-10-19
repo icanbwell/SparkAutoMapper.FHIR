@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.accident_backbone_element import FhirAccidentBackboneElement
 from spark_auto_mapper_fhir.fhir_types.care_team_backbone_element import FhirCareTeamBackboneElement
@@ -36,7 +36,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import FhirPro
 from spark_auto_mapper_fhir.fhir_types.vision_prescription import FhirVisionPrescription
 
 
-class FhirClaim(AutoMapperDataTypeComplexBase):
+class FhirClaim(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,

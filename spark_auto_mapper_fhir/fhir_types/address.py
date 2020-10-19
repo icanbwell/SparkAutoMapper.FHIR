@@ -1,12 +1,12 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirAddress(AutoMapperDataTypeComplexBase):
+class FhirAddress(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,

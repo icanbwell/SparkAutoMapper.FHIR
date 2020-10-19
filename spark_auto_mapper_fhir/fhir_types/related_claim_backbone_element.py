@@ -1,6 +1,7 @@
 from typing import Optional
 
-from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataTypeComplexBase
+from spark_auto_mapper_fhir.fhir_types.claim import FhirClaim
+from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.related_claim_relationship import FhirRelatedClaimRelationshipCode
@@ -8,10 +9,10 @@ from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 
-class FhirRelatedClaimBackboneElement(AutoMapperDataTypeComplexBase):
+class FhirRelatedClaimBackboneElement(FhirResourceBase):
     @classmethod
     def map(cls,
-            claim: Optional[FhirReference[AutoMapperDataTypeComplexBase]] = None,
+            claim: Optional[FhirReference[FhirClaim]] = None,
             # should be FhirClaim but we get circular import
             relationship: Optional[FhirCodeableConcept[FhirRelatedClaimRelationshipCode]] = None,
             reference: Optional[FhirIdentifier] = None
