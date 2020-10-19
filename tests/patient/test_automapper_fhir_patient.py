@@ -2,7 +2,7 @@ from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
 # noinspection PyUnresolvedReferences
-from pyspark.sql.functions import col
+from pyspark.sql.functions import col, expr
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -24,9 +24,10 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     # Arrange
     spark_session.createDataFrame(
         [
-            (1, 'Qureshi', 'Imran', '1970-01-01'),
-            (2, 'Vidal', 'Michael', '1970-02-02'),
-        ], ['member_id', 'last_name', 'first_name', 'date_of_birth']
+            (1, 'Qureshi', 'Imran', '1970-01-01', "F"),
+            (2, 'Vidal', 'Michael', '1970-02-02', "M"),
+        ],
+        ['member_id', 'last_name', 'first_name', 'date_of_birth', "my_gender"]
     ).createOrReplaceTempView("patients")
 
     source_df: DataFrame = spark_session.table("patients")
@@ -56,12 +57,22 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                     given=FhirList(["first_name", "middle_name"])
                 )
             ),
-            gender=AdministrativeGenderCode.female,
             birthDate=A.date(A.column("date_of_birth")),
             maritalStatus=CodeableConcept(
                 coding=Coding(
                     code=MaritalStatusCode.Married,
                     system=MaritalStatusCode.codeset
+                )
+            ),
+            gender=AdministrativeGenderCode(
+                A.expression(
+                    """
+    CASE
+        WHEN `my_gender` = 'F' THEN 'female'
+        WHEN `my_gender` = 'M' THEN 'male'
+        ELSE 'other'
+    END
+    """
                 )
             )
         )
@@ -96,7 +107,9 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                           lit("middle_name")).alias("given")
                 )
             ).alias("name"),
-            lit("female").alias("gender"),
+            expr(
+                """CASE WHEN (`my_gender` = F) THEN 'female' WHEN (`my_gender` = M) THEN 'male' ELSE other END"""
+            ).alias("gender"),
             coalesce(
                 to_date(col("date_of_birth"), 'yyyy-MM-dd'),
                 to_date(col("date_of_birth"), 'yyyyMMdd'),
