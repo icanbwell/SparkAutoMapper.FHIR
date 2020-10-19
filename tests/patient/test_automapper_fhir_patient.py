@@ -7,17 +7,17 @@ from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.fhir_types.human_name import HumanName
-from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
+from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.resources.human_name import HumanName
+from spark_auto_mapper_fhir.resources.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.patient import Patient
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_type import IdentifierTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.identifier_use import IdentifierUseCode
-from spark_auto_mapper_fhir.fhir_types.coding import Coding
-from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import MaritalStatusCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import NameUseCode
+from spark_auto_mapper_fhir.resources.patient import Patient
+from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.valuesets.identifier_type import IdentifierTypeCode
+from spark_auto_mapper_fhir.valuesets.identifier_use import IdentifierUseCode
+from spark_auto_mapper_fhir.resources.coding import Coding
+from spark_auto_mapper_fhir.valuesets.marital_status import MaritalStatusCode
+from spark_auto_mapper_fhir.valuesets.name_use import NameUseCode
 
 
 def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
