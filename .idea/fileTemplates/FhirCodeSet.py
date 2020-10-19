@@ -1,6 +1,6 @@
 from typing import Callable, Type, Any
 
-rom spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -12,7 +12,6 @@ class Fhir${ClassName}Code(FhirValueSetBase):
     """
     $Documentation
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
