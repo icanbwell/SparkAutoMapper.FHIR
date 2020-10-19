@@ -30,5 +30,7 @@ jobs:
           pip install wheel
 
       # setup and install everything and run tests
+      - name: install_spark
+        run: make download_spark
       - name: continuous_integration
         run: make continuous_integration

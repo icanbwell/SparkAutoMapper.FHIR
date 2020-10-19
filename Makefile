@@ -84,7 +84,7 @@ reset-pre-commit: clean-pre-commit run-pre-commit
 init: installspark up devsetup tests
 
 .PHONY:continuous_integration
-continuous_integration: download_spark
+continuous_integration:
 	pip install --upgrade pip && \
     pip install --upgrade -r requirements.txt && \
     pip install --upgrade -r requirements-test.txt && \
