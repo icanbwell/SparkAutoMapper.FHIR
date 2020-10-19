@@ -1,6 +1,6 @@
 from typing import Callable, Type, Any
 
-from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirValueSetBase
 
@@ -8,10 +8,12 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 class FhirAdministrativeGenderCode(FhirValueSetBase):
     @classmethod
     def map(
-        cls, value: AutoMapperNativeSimpleType
+        cls, value: AutoMapperTextInputType
     ) -> 'FhirAdministrativeGenderCode':
-        assert value in ["male", "female", "other", "unknown"]
-        return cls(value=value)
+        assert not isinstance(value, str) or value in [
+            "male", "female", "other", "unknown"
+        ]
+        return FhirAdministrativeGenderCode(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

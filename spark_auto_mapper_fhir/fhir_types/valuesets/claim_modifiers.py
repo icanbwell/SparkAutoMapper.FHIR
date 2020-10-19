@@ -1,7 +1,7 @@
 from typing import Callable, Type, Any
 
 from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirValueSetBase
-from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -14,9 +14,7 @@ class FhirClaimModifiersCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-claim-modifiers.html
     """
     @classmethod
-    def map(
-        cls, value: AutoMapperNativeSimpleType
-    ) -> 'FhirClaimModifiersCode':
+    def map(cls, value: AutoMapperTextInputType) -> 'FhirClaimModifiersCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection

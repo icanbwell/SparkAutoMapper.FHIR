@@ -1,6 +1,6 @@
 from typing import Callable, Type, Any
 
-from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
+from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -15,7 +15,7 @@ class FhirProviderQualificationCode(FhirValueSetBase):
     """
     @classmethod
     def map(
-        cls, value: AutoMapperNativeSimpleType
+        cls, value: AutoMapperTextInputType
     ) -> 'FhirProviderQualificationCode':
         return cls(value=value)
 
