@@ -154,3 +154,6 @@ dmypy.json
 .idea/SparkAutoMapper.FHIR.iml
 .idea/vcs.xml
 .idea/modules.xml
+
+# .DS_Store
+**/.DS_Store
