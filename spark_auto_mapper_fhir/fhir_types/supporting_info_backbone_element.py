@@ -62,4 +62,5 @@ class FhirSupportingInfoBackboneElement(FhirResourceBase):
             valueQuantity=valueQuantity,
             valueAttachment=valueAttachment,
             valueReference=valueReference,
-            reason=reason)
+            reason=reason
+        )

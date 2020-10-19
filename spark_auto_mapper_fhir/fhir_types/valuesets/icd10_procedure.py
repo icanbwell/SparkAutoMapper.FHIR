@@ -14,8 +14,9 @@ class FhirIcd10ProcedureCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-icd-10-procedures.html
     """
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType) -> 'FhirIcd10ProcedureCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirIcd10ProcedureCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -24,7 +25,7 @@ class FhirIcd10ProcedureCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirIcd10ProcedureCode'] = f
 
         def __get__(
-                self, obj: Any, owner: Type['FhirIcd10ProcedureCode']
+            self, obj: Any, owner: Type['FhirIcd10ProcedureCode']
         ) -> 'FhirIcd10ProcedureCode':
             return self.f(owner)
 

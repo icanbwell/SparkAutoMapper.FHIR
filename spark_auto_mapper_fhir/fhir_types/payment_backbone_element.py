@@ -35,9 +35,11 @@ class FhirPaymentBackboneElement(FhirResourceBase):
         :param amount: Payable amount after adjustment
         :param identifier: Business identifier for the payment
         """
-        return FhirPaymentBackboneElement(type_=type_,
-                                          adjustment=adjustment,
-                                          adjustmentReason=adjustmentReason,
-                                          date=date,
-                                          amount=amount,
-                                          identifier=identifier)
+        return FhirPaymentBackboneElement(
+            type_=type_,
+            adjustment=adjustment,
+            adjustmentReason=adjustmentReason,
+            date=date,
+            amount=amount,
+            identifier=identifier
+        )

@@ -22,9 +22,8 @@ class FhirCoverageFinancialExceptionCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self,
-                f: Callable[...,
-                            'FhirCoverageFinancialExceptionCode']) -> None:
+            self, f: Callable[..., 'FhirCoverageFinancialExceptionCode']
+        ) -> None:
             self.f: Callable[..., 'FhirCoverageFinancialExceptionCode'] = f
 
         def __get__(

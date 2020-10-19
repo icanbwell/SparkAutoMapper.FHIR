@@ -37,8 +37,8 @@ class FhirAddItemBackboneElement(FhirResourceBase):
         provider: Optional[FhirReference[Union[FhirPractitioner,
                                                FhirPractitionerRole,
                                                FhirOrganization]]] = None,
-        modifier: Optional[FhirList[
-            FhirCodeableConcept[FhirClaimModifiersCode]]] = None,
+        modifier: Optional[FhirList[FhirCodeableConcept[FhirClaimModifiersCode]
+                                    ]] = None,
         programCode: Optional[FhirList[
             FhirCodeableConcept[FhirExProgramReasonCode]]] = None,
         servicedDate: Optional[FhirDate] = None,
@@ -52,11 +52,11 @@ class FhirAddItemBackboneElement(FhirResourceBase):
         factor: Optional[FhirDecimal] = None,
         net: Optional[FhirMoney] = None,
         bodySite: Optional[FhirCodeableConcept[FhirToothCode]] = None,
-        subSite: Optional[FhirList[
-            FhirCodeableConcept[FhirSurfaceCode]]] = None,
+        subSite: Optional[FhirList[FhirCodeableConcept[FhirSurfaceCode]]
+                          ] = None,
         noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
-        adjudication: Optional[
-            FhirList[FhirAdjudicationBackboneElement]] = None
+        adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]
+                               ] = None
     ) -> 'FhirAddItemBackboneElement':
         """
         AddItemBackboneElement Resource in FHIR
@@ -104,4 +104,5 @@ class FhirAddItemBackboneElement(FhirResourceBase):
             bodySite=bodySite,
             subSite=subSite,
             noteNumber=noteNumber,
-            adjudication=adjudication)
+            adjudication=adjudication
+        )

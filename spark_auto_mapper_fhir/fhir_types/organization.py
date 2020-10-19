@@ -24,14 +24,14 @@ class FhirOrganization(FhirResourceBase):
         id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         active: Optional[FhirBoolean] = None,
-        type_: Optional[FhirList[
-            FhirCodeableConcept[FhirOrganizationTypeCode]]] = None,
+        type_: Optional[FhirList[FhirCodeableConcept[FhirOrganizationTypeCode]]
+                        ] = None,
         alias: Optional[FhirList[FhirString]] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
         address: Optional[FhirList[FhirAddress]] = None,
         partOf: Optional[FhirReference['FhirOrganization']] = None,
-        contact: Optional[
-            FhirList[FhirOrganizationContactBackboneElement]] = None,
+        contact: Optional[FhirList[FhirOrganizationContactBackboneElement]
+                          ] = None,
         endpoint: Optional[FhirList[FhirReference[FhirEndpoint]]] = None
     ) -> 'FhirOrganization':
         """
@@ -54,13 +54,15 @@ class FhirOrganization(FhirResourceBase):
         :param contact: Contact for the organization for a certain purpose
         :param endpoint: Technical endpoints providing access to services operated for the organization
         """
-        return FhirOrganization(id_=id_,
-                                identifier=identifier,
-                                active=active,
-                                type_=type_,
-                                alias=alias,
-                                telecom=telecom,
-                                address=address,
-                                partOf=partOf,
-                                contact=contact,
-                                endpoint=endpoint)
+        return FhirOrganization(
+            id_=id_,
+            identifier=identifier,
+            active=active,
+            type_=type_,
+            alias=alias,
+            telecom=telecom,
+            address=address,
+            partOf=partOf,
+            contact=contact,
+            endpoint=endpoint
+        )

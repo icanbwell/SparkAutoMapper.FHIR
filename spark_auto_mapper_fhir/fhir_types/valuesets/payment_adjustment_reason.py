@@ -22,8 +22,8 @@ class FhirPaymentAdjustmentReasonCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self, f: Callable[...,
-                                  'FhirPaymentAdjustmentReasonCode']) -> None:
+            self, f: Callable[..., 'FhirPaymentAdjustmentReasonCode']
+        ) -> None:
             self.f: Callable[..., 'FhirPaymentAdjustmentReasonCode'] = f
 
         def __get__(

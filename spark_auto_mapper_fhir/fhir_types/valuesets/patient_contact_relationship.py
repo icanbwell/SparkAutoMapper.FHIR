@@ -22,9 +22,8 @@ class FhirPatientContactRelationshipCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self,
-                f: Callable[...,
-                            'FhirPatientContactRelationshipCode']) -> None:
+            self, f: Callable[..., 'FhirPatientContactRelationshipCode']
+        ) -> None:
             self.f: Callable[..., 'FhirPatientContactRelationshipCode'] = f
 
         def __get__(

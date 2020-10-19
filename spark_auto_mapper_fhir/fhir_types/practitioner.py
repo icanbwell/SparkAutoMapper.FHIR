@@ -53,13 +53,15 @@ class FhirPractitioner(FhirResourceBase):
         :param communication: A language the practitioner can use in patient communication.
                             http://hl7.org/fhir/valueset-languages.html
         """
-        return FhirPractitioner(identifier=identifier,
-                                active=active,
-                                name=name,
-                                telecom=telecom,
-                                address=address,
-                                gender=gender,
-                                birthDate=birthDate,
-                                photo=photo,
-                                qualification=qualification,
-                                communication=communication)
+        return FhirPractitioner(
+            identifier=identifier,
+            active=active,
+            name=name,
+            telecom=telecom,
+            address=address,
+            gender=gender,
+            birthDate=birthDate,
+            photo=photo,
+            qualification=qualification,
+            communication=communication
+        )

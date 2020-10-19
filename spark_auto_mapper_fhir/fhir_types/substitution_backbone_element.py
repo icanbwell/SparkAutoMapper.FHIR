@@ -33,4 +33,5 @@ class FhirSubstitutionBackboneElement(FhirResourceBase):
         return FhirSubstitutionBackboneElement(
             allowedBoolean=allowedBoolean,
             allowedCodeableConcept=allowedCodeableConcept,
-            reason=reason)
+            reason=reason
+        )

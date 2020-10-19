@@ -22,8 +22,9 @@ class FhirCurrencyCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirCurrencyCode']) -> None:
             self.f: Callable[..., 'FhirCurrencyCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirCurrencyCode']) -> 'FhirCurrencyCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirCurrencyCode']
+        ) -> 'FhirCurrencyCode':
             return self.f(owner)
 
     @classproperty

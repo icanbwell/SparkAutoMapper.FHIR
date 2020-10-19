@@ -22,8 +22,9 @@ class FhirIcd10Code(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirIcd10Code']) -> None:
             self.f: Callable[..., 'FhirIcd10Code'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirIcd10Code']) -> 'FhirIcd10Code':
+        def __get__(
+            self, obj: Any, owner: Type['FhirIcd10Code']
+        ) -> 'FhirIcd10Code':
             return self.f(owner)
 
     @classproperty

@@ -30,7 +30,6 @@ class FhirProviderQualificationBackboneElement(FhirResourceBase):
         :param period: Period during which the qualification is valid
         :param issuer: Organization that regulates and issues the qualification
         """
-        return FhirProviderQualificationBackboneElement(code=code,
-                                                        identifier=identifier,
-                                                        period=period,
-                                                        issuer=issuer)
+        return FhirProviderQualificationBackboneElement(
+            code=code, identifier=identifier, period=period, issuer=issuer
+        )

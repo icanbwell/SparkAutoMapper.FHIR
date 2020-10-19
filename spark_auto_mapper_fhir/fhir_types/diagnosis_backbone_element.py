@@ -18,8 +18,8 @@ class FhirDiagnosisBackboneElement(FhirResourceBase):
         sequence: FhirPositiveInt,
         diagnosisCodeableConcept: FhirCodeableConcept[FhirIcd10Code],
         type_: Optional[FhirCodeableConcept[FhirDiagnosisType]] = None,
-        onAdmission: Optional[
-            FhirCodeableConcept[FhirDiagnosisOnAdmissionCode]] = None,
+        onAdmission: Optional[FhirCodeableConcept[FhirDiagnosisOnAdmissionCode]
+                              ] = None,
         packageCode: Optional[
             FhirCodeableConcept[FhirDiagnosisRelatedGroupCode]] = None
     ) -> 'FhirDiagnosisBackboneElement':
@@ -40,4 +40,5 @@ class FhirDiagnosisBackboneElement(FhirResourceBase):
             diagnosisCodeableConcept=diagnosisCodeableConcept,
             type_=type_,
             onAdmission=onAdmission,
-            packageCode=packageCode)
+            packageCode=packageCode
+        )

@@ -27,14 +27,14 @@ class FhirRevenueItemBackboneElement(FhirResourceBase):
         sequence: FhirPositiveInt,
         productOrService: FhirList[FhirCodeableConcept[FhirServiceUSCLSCode]],
         informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        revenue: Optional[FhirList[
-            FhirCodeableConcept[FhirExRevenueCenterCode]]] = None,
-        modifier: Optional[FhirList[
-            FhirCodeableConcept[FhirClaimModifiersCode]]] = None,
+        revenue: Optional[FhirList[FhirCodeableConcept[FhirExRevenueCenterCode]
+                                   ]] = None,
+        modifier: Optional[FhirList[FhirCodeableConcept[FhirClaimModifiersCode]
+                                    ]] = None,
         quantity: Optional[FhirList[FhirSimpleQuantity]] = None,
         factor: Optional[FhirDecimal] = None,
-        adjudication: Optional[
-            FhirList[FhirAdjudicationBackboneElement]] = None,
+        adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]
+                               ] = None,
         servicedDate: Optional[FhirDate] = None,
         servicedPeriod: Optional[FhirPeriod] = None,
         locationCodeableConcept: Optional[
@@ -75,4 +75,5 @@ class FhirRevenueItemBackboneElement(FhirResourceBase):
             servicedPeriod=servicedPeriod,
             locationCodeableConcept=locationCodeableConcept,
             locationAddress=locationAddress,
-            locationReference=locationReference)
+            locationReference=locationReference
+        )

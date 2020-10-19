@@ -14,14 +14,16 @@ class FhirProcessPriorityCode(FhirValueSetBase):
     https://terminology.hl7.org/1.0.0/CodeSystem-processpriority.html
     """
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType) -> 'FhirProcessPriorityCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirProcessPriorityCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[...,
-                                       'FhirProcessPriorityCode']) -> None:
+        def __init__(
+            self, f: Callable[..., 'FhirProcessPriorityCode']
+        ) -> None:
             self.f: Callable[..., 'FhirProcessPriorityCode'] = f
 
         def __get__(

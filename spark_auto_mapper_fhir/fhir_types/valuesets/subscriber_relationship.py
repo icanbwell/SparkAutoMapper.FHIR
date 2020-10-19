@@ -14,15 +14,16 @@ class FhirSubscriberRelationshipCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-subscriber-relationship.html
     """
     @classmethod
-    def map(cls, value: AutoMapperNativeSimpleType
-            ) -> 'FhirSubscriberRelationshipCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirSubscriberRelationshipCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self, f: Callable[...,
-                                  'FhirSubscriberRelationshipCode']) -> None:
+            self, f: Callable[..., 'FhirSubscriberRelationshipCode']
+        ) -> None:
             self.f: Callable[..., 'FhirSubscriberRelationshipCode'] = f
 
         def __get__(

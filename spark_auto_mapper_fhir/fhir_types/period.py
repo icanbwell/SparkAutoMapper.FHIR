@@ -9,9 +9,11 @@ from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 class FhirPeriod(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            start: Optional[FhirDate] = None,
-            end: Optional[FhirDate] = None) -> 'FhirPeriod':
+    def map(
+        cls,
+        start: Optional[FhirDate] = None,
+        end: Optional[FhirDate] = None
+    ) -> 'FhirPeriod':
         """
         Period Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Period

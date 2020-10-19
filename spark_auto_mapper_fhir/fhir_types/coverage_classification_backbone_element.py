@@ -24,6 +24,6 @@ class FhirCoverageClassificationBackboneElement(FhirResourceBase):
         :param value: Value associated with the type
         :param name: Human readable description of the type and value
         """
-        return FhirCoverageClassificationBackboneElement(type_=type_,
-                                                         value=value,
-                                                         name=name)
+        return FhirCoverageClassificationBackboneElement(
+            type_=type_, value=value, name=name
+        )

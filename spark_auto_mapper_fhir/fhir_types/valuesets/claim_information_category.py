@@ -22,8 +22,8 @@ class FhirClaimInformationCategoryCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self, f: Callable[...,
-                                  'FhirClaimInformationCategoryCode']) -> None:
+            self, f: Callable[..., 'FhirClaimInformationCategoryCode']
+        ) -> None:
             self.f: Callable[..., 'FhirClaimInformationCategoryCode'] = f
 
         def __get__(

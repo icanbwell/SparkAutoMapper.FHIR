@@ -14,14 +14,16 @@ class FhirRemittanceOutcomeCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-remittance-outcome.html
     """
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType) -> 'FhirRemittanceOutcomeCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirRemittanceOutcomeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[...,
-                                       'FhirRemittanceOutcomeCode']) -> None:
+        def __init__(
+            self, f: Callable[..., 'FhirRemittanceOutcomeCode']
+        ) -> None:
             self.f: Callable[..., 'FhirRemittanceOutcomeCode'] = f
 
         def __get__(

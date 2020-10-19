@@ -22,9 +22,8 @@ class FhirMedicationRequestCourseOfTherapyCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self,
-            f: Callable[...,
-                        'FhirMedicationRequestCourseOfTherapyCode']) -> None:
+            self, f: Callable[..., 'FhirMedicationRequestCourseOfTherapyCode']
+        ) -> None:
             self.f: Callable[...,
                              'FhirMedicationRequestCourseOfTherapyCode'] = f
 
@@ -36,7 +35,8 @@ class FhirMedicationRequestCourseOfTherapyCode(FhirValueSetBase):
 
     @classproperty
     def NameOfYourFirstValue(
-            cls) -> 'FhirMedicationRequestCourseOfTherapyCode':
+        cls
+    ) -> 'FhirMedicationRequestCourseOfTherapyCode':
         """
         Comment
         """

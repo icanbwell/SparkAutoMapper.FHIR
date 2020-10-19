@@ -22,5 +22,6 @@ class FhirCoverageFinancialExceptionBackboneElement(FhirResourceBase):
         :param type_: Exception category. https://hl7.org/FHIR/valueset-coverage-financial-exception.html
         :param period: The effective period of the exception
         """
-        return FhirCoverageFinancialExceptionBackboneElement(type_=type_,
-                                                             period=period)
+        return FhirCoverageFinancialExceptionBackboneElement(
+            type_=type_, period=period
+        )

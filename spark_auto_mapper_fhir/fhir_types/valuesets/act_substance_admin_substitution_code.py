@@ -23,9 +23,8 @@ class FhirActSubstanceAdminSubstitutionCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self,
-                f: Callable[...,
-                            'FhirActSubstanceAdminSubstitutionCode']) -> None:
+            self, f: Callable[..., 'FhirActSubstanceAdminSubstitutionCode']
+        ) -> None:
             self.f: Callable[..., 'FhirActSubstanceAdminSubstitutionCode'] = f
 
         def __get__(

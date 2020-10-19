@@ -22,8 +22,9 @@ class FhirMimeTypeCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirMimeTypeCode']) -> None:
             self.f: Callable[..., 'FhirMimeTypeCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirMimeTypeCode']) -> 'FhirMimeTypeCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirMimeTypeCode']
+        ) -> 'FhirMimeTypeCode':
             return self.f(owner)
 
     @classproperty

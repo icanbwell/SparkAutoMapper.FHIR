@@ -22,8 +22,9 @@ class FhirSurfaceCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirSurfaceCode']) -> None:
             self.f: Callable[..., 'FhirSurfaceCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirSurfaceCode']) -> 'FhirSurfaceCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirSurfaceCode']
+        ) -> 'FhirSurfaceCode':
             return self.f(owner)
 
     @classproperty

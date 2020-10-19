@@ -7,15 +7,17 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 
 class FhirAdministrativeGenderCode(FhirValueSetBase):
     @classmethod
-    def map(cls, value: AutoMapperNativeSimpleType
-            ) -> 'FhirAdministrativeGenderCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirAdministrativeGenderCode':
         assert value in ["male", "female", "other", "unknown"]
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self,
-                     f: Callable[..., 'FhirAdministrativeGenderCode']) -> None:
+        def __init__(
+            self, f: Callable[..., 'FhirAdministrativeGenderCode']
+        ) -> None:
             self.f: Callable[..., 'FhirAdministrativeGenderCode'] = f
 
         def __get__(

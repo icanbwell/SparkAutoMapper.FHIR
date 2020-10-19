@@ -23,8 +23,8 @@ class FhirNetworkTypeCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirNetworkTypeCode'] = f
 
         def __get__(
-                self, obj: Any,
-                owner: Type['FhirNetworkTypeCode']) -> 'FhirNetworkTypeCode':
+            self, obj: Any, owner: Type['FhirNetworkTypeCode']
+        ) -> 'FhirNetworkTypeCode':
             return self.f(owner)
 
     @classproperty

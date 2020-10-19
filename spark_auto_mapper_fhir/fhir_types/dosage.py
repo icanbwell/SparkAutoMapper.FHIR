@@ -31,7 +31,9 @@ class FhirDosage(FhirResourceBase):
                                         https://hl7.org/FHIR/valueset-additional-instruction-codes.html
         :param patientInstruction: Patient or consumer oriented instructions
         """
-        return FhirDosage(sequence=sequence,
-                          text=text,
-                          additionalInstruction=additionalInstruction,
-                          patientInstruction=patientInstruction)
+        return FhirDosage(
+            sequence=sequence,
+            text=text,
+            additionalInstruction=additionalInstruction,
+            patientInstruction=patientInstruction
+        )

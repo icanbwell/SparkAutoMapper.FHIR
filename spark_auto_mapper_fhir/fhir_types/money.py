@@ -8,9 +8,11 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.currency import FhirCurrencyCod
 
 class FhirMoney(FhirResourceBase):
     @classmethod
-    def map(cls,
-            value: Optional[FhirDecimal] = None,
-            currency: Optional[FhirCurrencyCode] = None) -> 'FhirMoney':
+    def map(
+        cls,
+        value: Optional[FhirDecimal] = None,
+        currency: Optional[FhirCurrencyCode] = None
+    ) -> 'FhirMoney':
         """
         Money Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Money

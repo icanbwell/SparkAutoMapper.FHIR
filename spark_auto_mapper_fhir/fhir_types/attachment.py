@@ -14,15 +14,17 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.mime_type import FhirMimeTypeCo
 class FhirAttachment(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            contentType: Optional[FhirMimeTypeCode] = None,
-            language: Optional[FhirCommonLanguageCode] = None,
-            data: Optional[FhirBase64Binary] = None,
-            url: Optional[FhirUri] = None,
-            size: Optional[FhirUnsignedInt] = None,
-            hash_: Optional[FhirBase64Binary] = None,
-            title: Optional[FhirString] = None,
-            creation: Optional[FhirDateTime] = None) -> 'FhirAttachment':
+    def map(
+        cls,
+        contentType: Optional[FhirMimeTypeCode] = None,
+        language: Optional[FhirCommonLanguageCode] = None,
+        data: Optional[FhirBase64Binary] = None,
+        url: Optional[FhirUri] = None,
+        size: Optional[FhirUnsignedInt] = None,
+        hash_: Optional[FhirBase64Binary] = None,
+        title: Optional[FhirString] = None,
+        creation: Optional[FhirDateTime] = None
+    ) -> 'FhirAttachment':
         """
         Attachment Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Attachment
@@ -38,11 +40,13 @@ class FhirAttachment(FhirResourceBase):
         :param title: Label to display in place of the data
         :param creation: Date attachment was first created
         """
-        return FhirAttachment(contentType=contentType,
-                              language=language,
-                              data=data,
-                              url=url,
-                              size=size,
-                              hash_=hash_,
-                              title=title,
-                              creation=creation)
+        return FhirAttachment(
+            contentType=contentType,
+            language=language,
+            data=data,
+            url=url,
+            size=size,
+            hash_=hash_,
+            title=title,
+            creation=creation
+        )

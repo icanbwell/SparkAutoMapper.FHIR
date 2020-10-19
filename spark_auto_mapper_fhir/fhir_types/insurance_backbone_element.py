@@ -28,6 +28,6 @@ class FhirInsuranceBackboneElement(FhirResourceBase):
         :param coverage: Insurance information
         :param preAuthRef: 	Prior authorization reference number
         """
-        return FhirInsuranceBackboneElement(focal=focal,
-                                            coverage=coverage,
-                                            preAuthRef=preAuthRef)
+        return FhirInsuranceBackboneElement(
+            focal=focal, coverage=coverage, preAuthRef=preAuthRef
+        )

@@ -9,16 +9,18 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 class FhirAddress(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            use: Optional[FhirString] = None,
-            type_: Optional[FhirString] = None,
-            text: Optional[FhirString] = None,
-            line: Optional[FhirList[FhirString]] = None,
-            city: Optional[FhirString] = None,
-            district: Optional[FhirString] = None,
-            state: Optional[FhirString] = None,
-            postalCode: Optional[FhirString] = None,
-            country: Optional[FhirString] = None) -> 'FhirAddress':
+    def map(
+        cls,
+        use: Optional[FhirString] = None,
+        type_: Optional[FhirString] = None,
+        text: Optional[FhirString] = None,
+        line: Optional[FhirList[FhirString]] = None,
+        city: Optional[FhirString] = None,
+        district: Optional[FhirString] = None,
+        state: Optional[FhirString] = None,
+        postalCode: Optional[FhirString] = None,
+        country: Optional[FhirString] = None
+    ) -> 'FhirAddress':
         """
         Address Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Address
@@ -35,12 +37,14 @@ class FhirAddress(FhirResourceBase):
         :param postalCode: 	Postal code for area
         :param country: Country (e.g. can be ISO 3166 2 or 3 letter code)
         """
-        return FhirAddress(use=use,
-                           type=type_,
-                           text=text,
-                           line=line,
-                           city=city,
-                           district=district,
-                           state=state,
-                           postalCode=postalCode,
-                           country=country)
+        return FhirAddress(
+            use=use,
+            type=type_,
+            text=text,
+            line=line,
+            city=city,
+            district=district,
+            state=state,
+            postalCode=postalCode,
+            country=country
+        )

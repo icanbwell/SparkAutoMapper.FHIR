@@ -36,4 +36,5 @@ class FhirCostToBeneficiaryBackboneElement(FhirResourceBase):
             type_=type_,
             valueQuantity=valueQuantity,
             valueMoney=valueMoney,
-            exception=exception)
+            exception=exception
+        )

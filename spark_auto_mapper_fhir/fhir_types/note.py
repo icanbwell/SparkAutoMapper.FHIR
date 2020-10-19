@@ -29,7 +29,6 @@ class FhirNote(FhirResourceBase):
         :param text: Note explanatory text
         :param language: Language of the text. https://hl7.org/FHIR/valueset-languages.html
         """
-        return FhirNote(number=number,
-                        type_=type_,
-                        text=text,
-                        language=language)
+        return FhirNote(
+            number=number, type_=type_, text=text, language=language
+        )

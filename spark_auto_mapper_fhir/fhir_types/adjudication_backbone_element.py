@@ -15,8 +15,8 @@ class FhirAdjudicationBackboneElement(FhirResourceBase):
     def map(
         cls,
         category: FhirCodeableConcept[FhirAdjudicationValueCode],
-        reason: Optional[
-            FhirCodeableConcept[FhirAdjudicationReasonCode]] = None,
+        reason: Optional[FhirCodeableConcept[FhirAdjudicationReasonCode]
+                         ] = None,
         amount: Optional[FhirMoney] = None,
         value: Optional[FhirDecimal] = None
     ) -> 'FhirAdjudicationBackboneElement':
@@ -30,7 +30,6 @@ class FhirAdjudicationBackboneElement(FhirResourceBase):
         :param amount: Monetary amount
         :param value: Non-monitary value
         """
-        return FhirAdjudicationBackboneElement(category=category,
-                                               reason=reason,
-                                               amount=amount,
-                                               value=value)
+        return FhirAdjudicationBackboneElement(
+            category=category, reason=reason, amount=amount, value=value
+        )

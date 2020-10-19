@@ -23,7 +23,7 @@ class FhirMaritalStatusCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirMaritalStatusCode'] = f
 
         def __get__(
-                self, obj: Any, owner: Type['FhirMaritalStatusCode']
+            self, obj: Any, owner: Type['FhirMaritalStatusCode']
         ) -> 'FhirMaritalStatusCode':
             return self.f(owner)
 

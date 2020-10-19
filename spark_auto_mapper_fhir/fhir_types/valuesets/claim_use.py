@@ -22,8 +22,9 @@ class FhirClaimUseCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirClaimUseCode']) -> None:
             self.f: Callable[..., 'FhirClaimUseCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirClaimUseCode']) -> 'FhirClaimUseCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirClaimUseCode']
+        ) -> 'FhirClaimUseCode':
             return self.f(owner)
 
     @classproperty

@@ -14,8 +14,9 @@ class FhirClaimExceptionCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-claim-exception.html
     """
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType) -> 'FhirClaimExceptionCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirClaimExceptionCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -24,7 +25,7 @@ class FhirClaimExceptionCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirClaimExceptionCode'] = f
 
         def __get__(
-                self, obj: Any, owner: Type['FhirClaimExceptionCode']
+            self, obj: Any, owner: Type['FhirClaimExceptionCode']
         ) -> 'FhirClaimExceptionCode':
             return self.f(owner)
 

@@ -19,8 +19,8 @@ class FhirProcedureBackboneElement(FhirResourceBase):
         cls,
         sequence: FhirPositiveInt,
         procedureCodeableConcept: FhirCodeableConcept[FhirIcd10ProcedureCode],
-        type_: Optional[FhirList[
-            FhirCodeableConcept[FhirExProcedureTypeCode]]] = None,
+        type_: Optional[FhirList[FhirCodeableConcept[FhirExProcedureTypeCode]]
+                        ] = None,
         date: Optional[FhirDate] = None,
         procedureReference: Optional[FhirReference[FhirProcedure]] = None
     ) -> 'FhirProcedureBackboneElement':
@@ -41,4 +41,5 @@ class FhirProcedureBackboneElement(FhirResourceBase):
             procedureCodeableConcept=procedureCodeableConcept,
             type_=type_,
             date=date,
-            procedureReference=procedureReference)
+            procedureReference=procedureReference
+        )

@@ -38,12 +38,14 @@ class FhirIdentifier(FhirResourceBase):
         :param period: Time period when id is/was valid for use
         :param assigner: Organization that issued id (may be just text)
         """
-        return FhirIdentifier(use=use,
-                              type_=type_,
-                              system=system,
-                              value=value,
-                              period=period,
-                              assigner=assigner)
+        return FhirIdentifier(
+            use=use,
+            type_=type_,
+            system=system,
+            value=value,
+            period=period,
+            assigner=assigner
+        )
 
     use = A.column("use")
     type_ = A.column("type")

@@ -30,7 +30,9 @@ class FhirAccidentBackboneElement(FhirResourceBase):
         :param locationAddress: Where the event occurred
         :param locationReference: Where the event occurred
         """
-        return FhirAccidentBackboneElement(date=date,
-                                           type_=type_,
-                                           locationAddress=locationAddress,
-                                           locationReference=locationReference)
+        return FhirAccidentBackboneElement(
+            date=date,
+            type_=type_,
+            locationAddress=locationAddress,
+            locationReference=locationReference
+        )

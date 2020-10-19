@@ -10,14 +10,16 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import FhirNameUseCode
 
 class FhirHumanName(FhirResourceBase):
     @classmethod
-    def map(cls,
-            use: Optional[FhirNameUseCode] = None,
-            text: Optional[FhirString] = None,
-            family: Optional[FhirString] = None,
-            given: Optional[FhirList[FhirString]] = None,
-            prefix: Optional[FhirList[FhirString]] = None,
-            suffix: Optional[FhirList[FhirString]] = None,
-            period: Optional[FhirPeriod] = None) -> 'FhirHumanName':
+    def map(
+        cls,
+        use: Optional[FhirNameUseCode] = None,
+        text: Optional[FhirString] = None,
+        family: Optional[FhirString] = None,
+        given: Optional[FhirList[FhirString]] = None,
+        prefix: Optional[FhirList[FhirString]] = None,
+        suffix: Optional[FhirList[FhirString]] = None,
+        period: Optional[FhirPeriod] = None
+    ) -> 'FhirHumanName':
         """
         HumanName Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#HumanName
@@ -34,10 +36,12 @@ class FhirHumanName(FhirResourceBase):
                         This repeating element order: Suffixes appear in the correct order for presenting the name
         :param period: Time period when name was/is in use
         """
-        return FhirHumanName(use=use,
-                             text=text,
-                             family=family,
-                             given=given,
-                             prefix=prefix,
-                             suffix=suffix,
-                             period=period)
+        return FhirHumanName(
+            use=use,
+            text=text,
+            family=family,
+            given=given,
+            prefix=prefix,
+            suffix=suffix,
+            period=period
+        )

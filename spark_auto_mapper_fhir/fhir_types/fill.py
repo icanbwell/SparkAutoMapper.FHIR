@@ -8,9 +8,11 @@ from spark_auto_mapper_fhir.fhir_types.quantity import FhirQuantity
 
 class FhirFill(FhirResourceBase):
     @classmethod
-    def map(cls,
-            quantity: Optional[FhirQuantity] = None,
-            duration: Optional[FhirDuration] = None) -> 'FhirFill':
+    def map(
+        cls,
+        quantity: Optional[FhirQuantity] = None,
+        duration: Optional[FhirDuration] = None
+    ) -> 'FhirFill':
         """
         Fill Resource in FHIR
         https://hl7.org/FHIR/medicationrequest.html

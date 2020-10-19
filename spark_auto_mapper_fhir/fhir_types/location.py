@@ -9,9 +9,11 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 class FhirLocation(FhirResourceBase):
     @classmethod
-    def map(cls,
-            identifier: Optional[FhirList[FhirIdentifier]] = None,
-            name: Optional[FhirString] = None) -> 'FhirLocation':
+    def map(
+        cls,
+        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        name: Optional[FhirString] = None
+    ) -> 'FhirLocation':
         """
         Location Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Location

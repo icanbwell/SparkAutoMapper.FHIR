@@ -29,6 +29,6 @@ class FhirRelatedClaimBackboneElement(FhirResourceBase):
                             https://hl7.org/FHIR/valueset-related-claim-relationship.html
         :param reference: 	File or case reference
         """
-        return FhirRelatedClaimBackboneElement(claim=claim,
-                                               relationship=relationship,
-                                               reference=reference)
+        return FhirRelatedClaimBackboneElement(
+            claim=claim, relationship=relationship, reference=reference
+        )

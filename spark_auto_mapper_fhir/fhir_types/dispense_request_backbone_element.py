@@ -44,4 +44,5 @@ class FhirDispenseRequestBackboneElement(FhirResourceBase):
             numberOfRepeatsAllowed=numberOfRepeatsAllowed,
             quantity=quantity,
             expectedSupplyDuration=expectedSupplyDuration,
-            performer=performer)
+            performer=performer
+        )

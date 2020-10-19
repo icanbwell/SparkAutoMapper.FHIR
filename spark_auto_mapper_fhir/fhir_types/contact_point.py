@@ -11,12 +11,14 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.contact_point_use import FhirCo
 
 class FhirContactPoint(FhirResourceBase):
     @classmethod
-    def map(cls,
-            system: Optional[FhirContactPointSystemCode] = None,
-            value: Optional[FhirString] = None,
-            use: Optional[FhirContactPointUseCode] = None,
-            rank: Optional[FhirPositiveInt] = None,
-            period: Optional[FhirPeriod] = None) -> 'FhirContactPoint':
+    def map(
+        cls,
+        system: Optional[FhirContactPointSystemCode] = None,
+        value: Optional[FhirString] = None,
+        use: Optional[FhirContactPointUseCode] = None,
+        rank: Optional[FhirPositiveInt] = None,
+        period: Optional[FhirPeriod] = None
+    ) -> 'FhirContactPoint':
         """
         ContactPoint Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#ContactPoint
@@ -31,8 +33,6 @@ class FhirContactPoint(FhirResourceBase):
         :param rank: Specify preferred order of use (1 = highest)
         :param period: Time period when the contact point was/is in use
         """
-        return FhirContactPoint(system=system,
-                                value=value,
-                                use=use,
-                                rank=rank,
-                                period=period)
+        return FhirContactPoint(
+            system=system, value=value, use=use, rank=rank, period=period
+        )

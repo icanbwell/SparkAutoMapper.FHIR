@@ -22,9 +22,8 @@ class FhirMedicationRequestStatusReasonCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self,
-                f: Callable[...,
-                            'FhirMedicationRequestStatusReasonCode']) -> None:
+            self, f: Callable[..., 'FhirMedicationRequestStatusReasonCode']
+        ) -> None:
             self.f: Callable[..., 'FhirMedicationRequestStatusReasonCode'] = f
 
         def __get__(

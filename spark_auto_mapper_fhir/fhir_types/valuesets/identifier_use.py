@@ -23,7 +23,7 @@ class FhirIdentifierUseCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirIdentifierUseCode'] = f
 
         def __get__(
-                self, obj: Any, owner: Type['FhirIdentifierUseCode']
+            self, obj: Any, owner: Type['FhirIdentifierUseCode']
         ) -> 'FhirIdentifierUseCode':
             return self.f(owner)
 

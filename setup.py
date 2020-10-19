@@ -45,9 +45,10 @@ fix_setuptools()
 def parse_requirements(file: str) -> List[str]:
     with open(file, "r") as fs:
         return [
-            r for r in fs.read().splitlines()
-            if (len(r.strip()) > 0 and not r.strip().startswith("#")
-                and not r.strip().startswith("--"))
+            r for r in fs.read().splitlines() if (
+                len(r.strip()) > 0 and not r.strip().startswith("#")
+                and not r.strip().startswith("--")
+            )
         ]
 
 
@@ -57,26 +58,28 @@ test_requirements: List[str] = parse_requirements('requirements-test.txt')
 # classifiers list is here: https://pypi.org/classifiers/
 
 # create the package setup
-setup(name=package_name,
-      version=version,
-      author="Imran Qureshi",
-      author_email="imranq2@hotmail.com",
-      description="FHIR extensions for SparkAutoMapper",
-      long_description=long_description,
-      long_description_content_type="text/markdown",
-      url="https://github.com/imranq2/SparkAutoMapper.FHIR",
-      packages=find_packages(),
-      install_requires=requirements,
-      tests_require=test_requirements,
-      classifiers=[
-          "Development Status :: 4 - Beta",
-          "Programming Language :: Python :: 3",
-          "License :: OSI Approved :: Apache Software License",
-          "Operating System :: OS Independent",
-      ],
-      python_requires='>=3.6,<3.7',
-      dependency_links=[],
-      include_package_data=True,
-      zip_safe=False,
-      package_data={package_name: ["py.typed"]},
-      data_files=[])
+setup(
+    name=package_name,
+    version=version,
+    author="Imran Qureshi",
+    author_email="imranq2@hotmail.com",
+    description="FHIR extensions for SparkAutoMapper",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/imranq2/SparkAutoMapper.FHIR",
+    packages=find_packages(),
+    install_requires=requirements,
+    tests_require=test_requirements,
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6,<3.7',
+    dependency_links=[],
+    include_package_data=True,
+    zip_safe=False,
+    package_data={package_name: ["py.typed"]},
+    data_files=[]
+)

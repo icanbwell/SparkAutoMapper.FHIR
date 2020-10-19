@@ -61,16 +61,18 @@ class FhirExplanationOfBenefit(FhirResourceBase):
         outcome: FhirRemittanceOutcomeCode,
         enterer: Optional[FhirReference[Union[FhirPractitioner,
                                               FhirPractitionerRole]]] = None,
-        provider: Optional[FhirList[FhirReference[
-            Union[FhirOrganization, FhirPractitioner,
-                  FhirPractitionerRole]]]] = None,
+        provider: Optional[FhirList[FhirReference[Union[FhirOrganization,
+                                                        FhirPractitioner,
+                                                        FhirPractitionerRole]]]
+                           ] = None,
         billablePeriod: Optional[FhirPeriod] = None,
         subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
-        priority: Optional[
-            FhirCodeableConcept[FhirProcessPriorityCode]] = None,
-        prescription: Optional[FhirReference[Union[
-            FhirMedicationRequest, FhirVisionPrescription]]] = None,
+        priority: Optional[FhirCodeableConcept[FhirProcessPriorityCode]
+                           ] = None,
+        prescription: Optional[FhirReference[Union[FhirMedicationRequest,
+                                                   FhirVisionPrescription]]
+                               ] = None,
         originalPrescription: Optional[FhirReference[
             Union[FhirMedicationRequest]]] = None,
         payee: Optional[FhirPayeeBackboneElement] = None,
@@ -82,8 +84,8 @@ class FhirExplanationOfBenefit(FhirResourceBase):
         preAuthRef: Optional[FhirList[FhirString]] = None,
         preAuthRefPeriod: Optional[FhirList[FhirPeriod]] = None,
         careTeam: Optional[FhirList[FhirCareTeamBackboneElement]] = None,
-        supportingInfo: Optional[
-            FhirList[FhirSupportingInfoBackboneElement]] = None,
+        supportingInfo: Optional[FhirList[FhirSupportingInfoBackboneElement]
+                                 ] = None,
         diagnosis: Optional[FhirList[FhirDiagnosisBackboneElement]] = None,
         procedure: Optional[FhirList[FhirProcedureBackboneElement]] = None,
         precedence: Optional[FhirPositiveInt] = None,
@@ -191,4 +193,5 @@ class FhirExplanationOfBenefit(FhirResourceBase):
             form=form,
             processNote=processNote,
             benefitPeriod=benefitPeriod,
-            benefitBalance=benefitBalance)
+            benefitBalance=benefitBalance
+        )

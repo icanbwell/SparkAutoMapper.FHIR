@@ -31,30 +31,31 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMarit
 class FhirPatient(FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            id_: Optional[FhirId] = None,
-            identifier: Optional[FhirList[FhirIdentifier]] = None,
-            active: Optional[FhirBoolean] = None,
-            name: Optional[FhirList[FhirHumanName]] = None,
-            telecom: Optional[FhirList[FhirContactPoint]] = None,
-            gender: Optional[FhirAdministrativeGenderCode] = None,
-            birthDate: Optional[FhirDate] = None,
-            deceasedBoolean: Optional[FhirBoolean] = None,
-            deceasedDateTime: Optional[FhirDateTime] = None,
-            address: Optional[FhirList[FhirAddress]] = None,
-            maritalStatus: Optional[
-                FhirCodeableConcept[FhirMaritalStatusCode]] = None,
-            multipleBirthBoolean: Optional[FhirBoolean] = None,
-            multipleBirthInteger: Optional[FhirPositiveInt] = None,
-            photo: Optional[FhirList[FhirAttachment]] = None,
-            contact: Optional[FhirList[FhirContact]] = None,
-            communication: Optional[FhirList[FhirCommunication]] = None,
-            generalPractitioner: Optional[FhirList[FhirReference[
-                Union[FhirOrganization, FhirPractitioner,
-                      FhirPractitionerRole]]]] = None,
-            managingOrganization: Optional[
-                FhirReference[FhirOrganization]] = None,
-            link: Optional[FhirList[FhirLinkPatient]] = None) -> 'FhirPatient':
+    def map(
+        cls,
+        id_: Optional[FhirId] = None,
+        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        active: Optional[FhirBoolean] = None,
+        name: Optional[FhirList[FhirHumanName]] = None,
+        telecom: Optional[FhirList[FhirContactPoint]] = None,
+        gender: Optional[FhirAdministrativeGenderCode] = None,
+        birthDate: Optional[FhirDate] = None,
+        deceasedBoolean: Optional[FhirBoolean] = None,
+        deceasedDateTime: Optional[FhirDateTime] = None,
+        address: Optional[FhirList[FhirAddress]] = None,
+        maritalStatus: Optional[FhirCodeableConcept[FhirMaritalStatusCode]
+                                ] = None,
+        multipleBirthBoolean: Optional[FhirBoolean] = None,
+        multipleBirthInteger: Optional[FhirPositiveInt] = None,
+        photo: Optional[FhirList[FhirAttachment]] = None,
+        contact: Optional[FhirList[FhirContact]] = None,
+        communication: Optional[FhirList[FhirCommunication]] = None,
+        generalPractitioner: Optional[FhirList[FhirReference[
+            Union[FhirOrganization, FhirPractitioner,
+                  FhirPractitionerRole]]]] = None,
+        managingOrganization: Optional[FhirReference[FhirOrganization]] = None,
+        link: Optional[FhirList[FhirLinkPatient]] = None
+    ) -> 'FhirPatient':
         """
         Patient Resource in FHIR
         https://hl7.org/FHIR/patient.html
@@ -82,25 +83,27 @@ class FhirPatient(FhirResourceBase):
         :param managingOrganization: Organization that is the custodian of the patient record
         :param link: Link to another patient resource that concerns the same actual person
         """
-        return FhirPatient(id_=id_,
-                           identifier=identifier,
-                           active=active,
-                           name=name,
-                           telecom=telecom,
-                           gender=gender,
-                           birthDate=birthDate,
-                           deceasedBoolean=deceasedBoolean,
-                           deceasedDateTime=deceasedDateTime,
-                           address=address,
-                           maritalStatus=maritalStatus,
-                           multipleBirthBoolean=multipleBirthBoolean,
-                           multipleBirthInteger=multipleBirthInteger,
-                           photo=photo,
-                           contact=contact,
-                           communication=communication,
-                           generalPractitioner=generalPractitioner,
-                           managingOrganization=managingOrganization,
-                           link=link)
+        return FhirPatient(
+            id_=id_,
+            identifier=identifier,
+            active=active,
+            name=name,
+            telecom=telecom,
+            gender=gender,
+            birthDate=birthDate,
+            deceasedBoolean=deceasedBoolean,
+            deceasedDateTime=deceasedDateTime,
+            address=address,
+            maritalStatus=maritalStatus,
+            multipleBirthBoolean=multipleBirthBoolean,
+            multipleBirthInteger=multipleBirthInteger,
+            photo=photo,
+            contact=contact,
+            communication=communication,
+            generalPractitioner=generalPractitioner,
+            managingOrganization=managingOrganization,
+            link=link
+        )
 
     id_: AutoMapperDataTypeColumn = A.column("id_")
     identifier = A.column("identifier")

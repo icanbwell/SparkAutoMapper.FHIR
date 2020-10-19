@@ -12,9 +12,11 @@ _T = TypeVar("_T")
 class FhirCodeableConcept(Generic[_T], FhirResourceBase):
     # noinspection PyPep8Naming
     @classmethod
-    def map(cls,
-            coding: Optional[FhirCoding[_T]] = None,
-            text: Optional[FhirString] = None) -> 'FhirCodeableConcept[_T]':
+    def map(
+        cls,
+        coding: Optional[FhirCoding[_T]] = None,
+        text: Optional[FhirString] = None
+    ) -> 'FhirCodeableConcept[_T]':
         """
         CodeableConcept Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#CodeableConcept

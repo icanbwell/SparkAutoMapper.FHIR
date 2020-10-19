@@ -14,14 +14,16 @@ class FhirContactPointUseCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-contact-point-use.html
     """
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType) -> 'FhirContactPointUseCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirContactPointUseCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[...,
-                                       'FhirContactPointUseCode']) -> None:
+        def __init__(
+            self, f: Callable[..., 'FhirContactPointUseCode']
+        ) -> None:
             self.f: Callable[..., 'FhirContactPointUseCode'] = f
 
         def __get__(

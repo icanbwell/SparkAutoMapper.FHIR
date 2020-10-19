@@ -22,8 +22,9 @@ class FhirToothCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirToothCode']) -> None:
             self.f: Callable[..., 'FhirToothCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirToothCode']) -> 'FhirToothCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirToothCode']
+        ) -> 'FhirToothCode':
             return self.f(owner)
 
     @classproperty

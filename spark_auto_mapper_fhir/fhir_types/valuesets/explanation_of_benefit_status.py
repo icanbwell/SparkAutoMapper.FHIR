@@ -22,9 +22,8 @@ class FhirExplanationOfBenefitStatusCode(FhirValueSetBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self,
-                f: Callable[...,
-                            'FhirExplanationOfBenefitStatusCode']) -> None:
+            self, f: Callable[..., 'FhirExplanationOfBenefitStatusCode']
+        ) -> None:
             self.f: Callable[..., 'FhirExplanationOfBenefitStatusCode'] = f
 
         def __get__(

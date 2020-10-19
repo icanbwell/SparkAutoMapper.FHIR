@@ -23,8 +23,8 @@ class FhirBenefitTypeCode(FhirValueSetBase):
             self.f: Callable[..., 'FhirBenefitTypeCode'] = f
 
         def __get__(
-                self, obj: Any,
-                owner: Type['FhirBenefitTypeCode']) -> 'FhirBenefitTypeCode':
+            self, obj: Any, owner: Type['FhirBenefitTypeCode']
+        ) -> 'FhirBenefitTypeCode':
             return self.f(owner)
 
     @classproperty

@@ -22,8 +22,9 @@ class FhirLinkTypeCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'FhirLinkTypeCode']) -> None:
             self.f: Callable[..., 'FhirLinkTypeCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['FhirLinkTypeCode']) -> 'FhirLinkTypeCode':
+        def __get__(
+            self, obj: Any, owner: Type['FhirLinkTypeCode']
+        ) -> 'FhirLinkTypeCode':
             return self.f(owner)
 
     @classproperty

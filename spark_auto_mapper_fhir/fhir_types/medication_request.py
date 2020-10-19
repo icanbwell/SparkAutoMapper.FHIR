@@ -78,26 +78,30 @@ class FhirMedicationRequest(FhirResourceBase):
             FhirCodeableConcept[FhirProcedurePerformerRoleCode]] = None,
         recorder: Optional[FhirReference[Union[FhirPractitioner,
                                                FhirPractitionerRole]]] = None,
-        reasonCode: Optional[FhirList[
-            FhirCodeableConcept[FhirConditionCode]]] = None,
-        reasonReference: Optional[FhirList[FhirReference[Union[
-            FhirCondition, FhirObservation]]]] = None,
-        basedOn: Optional[FhirList[
-            Union[FhirCarePlan, 'FhirMedicationRequest', FhirServiceRequest,
-                  FhirImmunizationRecommendation]]] = None,
+        reasonCode: Optional[FhirList[FhirCodeableConcept[FhirConditionCode]]
+                             ] = None,
+        reasonReference: Optional[FhirList[FhirReference[Union[FhirCondition,
+                                                               FhirObservation]
+                                                         ]]] = None,
+        basedOn: Optional[FhirList[Union[FhirCarePlan, 'FhirMedicationRequest',
+                                         FhirServiceRequest,
+                                         FhirImmunizationRecommendation]]
+                          ] = None,
         groupIdentifier: Optional[FhirIdentifier] = None,
-        courseOfTherapyType: Optional[FhirCodeableConcept[
-            FhirMedicationRequestCourseOfTherapyCode]] = None,
-        insurance: Optional[FhirList[FhirReference[Union[
-            FhirCoverage, FhirClaimResponse]]]] = None,
+        courseOfTherapyType: Optional[
+            FhirCodeableConcept[FhirMedicationRequestCourseOfTherapyCode]
+        ] = None,
+        insurance: Optional[FhirList[FhirReference[Union[FhirCoverage,
+                                                         FhirClaimResponse]]]
+                            ] = None,
         note: Optional[FhirList[FhirAnnotation]] = None,
         dosageInstruction: Optional[FhirList[FhirDosage]] = None,
         dispenseRequest: Optional[FhirDispenseRequestBackboneElement] = None,
         substitution: Optional[FhirSubstitutionBackboneElement] = None,
-        priorPrescription: Optional[
-            FhirReference['FhirMedicationRequest']] = None,
-        detectedIssue: Optional[FhirList[
-            FhirReference[FhirDetectedIssue]]] = None
+        priorPrescription: Optional[FhirReference['FhirMedicationRequest']
+                                    ] = None,
+        detectedIssue: Optional[FhirList[FhirReference[FhirDetectedIssue]]
+                                ] = None
     ) -> 'FhirMedicationRequest':
         """
         MedicationRequest Resource in FHIR
@@ -167,4 +171,5 @@ class FhirMedicationRequest(FhirResourceBase):
             dispenseRequest=dispenseRequest,
             substitution=substitution,
             priorPrescription=priorPrescription,
-            detectedIssue=detectedIssue)
+            detectedIssue=detectedIssue
+        )

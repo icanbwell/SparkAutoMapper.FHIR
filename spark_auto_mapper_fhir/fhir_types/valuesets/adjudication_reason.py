@@ -14,14 +14,16 @@ class FhirAdjudicationReasonCode(FhirValueSetBase):
     http://hl7.org/fhir/valueset-adjudication-reason.html
     """
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType) -> 'FhirAdjudicationReasonCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirAdjudicationReasonCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[...,
-                                       'FhirAdjudicationReasonCode']) -> None:
+        def __init__(
+            self, f: Callable[..., 'FhirAdjudicationReasonCode']
+        ) -> None:
             self.f: Callable[..., 'FhirAdjudicationReasonCode'] = f
 
         def __get__(

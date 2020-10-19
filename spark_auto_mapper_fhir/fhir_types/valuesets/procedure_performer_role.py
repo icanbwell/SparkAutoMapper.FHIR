@@ -14,15 +14,16 @@ class FhirProcedurePerformerRoleCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-performer-role.html
     """
     @classmethod
-    def map(cls, value: AutoMapperNativeSimpleType
-            ) -> 'FhirProcedurePerformerRoleCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirProcedurePerformerRoleCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-                self, f: Callable[...,
-                                  'FhirProcedurePerformerRoleCode']) -> None:
+            self, f: Callable[..., 'FhirProcedurePerformerRoleCode']
+        ) -> None:
             self.f: Callable[..., 'FhirProcedurePerformerRoleCode'] = f
 
         def __get__(

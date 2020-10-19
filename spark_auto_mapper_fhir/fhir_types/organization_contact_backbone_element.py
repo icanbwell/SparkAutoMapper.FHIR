@@ -13,8 +13,8 @@ class FhirOrganizationContactBackboneElement(FhirResourceBase):
     @classmethod
     def map(
         cls,
-        purpose: Optional[
-            FhirCodeableConcept[FhirContactEntityTypeCode]] = None,
+        purpose: Optional[FhirCodeableConcept[FhirContactEntityTypeCode]
+                          ] = None,
         name: Optional[FhirHumanName] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
         address: Optional[FhirAddress] = None
@@ -30,7 +30,6 @@ class FhirOrganizationContactBackboneElement(FhirResourceBase):
         :param telecom: Contact details (telephone, email, etc.) for a contact
         :param address: Visiting or postal addresses for the contact
         """
-        return FhirOrganizationContactBackboneElement(purpose=purpose,
-                                                      name=name,
-                                                      telecom=telecom,
-                                                      address=address)
+        return FhirOrganizationContactBackboneElement(
+            purpose=purpose, name=name, telecom=telecom, address=address
+        )

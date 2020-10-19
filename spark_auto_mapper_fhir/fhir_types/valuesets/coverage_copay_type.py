@@ -14,14 +14,16 @@ class FhirCoverageCopayTypeCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-coverage-copay-type.html
     """
     @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType) -> 'FhirCoverageCopayTypeCode':
+    def map(
+        cls, value: AutoMapperNativeSimpleType
+    ) -> 'FhirCoverageCopayTypeCode':
         return cls(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[...,
-                                       'FhirCoverageCopayTypeCode']) -> None:
+        def __init__(
+            self, f: Callable[..., 'FhirCoverageCopayTypeCode']
+        ) -> None:
             self.f: Callable[..., 'FhirCoverageCopayTypeCode'] = f
 
         def __get__(

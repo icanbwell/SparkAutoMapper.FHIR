@@ -41,11 +41,13 @@ class FhirBenefitBalance(FhirResourceBase):
         :param term: Annual or lifetime. https://hl7.org/FHIR/valueset-benefit-term.html
         :param financial: Benefit Summary
         """
-        return FhirBenefitBalance(category=category,
-                                  excluded=excluded,
-                                  name=name,
-                                  description=description,
-                                  network=network,
-                                  unit=unit,
-                                  term=term,
-                                  financial=financial)
+        return FhirBenefitBalance(
+            category=category,
+            excluded=excluded,
+            name=name,
+            description=description,
+            network=network,
+            unit=unit,
+            term=term,
+            financial=financial
+        )
