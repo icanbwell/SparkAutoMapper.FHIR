@@ -9,14 +9,13 @@ from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
 from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMaritalStatusCode
 from spark_auto_mapper_fhir.fhir_types.communication import FhirCommunication
 from spark_auto_mapper_fhir.fhir_types.contact import FhirContact
 from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.link_patient import FhirLinkPatient
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -25,14 +24,15 @@ from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
 from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
 from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import FhirAdministrativeGenderCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMaritalStatusCode
 
 
 class FhirPatient(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming
     @classmethod
     def map(cls,
-            id_: FhirString,
+            id_: Optional[FhirId] = None,
             identifier: Optional[FhirList[FhirIdentifier]] = None,
             active: Optional[FhirBoolean] = None,
             name: Optional[FhirList[FhirHumanName]] = None,

@@ -5,15 +5,10 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 from spark_auto_mapper_fhir.fhir_types.accident_backbone_element import FhirAccidentBackboneElement
 from spark_auto_mapper_fhir.fhir_types.care_team_backbone_element import FhirCareTeamBackboneElement
 from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_sub_type import FhirClaimSubTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_type import FhirClaimTypeCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.claim_use import FhirClaimUseCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.financial_resource_status import FhirFinancialResourceStatusCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.funds_reservation import FhirFundsReservationCode
-from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import FhirProcessPriorityCode
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.device_request import FhirDeviceRequest
 from spark_auto_mapper_fhir.fhir_types.diagnosis_backbone_element import FhirDiagnosisBackboneElement
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
 from spark_auto_mapper_fhir.fhir_types.insurance_backbone_element import FhirInsuranceBackboneElement
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -31,8 +26,13 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.related_claim_backbone_element import FhirRelatedClaimBackboneElement
 from spark_auto_mapper_fhir.fhir_types.revenue_item_backbone_element import FhirRevenueItemBackboneElement
 from spark_auto_mapper_fhir.fhir_types.service_request import FhirServiceRequest
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.supporting_info_backbone_element import FhirSupportingInfoBackboneElement
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_sub_type import FhirClaimSubTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_type import FhirClaimTypeCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.claim_use import FhirClaimUseCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.financial_resource_status import FhirFinancialResourceStatusCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.funds_reservation import FhirFundsReservationCode
+from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import FhirProcessPriorityCode
 from spark_auto_mapper_fhir.fhir_types.vision_prescription import FhirVisionPrescription
 
 
@@ -40,7 +40,6 @@ class FhirClaim(AutoMapperDataTypeComplexBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     @classmethod
     def map(cls,
-            id_: FhirString,
             status: FhirFinancialResourceStatusCode,
             type_: FhirCodeableConcept[FhirClaimTypeCode],
             use: FhirClaimUseCode,
@@ -55,6 +54,7 @@ class FhirClaim(AutoMapperDataTypeComplexBase):
             ],
             priority: FhirCodeableConcept[FhirProcessPriorityCode],
             insurance: FhirList[FhirInsuranceBackboneElement],
+            id_: Optional[FhirId] = None,
             identifier: Optional[FhirList[FhirIdentifier]] = None,
             subType: Optional[FhirCodeableConcept[FhirClaimSubTypeCode]] = None,
             billablePeriod: Optional[FhirPeriod] = None,
