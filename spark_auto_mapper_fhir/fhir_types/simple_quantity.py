@@ -9,14 +9,13 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 
 
 class FhirSimpleQuantity(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         value: Optional[FhirDecimal] = None,
         unit: Optional[FhirString] = None,
         system: Optional[FhirUri] = None,
         code: Optional[FhirValueSetBase] = None
-    ) -> 'FhirSimpleQuantity':
+    ):
         """
         SimpleQuantity Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#SimpleQuantity
@@ -27,6 +26,4 @@ class FhirSimpleQuantity(FhirResourceBase):
         :param system: System that defines coded unit form
         :param code: Coded form of the unit
         """
-        return FhirSimpleQuantity(
-            value=value, unit=unit, system=system, code=code
-        )
+        super().__init__(value=value, unit=unit, system=system, code=code)

@@ -2,10 +2,9 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 
 class FhirObservation(FhirResourceBase):
-    @classmethod
-    def map(cls, ) -> 'FhirObservation':
+    def __init__(self) -> None:
         """
         Observation Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Observation
         """
-        return FhirObservation()
+        super().__init__()

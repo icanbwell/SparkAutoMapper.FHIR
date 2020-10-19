@@ -47,9 +47,8 @@ from spark_auto_mapper_fhir.fhir_types.substitution_backbone_element import \
 
 class FhirMedicationRequest(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         status: FhirMedicationRequestStatusCode,
         intent: FhirMedicationRequestIntent,
         medication: FhirMedicationBackboneElement,
@@ -102,7 +101,7 @@ class FhirMedicationRequest(FhirResourceBase):
                                     ] = None,
         detectedIssue: Optional[FhirList[FhirReference[FhirDetectedIssue]]
                                 ] = None
-    ) -> 'FhirMedicationRequest':
+    ):
         """
         MedicationRequest Resource in FHIR
         https://hl7.org/FHIR/medicationrequest.html
@@ -143,7 +142,7 @@ class FhirMedicationRequest(FhirResourceBase):
         :param priorPrescription: An order/prescription that is being replaced
         :param detectedIssue: Clinical Issue with action
         """
-        return FhirMedicationRequest(
+        super().__init__(
             status=status,
             intent=intent,
             medication=medication,

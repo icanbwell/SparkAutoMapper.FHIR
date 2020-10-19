@@ -83,9 +83,9 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             array(
                 struct(
                     lit("usual").alias("use"),
-                    col("a.member_id").alias("value"),
                     struct(struct(lit("MR").alias("code")).alias("coding")
                            ).alias("type"),
+                    col("a.member_id").alias("value"),
                 )
             ).alias("identifier"),
             array(
@@ -104,10 +104,10 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             ).alias("birthDate"),
             struct(
                 struct(
-                    lit("M").alias("code"),
                     lit(
                         "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
                     ).alias("system"),
+                    lit("M").alias("code"),
                 ).alias("coding")
             ).alias("maritalStatus")
         ).alias("patient")

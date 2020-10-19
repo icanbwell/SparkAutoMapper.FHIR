@@ -10,15 +10,14 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.quantity_comparator import Fhir
 
 
 class FhirDuration(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         value: Optional[FhirDecimal] = None,
         comparator: Optional[FhirQuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,
         system: Optional[FhirUri] = None,
         code: Optional[FhirDurationUnitCode] = None
-    ) -> 'FhirDuration':
+    ):
         """
         Duration Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Duration
@@ -31,7 +30,7 @@ class FhirDuration(FhirResourceBase):
         :param system: System that defines coded unit form
         :param code: Coded form of the unit
         """
-        return FhirDuration(
+        super().__init__(
             value=value,
             comparator=comparator,
             unit=unit,

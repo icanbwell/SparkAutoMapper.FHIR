@@ -10,15 +10,14 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.quantity_comparator import Fhir
 
 
 class FhirQuantity(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         value: Optional[FhirDecimal] = None,
         comparator: Optional[FhirQuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,
         system: Optional[FhirUri] = None,
         code: Optional[FhirValueSetBase] = None
-    ) -> 'FhirQuantity':
+    ):
         """
         Quantity Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#quantity
@@ -31,7 +30,7 @@ class FhirQuantity(FhirResourceBase):
         :param system: System that defines coded unit form
         :param code: Coded form of the unit
         """
-        return FhirQuantity(
+        super().__init__(
             value=value,
             comparator=comparator,
             unit=unit,

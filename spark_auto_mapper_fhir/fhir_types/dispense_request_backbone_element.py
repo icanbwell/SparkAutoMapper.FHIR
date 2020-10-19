@@ -13,9 +13,8 @@ from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 
 class FhirDispenseRequestBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         initialFill: Optional[FhirFill] = None,
         dispenseInterval: Optional[FhirDuration] = None,
         validityPeriod: Optional[FhirPeriod] = None,
@@ -23,7 +22,7 @@ class FhirDispenseRequestBackboneElement(FhirResourceBase):
         quantity: Optional[FhirSimpleQuantity] = None,
         expectedSupplyDuration: Optional[FhirDuration] = None,
         performer: Optional[FhirReference[FhirOrganization]] = None
-    ) -> 'FhirDispenseRequestBackboneElement':
+    ):
         """
         DispenseRequestBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#DispenseRequestBackboneElement
@@ -37,7 +36,7 @@ class FhirDispenseRequestBackboneElement(FhirResourceBase):
         :param expectedSupplyDuration: Number of days supply per dispense
         :param performer: Intended dispenser
         """
-        return FhirDispenseRequestBackboneElement(
+        super().__init__(
             initialFill=initialFill,
             dispenseInterval=dispenseInterval,
             validityPeriod=validityPeriod,

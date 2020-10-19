@@ -12,14 +12,13 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 class FhirAccidentBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         date: Optional[FhirDate] = None,
         type_: Optional[FhirCodeableConcept[FhirAccidentIncidentCode]] = None,
         locationAddress: Optional[FhirAddress] = None,
         locationReference: Optional[FhirReference[FhirLocation]] = None
-    ) -> 'FhirAccidentBackboneElement':
+    ) -> None:
         """
         AccidentBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.accident
@@ -30,7 +29,7 @@ class FhirAccidentBackboneElement(FhirResourceBase):
         :param locationAddress: Where the event occurred
         :param locationReference: Where the event occurred
         """
-        return FhirAccidentBackboneElement(
+        super().__init__(
             date=date,
             type_=type_,
             locationAddress=locationAddress,

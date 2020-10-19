@@ -11,16 +11,15 @@ from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 
 class FhirFinancialBenefit(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         type_: Optional[FhirCodeableConcept[FhirBenefitTypeCode]] = None,
         allowedUnsignedInt: Optional[FhirUnsignedInt] = None,
         allowedString: Optional[FhirString] = None,
         allowedMoney: Optional[FhirMoney] = None,
         usedUnsignedInt: Optional[FhirUnsignedInt] = None,
         usedMoney: Optional[FhirMoney] = None
-    ) -> 'FhirFinancialBenefit':
+    ):
         """
         FinancialBenefit Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.benefitBalance.financial
@@ -34,7 +33,7 @@ class FhirFinancialBenefit(FhirResourceBase):
         :param usedUnsignedInt: Benefits used
         :param usedMoney: Benefits used
         """
-        return FhirFinancialBenefit(
+        super().__init__(
             type_=type_,
             allowedUnsignedInt=allowedUnsignedInt,
             allowedString=allowedString,

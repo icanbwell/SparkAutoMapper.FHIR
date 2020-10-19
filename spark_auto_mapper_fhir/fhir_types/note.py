@@ -11,14 +11,13 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 class FhirNote(FhirResourceBase):
     # noinspection SpellCheckingInspection
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         number: Optional[FhirPositiveInt] = None,
         type_: Optional[FhirNoteTypeCode] = None,
         text: Optional[FhirString] = None,
         language: Optional[FhirCodeableConcept[FhirCommonLanguageCode]] = None
-    ) -> 'FhirNote':
+    ):
         """
         Note Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.processNote
@@ -29,6 +28,6 @@ class FhirNote(FhirResourceBase):
         :param text: Note explanatory text
         :param language: Language of the text. https://hl7.org/FHIR/valueset-languages.html
         """
-        return FhirNote(
+        super().__init__(
             number=number, type_=type_, text=text, language=language
         )

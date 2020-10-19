@@ -27,9 +27,8 @@ from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
 
 class FhirAddItemBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         productOrService: FhirCodeableConcept[FhirServiceUSCLSCode],
         itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
         detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
@@ -57,7 +56,7 @@ class FhirAddItemBackboneElement(FhirResourceBase):
         noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]
                                ] = None
-    ) -> 'FhirAddItemBackboneElement':
+    ):
         """
         AddItemBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.addItem
@@ -84,7 +83,7 @@ class FhirAddItemBackboneElement(FhirResourceBase):
         :param noteNumber: Applicable note numbers
         :param adjudication: Added items adjudication
         """
-        return FhirAddItemBackboneElement(
+        super().__init__(
             productOrService=productOrService,
             itemSequence=itemSequence,
             detailSequence=detailSequence,

@@ -10,15 +10,14 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 class FhirDosage(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         sequence: Optional[FhirPositiveInt] = None,
         text: Optional[FhirString] = None,
         additionalInstruction: Optional[
             FhirCodeableConcept[FhirAdditionalDosageInstructionCode]] = None,
         patientInstruction: Optional[FhirString] = None,
-    ) -> 'FhirDosage':
+    ):
         """
         Dosage Resource in FHIR
         https://hl7.org/FHIR/dosage.html#Dosage
@@ -31,7 +30,7 @@ class FhirDosage(FhirResourceBase):
                                         https://hl7.org/FHIR/valueset-additional-instruction-codes.html
         :param patientInstruction: Patient or consumer oriented instructions
         """
-        return FhirDosage(
+        super().__init__(
             sequence=sequence,
             text=text,
             additionalInstruction=additionalInstruction,

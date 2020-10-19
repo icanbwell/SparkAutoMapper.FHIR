@@ -10,15 +10,14 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.contactentity_type import FhirC
 
 
 class FhirOrganizationContactBackboneElement(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         purpose: Optional[FhirCodeableConcept[FhirContactEntityTypeCode]
                           ] = None,
         name: Optional[FhirHumanName] = None,
         telecom: Optional[FhirList[FhirContactPoint]] = None,
         address: Optional[FhirAddress] = None
-    ) -> 'FhirOrganizationContactBackboneElement':
+    ):
         """
         ContactBackboneElement Resource in FHIR
         http://hl7.org/fhir/organization-definitions.html#Organization.contact
@@ -30,6 +29,6 @@ class FhirOrganizationContactBackboneElement(FhirResourceBase):
         :param telecom: Contact details (telephone, email, etc.) for a contact
         :param address: Visiting or postal addresses for the contact
         """
-        return FhirOrganizationContactBackboneElement(
+        super().__init__(
             purpose=purpose, name=name, telecom=telecom, address=address
         )

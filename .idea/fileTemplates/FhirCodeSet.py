@@ -1,6 +1,6 @@
 from typing import Callable, Type, Any
 
-from spark_auto_mapper.type_definitions.native_types import AutoMapperNativeSimpleType
+rom spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -13,11 +13,8 @@ class Fhir${ClassName}Code(FhirValueSetBase):
     $Documentation
     """
 
-    @classmethod
-    def map(cls,
-            value: AutoMapperNativeSimpleType
-            ) -> 'Fhir${ClassName}Code':
-        return cls(value=value)
+    def __init__(self, value: AutoMapperTextInputType):
+        super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):

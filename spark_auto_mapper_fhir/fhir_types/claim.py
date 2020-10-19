@@ -38,9 +38,8 @@ from spark_auto_mapper_fhir.fhir_types.vision_prescription import FhirVisionPres
 
 class FhirClaim(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         status: FhirFinancialResourceStatusCode,
         type_: FhirCodeableConcept[FhirClaimTypeCode],
         use: FhirClaimUseCode,
@@ -78,7 +77,7 @@ class FhirClaim(FhirResourceBase):
         accident: Optional[FhirAccidentBackboneElement] = None,
         item: Optional[FhirList[FhirRevenueItemBackboneElement]] = None,
         total: Optional[FhirMoney] = None
-    ) -> 'FhirClaim':
+    ):
         """
         Claim Resource in FHIR
         https://hl7.org/FHIR/claim.html
@@ -114,7 +113,7 @@ class FhirClaim(FhirResourceBase):
         :param item: Product or service provided
         :param total: Total claim cost
         """
-        return FhirClaim(
+        super().__init__(
             id_=id_,
             status=status,
             type_=type_,

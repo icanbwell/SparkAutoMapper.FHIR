@@ -14,9 +14,8 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 
 class FhirCareTeamBackboneElement(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         sequence: FhirPositiveInt,
         provider: FhirReference[Union[FhirPractitioner, FhirPractitionerRole,
                                       FhirOrganization]],
@@ -24,7 +23,7 @@ class FhirCareTeamBackboneElement(FhirResourceBase):
         role: Optional[FhirCodeableConcept[FhirClaimCareTeamRoleCode]] = None,
         qualification: Optional[
             FhirCodeableConcept[FhirProviderQualificationCode]] = None
-    ) -> 'FhirCareTeamBackboneElement':
+    ):
         """
         CareTeamBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.careTeam
@@ -36,7 +35,7 @@ class FhirCareTeamBackboneElement(FhirResourceBase):
         :param role: Function within the team. https://hl7.org/FHIR/valueset-claim-careteamrole.html
         :param qualification: Practitioner credential or specialization. https://hl7.org/FHIR/valueset-provider-qualification.html
         """
-        return FhirCareTeamBackboneElement(
+        super().__init__(
             sequence=sequence,
             provider=provider,
             responsible=responsible,

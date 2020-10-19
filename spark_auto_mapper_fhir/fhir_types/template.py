@@ -2,10 +2,9 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 
 class AutoMapperFhirDataTypeTemplate(FhirResourceBase):
-    @classmethod
-    def map(cls, ) -> 'AutoMapperFhirDataTypeTemplate':
+    def __init__(self) -> None:
         """
         Template Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Template
         """
-        return AutoMapperFhirDataTypeTemplate()
+        super().__init__()

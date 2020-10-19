@@ -30,9 +30,8 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import FhirMarit
 
 class FhirPatient(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         active: Optional[FhirBoolean] = None,
@@ -55,7 +54,7 @@ class FhirPatient(FhirResourceBase):
                   FhirPractitionerRole]]]] = None,
         managingOrganization: Optional[FhirReference[FhirOrganization]] = None,
         link: Optional[FhirList[FhirLinkPatient]] = None
-    ) -> 'FhirPatient':
+    ):
         """
         Patient Resource in FHIR
         https://hl7.org/FHIR/patient.html
@@ -83,7 +82,7 @@ class FhirPatient(FhirResourceBase):
         :param managingOrganization: Organization that is the custodian of the patient record
         :param link: Link to another patient resource that concerns the same actual person
         """
-        return FhirPatient(
+        super().__init__(
             id_=id_,
             identifier=identifier,
             active=active,

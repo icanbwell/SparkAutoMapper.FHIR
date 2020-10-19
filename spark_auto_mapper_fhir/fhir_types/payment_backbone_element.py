@@ -12,9 +12,8 @@ from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 
 class FhirPaymentBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         type_: Optional[FhirCodeableConcept[FhirPaymentTypeCode]] = None,
         adjustment: Optional[FhirMoney] = None,
         adjustmentReason: Optional[
@@ -22,7 +21,7 @@ class FhirPaymentBackboneElement(FhirResourceBase):
         date: Optional[FhirDate] = None,
         amount: Optional[FhirMoney] = None,
         identifier: Optional[FhirIdentifier] = None
-    ) -> 'FhirPaymentBackboneElement':
+    ):
         """
         PaymentBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit.html
@@ -35,7 +34,7 @@ class FhirPaymentBackboneElement(FhirResourceBase):
         :param amount: Payable amount after adjustment
         :param identifier: Business identifier for the payment
         """
-        return FhirPaymentBackboneElement(
+        super().__init__(
             type_=type_,
             adjustment=adjustment,
             adjustmentReason=adjustmentReason,

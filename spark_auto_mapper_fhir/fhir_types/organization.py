@@ -18,9 +18,8 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.organization_type import FhirOr
 
 class FhirOrganization(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         active: Optional[FhirBoolean] = None,
@@ -33,7 +32,7 @@ class FhirOrganization(FhirResourceBase):
         contact: Optional[FhirList[FhirOrganizationContactBackboneElement]
                           ] = None,
         endpoint: Optional[FhirList[FhirReference[FhirEndpoint]]] = None
-    ) -> 'FhirOrganization':
+    ):
         """
         Organization Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Organization
@@ -54,7 +53,7 @@ class FhirOrganization(FhirResourceBase):
         :param contact: Contact for the organization for a certain purpose
         :param endpoint: Technical endpoints providing access to services operated for the organization
         """
-        return FhirOrganization(
+        super().__init__(
             id_=id_,
             identifier=identifier,
             active=active,

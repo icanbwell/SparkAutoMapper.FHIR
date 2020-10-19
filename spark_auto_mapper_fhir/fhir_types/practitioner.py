@@ -19,9 +19,8 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirComm
 
 class FhirPractitioner(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         identifier: Optional[FhirList[FhirIdentifier]] = None,
         active: Optional[FhirBoolean] = None,
         name: Optional[FhirList[FhirHumanName]] = None,
@@ -34,7 +33,7 @@ class FhirPractitioner(FhirResourceBase):
             FhirList[FhirProviderQualificationBackboneElement]] = None,
         communication: Optional[FhirList[
             FhirCodeableConcept[FhirCommonLanguageCode]]] = None
-    ) -> 'FhirPractitioner':
+    ):
         """
         Practitioner Resource in FHIR
         http://hl7.org/fhir/practitioner.html
@@ -53,7 +52,7 @@ class FhirPractitioner(FhirResourceBase):
         :param communication: A language the practitioner can use in patient communication.
                             http://hl7.org/fhir/valueset-languages.html
         """
-        return FhirPractitioner(
+        super().__init__(
             identifier=identifier,
             active=active,
             name=name,

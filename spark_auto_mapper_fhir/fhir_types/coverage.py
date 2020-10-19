@@ -24,9 +24,8 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 class FhirCoverage(FhirResourceBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         status: FhirFinancialResourceStatusCode,
         payor: FhirList[FhirReference[Union[FhirOrganization, FhirPatient,
                                             FhirRelatedPerson]]],
@@ -52,7 +51,7 @@ class FhirCoverage(FhirResourceBase):
             FhirList[FhirCostToBeneficiaryBackboneElement]] = None,
         subrogation: Optional[FhirBoolean] = None,
         contract: Optional[FhirList[FhirReference[FhirContract]]] = None
-    ) -> 'FhirCoverage':
+    ):
         """
         Coverage Resource in FHIR
         https://hl7.org/FHIR/coverage.html
@@ -79,7 +78,7 @@ class FhirCoverage(FhirResourceBase):
         :param subrogation: Reimbursement to insurer
         :param contract: Contract details
         """
-        return FhirCoverage(
+        super().__init__(
             status=status,
             payor=payor,
             beneficiary=beneficiary,

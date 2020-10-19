@@ -21,9 +21,8 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.relatedperson_relationshiptype 
 
 class FhirRelatedPerson(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         patient: FhirReference[
             FhirResourceBase
         ],  # should be FhirPatient but causes circular imports
@@ -41,7 +40,7 @@ class FhirRelatedPerson(FhirResourceBase):
         photo: Optional[FhirList[FhirAttachment]] = None,
         period: Optional[FhirPeriod] = None,
         communication: Optional[FhirList[FhirCommunication]] = None
-    ) -> 'FhirRelatedPerson':
+    ):
         """
         RelatedPerson Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#RelatedPerson
@@ -64,7 +63,7 @@ class FhirRelatedPerson(FhirResourceBase):
         :param period: Period of time that this relationship is considered valid
         :param communication: A language which may be used to communicate with about the patient's health
         """
-        return FhirRelatedPerson(
+        super().__init__(
             patient=patient,
             id_=id_,
             identifier=identifier,

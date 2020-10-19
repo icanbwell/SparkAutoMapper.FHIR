@@ -8,12 +8,11 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import FhirComm
 
 
 class FhirCommunication(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         language: FhirCodeableConcept[FhirCommonLanguageCode],
         preferred: Optional[FhirBoolean] = None
-    ) -> 'FhirCommunication':
+    ):
         """
         Communication Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Communication
@@ -24,4 +23,4 @@ class FhirCommunication(FhirResourceBase):
                         https://hl7.org/FHIR/valueset-languages.html
         :param preferred: Language preference indicator
         """
-        return FhirCommunication(language=language, preferred=preferred)
+        super().__init__(language=language, preferred=preferred)

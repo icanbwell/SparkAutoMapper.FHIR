@@ -11,15 +11,14 @@ from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
 
 class FhirAdjudicationBackboneElement(FhirResourceBase):
     # noinspection SpellCheckingInspection
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         category: FhirCodeableConcept[FhirAdjudicationValueCode],
         reason: Optional[FhirCodeableConcept[FhirAdjudicationReasonCode]
                          ] = None,
         amount: Optional[FhirMoney] = None,
         value: Optional[FhirDecimal] = None
-    ) -> 'FhirAdjudicationBackboneElement':
+    ):
         """
         Adjudication Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Adjudication
@@ -30,6 +29,6 @@ class FhirAdjudicationBackboneElement(FhirResourceBase):
         :param amount: Monetary amount
         :param value: Non-monitary value
         """
-        return FhirAdjudicationBackboneElement(
+        super().__init__(
             category=category, reason=reason, amount=amount, value=value
         )

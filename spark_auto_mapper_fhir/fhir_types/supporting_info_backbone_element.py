@@ -19,9 +19,8 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 class FhirSupportingInfoBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         sequence: FhirPositiveInt,
         category: FhirCodeableConcept[FhirClaimInformationCategoryCode],
         code: Optional[FhirCodeableConcept[FhirClaimExceptionCode]] = None,
@@ -33,7 +32,7 @@ class FhirSupportingInfoBackboneElement(FhirResourceBase):
         valueAttachment: Optional[FhirAttachment] = None,
         valueReference: Optional[FhirReference[Any]] = None,
         reason: Optional[FhirCoding[FhirMissingToothReasonCode]] = None
-    ) -> 'FhirSupportingInfoBackboneElement':
+    ):
         """
         SupportingInfoBackboneElement Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.supportingInfo
@@ -51,7 +50,7 @@ class FhirSupportingInfoBackboneElement(FhirResourceBase):
         :param valueReference: Data to be provided
         :param reason: Explanation for the information. https://hl7.org/FHIR/valueset-missing-tooth-reason.html
         """
-        return FhirSupportingInfoBackboneElement(
+        super().__init__(
             sequence=sequence,
             category=category,
             code=code,

@@ -48,9 +48,8 @@ from spark_auto_mapper_fhir.fhir_types.vision_prescription import FhirVisionPres
 
 class FhirExplanationOfBenefit(FhirResourceBase):
     # noinspection SpellCheckingInspection,PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         status: FhirExplanationOfBenefitStatusCode,
         type_: FhirCodeableConcept[FhirClaimTypeCode],
         use: FhirClaimUseCode,
@@ -100,7 +99,7 @@ class FhirExplanationOfBenefit(FhirResourceBase):
         processNote: Optional[FhirNote] = None,
         benefitPeriod: Optional[FhirPeriod] = None,
         benefitBalance: Optional[FhirList[FhirBenefitBalance]] = None
-    ) -> 'FhirExplanationOfBenefit':
+    ):
         """
         ExplanationOfBenefit Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#ExplanationOfBenefit
@@ -153,7 +152,7 @@ class FhirExplanationOfBenefit(FhirResourceBase):
         :param benefitPeriod: When the benefits are applicable
         :param benefitBalance: Balance by Benefit Category
         """
-        return FhirExplanationOfBenefit(
+        super().__init__(
             status=status,
             type_=type_,
             use=use,

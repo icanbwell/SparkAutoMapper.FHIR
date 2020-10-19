@@ -2,10 +2,9 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 
 class FhirCondition(FhirResourceBase):
-    @classmethod
-    def map(cls, ) -> 'FhirCondition':
+    def __init__(self) -> None:
         """
         Condition Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Condition
         """
-        return FhirCondition()
+        super().__init__()

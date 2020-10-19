@@ -14,16 +14,15 @@ from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
 
 class FhirProcedureBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         sequence: FhirPositiveInt,
         procedureCodeableConcept: FhirCodeableConcept[FhirIcd10ProcedureCode],
         type_: Optional[FhirList[FhirCodeableConcept[FhirExProcedureTypeCode]]
                         ] = None,
         date: Optional[FhirDate] = None,
         procedureReference: Optional[FhirReference[FhirProcedure]] = None
-    ) -> 'FhirProcedureBackboneElement':
+    ):
         """
         ProcedureBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#ProcedureBackboneElement
@@ -36,7 +35,7 @@ class FhirProcedureBackboneElement(FhirResourceBase):
         :param date: When the procedure was performed
         :param procedureReference:
         """
-        return FhirProcedureBackboneElement(
+        super().__init__(
             sequence=sequence,
             procedureCodeableConcept=procedureCodeableConcept,
             type_=type_,

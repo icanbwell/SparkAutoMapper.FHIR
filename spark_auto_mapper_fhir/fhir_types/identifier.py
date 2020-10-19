@@ -13,9 +13,8 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 class FhirIdentifier(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         use: Optional[FhirIdentifierUseCode] = None,
         type_: Optional[FhirCodeableConcept[FhirIdentifierTypeCode]] = None,
         system: Optional[FhirUri] = None,
@@ -23,7 +22,7 @@ class FhirIdentifier(FhirResourceBase):
         period: Optional[FhirPeriod] = None,
         assigner: Optional[FhirResourceBase] = None
         # should be FhirReference[FhirOrganization] but this is causing circular import
-    ) -> 'FhirIdentifier':
+    ):
         """
         Identifier Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Identifier
@@ -38,7 +37,7 @@ class FhirIdentifier(FhirResourceBase):
         :param period: Time period when id is/was valid for use
         :param assigner: Organization that issued id (may be just text)
         """
-        return FhirIdentifier(
+        super().__init__(
             use=use,
             type_=type_,
             system=system,

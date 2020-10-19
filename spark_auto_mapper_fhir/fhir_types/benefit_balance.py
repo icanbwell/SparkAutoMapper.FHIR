@@ -14,9 +14,8 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 class FhirBenefitBalance(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         category: FhirCodeableConcept[FhirBenefitCategoryCode],
         excluded: Optional[FhirBoolean] = None,
         name: Optional[FhirString] = None,
@@ -25,7 +24,7 @@ class FhirBenefitBalance(FhirResourceBase):
         unit: Optional[FhirCodeableConcept[FhirBenefitUnitTypeCode]] = None,
         term: Optional[FhirCodeableConcept[FhirBenefitTermCode]] = None,
         financial: Optional[FhirList[FhirFinancialBenefit]] = None
-    ) -> 'FhirBenefitBalance':
+    ):
         """
         BenefitBalance Resource in FHIR
         https://hl7.org/FHIR/explanationofbenefit-definitions.html#ExplanationOfBenefit.benefitBalance
@@ -41,7 +40,7 @@ class FhirBenefitBalance(FhirResourceBase):
         :param term: Annual or lifetime. https://hl7.org/FHIR/valueset-benefit-term.html
         :param financial: Benefit Summary
         """
-        return FhirBenefitBalance(
+        super().__init__(
             category=category,
             excluded=excluded,
             name=name,

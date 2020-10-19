@@ -8,13 +8,12 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.link_type import FhirLinkTypeCo
 
 
 class FhirLinkPatient(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         other: FhirReference[Union[Any, FhirRelatedPerson]],
         # "Any" should be "FhirPatient" but causes a circular import
         type_: FhirLinkTypeCode
-    ) -> 'FhirLinkPatient':
+    ):
         """
         LinkPatient Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#LinkPatient
@@ -24,4 +23,4 @@ class FhirLinkPatient(FhirResourceBase):
         :param other: The other patient or related person resource that the link refers to
         :param type_: replaced-by | replaces | refer | seealso. https://hl7.org/FHIR/valueset-link-type.html
         """
-        return FhirLinkPatient(other=other, type_=type_)
+        super().__init__(other=other, type_=type_)

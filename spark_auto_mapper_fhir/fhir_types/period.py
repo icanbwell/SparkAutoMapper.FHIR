@@ -8,12 +8,11 @@ from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 
 class FhirPeriod(FhirResourceBase):
     # noinspection PyPep8Naming
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         start: Optional[FhirDate] = None,
         end: Optional[FhirDate] = None
-    ) -> 'FhirPeriod':
+    ):
         """
         Period Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Period
@@ -23,4 +22,4 @@ class FhirPeriod(FhirResourceBase):
         :param start: Starting time with inclusive boundary
         :param end: End time with inclusive boundary, if not ongoing
         """
-        return FhirPeriod(start=start, end=end)
+        super().__init__(start=start, end=end)

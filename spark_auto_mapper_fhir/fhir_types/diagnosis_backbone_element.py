@@ -12,9 +12,8 @@ from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
 class FhirDiagnosisBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         sequence: FhirPositiveInt,
         diagnosisCodeableConcept: FhirCodeableConcept[FhirIcd10Code],
         type_: Optional[FhirCodeableConcept[FhirDiagnosisType]] = None,
@@ -22,7 +21,7 @@ class FhirDiagnosisBackboneElement(FhirResourceBase):
                               ] = None,
         packageCode: Optional[
             FhirCodeableConcept[FhirDiagnosisRelatedGroupCode]] = None
-    ) -> 'FhirDiagnosisBackboneElement':
+    ):
         """
         DiagnosisBackboneElement Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#DiagnosisBackboneElement
@@ -35,7 +34,7 @@ class FhirDiagnosisBackboneElement(FhirResourceBase):
         :param onAdmission: Present on admission https://hl7.org/FHIR/valueset-ex-diagnosis-on-admission.html
         :param packageCode: Package billing code https://hl7.org/FHIR/valueset-ex-diagnosisrelatedgroup.html
         """
-        return FhirDiagnosisBackboneElement(
+        super().__init__(
             sequence=sequence,
             diagnosisCodeableConcept=diagnosisCodeableConcept,
             type_=type_,

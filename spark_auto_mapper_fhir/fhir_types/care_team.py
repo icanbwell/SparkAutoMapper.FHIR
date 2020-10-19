@@ -2,10 +2,9 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 
 
 class FhirCareTeam(FhirResourceBase):
-    @classmethod
-    def map(cls, ) -> 'FhirCareTeam':
+    def __init__(self) -> None:
         """
         CareTeam Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#CareTeam
         """
-        return FhirCareTeam()
+        super().__init__()

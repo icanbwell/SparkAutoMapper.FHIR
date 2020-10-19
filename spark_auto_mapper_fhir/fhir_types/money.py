@@ -7,12 +7,11 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.currency import FhirCurrencyCod
 
 
 class FhirMoney(FhirResourceBase):
-    @classmethod
-    def map(
-        cls,
+    def __init__(
+        self,
         value: Optional[FhirDecimal] = None,
         currency: Optional[FhirCurrencyCode] = None
-    ) -> 'FhirMoney':
+    ):
         """
         Money Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Money
@@ -21,4 +20,4 @@ class FhirMoney(FhirResourceBase):
         :param value: Numerical value (with implicit precision)
         :param currency: ISO 4217 Currency Code. https://hl7.org/FHIR/valueset-currencies.html
         """
-        return FhirMoney(value=value, currency=currency)
+        super().__init__(value=value, currency=currency)

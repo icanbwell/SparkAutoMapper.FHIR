@@ -1,12 +1,9 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-class Fhir$Name(FhirResourceBase):
-    @classmethod
-    def map(cls,
-            ) -> 'Fhir$Name':
+class Fhir$ClassName(FhirResourceBase):
+    def __init__(self) -> None:
         """
-        $Name Resource in FHIR
+        $ClassName Resource in FHIR
         $Documentation
         """
-        return Fhir$Name(
-        )
+        super().__init__()
