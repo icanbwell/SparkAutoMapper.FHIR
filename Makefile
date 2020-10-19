@@ -84,4 +84,4 @@ reset-pre-commit: clean-pre-commit run-pre-commit
 init: installspark up devsetup tests
 
 .PHONY:continuous_integration
-continuous_integration: installspark devsetup tests
+continuous_integration: download_spark devsetup tests
