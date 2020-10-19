@@ -1,7 +1,7 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirContract(FhirResourceBase):
+class Contract(FhirResourceBase):
     def __init__(self) -> None:
         """
         Contract Resource in FHIR

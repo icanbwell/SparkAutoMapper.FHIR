@@ -1,7 +1,7 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirProcedure(FhirResourceBase):
+class Procedure(FhirResourceBase):
     def __init__(self) -> None:
         """
         Procedure Resource in FHIR

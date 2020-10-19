@@ -2,22 +2,22 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.address import Address
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.accident_incident import AccidentIncidentCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.location import Location
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 
 
-class FhirAccidentBackboneElement(FhirResourceBase):
+class AccidentBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
         date: Optional[FhirDate] = None,
-        type_: Optional[FhirCodeableConcept[AccidentIncidentCode]] = None,
-        locationAddress: Optional[FhirAddress] = None,
-        locationReference: Optional[FhirReference[FhirLocation]] = None
+        type_: Optional[CodeableConcept[AccidentIncidentCode]] = None,
+        locationAddress: Optional[Address] = None,
+        locationReference: Optional[Reference[Location]] = None
     ) -> None:
         """
         AccidentBackboneElement Resource in FHIR

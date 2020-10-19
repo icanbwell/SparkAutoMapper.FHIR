@@ -2,20 +2,20 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.adjudication_reason import AdjudicationReasonCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.adjudication_value import AdjudicationValueCode
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
-from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
+from spark_auto_mapper_fhir.fhir_types.money import Money
 
 
-class FhirAdjudicationBackboneElement(FhirResourceBase):
+class AdjudicationBackboneElement(FhirResourceBase):
     # noinspection SpellCheckingInspection
     def __init__(
         self,
-        category: FhirCodeableConcept[AdjudicationValueCode],
-        reason: Optional[FhirCodeableConcept[AdjudicationReasonCode]] = None,
-        amount: Optional[FhirMoney] = None,
+        category: CodeableConcept[AdjudicationValueCode],
+        reason: Optional[CodeableConcept[AdjudicationReasonCode]] = None,
+        amount: Optional[Money] = None,
         value: Optional[FhirDecimal] = None
     ):
         """

@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.duration_unit import DurationUn
 from spark_auto_mapper_fhir.fhir_types.valuesets.quantity_comparator import QuantityComparatorCode
 
 
-class FhirDuration(FhirResourceBase):
+class Duration(FhirResourceBase):
     def __init__(
         self,
         value: Optional[FhirDecimal] = None,

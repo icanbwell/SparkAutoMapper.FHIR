@@ -6,7 +6,7 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 
 
-class FhirPeriod(FhirResourceBase):
+class Period(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

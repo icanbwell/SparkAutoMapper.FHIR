@@ -2,23 +2,23 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_type import BenefitTypeCode
-from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
+from spark_auto_mapper_fhir.fhir_types.money import Money
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 
 
-class FhirFinancialBenefit(FhirResourceBase):
+class FinancialBenefit(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        type_: Optional[FhirCodeableConcept[BenefitTypeCode]] = None,
+        type_: Optional[CodeableConcept[BenefitTypeCode]] = None,
         allowedUnsignedInt: Optional[FhirUnsignedInt] = None,
         allowedString: Optional[FhirString] = None,
-        allowedMoney: Optional[FhirMoney] = None,
+        allowedMoney: Optional[Money] = None,
         usedUnsignedInt: Optional[FhirUnsignedInt] = None,
-        usedMoney: Optional[FhirMoney] = None
+        usedMoney: Optional[Money] = None
     ):
         """
         FinancialBenefit Resource in FHIR

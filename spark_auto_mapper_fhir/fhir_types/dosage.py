@@ -2,20 +2,20 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.additional_dosage_instruction import AdditionalDosageInstructionCode
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirDosage(FhirResourceBase):
+class Dosage(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
         sequence: Optional[FhirPositiveInt] = None,
         text: Optional[FhirString] = None,
         additionalInstruction: Optional[
-            FhirCodeableConcept[AdditionalDosageInstructionCode]] = None,
+            CodeableConcept[AdditionalDosageInstructionCode]] = None,
         patientInstruction: Optional[FhirString] = None,
     ):
         """

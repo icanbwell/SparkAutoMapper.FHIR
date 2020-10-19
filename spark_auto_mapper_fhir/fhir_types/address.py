@@ -6,7 +6,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirAddress(FhirResourceBase):
+class Address(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

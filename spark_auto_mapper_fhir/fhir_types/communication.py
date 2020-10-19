@@ -3,14 +3,14 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import CommonLanguageCode
 
 
-class FhirCommunication(FhirResourceBase):
+class Communication(FhirResourceBase):
     def __init__(
         self,
-        language: FhirCodeableConcept[CommonLanguageCode],
+        language: CodeableConcept[CommonLanguageCode],
         preferred: Optional[FhirBoolean] = None
     ):
         """

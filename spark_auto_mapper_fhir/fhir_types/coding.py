@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 _T = TypeVar("_T")
 
 
-class FhirCoding(Generic[_T], FhirResourceBase):
+class Coding(Generic[_T], FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

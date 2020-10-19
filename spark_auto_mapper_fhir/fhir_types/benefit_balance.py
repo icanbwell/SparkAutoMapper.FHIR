@@ -3,27 +3,27 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_category import BenefitCategoryCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_term import BenefitTermCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.benefit_unit_type import BenefitUnitTypeCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.network_type import NetworkTypeCode
-from spark_auto_mapper_fhir.fhir_types.financial_benefit import FhirFinancialBenefit
+from spark_auto_mapper_fhir.fhir_types.financial_benefit import FinancialBenefit
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirBenefitBalance(FhirResourceBase):
+class BenefitBalance(FhirResourceBase):
     def __init__(
         self,
-        category: FhirCodeableConcept[BenefitCategoryCode],
+        category: CodeableConcept[BenefitCategoryCode],
         excluded: Optional[FhirBoolean] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
-        network: Optional[FhirCodeableConcept[NetworkTypeCode]] = None,
-        unit: Optional[FhirCodeableConcept[BenefitUnitTypeCode]] = None,
-        term: Optional[FhirCodeableConcept[BenefitTermCode]] = None,
-        financial: Optional[FhirList[FhirFinancialBenefit]] = None
+        network: Optional[CodeableConcept[NetworkTypeCode]] = None,
+        unit: Optional[CodeableConcept[BenefitUnitTypeCode]] = None,
+        term: Optional[CodeableConcept[BenefitTermCode]] = None,
+        financial: Optional[FhirList[FinancialBenefit]] = None
     ):
         """
         BenefitBalance Resource in FHIR

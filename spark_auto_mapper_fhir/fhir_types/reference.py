@@ -2,20 +2,20 @@ from typing import Optional, TypeVar, Generic
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 _T = TypeVar("_T")
 
 
-class FhirReference(Generic[_T], FhirResourceBase):
+class Reference(Generic[_T], FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
         reference: Optional[FhirString] = None,
         type_: Optional[FhirUri] = None,
-        identifier: Optional[FhirIdentifier] = None,
+        identifier: Optional[Identifier] = None,
         display: Optional[FhirString] = None
     ):
         """

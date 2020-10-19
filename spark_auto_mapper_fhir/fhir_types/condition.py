@@ -1,7 +1,7 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirCondition(FhirResourceBase):
+class Condition(FhirResourceBase):
     def __init__(self) -> None:
         """
         Condition Resource in FHIR

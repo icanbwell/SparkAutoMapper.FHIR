@@ -1,7 +1,7 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirServiceRequest(FhirResourceBase):
+class ServiceRequest(FhirResourceBase):
     def __init__(self) -> None:
         """
         ServiceRequest Resource in FHIR

@@ -2,37 +2,37 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
+from spark_auto_mapper_fhir.fhir_types.address import Address
+from spark_auto_mapper_fhir.fhir_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.fhir_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.human_name import HumanName
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.provider_qualification_backbone_element import \
-    FhirProviderQualificationBackboneElement
+    ProviderQualificationBackboneElement
 from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import CommonLanguageCode
 
 
-class FhirPractitioner(FhirResourceBase):
+class Practitioner(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        name: Optional[FhirList[FhirHumanName]] = None,
-        telecom: Optional[FhirList[FhirContactPoint]] = None,
-        address: Optional[FhirList[FhirAddress]] = None,
+        name: Optional[FhirList[HumanName]] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
+        address: Optional[FhirList[Address]] = None,
         gender: Optional[AdministrativeGenderCode] = None,
         birthDate: Optional[FhirDate] = None,
-        photo: Optional[FhirList[FhirAttachment]] = None,
-        qualification: Optional[
-            FhirList[FhirProviderQualificationBackboneElement]] = None,
-        communication: Optional[FhirList[
-            FhirCodeableConcept[CommonLanguageCode]]] = None
+        photo: Optional[FhirList[Attachment]] = None,
+        qualification: Optional[FhirList[ProviderQualificationBackboneElement]
+                                ] = None,
+        communication: Optional[FhirList[CodeableConcept[CommonLanguageCode]]
+                                ] = None
     ):
         """
         Practitioner Resource in FHIR

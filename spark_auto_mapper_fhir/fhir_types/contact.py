@@ -2,29 +2,29 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.address import Address
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.patient_contact_relationship import PatientContactRelationshipCode
-from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
-from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
+from spark_auto_mapper_fhir.fhir_types.contact_point import ContactPoint
+from spark_auto_mapper_fhir.fhir_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.organization import Organization
+from spark_auto_mapper_fhir.fhir_types.period import Period
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 
 
-class FhirContact(FhirResourceBase):
+class Contact(FhirResourceBase):
     def __init__(
         self,
         relationship: Optional[FhirList[
-            FhirCodeableConcept[PatientContactRelationshipCode]]] = None,
-        name: Optional[FhirHumanName] = None,
-        telecom: Optional[FhirList[FhirContactPoint]] = None,
-        address: Optional[FhirAddress] = None,
+            CodeableConcept[PatientContactRelationshipCode]]] = None,
+        name: Optional[HumanName] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
+        address: Optional[Address] = None,
         gender: Optional[AdministrativeGenderCode] = None,
-        organization: Optional[FhirReference[FhirOrganization]] = None,
-        period: Optional[FhirPeriod] = None
+        organization: Optional[Reference[Organization]] = None,
+        period: Optional[Period] = None
     ):
         """
         Contact Resource in FHIR

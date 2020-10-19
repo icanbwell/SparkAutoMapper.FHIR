@@ -2,15 +2,15 @@ from typing import Union, Any
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
+from spark_auto_mapper_fhir.fhir_types.related_person import RelatedPerson
 from spark_auto_mapper_fhir.fhir_types.valuesets.link_type import LinkTypeCode
 
 
-class FhirLinkPatient(FhirResourceBase):
+class LinkPatient(FhirResourceBase):
     def __init__(
         self,
-        other: FhirReference[Union[Any, FhirRelatedPerson]],
+        other: Reference[Union[Any, RelatedPerson]],
         # "Any" should be "FhirPatient" but causes a circular import
         type_: LinkTypeCode
     ):

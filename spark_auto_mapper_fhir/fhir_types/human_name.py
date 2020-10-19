@@ -3,12 +3,12 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import NameUseCode
 
 
-class FhirHumanName(FhirResourceBase):
+class HumanName(FhirResourceBase):
     def __init__(
         self,
         use: Optional[NameUseCode] = None,
@@ -17,7 +17,7 @@ class FhirHumanName(FhirResourceBase):
         given: Optional[FhirList[FhirString]] = None,
         prefix: Optional[FhirList[FhirString]] = None,
         suffix: Optional[FhirList[FhirString]] = None,
-        period: Optional[FhirPeriod] = None
+        period: Optional[Period] = None
     ):
         """
         HumanName Resource in FHIR

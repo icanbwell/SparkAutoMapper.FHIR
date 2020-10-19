@@ -6,7 +6,7 @@ from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.valuesets.currency import CurrencyCode
 
 
-class FhirMoney(FhirResourceBase):
+class Money(FhirResourceBase):
     def __init__(
         self,
         value: Optional[FhirDecimal] = None,

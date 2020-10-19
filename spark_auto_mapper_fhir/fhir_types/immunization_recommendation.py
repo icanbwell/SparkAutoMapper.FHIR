@@ -1,7 +1,7 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirImmunizationRecommendation(FhirResourceBase):
+class ImmunizationRecommendation(FhirResourceBase):
     def __init__(self) -> None:
         """
         ImmunizationRecommendation Resource in FHIR

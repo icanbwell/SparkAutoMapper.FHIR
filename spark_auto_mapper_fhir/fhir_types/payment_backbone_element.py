@@ -2,25 +2,25 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.payment_adjustment_reason import PaymentAdjustmentReasonCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.payment_type import PaymentTypeCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
-from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
+from spark_auto_mapper_fhir.fhir_types.money import Money
 
 
-class FhirPaymentBackboneElement(FhirResourceBase):
+class PaymentBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        type_: Optional[FhirCodeableConcept[PaymentTypeCode]] = None,
-        adjustment: Optional[FhirMoney] = None,
-        adjustmentReason: Optional[
-            FhirCodeableConcept[PaymentAdjustmentReasonCode]] = None,
+        type_: Optional[CodeableConcept[PaymentTypeCode]] = None,
+        adjustment: Optional[Money] = None,
+        adjustmentReason: Optional[CodeableConcept[PaymentAdjustmentReasonCode]
+                                   ] = None,
         date: Optional[FhirDate] = None,
-        amount: Optional[FhirMoney] = None,
-        identifier: Optional[FhirIdentifier] = None
+        amount: Optional[Money] = None,
+        identifier: Optional[Identifier] = None
     ):
         """
         PaymentBackboneElement Resource in FHIR

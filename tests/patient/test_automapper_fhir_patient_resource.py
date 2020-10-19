@@ -7,9 +7,9 @@ from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
+from spark_auto_mapper_fhir.fhir_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
+from spark_auto_mapper_fhir.fhir_types.patient import Patient
 from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.name_use import NameUseCode
 
@@ -35,11 +35,11 @@ def test_auto_mapper_fhir_patient_resource(
     mapper = AutoMapper(
         view="members", source_view="patients", keys=["member_id"]
     ).complex(
-        FhirPatient(
+        Patient(
             id_=A.column("a.member_id"),
             birthDate=A.date(A.column("date_of_birth")),
             name=FhirList(
-                FhirHumanName(
+                HumanName(
                     use=NameUseCode("usual"), family=A.column("last_name")
                 )
             ),

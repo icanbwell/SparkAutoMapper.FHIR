@@ -2,24 +2,24 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.coverage_copay_type import CoverageCopayTypeCode
 from spark_auto_mapper_fhir.fhir_types.coverage_financial_exception_backbone_element import \
-    FhirCoverageFinancialExceptionBackboneElement
+    CoverageFinancialExceptionBackboneElement
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
-from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
+from spark_auto_mapper_fhir.fhir_types.money import Money
+from spark_auto_mapper_fhir.fhir_types.simple_quantity import SimpleQuantity
 
 
-class FhirCostToBeneficiaryBackboneElement(FhirResourceBase):
+class CostToBeneficiaryBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        type_: Optional[FhirCodeableConcept[CoverageCopayTypeCode]] = None,
-        valueQuantity: Optional[FhirSimpleQuantity] = None,
-        valueMoney: Optional[FhirMoney] = None,
-        exception: Optional[
-            FhirList[FhirCoverageFinancialExceptionBackboneElement]] = None
+        type_: Optional[CodeableConcept[CoverageCopayTypeCode]] = None,
+        valueQuantity: Optional[SimpleQuantity] = None,
+        valueMoney: Optional[Money] = None,
+        exception: Optional[FhirList[CoverageFinancialExceptionBackboneElement]
+                            ] = None
     ):
         """
         CostToBeneficiaryBackboneElement Resource in FHIR

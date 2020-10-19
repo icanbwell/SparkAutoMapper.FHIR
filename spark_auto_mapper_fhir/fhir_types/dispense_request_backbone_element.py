@@ -2,26 +2,26 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.duration import FhirDuration
-from spark_auto_mapper_fhir.fhir_types.fill import FhirFill
-from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
+from spark_auto_mapper_fhir.fhir_types.duration import Duration
+from spark_auto_mapper_fhir.fhir_types.fill import Fill
+from spark_auto_mapper_fhir.fhir_types.organization import Organization
+from spark_auto_mapper_fhir.fhir_types.period import Period
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
+from spark_auto_mapper_fhir.fhir_types.simple_quantity import SimpleQuantity
 from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 
 
-class FhirDispenseRequestBackboneElement(FhirResourceBase):
+class DispenseRequestBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        initialFill: Optional[FhirFill] = None,
-        dispenseInterval: Optional[FhirDuration] = None,
-        validityPeriod: Optional[FhirPeriod] = None,
+        initialFill: Optional[Fill] = None,
+        dispenseInterval: Optional[Duration] = None,
+        validityPeriod: Optional[Period] = None,
         numberOfRepeatsAllowed: Optional[FhirUnsignedInt] = None,
-        quantity: Optional[FhirSimpleQuantity] = None,
-        expectedSupplyDuration: Optional[FhirDuration] = None,
-        performer: Optional[FhirReference[FhirOrganization]] = None
+        quantity: Optional[SimpleQuantity] = None,
+        expectedSupplyDuration: Optional[Duration] = None,
+        performer: Optional[Reference[Organization]] = None
     ):
         """
         DispenseRequestBackboneElement Resource in FHIR

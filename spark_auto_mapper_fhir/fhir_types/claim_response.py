@@ -1,7 +1,7 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirClaimResponse(FhirResourceBase):
+class ClaimResponse(FhirResourceBase):
     def __init__(self) -> None:
         """
         ClaimResponse Resource in FHIR

@@ -3,21 +3,21 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.act_substance_admin_substitution_code import \
     ActSubstanceAdminSubstitutionCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.substance_admin_substitution_reason import \
     SubstanceAdminSubstitutionReason
 
 
-class FhirSubstitutionBackboneElement(FhirResourceBase):
+class SubstitutionBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
         allowedBoolean: Optional[FhirBoolean] = None,
         allowedCodeableConcept: Optional[
-            FhirCodeableConcept[ActSubstanceAdminSubstitutionCode]] = None,
-        reason: Optional[FhirCodeableConcept[SubstanceAdminSubstitutionReason]
+            CodeableConcept[ActSubstanceAdminSubstitutionCode]] = None,
+        reason: Optional[CodeableConcept[SubstanceAdminSubstitutionReason]
                          ] = None
     ):
         """

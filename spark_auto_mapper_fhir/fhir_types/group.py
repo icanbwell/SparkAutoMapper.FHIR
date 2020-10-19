@@ -1,7 +1,7 @@
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 
-class FhirGroup(FhirResourceBase):
+class Group(FhirResourceBase):
     def __init__(self) -> None:
         """
         Group Resource in FHIR

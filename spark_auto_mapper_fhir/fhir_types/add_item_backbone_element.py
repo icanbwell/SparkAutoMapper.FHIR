@@ -2,9 +2,9 @@ from typing import Optional, Union
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import FhirAdjudicationBackboneElement
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.address import Address
+from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import AdjudicationBackboneElement
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_modifiers import ClaimModifiersCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.ex_program import ExProgramReasonCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.service_place import ServicePlaceCode
@@ -14,47 +14,45 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.tooth import ToothCode
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
-from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
-from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.location import Location
+from spark_auto_mapper_fhir.fhir_types.money import Money
+from spark_auto_mapper_fhir.fhir_types.organization import Organization
+from spark_auto_mapper_fhir.fhir_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
-from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
+from spark_auto_mapper_fhir.fhir_types.practitioner import Practitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import PractitionerRole
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
+from spark_auto_mapper_fhir.fhir_types.simple_quantity import SimpleQuantity
 
 
-class FhirAddItemBackboneElement(FhirResourceBase):
+class AddItemBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
-        productOrService: FhirCodeableConcept[ServiceUSCLSCode],
+        productOrService: CodeableConcept[ServiceUSCLSCode],
         itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
         detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
         subDetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        provider: Optional[FhirReference[Union[FhirPractitioner,
-                                               FhirPractitionerRole,
-                                               FhirOrganization]]] = None,
-        modifier: Optional[FhirList[FhirCodeableConcept[ClaimModifiersCode]]
+        provider: Optional[Reference[Union[Practitioner, PractitionerRole,
+                                           Organization]]] = None,
+        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
                            ] = None,
-        programCode: Optional[FhirList[FhirCodeableConcept[ExProgramReasonCode]
-                                       ]] = None,
+        programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]
+                              ] = None,
         servicedDate: Optional[FhirDate] = None,
-        servicedPeriod: Optional[FhirPeriod] = None,
-        locationCodeableConcept: Optional[FhirCodeableConcept[ServicePlaceCode]
+        servicedPeriod: Optional[Period] = None,
+        locationCodeableConcept: Optional[CodeableConcept[ServicePlaceCode]
                                           ] = None,
-        locationAddress: Optional[FhirAddress] = None,
-        locationReference: Optional[FhirReference[FhirLocation]] = None,
-        quantity: Optional[FhirSimpleQuantity] = None,
-        unitPrice: Optional[FhirMoney] = None,
+        locationAddress: Optional[Address] = None,
+        locationReference: Optional[Reference[Location]] = None,
+        quantity: Optional[SimpleQuantity] = None,
+        unitPrice: Optional[Money] = None,
         factor: Optional[FhirDecimal] = None,
-        net: Optional[FhirMoney] = None,
-        bodySite: Optional[FhirCodeableConcept[ToothCode]] = None,
-        subSite: Optional[FhirList[FhirCodeableConcept[SurfaceCode]]] = None,
+        net: Optional[Money] = None,
+        bodySite: Optional[CodeableConcept[ToothCode]] = None,
+        subSite: Optional[FhirList[CodeableConcept[SurfaceCode]]] = None,
         noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
-        adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]
-                               ] = None
+        adjudication: Optional[FhirList[AdjudicationBackboneElement]] = None
     ):
         """
         AddItemBackboneElement Resource in FHIR

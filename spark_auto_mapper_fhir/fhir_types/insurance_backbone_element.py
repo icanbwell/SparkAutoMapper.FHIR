@@ -3,18 +3,18 @@ from typing import Optional
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.coverage import FhirCoverage
+from spark_auto_mapper_fhir.fhir_types.coverage import Coverage
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirInsuranceBackboneElement(FhirResourceBase):
+class InsuranceBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
         focal: FhirBoolean,
-        coverage: FhirReference[FhirCoverage],
+        coverage: Reference[Coverage],
         preAuthRef: Optional[FhirList[FhirString]] = None
     ):
         """

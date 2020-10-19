@@ -1,37 +1,36 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
+from spark_auto_mapper_fhir.fhir_types.address import Address
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
-from spark_auto_mapper_fhir.fhir_types.endpoint import FhirEndpoint
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.fhir_types.contact_point import ContactPoint
+from spark_auto_mapper_fhir.fhir_types.endpoint import Endpoint
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.organization_contact_backbone_element import \
-    FhirOrganizationContactBackboneElement
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+    OrganizationContactBackboneElement
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.valuesets.organization_type import OrganizationTypeCode
 
 
-class FhirOrganization(FhirResourceBase):
+class Organization(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
         id_: Optional[FhirId] = None,
-        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        type_: Optional[FhirList[FhirCodeableConcept[OrganizationTypeCode]]
+        type_: Optional[FhirList[CodeableConcept[OrganizationTypeCode]]
                         ] = None,
         alias: Optional[FhirList[FhirString]] = None,
-        telecom: Optional[FhirList[FhirContactPoint]] = None,
-        address: Optional[FhirList[FhirAddress]] = None,
-        partOf: Optional[FhirReference['FhirOrganization']] = None,
-        contact: Optional[FhirList[FhirOrganizationContactBackboneElement]
-                          ] = None,
-        endpoint: Optional[FhirList[FhirReference[FhirEndpoint]]] = None
+        telecom: Optional[FhirList[ContactPoint]] = None,
+        address: Optional[FhirList[Address]] = None,
+        partOf: Optional[Reference['Organization']] = None,
+        contact: Optional[FhirList[OrganizationContactBackboneElement]] = None,
+        endpoint: Optional[FhirList[Reference[Endpoint]]] = None
     ):
         """
         Organization Resource in FHIR

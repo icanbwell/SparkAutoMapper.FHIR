@@ -2,15 +2,15 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.duration import FhirDuration
-from spark_auto_mapper_fhir.fhir_types.quantity import FhirQuantity
+from spark_auto_mapper_fhir.fhir_types.duration import Duration
+from spark_auto_mapper_fhir.fhir_types.quantity import Quantity
 
 
-class FhirFill(FhirResourceBase):
+class Fill(FhirResourceBase):
     def __init__(
         self,
-        quantity: Optional[FhirQuantity] = None,
-        duration: Optional[FhirDuration] = None
+        quantity: Optional[Quantity] = None,
+        duration: Optional[Duration] = None
     ):
         """
         Fill Resource in FHIR

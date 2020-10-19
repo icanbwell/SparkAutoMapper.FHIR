@@ -2,24 +2,23 @@ from typing import Optional, Union
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_payee_type import ClaimPayeeTypeCode
-from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
-from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
-from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
-from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.related_person import FhirRelatedPerson
+from spark_auto_mapper_fhir.fhir_types.organization import Organization
+from spark_auto_mapper_fhir.fhir_types.patient import Patient
+from spark_auto_mapper_fhir.fhir_types.practitioner import Practitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import PractitionerRole
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
+from spark_auto_mapper_fhir.fhir_types.related_person import RelatedPerson
 
 
-class FhirPayeeBackboneElement(FhirResourceBase):
+class PayeeBackboneElement(FhirResourceBase):
     def __init__(
         self,
-        type_: Optional[FhirCodeableConcept[ClaimPayeeTypeCode]] = None,
-        party: Optional[FhirReference[Union[FhirPractitioner,
-                                            FhirPractitionerRole,
-                                            FhirOrganization, FhirPatient,
-                                            FhirRelatedPerson]]] = None
+        type_: Optional[CodeableConcept[ClaimPayeeTypeCode]] = None,
+        party: Optional[Reference[Union[Practitioner, PractitionerRole,
+                                        Organization, Patient,
+                                        RelatedPerson]]] = None
     ):
         """
         PayeeBackboneElement Resource in FHIR

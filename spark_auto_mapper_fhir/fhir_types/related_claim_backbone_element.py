@@ -1,22 +1,22 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.fhir_types.claim import FhirClaim
+from spark_auto_mapper_fhir.fhir_types.claim import Claim
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.related_claim_relationship import RelatedClaimRelationshipCode
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 
 
-class FhirRelatedClaimBackboneElement(FhirResourceBase):
+class RelatedClaimBackboneElement(FhirResourceBase):
     def __init__(
         self,
-        claim: Optional[FhirReference[FhirClaim]] = None,
+        claim: Optional[Reference[Claim]] = None,
         # should be FhirClaim but we get circular import
-        relationship: Optional[
-            FhirCodeableConcept[RelatedClaimRelationshipCode]] = None,
-        reference: Optional[FhirIdentifier] = None
+        relationship: Optional[CodeableConcept[RelatedClaimRelationshipCode]
+                               ] = None,
+        reference: Optional[Identifier] = None
     ):
         """
         RelatedClaimBackboneElement Resource in FHIR

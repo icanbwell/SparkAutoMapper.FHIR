@@ -2,36 +2,36 @@ from typing import Optional, Any
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
+from spark_auto_mapper_fhir.fhir_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_exception import ClaimExceptionCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_information_category import ClaimInformationCategoryCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.missing_tooth_reason import MissingToothReasonCode
-from spark_auto_mapper_fhir.fhir_types.coding import FhirCoding
+from spark_auto_mapper_fhir.fhir_types.coding import Coding
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.fhir_types.quantity import FhirQuantity
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.quantity import Quantity
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirSupportingInfoBackboneElement(FhirResourceBase):
+class SupportingInfoBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        category: FhirCodeableConcept[ClaimInformationCategoryCode],
-        code: Optional[FhirCodeableConcept[ClaimExceptionCode]] = None,
+        category: CodeableConcept[ClaimInformationCategoryCode],
+        code: Optional[CodeableConcept[ClaimExceptionCode]] = None,
         timingDate: Optional[FhirDate] = None,
-        timingPeriod: Optional[FhirPeriod] = None,
+        timingPeriod: Optional[Period] = None,
         valueBoolean: Optional[FhirBoolean] = None,
         valueString: Optional[FhirString] = None,
-        valueQuantity: Optional[FhirQuantity] = None,
-        valueAttachment: Optional[FhirAttachment] = None,
-        valueReference: Optional[FhirReference[Any]] = None,
-        reason: Optional[FhirCoding[MissingToothReasonCode]] = None
+        valueQuantity: Optional[Quantity] = None,
+        valueAttachment: Optional[Attachment] = None,
+        valueReference: Optional[Reference[Any]] = None,
+        reason: Optional[Coding[MissingToothReasonCode]] = None
     ):
         """
         SupportingInfoBackboneElement Resource in FHIR

@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirVal
 from spark_auto_mapper_fhir.fhir_types.valuesets.quantity_comparator import QuantityComparatorCode
 
 
-class FhirQuantity(FhirResourceBase):
+class Quantity(FhirResourceBase):
     def __init__(
         self,
         value: Optional[FhirDecimal] = None,

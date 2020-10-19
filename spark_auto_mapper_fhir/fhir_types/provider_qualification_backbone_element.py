@@ -2,22 +2,22 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.organization import Organization
+from spark_auto_mapper_fhir.fhir_types.period import Period
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.valuesets.provider_qualification import ProviderQualificationCode
 
 
-class FhirProviderQualificationBackboneElement(FhirResourceBase):
+class ProviderQualificationBackboneElement(FhirResourceBase):
     def __init__(
         self,
-        code: FhirCodeableConcept[ProviderQualificationCode],
-        identifier: Optional[FhirList[FhirIdentifier]] = None,
-        period: Optional[FhirPeriod] = None,
-        issuer: Optional[FhirReference[FhirOrganization]] = None
+        code: CodeableConcept[ProviderQualificationCode],
+        identifier: Optional[FhirList[Identifier]] = None,
+        period: Optional[Period] = None,
+        issuer: Optional[Reference[Organization]] = None
     ):
         """
         ProviderQualificationBackboneElement Resource in FHIR

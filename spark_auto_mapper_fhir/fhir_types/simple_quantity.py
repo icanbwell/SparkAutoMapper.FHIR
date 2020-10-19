@@ -8,7 +8,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 from spark_auto_mapper_fhir.fhir_types.valuesets.FhirValueSetBase import FhirValueSetBase
 
 
-class FhirSimpleQuantity(FhirResourceBase):
+class SimpleQuantity(FhirResourceBase):
     def __init__(
         self,
         value: Optional[FhirDecimal] = None,

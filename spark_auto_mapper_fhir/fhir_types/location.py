@@ -2,15 +2,15 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class FhirLocation(FhirResourceBase):
+class Location(FhirResourceBase):
     def __init__(
         self,
-        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
         name: Optional[FhirString] = None
     ):
         """

@@ -2,81 +2,80 @@ from typing import Optional, Union
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.accident_backbone_element import FhirAccidentBackboneElement
-from spark_auto_mapper_fhir.fhir_types.care_team_backbone_element import FhirCareTeamBackboneElement
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.accident_backbone_element import AccidentBackboneElement
+from spark_auto_mapper_fhir.fhir_types.care_team_backbone_element import CareTeamBackboneElement
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.device_request import FhirDeviceRequest
-from spark_auto_mapper_fhir.fhir_types.diagnosis_backbone_element import FhirDiagnosisBackboneElement
+from spark_auto_mapper_fhir.fhir_types.device_request import DeviceRequest
+from spark_auto_mapper_fhir.fhir_types.diagnosis_backbone_element import DiagnosisBackboneElement
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
-from spark_auto_mapper_fhir.fhir_types.insurance_backbone_element import FhirInsuranceBackboneElement
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
+from spark_auto_mapper_fhir.fhir_types.insurance_backbone_element import InsuranceBackboneElement
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
-from spark_auto_mapper_fhir.fhir_types.medication_request import FhirMedicationRequest
-from spark_auto_mapper_fhir.fhir_types.money import FhirMoney
-from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
-from spark_auto_mapper_fhir.fhir_types.patient import FhirPatient
-from spark_auto_mapper_fhir.fhir_types.payee_backbone_element import FhirPayeeBackboneElement
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
-from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
-from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
-from spark_auto_mapper_fhir.fhir_types.procedure_backbone_element import FhirProcedureBackboneElement
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.related_claim_backbone_element import FhirRelatedClaimBackboneElement
-from spark_auto_mapper_fhir.fhir_types.revenue_item_backbone_element import FhirRevenueItemBackboneElement
-from spark_auto_mapper_fhir.fhir_types.service_request import FhirServiceRequest
-from spark_auto_mapper_fhir.fhir_types.supporting_info_backbone_element import FhirSupportingInfoBackboneElement
+from spark_auto_mapper_fhir.fhir_types.location import Location
+from spark_auto_mapper_fhir.fhir_types.medication_request import MedicationRequest
+from spark_auto_mapper_fhir.fhir_types.money import Money
+from spark_auto_mapper_fhir.fhir_types.organization import Organization
+from spark_auto_mapper_fhir.fhir_types.patient import Patient
+from spark_auto_mapper_fhir.fhir_types.payee_backbone_element import PayeeBackboneElement
+from spark_auto_mapper_fhir.fhir_types.period import Period
+from spark_auto_mapper_fhir.fhir_types.practitioner import Practitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import PractitionerRole
+from spark_auto_mapper_fhir.fhir_types.procedure_backbone_element import ProcedureBackboneElement
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
+from spark_auto_mapper_fhir.fhir_types.related_claim_backbone_element import RelatedClaimBackboneElement
+from spark_auto_mapper_fhir.fhir_types.revenue_item_backbone_element import RevenueItemBackboneElement
+from spark_auto_mapper_fhir.fhir_types.service_request import ServiceRequest
+from spark_auto_mapper_fhir.fhir_types.supporting_info_backbone_element import SupportingInfoBackboneElement
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_sub_type import ClaimSubTypeCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_type import ClaimTypeCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_use import ClaimUseCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.financial_resource_status import FinancialResourceStatusCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.funds_reservation import FundsReservationCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.process_priority import ProcessPriorityCode
-from spark_auto_mapper_fhir.fhir_types.vision_prescription import FhirVisionPrescription
+from spark_auto_mapper_fhir.fhir_types.vision_prescription import VisionPrescription
 
 
-class FhirClaim(FhirResourceBase):
+class Claim(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
         status: FinancialResourceStatusCode,
-        type_: FhirCodeableConcept[ClaimTypeCode],
+        type_: CodeableConcept[ClaimTypeCode],
         use: ClaimUseCode,
-        patient: FhirReference[FhirPatient],
+        patient: Reference[Patient],
         created: FhirDateTime,
-        provider: FhirReference[Union[FhirPractitioner, FhirPractitionerRole,
-                                      FhirOrganization]],
-        priority: FhirCodeableConcept[ProcessPriorityCode],
-        insurance: FhirList[FhirInsuranceBackboneElement],
+        provider: Reference[Union[Practitioner, PractitionerRole,
+                                  Organization]],
+        priority: CodeableConcept[ProcessPriorityCode],
+        insurance: FhirList[InsuranceBackboneElement],
         id_: Optional[FhirId] = None,
-        identifier: Optional[FhirList[FhirIdentifier]] = None,
-        subType: Optional[FhirCodeableConcept[ClaimSubTypeCode]] = None,
-        billablePeriod: Optional[FhirPeriod] = None,
-        enterer: Optional[FhirReference[Union[FhirPractitioner,
-                                              FhirPractitionerRole]]] = None,
-        insurer: Optional[FhirReference[FhirOrganization]] = None,
-        fundsReserve: Optional[FhirCodeableConcept[FundsReservationCode]
-                               ] = None,
-        related: Optional[FhirList[FhirRelatedClaimBackboneElement]] = None,
-        prescription: Optional[FhirReference[Union[FhirDeviceRequest,
-                                                   FhirMedicationRequest,
-                                                   FhirVisionPrescription]]
-                               ] = None,
-        originalPrescription: Optional[FhirReference[
-            Union[FhirDeviceRequest, FhirMedicationRequest,
-                  FhirVisionPrescription]]] = None,
-        payee: Optional[FhirPayeeBackboneElement] = None,
-        referral: Optional[FhirReference[FhirServiceRequest]] = None,
-        facility: Optional[FhirReference[FhirLocation]] = None,
-        careTeam: Optional[FhirList[FhirCareTeamBackboneElement]] = None,
-        supportingInfo: Optional[FhirList[FhirSupportingInfoBackboneElement]
+        identifier: Optional[FhirList[Identifier]] = None,
+        subType: Optional[CodeableConcept[ClaimSubTypeCode]] = None,
+        billablePeriod: Optional[Period] = None,
+        enterer: Optional[Reference[Union[Practitioner,
+                                          PractitionerRole]]] = None,
+        insurer: Optional[Reference[Organization]] = None,
+        fundsReserve: Optional[CodeableConcept[FundsReservationCode]] = None,
+        related: Optional[FhirList[RelatedClaimBackboneElement]] = None,
+        prescription: Optional[Reference[Union[DeviceRequest,
+                                               MedicationRequest,
+                                               VisionPrescription]]] = None,
+        originalPrescription: Optional[Reference[Union[DeviceRequest,
+                                                       MedicationRequest,
+                                                       VisionPrescription]]
+                                       ] = None,
+        payee: Optional[PayeeBackboneElement] = None,
+        referral: Optional[Reference[ServiceRequest]] = None,
+        facility: Optional[Reference[Location]] = None,
+        careTeam: Optional[FhirList[CareTeamBackboneElement]] = None,
+        supportingInfo: Optional[FhirList[SupportingInfoBackboneElement]
                                  ] = None,
-        diagnosis: Optional[FhirList[FhirDiagnosisBackboneElement]] = None,
-        procedure: Optional[FhirList[FhirProcedureBackboneElement]] = None,
-        accident: Optional[FhirAccidentBackboneElement] = None,
-        item: Optional[FhirList[FhirRevenueItemBackboneElement]] = None,
-        total: Optional[FhirMoney] = None
+        diagnosis: Optional[FhirList[DiagnosisBackboneElement]] = None,
+        procedure: Optional[FhirList[ProcedureBackboneElement]] = None,
+        accident: Optional[AccidentBackboneElement] = None,
+        item: Optional[FhirList[RevenueItemBackboneElement]] = None,
+        total: Optional[Money] = None
     ):
         """
         Claim Resource in FHIR

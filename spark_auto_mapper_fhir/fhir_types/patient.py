@@ -5,54 +5,53 @@ from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBas
 from spark_auto_mapper.data_types.date import AutoMapperDateDataType
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.attachment import FhirAttachment
+from spark_auto_mapper_fhir.fhir_types.address import Address
+from spark_auto_mapper_fhir.fhir_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
-from spark_auto_mapper_fhir.fhir_types.communication import FhirCommunication
-from spark_auto_mapper_fhir.fhir_types.contact import FhirContact
-from spark_auto_mapper_fhir.fhir_types.contact_point import FhirContactPoint
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.fhir_types.communication import Communication
+from spark_auto_mapper_fhir.fhir_types.contact import Contact
+from spark_auto_mapper_fhir.fhir_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.human_name import FhirHumanName
+from spark_auto_mapper_fhir.fhir_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.fhir_types.identifier import FhirIdentifier
-from spark_auto_mapper_fhir.fhir_types.link_patient import FhirLinkPatient
+from spark_auto_mapper_fhir.fhir_types.identifier import Identifier
+from spark_auto_mapper_fhir.fhir_types.link_patient import LinkPatient
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.organization import FhirOrganization
+from spark_auto_mapper_fhir.fhir_types.organization import Organization
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.fhir_types.practitioner import FhirPractitioner
-from spark_auto_mapper_fhir.fhir_types.practitioner_role import FhirPractitionerRole
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.practitioner import Practitioner
+from spark_auto_mapper_fhir.fhir_types.practitioner_role import PractitionerRole
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.marital_status import MaritalStatusCode
 
 
-class FhirPatient(FhirResourceBase):
+class Patient(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
         id_: Optional[FhirId] = None,
-        identifier: Optional[FhirList[FhirIdentifier]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        name: Optional[FhirList[FhirHumanName]] = None,
-        telecom: Optional[FhirList[FhirContactPoint]] = None,
+        name: Optional[FhirList[HumanName]] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
         gender: Optional[AdministrativeGenderCode] = None,
         birthDate: Optional[FhirDate] = None,
         deceasedBoolean: Optional[FhirBoolean] = None,
         deceasedDateTime: Optional[FhirDateTime] = None,
-        address: Optional[FhirList[FhirAddress]] = None,
-        maritalStatus: Optional[FhirCodeableConcept[MaritalStatusCode]] = None,
+        address: Optional[FhirList[Address]] = None,
+        maritalStatus: Optional[CodeableConcept[MaritalStatusCode]] = None,
         multipleBirthBoolean: Optional[FhirBoolean] = None,
         multipleBirthInteger: Optional[FhirPositiveInt] = None,
-        photo: Optional[FhirList[FhirAttachment]] = None,
-        contact: Optional[FhirList[FhirContact]] = None,
-        communication: Optional[FhirList[FhirCommunication]] = None,
-        generalPractitioner: Optional[FhirList[FhirReference[
-            Union[FhirOrganization, FhirPractitioner,
-                  FhirPractitionerRole]]]] = None,
-        managingOrganization: Optional[FhirReference[FhirOrganization]] = None,
-        link: Optional[FhirList[FhirLinkPatient]] = None
+        photo: Optional[FhirList[Attachment]] = None,
+        contact: Optional[FhirList[Contact]] = None,
+        communication: Optional[FhirList[Communication]] = None,
+        generalPractitioner: Optional[FhirList[Reference[Union[
+            Organization, Practitioner, PractitionerRole]]]] = None,
+        managingOrganization: Optional[Reference[Organization]] = None,
+        link: Optional[FhirList[LinkPatient]] = None
     ):
         """
         Patient Resource in FHIR

@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.common_language import CommonLa
 from spark_auto_mapper_fhir.fhir_types.valuesets.mime_type import MimeTypeCode
 
 
-class FhirAttachment(FhirResourceBase):
+class Attachment(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

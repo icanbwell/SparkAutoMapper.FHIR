@@ -2,9 +2,9 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.fhir_types.address import FhirAddress
-from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import FhirAdjudicationBackboneElement
-from spark_auto_mapper_fhir.fhir_types.codeableConcept import FhirCodeableConcept
+from spark_auto_mapper_fhir.fhir_types.address import Address
+from spark_auto_mapper_fhir.fhir_types.adjudication_backbone_element import AdjudicationBackboneElement
+from spark_auto_mapper_fhir.fhir_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.valuesets.claim_modifiers import ClaimModifiersCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.ex_revenue_center import ExRevenueCenterCode
 from spark_auto_mapper_fhir.fhir_types.valuesets.service_place import ServicePlaceCode
@@ -12,34 +12,33 @@ from spark_auto_mapper_fhir.fhir_types.valuesets.service_uscls import ServiceUSC
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.location import FhirLocation
-from spark_auto_mapper_fhir.fhir_types.period import FhirPeriod
+from spark_auto_mapper_fhir.fhir_types.location import Location
+from spark_auto_mapper_fhir.fhir_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.fhir_types.reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.simple_quantity import FhirSimpleQuantity
+from spark_auto_mapper_fhir.fhir_types.reference import Reference
+from spark_auto_mapper_fhir.fhir_types.simple_quantity import SimpleQuantity
 
 
-class FhirRevenueItemBackboneElement(FhirResourceBase):
+class RevenueItemBackboneElement(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        productOrService: FhirList[FhirCodeableConcept[ServiceUSCLSCode]],
+        productOrService: FhirList[CodeableConcept[ServiceUSCLSCode]],
         informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        revenue: Optional[FhirList[FhirCodeableConcept[ExRevenueCenterCode]]
+        revenue: Optional[FhirList[CodeableConcept[ExRevenueCenterCode]]
                           ] = None,
-        modifier: Optional[FhirList[FhirCodeableConcept[ClaimModifiersCode]]
+        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
                            ] = None,
-        quantity: Optional[FhirList[FhirSimpleQuantity]] = None,
+        quantity: Optional[FhirList[SimpleQuantity]] = None,
         factor: Optional[FhirDecimal] = None,
-        adjudication: Optional[FhirList[FhirAdjudicationBackboneElement]
-                               ] = None,
+        adjudication: Optional[FhirList[AdjudicationBackboneElement]] = None,
         servicedDate: Optional[FhirDate] = None,
-        servicedPeriod: Optional[FhirPeriod] = None,
-        locationCodeableConcept: Optional[FhirCodeableConcept[ServicePlaceCode]
+        servicedPeriod: Optional[Period] = None,
+        locationCodeableConcept: Optional[CodeableConcept[ServicePlaceCode]
                                           ] = None,
-        locationAddress: Optional[FhirAddress] = None,
-        locationReference: Optional[FhirReference[FhirLocation]] = None
+        locationAddress: Optional[Address] = None,
+        locationReference: Optional[Reference[Location]] = None
     ):
         """
         RevenueItemBackboneElement Resource in FHIR
