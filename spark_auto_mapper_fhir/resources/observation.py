@@ -17,6 +17,9 @@ class Observation(FhirResourceBase):
         http://hl7.org/fhir/observation.html
 
 
+        :param id_: id of resource
         :param identifier: Business Identifier for observation
         """
-        super().__init__(id_=id_, identifier=identifier)
+        super().__init__(
+            resourceType="Observation", id_=id_, identifier=identifier
+        )

@@ -23,13 +23,13 @@ class MedicationDispense(FhirResourceBase):
         + Rule: whenHandedOver cannot be before whenPrepared
 
 
-        :param id_: id
+        :param id_: id of resource
         :param identifier: External identifier
         :param partOf: Event that dispense is part of
 
         """
         super().__init__(
-            resourceType="Patient",
+            resourceType="MedicationDispense",
             id_=id_,
             identifier=identifier,
             partOf=partOf

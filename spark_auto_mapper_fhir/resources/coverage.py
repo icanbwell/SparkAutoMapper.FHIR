@@ -1,5 +1,6 @@
 from typing import Optional, Union
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -30,6 +31,7 @@ class Coverage(FhirResourceBase):
         payor: FhirList[Reference[Union[Organization, Patient,
                                         RelatedPerson]]],
         beneficiary: Reference[Patient],
+        id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[CodeableConcept[CoverageTypeAndSelfPayCode]] = None,
         policyHolder: Optional[Reference[Union[Patient, RelatedPerson,
@@ -59,6 +61,7 @@ class Coverage(FhirResourceBase):
         :param payor: Issuer of the policy
         :param beneficiary: Plan beneficiary
 
+        :param id_: id of resource
         :param identifier: Business Identifier for the coverage
         :param type_: Coverage category such as medical or accident. https://hl7.org/FHIR/valueset-coverage-type.html
         :param policyHolder: Owner of the policy
@@ -76,6 +79,8 @@ class Coverage(FhirResourceBase):
         :param contract: Contract details
         """
         super().__init__(
+            resourceType="Coverage",
+            id_=id_,
             status=status,
             payor=payor,
             beneficiary=beneficiary,

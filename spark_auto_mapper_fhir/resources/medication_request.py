@@ -1,5 +1,6 @@
 from typing import Optional, Union, Any
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.complex_types.annotation import Annotation
@@ -53,6 +54,7 @@ class MedicationRequest(FhirResourceBase):
         intent: MedicationRequestIntent,
         medication: MedicationBackboneElement,
         subject: Reference[Union[Patient, Group]],
+        id_: Optional[FhirId] = None,
         statusReason: Optional[
             CodeableConcept[MedicationRequestStatusReasonCode]] = None,
         category: Optional[FhirList[
@@ -103,6 +105,8 @@ class MedicationRequest(FhirResourceBase):
         :param intent: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option
                         https://hl7.org/FHIR/valueset-medicationrequest-intent.html
         :param medication: Medication to be taken. https://hl7.org/FHIR/valueset-medication-codes.html
+
+        :param id_: id of resource
         :param statusReason: Reason for current status.
                             https://hl7.org/FHIR/valueset-medicationrequest-status-reason.html
         :param category: Type of medication usage. https://hl7.org/FHIR/valueset-medicationrequest-category.html
@@ -134,6 +138,8 @@ class MedicationRequest(FhirResourceBase):
         :param detectedIssue: Clinical Issue with action
         """
         super().__init__(
+            resourceType="MedicationRequest",
+            id_=id_,
             status=status,
             intent=intent,
             medication=medication,

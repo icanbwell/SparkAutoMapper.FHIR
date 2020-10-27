@@ -118,6 +118,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         :param insurance: Patient insurance information
         :param outcome: queued | complete | error | partial. https://hl7.org/FHIR/valueset-remittance-outcome.html
 
+        :param id_: id of resource
         :param enterer: Author of the claim
         :param provider: Party responsible for the claim
         :param billablePeriod: Relevant time frame for the claim

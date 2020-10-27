@@ -42,6 +42,7 @@ class Practitioner(FhirResourceBase):
         A person with a formal responsibility in the provisioning of healthcare or related services
 
 
+        :param id_: id of resource
         :param identifier: An identifier for the person as this agent
         :param active: Whether this practitioner's record is in active use
         :param name: The name(s) associated with the practitioner

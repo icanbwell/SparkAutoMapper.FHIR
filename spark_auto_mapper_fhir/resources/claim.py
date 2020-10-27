@@ -82,7 +82,7 @@ class Claim(FhirResourceBase):
         https://hl7.org/FHIR/claim.html
         Claim, Pre-determination or Pre-authorization
 
-        :param id_: id
+        :param id_: id of resource
         :param status: active | cancelled | draft | entered-in-error. https://hl7.org/FHIR/valueset-fm-status.html
         :param type_: Category or discipline. https://hl7.org/FHIR/valueset-claim-type.html
         :param use: claim | preauthorization | predetermination. https://hl7.org/FHIR/valueset-claim-use.html

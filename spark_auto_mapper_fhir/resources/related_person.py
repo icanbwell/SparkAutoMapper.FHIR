@@ -48,7 +48,7 @@ class RelatedPerson(FhirResourceBase):
 
         :param patient: The patient this person is related to
 
-        :param id_: id
+        :param id_: id of resource
         :param identifier: 	A human identifier for this person
         :param active: Whether this related person's record is in active use
         :param relationship: The nature of the relationship.
@@ -64,6 +64,7 @@ class RelatedPerson(FhirResourceBase):
         """
         super().__init__(
             patient=patient,
+            resourceType="RelatedPerson",
             id_=id_,
             identifier=identifier,
             active=active,

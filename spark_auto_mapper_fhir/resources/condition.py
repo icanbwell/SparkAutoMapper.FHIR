@@ -9,6 +9,9 @@ class Condition(FhirResourceBase):
         """
         Condition Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Condition
+
+
+        :param id_: id of resource
         """
         super().__init__(
             resourceType="Condition",

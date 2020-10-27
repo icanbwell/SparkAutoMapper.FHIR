@@ -39,7 +39,7 @@ class Organization(FhirResourceBase):
         + Rule: The organization SHALL at least have a name or an identifier, and possibly more than one
 
 
-        :param id_: id
+        :param id_: id of resource
         :param identifier: Identifies this organization across multiple systems
         :param active: Whether the organization's record is still in active use
         :param type_: Kind of organization. http://hl7.org/fhir/valueset-organization-type.html

@@ -5,6 +5,9 @@ class $ClassName(FhirResourceBase):
         """
         $ClassName Resource in FHIR
         $Documentation
+        
+        
+        :param id_: id of resource
         """
         super().__init__(
             resourceType="$ClassName",
