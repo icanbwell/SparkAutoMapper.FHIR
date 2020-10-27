@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -10,7 +10,7 @@ from spark_auto_mapper_fhir.valuesets.substance_admin_substitution_reason import
     SubstanceAdminSubstitutionReason
 
 
-class SubstitutionBackboneElement(FhirResourceBase):
+class SubstitutionBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,

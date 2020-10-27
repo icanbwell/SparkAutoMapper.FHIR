@@ -1,6 +1,6 @@
 from typing import Union, Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 
 
-class CareTeamBackboneElement(FhirResourceBase):
+class CareTeamBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,

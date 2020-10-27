@@ -1,7 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.resources.claim import Claim
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.related_claim_relationship import RelatedClaimRelationshipCode
@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 
 
-class RelatedClaimBackboneElement(FhirResourceBase):
+class RelatedClaimBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         claim: Optional[Reference[Claim]] = None,

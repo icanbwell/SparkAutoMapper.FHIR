@@ -1,7 +1,7 @@
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 
-class ReportedBackboneElement(FhirResourceBase):
+class ReportedBackboneElement(FhirBackboneElementBase):
     def __init__(self) -> None:
         """
         ReportedBackboneElement Resource in FHIR

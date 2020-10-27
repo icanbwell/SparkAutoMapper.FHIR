@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.adjudication_reason import AdjudicationReasonCode
@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.complex_types.money import Money
 
 
-class AdjudicationBackboneElement(FhirResourceBase):
+class AdjudicationBackboneElement(FhirBackboneElementBase):
     # noinspection SpellCheckingInspection
     def __init__(
         self,

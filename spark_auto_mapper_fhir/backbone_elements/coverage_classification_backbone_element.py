@@ -1,13 +1,13 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.coverage_class import CoverageClassCode
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
-class CoverageClassificationBackboneElement(FhirResourceBase):
+class CoverageClassificationBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         type_: CodeableConcept[CoverageClassCode],

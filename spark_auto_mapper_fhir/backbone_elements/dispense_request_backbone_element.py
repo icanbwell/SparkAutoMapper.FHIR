@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 from spark_auto_mapper_fhir.complex_types.duration import Duration
 from spark_auto_mapper_fhir.complex_types.fill import Fill
@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
 from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
 
 
-class DispenseRequestBackboneElement(FhirResourceBase):
+class DispenseRequestBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

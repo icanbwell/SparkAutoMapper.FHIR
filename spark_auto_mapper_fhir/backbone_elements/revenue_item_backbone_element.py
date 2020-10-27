@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
@@ -19,7 +19,7 @@ from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
 
 
-class RevenueItemBackboneElement(FhirResourceBase):
+class RevenueItemBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
