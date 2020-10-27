@@ -102,6 +102,9 @@ class Patient(FhirResourceBase):
             link=link
         )
 
+        if active:
+            assert photo
+
     id_: AutoMapperDataTypeColumn = A.column("id_")
     identifier = A.column("identifier")
     active = A.boolean(A.column("active"))

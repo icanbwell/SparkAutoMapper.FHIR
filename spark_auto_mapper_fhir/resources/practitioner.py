@@ -1,5 +1,6 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.resources.address import Address
@@ -21,6 +22,7 @@ class Practitioner(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         name: Optional[FhirList[HumanName]] = None,
@@ -53,6 +55,7 @@ class Practitioner(FhirResourceBase):
                             http://hl7.org/fhir/valueset-languages.html
         """
         super().__init__(
+            id_=id_,
             identifier=identifier,
             active=active,
             name=name,
