@@ -1,0 +1,27 @@
+from typing import Union, Optional
+
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.resources.patient import Patient
+from spark_auto_mapper_fhir.resources.person import Person
+from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+from spark_auto_mapper_fhir.valuesets.identity_assurance_level import IdentityAssuranceLevel
+
+
+class LinkPersonBackboneElement(FhirBackboneElementBase):
+    def __init__(
+        self,
+        target: Reference[Union[Patient, Practitioner, RelatedPerson, Person]],
+        assurance: Optional[IdentityAssuranceLevel] = None
+    ) -> None:
+        """
+        LinkPersonBackboneElement Backbone Element in FHIR
+        https://hl7.org/FHIR/person-definitions.html#Person.link
+        Link to a resource that concerns the same actual person
+
+
+        :param target: The resource to which this actual person is associated
+        :param assurance: level1 | level2 | level3 | level4
+        """
+        super().__init__(target=target, assurance=assurance)

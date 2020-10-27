@@ -1,3 +1,6 @@
+from typing import Optional
+
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 class $ClassName(FhirResourceBase):
