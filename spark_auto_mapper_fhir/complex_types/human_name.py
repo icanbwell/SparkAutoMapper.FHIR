@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.period import Period
@@ -8,7 +8,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.valuesets.name_use import NameUseCode
 
 
-class HumanName(FhirResourceBase):
+class HumanName(FhirComplexTypeBase):
     def __init__(
         self,
         use: Optional[NameUseCode] = None,

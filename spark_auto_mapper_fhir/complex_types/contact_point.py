@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.valuesets.contact_point_system import ContactPointSy
 from spark_auto_mapper_fhir.valuesets.contact_point_use import ContactPointUseCode
 
 
-class ContactPoint(FhirResourceBase):
+class ContactPoint(FhirComplexTypeBase):
     def __init__(
         self,
         system: Optional[ContactPointSystemCode] = None,

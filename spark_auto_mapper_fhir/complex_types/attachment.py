@@ -1,6 +1,6 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.base64Binary import FhirBase64Binary
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.valuesets.common_language import CommonLanguageCode
 from spark_auto_mapper_fhir.valuesets.mime_type import MimeTypeCode
 
 
-class Attachment(FhirResourceBase):
+class Attachment(FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

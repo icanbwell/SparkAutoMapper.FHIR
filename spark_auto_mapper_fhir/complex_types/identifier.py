@@ -1,5 +1,6 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
@@ -11,7 +12,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
-class Identifier(FhirResourceBase):
+class Identifier(FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

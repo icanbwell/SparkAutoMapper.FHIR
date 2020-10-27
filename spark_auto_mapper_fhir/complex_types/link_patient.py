@@ -1,13 +1,13 @@
 from typing import Union, Any
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 from spark_auto_mapper_fhir.valuesets.link_type import LinkTypeCode
 
 
-class LinkPatient(FhirResourceBase):
+class LinkPatient(FhirComplexTypeBase):
     def __init__(
         self,
         other: Reference[Union[Any, RelatedPerson]],

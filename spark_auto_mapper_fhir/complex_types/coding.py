@@ -1,6 +1,6 @@
 from typing import Optional, TypeVar, Generic
 
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 _T = TypeVar("_T")
 
 
-class Coding(Generic[_T], FhirResourceBase):
+class Coding(Generic[_T], FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
