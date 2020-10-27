@@ -2,11 +2,11 @@ from typing import Optional, Union, Any
 
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.resources.annotation import Annotation
+from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 from spark_auto_mapper_fhir.resources.care_plan import CarePlan
 from spark_auto_mapper_fhir.resources.care_team import CareTeam
 from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.condition import ConditionCode
 from spark_auto_mapper_fhir.valuesets.medication_request_category import MedicationRequestCategoryCode
 from spark_auto_mapper_fhir.valuesets.medication_request_course_of_therapy import \
@@ -22,26 +22,26 @@ from spark_auto_mapper_fhir.resources.coverage import Coverage
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
 from spark_auto_mapper_fhir.resources.device import Device
-from spark_auto_mapper_fhir.resources.dispense_request_backbone_element import \
+from spark_auto_mapper_fhir.backbone_elements.dispense_request_backbone_element import \
     DispenseRequestBackboneElement
-from spark_auto_mapper_fhir.resources.dosage import Dosage
+from spark_auto_mapper_fhir.complex_types.dosage import Dosage
 from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.group import Group
-from spark_auto_mapper_fhir.resources.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.resources.medication_backbone_element import \
+from spark_auto_mapper_fhir.backbone_elements.medication_backbone_element import \
     MedicationBackboneElement
 from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-from spark_auto_mapper_fhir.resources.reference import Reference
+from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-from spark_auto_mapper_fhir.resources.reported_backbone_element import ReportedBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.reported_backbone_element import ReportedBackboneElement
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
-from spark_auto_mapper_fhir.resources.substitution_backbone_element import \
+from spark_auto_mapper_fhir.backbone_elements.substitution_backbone_element import \
     SubstitutionBackboneElement
 
 

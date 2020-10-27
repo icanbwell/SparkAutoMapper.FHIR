@@ -2,31 +2,31 @@ from typing import Optional, Union
 
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.resources.accident_backbone_element import AccidentBackboneElement
-from spark_auto_mapper_fhir.resources.care_team_backbone_element import CareTeamBackboneElement
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.backbone_elements.accident_backbone_element import AccidentBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.care_team_backbone_element import CareTeamBackboneElement
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.resources.device_request import DeviceRequest
-from spark_auto_mapper_fhir.resources.diagnosis_backbone_element import DiagnosisBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.diagnosis_backbone_element import DiagnosisBackboneElement
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.identifier import Identifier
-from spark_auto_mapper_fhir.resources.insurance_backbone_element import InsuranceBackboneElement
+from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.backbone_elements.insurance_backbone_element import InsuranceBackboneElement
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.location import Location
 from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
-from spark_auto_mapper_fhir.resources.money import Money
+from spark_auto_mapper_fhir.complex_types.money import Money
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.resources.payee_backbone_element import PayeeBackboneElement
-from spark_auto_mapper_fhir.resources.period import Period
+from spark_auto_mapper_fhir.backbone_elements.payee_backbone_element import PayeeBackboneElement
+from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-from spark_auto_mapper_fhir.resources.procedure_backbone_element import ProcedureBackboneElement
-from spark_auto_mapper_fhir.resources.reference import Reference
-from spark_auto_mapper_fhir.resources.related_claim_backbone_element import RelatedClaimBackboneElement
-from spark_auto_mapper_fhir.resources.revenue_item_backbone_element import RevenueItemBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.procedure_backbone_element import ProcedureBackboneElement
+from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.backbone_elements.related_claim_backbone_element import RelatedClaimBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.revenue_item_backbone_element import RevenueItemBackboneElement
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
-from spark_auto_mapper_fhir.resources.supporting_info_backbone_element import SupportingInfoBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.supporting_info_backbone_element import SupportingInfoBackboneElement
 from spark_auto_mapper_fhir.valuesets.claim_sub_type import ClaimSubTypeCode
 from spark_auto_mapper_fhir.valuesets.claim_type import ClaimTypeCode
 from spark_auto_mapper_fhir.valuesets.claim_use import ClaimUseCode
@@ -113,6 +113,7 @@ class Claim(FhirResourceBase):
         :param total: Total claim cost
         """
         super().__init__(
+            resourceType="Claim",
             id_=id_,
             status=status,
             type_=type_,

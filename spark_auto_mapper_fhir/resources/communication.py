@@ -3,7 +3,7 @@ from typing import Optional
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.common_language import CommonLanguageCode
 
 
