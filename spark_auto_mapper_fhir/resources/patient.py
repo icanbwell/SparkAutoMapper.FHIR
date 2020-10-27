@@ -1,6 +1,8 @@
 from typing import Optional, Union
 
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
+
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.data_types.date import AutoMapperDateDataType
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -51,7 +53,8 @@ class Patient(FhirResourceBase):
         generalPractitioner: Optional[FhirList[Reference[Union[
             Organization, Practitioner, PractitionerRole]]]] = None,
         managingOrganization: Optional[Reference[Organization]] = None,
-        link: Optional[FhirList[LinkPatient]] = None
+        link: Optional[FhirList[LinkPatient]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Patient Resource in FHIR
@@ -79,6 +82,7 @@ class Patient(FhirResourceBase):
         :param generalPractitioner: Patient's nominated primary care provider
         :param managingOrganization: Organization that is the custodian of the patient record
         :param link: Link to another patient resource that concerns the same actual person
+        :param extension: extensions
         """
         super().__init__(
             resourceType="Patient",
@@ -100,11 +104,9 @@ class Patient(FhirResourceBase):
             communication=communication,
             generalPractitioner=generalPractitioner,
             managingOrganization=managingOrganization,
-            link=link
+            link=link,
+            extension=extension
         )
-
-        if active:
-            assert photo
 
     id_: AutoMapperDataTypeColumn = A.column("id_")
     identifier = A.column("identifier")
