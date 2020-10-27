@@ -1,9 +1,10 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.common_language import CommonLanguageCode
 
 
@@ -11,6 +12,7 @@ class Communication(FhirResourceBase):
     def __init__(
         self,
         language: CodeableConcept[CommonLanguageCode],
+        id_: Optional[FhirId] = None,
         preferred: Optional[FhirBoolean] = None
     ):
         """
@@ -21,6 +23,12 @@ class Communication(FhirResourceBase):
 
         :param language: The language which can be used to communicate with the patient about his or her health.
                         https://hl7.org/FHIR/valueset-languages.html
+        :param id_: id of resource
         :param preferred: Language preference indicator
         """
-        super().__init__(language=language, preferred=preferred)
+        super().__init__(
+            resourceType="Communication",
+            id_=id_,
+            language=language,
+            preferred=preferred
+        )

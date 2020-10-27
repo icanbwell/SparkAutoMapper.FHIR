@@ -1,29 +1,31 @@
 from typing import Optional, Union
 
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
+
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.data_types.date import AutoMapperDateDataType
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.resources.address import Address
-from spark_auto_mapper_fhir.resources.attachment import Attachment
+from spark_auto_mapper_fhir.complex_types.address import Address
+from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.resources.communication import Communication
-from spark_auto_mapper_fhir.resources.contact import Contact
-from spark_auto_mapper_fhir.resources.contact_point import ContactPoint
+from spark_auto_mapper_fhir.complex_types.contact import Contact
+from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.resources.human_name import HumanName
+from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.identifier import Identifier
-from spark_auto_mapper_fhir.resources.link_patient import LinkPatient
+from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.link_patient import LinkPatient
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-from spark_auto_mapper_fhir.resources.reference import Reference
+from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.valuesets.marital_status import MaritalStatusCode
 
@@ -51,7 +53,8 @@ class Patient(FhirResourceBase):
         generalPractitioner: Optional[FhirList[Reference[Union[
             Organization, Practitioner, PractitionerRole]]]] = None,
         managingOrganization: Optional[Reference[Organization]] = None,
-        link: Optional[FhirList[LinkPatient]] = None
+        link: Optional[FhirList[LinkPatient]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Patient Resource in FHIR
@@ -79,8 +82,10 @@ class Patient(FhirResourceBase):
         :param generalPractitioner: Patient's nominated primary care provider
         :param managingOrganization: Organization that is the custodian of the patient record
         :param link: Link to another patient resource that concerns the same actual person
+        :param extension: extensions
         """
         super().__init__(
+            resourceType="Patient",
             id_=id_,
             identifier=identifier,
             active=active,
@@ -99,7 +104,8 @@ class Patient(FhirResourceBase):
             communication=communication,
             generalPractitioner=generalPractitioner,
             managingOrganization=managingOrganization,
-            link=link
+            link=link,
+            extension=extension
         )
 
     id_: AutoMapperDataTypeColumn = A.column("id_")

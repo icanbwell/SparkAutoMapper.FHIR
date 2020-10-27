@@ -1,23 +1,24 @@
 from typing import Optional, Union
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.coverage_type_and_self_pay import CoverageTypeAndSelfPayCode
 from spark_auto_mapper_fhir.valuesets.financial_resource_status import FinancialResourceStatusCode
 from spark_auto_mapper_fhir.valuesets.subscriber_relationship import SubscriberRelationshipCode
 from spark_auto_mapper_fhir.resources.contract import Contract
-from spark_auto_mapper_fhir.resources.cost_to_beneficiary_backbone_element import CostToBeneficiaryBackboneElement
-from spark_auto_mapper_fhir.resources.coverage_classification_backbone_element import \
+from spark_auto_mapper_fhir.backbone_elements.cost_to_beneficiary_backbone_element import CostToBeneficiaryBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.coverage_classification_backbone_element import \
     CoverageClassificationBackboneElement
-from spark_auto_mapper_fhir.resources.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.resources.period import Period
+from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.resources.reference import Reference
+from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
@@ -30,6 +31,7 @@ class Coverage(FhirResourceBase):
         payor: FhirList[Reference[Union[Organization, Patient,
                                         RelatedPerson]]],
         beneficiary: Reference[Patient],
+        id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[CodeableConcept[CoverageTypeAndSelfPayCode]] = None,
         policyHolder: Optional[Reference[Union[Patient, RelatedPerson,
@@ -59,6 +61,7 @@ class Coverage(FhirResourceBase):
         :param payor: Issuer of the policy
         :param beneficiary: Plan beneficiary
 
+        :param id_: id of resource
         :param identifier: Business Identifier for the coverage
         :param type_: Coverage category such as medical or accident. https://hl7.org/FHIR/valueset-coverage-type.html
         :param policyHolder: Owner of the policy
@@ -76,6 +79,8 @@ class Coverage(FhirResourceBase):
         :param contract: Contract details
         """
         super().__init__(
+            resourceType="Coverage",
+            id_=id_,
             status=status,
             payor=payor,
             beneficiary=beneficiary,

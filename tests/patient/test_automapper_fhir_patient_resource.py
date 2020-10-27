@@ -7,7 +7,7 @@ from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
-from spark_auto_mapper_fhir.resources.human_name import HumanName
+from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
@@ -57,8 +57,10 @@ def test_auto_mapper_fhir_patient_resource(
     result_df: DataFrame = mapper.transform(df=df)
 
     # Assert
-    assert len(sql_expressions) == 4
+    assert len(sql_expressions) == 5
     assert str(sql_expressions["id"]) == str(col("a.member_id").alias("id"))
+    assert str(sql_expressions["resourceType"]
+               ) == str(lit("Patient").alias("resourceType"))
     assert str(sql_expressions["birthDate"]) == str(
         coalesce(
             to_date(col("date_of_birth"), 'yyyy-MM-dd'),

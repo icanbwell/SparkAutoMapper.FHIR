@@ -1,17 +1,18 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
-from spark_auto_mapper_fhir.resources.address import Address
-from spark_auto_mapper_fhir.resources.attachment import Attachment
+from spark_auto_mapper_fhir.complex_types.address import Address
+from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.resources.contact_point import ContactPoint
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.resources.human_name import HumanName
-from spark_auto_mapper_fhir.resources.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.resources.provider_qualification_backbone_element import \
+from spark_auto_mapper_fhir.backbone_elements.provider_qualification_backbone_element import \
     ProviderQualificationBackboneElement
 from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.valuesets.common_language import CommonLanguageCode
@@ -21,6 +22,7 @@ class Practitioner(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         name: Optional[FhirList[HumanName]] = None,
@@ -40,6 +42,7 @@ class Practitioner(FhirResourceBase):
         A person with a formal responsibility in the provisioning of healthcare or related services
 
 
+        :param id_: id of resource
         :param identifier: An identifier for the person as this agent
         :param active: Whether this practitioner's record is in active use
         :param name: The name(s) associated with the practitioner
@@ -53,6 +56,8 @@ class Practitioner(FhirResourceBase):
                             http://hl7.org/fhir/valueset-languages.html
         """
         super().__init__(
+            resourceType="Practitioner",
+            id_=id_,
             identifier=identifier,
             active=active,
             name=name,

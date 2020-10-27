@@ -1,17 +1,17 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.resources.address import Address
+from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.resources.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.resources.contact_point import ContactPoint
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.resources.organization_contact_backbone_element import \
+from spark_auto_mapper_fhir.backbone_elements.organization_contact_backbone_element import \
     OrganizationContactBackboneElement
-from spark_auto_mapper_fhir.resources.reference import Reference
+from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.valuesets.organization_type import OrganizationTypeCode
 
@@ -39,7 +39,7 @@ class Organization(FhirResourceBase):
         + Rule: The organization SHALL at least have a name or an identifier, and possibly more than one
 
 
-        :param id_: id
+        :param id_: id of resource
         :param identifier: Identifies this organization across multiple systems
         :param active: Whether the organization's record is still in active use
         :param type_: Kind of organization. http://hl7.org/fhir/valueset-organization-type.html
@@ -53,6 +53,7 @@ class Organization(FhirResourceBase):
         :param endpoint: Technical endpoints providing access to services operated for the organization
         """
         super().__init__(
+            resourceType="Organization",
             id_=id_,
             identifier=identifier,
             active=active,
