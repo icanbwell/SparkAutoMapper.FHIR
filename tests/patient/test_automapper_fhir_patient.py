@@ -40,12 +40,12 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
         view="members", source_view="patients", keys=["member_id"]
     ).columns(
         patient=Patient(
-            id_=A.column("a.member_id"),
+            id_=A.column("member_id"),
             identifier=FhirList(
                 [
                     Identifier(
                         use=IdentifierUseCode.Usual,
-                        value=A.column("a.member_id"),
+                        value=A.column("member_id"),
                         type_=CodeableConcept(
                             coding=Coding(
                                 code=IdentifierTypeCode.MedicalRecordNumber
@@ -97,19 +97,19 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     assert str(sql_expressions["patient"]) == str(
         struct(
             lit("Patient").alias("resourceType"),
-            col("a.member_id").alias("id"),
+            col("b.member_id").alias("id"),
             array(
                 struct(
                     lit("usual").alias("use"),
                     struct(struct(lit("MR").alias("code")).alias("coding")
                            ).alias("type"),
-                    col("a.member_id").alias("value"),
+                    col("b.member_id").alias("value"),
                 )
             ).alias("identifier"),
             array(
                 struct(
                     lit("usual").alias("use"),
-                    col("last_name").alias("family"),
+                    col("b.last_name").alias("family"),
                     array(lit("first_name"),
                           lit("middle_name")).alias("given")
                 )
@@ -118,9 +118,9 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                 """CASE WHEN (`my_gender` = F) THEN 'female' WHEN (`my_gender` = M) THEN 'male' ELSE other END"""
             ).alias("gender"),
             coalesce(
-                to_date(col("date_of_birth"), 'yyyy-MM-dd'),
-                to_date(col("date_of_birth"), 'yyyyMMdd'),
-                to_date(col("date_of_birth"), 'MM/dd/yy')
+                to_date(col("b.date_of_birth"), 'yyyy-MM-dd'),
+                to_date(col("b.date_of_birth"), 'yyyyMMdd'),
+                to_date(col("b.date_of_birth"), 'MM/dd/yy')
             ).alias("birthDate"),
             struct(
                 struct(
