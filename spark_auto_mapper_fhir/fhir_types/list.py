@@ -10,6 +10,6 @@ _T = TypeVar(
 )
 
 
-class FhirList(AutoMapperList[_T]):  # type: ignore
+class FhirList(AutoMapperList[_T]):
     def __init__(self, value: Optional[List[_T]]) -> None:
         super().__init__(value=value)
