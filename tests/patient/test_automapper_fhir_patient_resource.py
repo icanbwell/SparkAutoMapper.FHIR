@@ -36,7 +36,7 @@ def test_auto_mapper_fhir_patient_resource(
         view="members", source_view="patients", keys=["member_id"]
     ).complex(
         Patient(
-            id_=A.column("a.member_id"),
+            id_=A.column("member_id"),
             birthDate=A.date(A.column("date_of_birth")),
             name=FhirList(
                 [
@@ -60,26 +60,26 @@ def test_auto_mapper_fhir_patient_resource(
 
     # Assert
     assert len(sql_expressions) == 5
-    assert str(sql_expressions["id"]) == str(col("a.member_id").alias("id"))
+    assert str(sql_expressions["id"]) == str(col("b.member_id").alias("id"))
     assert str(sql_expressions["resourceType"]
                ) == str(lit("Patient").alias("resourceType"))
     assert str(sql_expressions["birthDate"]) == str(
         coalesce(
-            to_date(col("date_of_birth"), 'yyyy-MM-dd'),
-            to_date(col("date_of_birth"), 'yyyyMMdd'),
-            to_date(col("date_of_birth"), 'MM/dd/yy')
+            to_date(col("b.date_of_birth"), 'yyyy-MM-dd'),
+            to_date(col("b.date_of_birth"), 'yyyyMMdd'),
+            to_date(col("b.date_of_birth"), 'MM/dd/yy')
         ).alias("birthDate")
     )
     assert str(sql_expressions["name"]) == str(
         array(
             struct(
                 lit("usual").alias("use"),
-                col("last_name").alias("family"),
+                col("b.last_name").alias("family"),
             )
         ).alias("name")
     )
     assert str(sql_expressions["gender"]
-               ) == str(col("my_gender").alias("gender"))
+               ) == str(col("b.my_gender").alias("gender"))
 
     result_df.printSchema()
     result_df.show()
