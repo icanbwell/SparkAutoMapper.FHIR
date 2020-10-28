@@ -1,15 +1,17 @@
-from typing import Optional, TypeVar, Generic
+from typing import Optional, TypeVar, Generic, Union
 
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
-_T = TypeVar("_T")
+# https://mypy.readthedocs.io/en/stable/generics.html
+_T = TypeVar("_T", bound=Union[FhirValueSetBase])
 
 
 # noinspection SpellCheckingInspection
-class CodeableConcept(Generic[_T], FhirComplexTypeBase):
+class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
     # noinspection PyPep8Naming
     def __init__(
         self,

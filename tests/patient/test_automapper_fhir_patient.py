@@ -42,20 +42,26 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
         patient=Patient(
             id_=A.column("a.member_id"),
             identifier=FhirList(
-                Identifier(
-                    use=IdentifierUseCode.Usual,
-                    value=A.column("a.member_id"),
-                    type_=CodeableConcept(
-                        coding=Coding(code=IdentifierTypeCode("MR"))
+                [
+                    Identifier(
+                        use=IdentifierUseCode.Usual,
+                        value=A.column("a.member_id"),
+                        type_=CodeableConcept(
+                            coding=Coding(
+                                code=IdentifierTypeCode.MedicalRecordNumber
+                            )
+                        )
                     )
-                )
+                ]
             ),
             name=FhirList(
-                HumanName(
-                    use=NameUseCode("usual"),
-                    family=A.column("last_name"),
-                    given=FhirList(["first_name", "middle_name"])
-                )
+                [
+                    HumanName(
+                        use=NameUseCode("usual"),
+                        family=A.column("last_name"),
+                        given=FhirList(["first_name", "middle_name"])
+                    )
+                ]
             ),
             birthDate=A.date(A.column("date_of_birth")),
             maritalStatus=CodeableConcept(

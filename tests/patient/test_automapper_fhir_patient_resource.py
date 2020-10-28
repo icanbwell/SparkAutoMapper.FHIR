@@ -39,9 +39,11 @@ def test_auto_mapper_fhir_patient_resource(
             id_=A.column("a.member_id"),
             birthDate=A.date(A.column("date_of_birth")),
             name=FhirList(
-                HumanName(
-                    use=NameUseCode("usual"), family=A.column("last_name")
-                )
+                [
+                    HumanName(
+                        use=NameUseCode("usual"), family=A.column("last_name")
+                    )
+                ]
             ),
             gender=AdministrativeGenderCode(A.column("my_gender"))
         )
