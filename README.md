@@ -32,7 +32,6 @@ mapper = AutoMapperFhir(
 ```
 
 # Publishing a new package
-1. Edit VERSION to increment the version
-2. Create a new release
-3. The GitHub Action should automatically kick in and publish the package
-4. You can see the status in the Actions tab
+1. Create a new release
+2. The GitHub Action should automatically kick in and publish the package
+3. You can see the status in the Actions tab
