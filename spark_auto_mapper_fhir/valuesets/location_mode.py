@@ -9,41 +9,49 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class ${ClassName}(FhirValueSetBase):
+class LocationMode(FhirValueSetBase):
     """
-    $Documentation
+    https://hl7.org/FHIR/valueset-location-mode.html
     """
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., '${ClassName}']) -> None:
-            self.f: Callable[..., '${ClassName}'] = f
+        def __init__(self, f: Callable[..., 'LocationMode']) -> None:
+            self.f: Callable[..., 'LocationMode'] = f
 
-        def __get__(self, obj: Any, 
-                    owner: Type['${ClassName}']
-                    ) -> '${ClassName}':
+        def __get__(
+            self, obj: Any, owner: Type['LocationMode']
+        ) -> 'LocationMode':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> '${ClassName}':
+    def Instance(cls) -> 'LocationMode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return ${ClassName}("A")
+        return LocationMode("instance")
+
+    @classproperty
+    def Kind(cls) -> 'LocationMode':
+        """
+        Comment
+        """
+        # noinspection PyCallingNonCallable
+        return LocationMode("kind")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
         """
-        $SystemUri
+        http://hl7.org/fhir/location-mode
         """
-        return "$SystemUri"
+        return "http://hl7.org/fhir/location-mode"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
         """
-        $OID
+        2.16.840.1.113883.4.642.3.330
         """
-        return "$OID"
+        return "2.16.840.1.113883.4.642.3.330"

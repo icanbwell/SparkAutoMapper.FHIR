@@ -9,41 +9,43 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class ${ClassName}(FhirValueSetBase):
+class ServiceDeliveryLocationType(FhirValueSetBase):
     """
-    $Documentation
+    https://hl7.org/FHIR/v3/ServiceDeliveryLocationRoleType/vs.html
     """
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., '${ClassName}']) -> None:
-            self.f: Callable[..., '${ClassName}'] = f
+        def __init__(
+            self, f: Callable[..., 'ServiceDeliveryLocationType']
+        ) -> None:
+            self.f: Callable[..., 'ServiceDeliveryLocationType'] = f
 
-        def __get__(self, obj: Any, 
-                    owner: Type['${ClassName}']
-                    ) -> '${ClassName}':
+        def __get__(
+            self, obj: Any, owner: Type['ServiceDeliveryLocationType']
+        ) -> 'ServiceDeliveryLocationType':
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> '${ClassName}':
+    def Hospital(cls) -> 'ServiceDeliveryLocationType':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return ${ClassName}("A")
+        return ServiceDeliveryLocationType("HOSP")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
         """
-        $SystemUri
+        http://terminology.hl7.org/CodeSystem/v3-RoleCode
         """
-        return "$SystemUri"
+        return "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
         """
-        $OID
+        2.16.840.1.113883.1.11.17660
         """
-        return "$OID"
+        return "2.16.840.1.113883.1.11.17660"
