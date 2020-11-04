@@ -9,57 +9,59 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class LocationStatusCode(FhirValueSetBase):
+class ServiceProvisionConditionCode(FhirValueSetBase):
     """
-    https://hl7.org/FHIR/valueset-location-status.html
+    https://hl7.org/FHIR/valueset-service-provision-conditions.html
     """
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'LocationStatusCode']) -> None:
-            self.f: Callable[..., 'LocationStatusCode'] = f
+        def __init__(
+            self, f: Callable[..., 'ServiceProvisionConditionCode']
+        ) -> None:
+            self.f: Callable[..., 'ServiceProvisionConditionCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['LocationStatusCode']
-        ) -> 'LocationStatusCode':
+            self, obj: Any, owner: Type['ServiceProvisionConditionCode']
+        ) -> 'ServiceProvisionConditionCode':
             return self.f(owner)
 
     @classproperty
-    def Active(cls) -> 'LocationStatusCode':
+    def Free(cls) -> 'ServiceProvisionConditionCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return LocationStatusCode("active")
+        return ServiceProvisionConditionCode("free")
 
     @classproperty
-    def Suspended(cls) -> 'LocationStatusCode':
+    def DiscountsAvailable(cls) -> 'ServiceProvisionConditionCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return LocationStatusCode("suspended")
+        return ServiceProvisionConditionCode("disc")
 
     @classproperty
-    def Inactive(cls) -> 'LocationStatusCode':
+    def FeesApply(cls) -> 'ServiceProvisionConditionCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return LocationStatusCode("inactive")
+        return ServiceProvisionConditionCode("cost")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
         """
-        http://hl7.org/fhir/location-status
+        http://terminology.hl7.org/CodeSystem/service-provision-conditions
         """
-        return "http://hl7.org/fhir/location-status"
+        return "http://terminology.hl7.org/CodeSystem/service-provision-conditions"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
         """
-        2.16.840.1.113883.4.642.3.332
+        2.16.840.1.113883.4.642.3.514
         """
-        return "2.16.840.1.113883.4.642.3.332"
+        return "2.16.840.1.113883.4.642.3.514"

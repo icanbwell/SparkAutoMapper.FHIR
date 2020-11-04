@@ -7,7 +7,7 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.act_substance_admin_substitution_code import \
     ActSubstanceAdminSubstitutionCode
 from spark_auto_mapper_fhir.valuesets.substance_admin_substitution_reason import \
-    SubstanceAdminSubstitutionReason
+    SubstanceAdminSubstitutionReasonCode
 
 
 class SubstitutionBackboneElement(FhirBackboneElementBase):
@@ -17,7 +17,7 @@ class SubstitutionBackboneElement(FhirBackboneElementBase):
         allowedBoolean: Optional[FhirBoolean] = None,
         allowedCodeableConcept: Optional[
             CodeableConcept[ActSubstanceAdminSubstitutionCode]] = None,
-        reason: Optional[CodeableConcept[SubstanceAdminSubstitutionReason]
+        reason: Optional[CodeableConcept[SubstanceAdminSubstitutionReasonCode]
                          ] = None
     ):
         """

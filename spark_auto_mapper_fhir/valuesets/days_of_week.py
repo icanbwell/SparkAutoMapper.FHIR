@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class DaysOfWeek(FhirValueSetBase):
+class DaysOfWeekCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-days-of-week.html
     """
@@ -18,67 +18,69 @@ class DaysOfWeek(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'DaysOfWeek']) -> None:
-            self.f: Callable[..., 'DaysOfWeek'] = f
+        def __init__(self, f: Callable[..., 'DaysOfWeekCode']) -> None:
+            self.f: Callable[..., 'DaysOfWeekCode'] = f
 
-        def __get__(self, obj: Any, owner: Type['DaysOfWeek']) -> 'DaysOfWeek':
+        def __get__(
+            self, obj: Any, owner: Type['DaysOfWeekCode']
+        ) -> 'DaysOfWeekCode':
             return self.f(owner)
 
     @classproperty
-    def Monday(cls) -> 'DaysOfWeek':
+    def Monday(cls) -> 'DaysOfWeekCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return DaysOfWeek("mon")
+        return DaysOfWeekCode("mon")
 
     @classproperty
-    def Tuesday(cls) -> 'DaysOfWeek':
+    def Tuesday(cls) -> 'DaysOfWeekCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return DaysOfWeek("tue")
+        return DaysOfWeekCode("tue")
 
     @classproperty
-    def Wednesday(cls) -> 'DaysOfWeek':
+    def Wednesday(cls) -> 'DaysOfWeekCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return DaysOfWeek("wed")
+        return DaysOfWeekCode("wed")
 
     @classproperty
-    def Thursday(cls) -> 'DaysOfWeek':
+    def Thursday(cls) -> 'DaysOfWeekCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return DaysOfWeek("thu")
+        return DaysOfWeekCode("thu")
 
     @classproperty
-    def Friday(cls) -> 'DaysOfWeek':
+    def Friday(cls) -> 'DaysOfWeekCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return DaysOfWeek("fri")
+        return DaysOfWeekCode("fri")
 
     @classproperty
-    def Saturday(cls) -> 'DaysOfWeek':
+    def Saturday(cls) -> 'DaysOfWeekCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return DaysOfWeek("sat")
+        return DaysOfWeekCode("sat")
 
     @classproperty
-    def Sunday(cls) -> 'DaysOfWeek':
+    def Sunday(cls) -> 'DaysOfWeekCode':
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return DaysOfWeek("sun")
+        return DaysOfWeekCode("sun")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
