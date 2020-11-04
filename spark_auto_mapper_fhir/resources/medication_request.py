@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.valuesets.condition import ConditionCode
 from spark_auto_mapper_fhir.valuesets.medication_request_category import MedicationRequestCategoryCode
 from spark_auto_mapper_fhir.valuesets.medication_request_course_of_therapy import \
     MedicationRequestCourseOfTherapyCode
-from spark_auto_mapper_fhir.valuesets.medication_request_intent import MedicationRequestIntent
+from spark_auto_mapper_fhir.valuesets.medication_request_intent import MedicationRequestIntentCode
 from spark_auto_mapper_fhir.valuesets.medication_request_status import MedicationRequestStatusCode
 from spark_auto_mapper_fhir.valuesets.medication_request_status_reason import \
     MedicationRequestStatusReasonCode
@@ -51,7 +51,7 @@ class MedicationRequest(FhirResourceBase):
     def __init__(
         self,
         status: MedicationRequestStatusCode,
-        intent: MedicationRequestIntent,
+        intent: MedicationRequestIntentCode,
         medication: MedicationBackboneElement,
         subject: Reference[Union[Patient, Group]],
         id_: Optional[FhirId] = None,

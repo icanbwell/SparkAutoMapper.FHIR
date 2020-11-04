@@ -6,14 +6,14 @@ from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.person import Person
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-from spark_auto_mapper_fhir.valuesets.identity_assurance_level import IdentityAssuranceLevel
+from spark_auto_mapper_fhir.valuesets.identity_assurance_level import IdentityAssuranceLevelCode
 
 
 class LinkPersonBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         target: Reference[Union[Patient, Practitioner, RelatedPerson, Person]],
-        assurance: Optional[IdentityAssuranceLevel] = None
+        assurance: Optional[IdentityAssuranceLevelCode] = None
     ) -> None:
         """
         LinkPersonBackboneElement Backbone Element in FHIR

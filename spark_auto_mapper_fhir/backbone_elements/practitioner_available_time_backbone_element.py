@@ -4,14 +4,14 @@ from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.time import FhirTime
-from spark_auto_mapper_fhir.valuesets.days_of_week import DaysOfWeek
+from spark_auto_mapper_fhir.valuesets.days_of_week import DaysOfWeekCode
 
 
 class PractitionerAvailableTimeBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        daysOfWeek: Optional[FhirList[DaysOfWeek]] = None,
+        daysOfWeek: Optional[FhirList[DaysOfWeekCode]] = None,
         allDay: Optional[FhirBoolean] = None,
         availableStartTime: Optional[FhirTime] = None,
         availableEndTime: Optional[FhirTime] = None

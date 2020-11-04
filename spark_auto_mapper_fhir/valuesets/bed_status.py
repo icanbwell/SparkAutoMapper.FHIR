@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class BedStatus(FhirValueSetBase):
+class BedStatusCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v2/0116/index.html
     """
@@ -18,41 +18,43 @@ class BedStatus(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'BedStatus']) -> None:
-            self.f: Callable[..., 'BedStatus'] = f
+        def __init__(self, f: Callable[..., 'BedStatusCode']) -> None:
+            self.f: Callable[..., 'BedStatusCode'] = f
 
-        def __get__(self, obj: Any, owner: Type['BedStatus']) -> 'BedStatus':
+        def __get__(
+            self, obj: Any, owner: Type['BedStatusCode']
+        ) -> 'BedStatusCode':
             return self.f(owner)
 
     @classproperty
-    def Closed(cls) -> 'BedStatus':
+    def Closed(cls) -> 'BedStatusCode':
         # noinspection PyCallingNonCallable
-        return BedStatus("C")
+        return BedStatusCode("C")
 
     @classproperty
-    def Housekeeping(cls) -> 'BedStatus':
+    def Housekeeping(cls) -> 'BedStatusCode':
         # noinspection PyCallingNonCallable
-        return BedStatus("H")
+        return BedStatusCode("H")
 
     @classproperty
-    def Isolated(cls) -> 'BedStatus':
+    def Isolated(cls) -> 'BedStatusCode':
         # noinspection PyCallingNonCallable
-        return BedStatus("I")
+        return BedStatusCode("I")
 
     @classproperty
-    def Contaminated(cls) -> 'BedStatus':
+    def Contaminated(cls) -> 'BedStatusCode':
         # noinspection PyCallingNonCallable
-        return BedStatus("K")
+        return BedStatusCode("K")
 
     @classproperty
-    def Occupied(cls) -> 'BedStatus':
+    def Occupied(cls) -> 'BedStatusCode':
         # noinspection PyCallingNonCallable
-        return BedStatus("O")
+        return BedStatusCode("O")
 
     @classproperty
-    def Unoccupied(cls) -> 'BedStatus':
+    def Unoccupied(cls) -> 'BedStatusCode':
         # noinspection PyCallingNonCallable
-        return BedStatus("U")
+        return BedStatusCode("U")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

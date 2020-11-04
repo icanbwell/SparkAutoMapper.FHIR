@@ -15,11 +15,11 @@ from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.resources.organization import Organization
-from spark_auto_mapper_fhir.valuesets.bed_status import BedStatus
-from spark_auto_mapper_fhir.valuesets.location_mode import LocationMode
-from spark_auto_mapper_fhir.valuesets.location_status import LocationStatus
-from spark_auto_mapper_fhir.valuesets.location_type import LocationType
-from spark_auto_mapper_fhir.valuesets.service_delivery_location_type import ServiceDeliveryLocationType
+from spark_auto_mapper_fhir.valuesets.bed_status import BedStatusCode
+from spark_auto_mapper_fhir.valuesets.location_mode import LocationModeCode
+from spark_auto_mapper_fhir.valuesets.location_status import LocationStatusCode
+from spark_auto_mapper_fhir.valuesets.location_type import LocationTypeCode
+from spark_auto_mapper_fhir.valuesets.service_delivery_location_type import ServiceDeliveryLocationTypeCode
 
 
 class Location(FhirResourceBase):
@@ -28,17 +28,17 @@ class Location(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[LocationStatus] = None,
-        operationalStatus: Optional[Coding[BedStatus]] = None,
+        status: Optional[LocationStatusCode] = None,
+        operationalStatus: Optional[Coding[BedStatusCode]] = None,
         name: Optional[FhirString] = None,
         alias: Optional[FhirList[FhirString]] = None,
         description: Optional[FhirString] = None,
-        mode: Optional[LocationMode] = None,
-        type_: Optional[FhirList[CodeableConcept[ServiceDeliveryLocationType]]
-                        ] = None,
+        mode: Optional[LocationModeCode] = None,
+        type_: Optional[FhirList[
+            CodeableConcept[ServiceDeliveryLocationTypeCode]]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[Address] = None,
-        physicalType: Optional[CodeableConcept[LocationType]] = None,
+        physicalType: Optional[CodeableConcept[LocationTypeCode]] = None,
         position: Optional[PositionBackboneElement] = None,
         managingOrganization: Optional[Reference[Organization]] = None,
         partOf: Optional[Reference['Location']] = None,

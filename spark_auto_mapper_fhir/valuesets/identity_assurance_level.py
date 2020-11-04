@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class IdentityAssuranceLevel(FhirValueSetBase):
+class IdentityAssuranceLevelCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-identity-assuranceLevel.html
     """
@@ -18,45 +18,47 @@ class IdentityAssuranceLevel(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'IdentityAssuranceLevel']) -> None:
-            self.f: Callable[..., 'IdentityAssuranceLevel'] = f
+        def __init__(
+            self, f: Callable[..., 'IdentityAssuranceLevelCode']
+        ) -> None:
+            self.f: Callable[..., 'IdentityAssuranceLevelCode'] = f
 
         def __get__(
-            self, obj: Any, owner: Type['IdentityAssuranceLevel']
-        ) -> 'IdentityAssuranceLevel':
+            self, obj: Any, owner: Type['IdentityAssuranceLevelCode']
+        ) -> 'IdentityAssuranceLevelCode':
             return self.f(owner)
 
     @classproperty
-    def Level1(cls) -> 'IdentityAssuranceLevel':
+    def Level1(cls) -> 'IdentityAssuranceLevelCode':
         """
         Little or no confidence in the asserted identity's accuracy.
         """
         # noinspection PyCallingNonCallable
-        return IdentityAssuranceLevel("level1")
+        return IdentityAssuranceLevelCode("level1")
 
     @classproperty
-    def Level2(cls) -> 'IdentityAssuranceLevel':
+    def Level2(cls) -> 'IdentityAssuranceLevelCode':
         """
         Some confidence in the asserted identity's accuracy.
         """
         # noinspection PyCallingNonCallable
-        return IdentityAssuranceLevel("level2")
+        return IdentityAssuranceLevelCode("level2")
 
     @classproperty
-    def Level3(cls) -> 'IdentityAssuranceLevel':
+    def Level3(cls) -> 'IdentityAssuranceLevelCode':
         """
         High confidence in the asserted identity's accuracy.
         """
         # noinspection PyCallingNonCallable
-        return IdentityAssuranceLevel("level3")
+        return IdentityAssuranceLevelCode("level3")
 
     @classproperty
-    def Level4(cls) -> 'IdentityAssuranceLevel':
+    def Level4(cls) -> 'IdentityAssuranceLevelCode':
         """
         Very high confidence in the asserted identity's accuracy.
         """
         # noinspection PyCallingNonCallable
-        return IdentityAssuranceLevel("level4")
+        return IdentityAssuranceLevelCode("level4")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
