@@ -2,7 +2,7 @@ from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
 # noinspection PyUnresolvedReferences
-from pyspark.sql.functions import col
+from pyspark.sql.functions import col, when
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -21,7 +21,7 @@ def test_auto_mapper_fhir_patient_resource(
     spark_session.createDataFrame(
         [
             (1, 'Qureshi', 'Imran', '1970-01-01', "female"),
-            (2, 'Vidal', 'Michael', '1970-02-02', "male"),
+            (2, 'Vidal', 'Michael', '1970-02-02', None),
         ],
         ['member_id', 'last_name', 'first_name', 'date_of_birth', "my_gender"]
     ).createOrReplaceTempView("patients")
@@ -45,7 +45,10 @@ def test_auto_mapper_fhir_patient_resource(
                     )
                 ]
             ),
-            gender=AdministrativeGenderCode(A.column("my_gender"))
+            gender=A.if_not_null(
+                A.column("my_gender"),
+                AdministrativeGenderCode(A.column("my_gender"))
+            )
         )
     )
 
@@ -78,8 +81,10 @@ def test_auto_mapper_fhir_patient_resource(
             )
         ).alias("name")
     )
-    assert str(sql_expressions["gender"]
-               ) == str(col("b.my_gender").alias("gender"))
+    assert str(sql_expressions["gender"]) == str(
+        when(col("b.my_gender").isNull(),
+             None).otherwise(col("b.my_gender")).alias("gender")
+    )
 
     result_df.printSchema()
     result_df.show()
