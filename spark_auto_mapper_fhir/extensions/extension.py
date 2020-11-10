@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
+from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 
@@ -31,6 +32,7 @@ class Extension(FhirExtensionBase):
         valueBase64Binary: Optional[FhirBase64Binary] = None,
         valueDate: Optional[FhirDate] = None,
         valueDateTime: Optional[FhirDateTime] = None,
+        valueReference: Optional[FhirResourceBase] = None,
         extension: Optional[FhirList['Extension']] = None
     ) -> None:
         """
@@ -53,6 +55,7 @@ class Extension(FhirExtensionBase):
         :param valueBase64Binary: Value of extension
         :param valueDate: Value of extension
         :param valueDateTime: Value of extension
+        :param valueReference: Value of extension
         :param extension: list of sub extensions
         """
         super().__init__(
@@ -69,5 +72,6 @@ class Extension(FhirExtensionBase):
             valueBase64Binary=valueBase64Binary,
             valueDate=valueDate,
             valueDateTime=valueDateTime,
+            valueReference=valueReference,
             extension=extension
         )
