@@ -1,5 +1,6 @@
 from typing import Optional, Union
 
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.backbone_elements.accident_backbone_element import AccidentBackboneElement
@@ -75,7 +76,8 @@ class Claim(FhirResourceBase):
         procedure: Optional[FhirList[ProcedureBackboneElement]] = None,
         accident: Optional[AccidentBackboneElement] = None,
         item: Optional[FhirList[RevenueItemBackboneElement]] = None,
-        total: Optional[Money] = None
+        total: Optional[Money] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Claim Resource in FHIR
@@ -141,5 +143,6 @@ class Claim(FhirResourceBase):
             procedure=procedure,
             accident=accident,
             item=item,
-            total=total
+            total=total,
+            extension=extension
         )

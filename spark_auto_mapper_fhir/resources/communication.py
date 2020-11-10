@@ -1,6 +1,8 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -13,7 +15,8 @@ class Communication(FhirResourceBase):
         self,
         language: CodeableConcept[CommonLanguageCode],
         id_: Optional[FhirId] = None,
-        preferred: Optional[FhirBoolean] = None
+        preferred: Optional[FhirBoolean] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Communication Resource in FHIR
@@ -30,5 +33,6 @@ class Communication(FhirResourceBase):
             resourceType="Communication",
             id_=id_,
             language=language,
-            preferred=preferred
+            preferred=preferred,
+            extension=extension
         )

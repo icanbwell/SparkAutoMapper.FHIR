@@ -1,6 +1,7 @@
 from typing import Optional
 
 from spark_auto_mapper_fhir.complex_types.address import Address
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -30,7 +31,8 @@ class Organization(FhirResourceBase):
         address: Optional[FhirList[Address]] = None,
         partOf: Optional[Reference['Organization']] = None,
         contact: Optional[FhirList[OrganizationContactBackboneElement]] = None,
-        endpoint: Optional[FhirList[Reference[Endpoint]]] = None
+        endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Organization Resource in FHIR
@@ -63,5 +65,6 @@ class Organization(FhirResourceBase):
             address=address,
             partOf=partOf,
             contact=contact,
-            endpoint=endpoint
+            endpoint=endpoint,
+            extension=extension
         )

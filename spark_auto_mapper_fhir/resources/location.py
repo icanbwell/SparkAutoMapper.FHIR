@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -45,7 +46,8 @@ class Location(FhirResourceBase):
         hoursOfOperation: Optional[FhirList[HoursOfOperationBackboneElement]
                                    ] = None,
         availabilityExceptions: Optional[FhirString] = None,
-        endpoint: Optional[FhirList[Reference[Endpoint]]] = None
+        endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Location Resource in FHIR
@@ -92,5 +94,6 @@ class Location(FhirResourceBase):
             partOf=partOf,
             hoursOfOperation=hoursOfOperation,
             availabilityExceptions=availabilityExceptions,
-            endpoint=endpoint
+            endpoint=endpoint,
+            extension=extension
         )

@@ -2,6 +2,7 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.resources.communication import Communication
@@ -38,7 +39,8 @@ class RelatedPerson(FhirResourceBase):
         address: Optional[FhirList[Address]] = None,
         photo: Optional[FhirList[Attachment]] = None,
         period: Optional[Period] = None,
-        communication: Optional[FhirList[Communication]] = None
+        communication: Optional[FhirList[Communication]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         RelatedPerson Resource in FHIR
@@ -76,5 +78,6 @@ class RelatedPerson(FhirResourceBase):
             address=address,
             photo=photo,
             period=period,
-            communication=communication
+            communication=communication,
+            extension=extension
         )

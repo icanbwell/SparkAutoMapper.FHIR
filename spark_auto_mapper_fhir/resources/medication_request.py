@@ -1,5 +1,6 @@
 from typing import Optional, Union, Any
 
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
@@ -93,7 +94,8 @@ class MedicationRequest(FhirResourceBase):
         dispenseRequest: Optional[DispenseRequestBackboneElement] = None,
         substitution: Optional[SubstitutionBackboneElement] = None,
         priorPrescription: Optional[Reference['MedicationRequest']] = None,
-        detectedIssue: Optional[FhirList[Reference[DetectedIssue]]] = None
+        detectedIssue: Optional[FhirList[Reference[DetectedIssue]]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         MedicationRequest Resource in FHIR
@@ -167,5 +169,6 @@ class MedicationRequest(FhirResourceBase):
             dispenseRequest=dispenseRequest,
             substitution=substitution,
             priorPrescription=priorPrescription,
-            detectedIssue=detectedIssue
+            detectedIssue=detectedIssue,
+            extension=extension
         )
