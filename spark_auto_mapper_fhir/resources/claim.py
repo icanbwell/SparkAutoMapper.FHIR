@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from spark_auto_mapper_fhir.extensions.extension import Extension
+from spark_auto_mapper_fhir.extensions.extension_base import FhirExtensionBase
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.backbone_elements.accident_backbone_element import AccidentBackboneElement
@@ -77,7 +77,7 @@ class Claim(FhirResourceBase):
         accident: Optional[AccidentBackboneElement] = None,
         item: Optional[FhirList[RevenueItemBackboneElement]] = None,
         total: Optional[Money] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[FhirExtensionBase]] = None
     ):
         """
         Claim Resource in FHIR
