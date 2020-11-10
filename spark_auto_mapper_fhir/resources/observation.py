@@ -1,5 +1,6 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -10,7 +11,8 @@ class Observation(FhirResourceBase):
     def __init__(
         self,
         id_: Optional[FhirId] = None,
-        identifier: Optional[FhirList[Identifier]] = None
+        identifier: Optional[FhirList[Identifier]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ) -> None:
         """
         Observation Resource in FHIR
@@ -21,5 +23,8 @@ class Observation(FhirResourceBase):
         :param identifier: Business Identifier for observation
         """
         super().__init__(
-            resourceType="Observation", id_=id_, identifier=identifier
+            resourceType="Observation",
+            id_=id_,
+            identifier=identifier,
+            extension=extension
         )

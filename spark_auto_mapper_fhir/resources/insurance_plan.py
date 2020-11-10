@@ -8,6 +8,7 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -38,7 +39,8 @@ class InsurancePlan(FhirResourceBase):
         network: Optional[FhirList[Reference[Organization]]] = None,
         coverage: Optional[FhirList[InsurancePlanCoverageBackboneElement]
                            ] = None,
-        plan: Optional[FhirList[InsurancePlanBackboneElement]] = None
+        plan: Optional[FhirList[InsurancePlanBackboneElement]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ) -> None:
         """
         InsurancePlan Resource in FHIR
@@ -78,5 +80,6 @@ class InsurancePlan(FhirResourceBase):
             endpoint=endpoint,
             network=network,
             coverage=coverage,
-            plan=plan
+            plan=plan,
+            extension=extension
         )

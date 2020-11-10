@@ -1,6 +1,7 @@
 from typing import Optional
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -14,7 +15,8 @@ class MedicationDispense(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        partOf: Optional[FhirList[Reference[Procedure]]] = None
+        partOf: Optional[FhirList[Reference[Procedure]]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ) -> None:
         """
         MedicationDispense Resource in FHIR
@@ -32,5 +34,6 @@ class MedicationDispense(FhirResourceBase):
             resourceType="MedicationDispense",
             id_=id_,
             identifier=identifier,
-            partOf=partOf
+            partOf=partOf,
+            extension=extension
         )

@@ -8,6 +8,7 @@ from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -23,6 +24,7 @@ from spark_auto_mapper_fhir.valuesets.practitioner_role import PractitionerRoleC
 
 
 class PractitionerRole(FhirResourceBase):
+    # noinspection PyPep8Naming
     def __init__(
         self,
         id_: Optional[FhirId] = None,
@@ -41,7 +43,8 @@ class PractitionerRole(FhirResourceBase):
             FhirList[PractitionerAvailableTimeBackboneElement]] = None,
         notAvailable: Optional[FhirList[NotAvailableBackboneElement]] = None,
         availabilityExceptions: Optional[FhirString] = None,
-        endpoint: Optional[FhirList[Endpoint]] = None
+        endpoint: Optional[FhirList[Endpoint]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ) -> None:
         """
         PractitionerRole Resource in FHIR
@@ -81,5 +84,6 @@ class PractitionerRole(FhirResourceBase):
             availableTime=availableTime,
             notAvailable=notAvailable,
             availabilityExceptions=availabilityExceptions,
-            endpoint=endpoint
+            endpoint=endpoint,
+            extension=extension
         )

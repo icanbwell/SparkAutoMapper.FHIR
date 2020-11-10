@@ -1,5 +1,6 @@
 from typing import Optional, Union
 
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
@@ -9,7 +10,8 @@ from spark_auto_mapper_fhir.valuesets.coverage_type_and_self_pay import Coverage
 from spark_auto_mapper_fhir.valuesets.financial_resource_status import FinancialResourceStatusCode
 from spark_auto_mapper_fhir.valuesets.subscriber_relationship import SubscriberRelationshipCode
 from spark_auto_mapper_fhir.resources.contract import Contract
-from spark_auto_mapper_fhir.backbone_elements.cost_to_beneficiary_backbone_element import CostToBeneficiaryBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.cost_to_beneficiary_backbone_element import \
+    CostToBeneficiaryBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.coverage_classification_backbone_element import \
     CoverageClassificationBackboneElement
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -49,7 +51,8 @@ class Coverage(FhirResourceBase):
         costToBeneficiary: Optional[FhirList[CostToBeneficiaryBackboneElement]
                                     ] = None,
         subrogation: Optional[FhirBoolean] = None,
-        contract: Optional[FhirList[Reference[Contract]]] = None
+        contract: Optional[FhirList[Reference[Contract]]] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Coverage Resource in FHIR
@@ -97,5 +100,6 @@ class Coverage(FhirResourceBase):
             network=network,
             costToBeneficiary=costToBeneficiary,
             subrogation=subrogation,
-            contract=contract
+            contract=contract,
+            extension=extension
         )

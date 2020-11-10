@@ -1,5 +1,6 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
@@ -34,7 +35,8 @@ class Practitioner(FhirResourceBase):
         qualification: Optional[FhirList[ProviderQualificationBackboneElement]
                                 ] = None,
         communication: Optional[FhirList[CodeableConcept[CommonLanguageCode]]
-                                ] = None
+                                ] = None,
+        extension: Optional[FhirList[Extension]] = None
     ):
         """
         Practitioner Resource in FHIR
@@ -67,5 +69,6 @@ class Practitioner(FhirResourceBase):
             birthDate=birthDate,
             photo=photo,
             qualification=qualification,
-            communication=communication
+            communication=communication,
+            extension=extension
         )
