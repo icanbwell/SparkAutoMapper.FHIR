@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from spark_auto_mapper_fhir.extensions.extension import Extension
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
@@ -52,7 +52,7 @@ class Coverage(FhirResourceBase):
                                     ] = None,
         subrogation: Optional[FhirBoolean] = None,
         contract: Optional[FhirList[Reference[Contract]]] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None
     ):
         """
         Coverage Resource in FHIR

@@ -7,7 +7,7 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.extensions.extension import Extension
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -47,7 +47,7 @@ class Location(FhirResourceBase):
                                    ] = None,
         availabilityExceptions: Optional[FhirString] = None,
         endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None
     ):
         """
         Location Resource in FHIR
