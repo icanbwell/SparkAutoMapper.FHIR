@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.extensions.extension_base import FhirExtensionBase
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -65,7 +65,7 @@ class HealthcareService(FhirResourceBase):
         notAvailable: Optional[FhirList[NotAvailableBackboneElement]] = None,
         availabilityExceptions: Optional[FhirString] = None,
         endpoint: Optional[FhirList[Endpoint]] = None,
-        extension: Optional[FhirList[FhirExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None
     ) -> None:
         """
         HealthcareService Resource in FHIR

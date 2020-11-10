@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from spark_auto_mapper_fhir.extensions.extension_base import FhirExtensionBase
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
@@ -99,7 +99,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         processNote: Optional[Note] = None,
         benefitPeriod: Optional[Period] = None,
         benefitBalance: Optional[FhirList[BenefitBalance]] = None,
-        extension: Optional[FhirList[FhirExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None
     ):
         """
         ExplanationOfBenefit Resource in FHIR

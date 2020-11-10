@@ -2,7 +2,7 @@ from typing import Optional, Union
 
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
 
-from spark_auto_mapper_fhir.extensions.extension_base import FhirExtensionBase
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.data_types.date import AutoMapperDateDataType
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -54,7 +54,7 @@ class Patient(FhirResourceBase):
             Organization, Practitioner, PractitionerRole]]]] = None,
         managingOrganization: Optional[Reference[Organization]] = None,
         link: Optional[FhirList[LinkPatient]] = None,
-        extension: Optional[FhirList[FhirExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None
     ):
         """
         Patient Resource in FHIR

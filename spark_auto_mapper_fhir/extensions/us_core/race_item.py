@@ -1,14 +1,14 @@
 from typing import Optional, Union
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
-from spark_auto_mapper_fhir.extensions.extension_base import FhirExtensionBase
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 from spark_auto_mapper_fhir.valuesets.us_core.detailed_ethnicity import DetailedEthnicity
 from spark_auto_mapper_fhir.valuesets.us_core.omb_ethnicity_category import OMBEthnicityCategory
 
 
-class RaceItem(FhirExtensionBase):
+class RaceItem(ExtensionBase):
     # noinspection PyPep8Naming
     def __init__(
         self,

@@ -1,7 +1,7 @@
 from typing import Optional, Any
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
-from spark_auto_mapper_fhir.extensions.extension_base import FhirExtensionBase
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.base64Binary import FhirBase64Binary
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -15,7 +15,7 @@ from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 
-class Extension(FhirExtensionBase):
+class Extension(ExtensionBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
