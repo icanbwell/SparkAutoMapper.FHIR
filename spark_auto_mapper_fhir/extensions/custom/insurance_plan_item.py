@@ -26,5 +26,4 @@ class InsurancePlanItemExtension(FhirExtensionBase):
     # noinspection PyMethodParameters
     @genericclassproperty
     def codeset(cls) -> FhirUri:
-        return "https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/" + \
-               "insurance_plan_item"
+        return "plan"
