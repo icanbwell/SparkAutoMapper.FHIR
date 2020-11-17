@@ -2,7 +2,7 @@ from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
 # noinspection PyUnresolvedReferences
-from pyspark.sql.functions import col, expr, regexp_replace
+from pyspark.sql.functions import col, expr, regexp_replace, substring
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -107,8 +107,10 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     assert str(sql_expressions["patient"]) == str(
         struct(
             lit("Patient").alias("resourceType"),
-            regexp_replace(col("b.member_id"), "[^a-zA-Z0-9]",
-                           "_").alias("id"),
+            substring(
+                regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "_"),
+                0, 63
+            ).alias("id"),
             array(
                 struct(
                     lit("usual").alias("use"),
