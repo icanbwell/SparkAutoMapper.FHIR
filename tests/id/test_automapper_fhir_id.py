@@ -13,8 +13,8 @@ def test_auto_mapper_fhir_id(spark_session: SparkSession) -> None:
     # Arrange
     spark_session.createDataFrame(
         [
-            (1, 'Qureshi / &&'),
-            (2, ' Vidal '),
+            (1, 'Qureshi- / &&'),
+            (2, ' Vidal. '),
         ], ['member_id', 'last_name']
     ).createOrReplaceTempView("patients")
 
@@ -42,6 +42,6 @@ def test_auto_mapper_fhir_id(spark_session: SparkSession) -> None:
     result_df.show(truncate=False)
 
     assert result_df.where("member_id == 1").selectExpr("patient.id").collect(
-    )[0][0] == "Qureshi_____"
+    )[0][0] == "Qureshi-_____"
     assert result_df.where("member_id == 2").selectExpr("patient.id").collect(
-    )[0][0] == "_Vidal_"
+    )[0][0] == "_Vidal._"

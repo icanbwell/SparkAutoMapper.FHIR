@@ -1,7 +1,7 @@
 from typing import Union
 
 from pyspark.sql import DataFrame, Column
-from pyspark.sql.functions import regexp_replace
+from pyspark.sql.functions import regexp_replace, substring
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
 from spark_auto_mapper.data_types.text_like_base import AutoMapperTextLikeBase
 
@@ -19,9 +19,12 @@ class FhirId(AutoMapperTextLikeBase):
                            AutoMapperTextLikeBase] = column
 
     def get_column_spec(self, source_df: DataFrame) -> Column:
-        column_spec = regexp_replace(
-            str=self.column.get_column_spec(source_df=source_df),
-            pattern="[^a-zA-Z0-9]",
-            replacement="_"
+        # https://hl7.org/FHIR/datatypes.html#id
+        column_spec = substring(
+            regexp_replace(
+                str=self.column.get_column_spec(source_df=source_df),
+                pattern=r'[^A-Za-z0-9\-\.]',
+                replacement="_"
+            ), 0, 63
         )
         return column_spec
