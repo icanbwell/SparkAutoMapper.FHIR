@@ -10,7 +10,7 @@ from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 class Observation(FhirResourceBase):
     def __init__(
         self,
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         identifier: Optional[FhirList[Identifier]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None
     ) -> None:

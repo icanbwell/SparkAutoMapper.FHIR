@@ -21,7 +21,7 @@ class Person(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         identifiers: Optional[FhirList[Identifier]] = None,
         name: Optional[FhirList[HumanName]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,

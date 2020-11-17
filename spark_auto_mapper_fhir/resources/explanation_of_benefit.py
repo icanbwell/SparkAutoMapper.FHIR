@@ -60,7 +60,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         insurer: Reference[Organization],
         insurance: FhirList[InsuranceBackboneElement],
         outcome: RemittanceOutcomeCode,
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         enterer: Optional[Reference[Union[Practitioner,
                                           PractitionerRole]]] = None,
         provider: Optional[FhirList[Reference[Union[Organization, Practitioner,

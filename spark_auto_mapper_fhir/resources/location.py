@@ -27,7 +27,7 @@ class Location(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[LocationStatusCode] = None,
         operationalStatus: Optional[Coding[BedStatusCode]] = None,

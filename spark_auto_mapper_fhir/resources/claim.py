@@ -50,7 +50,7 @@ class Claim(FhirResourceBase):
                                   Organization]],
         priority: CodeableConcept[ProcessPriorityCode],
         insurance: FhirList[InsuranceBackboneElement],
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         identifier: Optional[FhirList[Identifier]] = None,
         subType: Optional[CodeableConcept[ClaimSubTypeCode]] = None,
         billablePeriod: Optional[Period] = None,

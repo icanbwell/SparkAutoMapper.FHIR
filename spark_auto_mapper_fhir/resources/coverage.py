@@ -33,7 +33,7 @@ class Coverage(FhirResourceBase):
         payor: FhirList[Reference[Union[Organization, Patient,
                                         RelatedPerson]]],
         beneficiary: Reference[Patient],
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[CodeableConcept[CoverageTypeAndSelfPayCode]] = None,
         policyHolder: Optional[Reference[Union[Patient, RelatedPerson,

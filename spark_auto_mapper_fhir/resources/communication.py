@@ -14,7 +14,7 @@ class Communication(FhirResourceBase):
     def __init__(
         self,
         language: CodeableConcept[CommonLanguageCode],
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         preferred: Optional[FhirBoolean] = None,
         extension: Optional[FhirList[ExtensionBase]] = None
     ):
