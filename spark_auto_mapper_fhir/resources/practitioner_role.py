@@ -28,7 +28,7 @@ class PractitionerRole(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
-        identifiers: Optional[FhirList[Identifier]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         period: Optional[Period] = None,
         practitioner: Optional[Reference[Practitioner]] = None,
@@ -36,8 +36,9 @@ class PractitionerRole(FhirResourceBase):
         code: Optional[FhirList[CodeableConcept[PractitionerRoleCode]]] = None,
         specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]
                             ] = None,
-        location: Optional[Reference[Location]] = None,
-        healthcareService: Optional[Reference[HealthcareService]] = None,
+        location: Optional[FhirList[Reference[Location]]] = None,
+        healthcareService: Optional[FhirList[Reference[HealthcareService]]
+                                    ] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         availableTime: Optional[
             FhirList[PractitionerAvailableTimeBackboneElement]] = None,
@@ -53,7 +54,7 @@ class PractitionerRole(FhirResourceBase):
 
 
         :param id_: id of resource
-        :param identifiers: Business Identifiers that are specific to a role/location
+        :param identifier: Business Identifiers that are specific to a role/location
         :param active: Whether this practitioner role record is in active use
         :param period: The period during which the practitioner is authorized to perform in these role(s)
         :param practitioner: Practitioner that is able to provide the defined services for the organization
@@ -71,7 +72,7 @@ class PractitionerRole(FhirResourceBase):
         super().__init__(
             resourceType="PractitionerRole",
             id_=id_,
-            identifiers=identifiers,
+            identifier=identifier,
             active=active,
             period=period,
             practitioner=practitioner,
