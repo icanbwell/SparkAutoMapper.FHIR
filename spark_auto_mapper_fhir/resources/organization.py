@@ -21,7 +21,7 @@ class Organization(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         type_: Optional[FhirList[CodeableConcept[OrganizationTypeCode]]

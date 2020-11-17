@@ -27,7 +27,7 @@ class RelatedPerson(FhirResourceBase):
         patient: Reference[
             FhirResourceBase
         ],  # should be FhirPatient but causes circular imports
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         relationship: Optional[FhirList[

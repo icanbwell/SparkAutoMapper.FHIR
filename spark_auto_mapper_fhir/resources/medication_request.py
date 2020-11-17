@@ -55,7 +55,7 @@ class MedicationRequest(FhirResourceBase):
         intent: MedicationRequestIntentCode,
         medication: MedicationBackboneElement,
         subject: Reference[Union[Patient, Group]],
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         statusReason: Optional[
             CodeableConcept[MedicationRequestStatusReasonCode]] = None,
         category: Optional[FhirList[

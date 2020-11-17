@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 class Condition(FhirResourceBase):
     def __init__(
         self,
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None
     ) -> None:
         """
