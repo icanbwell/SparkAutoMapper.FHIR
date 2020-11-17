@@ -2,7 +2,7 @@ from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
 # noinspection PyUnresolvedReferences
-from pyspark.sql.functions import col, expr
+from pyspark.sql.functions import col, expr, regexp_replace
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -10,6 +10,7 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
@@ -40,15 +41,20 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
         view="members", source_view="patients", keys=["member_id"]
     ).columns(
         patient=Patient(
-            id_=A.column("member_id"),
+            id_=FhirId(A.column("member_id")),
             identifier=FhirList(
                 [
                     Identifier(
                         use=IdentifierUseCode.Usual,
                         value=A.column("member_id"),
                         type_=CodeableConcept(
-                            coding=Coding(
-                                code=IdentifierTypeCode.MedicalRecordNumber
+                            coding=FhirList(
+                                [
+                                    Coding(
+                                        code=IdentifierTypeCode.
+                                        MedicalRecordNumber
+                                    )
+                                ]
                             )
                         )
                     )
@@ -65,9 +71,13 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             ),
             birthDate=A.date(A.column("date_of_birth")),
             maritalStatus=CodeableConcept(
-                coding=Coding(
-                    code=MaritalStatusCode.Married,
-                    system=MaritalStatusCode.codeset
+                coding=FhirList(
+                    [
+                        Coding(
+                            code=MaritalStatusCode.Married,
+                            system=MaritalStatusCode.codeset
+                        )
+                    ]
                 )
             ),
             gender=AdministrativeGenderCode(
@@ -97,12 +107,14 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     assert str(sql_expressions["patient"]) == str(
         struct(
             lit("Patient").alias("resourceType"),
-            col("b.member_id").alias("id"),
+            regexp_replace(col("b.member_id"), "[^a-zA-Z0-9]",
+                           "_").alias("id"),
             array(
                 struct(
                     lit("usual").alias("use"),
-                    struct(struct(lit("MR").alias("code")).alias("coding")
-                           ).alias("type"),
+                    struct(
+                        array(struct(lit("MR").alias("code"))).alias("coding")
+                    ).alias("type"),
                     col("b.member_id").alias("value"),
                 )
             ).alias("identifier"),
@@ -120,14 +132,17 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             coalesce(
                 to_date(col("b.date_of_birth"), 'yyyy-MM-dd'),
                 to_date(col("b.date_of_birth"), 'yyyyMMdd'),
+                to_date(col("b.date_of_birth"), 'MM/dd/yyyy'),
                 to_date(col("b.date_of_birth"), 'MM/dd/yy')
             ).alias("birthDate"),
             struct(
-                struct(
-                    lit(
-                        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                    ).alias("system"),
-                    lit("M").alias("code"),
+                array(
+                    struct(
+                        lit(
+                            "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                        ).alias("system"),
+                        lit("M").alias("code"),
+                    )
                 ).alias("coding")
             ).alias("maritalStatus")
         ).alias("patient")
