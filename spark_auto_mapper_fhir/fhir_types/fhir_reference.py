@@ -28,7 +28,7 @@ class FhirReference(AutoMapperTextLikeBase):
     def get_column_spec(self, source_df: DataFrame) -> Column:
         # https://hl7.org/FHIR/datatypes.html#id
         column_spec = concat(
-            lit(self.resource), "/",
+            lit(self.resource), lit("/"),
             self.column.get_column_spec(source_df=source_df)
         )
         return column_spec
