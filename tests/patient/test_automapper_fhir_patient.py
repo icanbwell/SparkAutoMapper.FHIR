@@ -2,7 +2,7 @@ from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
 # noinspection PyUnresolvedReferences
-from pyspark.sql.functions import col, expr
+from pyspark.sql.functions import col, expr, regexp_replace
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -10,6 +10,7 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
@@ -40,7 +41,7 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
         view="members", source_view="patients", keys=["member_id"]
     ).columns(
         patient=Patient(
-            id_=A.column("member_id"),
+            id_=FhirId(A.column("member_id")),
             identifier=FhirList(
                 [
                     Identifier(
@@ -106,7 +107,8 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     assert str(sql_expressions["patient"]) == str(
         struct(
             lit("Patient").alias("resourceType"),
-            col("b.member_id").alias("id"),
+            regexp_replace(col("b.member_id"), "[^a-zA-Z0-9/]",
+                           "-").alias("id"),
             array(
                 struct(
                     lit("usual").alias("use"),
