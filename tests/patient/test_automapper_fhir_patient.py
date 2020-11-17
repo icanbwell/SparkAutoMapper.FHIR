@@ -47,8 +47,13 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                         use=IdentifierUseCode.Usual,
                         value=A.column("member_id"),
                         type_=CodeableConcept(
-                            coding=Coding(
-                                code=IdentifierTypeCode.MedicalRecordNumber
+                            coding=FhirList(
+                                [
+                                    Coding(
+                                        code=IdentifierTypeCode.
+                                        MedicalRecordNumber
+                                    )
+                                ]
                             )
                         )
                     )
@@ -65,9 +70,13 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             ),
             birthDate=A.date(A.column("date_of_birth")),
             maritalStatus=CodeableConcept(
-                coding=Coding(
-                    code=MaritalStatusCode.Married,
-                    system=MaritalStatusCode.codeset
+                coding=FhirList(
+                    [
+                        Coding(
+                            code=MaritalStatusCode.Married,
+                            system=MaritalStatusCode.codeset
+                        )
+                    ]
                 )
             ),
             gender=AdministrativeGenderCode(
@@ -101,8 +110,9 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             array(
                 struct(
                     lit("usual").alias("use"),
-                    struct(struct(lit("MR").alias("code")).alias("coding")
-                           ).alias("type"),
+                    struct(
+                        array(struct(lit("MR").alias("code"))).alias("coding")
+                    ).alias("type"),
                     col("b.member_id").alias("value"),
                 )
             ).alias("identifier"),
@@ -120,14 +130,17 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
             coalesce(
                 to_date(col("b.date_of_birth"), 'yyyy-MM-dd'),
                 to_date(col("b.date_of_birth"), 'yyyyMMdd'),
+                to_date(col("b.date_of_birth"), 'MM/dd/yyyy'),
                 to_date(col("b.date_of_birth"), 'MM/dd/yy')
             ).alias("birthDate"),
             struct(
-                struct(
-                    lit(
-                        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                    ).alias("system"),
-                    lit("M").alias("code"),
+                array(
+                    struct(
+                        lit(
+                            "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                        ).alias("system"),
+                        lit("M").alias("code"),
+                    )
                 ).alias("coding")
             ).alias("maritalStatus")
         ).alias("patient")

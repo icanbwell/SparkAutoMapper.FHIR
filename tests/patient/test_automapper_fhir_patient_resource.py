@@ -70,6 +70,7 @@ def test_auto_mapper_fhir_patient_resource(
         coalesce(
             to_date(col("b.date_of_birth"), 'yyyy-MM-dd'),
             to_date(col("b.date_of_birth"), 'yyyyMMdd'),
+            to_date(col("b.date_of_birth"), 'MM/dd/yyyy'),
             to_date(col("b.date_of_birth"), 'MM/dd/yy')
         ).alias("birthDate")
     )
