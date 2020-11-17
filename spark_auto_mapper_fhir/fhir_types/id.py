@@ -21,7 +21,7 @@ class FhirId(AutoMapperTextLikeBase):
     def get_column_spec(self, source_df: DataFrame) -> Column:
         column_spec = regexp_replace(
             str=self.column.get_column_spec(source_df=source_df),
-            pattern="[^a-zA-Z0-9/]",
-            replacement="-"
+            pattern="[^a-zA-Z0-9]",
+            replacement="_"
         )
         return column_spec

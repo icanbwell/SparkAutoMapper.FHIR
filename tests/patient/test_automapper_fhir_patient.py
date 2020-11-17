@@ -107,8 +107,8 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
     assert str(sql_expressions["patient"]) == str(
         struct(
             lit("Patient").alias("resourceType"),
-            regexp_replace(col("b.member_id"), "[^a-zA-Z0-9/]",
-                           "-").alias("id"),
+            regexp_replace(col("b.member_id"), "[^a-zA-Z0-9]",
+                           "_").alias("id"),
             array(
                 struct(
                     lit("usual").alias("use"),
