@@ -1,6 +1,7 @@
 from typing import Union
 
 from pyspark.sql import DataFrame, Column
+from pyspark.sql.functions import lit
 from pyspark.sql.functions import concat
 from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
 from spark_auto_mapper.data_types.text_like_base import AutoMapperTextLikeBase
@@ -18,6 +19,8 @@ class FhirReference(AutoMapperTextLikeBase):
     ):
         super().__init__()
 
+        assert resource
+        assert "/" not in resource
         self.resource: str = resource
         self.column: Union[AutoMapperDataTypeColumn,
                            AutoMapperTextLikeBase] = FhirId(column)
@@ -25,7 +28,7 @@ class FhirReference(AutoMapperTextLikeBase):
     def get_column_spec(self, source_df: DataFrame) -> Column:
         # https://hl7.org/FHIR/datatypes.html#id
         column_spec = concat(
-            self.resource, "/",
+            lit(self.resource), "/",
             self.column.get_column_spec(source_df=source_df)
         )
         return column_spec
