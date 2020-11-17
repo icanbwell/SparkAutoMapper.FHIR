@@ -22,7 +22,7 @@ class Person(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
-        identifiers: Optional[FhirList[Identifier]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
         name: Optional[FhirList[HumanName]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         gender: Optional[AdministrativeGenderCode] = None,
@@ -41,7 +41,7 @@ class Person(FhirResourceBase):
 
 
         :param id_: id of resource
-        :param identifiers: A human identifier for this person
+        :param identifier: A human identifier for this person
         :param name: A name associated with the person
         :param telecom: A contact detail for the person
         :param gender: male | female | other | unknown
@@ -55,7 +55,7 @@ class Person(FhirResourceBase):
         super().__init__(
             resourceType="Person",
             id_=id_,
-            identifiers=identifiers,
+            identifier=identifier,
             name=name,
             telecom=telecom,
             gender=gender,
