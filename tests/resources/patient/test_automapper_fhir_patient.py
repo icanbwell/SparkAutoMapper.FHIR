@@ -6,6 +6,7 @@ from pyspark.sql.functions import col, expr, regexp_replace, substring
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
+from spark_auto_mapper.helpers.spark_higher_order_functions import filter
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
@@ -111,22 +112,31 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                 regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "_"),
                 0, 63
             ).alias("id"),
-            array(
-                struct(
-                    lit("usual").alias("use"),
+            filter(
+                array(
                     struct(
-                        array(struct(lit("MR").alias("code"))).alias("coding")
-                    ).alias("type"),
-                    col("b.member_id").alias("value"),
-                )
+                        lit("usual").alias("use"),
+                        struct(
+                            filter(
+                                array(struct(lit("MR").alias("code"))),
+                                lambda x: x.isNotNull()
+                            ).alias("coding")
+                        ).alias("type"),
+                        col("b.member_id").alias("value"),
+                    )
+                ), lambda x: x.isNotNull()
             ).alias("identifier"),
-            array(
-                struct(
-                    lit("usual").alias("use"),
-                    col("b.last_name").alias("family"),
-                    array(lit("first_name"),
-                          lit("middle_name")).alias("given")
-                )
+            filter(
+                array(
+                    struct(
+                        lit("usual").alias("use"),
+                        col("b.last_name").alias("family"),
+                        filter(
+                            array(lit("first_name"), lit("middle_name")),
+                            lambda x: x.isNotNull()
+                        ).alias("given")
+                    )
+                ), lambda x: x.isNotNull()
             ).alias("name"),
             expr(
                 """CASE WHEN (`my_gender` = F) THEN 'female' WHEN (`my_gender` = M) THEN 'male' ELSE other END"""
@@ -138,13 +148,15 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                 to_date(col("b.date_of_birth"), 'MM/dd/yy')
             ).alias("birthDate"),
             struct(
-                array(
-                    struct(
-                        lit(
-                            "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                        ).alias("system"),
-                        lit("M").alias("code"),
-                    )
+                filter(
+                    array(
+                        struct(
+                            lit(
+                                "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                            ).alias("system"),
+                            lit("M").alias("code"),
+                        )
+                    ), lambda x: x.isNotNull()
                 ).alias("coding")
             ).alias("maritalStatus")
         ).alias("patient")

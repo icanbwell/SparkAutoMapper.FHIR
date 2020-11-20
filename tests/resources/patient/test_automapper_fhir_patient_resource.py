@@ -6,6 +6,7 @@ from pyspark.sql.functions import col, when, regexp_replace, substring
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
+from spark_auto_mapper.helpers.spark_higher_order_functions import filter
 
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -80,11 +81,13 @@ def test_auto_mapper_fhir_patient_resource(
         ).alias("birthDate")
     )
     assert str(sql_expressions["name"]) == str(
-        array(
-            struct(
-                lit("usual").alias("use"),
-                col("b.last_name").alias("family"),
-            )
+        filter(
+            array(
+                struct(
+                    lit("usual").alias("use"),
+                    col("b.last_name").alias("family"),
+                )
+            ), lambda x: x.isNotNull()
         ).alias("name")
     )
     assert str(sql_expressions["gender"]) == str(
