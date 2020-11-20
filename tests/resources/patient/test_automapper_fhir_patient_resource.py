@@ -64,7 +64,7 @@ def test_auto_mapper_fhir_patient_resource(
     result_df: DataFrame = mapper.transform(df=df)
 
     # Assert
-    assert len(sql_expressions) == 5
+    assert len(sql_expressions) == 21
     assert str(sql_expressions["id"]) == str(
         substring(
             regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "_"), 0, 63
@@ -85,7 +85,12 @@ def test_auto_mapper_fhir_patient_resource(
             array(
                 struct(
                     lit("usual").alias("use"),
+                    lit(None).alias("text"),
                     col("b.last_name").alias("family"),
+                    lit(None).alias("given"),
+                    lit(None).alias("prefix"),
+                    lit(None).alias("suffix"),
+                    lit(None).alias("period"),
                 )
             ), lambda x: x.isNotNull()
         ).alias("name")
