@@ -11,8 +11,14 @@ _T = TypeVar(
 
 
 class FhirList(AutoMapperList[_T]):
-    def __init__(self, value: Optional[List[_T]]) -> None:
-        super().__init__(value=value)
-
-        # TODO: check if value is a list of struct that we have the same columns in each
-        #   otherwise Spark will complain
+    def __init__(
+        self,
+        value: Optional[List[_T]],
+        include_null_properties: bool = False
+    ) -> None:
+        if include_null_properties and value and len(value) > 1:
+            super().__init__(
+                value=value, include_null_properties=include_null_properties
+            )
+        else:
+            super().__init__(value=value)
