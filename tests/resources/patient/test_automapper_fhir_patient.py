@@ -118,26 +118,43 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                         lit("usual").alias("use"),
                         struct(
                             filter(
-                                array(struct(lit("MR").alias("code"))),
-                                lambda x: x.isNotNull()
-                            ).alias("coding")
+                                array(
+                                    struct(
+                                        lit(None).alias("system"),
+                                        lit(None).alias("version"),
+                                        lit("MR").alias("code"),
+                                        lit(None).alias("display"),
+                                        lit(None).alias("userSelected"),
+                                    )
+                                ), lambda x: x.isNotNull()
+                            ).alias("coding"),
+                            lit(None).alias("text"),
                         ).alias("type"),
+                        lit(None).alias("system"),
                         col("b.member_id").alias("value"),
+                        lit(None).alias("period"),
+                        lit(None).alias("assigner"),
                     )
                 ), lambda x: x.isNotNull()
             ).alias("identifier"),
+            lit(None).alias("active"),
             filter(
                 array(
                     struct(
                         lit("usual").alias("use"),
+                        lit(None).alias("text"),
                         col("b.last_name").alias("family"),
                         filter(
                             array(lit("first_name"), lit("middle_name")),
                             lambda x: x.isNotNull()
-                        ).alias("given")
+                        ).alias("given"),
+                        lit(None).alias("prefix"),
+                        lit(None).alias("suffix"),
+                        lit(None).alias("period"),
                     )
                 ), lambda x: x.isNotNull()
             ).alias("name"),
+            lit(None).alias("telecom"),
             expr(
                 """CASE WHEN (`my_gender` = F) THEN 'female' WHEN (`my_gender` = M) THEN 'male' ELSE other END"""
             ).alias("gender"),
@@ -147,6 +164,9 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                 to_date(col("b.date_of_birth"), 'MM/dd/yyyy'),
                 to_date(col("b.date_of_birth"), 'MM/dd/yy')
             ).alias("birthDate"),
+            lit(None).alias("deceasedBoolean"),
+            lit(None).alias("deceasedDateTime"),
+            lit(None).alias("address"),
             struct(
                 filter(
                     array(
@@ -154,11 +174,24 @@ def test_auto_mapper_fhir_patient(spark_session: SparkSession) -> None:
                             lit(
                                 "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
                             ).alias("system"),
+                            lit(None).alias("version"),
                             lit("M").alias("code"),
+                            lit(None).alias("display"),
+                            lit(None).alias("userSelected"),
                         )
                     ), lambda x: x.isNotNull()
-                ).alias("coding")
-            ).alias("maritalStatus")
+                ).alias("coding"),
+                lit(None).alias("text"),
+            ).alias("maritalStatus"),
+            lit(None).alias("multipleBirthBoolean"),
+            lit(None).alias("multipleBirthInteger"),
+            lit(None).alias("photo"),
+            lit(None).alias("contact"),
+            lit(None).alias("communication"),
+            lit(None).alias("generalPractitioner"),
+            lit(None).alias("managingOrganization"),
+            lit(None).alias("link"),
+            lit(None).alias("extension"),
         ).alias("patient")
     )
 
