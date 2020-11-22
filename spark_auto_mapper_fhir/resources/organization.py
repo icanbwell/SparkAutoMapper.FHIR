@@ -26,6 +26,7 @@ class Organization(FhirResourceBase):
         active: Optional[FhirBoolean] = None,
         type_: Optional[FhirList[CodeableConcept[OrganizationTypeCode]]
                         ] = None,
+        name: Optional[FhirString] = None,
         alias: Optional[FhirList[FhirString]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[FhirList[Address]] = None,
@@ -45,6 +46,7 @@ class Organization(FhirResourceBase):
         :param identifier: Identifies this organization across multiple systems
         :param active: Whether the organization's record is still in active use
         :param type_: Kind of organization. http://hl7.org/fhir/valueset-organization-type.html
+        :param name: Name used for the organization
         :param alias: A list of alternate names that the organization is known as, or was known as in the past
         :param telecom: A contact detail for the organization
                         + Rule: The telecom of an organization can never be of use 'home'
@@ -60,6 +62,7 @@ class Organization(FhirResourceBase):
             identifier=identifier,
             active=active,
             type_=type_,
+            name=name,
             alias=alias,
             telecom=telecom,
             address=address,
