@@ -27,12 +27,103 @@ class OrganizationTypeCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'OrganizationTypeCode':
+    def HealthcareProvider(cls) -> 'OrganizationTypeCode':
         """
-        Comment
+        An organization that provides healthcare services.
         """
         # noinspection PyCallingNonCallable
-        return OrganizationTypeCode("A")
+        return OrganizationTypeCode("prov")
+
+    @classproperty
+    def HospitalDepartment(cls) -> 'OrganizationTypeCode':
+        """
+        A department or ward within a hospital (Generally is not applicable to top level organizations)
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("dept")
+
+    @classproperty
+    def OrganizationalTeam(cls) -> 'OrganizationTypeCode':
+        """
+        An organizational team is usually a grouping of practitioners that perform a specific function
+        within an organization (which could be a top level organization, or a department).
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("team")
+
+    @classproperty
+    def Government(cls) -> 'OrganizationTypeCode':
+        """
+        A political body, often used when including organization records for government bodies
+        such as a Federal Government, State or Local Government.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("govt")
+
+    @classproperty
+    def InsuranceCompany(cls) -> 'OrganizationTypeCode':
+        """
+        A company that provides insurance to its subscribers that may include healthcare related policies.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("ins")
+
+    @classproperty
+    def Payer(cls) -> 'OrganizationTypeCode':
+        """
+        A company, charity, or governmental organization, which processes claims and/or issues payments
+         to providers on behalf of patients or groups of patients.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("pay")
+
+    @classproperty
+    def EducationalInstitute(cls) -> 'OrganizationTypeCode':
+        """
+        An educational institution that provides education or research facilities.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("edu")
+
+    @classproperty
+    def ReligiousInstitution(cls) -> 'OrganizationTypeCode':
+        """
+        An organization that is identified as a part of a religious institution.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("reli")
+
+    @classproperty
+    def ClinicalResearchSponsor(cls) -> 'OrganizationTypeCode':
+        """
+        An organization that is identified as a Pharmaceutical/Clinical Research Sponsor.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("crs")
+
+    @classproperty
+    def CommunityGroup(cls) -> 'OrganizationTypeCode':
+        """
+        An un-incorporated community group.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("cg")
+
+    @classproperty
+    def NonHealthcareBusiness(cls) -> 'OrganizationTypeCode':
+        """
+        An organization that is a registered business or corporation but not identified by other types.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("bus")
+
+    @classproperty
+    def Other(cls) -> 'OrganizationTypeCode':
+        """
+        Other type of organization not already specified.
+        """
+        # noinspection PyCallingNonCallable
+        return OrganizationTypeCode("other")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
