@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -12,6 +14,7 @@ class Dosage(FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         sequence: Optional[FhirPositiveInt] = None,
         text: Optional[FhirString] = None,
         additionalInstruction: Optional[
@@ -31,6 +34,7 @@ class Dosage(FhirComplexTypeBase):
         :param patientInstruction: Patient or consumer oriented instructions
         """
         super().__init__(
+            id_=id_,
             sequence=sequence,
             text=text,
             additionalInstruction=additionalInstruction,

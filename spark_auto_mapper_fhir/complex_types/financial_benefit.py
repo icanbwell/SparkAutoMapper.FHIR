@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -13,6 +15,7 @@ class FinancialBenefit(FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         type_: Optional[CodeableConcept[BenefitTypeCode]] = None,
         allowedUnsignedInt: Optional[FhirUnsignedInt] = None,
         allowedString: Optional[FhirString] = None,
@@ -34,6 +37,7 @@ class FinancialBenefit(FhirComplexTypeBase):
         :param usedMoney: Benefits used
         """
         super().__init__(
+            id_=id_,
             type_=type_,
             allowedUnsignedInt=allowedUnsignedInt,
             allowedString=allowedString,

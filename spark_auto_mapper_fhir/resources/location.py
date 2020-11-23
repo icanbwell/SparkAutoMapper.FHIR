@@ -1,5 +1,8 @@
 from typing import Optional
 
+from pyspark.sql.types import StructType
+from spark_fhir_schemas.r4.resources.location import LocationSchema
+
 from spark_auto_mapper_fhir.backbone_elements.hours_of_operation_backbone_element import HoursOfOperationBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.position_backbone_element import PositionBackboneElement
 from spark_auto_mapper_fhir.complex_types.address import Address
@@ -97,3 +100,6 @@ class Location(FhirResourceBase):
             endpoint=endpoint,
             extension=extension
         )
+
+    def get_schema(self) -> Optional[StructType]:
+        return LocationSchema.get_schema()

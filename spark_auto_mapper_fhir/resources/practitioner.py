@@ -1,5 +1,8 @@
 from typing import Optional
 
+from pyspark.sql.types import StructType
+from spark_fhir_schemas.r4.resources.practitioner import PractitionerSchema
+
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -72,3 +75,6 @@ class Practitioner(FhirResourceBase):
             communication=communication,
             extension=extension
         )
+
+    def get_schema(self) -> Optional[StructType]:
+        return PractitionerSchema.get_schema()

@@ -1,4 +1,6 @@
-from typing import Union, Any
+from typing import Union, Any, Optional
+
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -11,8 +13,8 @@ class LinkPatient(FhirComplexTypeBase):
     def __init__(
         self,
         other: Reference[Union[Any, RelatedPerson]],
-        # "Any" should be "FhirPatient" but causes a circular import
-        type_: LinkTypeCode
+        type_: LinkTypeCode,
+        id_: Optional[FhirId] = None,
     ):
         """
         LinkPatient Resource in FHIR
@@ -23,4 +25,4 @@ class LinkPatient(FhirComplexTypeBase):
         :param other: The other patient or related person resource that the link refers to
         :param type_: replaced-by | replaces | refer | seealso. https://hl7.org/FHIR/valueset-link-type.html
         """
-        super().__init__(other=other, type_=type_)
+        super().__init__(id_=id_, other=other, type_=type_)

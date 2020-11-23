@@ -1,5 +1,8 @@
 from typing import Optional
 
+from pyspark.sql.types import StructType
+from spark_fhir_schemas.r4.resources.relatedperson import RelatedPersonSchema
+
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -81,3 +84,6 @@ class RelatedPerson(FhirResourceBase):
             communication=communication,
             extension=extension
         )
+
+    def get_schema(self) -> Optional[StructType]:
+        return RelatedPersonSchema.get_schema()

@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.address import Address
@@ -17,6 +19,7 @@ from spark_auto_mapper_fhir.complex_types.reference import Reference
 class Contact(FhirComplexTypeBase):
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         relationship: Optional[FhirList[
             CodeableConcept[PatientContactRelationshipCode]]] = None,
         name: Optional[HumanName] = None,
@@ -42,6 +45,7 @@ class Contact(FhirComplexTypeBase):
         :param period: The period during which this contact person or organization is valid to be contacted relating to this patient
         """
         super().__init__(
+            id_=id_,
             relationship=relationship,
             name=name,
             telecom=telecom,

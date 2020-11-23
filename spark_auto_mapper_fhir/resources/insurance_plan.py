@@ -1,5 +1,8 @@
 from typing import Optional
 
+from pyspark.sql.types import StructType
+from spark_fhir_schemas.r4.resources.insuranceplan import InsurancePlanSchema
+
 from spark_auto_mapper_fhir.backbone_elements.contact_backbone_element import ContactBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.insurance_plan_backbone_element import InsurancePlanBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.insurance_plan_coverage_backbone_element import \
@@ -83,3 +86,6 @@ class InsurancePlan(FhirResourceBase):
             plan=plan,
             extension=extension
         )
+
+    def get_schema(self) -> Optional[StructType]:
+        return InsurancePlanSchema.get_schema()

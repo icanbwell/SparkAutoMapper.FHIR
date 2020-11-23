@@ -1,5 +1,8 @@
 from typing import Optional
 
+from pyspark.sql.types import StructType
+from spark_fhir_schemas.r4.resources.person import PersonSchema
+
 from spark_auto_mapper_fhir.backbone_elements.link_person_backbone_element import LinkPersonBackboneElement
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
@@ -67,3 +70,6 @@ class Person(FhirResourceBase):
             link=link,
             extension=extension
         )
+
+    def get_schema(self) -> Optional[StructType]:
+        return PersonSchema.get_schema()

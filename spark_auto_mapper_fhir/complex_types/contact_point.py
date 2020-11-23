@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.period import Period
@@ -12,6 +14,7 @@ from spark_auto_mapper_fhir.valuesets.contact_point_use import ContactPointUseCo
 class ContactPoint(FhirComplexTypeBase):
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         system: Optional[ContactPointSystemCode] = None,
         value: Optional[FhirString] = None,
         use: Optional[ContactPointUseCode] = None,
@@ -33,5 +36,10 @@ class ContactPoint(FhirComplexTypeBase):
         :param period: Time period when the contact point was/is in use
         """
         super().__init__(
-            system=system, value=value, use=use, rank=rank, period=period
+            id_=id_,
+            system=system,
+            value=value,
+            use=use,
+            rank=rank,
+            period=period
         )

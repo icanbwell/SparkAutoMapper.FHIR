@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.base64Binary import FhirBase64Binary
@@ -15,6 +17,7 @@ class Attachment(FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         contentType: Optional[MimeTypeCode] = None,
         language: Optional[CommonLanguageCode] = None,
         data: Optional[FhirBase64Binary] = None,
@@ -40,6 +43,7 @@ class Attachment(FhirComplexTypeBase):
         :param creation: Date attachment was first created
         """
         super().__init__(
+            id_=id_,
             contentType=contentType,
             language=language,
             data=data,

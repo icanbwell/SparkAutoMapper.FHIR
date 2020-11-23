@@ -1,5 +1,8 @@
 from typing import Optional
 
+from pyspark.sql.types import StructType
+from spark_fhir_schemas.r4.resources.healthcareservice import HealthcareServiceSchema
+
 from spark_auto_mapper_fhir.backbone_elements.eligibility_backbone_element import EligibilityBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.not_available_backbone_element import NotAvailableBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.practitioner_available_time_backbone_element import \
@@ -127,3 +130,6 @@ class HealthcareService(FhirResourceBase):
             endpoint=endpoint,
             extension=extension
         )
+
+    def get_schema(self) -> Optional[StructType]:
+        return HealthcareServiceSchema.get_schema()
