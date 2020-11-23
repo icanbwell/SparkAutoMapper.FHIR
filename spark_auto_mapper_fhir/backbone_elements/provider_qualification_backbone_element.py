@@ -35,8 +35,8 @@ class ProviderQualificationBackboneElement(FhirBackboneElementBase):
         super().__init__(
             id_=id_,
             extension=extension,
-            code=code,
             identifier=identifier,
+            code=code,
             period=period,
             issuer=issuer
         )
