@@ -1,5 +1,8 @@
 from typing import Optional
 
+from pyspark.sql.types import StructType
+from spark_fhir_schemas.r4.resources.organization import OrganizationSchema
+
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -71,3 +74,6 @@ class Organization(FhirResourceBase):
             endpoint=endpoint,
             extension=extension
         )
+
+    def get_schema(self) -> Optional[StructType]:
+        return OrganizationSchema.get_schema()

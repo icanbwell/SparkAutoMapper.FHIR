@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -16,6 +18,7 @@ class Identifier(FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         use: Optional[IdentifierUseCode] = None,
         type_: Optional[CodeableConcept[IdentifierTypeCode]] = None,
         system: Optional[FhirUri] = None,
@@ -39,6 +42,7 @@ class Identifier(FhirComplexTypeBase):
         :param assigner: Organization that issued id (may be just text)
         """
         super().__init__(
+            id_=id_,
             use=use,
             type_=type_,
             system=system,

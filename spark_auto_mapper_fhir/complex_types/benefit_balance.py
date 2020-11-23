@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -17,6 +19,7 @@ class BenefitBalance(FhirComplexTypeBase):
     def __init__(
         self,
         category: CodeableConcept[BenefitCategoryCode],
+        id_: Optional[FhirId] = None,
         excluded: Optional[FhirBoolean] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
@@ -42,6 +45,7 @@ class BenefitBalance(FhirComplexTypeBase):
         """
         super().__init__(
             category=category,
+            id_=id_,
             excluded=excluded,
             name=name,
             description=description,

@@ -1,6 +1,8 @@
 from typing import Optional, Union
 
-from spark_auto_mapper.data_types.column import AutoMapperDataTypeColumn
+from pyspark.sql.types import StructType
+from spark_auto_mapper.data_types.text_like_base import AutoMapperTextLikeBase
+from spark_fhir_schemas.r4.resources.patient import PatientSchema
 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -108,17 +110,20 @@ class Patient(FhirResourceBase):
             extension=extension
         )
 
-    id_: AutoMapperDataTypeColumn = A.column("id_")
+    def get_schema(self) -> Optional[StructType]:
+        return PatientSchema.get_schema()
+
+    id_: FhirId = FhirId(A.column("id_"))
     identifier = A.column("identifier")
     active = A.boolean(A.column("active"))
     name = A.column("name")
     telecom = A.column("telecom")
-    gender: AutoMapperDataTypeColumn = A.column("gender")
+    gender: AutoMapperTextLikeBase = A.column("gender")
     birthDate: AutoMapperDateDataType = A.date(A.column("birthDate"))
     deceasedBoolean = A.column("deceasedBoolean")
     deceasedDateTime = A.column("deceasedDateTime")
     address = A.column("address")
-    maritalStatus: AutoMapperDataTypeColumn = A.column("maritalStatus")
+    maritalStatus: AutoMapperTextLikeBase = A.column("maritalStatus")
     multipleBirthBoolean = A.column("multipleBirthBoolean")
     multipleBirthInteger = A.column("multipleBirthInteger")
     photo = A.column("photo")

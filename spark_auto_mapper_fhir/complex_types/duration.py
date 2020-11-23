@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
@@ -12,6 +14,7 @@ from spark_auto_mapper_fhir.valuesets.quantity_comparator import QuantityCompara
 class Duration(FhirComplexTypeBase):
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         value: Optional[FhirDecimal] = None,
         comparator: Optional[QuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,
@@ -31,6 +34,7 @@ class Duration(FhirComplexTypeBase):
         :param code: Coded form of the unit
         """
         super().__init__(
+            id_=id_,
             value=value,
             comparator=comparator,
             unit=unit,

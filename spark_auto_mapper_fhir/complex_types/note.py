@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -13,6 +15,7 @@ class Note(FhirComplexTypeBase):
     # noinspection SpellCheckingInspection
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         number: Optional[FhirPositiveInt] = None,
         type_: Optional[NoteTypeCode] = None,
         text: Optional[FhirString] = None,
@@ -29,5 +32,5 @@ class Note(FhirComplexTypeBase):
         :param language: Language of the text. https://hl7.org/FHIR/valueset-languages.html
         """
         super().__init__(
-            number=number, type_=type_, text=text, language=language
+            id_=id_, number=number, type_=type_, text=text, language=language
         )

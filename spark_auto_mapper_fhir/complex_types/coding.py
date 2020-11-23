@@ -1,5 +1,7 @@
 from typing import Optional, TypeVar, Generic, Union
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -14,6 +16,7 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         system: Optional[FhirUri] = None,
         version: Optional[FhirString] = None,
         code: Optional[_T] = None,
@@ -32,6 +35,7 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
         :param userSelected: If this coding was chosen directly by the user
         """
         super().__init__(
+            id_=id_,
             system=system,
             version=version,
             code=code,

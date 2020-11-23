@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -9,6 +11,7 @@ class Address(FhirComplexTypeBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         use: Optional[FhirString] = None,
         type_: Optional[FhirString] = None,
         text: Optional[FhirString] = None,
@@ -36,6 +39,7 @@ class Address(FhirComplexTypeBase):
         :param country: Country (e.g. can be ISO 3166 2 or 3 letter code)
         """
         super().__init__(
+            id_=id_,
             use=use,
             type=type_,
             text=text,

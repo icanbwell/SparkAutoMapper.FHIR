@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -11,6 +13,7 @@ from spark_auto_mapper_fhir.valuesets.name_use import NameUseCode
 class HumanName(FhirComplexTypeBase):
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
         use: Optional[NameUseCode] = None,
         text: Optional[FhirString] = None,
         family: Optional[FhirString] = None,
@@ -36,6 +39,7 @@ class HumanName(FhirComplexTypeBase):
         :param period: Time period when name was/is in use
         """
         super().__init__(
+            id_=id_,
             use=use,
             text=text,
             family=family,
