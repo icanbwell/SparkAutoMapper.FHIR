@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -14,6 +16,7 @@ class HumanName(FhirComplexTypeBase):
     def __init__(
         self,
         id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         use: Optional[NameUseCode] = None,
         text: Optional[FhirString] = None,
         family: Optional[FhirString] = None,
@@ -40,6 +43,7 @@ class HumanName(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
+            extension=extension,
             use=use,
             text=text,
             family=family,

@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -20,6 +22,7 @@ class Contact(FhirComplexTypeBase):
     def __init__(
         self,
         id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         relationship: Optional[FhirList[
             CodeableConcept[PatientContactRelationshipCode]]] = None,
         name: Optional[HumanName] = None,
@@ -46,6 +49,7 @@ class Contact(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
+            extension=extension,
             relationship=relationship,
             name=name,
             telecom=telecom,
