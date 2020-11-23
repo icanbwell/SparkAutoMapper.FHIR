@@ -26,5 +26,7 @@ class ServiceRequest(FhirResourceBase):
             resourceType="ServiceRequest", id_=id_, extension=extension
         )
 
-    def get_schema(self) -> Optional[StructType]:
-        return ServiceRequestSchema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return ServiceRequestSchema.get_schema(
+            include_extension=include_extension
+        )

@@ -26,5 +26,7 @@ class DeviceRequest(FhirResourceBase):
             resourceType="DeviceRequest", id_=id_, extension=extension
         )
 
-    def get_schema(self) -> Optional[StructType]:
-        return DeviceRequestSchema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return DeviceRequestSchema.get_schema(
+            include_extension=include_extension
+        )

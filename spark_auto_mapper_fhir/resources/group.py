@@ -24,5 +24,5 @@ class Group(FhirResourceBase):
         """
         super().__init__(resourceType="Group", id_=id_, extension=extension)
 
-    def get_schema(self) -> Optional[StructType]:
-        return GroupSchema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return GroupSchema.get_schema(include_extension=include_extension)

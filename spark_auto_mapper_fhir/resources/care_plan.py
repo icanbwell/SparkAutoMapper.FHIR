@@ -24,5 +24,5 @@ class CarePlan(FhirResourceBase):
         """
         super().__init__(resourceType="CarePlan", id_=id_, extension=extension)
 
-    def get_schema(self) -> Optional[StructType]:
-        return CarePlanSchema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return CarePlanSchema.get_schema(include_extension=include_extension)

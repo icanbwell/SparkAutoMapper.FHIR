@@ -85,5 +85,7 @@ class RelatedPerson(FhirResourceBase):
             extension=extension
         )
 
-    def get_schema(self) -> Optional[StructType]:
-        return RelatedPersonSchema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return RelatedPersonSchema.get_schema(
+            include_extension=include_extension
+        )
