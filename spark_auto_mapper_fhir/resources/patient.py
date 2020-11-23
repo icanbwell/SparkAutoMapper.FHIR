@@ -110,8 +110,8 @@ class Patient(FhirResourceBase):
             extension=extension
         )
 
-    def get_schema(self) -> Optional[StructType]:
-        return PatientSchema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return PatientSchema.get_schema(include_extension=include_extension)
 
     id_: FhirId = FhirId(A.column("id_"))
     identifier = A.column("identifier")

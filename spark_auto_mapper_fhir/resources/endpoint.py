@@ -24,5 +24,5 @@ class Endpoint(FhirResourceBase):
         """
         super().__init__(resourceType="Endpoint", id_=id_, extension=extension)
 
-    def get_schema(self) -> Optional[StructType]:
-        return EndpointSchema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return EndpointSchema.get_schema(include_extension=include_extension)

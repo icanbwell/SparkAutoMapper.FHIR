@@ -6,5 +6,5 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 class FhirResourceBase(AutoMapperDataTypeComplexBase):
     # all resources must implement this
-    def get_schema(self) -> Optional[StructType]:
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
         raise NotImplementedError
