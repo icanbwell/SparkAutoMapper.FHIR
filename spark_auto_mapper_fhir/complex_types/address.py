@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.complex_types.period import Period
+
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -23,7 +25,8 @@ class Address(FhirComplexTypeBase):
         district: Optional[FhirString] = None,
         state: Optional[FhirString] = None,
         postalCode: Optional[FhirString] = None,
-        country: Optional[FhirString] = None
+        country: Optional[FhirString] = None,
+        period: Optional[Period] = None
     ):
         """
         Address Resource in FHIR
@@ -52,5 +55,6 @@ class Address(FhirComplexTypeBase):
             district=district,
             state=state,
             postalCode=postalCode,
-            country=country
+            country=country,
+            period=period
         )

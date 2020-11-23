@@ -1,7 +1,6 @@
 from typing import Optional
 
 from pyspark.sql.types import StructType
-from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_fhir_schemas.r4.resources.location import LocationSchema
 
 from spark_auto_mapper_fhir.backbone_elements.hours_of_operation_backbone_element import HoursOfOperationBackboneElement
@@ -51,8 +50,7 @@ class Location(FhirResourceBase):
                                    ] = None,
         availabilityExceptions: Optional[FhirString] = None,
         endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
-        period: Optional[Period] = None
+        extension: Optional[FhirList[ExtensionBase]] = None
     ):
         """
         Location Resource in FHIR
@@ -100,8 +98,7 @@ class Location(FhirResourceBase):
             hoursOfOperation=hoursOfOperation,
             availabilityExceptions=availabilityExceptions,
             endpoint=endpoint,
-            extension=extension,
-            period=period
+            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:
