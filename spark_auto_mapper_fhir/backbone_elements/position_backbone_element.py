@@ -1,4 +1,7 @@
 from typing import Optional
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
@@ -9,6 +12,8 @@ class PositionBackboneElement(FhirBackboneElementBase):
         self,
         longitude: FhirDecimal,
         latitude: FhirDecimal,
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         altitude: Optional[FhirDecimal] = None
     ) -> None:
         """
@@ -21,5 +26,9 @@ class PositionBackboneElement(FhirBackboneElementBase):
         :param altitude: Altitude with WGS84 datum
         """
         super().__init__(
-            longitude=longitude, latitude=latitude, altitude=altitude
+            id_=id_,
+            extension=extension,
+            longitude=longitude,
+            latitude=latitude,
+            altitude=altitude
         )

@@ -1,5 +1,11 @@
 from typing import Union, Optional
 
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -19,6 +25,8 @@ class CareTeamBackboneElement(FhirBackboneElementBase):
         sequence: FhirPositiveInt,
         provider: Reference[Union[Practitioner, PractitionerRole,
                                   Organization]],
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         responsible: Optional[FhirBoolean] = None,
         role: Optional[CodeableConcept[ClaimCareTeamRoleCode]] = None,
         qualification: Optional[CodeableConcept[ProviderQualificationCode]
@@ -36,6 +44,8 @@ class CareTeamBackboneElement(FhirBackboneElementBase):
         :param qualification: Practitioner credential or specialization. https://hl7.org/FHIR/valueset-provider-qualification.html
         """
         super().__init__(
+            id_=id_,
+            extension=extension,
             sequence=sequence,
             provider=provider,
             responsible=responsible,

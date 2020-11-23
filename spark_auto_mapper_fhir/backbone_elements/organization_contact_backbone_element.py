@@ -5,6 +5,8 @@ from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.valuesets.contactentity_type import ContactEntityTypeCode
 
@@ -12,6 +14,8 @@ from spark_auto_mapper_fhir.valuesets.contactentity_type import ContactEntityTyp
 class OrganizationContactBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         purpose: Optional[CodeableConcept[ContactEntityTypeCode]] = None,
         name: Optional[HumanName] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
@@ -29,5 +33,10 @@ class OrganizationContactBackboneElement(FhirBackboneElementBase):
         :param address: Visiting or postal addresses for the contact
         """
         super().__init__(
-            purpose=purpose, name=name, telecom=telecom, address=address
+            id_=id_,
+            extension=extension,
+            purpose=purpose,
+            name=name,
+            telecom=telecom,
+            address=address
         )
