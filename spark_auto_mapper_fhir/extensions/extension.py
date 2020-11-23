@@ -1,5 +1,18 @@
 from typing import Optional, Any
 
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+
+from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+from spark_auto_mapper_fhir.complex_types.period import Period
+
+from spark_auto_mapper_fhir.complex_types.money import Money
+
+from spark_auto_mapper_fhir.complex_types.range import Range
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.base64Binary import FhirBase64Binary
@@ -20,6 +33,7 @@ class Extension(ExtensionBase):
     def __init__(
         self,
         url: FhirUri,
+        id_: Optional[FhirId],
         valueCoding: Optional[Coding[Any]] = None,
         valueCode: Optional[FhirValueSetBase] = None,
         valueString: Optional[FhirString] = None,
@@ -33,7 +47,18 @@ class Extension(ExtensionBase):
         valueDate: Optional[FhirDate] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valueReference: Optional[FhirResourceBase] = None,
-        extension: Optional[FhirList['Extension']] = None
+        extension: Optional[FhirList['Extension']] = None,
+        valueId: Optional[FhirId] = None,
+        valueTime: Optional[FhirDateTime] = None,
+        valueUnsignedInt: Optional[FhirPositiveInt] = None,
+        valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]
+                                       ] = None,
+        valueCount: Optional[FhirPositiveInt] = None,
+        valueMoney: Optional[Money] = None,
+        valuePeriod: Optional[Period] = None,
+        valueQuantity: Optional[Quantity] = None,
+        valueIdentifier: Optional[Identifier] = None,
+        valueRange: Optional[Range] = None
     ) -> None:
         """
         Extension type in FHIR
@@ -73,5 +98,15 @@ class Extension(ExtensionBase):
             valueDate=valueDate,
             valueDateTime=valueDateTime,
             valueReference=valueReference,
-            extension=extension
+            extension=extension,
+            valueId=valueId,
+            valueTime=valueTime,
+            valueUnsignedInt=valueUnsignedInt,
+            valueCodeableConcept=valueCodeableConcept,
+            valueCount=valueCount,
+            valueMoney=valueMoney,
+            valuePeriod=valuePeriod,
+            valueQuantity=valueQuantity,
+            valueIdentifier=valueIdentifier,
+            valueRange=valueRange
         )

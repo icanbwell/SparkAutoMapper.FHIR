@@ -1,28 +1,29 @@
 from typing import Optional, Union
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
-
-from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.money import Money
+from spark_auto_mapper_fhir.complex_types.period import Period
+from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
+from spark_auto_mapper_fhir.resources.location import Location
+from spark_auto_mapper_fhir.resources.organization import Organization
+from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.valuesets.claim_modifiers import ClaimModifiersCode
 from spark_auto_mapper_fhir.valuesets.ex_program import ExProgramReasonCode
 from spark_auto_mapper_fhir.valuesets.service_place import ServicePlaceCode
 from spark_auto_mapper_fhir.valuesets.service_uscls import ServiceUSCLSCode
 from spark_auto_mapper_fhir.valuesets.surface import SurfaceCode
 from spark_auto_mapper_fhir.valuesets.tooth import ToothCode
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.resources.location import Location
-from spark_auto_mapper_fhir.complex_types.money import Money
-from spark_auto_mapper_fhir.resources.organization import Organization
-from spark_auto_mapper_fhir.complex_types.period import Period
-from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
 
 
 class AddItemBackboneElement(FhirBackboneElementBase):
@@ -30,6 +31,8 @@ class AddItemBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         productOrService: CodeableConcept[ServiceUSCLSCode],
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
         detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
         subDetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
@@ -81,6 +84,8 @@ class AddItemBackboneElement(FhirBackboneElementBase):
         :param adjudication: Added items adjudication
         """
         super().__init__(
+            id_=id_,
+            extension=extension,
             productOrService=productOrService,
             itemSequence=itemSequence,
             detailSequence=detailSequence,

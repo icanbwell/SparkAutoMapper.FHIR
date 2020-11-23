@@ -1,4 +1,7 @@
 from typing import Optional
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
@@ -11,6 +14,8 @@ class CoverageFinancialExceptionBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         type_: CodeableConcept[CoverageFinancialExceptionCode],
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         period: Optional[Period] = None
     ):
         """
@@ -21,4 +26,6 @@ class CoverageFinancialExceptionBackboneElement(FhirBackboneElementBase):
         :param type_: Exception category. https://hl7.org/FHIR/valueset-coverage-financial-exception.html
         :param period: The effective period of the exception
         """
-        super().__init__(type_=type_, period=period)
+        super().__init__(
+            id_=id_, extension=extension, type_=type_, period=period
+        )

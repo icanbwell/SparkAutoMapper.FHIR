@@ -1,4 +1,7 @@
 from typing import Optional, Any
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
@@ -23,6 +26,8 @@ class SupportingInfoBackboneElement(FhirBackboneElementBase):
         self,
         sequence: FhirPositiveInt,
         category: CodeableConcept[ClaimInformationCategoryCode],
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[CodeableConcept[ClaimExceptionCode]] = None,
         timingDate: Optional[FhirDate] = None,
         timingPeriod: Optional[Period] = None,
@@ -51,6 +56,8 @@ class SupportingInfoBackboneElement(FhirBackboneElementBase):
         :param reason: Explanation for the information. https://hl7.org/FHIR/valueset-missing-tooth-reason.html
         """
         super().__init__(
+            id_=id_,
+            extension=extension,
             sequence=sequence,
             category=category,
             code=code,

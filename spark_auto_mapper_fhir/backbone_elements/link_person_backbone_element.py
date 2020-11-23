@@ -1,5 +1,11 @@
 from typing import Union, Optional
 
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.resources.patient import Patient
@@ -13,6 +19,8 @@ class LinkPersonBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         target: Reference[Union[Patient, Practitioner, RelatedPerson, Person]],
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         assurance: Optional[IdentityAssuranceLevelCode] = None
     ) -> None:
         """
@@ -24,4 +32,6 @@ class LinkPersonBackboneElement(FhirBackboneElementBase):
         :param target: The resource to which this actual person is associated
         :param assurance: level1 | level2 | level3 | level4
         """
-        super().__init__(target=target, assurance=assurance)
+        super().__init__(
+            id_=id_, extension=extension, target=target, assurance=assurance
+        )

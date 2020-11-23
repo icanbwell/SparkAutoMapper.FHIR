@@ -6,6 +6,8 @@ from spark_auto_mapper_fhir.backbone_elements.specific_cost_backbone_element imp
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.location import Location
 from spark_auto_mapper_fhir.resources.organization import Organization
@@ -16,6 +18,8 @@ class InsurancePlanBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[CodeableConcept[FhirValueSetBase]] = None,
         coverageArea: Optional[FhirList[Reference[Location]]] = None,
@@ -37,6 +41,8 @@ class InsurancePlanBackboneElement(FhirBackboneElementBase):
         :param specificCost: Specific costs
         """
         super().__init__(
+            id_=id_,
+            extension=extension,
             identifier=identifier,
             type_=type_,
             coverageArea=coverageArea,

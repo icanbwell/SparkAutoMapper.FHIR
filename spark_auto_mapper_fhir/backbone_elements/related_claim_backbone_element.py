@@ -1,4 +1,7 @@
 from typing import Optional
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.resources.claim import Claim
@@ -12,6 +15,8 @@ from spark_auto_mapper_fhir.complex_types.reference import Reference
 class RelatedClaimBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         claim: Optional[Reference[Claim]] = None,
         # should be FhirClaim but we get circular import
         relationship: Optional[CodeableConcept[RelatedClaimRelationshipCode]
@@ -29,5 +34,9 @@ class RelatedClaimBackboneElement(FhirBackboneElementBase):
         :param reference: 	File or case reference
         """
         super().__init__(
-            claim=claim, relationship=relationship, reference=reference
+            id_=id_,
+            extension=extension,
+            claim=claim,
+            relationship=relationship,
+            reference=reference
         )

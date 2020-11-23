@@ -1,4 +1,7 @@
 from typing import Optional
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -12,6 +15,8 @@ class GeneralCostBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
+        id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[CodeableConcept[FhirValueSetBase]] = None,
         groupSize: Optional[FhirPositiveInt] = None,
         cost: Optional[Money] = None,
@@ -29,5 +34,10 @@ class GeneralCostBackboneElement(FhirBackboneElementBase):
         :param comment: Additional cost information
         """
         super().__init__(
-            type_=type_, groupSize=groupSize, cost=cost, comment=comment
+            id_=id_,
+            extension=extension,
+            type_=type_,
+            groupSize=groupSize,
+            cost=cost,
+            comment=comment
         )
