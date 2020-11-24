@@ -81,6 +81,7 @@ class Location(FhirResourceBase):
         super().__init__(
             resourceType="Location",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             status=status,
             operationalStatus=operationalStatus,
@@ -98,7 +99,6 @@ class Location(FhirResourceBase):
             hoursOfOperation=hoursOfOperation,
             availabilityExceptions=availabilityExceptions,
             endpoint=endpoint,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

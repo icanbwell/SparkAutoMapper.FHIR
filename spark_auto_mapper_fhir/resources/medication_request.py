@@ -145,6 +145,7 @@ class MedicationRequest(FhirResourceBase):
         super().__init__(
             resourceType="MedicationRequest",
             id_=id_,
+            extension=extension,
             status=status,
             intent=intent,
             medication=medication,
@@ -172,8 +173,7 @@ class MedicationRequest(FhirResourceBase):
             dispenseRequest=dispenseRequest,
             substitution=substitution,
             priorPrescription=priorPrescription,
-            detectedIssue=detectedIssue,
-            extension=extension
+            detectedIssue=detectedIssue
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

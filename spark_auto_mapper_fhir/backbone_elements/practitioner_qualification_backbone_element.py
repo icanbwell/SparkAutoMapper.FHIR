@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.valuesets.provider_qualification import ProviderQualificationCode
 
 
-class ProviderQualificationBackboneElement(FhirBackboneElementBase):
+class PractitionerQualificationBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         code: CodeableConcept[ProviderQualificationCode],

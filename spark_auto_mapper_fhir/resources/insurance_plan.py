@@ -70,6 +70,7 @@ class InsurancePlan(FhirResourceBase):
         super().__init__(
             resourceType="InsurancePlan",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             status=status,
             type_=type_,
@@ -84,7 +85,6 @@ class InsurancePlan(FhirResourceBase):
             network=network,
             coverage=coverage,
             plan=plan,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

@@ -58,6 +58,7 @@ class Person(FhirResourceBase):
         super().__init__(
             resourceType="Person",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             name=name,
             telecom=telecom,
@@ -68,7 +69,6 @@ class Person(FhirResourceBase):
             managingOrganization=managingOrganization,
             active=active,
             link=link,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

@@ -104,6 +104,7 @@ class HealthcareService(FhirResourceBase):
         super().__init__(
             resourceType="HealthcareService",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             active=active,
             providedBy=providedBy,
@@ -128,7 +129,6 @@ class HealthcareService(FhirResourceBase):
             notAvailable=notAvailable,
             availabilityExceptions=availabilityExceptions,
             endpoint=endpoint,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

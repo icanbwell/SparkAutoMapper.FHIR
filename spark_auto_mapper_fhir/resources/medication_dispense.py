@@ -36,9 +36,9 @@ class MedicationDispense(FhirResourceBase):
         super().__init__(
             resourceType="MedicationDispense",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             partOf=partOf,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

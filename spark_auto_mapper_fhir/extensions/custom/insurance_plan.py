@@ -16,6 +16,10 @@ class InsurancePlanExtension(ExtensionBase):
     ) -> None:
         """
         InsurancePlanExtension Extension type in FHIR
+
+
+        :param url: Automatically set to codeset property if not passed in
+        :param extension:
         """
         super().__init__(
             url=url or InsurancePlanExtension.codeset, extension=extension
@@ -24,4 +28,9 @@ class InsurancePlanExtension(ExtensionBase):
     # noinspection PyMethodParameters
     @genericclassproperty
     def codeset(cls) -> FhirUri:
+        """
+        https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/insurance_plan
+        :return:
+        :rtype:
+        """
         return "https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/insurance_plan"

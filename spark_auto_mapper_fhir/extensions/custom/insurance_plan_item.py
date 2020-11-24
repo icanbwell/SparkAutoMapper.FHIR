@@ -16,7 +16,11 @@ class InsurancePlanItemExtension(ExtensionBase):
     ) -> None:
         """
         InsurancePlanItemExtension Extension type in FHIR
-        Used to define relationship between
+        Used to define relationship between practitioner and insurance plan
+
+
+        :param url: Set to "plan" if not passed in
+        :param valueReference:
         """
         super().__init__(
             url=url or InsurancePlanItemExtension.codeset,
@@ -26,4 +30,9 @@ class InsurancePlanItemExtension(ExtensionBase):
     # noinspection PyMethodParameters
     @genericclassproperty
     def codeset(cls) -> FhirUri:
+        """
+        plan
+        :return:
+        :rtype:
+        """
         return "plan"

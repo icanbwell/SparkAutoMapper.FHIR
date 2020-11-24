@@ -62,6 +62,7 @@ class Organization(FhirResourceBase):
         super().__init__(
             resourceType="Organization",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             active=active,
             type_=type_,
@@ -72,7 +73,6 @@ class Organization(FhirResourceBase):
             partOf=partOf,
             contact=contact,
             endpoint=endpoint,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:
