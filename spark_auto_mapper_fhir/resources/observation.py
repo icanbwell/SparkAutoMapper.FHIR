@@ -28,8 +28,8 @@ class Observation(FhirResourceBase):
         super().__init__(
             resourceType="Observation",
             id_=id_,
+            extension=extension,
             identifier=identifier,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

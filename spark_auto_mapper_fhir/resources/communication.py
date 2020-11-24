@@ -35,9 +35,9 @@ class Communication(FhirResourceBase):
         super().__init__(
             resourceType="Communication",
             id_=id_,
+            extension=extension,
             language=language,
             preferred=preferred,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

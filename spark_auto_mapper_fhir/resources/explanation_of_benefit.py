@@ -3,6 +3,8 @@ from typing import Optional, Union
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.explanationofbenefit import ExplanationOfBenefitSchema
 
+from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_related_backbone_element import \
+    ExplanationOfBenefitRelatedBackboneElement
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -20,6 +22,7 @@ from spark_auto_mapper_fhir.valuesets.claim_sub_type import ClaimSubTypeCode
 from spark_auto_mapper_fhir.valuesets.claim_type import ClaimTypeCode
 from spark_auto_mapper_fhir.valuesets.explanation_of_benefit_status import ExplanationOfBenefitStatusCode
 from spark_auto_mapper_fhir.valuesets.form import FormCode
+from spark_auto_mapper_fhir.valuesets.funds_reserve import FundsReserveCode
 from spark_auto_mapper_fhir.valuesets.process_priority import ProcessPriorityCode
 from spark_auto_mapper_fhir.valuesets.remittance_outcome import RemittanceOutcomeCode
 from spark_auto_mapper_fhir.valuesets.claim_use import ClaimUseCode
@@ -73,6 +76,11 @@ class ExplanationOfBenefit(FhirResourceBase):
         subType: Optional[CodeableConcept[ClaimSubTypeCode]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         priority: Optional[CodeableConcept[ProcessPriorityCode]] = None,
+        fundsReserveRequested: Optional[CodeableConcept[FundsReserveCode]
+                                        ] = None,
+        fundsReserve: Optional[CodeableConcept[FundsReserveCode]] = None,
+        related: Optional[FhirList[ExplanationOfBenefitRelatedBackboneElement]
+                          ] = None,
         prescription: Optional[Reference[Union[MedicationRequest,
                                                VisionPrescription]]] = None,
         originalPrescription: Optional[Reference[Union[MedicationRequest]]
@@ -130,6 +138,9 @@ class ExplanationOfBenefit(FhirResourceBase):
         :param subType: More granular claim type. https://hl7.org/FHIR/valueset-claim-subtype.html
         :param identifier: Business Identifier for the resource
         :param priority: Desired processing urgency. http://terminology.hl7.org/CodeSystem/processpriority
+        :param fundsReserveRequested: For whom to reserve funds
+        :param fundsReserve: Funds reserved status
+        :param related: Prior or corollary claims
         :param prescription: Prescription authorizing services or products
         :param originalPrescription: Original prescription if superceded by fulfiller
         :param payee: Recipient of benefits payable
@@ -160,20 +171,22 @@ class ExplanationOfBenefit(FhirResourceBase):
         super().__init__(
             resourceType="ExplanationOfBenefit",
             id_=id_,
+            extension=extension,
+            identifier=identifier,
             status=status,
             type_=type_,
+            subType=subType,
             use=use,
             patient=patient,
-            created=created,
-            insurer=insurer,
-            insurance=insurance,
-            outcome=outcome,
-            enterer=enterer,
-            provider=provider,
             billablePeriod=billablePeriod,
-            subType=subType,
-            identifier=identifier,
+            created=created,
+            enterer=enterer,
+            insurer=insurer,
+            provider=provider,
             priority=priority,
+            fundsReserveRequested=fundsReserveRequested,
+            fundsReserve=fundsReserve,
+            related=related,
             prescription=prescription,
             originalPrescription=originalPrescription,
             payee=payee,
@@ -181,6 +194,7 @@ class ExplanationOfBenefit(FhirResourceBase):
             facility=facility,
             claim=claim,
             claimResponse=claimResponse,
+            outcome=outcome,
             disposition=disposition,
             preAuthRef=preAuthRef,
             preAuthRefPeriod=preAuthRefPeriod,
@@ -189,6 +203,7 @@ class ExplanationOfBenefit(FhirResourceBase):
             diagnosis=diagnosis,
             procedure=procedure,
             precedence=precedence,
+            insurance=insurance,
             accident=accident,
             item=item,
             addItem=addItem,
@@ -200,7 +215,6 @@ class ExplanationOfBenefit(FhirResourceBase):
             processNote=processNote,
             benefitPeriod=benefitPeriod,
             benefitBalance=benefitBalance,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

@@ -75,6 +75,7 @@ class PractitionerRole(FhirResourceBase):
         super().__init__(
             resourceType="PractitionerRole",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             active=active,
             period=period,
@@ -89,7 +90,6 @@ class PractitionerRole(FhirResourceBase):
             notAvailable=notAvailable,
             availabilityExceptions=availabilityExceptions,
             endpoint=endpoint,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

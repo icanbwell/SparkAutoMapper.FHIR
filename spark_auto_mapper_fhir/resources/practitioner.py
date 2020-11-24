@@ -16,8 +16,8 @@ from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.provider_qualification_backbone_element import \
-    ProviderQualificationBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.practitioner_qualification_backbone_element import \
+    PractitionerQualificationBackboneElement
 from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
 from spark_auto_mapper_fhir.valuesets.common_language import CommonLanguageCode
 
@@ -35,8 +35,8 @@ class Practitioner(FhirResourceBase):
         gender: Optional[AdministrativeGenderCode] = None,
         birthDate: Optional[FhirDate] = None,
         photo: Optional[FhirList[Attachment]] = None,
-        qualification: Optional[FhirList[ProviderQualificationBackboneElement]
-                                ] = None,
+        qualification: Optional[
+            FhirList[PractitionerQualificationBackboneElement]] = None,
         communication: Optional[FhirList[CodeableConcept[CommonLanguageCode]]
                                 ] = None,
         extension: Optional[FhirList[ExtensionBase]] = None
@@ -63,6 +63,7 @@ class Practitioner(FhirResourceBase):
         super().__init__(
             resourceType="Practitioner",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             active=active,
             name=name,
@@ -73,7 +74,6 @@ class Practitioner(FhirResourceBase):
             photo=photo,
             qualification=qualification,
             communication=communication,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

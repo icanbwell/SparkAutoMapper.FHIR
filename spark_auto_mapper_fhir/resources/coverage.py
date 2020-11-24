@@ -87,24 +87,24 @@ class Coverage(FhirResourceBase):
         super().__init__(
             resourceType="Coverage",
             id_=id_,
-            status=status,
-            payor=payor,
-            beneficiary=beneficiary,
+            extension=extension,
             identifier=identifier,
+            status=status,
             type_=type_,
             policyHolder=policyHolder,
             subscriber=subscriber,
             subscriberId=subscriberId,
+            beneficiary=beneficiary,
             dependent=dependent,
             relationship=relationship,
             period=period,
+            payor=payor,
             class_=class_,
             order=order,
             network=network,
             costToBeneficiary=costToBeneficiary,
             subrogation=subrogation,
             contract=contract,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

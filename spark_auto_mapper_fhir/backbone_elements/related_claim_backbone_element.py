@@ -18,7 +18,6 @@ class RelatedClaimBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         claim: Optional[Reference[Claim]] = None,
-        # should be FhirClaim but we get circular import
         relationship: Optional[CodeableConcept[RelatedClaimRelationshipCode]
                                ] = None,
         reference: Optional[Identifier] = None

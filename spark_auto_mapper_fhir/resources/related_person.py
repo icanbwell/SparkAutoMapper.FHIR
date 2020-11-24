@@ -71,6 +71,7 @@ class RelatedPerson(FhirResourceBase):
             patient=patient,
             resourceType="RelatedPerson",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             active=active,
             relationship=relationship,
@@ -81,8 +82,7 @@ class RelatedPerson(FhirResourceBase):
             address=address,
             photo=photo,
             period=period,
-            communication=communication,
-            extension=extension
+            communication=communication
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

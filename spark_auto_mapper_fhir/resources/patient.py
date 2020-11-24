@@ -89,6 +89,7 @@ class Patient(FhirResourceBase):
         super().__init__(
             resourceType="Patient",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             active=active,
             name=name,
@@ -106,8 +107,7 @@ class Patient(FhirResourceBase):
             communication=communication,
             generalPractitioner=generalPractitioner,
             managingOrganization=managingOrganization,
-            link=link,
-            extension=extension
+            link=link
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:
