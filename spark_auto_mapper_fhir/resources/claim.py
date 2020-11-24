@@ -120,6 +120,7 @@ class Claim(FhirResourceBase):
         super().__init__(
             resourceType="Claim",
             id_=id_,
+            extension=extension,
             status=status,
             type_=type_,
             use=use,
@@ -147,7 +148,6 @@ class Claim(FhirResourceBase):
             accident=accident,
             item=item,
             total=total,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

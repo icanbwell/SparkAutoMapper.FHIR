@@ -63,6 +63,7 @@ class Practitioner(FhirResourceBase):
         super().__init__(
             resourceType="Practitioner",
             id_=id_,
+            extension=extension,
             identifier=identifier,
             active=active,
             name=name,
@@ -73,7 +74,6 @@ class Practitioner(FhirResourceBase):
             photo=photo,
             qualification=qualification,
             communication=communication,
-            extension=extension
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:
