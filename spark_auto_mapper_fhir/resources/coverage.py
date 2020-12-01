@@ -3,6 +3,7 @@ from typing import Optional, Union
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.coverage import CoverageSchema
 
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -37,6 +38,7 @@ class Coverage(FhirResourceBase):
                                         RelatedPerson]]],
         beneficiary: Reference[Patient],
         id_: FhirId,
+        meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[CodeableConcept[CoverageTypeAndSelfPayCode]] = None,
         policyHolder: Optional[Reference[Union[Patient, RelatedPerson,
@@ -87,6 +89,7 @@ class Coverage(FhirResourceBase):
         super().__init__(
             resourceType="Coverage",
             id_=id_,
+            meta=meta,
             extension=extension,
             identifier=identifier,
             status=status,

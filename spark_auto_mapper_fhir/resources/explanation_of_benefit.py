@@ -5,6 +5,7 @@ from spark_fhir_schemas.r4.resources.explanationofbenefit import ExplanationOfBe
 
 from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_related_backbone_element import \
     ExplanationOfBenefitRelatedBackboneElement
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -67,6 +68,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         insurance: FhirList[InsuranceBackboneElement],
         outcome: RemittanceOutcomeCode,
         id_: FhirId,
+        meta: Optional[Meta] = None,
         enterer: Optional[Reference[Union[Practitioner,
                                           PractitionerRole]]] = None,
         provider: Optional[FhirList[Reference[Union[Organization, Practitioner,
@@ -171,6 +173,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         super().__init__(
             resourceType="ExplanationOfBenefit",
             id_=id_,
+            meta=meta,
             extension=extension,
             identifier=identifier,
             status=status,

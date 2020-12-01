@@ -4,6 +4,7 @@ from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.medicationdispense import MedicationDispenseSchema
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -17,6 +18,7 @@ class MedicationDispense(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
+        meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         partOf: Optional[FhirList[Reference[Procedure]]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None
@@ -36,6 +38,7 @@ class MedicationDispense(FhirResourceBase):
         super().__init__(
             resourceType="MedicationDispense",
             id_=id_,
+            meta=meta,
             extension=extension,
             identifier=identifier,
             partOf=partOf,

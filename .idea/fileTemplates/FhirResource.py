@@ -4,11 +4,13 @@ from pyspark.sql.types import StructType
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 
 
 class $ClassName(FhirResourceBase):
     def __init__(self,
                 id_: Optional[FhirId] = None, 
+                meta: Optional[Meta] = None,
                 extension: Optional[FhirList[Extension]] = None
         ) -> None:
         """
@@ -21,6 +23,7 @@ class $ClassName(FhirResourceBase):
         super().__init__(
             resourceType="$ClassName",
             id_=id_,
+            meta=meta,
             extension=extension
             )
 

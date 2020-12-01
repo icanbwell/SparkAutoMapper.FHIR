@@ -3,6 +3,7 @@ from typing import Optional
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.practitioner import PractitionerSchema
 
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -27,6 +28,7 @@ class Practitioner(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
+        meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         name: Optional[FhirList[HumanName]] = None,
@@ -63,6 +65,7 @@ class Practitioner(FhirResourceBase):
         super().__init__(
             resourceType="Practitioner",
             id_=id_,
+            meta=meta,
             extension=extension,
             identifier=identifier,
             active=active,
