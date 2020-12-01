@@ -14,7 +14,7 @@ class FhirList(AutoMapperList[_T]):
     def __init__(
         self,
         value: Optional[List[_T]],
-        include_null_properties: bool = True
+        include_null_properties: bool = False
     ) -> None:
         super().__init__(
             value=value, include_null_properties=include_null_properties
