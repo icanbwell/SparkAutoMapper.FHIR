@@ -9,6 +9,7 @@ from spark_auto_mapper_fhir.backbone_elements.practitioner_available_time_backbo
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -31,6 +32,7 @@ class PractitionerRole(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
+        meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         period: Optional[Period] = None,
@@ -75,6 +77,7 @@ class PractitionerRole(FhirResourceBase):
         super().__init__(
             resourceType="PractitionerRole",
             id_=id_,
+            meta=meta,
             extension=extension,
             identifier=identifier,
             active=active,

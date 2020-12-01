@@ -3,6 +3,7 @@ from typing import Optional, Union, Any
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.medicationrequest import MedicationRequestSchema
 
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -59,6 +60,7 @@ class MedicationRequest(FhirResourceBase):
         medication: MedicationBackboneElement,
         subject: Reference[Union[Patient, Group]],
         id_: FhirId,
+        meta: Optional[Meta] = None,
         statusReason: Optional[
             CodeableConcept[MedicationRequestStatusReasonCode]] = None,
         category: Optional[FhirList[
@@ -145,6 +147,7 @@ class MedicationRequest(FhirResourceBase):
         super().__init__(
             resourceType="MedicationRequest",
             id_=id_,
+            meta=meta,
             extension=extension,
             status=status,
             intent=intent,

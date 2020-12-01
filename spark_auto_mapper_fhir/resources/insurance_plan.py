@@ -9,6 +9,7 @@ from spark_auto_mapper_fhir.backbone_elements.insurance_plan_coverage_backbone_e
     InsurancePlanCoverageBackboneElement
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -28,6 +29,7 @@ class InsurancePlan(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
+        meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[PublicationStatusCode] = None,
         type_: Optional[CodeableConcept[InsurancePlanTypeCode]] = None,
@@ -70,6 +72,7 @@ class InsurancePlan(FhirResourceBase):
         super().__init__(
             resourceType="InsurancePlan",
             id_=id_,
+            meta=meta,
             extension=extension,
             identifier=identifier,
             status=status,

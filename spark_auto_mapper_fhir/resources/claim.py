@@ -3,6 +3,7 @@ from typing import Optional, Union
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.claim import ClaimSchema
 
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
@@ -54,6 +55,7 @@ class Claim(FhirResourceBase):
         priority: CodeableConcept[ProcessPriorityCode],
         insurance: FhirList[InsuranceBackboneElement],
         id_: FhirId,
+        meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         subType: Optional[CodeableConcept[ClaimSubTypeCode]] = None,
         billablePeriod: Optional[Period] = None,
@@ -120,6 +122,7 @@ class Claim(FhirResourceBase):
         super().__init__(
             resourceType="Claim",
             id_=id_,
+            meta=meta,
             extension=extension,
             status=status,
             type_=type_,
