@@ -1,6 +1,7 @@
 from typing import Optional
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
+from spark_auto_mapper_fhir.complex_types.structure_definition import StructureDefinition
 
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -22,7 +23,7 @@ class Meta(FhirComplexTypeBase):
         versionId: Optional[FhirId] = None,
         lastUpdated: Optional[FhirInstant] = None,
         source: Optional[FhirUri] = None,
-        # profile: Optional[FhirList[]],  # TODO:
+        profile: Optional[FhirList[StructureDefinition]] = None,
         security: Optional[FhirList[Coding[SecurityLabelsCode]]] = None,
         tag: Optional[FhirList[Coding[CommonTagsCode]]] = None,
     ) -> None:
@@ -41,6 +42,7 @@ class Meta(FhirComplexTypeBase):
         :param versionId: Version specific identifier
         :param lastUpdated: When the resource version last changed
         :param source: 	Identifies where the resource comes from
+        :param profile: Profiles this resource claims to conform to
         :param security: Security Labels applied to this resource
         :param tag: Tags applied to this resource
         """
@@ -50,6 +52,7 @@ class Meta(FhirComplexTypeBase):
             versionId=versionId,
             lastUpdated=lastUpdated,
             source=source,
+            profile=profile,
             security=security,
             tag=tag
         )
