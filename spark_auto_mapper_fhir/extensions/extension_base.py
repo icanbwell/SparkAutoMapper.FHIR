@@ -2,4 +2,7 @@ from spark_auto_mapper.data_types.complex.complex_base import AutoMapperDataType
 
 
 class ExtensionBase(AutoMapperDataTypeComplexBase):
-    pass
+    """
+    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
+
+    """

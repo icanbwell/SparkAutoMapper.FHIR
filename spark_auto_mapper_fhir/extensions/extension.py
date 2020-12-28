@@ -84,6 +84,7 @@ class Extension(ExtensionBase):
         :param extension: list of sub extensions
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             url=url,
             valueBoolean=valueBoolean,
@@ -99,6 +100,7 @@ class Extension(ExtensionBase):
             valueUnsignedInt=valueUnsignedInt,
             valueUri=valueUri,
             valueUrl=valueUrl,
+            valueBase64Binary=valueBase64Binary,
             valueCodeableConcept=valueCodeableConcept,
             valueCoding=valueCoding,
             valueCount=valueCount,
