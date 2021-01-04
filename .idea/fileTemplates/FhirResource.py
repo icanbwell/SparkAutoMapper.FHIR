@@ -2,6 +2,7 @@ from typing import Optional
 from pyspark.sql.types import StructType
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
@@ -27,5 +28,5 @@ class $ClassName(FhirResourceBase):
             extension=extension
             )
 
-    def get_schema(self) -> Optional[StructType]:
-        return ${ClassName}Schema.get_schema()
+    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+        return ${ClassName}Schema.get_schema(include_extension=include_extension)
