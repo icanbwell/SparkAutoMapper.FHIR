@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, Optional
 
 from pyspark.sql import DataFrame, Column
 from pyspark.sql.functions import lit
@@ -25,10 +25,14 @@ class FhirReference(AutoMapperTextLikeBase):
         self.column: Union[AutoMapperDataTypeColumn,
                            AutoMapperTextLikeBase] = FhirId(column)
 
-    def get_column_spec(self, source_df: DataFrame) -> Column:
+    def get_column_spec(
+        self, source_df: DataFrame, current_column: Optional[Column]
+    ) -> Column:
         # https://hl7.org/FHIR/datatypes.html#id
         column_spec = concat(
             lit(self.resource), lit("/"),
-            self.column.get_column_spec(source_df=source_df)
+            self.column.get_column_spec(
+                source_df=source_df, current_column=current_column
+            )
         )
         return column_spec
