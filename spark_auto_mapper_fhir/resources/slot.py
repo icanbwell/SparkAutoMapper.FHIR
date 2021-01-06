@@ -52,32 +52,32 @@ class Slot(FhirResourceBase):
 
 
         :param id_: id of resource
-        :param schedule: The schedule resource that this slot defines an interval of status information
-        :param status: busy | free | busy-unavailable | busy-tentative | entered-in-error
-        :param start: Date/Time that the slot is to begin
-        :param end: Date/Time that the slot is to conclude
         :param identifier: An identifier for the slot
         :param serviceCategory: A broad categorization of the service that is to be performed during this appointment
         :param serviceType: The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource
         :param specialty: The specialty of a practitioner that would be required to perform the service requested in this appointment
         :param appointmentType: The style of appointment or patient that may be booked in the slot (not service type)
+        :param schedule: The schedule resource that this slot defines an interval of status information
+        :param status: busy | free | busy-unavailable | busy-tentative | entered-in-error
+        :param start: Date/Time that the slot is to begin
+        :param end: Date/Time that the slot is to conclude
         :param overbooked: This slot has already been overbooked, appointments are unlikely to be accepted for this time
         :param comment: Comments on the slot to describe any extended information. Such as custom constraints on the slot
         """
         super().__init__(
             resourceType="Schedule",
             id_=id_,
-            schedule=schedule,
-            status=status,
-            start=start,
-            end=end,
             meta=meta,
-            identifier=identifier,
             extension=extension,
+            identifier=identifier,
             serviceCategory=serviceCategory,
             serviceType=serviceType,
             specialty=specialty,
             appointmentType=appointmentType,
+            schedule=schedule,
+            status=status,
+            start=start,
+            end=end,
             overbooked=overbooked,
             comment=comment,
         )

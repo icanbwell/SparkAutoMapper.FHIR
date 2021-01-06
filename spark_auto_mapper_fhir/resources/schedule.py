@@ -54,26 +54,26 @@ class Schedule(FhirResourceBase):
 
 
         :param id_: id of resource
-        :param actor: Resource(s) that availability information is being provided for
         :param identifier: An identifier for the schedule
         :param active: Whether this schedule is in active use
         :param serviceCategory: High-level category
         :param serviceType: Specific service
         :param specialty: Type of specialty needed
+        :param actor: Resource(s) that availability information is being provided for
         :param planningHorizon: Period of time covered by schedule
         :param comment: Comments on availability
         """
         super().__init__(
             resourceType="Schedule",
             id_=id_,
-            actor=actor,
             meta=meta,
-            identifier=identifier,
             extension=extension,
+            identifier=identifier,
             active=active,
             serviceCategory=serviceCategory,
             serviceType=serviceType,
             specialty=specialty,
+            actor=actor,
             planningHorizon=planningHorizon,
             comment=comment,
         )
