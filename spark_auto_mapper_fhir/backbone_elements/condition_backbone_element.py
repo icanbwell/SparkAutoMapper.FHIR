@@ -24,4 +24,6 @@ class ConditionBackboneElement(FhirBackboneElementBase):
         ConditionBackboneElement Backbone Element in FHIR
         https://www.hl7.org/fhir/backboneelement.html
         """
-        super().__init__(kind=kind, id_=id_,expression=expression, extension=extension)
+        super().__init__(
+            kind=kind, id_=id_, expression=expression, extension=extension
+        )

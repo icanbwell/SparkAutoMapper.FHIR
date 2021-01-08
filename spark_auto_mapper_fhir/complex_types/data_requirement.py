@@ -8,15 +8,14 @@ from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComp
 
 
 class DataRequirement(FhirComplexTypeBase):
-    def __init__(self, id_: Optional[FhirId] = None,
-                 code_filter:Optional[FhirList[CodeFilter]]=None,
-                 extension: Optional[FhirList[ExtensionBase]] = None) -> None:
+    def __init__(
+        self,
+        id_: Optional[FhirId] = None,
+        code_filter: Optional[FhirList[CodeFilter]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None
+    ) -> None:
         """
         DataRequirement Complex Type in FHIR
         https://www.hl7.org/fhir/metadatatypes.html#DataRequirement
         """
-        super().__init__(
-            id_=id_,
-            code_filter=code_filter,
-            extension=extension
-        )
+        super().__init__(id_=id_, code_filter=code_filter, extension=extension)

@@ -13,7 +13,6 @@ class TriggerTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-trigger-type.html
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -22,9 +21,9 @@ class TriggerTypeCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'TriggerTypeCode']) -> None:
             self.f: Callable[..., 'TriggerTypeCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['TriggerTypeCode']
-                    ) -> 'TriggerTypeCode':
+        def __get__(
+            self, obj: Any, owner: Type['TriggerTypeCode']
+        ) -> 'TriggerTypeCode':
             return self.f(owner)
 
     @classproperty
@@ -34,6 +33,7 @@ class TriggerTypeCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return TriggerTypeCode("A")
+
     @classproperty
     def named_event(cls) -> 'TriggerTypeCode':
         """

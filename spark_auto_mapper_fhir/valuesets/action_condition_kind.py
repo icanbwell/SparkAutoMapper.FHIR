@@ -13,18 +13,19 @@ class ActionConditionKindCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-condition-kind.html
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ActionConditionKindCode']) -> None:
+        def __init__(
+            self, f: Callable[..., 'ActionConditionKindCode']
+        ) -> None:
             self.f: Callable[..., 'ActionConditionKindCode'] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['ActionConditionKindCode']
-                    ) -> 'ActionConditionKindCode':
+        def __get__(
+            self, obj: Any, owner: Type['ActionConditionKindCode']
+        ) -> 'ActionConditionKindCode':
             return self.f(owner)
 
     @classproperty
@@ -34,6 +35,7 @@ class ActionConditionKindCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return ActionConditionKindCode("applicability")
+
     @classproperty
     def start(cls) -> 'ActionConditionKindCode':
         """
@@ -41,6 +43,7 @@ class ActionConditionKindCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return ActionConditionKindCode("start")
+
     @classproperty
     def stop(cls) -> 'ActionConditionKindCode':
         """
