@@ -24,8 +24,8 @@ class CodeFilter(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
+            extension=extension,
             path=path,
             search_param=search_param,
             code=code,
-            extension=extension
         )

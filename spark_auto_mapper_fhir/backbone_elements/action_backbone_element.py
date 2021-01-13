@@ -25,8 +25,8 @@ class ActionBackboneElement(FhirBackboneElementBase):
         """
         super().__init__(
             id_=id_,
+            extension=extension,
             code=code,
             trigger=trigger,
             condition=condition,
-            extension=extension
         )

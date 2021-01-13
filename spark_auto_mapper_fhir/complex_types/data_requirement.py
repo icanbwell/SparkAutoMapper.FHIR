@@ -1,7 +1,6 @@
 from typing import Optional
 
 from spark_auto_mapper_fhir.complex_types.code_filter import CodeFilter
-from spark_auto_mapper_fhir.complex_types.coding import Coding
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -12,7 +11,7 @@ from spark_auto_mapper_fhir.valuesets.all_types import FhirAllTypesCode
 class DataRequirement(FhirComplexTypeBase):
     def __init__(
         self,
-        type_: Coding[FhirAllTypesCode],
+        type_: FhirAllTypesCode,
         id_: Optional[FhirId] = None,
         code_filter: Optional[FhirList[CodeFilter]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None
@@ -22,5 +21,8 @@ class DataRequirement(FhirComplexTypeBase):
         https://www.hl7.org/fhir/metadatatypes.html#DataRequirement
         """
         super().__init__(
-            id_=id_, type_=type_, code_filter=code_filter, extension=extension
+            id_=id_,
+            extension=extension,
+            type_=type_,
+            code_filter=code_filter,
         )
