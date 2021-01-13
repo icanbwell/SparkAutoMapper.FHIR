@@ -9,11 +9,13 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.valuesets.publication_status import PublicationStatusCode
 
 
 class PlanDefinition(FhirResourceBase):
     def __init__(
         self,
+        status: PublicationStatusCode,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         action: Optional[FhirList[ActionBackboneElement]] = None,
@@ -29,6 +31,7 @@ class PlanDefinition(FhirResourceBase):
         super().__init__(
             resourceType="PlanDefinition",
             id_=id_,
+            status=status,
             action=action,
             meta=meta,
             extension=extension
