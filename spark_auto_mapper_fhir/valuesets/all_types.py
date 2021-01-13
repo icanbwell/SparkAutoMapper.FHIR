@@ -39,7 +39,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def BackboneElement(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("backboneelement")
+        return FhirAllTypesCode("backbone_element")
 
     @classproperty
     def Coding(cls) -> 'FhirAllTypesCode':
@@ -49,7 +49,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def ContactPoint(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("contactpoint")
+        return FhirAllTypesCode("contact_point")
 
     @classproperty
     def Count(cls) -> 'FhirAllTypesCode':
@@ -69,7 +69,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def ElementDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("elementdefinition")
+        return FhirAllTypesCode("element_definition")
 
     @classproperty
     def Extension(cls) -> 'FhirAllTypesCode':
@@ -89,12 +89,12 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def MoneyQuantity(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("moneyquantity")
+        return FhirAllTypesCode("money_quantity")
 
     @classproperty
     def ParameterDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("parameterdefinition")
+        return FhirAllTypesCode("parameter_definition")
 
     @classproperty
     def Population(cls) -> 'FhirAllTypesCode':
@@ -104,7 +104,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def ProductShelfLife(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("productshelflife")
+        return FhirAllTypesCode("product_shelf_life")
 
     @classproperty
     def Range(cls) -> 'FhirAllTypesCode':
@@ -119,12 +119,12 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def SampledData(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("sampleddata")
+        return FhirAllTypesCode("sampled_data")
 
     @classproperty
     def SimpleQuantity(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("simplequantity")
+        return FhirAllTypesCode("simple_quantity")
 
     @classproperty
     def Timing(cls) -> 'FhirAllTypesCode':
@@ -134,7 +134,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def UsageContext(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("usagecontext")
+        return FhirAllTypesCode("usage_context")
 
     @classproperty
     def boolean(cls) -> 'FhirAllTypesCode':
@@ -149,7 +149,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def dateTime(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("datetime")
+        return FhirAllTypesCode("date_time")
 
     @classproperty
     def id(cls) -> 'FhirAllTypesCode':
@@ -162,6 +162,11 @@ class FhirAllTypesCode(FhirValueSetBase):
         return FhirAllTypesCode("integer")
 
     @classproperty
+    def oid_(cls) -> 'FhirAllTypesCode':
+        # noinspection PyCallingNonCallable
+        return FhirAllTypesCode("oid")
+
+    @classproperty
     def string(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
         return FhirAllTypesCode("string")
@@ -169,7 +174,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def unsignedInt(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("unsignedint")
+        return FhirAllTypesCode("unsigned_int")
 
     @classproperty
     def url(cls) -> 'FhirAllTypesCode':
@@ -184,17 +189,17 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def ActivityDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("activitydefinition")
+        return FhirAllTypesCode("activity_definition")
 
     @classproperty
     def AllergyIntolerance(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("allergyintolerance")
+        return FhirAllTypesCode("allergy_intolerance")
 
     @classproperty
     def AppointmentResponse(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("appointmentresponse")
+        return FhirAllTypesCode("appointment_response")
 
     @classproperty
     def Basic(cls) -> 'FhirAllTypesCode':
@@ -204,7 +209,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def BiologicallyDerivedProduct(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("biologicallyderivedproduct")
+        return FhirAllTypesCode("biologically_derived_product")
 
     @classproperty
     def Bundle(cls) -> 'FhirAllTypesCode':
@@ -214,32 +219,32 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def CarePlan(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("careplan")
+        return FhirAllTypesCode("care_plan")
 
     @classproperty
     def CatalogEntry(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("catalogentry")
+        return FhirAllTypesCode("catalog_entry")
 
     @classproperty
     def ChargeItemDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("chargeitemdefinition")
+        return FhirAllTypesCode("charge_item_definition")
 
     @classproperty
     def ClaimResponse(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("claimresponse")
+        return FhirAllTypesCode("claim_response")
 
     @classproperty
     def CodeSystem(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("codesystem")
+        return FhirAllTypesCode("code_system")
 
     @classproperty
     def CommunicationRequest(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("communicationrequest")
+        return FhirAllTypesCode("communication_request")
 
     @classproperty
     def Composition(cls) -> 'FhirAllTypesCode':
@@ -259,37 +264,37 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def CoverageEligibilityRequest(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("coverageeligibilityrequest")
+        return FhirAllTypesCode("coverage_eligibility_request")
 
     @classproperty
     def DetectedIssue(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("detectedissue")
+        return FhirAllTypesCode("detected_issue")
 
     @classproperty
     def DeviceDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("devicedefinition")
+        return FhirAllTypesCode("device_definition")
 
     @classproperty
     def DeviceRequest(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("devicerequest")
+        return FhirAllTypesCode("device_request")
 
     @classproperty
     def DiagnosticReport(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("diagnosticreport")
+        return FhirAllTypesCode("diagnostic_report")
 
     @classproperty
     def DocumentReference(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("documentreference")
+        return FhirAllTypesCode("document_reference")
 
     @classproperty
     def EffectEvidenceSynthesis(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("effectevidencesynthesis")
+        return FhirAllTypesCode("effect_evidence_synthesis")
 
     @classproperty
     def Endpoint(cls) -> 'FhirAllTypesCode':
@@ -299,22 +304,22 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def EnrollmentResponse(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("enrollmentresponse")
+        return FhirAllTypesCode("enrollment_response")
 
     @classproperty
     def EventDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("eventdefinition")
+        return FhirAllTypesCode("event_definition")
 
     @classproperty
     def EvidenceVariable(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("evidencevariable")
+        return FhirAllTypesCode("evidence_variable")
 
     @classproperty
     def ExplanationOfBenefit(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("explanationofbenefit")
+        return FhirAllTypesCode("explanation_of_benefit")
 
     @classproperty
     def Flag(cls) -> 'FhirAllTypesCode':
@@ -324,27 +329,27 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def GraphDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("graphdefinition")
+        return FhirAllTypesCode("graph_definition")
 
     @classproperty
     def GuidanceResponse(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("guidanceresponse")
+        return FhirAllTypesCode("guidance_response")
 
     @classproperty
     def ImagingStudy(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("imagingstudy")
+        return FhirAllTypesCode("imaging_study")
 
     @classproperty
     def ImmunizationEvaluation(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("immunizationevaluation")
+        return FhirAllTypesCode("immunization_evaluation")
 
     @classproperty
     def ImplementationGuide(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("implementationguide")
+        return FhirAllTypesCode("implementation_guide")
 
     @classproperty
     def Invoice(cls) -> 'FhirAllTypesCode':
@@ -364,7 +369,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def MeasureReport(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("measurereport")
+        return FhirAllTypesCode("measure_report")
 
     @classproperty
     def Medication(cls) -> 'FhirAllTypesCode':
@@ -374,67 +379,67 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def MedicationDispense(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("medicationdispense")
+        return FhirAllTypesCode("medication_dispense")
 
     @classproperty
     def MedicationRequest(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("medicationrequest")
+        return FhirAllTypesCode("medication_request")
 
     @classproperty
     def MedicinalProduct(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("medicinalproduct")
+        return FhirAllTypesCode("medicinal_product")
 
     @classproperty
     def MedicinalProductContraindication(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("medicinalproductcontraindication")
+        return FhirAllTypesCode("medicinal_product_contraindication")
 
     @classproperty
     def MedicinalProductIngredient(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("medicinalproductingredient")
+        return FhirAllTypesCode("medicinal_product_ingredient")
 
     @classproperty
     def MedicinalProductManufactured(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("medicinalproductmanufactured")
+        return FhirAllTypesCode("medicinal_product_manufactured")
 
     @classproperty
     def MedicinalProductPharmaceutical(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("medicinalproductpharmaceutical")
+        return FhirAllTypesCode("medicinal_product_pharmaceutical")
 
     @classproperty
     def MessageDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("messagedefinition")
+        return FhirAllTypesCode("message_definition")
 
     @classproperty
     def MolecularSequence(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("molecularsequence")
+        return FhirAllTypesCode("molecular_sequence")
 
     @classproperty
     def NutritionOrder(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("nutritionorder")
+        return FhirAllTypesCode("nutrition_order")
 
     @classproperty
     def ObservationDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("observationdefinition")
+        return FhirAllTypesCode("observation_definition")
 
     @classproperty
     def OperationOutcome(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("operationoutcome")
+        return FhirAllTypesCode("operation_outcome")
 
     @classproperty
     def OrganizationAffiliation(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("organizationaffiliation")
+        return FhirAllTypesCode("organization_affiliation")
 
     @classproperty
     def Patient(cls) -> 'FhirAllTypesCode':
@@ -444,17 +449,17 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def PaymentReconciliation(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("paymentreconciliation")
+        return FhirAllTypesCode("payment_reconciliation")
 
     @classproperty
     def PlanDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("plandefinition")
+        return FhirAllTypesCode("plan_definition")
 
     @classproperty
     def PractitionerRole(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("practitionerrole")
+        return FhirAllTypesCode("practitioner_role")
 
     @classproperty
     def Provenance(cls) -> 'FhirAllTypesCode':
@@ -464,27 +469,27 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def QuestionnaireResponse(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("questionnaireresponse")
+        return FhirAllTypesCode("questionnaire_response")
 
     @classproperty
     def RequestGroup(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("requestgroup")
+        return FhirAllTypesCode("request_group")
 
     @classproperty
     def ResearchElementDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("researchelementdefinition")
+        return FhirAllTypesCode("research_element_definition")
 
     @classproperty
     def ResearchSubject(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("researchsubject")
+        return FhirAllTypesCode("research_subject")
 
     @classproperty
     def RiskAssessment(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("riskassessment")
+        return FhirAllTypesCode("risk_assessment")
 
     @classproperty
     def Schedule(cls) -> 'FhirAllTypesCode':
@@ -494,7 +499,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def ServiceRequest(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("servicerequest")
+        return FhirAllTypesCode("service_request")
 
     @classproperty
     def Specimen(cls) -> 'FhirAllTypesCode':
@@ -504,7 +509,7 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def StructureDefinition(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("structuredefinition")
+        return FhirAllTypesCode("structure_definition")
 
     @classproperty
     def Subscription(cls) -> 'FhirAllTypesCode':
@@ -514,22 +519,22 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def SubstanceNucleicAcid(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("substancenucleicacid")
+        return FhirAllTypesCode("substance_nucleic_acid")
 
     @classproperty
     def SubstanceProtein(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("substanceprotein")
+        return FhirAllTypesCode("substance_protein")
 
     @classproperty
     def SubstanceSourceMaterial(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("substancesourcematerial")
+        return FhirAllTypesCode("substance_source_material")
 
     @classproperty
     def SupplyDelivery(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("supplydelivery")
+        return FhirAllTypesCode("supply_delivery")
 
     @classproperty
     def Task(cls) -> 'FhirAllTypesCode':
@@ -539,17 +544,17 @@ class FhirAllTypesCode(FhirValueSetBase):
     @classproperty
     def TestReport(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("testreport")
+        return FhirAllTypesCode("test_report")
 
     @classproperty
     def ValueSet(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("valueset")
+        return FhirAllTypesCode("value_set")
 
     @classproperty
     def VisionPrescription(cls) -> 'FhirAllTypesCode':
         # noinspection PyCallingNonCallable
-        return FhirAllTypesCode("visionprescription")
+        return FhirAllTypesCode("vision_prescription")
 
     @classproperty
     def Any(cls) -> 'FhirAllTypesCode':
