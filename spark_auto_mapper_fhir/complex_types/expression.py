@@ -25,10 +25,10 @@ class Expression(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
+            extension=extension,
             description=description,
             name=name,
             language=language,
             expression=expression,
             reference=reference,
-            extension=extension
         )

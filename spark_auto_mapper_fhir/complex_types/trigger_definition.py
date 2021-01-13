@@ -27,10 +27,10 @@ class TriggerDefinition(FhirComplexTypeBase):
         https://www.hl7.org/fhir/metadatatypes.html#TriggerDefinition
         """
         super().__init__(
-            type_=type_,
             id_=id_,
+            extension=extension,
+            type_=type_,
             name=name,
             data=data,
             condition=condition,
-            extension=extension,
         )

@@ -31,10 +31,10 @@ class PlanDefinition(FhirResourceBase):
         super().__init__(
             resourceType="PlanDefinition",
             id_=id_,
-            status=status,
-            action=action,
             meta=meta,
-            extension=extension
+            extension=extension,
+            status=status,
+            action=action
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:

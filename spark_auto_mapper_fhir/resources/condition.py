@@ -33,9 +33,9 @@ class Condition(FhirResourceBase):
             resourceType="Condition",
             id_=id_,
             meta=meta,
+            extension=extension,
             identifier=identifier,
             code=code,
-            extension=extension,
         )
 
     def get_schema(self, include_extension: bool) -> Optional[StructType]:
