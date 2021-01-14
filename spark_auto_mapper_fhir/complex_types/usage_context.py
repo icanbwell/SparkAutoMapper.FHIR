@@ -23,7 +23,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
-from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
 from spark_auto_mapper_fhir.resources.research_study import ResearchStudy
 from spark_auto_mapper_fhir.valuesets.usage_context_type import UsageContextTypeCode
 from spark_auto_mapper_fhir.valuesets.use_context import ConformanceUseContextCode
@@ -40,8 +42,8 @@ class UsageContext(FhirComplexTypeBase):
             CodeableConcept[ConformanceUseContextCode]] = None,
         valueQuantity: Optional[Quantity] = None,
         valueRange: Optional[Range] = None,
-        valueReference: Optional[Reference[Union[PlanDefinition, ResearchStudy,
-                                                 InsurancePlan,
+        valueReference: Optional[Reference[Union['PlanDefinition',
+                                                 ResearchStudy, InsurancePlan,
                                                  HealthcareService, Group,
                                                  Location,
                                                  Organization]]] = None
