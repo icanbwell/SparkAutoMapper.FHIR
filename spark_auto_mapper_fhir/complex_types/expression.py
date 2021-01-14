@@ -13,15 +13,24 @@ class Expression(FhirComplexTypeBase):
         self,
         language: CommonLanguageCode,
         id_: Optional[FhirId] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         name: Optional[FhirId] = None,
         expression: Optional[FhirString] = None,
         reference: Optional[FhirUri] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
     ) -> None:
         """
         Expression Complex Type in FHIR
         https://www.hl7.org/fhir/metadatatypes.html#Expression
+        An expression that can be used to generate a value
+        + Rule: An expression or a reference must be provided
+
+
+        :param description: Natural language description of the condition
+        :param name: Short name assigned to expression for reuse
+        :param language: text/cql | text/fhirpath | application/x-fhir-query | etc.
+        :param expression: Expression in specified language
+        :param reference: Where the expression is found
         """
         super().__init__(
             id_=id_,

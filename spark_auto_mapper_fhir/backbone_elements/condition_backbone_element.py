@@ -17,8 +17,8 @@ class ConditionBackboneElement(FhirBackboneElementBase):
         self,
         kind: ActionConditionKindCode,
         id_: Optional[FhirId] = None,
-        expression: Optional[Expression] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
+        expression: Optional[Expression] = None,
     ) -> None:
         """
         ConditionBackboneElement Backbone Element in FHIR
