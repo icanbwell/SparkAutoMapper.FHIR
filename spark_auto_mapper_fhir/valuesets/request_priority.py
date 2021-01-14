@@ -27,13 +27,44 @@ class RequestPriorityCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'RequestPriorityCode':
+    def Routine(cls) -> 'RequestPriorityCode':
         """
-        Comment
+        The request has normal priority.
         """
         # noinspection PyCallingNonCallable
-        return RequestPriorityCode("A")
+        return RequestPriorityCode("routine")
+
+    @classproperty
+    def Urgent(cls) -> 'RequestPriorityCode':
+        """
+        The request should be actioned promptly - higher priority than routine.
+        """
+        # noinspection PyCallingNonCallable
+        return RequestPriorityCode("urgent")
+
+    @classproperty
+    def ASAP(cls) -> 'RequestPriorityCode':
+        """
+        The request should be actioned as soon as possible - higher priority than urgent.
+        """
+        # noinspection PyCallingNonCallable
+        return RequestPriorityCode("asap")
+
+    @classproperty
+    def STAT(cls) -> 'RequestPriorityCode':
+        """
+        The request should be actioned immediately - highest possible priority. E.g. an emergency.
+        """
+        # noinspection PyCallingNonCallable
+        return RequestPriorityCode("stat")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
         return "http://hl7.org/fhir/request-priority"
+
+    @genericclassproperty
+    def oid(cls) -> FhirUri:
+        """
+        2.16.840.1.113883.4.642.3.115
+        """
+        return "2.16.840.1.113883.4.642.3.115"
