@@ -81,7 +81,8 @@ class ActionBackboneElement(FhirBackboneElementBase):
         definitionUri: Optional[FhirUri] = None,
         transform: Optional[FhirCanonical] = None,
         dynamicValue: Optional[
-            FhirList[PlanDefinitionDynamicValueBackboneElement]] = None
+            FhirList[PlanDefinitionDynamicValueBackboneElement]] = None,
+        action: Optional[FhirList['ActionBackboneElement']] = None
     ) -> None:
         """
         ActionBackboneElement Backbone Element in FHIR
@@ -158,5 +159,6 @@ class ActionBackboneElement(FhirBackboneElementBase):
             definitionCanonical=definitionCanonical,
             definitionUri=definitionUri,
             transform=transform,
-            dynamicValue=dynamicValue
+            dynamicValue=dynamicValue,
+            action=action
         )

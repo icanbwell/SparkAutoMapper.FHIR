@@ -43,6 +43,7 @@ from spark_auto_mapper_fhir.valuesets.subject_type import SubjectTypeCode
 
 
 class PlanDefinition(FhirResourceBase):
+    # noinspection PyPep8Naming
     def __init__(
         self,
         status: PublicationStatusCode,
