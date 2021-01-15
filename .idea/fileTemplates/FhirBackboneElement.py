@@ -9,6 +9,7 @@ class $ClassName(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None) -> None:
         """
         $ClassName Backbone Element in FHIR
+        IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR properties not just the ones you need   
         $Documentation
         """
         super().__init__(
