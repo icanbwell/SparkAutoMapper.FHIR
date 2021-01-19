@@ -1,4 +1,4 @@
-from typing import Optional, Union, Any
+from typing import Optional, Union, Any, TYPE_CHECKING
 
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.medicationrequest import MedicationRequestSchema
@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.resources.care_plan import CarePlan
 from spark_auto_mapper_fhir.resources.care_team import CareTeam
 from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+
 from spark_auto_mapper_fhir.valuesets.condition import ConditionCode
 from spark_auto_mapper_fhir.valuesets.medication_request_category import MedicationRequestCategoryCode
 from spark_auto_mapper_fhir.valuesets.medication_request_course_of_therapy import \
@@ -23,7 +24,8 @@ from spark_auto_mapper_fhir.valuesets.medication_request_status_reason import \
     MedicationRequestStatusReasonCode
 from spark_auto_mapper_fhir.valuesets.procedure_performer_role import ProcedurePerformerRoleCode
 from spark_auto_mapper_fhir.valuesets.request_priority import RequestPriorityCode
-from spark_auto_mapper_fhir.resources.condition import Condition
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.condition import Condition
 from spark_auto_mapper_fhir.resources.coverage import Coverage
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
@@ -38,7 +40,8 @@ from spark_auto_mapper_fhir.resources.immunization_recommendation import Immuniz
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.backbone_elements.medication_backbone_element import \
     MedicationBackboneElement
-from spark_auto_mapper_fhir.resources.observation import Observation
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -83,8 +86,8 @@ class MedicationRequest(FhirResourceBase):
         recorder: Optional[Reference[Union[Practitioner,
                                            PractitionerRole]]] = None,
         reasonCode: Optional[FhirList[CodeableConcept[ConditionCode]]] = None,
-        reasonReference: Optional[FhirList[Reference[Union[Condition,
-                                                           Observation]]]
+        reasonReference: Optional[FhirList[Reference[Union['Condition',
+                                                           'Observation']]]
                                   ] = None,
         basedOn: Optional[FhirList[Union[CarePlan, 'MedicationRequest',
                                          ServiceRequest,
