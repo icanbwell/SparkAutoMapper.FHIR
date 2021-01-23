@@ -1,4 +1,4 @@
-from typing import Optional, Any
+from typing import Optional, Any, Union
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.questionnaireresponse import QuestionnaireResponseSchema
 
@@ -9,9 +9,21 @@ from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.resources.care_plan import CarePlan
+from spark_auto_mapper_fhir.resources.device import Device
+from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.resources.observation import Observation
+from spark_auto_mapper_fhir.resources.organization import Organization
+from spark_auto_mapper_fhir.resources.patient import Patient
+from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+from spark_auto_mapper_fhir.resources.procedure import Procedure
+from spark_auto_mapper_fhir.resources.questionnaire import Questionnaire
+from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 from spark_auto_mapper_fhir.valuesets.questionnaire_answers_status import QuestionnaireAnswersStatusCode
 
 
@@ -20,8 +32,20 @@ class QuestionnaireResponse(FhirResourceBase):
         self,
         status: QuestionnaireAnswersStatusCode,
         identifier: Optional[Identifier] = None,
+        based_on: Optional[FhirList[Reference[Union[CarePlan,
+                                                    ServiceRequest]]]] = None,
+        part_of: Optional[FhirList[Reference[Union[Observation,
+                                                   Procedure]]]] = None,
+        questionnaire: Optional[Reference[Questionnaire]] = None,
         subject: Optional[Reference[Any]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         authored: Optional[FhirDate] = None,
+        author: Optional[Reference[Union[Device, Practitioner,
+                                         PractitionerRole, Patient,
+                                         RelatedPerson, Organization]]] = None,
+        source: Optional[Reference[Union[Patient, Practitioner,
+                                         PractitionerRole,
+                                         RelatedPerson]]] = None,
         item: Optional[FhirList[QuestionnaireResponseItemBackboneElement]
                        ] = None,
         id_: Optional[FhirId] = None,
@@ -48,8 +72,14 @@ class QuestionnaireResponse(FhirResourceBase):
             extension=extension,
             status=status,
             identifier=identifier,
+            based_on=based_on,
+            part_of=part_of,
+            questionnaire=questionnaire,
             subject=subject,
+            encounter=encounter,
             authored=authored,
+            author=author,
+            source=source,
             item=item
         )
 
