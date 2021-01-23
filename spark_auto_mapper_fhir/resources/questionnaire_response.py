@@ -60,8 +60,14 @@ class QuestionnaireResponse(FhirResourceBase):
         :param id_: id of resource
         :param status: The position of the questionnaire response within its overall lifecycle.
         :param identifier: A business identifier assigned to a particular completed (or partially completed) questionnaire.
+        :param based_on: The order, proposal or plan that is fulfilled in whole or in part by this QuestionnaireResponse. For example, a ServiceRequest seeking an intake assessment or a decision support recommendation to assess for post-partum depression.
+        :param part_of: A procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.
+        :param questionnaire: The Questionnaire that defines and organizes the questions for which answers are being provided.
         :param subject: The subject of the questionnaire response. This could be a patient, organization, practitioner, device, etc. This is who/what the answers apply to, but is not necessarily the source of information.
+        :param encounter: The Encounter during which this questionnaire response was created or to which the creation of this record is tightly associated.
         :param authored: The date and/or time that this set of answers were last changed.,
+        :param author: Person who received the answers to the questions in the QuestionnaireResponse and recorded them in the system.
+        :param source: The person who answered the questions about the subject.
         :param item: A group or question item from the original questionnaire for which answers are provided.
 
         """
