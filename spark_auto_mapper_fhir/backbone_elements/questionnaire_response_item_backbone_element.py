@@ -19,7 +19,7 @@ class QuestionnaireResponseItemBackboneElement(FhirBackboneElementBase):
         definition: Optional[FhirUri] = None,
         text: Optional[FhirString] = None,
         answer: Optional[
-            FhirList[QuestionnaireResponseItemAnswerBackboneElement]] = None,
+            FhirList['QuestionnaireResponseItemAnswerBackboneElement']] = None,
         item: Optional[FhirList['QuestionnaireResponseItemBackboneElement']
                        ] = None
     ) -> None:

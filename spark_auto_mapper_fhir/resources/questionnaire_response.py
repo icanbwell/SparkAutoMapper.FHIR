@@ -15,7 +15,9 @@ from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.resources.observation import Observation
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -34,7 +36,7 @@ class QuestionnaireResponse(FhirResourceBase):
         identifier: Optional[Identifier] = None,
         based_on: Optional[FhirList[Reference[Union[CarePlan,
                                                     ServiceRequest]]]] = None,
-        part_of: Optional[FhirList[Reference[Union[Observation,
+        part_of: Optional[FhirList[Reference[Union['Observation',
                                                    Procedure]]]] = None,
         questionnaire: Optional[Reference[Questionnaire]] = None,
         subject: Optional[Reference[Any]] = None,
@@ -76,11 +78,11 @@ class QuestionnaireResponse(FhirResourceBase):
             id_=id_,
             meta=meta,
             extension=extension,
-            status=status,
             identifier=identifier,
             based_on=based_on,
             part_of=part_of,
             questionnaire=questionnaire,
+            status=status,
             subject=subject,
             encounter=encounter,
             authored=authored,

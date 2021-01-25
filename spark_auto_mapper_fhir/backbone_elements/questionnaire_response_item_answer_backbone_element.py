@@ -1,7 +1,9 @@
 from typing import Optional, Union
 
-from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item_backbone_element import \
-    QuestionnaireResponseItemBackboneElement
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item_backbone_element import \
+        QuestionnaireResponseItemBackboneElement
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -24,7 +26,7 @@ class QuestionnaireResponseItemAnswerBackboneElement(FhirBackboneElementBase):
         value: Optional[Union[FhirBoolean, FhirDecimal, FhirInteger, FhirDate,
                               FhirDateTime, FhirString, FhirUri,
                               FhirReference]] = None,
-        item: Optional[FhirList[QuestionnaireResponseItemBackboneElement]
+        item: Optional[FhirList['QuestionnaireResponseItemBackboneElement']
                        ] = None
     ) -> None:
         """
