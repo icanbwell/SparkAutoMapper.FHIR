@@ -6,6 +6,7 @@ from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item_backbo
     QuestionnaireResponseItemBackboneElement
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -13,7 +14,6 @@ from spark_auto_mapper_fhir.resources.care_plan import CarePlan
 from spark_auto_mapper_fhir.resources.device import Device
 from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
-from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -52,7 +52,7 @@ class QuestionnaireResponse(FhirResourceBase):
                        ] = None,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         QuestionnaireResponse Resource in FHIR
