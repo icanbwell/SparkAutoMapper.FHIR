@@ -32,8 +32,7 @@ class EmpiProcessingStatusExtension(ExtensionBase):
                 valueDateTime=date_processed
             ),
             ExtensionBase(
-                url=f"{definition_base_url}request_id",
-                valueDateTime=request_id
+                url=f"{definition_base_url}request_id", valueString=request_id
             ),
         ]
         super().__init__(
