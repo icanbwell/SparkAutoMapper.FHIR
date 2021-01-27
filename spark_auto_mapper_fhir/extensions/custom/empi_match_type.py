@@ -12,6 +12,7 @@ class EmpiMatchType(ExtensionBase):
         """
         EmpiMatchType Extension type in FHIR
 
+        :param match_type: The type of empi match for a patient
         """
         url: str = "https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/empi_match_type"
         extensions = [ExtensionBase(url=url, valueString=match_type)]
