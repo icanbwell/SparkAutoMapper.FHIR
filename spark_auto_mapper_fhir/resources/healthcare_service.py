@@ -47,7 +47,7 @@ class HealthcareService(FhirResourceBase):
         type_: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
         specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]
                             ] = None,
-        location: Optional[Reference[Location]] = None,
+        location: Optional[FhirList[Reference[Location]]] = None,
         name: Optional[FhirString] = None,
         comment: Optional[FhirString] = None,
         extraDetails: Optional[FhirMarkdown] = None,
