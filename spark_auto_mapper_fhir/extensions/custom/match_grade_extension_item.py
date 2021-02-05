@@ -6,7 +6,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 # noinspection SpellCheckingInspection
-class EmpiProcessingStatusExtensionItem(BaseExtensionItem):
+class MatchGradeExtensionItem(BaseExtensionItem):
     # noinspection PyPep8Naming
     def __init__(
         self,
