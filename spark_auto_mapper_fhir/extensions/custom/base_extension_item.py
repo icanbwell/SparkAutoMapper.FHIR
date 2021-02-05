@@ -11,8 +11,10 @@ class BaseExtensionItem(ExtensionBase):
         self,
         url: str,
         valueString: Optional[FhirString] = None,
-        valueDateTime: Optional[FhirDateTime] = None
+        valueDateTime: Optional[FhirDateTime] = None,
+        include_null_properties: bool = True
     ) -> None:
         super().__init__(
             url=url, valueString=valueString, valueDateTime=valueDateTime
         )
+        super().include_null_properties(include_null_properties=True)
