@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from typing import Optional, Union, TYPE_CHECKING
 
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.claim import ClaimSchema
@@ -28,7 +28,6 @@ from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.backbone_elements.procedure_backbone_element import ProcedureBackboneElement
 from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.backbone_elements.related_claim_backbone_element import RelatedClaimBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.revenue_item_backbone_element import RevenueItemBackboneElement
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 from spark_auto_mapper_fhir.backbone_elements.supporting_info_backbone_element import SupportingInfoBackboneElement
@@ -39,7 +38,8 @@ from spark_auto_mapper_fhir.valuesets.financial_resource_status import Financial
 from spark_auto_mapper_fhir.valuesets.funds_reservation import FundsReservationCode
 from spark_auto_mapper_fhir.valuesets.process_priority import ProcessPriorityCode
 from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescription
-
+# if TYPE_CHECKING:
+#     from spark_auto_mapper_fhir.backbone_elements.related_claim_backbone_element import RelatedClaimBackboneElement
 
 class Claim(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
@@ -63,7 +63,7 @@ class Claim(FhirResourceBase):
                                           PractitionerRole]]] = None,
         insurer: Optional[Reference[Organization]] = None,
         fundsReserve: Optional[CodeableConcept[FundsReservationCode]] = None,
-        related: Optional[FhirList[RelatedClaimBackboneElement]] = None,
+        # related: Optional[FhirList[RelatedClaimBackboneElement]] = None,
         prescription: Optional[Reference[Union[DeviceRequest,
                                                MedicationRequest,
                                                VisionPrescription]]] = None,
@@ -105,7 +105,7 @@ class Claim(FhirResourceBase):
         :param enterer: Author of the claim
         :param insurer: Target
         :param fundsReserve: For whom to reserve funds. https://hl7.org/FHIR/valueset-fundsreserve.html
-        :param related: Prior or corollary claims
+        # :param related: Prior or corollary claims
         :param prescription: Prescription authorizing services and products
         :param originalPrescription: Original prescription if superseded by fulfiller
         :param payee: Recipient of benefits payable
@@ -138,7 +138,7 @@ class Claim(FhirResourceBase):
             enterer=enterer,
             insurer=insurer,
             fundsReserve=fundsReserve,
-            related=related,
+            # related=related,
             prescription=prescription,
             originalPrescription=originalPrescription,
             payee=payee,
