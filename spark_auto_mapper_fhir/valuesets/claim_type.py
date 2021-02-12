@@ -27,12 +27,40 @@ class ClaimTypeCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ClaimTypeCode':
+    def Institutional(cls) -> 'ClaimTypeCode':
         """
-        Comment
+        Hospital, clinic and typically inpatient claims.
         """
         # noinspection PyCallingNonCallable
-        return ClaimTypeCode("A")
+        return ClaimTypeCode("institutional")
+
+    def Oral(cls) -> 'ClaimTypeCode':
+        """
+        Dental, Denture and Hygiene claims.
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimTypeCode("oral")
+
+    def Pharmacy(cls) -> 'ClaimTypeCode':
+        """
+        Pharmacy claims for goods and services.
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimTypeCode("pharmacy")
+
+    def Professional(cls) -> 'ClaimTypeCode':
+        """
+        Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimTypeCode("professional")
+
+    def Vision(cls) -> 'ClaimTypeCode':
+        """
+        Vision claims for professional services and products such as glasses and contact lenses.
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimTypeCode("vision")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

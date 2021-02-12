@@ -27,12 +27,33 @@ class RemittanceOutcomeCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'RemittanceOutcomeCode':
+    def Queued(cls) -> 'RemittanceOutcomeCode':
         """
-        Comment
+        The Claim/Pre-authorization/Pre-determination has been received but processing has not begun.
         """
         # noinspection PyCallingNonCallable
-        return RemittanceOutcomeCode("A")
+        return RemittanceOutcomeCode("queued")
+
+    def ProcessingComplete(cls) -> 'RemittanceOutcomeCode':
+        """
+        The processing has completed without errors
+        """
+        # noinspection PyCallingNonCallable
+        return RemittanceOutcomeCode("complete")
+
+    def Error(cls) -> 'RemittanceOutcomeCode':
+        """
+        One or more errors have been detected in the Claim
+        """
+        # noinspection PyCallingNonCallable
+        return RemittanceOutcomeCode("error")
+
+    def PartialProcessing(cls) -> 'RemittanceOutcomeCode':
+        """
+        No errors have been detected in the Claim and some of the adjudication has been performed.
+        """
+        # noinspection PyCallingNonCallable
+        return RemittanceOutcomeCode("partial")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
