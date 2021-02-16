@@ -1,15 +1,16 @@
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
-from spark_auto_mapper_fhir.resources.claim import Claim
 
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.valuesets.related_claim_relationship import RelatedClaimRelationshipCode
-from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-from spark_auto_mapper_fhir.complex_types.reference import Reference
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+    from spark_auto_mapper_fhir.valuesets.related_claim_relationship import RelatedClaimRelationshipCode
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+    from spark_auto_mapper_fhir.resources.claim import Claim
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
 
 
 class RelatedClaimBackboneElement(FhirBackboneElementBase):
@@ -17,10 +18,10 @@ class RelatedClaimBackboneElement(FhirBackboneElementBase):
         self,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        claim: Optional[Reference[Claim]] = None,
-        relationship: Optional[CodeableConcept[RelatedClaimRelationshipCode]
+        claim: Optional['Reference[Claim]'] = None,
+        relationship: Optional['CodeableConcept[RelatedClaimRelationshipCode]'
                                ] = None,
-        reference: Optional[Identifier] = None
+        reference: Optional['Identifier'] = None
     ):
         """
         RelatedClaimBackboneElement Resource in FHIR
