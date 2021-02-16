@@ -27,12 +27,89 @@ class DiagnosisTypeCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'DiagnosisTypeCode':
+    def AdmittingDiagnosis(cls) -> 'DiagnosisTypeCode':
         """
-        Comment
+        The diagnosis given as the reason why the patient was admitted to the hospital.
         """
         # noinspection PyCallingNonCallable
-        return DiagnosisTypeCode("A")
+        return DiagnosisTypeCode("admitting")
+
+    def ClinicalDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than diagnostic tests.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("clinical")
+
+    def DifferentialDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        One of a set of the possible diagnoses that could be connected to the signs, symptoms, and lab findings.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("differential")
+
+    def DischargeDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        The diagnosis given when the patient is discharged from the hospital.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("discharge")
+
+    def LaboratoryDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("laboratory")
+
+    def NursingDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("nursing")
+
+    def PrenatalDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        A diagnosis determined prior to birth.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("prenatal")
+
+    def PrincipalDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("principal")
+
+    def RadiologyDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        A diagnosis based primarily on the results from medical imaging studies.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("radiology")
+
+    def RemoteDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        A diagnosis determined using telemedicine techniques.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("remote")
+
+    def RetrospectiveDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        The labeling of an illness in a specific historical event using modern knowledge, methods and disease classifications.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("retrospective")
+
+    def SelfDiagnosis(cls) -> 'DiagnosisTypeCode':
+        """
+        A diagnosis determined by the patient.
+        """
+        # noinspection PyCallingNonCallable
+        return DiagnosisTypeCode("self")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

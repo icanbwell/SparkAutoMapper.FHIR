@@ -27,12 +27,26 @@ class ClaimUseCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ClaimUseCode':
+    def Claim(cls) -> 'ClaimUseCode':
         """
-        Comment
+        The treatment is complete and this represents a Claim for the services.
         """
         # noinspection PyCallingNonCallable
-        return ClaimUseCode("A")
+        return ClaimUseCode("claim")
+
+    def Preauthorization(cls) -> 'ClaimUseCode':
+        """
+        The treatment is proposed and this represents a Pre-authorization for the services.
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimUseCode("preauthorization")
+
+    def Predetermination(cls) -> 'ClaimUseCode':
+        """
+        The treatment is proposed and this represents a Pre-determination for the services.
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimUseCode("predetermination")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

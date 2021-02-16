@@ -29,12 +29,33 @@ class ExplanationOfBenefitStatusCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ExplanationOfBenefitStatusCode':
+    def Active(cls) -> 'ExplanationOfBenefitStatusCode':
         """
-        Comment
+        The resource instance is curently in-force.
         """
         # noinspection PyCallingNonCallable
-        return ExplanationOfBenefitStatusCode("A")
+        return ExplanationOfBenefitStatusCode("active")
+
+    def Cancelled(cls) -> 'ExplanationOfBenefitStatusCode':
+        """
+        The resource instance is withdrawn, rescinded or reversed.
+        """
+        # noinspection PyCallingNonCallable
+        return ExplanationOfBenefitStatusCode("cancelled")
+
+    def Draft(cls) -> 'ExplanationOfBenefitStatusCode':
+        """
+        A new resource instance the contents of which is not complete
+        """
+        # noinspection PyCallingNonCallable
+        return ExplanationOfBenefitStatusCode("draft")
+
+    def EnteredInError(cls) -> 'ExplanationOfBenefitStatusCode':
+        """
+        The resource instance was entered in error.
+        """
+        # noinspection PyCallingNonCallable
+        return ExplanationOfBenefitStatusCode("entered-in-error")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

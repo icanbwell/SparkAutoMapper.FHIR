@@ -27,12 +27,19 @@ class ClaimSubTypeCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ClaimSubTypeCode':
+    def OrthodonticClaim(cls) -> 'ClaimSubTypeCode':
         """
-        Comment
+        A claim for Orthodontic Services.
         """
         # noinspection PyCallingNonCallable
-        return ClaimSubTypeCode("A")
+        return ClaimSubTypeCode("ortho")
+
+    def EmergencyClaim(cls) -> 'ClaimSubTypeCode':
+        """
+        A claim for emergency services.
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimSubTypeCode("emergency")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

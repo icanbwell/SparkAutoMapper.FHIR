@@ -27,12 +27,54 @@ class AdjudicationValueCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'AdjudicationValueCode':
+    def SubmittedAmount(cls) -> 'AdjudicationValueCode':
         """
-        Comment
+        The total submitted amount for the claim or group or line item.
         """
         # noinspection PyCallingNonCallable
-        return AdjudicationValueCode("A")
+        return AdjudicationValueCode("submitted")
+
+    def CoPay(cls) -> 'AdjudicationValueCode':
+        """
+        Patient Co-Payment
+        """
+        # noinspection PyCallingNonCallable
+        return AdjudicationValueCode("copay")
+
+    def EligibleAmount(cls) -> 'AdjudicationValueCode':
+        """
+        Amount of the change which is considered for adjudication.
+        """
+        # noinspection PyCallingNonCallable
+        return AdjudicationValueCode("eligible")
+
+    def Deductible(cls) -> 'AdjudicationValueCode':
+        """
+        Amount deducted from the eligible amount prior to adjudication.
+        """
+        # noinspection PyCallingNonCallable
+        return AdjudicationValueCode("deductible")
+
+    def BenefitAmount(cls) -> 'AdjudicationValueCode':
+        """
+        Amount payable under the coverage.
+        """
+        # noinspection PyCallingNonCallable
+        return AdjudicationValueCode("benefit")
+
+    def CoInsurance(cls) -> 'AdjudicationValueCode':
+        """
+
+        """
+        # noinspection PyCallingNonCallable
+        return AdjudicationValueCode("coins")
+
+    def PaidToProvider(cls) -> 'AdjudicationValueCode':
+        """
+
+        """
+        # noinspection PyCallingNonCallable
+        return AdjudicationValueCode("paidtoprovider")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

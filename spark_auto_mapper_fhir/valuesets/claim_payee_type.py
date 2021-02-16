@@ -27,12 +27,26 @@ class ClaimPayeeTypeCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ClaimPayeeTypeCode':
+    def Subscriber(cls) -> 'ClaimPayeeTypeCode':
         """
-        Comment
+        The subscriber (policy holder) will be reimbursed.
         """
         # noinspection PyCallingNonCallable
-        return ClaimPayeeTypeCode("A")
+        return ClaimPayeeTypeCode("subscriber")
+
+    def Provider(cls) -> 'ClaimPayeeTypeCode':
+        """
+        Any benefit payable will be paid to the provider (Assignment of Benefit).
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimPayeeTypeCode("provider")
+
+    def Other(cls) -> 'ClaimPayeeTypeCode':
+        """
+        Any benefit payable will be paid to a third party such as a guarrantor.
+        """
+        # noinspection PyCallingNonCallable
+        return ClaimPayeeTypeCode("other")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
