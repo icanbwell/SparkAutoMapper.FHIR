@@ -1,4 +1,4 @@
-from typing import Optional, Union, TYPE_CHECKING
+from typing import Optional, Union
 
 from pyspark.sql.types import StructType
 from spark_fhir_schemas.r4.resources.claim import ClaimSchema
@@ -40,6 +40,7 @@ from spark_auto_mapper_fhir.valuesets.process_priority import ProcessPriorityCod
 from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescription
 # if TYPE_CHECKING:
 #     from spark_auto_mapper_fhir.backbone_elements.related_claim_backbone_element import RelatedClaimBackboneElement
+
 
 class Claim(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
