@@ -1,5 +1,6 @@
 from typing import Optional, Union
 
+from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_add_item_detail_backbone_element import ExplanationOfBenefitsAddItemDetailBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.complex_types.address import Address
@@ -26,7 +27,7 @@ from spark_auto_mapper_fhir.valuesets.surface import SurfaceCode
 from spark_auto_mapper_fhir.valuesets.tooth import ToothCode
 
 
-class AddItemBackboneElement(FhirBackboneElementBase):
+class ExplanationOfBenefitsAddItemBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming,SpellCheckingInspection
     def __init__(
         self,
@@ -36,8 +37,9 @@ class AddItemBackboneElement(FhirBackboneElementBase):
         itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
         detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
         subDetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        provider: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                           Organization]]] = None,
+        provider: Optional[FhirList[Reference[Union[Practitioner,
+                                                    PractitionerRole,
+                                                    Organization]]]] = None,
         modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
                            ] = None,
         programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]
@@ -55,7 +57,9 @@ class AddItemBackboneElement(FhirBackboneElementBase):
         bodySite: Optional[CodeableConcept[ToothCode]] = None,
         subSite: Optional[FhirList[CodeableConcept[SurfaceCode]]] = None,
         noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
-        adjudication: Optional[FhirList[AdjudicationBackboneElement]] = None
+        adjudication: Optional[FhirList[AdjudicationBackboneElement]] = None,
+        detail: Optional[
+            FhirList[ExplanationOfBenefitsAddItemDetailBackboneElement]] = None
     ):
         """
         AddItemBackboneElement Resource in FHIR
@@ -105,5 +109,6 @@ class AddItemBackboneElement(FhirBackboneElementBase):
             bodySite=bodySite,
             subSite=subSite,
             noteNumber=noteNumber,
-            adjudication=adjudication
+            adjudication=adjudication,
+            detail=detail
         )

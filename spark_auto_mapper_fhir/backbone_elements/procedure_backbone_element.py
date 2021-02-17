@@ -1,5 +1,7 @@
 from typing import Optional
 
+from spark_auto_mapper_fhir.resources.device import Device
+
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -18,12 +20,14 @@ class ProcedureBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        procedureCodeableConcept: CodeableConcept[Icd10ProcedureCode],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[FhirList[CodeableConcept[ExProcedureTypeCode]]] = None,
         date: Optional[FhirDate] = None,
-        procedureReference: Optional[Reference[Procedure]] = None
+        procedureCodeableConcept: Optional[CodeableConcept[Icd10ProcedureCode]
+                                           ] = None,
+        procedureReference: Optional[Reference[Procedure]] = None,
+        udi: Optional[FhirList[Device]] = None
     ):
         """
         ProcedureBackboneElement Resource in FHIR
@@ -41,8 +45,9 @@ class ProcedureBackboneElement(FhirBackboneElementBase):
             id_=id_,
             extension=extension,
             sequence=sequence,
-            procedureCodeableConcept=procedureCodeableConcept,
             type_=type_,
             date=date,
-            procedureReference=procedureReference
+            procedureCodeableConcept=procedureCodeableConcept,
+            procedureReference=procedureReference,
+            udi=udi
         )
