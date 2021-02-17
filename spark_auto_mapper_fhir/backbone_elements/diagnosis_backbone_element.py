@@ -1,4 +1,8 @@
 from typing import Optional
+
+from spark_auto_mapper_fhir.resources.condition import Condition
+
+from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -18,10 +22,11 @@ class DiagnosisBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        diagnosisCodeableConcept: CodeableConcept[Icd10Code],
+        diagnosisCodeableConcept: Optional[CodeableConcept[Icd10Code]] = None,
+        diagnsosisReference: Optional[Reference[Condition]] = None,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: Optional[CodeableConcept[DiagnosisTypeCode]] = None,
+        type_: Optional[FhirList[CodeableConcept[DiagnosisTypeCode]]] = None,
         onAdmission: Optional[CodeableConcept[DiagnosisOnAdmissionCode]
                               ] = None,
         packageCode: Optional[CodeableConcept[DiagnosisRelatedGroupCode]
@@ -44,6 +49,7 @@ class DiagnosisBackboneElement(FhirBackboneElementBase):
             extension=extension,
             sequence=sequence,
             diagnosisCodeableConcept=diagnosisCodeableConcept,
+            diagnsosisReference=diagnsosisReference,
             type_=type_,
             onAdmission=onAdmission,
             packageCode=packageCode

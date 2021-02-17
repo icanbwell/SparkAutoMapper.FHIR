@@ -11,7 +11,8 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 # noinspection PyPep8Naming
 class ${ClassName}Code(FhirValueSetBase):
     """
-    IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR properties not just the ones you need
+    IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR
+                properties not just the ones you need
     $Documentation
     """
     def __init__(self, value: AutoMapperTextInputType):
