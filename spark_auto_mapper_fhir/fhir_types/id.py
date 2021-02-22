@@ -28,7 +28,7 @@ class FhirId(AutoMapperTextLikeBase):
                     source_df=source_df, current_column=current_column
                 ),
                 pattern=r'[^A-Za-z0-9\-\.]',
-                replacement="_"
+                replacement="-"
             ), 0, 63
         )
         return column_spec
