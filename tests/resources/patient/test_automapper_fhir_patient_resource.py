@@ -66,7 +66,7 @@ def test_auto_mapper_fhir_patient_resource(
     assert len(sql_expressions) == 5
     assert str(sql_expressions["id"]) == str(
         substring(
-            regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "_"), 0, 63
+            regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "-"), 0, 63
         ).cast("string").alias("id")
     )
     assert str(sql_expressions["resourceType"]
