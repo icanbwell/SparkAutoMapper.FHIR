@@ -1,3 +1,9 @@
+[![Build and Test](https://github.com/imranq2/SparkAutoMapper.FHIR/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/imranq2/SparkAutoMapper.FHIR/actions/workflows/build_and_test.yml)
+
+[![Upload Python Package](https://github.com/imranq2/SparkAutoMapper.FHIR/actions/workflows/python-publish.yml/badge.svg)](https://github.com/imranq2/SparkAutoMapper.FHIR/actions/workflows/python-publish.yml)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/imranq2/SparkAutoMapper.FHIR/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/imranq2/SparkAutoMapper.FHIR?targetFile=requirements.txt)
+
 # SparkAutoMapper.FHIR
 Add custom FHIR data types to SparkAutoMapper.
 
