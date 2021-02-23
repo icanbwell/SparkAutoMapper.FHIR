@@ -15,7 +15,7 @@ from spark_auto_mapper_fhir.complex_types.money import Money
 class TotalBackBoneElement(FhirBackboneElementBase):
     def __init__(
         self,
-        category: FhirList[CodeableConcept[AdjudicationCode]],
+        category: CodeableConcept[AdjudicationCode],
         amount: Money,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
