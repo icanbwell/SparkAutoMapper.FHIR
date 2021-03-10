@@ -26,7 +26,7 @@ class FhirReference(AutoMapperTextLikeBase):
                            AutoMapperTextLikeBase] = FhirId(column)
 
     def get_column_spec(
-        self, source_df: DataFrame, current_column: Optional[Column]
+        self, source_df: Optional[DataFrame], current_column: Optional[Column]
     ) -> Column:
         # https://hl7.org/FHIR/datatypes.html#id
         column_spec = concat(
