@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.explanationofbenefit import ExplanationOfBenefitSchema
 
 from spark_auto_mapper_fhir.backbone_elements.accident_backbone_element import AccidentBackboneElement
@@ -215,7 +215,9 @@ class ExplanationOfBenefit(FhirResourceBase):
             benefitBalance=benefitBalance,
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return ExplanationOfBenefitSchema.get_schema(
             include_extension=include_extension
         )

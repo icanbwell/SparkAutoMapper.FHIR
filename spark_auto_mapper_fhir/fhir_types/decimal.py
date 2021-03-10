@@ -19,7 +19,7 @@ class FhirDecimal(AutoMapperTextLikeBase):
                            AutoMapperTextLikeBase] = column
 
     def get_column_spec(
-        self, source_df: DataFrame, current_column: Optional[Column]
+        self, source_df: Optional[DataFrame], current_column: Optional[Column]
     ) -> Column:
         column_spec = round(
             self.column.get_column_spec(

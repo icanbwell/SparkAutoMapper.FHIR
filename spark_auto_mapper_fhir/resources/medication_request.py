@@ -1,6 +1,6 @@
 from typing import Optional, Union, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.medicationrequest import MedicationRequestSchema
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
@@ -182,7 +182,9 @@ class MedicationRequest(FhirResourceBase):
             detectedIssue=detectedIssue
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return MedicationRequestSchema.get_schema(
             include_extension=include_extension
         )

@@ -1,5 +1,5 @@
-from typing import Optional
-from pyspark.sql.types import StructType
+from typing import Optional, Union
+from pyspark.sql.types import StructType, DataType
 
 from spark_auto_mapper_fhir.backbone_elements.goal_backbone_element import GoalBackboneElement
 from spark_auto_mapper_fhir.complex_types.period import Period
@@ -165,7 +165,9 @@ class PlanDefinition(FhirResourceBase):
             action=action
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return PlanDefinitionSchema.get_schema(
             include_extension=include_extension
         )

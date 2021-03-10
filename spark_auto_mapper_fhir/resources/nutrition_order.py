@@ -1,5 +1,5 @@
-from typing import Optional
-from pyspark.sql.types import StructType
+from typing import Optional, Union
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.nutritionorder import NutritionOrderSchema
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -30,7 +30,9 @@ class NutritionOrder(FhirResourceBase):
             extension=extension
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return NutritionOrderSchema.get_schema(
             include_extension=include_extension
         )

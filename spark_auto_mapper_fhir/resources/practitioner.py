@@ -1,6 +1,6 @@
-from typing import Optional
+from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.practitioner import PractitionerSchema
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
@@ -79,7 +79,9 @@ class Practitioner(FhirResourceBase):
             communication=communication,
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return PractitionerSchema.get_schema(
             include_extension=include_extension
         )

@@ -1,6 +1,6 @@
-from typing import Optional
+from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.person import PersonSchema
 
 from spark_auto_mapper_fhir.backbone_elements.link_person_backbone_element import LinkPersonBackboneElement
@@ -74,5 +74,7 @@ class Person(FhirResourceBase):
             link=link,
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return PersonSchema.get_schema(include_extension=include_extension)

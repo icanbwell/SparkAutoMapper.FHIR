@@ -1,6 +1,6 @@
-from typing import Optional
+from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.devicerequest import DeviceRequestSchema
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
@@ -31,7 +31,9 @@ class DeviceRequest(FhirResourceBase):
             extension=extension
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return DeviceRequestSchema.get_schema(
             include_extension=include_extension
         )

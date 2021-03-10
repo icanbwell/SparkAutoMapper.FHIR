@@ -1,5 +1,5 @@
-from typing import Optional
-from pyspark.sql.types import StructType
+from typing import Optional, Union
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
@@ -60,7 +60,9 @@ class RelatedArtifact(FhirResourceBase):
             resource=resource
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return RelatedArtifactSchema.get_schema(
             include_extension=include_extension
         )

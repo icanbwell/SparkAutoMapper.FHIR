@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.schedule import ScheduleSchema
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -78,5 +78,7 @@ class Schedule(FhirResourceBase):
             comment=comment,
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return ScheduleSchema.get_schema(include_extension=include_extension)
