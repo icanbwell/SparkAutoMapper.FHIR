@@ -1,6 +1,6 @@
-from typing import Optional
+from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 
 from spark_auto_mapper_fhir.backbone_elements.group_member_backbone_element import GroupMemberBackboneElement
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -47,7 +47,9 @@ class Group(FhirResourceBase):
             member=member
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return GroupSchema.get_schema(include_extension=include_extension)
 
     id_: FhirId = FhirId(A.column("id_"))

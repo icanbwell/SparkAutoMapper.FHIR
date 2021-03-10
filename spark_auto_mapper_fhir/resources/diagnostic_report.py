@@ -1,5 +1,5 @@
 from typing import Optional, Union
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -155,7 +155,9 @@ class DiagnosticReport(FhirResourceBase):
             presentedForm=presentedForm
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return DiagnosticReportSchema.get_schema(
             include_extension=include_extension
         )

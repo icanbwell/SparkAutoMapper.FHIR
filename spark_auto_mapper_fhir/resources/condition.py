@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 from spark_auto_mapper_fhir.backbone_elements.condition_evidence_backbone_element import \
@@ -152,5 +152,7 @@ class Condition(FhirResourceBase):
             note=note
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return ConditionSchema.get_schema(include_extension=include_extension)

@@ -1,5 +1,5 @@
 from typing import Optional, Any, Union
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.questionnaireresponse import QuestionnaireResponseSchema
 
 from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item_backbone_element import \
@@ -91,7 +91,9 @@ class QuestionnaireResponse(FhirResourceBase):
             item=item
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return QuestionnaireResponseSchema.get_schema(
             include_extension=include_extension
         )

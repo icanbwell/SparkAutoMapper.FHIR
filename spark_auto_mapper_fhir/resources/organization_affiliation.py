@@ -1,5 +1,5 @@
-from typing import Optional
-from pyspark.sql.types import StructType
+from typing import Optional, Union
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -96,7 +96,9 @@ class OrganizationAffiliation(FhirResourceBase):
             endpoint=endpoint
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return OrganizationAffiliationSchema.get_schema(
             include_extension=include_extension
         )

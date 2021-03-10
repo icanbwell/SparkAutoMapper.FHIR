@@ -25,7 +25,7 @@ class RevenueItemBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        productOrService: FhirList[CodeableConcept[ServiceUSCLSCode]],
+        productOrService: CodeableConcept[ServiceUSCLSCode],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
@@ -50,7 +50,8 @@ class RevenueItemBackboneElement(FhirBackboneElementBase):
 
         :param sequence: Item instance identifier
         :param informationSequence: Applicable exception and supporting information
-        :param productOrService: Billing, service, product, or drug code. https://hl7.org/FHIR/valueset-service-uscls.html
+        :param productOrService: Billing, service, product, or drug code.
+                                    https://hl7.org/FHIR/valueset-service-uscls.html
         :param revenue: Revenue or cost center code. https://hl7.org/FHIR/valueset-ex-revenue-center.html
         :param modifier: Product or service billing modifiers. https://hl7.org/FHIR/valueset-claim-modifiers.html
         :param quantity: Count of products or services
@@ -59,7 +60,8 @@ class RevenueItemBackboneElement(FhirBackboneElementBase):
                             https://hl7.org/FHIR/explanationofbenefit.html#ExplanationOfBenefit.item.adjudication
         :param servicedDate: Date or dates of service or product delivery
         :param servicedPeriod: Date or dates of service or product delivery
-        :param locationCodeableConcept: Place of service or where product was supplied. https://hl7.org/FHIR/valueset-service-place.html
+        :param locationCodeableConcept: Place of service or where product was supplied.
+                                        https://hl7.org/FHIR/valueset-service-place.html
         :param locationAddress: Place of service or where product was supplied.
         :param locationReference: Place of service or where product was supplied.
         """

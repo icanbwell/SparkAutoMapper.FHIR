@@ -1,6 +1,6 @@
 from typing import Optional, Union, Any
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.observation import ObservationSchema
 
 from spark_auto_mapper_fhir.backbone_elements.observation_component_backbone_element import \
@@ -220,7 +220,9 @@ class Observation(FhirResourceBase):
             component=component
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return ObservationSchema.get_schema(
             include_extension=include_extension
         )

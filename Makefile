@@ -16,6 +16,7 @@ include spark_auto_mapper_fhir/Makefile.python
 .PHONY:devsetup
 devsetup:venv
 	. $(VENV_NAME)/bin/activate && \
+	. $(VENV_NAME)/bin/activate && \
     pip install --upgrade pip && \
     pip install --upgrade -r requirements.txt && \
     pip install --upgrade -r requirements-test.txt && \

@@ -1,6 +1,6 @@
 from typing import Optional, Union
 
-from pyspark.sql.types import StructType
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper.data_types.text_like_base import AutoMapperTextLikeBase
 from spark_fhir_schemas.r4.resources.patient import PatientSchema
 
@@ -113,7 +113,9 @@ class Patient(FhirResourceBase):
             link=link
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[StructType]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return PatientSchema.get_schema(include_extension=include_extension)
 
     id_: FhirId = FhirId(A.column("id_"))
