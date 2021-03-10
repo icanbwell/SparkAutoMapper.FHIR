@@ -27,7 +27,7 @@ class ExplanationOfBenefitsItemDetailBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        productOrService: FhirList[CodeableConcept[ServiceUSCLSCode]],
+        productOrService: CodeableConcept[ServiceUSCLSCode],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         revenue: Optional[CodeableConcept[ExRevenueCenterCode]] = None,
