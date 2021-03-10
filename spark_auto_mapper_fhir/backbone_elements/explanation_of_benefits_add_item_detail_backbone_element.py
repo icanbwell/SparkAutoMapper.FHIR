@@ -23,7 +23,7 @@ class ExplanationOfBenefitsAddItemDetailBackboneElement(
     # noinspection PyPep8Naming
     def __init__(
         self,
-        productOrService: FhirList[CodeableConcept[ServiceUSCLSCode]],
+        productOrService: CodeableConcept[ServiceUSCLSCode],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
