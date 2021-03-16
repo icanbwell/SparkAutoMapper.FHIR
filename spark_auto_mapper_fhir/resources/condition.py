@@ -1,8 +1,10 @@
-from typing import Optional, Union
+from typing import Optional, Union, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
+from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 from spark_auto_mapper_fhir.backbone_elements.condition_evidence_backbone_element import \
     ConditionEvidenceBackboneElement
 from spark_auto_mapper_fhir.backbone_elements.condition_stage_backbone_element import ConditionStageBackboneElement
@@ -21,8 +23,8 @@ from spark_auto_mapper_fhir.fhir_types.age import FhirAge
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
-
-from spark_auto_mapper_fhir.resources.encounter import Encounter
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.encounter import Encounter
 
 from spark_auto_mapper_fhir.resources.patient import Patient
 
@@ -33,9 +35,7 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.valuesets.body_site import SNOMEDCTBodyStructuresCode
 from spark_auto_mapper_fhir.valuesets.condition import ConditionCode
 from spark_auto_mapper_fhir.valuesets.condition_category import ConditionCategoryCode
@@ -63,7 +63,7 @@ class Condition(FhirResourceBase):
         code: Optional[CodeableConcept[ConditionCode]] = None,
         bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]
                                     ]] = None,
-        encounter: Optional[Reference[Encounter]] = None,
+        encounter: Optional[Reference['Encounter']] = None,
         onsetDateTime: Optional[FhirDateTime] = None,
         onsetAge: Optional[FhirAge] = None,
         onsetPeriod: Optional[Period] = None,
@@ -87,7 +87,8 @@ class Condition(FhirResourceBase):
         Condition Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Condition
         Detailed information about conditions, problems or diagnoses
-        + Guideline: Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item
+        + Guideline: Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error
+                        and category is problem-list-item
         + Rule: If condition is abated, then clinicalStatus must be either inactive, resolved, or remission
         + Rule: Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error
 
