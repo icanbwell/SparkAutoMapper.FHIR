@@ -1,6 +1,6 @@
-setuptools
+setuptools==53.0.0
 wheel
-twine
+twine==3.3.0
 pytest
 mypy
 flake8
