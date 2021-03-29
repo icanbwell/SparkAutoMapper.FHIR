@@ -18,9 +18,7 @@ class RequestStatusCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'RequestStatusCode']
-        ) -> None:
+        def __init__(self, f: Callable[..., 'RequestStatusCode']) -> None:
             self.f: Callable[..., 'RequestStatusCode'] = f
 
         def __get__(
@@ -83,7 +81,6 @@ class RequestStatusCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return RequestStatusCode("unknown")
-
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

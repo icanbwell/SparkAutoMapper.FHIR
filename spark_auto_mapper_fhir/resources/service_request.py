@@ -1,6 +1,7 @@
 from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
+from typing import Any
 from spark_fhir_schemas.r4.resources.servicerequest import ServiceRequestSchema
 
 from spark_auto_mapper_fhir.backbone_elements.timing_backbone_element import Timing
@@ -40,12 +41,9 @@ from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 from spark_auto_mapper_fhir.resources.specimen import Specimen
-from spark_auto_mapper_fhir.valuesets import snomed
 from spark_auto_mapper_fhir.valuesets.body_site import SNOMEDCTBodyStructuresCode
-from spark_auto_mapper_fhir.valuesets.medication_request_intent import MedicationRequestIntentCode
-from spark_auto_mapper_fhir.valuesets.medication_request_status import MedicationRequestStatusCode
+from spark_auto_mapper_fhir.valuesets.medication_as_needed_reason import MedicationAsNeededReasonCode
 from spark_auto_mapper_fhir.valuesets.participant_role import ParticipantRoleCode
 from spark_auto_mapper_fhir.valuesets.procedure_reason import ProcedureReasonCode
 from spark_auto_mapper_fhir.valuesets.request_intent import RequestIntentCode
@@ -61,46 +59,64 @@ class ServiceRequest(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
+        status: RequestStatusCode,
+        intent: RequestIntentCode,
+        subject: Reference[Union[Patient, Group, Location, Device]],
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
-        basedOn: Optional[FhirList[Reference[Union[CarePlan, ServiceRequest, MedicationRequest]]]] = None,
-        replaces: Optional[FhirList[Reference[ServiceRequest]]] = None,
+        basedOn: Optional[FhirList[Reference[Union[CarePlan, 'ServiceRequest',
+                                                   MedicationRequest]]]
+                          ] = None,
+        replaces: Optional[FhirList[Reference['ServiceRequest']]] = None,
         requisition: Optional[Identifier] = None,
-        status: RequestStatusCode = None,
-        intent: RequestIntentCode = None,
         category: Optional[CodeableConcept[ServiceRequestCategoryCode]] = None,
         priority: Optional[RequestPriorityCode] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         code: Optional[CodeableConcept[SNOMEDCTProcedureCode]] = None,
-        orderDetail: Optional[FhirList[CodeableConcept[ServiceRequestOrderDetailsCode]]] = None,
+        orderDetail: Optional[FhirList[
+            CodeableConcept[ServiceRequestOrderDetailsCode]]] = None,
         quantityQuantity: Optional[Quantity] = None,
         quantityRatio: Optional[Ratio] = None,
         quantityRange: Optional[Range] = None,
-        subject: Reference[Union[Patient, Group, Location, Device]] = None,
         encounter: Optional[Reference[Encounter]] = None,
         occurrenceDateTime: Optional[FhirDateTime] = None,
         occurrencePeriod: Optional[Period] = None,
         occurrenceTiming: Optional[Timing] = None,
         asNeededBoolean: Optional[FhirBoolean] = None,
-        asNeededCodeableConcept: Optional[CodeableConcept] = None,
+        asNeededCodeableConcept: Optional[
+            CodeableConcept[MedicationAsNeededReasonCode]] = None,
         authoredOn: Optional[FhirDateTime] = None,
-        requester: Optional[Reference[Union[Practitioner, PractitionerRole, Organization, Patient, RelatedPerson, Device]]] = None,
+        requester: Optional[Reference[Union[Practitioner, PractitionerRole,
+                                            Organization, Patient,
+                                            RelatedPerson, Device]]] = None,
         performerType: Optional[CodeableConcept[ParticipantRoleCode]] = None,
-        performer: Optional[FhirList[Reference[Union[Practitioner, PractitionerRole, Organization, CareTeam, HealthcareService, Patient, Device, RelatedPerson]]]] = None,
-        locationCode: Optional[FhirList[CodeableConcept[ServiceDeliveryLocationTypeCode]]] = None,
+        performer: Optional[FhirList[Reference[Union[Practitioner,
+                                                     PractitionerRole,
+                                                     Organization, CareTeam,
+                                                     HealthcareService,
+                                                     Patient, Device,
+                                                     RelatedPerson]]]] = None,
+        locationCode: Optional[FhirList[
+            CodeableConcept[ServiceDeliveryLocationTypeCode]]] = None,
         locationReference: Optional[FhirList[Reference[Location]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCode]]] = None,
-        reasonReference: Optional[FhirList[Reference[Union[Condition, Observation, DiagnosticReport, DocumentReference]]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCode]]
+                             ] = None,
+        reasonReference: Optional[FhirList[Reference[Union[Condition,
+                                                           Observation,
+                                                           DiagnosticReport,
+                                                           DocumentReference]]]
+                                  ] = None,
         insurance: Optional[FhirList[Union[Coverage, ClaimResponse]]] = None,
         supportingInfo: Optional[FhirList[Reference[Any]]] = None,
         specimen: Optional[FhirList[Reference[Specimen]]] = None,
-        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]] = None,
+        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]
+                                    ]] = None,
         note: Optional[FhirList[Annotation]] = None,
-        patientInstruction: Optional[FhirString] = None
-        # relevantHistory: Optional[FhirList[Reference[Provenance]]]
+        patientInstruction: Optional[FhirString] = None,
+        # relevantHistory: Optional[FhirList[Reference[Provenance]]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None
     ) -> None:
         """
         ServiceRequest Resource in FHIR
@@ -108,14 +124,15 @@ class ServiceRequest(FhirResourceBase):
         A request for a service to be performed
 
         :param id_: id of resource
+        :param status: draft | active | on-hold | revoked | completed | entered-in-error | unknown
+        :param intent: proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option
+        :param subject: Individual or Entity the service is ordered for
         :param identifier: Identifiers assigned to this order
         :param instantiatesCanonical: Instantiates FHIR protocol or definition
         :param instantiatesUri: Instantiates external protocol or definition
         :param basedOn: What request fulfills
         :param replaces: What request replaces
         :param requisition: Composite Request ID
-        :param status: draft | active | on-hold | revoked | completed | entered-in-error | unknown
-        :param intent: proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option
         :param category: Classification of service
         :param priority: routine | urgent | asap | stat
         :param doNotPerform: True if service/procedure should not be performed
@@ -124,7 +141,6 @@ class ServiceRequest(FhirResourceBase):
         :param quantityQuantity: Service amount
         :param quantityRatio: Service amount
         :param quantityRange: Service amount
-        :param subject: Individual or Entity the service is ordered for
         :param encounter: Encounter in which the request was created
         :param occurrenceDateTime: What service should occur
         :param occurrencePeriod: What service should occur
@@ -150,16 +166,16 @@ class ServiceRequest(FhirResourceBase):
         super().__init__(
             resourceType="ServiceRequest",
             id_=id_,
+            status=status,
+            intent=intent,
+            subject=subject,
             meta=meta,
-            extension=extension,
             identifier=identifier,
             instantiatesCanonical=instantiatesCanonical,
             instantiatesUri=instantiatesUri,
             basedOn=basedOn,
             replaces=replaces,
             requisition=requisition,
-            status=status,
-            intent=intent,
             category=category,
             priority=priority,
             doNotPerform=doNotPerform,
@@ -168,7 +184,6 @@ class ServiceRequest(FhirResourceBase):
             quantityQuantity=quantityQuantity,
             quantityRatio=quantityRatio,
             quantityRange=quantityRange,
-            subject=subject,
             encounter=encounter,
             occurrenceDateTime=occurrenceDateTime,
             occurrencePeriod=occurrencePeriod,
@@ -188,8 +203,9 @@ class ServiceRequest(FhirResourceBase):
             specimen=specimen,
             bodySite=bodySite,
             note=note,
-            patientInstruction=patientInstruction
-            # relevantHistory=relevantHistory
+            patientInstruction=patientInstruction,
+            # relevantHistory=relevantHistory,
+            extension=extension,
         )
 
     def get_schema(

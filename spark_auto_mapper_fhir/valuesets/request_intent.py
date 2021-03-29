@@ -18,9 +18,7 @@ class RequestIntentCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'RequestIntentCode']
-        ) -> None:
+        def __init__(self, f: Callable[..., 'RequestIntentCode']) -> None:
             self.f: Callable[..., 'RequestIntentCode'] = f
 
         def __get__(
@@ -99,7 +97,6 @@ class RequestIntentCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return RequestIntentCode("option")
-
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

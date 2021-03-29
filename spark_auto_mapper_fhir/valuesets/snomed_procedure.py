@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 # noinspection PyPep8Naming
 class SNOMEDCTProcedureCode(FhirValueSetBase):
     """
-    http://snomed.info/sct
+    https://www.hl7.org/fhir/valueset-procedure-code.html
     """
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
@@ -21,7 +21,9 @@ class SNOMEDCTProcedureCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., 'SNOMEDCTProcedureCode']) -> None:
             self.f: Callable[..., 'SNOMEDCTProcedureCode'] = f
 
-        def __get__(self, obj: Any, owner: Type['SNOMEDCTProcedureCode']) -> 'SNOMEDCTProcedureCode':
+        def __get__(
+            self, obj: Any, owner: Type['SNOMEDCTProcedureCode']
+        ) -> 'SNOMEDCTProcedureCode':
             return self.f(owner)
 
     @classproperty
@@ -30,7 +32,7 @@ class SNOMEDCTProcedureCode(FhirValueSetBase):
         Comment
         """
         # noinspection PyCallingNonCallable
-        return SnoMedCode("A")
+        return SNOMEDCTProcedureCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

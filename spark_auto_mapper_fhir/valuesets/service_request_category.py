@@ -36,7 +36,6 @@ class ServiceRequestCategoryCode(FhirValueSetBase):
         # noinspection PyCallingNonCallable
         return ServiceRequestCategoryCode("A")
 
-
     @genericclassproperty
     def codeset(cls) -> FhirUri:
         """
