@@ -1,7 +1,6 @@
-from typing import Optional, Union
+from typing import Optional, Union, Any, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
-from typing import Any
 from spark_fhir_schemas.r4.resources.servicerequest import ServiceRequestSchema
 
 from spark_auto_mapper_fhir.backbone_elements.timing_backbone_element import Timing
@@ -24,18 +23,20 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirCanonical, FhirUri
 from spark_auto_mapper_fhir.resources.care_plan import CarePlan
 from spark_auto_mapper_fhir.resources.care_team import CareTeam
 from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
-from spark_auto_mapper_fhir.resources.condition import Condition
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.condition import Condition
+    from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
+    from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
+    from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.coverage import Coverage
 from spark_auto_mapper_fhir.resources.device import Device
-from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
+
 from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.resources.group import Group
 from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
 from spark_auto_mapper_fhir.resources.location import Location
-from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
-from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -67,7 +68,7 @@ class ServiceRequest(FhirResourceBase):
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
         basedOn: Optional[FhirList[Reference[Union[CarePlan, 'ServiceRequest',
-                                                   MedicationRequest]]]
+                                                   'MedicationRequest']]]
                           ] = None,
         replaces: Optional[FhirList[Reference['ServiceRequest']]] = None,
         requisition: Optional[Identifier] = None,
@@ -103,9 +104,9 @@ class ServiceRequest(FhirResourceBase):
         locationReference: Optional[FhirList[Reference[Location]]] = None,
         reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCode]]
                              ] = None,
-        reasonReference: Optional[FhirList[Reference[Union[Condition,
-                                                           Observation,
-                                                           DiagnosticReport,
+        reasonReference: Optional[FhirList[Reference[Union['Condition',
+                                                           'Observation',
+                                                           'DiagnosticReport',
                                                            DocumentReference]]]
                                   ] = None,
         insurance: Optional[FhirList[Union[Coverage, ClaimResponse]]] = None,
