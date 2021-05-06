@@ -27,7 +27,7 @@ class GroupTypeCode(FhirValueSetBase):
     @classproperty
     def person(cls) -> 'GroupTypeCode':
         """
-        Male
+        Group contains "person" Patient resources.
         """
         # noinspection PyCallingNonCallable
         return GroupTypeCode("person")
@@ -36,7 +36,7 @@ class GroupTypeCode(FhirValueSetBase):
     @classproperty
     def animal(cls) -> 'GroupTypeCode':
         """
-        Male
+        Group contains "animal" Patient resources.
         """
         # noinspection PyCallingNonCallable
         return GroupTypeCode("animal")
@@ -45,7 +45,7 @@ class GroupTypeCode(FhirValueSetBase):
     @classproperty
     def practitioner(cls) -> 'GroupTypeCode':
         """
-        Male
+        Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
         """
         # noinspection PyCallingNonCallable
         return GroupTypeCode("practitioner")
@@ -54,7 +54,7 @@ class GroupTypeCode(FhirValueSetBase):
     @classproperty
     def device(cls) -> 'GroupTypeCode':
         """
-        Male
+        Group contains Device resources.
         """
         # noinspection PyCallingNonCallable
         return GroupTypeCode("device")
@@ -63,7 +63,7 @@ class GroupTypeCode(FhirValueSetBase):
     @classproperty
     def medication(cls) -> 'GroupTypeCode':
         """
-        Male
+        Group contains Medication resources.
         """
         # noinspection PyCallingNonCallable
         return GroupTypeCode("medication")
@@ -72,7 +72,7 @@ class GroupTypeCode(FhirValueSetBase):
     @classproperty
     def substance(cls) -> 'GroupTypeCode':
         """
-        Male
+        Group contains Substance resources.
         """
         # noinspection PyCallingNonCallable
         return GroupTypeCode("substance")
