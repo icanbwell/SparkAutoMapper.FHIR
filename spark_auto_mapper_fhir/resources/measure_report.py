@@ -1,5 +1,6 @@
 from typing import Optional, Union, Any
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 
 from spark_auto_mapper_fhir.backbone_elements.group_backbone_element import GroupBackboneElement
 from spark_auto_mapper_fhir.resources.organization import Organization
@@ -30,6 +31,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.valuesets.measure_improvement_notation import MeasureImprovementNotationCode
 from spark_auto_mapper_fhir.valuesets.measure_report_status import MeasureReportStatusCode
 from spark_auto_mapper_fhir.valuesets.measure_report_type import MeasureReportTypeCode
 
@@ -50,7 +52,8 @@ class MeasureReport(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         reporter: Optional[Reference[Union[Practitioner, PractitionerRole,
                                            Location, Organization]]] = None,
-        # improvementNotation: Optional[CodeableConcept[MeasureImprovementNotationCode]] = None,
+        improvementNotation: Optional[
+            CodeableConcept[MeasureImprovementNotationCode]] = None,
         group: Optional[FhirList[GroupBackboneElement]] = None,
         evaluatedResource: Optional[FhirList[Reference[Any]]] = None,
         extension: Optional[FhirList[Extension]] = None
@@ -84,7 +87,7 @@ class MeasureReport(FhirResourceBase):
             date=date,
             reporter=reporter,
             period=period,
-            # improvementNotation=improvementNotation,
+            improvementNotation=improvementNotation,
             group=group,
             evaluatedResource=evaluatedResource,
             extension=extension

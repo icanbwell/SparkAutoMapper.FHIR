@@ -1,5 +1,7 @@
 from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
+
+from spark_auto_mapper_fhir.valuesets.measure_improvement_notation import MeasureImprovementNotationCode
 from spark_auto_mapper_fhir.valuesets.subject_type import SubjectTypeCode
 
 from spark_auto_mapper_fhir.resources.related_artifact import RelatedArtifact
@@ -88,7 +90,8 @@ class Measure(FhirResourceBase):
         rateAggregation: Optional[FhirString] = None,
         rationale: Optional[FhirMarkdown] = None,
         clinicalRecommendationStatement: Optional[FhirMarkdown] = None,
-        # improvementNotation: Optional[CodeableConcept[MeasureImprovementNotationCode]] = None,
+        improvementNotation: Optional[
+            CodeableConcept[MeasureImprovementNotationCode]] = None,
         definition: Optional[FhirList[FhirMarkdown]] = None,
         guidance: Optional[FhirMarkdown] = None,
         # group: Optional[GroupBackboneElement] = None,
@@ -142,7 +145,7 @@ class Measure(FhirResourceBase):
             rateAggregation=rateAggregation,
             rationale=rationale,
             clinicalRecommendationStatement=clinicalRecommendationStatement,
-            # improvementNotation=improvementNotation,
+            improvementNotation=improvementNotation,
             definition=definition,
             guidance=guidance,
             # group=group,
