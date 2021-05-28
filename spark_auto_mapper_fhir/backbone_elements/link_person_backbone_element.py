@@ -9,7 +9,9 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.resources.person import Person
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.person import Person
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 from spark_auto_mapper_fhir.valuesets.identity_assurance_level import IdentityAssuranceLevelCode
@@ -18,7 +20,8 @@ from spark_auto_mapper_fhir.valuesets.identity_assurance_level import IdentityAs
 class LinkPersonBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
-        target: Reference[Union[Patient, Practitioner, RelatedPerson, Person]],
+        target: Reference[Union[Patient, Practitioner, RelatedPerson,
+                                'Person']],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         assurance: Optional[IdentityAssuranceLevelCode] = None
