@@ -4,11 +4,10 @@ import pytest
 from pyspark.sql import SparkSession, Column, DataFrame
 
 # noinspection PyUnresolvedReferences
-from pyspark.sql.functions import col, when, regexp_replace, substring
+from pyspark.sql.functions import col, when, regexp_replace, substring, filter
 from pyspark.sql.functions import lit, struct, array, coalesce, to_date
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
-from spark_auto_mapper.helpers.spark_higher_order_functions import filter
 
 
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
