@@ -3,7 +3,7 @@ LANG=en_US.utf-8
 export LANG
 
 Pipfile.lock: Pipfile
-	docker-compose run --rm --name spark_pipeline_framework dev pipenv lock --dev
+	docker-compose run --rm --name sam dev pipenv lock --dev
 
 .PHONY:devdocker
 devdocker: ## Builds the docker for dev
@@ -39,15 +39,15 @@ update: down Pipfile.lock setup-pre-commit  ## Updates all the packages using Pi
 
 .PHONY:tests
 tests:
-	docker-compose run --rm --name spark_pipeline_framework_fhir dev pytest tests
+	docker-compose run --rm --name sam_fhir dev pytest tests
 .PHONY:continuous_integration
 continuous_integration: run-pre-commit
-	docker-compose run --rm --name spark_pipeline_framework_fhir dev python setup.py install && \
+	docker-compose run --rm --name sam_fhir dev python setup.py install && \
     pytest tests
 
 .PHONY: sphinx-html
 sphinx-html:
-	docker-compose run --rm --name spark_pipeline_framework_fhir dev make -C docsrc html
+	docker-compose run --rm --name sam_fhir dev make -C docsrc html
 	@echo "copy html to docs... why? https://github.com/sphinx-doc/sphinx/issues/3382#issuecomment-470772316"
 	@rm -rf docs/*
 	@touch docs/.nojekyll

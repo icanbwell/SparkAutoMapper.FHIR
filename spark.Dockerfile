@@ -2,11 +2,11 @@ FROM imranq2/spark_python:0.1.25
 # https://github.com/imranq2/docker.spark_python
 USER root
 
-ENV PYTHONPATH=/sam_fhir
-ENV CLASSPATH=/sam_fhir/jars:$CLASSPATH
+ENV PYTHONPATH=/SparkAutoMapper.FHIR
+ENV CLASSPATH=/SparkAutoMapper.FHIR/jars:$CLASSPATH
 
-COPY Pipfile* /sam_fhir/
-WORKDIR /sam_fhir
+COPY Pipfile* /SparkAutoMapper.FHIR/
+WORKDIR /SparkAutoMapper.FHIR
 
 RUN df -h # for space monitoring
 RUN pipenv install --ignore-pipfile --deploy --dev
