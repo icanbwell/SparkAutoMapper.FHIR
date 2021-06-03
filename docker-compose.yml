@@ -7,7 +7,7 @@ services:
       context: .
     volumes:
       - ./:/SparkAutoMapper.FHIR/
-    container_name: spf_fhir_dev
+    container_name: sam_fhir_dev
     working_dir: /SparkAutoMapper.FHIR
     networks:
       - sam_fhir_net

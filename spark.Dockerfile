@@ -14,7 +14,7 @@ RUN pipenv install --ignore-pipfile --deploy --dev
 # COPY ./jars/* /opt/bitnami/spark/jars/
 # COPY ./conf/* /opt/bitnami/spark/conf/
 
-COPY . /sam_fhir
+COPY . /SparkAutoMapper.FHIR
 
 # run pre-commit once so it installs all the hooks and subsequent runs are fast
 # RUN pre-commit install
