@@ -13,21 +13,22 @@ class InsurancePlanTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-insuranceplan-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'InsurancePlanTypeCode']) -> None:
-            self.f: Callable[..., 'InsurancePlanTypeCode'] = f
+        def __init__(self, f: Callable[..., "InsurancePlanTypeCode"]) -> None:
+            self.f: Callable[..., "InsurancePlanTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['InsurancePlanTypeCode']
-        ) -> 'InsurancePlanTypeCode':
+            self, obj: Any, owner: Type["InsurancePlanTypeCode"]
+        ) -> "InsurancePlanTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Medical(cls) -> 'InsurancePlanTypeCode':
+    def Medical(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -35,7 +36,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("medical")
 
     @classproperty
-    def Dental(cls) -> 'InsurancePlanTypeCode':
+    def Dental(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -43,7 +44,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("dental")
 
     @classproperty
-    def MentalHealth(cls) -> 'InsurancePlanTypeCode':
+    def MentalHealth(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -51,7 +52,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("mental")
 
     @classproperty
-    def SubstanceAbuse(cls) -> 'InsurancePlanTypeCode':
+    def SubstanceAbuse(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -59,7 +60,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("subst-ab")
 
     @classproperty
-    def Vision(cls) -> 'InsurancePlanTypeCode':
+    def Vision(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -67,7 +68,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("vision")
 
     @classproperty
-    def Drug(cls) -> 'InsurancePlanTypeCode':
+    def Drug(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -75,7 +76,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("drug")
 
     @classproperty
-    def ShortTermCare(cls) -> 'InsurancePlanTypeCode':
+    def ShortTermCare(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -83,7 +84,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("short-term")
 
     @classproperty
-    def LongTermCare(cls) -> 'InsurancePlanTypeCode':
+    def LongTermCare(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -91,7 +92,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("long-term")
 
     @classproperty
-    def Hospice(cls) -> 'InsurancePlanTypeCode':
+    def Hospice(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """
@@ -99,7 +100,7 @@ class InsurancePlanTypeCode(FhirValueSetBase):
         return InsurancePlanTypeCode("hospice")
 
     @classproperty
-    def HomeHealth(cls) -> 'InsurancePlanTypeCode':
+    def HomeHealth(cls) -> "InsurancePlanTypeCode":
         """
         Comment
         """

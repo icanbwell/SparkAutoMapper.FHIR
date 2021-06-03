@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.duration import Duration
 from spark_auto_mapper_fhir.complex_types.quantity import Quantity
@@ -18,7 +20,7 @@ class Fill(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         quantity: Optional[Quantity] = None,
-        duration: Optional[Duration] = None
+        duration: Optional[Duration] = None,
     ):
         """
         Fill Resource in FHIR

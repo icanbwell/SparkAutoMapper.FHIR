@@ -13,23 +13,22 @@ class ActionRequiredBehaviorCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-required-behavior.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionRequiredBehaviorCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionRequiredBehaviorCode'] = f
+        def __init__(self, f: Callable[..., "ActionRequiredBehaviorCode"]) -> None:
+            self.f: Callable[..., "ActionRequiredBehaviorCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionRequiredBehaviorCode']
-        ) -> 'ActionRequiredBehaviorCode':
+            self, obj: Any, owner: Type["ActionRequiredBehaviorCode"]
+        ) -> "ActionRequiredBehaviorCode":
             return self.f(owner)
 
     @classproperty
-    def Must(cls) -> 'ActionRequiredBehaviorCode':
+    def Must(cls) -> "ActionRequiredBehaviorCode":
         """
         An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
         """
@@ -37,7 +36,7 @@ class ActionRequiredBehaviorCode(FhirValueSetBase):
         return ActionRequiredBehaviorCode("must")
 
     @classproperty
-    def Could(cls) -> 'ActionRequiredBehaviorCode':
+    def Could(cls) -> "ActionRequiredBehaviorCode":
         """
         An action with this behavior may be included in the set of actions processed by the end user.
         """
@@ -45,7 +44,7 @@ class ActionRequiredBehaviorCode(FhirValueSetBase):
         return ActionRequiredBehaviorCode("could")
 
     @classproperty
-    def MustUnlessDocumented(cls) -> 'ActionRequiredBehaviorCode':
+    def MustUnlessDocumented(cls) -> "ActionRequiredBehaviorCode":
         """
         An action with this behavior must be included in the set of actions processed by the end user,
         unless the end user provides documentation as to why the action was not included.

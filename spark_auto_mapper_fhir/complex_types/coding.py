@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -26,7 +28,7 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
         version: Optional[FhirString] = None,
         code: Optional[_T] = None,
         display: Optional[FhirString] = None,
-        userSelected: Optional[FhirBoolean] = None
+        userSelected: Optional[FhirBoolean] = None,
     ):
         """
         Coding Resource in FHIR
@@ -46,5 +48,5 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
             version=version,
             code=code,
             display=display,
-            userSelected=userSelected
+            userSelected=userSelected,
         )

@@ -1,6 +1,8 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -18,7 +20,7 @@ class HoursOfOperationBackboneElement(FhirBackboneElementBase):
         daysOfWeek: Optional[FhirList[DaysOfWeekCode]] = None,
         allDay: Optional[FhirBoolean] = None,
         openingTime: Optional[FhirTime] = None,
-        closingTime: Optional[FhirTime] = None
+        closingTime: Optional[FhirTime] = None,
     ) -> None:
         """
         HoursOfOperationBackboneElement Backbone Element in FHIR
@@ -37,5 +39,5 @@ class HoursOfOperationBackboneElement(FhirBackboneElementBase):
             daysOfWeek=daysOfWeek,
             allDay=allDay,
             openingTime=openingTime,
-            closingTime=closingTime
+            closingTime=closingTime,
         )

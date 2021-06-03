@@ -3,7 +3,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.claim_payee_type import ClaimPayeeTypeCode
@@ -21,9 +23,13 @@ class PayeeBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[CodeableConcept[ClaimPayeeTypeCode]] = None,
-        party: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                        Organization, Patient,
-                                        RelatedPerson]]] = None
+        party: Optional[
+            Reference[
+                Union[
+                    Practitioner, PractitionerRole, Organization, Patient, RelatedPerson
+                ]
+            ]
+        ] = None,
     ):
         """
         PayeeBackboneElement Resource in FHIR
@@ -33,6 +39,4 @@ class PayeeBackboneElement(FhirBackboneElementBase):
         :param type_: Category of recipient https://hl7.org/FHIR/valueset-payeetype.html
         :param party: Recipient reference
         """
-        super().__init__(
-            id_=id_, extension=extension, type_=type_, party=party
-        )
+        super().__init__(id_=id_, extension=extension, type_=type_, party=party)

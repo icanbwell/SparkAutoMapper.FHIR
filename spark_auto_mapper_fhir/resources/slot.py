@@ -19,7 +19,9 @@ from spark_auto_mapper_fhir.valuesets.practice_setting_code import PracticeSetti
 from spark_auto_mapper_fhir.valuesets.service_category import ServiceCategoryCode
 from spark_auto_mapper_fhir.valuesets.service_type import ServiceTypeCode
 from spark_auto_mapper_fhir.valuesets.slot_status import SlotStatusCode
-from spark_auto_mapper_fhir.valuesets.v2_appointment_reason import V2AppointmentReasonCode
+from spark_auto_mapper_fhir.valuesets.v2_appointment_reason import (
+    V2AppointmentReasonCode,
+)
 
 
 class Slot(FhirResourceBase):
@@ -34,14 +36,12 @@ class Slot(FhirResourceBase):
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategoryCode]
-                                           ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]
-                              ] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]
-                            ] = None,
-        appointmentType: Optional[CodeableConcept[V2AppointmentReasonCode]
-                                  ] = None,
+        serviceCategory: Optional[
+            FhirList[CodeableConcept[ServiceCategoryCode]]
+        ] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
+        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]] = None,
+        appointmentType: Optional[CodeableConcept[V2AppointmentReasonCode]] = None,
         overbooked: Optional[FhirBoolean] = None,
         comment: Optional[FhirString] = None,
     ):

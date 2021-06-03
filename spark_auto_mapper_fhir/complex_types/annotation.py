@@ -22,7 +22,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 
 class Annotation(FhirComplexTypeBase):
@@ -31,11 +33,11 @@ class Annotation(FhirComplexTypeBase):
         text: FhirMarkdown,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        authorReference: Optional[Reference[Union[Practitioner, Patient,
-                                                  RelatedPerson,
-                                                  Organization]]] = None,
+        authorReference: Optional[
+            Reference[Union[Practitioner, Patient, RelatedPerson, Organization]]
+        ] = None,
         authorString: Optional[FhirString] = None,
-        time: Optional[FhirDateTime] = None
+        time: Optional[FhirDateTime] = None,
     ) -> None:
         """
         Annotation Resource in FHIR
@@ -53,5 +55,5 @@ class Annotation(FhirComplexTypeBase):
             authorReference=authorReference,
             authorString=authorString,
             time=time,
-            text=text
+            text=text,
         )

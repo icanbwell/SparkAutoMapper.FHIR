@@ -1,6 +1,8 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -21,7 +23,7 @@ class AccidentBackboneElement(FhirBackboneElementBase):
         date: Optional[FhirDate] = None,
         type_: Optional[CodeableConcept[AccidentIncidentCode]] = None,
         locationAddress: Optional[Address] = None,
-        locationReference: Optional[Reference[Location]] = None
+        locationReference: Optional[Reference[Location]] = None,
     ) -> None:
         """
         AccidentBackboneElement Resource in FHIR
@@ -39,5 +41,5 @@ class AccidentBackboneElement(FhirBackboneElementBase):
             date=date,
             type_=type_,
             locationAddress=locationAddress,
-            locationReference=locationReference
+            locationReference=locationReference,
         )

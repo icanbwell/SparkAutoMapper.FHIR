@@ -13,23 +13,22 @@ class RelatedClaimRelationshipCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-related-claim-relationship.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'RelatedClaimRelationshipCode']
-        ) -> None:
-            self.f: Callable[..., 'RelatedClaimRelationshipCode'] = f
+        def __init__(self, f: Callable[..., "RelatedClaimRelationshipCode"]) -> None:
+            self.f: Callable[..., "RelatedClaimRelationshipCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['RelatedClaimRelationshipCode']
-        ) -> 'RelatedClaimRelationshipCode':
+            self, obj: Any, owner: Type["RelatedClaimRelationshipCode"]
+        ) -> "RelatedClaimRelationshipCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'RelatedClaimRelationshipCode':
+    def NameOfYourFirstValue(cls) -> "RelatedClaimRelationshipCode":
         """
         Comment
         """

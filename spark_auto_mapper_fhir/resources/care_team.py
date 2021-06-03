@@ -4,8 +4,9 @@ from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.careteam import CareTeamSchema
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.backbone_elements.care_team_participant_backbone_element import \
-        CareTeamParticipantBackboneElement
+    from spark_auto_mapper_fhir.backbone_elements.care_team_participant_backbone_element import (
+        CareTeamParticipantBackboneElement,
+    )
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
@@ -26,7 +27,9 @@ from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.valuesets.care_team_category import CareTeamCategoryCode
 from spark_auto_mapper_fhir.valuesets.care_team_status import CareTeamStatusCode
-from spark_auto_mapper_fhir.valuesets.snomed_clinical_finding import SNOMEDCTClinicalFindingsCode
+from spark_auto_mapper_fhir.valuesets.snomed_clinical_finding import (
+    SNOMEDCTClinicalFindingsCode,
+)
 
 
 class CareTeam(FhirResourceBase):
@@ -38,21 +41,19 @@ class CareTeam(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[CareTeamStatusCode] = None,
-        category: Optional[FhirList[CodeableConcept[CareTeamCategoryCode]]
-                           ] = None,
+        category: Optional[FhirList[CodeableConcept[CareTeamCategoryCode]]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
-        encounter: Optional[Reference['Encounter']] = None,
+        encounter: Optional[Reference["Encounter"]] = None,
         period: Optional[Period] = None,
-        participant: Optional[FhirList['CareTeamParticipantBackboneElement']
-                              ] = None,
-        reasonCode: Optional[FhirList[
-            CodeableConcept[SNOMEDCTClinicalFindingsCode]]] = None,
-        reasonReference: Optional[FhirList[Reference['Condition']]] = None,
-        managingOrganization: Optional[FhirList[Reference[Organization]]
-                                       ] = None,
+        participant: Optional[FhirList["CareTeamParticipantBackboneElement"]] = None,
+        reasonCode: Optional[
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode]]
+        ] = None,
+        reasonReference: Optional[FhirList[Reference["Condition"]]] = None,
+        managingOrganization: Optional[FhirList[Reference[Organization]]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
-        note: Optional[FhirList[Annotation]] = None
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
         CareTeam Resource in FHIR
@@ -93,7 +94,7 @@ class CareTeam(FhirResourceBase):
             reasonReference=reasonReference,
             managingOrganization=managingOrganization,
             telecom=telecom,
-            note=note
+            note=note,
         )
 
     def get_schema(

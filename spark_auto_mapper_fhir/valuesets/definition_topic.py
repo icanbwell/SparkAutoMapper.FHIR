@@ -13,21 +13,22 @@ class DefinitionTopicCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-definition-topic.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'DefinitionTopicCode']) -> None:
-            self.f: Callable[..., 'DefinitionTopicCode'] = f
+        def __init__(self, f: Callable[..., "DefinitionTopicCode"]) -> None:
+            self.f: Callable[..., "DefinitionTopicCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['DefinitionTopicCode']
-        ) -> 'DefinitionTopicCode':
+            self, obj: Any, owner: Type["DefinitionTopicCode"]
+        ) -> "DefinitionTopicCode":
             return self.f(owner)
 
     @classproperty
-    def Treatment(cls) -> 'DefinitionTopicCode':
+    def Treatment(cls) -> "DefinitionTopicCode":
         """
         The definition is related to treatment of the patient.
         """
@@ -35,7 +36,7 @@ class DefinitionTopicCode(FhirValueSetBase):
         return DefinitionTopicCode("treatment")
 
     @classproperty
-    def Education(cls) -> 'DefinitionTopicCode':
+    def Education(cls) -> "DefinitionTopicCode":
         """
         The definition is related to education of the patient.
         """
@@ -43,7 +44,7 @@ class DefinitionTopicCode(FhirValueSetBase):
         return DefinitionTopicCode("education")
 
     @classproperty
-    def Assessment(cls) -> 'DefinitionTopicCode':
+    def Assessment(cls) -> "DefinitionTopicCode":
         """
         The definition is related to assessment of the patient.
         """

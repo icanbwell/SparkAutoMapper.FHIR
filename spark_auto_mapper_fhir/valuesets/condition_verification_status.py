@@ -13,23 +13,22 @@ class ConditionVerificationStatusCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-condition-ver-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ConditionVerificationStatusCode']
-        ) -> None:
-            self.f: Callable[..., 'ConditionVerificationStatusCode'] = f
+        def __init__(self, f: Callable[..., "ConditionVerificationStatusCode"]) -> None:
+            self.f: Callable[..., "ConditionVerificationStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ConditionVerificationStatusCode']
-        ) -> 'ConditionVerificationStatusCode':
+            self, obj: Any, owner: Type["ConditionVerificationStatusCode"]
+        ) -> "ConditionVerificationStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Unconfirmed(cls) -> 'ConditionVerificationStatusCode':
+    def Unconfirmed(cls) -> "ConditionVerificationStatusCode":
         """
         There is not sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
         """
@@ -37,7 +36,7 @@ class ConditionVerificationStatusCode(FhirValueSetBase):
         return ConditionVerificationStatusCode("unconfirmed")
 
     @classproperty
-    def Provisional(cls) -> 'ConditionVerificationStatusCode':
+    def Provisional(cls) -> "ConditionVerificationStatusCode":
         """
         This is a tentative diagnosis - still a candidate that is under consideration.
         """
@@ -45,7 +44,7 @@ class ConditionVerificationStatusCode(FhirValueSetBase):
         return ConditionVerificationStatusCode("provisional")
 
     @classproperty
-    def Differential(cls) -> 'ConditionVerificationStatusCode':
+    def Differential(cls) -> "ConditionVerificationStatusCode":
         """
         One of a set of potential (and typically mutually exclusive) diagnoses asserted to further guide
          the diagnostic process and preliminary treatment.
@@ -54,7 +53,7 @@ class ConditionVerificationStatusCode(FhirValueSetBase):
         return ConditionVerificationStatusCode("differential")
 
     @classproperty
-    def Confirmed(cls) -> 'ConditionVerificationStatusCode':
+    def Confirmed(cls) -> "ConditionVerificationStatusCode":
         """
         There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
         """
@@ -62,7 +61,7 @@ class ConditionVerificationStatusCode(FhirValueSetBase):
         return ConditionVerificationStatusCode("confirmed")
 
     @classproperty
-    def Refuted(cls) -> 'ConditionVerificationStatusCode':
+    def Refuted(cls) -> "ConditionVerificationStatusCode":
         """
         This condition has been ruled out by diagnostic and clinical evidence.
         """
@@ -70,7 +69,7 @@ class ConditionVerificationStatusCode(FhirValueSetBase):
         return ConditionVerificationStatusCode("refuted")
 
     @classproperty
-    def EnteredInError(cls) -> 'ConditionVerificationStatusCode':
+    def EnteredInError(cls) -> "ConditionVerificationStatusCode":
         """
         The statement was entered in error and is not valid.
         """

@@ -13,23 +13,22 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-diagnostic-report-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'DiagnosticReportStatusCode']
-        ) -> None:
-            self.f: Callable[..., 'DiagnosticReportStatusCode'] = f
+        def __init__(self, f: Callable[..., "DiagnosticReportStatusCode"]) -> None:
+            self.f: Callable[..., "DiagnosticReportStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['DiagnosticReportStatusCode']
-        ) -> 'DiagnosticReportStatusCode':
+            self, obj: Any, owner: Type["DiagnosticReportStatusCode"]
+        ) -> "DiagnosticReportStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Registered(cls) -> 'DiagnosticReportStatusCode':
+    def Registered(cls) -> "DiagnosticReportStatusCode":
         """
         The existence of the report is registered, but there is nothing yet available.
         """
@@ -37,7 +36,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("registered")
 
     @classproperty
-    def Partial(cls) -> 'DiagnosticReportStatusCode':
+    def Partial(cls) -> "DiagnosticReportStatusCode":
         """
         This is a partial (e.g. initial, interim or preliminary) report: data in the report may be
         incomplete or unverified.
@@ -46,7 +45,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("partial")
 
     @classproperty
-    def Preliminary(cls) -> 'DiagnosticReportStatusCode':
+    def Preliminary(cls) -> "DiagnosticReportStatusCode":
         """
         Verified early results are available, but not all results are final.
         """
@@ -54,7 +53,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("preliminary")
 
     @classproperty
-    def Final(cls) -> 'DiagnosticReportStatusCode':
+    def Final(cls) -> "DiagnosticReportStatusCode":
         """
         The report is complete and verified by an authorized person.
         """
@@ -62,7 +61,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("final")
 
     @classproperty
-    def Amended(cls) -> 'DiagnosticReportStatusCode':
+    def Amended(cls) -> "DiagnosticReportStatusCode":
         """
         Subsequent to being final, the report has been modified. This includes any change in the results, diagnosis,
          narrative text, or other content of a report that has been issued.
@@ -71,7 +70,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("amended")
 
     @classproperty
-    def Corrected(cls) -> 'DiagnosticReportStatusCode':
+    def Corrected(cls) -> "DiagnosticReportStatusCode":
         """
         Subsequent to being final, the report has been modified to correct an error in the report or referenced results.
         """
@@ -79,7 +78,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("corrected")
 
     @classproperty
-    def Appended(cls) -> 'DiagnosticReportStatusCode':
+    def Appended(cls) -> "DiagnosticReportStatusCode":
         """
         Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged.
         """
@@ -87,7 +86,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("appended")
 
     @classproperty
-    def Cancelled(cls) -> 'DiagnosticReportStatusCode':
+    def Cancelled(cls) -> "DiagnosticReportStatusCode":
         """
         The report is unavailable because the measurement was not started or not completed (also sometimes called "aborted").
         """
@@ -95,7 +94,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("cancelled")
 
     @classproperty
-    def EnteredInError(cls) -> 'DiagnosticReportStatusCode':
+    def EnteredInError(cls) -> "DiagnosticReportStatusCode":
         """
         The report has been withdrawn following a previous final release. This electronic record should never have
          existed, though it is possible that real-world decisions were based on it. (If real-world activity has
@@ -105,7 +104,7 @@ class DiagnosticReportStatusCode(FhirValueSetBase):
         return DiagnosticReportStatusCode("entered-in-error")
 
     @classproperty
-    def Unknown(cls) -> 'DiagnosticReportStatusCode':
+    def Unknown(cls) -> "DiagnosticReportStatusCode":
         """
         The authoring/source system does not know which of the status values currently applies for this observation.
         Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but

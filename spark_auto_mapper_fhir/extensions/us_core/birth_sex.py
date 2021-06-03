@@ -11,7 +11,7 @@ class BirthSex(ExtensionBase):
     def __init__(
         self,
         url: Optional[FhirUri] = None,
-        valueCode: Optional[FhirValueSetBase] = None
+        valueCode: Optional[FhirValueSetBase] = None,
     ) -> None:
         """
         Extension type in FHIR

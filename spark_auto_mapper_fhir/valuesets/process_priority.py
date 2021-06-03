@@ -13,21 +13,22 @@ class ProcessPriorityCode(FhirValueSetBase):
     """
     https://terminology.hl7.org/1.0.0/CodeSystem-processpriority.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ProcessPriorityCode']) -> None:
-            self.f: Callable[..., 'ProcessPriorityCode'] = f
+        def __init__(self, f: Callable[..., "ProcessPriorityCode"]) -> None:
+            self.f: Callable[..., "ProcessPriorityCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ProcessPriorityCode']
-        ) -> 'ProcessPriorityCode':
+            self, obj: Any, owner: Type["ProcessPriorityCode"]
+        ) -> "ProcessPriorityCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ProcessPriorityCode':
+    def NameOfYourFirstValue(cls) -> "ProcessPriorityCode":
         """
         Comment
         """

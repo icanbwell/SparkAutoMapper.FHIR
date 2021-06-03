@@ -13,23 +13,22 @@ class ExProviderQualificationCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-provider-qualification.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ExProviderQualificationCode']
-        ) -> None:
-            self.f: Callable[..., 'ExProviderQualificationCode'] = f
+        def __init__(self, f: Callable[..., "ExProviderQualificationCode"]) -> None:
+            self.f: Callable[..., "ExProviderQualificationCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ExProviderQualificationCode']
-        ) -> 'ExProviderQualificationCode':
+            self, obj: Any, owner: Type["ExProviderQualificationCode"]
+        ) -> "ExProviderQualificationCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ExProviderQualificationCode':
+    def NameOfYourFirstValue(cls) -> "ExProviderQualificationCode":
         """
         Comment
         """

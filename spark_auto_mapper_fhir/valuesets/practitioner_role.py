@@ -13,21 +13,22 @@ class PractitionerRoleCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-practitioner-role.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'PractitionerRoleCode']) -> None:
-            self.f: Callable[..., 'PractitionerRoleCode'] = f
+        def __init__(self, f: Callable[..., "PractitionerRoleCode"]) -> None:
+            self.f: Callable[..., "PractitionerRoleCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['PractitionerRoleCode']
-        ) -> 'PractitionerRoleCode':
+            self, obj: Any, owner: Type["PractitionerRoleCode"]
+        ) -> "PractitionerRoleCode":
             return self.f(owner)
 
     @classproperty
-    def Doctor(cls) -> 'PractitionerRoleCode':
+    def Doctor(cls) -> "PractitionerRoleCode":
         """
         A qualified/registered medical practitioner
         """
@@ -35,7 +36,7 @@ class PractitionerRoleCode(FhirValueSetBase):
         return PractitionerRoleCode("doctor")
 
     @classproperty
-    def Nurse(cls) -> 'PractitionerRoleCode':
+    def Nurse(cls) -> "PractitionerRoleCode":
         """
         A practitioner with nursing experience that may be qualified/registered
         """
@@ -43,7 +44,7 @@ class PractitionerRoleCode(FhirValueSetBase):
         return PractitionerRoleCode("nurse")
 
     @classproperty
-    def Pharmacist(cls) -> 'PractitionerRoleCode':
+    def Pharmacist(cls) -> "PractitionerRoleCode":
         """
         A qualified/registered/licensed pharmacist
         """
@@ -51,7 +52,7 @@ class PractitionerRoleCode(FhirValueSetBase):
         return PractitionerRoleCode("pharmacist")
 
     @classproperty
-    def Researcher(cls) -> 'PractitionerRoleCode':
+    def Researcher(cls) -> "PractitionerRoleCode":
         """
         A practitioner that may perform research
         """
@@ -59,7 +60,7 @@ class PractitionerRoleCode(FhirValueSetBase):
         return PractitionerRoleCode("researcher")
 
     @classproperty
-    def Teacher(cls) -> 'PractitionerRoleCode':
+    def Teacher(cls) -> "PractitionerRoleCode":
         """
         Someone who is able to provide educational services
         """
@@ -67,7 +68,7 @@ class PractitionerRoleCode(FhirValueSetBase):
         return PractitionerRoleCode("teacher")
 
     @classproperty
-    def ICTProfessional(cls) -> 'PractitionerRoleCode':
+    def ICTProfessional(cls) -> "PractitionerRoleCode":
         """
         Someone who is qualified in Information and Communication Technologies
         """

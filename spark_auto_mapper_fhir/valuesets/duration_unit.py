@@ -13,21 +13,22 @@ class DurationUnitCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-duration-units.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'DurationUnitCode']) -> None:
-            self.f: Callable[..., 'DurationUnitCode'] = f
+        def __init__(self, f: Callable[..., "DurationUnitCode"]) -> None:
+            self.f: Callable[..., "DurationUnitCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['DurationUnitCode']
-        ) -> 'DurationUnitCode':
+            self, obj: Any, owner: Type["DurationUnitCode"]
+        ) -> "DurationUnitCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'DurationUnitCode':
+    def NameOfYourFirstValue(cls) -> "DurationUnitCode":
         """
         Comment
         """

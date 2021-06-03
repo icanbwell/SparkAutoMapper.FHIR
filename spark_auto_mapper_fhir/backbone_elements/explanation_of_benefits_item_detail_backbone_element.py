@@ -1,8 +1,11 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_item_sub_detail_backbone_element import \
-    ExplanationOfBenefitsItemSubDetailBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import (
+    AdjudicationBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_item_sub_detail_backbone_element import (
+    ExplanationOfBenefitsItemSubDetailBackboneElement,
+)
 from spark_auto_mapper_fhir.resources.device import Device
 
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
@@ -13,7 +16,9 @@ from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.valuesets.benefit_category import BenefitCategoryCode
 from spark_auto_mapper_fhir.valuesets.claim_modifiers import ClaimModifiersCode
@@ -32,10 +37,8 @@ class ExplanationOfBenefitsItemDetailBackboneElement(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         revenue: Optional[CodeableConcept[ExRevenueCenterCode]] = None,
         category: Optional[CodeableConcept[BenefitCategoryCode]] = None,
-        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
-                           ] = None,
-        programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]
-                              ] = None,
+        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]] = None,
+        programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]] = None,
         quantity: Optional[SimpleQuantity] = None,
         unitPrice: Optional[Money] = None,
         factor: Optional[FhirDecimal] = None,
@@ -44,7 +47,8 @@ class ExplanationOfBenefitsItemDetailBackboneElement(FhirBackboneElementBase):
         noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: Optional[FhirList[AdjudicationBackboneElement]] = None,
         subDetail: Optional[
-            FhirList[ExplanationOfBenefitsItemSubDetailBackboneElement]] = None
+            FhirList[ExplanationOfBenefitsItemSubDetailBackboneElement]
+        ] = None,
     ) -> None:
         """
         ExplanationOfBenefitsItemDetailBackboneElement Backbone Element in FHIR
@@ -68,5 +72,5 @@ class ExplanationOfBenefitsItemDetailBackboneElement(FhirBackboneElementBase):
             udi=udi,
             noteNumber=noteNumber,
             adjudication=adjudication,
-            subDetail=subDetail
+            subDetail=subDetail,
         )

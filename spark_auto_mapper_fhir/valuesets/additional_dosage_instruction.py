@@ -13,23 +13,22 @@ class AdditionalDosageInstructionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-additional-instruction-codes.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'AdditionalDosageInstructionCode']
-        ) -> None:
-            self.f: Callable[..., 'AdditionalDosageInstructionCode'] = f
+        def __init__(self, f: Callable[..., "AdditionalDosageInstructionCode"]) -> None:
+            self.f: Callable[..., "AdditionalDosageInstructionCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['AdditionalDosageInstructionCode']
-        ) -> 'AdditionalDosageInstructionCode':
+            self, obj: Any, owner: Type["AdditionalDosageInstructionCode"]
+        ) -> "AdditionalDosageInstructionCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'AdditionalDosageInstructionCode':
+    def NameOfYourFirstValue(cls) -> "AdditionalDosageInstructionCode":
         """
         Comment
         """

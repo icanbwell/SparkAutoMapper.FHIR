@@ -13,35 +13,36 @@ class ClaimPayeeTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-payeetype.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ClaimPayeeTypeCode']) -> None:
-            self.f: Callable[..., 'ClaimPayeeTypeCode'] = f
+        def __init__(self, f: Callable[..., "ClaimPayeeTypeCode"]) -> None:
+            self.f: Callable[..., "ClaimPayeeTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ClaimPayeeTypeCode']
-        ) -> 'ClaimPayeeTypeCode':
+            self, obj: Any, owner: Type["ClaimPayeeTypeCode"]
+        ) -> "ClaimPayeeTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Subscriber(cls) -> 'ClaimPayeeTypeCode':
+    def Subscriber(cls) -> "ClaimPayeeTypeCode":
         """
         The subscriber (policy holder) will be reimbursed.
         """
         # noinspection PyCallingNonCallable
         return ClaimPayeeTypeCode("subscriber")
 
-    def Provider(cls) -> 'ClaimPayeeTypeCode':
+    def Provider(cls) -> "ClaimPayeeTypeCode":
         """
         Any benefit payable will be paid to the provider (Assignment of Benefit).
         """
         # noinspection PyCallingNonCallable
         return ClaimPayeeTypeCode("provider")
 
-    def Other(cls) -> 'ClaimPayeeTypeCode':
+    def Other(cls) -> "ClaimPayeeTypeCode":
         """
         Any benefit payable will be paid to a third party such as a guarrantor.
         """

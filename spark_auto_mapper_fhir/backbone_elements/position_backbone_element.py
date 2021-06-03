@@ -3,7 +3,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
 
@@ -14,7 +16,7 @@ class PositionBackboneElement(FhirBackboneElementBase):
         latitude: FhirDecimal,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        altitude: Optional[FhirDecimal] = None
+        altitude: Optional[FhirDecimal] = None,
     ) -> None:
         """
         PositionBackboneElement Backbone Element in FHIR
@@ -30,5 +32,5 @@ class PositionBackboneElement(FhirBackboneElementBase):
             extension=extension,
             longitude=longitude,
             latitude=latitude,
-            altitude=altitude
+            altitude=altitude,
         )

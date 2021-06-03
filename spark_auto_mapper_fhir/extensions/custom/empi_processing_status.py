@@ -1,5 +1,7 @@
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
-from spark_auto_mapper_fhir.extensions.custom.empi_processing_status_item import EmpiProcessingStatusExtensionItem
+from spark_auto_mapper_fhir.extensions.custom.empi_processing_status_item import (
+    EmpiProcessingStatusExtensionItem,
+)
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -35,13 +37,12 @@ class EmpiProcessingStatusExtension(ExtensionBase):
             EmpiProcessingStatusExtensionItem(
                 url="date_processed",
                 valueDateTime=date_processed,
-            )
+            ),
         ]
 
         self.extensions = processing_status_extensions
         super().__init__(
-            url=self.__class__.codeset,
-            extension=FhirList(processing_status_extensions)
+            url=self.__class__.codeset, extension=FhirList(processing_status_extensions)
         )
 
     # noinspection PyMethodParameters

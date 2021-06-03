@@ -10,7 +10,9 @@ from spark_auto_mapper_fhir.complex_types.range import Range
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper_fhir.valuesets.observation_code import LOINCCode
 
@@ -24,9 +26,8 @@ class TargetBackboneElement(FhirBackboneElementBase):
         measure: Optional[CodeableConcept[LOINCCode]] = None,
         detailQuantity: Optional[Quantity] = None,
         detailRange: Optional[Range] = None,
-        detailCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]
-                                        ] = None,
-        due: Optional[Duration] = None
+        detailCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]] = None,
+        due: Optional[Duration] = None,
     ) -> None:
         """
         TargetBackboneElement Backbone Element in FHIR
@@ -47,5 +48,5 @@ class TargetBackboneElement(FhirBackboneElementBase):
             detailQuantity=detailQuantity,
             detailRange=detailRange,
             detailCodeableConcept=detailCodeableConcept,
-            due=due
+            due=due,
         )

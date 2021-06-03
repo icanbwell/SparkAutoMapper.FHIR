@@ -13,23 +13,24 @@ class ObservationReferenceRangeMeaningCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-referencerange-meaning.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'ObservationReferenceRangeMeaningCode']
+            self, f: Callable[..., "ObservationReferenceRangeMeaningCode"]
         ) -> None:
-            self.f: Callable[..., 'ObservationReferenceRangeMeaningCode'] = f
+            self.f: Callable[..., "ObservationReferenceRangeMeaningCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ObservationReferenceRangeMeaningCode']
-        ) -> 'ObservationReferenceRangeMeaningCode':
+            self, obj: Any, owner: Type["ObservationReferenceRangeMeaningCode"]
+        ) -> "ObservationReferenceRangeMeaningCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ObservationReferenceRangeMeaningCode':
+    def NameOfYourFirstValue(cls) -> "ObservationReferenceRangeMeaningCode":
         """
         Comment
         """

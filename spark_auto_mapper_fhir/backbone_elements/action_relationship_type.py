@@ -13,23 +13,22 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-relationship-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionRelationshipTypeCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionRelationshipTypeCode'] = f
+        def __init__(self, f: Callable[..., "ActionRelationshipTypeCode"]) -> None:
+            self.f: Callable[..., "ActionRelationshipTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionRelationshipTypeCode']
-        ) -> 'ActionRelationshipTypeCode':
+            self, obj: Any, owner: Type["ActionRelationshipTypeCode"]
+        ) -> "ActionRelationshipTypeCode":
             return self.f(owner)
 
     @classproperty
-    def BeforeStart(cls) -> 'ActionRelationshipTypeCode':
+    def BeforeStart(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed before the start of the related action.
         """
@@ -37,7 +36,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("before-start")
 
     @classproperty
-    def Before(cls) -> 'ActionRelationshipTypeCode':
+    def Before(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed before the related action.
         """
@@ -45,7 +44,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("before")
 
     @classproperty
-    def BeforeEnd(cls) -> 'ActionRelationshipTypeCode':
+    def BeforeEnd(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed before the end of the related action.
         """
@@ -53,7 +52,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("before-end")
 
     @classproperty
-    def ConcurrentWithStart(cls) -> 'ActionRelationshipTypeCode':
+    def ConcurrentWithStart(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed concurrent with the start of the related action.
         """
@@ -61,7 +60,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("concurrent-with-start")
 
     @classproperty
-    def Concurrent(cls) -> 'ActionRelationshipTypeCode':
+    def Concurrent(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed concurrent with the related action.
         """
@@ -69,7 +68,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("concurrent")
 
     @classproperty
-    def ConcurrentWithEnd(cls) -> 'ActionRelationshipTypeCode':
+    def ConcurrentWithEnd(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed concurrent with the end of the related action.
         """
@@ -77,7 +76,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("concurrent-with-end")
 
     @classproperty
-    def AfterStart(cls) -> 'ActionRelationshipTypeCode':
+    def AfterStart(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed after the start of the related action.
         """
@@ -85,7 +84,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("after-start")
 
     @classproperty
-    def After(cls) -> 'ActionRelationshipTypeCode':
+    def After(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed after the related action.
         """
@@ -93,7 +92,7 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
         return ActionRelationshipTypeCode("after")
 
     @classproperty
-    def AfterEnd(cls) -> 'ActionRelationshipTypeCode':
+    def AfterEnd(cls) -> "ActionRelationshipTypeCode":
         """
         The action must be performed after the end of the related action.
         """

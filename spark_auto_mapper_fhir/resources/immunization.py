@@ -14,7 +14,7 @@ class Immunization(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         Immunization Resource in FHIR
@@ -24,15 +24,10 @@ class Immunization(FhirResourceBase):
         :param id_: id of resource
         """
         super().__init__(
-            resourceType="Immunization",
-            id_=id_,
-            meta=meta,
-            extension=extension
+            resourceType="Immunization", id_=id_, meta=meta, extension=extension
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return ImmunizationSchema.get_schema(
-            include_extension=include_extension
-        )
+        return ImmunizationSchema.get_schema(include_extension=include_extension)

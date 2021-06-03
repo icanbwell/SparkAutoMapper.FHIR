@@ -15,7 +15,7 @@ class DeviceRequest(FhirResourceBase):
         self,
         id_: FhirId,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         DeviceRequest Resource in FHIR
@@ -25,15 +25,10 @@ class DeviceRequest(FhirResourceBase):
         :param id_: id of resource
         """
         super().__init__(
-            resourceType="DeviceRequest",
-            id_=id_,
-            meta=meta,
-            extension=extension
+            resourceType="DeviceRequest", id_=id_, meta=meta, extension=extension
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return DeviceRequestSchema.get_schema(
-            include_extension=include_extension
-        )
+        return DeviceRequestSchema.get_schema(include_extension=include_extension)

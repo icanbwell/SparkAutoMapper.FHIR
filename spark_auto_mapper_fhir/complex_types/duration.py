@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
@@ -24,7 +26,7 @@ class Duration(FhirComplexTypeBase):
         comparator: Optional[QuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,
         system: Optional[FhirUri] = None,
-        code: Optional[DurationUnitCode] = None
+        code: Optional[DurationUnitCode] = None,
     ):
         """
         Duration Resource in FHIR
@@ -45,5 +47,5 @@ class Duration(FhirComplexTypeBase):
             comparator=comparator,
             unit=unit,
             system=system,
-            code=code
+            code=code,
         )

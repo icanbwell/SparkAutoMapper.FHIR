@@ -13,21 +13,22 @@ class ContactEntityTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-contactentity-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ContactEntityTypeCode']) -> None:
-            self.f: Callable[..., 'ContactEntityTypeCode'] = f
+        def __init__(self, f: Callable[..., "ContactEntityTypeCode"]) -> None:
+            self.f: Callable[..., "ContactEntityTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ContactEntityTypeCode']
-        ) -> 'ContactEntityTypeCode':
+            self, obj: Any, owner: Type["ContactEntityTypeCode"]
+        ) -> "ContactEntityTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Billing(cls) -> 'ContactEntityTypeCode':
+    def Billing(cls) -> "ContactEntityTypeCode":
         """
         Contact details for information regarding to billing/general finance enquiries.
         """
@@ -35,7 +36,7 @@ class ContactEntityTypeCode(FhirValueSetBase):
         return ContactEntityTypeCode("BILL")
 
     @classproperty
-    def Administrative(cls) -> 'ContactEntityTypeCode':
+    def Administrative(cls) -> "ContactEntityTypeCode":
         """
         Contact details for administrative enquiries.
         """
@@ -43,7 +44,7 @@ class ContactEntityTypeCode(FhirValueSetBase):
         return ContactEntityTypeCode("ADMIN")
 
     @classproperty
-    def HumanResource(cls) -> 'ContactEntityTypeCode':
+    def HumanResource(cls) -> "ContactEntityTypeCode":
         """
         Contact details for issues related to Human Resources, such as staff matters, OH&S etc.
         """
@@ -52,7 +53,7 @@ class ContactEntityTypeCode(FhirValueSetBase):
 
     # noinspection SpellCheckingInspection
     @classproperty
-    def Payor(cls) -> 'ContactEntityTypeCode':
+    def Payor(cls) -> "ContactEntityTypeCode":
         """
         Contact details for dealing with issues related to insurance claims/adjudication/payment.
         """
@@ -60,7 +61,7 @@ class ContactEntityTypeCode(FhirValueSetBase):
         return ContactEntityTypeCode("PAYOR")
 
     @classproperty
-    def Patient(cls) -> 'ContactEntityTypeCode':
+    def Patient(cls) -> "ContactEntityTypeCode":
         """
         Generic information contact for patients.
         """
@@ -68,7 +69,7 @@ class ContactEntityTypeCode(FhirValueSetBase):
         return ContactEntityTypeCode("PATINF")
 
     @classproperty
-    def Press(cls) -> 'ContactEntityTypeCode':
+    def Press(cls) -> "ContactEntityTypeCode":
         """
         Dedicated contact point for matters relating to press enquiries.
         """

@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.benefit_type import BenefitTypeCode
@@ -26,7 +28,7 @@ class FinancialBenefit(FhirComplexTypeBase):
         allowedString: Optional[FhirString] = None,
         allowedMoney: Optional[Money] = None,
         usedUnsignedInt: Optional[FhirUnsignedInt] = None,
-        usedMoney: Optional[Money] = None
+        usedMoney: Optional[Money] = None,
     ):
         """
         FinancialBenefit Resource in FHIR
@@ -49,5 +51,5 @@ class FinancialBenefit(FhirComplexTypeBase):
             allowedString=allowedString,
             allowedMoney=allowedMoney,
             usedUnsignedInt=usedUnsignedInt,
-            usedMoney=usedMoney
+            usedMoney=usedMoney,
         )

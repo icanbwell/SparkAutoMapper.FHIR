@@ -13,21 +13,22 @@ class ConditionCategoryCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-condition-category.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ConditionCategoryCode']) -> None:
-            self.f: Callable[..., 'ConditionCategoryCode'] = f
+        def __init__(self, f: Callable[..., "ConditionCategoryCode"]) -> None:
+            self.f: Callable[..., "ConditionCategoryCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ConditionCategoryCode']
-        ) -> 'ConditionCategoryCode':
+            self, obj: Any, owner: Type["ConditionCategoryCode"]
+        ) -> "ConditionCategoryCode":
             return self.f(owner)
 
     @classproperty
-    def ProblemListItem(cls) -> 'ConditionCategoryCode':
+    def ProblemListItem(cls) -> "ConditionCategoryCode":
         """
         An item on a problem list that can be managed over time and can be expressed by a practitioner
          (e.g. physician, nurse), patient, or related person.
@@ -36,7 +37,7 @@ class ConditionCategoryCode(FhirValueSetBase):
         return ConditionCategoryCode("problem-list-item")
 
     @classproperty
-    def EncounterDiagnosis(cls) -> 'ConditionCategoryCode':
+    def EncounterDiagnosis(cls) -> "ConditionCategoryCode":
         """
         A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
         """

@@ -13,21 +13,20 @@ class CommonTagsCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-common-tags.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'CommonTagsCode']) -> None:
-            self.f: Callable[..., 'CommonTagsCode'] = f
+        def __init__(self, f: Callable[..., "CommonTagsCode"]) -> None:
+            self.f: Callable[..., "CommonTagsCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['CommonTagsCode']
-        ) -> 'CommonTagsCode':
+        def __get__(self, obj: Any, owner: Type["CommonTagsCode"]) -> "CommonTagsCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'CommonTagsCode':
+    def NameOfYourFirstValue(cls) -> "CommonTagsCode":
         """
         Comment
         """

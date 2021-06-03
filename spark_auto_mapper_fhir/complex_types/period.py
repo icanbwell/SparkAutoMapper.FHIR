@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 # noinspection SpellCheckingInspection
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -19,7 +21,7 @@ class Period(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         start: Optional[FhirDate] = None,
-        end: Optional[FhirDate] = None
+        end: Optional[FhirDate] = None,
     ):
         """
         Period Resource in FHIR

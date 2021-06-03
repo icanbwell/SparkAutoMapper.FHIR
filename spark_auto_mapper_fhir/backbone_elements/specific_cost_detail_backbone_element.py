@@ -1,13 +1,17 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
-from spark_auto_mapper_fhir.valuesets.benefit_cost_applicability import BenefitCostApplicabilityCode
+from spark_auto_mapper_fhir.valuesets.benefit_cost_applicability import (
+    BenefitCostApplicabilityCode,
+)
 
 
 class SpecificCostDetailBackboneElement(FhirBackboneElementBase):
@@ -16,11 +20,9 @@ class SpecificCostDetailBackboneElement(FhirBackboneElementBase):
         type_: CodeableConcept[FhirValueSetBase],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        applicability: Optional[CodeableConcept[BenefitCostApplicabilityCode]
-                                ] = None,
-        qualifiers: Optional[FhirList[CodeableConcept[FhirValueSetBase]]
-                             ] = None,
-        value: Optional[Quantity] = None
+        applicability: Optional[CodeableConcept[BenefitCostApplicabilityCode]] = None,
+        qualifiers: Optional[FhirList[CodeableConcept[FhirValueSetBase]]] = None,
+        value: Optional[Quantity] = None,
     ) -> None:
         """
         SpecificCostDetailBackboneElement Backbone Element in FHIR
@@ -39,5 +41,5 @@ class SpecificCostDetailBackboneElement(FhirBackboneElementBase):
             type_=type_,
             applicability=applicability,
             qualifiers=qualifiers,
-            value=value
+            value=value,
         )

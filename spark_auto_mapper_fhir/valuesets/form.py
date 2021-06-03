@@ -13,19 +13,20 @@ class FormCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-forms.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'FormCode']) -> None:
-            self.f: Callable[..., 'FormCode'] = f
+        def __init__(self, f: Callable[..., "FormCode"]) -> None:
+            self.f: Callable[..., "FormCode"] = f
 
-        def __get__(self, obj: Any, owner: Type['FormCode']) -> 'FormCode':
+        def __get__(self, obj: Any, owner: Type["FormCode"]) -> "FormCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FormCode':
+    def NameOfYourFirstValue(cls) -> "FormCode":
         """
         Comment
         """

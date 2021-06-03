@@ -16,7 +16,9 @@ from spark_auto_mapper_fhir.complex_types.code_filter import CodeFilter
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 from spark_auto_mapper_fhir.fhir_types.uri import FhirCanonical
 from spark_auto_mapper_fhir.valuesets.all_types import FhirAllTypesCode
 from spark_auto_mapper_fhir.valuesets.subject_type import SubjectTypeCode
@@ -29,14 +31,13 @@ class DataRequirement(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         profile: Optional[FhirList[FhirCanonical]] = None,
-        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]
-                                         ] = None,
+        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Group]] = None,
         mustSupport: Optional[FhirList[FhirString]] = None,
         code_filter: Optional[FhirList[CodeFilter]] = None,
         date_filter: Optional[FhirList[DateFilter]] = None,
         limit: Optional[FhirPositiveInt] = None,
-        sort: Optional[FhirList[Sort]] = None
+        sort: Optional[FhirList[Sort]] = None,
     ) -> None:
         """
         DataRequirement Complex Type in FHIR
@@ -67,5 +68,5 @@ class DataRequirement(FhirComplexTypeBase):
             code_filter=code_filter,
             date_filter=date_filter,
             limit=limit,
-            sort=sort
+            sort=sort,
         )

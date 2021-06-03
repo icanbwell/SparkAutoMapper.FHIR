@@ -1,8 +1,11 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
-from spark_auto_mapper_fhir.backbone_elements.specific_cost_detail_backbone_element import \
-    SpecificCostDetailBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
+from spark_auto_mapper_fhir.backbone_elements.specific_cost_detail_backbone_element import (
+    SpecificCostDetailBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -16,7 +19,7 @@ class SpecificCostBackboneElement(FhirBackboneElementBase):
         category: CodeableConcept[FhirValueSetBase],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        benefit: Optional[FhirList[SpecificCostDetailBackboneElement]] = None
+        benefit: Optional[FhirList[SpecificCostDetailBackboneElement]] = None,
     ) -> None:
         """
         SpecificCostBackboneElement Backbone Element in FHIR

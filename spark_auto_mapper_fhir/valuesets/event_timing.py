@@ -13,21 +13,22 @@ class EventTimingCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-event-timing.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'EventTimingCode']) -> None:
-            self.f: Callable[..., 'EventTimingCode'] = f
+        def __init__(self, f: Callable[..., "EventTimingCode"]) -> None:
+            self.f: Callable[..., "EventTimingCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['EventTimingCode']
-        ) -> 'EventTimingCode':
+            self, obj: Any, owner: Type["EventTimingCode"]
+        ) -> "EventTimingCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'EventTimingCode':
+    def NameOfYourFirstValue(cls) -> "EventTimingCode":
         """
         Comment
         """

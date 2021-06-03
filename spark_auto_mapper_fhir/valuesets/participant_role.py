@@ -15,21 +15,22 @@ class ParticipantRoleCode(FhirValueSetBase):
                 properties not just the ones you need
     https://www.hl7.org/fhir/valueset-participant-role.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ParticipantRoleCode']) -> None:
-            self.f: Callable[..., 'ParticipantRoleCode'] = f
+        def __init__(self, f: Callable[..., "ParticipantRoleCode"]) -> None:
+            self.f: Callable[..., "ParticipantRoleCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ParticipantRoleCode']
-        ) -> 'ParticipantRoleCode':
+            self, obj: Any, owner: Type["ParticipantRoleCode"]
+        ) -> "ParticipantRoleCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ParticipantRoleCode':
+    def NameOfYourFirstValue(cls) -> "ParticipantRoleCode":
         """
         Comment
         """

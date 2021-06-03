@@ -13,21 +13,22 @@ class TriggerTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-trigger-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'TriggerTypeCode']) -> None:
-            self.f: Callable[..., 'TriggerTypeCode'] = f
+        def __init__(self, f: Callable[..., "TriggerTypeCode"]) -> None:
+            self.f: Callable[..., "TriggerTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['TriggerTypeCode']
-        ) -> 'TriggerTypeCode':
+            self, obj: Any, owner: Type["TriggerTypeCode"]
+        ) -> "TriggerTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'TriggerTypeCode':
+    def NameOfYourFirstValue(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -35,7 +36,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("A")
 
     @classproperty
-    def named_event(cls) -> 'TriggerTypeCode':
+    def named_event(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -43,7 +44,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("named-event")
 
     @classproperty
-    def periodic(cls) -> 'TriggerTypeCode':
+    def periodic(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -51,7 +52,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("periodic")
 
     @classproperty
-    def data_changed(cls) -> 'TriggerTypeCode':
+    def data_changed(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -59,7 +60,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("data-changed")
 
     @classproperty
-    def data_added(cls) -> 'TriggerTypeCode':
+    def data_added(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -67,7 +68,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("data-added")
 
     @classproperty
-    def data_modified(cls) -> 'TriggerTypeCode':
+    def data_modified(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -75,7 +76,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("data-modified")
 
     @classproperty
-    def data_removed(cls) -> 'TriggerTypeCode':
+    def data_removed(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -83,7 +84,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("data-removed")
 
     @classproperty
-    def data_accessed(cls) -> 'TriggerTypeCode':
+    def data_accessed(cls) -> "TriggerTypeCode":
         """
         Comment
         """
@@ -91,7 +92,7 @@ class TriggerTypeCode(FhirValueSetBase):
         return TriggerTypeCode("data-accessed")
 
     @classproperty
-    def data_access_ended(cls) -> 'TriggerTypeCode':
+    def data_access_ended(cls) -> "TriggerTypeCode":
         """
         Comment
         """

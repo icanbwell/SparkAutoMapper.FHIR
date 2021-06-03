@@ -13,21 +13,22 @@ class SortDirectionCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-sort-direction.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'SortDirectionCode']) -> None:
-            self.f: Callable[..., 'SortDirectionCode'] = f
+        def __init__(self, f: Callable[..., "SortDirectionCode"]) -> None:
+            self.f: Callable[..., "SortDirectionCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['SortDirectionCode']
-        ) -> 'SortDirectionCode':
+            self, obj: Any, owner: Type["SortDirectionCode"]
+        ) -> "SortDirectionCode":
             return self.f(owner)
 
     @classproperty
-    def Ascending(cls) -> 'SortDirectionCode':
+    def Ascending(cls) -> "SortDirectionCode":
         """
         Sort by the value ascending, so that lower values appear first.
         """
@@ -35,7 +36,7 @@ class SortDirectionCode(FhirValueSetBase):
         return SortDirectionCode("ascending")
 
     @classproperty
-    def Descending(cls) -> 'SortDirectionCode':
+    def Descending(cls) -> "SortDirectionCode":
         """
         Sort by the value descending, so that lower values appear last.
         """

@@ -13,23 +13,22 @@ class V2AppointmentReasonCode(FhirValueSetBase):
     """
     http://terminology.hl7.org/ValueSet/v2-0276
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'V2AppointmentReasonCode']
-        ) -> None:
-            self.f: Callable[..., 'V2AppointmentReasonCode'] = f
+        def __init__(self, f: Callable[..., "V2AppointmentReasonCode"]) -> None:
+            self.f: Callable[..., "V2AppointmentReasonCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['V2AppointmentReasonCode']
-        ) -> 'V2AppointmentReasonCode':
+            self, obj: Any, owner: Type["V2AppointmentReasonCode"]
+        ) -> "V2AppointmentReasonCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'V2AppointmentReasonCode':
+    def NameOfYourFirstValue(cls) -> "V2AppointmentReasonCode":
         """
         Comment
         """

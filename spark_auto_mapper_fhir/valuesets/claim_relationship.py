@@ -13,21 +13,22 @@ class ClaimRelationshipCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-related-claim-relationship.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ClaimRelationshipCode']) -> None:
-            self.f: Callable[..., 'ClaimRelationshipCode'] = f
+        def __init__(self, f: Callable[..., "ClaimRelationshipCode"]) -> None:
+            self.f: Callable[..., "ClaimRelationshipCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ClaimRelationshipCode']
-        ) -> 'ClaimRelationshipCode':
+            self, obj: Any, owner: Type["ClaimRelationshipCode"]
+        ) -> "ClaimRelationshipCode":
             return self.f(owner)
 
     @classproperty
-    def PriorClaim(cls) -> 'ClaimRelationshipCode':
+    def PriorClaim(cls) -> "ClaimRelationshipCode":
         """
         A prior claim instance for the same intended suite of services.
         """
@@ -35,7 +36,7 @@ class ClaimRelationshipCode(FhirValueSetBase):
         return ClaimRelationshipCode("prior")
 
     @classproperty
-    def AssociatedClaim(cls) -> 'ClaimRelationshipCode':
+    def AssociatedClaim(cls) -> "ClaimRelationshipCode":
         """
         A claim for a different suite of services which is related the suite claimed here.
         """

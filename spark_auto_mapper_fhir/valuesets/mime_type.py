@@ -13,21 +13,20 @@ class MimeTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-mimetypes.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'MimeTypeCode']) -> None:
-            self.f: Callable[..., 'MimeTypeCode'] = f
+        def __init__(self, f: Callable[..., "MimeTypeCode"]) -> None:
+            self.f: Callable[..., "MimeTypeCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['MimeTypeCode']
-        ) -> 'MimeTypeCode':
+        def __get__(self, obj: Any, owner: Type["MimeTypeCode"]) -> "MimeTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'MimeTypeCode':
+    def NameOfYourFirstValue(cls) -> "MimeTypeCode":
         """
         Comment
         """

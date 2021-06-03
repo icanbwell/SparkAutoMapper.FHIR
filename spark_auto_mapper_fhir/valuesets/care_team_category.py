@@ -15,21 +15,22 @@ class CareTeamCategoryCode(FhirValueSetBase):
                 properties not just the ones you need
     https://www.hl7.org/fhir/valueset-care-team-category.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'CareTeamCategoryCode']) -> None:
-            self.f: Callable[..., 'CareTeamCategoryCode'] = f
+        def __init__(self, f: Callable[..., "CareTeamCategoryCode"]) -> None:
+            self.f: Callable[..., "CareTeamCategoryCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['CareTeamCategoryCode']
-        ) -> 'CareTeamCategoryCode':
+            self, obj: Any, owner: Type["CareTeamCategoryCode"]
+        ) -> "CareTeamCategoryCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'CareTeamCategoryCode':
+    def NameOfYourFirstValue(cls) -> "CareTeamCategoryCode":
         """
         Comment
         """

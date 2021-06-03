@@ -5,9 +5,15 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
-from spark_auto_mapper_fhir.valuesets.action_participant_role import ActionParticipantRoleCode
-from spark_auto_mapper_fhir.valuesets.action_participant_type import ActionParticipantTypeCode
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
+from spark_auto_mapper_fhir.valuesets.action_participant_role import (
+    ActionParticipantRoleCode,
+)
+from spark_auto_mapper_fhir.valuesets.action_participant_type import (
+    ActionParticipantTypeCode,
+)
 
 
 class ParticipantBackboneElement(FhirBackboneElementBase):
@@ -16,8 +22,7 @@ class ParticipantBackboneElement(FhirBackboneElementBase):
         type_: ActionParticipantTypeCode,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: Optional[FhirList[CodeableConcept[ActionParticipantRoleCode]]
-                       ] = None
+        role: Optional[FhirList[CodeableConcept[ActionParticipantRoleCode]]] = None,
     ) -> None:
         """
         ParticipantBackboneElement Backbone Element in FHIR

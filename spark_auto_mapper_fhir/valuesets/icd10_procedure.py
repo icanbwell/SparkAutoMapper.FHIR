@@ -13,21 +13,22 @@ class Icd10ProcedureCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-icd-10-procedures.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'Icd10ProcedureCode']) -> None:
-            self.f: Callable[..., 'Icd10ProcedureCode'] = f
+        def __init__(self, f: Callable[..., "Icd10ProcedureCode"]) -> None:
+            self.f: Callable[..., "Icd10ProcedureCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['Icd10ProcedureCode']
-        ) -> 'Icd10ProcedureCode':
+            self, obj: Any, owner: Type["Icd10ProcedureCode"]
+        ) -> "Icd10ProcedureCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'Icd10ProcedureCode':
+    def NameOfYourFirstValue(cls) -> "Icd10ProcedureCode":
         """
         Comment
         """

@@ -1,23 +1,49 @@
 from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
-from spark_fhir_schemas.r4.resources.explanationofbenefit import ExplanationOfBenefitSchema
+from spark_fhir_schemas.r4.resources.explanationofbenefit import (
+    ExplanationOfBenefitSchema,
+)
 
-from spark_auto_mapper_fhir.backbone_elements.accident_backbone_element import AccidentBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_add_item_backbone_element import ExplanationOfBenefitsAddItemBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.care_team_backbone_element import CareTeamBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.diagnosis_backbone_element import DiagnosisBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_item_backbone_element import \
-    ExplanationOfBenefitsItemBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.insurance_backbone_element import InsuranceBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.payee_backbone_element import PayeeBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.payment_backbone_element import PaymentBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.procedure_backbone_element import ProcedureBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.related_claim_backbone_element import RelatedClaimBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.supporting_info_backbone_element import \
-    SupportingInfoBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.total_backbone_element import TotalBackBoneElement
+from spark_auto_mapper_fhir.backbone_elements.accident_backbone_element import (
+    AccidentBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_add_item_backbone_element import (
+    ExplanationOfBenefitsAddItemBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import (
+    AdjudicationBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.care_team_backbone_element import (
+    CareTeamBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.diagnosis_backbone_element import (
+    DiagnosisBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_item_backbone_element import (
+    ExplanationOfBenefitsItemBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.insurance_backbone_element import (
+    InsuranceBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.payee_backbone_element import (
+    PayeeBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.payment_backbone_element import (
+    PaymentBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.procedure_backbone_element import (
+    ProcedureBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.related_claim_backbone_element import (
+    RelatedClaimBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.supporting_info_backbone_element import (
+    SupportingInfoBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.total_backbone_element import (
+    TotalBackBoneElement,
+)
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.complex_types.benefit_balance import BenefitBalance
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -46,7 +72,9 @@ from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescript
 from spark_auto_mapper_fhir.valuesets.claim_sub_type import ClaimSubTypeCode
 from spark_auto_mapper_fhir.valuesets.claim_type import ClaimTypeCode
 from spark_auto_mapper_fhir.valuesets.claim_use import ClaimUseCode
-from spark_auto_mapper_fhir.valuesets.explanation_of_benefit_status import ExplanationOfBenefitStatusCode
+from spark_auto_mapper_fhir.valuesets.explanation_of_benefit_status import (
+    ExplanationOfBenefitStatusCode,
+)
 from spark_auto_mapper_fhir.valuesets.form import FormCode
 from spark_auto_mapper_fhir.valuesets.funds_reserve import FundsReserveCode
 from spark_auto_mapper_fhir.valuesets.process_priority import ProcessPriorityCode
@@ -64,8 +92,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         patient: Reference[Patient],
         created: FhirDate,
         insurer: Reference[Organization],
-        provider: Reference[Union[Organization, Practitioner,
-                                  PractitionerRole]],
+        provider: Reference[Union[Organization, Practitioner, PractitionerRole]],
         outcome: RemittanceOutcomeCode,
         insurance: FhirList[InsuranceBackboneElement],
         meta: Optional[Meta] = None,
@@ -73,17 +100,15 @@ class ExplanationOfBenefit(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         subType: Optional[CodeableConcept[ClaimSubTypeCode]] = None,
         billablePeriod: Optional[Period] = None,
-        enterer: Optional[Reference[Union[Practitioner,
-                                          PractitionerRole]]] = None,
+        enterer: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         priority: Optional[CodeableConcept[ProcessPriorityCode]] = None,
-        fundsReserveRequested: Optional[CodeableConcept[FundsReserveCode]
-                                        ] = None,
+        fundsReserveRequested: Optional[CodeableConcept[FundsReserveCode]] = None,
         fundsReserve: Optional[CodeableConcept[FundsReserveCode]] = None,
         related: Optional[FhirList[RelatedClaimBackboneElement]] = None,
-        prescription: Optional[Reference[Union[MedicationRequest,
-                                               VisionPrescription]]] = None,
-        originalPrescription: Optional[Reference[Union[MedicationRequest]]
-                                       ] = None,
+        prescription: Optional[
+            Reference[Union[MedicationRequest, VisionPrescription]]
+        ] = None,
+        originalPrescription: Optional[Reference[Union[MedicationRequest]]] = None,
         payee: Optional[PayeeBackboneElement] = None,
         referral: Optional[Reference[ServiceRequest]] = None,
         facility: Optional[Reference[Location]] = None,
@@ -93,16 +118,13 @@ class ExplanationOfBenefit(FhirResourceBase):
         preAuthRef: Optional[FhirList[FhirString]] = None,
         preAuthRefPeriod: Optional[FhirList[Period]] = None,
         careTeam: Optional[FhirList[CareTeamBackboneElement]] = None,
-        supportingInfo: Optional[FhirList[SupportingInfoBackboneElement]
-                                 ] = None,
+        supportingInfo: Optional[FhirList[SupportingInfoBackboneElement]] = None,
         diagnosis: Optional[FhirList[DiagnosisBackboneElement]] = None,
         procedure: Optional[FhirList[ProcedureBackboneElement]] = None,
         precedence: Optional[FhirPositiveInt] = None,
         accident: Optional[AccidentBackboneElement] = None,
-        item: Optional[FhirList[ExplanationOfBenefitsItemBackboneElement]
-                       ] = None,
-        addItem: Optional[FhirList[ExplanationOfBenefitsAddItemBackboneElement]
-                          ] = None,
+        item: Optional[FhirList[ExplanationOfBenefitsItemBackboneElement]] = None,
+        addItem: Optional[FhirList[ExplanationOfBenefitsAddItemBackboneElement]] = None,
         adjudication: Optional[AdjudicationBackboneElement] = None,
         total: Optional[FhirList[TotalBackBoneElement]] = None,
         payment: Optional[PaymentBackboneElement] = None,

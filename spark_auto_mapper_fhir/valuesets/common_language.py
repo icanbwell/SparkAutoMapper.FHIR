@@ -13,21 +13,22 @@ class CommonLanguageCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-languages.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'CommonLanguageCode']) -> None:
-            self.f: Callable[..., 'CommonLanguageCode'] = f
+        def __init__(self, f: Callable[..., "CommonLanguageCode"]) -> None:
+            self.f: Callable[..., "CommonLanguageCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['CommonLanguageCode']
-        ) -> 'CommonLanguageCode':
+            self, obj: Any, owner: Type["CommonLanguageCode"]
+        ) -> "CommonLanguageCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'CommonLanguageCode':
+    def NameOfYourFirstValue(cls) -> "CommonLanguageCode":
         """
         Comment
         """

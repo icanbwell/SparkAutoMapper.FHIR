@@ -1,6 +1,7 @@
 from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
+
 # noinspection PyUnresolvedReferences
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
@@ -15,9 +16,10 @@ def test_auto_mapper_fhir_reference(spark_session: SparkSession) -> None:
     # Arrange
     spark_session.createDataFrame(
         [
-            (1, 'Qureshi'),
-            (2, 'Vidal'),
-        ], ['member_id', 'last_name']
+            (1, "Qureshi"),
+            (2, "Vidal"),
+        ],
+        ["member_id", "last_name"],
     ).createOrReplaceTempView("patients")
 
     source_df: DataFrame = spark_session.table("patients")
@@ -33,14 +35,12 @@ def test_auto_mapper_fhir_reference(spark_session: SparkSession) -> None:
             id_=FhirId(A.column("last_name")),
             managingOrganization=Reference(
                 reference=FhirReference("Organization", A.column("last_name"))
-            )
+            ),
         )
     )
 
     assert isinstance(mapper, AutoMapper)
-    sql_expressions: Dict[str, Column] = mapper.get_column_specs(
-        source_df=source_df
-    )
+    sql_expressions: Dict[str, Column] = mapper.get_column_specs(source_df=source_df)
     for column_name, sql_expression in sql_expressions.items():
         print(f"{column_name}: {sql_expression}")
 
@@ -50,9 +50,15 @@ def test_auto_mapper_fhir_reference(spark_session: SparkSession) -> None:
     result_df.printSchema()
     result_df.show(truncate=False)
 
-    assert result_df.where("member_id == 1").selectExpr(
-        "patient.managingOrganization.reference"
-    ).collect()[0][0] == "Organization/Qureshi"
-    assert result_df.where("member_id == 2").selectExpr(
-        "patient.managingOrganization.reference"
-    ).collect()[0][0] == "Organization/Vidal"
+    assert (
+        result_df.where("member_id == 1")
+        .selectExpr("patient.managingOrganization.reference")
+        .collect()[0][0]
+        == "Organization/Qureshi"
+    )
+    assert (
+        result_df.where("member_id == 2")
+        .selectExpr("patient.managingOrganization.reference")
+        .collect()[0][0]
+        == "Organization/Vidal"
+    )

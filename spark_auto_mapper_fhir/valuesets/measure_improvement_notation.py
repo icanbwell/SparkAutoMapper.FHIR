@@ -13,23 +13,22 @@ class MeasureImprovementNotationCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-measure-improvement-notation.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'MeasureImprovementNotationCode']
-        ) -> None:
-            self.f: Callable[..., 'MeasureImprovementNotationCode'] = f
+        def __init__(self, f: Callable[..., "MeasureImprovementNotationCode"]) -> None:
+            self.f: Callable[..., "MeasureImprovementNotationCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['MeasureImprovementNotationCode']
-        ) -> 'MeasureImprovementNotationCode':
+            self, obj: Any, owner: Type["MeasureImprovementNotationCode"]
+        ) -> "MeasureImprovementNotationCode":
             return self.f(owner)
 
     @classproperty
-    def Increase(cls) -> 'MeasureImprovementNotationCode':
+    def Increase(cls) -> "MeasureImprovementNotationCode":
         """
         Improvement is indicated as an increase in the score or measurement (e.g. Higher score indicates better quality).
         """
@@ -37,7 +36,7 @@ class MeasureImprovementNotationCode(FhirValueSetBase):
         return MeasureImprovementNotationCode("increase")
 
     @classproperty
-    def Decrease(cls) -> 'MeasureImprovementNotationCode':
+    def Decrease(cls) -> "MeasureImprovementNotationCode":
         """
         Improvement is indicated as a decrease in the score or measurement (e.g. Lower score indicates better quality).
         """
