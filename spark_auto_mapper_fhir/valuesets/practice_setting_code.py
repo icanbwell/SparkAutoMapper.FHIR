@@ -13,21 +13,22 @@ class PracticeSettingCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-c80-practice-codes.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'PracticeSettingCode']) -> None:
-            self.f: Callable[..., 'PracticeSettingCode'] = f
+        def __init__(self, f: Callable[..., "PracticeSettingCode"]) -> None:
+            self.f: Callable[..., "PracticeSettingCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['PracticeSettingCode']
-        ) -> 'PracticeSettingCode':
+            self, obj: Any, owner: Type["PracticeSettingCode"]
+        ) -> "PracticeSettingCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'PracticeSettingCode':
+    def NameOfYourFirstValue(cls) -> "PracticeSettingCode":
         """
         Comment
         """

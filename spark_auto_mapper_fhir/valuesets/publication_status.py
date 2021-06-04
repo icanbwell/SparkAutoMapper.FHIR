@@ -14,21 +14,22 @@ class PublicationStatusCode(FhirValueSetBase):
     https://www.hl7.org/fhir/valueset-publication-status.html
     draft | active | retired | unknown
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'PublicationStatusCode']) -> None:
-            self.f: Callable[..., 'PublicationStatusCode'] = f
+        def __init__(self, f: Callable[..., "PublicationStatusCode"]) -> None:
+            self.f: Callable[..., "PublicationStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['PublicationStatusCode']
-        ) -> 'PublicationStatusCode':
+            self, obj: Any, owner: Type["PublicationStatusCode"]
+        ) -> "PublicationStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Draft(cls) -> 'PublicationStatusCode':
+    def Draft(cls) -> "PublicationStatusCode":
         """
         Comment
         """
@@ -36,7 +37,7 @@ class PublicationStatusCode(FhirValueSetBase):
         return PublicationStatusCode("draft")
 
     @classproperty
-    def Active(cls) -> 'PublicationStatusCode':
+    def Active(cls) -> "PublicationStatusCode":
         """
         Comment
         """
@@ -44,7 +45,7 @@ class PublicationStatusCode(FhirValueSetBase):
         return PublicationStatusCode("active")
 
     @classproperty
-    def Retired(cls) -> 'PublicationStatusCode':
+    def Retired(cls) -> "PublicationStatusCode":
         """
         Comment
         """
@@ -52,7 +53,7 @@ class PublicationStatusCode(FhirValueSetBase):
         return PublicationStatusCode("retired")
 
     @classproperty
-    def Unknown(cls) -> 'PublicationStatusCode':
+    def Unknown(cls) -> "PublicationStatusCode":
         """
         Comment
         """

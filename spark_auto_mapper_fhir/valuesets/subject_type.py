@@ -13,21 +13,22 @@ class SubjectTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-subject-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'SubjectTypeCode']) -> None:
-            self.f: Callable[..., 'SubjectTypeCode'] = f
+        def __init__(self, f: Callable[..., "SubjectTypeCode"]) -> None:
+            self.f: Callable[..., "SubjectTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['SubjectTypeCode']
-        ) -> 'SubjectTypeCode':
+            self, obj: Any, owner: Type["SubjectTypeCode"]
+        ) -> "SubjectTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Patient(cls) -> 'SubjectTypeCode':
+    def Patient(cls) -> "SubjectTypeCode":
         """
         Demographics and other administrative information about an individual or animal receiving care
         or other health-related services.
@@ -36,7 +37,7 @@ class SubjectTypeCode(FhirValueSetBase):
         return SubjectTypeCode("Patient")
 
     @classproperty
-    def Practitioner(cls) -> 'SubjectTypeCode':
+    def Practitioner(cls) -> "SubjectTypeCode":
         """
         A person who is directly or indirectly involved in the provisioning of healthcare.
         """
@@ -44,7 +45,7 @@ class SubjectTypeCode(FhirValueSetBase):
         return SubjectTypeCode("Practitioner")
 
     @classproperty
-    def Organization(cls) -> 'SubjectTypeCode':
+    def Organization(cls) -> "SubjectTypeCode":
         """
         A formally or informally recognized grouping of people or organizations formed for the purpose of achieving
          some form of collective action. Includes companies, institutions, corporations, departments, community groups,
@@ -54,7 +55,7 @@ class SubjectTypeCode(FhirValueSetBase):
         return SubjectTypeCode("Organization")
 
     @classproperty
-    def Location(cls) -> 'SubjectTypeCode':
+    def Location(cls) -> "SubjectTypeCode":
         """
         Details and position information for a physical place where services are provided and resources and
         participants may be stored, found, contained, or accommodated.
@@ -63,7 +64,7 @@ class SubjectTypeCode(FhirValueSetBase):
         return SubjectTypeCode("Location")
 
     @classproperty
-    def Device(cls) -> 'SubjectTypeCode':
+    def Device(cls) -> "SubjectTypeCode":
         """
         A type of a manufactured item that is used in the provision of healthcare without being substantially changed
          through that activity. The device may be a medical or non-medical device.

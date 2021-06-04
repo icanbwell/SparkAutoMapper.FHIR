@@ -21,7 +21,7 @@ class MedicationDispense(FhirResourceBase):
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         partOf: Optional[FhirList[Reference[Procedure]]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         MedicationDispense Resource in FHIR
@@ -47,6 +47,4 @@ class MedicationDispense(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MedicationDispenseSchema.get_schema(
-            include_extension=include_extension
-        )
+        return MedicationDispenseSchema.get_schema(include_extension=include_extension)

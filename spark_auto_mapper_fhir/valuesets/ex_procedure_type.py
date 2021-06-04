@@ -13,21 +13,22 @@ class ExProcedureTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-ex-procedure-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ExProcedureTypeCode']) -> None:
-            self.f: Callable[..., 'ExProcedureTypeCode'] = f
+        def __init__(self, f: Callable[..., "ExProcedureTypeCode"]) -> None:
+            self.f: Callable[..., "ExProcedureTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ExProcedureTypeCode']
-        ) -> 'ExProcedureTypeCode':
+            self, obj: Any, owner: Type["ExProcedureTypeCode"]
+        ) -> "ExProcedureTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ExProcedureTypeCode':
+    def NameOfYourFirstValue(cls) -> "ExProcedureTypeCode":
         """
         Comment
         """

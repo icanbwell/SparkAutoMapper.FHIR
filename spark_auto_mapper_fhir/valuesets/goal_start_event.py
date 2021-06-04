@@ -14,21 +14,22 @@ class GoalStartEventCode(FhirValueSetBase):
     https://www.hl7.org/fhir/valueset-goal-start-event.html
     Identifies types of events that might trigger the start of a goal.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'GoalStartEventCode']) -> None:
-            self.f: Callable[..., 'GoalStartEventCode'] = f
+        def __init__(self, f: Callable[..., "GoalStartEventCode"]) -> None:
+            self.f: Callable[..., "GoalStartEventCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['GoalStartEventCode']
-        ) -> 'GoalStartEventCode':
+            self, obj: Any, owner: Type["GoalStartEventCode"]
+        ) -> "GoalStartEventCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'GoalStartEventCode':
+    def NameOfYourFirstValue(cls) -> "GoalStartEventCode":
         """
         Comment
         """

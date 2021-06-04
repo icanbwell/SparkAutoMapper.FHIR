@@ -13,7 +13,9 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUrl, FhirCanonical
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.valuesets.related_artifact_type import RelatedArtifactTypeCode
+from spark_auto_mapper_fhir.valuesets.related_artifact_type import (
+    RelatedArtifactTypeCode,
+)
 
 
 class RelatedArtifact(FhirResourceBase):
@@ -28,7 +30,7 @@ class RelatedArtifact(FhirResourceBase):
         citation: Optional[FhirMarkdown] = None,
         url: Optional[FhirUrl] = None,
         document: Optional[Attachment] = None,
-        resource: Optional[FhirCanonical] = None
+        resource: Optional[FhirCanonical] = None,
     ) -> None:
         """
         RelatedArtifact Resource in FHIR
@@ -57,12 +59,10 @@ class RelatedArtifact(FhirResourceBase):
             citation=citation,
             url=url,
             document=document,
-            resource=resource
+            resource=resource,
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return RelatedArtifactSchema.get_schema(
-            include_extension=include_extension
-        )
+        return RelatedArtifactSchema.get_schema(include_extension=include_extension)

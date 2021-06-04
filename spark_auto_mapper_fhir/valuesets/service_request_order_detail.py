@@ -13,23 +13,22 @@ class ServiceRequestOrderDetailsCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-servicerequest-orderdetail.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ServiceRequestOrderDetailsCode']
-        ) -> None:
-            self.f: Callable[..., 'ServiceRequestOrderDetailsCode'] = f
+        def __init__(self, f: Callable[..., "ServiceRequestOrderDetailsCode"]) -> None:
+            self.f: Callable[..., "ServiceRequestOrderDetailsCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ServiceRequestOrderDetailsCode']
-        ) -> 'ServiceRequestOrderDetailsCode':
+            self, obj: Any, owner: Type["ServiceRequestOrderDetailsCode"]
+        ) -> "ServiceRequestOrderDetailsCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ServiceRequestOrderDetailsCode':
+    def NameOfYourFirstValue(cls) -> "ServiceRequestOrderDetailsCode":
         """
         Comment
         """

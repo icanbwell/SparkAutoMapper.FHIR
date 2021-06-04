@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
@@ -54,7 +56,7 @@ class Identifier(FhirComplexTypeBase):
             system=system,
             value=value,
             period=period,
-            assigner=assigner
+            assigner=assigner,
         )
 
     use = A.column("use")

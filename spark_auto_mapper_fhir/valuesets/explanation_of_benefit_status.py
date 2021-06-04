@@ -13,44 +13,43 @@ class ExplanationOfBenefitStatusCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-explanationofbenefit-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ExplanationOfBenefitStatusCode']
-        ) -> None:
-            self.f: Callable[..., 'ExplanationOfBenefitStatusCode'] = f
+        def __init__(self, f: Callable[..., "ExplanationOfBenefitStatusCode"]) -> None:
+            self.f: Callable[..., "ExplanationOfBenefitStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ExplanationOfBenefitStatusCode']
-        ) -> 'ExplanationOfBenefitStatusCode':
+            self, obj: Any, owner: Type["ExplanationOfBenefitStatusCode"]
+        ) -> "ExplanationOfBenefitStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Active(cls) -> 'ExplanationOfBenefitStatusCode':
+    def Active(cls) -> "ExplanationOfBenefitStatusCode":
         """
         The resource instance is curently in-force.
         """
         # noinspection PyCallingNonCallable
         return ExplanationOfBenefitStatusCode("active")
 
-    def Cancelled(cls) -> 'ExplanationOfBenefitStatusCode':
+    def Cancelled(cls) -> "ExplanationOfBenefitStatusCode":
         """
         The resource instance is withdrawn, rescinded or reversed.
         """
         # noinspection PyCallingNonCallable
         return ExplanationOfBenefitStatusCode("cancelled")
 
-    def Draft(cls) -> 'ExplanationOfBenefitStatusCode':
+    def Draft(cls) -> "ExplanationOfBenefitStatusCode":
         """
         A new resource instance the contents of which is not complete
         """
         # noinspection PyCallingNonCallable
         return ExplanationOfBenefitStatusCode("draft")
 
-    def EnteredInError(cls) -> 'ExplanationOfBenefitStatusCode':
+    def EnteredInError(cls) -> "ExplanationOfBenefitStatusCode":
         """
         The resource instance was entered in error.
         """

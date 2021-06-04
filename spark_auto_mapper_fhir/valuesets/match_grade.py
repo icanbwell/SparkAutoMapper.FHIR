@@ -14,21 +14,20 @@ class MatchGradeCode(FhirValueSetBase):
     IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR properties not just the ones you need
     https://www.hl7.org/fhir/valueset-match-grade.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'MatchGradeCode']) -> None:
-            self.f: Callable[..., 'MatchGradeCode'] = f
+        def __init__(self, f: Callable[..., "MatchGradeCode"]) -> None:
+            self.f: Callable[..., "MatchGradeCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['MatchGradeCode']
-        ) -> 'MatchGradeCode':
+        def __get__(self, obj: Any, owner: Type["MatchGradeCode"]) -> "MatchGradeCode":
             return self.f(owner)
 
     @classproperty
-    def CertainMatch(cls) -> 'MatchGradeCode':
+    def CertainMatch(cls) -> "MatchGradeCode":
         """
         This record meets the matching criteria to be automatically considered as a full match.
         """
@@ -36,7 +35,7 @@ class MatchGradeCode(FhirValueSetBase):
         return MatchGradeCode("certain")
 
     @classproperty
-    def ProbableMatch(cls) -> 'MatchGradeCode':
+    def ProbableMatch(cls) -> "MatchGradeCode":
         """
         This record is a close match, but not a certain match. Additional review (e.g. by a human) may be required before using this as a match.
         """
@@ -44,7 +43,7 @@ class MatchGradeCode(FhirValueSetBase):
         return MatchGradeCode("probable")
 
     @classproperty
-    def PossibleMatch(cls) -> 'MatchGradeCode':
+    def PossibleMatch(cls) -> "MatchGradeCode":
         """
         This record may be a matching one. Additional review (e.g. by a human) SHOULD be performed before using this as a match.
         """
@@ -52,7 +51,7 @@ class MatchGradeCode(FhirValueSetBase):
         return MatchGradeCode("possible")
 
     @classproperty
-    def CertainlyNotAMatch(cls) -> 'MatchGradeCode':
+    def CertainlyNotAMatch(cls) -> "MatchGradeCode":
         """
         This record is known not to be a match. Note that usually non-matching records are not returned, but in some cases records previously or likely considered as a match may specifically be negated by the matching engine.
         """

@@ -8,25 +8,26 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 class AdministrativeGenderCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         assert not isinstance(value, str) or value in [
-            "male", "female", "other", "unknown"
+            "male",
+            "female",
+            "other",
+            "unknown",
         ]
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'AdministrativeGenderCode']
-        ) -> None:
-            self.f: Callable[..., 'AdministrativeGenderCode'] = f
+        def __init__(self, f: Callable[..., "AdministrativeGenderCode"]) -> None:
+            self.f: Callable[..., "AdministrativeGenderCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['AdministrativeGenderCode']
-        ) -> 'AdministrativeGenderCode':
+            self, obj: Any, owner: Type["AdministrativeGenderCode"]
+        ) -> "AdministrativeGenderCode":
             return self.f(owner)
 
     # noinspection PyMethodParameters
     @classproperty
-    def male(cls) -> 'AdministrativeGenderCode':
+    def male(cls) -> "AdministrativeGenderCode":
         """
         Male
         """
@@ -35,7 +36,7 @@ class AdministrativeGenderCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def female(cls) -> 'AdministrativeGenderCode':
+    def female(cls) -> "AdministrativeGenderCode":
         """
         Female
         """
@@ -44,7 +45,7 @@ class AdministrativeGenderCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def other(cls) -> 'AdministrativeGenderCode':
+    def other(cls) -> "AdministrativeGenderCode":
         """
         Other
         """
@@ -53,7 +54,7 @@ class AdministrativeGenderCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def unknown(cls) -> 'AdministrativeGenderCode':
+    def unknown(cls) -> "AdministrativeGenderCode":
         """
         Unknown
         """

@@ -4,9 +4,12 @@ from spark_auto_mapper_fhir.resources.group import Group
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 
-from spark_auto_mapper_fhir.backbone_elements.participant_backbone_element import ParticipantBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.plan_definition_dynamicValue_backbone_element import \
-    PlanDefinitionDynamicValueBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.participant_backbone_element import (
+    ParticipantBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.plan_definition_dynamicValue_backbone_element import (
+    PlanDefinitionDynamicValueBackboneElement,
+)
 from spark_auto_mapper_fhir.backbone_elements.timing_backbone_element import Timing
 from spark_auto_mapper_fhir.complex_types.duration import Duration
 
@@ -16,27 +19,43 @@ from spark_auto_mapper_fhir.fhir_types.age import FhirAge
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 
-from spark_auto_mapper_fhir.backbone_elements.related_action_backbone_element import RelatedActionBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.related_action_backbone_element import (
+    RelatedActionBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
 from spark_auto_mapper_fhir.fhir_types.uri import FhirCanonical, FhirUri
 from spark_auto_mapper_fhir.resources.related_artifact import RelatedArtifact
-from spark_auto_mapper_fhir.valuesets.action_cardinality_behavior import ActionCardinalityBehaviorCode
-from spark_auto_mapper_fhir.valuesets.action_grouping_behavior import ActionGroupingBehaviorCode
-from spark_auto_mapper_fhir.valuesets.action_precheck_behavior import ActionPrecheckBehaviorCode
-from spark_auto_mapper_fhir.valuesets.action_required_behavior import ActionRequiredBehaviorCode
-from spark_auto_mapper_fhir.valuesets.action_selection_behavior import ActionSelectionBehaviorCode
+from spark_auto_mapper_fhir.valuesets.action_cardinality_behavior import (
+    ActionCardinalityBehaviorCode,
+)
+from spark_auto_mapper_fhir.valuesets.action_grouping_behavior import (
+    ActionGroupingBehaviorCode,
+)
+from spark_auto_mapper_fhir.valuesets.action_precheck_behavior import (
+    ActionPrecheckBehaviorCode,
+)
+from spark_auto_mapper_fhir.valuesets.action_required_behavior import (
+    ActionRequiredBehaviorCode,
+)
+from spark_auto_mapper_fhir.valuesets.action_selection_behavior import (
+    ActionSelectionBehaviorCode,
+)
 from spark_auto_mapper_fhir.valuesets.action_type import ActionTypeCode
 from spark_auto_mapper_fhir.valuesets.request_priority import RequestPriorityCode
 
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.backbone_elements.condition_backbone_element import ConditionBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.condition_backbone_element import (
+    ConditionBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.trigger_definition import TriggerDefinition
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper_fhir.valuesets.subject_type import SubjectTypeCode
 
@@ -56,8 +75,7 @@ class ActionBackboneElement(FhirBackboneElementBase):
         reason: Optional[FhirList[CodeableConcept[FhirValueSetBase]]] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         goalId: Optional[FhirList[FhirId]] = None,
-        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]
-                                         ] = None,
+        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Group]] = None,
         trigger: Optional[FhirList[TriggerDefinition]] = None,
         condition: Optional[FhirList[ConditionBackboneElement]] = None,
@@ -81,8 +99,9 @@ class ActionBackboneElement(FhirBackboneElementBase):
         definitionUri: Optional[FhirUri] = None,
         transform: Optional[FhirCanonical] = None,
         dynamicValue: Optional[
-            FhirList[PlanDefinitionDynamicValueBackboneElement]] = None,
-        action: Optional[FhirList['ActionBackboneElement']] = None
+            FhirList[PlanDefinitionDynamicValueBackboneElement]
+        ] = None,
+        action: Optional[FhirList["ActionBackboneElement"]] = None,
     ) -> None:
         """
         ActionBackboneElement Backbone Element in FHIR
@@ -160,5 +179,5 @@ class ActionBackboneElement(FhirBackboneElementBase):
             definitionUri=definitionUri,
             transform=transform,
             dynamicValue=dynamicValue,
-            action=action
+            action=action,
         )

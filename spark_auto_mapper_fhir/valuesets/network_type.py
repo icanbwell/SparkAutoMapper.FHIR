@@ -13,21 +13,22 @@ class NetworkTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-benefit-network.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'NetworkTypeCode']) -> None:
-            self.f: Callable[..., 'NetworkTypeCode'] = f
+        def __init__(self, f: Callable[..., "NetworkTypeCode"]) -> None:
+            self.f: Callable[..., "NetworkTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['NetworkTypeCode']
-        ) -> 'NetworkTypeCode':
+            self, obj: Any, owner: Type["NetworkTypeCode"]
+        ) -> "NetworkTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'NetworkTypeCode':
+    def NameOfYourFirstValue(cls) -> "NetworkTypeCode":
         """
         Comment
         """

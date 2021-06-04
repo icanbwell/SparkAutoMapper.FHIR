@@ -13,21 +13,22 @@ class QuantityComparatorCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-quantity-comparator.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'QuantityComparatorCode']) -> None:
-            self.f: Callable[..., 'QuantityComparatorCode'] = f
+        def __init__(self, f: Callable[..., "QuantityComparatorCode"]) -> None:
+            self.f: Callable[..., "QuantityComparatorCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['QuantityComparatorCode']
-        ) -> 'QuantityComparatorCode':
+            self, obj: Any, owner: Type["QuantityComparatorCode"]
+        ) -> "QuantityComparatorCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'QuantityComparatorCode':
+    def NameOfYourFirstValue(cls) -> "QuantityComparatorCode":
         """
         Comment
         """

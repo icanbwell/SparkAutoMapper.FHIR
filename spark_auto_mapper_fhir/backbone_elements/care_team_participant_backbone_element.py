@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
@@ -25,11 +27,20 @@ class CareTeamParticipantBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         role: Optional[FhirList[CodeableConcept[ParticipantRoleCode]]] = None,
-        member: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                         RelatedPerson, Patient, Organization,
-                                         'CareTeam']]] = None,
+        member: Optional[
+            Reference[
+                Union[
+                    Practitioner,
+                    PractitionerRole,
+                    RelatedPerson,
+                    Patient,
+                    Organization,
+                    "CareTeam",
+                ]
+            ]
+        ] = None,
         onBehalfOf: Optional[Reference[Organization]] = None,
-        period: Optional[Period] = None
+        period: Optional[Period] = None,
     ) -> None:
         """
         CareTeamParticipantBackboneElement Backbone Element in FHIR
@@ -48,5 +59,5 @@ class CareTeamParticipantBackboneElement(FhirBackboneElementBase):
             role=role,
             member=member,
             onBehalfOf=onBehalfOf,
-            period=period
+            period=period,
         )

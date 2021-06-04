@@ -1,5 +1,5 @@
 # noinspection Mypy
-from typing import Any, List
+from typing import Any
 
 from setuptools import setup, find_packages
 from os import path, getcwd
@@ -7,13 +7,13 @@ from os import path, getcwd
 # from https://packaging.python.org/tutorials/packaging-projects/
 
 # noinspection SpellCheckingInspection
-package_name = 'sparkautomapper.fhir'
+package_name = "sparkautomapper.fhir"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 try:
-    with open(path.join(getcwd(), 'VERSION')) as version_file:
+    with open(path.join(getcwd(), "VERSION")) as version_file:
         version = version_file.read().strip()
 except IOError:
     raise
@@ -31,7 +31,7 @@ def fix_setuptools() -> None:
 
         # noinspection PyUnusedLocal
         def violation(operation: Any, *args: Any, **_: Any) -> None:
-            print("SandboxViolation: %s" % (args, ))
+            print("SandboxViolation: %s" % (args,))
 
         DirectorySandbox._violation = violation
     except ImportError:
@@ -40,20 +40,6 @@ def fix_setuptools() -> None:
 
 # Fix bugs in setuptools.
 fix_setuptools()
-
-
-def parse_requirements(file: str) -> List[str]:
-    with open(file, "r") as fs:
-        return [
-            r for r in fs.read().splitlines() if (
-                len(r.strip()) > 0 and not r.strip().startswith("#")
-                and not r.strip().startswith("--")
-            )
-        ]
-
-
-requirements: List[str] = parse_requirements('requirements.txt')
-test_requirements: List[str] = parse_requirements('requirements-test.txt')
 
 # classifiers list is here: https://pypi.org/classifiers/
 
@@ -68,18 +54,17 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/imranq2/SparkAutoMapper.FHIR",
     packages=find_packages(),
-    install_requires=requirements,
-    tests_require=test_requirements,
+    install_requires=[],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6,<4',
+    python_requires=">=3.6,<4",
     dependency_links=[],
     include_package_data=True,
     zip_safe=False,
     package_data={package_name: ["py.typed"]},
-    data_files=[]
+    data_files=[],
 )

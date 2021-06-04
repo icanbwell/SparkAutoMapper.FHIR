@@ -10,14 +10,22 @@ from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.valuesets.coverage_type_and_self_pay import CoverageTypeAndSelfPayCode
-from spark_auto_mapper_fhir.valuesets.financial_resource_status import FinancialResourceStatusCode
-from spark_auto_mapper_fhir.valuesets.subscriber_relationship import SubscriberRelationshipCode
+from spark_auto_mapper_fhir.valuesets.coverage_type_and_self_pay import (
+    CoverageTypeAndSelfPayCode,
+)
+from spark_auto_mapper_fhir.valuesets.financial_resource_status import (
+    FinancialResourceStatusCode,
+)
+from spark_auto_mapper_fhir.valuesets.subscriber_relationship import (
+    SubscriberRelationshipCode,
+)
 from spark_auto_mapper_fhir.resources.contract import Contract
-from spark_auto_mapper_fhir.backbone_elements.cost_to_beneficiary_backbone_element import \
-    CostToBeneficiaryBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.coverage_classification_backbone_element import \
-    CoverageClassificationBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.cost_to_beneficiary_backbone_element import (
+    CostToBeneficiaryBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.coverage_classification_backbone_element import (
+    CoverageClassificationBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.organization import Organization
@@ -34,30 +42,27 @@ class Coverage(FhirResourceBase):
     def __init__(
         self,
         status: FinancialResourceStatusCode,
-        payor: FhirList[Reference[Union[Organization, Patient,
-                                        RelatedPerson]]],
+        payor: FhirList[Reference[Union[Organization, Patient, RelatedPerson]]],
         beneficiary: Reference[Patient],
         id_: FhirId,
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[CodeableConcept[CoverageTypeAndSelfPayCode]] = None,
-        policyHolder: Optional[Reference[Union[Patient, RelatedPerson,
-                                               Organization]]] = None,
+        policyHolder: Optional[
+            Reference[Union[Patient, RelatedPerson, Organization]]
+        ] = None,
         subscriber: Optional[Reference[Union[Patient, RelatedPerson]]] = None,
         subscriberId: Optional[FhirString] = None,
         dependent: Optional[FhirString] = None,
-        relationship: Optional[CodeableConcept[SubscriberRelationshipCode]
-                               ] = None,
+        relationship: Optional[CodeableConcept[SubscriberRelationshipCode]] = None,
         period: Optional[Period] = None,
-        class_: Optional[FhirList[CoverageClassificationBackboneElement]
-                         ] = None,
+        class_: Optional[FhirList[CoverageClassificationBackboneElement]] = None,
         order: Optional[FhirPositiveInt] = None,
         network: Optional[FhirString] = None,
-        costToBeneficiary: Optional[FhirList[CostToBeneficiaryBackboneElement]
-                                    ] = None,
+        costToBeneficiary: Optional[FhirList[CostToBeneficiaryBackboneElement]] = None,
         subrogation: Optional[FhirBoolean] = None,
         contract: Optional[FhirList[Reference[Contract]]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """
         Coverage Resource in FHIR

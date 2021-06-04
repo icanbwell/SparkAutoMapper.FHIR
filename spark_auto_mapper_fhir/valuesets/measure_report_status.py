@@ -13,23 +13,22 @@ class MeasureReportStatusCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-measure-report-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'MeasureReportStatusCode']
-        ) -> None:
-            self.f: Callable[..., 'MeasureReportStatusCode'] = f
+        def __init__(self, f: Callable[..., "MeasureReportStatusCode"]) -> None:
+            self.f: Callable[..., "MeasureReportStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['MeasureReportStatusCode']
-        ) -> 'MeasureReportStatusCode':
+            self, obj: Any, owner: Type["MeasureReportStatusCode"]
+        ) -> "MeasureReportStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Complete(cls) -> 'MeasureReportStatusCode':
+    def Complete(cls) -> "MeasureReportStatusCode":
         """
         The report is complete and ready for use.
         """
@@ -37,7 +36,7 @@ class MeasureReportStatusCode(FhirValueSetBase):
         return MeasureReportStatusCode("complete")
 
     @classproperty
-    def Pending(cls) -> 'MeasureReportStatusCode':
+    def Pending(cls) -> "MeasureReportStatusCode":
         """
         The report is currently being generated.
         """
@@ -45,7 +44,7 @@ class MeasureReportStatusCode(FhirValueSetBase):
         return MeasureReportStatusCode("pending")
 
     @classproperty
-    def Error(cls) -> 'MeasureReportStatusCode':
+    def Error(cls) -> "MeasureReportStatusCode":
         """
         An error occurred attempting to generate the report.
         """

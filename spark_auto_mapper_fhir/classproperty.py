@@ -6,6 +6,7 @@ class genericclassproperty(object):
     """
     Attribute to have a method treated as class property
     """
+
     def __init__(self, f: Callable[..., Any]) -> None:
         self.f = f
 

@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.common_language import CommonLanguageCode
@@ -24,7 +26,7 @@ class Note(FhirComplexTypeBase):
         number: Optional[FhirPositiveInt] = None,
         type_: Optional[NoteTypeCode] = None,
         text: Optional[FhirString] = None,
-        language: Optional[CodeableConcept[CommonLanguageCode]] = None
+        language: Optional[CodeableConcept[CommonLanguageCode]] = None,
     ):
         """
         Note Resource in FHIR
@@ -42,5 +44,5 @@ class Note(FhirComplexTypeBase):
             number=number,
             type_=type_,
             text=text,
-            language=language
+            language=language,
         )

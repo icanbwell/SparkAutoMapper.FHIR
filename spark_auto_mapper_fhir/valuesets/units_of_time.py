@@ -13,21 +13,22 @@ class UnitsOfTimeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-units-of-time.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'UnitsOfTimeCode']) -> None:
-            self.f: Callable[..., 'UnitsOfTimeCode'] = f
+        def __init__(self, f: Callable[..., "UnitsOfTimeCode"]) -> None:
+            self.f: Callable[..., "UnitsOfTimeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['UnitsOfTimeCode']
-        ) -> 'UnitsOfTimeCode':
+            self, obj: Any, owner: Type["UnitsOfTimeCode"]
+        ) -> "UnitsOfTimeCode":
             return self.f(owner)
 
     @classproperty
-    def second(cls) -> 'UnitsOfTimeCode':
+    def second(cls) -> "UnitsOfTimeCode":
         """
         Comment
         """
@@ -35,7 +36,7 @@ class UnitsOfTimeCode(FhirValueSetBase):
         return UnitsOfTimeCode("s")
 
     @classproperty
-    def minute(cls) -> 'UnitsOfTimeCode':
+    def minute(cls) -> "UnitsOfTimeCode":
         """
         Comment
         """
@@ -43,7 +44,7 @@ class UnitsOfTimeCode(FhirValueSetBase):
         return UnitsOfTimeCode("min")
 
     @classproperty
-    def hour(cls) -> 'UnitsOfTimeCode':
+    def hour(cls) -> "UnitsOfTimeCode":
         """
         Comment
         """
@@ -51,7 +52,7 @@ class UnitsOfTimeCode(FhirValueSetBase):
         return UnitsOfTimeCode("h")
 
     @classproperty
-    def day(cls) -> 'UnitsOfTimeCode':
+    def day(cls) -> "UnitsOfTimeCode":
         """
         Comment
         """
@@ -59,7 +60,7 @@ class UnitsOfTimeCode(FhirValueSetBase):
         return UnitsOfTimeCode("d")
 
     @classproperty
-    def week(cls) -> 'UnitsOfTimeCode':
+    def week(cls) -> "UnitsOfTimeCode":
         """
         Comment
         """
@@ -67,7 +68,7 @@ class UnitsOfTimeCode(FhirValueSetBase):
         return UnitsOfTimeCode("wk")
 
     @classproperty
-    def month(cls) -> 'UnitsOfTimeCode':
+    def month(cls) -> "UnitsOfTimeCode":
         """
         Comment
         """
@@ -75,7 +76,7 @@ class UnitsOfTimeCode(FhirValueSetBase):
         return UnitsOfTimeCode("mo")
 
     @classproperty
-    def year(cls) -> 'UnitsOfTimeCode':
+    def year(cls) -> "UnitsOfTimeCode":
         """
         Comment
         """

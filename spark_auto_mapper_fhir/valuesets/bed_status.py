@@ -13,46 +13,45 @@ class BedStatusCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v2/0116/index.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'BedStatusCode']) -> None:
-            self.f: Callable[..., 'BedStatusCode'] = f
+        def __init__(self, f: Callable[..., "BedStatusCode"]) -> None:
+            self.f: Callable[..., "BedStatusCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['BedStatusCode']
-        ) -> 'BedStatusCode':
+        def __get__(self, obj: Any, owner: Type["BedStatusCode"]) -> "BedStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Closed(cls) -> 'BedStatusCode':
+    def Closed(cls) -> "BedStatusCode":
         # noinspection PyCallingNonCallable
         return BedStatusCode("C")
 
     @classproperty
-    def Housekeeping(cls) -> 'BedStatusCode':
+    def Housekeeping(cls) -> "BedStatusCode":
         # noinspection PyCallingNonCallable
         return BedStatusCode("H")
 
     @classproperty
-    def Isolated(cls) -> 'BedStatusCode':
+    def Isolated(cls) -> "BedStatusCode":
         # noinspection PyCallingNonCallable
         return BedStatusCode("I")
 
     @classproperty
-    def Contaminated(cls) -> 'BedStatusCode':
+    def Contaminated(cls) -> "BedStatusCode":
         # noinspection PyCallingNonCallable
         return BedStatusCode("K")
 
     @classproperty
-    def Occupied(cls) -> 'BedStatusCode':
+    def Occupied(cls) -> "BedStatusCode":
         # noinspection PyCallingNonCallable
         return BedStatusCode("O")
 
     @classproperty
-    def Unoccupied(cls) -> 'BedStatusCode':
+    def Unoccupied(cls) -> "BedStatusCode":
         # noinspection PyCallingNonCallable
         return BedStatusCode("U")
 
@@ -65,6 +64,5 @@ class BedStatusCode(FhirValueSetBase):
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
-        """
-        """
+        """ """
         return ""

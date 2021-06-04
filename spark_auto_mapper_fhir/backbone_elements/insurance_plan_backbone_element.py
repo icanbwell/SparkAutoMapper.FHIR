@@ -1,8 +1,14 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
-from spark_auto_mapper_fhir.backbone_elements.general_cost_backbone_element import GeneralCostBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.specific_cost_backbone_element import SpecificCostBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
+from spark_auto_mapper_fhir.backbone_elements.general_cost_backbone_element import (
+    GeneralCostBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.specific_cost_backbone_element import (
+    SpecificCostBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -25,7 +31,7 @@ class InsurancePlanBackboneElement(FhirBackboneElementBase):
         coverageArea: Optional[FhirList[Reference[Location]]] = None,
         network: Optional[FhirList[Reference[Organization]]] = None,
         generalCost: Optional[FhirList[GeneralCostBackboneElement]] = None,
-        specificCost: Optional[FhirList[SpecificCostBackboneElement]] = None
+        specificCost: Optional[FhirList[SpecificCostBackboneElement]] = None,
     ) -> None:
         """
         InsurancePlanBackboneElement Backbone Element in FHIR
@@ -48,5 +54,5 @@ class InsurancePlanBackboneElement(FhirBackboneElementBase):
             coverageArea=coverageArea,
             network=network,
             generalCost=generalCost,
-            specificCost=specificCost
+            specificCost=specificCost,
         )

@@ -14,7 +14,7 @@ class MolecularSequence(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         MolecularSequence Resource in FHIR
@@ -24,15 +24,10 @@ class MolecularSequence(FhirResourceBase):
         :param id_: id of resource
         """
         super().__init__(
-            resourceType="MolecularSequence",
-            id_=id_,
-            meta=meta,
-            extension=extension
+            resourceType="MolecularSequence", id_=id_, meta=meta, extension=extension
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MolecularSequenceSchema.get_schema(
-            include_extension=include_extension
-        )
+        return MolecularSequenceSchema.get_schema(include_extension=include_extension)

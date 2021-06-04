@@ -11,7 +11,9 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.valuesets.condition_stage import ConditionStageCode
 from spark_auto_mapper_fhir.valuesets.condition_stage_type import ConditionStageTypeCode
 
@@ -22,10 +24,12 @@ class ConditionStageBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         summary: Optional[CodeableConcept[ConditionStageCode]] = None,
-        assessment: Optional[FhirList[Reference[Union[ClinicalImpression,
-                                                      DiagnosticReport,
-                                                      Observation]]]] = None,
-        type_: Optional[CodeableConcept[ConditionStageTypeCode]] = None
+        assessment: Optional[
+            FhirList[
+                Reference[Union[ClinicalImpression, DiagnosticReport, Observation]]
+            ]
+        ] = None,
+        type_: Optional[CodeableConcept[ConditionStageTypeCode]] = None,
     ) -> None:
         """
         ConditionStageBackboneElement Backbone Element in FHIR
@@ -42,5 +46,5 @@ class ConditionStageBackboneElement(FhirBackboneElementBase):
             extension=extension,
             summary=summary,
             assessment=assessment,
-            type_=type_
+            type_=type_,
         )

@@ -2,7 +2,9 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.resources.device import Device
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -24,10 +26,9 @@ class ProcedureBackboneElement(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[FhirList[CodeableConcept[ExProcedureTypeCode]]] = None,
         date: Optional[FhirDate] = None,
-        procedureCodeableConcept: Optional[CodeableConcept[Icd10ProcedureCode]
-                                           ] = None,
+        procedureCodeableConcept: Optional[CodeableConcept[Icd10ProcedureCode]] = None,
         procedureReference: Optional[Reference[Procedure]] = None,
-        udi: Optional[FhirList[Device]] = None
+        udi: Optional[FhirList[Device]] = None,
     ):
         """
         ProcedureBackboneElement Resource in FHIR
@@ -49,5 +50,5 @@ class ProcedureBackboneElement(FhirBackboneElementBase):
             date=date,
             procedureCodeableConcept=procedureCodeableConcept,
             procedureReference=procedureReference,
-            udi=udi
+            udi=udi,
         )

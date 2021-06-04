@@ -13,23 +13,22 @@ class ConformanceUseContextCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-use-context.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ConformanceUseContextCode']
-        ) -> None:
-            self.f: Callable[..., 'ConformanceUseContextCode'] = f
+        def __init__(self, f: Callable[..., "ConformanceUseContextCode"]) -> None:
+            self.f: Callable[..., "ConformanceUseContextCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ConformanceUseContextCode']
-        ) -> 'ConformanceUseContextCode':
+            self, obj: Any, owner: Type["ConformanceUseContextCode"]
+        ) -> "ConformanceUseContextCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ConformanceUseContextCode':
+    def NameOfYourFirstValue(cls) -> "ConformanceUseContextCode":
         """
         Comment
         """

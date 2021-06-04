@@ -13,21 +13,20 @@ class SurfaceCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-surface.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'SurfaceCode']) -> None:
-            self.f: Callable[..., 'SurfaceCode'] = f
+        def __init__(self, f: Callable[..., "SurfaceCode"]) -> None:
+            self.f: Callable[..., "SurfaceCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['SurfaceCode']
-        ) -> 'SurfaceCode':
+        def __get__(self, obj: Any, owner: Type["SurfaceCode"]) -> "SurfaceCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'SurfaceCode':
+    def NameOfYourFirstValue(cls) -> "SurfaceCode":
         """
         Comment
         """

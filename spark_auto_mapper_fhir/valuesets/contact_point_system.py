@@ -13,21 +13,22 @@ class ContactPointSystemCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-contact-point-system.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ContactPointSystemCode']) -> None:
-            self.f: Callable[..., 'ContactPointSystemCode'] = f
+        def __init__(self, f: Callable[..., "ContactPointSystemCode"]) -> None:
+            self.f: Callable[..., "ContactPointSystemCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ContactPointSystemCode']
-        ) -> 'ContactPointSystemCode':
+            self, obj: Any, owner: Type["ContactPointSystemCode"]
+        ) -> "ContactPointSystemCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ContactPointSystemCode':
+    def NameOfYourFirstValue(cls) -> "ContactPointSystemCode":
         """
         Comment
         """

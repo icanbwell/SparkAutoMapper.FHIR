@@ -3,9 +3,12 @@ from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.practitionerrole import PractitionerRoleSchema
 
-from spark_auto_mapper_fhir.backbone_elements.not_available_backbone_element import NotAvailableBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.practitioner_available_time_backbone_element import \
-    PractitionerAvailableTimeBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.not_available_backbone_element import (
+    NotAvailableBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.practitioner_available_time_backbone_element import (
+    PractitionerAvailableTimeBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -39,18 +42,17 @@ class PractitionerRole(FhirResourceBase):
         practitioner: Optional[Reference[Practitioner]] = None,
         organization: Optional[Reference[Organization]] = None,
         code: Optional[FhirList[CodeableConcept[PractitionerRoleCode]]] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]
-                            ] = None,
+        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]] = None,
         location: Optional[FhirList[Reference[Location]]] = None,
-        healthcareService: Optional[FhirList[Reference[HealthcareService]]
-                                    ] = None,
+        healthcareService: Optional[FhirList[Reference[HealthcareService]]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         availableTime: Optional[
-            FhirList[PractitionerAvailableTimeBackboneElement]] = None,
+            FhirList[PractitionerAvailableTimeBackboneElement]
+        ] = None,
         notAvailable: Optional[FhirList[NotAvailableBackboneElement]] = None,
         availabilityExceptions: Optional[FhirString] = None,
         endpoint: Optional[FhirList[Endpoint]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         PractitionerRole Resource in FHIR
@@ -98,6 +100,4 @@ class PractitionerRole(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return PractitionerRoleSchema.get_schema(
-            include_extension=include_extension
-        )
+        return PractitionerRoleSchema.get_schema(include_extension=include_extension)

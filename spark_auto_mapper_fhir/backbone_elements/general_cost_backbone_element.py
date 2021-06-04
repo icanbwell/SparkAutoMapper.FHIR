@@ -3,7 +3,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.money import Money
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -20,7 +22,7 @@ class GeneralCostBackboneElement(FhirBackboneElementBase):
         type_: Optional[CodeableConcept[FhirValueSetBase]] = None,
         groupSize: Optional[FhirPositiveInt] = None,
         cost: Optional[Money] = None,
-        comment: Optional[FhirString] = None
+        comment: Optional[FhirString] = None,
     ) -> None:
         """
         GeneralCostBackboneElement Backbone Element in FHIR
@@ -39,5 +41,5 @@ class GeneralCostBackboneElement(FhirBackboneElementBase):
             type_=type_,
             groupSize=groupSize,
             cost=cost,
-            comment=comment
+            comment=comment,
         )

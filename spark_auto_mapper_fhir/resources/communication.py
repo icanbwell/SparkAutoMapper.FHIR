@@ -21,7 +21,7 @@ class Communication(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         preferred: Optional[FhirBoolean] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """
         Communication Resource in FHIR
@@ -46,6 +46,4 @@ class Communication(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return CommunicationSchema.get_schema(
-            include_extension=include_extension
-        )
+        return CommunicationSchema.get_schema(include_extension=include_extension)

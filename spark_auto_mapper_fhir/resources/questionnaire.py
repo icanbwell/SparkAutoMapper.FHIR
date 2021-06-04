@@ -14,7 +14,7 @@ class Questionnaire(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         Questionnaire Resource in FHIR
@@ -26,15 +26,10 @@ class Questionnaire(FhirResourceBase):
         """
         # TODO fill in all the properties
         super().__init__(
-            resourceType="Questionnaire",
-            id_=id_,
-            meta=meta,
-            extension=extension
+            resourceType="Questionnaire", id_=id_, meta=meta, extension=extension
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return QuestionnaireSchema.get_schema(
-            include_extension=include_extension
-        )
+        return QuestionnaireSchema.get_schema(include_extension=include_extension)

@@ -13,23 +13,22 @@ class ManifestationAndSymptomCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-manifestation-or-symptom.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ManifestationAndSymptomCode']
-        ) -> None:
-            self.f: Callable[..., 'ManifestationAndSymptomCode'] = f
+        def __init__(self, f: Callable[..., "ManifestationAndSymptomCode"]) -> None:
+            self.f: Callable[..., "ManifestationAndSymptomCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ManifestationAndSymptomCode']
-        ) -> 'ManifestationAndSymptomCode':
+            self, obj: Any, owner: Type["ManifestationAndSymptomCode"]
+        ) -> "ManifestationAndSymptomCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ManifestationAndSymptomCode':
+    def NameOfYourFirstValue(cls) -> "ManifestationAndSymptomCode":
         """
         Comment
         """

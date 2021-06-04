@@ -3,10 +3,12 @@ from typing import Optional, Union, Any
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.observation import ObservationSchema
 
-from spark_auto_mapper_fhir.backbone_elements.observation_component_backbone_element import \
-    ObservationComponentBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.observation_reference_range_backbone_element import \
-    ObservationReferenceRangeBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.observation_component_backbone_element import (
+    ObservationComponentBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.observation_reference_range_backbone_element import (
+    ObservationReferenceRangeBackboneElement,
+)
 from spark_auto_mapper_fhir.backbone_elements.timing_backbone_element import Timing
 from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -38,10 +40,14 @@ from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.resources.group import Group
 from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
 from spark_auto_mapper_fhir.resources.immunization import Immunization
-from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
+from spark_auto_mapper_fhir.resources.immunization_recommendation import (
+    ImmunizationRecommendation,
+)
 from spark_auto_mapper_fhir.resources.location import Location
 from spark_auto_mapper_fhir.resources.media import Media
-from spark_auto_mapper_fhir.resources.medication_administration import MedicationAdministration
+from spark_auto_mapper_fhir.resources.medication_administration import (
+    MedicationAdministration,
+)
 from spark_auto_mapper_fhir.resources.medication_dispense import MedicationDispense
 from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
 from spark_auto_mapper_fhir.resources.medication_statement import MedicationStatement
@@ -52,16 +58,22 @@ from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.resources.procedure import Procedure
-from spark_auto_mapper_fhir.resources.questionnaire_response import QuestionnaireResponse
+from spark_auto_mapper_fhir.resources.questionnaire_response import (
+    QuestionnaireResponse,
+)
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 from spark_auto_mapper_fhir.resources.specimen import Specimen
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper_fhir.valuesets.body_site import SNOMEDCTBodyStructuresCode
 from spark_auto_mapper_fhir.valuesets.data_absent_reason import DataAbsentReasonCode
-from spark_auto_mapper_fhir.valuesets.observation_category import ObservationCategoryCode
+from spark_auto_mapper_fhir.valuesets.observation_category import (
+    ObservationCategoryCode,
+)
 from spark_auto_mapper_fhir.valuesets.observation_code import LOINCCode
-from spark_auto_mapper_fhir.valuesets.observation_interpretation import ObservationInterpretationCode
+from spark_auto_mapper_fhir.valuesets.observation_interpretation import (
+    ObservationInterpretationCode,
+)
 from spark_auto_mapper_fhir.valuesets.observation_methods import ObservationMethodsCode
 from spark_auto_mapper_fhir.valuesets.observation_status import ObservationStatusCode
 
@@ -76,20 +88,36 @@ class Observation(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        basedOn: Optional[FhirList[Reference[Union[CarePlan, DeviceRequest,
-                                                   ImmunizationRecommendation,
-                                                   MedicationRequest,
-                                                   NutritionOrder,
-                                                   ServiceRequest]]]] = None,
-        partOf: Optional[FhirList[Reference[Union[MedicationAdministration,
-                                                  MedicationDispense,
-                                                  MedicationStatement,
-                                                  Procedure, Immunization,
-                                                  ImagingStudy]]]] = None,
-        category: Optional[FhirList[CodeableConcept[ObservationCategoryCode]]
-                           ] = None,
-        subject: Optional[Reference[Union[Patient, Group, Device,
-                                          Location]]] = None,
+        basedOn: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        CarePlan,
+                        DeviceRequest,
+                        ImmunizationRecommendation,
+                        MedicationRequest,
+                        NutritionOrder,
+                        ServiceRequest,
+                    ]
+                ]
+            ]
+        ] = None,
+        partOf: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        MedicationAdministration,
+                        MedicationDispense,
+                        MedicationStatement,
+                        Procedure,
+                        Immunization,
+                        ImagingStudy,
+                    ]
+                ]
+            ]
+        ] = None,
+        category: Optional[FhirList[CodeableConcept[ObservationCategoryCode]]] = None,
+        subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         focus: Optional[FhirList[Any]] = None,
         encounter: Optional[Encounter] = None,
         effectiveDateTime: Optional[FhirDateTime] = None,
@@ -97,14 +125,22 @@ class Observation(FhirResourceBase):
         effectiveTiming: Optional[Timing] = None,
         effectiveInstant: Optional[FhirInstant] = None,
         issued: Optional[FhirInstant] = None,
-        performer: Optional[FhirList[Reference[Union[Practitioner,
-                                                     PractitionerRole,
-                                                     Organization, CareTeam,
-                                                     Patient,
-                                                     RelatedPerson]]]] = None,
+        performer: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Practitioner,
+                        PractitionerRole,
+                        Organization,
+                        CareTeam,
+                        Patient,
+                        RelatedPerson,
+                    ]
+                ]
+            ]
+        ] = None,
         valueQuantity: Optional[Quantity] = None,
-        valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]
-                                       ] = None,
+        valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]] = None,
         valueString: Optional[FhirString] = None,
         valueBoolean: Optional[FhirBoolean] = None,
         valueInteger: Optional[FhirInteger] = None,
@@ -114,29 +150,38 @@ class Observation(FhirResourceBase):
         valueTime: Optional[FhirTime] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valuePeriod: Optional[Period] = None,
-        dataAbsentReason: Optional[CodeableConcept[DataAbsentReasonCode]
-                                   ] = None,
-        interpretation: Optional[FhirList[ObservationInterpretationCode]
-                                 ] = None,
+        dataAbsentReason: Optional[CodeableConcept[DataAbsentReasonCode]] = None,
+        interpretation: Optional[FhirList[ObservationInterpretationCode]] = None,
         note: Optional[FhirList[Annotation]] = None,
         bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
         method: Optional[CodeableConcept[ObservationMethodsCode]] = None,
         specimen: Optional[Reference[Specimen]] = None,
         device: Optional[Reference[Union[Device, DeviceMetric]]] = None,
         referenceRange: Optional[
-            FhirList[ObservationReferenceRangeBackboneElement]] = None,
-        hasMember: Optional[FhirList[Reference[Union['Observation',
-                                                     QuestionnaireResponse,
-                                                     MolecularSequence]]]
-                            ] = None,
-        derivedFrom: Optional[FhirList[Reference[Union[DocumentReference,
-                                                       ImagingStudy, Media,
-                                                       QuestionnaireResponse,
-                                                       'Observation',
-                                                       MolecularSequence]]]
-                              ] = None,
-        component: Optional[FhirList[ObservationComponentBackboneElement]
-                            ] = None
+            FhirList[ObservationReferenceRangeBackboneElement]
+        ] = None,
+        hasMember: Optional[
+            FhirList[
+                Reference[
+                    Union["Observation", QuestionnaireResponse, MolecularSequence]
+                ]
+            ]
+        ] = None,
+        derivedFrom: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        DocumentReference,
+                        ImagingStudy,
+                        Media,
+                        QuestionnaireResponse,
+                        "Observation",
+                        MolecularSequence,
+                    ]
+                ]
+            ]
+        ] = None,
+        component: Optional[FhirList[ObservationComponentBackboneElement]] = None,
     ) -> None:
         """
         Observation Resource in FHIR
@@ -217,12 +262,10 @@ class Observation(FhirResourceBase):
             referenceRange=referenceRange,
             hasMember=hasMember,
             derivedFrom=derivedFrom,
-            component=component
+            component=component,
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return ObservationSchema.get_schema(
-            include_extension=include_extension
-        )
+        return ObservationSchema.get_schema(include_extension=include_extension)

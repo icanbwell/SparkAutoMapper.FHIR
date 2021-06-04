@@ -13,21 +13,22 @@ class ClaimCareTeamRoleCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-claim-careteamrole.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ClaimCareTeamRoleCode']) -> None:
-            self.f: Callable[..., 'ClaimCareTeamRoleCode'] = f
+        def __init__(self, f: Callable[..., "ClaimCareTeamRoleCode"]) -> None:
+            self.f: Callable[..., "ClaimCareTeamRoleCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ClaimCareTeamRoleCode']
-        ) -> 'ClaimCareTeamRoleCode':
+            self, obj: Any, owner: Type["ClaimCareTeamRoleCode"]
+        ) -> "ClaimCareTeamRoleCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ClaimCareTeamRoleCode':
+    def NameOfYourFirstValue(cls) -> "ClaimCareTeamRoleCode":
         """
         Comment
         """

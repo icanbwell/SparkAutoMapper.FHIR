@@ -1,8 +1,14 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score import AvailabilityScoreExtensionItem
-from spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic import SearchCharacteristicExtensionItem
-from spark_auto_mapper_fhir.extensions.custom.provider_search_system import ProviderSearchSystemExtensionItem
+from spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score import (
+    AvailabilityScoreExtensionItem,
+)
+from spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic import (
+    SearchCharacteristicExtensionItem,
+)
+from spark_auto_mapper_fhir.extensions.custom.provider_search_system import (
+    ProviderSearchSystemExtensionItem,
+)
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,9 +24,10 @@ class ProviderSearchExtension(ExtensionBase):
         self,
         forSystem: ProviderSearchSystemExtensionItem,
         searchCharacteristic: Optional[
-            FhirList[SearchCharacteristicExtensionItem]] = None,
+            FhirList[SearchCharacteristicExtensionItem]
+        ] = None,
         availabilityScore: Optional[AvailabilityScoreExtensionItem] = None,
-        id_: Optional[FhirId] = None
+        id_: Optional[FhirId] = None,
     ) -> None:
         """
 
@@ -33,7 +40,7 @@ class ProviderSearchExtension(ExtensionBase):
         super().__init__(
             url=ProviderSearchExtension.codeset,
             id_=id_,
-            extension=[availabilityScore, searchCharacteristic, forSystem]
+            extension=[availabilityScore, searchCharacteristic, forSystem],
         )
 
     # noinspection PyMethodParameters

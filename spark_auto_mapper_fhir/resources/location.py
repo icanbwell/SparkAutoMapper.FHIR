@@ -3,8 +3,12 @@ from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.location import LocationSchema
 
-from spark_auto_mapper_fhir.backbone_elements.hours_of_operation_backbone_element import HoursOfOperationBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.position_backbone_element import PositionBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.hours_of_operation_backbone_element import (
+    HoursOfOperationBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.position_backbone_element import (
+    PositionBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.coding import Coding
@@ -24,7 +28,9 @@ from spark_auto_mapper_fhir.valuesets.bed_status import BedStatusCode
 from spark_auto_mapper_fhir.valuesets.location_mode import LocationModeCode
 from spark_auto_mapper_fhir.valuesets.location_status import LocationStatusCode
 from spark_auto_mapper_fhir.valuesets.location_type import LocationTypeCode
-from spark_auto_mapper_fhir.valuesets.service_delivery_location_type import ServiceDeliveryLocationTypeCode
+from spark_auto_mapper_fhir.valuesets.service_delivery_location_type import (
+    ServiceDeliveryLocationTypeCode,
+)
 
 
 class Location(FhirResourceBase):
@@ -40,19 +46,19 @@ class Location(FhirResourceBase):
         alias: Optional[FhirList[FhirString]] = None,
         description: Optional[FhirString] = None,
         mode: Optional[LocationModeCode] = None,
-        type_: Optional[FhirList[
-            CodeableConcept[ServiceDeliveryLocationTypeCode]]] = None,
+        type_: Optional[
+            FhirList[CodeableConcept[ServiceDeliveryLocationTypeCode]]
+        ] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[Address] = None,
         physicalType: Optional[CodeableConcept[LocationTypeCode]] = None,
         position: Optional[PositionBackboneElement] = None,
         managingOrganization: Optional[Reference[Organization]] = None,
-        partOf: Optional[Reference['Location']] = None,
-        hoursOfOperation: Optional[FhirList[HoursOfOperationBackboneElement]
-                                   ] = None,
+        partOf: Optional[Reference["Location"]] = None,
+        hoursOfOperation: Optional[FhirList[HoursOfOperationBackboneElement]] = None,
         availabilityExceptions: Optional[FhirString] = None,
         endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """
         Location Resource in FHIR

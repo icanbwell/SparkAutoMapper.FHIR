@@ -6,12 +6,16 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.claim_care_team_role import ClaimCareTeamRoleCode
-from spark_auto_mapper_fhir.valuesets.provider_qualification import ProviderQualificationCode
+from spark_auto_mapper_fhir.valuesets.provider_qualification import (
+    ProviderQualificationCode,
+)
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -23,14 +27,12 @@ class CareTeamBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         sequence: FhirPositiveInt,
-        provider: Reference[Union[Practitioner, PractitionerRole,
-                                  Organization]],
+        provider: Reference[Union[Practitioner, PractitionerRole, Organization]],
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         responsible: Optional[FhirBoolean] = None,
         role: Optional[CodeableConcept[ClaimCareTeamRoleCode]] = None,
-        qualification: Optional[CodeableConcept[ProviderQualificationCode]
-                                ] = None
+        qualification: Optional[CodeableConcept[ProviderQualificationCode]] = None,
     ):
         """
         CareTeamBackboneElement Resource in FHIR
@@ -50,5 +52,5 @@ class CareTeamBackboneElement(FhirBackboneElementBase):
             provider=provider,
             responsible=responsible,
             role=role,
-            qualification=qualification
+            qualification=qualification,
         )

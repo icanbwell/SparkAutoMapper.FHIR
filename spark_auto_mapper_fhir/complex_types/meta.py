@@ -1,7 +1,9 @@
 from typing import Optional
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
-from spark_auto_mapper_fhir.complex_types.structure_definition import StructureDefinition
+from spark_auto_mapper_fhir.complex_types.structure_definition import (
+    StructureDefinition,
+)
 
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -9,7 +11,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 from spark_auto_mapper_fhir.valuesets.common_tags import CommonTagsCode
 from spark_auto_mapper_fhir.valuesets.security_labels import SecurityLabelsCode
 
@@ -54,5 +58,5 @@ class Meta(FhirComplexTypeBase):
             source=source,
             profile=profile,
             security=security,
-            tag=tag
+            tag=tag,
         )

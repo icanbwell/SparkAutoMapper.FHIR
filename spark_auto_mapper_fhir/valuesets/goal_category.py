@@ -13,21 +13,22 @@ class GoalCategoryCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-goal-category.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'GoalCategoryCode']) -> None:
-            self.f: Callable[..., 'GoalCategoryCode'] = f
+        def __init__(self, f: Callable[..., "GoalCategoryCode"]) -> None:
+            self.f: Callable[..., "GoalCategoryCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['GoalCategoryCode']
-        ) -> 'GoalCategoryCode':
+            self, obj: Any, owner: Type["GoalCategoryCode"]
+        ) -> "GoalCategoryCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'GoalCategoryCode':
+    def NameOfYourFirstValue(cls) -> "GoalCategoryCode":
         """
         Comment
         """

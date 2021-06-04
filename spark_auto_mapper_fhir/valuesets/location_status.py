@@ -13,21 +13,22 @@ class LocationStatusCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-location-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'LocationStatusCode']) -> None:
-            self.f: Callable[..., 'LocationStatusCode'] = f
+        def __init__(self, f: Callable[..., "LocationStatusCode"]) -> None:
+            self.f: Callable[..., "LocationStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['LocationStatusCode']
-        ) -> 'LocationStatusCode':
+            self, obj: Any, owner: Type["LocationStatusCode"]
+        ) -> "LocationStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Active(cls) -> 'LocationStatusCode':
+    def Active(cls) -> "LocationStatusCode":
         """
         Comment
         """
@@ -35,7 +36,7 @@ class LocationStatusCode(FhirValueSetBase):
         return LocationStatusCode("active")
 
     @classproperty
-    def Suspended(cls) -> 'LocationStatusCode':
+    def Suspended(cls) -> "LocationStatusCode":
         """
         Comment
         """
@@ -43,7 +44,7 @@ class LocationStatusCode(FhirValueSetBase):
         return LocationStatusCode("suspended")
 
     @classproperty
-    def Inactive(cls) -> 'LocationStatusCode':
+    def Inactive(cls) -> "LocationStatusCode":
         """
         Comment
         """

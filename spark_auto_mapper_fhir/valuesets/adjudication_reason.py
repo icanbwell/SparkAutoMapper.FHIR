@@ -13,21 +13,22 @@ class AdjudicationReasonCode(FhirValueSetBase):
     """
     http://hl7.org/fhir/valueset-adjudication-reason.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'AdjudicationReasonCode']) -> None:
-            self.f: Callable[..., 'AdjudicationReasonCode'] = f
+        def __init__(self, f: Callable[..., "AdjudicationReasonCode"]) -> None:
+            self.f: Callable[..., "AdjudicationReasonCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['AdjudicationReasonCode']
-        ) -> 'AdjudicationReasonCode':
+            self, obj: Any, owner: Type["AdjudicationReasonCode"]
+        ) -> "AdjudicationReasonCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'AdjudicationReasonCode':
+    def NameOfYourFirstValue(cls) -> "AdjudicationReasonCode":
         """
         Comment
         """

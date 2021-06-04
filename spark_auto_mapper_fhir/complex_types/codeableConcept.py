@@ -4,7 +4,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -23,7 +25,7 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         coding: Optional[FhirList[Coding[_T]]] = None,
-        text: Optional[FhirString] = None
+        text: Optional[FhirString] = None,
     ):
         """
         CodeableConcept Resource in FHIR
@@ -33,6 +35,4 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
         :param coding: Code defined by a terminology system
         :param text: Plain text representation of the concept
         """
-        super().__init__(
-            id_=id_, extension=extension, coding=coding, text=text
-        )
+        super().__init__(id_=id_, extension=extension, coding=coding, text=text)

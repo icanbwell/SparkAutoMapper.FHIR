@@ -1,9 +1,12 @@
 from typing import Optional, Any, Union
 from pyspark.sql.types import StructType, DataType
-from spark_fhir_schemas.r4.resources.questionnaireresponse import QuestionnaireResponseSchema
+from spark_fhir_schemas.r4.resources.questionnaireresponse import (
+    QuestionnaireResponseSchema,
+)
 
-from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item_backbone_element import \
-    QuestionnaireResponseItemBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item_backbone_element import (
+    QuestionnaireResponseItemBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -16,6 +19,7 @@ from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from typing import TYPE_CHECKING
+
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
@@ -26,7 +30,9 @@ from spark_auto_mapper_fhir.resources.procedure import Procedure
 from spark_auto_mapper_fhir.resources.questionnaire import Questionnaire
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
-from spark_auto_mapper_fhir.valuesets.questionnaire_answers_status import QuestionnaireAnswersStatusCode
+from spark_auto_mapper_fhir.valuesets.questionnaire_answers_status import (
+    QuestionnaireAnswersStatusCode,
+)
 
 
 class QuestionnaireResponse(FhirResourceBase):
@@ -34,22 +40,28 @@ class QuestionnaireResponse(FhirResourceBase):
         self,
         status: QuestionnaireAnswersStatusCode,
         identifier: Optional[Identifier] = None,
-        based_on: Optional[FhirList[Reference[Union[CarePlan,
-                                                    ServiceRequest]]]] = None,
-        part_of: Optional[FhirList[Reference[Union['Observation',
-                                                   Procedure]]]] = None,
+        based_on: Optional[FhirList[Reference[Union[CarePlan, ServiceRequest]]]] = None,
+        part_of: Optional[FhirList[Reference[Union["Observation", Procedure]]]] = None,
         questionnaire: Optional[Reference[Questionnaire]] = None,
         subject: Optional[Reference[Any]] = None,
         encounter: Optional[Reference[Encounter]] = None,
         authored: Optional[FhirDate] = None,
-        author: Optional[Reference[Union[Device, Practitioner,
-                                         PractitionerRole, Patient,
-                                         RelatedPerson, Organization]]] = None,
-        source: Optional[Reference[Union[Patient, Practitioner,
-                                         PractitionerRole,
-                                         RelatedPerson]]] = None,
-        item: Optional[FhirList[QuestionnaireResponseItemBackboneElement]
-                       ] = None,
+        author: Optional[
+            Reference[
+                Union[
+                    Device,
+                    Practitioner,
+                    PractitionerRole,
+                    Patient,
+                    RelatedPerson,
+                    Organization,
+                ]
+            ]
+        ] = None,
+        source: Optional[
+            Reference[Union[Patient, Practitioner, PractitionerRole, RelatedPerson]]
+        ] = None,
+        item: Optional[FhirList[QuestionnaireResponseItemBackboneElement]] = None,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
@@ -88,7 +100,7 @@ class QuestionnaireResponse(FhirResourceBase):
             authored=authored,
             author=author,
             source=source,
-            item=item
+            item=item,
         )
 
     def get_schema(

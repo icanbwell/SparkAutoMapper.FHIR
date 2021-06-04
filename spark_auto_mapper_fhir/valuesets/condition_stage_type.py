@@ -13,21 +13,22 @@ class ConditionStageTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-condition-stage-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ConditionStageTypeCode']) -> None:
-            self.f: Callable[..., 'ConditionStageTypeCode'] = f
+        def __init__(self, f: Callable[..., "ConditionStageTypeCode"]) -> None:
+            self.f: Callable[..., "ConditionStageTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ConditionStageTypeCode']
-        ) -> 'ConditionStageTypeCode':
+            self, obj: Any, owner: Type["ConditionStageTypeCode"]
+        ) -> "ConditionStageTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ConditionStageTypeCode':
+    def NameOfYourFirstValue(cls) -> "ConditionStageTypeCode":
         """
         Comment
         """

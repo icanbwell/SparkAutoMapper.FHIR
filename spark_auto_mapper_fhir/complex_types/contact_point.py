@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -24,7 +26,7 @@ class ContactPoint(FhirComplexTypeBase):
         value: Optional[FhirString] = None,
         use: Optional[ContactPointUseCode] = None,
         rank: Optional[FhirPositiveInt] = None,
-        period: Optional[Period] = None
+        period: Optional[Period] = None,
     ):
         """
         ContactPoint Resource in FHIR
@@ -47,5 +49,5 @@ class ContactPoint(FhirComplexTypeBase):
             value=value,
             use=use,
             rank=rank,
-            period=period
+            period=period,
         )

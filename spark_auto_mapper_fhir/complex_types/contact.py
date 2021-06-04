@@ -4,12 +4,18 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
-from spark_auto_mapper_fhir.valuesets.patient_contact_relationship import PatientContactRelationshipCode
+from spark_auto_mapper_fhir.valuesets.administrative_gender import (
+    AdministrativeGenderCode,
+)
+from spark_auto_mapper_fhir.valuesets.patient_contact_relationship import (
+    PatientContactRelationshipCode,
+)
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -23,14 +29,15 @@ class Contact(FhirComplexTypeBase):
         self,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        relationship: Optional[FhirList[
-            CodeableConcept[PatientContactRelationshipCode]]] = None,
+        relationship: Optional[
+            FhirList[CodeableConcept[PatientContactRelationshipCode]]
+        ] = None,
         name: Optional[HumanName] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[Address] = None,
         gender: Optional[AdministrativeGenderCode] = None,
         organization: Optional[Reference[Organization]] = None,
-        period: Optional[Period] = None
+        period: Optional[Period] = None,
     ):
         """
         Contact Resource in FHIR
@@ -56,5 +63,5 @@ class Contact(FhirComplexTypeBase):
             address=address,
             gender=gender,
             organization=organization,
-            period=period
+            period=period,
         )

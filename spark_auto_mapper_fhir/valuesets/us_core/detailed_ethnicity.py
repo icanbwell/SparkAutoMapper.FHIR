@@ -14,21 +14,22 @@ class DetailedEthnicity(FhirValueSetBase):
     https://www.hl7.org/fhir/us/core/ValueSet-detailed-ethnicity.html
     All codes from https://www.hl7.org/fhir/us/core/CodeSystem-cdcrec.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'DetailedEthnicity']) -> None:
-            self.f: Callable[..., 'DetailedEthnicity'] = f
+        def __init__(self, f: Callable[..., "DetailedEthnicity"]) -> None:
+            self.f: Callable[..., "DetailedEthnicity"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['DetailedEthnicity']
-        ) -> 'DetailedEthnicity':
+            self, obj: Any, owner: Type["DetailedEthnicity"]
+        ) -> "DetailedEthnicity":
             return self.f(owner)
 
     @classproperty
-    def Mexican(cls) -> 'DetailedEthnicity':
+    def Mexican(cls) -> "DetailedEthnicity":
         """
         Comment
         """

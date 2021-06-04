@@ -20,14 +20,18 @@ from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-from spark_fhir_schemas.r4.resources.organizationaffiliation import OrganizationAffiliationSchema
+from spark_fhir_schemas.r4.resources.organizationaffiliation import (
+    OrganizationAffiliationSchema,
+)
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.valuesets.organization_affiliation_role import OrganizationAffiliationRoleCode
+from spark_auto_mapper_fhir.valuesets.organization_affiliation_role import (
+    OrganizationAffiliationRoleCode,
+)
 
 
 class OrganizationAffiliation(FhirResourceBase):
@@ -43,15 +47,14 @@ class OrganizationAffiliation(FhirResourceBase):
         organization: Optional[Reference[Organization]] = None,
         participatingOrganization: Optional[Reference[Organization]] = None,
         network: Optional[FhirList[Reference[Organization]]] = None,
-        code: Optional[FhirList[
-            CodeableConcept[OrganizationAffiliationRoleCode]]] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]
-                            ] = None,
+        code: Optional[
+            FhirList[CodeableConcept[OrganizationAffiliationRoleCode]]
+        ] = None,
+        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]] = None,
         location: Optional[FhirList[Reference[Location]]] = None,
-        healthcareService: Optional[FhirList[Reference[HealthcareService]]
-                                    ] = None,
+        healthcareService: Optional[FhirList[Reference[HealthcareService]]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
-        endpoint: Optional[FhirList[Reference[Endpoint]]] = None
+        endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
     ) -> None:
         """
         OrganizationAffiliation Resource in FHIR
@@ -93,7 +96,7 @@ class OrganizationAffiliation(FhirResourceBase):
             location=location,
             healthcareService=healthcareService,
             telecom=telecom,
-            endpoint=endpoint
+            endpoint=endpoint,
         )
 
     def get_schema(
