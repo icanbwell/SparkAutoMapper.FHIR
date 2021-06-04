@@ -12,7 +12,7 @@ class Ethnicity(ExtensionBase):
     def __init__(
         self,
         url: Optional[FhirUri] = None,
-        extension: Optional[FhirList[EthnicityItem]] = None
+        extension: Optional[FhirList[EthnicityItem]] = None,
     ) -> None:
         """
         Extension type in FHIR

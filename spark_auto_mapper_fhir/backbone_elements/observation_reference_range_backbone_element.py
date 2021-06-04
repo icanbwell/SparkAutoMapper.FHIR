@@ -10,9 +10,15 @@ from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
-from spark_auto_mapper_fhir.valuesets.referencerange_appliesto import ObservationReferenceRangeAppliesToCode
-from spark_auto_mapper_fhir.valuesets.referencerange_meaning import ObservationReferenceRangeMeaningCode
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
+from spark_auto_mapper_fhir.valuesets.referencerange_appliesto import (
+    ObservationReferenceRangeAppliesToCode,
+)
+from spark_auto_mapper_fhir.valuesets.referencerange_meaning import (
+    ObservationReferenceRangeMeaningCode,
+)
 
 
 class ObservationReferenceRangeBackboneElement(FhirBackboneElementBase):
@@ -23,12 +29,12 @@ class ObservationReferenceRangeBackboneElement(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         low: Optional[SimpleQuantity] = None,
         high: Optional[SimpleQuantity] = None,
-        type_: Optional[CodeableConcept[ObservationReferenceRangeMeaningCode]
-                        ] = None,
-        appliesTo: Optional[FhirList[
-            CodeableConcept[ObservationReferenceRangeAppliesToCode]]] = None,
+        type_: Optional[CodeableConcept[ObservationReferenceRangeMeaningCode]] = None,
+        appliesTo: Optional[
+            FhirList[CodeableConcept[ObservationReferenceRangeAppliesToCode]]
+        ] = None,
         age: Optional[Range] = None,
-        text: Optional[FhirString] = None
+        text: Optional[FhirString] = None,
     ) -> None:
         """
         ObservationReferenceRangeBackboneElement Backbone Element in FHIR
@@ -52,5 +58,5 @@ class ObservationReferenceRangeBackboneElement(FhirBackboneElementBase):
             type_=type_,
             appliesTo=appliesTo,
             age=age,
-            text=text
+            text=text,
         )

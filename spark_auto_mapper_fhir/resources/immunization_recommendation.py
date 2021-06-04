@@ -1,7 +1,9 @@
 from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
-from spark_fhir_schemas.r4.resources.immunizationrecommendation import ImmunizationRecommendationSchema
+from spark_fhir_schemas.r4.resources.immunizationrecommendation import (
+    ImmunizationRecommendationSchema,
+)
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -15,7 +17,7 @@ class ImmunizationRecommendation(FhirResourceBase):
         self,
         id_: FhirId,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         ImmunizationRecommendation Resource in FHIR
@@ -28,7 +30,7 @@ class ImmunizationRecommendation(FhirResourceBase):
             resourceType="ImmunizationRecommendation",
             id_=id_,
             meta=meta,
-            extension=extension
+            extension=extension,
         )
 
     def get_schema(

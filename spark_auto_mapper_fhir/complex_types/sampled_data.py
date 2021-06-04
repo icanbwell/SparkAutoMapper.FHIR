@@ -10,7 +10,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 
 class SampledData(FhirComplexTypeBase):
@@ -25,7 +27,7 @@ class SampledData(FhirComplexTypeBase):
         factor: Optional[FhirDecimal] = None,
         lowerLimit: Optional[FhirDecimal] = None,
         upperLimit: Optional[FhirDecimal] = None,
-        data: Optional[FhirString] = None
+        data: Optional[FhirString] = None,
     ) -> None:
         """
         SampledData Complex Type in FHIR
@@ -50,5 +52,5 @@ class SampledData(FhirComplexTypeBase):
             lowerLimit=lowerLimit,
             upperLimit=upperLimit,
             dimensions=dimensions,
-            data=data
+            data=data,
         )

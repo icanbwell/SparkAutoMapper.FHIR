@@ -3,13 +3,17 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.claim_exception import ClaimExceptionCode
-from spark_auto_mapper_fhir.valuesets.claim_information_category import ClaimInformationCategoryCode
+from spark_auto_mapper_fhir.valuesets.claim_information_category import (
+    ClaimInformationCategoryCode,
+)
 from spark_auto_mapper_fhir.valuesets.missing_tooth_reason import MissingToothReasonCode
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -36,7 +40,7 @@ class SupportingInfoBackboneElement(FhirBackboneElementBase):
         valueQuantity: Optional[Quantity] = None,
         valueAttachment: Optional[Attachment] = None,
         valueReference: Optional[Reference[Any]] = None,
-        reason: Optional[Coding[MissingToothReasonCode]] = None
+        reason: Optional[Coding[MissingToothReasonCode]] = None,
     ):
         """
         SupportingInfoBackboneElement Resource in FHIR
@@ -68,5 +72,5 @@ class SupportingInfoBackboneElement(FhirBackboneElementBase):
             valueQuantity=valueQuantity,
             valueAttachment=valueAttachment,
             valueReference=valueReference,
-            reason=reason
+            reason=reason,
         )

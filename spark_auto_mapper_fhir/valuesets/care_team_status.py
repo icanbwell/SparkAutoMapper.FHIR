@@ -15,21 +15,22 @@ class CareTeamStatusCode(FhirValueSetBase):
                 properties not just the ones you need
     https://www.hl7.org/fhir/valueset-care-team-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'CareTeamStatusCode']) -> None:
-            self.f: Callable[..., 'CareTeamStatusCode'] = f
+        def __init__(self, f: Callable[..., "CareTeamStatusCode"]) -> None:
+            self.f: Callable[..., "CareTeamStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['CareTeamStatusCode']
-        ) -> 'CareTeamStatusCode':
+            self, obj: Any, owner: Type["CareTeamStatusCode"]
+        ) -> "CareTeamStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Proposed(cls) -> 'CareTeamStatusCode':
+    def Proposed(cls) -> "CareTeamStatusCode":
         """
         The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
         """
@@ -37,7 +38,7 @@ class CareTeamStatusCode(FhirValueSetBase):
         return CareTeamStatusCode("proposed")
 
     @classproperty
-    def Active(cls) -> 'CareTeamStatusCode':
+    def Active(cls) -> "CareTeamStatusCode":
         """
         The care team is currently participating in the coordination and delivery of care.
         """
@@ -45,7 +46,7 @@ class CareTeamStatusCode(FhirValueSetBase):
         return CareTeamStatusCode("active")
 
     @classproperty
-    def Suspended(cls) -> 'CareTeamStatusCode':
+    def Suspended(cls) -> "CareTeamStatusCode":
         """
         The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
         """
@@ -53,7 +54,7 @@ class CareTeamStatusCode(FhirValueSetBase):
         return CareTeamStatusCode("suspended")
 
     @classproperty
-    def Inactive(cls) -> 'CareTeamStatusCode':
+    def Inactive(cls) -> "CareTeamStatusCode":
         """
         The care team was, but is no longer, participating in the coordination and delivery of care.
         """
@@ -61,7 +62,7 @@ class CareTeamStatusCode(FhirValueSetBase):
         return CareTeamStatusCode("inactive")
 
     @classproperty
-    def EnteredInError(cls) -> 'CareTeamStatusCode':
+    def EnteredInError(cls) -> "CareTeamStatusCode":
         """
         Comment
         """

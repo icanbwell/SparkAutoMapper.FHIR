@@ -8,24 +8,26 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 class GroupTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         assert not isinstance(value, str) or value in [
-            "person", "animal", "practitioner", "device", "medication",
-            "substance"
+            "person",
+            "animal",
+            "practitioner",
+            "device",
+            "medication",
+            "substance",
         ]
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'GroupTypeCode']) -> None:
-            self.f: Callable[..., 'GroupTypeCode'] = f
+        def __init__(self, f: Callable[..., "GroupTypeCode"]) -> None:
+            self.f: Callable[..., "GroupTypeCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['GroupTypeCode']
-        ) -> 'GroupTypeCode':
+        def __get__(self, obj: Any, owner: Type["GroupTypeCode"]) -> "GroupTypeCode":
             return self.f(owner)
 
     # noinspection PyMethodParameters
     @classproperty
-    def person(cls) -> 'GroupTypeCode':
+    def person(cls) -> "GroupTypeCode":
         """
         Group contains "person" Patient resources.
         """
@@ -34,7 +36,7 @@ class GroupTypeCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def animal(cls) -> 'GroupTypeCode':
+    def animal(cls) -> "GroupTypeCode":
         """
         Group contains "animal" Patient resources.
         """
@@ -43,7 +45,7 @@ class GroupTypeCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def practitioner(cls) -> 'GroupTypeCode':
+    def practitioner(cls) -> "GroupTypeCode":
         """
         Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
         """
@@ -52,7 +54,7 @@ class GroupTypeCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def device(cls) -> 'GroupTypeCode':
+    def device(cls) -> "GroupTypeCode":
         """
         Group contains Device resources.
         """
@@ -61,7 +63,7 @@ class GroupTypeCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def medication(cls) -> 'GroupTypeCode':
+    def medication(cls) -> "GroupTypeCode":
         """
         Group contains Medication resources.
         """
@@ -70,7 +72,7 @@ class GroupTypeCode(FhirValueSetBase):
 
     # noinspection PyMethodParameters
     @classproperty
-    def substance(cls) -> 'GroupTypeCode':
+    def substance(cls) -> "GroupTypeCode":
         """
         Group contains Substance resources.
         """

@@ -13,21 +13,22 @@ class AccidentIncidentCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v3/ActIncidentCode/vs.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'AccidentIncidentCode']) -> None:
-            self.f: Callable[..., 'AccidentIncidentCode'] = f
+        def __init__(self, f: Callable[..., "AccidentIncidentCode"]) -> None:
+            self.f: Callable[..., "AccidentIncidentCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['AccidentIncidentCode']
-        ) -> 'AccidentIncidentCode':
+            self, obj: Any, owner: Type["AccidentIncidentCode"]
+        ) -> "AccidentIncidentCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'AccidentIncidentCode':
+    def NameOfYourFirstValue(cls) -> "AccidentIncidentCode":
         """
         Comment
         """

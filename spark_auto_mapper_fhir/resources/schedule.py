@@ -31,19 +31,28 @@ class Schedule(FhirResourceBase):
     def __init__(
         self,
         id_: FhirId,
-        actor: FhirList[Reference[Union[Patient, Practitioner,
-                                        PractitionerRole, RelatedPerson,
-                                        Device, HealthcareService, Location]]],
+        actor: FhirList[
+            Reference[
+                Union[
+                    Patient,
+                    Practitioner,
+                    PractitionerRole,
+                    RelatedPerson,
+                    Device,
+                    HealthcareService,
+                    Location,
+                ]
+            ]
+        ],
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         active: Optional[FhirBoolean] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategoryCode]
-                                           ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]
-                              ] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]
-                            ] = None,
+        serviceCategory: Optional[
+            FhirList[CodeableConcept[ServiceCategoryCode]]
+        ] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
+        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]] = None,
         planningHorizon: Optional[Period] = None,
         comment: Optional[FhirString] = None,
     ):

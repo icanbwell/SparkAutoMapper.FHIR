@@ -1,7 +1,8 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.observation_reference_range_backbone_element import \
-    ObservationReferenceRangeBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.observation_reference_range_backbone_element import (
+    ObservationReferenceRangeBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.period import Period
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
@@ -25,10 +26,14 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.valuesets.data_absent_reason import DataAbsentReasonCode
 from spark_auto_mapper_fhir.valuesets.observation_code import LOINCCode
-from spark_auto_mapper_fhir.valuesets.observation_interpretation import ObservationInterpretationCode
+from spark_auto_mapper_fhir.valuesets.observation_interpretation import (
+    ObservationInterpretationCode,
+)
 
 
 class ObservationComponentBackboneElement(FhirBackboneElementBase):
@@ -39,8 +44,7 @@ class ObservationComponentBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         valueQuantity: Optional[Quantity] = None,
-        valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]
-                                       ] = None,
+        valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]] = None,
         valueString: Optional[FhirString] = None,
         valueBoolean: Optional[FhirBoolean] = None,
         valueInteger: Optional[FhirInteger] = None,
@@ -50,12 +54,11 @@ class ObservationComponentBackboneElement(FhirBackboneElementBase):
         valueTime: Optional[FhirTime] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valuePeriod: Optional[Period] = None,
-        dataAbsentReason: Optional[CodeableConcept[DataAbsentReasonCode]
-                                   ] = None,
-        interpretation: Optional[FhirList[ObservationInterpretationCode]
-                                 ] = None,
+        dataAbsentReason: Optional[CodeableConcept[DataAbsentReasonCode]] = None,
+        interpretation: Optional[FhirList[ObservationInterpretationCode]] = None,
         referenceRange: Optional[
-            FhirList[ObservationReferenceRangeBackboneElement]] = None,
+            FhirList[ObservationReferenceRangeBackboneElement]
+        ] = None,
     ) -> None:
         """
         ObservationComponentBackboneElement Backbone Element in FHIR
@@ -85,5 +88,5 @@ class ObservationComponentBackboneElement(FhirBackboneElementBase):
             valuePeriod=valuePeriod,
             dataAbsentReason=dataAbsentReason,
             interpretation=interpretation,
-            referenceRange=referenceRange
+            referenceRange=referenceRange,
         )

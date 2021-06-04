@@ -12,7 +12,7 @@ class InsurancePlanItemExtension(ExtensionBase):
     def __init__(
         self,
         url: Optional[FhirUri] = None,
-        valueReference: Optional[Reference[InsurancePlan]] = None
+        valueReference: Optional[Reference[InsurancePlan]] = None,
     ) -> None:
         """
         InsurancePlanItemExtension Extension type in FHIR
@@ -23,8 +23,7 @@ class InsurancePlanItemExtension(ExtensionBase):
         :param valueReference:
         """
         super().__init__(
-            url=url or InsurancePlanItemExtension.codeset,
-            valueReference=valueReference
+            url=url or InsurancePlanItemExtension.codeset, valueReference=valueReference
         )
 
     # noinspection PyMethodParameters

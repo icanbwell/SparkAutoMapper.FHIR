@@ -47,7 +47,7 @@ class Procedure(FhirResourceBase):
             extension=extension,
             identifier=identifier,
             status=status,
-            statusReason=statusReason
+            statusReason=statusReason,
         )
 
     def get_schema(

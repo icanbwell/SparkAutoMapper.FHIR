@@ -12,7 +12,7 @@ class Race(ExtensionBase):
     def __init__(
         self,
         url: Optional[FhirUri] = None,
-        extension: Optional[FhirList[RaceItem]] = None
+        extension: Optional[FhirList[RaceItem]] = None,
     ) -> None:
         """
         Extension type in FHIR

@@ -5,7 +5,9 @@ from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 
 class Range(FhirComplexTypeBase):
@@ -14,7 +16,7 @@ class Range(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         low: Optional[SimpleQuantity] = None,
-        high: Optional[SimpleQuantity] = None
+        high: Optional[SimpleQuantity] = None,
     ) -> None:
         """
         Range Complex Type in FHIR

@@ -15,31 +15,47 @@ from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 
 from spark_auto_mapper_fhir.valuesets.condition import ConditionCode
-from spark_auto_mapper_fhir.valuesets.medication_request_category import MedicationRequestCategoryCode
-from spark_auto_mapper_fhir.valuesets.medication_request_course_of_therapy import \
-    MedicationRequestCourseOfTherapyCode
-from spark_auto_mapper_fhir.valuesets.medication_request_intent import MedicationRequestIntentCode
-from spark_auto_mapper_fhir.valuesets.medication_request_status import MedicationRequestStatusCode
-from spark_auto_mapper_fhir.valuesets.medication_request_status_reason import \
-    MedicationRequestStatusReasonCode
-from spark_auto_mapper_fhir.valuesets.procedure_performer_role import ProcedurePerformerRoleCode
+from spark_auto_mapper_fhir.valuesets.medication_request_category import (
+    MedicationRequestCategoryCode,
+)
+from spark_auto_mapper_fhir.valuesets.medication_request_course_of_therapy import (
+    MedicationRequestCourseOfTherapyCode,
+)
+from spark_auto_mapper_fhir.valuesets.medication_request_intent import (
+    MedicationRequestIntentCode,
+)
+from spark_auto_mapper_fhir.valuesets.medication_request_status import (
+    MedicationRequestStatusCode,
+)
+from spark_auto_mapper_fhir.valuesets.medication_request_status_reason import (
+    MedicationRequestStatusReasonCode,
+)
+from spark_auto_mapper_fhir.valuesets.procedure_performer_role import (
+    ProcedurePerformerRoleCode,
+)
 from spark_auto_mapper_fhir.valuesets.request_priority import RequestPriorityCode
+
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.condition import Condition
 from spark_auto_mapper_fhir.resources.coverage import Coverage
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
 from spark_auto_mapper_fhir.resources.device import Device
-from spark_auto_mapper_fhir.backbone_elements.dispense_request_backbone_element import \
-    DispenseRequestBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.dispense_request_backbone_element import (
+    DispenseRequestBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.dosage import Dosage
 from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.group import Group
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
+from spark_auto_mapper_fhir.resources.immunization_recommendation import (
+    ImmunizationRecommendation,
+)
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.medication_backbone_element import \
-    MedicationBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.medication_backbone_element import (
+    MedicationBackboneElement,
+)
+
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
@@ -48,10 +64,13 @@ from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-from spark_auto_mapper_fhir.backbone_elements.reported_backbone_element import ReportedBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.reported_backbone_element import (
+    ReportedBackboneElement,
+)
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
-from spark_auto_mapper_fhir.backbone_elements.substitution_backbone_element import \
-    SubstitutionBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.substitution_backbone_element import (
+    SubstitutionBackboneElement,
+)
 
 
 class MedicationRequest(FhirResourceBase):
@@ -65,45 +84,70 @@ class MedicationRequest(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         statusReason: Optional[
-            CodeableConcept[MedicationRequestStatusReasonCode]] = None,
-        category: Optional[FhirList[
-            CodeableConcept[MedicationRequestCategoryCode]]] = None,
+            CodeableConcept[MedicationRequestStatusReasonCode]
+        ] = None,
+        category: Optional[
+            FhirList[CodeableConcept[MedicationRequestCategoryCode]]
+        ] = None,
         priority: Optional[RequestPriorityCode] = None,
         reported: Optional[ReportedBackboneElement] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         encounter: Optional[Encounter] = None,
         supportingInformation: Optional[FhirList[Any]] = None,
         authoredOn: Optional[FhirDateTime] = None,
-        requester: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                            Organization, Patient,
-                                            RelatedPerson, Device]]] = None,
-        performer: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                            Organization, Patient,
-                                            RelatedPerson, Device,
-                                            CareTeam]]] = None,
-        performerType: Optional[CodeableConcept[ProcedurePerformerRoleCode]
-                                ] = None,
-        recorder: Optional[Reference[Union[Practitioner,
-                                           PractitionerRole]]] = None,
+        requester: Optional[
+            Reference[
+                Union[
+                    Practitioner,
+                    PractitionerRole,
+                    Organization,
+                    Patient,
+                    RelatedPerson,
+                    Device,
+                ]
+            ]
+        ] = None,
+        performer: Optional[
+            Reference[
+                Union[
+                    Practitioner,
+                    PractitionerRole,
+                    Organization,
+                    Patient,
+                    RelatedPerson,
+                    Device,
+                    CareTeam,
+                ]
+            ]
+        ] = None,
+        performerType: Optional[CodeableConcept[ProcedurePerformerRoleCode]] = None,
+        recorder: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         reasonCode: Optional[FhirList[CodeableConcept[ConditionCode]]] = None,
-        reasonReference: Optional[FhirList[Reference[Union['Condition',
-                                                           'Observation']]]
-                                  ] = None,
-        basedOn: Optional[FhirList[Union[CarePlan, 'MedicationRequest',
-                                         ServiceRequest,
-                                         ImmunizationRecommendation]]] = None,
+        reasonReference: Optional[
+            FhirList[Reference[Union["Condition", "Observation"]]]
+        ] = None,
+        basedOn: Optional[
+            FhirList[
+                Union[
+                    CarePlan,
+                    "MedicationRequest",
+                    ServiceRequest,
+                    ImmunizationRecommendation,
+                ]
+            ]
+        ] = None,
         groupIdentifier: Optional[Identifier] = None,
         courseOfTherapyType: Optional[
-            CodeableConcept[MedicationRequestCourseOfTherapyCode]] = None,
-        insurance: Optional[FhirList[Reference[Union[Coverage,
-                                                     ClaimResponse]]]] = None,
+            CodeableConcept[MedicationRequestCourseOfTherapyCode]
+        ] = None,
+        insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
         note: Optional[FhirList[Annotation]] = None,
         dosageInstruction: Optional[FhirList[Dosage]] = None,
         dispenseRequest: Optional[DispenseRequestBackboneElement] = None,
         substitution: Optional[SubstitutionBackboneElement] = None,
-        priorPrescription: Optional[Reference['MedicationRequest']] = None,
+        priorPrescription: Optional[Reference["MedicationRequest"]] = None,
         detectedIssue: Optional[FhirList[Reference[DetectedIssue]]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """
         MedicationRequest Resource in FHIR
@@ -179,12 +223,10 @@ class MedicationRequest(FhirResourceBase):
             dispenseRequest=dispenseRequest,
             substitution=substitution,
             priorPrescription=priorPrescription,
-            detectedIssue=detectedIssue
+            detectedIssue=detectedIssue,
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MedicationRequestSchema.get_schema(
-            include_extension=include_extension
-        )
+        return MedicationRequestSchema.get_schema(include_extension=include_extension)

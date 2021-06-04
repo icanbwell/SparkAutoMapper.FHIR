@@ -13,21 +13,20 @@ class LinkTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-link-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'LinkTypeCode']) -> None:
-            self.f: Callable[..., 'LinkTypeCode'] = f
+        def __init__(self, f: Callable[..., "LinkTypeCode"]) -> None:
+            self.f: Callable[..., "LinkTypeCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['LinkTypeCode']
-        ) -> 'LinkTypeCode':
+        def __get__(self, obj: Any, owner: Type["LinkTypeCode"]) -> "LinkTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'LinkTypeCode':
+    def NameOfYourFirstValue(cls) -> "LinkTypeCode":
         """
         Comment
         """

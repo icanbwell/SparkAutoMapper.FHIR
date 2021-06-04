@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
@@ -26,7 +28,7 @@ class Address(FhirComplexTypeBase):
         state: Optional[FhirString] = None,
         postalCode: Optional[FhirString] = None,
         country: Optional[FhirString] = None,
-        period: Optional[Period] = None
+        period: Optional[Period] = None,
     ):
         """
         Address Resource in FHIR
@@ -56,5 +58,5 @@ class Address(FhirComplexTypeBase):
             state=state,
             postalCode=postalCode,
             country=country,
-            period=period
+            period=period,
         )

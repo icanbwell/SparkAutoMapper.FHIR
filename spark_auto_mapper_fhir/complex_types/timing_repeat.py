@@ -18,7 +18,9 @@ from spark_auto_mapper_fhir.complex_types.range import Range
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 from spark_auto_mapper_fhir.valuesets.event_timing import EventTimingCode
 from spark_auto_mapper_fhir.valuesets.units_of_time import UnitsOfTimeCode
 
@@ -45,7 +47,7 @@ class TimingRepeat(FhirComplexTypeBase):
         dayOfWeek: Optional[FhirList[DaysOfWeekCode]] = None,
         timeOfDay: Optional[FhirList[FhirTime]] = None,
         when: Optional[FhirList[EventTimingCode]] = None,
-        offset: Optional[FhirUnsignedInt] = None
+        offset: Optional[FhirUnsignedInt] = None,
     ) -> None:
         """
         TimingRepeat Complex Type in FHIR
@@ -99,5 +101,5 @@ class TimingRepeat(FhirComplexTypeBase):
             dayOfWeek=dayOfWeek,
             timeOfDay=timeOfDay,
             when=when,
-            offset=offset
+            offset=offset,
         )

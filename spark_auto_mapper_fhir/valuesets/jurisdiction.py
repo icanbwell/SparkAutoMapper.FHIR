@@ -13,21 +13,22 @@ class JurisdictionCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-jurisdiction.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'JurisdictionCode']) -> None:
-            self.f: Callable[..., 'JurisdictionCode'] = f
+        def __init__(self, f: Callable[..., "JurisdictionCode"]) -> None:
+            self.f: Callable[..., "JurisdictionCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['JurisdictionCode']
-        ) -> 'JurisdictionCode':
+            self, obj: Any, owner: Type["JurisdictionCode"]
+        ) -> "JurisdictionCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'JurisdictionCode':
+    def NameOfYourFirstValue(cls) -> "JurisdictionCode":
         """
         Comment
         """

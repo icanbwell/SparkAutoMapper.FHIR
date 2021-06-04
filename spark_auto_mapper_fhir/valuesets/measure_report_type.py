@@ -13,21 +13,22 @@ class MeasureReportTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-measure-report-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'MeasureReportTypeCode']) -> None:
-            self.f: Callable[..., 'MeasureReportTypeCode'] = f
+        def __init__(self, f: Callable[..., "MeasureReportTypeCode"]) -> None:
+            self.f: Callable[..., "MeasureReportTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['MeasureReportTypeCode']
-        ) -> 'MeasureReportTypeCode':
+            self, obj: Any, owner: Type["MeasureReportTypeCode"]
+        ) -> "MeasureReportTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Individual(cls) -> 'MeasureReportTypeCode':
+    def Individual(cls) -> "MeasureReportTypeCode":
         """
         An individual report that provides information on the performance for a given measure with respect to a single subject.
         """
@@ -35,7 +36,7 @@ class MeasureReportTypeCode(FhirValueSetBase):
         return MeasureReportTypeCode("individual")
 
     @classproperty
-    def SubjectList(cls) -> 'MeasureReportTypeCode':
+    def SubjectList(cls) -> "MeasureReportTypeCode":
         """
         A subject list report that includes a listing of subjects that satisfied each population criteria in the measure.
         """
@@ -43,7 +44,7 @@ class MeasureReportTypeCode(FhirValueSetBase):
         return MeasureReportTypeCode("subject-list")
 
     @classproperty
-    def Summary(cls) -> 'MeasureReportTypeCode':
+    def Summary(cls) -> "MeasureReportTypeCode":
         """
         A summary report that returns the number of members in each population criteria for the measure.
         """
@@ -51,7 +52,7 @@ class MeasureReportTypeCode(FhirValueSetBase):
         return MeasureReportTypeCode("summary")
 
     @classproperty
-    def DataCollection(cls) -> 'MeasureReportTypeCode':
+    def DataCollection(cls) -> "MeasureReportTypeCode":
         """
         A data collection report that contains data-of-interest for the measure.
         """

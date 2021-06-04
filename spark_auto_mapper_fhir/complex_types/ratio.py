@@ -5,7 +5,9 @@ from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 
 class Ratio(FhirComplexTypeBase):
@@ -24,8 +26,5 @@ class Ratio(FhirComplexTypeBase):
                 there SHALL be some extension present
         """
         super().__init__(
-            id_=id_,
-            extension=extension,
-            numerator=numerator,
-            denominator=denominator
+            id_=id_, extension=extension, numerator=numerator, denominator=denominator
         )

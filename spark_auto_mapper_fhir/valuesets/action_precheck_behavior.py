@@ -14,23 +14,22 @@ class ActionPrecheckBehaviorCode(FhirValueSetBase):
     https://www.hl7.org/fhir/valueset-action-precheck-behavior.html
     Defines selection frequency behavior for an action or group.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionPrecheckBehaviorCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionPrecheckBehaviorCode'] = f
+        def __init__(self, f: Callable[..., "ActionPrecheckBehaviorCode"]) -> None:
+            self.f: Callable[..., "ActionPrecheckBehaviorCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionPrecheckBehaviorCode']
-        ) -> 'ActionPrecheckBehaviorCode':
+            self, obj: Any, owner: Type["ActionPrecheckBehaviorCode"]
+        ) -> "ActionPrecheckBehaviorCode":
             return self.f(owner)
 
     @classproperty
-    def Yes(cls) -> 'ActionPrecheckBehaviorCode':
+    def Yes(cls) -> "ActionPrecheckBehaviorCode":
         """
         An action with this behavior is one of the most frequent action that is, or should be, included by an end user,
          for the particular context in which the action occurs. The system displaying the action to the end user should
@@ -40,7 +39,7 @@ class ActionPrecheckBehaviorCode(FhirValueSetBase):
         return ActionPrecheckBehaviorCode("yes")
 
     @classproperty
-    def No(cls) -> 'ActionPrecheckBehaviorCode':
+    def No(cls) -> "ActionPrecheckBehaviorCode":
         """
         An action with this behavior is one of the less frequent actions included by the end user, for the
         particular context in which the action occurs. The system displaying the actions to the end user

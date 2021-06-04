@@ -3,7 +3,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.duration import Duration
 from spark_auto_mapper_fhir.complex_types.fill import Fill
@@ -26,7 +28,7 @@ class DispenseRequestBackboneElement(FhirBackboneElementBase):
         numberOfRepeatsAllowed: Optional[FhirUnsignedInt] = None,
         quantity: Optional[SimpleQuantity] = None,
         expectedSupplyDuration: Optional[Duration] = None,
-        performer: Optional[Reference[Organization]] = None
+        performer: Optional[Reference[Organization]] = None,
     ):
         """
         DispenseRequestBackboneElement Resource in FHIR
@@ -50,5 +52,5 @@ class DispenseRequestBackboneElement(FhirBackboneElementBase):
             numberOfRepeatsAllowed=numberOfRepeatsAllowed,
             quantity=quantity,
             expectedSupplyDuration=expectedSupplyDuration,
-            performer=performer
+            performer=performer,
         )

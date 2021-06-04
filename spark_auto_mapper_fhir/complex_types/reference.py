@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
@@ -26,7 +28,7 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
         reference: Optional[FhirReference] = None,
         type_: Optional[FhirUri] = None,
         identifier: Optional[Identifier] = None,
-        display: Optional[FhirString] = None
+        display: Optional[FhirString] = None,
     ):
         """
         Reference Resource in FHIR
@@ -46,5 +48,5 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
             reference=reference,
             type_=type_,
             identifier=identifier,
-            display=display
+            display=display,
         )

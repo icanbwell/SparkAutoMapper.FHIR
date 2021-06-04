@@ -15,21 +15,22 @@ class EventStatusCode(FhirValueSetBase):
                 properties not just the ones you need
     https://www.hl7.org/fhir/valueset-event-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'EventStatusCode']) -> None:
-            self.f: Callable[..., 'EventStatusCode'] = f
+        def __init__(self, f: Callable[..., "EventStatusCode"]) -> None:
+            self.f: Callable[..., "EventStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['EventStatusCode']
-        ) -> 'EventStatusCode':
+            self, obj: Any, owner: Type["EventStatusCode"]
+        ) -> "EventStatusCode":
             return self.f(owner)
 
     @classproperty
-    def preparation(cls) -> 'EventStatusCode':
+    def preparation(cls) -> "EventStatusCode":
         """
         Comment
         """
@@ -37,7 +38,7 @@ class EventStatusCode(FhirValueSetBase):
         return EventStatusCode("preparation")
 
     @classproperty
-    def InProgress(cls) -> 'EventStatusCode':
+    def InProgress(cls) -> "EventStatusCode":
         """
         Comment
         """

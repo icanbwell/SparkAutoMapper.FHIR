@@ -4,7 +4,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.period import Period
@@ -23,7 +25,7 @@ class HumanName(FhirComplexTypeBase):
         given: Optional[FhirList[FhirString]] = None,
         prefix: Optional[FhirList[FhirString]] = None,
         suffix: Optional[FhirList[FhirString]] = None,
-        period: Optional[Period] = None
+        period: Optional[Period] = None,
     ):
         """
         HumanName Resource in FHIR
@@ -50,5 +52,5 @@ class HumanName(FhirComplexTypeBase):
             given=given,
             prefix=prefix,
             suffix=suffix,
-            period=period
+            period=period,
         )

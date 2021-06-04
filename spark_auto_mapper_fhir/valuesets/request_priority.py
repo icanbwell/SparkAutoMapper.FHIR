@@ -13,21 +13,22 @@ class RequestPriorityCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-request-priority.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'RequestPriorityCode']) -> None:
-            self.f: Callable[..., 'RequestPriorityCode'] = f
+        def __init__(self, f: Callable[..., "RequestPriorityCode"]) -> None:
+            self.f: Callable[..., "RequestPriorityCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['RequestPriorityCode']
-        ) -> 'RequestPriorityCode':
+            self, obj: Any, owner: Type["RequestPriorityCode"]
+        ) -> "RequestPriorityCode":
             return self.f(owner)
 
     @classproperty
-    def Routine(cls) -> 'RequestPriorityCode':
+    def Routine(cls) -> "RequestPriorityCode":
         """
         The request has normal priority.
         """
@@ -35,7 +36,7 @@ class RequestPriorityCode(FhirValueSetBase):
         return RequestPriorityCode("routine")
 
     @classproperty
-    def Urgent(cls) -> 'RequestPriorityCode':
+    def Urgent(cls) -> "RequestPriorityCode":
         """
         The request should be actioned promptly - higher priority than routine.
         """
@@ -43,7 +44,7 @@ class RequestPriorityCode(FhirValueSetBase):
         return RequestPriorityCode("urgent")
 
     @classproperty
-    def ASAP(cls) -> 'RequestPriorityCode':
+    def ASAP(cls) -> "RequestPriorityCode":
         """
         The request should be actioned as soon as possible - higher priority than urgent.
         """
@@ -51,7 +52,7 @@ class RequestPriorityCode(FhirValueSetBase):
         return RequestPriorityCode("asap")
 
     @classproperty
-    def STAT(cls) -> 'RequestPriorityCode':
+    def STAT(cls) -> "RequestPriorityCode":
         """
         The request should be actioned immediately - highest possible priority. E.g. an emergency.
         """

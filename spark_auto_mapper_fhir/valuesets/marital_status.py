@@ -13,21 +13,22 @@ class MaritalStatusCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-marital-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'MaritalStatusCode']) -> None:
-            self.f: Callable[..., 'MaritalStatusCode'] = f
+        def __init__(self, f: Callable[..., "MaritalStatusCode"]) -> None:
+            self.f: Callable[..., "MaritalStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['MaritalStatusCode']
-        ) -> 'MaritalStatusCode':
+            self, obj: Any, owner: Type["MaritalStatusCode"]
+        ) -> "MaritalStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Annulled(cls) -> 'MaritalStatusCode':
+    def Annulled(cls) -> "MaritalStatusCode":
         """
         Marriage contract has been declared null and to not have existed
         """
@@ -35,7 +36,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("A")
 
     @classproperty
-    def Divorced(cls) -> 'MaritalStatusCode':
+    def Divorced(cls) -> "MaritalStatusCode":
         """
         Marriage contract has been declared dissolved and inactive
         """
@@ -43,7 +44,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("D")
 
     @classproperty
-    def Interlocutory(cls) -> 'MaritalStatusCode':
+    def Interlocutory(cls) -> "MaritalStatusCode":
         """
         Subject to an Interlocutory Decree.
         """
@@ -51,7 +52,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("I")
 
     @classproperty
-    def Legally_Separated(cls) -> 'MaritalStatusCode':
+    def Legally_Separated(cls) -> "MaritalStatusCode":
         """
         Legally Separated
         """
@@ -59,7 +60,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("L")
 
     @classproperty
-    def Married(self) -> 'MaritalStatusCode':
+    def Married(self) -> "MaritalStatusCode":
         """
         A current marriage contract is active
         """
@@ -67,7 +68,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("M")
 
     @classproperty
-    def Polygamous(self) -> 'MaritalStatusCode':
+    def Polygamous(self) -> "MaritalStatusCode":
         """
         More than 1 current spouse
         """
@@ -75,7 +76,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("P")
 
     @classproperty
-    def Never_Married(cls) -> 'MaritalStatusCode':
+    def Never_Married(cls) -> "MaritalStatusCode":
         """
         No marriage contract has ever been entered
         :return:
@@ -85,7 +86,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("S")
 
     @classproperty
-    def Domestic_partner(self) -> 'MaritalStatusCode':
+    def Domestic_partner(self) -> "MaritalStatusCode":
         """
         Person declares that a domestic partner relationship exists.
         """
@@ -93,7 +94,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("T")
 
     @classproperty
-    def unmarried(self) -> 'MaritalStatusCode':
+    def unmarried(self) -> "MaritalStatusCode":
         """
         Currently not in a marriage contract.
         """
@@ -101,7 +102,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("U")
 
     @classproperty
-    def Widowed(self) -> 'MaritalStatusCode':
+    def Widowed(self) -> "MaritalStatusCode":
         """
         The spouse has died
         """
@@ -109,7 +110,7 @@ class MaritalStatusCode(FhirValueSetBase):
         return MaritalStatusCode("W")
 
     @classproperty
-    def unknown(self) -> 'MaritalStatusCode':
+    def unknown(self) -> "MaritalStatusCode":
         """
         Description:A proper value is applicable, but not known. Usage Notes: This means the actual value is not known.
         If the only thing that is unknown is how to properly express the value in the necessary

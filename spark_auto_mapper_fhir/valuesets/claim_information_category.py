@@ -13,51 +13,50 @@ class ClaimInformationCategoryCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-claim-informationcategory.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ClaimInformationCategoryCode']
-        ) -> None:
-            self.f: Callable[..., 'ClaimInformationCategoryCode'] = f
+        def __init__(self, f: Callable[..., "ClaimInformationCategoryCode"]) -> None:
+            self.f: Callable[..., "ClaimInformationCategoryCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ClaimInformationCategoryCode']
-        ) -> 'ClaimInformationCategoryCode':
+            self, obj: Any, owner: Type["ClaimInformationCategoryCode"]
+        ) -> "ClaimInformationCategoryCode":
             return self.f(owner)
 
     @classproperty
-    def Information(cls) -> 'ClaimInformationCategoryCode':
+    def Information(cls) -> "ClaimInformationCategoryCode":
         """
         Codes conveying additional situation and condition information.
         """
         # noinspection PyCallingNonCallable
         return ClaimInformationCategoryCode("info")
 
-    def Discharge(cls) -> 'ClaimInformationCategoryCode':
+    def Discharge(cls) -> "ClaimInformationCategoryCode":
         """
         Discharge status and discharge to locations.
         """
         # noinspection PyCallingNonCallable
         return ClaimInformationCategoryCode("discharge")
 
-    def RelatedServices(cls) -> 'ClaimInformationCategoryCode':
+    def RelatedServices(cls) -> "ClaimInformationCategoryCode":
         """
         Nature and date of the related event e.g. Last exam, service, X-ray etc.
         """
         # noinspection PyCallingNonCallable
         return ClaimInformationCategoryCode("related")
 
-    def Exception(cls) -> 'ClaimInformationCategoryCode':
+    def Exception(cls) -> "ClaimInformationCategoryCode":
         """
         Insurance policy exceptions.
         """
         # noinspection PyCallingNonCallable
         return ClaimInformationCategoryCode("exception")
 
-    def Other(cls) -> 'ClaimInformationCategoryCode':
+    def Other(cls) -> "ClaimInformationCategoryCode":
         """
         Other information identified by the type.system.
         """

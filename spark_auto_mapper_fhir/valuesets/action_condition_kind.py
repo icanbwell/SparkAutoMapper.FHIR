@@ -13,23 +13,22 @@ class ActionConditionKindCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-condition-kind.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionConditionKindCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionConditionKindCode'] = f
+        def __init__(self, f: Callable[..., "ActionConditionKindCode"]) -> None:
+            self.f: Callable[..., "ActionConditionKindCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionConditionKindCode']
-        ) -> 'ActionConditionKindCode':
+            self, obj: Any, owner: Type["ActionConditionKindCode"]
+        ) -> "ActionConditionKindCode":
             return self.f(owner)
 
     @classproperty
-    def applicability(cls) -> 'ActionConditionKindCode':
+    def applicability(cls) -> "ActionConditionKindCode":
         """
         Comment
         """
@@ -37,7 +36,7 @@ class ActionConditionKindCode(FhirValueSetBase):
         return ActionConditionKindCode("applicability")
 
     @classproperty
-    def start(cls) -> 'ActionConditionKindCode':
+    def start(cls) -> "ActionConditionKindCode":
         """
         Comment
         """
@@ -45,7 +44,7 @@ class ActionConditionKindCode(FhirValueSetBase):
         return ActionConditionKindCode("start")
 
     @classproperty
-    def stop(cls) -> 'ActionConditionKindCode':
+    def stop(cls) -> "ActionConditionKindCode":
         """
         Comment
         """

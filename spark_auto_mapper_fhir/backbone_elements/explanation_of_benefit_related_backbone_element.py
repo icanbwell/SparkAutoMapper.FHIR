@@ -9,7 +9,9 @@ from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.valuesets.claim_relationship import ClaimRelationshipCode
 
 
@@ -20,7 +22,7 @@ class ExplanationOfBenefitRelatedBackboneElement(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         claim: Optional[Reference[Claim]] = None,
         relationship: Optional[CodeableConcept[ClaimRelationshipCode]] = None,
-        reference: Optional[FhirId] = None
+        reference: Optional[FhirId] = None,
     ) -> None:
         """
         ExplanationOfBenefitRelatedBackboneElement Backbone Element in FHIR
@@ -37,5 +39,5 @@ class ExplanationOfBenefitRelatedBackboneElement(FhirBackboneElementBase):
             extension=extension,
             claim=claim,
             relationship=relationship,
-            reference=reference
+            reference=reference,
         )

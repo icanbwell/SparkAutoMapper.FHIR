@@ -13,21 +13,22 @@ class LocationTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-location-physical-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'LocationTypeCode']) -> None:
-            self.f: Callable[..., 'LocationTypeCode'] = f
+        def __init__(self, f: Callable[..., "LocationTypeCode"]) -> None:
+            self.f: Callable[..., "LocationTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['LocationTypeCode']
-        ) -> 'LocationTypeCode':
+            self, obj: Any, owner: Type["LocationTypeCode"]
+        ) -> "LocationTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Site(cls) -> 'LocationTypeCode':
+    def Site(cls) -> "LocationTypeCode":
         """
         Comment
         """
@@ -35,7 +36,7 @@ class LocationTypeCode(FhirValueSetBase):
         return LocationTypeCode("si")
 
     @classproperty
-    def Building(cls) -> 'LocationTypeCode':
+    def Building(cls) -> "LocationTypeCode":
         """
         Comment
         """

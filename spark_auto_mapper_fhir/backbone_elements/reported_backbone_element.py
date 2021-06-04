@@ -6,14 +6,16 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 
 
 class ReportedBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
         id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         ReportedBackboneElement Resource in FHIR

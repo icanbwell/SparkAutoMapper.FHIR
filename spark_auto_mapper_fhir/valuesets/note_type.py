@@ -13,21 +13,20 @@ class NoteTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-note-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'NoteTypeCode']) -> None:
-            self.f: Callable[..., 'NoteTypeCode'] = f
+        def __init__(self, f: Callable[..., "NoteTypeCode"]) -> None:
+            self.f: Callable[..., "NoteTypeCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['NoteTypeCode']
-        ) -> 'NoteTypeCode':
+        def __get__(self, obj: Any, owner: Type["NoteTypeCode"]) -> "NoteTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'NoteTypeCode':
+    def NameOfYourFirstValue(cls) -> "NoteTypeCode":
         """
         Comment
         """

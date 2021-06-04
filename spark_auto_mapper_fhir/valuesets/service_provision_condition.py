@@ -13,23 +13,22 @@ class ServiceProvisionConditionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-service-provision-conditions.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ServiceProvisionConditionCode']
-        ) -> None:
-            self.f: Callable[..., 'ServiceProvisionConditionCode'] = f
+        def __init__(self, f: Callable[..., "ServiceProvisionConditionCode"]) -> None:
+            self.f: Callable[..., "ServiceProvisionConditionCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ServiceProvisionConditionCode']
-        ) -> 'ServiceProvisionConditionCode':
+            self, obj: Any, owner: Type["ServiceProvisionConditionCode"]
+        ) -> "ServiceProvisionConditionCode":
             return self.f(owner)
 
     @classproperty
-    def Free(cls) -> 'ServiceProvisionConditionCode':
+    def Free(cls) -> "ServiceProvisionConditionCode":
         """
         Comment
         """
@@ -37,7 +36,7 @@ class ServiceProvisionConditionCode(FhirValueSetBase):
         return ServiceProvisionConditionCode("free")
 
     @classproperty
-    def DiscountsAvailable(cls) -> 'ServiceProvisionConditionCode':
+    def DiscountsAvailable(cls) -> "ServiceProvisionConditionCode":
         """
         Comment
         """
@@ -45,7 +44,7 @@ class ServiceProvisionConditionCode(FhirValueSetBase):
         return ServiceProvisionConditionCode("disc")
 
     @classproperty
-    def FeesApply(cls) -> 'ServiceProvisionConditionCode':
+    def FeesApply(cls) -> "ServiceProvisionConditionCode":
         """
         Comment
         """

@@ -14,21 +14,22 @@ class TimingAbbreviationCode(FhirValueSetBase):
     https://www.hl7.org/fhir/valueset-timing-abbreviation.html
     Code for a known / defined timing pattern.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'TimingAbbreviationCode']) -> None:
-            self.f: Callable[..., 'TimingAbbreviationCode'] = f
+        def __init__(self, f: Callable[..., "TimingAbbreviationCode"]) -> None:
+            self.f: Callable[..., "TimingAbbreviationCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['TimingAbbreviationCode']
-        ) -> 'TimingAbbreviationCode':
+            self, obj: Any, owner: Type["TimingAbbreviationCode"]
+        ) -> "TimingAbbreviationCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'TimingAbbreviationCode':
+    def NameOfYourFirstValue(cls) -> "TimingAbbreviationCode":
         """
         Comment
         """

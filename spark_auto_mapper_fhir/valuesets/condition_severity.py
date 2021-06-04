@@ -13,21 +13,22 @@ class ConditionSeverityCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-condition-severity.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ConditionSeverityCode']) -> None:
-            self.f: Callable[..., 'ConditionSeverityCode'] = f
+        def __init__(self, f: Callable[..., "ConditionSeverityCode"]) -> None:
+            self.f: Callable[..., "ConditionSeverityCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ConditionSeverityCode']
-        ) -> 'ConditionSeverityCode':
+            self, obj: Any, owner: Type["ConditionSeverityCode"]
+        ) -> "ConditionSeverityCode":
             return self.f(owner)
 
     @classproperty
-    def Severe(cls) -> 'ConditionSeverityCode':
+    def Severe(cls) -> "ConditionSeverityCode":
         """
         Comment
         """
@@ -35,7 +36,7 @@ class ConditionSeverityCode(FhirValueSetBase):
         return ConditionSeverityCode("24484000")
 
     @classproperty
-    def Moderate(cls) -> 'ConditionSeverityCode':
+    def Moderate(cls) -> "ConditionSeverityCode":
         """
         Comment
         """
@@ -43,7 +44,7 @@ class ConditionSeverityCode(FhirValueSetBase):
         return ConditionSeverityCode("6736007")
 
     @classproperty
-    def Mild(cls) -> 'ConditionSeverityCode':
+    def Mild(cls) -> "ConditionSeverityCode":
         """
         Comment
         """

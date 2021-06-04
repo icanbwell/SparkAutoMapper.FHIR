@@ -13,21 +13,22 @@ class ReferralMethodCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-service-referral-method.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ReferralMethodCode']) -> None:
-            self.f: Callable[..., 'ReferralMethodCode'] = f
+        def __init__(self, f: Callable[..., "ReferralMethodCode"]) -> None:
+            self.f: Callable[..., "ReferralMethodCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ReferralMethodCode']
-        ) -> 'ReferralMethodCode':
+            self, obj: Any, owner: Type["ReferralMethodCode"]
+        ) -> "ReferralMethodCode":
             return self.f(owner)
 
     @classproperty
-    def Fax(cls) -> 'ReferralMethodCode':
+    def Fax(cls) -> "ReferralMethodCode":
         """
         Referrals may be accepted by fax.
         """
@@ -35,7 +36,7 @@ class ReferralMethodCode(FhirValueSetBase):
         return ReferralMethodCode("fax")
 
     @classproperty
-    def Phone(cls) -> 'ReferralMethodCode':
+    def Phone(cls) -> "ReferralMethodCode":
         """
         Referrals may be accepted over the phone from a practitioner.
         """
@@ -43,7 +44,7 @@ class ReferralMethodCode(FhirValueSetBase):
         return ReferralMethodCode("phone")
 
     @classproperty
-    def SecureMessaging(cls) -> 'ReferralMethodCode':
+    def SecureMessaging(cls) -> "ReferralMethodCode":
         """
         Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems
         supported, refer to the identifiers collection. Callers will need to understand the specific identifier
@@ -53,7 +54,7 @@ class ReferralMethodCode(FhirValueSetBase):
         return ReferralMethodCode("elec")
 
     @classproperty
-    def SecureEmail(cls) -> 'ReferralMethodCode':
+    def SecureEmail(cls) -> "ReferralMethodCode":
         """
         Referrals may be accepted via a secure email. To send please encrypt with the services public key.
         """
@@ -61,7 +62,7 @@ class ReferralMethodCode(FhirValueSetBase):
         return ReferralMethodCode("semail")
 
     @classproperty
-    def Mail(cls) -> 'ReferralMethodCode':
+    def Mail(cls) -> "ReferralMethodCode":
         """
         Referrals may be accepted via regular postage (or hand delivered).
         """

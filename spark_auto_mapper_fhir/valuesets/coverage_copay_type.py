@@ -13,21 +13,22 @@ class CoverageCopayTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-coverage-copay-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'CoverageCopayTypeCode']) -> None:
-            self.f: Callable[..., 'CoverageCopayTypeCode'] = f
+        def __init__(self, f: Callable[..., "CoverageCopayTypeCode"]) -> None:
+            self.f: Callable[..., "CoverageCopayTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['CoverageCopayTypeCode']
-        ) -> 'CoverageCopayTypeCode':
+            self, obj: Any, owner: Type["CoverageCopayTypeCode"]
+        ) -> "CoverageCopayTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'CoverageCopayTypeCode':
+    def NameOfYourFirstValue(cls) -> "CoverageCopayTypeCode":
         """
         Comment
         """

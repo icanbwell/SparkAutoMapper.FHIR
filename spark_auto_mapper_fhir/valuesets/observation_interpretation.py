@@ -13,23 +13,22 @@ class ObservationInterpretationCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-observation-interpretation.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ObservationInterpretationCode']
-        ) -> None:
-            self.f: Callable[..., 'ObservationInterpretationCode'] = f
+        def __init__(self, f: Callable[..., "ObservationInterpretationCode"]) -> None:
+            self.f: Callable[..., "ObservationInterpretationCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ObservationInterpretationCode']
-        ) -> 'ObservationInterpretationCode':
+            self, obj: Any, owner: Type["ObservationInterpretationCode"]
+        ) -> "ObservationInterpretationCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ObservationInterpretationCode':
+    def NameOfYourFirstValue(cls) -> "ObservationInterpretationCode":
         """
         Comment
         """

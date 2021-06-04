@@ -13,23 +13,24 @@ class MedicationRequestCourseOfTherapyCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-medicationrequest-course-of-therapy.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'MedicationRequestCourseOfTherapyCode']
+            self, f: Callable[..., "MedicationRequestCourseOfTherapyCode"]
         ) -> None:
-            self.f: Callable[..., 'MedicationRequestCourseOfTherapyCode'] = f
+            self.f: Callable[..., "MedicationRequestCourseOfTherapyCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['MedicationRequestCourseOfTherapyCode']
-        ) -> 'MedicationRequestCourseOfTherapyCode':
+            self, obj: Any, owner: Type["MedicationRequestCourseOfTherapyCode"]
+        ) -> "MedicationRequestCourseOfTherapyCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'MedicationRequestCourseOfTherapyCode':
+    def NameOfYourFirstValue(cls) -> "MedicationRequestCourseOfTherapyCode":
         """
         Comment
         """
@@ -38,4 +39,6 @@ class MedicationRequestCourseOfTherapyCode(FhirValueSetBase):
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
-        return "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
+        return (
+            "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
+        )

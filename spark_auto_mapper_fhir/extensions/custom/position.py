@@ -13,7 +13,7 @@ class PositionExtension(ExtensionBase):
         self,
         longitude: FhirDecimal,
         latitude: FhirDecimal,
-        altitude: Optional[FhirDecimal] = None
+        altitude: Optional[FhirDecimal] = None,
     ) -> None:
         """
         Position Extension type in FHIR
@@ -28,20 +28,16 @@ class PositionExtension(ExtensionBase):
             ExtensionBase(
                 url=f"{definition_base_url}longitude", valueDecimal=longitude
             ),
-            ExtensionBase(
-                url=f"{definition_base_url}latitude", valueDecimal=latitude
-            )
+            ExtensionBase(url=f"{definition_base_url}latitude", valueDecimal=latitude),
         ]
         if altitude:
             position_extensions.append(
                 ExtensionBase(
-                    url=f"{definition_base_url}altitude",
-                    valueDecimal=altitude
+                    url=f"{definition_base_url}altitude", valueDecimal=altitude
                 )
             )
         super().__init__(
-            url=self.__class__.codeset,
-            extension=FhirList(position_extensions)
+            url=self.__class__.codeset, extension=FhirList(position_extensions)
         )
 
     # noinspection PyMethodParameters

@@ -14,23 +14,22 @@ class BenefitCostApplicabilityCode(FhirValueSetBase):
     Whether the cost applies to in-network or out-of-network providers.
     https://www.hl7.org/fhir/valueset-insuranceplan-applicability.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'BenefitCostApplicabilityCode']
-        ) -> None:
-            self.f: Callable[..., 'BenefitCostApplicabilityCode'] = f
+        def __init__(self, f: Callable[..., "BenefitCostApplicabilityCode"]) -> None:
+            self.f: Callable[..., "BenefitCostApplicabilityCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['BenefitCostApplicabilityCode']
-        ) -> 'BenefitCostApplicabilityCode':
+            self, obj: Any, owner: Type["BenefitCostApplicabilityCode"]
+        ) -> "BenefitCostApplicabilityCode":
             return self.f(owner)
 
     @classproperty
-    def InNetwork(cls) -> 'BenefitCostApplicabilityCode':
+    def InNetwork(cls) -> "BenefitCostApplicabilityCode":
         """
         Provider is contracted with the health insurance company to provide
         services to plan members for specific pre-negotiated rates
@@ -39,7 +38,7 @@ class BenefitCostApplicabilityCode(FhirValueSetBase):
         return BenefitCostApplicabilityCode("in-network")
 
     @classproperty
-    def OutOfNetwork(cls) -> 'BenefitCostApplicabilityCode':
+    def OutOfNetwork(cls) -> "BenefitCostApplicabilityCode":
         """
         Provider is not contracted with the health insurance company to provide services to plan
         members for specific pre-negotiated rates
@@ -48,7 +47,7 @@ class BenefitCostApplicabilityCode(FhirValueSetBase):
         return BenefitCostApplicabilityCode("out-of-network")
 
     @classproperty
-    def Other(cls) -> 'BenefitCostApplicabilityCode':
+    def Other(cls) -> "BenefitCostApplicabilityCode":
         """
         Other applicability
         """

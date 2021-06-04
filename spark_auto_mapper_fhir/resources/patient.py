@@ -29,7 +29,9 @@ from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.valuesets.administrative_gender import (
+    AdministrativeGenderCode,
+)
 from spark_auto_mapper_fhir.valuesets.marital_status import MaritalStatusCode
 
 
@@ -54,11 +56,12 @@ class Patient(FhirResourceBase):
         photo: Optional[FhirList[Attachment]] = None,
         contact: Optional[FhirList[Contact]] = None,
         communication: Optional[FhirList[Communication]] = None,
-        generalPractitioner: Optional[FhirList[Reference[Union[
-            Organization, Practitioner, PractitionerRole]]]] = None,
+        generalPractitioner: Optional[
+            FhirList[Reference[Union[Organization, Practitioner, PractitionerRole]]]
+        ] = None,
         managingOrganization: Optional[Reference[Organization]] = None,
         link: Optional[FhirList[LinkPatient]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """
         Patient Resource in FHIR
@@ -110,7 +113,7 @@ class Patient(FhirResourceBase):
             communication=communication,
             generalPractitioner=generalPractitioner,
             managingOrganization=managingOrganization,
-            link=link
+            link=link,
         )
 
     def get_schema(

@@ -13,21 +13,22 @@ class RequestIntentCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-request-intent.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'RequestIntentCode']) -> None:
-            self.f: Callable[..., 'RequestIntentCode'] = f
+        def __init__(self, f: Callable[..., "RequestIntentCode"]) -> None:
+            self.f: Callable[..., "RequestIntentCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['RequestIntentCode']
-        ) -> 'RequestIntentCode':
+            self, obj: Any, owner: Type["RequestIntentCode"]
+        ) -> "RequestIntentCode":
             return self.f(owner)
 
     @classproperty
-    def Proposal(cls) -> 'RequestIntentCode':
+    def Proposal(cls) -> "RequestIntentCode":
         """
         The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.
         """
@@ -35,7 +36,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("proposal")
 
     @classproperty
-    def Plan(cls) -> 'RequestIntentCode':
+    def Plan(cls) -> "RequestIntentCode":
         """
         The request represents an intention to ensure something occurs without providing an authorization for others to act.
         """
@@ -43,7 +44,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("plan")
 
     @classproperty
-    def Directive(cls) -> 'RequestIntentCode':
+    def Directive(cls) -> "RequestIntentCode":
         """
         The request represents a legally binding instruction authored by a Patient or RelatedPerson.
         """
@@ -51,7 +52,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("directive")
 
     @classproperty
-    def Order(cls) -> 'RequestIntentCode':
+    def Order(cls) -> "RequestIntentCode":
         """
         The request represents a request/demand and authorization for action by a Practitioner.
         """
@@ -59,7 +60,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("order")
 
     @classproperty
-    def OriginalOrder(cls) -> 'RequestIntentCode':
+    def OriginalOrder(cls) -> "RequestIntentCode":
         """
         The request represents an original authorization for action.
         """
@@ -67,7 +68,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("original-order")
 
     @classproperty
-    def ReflexOrder(cls) -> 'RequestIntentCode':
+    def ReflexOrder(cls) -> "RequestIntentCode":
         """
         The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.
         """
@@ -75,7 +76,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("reflex-order")
 
     @classproperty
-    def FillerOrder(cls) -> 'RequestIntentCode':
+    def FillerOrder(cls) -> "RequestIntentCode":
         """
         The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.
         """
@@ -83,7 +84,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("filler-order")
 
     @classproperty
-    def InstanceOrder(cls) -> 'RequestIntentCode':
+    def InstanceOrder(cls) -> "RequestIntentCode":
         """
         An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence. E.g. The administration of a single dose of a drug.
         """
@@ -91,7 +92,7 @@ class RequestIntentCode(FhirValueSetBase):
         return RequestIntentCode("instance-order")
 
     @classproperty
-    def Option(cls) -> 'RequestIntentCode':
+    def Option(cls) -> "RequestIntentCode":
         """
         The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests. Refer to [[[RequestGroup]]] for additional information on how this status is used.
         """

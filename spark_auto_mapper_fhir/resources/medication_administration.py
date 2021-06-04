@@ -1,6 +1,8 @@
 from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
-from spark_fhir_schemas.r4.resources.medicationadministration import MedicationAdministrationSchema
+from spark_fhir_schemas.r4.resources.medicationadministration import (
+    MedicationAdministrationSchema,
+)
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -14,7 +16,7 @@ class MedicationAdministration(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         MedicationAdministration Resource in FHIR
@@ -27,7 +29,7 @@ class MedicationAdministration(FhirResourceBase):
             resourceType="MedicationAdministration",
             id_=id_,
             meta=meta,
-            extension=extension
+            extension=extension,
         )
 
     def get_schema(

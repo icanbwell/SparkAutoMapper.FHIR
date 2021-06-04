@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.fhir_types.base64Binary import FhirBase64Binary
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
@@ -30,7 +32,7 @@ class Attachment(FhirComplexTypeBase):
         size: Optional[FhirUnsignedInt] = None,
         hash_: Optional[FhirBase64Binary] = None,
         title: Optional[FhirString] = None,
-        creation: Optional[FhirDateTime] = None
+        creation: Optional[FhirDateTime] = None,
     ):
         """
         Attachment Resource in FHIR
@@ -57,5 +59,5 @@ class Attachment(FhirComplexTypeBase):
             size=size,
             hash_=hash_,
             title=title,
-            creation=creation
+            creation=creation,
         )

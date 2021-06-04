@@ -13,23 +13,22 @@ class FinancialResourceStatusCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-fm-status.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'FinancialResourceStatusCode']
-        ) -> None:
-            self.f: Callable[..., 'FinancialResourceStatusCode'] = f
+        def __init__(self, f: Callable[..., "FinancialResourceStatusCode"]) -> None:
+            self.f: Callable[..., "FinancialResourceStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['FinancialResourceStatusCode']
-        ) -> 'FinancialResourceStatusCode':
+            self, obj: Any, owner: Type["FinancialResourceStatusCode"]
+        ) -> "FinancialResourceStatusCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'FinancialResourceStatusCode':
+    def NameOfYourFirstValue(cls) -> "FinancialResourceStatusCode":
         """
         Comment
         """

@@ -14,21 +14,22 @@ class DataAbsentReasonCode(FhirValueSetBase):
     Used to specify why the normally expected content of the data element is missing.
     https://www.hl7.org/fhir/valueset-data-absent-reason.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'DataAbsentReasonCode']) -> None:
-            self.f: Callable[..., 'DataAbsentReasonCode'] = f
+        def __init__(self, f: Callable[..., "DataAbsentReasonCode"]) -> None:
+            self.f: Callable[..., "DataAbsentReasonCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['DataAbsentReasonCode']
-        ) -> 'DataAbsentReasonCode':
+            self, obj: Any, owner: Type["DataAbsentReasonCode"]
+        ) -> "DataAbsentReasonCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'DataAbsentReasonCode':
+    def NameOfYourFirstValue(cls) -> "DataAbsentReasonCode":
         """
         Comment
         """

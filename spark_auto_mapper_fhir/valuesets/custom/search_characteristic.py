@@ -13,23 +13,22 @@ class SearchCharacteristicCode(FhirValueSetBase):
     """
     Custom codeset for providerSearch.searchCharacteristic extension
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'SearchCharacteristicCode']
-        ) -> None:
-            self.f: Callable[..., 'SearchCharacteristicCode'] = f
+        def __init__(self, f: Callable[..., "SearchCharacteristicCode"]) -> None:
+            self.f: Callable[..., "SearchCharacteristicCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['SearchCharacteristicCode']
-        ) -> 'SearchCharacteristicCode':
+            self, obj: Any, owner: Type["SearchCharacteristicCode"]
+        ) -> "SearchCharacteristicCode":
             return self.f(owner)
 
     @classproperty
-    def HideFromSearch(cls) -> 'SearchCharacteristicCode':
+    def HideFromSearch(cls) -> "SearchCharacteristicCode":
         """
         Resource should not populate in front-end search
         """
@@ -37,7 +36,7 @@ class SearchCharacteristicCode(FhirValueSetBase):
         return SearchCharacteristicCode("hidefromsearch")
 
     @classproperty
-    def Bookable(cls) -> 'SearchCharacteristicCode':
+    def Bookable(cls) -> "SearchCharacteristicCode":
         """
         Resource is available for appointment creations
         """

@@ -4,7 +4,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -29,7 +31,7 @@ class BenefitBalance(FhirComplexTypeBase):
         network: Optional[CodeableConcept[NetworkTypeCode]] = None,
         unit: Optional[CodeableConcept[BenefitUnitTypeCode]] = None,
         term: Optional[CodeableConcept[BenefitTermCode]] = None,
-        financial: Optional[FhirList[FinancialBenefit]] = None
+        financial: Optional[FhirList[FinancialBenefit]] = None,
     ):
         """
         BenefitBalance Resource in FHIR
@@ -56,5 +58,5 @@ class BenefitBalance(FhirComplexTypeBase):
             network=network,
             unit=unit,
             term=term,
-            financial=financial
+            financial=financial,
         )

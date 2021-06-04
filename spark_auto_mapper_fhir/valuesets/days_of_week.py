@@ -13,21 +13,20 @@ class DaysOfWeekCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-days-of-week.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'DaysOfWeekCode']) -> None:
-            self.f: Callable[..., 'DaysOfWeekCode'] = f
+        def __init__(self, f: Callable[..., "DaysOfWeekCode"]) -> None:
+            self.f: Callable[..., "DaysOfWeekCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['DaysOfWeekCode']
-        ) -> 'DaysOfWeekCode':
+        def __get__(self, obj: Any, owner: Type["DaysOfWeekCode"]) -> "DaysOfWeekCode":
             return self.f(owner)
 
     @classproperty
-    def Monday(cls) -> 'DaysOfWeekCode':
+    def Monday(cls) -> "DaysOfWeekCode":
         """
         Comment
         """
@@ -35,7 +34,7 @@ class DaysOfWeekCode(FhirValueSetBase):
         return DaysOfWeekCode("mon")
 
     @classproperty
-    def Tuesday(cls) -> 'DaysOfWeekCode':
+    def Tuesday(cls) -> "DaysOfWeekCode":
         """
         Comment
         """
@@ -43,7 +42,7 @@ class DaysOfWeekCode(FhirValueSetBase):
         return DaysOfWeekCode("tue")
 
     @classproperty
-    def Wednesday(cls) -> 'DaysOfWeekCode':
+    def Wednesday(cls) -> "DaysOfWeekCode":
         """
         Comment
         """
@@ -51,7 +50,7 @@ class DaysOfWeekCode(FhirValueSetBase):
         return DaysOfWeekCode("wed")
 
     @classproperty
-    def Thursday(cls) -> 'DaysOfWeekCode':
+    def Thursday(cls) -> "DaysOfWeekCode":
         """
         Comment
         """
@@ -59,7 +58,7 @@ class DaysOfWeekCode(FhirValueSetBase):
         return DaysOfWeekCode("thu")
 
     @classproperty
-    def Friday(cls) -> 'DaysOfWeekCode':
+    def Friday(cls) -> "DaysOfWeekCode":
         """
         Comment
         """
@@ -67,7 +66,7 @@ class DaysOfWeekCode(FhirValueSetBase):
         return DaysOfWeekCode("fri")
 
     @classproperty
-    def Saturday(cls) -> 'DaysOfWeekCode':
+    def Saturday(cls) -> "DaysOfWeekCode":
         """
         Comment
         """
@@ -75,7 +74,7 @@ class DaysOfWeekCode(FhirValueSetBase):
         return DaysOfWeekCode("sat")
 
     @classproperty
-    def Sunday(cls) -> 'DaysOfWeekCode':
+    def Sunday(cls) -> "DaysOfWeekCode":
         """
         Comment
         """

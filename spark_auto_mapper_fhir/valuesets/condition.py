@@ -13,21 +13,20 @@ class ConditionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-condition-code.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ConditionCode']) -> None:
-            self.f: Callable[..., 'ConditionCode'] = f
+        def __init__(self, f: Callable[..., "ConditionCode"]) -> None:
+            self.f: Callable[..., "ConditionCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['ConditionCode']
-        ) -> 'ConditionCode':
+        def __get__(self, obj: Any, owner: Type["ConditionCode"]) -> "ConditionCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ConditionCode':
+    def NameOfYourFirstValue(cls) -> "ConditionCode":
         """
         Comment
         """
