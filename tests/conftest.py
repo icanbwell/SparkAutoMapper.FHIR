@@ -1,7 +1,6 @@
 import logging
 import os
 import shutil
-from os import path
 from typing import Any
 
 import pytest
@@ -96,13 +95,7 @@ def spark_session_per_function(request: Any) -> SparkSession:
 
     clean_spark_dir()
 
-    master: str = "spark://spark:7077"
     master = "local[2]"
-    if not path.exists("/Applications/Docker.app"):
-        master = "local[2]"
-        print(f"++++++ Running on local spark: {master} ++++")
-    else:
-        print(f"++++++ Running on docker spark: {master} ++++")
 
     session = (
         SparkSession.builder.appName("pytest-pyspark-local-testing")
