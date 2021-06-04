@@ -9,7 +9,7 @@ COPY Pipfile* /SparkAutoMapper.FHIR/
 WORKDIR /SparkAutoMapper.FHIR
 
 RUN df -h # for space monitoring
-RUN pipenv install --ignore-pipfile --deploy --dev
+RUN pipenv sync --dev --system
 
 # COPY ./jars/* /opt/bitnami/spark/jars/
 # COPY ./conf/* /opt/bitnami/spark/conf/
