@@ -4,6 +4,9 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper.data_types.text_like_base import AutoMapperTextLikeBase
 from spark_fhir_schemas.r4.resources.patient import PatientSchema
 
+from spark_auto_mapper_fhir.backbone_elements.patient_communication_backbone_element import (
+    PatientCommunicationBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -14,7 +17,6 @@ from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.resources.communication import Communication
 from spark_auto_mapper_fhir.complex_types.contact import Contact
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -55,7 +57,7 @@ class Patient(FhirResourceBase):
         multipleBirthInteger: Optional[FhirPositiveInt] = None,
         photo: Optional[FhirList[Attachment]] = None,
         contact: Optional[FhirList[Contact]] = None,
-        communication: Optional[FhirList[Communication]] = None,
+        communication: Optional[FhirList[PatientCommunicationBackboneElement]] = None,
         generalPractitioner: Optional[
             FhirList[Reference[Union[Organization, Practitioner, PractitionerRole]]]
         ] = None,
