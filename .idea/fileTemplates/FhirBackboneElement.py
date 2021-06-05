@@ -5,7 +5,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
 
 class $ClassName(FhirBackboneElementBase):
-    def __init__(self,id_: Optional[FhirId] = None,
+    def __init__(self,*,id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None) -> None:
         """
         $ClassName Backbone Element in FHIR

@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.complex_types.meta import Meta
 
 class $ClassName(FhirResourceBase):
     def __init__(self,
+                *,
                 id_: Optional[FhirId] = None, 
                 meta: Optional[Meta] = None,
                 extension: Optional[FhirList[Extension]] = None
