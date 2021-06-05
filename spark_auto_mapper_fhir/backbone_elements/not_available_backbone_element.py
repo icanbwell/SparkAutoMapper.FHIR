@@ -3,7 +3,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
@@ -14,7 +16,7 @@ class NotAvailableBackboneElement(FhirBackboneElementBase):
         description: FhirString,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        during: Optional[Period] = None
+        during: Optional[Period] = None,
     ) -> None:
         """
         NotAvailableBackboneElement Backbone Element in FHIR
@@ -26,8 +28,5 @@ class NotAvailableBackboneElement(FhirBackboneElementBase):
         :param during: Service not available from this date
         """
         super().__init__(
-            id_=id_,
-            extension=extension,
-            description=description,
-            during=during
+            id_=id_, extension=extension, description=description, during=during
         )

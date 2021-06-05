@@ -2,7 +2,9 @@ from typing import Optional, Union, Any
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 
-from spark_auto_mapper_fhir.backbone_elements.group_backbone_element import GroupBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.group_backbone_element import (
+    GroupBackboneElement,
+)
 from spark_auto_mapper_fhir.resources.organization import Organization
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
@@ -31,8 +33,12 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.valuesets.measure_improvement_notation import MeasureImprovementNotationCode
-from spark_auto_mapper_fhir.valuesets.measure_report_status import MeasureReportStatusCode
+from spark_auto_mapper_fhir.valuesets.measure_improvement_notation import (
+    MeasureImprovementNotationCode,
+)
+from spark_auto_mapper_fhir.valuesets.measure_report_status import (
+    MeasureReportStatusCode,
+)
 from spark_auto_mapper_fhir.valuesets.measure_report_type import MeasureReportTypeCode
 
 
@@ -46,17 +52,28 @@ class MeasureReport(FhirResourceBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        subject: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                          Location, Device, RelatedPerson,
-                                          Group]]] = None,
+        subject: Optional[
+            Reference[
+                Union[
+                    Practitioner,
+                    PractitionerRole,
+                    Location,
+                    Device,
+                    RelatedPerson,
+                    Group,
+                ]
+            ]
+        ] = None,
         date: Optional[FhirDateTime] = None,
-        reporter: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                           Location, Organization]]] = None,
+        reporter: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Location, Organization]]
+        ] = None,
         improvementNotation: Optional[
-            CodeableConcept[MeasureImprovementNotationCode]] = None,
+            CodeableConcept[MeasureImprovementNotationCode]
+        ] = None,
         group: Optional[FhirList[GroupBackboneElement]] = None,
         evaluatedResource: Optional[FhirList[Reference[Any]]] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         MeasureReport Resource in FHIR
@@ -90,12 +107,10 @@ class MeasureReport(FhirResourceBase):
             improvementNotation=improvementNotation,
             group=group,
             evaluatedResource=evaluatedResource,
-            extension=extension
+            extension=extension,
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MeasureReportSchema.get_schema(
-            include_extension=include_extension
-        )
+        return MeasureReportSchema.get_schema(include_extension=include_extension)

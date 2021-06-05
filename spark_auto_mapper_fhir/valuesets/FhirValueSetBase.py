@@ -15,9 +15,13 @@ class FhirValueSetBase(AutoMapperDataTypeBase):
     def get_column_spec(
         self, source_df: Optional[DataFrame], current_column: Optional[Column]
     ) -> Column:
-        if isinstance(self.value, str) or isinstance(self.value, int) \
-                or isinstance(self.value, float) or isinstance(self.value, date) \
-                or isinstance(self.value, datetime):
+        if (
+            isinstance(self.value, str)
+            or isinstance(self.value, int)
+            or isinstance(self.value, float)
+            or isinstance(self.value, date)
+            or isinstance(self.value, datetime)
+        ):
             return lit(self.value)
 
         if isinstance(self.value, AutoMapperDataTypeBase):
@@ -25,6 +29,4 @@ class FhirValueSetBase(AutoMapperDataTypeBase):
                 source_df=source_df, current_column=current_column
             )
 
-        raise ValueError(
-            f"value: {self.value} is not str or AutoMapperDataTypeBase"
-        )
+        raise ValueError(f"value: {self.value} is not str or AutoMapperDataTypeBase")

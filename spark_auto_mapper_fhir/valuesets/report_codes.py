@@ -13,23 +13,22 @@ class LOINCDiagnosticReportCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-report-codes.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'LOINCDiagnosticReportCode']
-        ) -> None:
-            self.f: Callable[..., 'LOINCDiagnosticReportCode'] = f
+        def __init__(self, f: Callable[..., "LOINCDiagnosticReportCode"]) -> None:
+            self.f: Callable[..., "LOINCDiagnosticReportCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['LOINCDiagnosticReportCode']
-        ) -> 'LOINCDiagnosticReportCode':
+            self, obj: Any, owner: Type["LOINCDiagnosticReportCode"]
+        ) -> "LOINCDiagnosticReportCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'LOINCDiagnosticReportCode':
+    def NameOfYourFirstValue(cls) -> "LOINCDiagnosticReportCode":
         """
         Comment
         """

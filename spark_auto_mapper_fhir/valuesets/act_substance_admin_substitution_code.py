@@ -13,23 +13,24 @@ class ActSubstanceAdminSubstitutionCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/v3/ActSubstanceAdminSubstitutionCode/vs.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'ActSubstanceAdminSubstitutionCode']
+            self, f: Callable[..., "ActSubstanceAdminSubstitutionCode"]
         ) -> None:
-            self.f: Callable[..., 'ActSubstanceAdminSubstitutionCode'] = f
+            self.f: Callable[..., "ActSubstanceAdminSubstitutionCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActSubstanceAdminSubstitutionCode']
-        ) -> 'ActSubstanceAdminSubstitutionCode':
+            self, obj: Any, owner: Type["ActSubstanceAdminSubstitutionCode"]
+        ) -> "ActSubstanceAdminSubstitutionCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ActSubstanceAdminSubstitutionCode':
+    def NameOfYourFirstValue(cls) -> "ActSubstanceAdminSubstitutionCode":
         """
         Comment
         """

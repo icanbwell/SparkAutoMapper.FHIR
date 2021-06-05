@@ -14,7 +14,7 @@ class Specimen(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         Specimen Resource in FHIR

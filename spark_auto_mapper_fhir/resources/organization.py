@@ -14,8 +14,9 @@ from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.organization_contact_backbone_element import \
-    OrganizationContactBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.organization_contact_backbone_element import (
+    OrganizationContactBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.valuesets.organization_type import OrganizationTypeCode
@@ -29,16 +30,15 @@ class Organization(FhirResourceBase):
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        type_: Optional[FhirList[CodeableConcept[OrganizationTypeCode]]
-                        ] = None,
+        type_: Optional[FhirList[CodeableConcept[OrganizationTypeCode]]] = None,
         name: Optional[FhirString] = None,
         alias: Optional[FhirList[FhirString]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[FhirList[Address]] = None,
-        partOf: Optional[Reference['Organization']] = None,
+        partOf: Optional[Reference["Organization"]] = None,
         contact: Optional[FhirList[OrganizationContactBackboneElement]] = None,
         endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """
         Organization Resource in FHIR
@@ -81,6 +81,4 @@ class Organization(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return OrganizationSchema.get_schema(
-            include_extension=include_extension
-        )
+        return OrganizationSchema.get_schema(include_extension=include_extension)

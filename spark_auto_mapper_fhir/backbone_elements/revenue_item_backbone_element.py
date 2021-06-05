@@ -1,7 +1,11 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import (
+    AdjudicationBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.period import Period
@@ -29,19 +33,16 @@ class RevenueItemBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        revenue: Optional[FhirList[CodeableConcept[ExRevenueCenterCode]]
-                          ] = None,
-        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
-                           ] = None,
+        revenue: Optional[FhirList[CodeableConcept[ExRevenueCenterCode]]] = None,
+        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]] = None,
         quantity: Optional[FhirList[SimpleQuantity]] = None,
         factor: Optional[FhirDecimal] = None,
         adjudication: Optional[FhirList[AdjudicationBackboneElement]] = None,
         servicedDate: Optional[FhirDate] = None,
         servicedPeriod: Optional[Period] = None,
-        locationCodeableConcept: Optional[CodeableConcept[ServicePlaceCode]
-                                          ] = None,
+        locationCodeableConcept: Optional[CodeableConcept[ServicePlaceCode]] = None,
         locationAddress: Optional[Address] = None,
-        locationReference: Optional[Reference[Location]] = None
+        locationReference: Optional[Reference[Location]] = None,
     ):
         """
         RevenueItemBackboneElement Resource in FHIR
@@ -80,5 +81,5 @@ class RevenueItemBackboneElement(FhirBackboneElementBase):
             servicedPeriod=servicedPeriod,
             locationCodeableConcept=locationCodeableConcept,
             locationAddress=locationAddress,
-            locationReference=locationReference
+            locationReference=locationReference,
         )

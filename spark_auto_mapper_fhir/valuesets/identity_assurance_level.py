@@ -13,23 +13,22 @@ class IdentityAssuranceLevelCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-identity-assuranceLevel.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'IdentityAssuranceLevelCode']
-        ) -> None:
-            self.f: Callable[..., 'IdentityAssuranceLevelCode'] = f
+        def __init__(self, f: Callable[..., "IdentityAssuranceLevelCode"]) -> None:
+            self.f: Callable[..., "IdentityAssuranceLevelCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['IdentityAssuranceLevelCode']
-        ) -> 'IdentityAssuranceLevelCode':
+            self, obj: Any, owner: Type["IdentityAssuranceLevelCode"]
+        ) -> "IdentityAssuranceLevelCode":
             return self.f(owner)
 
     @classproperty
-    def Level1(cls) -> 'IdentityAssuranceLevelCode':
+    def Level1(cls) -> "IdentityAssuranceLevelCode":
         """
         Little or no confidence in the asserted identity's accuracy.
         """
@@ -37,7 +36,7 @@ class IdentityAssuranceLevelCode(FhirValueSetBase):
         return IdentityAssuranceLevelCode("level1")
 
     @classproperty
-    def Level2(cls) -> 'IdentityAssuranceLevelCode':
+    def Level2(cls) -> "IdentityAssuranceLevelCode":
         """
         Some confidence in the asserted identity's accuracy.
         """
@@ -45,7 +44,7 @@ class IdentityAssuranceLevelCode(FhirValueSetBase):
         return IdentityAssuranceLevelCode("level2")
 
     @classproperty
-    def Level3(cls) -> 'IdentityAssuranceLevelCode':
+    def Level3(cls) -> "IdentityAssuranceLevelCode":
         """
         High confidence in the asserted identity's accuracy.
         """
@@ -53,7 +52,7 @@ class IdentityAssuranceLevelCode(FhirValueSetBase):
         return IdentityAssuranceLevelCode("level3")
 
     @classproperty
-    def Level4(cls) -> 'IdentityAssuranceLevelCode':
+    def Level4(cls) -> "IdentityAssuranceLevelCode":
         """
         Very high confidence in the asserted identity's accuracy.
         """

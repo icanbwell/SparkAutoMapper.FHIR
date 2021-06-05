@@ -10,6 +10,7 @@ class AcceptingPatientsCode(FhirValueSetBase):
     """
     https://build.fhir.org/ig/HL7/davinci-pdex-plan-net/CodeSystem-AcceptingPatientsCS.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -48,9 +49,7 @@ class AcceptingPatientsCode(FhirValueSetBase):
         return AcceptingPatientsCode("existptonly")
 
     @classproperty
-    def AcceptingExistingPatientsAndTheirFamilies(
-        cls
-    ) -> "AcceptingPatientsCode":
+    def AcceptingExistingPatientsAndTheirFamilies(cls) -> "AcceptingPatientsCode":
         """
         Accepting existing patients and members of their families
         """

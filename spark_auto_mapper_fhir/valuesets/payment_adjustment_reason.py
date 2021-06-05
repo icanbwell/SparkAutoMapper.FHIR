@@ -13,23 +13,22 @@ class PaymentAdjustmentReasonCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-payment-adjustment-reason.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'PaymentAdjustmentReasonCode']
-        ) -> None:
-            self.f: Callable[..., 'PaymentAdjustmentReasonCode'] = f
+        def __init__(self, f: Callable[..., "PaymentAdjustmentReasonCode"]) -> None:
+            self.f: Callable[..., "PaymentAdjustmentReasonCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['PaymentAdjustmentReasonCode']
-        ) -> 'PaymentAdjustmentReasonCode':
+            self, obj: Any, owner: Type["PaymentAdjustmentReasonCode"]
+        ) -> "PaymentAdjustmentReasonCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'PaymentAdjustmentReasonCode':
+    def NameOfYourFirstValue(cls) -> "PaymentAdjustmentReasonCode":
         """
         Comment
         """

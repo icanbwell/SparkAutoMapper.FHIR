@@ -13,19 +13,20 @@ class SnoMedCode(FhirValueSetBase):
     """
     http://snomed.info/sct
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'SnoMedCode']) -> None:
-            self.f: Callable[..., 'SnoMedCode'] = f
+        def __init__(self, f: Callable[..., "SnoMedCode"]) -> None:
+            self.f: Callable[..., "SnoMedCode"] = f
 
-        def __get__(self, obj: Any, owner: Type['SnoMedCode']) -> 'SnoMedCode':
+        def __get__(self, obj: Any, owner: Type["SnoMedCode"]) -> "SnoMedCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'SnoMedCode':
+    def NameOfYourFirstValue(cls) -> "SnoMedCode":
         """
         Comment
         """
@@ -41,6 +42,5 @@ class SnoMedCode(FhirValueSetBase):
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
-        """
-        """
+        """ """
         return ""

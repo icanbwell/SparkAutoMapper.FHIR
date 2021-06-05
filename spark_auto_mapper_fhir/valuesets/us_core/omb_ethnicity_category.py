@@ -13,21 +13,22 @@ class OMBEthnicityCategory(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/us/core/ValueSet-omb-ethnicity-category.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'OMBEthnicityCategory']) -> None:
-            self.f: Callable[..., 'OMBEthnicityCategory'] = f
+        def __init__(self, f: Callable[..., "OMBEthnicityCategory"]) -> None:
+            self.f: Callable[..., "OMBEthnicityCategory"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['OMBEthnicityCategory']
-        ) -> 'OMBEthnicityCategory':
+            self, obj: Any, owner: Type["OMBEthnicityCategory"]
+        ) -> "OMBEthnicityCategory":
             return self.f(owner)
 
     @classproperty
-    def HispanicOrLatino(cls) -> 'OMBEthnicityCategory':
+    def HispanicOrLatino(cls) -> "OMBEthnicityCategory":
         """
         Comment
         """
@@ -35,7 +36,7 @@ class OMBEthnicityCategory(FhirValueSetBase):
         return OMBEthnicityCategory("2135-2")
 
     @classproperty
-    def NonHispanicOrLatino(cls) -> 'OMBEthnicityCategory':
+    def NonHispanicOrLatino(cls) -> "OMBEthnicityCategory":
         """
         Comment
         """

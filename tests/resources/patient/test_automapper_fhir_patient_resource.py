@@ -1,6 +1,7 @@
 from typing import Dict
 
 from pyspark.sql import SparkSession, Column, DataFrame
+
 # noinspection PyUnresolvedReferences
 from pyspark.sql.functions import col, regexp_replace, substring
 from pyspark.sql.functions import coalesce, lit, to_date
@@ -11,20 +12,20 @@ from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
+from spark_auto_mapper_fhir.valuesets.administrative_gender import (
+    AdministrativeGenderCode,
+)
 from spark_auto_mapper_fhir.valuesets.name_use import NameUseCode
 
 
-def test_auto_mapper_fhir_patient_resource(
-    spark_session: SparkSession
-) -> None:
+def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession) -> None:
     # Arrange
     spark_session.createDataFrame(
         [
-            (1, 'Qureshi', 'Imran', '1970-01-01', "female"),
-            (2, 'Vidal', 'Michael', '1970-02-02', None),
+            (1, "Qureshi", "Imran", "1970-01-01", "female"),
+            (2, "Vidal", "Michael", "1970-02-02", None),
         ],
-        ['member_id', 'last_name', 'first_name', 'date_of_birth', "my_gender"]
+        ["member_id", "last_name", "first_name", "date_of_birth", "my_gender"],
     ).createOrReplaceTempView("patients")
 
     source_df: DataFrame = spark_session.table("patients")
@@ -40,23 +41,16 @@ def test_auto_mapper_fhir_patient_resource(
             id_=FhirId(A.column("member_id")),
             birthDate=A.date(A.column("date_of_birth")),
             name=FhirList(
-                [
-                    HumanName(
-                        use=NameUseCode("usual"), family=A.column("last_name")
-                    )
-                ]
+                [HumanName(use=NameUseCode("usual"), family=A.column("last_name"))]
             ),
             gender=A.if_not_null(
-                A.column("my_gender"),
-                AdministrativeGenderCode(A.column("my_gender"))
-            )
+                A.column("my_gender"), AdministrativeGenderCode(A.column("my_gender"))
+            ),
         )
     )
 
     assert isinstance(mapper, AutoMapper)
-    sql_expressions: Dict[str, Column] = mapper.get_column_specs(
-        source_df=source_df
-    )
+    sql_expressions: Dict[str, Column] = mapper.get_column_specs(source_df=source_df)
     for column_name, sql_expression in sql_expressions.items():
         print(f"{column_name}: {sql_expression}")
 
@@ -65,18 +59,21 @@ def test_auto_mapper_fhir_patient_resource(
     # Assert
     assert len(sql_expressions) == 5
     assert str(sql_expressions["id"]) == str(
-        substring(
-            regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "-"), 0, 63
-        ).cast("string").alias("id")
+        substring(regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "-"), 0, 63)
+        .cast("string")
+        .alias("id")
     )
-    assert str(sql_expressions["resourceType"]
-               ) == str(lit("Patient").cast("string").alias("resourceType"))
+    assert str(sql_expressions["resourceType"]) == str(
+        lit("Patient").cast("string").alias("resourceType")
+    )
     assert str(sql_expressions["birthDate"]) == str(
         coalesce(
-            to_date(col("b.date_of_birth"), 'y-M-d'),
-            to_date(col("b.date_of_birth"), 'yyyyMMdd'),
-            to_date(col("b.date_of_birth"), 'M/d/y')
-        ).cast("date").alias("birthDate")
+            to_date(col("b.date_of_birth"), "y-M-d"),
+            to_date(col("b.date_of_birth"), "yyyyMMdd"),
+            to_date(col("b.date_of_birth"), "M/d/y"),
+        )
+        .cast("date")
+        .alias("birthDate")
     )
     # assert str(sql_expressions["name"]) == str(
     #     filter(
@@ -96,14 +93,20 @@ def test_auto_mapper_fhir_patient_resource(
     result_df.printSchema()
     result_df.show()
 
-    assert result_df.where("member_id == 1").selectExpr("name[0].use").collect(
-    )[0][0] == "usual"
-    assert result_df.where("member_id == 1").selectExpr(
-        "name[0].family"
-    ).collect()[0][0] == "Qureshi"
+    assert (
+        result_df.where("member_id == 1").selectExpr("name[0].use").collect()[0][0]
+        == "usual"
+    )
+    assert (
+        result_df.where("member_id == 1").selectExpr("name[0].family").collect()[0][0]
+        == "Qureshi"
+    )
 
-    assert result_df.where("member_id == 2").selectExpr("name[0].use").collect(
-    )[0][0] == "usual"
-    assert result_df.where("member_id == 2").selectExpr(
-        "name[0].family"
-    ).collect()[0][0] == "Vidal"
+    assert (
+        result_df.where("member_id == 2").selectExpr("name[0].use").collect()[0][0]
+        == "usual"
+    )
+    assert (
+        result_df.where("member_id == 2").selectExpr("name[0].family").collect()[0][0]
+        == "Vidal"
+    )

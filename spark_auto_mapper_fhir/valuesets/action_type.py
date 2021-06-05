@@ -13,21 +13,20 @@ class ActionTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ActionTypeCode']) -> None:
-            self.f: Callable[..., 'ActionTypeCode'] = f
+        def __init__(self, f: Callable[..., "ActionTypeCode"]) -> None:
+            self.f: Callable[..., "ActionTypeCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['ActionTypeCode']
-        ) -> 'ActionTypeCode':
+        def __get__(self, obj: Any, owner: Type["ActionTypeCode"]) -> "ActionTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Create(cls) -> 'ActionTypeCode':
+    def Create(cls) -> "ActionTypeCode":
         """
         The action is to create a new resource.
         """
@@ -35,7 +34,7 @@ class ActionTypeCode(FhirValueSetBase):
         return ActionTypeCode("create")
 
     @classproperty
-    def Update(cls) -> 'ActionTypeCode':
+    def Update(cls) -> "ActionTypeCode":
         """
         The action is to update an existing resource.
         """
@@ -43,7 +42,7 @@ class ActionTypeCode(FhirValueSetBase):
         return ActionTypeCode("update")
 
     @classproperty
-    def Remove(cls) -> 'ActionTypeCode':
+    def Remove(cls) -> "ActionTypeCode":
         """
         The action is to remove an existing resource.
         """
@@ -51,7 +50,7 @@ class ActionTypeCode(FhirValueSetBase):
         return ActionTypeCode("remove")
 
     @classproperty
-    def FireEvent(cls) -> 'ActionTypeCode':
+    def FireEvent(cls) -> "ActionTypeCode":
         """
         The action is to fire a specific event.
         """

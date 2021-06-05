@@ -1,5 +1,7 @@
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
-from spark_auto_mapper_fhir.extensions.custom.match_grade_extension_item import MatchGradeExtensionItem
+from spark_auto_mapper_fhir.extensions.custom.match_grade_extension_item import (
+    MatchGradeExtensionItem,
+)
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -17,12 +19,10 @@ class MatchGrade(ExtensionBase):
         extensions = [
             MatchGradeExtensionItem(
                 url="http://hl7.org/fhir/StructureDefinition/match-grade",
-                valueString=match_grade
+                valueString=match_grade,
             )
         ]
-        super().__init__(
-            url=self.__class__.codeset, extension=FhirList(extensions)
-        )
+        super().__init__(url=self.__class__.codeset, extension=FhirList(extensions))
 
     # noinspection PyMethodParameters
     @genericclassproperty

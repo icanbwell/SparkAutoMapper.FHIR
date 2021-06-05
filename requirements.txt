@@ -1,5 +1,0 @@
-numpy>=1.19.2
-pyspark>=3.1.1
-logger
-sparkautomapper>=0.2.29
-sparkfhirschemas>=0.1.20

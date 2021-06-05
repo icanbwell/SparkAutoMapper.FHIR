@@ -22,8 +22,11 @@ from spark_auto_mapper_fhir.complex_types.range import Range
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 from typing import TYPE_CHECKING
+
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
 from spark_auto_mapper_fhir.resources.research_study import ResearchStudy
@@ -39,14 +42,23 @@ class UsageContext(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[Coding[UsageContextTypeCode]] = None,
         valueCodeableConcept: Optional[
-            CodeableConcept[ConformanceUseContextCode]] = None,
+            CodeableConcept[ConformanceUseContextCode]
+        ] = None,
         valueQuantity: Optional[Quantity] = None,
         valueRange: Optional[Range] = None,
-        valueReference: Optional[Reference[Union['PlanDefinition',
-                                                 ResearchStudy, InsurancePlan,
-                                                 HealthcareService, Group,
-                                                 Location,
-                                                 Organization]]] = None
+        valueReference: Optional[
+            Reference[
+                Union[
+                    "PlanDefinition",
+                    ResearchStudy,
+                    InsurancePlan,
+                    HealthcareService,
+                    Group,
+                    Location,
+                    Organization,
+                ]
+            ]
+        ] = None,
     ) -> None:
         """
         UsageContext Complex Type in FHIR
@@ -59,5 +71,5 @@ class UsageContext(FhirComplexTypeBase):
             valueCodeableConcept=valueCodeableConcept,
             valueQuantity=valueQuantity,
             valueRange=valueRange,
-            valueReference=valueReference
+            valueReference=valueReference,
         )

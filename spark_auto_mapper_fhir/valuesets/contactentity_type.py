@@ -13,21 +13,22 @@ class ContactEntityTypeCode(FhirValueSetBase):
     """
     http://hl7.org/fhir/valueset-contactentity-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ContactEntityTypeCode']) -> None:
-            self.f: Callable[..., 'ContactEntityTypeCode'] = f
+        def __init__(self, f: Callable[..., "ContactEntityTypeCode"]) -> None:
+            self.f: Callable[..., "ContactEntityTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ContactEntityTypeCode']
-        ) -> 'ContactEntityTypeCode':
+            self, obj: Any, owner: Type["ContactEntityTypeCode"]
+        ) -> "ContactEntityTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ContactEntityTypeCode':
+    def NameOfYourFirstValue(cls) -> "ContactEntityTypeCode":
         """
         Comment
         """

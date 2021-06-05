@@ -13,21 +13,22 @@ class GoalPriorityCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-goal-priority.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'GoalPriorityCode']) -> None:
-            self.f: Callable[..., 'GoalPriorityCode'] = f
+        def __init__(self, f: Callable[..., "GoalPriorityCode"]) -> None:
+            self.f: Callable[..., "GoalPriorityCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['GoalPriorityCode']
-        ) -> 'GoalPriorityCode':
+            self, obj: Any, owner: Type["GoalPriorityCode"]
+        ) -> "GoalPriorityCode":
             return self.f(owner)
 
     @classproperty
-    def HighPriority(cls) -> 'GoalPriorityCode':
+    def HighPriority(cls) -> "GoalPriorityCode":
         """
         Indicates that the goal is of considerable importance and should be a primary focus of care delivery.
         """
@@ -35,7 +36,7 @@ class GoalPriorityCode(FhirValueSetBase):
         return GoalPriorityCode("high-priority")
 
     @classproperty
-    def MediumPriority(cls) -> 'GoalPriorityCode':
+    def MediumPriority(cls) -> "GoalPriorityCode":
         """
         Indicates that the goal has a reasonable degree of importance and that concrete action should be taken
          towards the goal. Attainment is not as critical as high-priority goals.
@@ -44,7 +45,7 @@ class GoalPriorityCode(FhirValueSetBase):
         return GoalPriorityCode("medium-priority")
 
     @classproperty
-    def LowPriority(cls) -> 'GoalPriorityCode':
+    def LowPriority(cls) -> "GoalPriorityCode":
         """
         The goal is desirable but is not sufficiently important to devote significant resources to.
         Achievement of the goal may be sought when incidental to achieving other goals.

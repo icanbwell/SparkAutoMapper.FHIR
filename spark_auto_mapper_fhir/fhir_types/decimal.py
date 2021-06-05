@@ -10,13 +10,11 @@ class FhirDecimal(AutoMapperTextLikeBase):
     """
     Cleans up the text for an id column
     """
-    def __init__(
-        self, column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase]
-    ):
+
+    def __init__(self, column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase]):
         super().__init__()
 
-        self.column: Union[AutoMapperDataTypeColumn,
-                           AutoMapperTextLikeBase] = column
+        self.column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase] = column
 
     def get_column_spec(
         self, source_df: Optional[DataFrame], current_column: Optional[Column]
@@ -24,6 +22,7 @@ class FhirDecimal(AutoMapperTextLikeBase):
         column_spec = round(
             self.column.get_column_spec(
                 source_df=source_df, current_column=current_column
-            ).cast("float"), 6
+            ).cast("float"),
+            6,
         )
         return column_spec

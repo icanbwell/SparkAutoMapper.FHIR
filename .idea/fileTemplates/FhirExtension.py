@@ -10,6 +10,7 @@ class ${Class}(ExtensionBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        *,
         url: Optional[FhirUri] = None,
         valueCode: Optional[FhirValueSetBase] = None
     ) -> None:

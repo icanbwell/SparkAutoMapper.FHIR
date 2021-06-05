@@ -13,23 +13,22 @@ class ActionGroupingBehaviorCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-grouping-behavior.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionGroupingBehaviorCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionGroupingBehaviorCode'] = f
+        def __init__(self, f: Callable[..., "ActionGroupingBehaviorCode"]) -> None:
+            self.f: Callable[..., "ActionGroupingBehaviorCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionGroupingBehaviorCode']
-        ) -> 'ActionGroupingBehaviorCode':
+            self, obj: Any, owner: Type["ActionGroupingBehaviorCode"]
+        ) -> "ActionGroupingBehaviorCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ActionGroupingBehaviorCode':
+    def NameOfYourFirstValue(cls) -> "ActionGroupingBehaviorCode":
         """
         Comment
         """

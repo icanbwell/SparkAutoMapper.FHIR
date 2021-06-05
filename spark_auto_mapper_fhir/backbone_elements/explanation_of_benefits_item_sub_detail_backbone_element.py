@@ -1,6 +1,8 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import (
+    AdjudicationBackboneElement,
+)
 from spark_auto_mapper_fhir.resources.device import Device
 
 from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
@@ -11,7 +13,9 @@ from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.valuesets.benefit_category import BenefitCategoryCode
 from spark_auto_mapper_fhir.valuesets.claim_modifiers import ClaimModifiersCode
@@ -20,9 +24,7 @@ from spark_auto_mapper_fhir.valuesets.ex_revenue_center import ExRevenueCenterCo
 from spark_auto_mapper_fhir.valuesets.service_uscls import ServiceUSCLSCode
 
 
-class ExplanationOfBenefitsItemSubDetailBackboneElement(
-    FhirBackboneElementBase
-):
+class ExplanationOfBenefitsItemSubDetailBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -32,10 +34,8 @@ class ExplanationOfBenefitsItemSubDetailBackboneElement(
         extension: Optional[FhirList[ExtensionBase]] = None,
         revenue: Optional[CodeableConcept[ExRevenueCenterCode]] = None,
         category: Optional[CodeableConcept[BenefitCategoryCode]] = None,
-        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
-                           ] = None,
-        programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]
-                              ] = None,
+        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]] = None,
+        programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]] = None,
         quantity: Optional[SimpleQuantity] = None,
         unitPrice: Optional[Money] = None,
         factor: Optional[FhirDecimal] = None,

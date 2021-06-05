@@ -6,10 +6,14 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import (
+    FhirComplexTypeBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.valuesets.additional_dosage_instruction import AdditionalDosageInstructionCode
+from spark_auto_mapper_fhir.valuesets.additional_dosage_instruction import (
+    AdditionalDosageInstructionCode,
+)
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
@@ -23,7 +27,8 @@ class Dosage(FhirComplexTypeBase):
         sequence: Optional[FhirPositiveInt] = None,
         text: Optional[FhirString] = None,
         additionalInstruction: Optional[
-            CodeableConcept[AdditionalDosageInstructionCode]] = None,
+            CodeableConcept[AdditionalDosageInstructionCode]
+        ] = None,
         patientInstruction: Optional[FhirString] = None,
     ):
         """
@@ -44,5 +49,5 @@ class Dosage(FhirComplexTypeBase):
             sequence=sequence,
             text=text,
             additionalInstruction=additionalInstruction,
-            patientInstruction=patientInstruction
+            patientInstruction=patientInstruction,
         )

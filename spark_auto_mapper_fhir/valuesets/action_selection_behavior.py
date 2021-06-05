@@ -13,23 +13,22 @@ class ActionSelectionBehaviorCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-selection-behavior.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionSelectionBehaviorCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionSelectionBehaviorCode'] = f
+        def __init__(self, f: Callable[..., "ActionSelectionBehaviorCode"]) -> None:
+            self.f: Callable[..., "ActionSelectionBehaviorCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionSelectionBehaviorCode']
-        ) -> 'ActionSelectionBehaviorCode':
+            self, obj: Any, owner: Type["ActionSelectionBehaviorCode"]
+        ) -> "ActionSelectionBehaviorCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ActionSelectionBehaviorCode':
+    def NameOfYourFirstValue(cls) -> "ActionSelectionBehaviorCode":
         """
         Comment
         """

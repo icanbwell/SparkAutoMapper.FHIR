@@ -47,18 +47,17 @@ class Extension(ExtensionBase):
         valueDate: Optional[FhirDate] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valueReference: Optional[FhirResourceBase] = None,
-        extension: Optional[FhirList['Extension']] = None,
+        extension: Optional[FhirList["Extension"]] = None,
         valueId: Optional[FhirId] = None,
         valueTime: Optional[FhirDateTime] = None,
         valueUnsignedInt: Optional[FhirPositiveInt] = None,
-        valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]
-                                       ] = None,
+        valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]] = None,
         valueCount: Optional[FhirPositiveInt] = None,
         valueMoney: Optional[Money] = None,
         valuePeriod: Optional[Period] = None,
         valueQuantity: Optional[Quantity] = None,
         valueIdentifier: Optional[Identifier] = None,
-        valueRange: Optional[Range] = None
+        valueRange: Optional[Range] = None,
     ) -> None:
         """
         Extension type in FHIR
@@ -109,5 +108,5 @@ class Extension(ExtensionBase):
             valuePeriod=valuePeriod,
             valueQuantity=valueQuantity,
             valueRange=valueRange,
-            valueReference=valueReference
+            valueReference=valueReference,
         )

@@ -13,21 +13,20 @@ class NameUseCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-name-use.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'NameUseCode']) -> None:
-            self.f: Callable[..., 'NameUseCode'] = f
+        def __init__(self, f: Callable[..., "NameUseCode"]) -> None:
+            self.f: Callable[..., "NameUseCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['NameUseCode']
-        ) -> 'NameUseCode':
+        def __get__(self, obj: Any, owner: Type["NameUseCode"]) -> "NameUseCode":
             return self.f(owner)
 
     @classproperty
-    def usual(cls) -> 'NameUseCode':
+    def usual(cls) -> "NameUseCode":
         """
         Comment
         """

@@ -14,23 +14,22 @@ class ActionCardinalityBehaviorCode(FhirValueSetBase):
     https://www.hl7.org/fhir/valueset-action-cardinality-behavior.html
     Defines behavior for an action or a group for how many times that item may be repeated.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionCardinalityBehaviorCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionCardinalityBehaviorCode'] = f
+        def __init__(self, f: Callable[..., "ActionCardinalityBehaviorCode"]) -> None:
+            self.f: Callable[..., "ActionCardinalityBehaviorCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionCardinalityBehaviorCode']
-        ) -> 'ActionCardinalityBehaviorCode':
+            self, obj: Any, owner: Type["ActionCardinalityBehaviorCode"]
+        ) -> "ActionCardinalityBehaviorCode":
             return self.f(owner)
 
     @classproperty
-    def Single(cls) -> 'ActionCardinalityBehaviorCode':
+    def Single(cls) -> "ActionCardinalityBehaviorCode":
         """
         The action may only be selected one time.
         """
@@ -38,7 +37,7 @@ class ActionCardinalityBehaviorCode(FhirValueSetBase):
         return ActionCardinalityBehaviorCode("single")
 
     @classproperty
-    def Multiple(cls) -> 'ActionCardinalityBehaviorCode':
+    def Multiple(cls) -> "ActionCardinalityBehaviorCode":
         """
         The action may be selected multiple times.
         """

@@ -11,9 +11,14 @@ from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
+
 # from spark_auto_mapper_fhir.resources.list import List
-from spark_auto_mapper_fhir.valuesets.measure_population import MeasurePopulationTypeCode
+from spark_auto_mapper_fhir.valuesets.measure_population import (
+    MeasurePopulationTypeCode,
+)
 
 
 class PopulationBackboneElement(FhirBackboneElementBase):
@@ -23,7 +28,7 @@ class PopulationBackboneElement(FhirBackboneElementBase):
         code: Optional[CodeableConcept[MeasurePopulationTypeCode]] = None,
         count: Optional[FhirInteger] = None,
         subjectResults: Optional[Reference[FhirResourceBase]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         PopulationBackboneElement Resource in FHIR

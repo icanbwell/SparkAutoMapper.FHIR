@@ -1,8 +1,11 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.coverage_financial_exception_backbone_element import \
-    CoverageFinancialExceptionBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.coverage_financial_exception_backbone_element import (
+    CoverageFinancialExceptionBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.money import Money
 from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
@@ -21,8 +24,7 @@ class CostToBeneficiaryBackboneElement(FhirBackboneElementBase):
         type_: Optional[CodeableConcept[CoverageCopayTypeCode]] = None,
         valueQuantity: Optional[SimpleQuantity] = None,
         valueMoney: Optional[Money] = None,
-        exception: Optional[FhirList[CoverageFinancialExceptionBackboneElement]
-                            ] = None
+        exception: Optional[FhirList[CoverageFinancialExceptionBackboneElement]] = None,
     ):
         """
         CostToBeneficiaryBackboneElement Resource in FHIR
@@ -40,5 +42,5 @@ class CostToBeneficiaryBackboneElement(FhirBackboneElementBase):
             type_=type_,
             valueQuantity=valueQuantity,
             valueMoney=valueMoney,
-            exception=exception
+            exception=exception,
         )

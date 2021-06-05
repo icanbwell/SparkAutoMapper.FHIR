@@ -2,7 +2,9 @@ from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
 
-from spark_auto_mapper_fhir.backbone_elements.group_member_backbone_element import GroupMemberBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.group_member_backbone_element import (
+    GroupMemberBackboneElement,
+)
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -27,7 +29,7 @@ class Group(FhirResourceBase):
         type_: Optional[GroupTypeCode] = None,
         name: Optional[FhirString] = None,
         member: Optional[FhirList[GroupMemberBackboneElement]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         Group Resource in FHIR
@@ -44,7 +46,7 @@ class Group(FhirResourceBase):
             identifier=identifier,
             type_=type_,
             name=name,
-            member=member
+            member=member,
         )
 
     def get_schema(

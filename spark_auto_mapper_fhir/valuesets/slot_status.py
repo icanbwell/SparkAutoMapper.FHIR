@@ -14,21 +14,20 @@ class SlotStatusCode(FhirValueSetBase):
     https://www.hl7.org/fhir/valueset-slotstatus.html
     busy | free | busy-unavailable | busy-tentative | entered-in-error
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'SlotStatusCode']) -> None:
-            self.f: Callable[..., 'SlotStatusCode'] = f
+        def __init__(self, f: Callable[..., "SlotStatusCode"]) -> None:
+            self.f: Callable[..., "SlotStatusCode"] = f
 
-        def __get__(
-            self, obj: Any, owner: Type['SlotStatusCode']
-        ) -> 'SlotStatusCode':
+        def __get__(self, obj: Any, owner: Type["SlotStatusCode"]) -> "SlotStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Busy(cls) -> 'SlotStatusCode':
+    def Busy(cls) -> "SlotStatusCode":
         """
         Comment
         """
@@ -36,7 +35,7 @@ class SlotStatusCode(FhirValueSetBase):
         return SlotStatusCode("busy")
 
     @classproperty
-    def Free(cls) -> 'SlotStatusCode':
+    def Free(cls) -> "SlotStatusCode":
         """
         Comment
         """
@@ -44,7 +43,7 @@ class SlotStatusCode(FhirValueSetBase):
         return SlotStatusCode("free")
 
     @classproperty
-    def BusyUnavailable(cls) -> 'SlotStatusCode':
+    def BusyUnavailable(cls) -> "SlotStatusCode":
         """
         Comment
         """
@@ -52,7 +51,7 @@ class SlotStatusCode(FhirValueSetBase):
         return SlotStatusCode("busy-unavailable")
 
     @classproperty
-    def BusyTentative(cls) -> 'SlotStatusCode':
+    def BusyTentative(cls) -> "SlotStatusCode":
         """
         Comment
         """
@@ -60,7 +59,7 @@ class SlotStatusCode(FhirValueSetBase):
         return SlotStatusCode("busy-tentative")
 
     @classproperty
-    def EnteredInError(cls) -> 'SlotStatusCode':
+    def EnteredInError(cls) -> "SlotStatusCode":
         """
         Comment
         """

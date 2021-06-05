@@ -1,7 +1,9 @@
 from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
 
-from spark_auto_mapper_fhir.backbone_elements.goal_backbone_element import GoalBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.goal_backbone_element import (
+    GoalBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.period import Period
 
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -28,7 +30,9 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri, FhirCanonical
 
 from spark_fhir_schemas.r4.resources.plandefinition import PlanDefinitionSchema
 
-from spark_auto_mapper_fhir.backbone_elements.action_backbone_element import ActionBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.action_backbone_element import (
+    ActionBackboneElement,
+)
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
@@ -58,16 +62,14 @@ class PlanDefinition(FhirResourceBase):
         subtitle: Optional[FhirString] = None,
         type_: Optional[CodeableConcept[PlanDefinitionTypeCode]] = None,
         experimental: Optional[FhirBoolean] = None,
-        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]
-                                         ] = None,
+        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Group]] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionCode]]
-                               ] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionCode]]] = None,
         purpose: Optional[FhirMarkdown] = None,
         usage: Optional[FhirString] = None,
         copyright_: Optional[FhirMarkdown] = None,
@@ -162,12 +164,10 @@ class PlanDefinition(FhirResourceBase):
             relatedArtifact=relatedArtifact,
             library=library,
             goal=goal,
-            action=action
+            action=action,
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return PlanDefinitionSchema.get_schema(
-            include_extension=include_extension
-        )
+        return PlanDefinitionSchema.get_schema(include_extension=include_extension)

@@ -13,21 +13,22 @@ class SNOMEDCTProcedureCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-procedure-code.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'SNOMEDCTProcedureCode']) -> None:
-            self.f: Callable[..., 'SNOMEDCTProcedureCode'] = f
+        def __init__(self, f: Callable[..., "SNOMEDCTProcedureCode"]) -> None:
+            self.f: Callable[..., "SNOMEDCTProcedureCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['SNOMEDCTProcedureCode']
-        ) -> 'SNOMEDCTProcedureCode':
+            self, obj: Any, owner: Type["SNOMEDCTProcedureCode"]
+        ) -> "SNOMEDCTProcedureCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'SNOMEDCTProcedureCode':
+    def NameOfYourFirstValue(cls) -> "SNOMEDCTProcedureCode":
         """
         Comment
         """

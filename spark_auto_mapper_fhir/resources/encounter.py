@@ -15,7 +15,7 @@ class Encounter(FhirResourceBase):
         self,
         id_: FhirId,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         Encounter Resource in FHIR

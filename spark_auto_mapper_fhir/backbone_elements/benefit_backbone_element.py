@@ -1,7 +1,11 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.backbone_elements.benefit_limit_backbone_element import BenefitLimitBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.benefit_limit_backbone_element import (
+    BenefitLimitBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -17,7 +21,7 @@ class BenefitBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         requirement: Optional[FhirString] = None,
-        limit: Optional[FhirList[BenefitLimitBackboneElement]] = None
+        limit: Optional[FhirList[BenefitLimitBackboneElement]] = None,
     ) -> None:
         """
         BenefitBackboneElement Backbone Element in FHIR
@@ -34,5 +38,5 @@ class BenefitBackboneElement(FhirBackboneElementBase):
             extension=extension,
             type_=type_,
             requirement=requirement,
-            limit=limit
+            limit=limit,
         )

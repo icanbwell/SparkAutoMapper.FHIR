@@ -13,24 +13,24 @@ class ObservationReferenceRangeAppliesToCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-referencerange-appliesto.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
         def __init__(
-            self, f: Callable[..., 'ObservationReferenceRangeAppliesToCode']
+            self, f: Callable[..., "ObservationReferenceRangeAppliesToCode"]
         ) -> None:
-            self.f: Callable[..., 'ObservationReferenceRangeAppliesToCode'] = f
+            self.f: Callable[..., "ObservationReferenceRangeAppliesToCode"] = f
 
         def __get__(
-            self, obj: Any,
-            owner: Type['ObservationReferenceRangeAppliesToCode']
-        ) -> 'ObservationReferenceRangeAppliesToCode':
+            self, obj: Any, owner: Type["ObservationReferenceRangeAppliesToCode"]
+        ) -> "ObservationReferenceRangeAppliesToCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ObservationReferenceRangeAppliesToCode':
+    def NameOfYourFirstValue(cls) -> "ObservationReferenceRangeAppliesToCode":
         """
         Comment
         """

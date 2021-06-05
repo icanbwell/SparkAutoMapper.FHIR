@@ -13,21 +13,22 @@ class ProcedureReasonCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-procedure-reason.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ProcedureReasonCode']) -> None:
-            self.f: Callable[..., 'ProcedureReasonCode'] = f
+        def __init__(self, f: Callable[..., "ProcedureReasonCode"]) -> None:
+            self.f: Callable[..., "ProcedureReasonCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ProcedureReasonCode']
-        ) -> 'ProcedureReasonCode':
+            self, obj: Any, owner: Type["ProcedureReasonCode"]
+        ) -> "ProcedureReasonCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ProcedureReasonCode':
+    def NameOfYourFirstValue(cls) -> "ProcedureReasonCode":
         """
         Comment
         """

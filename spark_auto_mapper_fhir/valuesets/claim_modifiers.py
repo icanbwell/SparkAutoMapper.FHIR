@@ -13,21 +13,22 @@ class ClaimModifiersCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-claim-modifiers.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ClaimModifiersCode']) -> None:
-            self.f: Callable[..., 'ClaimModifiersCode'] = f
+        def __init__(self, f: Callable[..., "ClaimModifiersCode"]) -> None:
+            self.f: Callable[..., "ClaimModifiersCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ClaimModifiersCode']
-        ) -> 'ClaimModifiersCode':
+            self, obj: Any, owner: Type["ClaimModifiersCode"]
+        ) -> "ClaimModifiersCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'ClaimModifiersCode':
+    def NameOfYourFirstValue(cls) -> "ClaimModifiersCode":
         """
         Comment
         """

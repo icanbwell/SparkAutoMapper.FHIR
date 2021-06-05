@@ -1,8 +1,14 @@
 from typing import Optional, Union
 
-from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_add_item_detail_backbone_element import ExplanationOfBenefitsAddItemDetailBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import AdjudicationBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefits_add_item_detail_backbone_element import (
+    ExplanationOfBenefitsAddItemDetailBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.adjudication_backbone_element import (
+    AdjudicationBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.complex_types.address import Address
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.money import Money
@@ -37,17 +43,14 @@ class ExplanationOfBenefitsAddItemBackboneElement(FhirBackboneElementBase):
         itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
         detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
         subDetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        provider: Optional[FhirList[Reference[Union[Practitioner,
-                                                    PractitionerRole,
-                                                    Organization]]]] = None,
-        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]
-                           ] = None,
-        programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]
-                              ] = None,
+        provider: Optional[
+            FhirList[Reference[Union[Practitioner, PractitionerRole, Organization]]]
+        ] = None,
+        modifier: Optional[FhirList[CodeableConcept[ClaimModifiersCode]]] = None,
+        programCode: Optional[FhirList[CodeableConcept[ExProgramReasonCode]]] = None,
         servicedDate: Optional[FhirDate] = None,
         servicedPeriod: Optional[Period] = None,
-        locationCodeableConcept: Optional[CodeableConcept[ServicePlaceCode]
-                                          ] = None,
+        locationCodeableConcept: Optional[CodeableConcept[ServicePlaceCode]] = None,
         locationAddress: Optional[Address] = None,
         locationReference: Optional[Reference[Location]] = None,
         quantity: Optional[SimpleQuantity] = None,
@@ -59,7 +62,8 @@ class ExplanationOfBenefitsAddItemBackboneElement(FhirBackboneElementBase):
         noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: Optional[FhirList[AdjudicationBackboneElement]] = None,
         detail: Optional[
-            FhirList[ExplanationOfBenefitsAddItemDetailBackboneElement]] = None
+            FhirList[ExplanationOfBenefitsAddItemDetailBackboneElement]
+        ] = None,
     ):
         """
         AddItemBackboneElement Resource in FHIR
@@ -110,5 +114,5 @@ class ExplanationOfBenefitsAddItemBackboneElement(FhirBackboneElementBase):
             subSite=subSite,
             noteNumber=noteNumber,
             adjudication=adjudication,
-            detail=detail
+            detail=detail,
         )

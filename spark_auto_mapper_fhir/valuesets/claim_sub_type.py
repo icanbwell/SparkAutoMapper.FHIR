@@ -13,28 +13,29 @@ class ClaimSubTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-claim-subtype.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'ClaimSubTypeCode']) -> None:
-            self.f: Callable[..., 'ClaimSubTypeCode'] = f
+        def __init__(self, f: Callable[..., "ClaimSubTypeCode"]) -> None:
+            self.f: Callable[..., "ClaimSubTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ClaimSubTypeCode']
-        ) -> 'ClaimSubTypeCode':
+            self, obj: Any, owner: Type["ClaimSubTypeCode"]
+        ) -> "ClaimSubTypeCode":
             return self.f(owner)
 
     @classproperty
-    def OrthodonticClaim(cls) -> 'ClaimSubTypeCode':
+    def OrthodonticClaim(cls) -> "ClaimSubTypeCode":
         """
         A claim for Orthodontic Services.
         """
         # noinspection PyCallingNonCallable
         return ClaimSubTypeCode("ortho")
 
-    def EmergencyClaim(cls) -> 'ClaimSubTypeCode':
+    def EmergencyClaim(cls) -> "ClaimSubTypeCode":
         """
         A claim for emergency services.
         """

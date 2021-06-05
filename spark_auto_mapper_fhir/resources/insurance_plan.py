@@ -3,10 +3,15 @@ from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.insuranceplan import InsurancePlanSchema
 
-from spark_auto_mapper_fhir.backbone_elements.contact_backbone_element import ContactBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.insurance_plan_backbone_element import InsurancePlanBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.insurance_plan_coverage_backbone_element import \
-    InsurancePlanCoverageBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.contact_backbone_element import (
+    ContactBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.insurance_plan_backbone_element import (
+    InsurancePlanBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.insurance_plan_coverage_backbone_element import (
+    InsurancePlanCoverageBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.meta import Meta
@@ -42,10 +47,9 @@ class InsurancePlan(FhirResourceBase):
         contact: Optional[FhirList[ContactBackboneElement]] = None,
         endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
         network: Optional[FhirList[Reference[Organization]]] = None,
-        coverage: Optional[FhirList[InsurancePlanCoverageBackboneElement]
-                           ] = None,
+        coverage: Optional[FhirList[InsurancePlanCoverageBackboneElement]] = None,
         plan: Optional[FhirList[InsurancePlanBackboneElement]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         InsurancePlan Resource in FHIR
@@ -93,6 +97,4 @@ class InsurancePlan(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return InsurancePlanSchema.get_schema(
-            include_extension=include_extension
-        )
+        return InsurancePlanSchema.get_schema(include_extension=include_extension)

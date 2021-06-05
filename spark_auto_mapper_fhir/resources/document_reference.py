@@ -14,7 +14,7 @@ class DocumentReference(FhirResourceBase):
         self,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         DocumentReference Resource in FHIR
@@ -24,15 +24,10 @@ class DocumentReference(FhirResourceBase):
         :param id_: id of resource
         """
         super().__init__(
-            resourceType="DocumentReference",
-            id_=id_,
-            meta=meta,
-            extension=extension
+            resourceType="DocumentReference", id_=id_, meta=meta, extension=extension
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return DocumentReferenceSchema.get_schema(
-            include_extension=include_extension
-        )
+        return DocumentReferenceSchema.get_schema(include_extension=include_extension)

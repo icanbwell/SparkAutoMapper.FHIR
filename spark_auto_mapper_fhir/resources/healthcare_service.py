@@ -3,10 +3,15 @@ from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.healthcareservice import HealthcareServiceSchema
 
-from spark_auto_mapper_fhir.backbone_elements.eligibility_backbone_element import EligibilityBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.not_available_backbone_element import NotAvailableBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.practitioner_available_time_backbone_element import \
-    PractitionerAvailableTimeBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.eligibility_backbone_element import (
+    EligibilityBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.not_available_backbone_element import (
+    NotAvailableBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.practitioner_available_time_backbone_element import (
+    PractitionerAvailableTimeBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -29,7 +34,9 @@ from spark_auto_mapper_fhir.valuesets.practice_setting_code import PracticeSetti
 from spark_auto_mapper_fhir.valuesets.program import ProgramCode
 from spark_auto_mapper_fhir.valuesets.referral_method import ReferralMethodCode
 from spark_auto_mapper_fhir.valuesets.service_category import ServiceCategoryCode
-from spark_auto_mapper_fhir.valuesets.service_provision_condition import ServiceProvisionConditionCode
+from spark_auto_mapper_fhir.valuesets.service_provision_condition import (
+    ServiceProvisionConditionCode,
+)
 from spark_auto_mapper_fhir.valuesets.service_type import ServiceTypeCode
 
 
@@ -42,11 +49,9 @@ class HealthcareService(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         providedBy: Optional[Reference[Organization]] = None,
-        category: Optional[FhirList[CodeableConcept[ServiceCategoryCode]]
-                           ] = None,
+        category: Optional[FhirList[CodeableConcept[ServiceCategoryCode]]] = None,
         type_: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]
-                            ] = None,
+        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]] = None,
         location: Optional[FhirList[Reference[Location]]] = None,
         name: Optional[FhirString] = None,
         comment: Optional[FhirString] = None,
@@ -54,23 +59,22 @@ class HealthcareService(FhirResourceBase):
         photo: Optional[Attachment] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         coverageArea: Optional[FhirList[Reference[Location]]] = None,
-        serviceProvisionCode: Optional[FhirList[
-            CodeableConcept[ServiceProvisionConditionCode]]] = None,
+        serviceProvisionCode: Optional[
+            FhirList[CodeableConcept[ServiceProvisionConditionCode]]
+        ] = None,
         eligibility: Optional[FhirList[EligibilityBackboneElement]] = None,
         program: Optional[FhirList[CodeableConcept[ProgramCode]]] = None,
-        characteristic: Optional[FhirList[CodeableConcept[FhirValueSetBase]]
-                                 ] = None,
-        communication: Optional[FhirList[CodeableConcept[CommonLanguageCode]]
-                                ] = None,
-        referralMethod: Optional[FhirList[CodeableConcept[ReferralMethodCode]]
-                                 ] = None,
+        characteristic: Optional[FhirList[CodeableConcept[FhirValueSetBase]]] = None,
+        communication: Optional[FhirList[CodeableConcept[CommonLanguageCode]]] = None,
+        referralMethod: Optional[FhirList[CodeableConcept[ReferralMethodCode]]] = None,
         appointmentRequired: Optional[FhirBoolean] = None,
         availableTime: Optional[
-            FhirList[PractitionerAvailableTimeBackboneElement]] = None,
+            FhirList[PractitionerAvailableTimeBackboneElement]
+        ] = None,
         notAvailable: Optional[FhirList[NotAvailableBackboneElement]] = None,
         availabilityExceptions: Optional[FhirString] = None,
         endpoint: Optional[FhirList[Endpoint]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
         HealthcareService Resource in FHIR
@@ -137,6 +141,4 @@ class HealthcareService(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return HealthcareServiceSchema.get_schema(
-            include_extension=include_extension
-        )
+        return HealthcareServiceSchema.get_schema(include_extension=include_extension)

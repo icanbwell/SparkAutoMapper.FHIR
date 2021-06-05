@@ -13,21 +13,22 @@ class BenefitTypeCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-benefit-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'BenefitTypeCode']) -> None:
-            self.f: Callable[..., 'BenefitTypeCode'] = f
+        def __init__(self, f: Callable[..., "BenefitTypeCode"]) -> None:
+            self.f: Callable[..., "BenefitTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['BenefitTypeCode']
-        ) -> 'BenefitTypeCode':
+            self, obj: Any, owner: Type["BenefitTypeCode"]
+        ) -> "BenefitTypeCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'BenefitTypeCode':
+    def NameOfYourFirstValue(cls) -> "BenefitTypeCode":
         """
         Comment
         """

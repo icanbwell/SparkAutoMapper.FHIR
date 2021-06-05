@@ -5,9 +5,12 @@ from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-from spark_auto_mapper_fhir.backbone_elements.condition_evidence_backbone_element import \
-    ConditionEvidenceBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.condition_stage_backbone_element import ConditionStageBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.condition_evidence_backbone_element import (
+    ConditionEvidenceBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.condition_stage_backbone_element import (
+    ConditionStageBackboneElement,
+)
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -23,6 +26,7 @@ from spark_auto_mapper_fhir.fhir_types.age import FhirAge
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
+
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
@@ -39,9 +43,13 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.valuesets.body_site import SNOMEDCTBodyStructuresCode
 from spark_auto_mapper_fhir.valuesets.condition import ConditionCode
 from spark_auto_mapper_fhir.valuesets.condition_category import ConditionCategoryCode
-from spark_auto_mapper_fhir.valuesets.condition_clinical import ConditionClinicalStatusCode
+from spark_auto_mapper_fhir.valuesets.condition_clinical import (
+    ConditionClinicalStatusCode,
+)
 from spark_auto_mapper_fhir.valuesets.condition_severity import ConditionSeverityCode
-from spark_auto_mapper_fhir.valuesets.condition_verification_status import ConditionVerificationStatusCode
+from spark_auto_mapper_fhir.valuesets.condition_verification_status import (
+    ConditionVerificationStatusCode,
+)
 
 
 class Condition(FhirResourceBase):
@@ -53,17 +61,17 @@ class Condition(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        clinicalStatus: Optional[CodeableConcept[ConditionClinicalStatusCode]
-                                 ] = None,
+        clinicalStatus: Optional[CodeableConcept[ConditionClinicalStatusCode]] = None,
         verificationStatus: Optional[
-            CodeableConcept[ConditionVerificationStatusCode]] = None,
-        category: Optional[FhirList[CodeableConcept[ConditionCategoryCode]]
-                           ] = None,
+            CodeableConcept[ConditionVerificationStatusCode]
+        ] = None,
+        category: Optional[FhirList[CodeableConcept[ConditionCategoryCode]]] = None,
         severity: Optional[CodeableConcept[ConditionSeverityCode]] = None,
         code: Optional[CodeableConcept[ConditionCode]] = None,
-        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]
-                                    ]] = None,
-        encounter: Optional[Reference['Encounter']] = None,
+        bodySite: Optional[
+            FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
+        ] = None,
+        encounter: Optional[Reference["Encounter"]] = None,
         onsetDateTime: Optional[FhirDateTime] = None,
         onsetAge: Optional[FhirAge] = None,
         onsetPeriod: Optional[Period] = None,
@@ -75,13 +83,15 @@ class Condition(FhirResourceBase):
         abatementRange: Optional[Range] = None,
         abatementString: Optional[FhirString] = None,
         recordedDate: Optional[FhirDateTime] = None,
-        recorder: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                           Patient, RelatedPerson]]] = None,
-        asserter: Optional[Reference[Union[Practitioner, PractitionerRole,
-                                           Patient, RelatedPerson]]] = None,
+        recorder: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Patient, RelatedPerson]]
+        ] = None,
+        asserter: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Patient, RelatedPerson]]
+        ] = None,
         stage: Optional[FhirList[ConditionStageBackboneElement]] = None,
         evidence: Optional[FhirList[ConditionEvidenceBackboneElement]] = None,
-        note: Optional[FhirList[Annotation]] = None
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
         Condition Resource in FHIR
@@ -150,7 +160,7 @@ class Condition(FhirResourceBase):
             asserter=asserter,
             stage=stage,
             evidence=evidence,
-            note=note
+            note=note,
         )
 
     def get_schema(

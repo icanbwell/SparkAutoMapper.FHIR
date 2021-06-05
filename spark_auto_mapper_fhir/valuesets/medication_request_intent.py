@@ -13,23 +13,22 @@ class MedicationRequestIntentCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-medicationrequest-intent.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'MedicationRequestIntentCode']
-        ) -> None:
-            self.f: Callable[..., 'MedicationRequestIntentCode'] = f
+        def __init__(self, f: Callable[..., "MedicationRequestIntentCode"]) -> None:
+            self.f: Callable[..., "MedicationRequestIntentCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['MedicationRequestIntentCode']
-        ) -> 'MedicationRequestIntentCode':
+            self, obj: Any, owner: Type["MedicationRequestIntentCode"]
+        ) -> "MedicationRequestIntentCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> 'MedicationRequestIntentCode':
+    def NameOfYourFirstValue(cls) -> "MedicationRequestIntentCode":
         """
         Comment
         """

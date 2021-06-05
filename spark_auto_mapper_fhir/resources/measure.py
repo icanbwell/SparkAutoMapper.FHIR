@@ -1,7 +1,9 @@
 from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
 
-from spark_auto_mapper_fhir.valuesets.measure_improvement_notation import MeasureImprovementNotationCode
+from spark_auto_mapper_fhir.valuesets.measure_improvement_notation import (
+    MeasureImprovementNotationCode,
+)
 from spark_auto_mapper_fhir.valuesets.subject_type import SubjectTypeCode
 
 from spark_auto_mapper_fhir.resources.related_artifact import RelatedArtifact
@@ -59,16 +61,14 @@ class Measure(FhirResourceBase):
         title: Optional[FhirString] = None,
         subtitle: Optional[FhirString] = None,
         experimental: Optional[FhirBoolean] = None,
-        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]
-                                         ] = None,
+        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Group]] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionCode]]
-                               ] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionCode]]] = None,
         purpose: Optional[FhirMarkdown] = None,
         usage: Optional[FhirString] = None,
         copyright_: Optional[FhirMarkdown] = None,
@@ -91,12 +91,13 @@ class Measure(FhirResourceBase):
         rationale: Optional[FhirMarkdown] = None,
         clinicalRecommendationStatement: Optional[FhirMarkdown] = None,
         improvementNotation: Optional[
-            CodeableConcept[MeasureImprovementNotationCode]] = None,
+            CodeableConcept[MeasureImprovementNotationCode]
+        ] = None,
         definition: Optional[FhirList[FhirMarkdown]] = None,
         guidance: Optional[FhirMarkdown] = None,
         # group: Optional[GroupBackboneElement] = None,
         # supplementalData Optional[SupplementalDataBackboneElement] = None,
-        extension: Optional[FhirList[Extension]] = None
+        extension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
         Measure Resource in FHIR
@@ -150,7 +151,7 @@ class Measure(FhirResourceBase):
             guidance=guidance,
             # group=group,
             # supplementalData=supplementalData,
-            extension=extension
+            extension=extension,
         )
 
     def get_schema(

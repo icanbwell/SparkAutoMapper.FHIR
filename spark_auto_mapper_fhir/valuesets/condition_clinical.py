@@ -14,23 +14,22 @@ class ConditionClinicalStatusCode(FhirValueSetBase):
     https://www.hl7.org/fhir/valueset-condition-clinical.html
     Preferred value set for Condition Clinical Status.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ConditionClinicalStatusCode']
-        ) -> None:
-            self.f: Callable[..., 'ConditionClinicalStatusCode'] = f
+        def __init__(self, f: Callable[..., "ConditionClinicalStatusCode"]) -> None:
+            self.f: Callable[..., "ConditionClinicalStatusCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ConditionClinicalStatusCode']
-        ) -> 'ConditionClinicalStatusCode':
+            self, obj: Any, owner: Type["ConditionClinicalStatusCode"]
+        ) -> "ConditionClinicalStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Active(cls) -> 'ConditionClinicalStatusCode':
+    def Active(cls) -> "ConditionClinicalStatusCode":
         """
         The subject is currently experiencing the symptoms of the condition or there is evidence of the condition.
         """
@@ -38,7 +37,7 @@ class ConditionClinicalStatusCode(FhirValueSetBase):
         return ConditionClinicalStatusCode("active")
 
     @classproperty
-    def Recurrence(cls) -> 'ConditionClinicalStatusCode':
+    def Recurrence(cls) -> "ConditionClinicalStatusCode":
         """
         The subject is experiencing a re-occurence or repeating of a previously resolved condition,
         e.g. urinary tract infection, pancreatitis, cholangitis, conjunctivitis.
@@ -47,7 +46,7 @@ class ConditionClinicalStatusCode(FhirValueSetBase):
         return ConditionClinicalStatusCode("recurrence")
 
     @classproperty
-    def Relapse(cls) -> 'ConditionClinicalStatusCode':
+    def Relapse(cls) -> "ConditionClinicalStatusCode":
         """
         The subject is experiencing a return of a condition, or signs and symptoms after a period of improvement
         or remission, e.g. relapse of cancer, multiple sclerosis, rheumatoid arthritis, systemic lupus erythematosus,
@@ -57,7 +56,7 @@ class ConditionClinicalStatusCode(FhirValueSetBase):
         return ConditionClinicalStatusCode("relapse")
 
     @classproperty
-    def Inactive(cls) -> 'ConditionClinicalStatusCode':
+    def Inactive(cls) -> "ConditionClinicalStatusCode":
         """
         The subject is no longer experiencing the symptoms of the condition or there is no longer evidence
         of the condition.
@@ -66,7 +65,7 @@ class ConditionClinicalStatusCode(FhirValueSetBase):
         return ConditionClinicalStatusCode("inactive")
 
     @classproperty
-    def Remission(cls) -> 'ConditionClinicalStatusCode':
+    def Remission(cls) -> "ConditionClinicalStatusCode":
         """
         The subject is no longer experiencing the symptoms of the condition, but there is a risk of the
         symptoms returning.
@@ -75,7 +74,7 @@ class ConditionClinicalStatusCode(FhirValueSetBase):
         return ConditionClinicalStatusCode("remission")
 
     @classproperty
-    def Resolved(cls) -> 'ConditionClinicalStatusCode':
+    def Resolved(cls) -> "ConditionClinicalStatusCode":
         """
         The subject is no longer experiencing the symptoms of the condition and there is a negligible
         perceived risk of the symptoms returning.

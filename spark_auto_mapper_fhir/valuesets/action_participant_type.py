@@ -13,23 +13,22 @@ class ActionParticipantTypeCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-action-participant-type.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'ActionParticipantTypeCode']
-        ) -> None:
-            self.f: Callable[..., 'ActionParticipantTypeCode'] = f
+        def __init__(self, f: Callable[..., "ActionParticipantTypeCode"]) -> None:
+            self.f: Callable[..., "ActionParticipantTypeCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['ActionParticipantTypeCode']
-        ) -> 'ActionParticipantTypeCode':
+            self, obj: Any, owner: Type["ActionParticipantTypeCode"]
+        ) -> "ActionParticipantTypeCode":
             return self.f(owner)
 
     @classproperty
-    def Patient(cls) -> 'ActionParticipantTypeCode':
+    def Patient(cls) -> "ActionParticipantTypeCode":
         """
         The participant is the patient under evaluation.
         """
@@ -37,7 +36,7 @@ class ActionParticipantTypeCode(FhirValueSetBase):
         return ActionParticipantTypeCode("patient")
 
     @classproperty
-    def Practitioner(cls) -> 'ActionParticipantTypeCode':
+    def Practitioner(cls) -> "ActionParticipantTypeCode":
         """
         The participant is a practitioner involved in the patient's care.
         """
@@ -45,7 +44,7 @@ class ActionParticipantTypeCode(FhirValueSetBase):
         return ActionParticipantTypeCode("practitioner")
 
     @classproperty
-    def RelatedPerson(cls) -> 'ActionParticipantTypeCode':
+    def RelatedPerson(cls) -> "ActionParticipantTypeCode":
         """
         The participant is a person related to the patient.
         """
@@ -53,7 +52,7 @@ class ActionParticipantTypeCode(FhirValueSetBase):
         return ActionParticipantTypeCode("related-person")
 
     @classproperty
-    def Device(cls) -> 'ActionParticipantTypeCode':
+    def Device(cls) -> "ActionParticipantTypeCode":
         """
         The participant is a system or device used in the care of the patient.
         """

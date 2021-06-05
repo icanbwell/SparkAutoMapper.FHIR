@@ -13,21 +13,22 @@ class IdentifierUseCode(FhirValueSetBase):
     """
     https://hl7.org/FHIR/valueset-identifier-use.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'IdentifierUseCode']) -> None:
-            self.f: Callable[..., 'IdentifierUseCode'] = f
+        def __init__(self, f: Callable[..., "IdentifierUseCode"]) -> None:
+            self.f: Callable[..., "IdentifierUseCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['IdentifierUseCode']
-        ) -> 'IdentifierUseCode':
+            self, obj: Any, owner: Type["IdentifierUseCode"]
+        ) -> "IdentifierUseCode":
             return self.f(owner)
 
     @classproperty
-    def Usual(cls) -> 'IdentifierUseCode':
+    def Usual(cls) -> "IdentifierUseCode":
         """
         The identifier recommended for display and use in real-world interactions.
         """
@@ -35,7 +36,7 @@ class IdentifierUseCode(FhirValueSetBase):
         return IdentifierUseCode("usual")
 
     @classproperty
-    def Official(cls) -> 'IdentifierUseCode':
+    def Official(cls) -> "IdentifierUseCode":
         """
         The identifier considered to be most trusted for the identification of this item.
         Sometimes also known as "primary" and "main". The determination of "official" is subjective
@@ -45,7 +46,7 @@ class IdentifierUseCode(FhirValueSetBase):
         return IdentifierUseCode("official")
 
     @classproperty
-    def Temp(cls) -> 'IdentifierUseCode':
+    def Temp(cls) -> "IdentifierUseCode":
         """
         A temporary identifier.
         """
@@ -53,7 +54,7 @@ class IdentifierUseCode(FhirValueSetBase):
         return IdentifierUseCode("temp")
 
     @classproperty
-    def Secondary(cls) -> 'IdentifierUseCode':
+    def Secondary(cls) -> "IdentifierUseCode":
         """
         An identifier that was assigned in secondary use - it serves to identify the object in a relative context,
         but cannot be consistently assigned to the same object again in a different context.
@@ -62,7 +63,7 @@ class IdentifierUseCode(FhirValueSetBase):
         return IdentifierUseCode("secondary")
 
     @classproperty
-    def Old(cls) -> 'IdentifierUseCode':
+    def Old(cls) -> "IdentifierUseCode":
         """
         The identifier id no longer considered valid, but may be relevant for search purposes.
         E.g. Changes to identifier schemes, account merges, etc.

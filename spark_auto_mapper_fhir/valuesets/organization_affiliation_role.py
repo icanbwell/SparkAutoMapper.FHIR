@@ -13,23 +13,22 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
     """
     https://www.hl7.org/fhir/valueset-organization-role.html
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(
-            self, f: Callable[..., 'OrganizationAffiliationRoleCode']
-        ) -> None:
-            self.f: Callable[..., 'OrganizationAffiliationRoleCode'] = f
+        def __init__(self, f: Callable[..., "OrganizationAffiliationRoleCode"]) -> None:
+            self.f: Callable[..., "OrganizationAffiliationRoleCode"] = f
 
         def __get__(
-            self, obj: Any, owner: Type['OrganizationAffiliationRoleCode']
-        ) -> 'OrganizationAffiliationRoleCode':
+            self, obj: Any, owner: Type["OrganizationAffiliationRoleCode"]
+        ) -> "OrganizationAffiliationRoleCode":
             return self.f(owner)
 
     @classproperty
-    def Provider(cls) -> 'OrganizationAffiliationRoleCode':
+    def Provider(cls) -> "OrganizationAffiliationRoleCode":
         """
         Comment
         """
@@ -37,7 +36,7 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
         return OrganizationAffiliationRoleCode("provider")
 
     @classproperty
-    def Agency(cls) -> 'OrganizationAffiliationRoleCode':
+    def Agency(cls) -> "OrganizationAffiliationRoleCode":
         """
         An organization such as a public health agency, community/social services provider, etc.
         """
@@ -45,7 +44,7 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
         return OrganizationAffiliationRoleCode("agency")
 
     @classproperty
-    def Research(cls) -> 'OrganizationAffiliationRoleCode':
+    def Research(cls) -> "OrganizationAffiliationRoleCode":
         """
         An organization providing research-related services such as conducting research, recruiting research participants, analyzing data, etc.
         """
@@ -53,7 +52,7 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
         return OrganizationAffiliationRoleCode("research")
 
     @classproperty
-    def Payer(cls) -> 'OrganizationAffiliationRoleCode':
+    def Payer(cls) -> "OrganizationAffiliationRoleCode":
         """
         An organization providing reimbursement, payment, or related services
         """
@@ -61,7 +60,7 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
         return OrganizationAffiliationRoleCode("payer")
 
     @classproperty
-    def Diagnostics(cls) -> 'OrganizationAffiliationRoleCode':
+    def Diagnostics(cls) -> "OrganizationAffiliationRoleCode":
         """
         An organization providing diagnostic testing/laboratory services
         """
@@ -69,7 +68,7 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
         return OrganizationAffiliationRoleCode("diagnostics")
 
     @classproperty
-    def Supplier(cls) -> 'OrganizationAffiliationRoleCode':
+    def Supplier(cls) -> "OrganizationAffiliationRoleCode":
         """
         An organization that provides medical supplies (e.g. medical devices, equipment, pharmaceutical products, etc.)
         """
@@ -77,7 +76,7 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
         return OrganizationAffiliationRoleCode("supplier")
 
     @classproperty
-    def HIE(cls) -> 'OrganizationAffiliationRoleCode':
+    def HIE(cls) -> "OrganizationAffiliationRoleCode":
         """
         An organization that facilitates electronic clinical data exchange between entities
         """
@@ -85,7 +84,7 @@ class OrganizationAffiliationRoleCode(FhirValueSetBase):
         return OrganizationAffiliationRoleCode("HIE/HIO")
 
     @classproperty
-    def Member(cls) -> 'OrganizationAffiliationRoleCode':
+    def Member(cls) -> "OrganizationAffiliationRoleCode":
         """
         A type of non-ownership relationship between entities (encompasses partnerships, collaboration, joint ventures, etc.)
         """

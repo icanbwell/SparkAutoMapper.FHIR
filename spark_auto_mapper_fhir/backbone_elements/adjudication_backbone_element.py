@@ -3,7 +3,9 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.valuesets.adjudication_reason import AdjudicationReasonCode
@@ -21,7 +23,7 @@ class AdjudicationBackboneElement(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         reason: Optional[CodeableConcept[AdjudicationReasonCode]] = None,
         amount: Optional[Money] = None,
-        value: Optional[FhirDecimal] = None
+        value: Optional[FhirDecimal] = None,
     ):
         """
         Adjudication Resource in FHIR
@@ -39,5 +41,5 @@ class AdjudicationBackboneElement(FhirBackboneElementBase):
             category=category,
             reason=reason,
             amount=amount,
-            value=value
+            value=value,
         )

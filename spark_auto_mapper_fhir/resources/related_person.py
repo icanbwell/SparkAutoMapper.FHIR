@@ -19,9 +19,12 @@ from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.period import Period
 from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.valuesets.administrative_gender import AdministrativeGenderCode
-from spark_auto_mapper_fhir.valuesets.relatedperson_relationshiptype import \
-    RelatedPersonRelationshipTypeCode
+from spark_auto_mapper_fhir.valuesets.administrative_gender import (
+    AdministrativeGenderCode,
+)
+from spark_auto_mapper_fhir.valuesets.relatedperson_relationshiptype import (
+    RelatedPersonRelationshipTypeCode,
+)
 
 
 class RelatedPerson(FhirResourceBase):
@@ -35,8 +38,9 @@ class RelatedPerson(FhirResourceBase):
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        relationship: Optional[FhirList[
-            CodeableConcept[RelatedPersonRelationshipTypeCode]]] = None,
+        relationship: Optional[
+            FhirList[CodeableConcept[RelatedPersonRelationshipTypeCode]]
+        ] = None,
         name: Optional[FhirList[HumanName]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         gender: Optional[AdministrativeGenderCode] = None,
@@ -45,7 +49,7 @@ class RelatedPerson(FhirResourceBase):
         photo: Optional[FhirList[Attachment]] = None,
         period: Optional[Period] = None,
         communication: Optional[FhirList[Communication]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None
+        extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """
         RelatedPerson Resource in FHIR
@@ -85,12 +89,10 @@ class RelatedPerson(FhirResourceBase):
             address=address,
             photo=photo,
             period=period,
-            communication=communication
+            communication=communication,
         )
 
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return RelatedPersonSchema.get_schema(
-            include_extension=include_extension
-        )
+        return RelatedPersonSchema.get_schema(include_extension=include_extension)
