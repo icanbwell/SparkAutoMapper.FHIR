@@ -15,7 +15,7 @@ class ${ClassName}Code(FhirValueSetBase):
                 properties not just the ones you need
     $Documentation
     """
-    def __init__(self, value: AutoMapperTextInputType):
+    def __init__(self, *, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
