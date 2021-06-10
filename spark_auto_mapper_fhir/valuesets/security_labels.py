@@ -36,6 +36,14 @@ class SecurityLabelsCode(FhirValueSetBase):
         return SecurityLabelsCode("A")
 
     @genericclassproperty
+    def owner_codeset(cls) -> FhirUri:
+        return "https://www.icanbwell.com/owner"
+
+    @genericclassproperty
+    def access_codeset(cls) -> FhirUri:
+        return "https://www.icanbwell.com/access"
+
+    @genericclassproperty
     def codeset(cls) -> FhirUri:
         """
         http://terminology.hl7.org/CodeSystem/v3-Confidentiality

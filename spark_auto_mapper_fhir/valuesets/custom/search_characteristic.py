@@ -28,12 +28,12 @@ class SearchCharacteristicCode(FhirValueSetBase):
             return self.f(owner)
 
     @classproperty
-    def HideFromSearch(cls) -> "SearchCharacteristicCode":
+    def IncludeInSearch(cls) -> "SearchCharacteristicCode":
         """
-        Resource should not populate in front-end search
+        Resource populateS in front-end search results
         """
         # noinspection PyCallingNonCallable
-        return SearchCharacteristicCode("hidefromsearch")
+        return SearchCharacteristicCode("searchable")
 
     @classproperty
     def Bookable(cls) -> "SearchCharacteristicCode":
