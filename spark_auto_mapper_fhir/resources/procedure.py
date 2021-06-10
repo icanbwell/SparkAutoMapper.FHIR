@@ -73,7 +73,7 @@ class Procedure(FhirResourceBase):
         statusReason: Optional[CodeableConcept[SnoMedCode]] = None,
         subject: Reference[Union[Patient, Group]],
         instantiatesCanonical: Optional[FhirCanonical] = None,
-        instantiatesUri: Optional[FhirList[FhirUri]],
+        instantiatesUri: Optional[FhirList[FhirUri]] = None,
         basedOn: Optional[FhirList[Union[CarePlan, ServiceRequest]]] = None,
         partOf: Optional[
             FhirList[Union["Procedure", "Observation", MedicationAdministration]]
