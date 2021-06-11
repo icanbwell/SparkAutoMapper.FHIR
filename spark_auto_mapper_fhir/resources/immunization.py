@@ -9,10 +9,12 @@ from spark_auto_mapper_fhir.backbone_elements.Immunization_reaction_backbone_ele
 from spark_auto_mapper_fhir.backbone_elements.immunization_education_backbone_element import (
     ImmunizationEducationBackboneElement,
 )
-from spark_auto_mapper_fhir.backbone_elements.immunization_performer_backbone_element import \
-    ImmunizationPerformerBackboneElement
-from spark_auto_mapper_fhir.backbone_elements.immunization_protocolApplied_backbone_element import \
-    ImmunizationProtocolAppliedBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.immunization_performer_backbone_element import (
+    ImmunizationPerformerBackboneElement,
+)
+from spark_auto_mapper_fhir.backbone_elements.immunization_protocolApplied_backbone_element import (
+    ImmunizationProtocolAppliedBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -33,9 +35,6 @@ from spark_auto_mapper_fhir.resources.location import Location
 from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.valuesets.immunization_function import (
-    ImmunizationFunctionCode,
-)
 from spark_auto_mapper_fhir.valuesets.immunization_funding_source import (
     ImmunizationFundingSourceCode,
 )
@@ -55,9 +54,6 @@ from spark_auto_mapper_fhir.valuesets.immunization_status_reason import (
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.valuesets.immunization_subpotent_reason import (
     ImmunizationSubpotentReasonCode,
-)
-from spark_auto_mapper_fhir.valuesets.immunization_target_disease import (
-    ImmunizationTargetDiseaseCode,
 )
 from spark_auto_mapper_fhir.valuesets.vaccine_code import VaccineCode
 
@@ -91,27 +87,15 @@ class Immunization(FhirResourceBase):
         note: Optional[FhirList[Annotation]] = None,
         reasonCode: Optional[FhirList[CodeableConcept[ImmunizationReasonCode]]] = None,
         reasonReference: Optional[
-                FhirList[
-                    Reference[
-                        Union[
-                            Condition,
-                            Observation,
-                            "DiagnosticReport"
-                        ]
-                    ]
-                ]
+            FhirList[Reference[Union[Condition, Observation, "DiagnosticReport"]]]
         ] = None,
         isSubpotent: Optional[FhirBoolean] = None,
         subpotentReason: Optional[
             CodeableConcept[ImmunizationSubpotentReasonCode]
         ] = None,
-        education: Optional[FhirList[ImmunizationEducationBackboneElement]]= None,
+        education: Optional[FhirList[ImmunizationEducationBackboneElement]] = None,
         programEligibility: Optional[
-                                FhirList[
-                                    CodeableConcept[
-                                        ImmunizationProgramElegibilityCode
-                                    ]
-                                ]
+            FhirList[CodeableConcept[ImmunizationProgramElegibilityCode]]
         ] = None,
         fundingSource: Optional[CodeableConcept[ImmunizationFundingSourceCode]] = None,
         reaction: Optional[FhirList[ImmunizationReactionBackboneElement]] = None,
