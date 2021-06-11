@@ -38,6 +38,7 @@ from spark_auto_mapper_fhir.resources.procedure import Procedure
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 from spark_auto_mapper_fhir.resources.slot import Slot
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
+from spark_auto_mapper_fhir.valuesets.appointment_status import AppointmentStatusCode
 from spark_auto_mapper_fhir.valuesets.practice_setting_code import PracticeSettingCode
 from spark_auto_mapper_fhir.valuesets.service_category import ServiceCategoryCode
 from spark_auto_mapper_fhir.valuesets.service_type import ServiceTypeCode
@@ -52,7 +53,7 @@ class Appointment(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: [FhirValueSetBase] = None,  # todo AppointmentStatusCode
+        status: [AppointmentStatusCode],
         cancelationReason: Optional[FhirValueSetBase] = None,  # todo AppointmentCancellationReasonCode
         serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategoryCode]]] = None,
         serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
