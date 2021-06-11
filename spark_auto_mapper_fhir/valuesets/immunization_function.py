@@ -16,7 +16,7 @@ class ImmunizationFunctionCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-immunization-function.html
     """
 
-    def __init__(self, *, value: AutoMapperTextInputType):
+    def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
