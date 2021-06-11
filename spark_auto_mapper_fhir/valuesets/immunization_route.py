@@ -90,7 +90,7 @@ class ImmunizationRouteCode(FhirValueSetBase):
         """
         http://hl7.org/fhir/ValueSet/immunization-route
         """
-        return "http://hl7.org/fhir/ValueSet/immunization-route "
+        return "http://hl7.org/fhir/ValueSet/immunization-route"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:

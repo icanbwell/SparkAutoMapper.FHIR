@@ -52,7 +52,7 @@ class ImmunizationProgramElegibilityCode(FhirValueSetBase):
         """
         http://hl7.org/fhir/ValueSet/immunization-program-eligibility
         """
-        return "http://hl7.org/fhir/ValueSet/immunization-program-eligibility "
+        return "http://hl7.org/fhir/ValueSet/immunization-program-eligibility"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:

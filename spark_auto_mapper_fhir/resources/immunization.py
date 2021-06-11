@@ -9,6 +9,10 @@ from spark_auto_mapper_fhir.backbone_elements.Immunization_reaction_backbone_ele
 from spark_auto_mapper_fhir.backbone_elements.immunization_education_backbone_element import (
     ImmunizationEducationBackboneElement,
 )
+from spark_auto_mapper_fhir.backbone_elements.immunization_performer_backbone_element import \
+    ImmunizationPerformerBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.immunization_protocolApplied_backbone_element import \
+    ImmunizationProtocolAppliedBackboneElement
 from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -71,8 +75,8 @@ class Immunization(FhirResourceBase):
         vaccineCode: CodeableConcept[VaccineCode],
         patient: Reference[Patient],
         encounter: Optional[Reference[Encounter]] = None,
-        occurrenceDateTime: FhirDateTime,
-        occurrenceString: FhirString,
+        occurrenceDateTime: FhirDateTime = None,
+        occurrenceString: FhirString = None,
         recorded: Optional[FhirDateTime] = None,
         primarySource: Optional[FhirBoolean] = None,
         reportOrigin: Optional[CodeableConcept[ImmunizationOriginCode]] = None,
@@ -83,22 +87,35 @@ class Immunization(FhirResourceBase):
         site: Optional[CodeableConcept[ImmunizationSiteCode]] = None,
         route: Optional[CodeableConcept[ImmunizationRouteCode]] = None,
         doseQuantity: Optional[SimpleQuantity] = None,
-        performer: Optional[FhirList[ImmunizationFunctionCode]] = None,
-        note: Optional[Annotation] = None,
-        reasonCode: Optional[CodeableConcept[ImmunizationReasonCode]] = None,
+        performer: Optional[FhirList[ImmunizationPerformerBackboneElement]] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ImmunizationReasonCode]]] = None,
         reasonReference: Optional[
-            Reference[Union[Condition, Observation, "DiagnosticReport"]]
+                FhirList[
+                    Reference[
+                        Union[
+                            Condition,
+                            Observation,
+                            "DiagnosticReport"
+                        ]
+                    ]
+                ]
         ] = None,
+        isSubpotent: Optional[FhirBoolean] = None,
         subpotentReason: Optional[
             CodeableConcept[ImmunizationSubpotentReasonCode]
         ] = None,
-        education: Optional[ImmunizationEducationBackboneElement] = None,
+        education: Optional[FhirList[ImmunizationEducationBackboneElement]]= None,
         programEligibility: Optional[
-            CodeableConcept[ImmunizationProgramElegibilityCode]
+                                FhirList[
+                                    CodeableConcept[
+                                        ImmunizationProgramElegibilityCode
+                                    ]
+                                ]
         ] = None,
         fundingSource: Optional[CodeableConcept[ImmunizationFundingSourceCode]] = None,
-        reaction: Optional[ImmunizationReactionBackboneElement] = None,
-        protocolApplied: Optional[ImmunizationTargetDiseaseCode] = None,
+        reaction: Optional[FhirList[ImmunizationReactionBackboneElement]] = None,
+        protocolApplied: Optional[ImmunizationProtocolAppliedBackboneElement] = None,
     ) -> None:
         """
         Immunization Resource in FHIR

@@ -19,7 +19,7 @@ class ImmunizationPerformerBackboneElement(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        function: Optional[FhirList[ImmunizationFunctionCode]] = None,
+        function: Optional[FhirList[FhirList[ImmunizationFunctionCode]]] = None,
         actor: Reference[
             Union[
                 Practitioner,

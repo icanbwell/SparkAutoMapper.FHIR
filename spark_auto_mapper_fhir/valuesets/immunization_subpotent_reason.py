@@ -58,7 +58,7 @@ class ImmunizationSubpotentReasonCode(FhirValueSetBase):
         """
         http://hl7.org/fhir/ValueSet/immunization-subpotent-reason
         """
-        return "http://hl7.org/fhir/ValueSet/immunization-subpotent-reason "
+        return "http://hl7.org/fhir/ValueSet/immunization-subpotent-reason"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:

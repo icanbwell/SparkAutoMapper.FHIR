@@ -50,7 +50,7 @@ class ImmunizationSiteCode(FhirValueSetBase):
         """
         http://hl7.org/fhir/ValueSet/immunization-site
         """
-        return "http://hl7.org/fhir/ValueSet/immunization-site "
+        return "http://hl7.org/fhir/ValueSet/immunization-site"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:

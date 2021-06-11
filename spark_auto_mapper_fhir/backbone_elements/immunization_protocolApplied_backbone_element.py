@@ -6,6 +6,7 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
     FhirBackboneElementBase,
 )
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.resources.organization import Organization
@@ -21,9 +22,9 @@ class ImmunizationProtocolAppliedBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         series: Optional[FhirString] = None,
         authority: Optional[Reference[Organization]] = None,
-        targetDisease: Optional[CodeableConcept[ImmunizationTargetDiseaseCode]] = None,
-        doseNumberPositiveInt: FhirPositiveInt,
-        doseNumberString: FhirString,
+        targetDisease: Optional[FhirList[CodeableConcept[ImmunizationTargetDiseaseCode]]]= None,
+        doseNumberPositiveInt: FhirPositiveInt = None,
+        doseNumberString: FhirString = None,
         seriesDosesPositiveInt: Optional[FhirPositiveInt] = None,
         seriesDosesString: Optional[FhirString] = None,
     ) -> None:

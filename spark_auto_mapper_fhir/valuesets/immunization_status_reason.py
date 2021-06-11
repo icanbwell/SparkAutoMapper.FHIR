@@ -42,7 +42,7 @@ class ImmunizationStatusReasonCode(FhirValueSetBase):
         """
         http://hl7.org/fhir/ValueSet/immunization-status-reason
         """
-        return "http://hl7.org/fhir/ValueSet/immunization-status-reason "
+        return "http://hl7.org/fhir/ValueSet/immunization-status-reason"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:

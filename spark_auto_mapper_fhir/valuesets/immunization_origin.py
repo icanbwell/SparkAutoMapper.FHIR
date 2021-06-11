@@ -66,7 +66,7 @@ class ImmunizationOriginCode(FhirValueSetBase):
         """
         http://hl7.org/fhir/ValueSet/immunization-origin
         """
-        return "http://hl7.org/fhir/ValueSet/immunization-origin "
+        return "http://hl7.org/fhir/ValueSet/immunization-origin"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
