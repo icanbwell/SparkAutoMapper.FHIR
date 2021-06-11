@@ -40,6 +40,7 @@ from spark_auto_mapper_fhir.resources.slot import Slot
 from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper_fhir.valuesets.appointment_cancellation_reason import AppointmentCancellationReasonCode
 from spark_auto_mapper_fhir.valuesets.appointment_status import AppointmentStatusCode
+from spark_auto_mapper_fhir.valuesets.encounter_reason import EncounterReasonCode
 from spark_auto_mapper_fhir.valuesets.practice_setting_code import PracticeSettingCode
 from spark_auto_mapper_fhir.valuesets.service_category import ServiceCategoryCode
 from spark_auto_mapper_fhir.valuesets.service_type import ServiceTypeCode
@@ -60,7 +61,7 @@ class Appointment(FhirResourceBase):
         serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
         specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]] = None,
         appointmentType: Optional[CodeableConcept[V2AppointmentReasonCode]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[FhirValueSetBase]]] = None,  # todo EncounterReasonCode
+        reasonCode: Optional[FhirList[CodeableConcept[EncounterReasonCode]]] = None,
         reasonReference: Optional[FhirList[Reference[Union[Condition, Procedure, Observation]]]] = None,  # todo ImmunicationRecommendation resource
         priority: Optional[FhirUnsignedInt] = None,
         description: Optional[FhirString] = None,
