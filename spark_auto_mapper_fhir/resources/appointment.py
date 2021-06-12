@@ -33,6 +33,7 @@ from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
 from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.procedure import Procedure
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
@@ -62,7 +63,7 @@ class Appointment(FhirResourceBase):
         specialty: Optional[FhirList[CodeableConcept[PracticeSettingCode]]] = None,
         appointmentType: Optional[CodeableConcept[V2AppointmentReasonCode]] = None,
         reasonCode: Optional[FhirList[CodeableConcept[EncounterReasonCode]]] = None,
-        reasonReference: Optional[FhirList[Reference[Union[Condition, Procedure, Observation]]]] = None,  # todo ImmunicationRecommendation resource
+        reasonReference: Optional[FhirList[Reference[Union[Condition, Procedure, Observation, ImmunizationRecommendation]]]] = None,
         priority: Optional[FhirUnsignedInt] = None,
         description: Optional[FhirString] = None,
         supportingInformation: Optional[FhirList[Reference[Any]]] = None,
