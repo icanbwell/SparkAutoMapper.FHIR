@@ -84,13 +84,34 @@ class Appointment(FhirResourceBase):
         """
         Appointment Resource in FHIR
         https://hl7.org/FHIR/datatypes.html#Appointment
-
+        A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s)
 
 
         :param id_: id of resource
-        :param identifier:
-        :param status:
-        :param endpoint: Technical endpoints providing access to services operated for the location
+        :param identifier: External Ids for this item
+        :param status: proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error | checked-in | waitlist
+        :param cancelationReason: The coded reason for the appointment being cancelled
+        :param serviceCategory: A broad categorization of the service that is to be performed during this appointment
+        :param serviceType: The specific service that is to be performed during this appointment
+        :param specialty: The specialty of a practitioner that would be required to perform the service requested in this appointment
+        :param appointmentType: The style of appointment or patient that has been booked in the slot (not service type)
+        :param reasonCode: Coded reason this appointment is scheduled
+        :param reasonReference: Reason the appointment is to take place (resource)
+        :param priority: Used to make informed decisions if needing to re-prioritize
+        :param description: Shown on a subject line in a meeting request, or appointment list
+        :param supportingInformation: Additional information to support the appointment
+        :param start: When appointment is to take place
+        :param end: When appointment is to conclude
+        :param minutesDuration: Can be less than start/end (e.g. estimate)
+        :param slot: The slots that this appointment is filling
+        :param created: The date that this appointment was initially created
+        :param comment: Additional comments
+        :param patientInstruction: Detailed information and instructions for the patient
+        :param basedOn: The service request this appointment is allocated to assess
+        :param participant: Participants involved in appointment
+            + Rule: Either the type or actor on the participant SHALL be specified
+        :param requestedPeriod: Potential date/time interval(s) requested to allocate the appointment within
+
         """
         super().__init__(
             resourceType="Appointment",
