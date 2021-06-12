@@ -17,16 +17,15 @@ from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
-from spark_auto_mapper_fhir.valuesets.action_participant_role import (
-    ActionParticipantRoleCode,
+from spark_auto_mapper_fhir.valuesets.encounter_participant_type import (
+    EncounterParticipantTypeCode,
 )
-from spark_auto_mapper_fhir.valuesets.action_participant_type import (
-    ActionParticipantTypeCode,
+from spark_auto_mapper_fhir.valuesets.participant_required import (
+    ParticipantRequiredCode,
 )
-from spark_auto_mapper_fhir.valuesets.encounter_participant_type import EncounterParticipantTypeCode
-from spark_auto_mapper_fhir.valuesets.participant_required import ParticipantRequiredCode
-from spark_auto_mapper_fhir.valuesets.participation_status import ParticipationStatusCode
+from spark_auto_mapper_fhir.valuesets.participation_status import (
+    ParticipationStatusCode,
+)
 
 
 class AppointmentParticipantBackboneElement(FhirBackboneElementBase):
@@ -35,9 +34,21 @@ class AppointmentParticipantBackboneElement(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         type_: Optional[FhirList[CodeableConcept[EncounterParticipantTypeCode]]] = None,
-        actor: Optional[Reference[Union[Patient, Practitioner, PractitionerRole, RelatedPerson, Device, HealthcareService, Location]]] = None,
+        actor: Optional[
+            Reference[
+                Union[
+                    Patient,
+                    Practitioner,
+                    PractitionerRole,
+                    RelatedPerson,
+                    Device,
+                    HealthcareService,
+                    Location,
+                ]
+            ]
+        ] = None,
         required: Optional[ParticipantRequiredCode] = None,
-        status: [ParticipationStatusCode],
+        status: ParticipationStatusCode,
         period: Optional[Period] = None,
         extension: Optional[FhirList[ExtensionBase]] = None
     ) -> None:
@@ -60,5 +71,5 @@ class AppointmentParticipantBackboneElement(FhirBackboneElementBase):
             required=required,
             status=status,
             period=period,
-            extension=extension
+            extension=extension,
         )

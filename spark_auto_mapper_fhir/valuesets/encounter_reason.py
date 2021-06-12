@@ -22,16 +22,16 @@ class EncounterReasonCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., "EncounterReasonCode"]) -> None:
             self.f: Callable[..., "EncounterReasonCode"] = f
 
-        def __get__(self, obj: Any, owner: Type["EncounterReasonCode"]) -> "EncounterReasonCode":
+        def __get__(
+            self, obj: Any, owner: Type["EncounterReasonCode"]
+        ) -> "EncounterReasonCode":
             return self.f(owner)
 
     @classproperty
     def NameYourFirstValue(cls) -> "EncounterReasonCode":
-        """
-        """
+        """ """
         # noinspection PyCallingNonCallable
         return EncounterReasonCode("A")
-
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

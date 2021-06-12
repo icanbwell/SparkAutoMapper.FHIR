@@ -22,7 +22,9 @@ class ParticipationStatusCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., "ParticipationStatusCode"]) -> None:
             self.f: Callable[..., "ParticipationStatusCode"] = f
 
-        def __get__(self, obj: Any, owner: Type["ParticipationStatusCode"]) -> "AppointmentCancellationReasonCode":
+        def __get__(
+            self, obj: Any, owner: Type["ParticipationStatusCode"]
+        ) -> "ParticipationStatusCode":
             return self.f(owner)
 
     @classproperty
@@ -56,7 +58,6 @@ class ParticipationStatusCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return ParticipationStatusCode("needs-action")
-
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

@@ -19,19 +19,21 @@ class AppointmentCancellationReasonCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., "AppointmentCancellationReasonCode"]) -> None:
+        def __init__(
+            self, f: Callable[..., "AppointmentCancellationReasonCode"]
+        ) -> None:
             self.f: Callable[..., "AppointmentCancellationReasonCode"] = f
 
-        def __get__(self, obj: Any, owner: Type["AppointmentCancellationReasonCode"]) -> "AppointmentCancellationReasonCode":
+        def __get__(
+            self, obj: Any, owner: Type["AppointmentCancellationReasonCode"]
+        ) -> "AppointmentCancellationReasonCode":
             return self.f(owner)
 
     @classproperty
     def NameYourFirstValue(cls) -> "AppointmentCancellationReasonCode":
-        """
-        """
+        """ """
         # noinspection PyCallingNonCallable
         return AppointmentCancellationReasonCode("A")
-
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

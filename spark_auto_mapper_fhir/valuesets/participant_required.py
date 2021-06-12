@@ -22,7 +22,9 @@ class ParticipantRequiredCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., "ParticipantRequiredCode"]) -> None:
             self.f: Callable[..., "ParticipantRequiredCode"] = f
 
-        def __get__(self, obj: Any, owner: Type["ParticipantRequiredCode"]) -> "AppointmentCancellationReasonCode":
+        def __get__(
+            self, obj: Any, owner: Type["ParticipantRequiredCode"]
+        ) -> "ParticipantRequiredCode":
             return self.f(owner)
 
     @classproperty
@@ -48,7 +50,6 @@ class ParticipantRequiredCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return ParticipantRequiredCode("information-only")
-
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

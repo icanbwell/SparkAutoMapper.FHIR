@@ -22,7 +22,9 @@ class AppointmentStatusCode(FhirValueSetBase):
         def __init__(self, f: Callable[..., "AppointmentStatusCode"]) -> None:
             self.f: Callable[..., "AppointmentStatusCode"] = f
 
-        def __get__(self, obj: Any, owner: Type["AppointmentStatusCode"]) -> "AppointmentStatusCode":
+        def __get__(
+            self, obj: Any, owner: Type["AppointmentStatusCode"]
+        ) -> "AppointmentStatusCode":
             return self.f(owner)
 
     @classproperty
@@ -104,7 +106,6 @@ class AppointmentStatusCode(FhirValueSetBase):
         """
         # noinspection PyCallingNonCallable
         return AppointmentStatusCode("waitlisted")
-
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
