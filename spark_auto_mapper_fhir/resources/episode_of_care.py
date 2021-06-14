@@ -1,7 +1,7 @@
 from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
-
+from spark_fhir_schemas.r4.resources.episodeofcare import EpisodeOfCareSchema
 
 from spark_auto_mapper_fhir.backbone_elements.episode_of_care_status_history_backbone_element import (
     EpisodeOfCareStatusHistoryBackboneElement,
