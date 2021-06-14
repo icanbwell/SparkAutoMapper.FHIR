@@ -3,8 +3,8 @@ from typing import Optional, Union, Any
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.appointment import AppointmentSchema
 
-from spark_auto_mapper_fhir.backbone_elements.participant_backbone_element import (
-    ParticipantBackboneElement,
+from spark_auto_mapper_fhir.backbone_elements.appointment_participant_backbone_element import (
+    AppointmentParticipantBackboneElement,
 )
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.meta import Meta
@@ -77,7 +77,7 @@ class Appointment(FhirResourceBase):
         comment: Optional[FhirString] = None,
         patientInstruction: Optional[FhirString] = None,
         basedOn: Optional[FhirList[Reference[ServiceRequest]]] = None,
-        participant: FhirList[ParticipantBackboneElement],
+        participant: FhirList[AppointmentParticipantBackboneElement],
         requestedPeriod: Optional[FhirList[Period]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None
     ):
