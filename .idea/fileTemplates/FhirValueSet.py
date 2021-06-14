@@ -34,7 +34,7 @@ class ${ClassName}Code(FhirValueSetBase):
         Comment
         """
         # noinspection PyCallingNonCallable
-        return ${ClassName}Code("A")
+        return ${ClassName}Code(value="A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:

@@ -1,4 +1,5 @@
-from typing import Optional, Union
+from __future__ import annotations
+from typing import Optional, Union, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.encounter import EncounterSchema
@@ -18,7 +19,7 @@ from spark_auto_mapper_fhir.backbone_elements.encounter_participant_backbone_ele
 from spark_auto_mapper_fhir.backbone_elements.encounter_status_history_backbone_element import (
     EncounterStatusHistoryBackboneElement,
 )
-from spark_auto_mapper_fhir.backbone_elements.encouter_diagnosis_backbone_element import (
+from spark_auto_mapper_fhir.backbone_elements.encounter_diagnosis_backbone_element import (
     EncounterDiagnosisBackboneElement,
 )
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -36,14 +37,17 @@ from spark_auto_mapper_fhir.resources.episode_of_care import (
 )  # To be added after EOC is merged
 from spark_auto_mapper_fhir.resources.account import Account
 from spark_auto_mapper_fhir.resources.appointment import Appointment
-from spark_auto_mapper_fhir.resources.condition import Condition
-from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.condition import Condition
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.resources.group import Group
 from spark_auto_mapper_fhir.resources.immunization_recommendation import (
     ImmunizationRecommendation,
 )
-from spark_auto_mapper_fhir.resources.observation import Observation
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.organization import Organization
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.procedure import Procedure

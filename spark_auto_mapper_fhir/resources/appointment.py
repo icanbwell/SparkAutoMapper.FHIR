@@ -1,4 +1,5 @@
-from typing import Optional, Union, Any
+from __future__ import annotations
+from typing import Optional, Union, Any, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
 from spark_fhir_schemas.r4.resources.appointment import AppointmentSchema
@@ -16,7 +17,9 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.unsigned_int import FhirUnsignedInt
-from spark_auto_mapper_fhir.resources.condition import Condition
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.condition import Condition
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -25,7 +28,9 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.resources.immunization_recommendation import (
     ImmunizationRecommendation,
 )
-from spark_auto_mapper_fhir.resources.observation import Observation
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.observation import Observation
 from spark_auto_mapper_fhir.resources.procedure import Procedure
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 from spark_auto_mapper_fhir.resources.slot import Slot
@@ -62,7 +67,9 @@ class Appointment(FhirResourceBase):
         reasonReference: Optional[
             FhirList[
                 Reference[
-                    Union[Condition, Procedure, Observation, ImmunizationRecommendation]
+                    Union[
+                        "Condition", Procedure, Observation, ImmunizationRecommendation
+                    ]
                 ]
             ]
         ] = None,

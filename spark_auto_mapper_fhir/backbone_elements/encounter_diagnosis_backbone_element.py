@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from typing import Optional, Union, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -9,7 +9,9 @@ from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import 
     FhirBackboneElementBase,
 )
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.resources.condition import Condition
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.condition import Condition
 from spark_auto_mapper_fhir.resources.procedure import Procedure
 from spark_auto_mapper_fhir.valuesets.encounter_diagnosis_role import (
     EncounterDiagnosisRoleCode,
@@ -21,7 +23,7 @@ class EncounterDiagnosisBackboneElement(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        condition: Reference[Union[Condition, Procedure]],
+        condition: Reference[Union["Condition", Procedure]],
         use: Optional[CodeableConcept[EncounterDiagnosisRoleCode]] = None,
         rank: Optional[FhirPositiveInt] = None,
         extension: Optional[FhirList[ExtensionBase]] = None

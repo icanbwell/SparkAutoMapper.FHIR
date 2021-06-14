@@ -36,7 +36,7 @@ class EncounterSpecialArrangementCode(FhirValueSetBase):
 
         """
         # noinspection PyCallingNonCallable
-        return EncounterSpecialArrangementCode("wheel")
+        return EncounterSpecialArrangementCode(value="wheel")
 
     @classproperty
     def AdditionalBedding(cls) -> "EncounterSpecialArrangementCode":
@@ -45,7 +45,7 @@ class EncounterSpecialArrangementCode(FhirValueSetBase):
 
         """
         # noinspection PyCallingNonCallable
-        return EncounterSpecialArrangementCode("add-bed")
+        return EncounterSpecialArrangementCode(value="add-bed")
 
     @classproperty
     def Interpreter(cls) -> "EncounterSpecialArrangementCode":
@@ -54,7 +54,7 @@ class EncounterSpecialArrangementCode(FhirValueSetBase):
 
         """
         # noinspection PyCallingNonCallable
-        return EncounterSpecialArrangementCode("int")
+        return EncounterSpecialArrangementCode(value="int")
 
     @classproperty
     def Attendant(cls) -> "EncounterSpecialArrangementCode":
@@ -63,7 +63,7 @@ class EncounterSpecialArrangementCode(FhirValueSetBase):
 
         """
         # noinspection PyCallingNonCallable
-        return EncounterSpecialArrangementCode("att")
+        return EncounterSpecialArrangementCode(value="att")
 
     @classproperty
     def GuideDog(cls) -> "EncounterSpecialArrangementCode":
@@ -72,7 +72,7 @@ class EncounterSpecialArrangementCode(FhirValueSetBase):
 
         """
         # noinspection PyCallingNonCallable
-        return EncounterSpecialArrangementCode("dog")
+        return EncounterSpecialArrangementCode(value="dog")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
