@@ -21,16 +21,14 @@ class DiagnosisRole(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'DiagnosisRole']) -> None:
-            self.f: Callable[..., 'DiagnosisRole'] = f
+        def __init__(self, f: Callable[..., "DiagnosisRole"]) -> None:
+            self.f: Callable[..., "DiagnosisRole"] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['DiagnosisRole']
-                    ) -> 'DiagnosisRole':
+        def __get__(self, obj: Any, owner: Type["DiagnosisRole"]) -> "DiagnosisRole":
             return self.f(owner)
 
     @classproperty
-    def AdmissionDiagnosis(cls) -> 'DiagnosisRole':
+    def AdmissionDiagnosis(cls) -> "DiagnosisRole":
         """
         Admission diagnosis
         """
@@ -38,7 +36,7 @@ class DiagnosisRole(FhirValueSetBase):
         return DiagnosisRole("AD")
 
     @classproperty
-    def DischargeDiagnosis(cls) -> 'DiagnosisRole':
+    def DischargeDiagnosis(cls) -> "DiagnosisRole":
         """
         Discharge diagnosis
         """
@@ -46,7 +44,7 @@ class DiagnosisRole(FhirValueSetBase):
         return DiagnosisRole("DD")
 
     @classproperty
-    def ChiefComplaint(cls) -> 'DiagnosisRole':
+    def ChiefComplaint(cls) -> "DiagnosisRole":
         """
         Chief complaint
         """
@@ -54,7 +52,7 @@ class DiagnosisRole(FhirValueSetBase):
         return DiagnosisRole("CC")
 
     @classproperty
-    def ComorbidityDiagnosis(cls) -> 'DiagnosisRole':
+    def ComorbidityDiagnosis(cls) -> "DiagnosisRole":
         """
         Comorbidity diagnosis
         """
@@ -62,7 +60,7 @@ class DiagnosisRole(FhirValueSetBase):
         return DiagnosisRole("CM")
 
     @classproperty
-    def preOpDiagnosis(cls) -> 'DiagnosisRole':
+    def preOpDiagnosis(cls) -> "DiagnosisRole":
         """
         pre-op diagnosis
         """
@@ -70,7 +68,7 @@ class DiagnosisRole(FhirValueSetBase):
         return DiagnosisRole("pre-op")
 
     @classproperty
-    def postOpDiagnosis(cls) -> 'DiagnosisRole':
+    def postOpDiagnosis(cls) -> "DiagnosisRole":
         """
         post-op diagnosis
         """
@@ -78,7 +76,7 @@ class DiagnosisRole(FhirValueSetBase):
         return DiagnosisRole("post-op")
 
     @classproperty
-    def Billing(cls) -> 'DiagnosisRole':
+    def Billing(cls) -> "DiagnosisRole":
         """
         Billing
         """

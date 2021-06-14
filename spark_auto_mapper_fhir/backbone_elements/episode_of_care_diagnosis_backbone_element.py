@@ -3,15 +3,18 @@ from typing import Optional
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import FhirBackboneElementBase
+from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
+    FhirBackboneElementBase,
+)
 from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.resources.condition import Condition
-from spark_auto_mapper_fhir.valuesets.diangnosis_role import DiagnosisRole
+from spark_auto_mapper_fhir.valuesets.diagnosis_role import DiagnosisRole
 
 
 class EpisodeOfCareDiagnosisBackboneElement(FhirBackboneElementBase):
     def __init__(
         self,
+        *,
         id_: Optional[FhirId] = None,
         condition: Reference[Condition],
         role: Optional[CodeableConcept[DiagnosisRole]] = None,
@@ -28,4 +31,4 @@ class EpisodeOfCareDiagnosisBackboneElement(FhirBackboneElementBase):
             condition=condition,
             role=role,
             rank=rank,
-    )
+        )

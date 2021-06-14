@@ -21,16 +21,16 @@ class EpisodeOfCareStatusCode(FhirValueSetBase):
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'EpisodeOfCareStatusCode']) -> None:
-            self.f: Callable[..., 'EpisodeOfCareStatusCode'] = f
+        def __init__(self, f: Callable[..., "EpisodeOfCareStatusCode"]) -> None:
+            self.f: Callable[..., "EpisodeOfCareStatusCode"] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['EpisodeOfCareStatusCode']
-                    ) -> 'EpisodeOfCareStatusCode':
+        def __get__(
+            self, obj: Any, owner: Type["EpisodeOfCareStatusCode"]
+        ) -> "EpisodeOfCareStatusCode":
             return self.f(owner)
 
     @classproperty
-    def Planned(cls) -> 'EpisodeOfCareStatusCode':
+    def Planned(cls) -> "EpisodeOfCareStatusCode":
         """
         This episode of care is planned to start at the date specified in the period.start.
         During this status, an organization may perform assessments to determine if the patient is eligible to receive services,
@@ -40,7 +40,7 @@ class EpisodeOfCareStatusCode(FhirValueSetBase):
         return EpisodeOfCareStatusCode("planned")
 
     @classproperty
-    def Waitlist(cls) -> 'EpisodeOfCareStatusCode':
+    def Waitlist(cls) -> "EpisodeOfCareStatusCode":
         """
         This episode has been placed on a waitlist, pending the episode being made active (or cancelled).
         """
@@ -48,7 +48,7 @@ class EpisodeOfCareStatusCode(FhirValueSetBase):
         return EpisodeOfCareStatusCode("waitlist")
 
     @classproperty
-    def Active(cls) -> 'EpisodeOfCareStatusCode':
+    def Active(cls) -> "EpisodeOfCareStatusCode":
         """
         This episode of care is current.
         """
@@ -56,7 +56,7 @@ class EpisodeOfCareStatusCode(FhirValueSetBase):
         return EpisodeOfCareStatusCode("active")
 
     @classproperty
-    def OnHold(cls) -> 'EpisodeOfCareStatusCode':
+    def OnHold(cls) -> "EpisodeOfCareStatusCode":
         """
         This episode of care is on hold;
         the organization has limited responsibility for the patient (such as while on respite).
@@ -65,7 +65,7 @@ class EpisodeOfCareStatusCode(FhirValueSetBase):
         return EpisodeOfCareStatusCode("onhold")
 
     @classproperty
-    def Finished(cls) -> 'EpisodeOfCareStatusCode':
+    def Finished(cls) -> "EpisodeOfCareStatusCode":
         """
         This episode of care is finished and the organization is not expecting
         to be providing further care to the patient.
@@ -75,7 +75,7 @@ class EpisodeOfCareStatusCode(FhirValueSetBase):
         return EpisodeOfCareStatusCode("finished")
 
     @classproperty
-    def Cancelled(cls) -> 'EpisodeOfCareStatusCode':
+    def Cancelled(cls) -> "EpisodeOfCareStatusCode":
         """
         The episode of care was cancelled, or withdrawn from service, often selected during the planned stage as the patient may have gone elsewhere, or the circumstances have changed and the organization is unable to provide the care.
         It indicates that services terminated outside the planned/expected workflow.
@@ -84,7 +84,7 @@ class EpisodeOfCareStatusCode(FhirValueSetBase):
         return EpisodeOfCareStatusCode("cancelled")
 
     @classproperty
-    def EnteredInError(cls) -> 'EpisodeOfCareStatusCode':
+    def EnteredInError(cls) -> "EpisodeOfCareStatusCode":
         """
         This instance should not have been part of this patient's medical record.
         """

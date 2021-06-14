@@ -16,21 +16,21 @@ class EpisodeOfCareTypeCode(FhirValueSetBase):
     https://hl7.org/FHIR/valueset-episodeofcare-type.html
     """
 
-    def __init__(self, *, value: AutoMapperTextInputType):
+    def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., 'EpisodeOfCareTypeCode']) -> None:
-            self.f: Callable[..., 'EpisodeOfCareTypeCode'] = f
+        def __init__(self, f: Callable[..., "EpisodeOfCareTypeCode"]) -> None:
+            self.f: Callable[..., "EpisodeOfCareTypeCode"] = f
 
-        def __get__(self, obj: Any,
-                    owner: Type['EpisodeOfCareTypeCode']
-                    ) -> 'EpisodeOfCareTypeCode':
+        def __get__(
+            self, obj: Any, owner: Type["EpisodeOfCareTypeCode"]
+        ) -> "EpisodeOfCareTypeCode":
             return self.f(owner)
 
     @classproperty
-    def HomeAndCommunityCare(cls) -> 'EpisodeOfCareTypeCode':
+    def HomeAndCommunityCare(cls) -> "EpisodeOfCareTypeCode":
         """
         Home and Community Care
         """
@@ -38,7 +38,7 @@ class EpisodeOfCareTypeCode(FhirValueSetBase):
         return EpisodeOfCareTypeCode("hacc")
 
     @classproperty
-    def PostAcuteCare(cls) -> 'EpisodeOfCareTypeCode':
+    def PostAcuteCare(cls) -> "EpisodeOfCareTypeCode":
         """
         Post Acute Care
         """
@@ -46,7 +46,7 @@ class EpisodeOfCareTypeCode(FhirValueSetBase):
         return EpisodeOfCareTypeCode("pac")
 
     @classproperty
-    def PostCoordinatedDiabetes(cls) -> 'EpisodeOfCareTypeCode':
+    def PostCoordinatedDiabetes(cls) -> "EpisodeOfCareTypeCode":
         """
         Post coordinated diabetes program
         """
@@ -54,7 +54,7 @@ class EpisodeOfCareTypeCode(FhirValueSetBase):
         return EpisodeOfCareTypeCode("diab")
 
     @classproperty
-    def DrugAndAlcoholRehab(cls) -> 'EpisodeOfCareTypeCode':
+    def DrugAndAlcoholRehab(cls) -> "EpisodeOfCareTypeCode":
         """
         Drug and alcohol rehabilitation
         """
@@ -62,7 +62,7 @@ class EpisodeOfCareTypeCode(FhirValueSetBase):
         return EpisodeOfCareTypeCode("da")
 
     @classproperty
-    def CommunityBasedAgedCare(cls) -> 'EpisodeOfCareTypeCode':
+    def CommunityBasedAgedCare(cls) -> "EpisodeOfCareTypeCode":
         """
         Community-based aged care
         """

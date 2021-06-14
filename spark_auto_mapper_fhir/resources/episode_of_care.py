@@ -1,11 +1,10 @@
 from typing import Optional, Union
 
-from blib2to3.pytree import type_repr
-from docutils.nodes import status
 from pyspark.sql.types import StructType, DataType
 
-from spark_auto_mapper_fhir.backbone_elements.encounter_status_history_backbone_element import \
-    EncounterStatushistoryBackboneElement
+from spark_auto_mapper_fhir.backbone_elements.encounter_status_history_backbone_element import (
+    EncounterStatushistoryBackboneElement,
+)
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 from spark_auto_mapper_fhir.complex_types.period import Period
@@ -22,28 +21,32 @@ from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
-from spark_auto_mapper_fhir.valuesets.diangnosis_role import DiagnosisRole
+from spark_auto_mapper_fhir.valuesets.diagnosis_role import DiagnosisRole
+from spark_auto_mapper_fhir.valuesets.episode_of_care_status import (
+    EpisodeOfCareStatusCode,
+)
 from spark_auto_mapper_fhir.valuesets.episode_of_care_type import EpisodeOfCareTypeCode
 
 
 class EpisodeOfCare(FhirResourceBase):
     def __init__(
-            self,
-            id_: Optional[FhirId] = None,
-            meta: Optional[Meta] = None,
-            extension: Optional[FhirList[Extension]] = None,
-            identifier: Optional[FhirList[Identifier]] = None,
-            statusHistory: Optional[FhirList[EncounterStatushistoryBackboneElement]] = None,
-            type_: Optional[FhirList[CodeableConcept[EpisodeOfCareTypeCode]]] = None,
-            diagnosis: Optional[FhirList[DiagnosisRole]] = None,
-            patient: Reference["Patient"],
-            managingOrganization: Optional[Reference[Organization]] = None,
-            period: Optional[Period] = None,
-            referralRequest: Optional[FhirList[Reference[ServiceRequest]]] = None,
-            careManager: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
-            team: Optional[FhirList[Reference[CareTeam]]] = None,
-            account: Optional[FhirList[Reference[Account]]] = None,
-
+        self,
+        *,
+        id_: Optional[FhirId] = None,
+        meta: Optional[Meta] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        status: EpisodeOfCareStatusCode,
+        statusHistory: Optional[FhirList[EncounterStatushistoryBackboneElement]] = None,
+        type_: Optional[FhirList[CodeableConcept[EpisodeOfCareTypeCode]]] = None,
+        diagnosis: Optional[FhirList[DiagnosisRole]] = None,
+        patient: Reference["Patient"],
+        managingOrganization: Optional[Reference[Organization]] = None,
+        period: Optional[Period] = None,
+        referralRequest: Optional[FhirList[Reference[ServiceRequest]]] = None,
+        careManager: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
+        team: Optional[FhirList[Reference[CareTeam]]] = None,
+        account: Optional[FhirList[Reference[Account]]] = None,
     ) -> None:
         """
         EpisodeOfCare Resource in FHIR
@@ -86,5 +89,7 @@ class EpisodeOfCare(FhirResourceBase):
             account=account,
         )
 
-    def get_schema(self, include_extension: bool) -> Optional[Union[StructType, DataType]]:
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
         return EpisodeOfCareSchema.get_schema(include_extension=include_extension)
