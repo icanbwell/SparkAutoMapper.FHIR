@@ -104,7 +104,7 @@ class Encounter(FhirResourceBase):
         https://hl7.org/FHIR/datatypes.html#Encounter
 
 
-        :param id_: id of resource usedsas
+        :param id_: id of resource
         :param identifier: External Ids for this condition
         :param status: planned | arrived | triaged | in-progress | onleave | finished | cancelled +
         :param statusHistory: List of past encounter classes
