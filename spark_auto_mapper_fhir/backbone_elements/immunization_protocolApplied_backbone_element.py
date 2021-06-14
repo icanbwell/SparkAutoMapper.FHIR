@@ -22,9 +22,7 @@ class ImmunizationProtocolAppliedBackboneElement(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         series: Optional[FhirString] = None,
         authority: Optional[Reference[Organization]] = None,
-        targetDisease: Optional[
-            FhirList[CodeableConcept[ImmunizationTargetDiseaseCode]]
-        ] = None,
+        targetDisease: Optional[FhirList[CodeableConcept[ImmunizationTargetDiseaseCode]]] = None,
         doseNumberPositiveInt: FhirPositiveInt = None,
         doseNumberString: FhirString = None,
         seriesDosesPositiveInt: Optional[FhirPositiveInt] = None,

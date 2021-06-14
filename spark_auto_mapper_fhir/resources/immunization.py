@@ -47,7 +47,7 @@ from spark_auto_mapper_fhir.valuesets.immunization_reason_code import (
 )
 from spark_auto_mapper_fhir.valuesets.immunization_route import ImmunizationRouteCode
 from spark_auto_mapper_fhir.valuesets.immunization_site import ImmunizationSiteCode
-
+from spark_auto_mapper_fhir.valuesets.immunization_status import ImmunizationStatusCode
 from spark_auto_mapper_fhir.valuesets.immunization_status_reason import (
     ImmunizationStatusReasonCode,
 )
@@ -62,11 +62,11 @@ class Immunization(FhirResourceBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
+        id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[Extension]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ImmunizationSiteCode,
+        status: ImmunizationStatusCode,
         statusReason: Optional[CodeableConcept[ImmunizationStatusReasonCode]] = None,
         vaccineCode: CodeableConcept[VaccineCode],
         patient: Reference[Patient],
