@@ -71,7 +71,7 @@ class Encounter(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: EncounterStatusCode,
-        #statusHistory: Optional[FhirList[EncounterStatusHistoryBackboneElement]] = None,
+        statusHistory: Optional[FhirList[EncounterStatusHistoryBackboneElement]] = None,
         class_: EncounterClassCode,
         classHistory: Optional[FhirList[EncounterClassHistoryBackboneElement]] = None,
         type_: Optional[FhirList[CodeableConcept[EncounterTypeCode]]] = None,
