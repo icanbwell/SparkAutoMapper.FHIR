@@ -2,8 +2,9 @@ from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
 
-from spark_auto_mapper_fhir.backbone_elements.encounter_status_history_backbone_element import (
-    EncounterStatushistoryBackboneElement,
+
+from spark_auto_mapper_fhir.backbone_elements.episode_of_care_status_history_backbone_element import (
+    EpisodeOfCareStatusHistoryBackboneElement,
 )
 from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -37,7 +38,9 @@ class EpisodeOfCare(FhirResourceBase):
         extension: Optional[FhirList[Extension]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: EpisodeOfCareStatusCode,
-        statusHistory: Optional[FhirList[EncounterStatushistoryBackboneElement]] = None,
+        statusHistory: Optional[
+            FhirList[EpisodeOfCareStatusHistoryBackboneElement]
+        ] = None,
         type_: Optional[FhirList[CodeableConcept[EpisodeOfCareTypeCode]]] = None,
         diagnosis: Optional[FhirList[DiagnosisRole]] = None,
         patient: Reference["Patient"],
