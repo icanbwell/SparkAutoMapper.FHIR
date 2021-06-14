@@ -32,7 +32,7 @@ class EncounterDiagnosisBackboneElement(FhirBackboneElementBase):
         EncounterDiagnosisBackboneElement Backbone Element in FHIR
         IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR
                     properties not just the ones you need
-        https://hl7.org/FHIR/encounter-definitions.html#Encounter.diagnosis
+        https://hl7.org/FHIR/encounter-definitions.html#Encounter.diagnosis Added
         """
         super().__init__(
             id_=id_, condition=condition, use=use, rank=rank, extension=extension
