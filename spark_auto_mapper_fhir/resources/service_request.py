@@ -33,7 +33,9 @@ from spark_auto_mapper_fhir.resources.coverage import Coverage
 from spark_auto_mapper_fhir.resources.device import Device
 
 from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
-from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.resources.group import Group
 from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
@@ -91,7 +93,7 @@ class ServiceRequest(FhirResourceBase):
         quantityQuantity: Optional[Quantity] = None,
         quantityRatio: Optional[Ratio] = None,
         quantityRange: Optional[Range] = None,
-        encounter: Optional[Reference[Encounter]] = None,
+        encounter: Optional[Reference["Encounter"]] = None,
         occurrenceDateTime: Optional[FhirDateTime] = None,
         occurrencePeriod: Optional[Period] = None,
         occurrenceTiming: Optional[Timing] = None,
