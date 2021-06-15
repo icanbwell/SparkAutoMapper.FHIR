@@ -22,6 +22,12 @@ def main() -> int:
     os.mkdir(complex_types_folder)
     complex_types_folder.joinpath("__init__.py").touch()
 
+    backbone_elements_folder = data_dir.joinpath("backbone_elements")
+    if os.path.exists(backbone_elements_folder):
+        shutil.rmtree(backbone_elements_folder)
+    os.mkdir(backbone_elements_folder)
+    backbone_elements_folder.joinpath("__init__.py").touch()
+
     simple_types_folder = data_dir.joinpath("simple_types")
     if os.path.exists(simple_types_folder):
         shutil.rmtree(simple_types_folder)
@@ -50,9 +56,11 @@ def main() -> int:
                 with open(file_path, "w") as file2:
                     file2.write(result)
             elif fhir_entity.type_ == "BackboneElement":
-                file_path = simple_types_folder.joinpath(f"{resource_name.lower()}.py")
+                file_path = backbone_elements_folder.joinpath(
+                    f"{resource_name.lower()}.py"
+                )
                 print(
-                    f"Writing simple_types_folder: {resource_name.lower()} to {file_path}..."
+                    f"Writing backbone_elements_folder: {resource_name.lower()} to {file_path}..."
                 )
                 with open(file_path, "w") as file2:
                     file2.write(result)

@@ -158,3 +158,8 @@ dmypy.json
 # .DS_Store
 **/.DS_Store
 /.idea/
+
+# temporary until we get this working
+/spark_auto_mapper_fhir/generator/backbone_elements/
+/spark_auto_mapper_fhir/generator/complex_types/
+/spark_auto_mapper_fhir/generator/resources/

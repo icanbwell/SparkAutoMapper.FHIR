@@ -39,7 +39,7 @@ class FhirXmlSchemaParser:
         ]
         complex_type: OrderedDict[str, Any]
         for complex_type in complex_types:
-            complex_type_name: str = complex_type["@name"]
+            complex_type_name: str = complex_type["@name"].replace(".", "")
             print(f"========== {complex_type_name} ===========")
             documentation_items: List[OrderedDict[str, Any]] = complex_type[
                 "xs:annotation"
@@ -100,9 +100,11 @@ class FhirXmlSchemaParser:
                         "boolean": "FhirBoolean",
                         "date": "FhirDate",
                         "dateTime": "FhirDateTime",
+                        "integer": "FhirInteger",
                     }
                     if cleaned_type in cleaned_type_mapping.keys():
                         cleaned_type = cleaned_type_mapping[cleaned_type]
+                    cleaned_type = cleaned_type.replace(".", "")
                     print(
                         f"{property_name}:"
                         f"{'Optional[' if optional else ''}"
