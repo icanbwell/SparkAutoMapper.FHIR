@@ -7,15 +7,19 @@ from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.{{ fhir_entity.name.lower() }} import {{ fhir_entity.name }}Schema
 
 if TYPE_CHECKING:
 {% for property in fhir_entity.properties %}
-    from spark_auto_mapper_fhir.resources.{{ property.type_.lower() }} import {{ property.type_ }}
-    from spark_auto_mapper_fhir.complex_types.{{ property.type_.lower() }} import {{ property.type_ }}
-    from spark_auto_mapper_fhir.valuesets.{{ property.type_.lower() }} import {{ property.type_ }}
-    from spark_auto_mapper_fhir.generator.backbone_elements.{{ property.type_.lower() }} import {{ property.type_ }}
+    from spark_auto_mapper_fhir.resources.{{ property.type_snake_case }} import {{ property.type_ }}
+    from spark_auto_mapper_fhir.complex_types.{{ property.type_snake_case }} import {{ property.type_ }}
+    from spark_auto_mapper_fhir.valuesets.{{ property.type_snake_case }} import {{ property.type_ }}
+    from spark_auto_mapper_fhir.generator.backbone_elements.{{ property.type_snake_case }} import {{ property.type_ }}
 
 {% endfor %}
 
@@ -31,6 +35,9 @@ class {{fhir_entity.name}}(FhirResourceBase):
     def __init__(
         self,
         *,
+        id_: FhirId,
+        meta: Optional[Meta] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
     {% for property in fhir_entity.properties %}
         {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.type_ }}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
 
@@ -40,9 +47,19 @@ class {{fhir_entity.name}}(FhirResourceBase):
     {% for documentation_item in fhir_entity.documentation %}
         {{ documentation_item }}
     {%  endfor %}
+
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+    {% for property in fhir_entity.properties %}
+        :param {{ property.name }}: {{ property.documentation[0] }}
+    {% endfor %}
         """
         super().__init__(
             resourceType="Patient",
+            id_=id_,
+            meta=meta,
+            extension=extension,
         {% for property in fhir_entity.properties %}
             {{ property.name }}={{ property.name }},
         {% endfor %}

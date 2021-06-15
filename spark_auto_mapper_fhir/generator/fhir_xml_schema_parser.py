@@ -1,7 +1,7 @@
 import dataclasses
 from pathlib import Path
 from typing import OrderedDict, Any, List, Union, Dict, Optional
-
+import re
 from xmltodict import parse
 
 
@@ -9,6 +9,7 @@ from xmltodict import parse
 class FhirProperty:
     name: str
     type_: str
+    type_snake_case: str
     optional: bool
     is_list: bool
     documentation: List[str]
@@ -17,12 +18,18 @@ class FhirProperty:
 @dataclasses.dataclass
 class FhirEntity:
     name: str
+    name_snake_case: str
     properties: List[FhirProperty]
     documentation: List[str]
     type_: str
 
 
 class FhirXmlSchemaParser:
+    @staticmethod
+    def camel_to_snake(name: str) -> str:
+        name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", name)
+        return re.sub("([a-z0-9])([A-Z])", r"\1_\2", name).lower()
+
     @staticmethod
     def generate_classes() -> List[FhirEntity]:
         data_dir: Path = Path(__file__).parent.joinpath("./")
@@ -40,6 +47,9 @@ class FhirXmlSchemaParser:
         complex_type: OrderedDict[str, Any]
         for complex_type in complex_types:
             complex_type_name: str = complex_type["@name"].replace(".", "")
+            complex_type_name_snake_case: str = FhirXmlSchemaParser.camel_to_snake(
+                complex_type_name
+            )
             print(f"========== {complex_type_name} ===========")
             documentation_items: List[OrderedDict[str, Any]] = complex_type[
                 "xs:annotation"
@@ -117,6 +127,9 @@ class FhirXmlSchemaParser:
                         FhirProperty(
                             name=property_name,
                             type_=cleaned_type,
+                            type_snake_case=FhirXmlSchemaParser.camel_to_snake(
+                                cleaned_type
+                            ),
                             optional=optional,
                             is_list=is_list,
                             documentation=[property_documentation],
@@ -124,6 +137,7 @@ class FhirXmlSchemaParser:
                     )
                 fhir_entity: FhirEntity = FhirEntity(
                     name=complex_type_name,
+                    name_snake_case=complex_type_name_snake_case,
                     type_=inner_complex_type_type,
                     documentation=documentation_entries,
                     properties=fhir_properties,
