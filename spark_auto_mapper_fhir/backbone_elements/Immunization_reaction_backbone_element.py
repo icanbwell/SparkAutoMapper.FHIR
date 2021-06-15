@@ -1,13 +1,17 @@
-from typing import Optional
+from __future__ import annotations
+from typing import Optional, TYPE_CHECKING
 
-from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.backbone_elements.fhir_backbone_element_base import (
     FhirBackboneElementBase,
 )
-from spark_auto_mapper_fhir.resources.observation import Observation
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+    from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+    from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
+    from spark_auto_mapper_fhir.resources.observation import Observation
 
 
 class ImmunizationReactionBackboneElement(FhirBackboneElementBase):

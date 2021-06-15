@@ -1,64 +1,75 @@
-from typing import Optional, Union
+from __future__ import annotations
+from typing import Optional, Union, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
-from spark_fhir_schemas.r4.resources.immunization import ImmunizationSchema
 
-from spark_auto_mapper_fhir.backbone_elements.Immunization_reaction_backbone_element import (
-    ImmunizationReactionBackboneElement,
-)
-from spark_auto_mapper_fhir.backbone_elements.immunization_education_backbone_element import (
-    ImmunizationEducationBackboneElement,
-)
-from spark_auto_mapper_fhir.backbone_elements.immunization_performer_backbone_element import (
-    ImmunizationPerformerBackboneElement,
-)
-from spark_auto_mapper_fhir.backbone_elements.immunization_protocolApplied_backbone_element import (
-    ImmunizationProtocolAppliedBackboneElement,
-)
-from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.resources.condition import Condition
-from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
-from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
-from spark_auto_mapper_fhir.extensions.extension import Extension
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.resources.location import Location
-from spark_auto_mapper_fhir.resources.observation import Observation
-from spark_auto_mapper_fhir.resources.organization import Organization
-from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.valuesets.immunization_funding_source import (
-    ImmunizationFundingSourceCode,
-)
-from spark_auto_mapper_fhir.valuesets.immunization_origin import ImmunizationOriginCode
-from spark_auto_mapper_fhir.valuesets.immunization_program_elegibility import (
-    ImmunizationProgramElegibilityCode,
-)
-from spark_auto_mapper_fhir.valuesets.immunization_reason_code import (
-    ImmunizationReasonCode,
-)
-from spark_auto_mapper_fhir.valuesets.immunization_route import ImmunizationRouteCode
-from spark_auto_mapper_fhir.valuesets.immunization_site import ImmunizationSiteCode
-from spark_auto_mapper_fhir.valuesets.immunization_status import ImmunizationStatusCode
-from spark_auto_mapper_fhir.valuesets.immunization_status_reason import (
-    ImmunizationStatusReasonCode,
-)
-from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-from spark_auto_mapper_fhir.valuesets.immunization_subpotent_reason import (
-    ImmunizationSubpotentReasonCode,
-)
-from spark_auto_mapper_fhir.valuesets.vaccine_code import VaccineCode
+
+if TYPE_CHECKING:
+    from spark_fhir_schemas.r4.resources.immunization import ImmunizationSchema
+
+    from spark_auto_mapper_fhir.backbone_elements.Immunization_reaction_backbone_element import (
+        ImmunizationReactionBackboneElement,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.immunization_education_backbone_element import (
+        ImmunizationEducationBackboneElement,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.immunization_performer_backbone_element import (
+        ImmunizationPerformerBackboneElement,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.immunization_protocolApplied_backbone_element import (
+        ImmunizationProtocolAppliedBackboneElement,
+    )
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+    from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    from spark_auto_mapper_fhir.complex_types.simple_quantity import SimpleQuantity
+    from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+    from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+    from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+    from spark_auto_mapper_fhir.fhir_types.id import FhirId
+    from spark_auto_mapper_fhir.fhir_types.list import FhirList
+    from spark_auto_mapper_fhir.fhir_types.string import FhirString
+    from spark_auto_mapper_fhir.resources.condition import Condition
+    from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
+    from spark_auto_mapper_fhir.resources.encounter import Encounter
+    from spark_auto_mapper_fhir.extensions.extension import Extension
+    from spark_auto_mapper_fhir.complex_types.meta import Meta
+    from spark_auto_mapper_fhir.resources.location import Location
+    from spark_auto_mapper_fhir.resources.observation import Observation
+    from spark_auto_mapper_fhir.resources.organization import Organization
+    from spark_auto_mapper_fhir.resources.patient import Patient
+    from spark_auto_mapper_fhir.valuesets.immunization_funding_source import (
+        ImmunizationFundingSourceCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.immunization_origin import (
+        ImmunizationOriginCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.immunization_program_elegibility import (
+        ImmunizationProgramElegibilityCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.immunization_reason_code import (
+        ImmunizationReasonCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.immunization_route import (
+        ImmunizationRouteCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.immunization_site import ImmunizationSiteCode
+    from spark_auto_mapper_fhir.valuesets.immunization_status import (
+        ImmunizationStatusCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.immunization_status_reason import (
+        ImmunizationStatusReasonCode,
+    )
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+    from spark_auto_mapper_fhir.valuesets.immunization_subpotent_reason import (
+        ImmunizationSubpotentReasonCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.vaccine_code import VaccineCode
 
 
 class Immunization(FhirResourceBase):
+    # noinspection PyPep8Naming
     def __init__(
         self,
         *,

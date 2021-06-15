@@ -1,73 +1,78 @@
+from __future__ import annotations
 from typing import Optional, Union, Any, TYPE_CHECKING
 
+# noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_fhir_schemas.r4.resources.servicerequest import ServiceRequestSchema
 
-from spark_auto_mapper_fhir.backbone_elements.timing_backbone_element import Timing
-from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.complex_types.period import Period
-from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-from spark_auto_mapper_fhir.complex_types.range import Range
-from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.uri import FhirCanonical, FhirUri
-from spark_auto_mapper_fhir.resources.care_plan import CarePlan
-from spark_auto_mapper_fhir.resources.care_team import CareTeam
-from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
+from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+
+if TYPE_CHECKING:
+    from spark_fhir_schemas.r4.resources.servicerequest import ServiceRequestSchema
+    from spark_auto_mapper_fhir.backbone_elements.timing_backbone_element import Timing
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+    from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+    from spark_auto_mapper_fhir.complex_types.meta import Meta
+    from spark_auto_mapper_fhir.complex_types.period import Period
+    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+    from spark_auto_mapper_fhir.complex_types.range import Range
+    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+    from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+    from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+    from spark_auto_mapper_fhir.fhir_types.id import FhirId
+    from spark_auto_mapper_fhir.fhir_types.list import FhirList
+    from spark_auto_mapper_fhir.fhir_types.string import FhirString
+    from spark_auto_mapper_fhir.fhir_types.uri import FhirCanonical, FhirUri
+    from spark_auto_mapper_fhir.resources.care_plan import CarePlan
+    from spark_auto_mapper_fhir.resources.care_team import CareTeam
+    from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.observation import Observation
-from spark_auto_mapper_fhir.resources.coverage import Coverage
-from spark_auto_mapper_fhir.resources.device import Device
+    from spark_auto_mapper_fhir.resources.coverage import Coverage
+    from spark_auto_mapper_fhir.resources.device import Device
 
-from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
+    from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.encounter import Encounter
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
-from spark_auto_mapper_fhir.resources.group import Group
-from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
-from spark_auto_mapper_fhir.resources.location import Location
-from spark_auto_mapper_fhir.resources.organization import Organization
-from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-from spark_auto_mapper_fhir.resources.specimen import Specimen
-from spark_auto_mapper_fhir.valuesets.body_site import SNOMEDCTBodyStructuresCode
-from spark_auto_mapper_fhir.valuesets.medication_as_needed_reason import (
-    MedicationAsNeededReasonCode,
-)
-from spark_auto_mapper_fhir.valuesets.participant_role import ParticipantRoleCode
-from spark_auto_mapper_fhir.valuesets.procedure_reason import ProcedureReasonCode
-from spark_auto_mapper_fhir.valuesets.request_intent import RequestIntentCode
-from spark_auto_mapper_fhir.valuesets.request_priority import RequestPriorityCode
-from spark_auto_mapper_fhir.valuesets.request_status import RequestStatusCode
-from spark_auto_mapper_fhir.valuesets.service_delivery_location_type import (
-    ServiceDeliveryLocationTypeCode,
-)
-from spark_auto_mapper_fhir.valuesets.service_request_category import (
-    ServiceRequestCategoryCode,
-)
-from spark_auto_mapper_fhir.valuesets.service_request_order_detail import (
-    ServiceRequestOrderDetailsCode,
-)
-from spark_auto_mapper_fhir.valuesets.snomed_procedure import SNOMEDCTProcedureCode
+    from spark_auto_mapper_fhir.resources.group import Group
+    from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
+    from spark_auto_mapper_fhir.resources.location import Location
+    from spark_auto_mapper_fhir.resources.organization import Organization
+    from spark_auto_mapper_fhir.resources.patient import Patient
+    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+    from spark_auto_mapper_fhir.resources.specimen import Specimen
+    from spark_auto_mapper_fhir.valuesets.body_site import SNOMEDCTBodyStructuresCode
+    from spark_auto_mapper_fhir.valuesets.medication_as_needed_reason import (
+        MedicationAsNeededReasonCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.participant_role import ParticipantRoleCode
+    from spark_auto_mapper_fhir.valuesets.procedure_reason import ProcedureReasonCode
+    from spark_auto_mapper_fhir.valuesets.request_intent import RequestIntentCode
+    from spark_auto_mapper_fhir.valuesets.request_priority import RequestPriorityCode
+    from spark_auto_mapper_fhir.valuesets.request_status import RequestStatusCode
+    from spark_auto_mapper_fhir.valuesets.service_delivery_location_type import (
+        ServiceDeliveryLocationTypeCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.service_request_category import (
+        ServiceRequestCategoryCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.service_request_order_detail import (
+        ServiceRequestOrderDetailsCode,
+    )
+    from spark_auto_mapper_fhir.valuesets.snomed_procedure import SNOMEDCTProcedureCode
 
 
 class ServiceRequest(FhirResourceBase):
+    # noinspection PyPep8Naming
     def __init__(
         self,
         id_: FhirId,
@@ -79,9 +84,9 @@ class ServiceRequest(FhirResourceBase):
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
         basedOn: Optional[
-            FhirList[Reference[Union[CarePlan, "ServiceRequest", "MedicationRequest"]]]
+            FhirList[Reference[Union[CarePlan, ServiceRequest, MedicationRequest]]]
         ] = None,
-        replaces: Optional[FhirList[Reference["ServiceRequest"]]] = None,
+        replaces: Optional[FhirList[Reference[ServiceRequest]]] = None,
         requisition: Optional[Identifier] = None,
         category: Optional[CodeableConcept[ServiceRequestCategoryCode]] = None,
         priority: Optional[RequestPriorityCode] = None,
@@ -93,7 +98,7 @@ class ServiceRequest(FhirResourceBase):
         quantityQuantity: Optional[Quantity] = None,
         quantityRatio: Optional[Ratio] = None,
         quantityRange: Optional[Range] = None,
-        encounter: Optional[Reference["Encounter"]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         occurrenceDateTime: Optional[FhirDateTime] = None,
         occurrencePeriod: Optional[Period] = None,
         occurrenceTiming: Optional[Timing] = None,
