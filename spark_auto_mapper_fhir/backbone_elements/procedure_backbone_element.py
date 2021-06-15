@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.resources.device import Device
@@ -29,7 +30,7 @@ class ProcedureBackboneElement(FhirBackboneElementBase):
         type_: Optional[FhirList[CodeableConcept[ExProcedureTypeCode]]] = None,
         date: Optional[FhirDate] = None,
         procedureCodeableConcept: Optional[CodeableConcept[Icd10ProcedureCode]] = None,
-        procedureReference: Optional[Reference["Procedure"]] = None,
+        procedureReference: Optional[Reference[Procedure]] = None,
         udi: Optional[FhirList[Device]] = None,
     ):
         """

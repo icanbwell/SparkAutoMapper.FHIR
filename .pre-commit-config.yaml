@@ -14,6 +14,13 @@ repos:
         entry: autoflake
         require_serial: true
         args: [ '--in-place', '--remove-all-unused-imports', '--ignore-init-module-imports']
+      - id: pycln
+        name: pycln
+        language: system
+        types: [ python ]
+        entry: pycln
+        require_serial: true
+        args: [ '--all']
       - id: flake8
         name: flake8
         language: system

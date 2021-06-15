@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional, Union, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
@@ -44,13 +45,13 @@ class CareTeam(FhirResourceBase):
         category: Optional[FhirList[CodeableConcept[CareTeamCategoryCode]]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
-        encounter: Optional[Reference["Encounter"]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         period: Optional[Period] = None,
-        participant: Optional[FhirList["CareTeamParticipantBackboneElement"]] = None,
+        participant: Optional[FhirList[CareTeamParticipantBackboneElement]] = None,
         reasonCode: Optional[
             FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode]]
         ] = None,
-        reasonReference: Optional[FhirList[Reference["Condition"]]] = None,
+        reasonReference: Optional[FhirList[Reference[Condition]]] = None,
         managingOrganization: Optional[FhirList[Reference[Organization]]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         note: Optional[FhirList[Annotation]] = None,

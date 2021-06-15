@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional
 
 from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item_answer_backbone_element import (
@@ -22,9 +23,9 @@ class QuestionnaireResponseItemBackboneElement(FhirBackboneElementBase):
         definition: Optional[FhirUri] = None,
         text: Optional[FhirString] = None,
         answer: Optional[
-            FhirList["QuestionnaireResponseItemAnswerBackboneElement"]
+            FhirList[QuestionnaireResponseItemAnswerBackboneElement]
         ] = None,
-        item: Optional[FhirList["QuestionnaireResponseItemBackboneElement"]] = None,
+        item: Optional[FhirList[QuestionnaireResponseItemBackboneElement]] = None,
     ) -> None:
         """
         QuestionnaireResponseItemBackboneElement Backbone Element in FHIR

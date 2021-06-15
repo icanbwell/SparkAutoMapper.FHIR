@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional, Union, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
@@ -67,39 +68,39 @@ class Claim(FhirResourceBase):
     # noinspection PyPep8Naming,SpellCheckingInspectionPatient
     def __init__(
         self,
-        status: "FinancialResourceStatusCode",
-        type_: "CodeableConcept[ClaimTypeCode]",
-        use: "ClaimUseCode",
-        patient: "Reference[Patient]",
-        created: "FhirDateTime",
-        provider: Reference[Union["Practitioner", "PractitionerRole", "Organization"]],
-        priority: "CodeableConcept[ProcessPriorityCode]",
-        insurance: FhirList["InsuranceBackboneElement"],
-        id_: "FhirId",
+        status: FinancialResourceStatusCode,
+        type_: CodeableConcept[ClaimTypeCode],
+        use: ClaimUseCode,
+        patient: Reference[Patient],
+        created: FhirDateTime,
+        provider: Reference[Union[Practitioner, PractitionerRole, Organization]],
+        priority: CodeableConcept[ProcessPriorityCode],
+        insurance: FhirList[InsuranceBackboneElement],
+        id_: FhirId,
         meta: Optional[Meta] = None,
-        identifier: Optional[FhirList["Identifier"]] = None,
-        subType: Optional[CodeableConcept["ClaimSubTypeCode"]] = None,
-        billablePeriod: Optional["Period"] = None,
-        enterer: Optional[Reference[Union["Practitioner", "PractitionerRole"]]] = None,
-        insurer: Optional[Reference["Organization"]] = None,
-        fundsReserve: Optional[CodeableConcept["FundsReservationCode"]] = None,
-        related: Optional[FhirList["RelatedClaimBackboneElement"]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        subType: Optional[CodeableConcept[ClaimSubTypeCode]] = None,
+        billablePeriod: Optional[Period] = None,
+        enterer: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
+        insurer: Optional[Reference[Organization]] = None,
+        fundsReserve: Optional[CodeableConcept[FundsReservationCode]] = None,
+        related: Optional[FhirList[RelatedClaimBackboneElement]] = None,
         prescription: Optional[
-            Reference[Union["DeviceRequest", "MedicationRequest", "VisionPrescription"]]
+            Reference[Union[DeviceRequest, MedicationRequest, VisionPrescription]]
         ] = None,
         originalPrescription: Optional[
-            Reference[Union["DeviceRequest", "MedicationRequest", "VisionPrescription"]]
+            Reference[Union[DeviceRequest, MedicationRequest, VisionPrescription]]
         ] = None,
-        payee: Optional["PayeeBackboneElement"] = None,
-        referral: Optional[Reference["ServiceRequest"]] = None,
-        facility: Optional[Reference["Location"]] = None,
-        careTeam: Optional[FhirList["CareTeamBackboneElement"]] = None,
-        supportingInfo: Optional[FhirList["SupportingInfoBackboneElement"]] = None,
-        diagnosis: Optional[FhirList["DiagnosisBackboneElement"]] = None,
-        procedure: Optional[FhirList["ProcedureBackboneElement"]] = None,
-        accident: Optional["AccidentBackboneElement"] = None,
-        item: Optional[FhirList["RevenueItemBackboneElement"]] = None,
-        total: Optional["Money"] = None,
+        payee: Optional[PayeeBackboneElement] = None,
+        referral: Optional[Reference[ServiceRequest]] = None,
+        facility: Optional[Reference[Location]] = None,
+        careTeam: Optional[FhirList[CareTeamBackboneElement]] = None,
+        supportingInfo: Optional[FhirList[SupportingInfoBackboneElement]] = None,
+        diagnosis: Optional[FhirList[DiagnosisBackboneElement]] = None,
+        procedure: Optional[FhirList[ProcedureBackboneElement]] = None,
+        accident: Optional[AccidentBackboneElement] = None,
+        item: Optional[FhirList[RevenueItemBackboneElement]] = None,
+        total: Optional[Money] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
     ):
         """

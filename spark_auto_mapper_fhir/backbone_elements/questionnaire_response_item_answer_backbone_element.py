@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional, Union
 
 from typing import TYPE_CHECKING
@@ -39,7 +40,7 @@ class QuestionnaireResponseItemAnswerBackboneElement(FhirBackboneElementBase):
                 FhirReference,
             ]
         ] = None,
-        item: Optional[FhirList["QuestionnaireResponseItemBackboneElement"]] = None,
+        item: Optional[FhirList[QuestionnaireResponseItemBackboneElement]] = None,
     ) -> None:
         """
         QuestionnaireResponseItemAnswerBackboneElement Backbone Element in FHIR

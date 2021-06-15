@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
@@ -43,7 +44,7 @@ class EpisodeOfCare(FhirResourceBase):
         ] = None,
         type_: Optional[FhirList[CodeableConcept[EpisodeOfCareTypeCode]]] = None,
         diagnosis: Optional[FhirList[DiagnosisRole]] = None,
-        patient: Reference["Patient"],
+        patient: Reference[Patient],
         managingOrganization: Optional[Reference[Organization]] = None,
         period: Optional[Period] = None,
         referralRequest: Optional[FhirList[Reference[ServiceRequest]]] = None,

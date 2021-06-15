@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional, Union, TYPE_CHECKING
 
 from pyspark.sql.types import StructType, DataType
@@ -71,7 +72,7 @@ class Condition(FhirResourceBase):
         bodySite: Optional[
             FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
         ] = None,
-        encounter: Optional[Reference["Encounter"]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         onsetDateTime: Optional[FhirDateTime] = None,
         onsetAge: Optional[FhirAge] = None,
         onsetPeriod: Optional[Period] = None,

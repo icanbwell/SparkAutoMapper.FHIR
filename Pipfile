@@ -27,6 +27,7 @@ sphinx-autoapi="==1.7.0"
 sphinx-rtd-theme="==0.5.1"
 xmlschema="*"
 jinja2="*"
+pycln="*"
 
 [requires]
 python_version = "3.7"
