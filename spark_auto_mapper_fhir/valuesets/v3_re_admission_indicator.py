@@ -9,43 +9,42 @@ from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
 
 # noinspection PyMethodParameters
 # noinspection PyPep8Naming
-class ${ClassName}Code(FhirValueSetBase):
+class V3ReAdmissionIndicatorCode(FhirValueSetBase):
     """
     IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR
                 properties not just the ones you need
-    $Documentation
+    https://hl7.org/FHIR/v2/0092/index.html
     """
-    def __init__(self, *, value: AutoMapperTextInputType):
+
+    def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     # noinspection PyPep8Naming,SpellCheckingInspection
     class classproperty(object):
-        def __init__(self, f: Callable[..., '${ClassName}Code']) -> None:
-            self.f: Callable[..., '${ClassName}Code'] = f
+        def __init__(self, f: Callable[..., "V3ReAdmissionIndicatorCode"]) -> None:
+            self.f: Callable[..., "V3ReAdmissionIndicatorCode"] = f
 
-        def __get__(self, obj: Any, 
-                    owner: Type['${ClassName}Code']
-                    ) -> '${ClassName}Code':
+        def __get__(
+            self, obj: Any, owner: Type["V3ReAdmissionIndicatorCode"]
+        ) -> "V3ReAdmissionIndicatorCode":
             return self.f(owner)
 
     @classproperty
-    def NameOfYourFirstValue(cls) -> '${ClassName}Code':
+    def NameOfYourFirstValue(cls) -> "V3ReAdmissionIndicatorCode":
         """
         Comment
         """
         # noinspection PyCallingNonCallable
-        return ${ClassName}Code(value="A")
+        return V3ReAdmissionIndicatorCode("A")
 
     @genericclassproperty
     def codeset(cls) -> FhirUri:
         """
-        $SystemUri
+        http://terminology.hl7.org/ValueSet/v2-0092
         """
-        return "$SystemUri"
+        return "http://terminology.hl7.org/ValueSet/v2-0092"
 
     @genericclassproperty
     def oid(cls) -> FhirUri:
-        """
-        $OID
-        """
-        return "$OID"
+        """ """
+        return ""

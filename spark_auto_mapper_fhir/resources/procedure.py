@@ -34,7 +34,9 @@ from spark_auto_mapper_fhir.resources.device import Device
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
 from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
-from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.resources.encounter import Encounter
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 from spark_auto_mapper_fhir.resources.group import Group
 from spark_auto_mapper_fhir.resources.location import Location
@@ -85,7 +87,7 @@ class Procedure(FhirResourceBase):
         performedString: Optional[FhirString] = None,
         performedAge: Optional[FhirAge] = None,
         performedRange: Optional[Range] = None,
-        encounter: Optional[Encounter] = None,
+        encounter: Optional["Encounter"] = None,
         recorder: Optional[
             Reference[Union[Patient, RelatedPerson, Practitioner, PractitionerRole]]
         ] = None,
