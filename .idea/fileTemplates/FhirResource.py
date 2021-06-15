@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional, Union
 from pyspark.sql.types import StructType, DataType
 

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Optional
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
