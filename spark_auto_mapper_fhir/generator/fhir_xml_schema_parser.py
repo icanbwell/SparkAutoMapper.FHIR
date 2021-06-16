@@ -30,6 +30,7 @@ class FhirProperty:
     fhir_type: Optional[str]
     reference_target_resources: List[SmartName]
     reference_target_resources_names: List[str]
+    is_back_bone_element: bool
 
 
 @dataclasses.dataclass
@@ -40,6 +41,7 @@ class FhirEntity:
     properties: List[FhirProperty]
     documentation: List[str]
     type_: Optional[str]
+    is_back_bone_element: bool
 
 
 class FhirXmlSchemaParser:
@@ -49,7 +51,7 @@ class FhirXmlSchemaParser:
         return re.sub("([a-z0-9])([A-Z])", r"\1_\2", name).lower()
 
     @staticmethod
-    def generate_classes() -> List[FhirEntity]:
+    def generate_classes(filter_to_resource: Optional[str] = None) -> List[FhirEntity]:
         data_dir: Path = Path(__file__).parent.joinpath("./")
         # schema = XMLSchema(str(resource_xsd_file))
         # pprint(schema.to_dict)
@@ -66,9 +68,17 @@ class FhirXmlSchemaParser:
             for resource_item in result["xs:schema"]["xs:include"]:
                 resources.append(resource_item["@schemaLocation"])
 
-        resource: str
-        for resource in resources:
-            resource_xsd_file: Path = data_dir.joinpath("xsd").joinpath(resource)
+        resource_xsd_file_name: str
+        for resource_xsd_file_name in resources:
+            if (
+                filter_to_resource
+                and not resource_xsd_file_name.startswith(filter_to_resource)
+                and not resource_xsd_file_name == "fhir-base.xsd"
+            ):
+                continue
+            resource_xsd_file: Path = data_dir.joinpath("xsd").joinpath(
+                resource_xsd_file_name
+            )
             fhir_entities.extend(
                 FhirXmlSchemaParser._generate_classes_for_resource(resource_xsd_file)
             )
@@ -91,24 +101,25 @@ class FhirXmlSchemaParser:
                 print(f"---- {fhir_property.name}: {fhir_property.type_} ----")
                 if fhir_property.type_ not in property_type_mapping.keys():
                     print("foo")
-                fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
-                references_for_property = [
-                    c
-                    for c in references
-                    if c.parent_entity_name == fhir_entity.fhir_name
-                    and c.property_name == fhir_property.name
-                ]
-                if references_for_property:
-                    fhir_property.reference_target_resources = [
-                        SmartName(
-                            name=c,
-                            snake_case_name=FhirXmlSchemaParser.camel_to_snake(c),
-                        )
-                        for c in references_for_property[0].target_resources
+                else:
+                    fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
+                    references_for_property = [
+                        c
+                        for c in references
+                        if c.parent_entity_name == fhir_entity.fhir_name
+                        and c.property_name == fhir_property.name
                     ]
-                    fhir_property.reference_target_resources_names = [
-                        c.name for c in fhir_property.reference_target_resources
-                    ]
+                    if references_for_property:
+                        fhir_property.reference_target_resources = [
+                            SmartName(
+                                name=c,
+                                snake_case_name=FhirXmlSchemaParser.camel_to_snake(c),
+                            )
+                            for c in references_for_property[0].target_resources
+                        ]
+                        fhir_property.reference_target_resources_names = [
+                            c.name for c in fhir_property.reference_target_resources
+                        ]
 
         return fhir_entities
 
@@ -186,6 +197,7 @@ class FhirXmlSchemaParser:
                 type_=entity_type,
                 documentation=documentation_entries,
                 properties=fhir_properties,
+                is_back_bone_element="." in entity_type if entity_type else False,
             )
             fhir_entities.append(fhir_entity)
         return fhir_entities
@@ -257,6 +269,7 @@ class FhirXmlSchemaParser:
                         fhir_type=None,
                         reference_target_resources=[],
                         reference_target_resources_names=[],
+                        is_back_bone_element="." in property_type,
                     )
                 )
         return fhir_properties

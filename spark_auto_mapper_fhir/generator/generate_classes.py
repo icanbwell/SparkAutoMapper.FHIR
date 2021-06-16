@@ -77,8 +77,10 @@ def main() -> int:
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
-        elif fhir_entity.type_ == "BackboneElement":
-            with open(data_dir.joinpath("template.complex_type.jinja2"), "r") as file:
+        elif fhir_entity.type_ == "BackboneElement" or fhir_entity.is_back_bone_element:
+            with open(
+                data_dir.joinpath("template.backbone_element.jinja2"), "r"
+            ) as file:
                 template_contents = file.read()
                 from jinja2 import Template
 
