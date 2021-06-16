@@ -6,8 +6,9 @@ from pyspark.sql.types import StructType, DataType
 
 from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
 
+from spark_fhir_schemas.r4.resources.servicerequest import ServiceRequestSchema
+
 if TYPE_CHECKING:
-    from spark_fhir_schemas.r4.resources.servicerequest import ServiceRequestSchema
     from spark_auto_mapper_fhir.backbone_elements.timing_backbone_element import Timing
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
@@ -171,7 +172,8 @@ class ServiceRequest(FhirResourceBase):
 
         :param id_: id of resource
         :param status: draft | active | on-hold | revoked | completed | entered-in-error | unknown
-        :param intent: proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option
+        :param intent: proposal | plan | directive | order | original-order | reflex-order | filler-order
+                                | instance-order | option
         :param subject: Individual or Entity the service is ordered for
         :param identifier: Identifiers assigned to this order
         :param instantiatesCanonical: Instantiates FHIR protocol or definition
