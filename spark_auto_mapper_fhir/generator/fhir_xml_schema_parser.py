@@ -6,6 +6,12 @@ from xmltodict import parse
 
 
 @dataclasses.dataclass
+class SmartName:
+    name: str
+    snake_case_name: str
+
+
+@dataclasses.dataclass
 class FhirReferenceType:
     parent_entity_name: str
     property_name: str
@@ -22,7 +28,8 @@ class FhirProperty:
     is_list: bool
     documentation: List[str]
     fhir_type: Optional[str]
-    reference_target_resources: List[str]
+    reference_target_resources: List[SmartName]
+    reference_target_resources_names: List[str]
 
 
 @dataclasses.dataclass
@@ -92,9 +99,16 @@ class FhirXmlSchemaParser:
                     and c.property_name == fhir_property.name
                 ]
                 if references_for_property:
-                    fhir_property.reference_target_resources = references_for_property[
-                        0
-                    ].target_resources
+                    fhir_property.reference_target_resources = [
+                        SmartName(
+                            name=c,
+                            snake_case_name=FhirXmlSchemaParser.camel_to_snake(c),
+                        )
+                        for c in references_for_property[0].target_resources
+                    ]
+                    fhir_property.reference_target_resources_names = [
+                        c.name for c in fhir_property.reference_target_resources
+                    ]
 
         return fhir_entities
 
@@ -242,6 +256,7 @@ class FhirXmlSchemaParser:
                         documentation=[property_documentation],
                         fhir_type=None,
                         reference_target_resources=[],
+                        reference_target_resources_names=[],
                     )
                 )
         return fhir_properties

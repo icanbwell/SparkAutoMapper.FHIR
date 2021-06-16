@@ -27,9 +27,12 @@ if TYPE_CHECKING:
 {#    from spark_auto_mapper_fhir.valuesets.{{ property.type_snake_case }} import {{ property.type_ }}#}
 {#    from spark_auto_mapper_fhir.fhir_types.{{ property.type_snake_case }} import {{ property.type_ }}#}
     {% endif %}
-    {% for reference_target_resource in property.reference_target_resources %}
-    from spark_auto_mapper_fhir.generator.resources.{{ reference_target_resource }} import {{ reference_target_resource | replace(".","") }}
-    {% endfor %}
+    {% if property.reference_target_resources %}
+    # Imports for References
+        {% for reference_target_resource in property.reference_target_resources %}
+    from spark_auto_mapper_fhir.generator.resources.{{ reference_target_resource.snake_case_name }} import {{ reference_target_resource.name | replace(".","") }}
+        {% endfor %}
+    {% endif %}
 {% endfor %}
 
 
@@ -49,7 +52,7 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
     {% for property in fhir_entity.properties %}
-        {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.type_ | replace(".","")}}{% if property.reference_target_resources %}[Union[{{ property.reference_target_resources | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
+        {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.type_ | replace(".","")}}{% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
 
     {% endfor %}
     ) -> None:
