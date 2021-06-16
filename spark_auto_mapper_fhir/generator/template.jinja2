@@ -19,6 +19,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.{{ property.type_snake_case }} import {{ property.type_ }}
     from spark_auto_mapper_fhir.complex_types.{{ property.type_snake_case }} import {{ property.type_ }}
     from spark_auto_mapper_fhir.valuesets.{{ property.type_snake_case }} import {{ property.type_ }}
+    from spark_auto_mapper_fhir.fhir_types.{{ property.type_snake_case }} import {{ property.type_ }}
     from spark_auto_mapper_fhir.generator.backbone_elements.{{ property.type_snake_case }} import {{ property.type_ }}
 
 {% endfor %}

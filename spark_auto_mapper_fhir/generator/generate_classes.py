@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 import shutil
-
+from os import path
 
 from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchemaParser
 
@@ -53,8 +53,16 @@ def main() -> int:
                 file_path = resources_folder.joinpath(f"{resource_name.lower()}.py")
                 print(f"Writing resource: {resource_name.lower()} to {file_path}...")
                 # print(result)
-                with open(file_path, "w") as file2:
-                    file2.write(result)
+                if not path.exists(file_path):
+                    with open(file_path, "w") as file2:
+                        file2.write(result)
+            elif fhir_entity.type_ == "Resource":
+                file_path = resources_folder.joinpath(f"{resource_name.lower()}.py")
+                print(f"Writing resource: {resource_name.lower()} to {file_path}...")
+                # print(result)
+                if not path.exists(file_path):
+                    with open(file_path, "w") as file2:
+                        file2.write(result)
             elif fhir_entity.type_ == "BackboneElement":
                 file_path = backbone_elements_folder.joinpath(
                     f"{resource_name.lower()}.py"
@@ -62,15 +70,17 @@ def main() -> int:
                 print(
                     f"Writing backbone_elements_folder: {resource_name.lower()} to {file_path}..."
                 )
-                with open(file_path, "w") as file2:
-                    file2.write(result)
+                if not path.exists(file_path):
+                    with open(file_path, "w") as file2:
+                        file2.write(result)
             elif fhir_entity.type_ == "Element":  # valueset
                 file_path = complex_types_folder.joinpath(f"{resource_name.lower()}.py")
                 print(
                     f"Writing complex_type: {resource_name.lower()} to {file_path}..."
                 )
-                with open(file_path, "w") as file2:
-                    file2.write(result)
+                if not path.exists(file_path):
+                    with open(file_path, "w") as file2:
+                        file2.write(result)
             else:
                 assert False, f"{resource_name}: {fhir_entity.type_} is not supported"
             # print(result)
