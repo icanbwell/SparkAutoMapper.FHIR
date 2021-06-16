@@ -6,6 +6,13 @@ from xmltodict import parse
 
 
 @dataclasses.dataclass
+class FhirReferenceType:
+    parent_entity_name: str
+    property_name: str
+    target_resources: List[str]
+
+
+@dataclasses.dataclass
 class FhirProperty:
     name: str
     type_: str
@@ -15,6 +22,7 @@ class FhirProperty:
     is_list: bool
     documentation: List[str]
     fhir_type: Optional[str]
+    reference_target_resources: List[str]
 
 
 @dataclasses.dataclass
@@ -64,6 +72,12 @@ class FhirXmlSchemaParser:
             for fhir_entity in fhir_entities
             if fhir_entity.type_
         }
+
+        # and the target resources for references
+        references: List[
+            FhirReferenceType
+        ] = FhirXmlSchemaParser.get_types_for_references()
+
         for fhir_entity in fhir_entities:
             print(f"2nd pass: checking {fhir_entity.fhir_name}")
             for fhir_property in fhir_entity.properties:
@@ -71,6 +85,16 @@ class FhirXmlSchemaParser:
                 if fhir_property.type_ not in property_type_mapping.keys():
                     print("foo")
                 fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
+                references_for_property = [
+                    c
+                    for c in references
+                    if c.parent_entity_name == fhir_entity.fhir_name
+                    and c.property_name == fhir_property.name
+                ]
+                if references_for_property:
+                    fhir_property.reference_target_resources = references_for_property[
+                        0
+                    ].target_resources
 
         return fhir_entities
 
@@ -217,6 +241,61 @@ class FhirXmlSchemaParser:
                         is_list=is_list,
                         documentation=[property_documentation],
                         fhir_type=None,
+                        reference_target_resources=[],
                     )
                 )
         return fhir_properties
+
+    @staticmethod
+    def get_types_for_references() -> List[FhirReferenceType]:
+        data_dir: Path = Path(__file__).parent.joinpath("./")
+
+        # first read fhir-all.xsd to get a list of resources
+        de_xml_file: Path = data_dir.joinpath("xsd").joinpath("dataelements.xml")
+
+        with open(de_xml_file, "r") as file:
+            contents = file.read()
+            result: OrderedDict[str, Any] = parse(contents)
+            entries: List[OrderedDict[str, Any]] = result["Bundle"]["entry"]
+
+            fhir_references: List[FhirReferenceType] = []
+            entry: OrderedDict[str, Any]
+            for entry in entries:
+                structure_definition: OrderedDict[str, Any] = entry["resource"][
+                    "StructureDefinition"
+                ]
+                name: str = structure_definition["name"]["@value"]
+                snapshot_element: OrderedDict[str, Any] = structure_definition[
+                    "snapshot"
+                ]["element"]
+                types: List[OrderedDict[str, Any]] = snapshot_element["type"]
+                if isinstance(types, OrderedDict):
+                    types = [types]
+                type_: OrderedDict[str, Any]
+                for type_ in types:
+                    type_code_obj = type_["code"]
+                    type_code: str = type_code_obj["@value"]
+                    if type_code.endswith("Reference"):
+                        if "targetProfile" not in type_:
+                            print("foo")
+                        if "targetProfile" in type_:
+                            target_profile_list: List[OrderedDict[str, Any]] = type_[
+                                "targetProfile"
+                            ]
+                            if isinstance(target_profile_list, OrderedDict):
+                                target_profile_list = [target_profile_list]
+                            target_profiles: List[str] = [
+                                c["@value"] for c in target_profile_list
+                            ]
+                            target_resources: List[str] = [
+                                c.split("/")[-1] for c in target_profiles
+                            ]
+                            print("foo")
+                            fhir_reference: FhirReferenceType = FhirReferenceType(
+                                parent_entity_name=name.split(".")[0],
+                                property_name=name.split(".")[1],
+                                target_resources=target_resources,
+                            )
+                            fhir_references.append(fhir_reference)
+                print(entry)
+            return fhir_references
