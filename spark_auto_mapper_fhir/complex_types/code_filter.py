@@ -19,7 +19,7 @@ class CodeFilter(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: Optional[FhirString] = None,
-        search_param: Optional[FhirString] = None,
+        searchParam: Optional[FhirString] = None,
         valueSet: Optional[FhirCanonical] = None,
         code: Optional[FhirList[Coding[FhirValueSetBase]]] = None,
     ) -> None:
@@ -30,7 +30,7 @@ class CodeFilter(FhirComplexTypeBase):
         + Rule: Either a path or a searchParam must be provided, but not both
 
         :param path: A code-valued attribute to filter on
-        :param search_param: A coded (token) parameter to search on
+        :param searchParam: A coded (token) parameter to search on
         :param valueSet: Valueset for the filter
         :param code: What code is expected
         """
@@ -38,7 +38,7 @@ class CodeFilter(FhirComplexTypeBase):
             id_=id_,
             extension=extension,
             path=path,
-            search_param=search_param,
+            searchParam=searchParam,
             valueSet=valueSet,
             code=code,
         )
