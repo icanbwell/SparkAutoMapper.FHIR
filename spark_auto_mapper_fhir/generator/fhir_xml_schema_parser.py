@@ -9,19 +9,22 @@ from xmltodict import parse
 class FhirProperty:
     name: str
     type_: str
+    cleaned_type: str
     type_snake_case: str
     optional: bool
     is_list: bool
     documentation: List[str]
+    fhir_type: Optional[str]
 
 
 @dataclasses.dataclass
 class FhirEntity:
-    name: str
+    fhir_name: str
+    cleaned_name: str
     name_snake_case: str
     properties: List[FhirProperty]
     documentation: List[str]
-    type_: str
+    type_: Optional[str]
 
 
 class FhirXmlSchemaParser:
@@ -39,10 +42,11 @@ class FhirXmlSchemaParser:
 
         # first read fhir-all.xsd to get a list of resources
         fhir_xsd_all_file: Path = data_dir.joinpath("xsd").joinpath("fhir-all.xsd")
+        resources: List[str] = ["fhir-base.xsd"]
+
         with open(fhir_xsd_all_file, "r") as file:
             contents = file.read()
             result: OrderedDict[str, Any] = parse(contents)
-            resources: List[str] = []
             resource_item: OrderedDict[str, Any]
             for resource_item in result["xs:schema"]["xs:include"]:
                 resources.append(resource_item["@schemaLocation"])
@@ -54,12 +58,26 @@ class FhirXmlSchemaParser:
                 FhirXmlSchemaParser._generate_classes_for_resource(resource_xsd_file)
             )
 
+        # now set the types in each property
+        property_type_mapping: Dict[str, str] = {
+            fhir_entity.fhir_name: fhir_entity.type_
+            for fhir_entity in fhir_entities
+            if fhir_entity.type_
+        }
+        for fhir_entity in fhir_entities:
+            print(f"2nd pass: checking {fhir_entity.fhir_name}")
+            for fhir_property in fhir_entity.properties:
+                print(f"---- {fhir_property.name}: {fhir_property.type_} ----")
+                if fhir_property.type_ not in property_type_mapping.keys():
+                    print("foo")
+                fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
+
         return fhir_entities
 
     @staticmethod
-    def _generate_classes_for_resource(patient_xsd_file: Path) -> List[FhirEntity]:
-        print(f"++++++ PROCESSING FILE {patient_xsd_file.name} +++++++++ ")
-        with open(patient_xsd_file, "r") as file:
+    def _generate_classes_for_resource(resource_xsd_file: Path) -> List[FhirEntity]:
+        print(f"++++++ PROCESSING FILE {resource_xsd_file.name} +++++++++ ")
+        with open(resource_xsd_file, "r") as file:
             contents = file.read()
             result = parse(contents)
             # pprint(result)
@@ -75,14 +93,17 @@ class FhirXmlSchemaParser:
             if not isinstance(complex_type, OrderedDict):
                 print("foo")
             assert isinstance(complex_type, OrderedDict), type(complex_type)
-            complex_type_name: str = complex_type["@name"].replace(".", "")
+            complex_type_name: str = complex_type["@name"]
+            cleaned_complex_type_name: str = complex_type_name.replace(".", "")
             complex_type_name_snake_case: str = FhirXmlSchemaParser.camel_to_snake(
-                complex_type_name
+                cleaned_complex_type_name
             )
             print(f"========== {complex_type_name} ===========")
-            documentation_items: List[OrderedDict[str, Any]] = complex_type[
-                "xs:annotation"
-            ]["xs:documentation"]
+            documentation_items: List[OrderedDict[str, Any]] = (
+                complex_type["xs:annotation"]["xs:documentation"]
+                if "x:annotation" in complex_type
+                else []
+            )
             if isinstance(documentation_items, OrderedDict):
                 documentation_items = [documentation_items]
             documentation_item_dict: Union[OrderedDict[str, Any], str]
@@ -105,74 +126,97 @@ class FhirXmlSchemaParser:
                 if complex_type.get("xs:complexContent")
                 else None
             )
+            entity_type: Optional[str] = None
             if inner_complex_type:
-                inner_complex_type_type: str = str(inner_complex_type.get("@base"))
-                print(f"type={inner_complex_type_type}")
-                properties: List[OrderedDict[str, Any]] = (
-                    inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
-                    if inner_complex_type.get("xs:sequence")
-                    else []
+                entity_type = str(inner_complex_type.get("@base"))
+                print(f"type={entity_type}")
+                fhir_properties = FhirXmlSchemaParser.generate_properties_for_class(
+                    inner_complex_type
                 )
-                if isinstance(properties, OrderedDict):
-                    properties = [properties]
-                fhir_properties: List[FhirProperty] = []
-                property_: OrderedDict[str, Any]
-                for property_ in properties:
-                    property_name: str = str(property_.get("@name"))
-                    min_occurs: str = str(property_.get("@minOccurs"))
-                    max_occurs: str = str(property_.get("@maxOccurs"))
-                    type_: str = str(property_.get("@type"))
-                    property_documentation_dict: Optional[OrderedDict[str, Any]] = (
-                        property_.get("xs:annotation").get("xs:documentation")  # type: ignore
-                        if property_.get("xs:annotation")
-                        else None
-                    )
-                    property_documentation: str = str(
-                        property_documentation_dict.get("#text")
-                        if property_documentation_dict
-                        else None
-                    )
-                    print(
-                        f"{property_name}: {type_} [{min_occurs}..{max_occurs}] // {property_documentation}"
-                    )
-                    optional: bool = min_occurs == "0"
-                    is_list: bool = max_occurs == "unbounded"
-                    cleaned_type: str = type_
-                    cleaned_type_mapping: Dict[str, str] = {
-                        "boolean": "FhirBoolean",
-                        "date": "FhirDate",
-                        "dateTime": "FhirDateTime",
-                        "integer": "FhirInteger",
-                    }
-                    if cleaned_type in cleaned_type_mapping.keys():
-                        cleaned_type = cleaned_type_mapping[cleaned_type]
-                    cleaned_type = cleaned_type.replace(".", "")
-                    print(
-                        f"{property_name}:"
-                        f"{'Optional[' if optional else ''}"
-                        f"{'FhirList[' if is_list else ''}"
-                        f"{cleaned_type}"
-                        f"{']' if is_list else ''}"
-                        f"{'] = None,' if optional else ','}"
-                    )
-                    fhir_properties.append(
-                        FhirProperty(
-                            name=property_name,
-                            type_=cleaned_type,
-                            type_snake_case=FhirXmlSchemaParser.camel_to_snake(
-                                cleaned_type
-                            ),
-                            optional=optional,
-                            is_list=is_list,
-                            documentation=[property_documentation],
-                        )
-                    )
-                fhir_entity: FhirEntity = FhirEntity(
-                    name=complex_type_name,
-                    name_snake_case=complex_type_name_snake_case,
-                    type_=inner_complex_type_type,
-                    documentation=documentation_entries,
-                    properties=fhir_properties,
+            elif "xs:sequence" in complex_type:
+                entity_type = "Element"
+                fhir_properties = FhirXmlSchemaParser.generate_properties_for_class(
+                    complex_type
                 )
-                fhir_entities.append(fhir_entity)
+            else:
+                fhir_properties = []
+            # now create the entity
+            fhir_entity: FhirEntity = FhirEntity(
+                fhir_name=complex_type_name,
+                cleaned_name=cleaned_complex_type_name,
+                name_snake_case=complex_type_name_snake_case,
+                type_=entity_type,
+                documentation=documentation_entries,
+                properties=fhir_properties,
+            )
+            fhir_entities.append(fhir_entity)
         return fhir_entities
+
+    @staticmethod
+    def generate_properties_for_class(
+        inner_complex_type: OrderedDict[str, Any]
+    ) -> List[FhirProperty]:
+        properties: List[OrderedDict[str, Any]] = (
+            inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
+            if inner_complex_type.get("xs:sequence")
+            else []
+        )
+        if isinstance(properties, OrderedDict):
+            properties = [properties]
+        fhir_properties: List[FhirProperty] = []
+        property_: OrderedDict[str, Any]
+        for property_ in properties:
+            property_name: str = str(property_.get("@name"))
+            min_occurs: str = str(property_.get("@minOccurs"))
+            max_occurs: str = str(property_.get("@maxOccurs"))
+            property_type: str = str(property_.get("@type"))
+            property_documentation_dict: Optional[OrderedDict[str, Any]] = (
+                property_.get("xs:annotation").get("xs:documentation")  # type: ignore
+                if property_.get("xs:annotation")
+                else None
+            )
+            property_documentation: str = str(
+                property_documentation_dict.get("#text")
+                if property_documentation_dict
+                else None
+            )
+            print(
+                f"{property_name}: {property_type} [{min_occurs}..{max_occurs}] // {property_documentation}"
+            )
+            optional: bool = min_occurs == "0"
+            is_list: bool = max_occurs == "unbounded"
+            cleaned_type: str = property_type
+            cleaned_type_mapping: Dict[str, str] = {
+                "boolean": "FhirBoolean",
+                "date": "FhirDate",
+                "dateTime": "FhirDateTime",
+                "integer": "FhirInteger",
+                "string": "FhirString",
+            }
+            cleaned_type = cleaned_type.replace(".", "")
+            print(
+                f"{property_name}:"
+                f"{'Optional[' if optional else ''}"
+                f"{'FhirList[' if is_list else ''}"
+                f"{cleaned_type}"
+                f"{']' if is_list else ''}"
+                f"{'] = None,' if optional else ','}"
+            )
+            if property_type and property_name and property_type != "None":
+                fhir_properties.append(
+                    FhirProperty(
+                        name=property_name,
+                        type_=property_type,
+                        cleaned_type=cleaned_type
+                        if cleaned_type not in cleaned_type_mapping
+                        else cleaned_type_mapping[cleaned_type],
+                        type_snake_case=FhirXmlSchemaParser.camel_to_snake(cleaned_type)
+                        if cleaned_type not in cleaned_type_mapping
+                        else cleaned_type,
+                        optional=optional,
+                        is_list=is_list,
+                        documentation=[property_documentation],
+                        fhir_type=None,
+                    )
+                )
+        return fhir_properties

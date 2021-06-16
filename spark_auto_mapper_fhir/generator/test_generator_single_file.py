@@ -7,7 +7,7 @@ from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchem
 def test_generator_single_file() -> None:
     print("")
     data_dir: Path = Path(__file__).parent.joinpath("./")
-    resource: str = "appointmentresponse.xsd"
+    resource: str = "fhir-base.xsd"
     resource_xsd_file: Path = data_dir.joinpath("xsd").joinpath(resource)
     fhir_entities = FhirXmlSchemaParser._generate_classes_for_resource(
         resource_xsd_file

@@ -48,36 +48,39 @@ def main() -> int:
                 fhir_entity=fhir_entity,
             )
 
-            resource_name: str = fhir_entity.name
+            resource_name: str = fhir_entity.cleaned_name
+            entity_file_name = FhirXmlSchemaParser.camel_to_snake(resource_name)
             if fhir_entity.type_ == "DomainResource":
-                file_path = resources_folder.joinpath(f"{resource_name.lower()}.py")
-                print(f"Writing resource: {resource_name.lower()} to {file_path}...")
+                file_path = resources_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing resource: {entity_file_name} to {file_path}...")
                 # print(result)
                 if not path.exists(file_path):
                     with open(file_path, "w") as file2:
                         file2.write(result)
             elif fhir_entity.type_ == "Resource":
-                file_path = resources_folder.joinpath(f"{resource_name.lower()}.py")
-                print(f"Writing resource: {resource_name.lower()} to {file_path}...")
+                file_path = resources_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing resource: {entity_file_name} to {file_path}...")
                 # print(result)
                 if not path.exists(file_path):
                     with open(file_path, "w") as file2:
                         file2.write(result)
             elif fhir_entity.type_ == "BackboneElement":
-                file_path = backbone_elements_folder.joinpath(
-                    f"{resource_name.lower()}.py"
-                )
+                file_path = backbone_elements_folder.joinpath(f"{entity_file_name}.py")
                 print(
-                    f"Writing backbone_elements_folder: {resource_name.lower()} to {file_path}..."
+                    f"Writing backbone_elements_folder: {entity_file_name} to {file_path}..."
                 )
                 if not path.exists(file_path):
                     with open(file_path, "w") as file2:
                         file2.write(result)
             elif fhir_entity.type_ == "Element":  # valueset
-                file_path = complex_types_folder.joinpath(f"{resource_name.lower()}.py")
-                print(
-                    f"Writing complex_type: {resource_name.lower()} to {file_path}..."
-                )
+                file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing complex_type: {entity_file_name} to {file_path}...")
+                if not path.exists(file_path):
+                    with open(file_path, "w") as file2:
+                        file2.write(result)
+            elif fhir_entity.type_ in ["Quantity"]:  # valueset
+                file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing complex_type: {entity_file_name} to {file_path}...")
                 if not path.exists(file_path):
                     with open(file_path, "w") as file2:
                         file2.write(result)
