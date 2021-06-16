@@ -25,6 +25,7 @@ from spark_auto_mapper_fhir.valuesets.subject_type import SubjectTypeCode
 
 
 class DataRequirement(FhirComplexTypeBase):
+    # noinspection PyPep8Naming
     def __init__(
         self,
         type_: FhirAllTypesCode,
@@ -34,8 +35,8 @@ class DataRequirement(FhirComplexTypeBase):
         subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Group]] = None,
         mustSupport: Optional[FhirList[FhirString]] = None,
-        code_filter: Optional[FhirList[CodeFilter]] = None,
-        date_filter: Optional[FhirList[DateFilter]] = None,
+        codeFilter: Optional[FhirList[CodeFilter]] = None,
+        dateFilter: Optional[FhirList[DateFilter]] = None,
         limit: Optional[FhirPositiveInt] = None,
         sort: Optional[FhirList[Sort]] = None,
     ) -> None:
@@ -50,9 +51,9 @@ class DataRequirement(FhirComplexTypeBase):
         :param subjectCodeableConcept: E.g. Patient, Practitioner, RelatedPerson, Organization, Location, Device
         :param subjectReference: E.g. Patient, Practitioner, RelatedPerson, Organization, Location, Device
         :param mustSupport: Indicates specific structure elements that are referenced by the knowledge module
-        :param code_filter: What codes are expected
+        :param codeFilter: What codes are expected
                             + Rule: Either a path or a searchParam must be provided, but not both
-        :param date_filter: What dates/date ranges are expected
+        :param dateFilter: What dates/date ranges are expected
                             + Rule: Either a path or a searchParam must be provided, but not both
         :param limit: Number of results
         :param sort: Order of the results
@@ -65,8 +66,8 @@ class DataRequirement(FhirComplexTypeBase):
             subjectCodeableConcept=subjectCodeableConcept,
             subjectReference=subjectReference,
             mustSupport=mustSupport,
-            code_filter=code_filter,
-            date_filter=date_filter,
+            codeFilter=codeFilter,
+            dateFilter=dateFilter,
             limit=limit,
             sort=sort,
         )
