@@ -13,9 +13,10 @@ class SmartName:
 
 @dataclasses.dataclass
 class FhirReferenceType:
-    parent_entity_name: str
-    property_name: str
+    # parent_entity_name: str
+    # property_name: str
     target_resources: List[str]
+    path: str
 
 
 @dataclasses.dataclass
@@ -90,11 +91,6 @@ class FhirXmlSchemaParser:
             if fhir_entity.type_
         }
 
-        # and the target resources for references
-        references: List[
-            FhirReferenceType
-        ] = FhirXmlSchemaParser.get_types_for_references()
-
         for fhir_entity in fhir_entities:
             print(f"2nd pass: checking {fhir_entity.fhir_name}")
             for fhir_property in fhir_entity.properties:
@@ -103,19 +99,36 @@ class FhirXmlSchemaParser:
                     print("foo")
                 else:
                     fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
-                    references_for_property = [
-                        c
-                        for c in references
-                        if c.parent_entity_name == fhir_entity.fhir_name
-                        and c.property_name == fhir_property.name
+
+        # and the target resources for references
+        references: List[
+            FhirReferenceType
+        ] = FhirXmlSchemaParser.get_types_for_references()
+
+        reference: FhirReferenceType
+        for reference in references:
+            name_parts: List[str] = reference.path.split(".")
+            if len(name_parts) == 2:
+                parent_entity_name: str = name_parts[0]
+                property_name: str = name_parts[1]
+                # find the corresponding fhir entity
+                fhir_entity_list = [
+                    f for f in fhir_entities if f.fhir_name == parent_entity_name
+                ]
+                if fhir_entity_list:
+                    fhir_entity = fhir_entity_list[0]
+                    fhir_property_list = [
+                        p for p in fhir_entity.properties if p.name == property_name
                     ]
-                    if references_for_property:
+
+                    if fhir_property_list:
+                        fhir_property = fhir_property_list[0]
                         fhir_property.reference_target_resources = [
                             SmartName(
                                 name=c,
                                 snake_case_name=FhirXmlSchemaParser.camel_to_snake(c),
                             )
-                            for c in references_for_property[0].target_resources
+                            for c in reference.target_resources
                         ]
                         fhir_property.reference_target_resources_names = [
                             c.name for c in fhir_property.reference_target_resources
@@ -292,7 +305,7 @@ class FhirXmlSchemaParser:
                 structure_definition: OrderedDict[str, Any] = entry["resource"][
                     "StructureDefinition"
                 ]
-                name: str = structure_definition["name"]["@value"]
+                # name: str = structure_definition["name"]["@value"]
                 snapshot_element: OrderedDict[str, Any] = structure_definition[
                     "snapshot"
                 ]["element"]
@@ -320,9 +333,10 @@ class FhirXmlSchemaParser:
                             ]
                             print("foo")
                             fhir_reference: FhirReferenceType = FhirReferenceType(
-                                parent_entity_name=name.split(".")[0],
-                                property_name=name.split(".")[1],
+                                # parent_entity_name=name_parts[0],
+                                # property_name=name_parts[1],
                                 target_resources=target_resources,
+                                path=snapshot_element["path"]["@value"],
                             )
                             fhir_references.append(fhir_reference)
                 print(entry)
