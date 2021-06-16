@@ -39,7 +39,7 @@ def main() -> int:
     # now print the result
     for fhir_entity in fhir_entities:
         # use template to generate new code files
-        with open(data_dir.joinpath("template.jinja2"), "r") as file:
+        with open(data_dir.joinpath("template.resource.jinja2"), "r") as file:
             template_contents: str = file.read()
             from jinja2 import Template
 
