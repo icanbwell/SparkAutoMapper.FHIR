@@ -33,9 +33,32 @@ class FhirXmlSchemaParser:
     @staticmethod
     def generate_classes() -> List[FhirEntity]:
         data_dir: Path = Path(__file__).parent.joinpath("./")
-        patient_xsd_file: Path = data_dir.joinpath("xsd").joinpath("patient.xsd")
-        # schema = XMLSchema(str(patient_xsd_file))
+        # schema = XMLSchema(str(resource_xsd_file))
         # pprint(schema.to_dict)
+        fhir_entities: List[FhirEntity] = []
+
+        # first read fhir-all.xsd to get a list of resources
+        fhir_xsd_all_file: Path = data_dir.joinpath("xsd").joinpath("fhir-all.xsd")
+        with open(fhir_xsd_all_file, "r") as file:
+            contents = file.read()
+            result: OrderedDict[str, Any] = parse(contents)
+            resources: List[str] = []
+            resource_item: OrderedDict[str, Any]
+            for resource_item in result["xs:schema"]["xs:include"]:
+                resources.append(resource_item["@schemaLocation"])
+
+        resource: str
+        for resource in resources:
+            resource_xsd_file: Path = data_dir.joinpath("xsd").joinpath(resource)
+            fhir_entities.extend(
+                FhirXmlSchemaParser._generate_classes_for_resource(resource_xsd_file)
+            )
+
+        return fhir_entities
+
+    @staticmethod
+    def _generate_classes_for_resource(patient_xsd_file: Path) -> List[FhirEntity]:
+        print(f"++++++ PROCESSING FILE {patient_xsd_file.name} +++++++++ ")
         with open(patient_xsd_file, "r") as file:
             contents = file.read()
             result = parse(contents)
@@ -44,8 +67,14 @@ class FhirXmlSchemaParser:
         complex_types: List[OrderedDict[str, Any]] = result["xs:schema"][
             "xs:complexType"
         ]
+        # if there is only one entry, then xml_to_dict makes it an object instead of a list
+        if isinstance(complex_types, OrderedDict):
+            complex_types = [complex_types]
         complex_type: OrderedDict[str, Any]
         for complex_type in complex_types:
+            if not isinstance(complex_type, OrderedDict):
+                print("foo")
+            assert isinstance(complex_type, OrderedDict), type(complex_type)
             complex_type_name: str = complex_type["@name"].replace(".", "")
             complex_type_name_snake_case: str = FhirXmlSchemaParser.camel_to_snake(
                 complex_type_name
@@ -54,6 +83,8 @@ class FhirXmlSchemaParser:
             documentation_items: List[OrderedDict[str, Any]] = complex_type[
                 "xs:annotation"
             ]["xs:documentation"]
+            if isinstance(documentation_items, OrderedDict):
+                documentation_items = [documentation_items]
             documentation_item_dict: Union[OrderedDict[str, Any], str]
             documentation_entries: List[str] = []
             for documentation_item_dict in documentation_items:
@@ -82,7 +113,8 @@ class FhirXmlSchemaParser:
                     if inner_complex_type.get("xs:sequence")
                     else []
                 )
-
+                if isinstance(properties, OrderedDict):
+                    properties = [properties]
                 fhir_properties: List[FhirProperty] = []
                 property_: OrderedDict[str, Any]
                 for property_ in properties:
