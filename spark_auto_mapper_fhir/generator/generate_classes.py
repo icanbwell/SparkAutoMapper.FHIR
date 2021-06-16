@@ -39,54 +39,100 @@ def main() -> int:
     # now print the result
     for fhir_entity in fhir_entities:
         # use template to generate new code files
-        with open(data_dir.joinpath("template.resource.jinja2"), "r") as file:
-            template_contents: str = file.read()
-            from jinja2 import Template
+        resource_name: str = fhir_entity.cleaned_name
+        entity_file_name = FhirXmlSchemaParser.camel_to_snake(resource_name)
+        if fhir_entity.type_ == "DomainResource":
+            with open(data_dir.joinpath("template.resource.jinja2"), "r") as file:
+                template_contents = file.read()
+                from jinja2 import Template
 
-            template = Template(template_contents, trim_blocks=True, lstrip_blocks=True)
-            result: str = template.render(
-                fhir_entity=fhir_entity,
-            )
-
-            resource_name: str = fhir_entity.cleaned_name
-            entity_file_name = FhirXmlSchemaParser.camel_to_snake(resource_name)
-            if fhir_entity.type_ == "DomainResource":
-                file_path = resources_folder.joinpath(f"{entity_file_name}.py")
-                print(f"Writing resource: {entity_file_name} to {file_path}...")
-                # print(result)
-                if not path.exists(file_path):
-                    with open(file_path, "w") as file2:
-                        file2.write(result)
-            elif fhir_entity.type_ == "Resource":
-                file_path = resources_folder.joinpath(f"{entity_file_name}.py")
-                print(f"Writing resource: {entity_file_name} to {file_path}...")
-                # print(result)
-                if not path.exists(file_path):
-                    with open(file_path, "w") as file2:
-                        file2.write(result)
-            elif fhir_entity.type_ == "BackboneElement":
-                file_path = backbone_elements_folder.joinpath(f"{entity_file_name}.py")
-                print(
-                    f"Writing backbone_elements_folder: {entity_file_name} to {file_path}..."
+                template = Template(
+                    template_contents, trim_blocks=True, lstrip_blocks=True
                 )
-                if not path.exists(file_path):
-                    with open(file_path, "w") as file2:
-                        file2.write(result)
-            elif fhir_entity.type_ == "Element":  # valueset
-                file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
-                print(f"Writing complex_type: {entity_file_name} to {file_path}...")
-                if not path.exists(file_path):
-                    with open(file_path, "w") as file2:
-                        file2.write(result)
-            elif fhir_entity.type_ in ["Quantity"]:  # valueset
-                file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
-                print(f"Writing complex_type: {entity_file_name} to {file_path}...")
-                if not path.exists(file_path):
-                    with open(file_path, "w") as file2:
-                        file2.write(result)
-            else:
-                assert False, f"{resource_name}: {fhir_entity.type_} is not supported"
+                result = template.render(
+                    fhir_entity=fhir_entity,
+                )
+
+            file_path = resources_folder.joinpath(f"{entity_file_name}.py")
+            print(f"Writing resource: {entity_file_name} to {file_path}...")
             # print(result)
+            if not path.exists(file_path):
+                with open(file_path, "w") as file2:
+                    file2.write(result)
+        elif fhir_entity.type_ == "Resource":
+            with open(data_dir.joinpath("template.resource.jinja2"), "r") as file:
+                template_contents = file.read()
+                from jinja2 import Template
+
+                template = Template(
+                    template_contents, trim_blocks=True, lstrip_blocks=True
+                )
+                result = template.render(
+                    fhir_entity=fhir_entity,
+                )
+
+            file_path = resources_folder.joinpath(f"{entity_file_name}.py")
+            print(f"Writing resource: {entity_file_name} to {file_path}...")
+            # print(result)
+            if not path.exists(file_path):
+                with open(file_path, "w") as file2:
+                    file2.write(result)
+        elif fhir_entity.type_ == "BackboneElement":
+            with open(data_dir.joinpath("template.complex_type.jinja2"), "r") as file:
+                template_contents = file.read()
+                from jinja2 import Template
+
+                template = Template(
+                    template_contents, trim_blocks=True, lstrip_blocks=True
+                )
+                result = template.render(
+                    fhir_entity=fhir_entity,
+                )
+
+            file_path = backbone_elements_folder.joinpath(f"{entity_file_name}.py")
+            print(
+                f"Writing backbone_elements_folder: {entity_file_name} to {file_path}..."
+            )
+            if not path.exists(file_path):
+                with open(file_path, "w") as file2:
+                    file2.write(result)
+        elif fhir_entity.type_ == "Element":  # valueset
+            with open(data_dir.joinpath("template.complex_type.jinja2"), "r") as file:
+                template_contents = file.read()
+                from jinja2 import Template
+
+                template = Template(
+                    template_contents, trim_blocks=True, lstrip_blocks=True
+                )
+                result = template.render(
+                    fhir_entity=fhir_entity,
+                )
+
+            file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
+            print(f"Writing complex_type: {entity_file_name} to {file_path}...")
+            if not path.exists(file_path):
+                with open(file_path, "w") as file2:
+                    file2.write(result)
+        elif fhir_entity.type_ in ["Quantity"]:  # valueset
+            with open(data_dir.joinpath("template.complex_type.jinja2"), "r") as file:
+                template_contents = file.read()
+                from jinja2 import Template
+
+                template = Template(
+                    template_contents, trim_blocks=True, lstrip_blocks=True
+                )
+                result = template.render(
+                    fhir_entity=fhir_entity,
+                )
+
+            file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
+            print(f"Writing complex_type: {entity_file_name} to {file_path}...")
+            if not path.exists(file_path):
+                with open(file_path, "w") as file2:
+                    file2.write(result)
+        else:
+            assert False, f"{resource_name}: {fhir_entity.type_} is not supported"
+        # print(result)
     return 0
 
 
