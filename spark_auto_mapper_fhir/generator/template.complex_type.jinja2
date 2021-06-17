@@ -70,14 +70,14 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
     ) -> None:
         """
     {% for documentation_item in fhir_entity.documentation %}
-        {{ documentation_item }}
+        {{ documentation_item | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {%  endfor %}
 
         :param id_: id of resource
         :param meta: Meta
         :param extension: extensions
     {% for property in fhir_entity.properties %}
-        :param {{ property.name }}: {{ property.documentation[0] }}
+        :param {{ property.name }}: {{ property.documentation[0] | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {% endfor %}
         """
         super().__init__(

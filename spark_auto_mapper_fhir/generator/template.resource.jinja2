@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+# noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -43,7 +44,7 @@ if TYPE_CHECKING:
 class {{fhir_entity.cleaned_name}}(FhirResourceBase):
     """
     {% for documentation_item in fhir_entity.documentation %}
-        {{ documentation_item }}
+        {{ documentation_item | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {%  endfor %}
     """
     # noinspection PyPep8Naming
@@ -60,14 +61,14 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
     ) -> None:
         """
     {% for documentation_item in fhir_entity.documentation %}
-        {{ documentation_item }}
+        {{ documentation_item | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ')}}
     {%  endfor %}
 
         :param id_: id of resource
         :param meta: Meta
         :param extension: extensions
     {% for property in fhir_entity.properties %}
-        :param {{ property.name }}: {{ property.documentation[0] }}
+        :param {{ property.name }}: {{ property.documentation[0] | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {% endfor %}
         """
         super().__init__(

@@ -32,6 +32,7 @@ class FhirProperty:
     reference_target_resources: List[SmartName]
     reference_target_resources_names: List[str]
     is_back_bone_element: bool
+    is_basic_type: bool
 
 
 @dataclasses.dataclass
@@ -274,9 +275,9 @@ class FhirXmlSchemaParser:
                 if property_documentation_dict
                 else None
             )
-            print(
-                f"{property_name}: {property_type} [{min_occurs}..{max_occurs}] // {property_documentation}"
-            )
+            # print(
+            #     f"{property_name}: {property_type} [{min_occurs}..{max_occurs}] // {property_documentation}"
+            # )
             optional: bool = min_occurs == "0"
             is_list: bool = max_occurs == "unbounded"
             cleaned_type: str = property_type
@@ -288,25 +289,27 @@ class FhirXmlSchemaParser:
                 "string": "FhirString",
             }
             cleaned_type = cleaned_type.replace(".", "")
-            print(
-                f"{property_name}:"
-                f"{'Optional[' if optional else ''}"
-                f"{'FhirList[' if is_list else ''}"
-                f"{cleaned_type}"
-                f"{']' if is_list else ''}"
-                f"{'] = None,' if optional else ','}"
-            )
+            # print(
+            #     f"{property_name}:"
+            #     f"{'Optional[' if optional else ''}"
+            #     f"{'FhirList[' if is_list else ''}"
+            #     f"{cleaned_type}"
+            #     f"{']' if is_list else ''}"
+            #     f"{'] = None,' if optional else ','}"
+            # )
             if property_type and property_name and property_type != "None":
                 fhir_properties.append(
                     FhirProperty(
-                        name=property_name,
+                        name=property_name
+                        if property_name not in ["id", "type"]
+                        else f"{property_name}_",
                         type_=property_type,
                         cleaned_type=cleaned_type
                         if cleaned_type not in cleaned_type_mapping
                         else cleaned_type_mapping[cleaned_type],
                         type_snake_case=FhirXmlSchemaParser.camel_to_snake(cleaned_type)
                         if cleaned_type not in cleaned_type_mapping
-                        else cleaned_type,
+                        else FhirXmlSchemaParser.camel_to_snake(cleaned_type),
                         optional=optional,
                         is_list=is_list,
                         documentation=[property_documentation],
@@ -314,6 +317,7 @@ class FhirXmlSchemaParser:
                         reference_target_resources=[],
                         reference_target_resources_names=[],
                         is_back_bone_element="." in property_type,
+                        is_basic_type=cleaned_type in cleaned_type_mapping,
                     )
                 )
         return fhir_properties
@@ -370,5 +374,5 @@ class FhirXmlSchemaParser:
                                 path=snapshot_element["path"]["@value"],
                             )
                             fhir_references.append(fhir_reference)
-                print(entry)
+                # print(entry)
             return fhir_references
