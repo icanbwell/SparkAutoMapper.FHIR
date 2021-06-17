@@ -12,9 +12,13 @@ class SmartName:
 
 
 @dataclasses.dataclass
+class FhirCodeableType:
+    codeable_type: str
+    path: str
+
+
+@dataclasses.dataclass
 class FhirReferenceType:
-    # parent_entity_name: str
-    # property_name: str
     target_resources: List[str]
     path: str
 
@@ -376,3 +380,57 @@ class FhirXmlSchemaParser:
                             fhir_references.append(fhir_reference)
                 # print(entry)
             return fhir_references
+
+    @staticmethod
+    def get_types_for_codeable_concepts() -> List[FhirCodeableType]:
+        data_dir: Path = Path(__file__).parent.joinpath("./")
+
+        # first read fhir-all.xsd to get a list of resources
+        de_xml_file: Path = data_dir.joinpath("xsd").joinpath("dataelements.xml")
+
+        with open(de_xml_file, "r") as file:
+            contents = file.read()
+            result: OrderedDict[str, Any] = parse(contents)
+            entries: List[OrderedDict[str, Any]] = result["Bundle"]["entry"]
+
+            fhir_codeable_types: List[FhirCodeableType] = []
+            entry: OrderedDict[str, Any]
+            for entry in entries:
+                structure_definition: OrderedDict[str, Any] = entry["resource"][
+                    "StructureDefinition"
+                ]
+                # name: str = structure_definition["name"]["@value"]
+                snapshot_element: OrderedDict[str, Any] = structure_definition[
+                    "snapshot"
+                ]["element"]
+                if "binding" in snapshot_element:
+                    bindings: List[OrderedDict[str, Any]] = snapshot_element["binding"]
+                    if isinstance(bindings, OrderedDict):
+                        bindings = [bindings]
+                    binding: OrderedDict[str, Any]
+                    for binding in bindings:
+                        extension_code_list = binding["extension"]
+                        if isinstance(extension_code_list, OrderedDict):
+                            extension_code_list = [extension_code_list]
+                        field_name: str = "@url"
+                        url: str = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+                        codeable_type_list: List[OrderedDict[str, Any]] = [
+                            bind
+                            for bind in extension_code_list
+                            if bind[field_name] == url
+                        ]
+                        if codeable_type_list:
+                            codeable_type_obj: OrderedDict[
+                                str, Any
+                            ] = codeable_type_list[0]
+                            codeable_type: str = codeable_type_obj["valueString"][
+                                "@value"
+                            ]
+                            fhir_codeable_types.append(
+                                FhirCodeableType(
+                                    path=snapshot_element["path"]["@value"],
+                                    codeable_type=codeable_type,
+                                )
+                            )
+                            print("foo")
+            return fhir_codeable_types

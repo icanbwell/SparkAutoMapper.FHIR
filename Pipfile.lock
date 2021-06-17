@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5872652dc436fa45a04cfefba7365eecbd69caa576d7d8397f8ac04ee4511d16"
+            "sha256": "424adde1dff3ce1f4e4735d74ec2659ddf1f8acd3b40041da5285836a888e13c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -77,19 +77,19 @@
         },
         "sparkautomapper": {
             "hashes": [
-                "sha256:3197f2d6f89613df27347a6e47ae12f4e1c6da85c84bcdc0df625c6e22d3f66e",
-                "sha256:903fe4117b3909071d7c8569614608615ffba51ad8484de19549b5747bcab192"
+                "sha256:48d19188d0f07b461d26e31ac825e9bf8b7ad486c754e79556ee2ae704db99b9",
+                "sha256:a5afcaa66a6ee802a3bff04608a6b413aa467927e0d35c710ebc19e7489fae5c"
             ],
             "index": "pypi",
-            "version": "==0.2.37"
+            "version": "==0.2.39"
         },
         "sparkfhirschemas": {
             "hashes": [
-                "sha256:15f3416d856ac9248ea66ff62f34d1f38e837bd7772b83d453a3638b00723ac4",
-                "sha256:bb9d49e272ff5bd5fa403ea893eb9c631350a4a431f0476936f163b4bbd648a9"
+                "sha256:24197ffac041c634f70374db6428f4ef5745ceaa0545665ce2e3030270a20914",
+                "sha256:56f22d604643ec2462b9e41f333f770b7c38092e111dd551c9d7cc5712378f4d"
             ],
             "index": "pypi",
-            "version": "==0.1.21"
+            "version": "==0.1.22"
         },
         "wrapt": {
             "hashes": [
