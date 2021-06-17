@@ -33,8 +33,8 @@ class AppointmentParticipantBackboneElement(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        type_: Optional[FhirList[CodeableConcept[EncounterParticipantTypeCode]]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
+        type_: Optional[FhirList[CodeableConcept[EncounterParticipantTypeCode]]] = None,
         actor: Optional[
             Reference[
                 Union[
@@ -66,8 +66,8 @@ class AppointmentParticipantBackboneElement(FhirBackboneElementBase):
         """
         super().__init__(
             id_=id_,
-            type_=type_,
             extension=extension,
+            type_=type_,
             actor=actor,
             required=required,
             status=status,
