@@ -37,6 +37,7 @@ class FhirProperty:
     reference_target_resources_names: List[str]
     is_back_bone_element: bool
     is_basic_type: bool
+    codeable_type: Optional[str]
 
 
 @dataclasses.dataclass
@@ -106,10 +107,74 @@ class FhirXmlSchemaParser:
                     fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
 
         # and the target resources for references
+        FhirXmlSchemaParser.process_types_for_references(fhir_entities)
+
+        # and the target types for codeable concepts
+        FhirXmlSchemaParser.process_types_for_codeable_concepts(fhir_entities)
+
+        return fhir_entities
+
+    @staticmethod
+    def process_types_for_codeable_concepts(fhir_entities: List[FhirEntity]) -> None:
+        codeable_types: List[
+            FhirCodeableType
+        ] = FhirXmlSchemaParser.get_types_for_codeable_concepts()
+        codeable_type: FhirCodeableType
+        for codeable_type in codeable_types:
+            name_parts: List[str] = codeable_type.path.split(".")
+            # find the entity corresponding to the name parts
+            entity_name_parts: List[str] = name_parts[0:-1]
+            fhir_entity_list: List[FhirEntity] = []
+            parent_fhir_entity: Optional[FhirEntity] = None
+            # parent_entity_name: Optional[str] = None
+            for entity_name_part in entity_name_parts:
+                if not parent_fhir_entity:
+                    # entity_name = entity_name_part
+                    fhir_entity_list = [
+                        f for f in fhir_entities if f.fhir_name == entity_name_part
+                    ]
+                    if not fhir_entity_list:
+                        print("foo")
+                    else:
+                        parent_fhir_entity = fhir_entity_list[0]
+                else:
+                    # find the property under the above entity
+                    fhir_property_list = [
+                        p
+                        for p in parent_fhir_entity.properties
+                        if p.name == entity_name_part
+                    ]
+                    if not fhir_property_list:
+                        print("foo")
+                    else:
+                        fhir_property = fhir_property_list[0]
+                        parent_entity_name = fhir_property.cleaned_type
+                        fhir_entity_list = [
+                            f
+                            for f in fhir_entities
+                            if f.cleaned_name == parent_entity_name
+                        ]
+                        if not fhir_entity_list:
+                            print("foo")
+                        else:
+                            parent_fhir_entity = fhir_entity_list[0]
+            property_name: str = name_parts[-1]
+            # find the corresponding fhir entity
+            if fhir_entity_list:
+                fhir_entity = fhir_entity_list[0]
+                fhir_property_list = [
+                    p for p in fhir_entity.properties if p.name == property_name
+                ]
+
+                if fhir_property_list:
+                    fhir_property = fhir_property_list[0]
+                    fhir_property.codeable_type = codeable_type.codeable_type
+
+    @staticmethod
+    def process_types_for_references(fhir_entities: List[FhirEntity]) -> None:
         references: List[
             FhirReferenceType
         ] = FhirXmlSchemaParser.get_types_for_references()
-
         reference: FhirReferenceType
         for reference in references:
             name_parts: List[str] = reference.path.split(".")
@@ -169,8 +234,6 @@ class FhirXmlSchemaParser:
                     fhir_property.reference_target_resources_names = [
                         c.name for c in fhir_property.reference_target_resources
                     ]
-
-        return fhir_entities
 
     @staticmethod
     def _generate_classes_for_resource(resource_xsd_file: Path) -> List[FhirEntity]:
@@ -322,6 +385,7 @@ class FhirXmlSchemaParser:
                         reference_target_resources_names=[],
                         is_back_bone_element="." in property_type,
                         is_basic_type=cleaned_type in cleaned_type_mapping,
+                        codeable_type=None,
                     )
                 )
         return fhir_properties
