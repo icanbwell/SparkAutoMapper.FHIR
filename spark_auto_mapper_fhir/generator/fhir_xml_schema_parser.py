@@ -468,33 +468,42 @@ class FhirXmlSchemaParser:
                     "snapshot"
                 ]["element"]
                 if "binding" in snapshot_element:
-                    bindings: List[OrderedDict[str, Any]] = snapshot_element["binding"]
-                    if isinstance(bindings, OrderedDict):
-                        bindings = [bindings]
-                    binding: OrderedDict[str, Any]
-                    for binding in bindings:
-                        extension_code_list = binding["extension"]
-                        if isinstance(extension_code_list, OrderedDict):
-                            extension_code_list = [extension_code_list]
-                        field_name: str = "@url"
-                        url: str = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-                        codeable_type_list: List[OrderedDict[str, Any]] = [
-                            bind
-                            for bind in extension_code_list
-                            if bind[field_name] == url
-                        ]
-                        if codeable_type_list:
-                            codeable_type_obj: OrderedDict[
-                                str, Any
-                            ] = codeable_type_list[0]
-                            codeable_type: str = codeable_type_obj["valueString"][
-                                "@value"
+                    types: List[OrderedDict[str, Any]] = snapshot_element["type"]
+                    if isinstance(types, OrderedDict):
+                        types = [types]
+                    type_: OrderedDict[str, Any]
+                    if types:
+                        type_ = types[0]
+                        if type_["code"]["@value"] in ["Coding", "CodeableConcept"]:
+                            bindings: List[OrderedDict[str, Any]] = snapshot_element[
+                                "binding"
                             ]
-                            fhir_codeable_types.append(
-                                FhirCodeableType(
-                                    path=snapshot_element["path"]["@value"],
-                                    codeable_type=codeable_type,
-                                )
-                            )
-                            print("foo")
+                            if isinstance(bindings, OrderedDict):
+                                bindings = [bindings]
+                            binding: OrderedDict[str, Any]
+                            for binding in bindings:
+                                extension_code_list = binding["extension"]
+                                if isinstance(extension_code_list, OrderedDict):
+                                    extension_code_list = [extension_code_list]
+                                field_name: str = "@url"
+                                url: str = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+                                codeable_type_list: List[OrderedDict[str, Any]] = [
+                                    bind
+                                    for bind in extension_code_list
+                                    if bind[field_name] == url
+                                ]
+                                if codeable_type_list:
+                                    codeable_type_obj: OrderedDict[
+                                        str, Any
+                                    ] = codeable_type_list[0]
+                                    codeable_type: str = codeable_type_obj[
+                                        "valueString"
+                                    ]["@value"]
+                                    fhir_codeable_types.append(
+                                        FhirCodeableType(
+                                            path=snapshot_element["path"]["@value"],
+                                            codeable_type=codeable_type,
+                                        )
+                                    )
+                                    print("foo")
             return fhir_codeable_types
