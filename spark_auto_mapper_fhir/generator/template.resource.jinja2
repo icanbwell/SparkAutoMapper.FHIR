@@ -36,6 +36,10 @@ if TYPE_CHECKING:
             {% endif %}
         {% endfor %}
     {% endif %}
+    {% if property.codeable_type %}
+    # Import for CodeableConcept for {{ property.name }}
+    from spark_auto_mapper_fhir.generator.complex_types.{{ property.codeable_type.snake_case_name }} import {{ property.codeable_type.name | replace(".","")}}
+    {% endif %}
 {% endfor %}
 
 
@@ -55,7 +59,7 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
     {% for property in fhir_entity.properties %}
-        {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.cleaned_type | replace(".","")}}{% if property.codeable_type %}[{{ property.codeable_type }}]{% endif %} {% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
+        {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.cleaned_type | replace(".","")}}{% if property.codeable_type %}[{{ property.codeable_type.name }}]{% endif %} {% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
 
     {% endfor %}
     ) -> None:

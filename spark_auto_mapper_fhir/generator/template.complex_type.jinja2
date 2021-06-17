@@ -48,6 +48,20 @@ _T = TypeVar("_T", bound=Union[FhirResourceBase])
 
 
 class Reference(FhirComplexTypeBase, Generic[_T]):
+{% elif fhir_entity.cleaned_name == "CodeableConcept" %}
+from typing import TypeVar, Generic
+from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
+_T = TypeVar("_T", bound=Union[FhirValueSetBase])
+
+
+class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
+{% elif fhir_entity.cleaned_name == "Coding" %}
+from typing import TypeVar, Generic
+from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
+_T = TypeVar("_T", bound=Union[FhirValueSetBase])
+
+
+class Coding(FhirComplexTypeBase, Generic[_T]):
 {% else %}
 class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
 {% endif %}
@@ -63,10 +77,26 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
+    {% if fhir_entity.cleaned_name == "Reference" %}
+        reference: Optional[FhirReference] = None,
+        type_: Optional[FhirUri] = None,
+        identifier: Optional[Identifier] = None,
+        display: Optional[FhirString] = None,
+    {% elif fhir_entity.cleaned_name == "CodeableConcept" %}
+        coding: Optional[FhirList[Coding[_T]]] = None,
+        text: Optional[FhirString] = None,
+    {% elif fhir_entity.cleaned_name == "Coding" %}
+        system: Optional[FhirUri] = None,
+        version: Optional[FhirString] = None,
+        code: Optional[_T] = None,
+        display: Optional[FhirString] = None,
+        userSelected: Optional[FhirBoolean] = None,
+    {% else %}
     {% for property in fhir_entity.properties %}
         {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.type_ | replace(".","")}}{% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
 
     {% endfor %}
+    {% endif %}
     ) -> None:
         """
     {% for documentation_item in fhir_entity.documentation %}

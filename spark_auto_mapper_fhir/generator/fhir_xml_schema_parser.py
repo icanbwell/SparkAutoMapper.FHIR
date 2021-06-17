@@ -37,7 +37,7 @@ class FhirProperty:
     reference_target_resources_names: List[str]
     is_back_bone_element: bool
     is_basic_type: bool
-    codeable_type: Optional[str]
+    codeable_type: Optional[SmartName]
 
 
 @dataclasses.dataclass
@@ -168,7 +168,12 @@ class FhirXmlSchemaParser:
 
                 if fhir_property_list:
                     fhir_property = fhir_property_list[0]
-                    fhir_property.codeable_type = codeable_type.codeable_type
+                    fhir_property.codeable_type = SmartName(
+                        name=codeable_type.codeable_type,
+                        snake_case_name=FhirXmlSchemaParser.camel_to_snake(
+                            codeable_type.codeable_type
+                        ),
+                    )
 
     @staticmethod
     def process_types_for_references(fhir_entities: List[FhirEntity]) -> None:
