@@ -1,4 +1,5 @@
 import dataclasses
+import json
 from pathlib import Path
 from typing import OrderedDict, Any, List, Union, Dict, Optional
 import re
@@ -9,6 +10,19 @@ from xmltodict import parse
 class SmartName:
     name: str
     snake_case_name: str
+
+
+@dataclasses.dataclass
+class FhirValueSetConcept:
+    code: str
+    display: Optional[str]
+    definition: Optional[str]
+
+
+@dataclasses.dataclass
+class FhirValueSet:
+    name: str
+    concepts: List[FhirValueSetConcept]
 
 
 @dataclasses.dataclass
@@ -65,7 +79,12 @@ class FhirXmlSchemaParser:
         fhir_entities: List[FhirEntity] = []
 
         # first read fhir-all.xsd to get a list of resources
-        fhir_xsd_all_file: Path = data_dir.joinpath("xsd").joinpath("fhir-all.xsd")
+        fhir_xsd_all_file: Path = (
+            data_dir.joinpath("xsd")
+            .joinpath("definitions.xml")
+            .joinpath("fhir-all-xsd")
+            .joinpath("fhir-all.xsd")
+        )
         resources: List[str] = ["fhir-base.xsd"]
 
         with open(fhir_xsd_all_file, "r") as file:
@@ -83,8 +102,11 @@ class FhirXmlSchemaParser:
                 and not resource_xsd_file_name == "fhir-base.xsd"
             ):
                 continue
-            resource_xsd_file: Path = data_dir.joinpath("xsd").joinpath(
-                resource_xsd_file_name
+            resource_xsd_file: Path = (
+                data_dir.joinpath("xsd")
+                .joinpath("definitions.xml")
+                .joinpath("fhir-all-xsd")
+                .joinpath(resource_xsd_file_name)
             )
             fhir_entities.extend(
                 FhirXmlSchemaParser._generate_classes_for_resource(resource_xsd_file)
@@ -326,6 +348,10 @@ class FhirXmlSchemaParser:
         properties: List[OrderedDict[str, Any]] = (
             inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
             if inner_complex_type.get("xs:sequence")
+            and inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
+            else inner_complex_type.get("xs:sequence").get("xs:choice").get("xs:element")  # type: ignore
+            if inner_complex_type.get("xs:sequence")
+            and inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
             else []
         )
         if isinstance(properties, OrderedDict):
@@ -400,7 +426,11 @@ class FhirXmlSchemaParser:
         data_dir: Path = Path(__file__).parent.joinpath("./")
 
         # first read fhir-all.xsd to get a list of resources
-        de_xml_file: Path = data_dir.joinpath("xsd").joinpath("dataelements.xml")
+        de_xml_file: Path = (
+            data_dir.joinpath("xsd")
+            .joinpath("definitions.xml")
+            .joinpath("dataelements.xml")
+        )
 
         with open(de_xml_file, "r") as file:
             contents = file.read()
@@ -455,7 +485,11 @@ class FhirXmlSchemaParser:
         data_dir: Path = Path(__file__).parent.joinpath("./")
 
         # first read fhir-all.xsd to get a list of resources
-        de_xml_file: Path = data_dir.joinpath("xsd").joinpath("dataelements.xml")
+        de_xml_file: Path = (
+            data_dir.joinpath("xsd")
+            .joinpath("definitions.xml")
+            .joinpath("dataelements.xml")
+        )
 
         with open(de_xml_file, "r") as file:
             contents = file.read()
@@ -512,3 +546,46 @@ class FhirXmlSchemaParser:
                                     )
                                     print("foo")
             return fhir_codeable_types
+
+    @staticmethod
+    def get_value_sets() -> List[FhirValueSet]:
+        data_dir: Path = Path(__file__).parent.joinpath("./")
+
+        # first read fhir-all.xsd to get a list of resources
+        # value_sets_json_file: Path = data_dir.joinpath("xsd").joinpath("definitions.xml").joinpath("valuesets.xml")
+        value_sets_json_file: Path = (
+            data_dir.joinpath("json")
+            .joinpath("definitions.json")
+            .joinpath("v3-codesystems.json")
+        )
+
+        with open(value_sets_json_file, "r") as file:
+            contents: str = file.read()
+            # result: OrderedDict[str, Any] = parse(contents)
+            result: OrderedDict[str, Any] = json.loads(contents)
+            entries: List[OrderedDict[str, Any]] = result["entry"]
+
+        fhir_value_sets: List[FhirValueSet] = []
+        value_set_entry: Dict[str, Any]
+        for value_set_entry in entries:
+            value_set: Dict[str, Any] = value_set_entry["resource"]
+            id: str = value_set["id"]
+            if "concept" in value_set:
+                concepts_list: List[Dict[str, Any]] = value_set["concept"]
+                fhir_concepts: List[FhirValueSetConcept] = []
+                concept: Dict[str, Any]
+                for concept in concepts_list:
+                    code: str = concept["code"]
+                    display: str = (
+                        concept["display"] if "display" in concept else concept["code"]
+                    )
+                    definition: Optional[str] = concept.get("definition")
+                    fhir_concepts.append(
+                        FhirValueSetConcept(
+                            code=code, display=display, definition=definition
+                        )
+                    )
+                fhir_value_sets.append(FhirValueSet(name=id, concepts=fhir_concepts))
+            print("foo")
+
+        return fhir_value_sets
