@@ -1,7 +1,7 @@
 from typing import Optional, Union
 
 from pyspark.sql.types import StructType, DataType
-from spark_fhir_schemas.r4.resources.careplan import CarePlanSchema
+from spark_fhir_schemas.r4.resources.account import AccountSchema
 
 from spark_auto_mapper_fhir.backbone_elements.coverage_backbone_element import (
     CoverageBackboneElement,
@@ -31,6 +31,7 @@ from spark_auto_mapper_fhir.valuesets.account_type import AccountTypeCode
 
 
 class Account(FhirResourceBase):
+    # noinspection PyPep8Naming
     def __init__(
         self,
         *,
@@ -102,4 +103,4 @@ class Account(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return CarePlanSchema.get_schema(include_extension=include_extension)
+        return AccountSchema.get_schema(include_extension=include_extension)
