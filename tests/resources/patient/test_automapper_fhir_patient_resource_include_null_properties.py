@@ -13,10 +13,10 @@ from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.patient import Patient
-from spark_auto_mapper_fhir.valuesets.administrative_gender import (
-    AdministrativeGenderCode,
+from spark_auto_mapper_fhir.value_sets.administrative_gender import (
+    AdministrativeGender,
 )
-from spark_auto_mapper_fhir.valuesets.name_use import NameUseCode
+from spark_auto_mapper_fhir.value_sets.name_use import NameUseCode
 
 
 @pytest.mark.skip("Need to implement null flag on complex")
@@ -49,7 +49,7 @@ def test_auto_mapper_fhir_patient_resource_include_null_properties(
                 include_null_properties=True,
             ),
             gender=A.if_not_null(
-                A.column("my_gender"), AdministrativeGenderCode(A.column("my_gender"))
+                A.column("my_gender"), AdministrativeGender(A.column("my_gender"))
             ),
         )
     )

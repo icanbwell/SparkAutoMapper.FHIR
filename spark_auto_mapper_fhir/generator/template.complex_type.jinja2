@@ -11,20 +11,20 @@ from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
-from spark_auto_mapper_fhir.complex_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 {% if fhir_entity.properties %}
 
 if TYPE_CHECKING:
 {% endif %}
 {% for property in fhir_entity.properties %}
     {% if property.fhir_type == "DomainResource" %}
-    from spark_auto_mapper_fhir.generator.resources.{{ property.type_snake_case }} import {{ property.type_ | replace(".","") }}
+    from spark_auto_mapper_fhir.resources.{{ property.type_snake_case }} import {{ property.type_ | replace(".","") }}
     {% elif property.fhir_type == "Resource" %}
-    from spark_auto_mapper_fhir.generator.resources.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
+    from spark_auto_mapper_fhir.resources.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
     {% elif property.fhir_type == "BackboneElement" %}
-    from spark_auto_mapper_fhir.generator.backbone_elements.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
+    from spark_auto_mapper_fhir.backbone_elements.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
     {% elif property.fhir_type == "Element" %}
-    from spark_auto_mapper_fhir.generator.complex_types.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
+    from spark_auto_mapper_fhir.complex_types.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
 {#    from spark_auto_mapper_fhir.valuesets.{{ property.type_snake_case }} import {{ property.type_ }}#}
 {#    from spark_auto_mapper_fhir.fhir_types.{{ property.type_snake_case }} import {{ property.type_ }}#}
     {% endif %}
@@ -32,7 +32,7 @@ if TYPE_CHECKING:
     # Imports for References for {{ property.name }}
         {% for reference_target_resource in property.reference_target_resources %}
             {% if reference_target_resource.name != fhir_entity.cleaned_name %}
-    from spark_auto_mapper_fhir.generator.resources.{{ reference_target_resource.snake_case_name }} import {{ reference_target_resource.name | replace(".","") }}
+    from spark_auto_mapper_fhir.resources.{{ reference_target_resource.snake_case_name }} import {{ reference_target_resource.name | replace(".","") }}
             {% endif %}
         {% endfor %}
     {% endif %}
@@ -43,21 +43,21 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 {% if fhir_entity.cleaned_name == "Reference" %}
 from typing import TypeVar, Generic
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
+from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 _T = TypeVar("_T", bound=Union[FhirResourceBase])
 
 
 class Reference(FhirComplexTypeBase, Generic[_T]):
 {% elif fhir_entity.cleaned_name == "CodeableConcept" %}
 from typing import TypeVar, Generic
-from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
+from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 _T = TypeVar("_T", bound=Union[FhirValueSetBase])
 
 
 class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
 {% elif fhir_entity.cleaned_name == "Coding" %}
 from typing import TypeVar, Generic
-from spark_auto_mapper_fhir.valuesets.FhirValueSetBase import FhirValueSetBase
+from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 _T = TypeVar("_T", bound=Union[FhirValueSetBase])
 
 

@@ -8,33 +8,34 @@ from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchem
 
 def main() -> int:
     data_dir: Path = Path(__file__).parent.joinpath("./")
+    parent_dir: Path = Path(__file__).parent.joinpath("../")
 
     # clean out old stuff
-    resources_folder = data_dir.joinpath("resources")
+    resources_folder = parent_dir.joinpath("resources")
     if os.path.exists(resources_folder):
         shutil.rmtree(resources_folder)
     os.mkdir(resources_folder)
     resources_folder.joinpath("__init__.py").touch()
 
-    complex_types_folder = data_dir.joinpath("complex_types")
+    complex_types_folder = parent_dir.joinpath("complex_types")
     if os.path.exists(complex_types_folder):
         shutil.rmtree(complex_types_folder)
     os.mkdir(complex_types_folder)
     complex_types_folder.joinpath("__init__.py").touch()
 
-    backbone_elements_folder = data_dir.joinpath("backbone_elements")
+    backbone_elements_folder = parent_dir.joinpath("backbone_elements")
     if os.path.exists(backbone_elements_folder):
         shutil.rmtree(backbone_elements_folder)
     os.mkdir(backbone_elements_folder)
     backbone_elements_folder.joinpath("__init__.py").touch()
 
-    simple_types_folder = data_dir.joinpath("simple_types")
+    simple_types_folder = parent_dir.joinpath("simple_types")
     if os.path.exists(simple_types_folder):
         shutil.rmtree(simple_types_folder)
     os.mkdir(simple_types_folder)
     simple_types_folder.joinpath("__init__.py").touch()
 
-    value_sets_folder = data_dir.joinpath("value_sets")
+    value_sets_folder = parent_dir.joinpath("value_sets")
     if os.path.exists(value_sets_folder):
         shutil.rmtree(value_sets_folder)
     os.mkdir(value_sets_folder)

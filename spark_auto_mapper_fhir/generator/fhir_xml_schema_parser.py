@@ -204,7 +204,7 @@ class FhirXmlSchemaParser:
                             if f.cleaned_name == parent_entity_name
                         ]
                         if not fhir_entity_list:
-                            print("foo")
+                            print("No FHIR entity list")
                         else:
                             parent_fhir_entity = fhir_entity_list[0]
             property_name: str = name_parts[-1]
@@ -426,7 +426,7 @@ class FhirXmlSchemaParser:
                 fhir_properties.append(
                     FhirProperty(
                         name=property_name
-                        if property_name not in ["id", "type"]
+                        if property_name not in ["id", "type", "class"]
                         else f"{property_name}_",
                         type_=property_type,
                         cleaned_type=cleaned_type

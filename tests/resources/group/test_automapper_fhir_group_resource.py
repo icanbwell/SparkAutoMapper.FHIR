@@ -9,12 +9,12 @@ from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.backbone_elements.group_member_backbone_element import (
     GroupMemberBackboneElement,
 )
-from spark_auto_mapper_fhir.valuesets.group_type import GroupTypeCode
-from spark_auto_mapper_fhir.valuesets.identifier_type import IdentifierTypeCode
+from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCode
+from spark_auto_mapper_fhir.value_sets.identifier_type import IdentifierTypeCode
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 

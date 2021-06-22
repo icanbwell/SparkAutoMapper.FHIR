@@ -1,10 +1,10 @@
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.classproperty import genericclassproperty
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
-from spark_auto_mapper_fhir.valuesets.custom.search_characteristic import (
+from spark_auto_mapper_fhir.value_sets_custom.custom.search_characteristic import (
     SearchCharacteristicCode,
 )
 
