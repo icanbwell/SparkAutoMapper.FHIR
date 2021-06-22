@@ -1,0 +1,257 @@
+from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
+
+# noinspection PyPackageRequirements
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+
+from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
+from spark_fhir_schemas.r4.resources.medicationrequest import MedicationRequestSchema
+
+if TYPE_CHECKING:
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+    from spark_auto_mapper_fhir.complex_types.medicationrequest_status import medicationrequestStatus
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for statusReason
+    from spark_auto_mapper_fhir.complex_types.medication_request_status_reason import MedicationRequestStatusReason
+    from spark_auto_mapper_fhir.complex_types.medication_request_intent import medicationRequestIntent
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.complex_types.medication_request_category import MedicationRequestCategory
+    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for subject
+    from spark_auto_mapper_fhir.resources.patient import Patient
+    from spark_auto_mapper_fhir.resources.group import Group
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for encounter
+    from spark_auto_mapper_fhir.resources.encounter import Encounter
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for supportingInformation
+    from spark_auto_mapper_fhir.resources.resource import Resource
+    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for requester
+    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+    from spark_auto_mapper_fhir.resources.organization import Organization
+    from spark_auto_mapper_fhir.resources.patient import Patient
+    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+    from spark_auto_mapper_fhir.resources.device import Device
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for performer
+    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+    from spark_auto_mapper_fhir.resources.organization import Organization
+    from spark_auto_mapper_fhir.resources.patient import Patient
+    from spark_auto_mapper_fhir.resources.device import Device
+    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+    from spark_auto_mapper_fhir.resources.care_team import CareTeam
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for performerType
+    from spark_auto_mapper_fhir.complex_types.medication_request_performer_type import MedicationRequestPerformerType
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for recorder
+    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.complex_types.medication_request_reason import MedicationRequestReason
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for reasonReference
+    from spark_auto_mapper_fhir.resources.condition import Condition
+    from spark_auto_mapper_fhir.resources.observation import Observation
+    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for basedOn
+    from spark_auto_mapper_fhir.resources.care_plan import CarePlan
+    from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+    from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for courseOfTherapyType
+    from spark_auto_mapper_fhir.complex_types.medication_request_course_of_therapy import MedicationRequestCourseOfTherapy
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for insurance
+    from spark_auto_mapper_fhir.resources.coverage import Coverage
+    from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+    from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
+    from spark_auto_mapper_fhir.backbone_elements.medication_request_dispense_request import MedicationRequestDispenseRequest
+    from spark_auto_mapper_fhir.backbone_elements.medication_request_substitution import MedicationRequestSubstitution
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for priorPrescription
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for detectedIssue
+    from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+    # Imports for References for eventHistory
+    from spark_auto_mapper_fhir.resources.provenance import Provenance
+
+
+# This file is auto-generated by generate_classes so do not edit manually
+# noinspection PyPep8Naming
+class MedicationRequest(FhirResourceBase):
+    """
+    """
+    # noinspection PyPep8Naming
+    def __init__(
+        self,
+        *,
+        id_: FhirId,
+        meta: Optional[Meta] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        status: medicationrequestStatus ,
+        statusReason: Optional[CodeableConcept[MedicationRequestStatusReason] ] = None,
+        intent: medicationRequestIntent ,
+        category: Optional[FhirList[CodeableConcept[MedicationRequestCategory] ]] = None,
+        priority: Optional[RequestPriority ] = None,
+        doNotPerform: Optional[FhirBoolean ] = None,
+        subject: Reference [Union[Patient, Group]],
+        encounter: Optional[Reference [Union[Encounter]]] = None,
+        supportingInformation: Optional[FhirList[Reference [Union[Resource]]]] = None,
+        authoredOn: Optional[FhirDateTime ] = None,
+        requester: Optional[Reference [Union[Practitioner, PractitionerRole, Organization, Patient, RelatedPerson, Device]]] = None,
+        performer: Optional[Reference [Union[Practitioner, PractitionerRole, Organization, Patient, Device, RelatedPerson, CareTeam]]] = None,
+        performerType: Optional[CodeableConcept[MedicationRequestPerformerType] ] = None,
+        recorder: Optional[Reference [Union[Practitioner, PractitionerRole]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[MedicationRequestReason] ]] = None,
+        reasonReference: Optional[FhirList[Reference [Union[Condition, Observation]]]] = None,
+        instantiatesCanonical: Optional[FhirList[canonical ]] = None,
+        instantiatesUri: Optional[FhirList[uri ]] = None,
+        basedOn: Optional[FhirList[Reference [Union[CarePlan, MedicationRequest, ServiceRequest, ImmunizationRecommendation]]]] = None,
+        groupIdentifier: Optional[Identifier ] = None,
+        courseOfTherapyType: Optional[CodeableConcept[MedicationRequestCourseOfTherapy] ] = None,
+        insurance: Optional[FhirList[Reference [Union[Coverage, ClaimResponse]]]] = None,
+        note: Optional[FhirList[Annotation ]] = None,
+        dosageInstruction: Optional[FhirList[Dosage ]] = None,
+        dispenseRequest: Optional[MedicationRequestDispenseRequest ] = None,
+        substitution: Optional[MedicationRequestSubstitution ] = None,
+        priorPrescription: Optional[Reference [Union[MedicationRequest]]] = None,
+        detectedIssue: Optional[FhirList[Reference [Union[DetectedIssue]]]] = None,
+        eventHistory: Optional[FhirList[Reference [Union[Provenance]]]] = None,
+    ) -> None:
+        """
+
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param identifier: Identifiers associated with this medication request that are defined by
+    business processes and/or used to refer to it when a direct URL reference to
+    the resource itself is not appropriate. They are business identifiers assigned
+    to this resource by the performer or other systems and remain constant as the
+    resource is updated and propagates from server to server.
+        :param status: A code specifying the current state of the order.  Generally, this will be
+    active or completed state.
+        :param statusReason: Captures the reason for the current state of the MedicationRequest.
+        :param intent: Whether the request is a proposal, plan, or an original order.
+        :param category: Indicates the type of medication request (for example, where the medication is
+    expected to be consumed or administered (i.e. inpatient or outpatient)).
+        :param priority: Indicates how quickly the Medication Request should be addressed with respect
+    to other requests.
+        :param doNotPerform: If true indicates that the provider is asking for the medication request not
+    to occur.
+        :param subject: A link to a resource representing the person or set of individuals to whom the
+    medication will be given.
+        :param encounter: The Encounter during which this [x] was created or to which the creation of
+    this record is tightly associated.
+        :param supportingInformation: Include additional information (for example, patient height and weight) that
+    supports the ordering of the medication.
+        :param authoredOn: The date (and perhaps time) when the prescription was initially written or
+    authored on.
+        :param requester: The individual, organization, or device that initiated the request and has
+    responsibility for its activation.
+        :param performer: The specified desired performer of the medication treatment (e.g. the
+    performer of the medication administration).
+        :param performerType: Indicates the type of performer of the administration of the medication.
+        :param recorder: The person who entered the order on behalf of another individual for example
+    in the case of a verbal or a telephone order.
+        :param reasonCode: The reason or the indication for ordering or not ordering the medication.
+        :param reasonReference: Condition or observation that supports why the medication was ordered.
+        :param instantiatesCanonical: The URL pointing to a protocol, guideline, orderset, or other definition that
+    is adhered to in whole or in part by this MedicationRequest.
+        :param instantiatesUri: The URL pointing to an externally maintained protocol, guideline, orderset or
+    other definition that is adhered to in whole or in part by this
+    MedicationRequest.
+        :param basedOn: A plan or request that is fulfilled in whole or in part by this medication
+    request.
+        :param groupIdentifier: A shared identifier common to all requests that were authorized more or less
+    simultaneously by a single author, representing the identifier of the
+    requisition or prescription.
+        :param courseOfTherapyType: The description of the overall patte3rn of the administration of the
+    medication to the patient.
+        :param insurance: Insurance plans, coverage extensions, pre-authorizations and/or pre-
+    determinations that may be required for delivering the requested service.
+        :param note: Extra information about the prescription that could not be conveyed by the
+    other attributes.
+        :param dosageInstruction: Indicates how the medication is to be used by the patient.
+        :param dispenseRequest: Indicates the specific details for the dispense or medication supply part of a
+    medication request (also known as a Medication Prescription or Medication
+    Order).  Note that this information is not always sent with the order.  There
+    may be in some settings (e.g. hospitals) institutional or system support for
+    completing the dispense details in the pharmacy department.
+        :param substitution: Indicates whether or not substitution can or should be part of the dispense.
+    In some cases, substitution must happen, in other cases substitution must not
+    happen. This block explains the prescriber's intent. If nothing is specified
+    substitution may be done.
+        :param priorPrescription: A link to a resource representing an earlier order related order or
+    prescription.
+        :param detectedIssue: Indicates an actual or potential clinical issue with or between one or more
+    active or proposed clinical actions for a patient; e.g. Drug-drug interaction,
+    duplicate therapy, dosage alert etc.
+        :param eventHistory: Links to Provenance records for past versions of this resource or fulfilling
+    request or event resources that identify key state transitions or updates that
+    are likely to be relevant to a user looking at the current version of the
+    resource.
+        """
+        super().__init__(
+            resourceType="MedicationRequest",
+            id_=id_,
+            meta=meta,
+            extension=extension,
+            identifier=identifier,
+            status=status,
+            statusReason=statusReason,
+            intent=intent,
+            category=category,
+            priority=priority,
+            doNotPerform=doNotPerform,
+            subject=subject,
+            encounter=encounter,
+            supportingInformation=supportingInformation,
+            authoredOn=authoredOn,
+            requester=requester,
+            performer=performer,
+            performerType=performerType,
+            recorder=recorder,
+            reasonCode=reasonCode,
+            reasonReference=reasonReference,
+            instantiatesCanonical=instantiatesCanonical,
+            instantiatesUri=instantiatesUri,
+            basedOn=basedOn,
+            groupIdentifier=groupIdentifier,
+            courseOfTherapyType=courseOfTherapyType,
+            insurance=insurance,
+            note=note,
+            dosageInstruction=dosageInstruction,
+            dispenseRequest=dispenseRequest,
+            substitution=substitution,
+            priorPrescription=priorPrescription,
+            detectedIssue=detectedIssue,
+            eventHistory=eventHistory,
+        )
+
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
+        return MedicationRequestSchema.get_schema(include_extension=include_extension)
