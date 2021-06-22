@@ -63,6 +63,7 @@ class FhirEntity:
     documentation: List[str]
     type_: Optional[str]
     is_back_bone_element: bool
+    is_value_set: bool = False
 
 
 class FhirXmlSchemaParser:
@@ -133,6 +134,14 @@ class FhirXmlSchemaParser:
 
         # and the target types for codeable concepts
         FhirXmlSchemaParser.process_types_for_codeable_concepts(fhir_entities)
+
+        value_sets: List[FhirValueSet] = FhirXmlSchemaParser.get_value_sets()
+
+        value_set: FhirValueSet
+        for value_set in value_sets:
+            for fhir_entity in fhir_entities:
+                if value_set.name == fhir_entity.fhir_name:
+                    fhir_entity.is_value_set = True
 
         return fhir_entities
 
@@ -569,7 +578,7 @@ class FhirXmlSchemaParser:
         value_set_entry: Dict[str, Any]
         for value_set_entry in entries:
             value_set: Dict[str, Any] = value_set_entry["resource"]
-            id: str = value_set["id"]
+            id_: str = value_set["id"].replace("v3-", "")
             if "concept" in value_set:
                 concepts_list: List[Dict[str, Any]] = value_set["concept"]
                 fhir_concepts: List[FhirValueSetConcept] = []
@@ -585,7 +594,7 @@ class FhirXmlSchemaParser:
                             code=code, display=display, definition=definition
                         )
                     )
-                fhir_value_sets.append(FhirValueSet(name=id, concepts=fhir_concepts))
+                fhir_value_sets.append(FhirValueSet(name=id_, concepts=fhir_concepts))
             print("foo")
 
         return fhir_value_sets

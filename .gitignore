@@ -163,3 +163,4 @@ dmypy.json
 /spark_auto_mapper_fhir/generator/backbone_elements/
 /spark_auto_mapper_fhir/generator/complex_types/
 /spark_auto_mapper_fhir/generator/resources/
+/spark_auto_mapper_fhir/generator/value_sets/
