@@ -16,6 +16,7 @@ class SmartName:
 class FhirValueSetConcept:
     code: str
     display: Optional[str]
+    cleaned_display: Optional[str]
     definition: Optional[str]
 
 
@@ -64,6 +65,7 @@ class FhirEntity:
     type_: Optional[str]
     is_back_bone_element: bool
     is_value_set: bool = False
+    value_set_concepts: Optional[List[FhirValueSetConcept]] = None
 
 
 class FhirXmlSchemaParser:
@@ -137,12 +139,28 @@ class FhirXmlSchemaParser:
 
         value_sets: List[FhirValueSet] = FhirXmlSchemaParser.get_value_sets()
 
-        value_set: FhirValueSet
-        for value_set in value_sets:
-            for fhir_entity in fhir_entities:
-                if value_set.name == fhir_entity.fhir_name:
-                    fhir_entity.is_value_set = True
+        # value_set: FhirValueSet
+        # for value_set in value_sets:
+        #     for fhir_entity in fhir_entities:
+        #         if value_set.name == fhir_entity.fhir_name:
+        #             fhir_entity.is_value_set = True
 
+        fhir_entities.extend(
+            [
+                FhirEntity(
+                    type_="ValueSet",
+                    fhir_name=c.name,
+                    name_snake_case=FhirXmlSchemaParser.camel_to_snake(c.name),
+                    cleaned_name=c.name,
+                    documentation=[],
+                    properties=[],
+                    is_back_bone_element=False,
+                    is_value_set=True,
+                    value_set_concepts=c.concepts,
+                )
+                for c in value_sets
+            ]
+        )
         return fhir_entities
 
     @staticmethod
@@ -588,10 +606,16 @@ class FhirXmlSchemaParser:
                     display: str = (
                         concept["display"] if "display" in concept else concept["code"]
                     )
+                    cleaned_display: str = "".join(
+                        [c.capitalize() for c in display.split(" ")]
+                    )
                     definition: Optional[str] = concept.get("definition")
                     fhir_concepts.append(
                         FhirValueSetConcept(
-                            code=code, display=display, definition=definition
+                            code=code,
+                            display=display,
+                            cleaned_display=cleaned_display,
+                            definition=definition,
                         )
                     )
                 fhir_value_sets.append(FhirValueSet(name=id_, concepts=fhir_concepts))
