@@ -37,7 +37,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.charge_item_code import ChargeItemCode
+    from spark_auto_mapper_fhir.value_sets.chargeitemcode import Chargeitemcode
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for instance
     from spark_auto_mapper_fhir.resources.medication import Medication
@@ -78,7 +79,7 @@ class ChargeItemDefinition(FhirResourceBase):
         approvalDate: Optional[FhirDate ] = None,
         lastReviewDate: Optional[FhirDate ] = None,
         effectivePeriod: Optional[Period ] = None,
-        code: Optional[CodeableConcept[ChargeItemCode] ] = None,
+        code: Optional[CodeableConcept[Chargeitemcode] ] = None,
         instance: Optional[FhirList[Reference [Union[Medication, Substance, Device]]]] = None,
         applicability: Optional[FhirList[ChargeItemDefinitionApplicability ]] = None,
         propertyGroup: Optional[FhirList[ChargeItemDefinitionPropertyGroup ]] = None,

@@ -20,11 +20,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.medicationrequest_status import medicationrequestStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.medication_request _status _reason _codes import medicationRequest Status Reason Codes
+    from spark_auto_mapper_fhir.value_sets.medicationrequest_status_reason_codes import MedicationrequestStatusReasonCodes
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.medication_request_intent import medicationRequestIntent
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medication_request _category _codes import medicationRequest Category Codes
+    from spark_auto_mapper_fhir.value_sets.medicationrequest_category_codes import MedicationrequestCategoryCodes
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -75,7 +77,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for courseOfTherapyType
-    from spark_auto_mapper_fhir.value_sets.medication_request _course of _therapy _codes import medicationRequest Course of Therapy Codes
+    from spark_auto_mapper_fhir.value_sets.medicationrequest_course_of_therapy_codes import MedicationrequestCourseOfTherapyCodes
+    # End Import for CodeableConcept for courseOfTherapyType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for insurance
     from spark_auto_mapper_fhir.resources.coverage import Coverage
@@ -108,9 +111,9 @@ class MedicationRequest(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: medicationrequestStatus ,
-        statusReason: Optional[CodeableConcept[medicationRequest Status Reason Codes] ] = None,
+        statusReason: Optional[CodeableConcept[MedicationrequestStatusReasonCodes] ] = None,
         intent: medicationRequestIntent ,
-        category: Optional[FhirList[CodeableConcept[medicationRequest Category Codes] ]] = None,
+        category: Optional[FhirList[CodeableConcept[MedicationrequestCategoryCodes] ]] = None,
         priority: Optional[RequestPriority ] = None,
         doNotPerform: Optional[FhirBoolean ] = None,
         subject: Reference [Union[Patient, Group]],
@@ -127,7 +130,7 @@ class MedicationRequest(FhirResourceBase):
         instantiatesUri: Optional[FhirList[uri ]] = None,
         basedOn: Optional[FhirList[Reference [Union[CarePlan, MedicationRequest, ServiceRequest, ImmunizationRecommendation]]]] = None,
         groupIdentifier: Optional[Identifier ] = None,
-        courseOfTherapyType: Optional[CodeableConcept[medicationRequest Course of Therapy Codes] ] = None,
+        courseOfTherapyType: Optional[CodeableConcept[MedicationrequestCourseOfTherapyCodes] ] = None,
         insurance: Optional[FhirList[Reference [Union[Coverage, ClaimResponse]]]] = None,
         note: Optional[FhirList[Annotation ]] = None,
         dosageInstruction: Optional[FhirList[Dosage ]] = None,

@@ -36,7 +36,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.observation_status import ObservationStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.observation_category_codes import ObservationCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.observationcategorycodes import Observationcategorycodes
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
@@ -61,7 +62,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for dataAbsentReason
-    from spark_auto_mapper_fhir.value_sets.data_absent_reason import DataAbsentReason
+    from spark_auto_mapper_fhir.value_sets.dataabsentreason import Dataabsentreason
+    # End Import for CodeableConcept for dataAbsentReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -104,14 +106,14 @@ class Observation(FhirResourceBase):
         basedOn: Optional[FhirList[Reference [Union[CarePlan, DeviceRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest]]]] = None,
         partOf: Optional[FhirList[Reference [Union[MedicationAdministration, MedicationDispense, MedicationStatement, Procedure, Immunization, ImagingStudy]]]] = None,
         status: ObservationStatus ,
-        category: Optional[FhirList[CodeableConcept[ObservationCategoryCodes] ]] = None,
+        category: Optional[FhirList[CodeableConcept[Observationcategorycodes] ]] = None,
         code: CodeableConcept ,
         subject: Optional[Reference [Union[Patient, Group, Device, Location]]] = None,
         focus: Optional[FhirList[Reference [Union[Resource]]]] = None,
         encounter: Optional[Reference [Union[Encounter]]] = None,
         issued: Optional[instant ] = None,
         performer: Optional[FhirList[Reference [Union[Practitioner, PractitionerRole, Organization, CareTeam, Patient, RelatedPerson]]]] = None,
-        dataAbsentReason: Optional[CodeableConcept[DataAbsentReason] ] = None,
+        dataAbsentReason: Optional[CodeableConcept[Dataabsentreason] ] = None,
         interpretation: Optional[FhirList[CodeableConcept ]] = None,
         note: Optional[FhirList[Annotation ]] = None,
         bodySite: Optional[CodeableConcept ] = None,

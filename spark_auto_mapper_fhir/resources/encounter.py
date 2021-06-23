@@ -23,10 +23,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.encounter_class_history import EncounterClassHistory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.encounter_type import EncounterType
+    from spark_auto_mapper_fhir.value_sets.encountertype import Encountertype
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
+    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
@@ -80,8 +82,8 @@ class Encounter(FhirResourceBase):
         statusHistory: Optional[FhirList[EncounterStatusHistory ]] = None,
         class_: Coding ,
         classHistory: Optional[FhirList[EncounterClassHistory ]] = None,
-        type: Optional[FhirList[CodeableConcept[EncounterType] ]] = None,
-        serviceType: Optional[CodeableConcept[ServiceType] ] = None,
+        type: Optional[FhirList[CodeableConcept[Encountertype] ]] = None,
+        serviceType: Optional[CodeableConcept[Servicetype] ] = None,
         priority: Optional[CodeableConcept ] = None,
         subject: Optional[Reference [Union[Patient, Group]]] = None,
         episodeOfCare: Optional[FhirList[Reference [Union[EpisodeOfCare]]]] = None,

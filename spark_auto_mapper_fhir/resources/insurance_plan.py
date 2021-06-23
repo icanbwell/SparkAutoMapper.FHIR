@@ -20,7 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.publication_status import PublicationStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.insurance_plan_type import InsurancePlanType
+    from spark_auto_mapper_fhir.value_sets.insuranceplantype import Insuranceplantype
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -58,7 +59,7 @@ class InsurancePlan(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: Optional[PublicationStatus ] = None,
-        type: Optional[FhirList[CodeableConcept[InsurancePlanType] ]] = None,
+        type: Optional[FhirList[CodeableConcept[Insuranceplantype] ]] = None,
         name: Optional[FhirString ] = None,
         alias: Optional[FhirList[FhirString ]] = None,
         period: Optional[Period ] = None,

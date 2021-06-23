@@ -33,7 +33,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.coding import Coding
     # Import for CodeableConcept for keyword
-    from spark_auto_mapper_fhir.value_sets.definition_use_codes import DefinitionUseCodes
+    from spark_auto_mapper_fhir.value_sets.definitionusecodes import Definitionusecodes
+    # End Import for CodeableConcept for keyword
     from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
     from spark_auto_mapper_fhir.backbone_elements.structure_definition_mapping import StructureDefinitionMapping
     from spark_auto_mapper_fhir.complex_types.structure_definition_kind import StructureDefinitionKind
@@ -74,7 +75,7 @@ class StructureDefinition(FhirResourceBase):
         jurisdiction: Optional[FhirList[CodeableConcept ]] = None,
         purpose: Optional[markdown ] = None,
         copyright: Optional[markdown ] = None,
-        keyword: Optional[FhirList[Coding[DefinitionUseCodes] ]] = None,
+        keyword: Optional[FhirList[Coding[Definitionusecodes] ]] = None,
         fhirVersion: Optional[FHIRVersion ] = None,
         mapping: Optional[FhirList[StructureDefinitionMapping ]] = None,
         kind: StructureDefinitionKind ,

@@ -20,13 +20,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.goal_lifecycle_status import GoalLifecycleStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for achievementStatus
-    from spark_auto_mapper_fhir.value_sets.goal_achievement_status import GoalAchievementStatus
+    from spark_auto_mapper_fhir.value_sets.goalachievementstatus import Goalachievementstatus
+    # End Import for CodeableConcept for achievementStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategory
+    from spark_auto_mapper_fhir.value_sets.goalcategory import Goalcategory
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for priority
-    from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriority
+    from spark_auto_mapper_fhir.value_sets.goalpriority import Goalpriority
+    # End Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
@@ -71,9 +74,9 @@ class Goal(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         lifecycleStatus: GoalLifecycleStatus ,
-        achievementStatus: Optional[CodeableConcept[GoalAchievementStatus] ] = None,
-        category: Optional[FhirList[CodeableConcept[GoalCategory] ]] = None,
-        priority: Optional[CodeableConcept[GoalPriority] ] = None,
+        achievementStatus: Optional[CodeableConcept[Goalachievementstatus] ] = None,
+        category: Optional[FhirList[CodeableConcept[Goalcategory] ]] = None,
+        priority: Optional[CodeableConcept[Goalpriority] ] = None,
         description: CodeableConcept ,
         subject: Reference [Union[Patient, Group, Organization]],
         target: Optional[FhirList[GoalTarget ]] = None,

@@ -24,7 +24,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.plan_definition_type import PlanDefinitionType
+    from spark_auto_mapper_fhir.value_sets.plandefinitiontype import Plandefinitiontype
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.publication_status import PublicationStatus
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
@@ -41,7 +42,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
+    from spark_auto_mapper_fhir.value_sets.definitiontopic import Definitiontopic
+    # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -70,7 +72,7 @@ class PlanDefinition(FhirResourceBase):
         name: Optional[FhirString ] = None,
         title: Optional[FhirString ] = None,
         subtitle: Optional[FhirString ] = None,
-        type: Optional[CodeableConcept[PlanDefinitionType] ] = None,
+        type: Optional[CodeableConcept[Plandefinitiontype] ] = None,
         status: PublicationStatus ,
         experimental: Optional[FhirBoolean ] = None,
         date: Optional[FhirDateTime ] = None,
@@ -85,7 +87,7 @@ class PlanDefinition(FhirResourceBase):
         approvalDate: Optional[FhirDate ] = None,
         lastReviewDate: Optional[FhirDate ] = None,
         effectivePeriod: Optional[Period ] = None,
-        topic: Optional[FhirList[CodeableConcept[DefinitionTopic] ]] = None,
+        topic: Optional[FhirList[CodeableConcept[Definitiontopic] ]] = None,
         author: Optional[FhirList[ContactDetail ]] = None,
         editor: Optional[FhirList[ContactDetail ]] = None,
         reviewer: Optional[FhirList[ContactDetail ]] = None,

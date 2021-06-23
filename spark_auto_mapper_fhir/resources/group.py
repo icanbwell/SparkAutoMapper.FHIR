@@ -22,7 +22,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBlood
+    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -51,7 +52,7 @@ class Group(FhirResourceBase):
         active: Optional[FhirBoolean ] = None,
         type: GroupType ,
         actual: FhirBoolean ,
-        code: Optional[CodeableConcept[ACMECholCodesBlood] ] = None,
+        code: Optional[CodeableConcept[Acmecholcodesblood] ] = None,
         name: Optional[FhirString ] = None,
         quantity: Optional[unsignedInt ] = None,
         managingEntity: Optional[Reference [Union[Organization, RelatedPerson, Practitioner, PractitionerRole]]] = None,

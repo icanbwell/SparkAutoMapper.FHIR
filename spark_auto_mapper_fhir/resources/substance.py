@@ -20,7 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.fhir_substance_status import FHIRSubstanceStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.substance_category_codes import SubstanceCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.substancecategorycodes import Substancecategorycodes
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.backbone_elements.substance_instance import SubstanceInstance
@@ -41,7 +42,7 @@ class Substance(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: Optional[FHIRSubstanceStatus ] = None,
-        category: Optional[FhirList[CodeableConcept[SubstanceCategoryCodes] ]] = None,
+        category: Optional[FhirList[CodeableConcept[Substancecategorycodes] ]] = None,
         code: CodeableConcept ,
         description: Optional[FhirString ] = None,
         instance: Optional[FhirList[SubstanceInstance ]] = None,

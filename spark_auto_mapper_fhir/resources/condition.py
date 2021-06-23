@@ -21,7 +21,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.condition_category_codes import ConditionCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.conditioncategorycodes import Conditioncategorycodes
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -65,7 +66,7 @@ class Condition(FhirResourceBase):
         identifier: Optional[FhirList[Identifier ]] = None,
         clinicalStatus: Optional[CodeableConcept ] = None,
         verificationStatus: Optional[CodeableConcept ] = None,
-        category: Optional[FhirList[CodeableConcept[ConditionCategoryCodes] ]] = None,
+        category: Optional[FhirList[CodeableConcept[Conditioncategorycodes] ]] = None,
         severity: Optional[CodeableConcept ] = None,
         code: Optional[CodeableConcept ] = None,
         bodySite: Optional[FhirList[CodeableConcept ]] = None,

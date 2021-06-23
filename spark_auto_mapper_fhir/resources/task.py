@@ -28,15 +28,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.task_status import TaskStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBlood
+    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for businessStatus
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBlood
+    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
+    # End Import for CodeableConcept for businessStatus
     from spark_auto_mapper_fhir.complex_types.task_intent import TaskIntent
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.task_code import TaskCode
+    from spark_auto_mapper_fhir.value_sets.taskcode import Taskcode
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for focus
@@ -72,7 +75,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBlood
+    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.resource import Resource
@@ -108,11 +112,11 @@ class Task(FhirResourceBase):
         groupIdentifier: Optional[Identifier ] = None,
         partOf: Optional[FhirList[Reference [Union[Task]]]] = None,
         status: TaskStatus ,
-        statusReason: Optional[CodeableConcept[ACMECholCodesBlood] ] = None,
-        businessStatus: Optional[CodeableConcept[ACMECholCodesBlood] ] = None,
+        statusReason: Optional[CodeableConcept[Acmecholcodesblood] ] = None,
+        businessStatus: Optional[CodeableConcept[Acmecholcodesblood] ] = None,
         intent: TaskIntent ,
         priority: Optional[RequestPriority ] = None,
-        code: Optional[CodeableConcept[TaskCode] ] = None,
+        code: Optional[CodeableConcept[Taskcode] ] = None,
         description: Optional[FhirString ] = None,
         focus: Optional[Reference [Union[Resource]]] = None,
         for_: Optional[Reference ] = None,
@@ -124,7 +128,7 @@ class Task(FhirResourceBase):
         performerType: Optional[FhirList[CodeableConcept ]] = None,
         owner: Optional[Reference [Union[Practitioner, PractitionerRole, Organization, CareTeam, HealthcareService, Patient, Device, RelatedPerson]]] = None,
         location: Optional[Reference [Union[Location]]] = None,
-        reasonCode: Optional[CodeableConcept[ACMECholCodesBlood] ] = None,
+        reasonCode: Optional[CodeableConcept[Acmecholcodesblood] ] = None,
         reasonReference: Optional[Reference [Union[Resource]]] = None,
         insurance: Optional[FhirList[Reference [Union[Coverage, ClaimResponse]]]] = None,
         note: Optional[FhirList[Annotation ]] = None,

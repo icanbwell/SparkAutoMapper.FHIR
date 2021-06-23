@@ -23,10 +23,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
+    from spark_auto_mapper_fhir.value_sets.servicecategory import Servicecategory
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
+    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for location
@@ -41,18 +43,22 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceProvisionCode
-    from spark_auto_mapper_fhir.value_sets.service_provision_conditions import ServiceProvisionConditions
+    from spark_auto_mapper_fhir.value_sets.serviceprovisionconditions import Serviceprovisionconditions
+    # End Import for CodeableConcept for serviceProvisionCode
     from spark_auto_mapper_fhir.backbone_elements.healthcare_service_eligibility import HealthcareServiceEligibility
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for program
     from spark_auto_mapper_fhir.value_sets.program import Program
+    # End Import for CodeableConcept for program
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for characteristic
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBlood
+    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
+    # End Import for CodeableConcept for characteristic
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for referralMethod
-    from spark_auto_mapper_fhir.value_sets.referral_method import ReferralMethod
+    from spark_auto_mapper_fhir.value_sets.referralmethod import Referralmethod
+    # End Import for CodeableConcept for referralMethod
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.backbone_elements.healthcare_service_available_time import HealthcareServiceAvailableTime
     from spark_auto_mapper_fhir.backbone_elements.healthcare_service_not_available import HealthcareServiceNotAvailable
@@ -77,8 +83,8 @@ class HealthcareService(FhirResourceBase):
         identifier: Optional[FhirList[Identifier ]] = None,
         active: Optional[FhirBoolean ] = None,
         providedBy: Optional[Reference [Union[Organization]]] = None,
-        category: Optional[FhirList[CodeableConcept[ServiceCategory] ]] = None,
-        type: Optional[FhirList[CodeableConcept[ServiceType] ]] = None,
+        category: Optional[FhirList[CodeableConcept[Servicecategory] ]] = None,
+        type: Optional[FhirList[CodeableConcept[Servicetype] ]] = None,
         specialty: Optional[FhirList[CodeableConcept ]] = None,
         location: Optional[FhirList[Reference [Union[Location]]]] = None,
         name: Optional[FhirString ] = None,
@@ -87,12 +93,12 @@ class HealthcareService(FhirResourceBase):
         photo: Optional[Attachment ] = None,
         telecom: Optional[FhirList[ContactPoint ]] = None,
         coverageArea: Optional[FhirList[Reference [Union[Location]]]] = None,
-        serviceProvisionCode: Optional[FhirList[CodeableConcept[ServiceProvisionConditions] ]] = None,
+        serviceProvisionCode: Optional[FhirList[CodeableConcept[Serviceprovisionconditions] ]] = None,
         eligibility: Optional[FhirList[HealthcareServiceEligibility ]] = None,
         program: Optional[FhirList[CodeableConcept[Program] ]] = None,
-        characteristic: Optional[FhirList[CodeableConcept[ACMECholCodesBlood] ]] = None,
+        characteristic: Optional[FhirList[CodeableConcept[Acmecholcodesblood] ]] = None,
         communication: Optional[FhirList[CodeableConcept ]] = None,
-        referralMethod: Optional[FhirList[CodeableConcept[ReferralMethod] ]] = None,
+        referralMethod: Optional[FhirList[CodeableConcept[Referralmethod] ]] = None,
         appointmentRequired: Optional[FhirBoolean ] = None,
         availableTime: Optional[FhirList[HealthcareServiceAvailableTime ]] = None,
         notAvailable: Optional[FhirList[HealthcareServiceNotAvailable ]] = None,

@@ -20,10 +20,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
+    from spark_auto_mapper_fhir.value_sets.servicecategory import Servicecategory
+    # End Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
+    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for actor
@@ -52,8 +54,8 @@ class Schedule(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         active: Optional[FhirBoolean ] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory] ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[ServiceType] ]] = None,
+        serviceCategory: Optional[FhirList[CodeableConcept[Servicecategory] ]] = None,
+        serviceType: Optional[FhirList[CodeableConcept[Servicetype] ]] = None,
         specialty: Optional[FhirList[CodeableConcept ]] = None,
         actor: FhirList[Reference [Union[Patient, Practitioner, PractitionerRole, RelatedPerson, Device, HealthcareService, Location]]],
         planningHorizon: Optional[Period ] = None,

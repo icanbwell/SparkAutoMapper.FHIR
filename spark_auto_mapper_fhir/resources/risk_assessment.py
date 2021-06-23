@@ -26,7 +26,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.observation_status import ObservationStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBlood
+    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
+    # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
@@ -74,7 +75,7 @@ class RiskAssessment(FhirResourceBase):
         basedOn: Optional[Reference [Union[Resource]]] = None,
         parent: Optional[Reference [Union[Resource]]] = None,
         status: ObservationStatus ,
-        method: Optional[CodeableConcept[ACMECholCodesBlood] ] = None,
+        method: Optional[CodeableConcept[Acmecholcodesblood] ] = None,
         code: Optional[CodeableConcept ] = None,
         subject: Reference [Union[Patient, Group]],
         encounter: Optional[Reference [Union[Encounter]]] = None,

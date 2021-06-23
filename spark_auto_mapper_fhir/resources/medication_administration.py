@@ -25,7 +25,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medication_administration _category _codes import MedicationAdministration Category Codes
+    from spark_auto_mapper_fhir.value_sets.medicationadministration_category_codes import MedicationadministrationCategoryCodes
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
@@ -40,7 +41,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.medication_administration_performer import MedicationAdministrationPerformer
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.reason_medication_given_codes import ReasonMedicationGivenCodes
+    from spark_auto_mapper_fhir.value_sets.reasonmedicationgivencodes import Reasonmedicationgivencodes
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
@@ -76,12 +78,12 @@ class MedicationAdministration(FhirResourceBase):
         partOf: Optional[FhirList[Reference [Union[MedicationAdministration, Procedure]]]] = None,
         status: code ,
         statusReason: Optional[FhirList[CodeableConcept ]] = None,
-        category: Optional[CodeableConcept[MedicationAdministration Category Codes] ] = None,
+        category: Optional[CodeableConcept[MedicationadministrationCategoryCodes] ] = None,
         subject: Reference [Union[Patient, Group]],
         context: Optional[Reference [Union[Encounter, EpisodeOfCare]]] = None,
         supportingInformation: Optional[FhirList[Reference [Union[Resource]]]] = None,
         performer: Optional[FhirList[MedicationAdministrationPerformer ]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[ReasonMedicationGivenCodes] ]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[Reasonmedicationgivencodes] ]] = None,
         reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, DiagnosticReport]]]] = None,
         request: Optional[Reference [Union[MedicationRequest]]] = None,
         device: Optional[FhirList[Reference [Union[Device]]]] = None,

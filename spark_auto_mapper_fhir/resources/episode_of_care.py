@@ -21,7 +21,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.episode_of_care_status_history import EpisodeOfCareStatusHistory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.episode_of_care_type import EpisodeOfCareType
+    from spark_auto_mapper_fhir.value_sets.episodeofcaretype import Episodeofcaretype
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.backbone_elements.episode_of_care_diagnosis import EpisodeOfCareDiagnosis
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for patient
@@ -60,7 +61,7 @@ class EpisodeOfCare(FhirResourceBase):
         identifier: Optional[FhirList[Identifier ]] = None,
         status: EpisodeOfCareStatus ,
         statusHistory: Optional[FhirList[EpisodeOfCareStatusHistory ]] = None,
-        type: Optional[FhirList[CodeableConcept[EpisodeOfCareType] ]] = None,
+        type: Optional[FhirList[CodeableConcept[Episodeofcaretype] ]] = None,
         diagnosis: Optional[FhirList[EpisodeOfCareDiagnosis ]] = None,
         patient: Reference [Union[Patient]],
         managingOrganization: Optional[Reference [Union[Organization]]] = None,

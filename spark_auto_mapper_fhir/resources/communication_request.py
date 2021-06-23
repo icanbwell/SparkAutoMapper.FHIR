@@ -26,10 +26,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBlood
+    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.communication_category import CommunicationCategory
+    from spark_auto_mapper_fhir.value_sets.communicationcategory import Communicationcategory
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -100,8 +102,8 @@ class CommunicationRequest(FhirResourceBase):
         replaces: Optional[FhirList[Reference [Union[CommunicationRequest]]]] = None,
         groupIdentifier: Optional[Identifier ] = None,
         status: RequestStatus ,
-        statusReason: Optional[CodeableConcept[ACMECholCodesBlood] ] = None,
-        category: Optional[FhirList[CodeableConcept[CommunicationCategory] ]] = None,
+        statusReason: Optional[CodeableConcept[Acmecholcodesblood] ] = None,
+        category: Optional[FhirList[CodeableConcept[Communicationcategory] ]] = None,
         priority: Optional[RequestPriority ] = None,
         doNotPerform: Optional[FhirBoolean ] = None,
         medium: Optional[FhirList[CodeableConcept ]] = None,

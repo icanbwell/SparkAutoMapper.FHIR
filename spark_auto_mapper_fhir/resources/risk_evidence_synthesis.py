@@ -35,7 +35,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
+    from spark_auto_mapper_fhir.value_sets.definitiontopic import Definitiontopic
+    # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -43,10 +44,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for synthesisType
-    from spark_auto_mapper_fhir.value_sets.synthesis_type import SynthesisType
+    from spark_auto_mapper_fhir.value_sets.synthesistype import Synthesistype
+    # End Import for CodeableConcept for synthesisType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for studyType
-    from spark_auto_mapper_fhir.value_sets.study_type import StudyType
+    from spark_auto_mapper_fhir.value_sets.studytype import Studytype
+    # End Import for CodeableConcept for studyType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for population
     from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
@@ -90,14 +93,14 @@ class RiskEvidenceSynthesis(FhirResourceBase):
         approvalDate: Optional[FhirDate ] = None,
         lastReviewDate: Optional[FhirDate ] = None,
         effectivePeriod: Optional[Period ] = None,
-        topic: Optional[FhirList[CodeableConcept[DefinitionTopic] ]] = None,
+        topic: Optional[FhirList[CodeableConcept[Definitiontopic] ]] = None,
         author: Optional[FhirList[ContactDetail ]] = None,
         editor: Optional[FhirList[ContactDetail ]] = None,
         reviewer: Optional[FhirList[ContactDetail ]] = None,
         endorser: Optional[FhirList[ContactDetail ]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact ]] = None,
-        synthesisType: Optional[CodeableConcept[SynthesisType] ] = None,
-        studyType: Optional[CodeableConcept[StudyType] ] = None,
+        synthesisType: Optional[CodeableConcept[Synthesistype] ] = None,
+        studyType: Optional[CodeableConcept[Studytype] ] = None,
         population: Reference [Union[EvidenceVariable]],
         exposure: Optional[Reference [Union[EvidenceVariable]]] = None,
         outcome: Reference [Union[EvidenceVariable]],

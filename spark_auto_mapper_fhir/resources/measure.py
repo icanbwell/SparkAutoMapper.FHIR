@@ -38,7 +38,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
+    from spark_auto_mapper_fhir.value_sets.definitiontopic import Definitiontopic
+    # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -48,13 +49,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for scoring
-    from spark_auto_mapper_fhir.value_sets.measure_scoring import MeasureScoring
+    from spark_auto_mapper_fhir.value_sets.measurescoring import Measurescoring
+    # End Import for CodeableConcept for scoring
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for compositeScoring
-    from spark_auto_mapper_fhir.value_sets.composite_measure_scoring import CompositeMeasureScoring
+    from spark_auto_mapper_fhir.value_sets.compositemeasurescoring import Compositemeasurescoring
+    # End Import for CodeableConcept for compositeScoring
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.measure_type import MeasureType
+    from spark_auto_mapper_fhir.value_sets.measuretype import Measuretype
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
@@ -98,7 +102,7 @@ class Measure(FhirResourceBase):
         approvalDate: Optional[FhirDate ] = None,
         lastReviewDate: Optional[FhirDate ] = None,
         effectivePeriod: Optional[Period ] = None,
-        topic: Optional[FhirList[CodeableConcept[DefinitionTopic] ]] = None,
+        topic: Optional[FhirList[CodeableConcept[Definitiontopic] ]] = None,
         author: Optional[FhirList[ContactDetail ]] = None,
         editor: Optional[FhirList[ContactDetail ]] = None,
         reviewer: Optional[FhirList[ContactDetail ]] = None,
@@ -106,9 +110,9 @@ class Measure(FhirResourceBase):
         relatedArtifact: Optional[FhirList[RelatedArtifact ]] = None,
         library: Optional[FhirList[canonical ]] = None,
         disclaimer: Optional[markdown ] = None,
-        scoring: Optional[CodeableConcept[MeasureScoring] ] = None,
-        compositeScoring: Optional[CodeableConcept[CompositeMeasureScoring] ] = None,
-        type: Optional[FhirList[CodeableConcept[MeasureType] ]] = None,
+        scoring: Optional[CodeableConcept[Measurescoring] ] = None,
+        compositeScoring: Optional[CodeableConcept[Compositemeasurescoring] ] = None,
+        type: Optional[FhirList[CodeableConcept[Measuretype] ]] = None,
         riskAdjustment: Optional[FhirString ] = None,
         rateAggregation: Optional[FhirString ] = None,
         rationale: Optional[markdown ] = None,

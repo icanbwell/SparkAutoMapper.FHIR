@@ -39,7 +39,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_detail import PaymentReconciliationDetail
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for formCode
-    from spark_auto_mapper_fhir.value_sets.form _codes import Form Codes
+    from spark_auto_mapper_fhir.value_sets.form_codes import FormCodes
+    # End Import for CodeableConcept for formCode
     from spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_process_note import PaymentReconciliationProcessNote
 
 
@@ -68,7 +69,7 @@ class PaymentReconciliation(FhirResourceBase):
         paymentAmount: Money ,
         paymentIdentifier: Optional[Identifier ] = None,
         detail: Optional[FhirList[PaymentReconciliationDetail ]] = None,
-        formCode: Optional[CodeableConcept[Form Codes] ] = None,
+        formCode: Optional[CodeableConcept[FormCodes] ] = None,
         processNote: Optional[FhirList[PaymentReconciliationProcessNote ]] = None,
     ) -> None:
         """

@@ -30,10 +30,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.event_status import EventStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.communication_not_done_reason import CommunicationNotDoneReason
+    from spark_auto_mapper_fhir.value_sets.communicationnotdonereason import Communicationnotdonereason
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.communication_category import CommunicationCategory
+    from spark_auto_mapper_fhir.value_sets.communicationcategory import Communicationcategory
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -42,7 +44,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.communication_topic import CommunicationTopic
+    from spark_auto_mapper_fhir.value_sets.communicationtopic import Communicationtopic
+    # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for about
     from spark_auto_mapper_fhir.resources.resource import Resource
@@ -101,12 +104,12 @@ class Communication(FhirResourceBase):
         partOf: Optional[FhirList[Reference [Union[Resource]]]] = None,
         inResponseTo: Optional[FhirList[Reference [Union[Communication]]]] = None,
         status: EventStatus ,
-        statusReason: Optional[CodeableConcept[CommunicationNotDoneReason] ] = None,
-        category: Optional[FhirList[CodeableConcept[CommunicationCategory] ]] = None,
+        statusReason: Optional[CodeableConcept[Communicationnotdonereason] ] = None,
+        category: Optional[FhirList[CodeableConcept[Communicationcategory] ]] = None,
         priority: Optional[RequestPriority ] = None,
         medium: Optional[FhirList[CodeableConcept ]] = None,
         subject: Optional[Reference [Union[Patient, Group]]] = None,
-        topic: Optional[CodeableConcept[CommunicationTopic] ] = None,
+        topic: Optional[CodeableConcept[Communicationtopic] ] = None,
         about: Optional[FhirList[Reference [Union[Resource]]]] = None,
         encounter: Optional[Reference [Union[Encounter]]] = None,
         sent: Optional[FhirDateTime ] = None,

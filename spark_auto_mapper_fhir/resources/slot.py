@@ -19,10 +19,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
+    from spark_auto_mapper_fhir.value_sets.servicecategory import Servicecategory
+    # End Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
+    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -48,8 +50,8 @@ class Slot(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory] ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[ServiceType] ]] = None,
+        serviceCategory: Optional[FhirList[CodeableConcept[Servicecategory] ]] = None,
+        serviceType: Optional[FhirList[CodeableConcept[Servicetype] ]] = None,
         specialty: Optional[FhirList[CodeableConcept ]] = None,
         appointmentType: Optional[CodeableConcept ] = None,
         schedule: Reference [Union[Schedule]],

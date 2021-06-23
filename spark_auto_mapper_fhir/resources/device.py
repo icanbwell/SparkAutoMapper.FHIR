@@ -24,7 +24,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.fhir_device_status import FHIRDeviceStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.fhir_device_status_reason import FHIRDeviceStatusReason
+    from spark_auto_mapper_fhir.value_sets.fhirdevicestatusreason import Fhirdevicestatusreason
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
@@ -71,7 +72,7 @@ class Device(FhirResourceBase):
         definition: Optional[Reference [Union[DeviceDefinition]]] = None,
         udiCarrier: Optional[FhirList[DeviceUdiCarrier ]] = None,
         status: Optional[FHIRDeviceStatus ] = None,
-        statusReason: Optional[FhirList[CodeableConcept[FHIRDeviceStatusReason] ]] = None,
+        statusReason: Optional[FhirList[CodeableConcept[Fhirdevicestatusreason] ]] = None,
         distinctIdentifier: Optional[FhirString ] = None,
         manufacturer: Optional[FhirString ] = None,
         manufactureDate: Optional[FhirDateTime ] = None,

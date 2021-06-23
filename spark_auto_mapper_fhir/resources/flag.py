@@ -20,7 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.flag_status import FlagStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.flag_category import FlagCategory
+    from spark_auto_mapper_fhir.value_sets.flagcategory import Flagcategory
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
@@ -59,7 +60,7 @@ class Flag(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: FlagStatus ,
-        category: Optional[FhirList[CodeableConcept[FlagCategory] ]] = None,
+        category: Optional[FhirList[CodeableConcept[Flagcategory] ]] = None,
         code: CodeableConcept ,
         subject: Reference [Union[Patient, Location, Group, Organization, Practitioner, PlanDefinition, Medication, Procedure]],
         period: Optional[Period ] = None,

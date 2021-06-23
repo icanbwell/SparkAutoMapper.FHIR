@@ -22,21 +22,25 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for need
-    from spark_auto_mapper_fhir.value_sets.need import need
+    from spark_auto_mapper_fhir.value_sets.need import Need
+    # End Import for CodeableConcept for need
     from spark_auto_mapper_fhir.complex_types.status import status
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for validationType
-    from spark_auto_mapper_fhir.value_sets.validation-type import validation-type
+    from spark_auto_mapper_fhir.value_sets.validationtype import Validationtype
+    # End Import for CodeableConcept for validationType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for validationProcess
-    from spark_auto_mapper_fhir.value_sets.validation-process import validation-process
+    from spark_auto_mapper_fhir.value_sets.validationprocess import Validationprocess
+    # End Import for CodeableConcept for validationProcess
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for failureAction
-    from spark_auto_mapper_fhir.value_sets.failure-action import failure-action
+    from spark_auto_mapper_fhir.value_sets.failureaction import Failureaction
+    # End Import for CodeableConcept for failureAction
     from spark_auto_mapper_fhir.backbone_elements.verification_result_primary_source import VerificationResultPrimarySource
     from spark_auto_mapper_fhir.backbone_elements.verification_result_attestation import VerificationResultAttestation
     from spark_auto_mapper_fhir.backbone_elements.verification_result_validator import VerificationResultValidator
@@ -56,15 +60,15 @@ class VerificationResult(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         target: Optional[FhirList[Reference [Union[Resource]]]] = None,
         targetLocation: Optional[FhirList[FhirString ]] = None,
-        need: Optional[CodeableConcept[need] ] = None,
+        need: Optional[CodeableConcept[Need] ] = None,
         status: status ,
         statusDate: Optional[FhirDateTime ] = None,
-        validationType: Optional[CodeableConcept[validation-type] ] = None,
-        validationProcess: Optional[FhirList[CodeableConcept[validation-process] ]] = None,
+        validationType: Optional[CodeableConcept[Validationtype] ] = None,
+        validationProcess: Optional[FhirList[CodeableConcept[Validationprocess] ]] = None,
         frequency: Optional[Timing ] = None,
         lastPerformed: Optional[FhirDateTime ] = None,
         nextScheduled: Optional[FhirDate ] = None,
-        failureAction: Optional[CodeableConcept[failure-action] ] = None,
+        failureAction: Optional[CodeableConcept[Failureaction] ] = None,
         primarySource: Optional[FhirList[VerificationResultPrimarySource ]] = None,
         attestation: Optional[VerificationResultAttestation ] = None,
         validator: Optional[FhirList[VerificationResultValidator ]] = None,

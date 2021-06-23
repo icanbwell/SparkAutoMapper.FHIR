@@ -27,7 +27,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.event_status import EventStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.media_type import MediaType
+    from spark_auto_mapper_fhir.value_sets.mediatype import Mediatype
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -84,7 +85,7 @@ class Media(FhirResourceBase):
         basedOn: Optional[FhirList[Reference [Union[ServiceRequest, CarePlan]]]] = None,
         partOf: Optional[FhirList[Reference [Union[Resource]]]] = None,
         status: EventStatus ,
-        type: Optional[CodeableConcept[MediaType] ] = None,
+        type: Optional[CodeableConcept[Mediatype] ] = None,
         modality: Optional[CodeableConcept ] = None,
         view: Optional[CodeableConcept ] = None,
         subject: Optional[Reference [Union[Patient, Practitioner, PractitionerRole, Group, Device, Specimen, Location]]] = None,

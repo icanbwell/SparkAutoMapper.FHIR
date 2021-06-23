@@ -20,13 +20,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.appointment_status import AppointmentStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for cancelationReason
-    from spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason import AppointmentCancellationReason
+    from spark_auto_mapper_fhir.value_sets.appointmentcancellationreason import Appointmentcancellationreason
+    # End Import for CodeableConcept for cancelationReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
+    from spark_auto_mapper_fhir.value_sets.servicecategory import Servicecategory
+    # End Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
+    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -71,9 +74,9 @@ class Appointment(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: AppointmentStatus ,
-        cancelationReason: Optional[CodeableConcept[AppointmentCancellationReason] ] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory] ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[ServiceType] ]] = None,
+        cancelationReason: Optional[CodeableConcept[Appointmentcancellationreason] ] = None,
+        serviceCategory: Optional[FhirList[CodeableConcept[Servicecategory] ]] = None,
+        serviceType: Optional[FhirList[CodeableConcept[Servicetype] ]] = None,
         specialty: Optional[FhirList[CodeableConcept ]] = None,
         appointmentType: Optional[CodeableConcept ] = None,
         reasonCode: Optional[FhirList[CodeableConcept ]] = None,

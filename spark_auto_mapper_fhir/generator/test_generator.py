@@ -4,7 +4,9 @@ from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchem
 
 
 def test_generator() -> None:
-    fhir_entities = FhirXmlSchemaParser.generate_classes(filter_to_resource="appointment")
+    fhir_entities = FhirXmlSchemaParser.generate_classes(
+        filter_to_resource="appointment"
+    )
     # fhir_entities = FhirXmlSchemaParser.generate_classes()
 
     # now print the result

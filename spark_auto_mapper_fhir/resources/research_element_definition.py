@@ -40,7 +40,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
+    from spark_auto_mapper_fhir.value_sets.definitiontopic import Definitiontopic
+    # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -86,7 +87,7 @@ class ResearchElementDefinition(FhirResourceBase):
         approvalDate: Optional[FhirDate ] = None,
         lastReviewDate: Optional[FhirDate ] = None,
         effectivePeriod: Optional[Period ] = None,
-        topic: Optional[FhirList[CodeableConcept[DefinitionTopic] ]] = None,
+        topic: Optional[FhirList[CodeableConcept[Definitiontopic] ]] = None,
         author: Optional[FhirList[ContactDetail ]] = None,
         editor: Optional[FhirList[ContactDetail ]] = None,
         reviewer: Optional[FhirList[ContactDetail ]] = None,

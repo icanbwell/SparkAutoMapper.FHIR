@@ -20,7 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.consent_state import ConsentState
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for scope
-    from spark_auto_mapper_fhir.value_sets.consent_scope_codes import ConsentScopeCodes
+    from spark_auto_mapper_fhir.value_sets.consentscopecodes import Consentscopecodes
+    # End Import for CodeableConcept for scope
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for patient
@@ -39,7 +40,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.consent_policy import ConsentPolicy
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for policyRule
-    from spark_auto_mapper_fhir.value_sets.consent_policy_rule_codes import ConsentPolicyRuleCodes
+    from spark_auto_mapper_fhir.value_sets.consentpolicyrulecodes import Consentpolicyrulecodes
+    # End Import for CodeableConcept for policyRule
     from spark_auto_mapper_fhir.backbone_elements.consent_verification import ConsentVerification
     from spark_auto_mapper_fhir.backbone_elements.consent_provision import ConsentProvision
 
@@ -58,14 +60,14 @@ class Consent(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: ConsentState ,
-        scope: CodeableConcept[ConsentScopeCodes] ,
+        scope: CodeableConcept[Consentscopecodes] ,
         category: FhirList[CodeableConcept ],
         patient: Optional[Reference [Union[Patient]]] = None,
         dateTime: Optional[FhirDateTime ] = None,
         performer: Optional[FhirList[Reference [Union[Organization, Patient, Practitioner, RelatedPerson, PractitionerRole]]]] = None,
         organization: Optional[FhirList[Reference [Union[Organization]]]] = None,
         policy: Optional[FhirList[ConsentPolicy ]] = None,
-        policyRule: Optional[CodeableConcept[ConsentPolicyRuleCodes] ] = None,
+        policyRule: Optional[CodeableConcept[Consentpolicyrulecodes] ] = None,
         verification: Optional[FhirList[ConsentVerification ]] = None,
         provision: Optional[ConsentProvision ] = None,
     ) -> None:

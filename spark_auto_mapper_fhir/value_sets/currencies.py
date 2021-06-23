@@ -24,4 +24,3 @@ class Currencies(FhirValueSetBase):
         super().__init__(value=value)
 
 
-class CurrenciesValues:

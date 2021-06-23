@@ -20,7 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import FinancialResourceStatusCodes
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.coverage_class_codes import CoverageClassCodes
+    from spark_auto_mapper_fhir.value_sets.coverageclasscodes import Coverageclasscodes
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for policyHolder
     from spark_auto_mapper_fhir.resources.patient import Patient
@@ -37,7 +38,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for relationship
-    from spark_auto_mapper_fhir.value_sets.subscriber_relationship_codes import SubscriberRelationshipCodes
+    from spark_auto_mapper_fhir.value_sets.subscriberrelationshipcodes import Subscriberrelationshipcodes
+    # End Import for CodeableConcept for relationship
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for payor
@@ -68,13 +70,13 @@ class Coverage(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: FinancialResourceStatusCodes ,
-        type: Optional[CodeableConcept[CoverageClassCodes] ] = None,
+        type: Optional[CodeableConcept[Coverageclasscodes] ] = None,
         policyHolder: Optional[Reference [Union[Patient, RelatedPerson, Organization]]] = None,
         subscriber: Optional[Reference [Union[Patient, RelatedPerson]]] = None,
         subscriberId: Optional[FhirString ] = None,
         beneficiary: Reference [Union[Patient]],
         dependent: Optional[FhirString ] = None,
-        relationship: Optional[CodeableConcept[SubscriberRelationshipCodes] ] = None,
+        relationship: Optional[CodeableConcept[Subscriberrelationshipcodes] ] = None,
         period: Optional[Period ] = None,
         payor: FhirList[Reference [Union[Organization, Patient, RelatedPerson]]],
         class_: Optional[FhirList[CoverageClass ]] = None,

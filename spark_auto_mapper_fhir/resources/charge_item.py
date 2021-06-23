@@ -24,7 +24,8 @@ if TYPE_CHECKING:
     # Imports for References for partOf
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.charge_item_code import ChargeItemCode
+    from spark_auto_mapper_fhir.value_sets.chargeitemcode import Chargeitemcode
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
@@ -94,7 +95,7 @@ class ChargeItem(FhirResourceBase):
         definitionCanonical: Optional[FhirList[canonical ]] = None,
         status: ChargeItemStatus ,
         partOf: Optional[FhirList[Reference [Union[ChargeItem]]]] = None,
-        code: CodeableConcept[ChargeItemCode] ,
+        code: CodeableConcept[Chargeitemcode] ,
         subject: Reference [Union[Patient, Group]],
         context: Optional[Reference [Union[Encounter, EpisodeOfCare]]] = None,
         performer: Optional[FhirList[ChargeItemPerformer ]] = None,

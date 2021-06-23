@@ -20,7 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.endpoint_status import EndpointStatus
     from spark_auto_mapper_fhir.complex_types.coding import Coding
     # Import for CodeableConcept for connectionType
-    from spark_auto_mapper_fhir.value_sets.endpoint_connection_type import EndpointConnectionType
+    from spark_auto_mapper_fhir.value_sets.endpointconnectiontype import Endpointconnectiontype
+    # End Import for CodeableConcept for connectionType
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for managingOrganization
@@ -47,7 +48,7 @@ class Endpoint(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: EndpointStatus ,
-        connectionType: Coding[EndpointConnectionType] ,
+        connectionType: Coding[Endpointconnectiontype] ,
         name: Optional[FhirString ] = None,
         managingOrganization: Optional[Reference [Union[Organization]]] = None,
         contact: Optional[FhirList[ContactPoint ]] = None,

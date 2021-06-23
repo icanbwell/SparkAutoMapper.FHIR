@@ -32,7 +32,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medication usage category codes import Medication usage category codes
+    from spark_auto_mapper_fhir.value_sets.medication_usage_category_codes import MedicationUsageCategoryCodes
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
@@ -79,7 +80,7 @@ class MedicationStatement(FhirResourceBase):
         partOf: Optional[FhirList[Reference [Union[MedicationAdministration, MedicationDispense, MedicationStatement, Procedure, Observation]]]] = None,
         status: MedicationStatusCodes ,
         statusReason: Optional[FhirList[CodeableConcept ]] = None,
-        category: Optional[CodeableConcept[Medication usage category codes] ] = None,
+        category: Optional[CodeableConcept[MedicationUsageCategoryCodes] ] = None,
         subject: Reference [Union[Patient, Group]],
         context: Optional[Reference [Union[Encounter, EpisodeOfCare]]] = None,
         dateAsserted: Optional[FhirDateTime ] = None,

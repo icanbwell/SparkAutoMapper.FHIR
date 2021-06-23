@@ -20,10 +20,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.explanation_of_benefit_status import ExplanationOfBenefitStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.claim_type_codes import ClaimTypeCodes
+    from spark_auto_mapper_fhir.value_sets.claimtypecodes import Claimtypecodes
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for subType
-    from spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes import ExampleClaimSubTypeCodes
+    from spark_auto_mapper_fhir.value_sets.exampleclaimsubtypecodes import Exampleclaimsubtypecodes
+    # End Import for CodeableConcept for subType
     from spark_auto_mapper_fhir.complex_types.use import Use
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for patient
@@ -45,10 +47,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for fundsReserveRequested
-    from spark_auto_mapper_fhir.value_sets.funds _reservation _codes import Funds Reservation Codes
+    from spark_auto_mapper_fhir.value_sets.funds_reservation_codes import FundsReservationCodes
+    # End Import for CodeableConcept for fundsReserveRequested
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for fundsReserve
-    from spark_auto_mapper_fhir.value_sets.funds _reservation _codes import Funds Reservation Codes
+    from spark_auto_mapper_fhir.value_sets.funds_reservation_codes import FundsReservationCodes
+    # End Import for CodeableConcept for fundsReserve
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_related import ExplanationOfBenefitRelated
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for prescription
@@ -88,7 +92,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_payment import ExplanationOfBenefitPayment
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for formCode
-    from spark_auto_mapper_fhir.value_sets.form _codes import Form Codes
+    from spark_auto_mapper_fhir.value_sets.form_codes import FormCodes
+    # End Import for CodeableConcept for formCode
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_process_note import ExplanationOfBenefitProcessNote
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -109,8 +114,8 @@ class ExplanationOfBenefit(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: ExplanationOfBenefitStatus ,
-        type: CodeableConcept[ClaimTypeCodes] ,
-        subType: Optional[CodeableConcept[ExampleClaimSubTypeCodes] ] = None,
+        type: CodeableConcept[Claimtypecodes] ,
+        subType: Optional[CodeableConcept[Exampleclaimsubtypecodes] ] = None,
         use: Use ,
         patient: Reference [Union[Patient]],
         billablePeriod: Optional[Period ] = None,
@@ -119,8 +124,8 @@ class ExplanationOfBenefit(FhirResourceBase):
         insurer: Reference [Union[Organization]],
         provider: Reference [Union[Practitioner, PractitionerRole, Organization]],
         priority: Optional[CodeableConcept ] = None,
-        fundsReserveRequested: Optional[CodeableConcept[Funds Reservation Codes] ] = None,
-        fundsReserve: Optional[CodeableConcept[Funds Reservation Codes] ] = None,
+        fundsReserveRequested: Optional[CodeableConcept[FundsReservationCodes] ] = None,
+        fundsReserve: Optional[CodeableConcept[FundsReservationCodes] ] = None,
         related: Optional[FhirList[ExplanationOfBenefitRelated ]] = None,
         prescription: Optional[Reference [Union[MedicationRequest, VisionPrescription]]] = None,
         originalPrescription: Optional[Reference [Union[MedicationRequest]]] = None,
@@ -145,7 +150,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         adjudication: Optional[FhirList[ExplanationOfBenefitAdjudication ]] = None,
         total: Optional[FhirList[ExplanationOfBenefitTotal ]] = None,
         payment: Optional[ExplanationOfBenefitPayment ] = None,
-        formCode: Optional[CodeableConcept[Form Codes] ] = None,
+        formCode: Optional[CodeableConcept[FormCodes] ] = None,
         form: Optional[Attachment ] = None,
         processNote: Optional[FhirList[ExplanationOfBenefitProcessNote ]] = None,
         benefitPeriod: Optional[Period ] = None,

@@ -20,7 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.supply_request_status import SupplyRequestStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.supply_type import SupplyType
+    from spark_auto_mapper_fhir.value_sets.supplytype import Supplytype
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.backbone_elements.supply_request_parameter import SupplyRequestParameter
@@ -39,7 +40,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.supply_request_reason import SupplyRequestReason
+    from spark_auto_mapper_fhir.value_sets.supplyrequestreason import Supplyrequestreason
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
@@ -71,14 +73,14 @@ class SupplyRequest(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: Optional[SupplyRequestStatus ] = None,
-        category: Optional[CodeableConcept[SupplyType] ] = None,
+        category: Optional[CodeableConcept[Supplytype] ] = None,
         priority: Optional[RequestPriority ] = None,
         quantity: Quantity ,
         parameter: Optional[FhirList[SupplyRequestParameter ]] = None,
         authoredOn: Optional[FhirDateTime ] = None,
         requester: Optional[Reference [Union[Practitioner, PractitionerRole, Organization, Patient, RelatedPerson, Device]]] = None,
         supplier: Optional[FhirList[Reference [Union[Organization, HealthcareService]]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[SupplyRequestReason] ]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[Supplyrequestreason] ]] = None,
         reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, DiagnosticReport, DocumentReference]]]] = None,
         deliverFrom: Optional[Reference [Union[Organization, Location]]] = None,
         deliverTo: Optional[Reference [Union[Organization, Location, Patient]]] = None,

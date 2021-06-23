@@ -22,18 +22,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contract_resource_status_codes import ContractResourceStatusCodes
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for legalState
-    from spark_auto_mapper_fhir.value_sets.contract_resource_legal_state_codes import ContractResourceLegalStateCodes
+    from spark_auto_mapper_fhir.value_sets.contractresourcelegalstatecodes import Contractresourcelegalstatecodes
+    # End Import for CodeableConcept for legalState
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for instantiatesCanonical
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for contentDerivative
-    from spark_auto_mapper_fhir.value_sets.contract_content_derivation_codes import ContractContentDerivationCodes
+    from spark_auto_mapper_fhir.value_sets.contractcontentderivationcodes import Contractcontentderivationcodes
+    # End Import for CodeableConcept for contentDerivative
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for expirationType
-    from spark_auto_mapper_fhir.value_sets.contract_resource_expiration_type_codes import ContractResourceExpirationTypeCodes
+    from spark_auto_mapper_fhir.value_sets.contractresourceexpirationtypecodes import Contractresourceexpirationtypecodes
+    # End Import for CodeableConcept for expirationType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.resource import Resource
@@ -58,13 +61,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for scope
-    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import ContractResourceScopeCodes
+    from spark_auto_mapper_fhir.value_sets.contractresourcescopecodes import Contractresourcescopecodes
+    # End Import for CodeableConcept for scope
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.contract_type_codes import ContractTypeCodes
+    from spark_auto_mapper_fhir.value_sets.contracttypecodes import Contracttypecodes
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for subType
-    from spark_auto_mapper_fhir.value_sets.contract_subtype_codes import ContractSubtypeCodes
+    from spark_auto_mapper_fhir.value_sets.contractsubtypecodes import Contractsubtypecodes
+    # End Import for CodeableConcept for subType
     from spark_auto_mapper_fhir.backbone_elements.contract_content_definition import ContractContentDefinition
     from spark_auto_mapper_fhir.backbone_elements.contract_term import ContractTerm
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -95,13 +101,13 @@ class Contract(FhirResourceBase):
         url: Optional[uri ] = None,
         version: Optional[FhirString ] = None,
         status: Optional[ContractResourceStatusCodes ] = None,
-        legalState: Optional[CodeableConcept[ContractResourceLegalStateCodes] ] = None,
+        legalState: Optional[CodeableConcept[Contractresourcelegalstatecodes] ] = None,
         instantiatesCanonical: Optional[Reference [Union[Contract]]] = None,
         instantiatesUri: Optional[uri ] = None,
-        contentDerivative: Optional[CodeableConcept[ContractContentDerivationCodes] ] = None,
+        contentDerivative: Optional[CodeableConcept[Contractcontentderivationcodes] ] = None,
         issued: Optional[FhirDateTime ] = None,
         applies: Optional[Period ] = None,
-        expirationType: Optional[CodeableConcept[ContractResourceExpirationTypeCodes] ] = None,
+        expirationType: Optional[CodeableConcept[Contractresourceexpirationtypecodes] ] = None,
         subject: Optional[FhirList[Reference [Union[Resource]]]] = None,
         authority: Optional[FhirList[Reference [Union[Organization]]]] = None,
         domain: Optional[FhirList[Reference [Union[Location]]]] = None,
@@ -111,9 +117,9 @@ class Contract(FhirResourceBase):
         subtitle: Optional[FhirString ] = None,
         alias: Optional[FhirList[FhirString ]] = None,
         author: Optional[Reference [Union[Patient, Practitioner, PractitionerRole, Organization]]] = None,
-        scope: Optional[CodeableConcept[ContractResourceScopeCodes] ] = None,
-        type: Optional[CodeableConcept[ContractTypeCodes] ] = None,
-        subType: Optional[FhirList[CodeableConcept[ContractSubtypeCodes] ]] = None,
+        scope: Optional[CodeableConcept[Contractresourcescopecodes] ] = None,
+        type: Optional[CodeableConcept[Contracttypecodes] ] = None,
+        subType: Optional[FhirList[CodeableConcept[Contractsubtypecodes] ]] = None,
         contentDefinition: Optional[ContractContentDefinition ] = None,
         term: Optional[FhirList[ContractTerm ]] = None,
         supportingInfo: Optional[FhirList[Reference [Union[Resource]]]] = None,

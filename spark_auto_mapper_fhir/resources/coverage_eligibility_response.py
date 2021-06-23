@@ -40,7 +40,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for form
-    from spark_auto_mapper_fhir.value_sets.form _codes import Form Codes
+    from spark_auto_mapper_fhir.value_sets.form_codes import FormCodes
+    # End Import for CodeableConcept for form
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_error import CoverageEligibilityResponseError
 
 
@@ -68,7 +69,7 @@ class CoverageEligibilityResponse(FhirResourceBase):
         insurer: Reference [Union[Organization]],
         insurance: Optional[FhirList[CoverageEligibilityResponseInsurance ]] = None,
         preAuthRef: Optional[FhirString ] = None,
-        form: Optional[CodeableConcept[Form Codes] ] = None,
+        form: Optional[CodeableConcept[FormCodes] ] = None,
         error: Optional[FhirList[CoverageEligibilityResponseError ]] = None,
     ) -> None:
         """

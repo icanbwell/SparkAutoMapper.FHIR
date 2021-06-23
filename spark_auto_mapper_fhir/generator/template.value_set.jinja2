@@ -52,7 +52,9 @@ class {{fhir_entity.cleaned_name}}(FhirValueSetBase):
         super().__init__(value=value)
 
 
+{%  if fhir_entity.value_set_concepts %}
 class {{fhir_entity.cleaned_name}}Values:
     {% for value_set_concept in fhir_entity.value_set_concepts %}
     {{ value_set_concept.cleaned_display }} = {{ fhir_entity.cleaned_name }}("{{ value_set_concept.code }}")
     {%  endfor %}
+{% endif %}

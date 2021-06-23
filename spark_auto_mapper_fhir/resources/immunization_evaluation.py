@@ -31,10 +31,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.immunization import Immunization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for doseStatus
-    from spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes import ImmunizationEvaluationDoseStatusCodes
+    from spark_auto_mapper_fhir.value_sets.immunizationevaluationdosestatuscodes import Immunizationevaluationdosestatuscodes
+    # End Import for CodeableConcept for doseStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for doseStatusReason
-    from spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes import ImmunizationEvaluationDoseStatusReasonCodes
+    from spark_auto_mapper_fhir.value_sets.immunizationevaluationdosestatusreasoncodes import Immunizationevaluationdosestatusreasoncodes
+    # End Import for CodeableConcept for doseStatusReason
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
@@ -58,8 +60,8 @@ class ImmunizationEvaluation(FhirResourceBase):
         authority: Optional[Reference [Union[Organization]]] = None,
         targetDisease: CodeableConcept ,
         immunizationEvent: Reference [Union[Immunization]],
-        doseStatus: CodeableConcept[ImmunizationEvaluationDoseStatusCodes] ,
-        doseStatusReason: Optional[FhirList[CodeableConcept[ImmunizationEvaluationDoseStatusReasonCodes] ]] = None,
+        doseStatus: CodeableConcept[Immunizationevaluationdosestatuscodes] ,
+        doseStatusReason: Optional[FhirList[CodeableConcept[Immunizationevaluationdosestatusreasoncodes] ]] = None,
         description: Optional[FhirString ] = None,
         series: Optional[FhirString ] = None,
     ) -> None:

@@ -18,7 +18,8 @@ from spark_fhir_schemas.r4.resources.observationdefinition import ObservationDef
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.observation_category_codes import ObservationCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.observationcategorycodes import Observationcategorycodes
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.observation_data_type import ObservationDataType
@@ -53,7 +54,7 @@ class ObservationDefinition(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[FhirList[CodeableConcept[ObservationCategoryCodes] ]] = None,
+        category: Optional[FhirList[CodeableConcept[Observationcategorycodes] ]] = None,
         code: CodeableConcept ,
         identifier: Optional[FhirList[Identifier ]] = None,
         permittedDataType: Optional[FhirList[ObservationDataType ]] = None,

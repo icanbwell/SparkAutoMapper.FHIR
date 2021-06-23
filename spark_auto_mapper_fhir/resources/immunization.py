@@ -51,14 +51,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for subpotentReason
-    from spark_auto_mapper_fhir.value_sets.immunization_subpotent_reason import ImmunizationSubpotentReason
+    from spark_auto_mapper_fhir.value_sets.immunizationsubpotentreason import Immunizationsubpotentreason
+    # End Import for CodeableConcept for subpotentReason
     from spark_auto_mapper_fhir.backbone_elements.immunization_education import ImmunizationEducation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for programEligibility
-    from spark_auto_mapper_fhir.value_sets.immunization_program_eligibility import ImmunizationProgramEligibility
+    from spark_auto_mapper_fhir.value_sets.immunizationprogrameligibility import Immunizationprogrameligibility
+    # End Import for CodeableConcept for programEligibility
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for fundingSource
-    from spark_auto_mapper_fhir.value_sets.immunization_funding_source import ImmunizationFundingSource
+    from spark_auto_mapper_fhir.value_sets.immunizationfundingsource import Immunizationfundingsource
+    # End Import for CodeableConcept for fundingSource
     from spark_auto_mapper_fhir.backbone_elements.immunization_reaction import ImmunizationReaction
     from spark_auto_mapper_fhir.backbone_elements.immunization_protocol_applied import ImmunizationProtocolApplied
 
@@ -96,10 +99,10 @@ class Immunization(FhirResourceBase):
         reasonCode: Optional[FhirList[CodeableConcept ]] = None,
         reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, DiagnosticReport]]]] = None,
         isSubpotent: Optional[FhirBoolean ] = None,
-        subpotentReason: Optional[FhirList[CodeableConcept[ImmunizationSubpotentReason] ]] = None,
+        subpotentReason: Optional[FhirList[CodeableConcept[Immunizationsubpotentreason] ]] = None,
         education: Optional[FhirList[ImmunizationEducation ]] = None,
-        programEligibility: Optional[FhirList[CodeableConcept[ImmunizationProgramEligibility] ]] = None,
-        fundingSource: Optional[CodeableConcept[ImmunizationFundingSource] ] = None,
+        programEligibility: Optional[FhirList[CodeableConcept[Immunizationprogrameligibility] ]] = None,
+        fundingSource: Optional[CodeableConcept[Immunizationfundingsource] ] = None,
         reaction: Optional[FhirList[ImmunizationReaction ]] = None,
         protocolApplied: Optional[FhirList[ImmunizationProtocolApplied ]] = None,
     ) -> None:
