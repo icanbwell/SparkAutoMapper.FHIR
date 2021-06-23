@@ -1,9 +1,13 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -14,60 +18,40 @@ from spark_fhir_schemas.r4.resources.observation import ObservationSchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.resources.device_request import DeviceRequest
-    from spark_auto_mapper_fhir.resources.immunization_recommendation import (
-        ImmunizationRecommendation,
-    )
+    from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.nutrition_order import NutritionOrder
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
-    from spark_auto_mapper_fhir.resources.medication_administration import (
-        MedicationAdministration,
-    )
+    from spark_auto_mapper_fhir.resources.medication_administration import MedicationAdministration
     from spark_auto_mapper_fhir.resources.medication_dispense import MedicationDispense
-    from spark_auto_mapper_fhir.resources.medication_statement import (
-        MedicationStatement,
-    )
+    from spark_auto_mapper_fhir.resources.medication_statement import MedicationStatement
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.resources.immunization import Immunization
     from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
-    from spark_auto_mapper_fhir.complex_types.observation_status import (
-        ObservationStatus,
-    )
+    from spark_auto_mapper_fhir.complex_types.observation_status import ObservationStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.complex_types.observation_category import (
-        ObservationCategory,
-    )
+    from spark_auto_mapper_fhir.value_sets.observation_category_codes import ObservationCategoryCodes
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.complex_types.observation_code import ObservationCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for focus
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.instant import instant
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -76,67 +60,39 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for dataAbsentReason
-    from spark_auto_mapper_fhir.complex_types.observation_value_absent_reason import (
-        ObservationValueAbsentReason,
-    )
+    from spark_auto_mapper_fhir.value_sets.data_absent_reason import DataAbsentReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for interpretation
-    from spark_auto_mapper_fhir.complex_types.observation_interpretation import (
-        ObservationInterpretation,
-    )
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.complex_types.body_site import BodySite
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.complex_types.observation_method import (
-        ObservationMethod,
-    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for specimen
     from spark_auto_mapper_fhir.resources.specimen import Specimen
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.device_metric import DeviceMetric
-    from spark_auto_mapper_fhir.backbone_elements.observation_reference_range import (
-        ObservationReferenceRange,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.observation_reference_range import ObservationReferenceRange
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for hasMember
-    from spark_auto_mapper_fhir.resources.questionnaire_response import (
-        QuestionnaireResponse,
-    )
+    from spark_auto_mapper_fhir.resources.questionnaire_response import QuestionnaireResponse
     from spark_auto_mapper_fhir.resources.molecular_sequence import MolecularSequence
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for derivedFrom
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
     from spark_auto_mapper_fhir.resources.media import Media
-    from spark_auto_mapper_fhir.resources.questionnaire_response import (
-        QuestionnaireResponse,
-    )
+    from spark_auto_mapper_fhir.resources.questionnaire_response import QuestionnaireResponse
     from spark_auto_mapper_fhir.resources.molecular_sequence import MolecularSequence
-    from spark_auto_mapper_fhir.backbone_elements.observation_component import (
-        ObservationComponent,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.observation_component import ObservationComponent
 
 
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class Observation(FhirResourceBase):
-    """ """
-
+    """
+    """
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -144,147 +100,87 @@ class Observation(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
-        basedOn: Optional[
-            FhirList[
-                Reference[
-                    Union[
-                        CarePlan,
-                        DeviceRequest,
-                        ImmunizationRecommendation,
-                        MedicationRequest,
-                        NutritionOrder,
-                        ServiceRequest,
-                    ]
-                ]
-            ]
-        ] = None,
-        partOf: Optional[
-            FhirList[
-                Reference[
-                    Union[
-                        MedicationAdministration,
-                        MedicationDispense,
-                        MedicationStatement,
-                        Procedure,
-                        Immunization,
-                        ImagingStudy,
-                    ]
-                ]
-            ]
-        ] = None,
-        status: ObservationStatus,
-        category: Optional[FhirList[CodeableConcept[ObservationCategory]]] = None,
-        code: CodeableConcept[ObservationCode],
-        subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
-        focus: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
-        issued: Optional[instant] = None,
-        performer: Optional[
-            FhirList[
-                Reference[
-                    Union[
-                        Practitioner,
-                        PractitionerRole,
-                        Organization,
-                        CareTeam,
-                        Patient,
-                        RelatedPerson,
-                    ]
-                ]
-            ]
-        ] = None,
-        dataAbsentReason: Optional[
-            CodeableConcept[ObservationValueAbsentReason]
-        ] = None,
-        interpretation: Optional[
-            FhirList[CodeableConcept[ObservationInterpretation]]
-        ] = None,
-        note: Optional[FhirList[Annotation]] = None,
-        bodySite: Optional[CodeableConcept[BodySite]] = None,
-        method: Optional[CodeableConcept[ObservationMethod]] = None,
-        specimen: Optional[Reference[Union[Specimen]]] = None,
-        device: Optional[Reference[Union[Device, DeviceMetric]]] = None,
-        referenceRange: Optional[FhirList[ObservationReferenceRange]] = None,
-        hasMember: Optional[
-            FhirList[
-                Reference[Union[Observation, QuestionnaireResponse, MolecularSequence]]
-            ]
-        ] = None,
-        derivedFrom: Optional[
-            FhirList[
-                Reference[
-                    Union[
-                        DocumentReference,
-                        ImagingStudy,
-                        Media,
-                        QuestionnaireResponse,
-                        Observation,
-                        MolecularSequence,
-                    ]
-                ]
-            ]
-        ] = None,
-        component: Optional[FhirList[ObservationComponent]] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        basedOn: Optional[FhirList[Reference [Union[CarePlan, DeviceRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest]]]] = None,
+        partOf: Optional[FhirList[Reference [Union[MedicationAdministration, MedicationDispense, MedicationStatement, Procedure, Immunization, ImagingStudy]]]] = None,
+        status: ObservationStatus ,
+        category: Optional[FhirList[CodeableConcept[ObservationCategoryCodes] ]] = None,
+        code: CodeableConcept ,
+        subject: Optional[Reference [Union[Patient, Group, Device, Location]]] = None,
+        focus: Optional[FhirList[Reference [Union[Resource]]]] = None,
+        encounter: Optional[Reference [Union[Encounter]]] = None,
+        issued: Optional[instant ] = None,
+        performer: Optional[FhirList[Reference [Union[Practitioner, PractitionerRole, Organization, CareTeam, Patient, RelatedPerson]]]] = None,
+        dataAbsentReason: Optional[CodeableConcept[DataAbsentReason] ] = None,
+        interpretation: Optional[FhirList[CodeableConcept ]] = None,
+        note: Optional[FhirList[Annotation ]] = None,
+        bodySite: Optional[CodeableConcept ] = None,
+        method: Optional[CodeableConcept ] = None,
+        specimen: Optional[Reference [Union[Specimen]]] = None,
+        device: Optional[Reference [Union[Device, DeviceMetric]]] = None,
+        referenceRange: Optional[FhirList[ObservationReferenceRange ]] = None,
+        hasMember: Optional[FhirList[Reference [Union[Observation, QuestionnaireResponse, MolecularSequence]]]] = None,
+        derivedFrom: Optional[FhirList[Reference [Union[DocumentReference, ImagingStudy, Media, QuestionnaireResponse, Observation, MolecularSequence]]]] = None,
+        component: Optional[FhirList[ObservationComponent ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param identifier: A unique identifier assigned to this observation.
-            :param basedOn: A plan, proposal or order that is fulfilled in whole or in part by this event.
-        For example, a MedicationRequest may require a patient to have laboratory test
-        performed before  it is dispensed.
-            :param partOf: A larger event of which this particular Observation is a component or step.
-        For example,  an observation as part of a procedure.
-            :param status: The status of the result value.
-            :param category: A code that classifies the general type of observation being made.
-            :param code: Describes what was observed. Sometimes this is called the observation "name".
-            :param subject: The patient, or group of patients, location, or device this observation is
-        about and into whose record the observation is placed. If the actual focus of
-        the observation is different from the subject (or a sample of, part, or region
-        of the subject), the `focus` element or the `code` itself specifies the actual
-        focus of the observation.
-            :param focus: The actual focus of an observation when it is not the patient of record
-        representing something or someone associated with the patient such as a
-        spouse, parent, fetus, or donor. For example, fetus observations in a mother's
-        record.  The focus of an observation could also be an existing condition,  an
-        intervention, the subject's diet,  another observation of the subject,  or a
-        body structure such as tumor or implanted device.   An example use case would
-        be using the Observation resource to capture whether the mother is trained to
-        change her child's tracheostomy tube. In this example, the child is the
-        patient of record and the mother is the focus.
-            :param encounter: The healthcare event  (e.g. a patient and healthcare provider interaction)
-        during which this observation is made.
-            :param issued: The date and time this version of the observation was made available to
-        providers, typically after the results have been reviewed and verified.
-            :param performer: Who was responsible for asserting the observed value as "true".
-            :param dataAbsentReason: Provides a reason why the expected value in the element Observation.value[x]
-        is missing.
-            :param interpretation: A categorical assessment of an observation value.  For example, high, low,
-        normal.
-            :param note: Comments about the observation or the results.
-            :param bodySite: Indicates the site on the subject's body where the observation was made (i.e.
-        the target site).
-            :param method: Indicates the mechanism used to perform the observation.
-            :param specimen: The specimen that was used when this observation was made.
-            :param device: The device used to generate the observation data.
-            :param referenceRange: Guidance on how to interpret the value by comparison to a normal or
-        recommended range.  Multiple reference ranges are interpreted as an "OR".   In
-        other words, to represent two distinct target populations, two
-        `referenceRange` elements would be used.
-            :param hasMember: This observation is a group observation (e.g. a battery, a panel of tests, a
-        set of vital sign measurements) that includes the target as a member of the
-        group.
-            :param derivedFrom: The target resource that represents a measurement from which this observation
-        value is derived. For example, a calculated anion gap or a fetal measurement
-        based on an ultrasound image.
-            :param component: Some observations have multiple component observations.  These component
-        observations are expressed as separate code value pairs that share the same
-        attributes.  Examples include systolic and diastolic component observations
-        for blood pressure measurement and multiple component observations for
-        genetics observations.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param identifier: A unique identifier assigned to this observation.
+        :param basedOn: A plan, proposal or order that is fulfilled in whole or in part by this event.
+    For example, a MedicationRequest may require a patient to have laboratory test
+    performed before  it is dispensed.
+        :param partOf: A larger event of which this particular Observation is a component or step.
+    For example,  an observation as part of a procedure.
+        :param status: The status of the result value.
+        :param category: A code that classifies the general type of observation being made.
+        :param code: Describes what was observed. Sometimes this is called the observation "name".
+        :param subject: The patient, or group of patients, location, or device this observation is
+    about and into whose record the observation is placed. If the actual focus of
+    the observation is different from the subject (or a sample of, part, or region
+    of the subject), the `focus` element or the `code` itself specifies the actual
+    focus of the observation.
+        :param focus: The actual focus of an observation when it is not the patient of record
+    representing something or someone associated with the patient such as a
+    spouse, parent, fetus, or donor. For example, fetus observations in a mother's
+    record.  The focus of an observation could also be an existing condition,  an
+    intervention, the subject's diet,  another observation of the subject,  or a
+    body structure such as tumor or implanted device.   An example use case would
+    be using the Observation resource to capture whether the mother is trained to
+    change her child's tracheostomy tube. In this example, the child is the
+    patient of record and the mother is the focus.
+        :param encounter: The healthcare event  (e.g. a patient and healthcare provider interaction)
+    during which this observation is made.
+        :param issued: The date and time this version of the observation was made available to
+    providers, typically after the results have been reviewed and verified.
+        :param performer: Who was responsible for asserting the observed value as "true".
+        :param dataAbsentReason: Provides a reason why the expected value in the element Observation.value[x]
+    is missing.
+        :param interpretation: A categorical assessment of an observation value.  For example, high, low,
+    normal.
+        :param note: Comments about the observation or the results.
+        :param bodySite: Indicates the site on the subject's body where the observation was made (i.e.
+    the target site).
+        :param method: Indicates the mechanism used to perform the observation.
+        :param specimen: The specimen that was used when this observation was made.
+        :param device: The device used to generate the observation data.
+        :param referenceRange: Guidance on how to interpret the value by comparison to a normal or
+    recommended range.  Multiple reference ranges are interpreted as an "OR".   In
+    other words, to represent two distinct target populations, two
+    `referenceRange` elements would be used.
+        :param hasMember: This observation is a group observation (e.g. a battery, a panel of tests, a
+    set of vital sign measurements) that includes the target as a member of the
+    group.
+        :param derivedFrom: The target resource that represents a measurement from which this observation
+    value is derived. For example, a calculated anion gap or a fetal measurement
+    based on an ultrasound image.
+        :param component: Some observations have multiple component observations.  These component
+    observations are expressed as separate code value pairs that share the same
+    attributes.  Examples include systolic and diastolic component observations
+    for blood pressure measurement and multiple component observations for
+    genetics observations.
         """
         super().__init__(
             resourceType="Observation",

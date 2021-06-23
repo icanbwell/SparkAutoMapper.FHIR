@@ -19,16 +19,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.complex_types.service-category import service-category
+    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.complex_types.service-type import service-type
+    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.complex_types.specialty import specialty
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for appointmentType
-    from spark_auto_mapper_fhir.complex_types.appointment-type import appointment-type
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for schedule
     from spark_auto_mapper_fhir.resources.schedule import Schedule
@@ -52,10 +48,10 @@ class Slot(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[service-category] ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[service-type] ]] = None,
-        specialty: Optional[FhirList[CodeableConcept[specialty] ]] = None,
-        appointmentType: Optional[CodeableConcept[appointment-type] ] = None,
+        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory] ]] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceType] ]] = None,
+        specialty: Optional[FhirList[CodeableConcept ]] = None,
+        appointmentType: Optional[CodeableConcept ] = None,
         schedule: Reference [Union[Schedule]],
         status: SlotStatus ,
         start: instant ,

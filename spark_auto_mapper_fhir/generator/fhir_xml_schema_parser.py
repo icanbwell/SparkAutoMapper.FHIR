@@ -149,6 +149,8 @@ class FhirXmlSchemaParser:
         #         if value_set.name == fhir_entity.fhir_name:
         #             fhir_entity.is_value_set = True
 
+        # remove any entities that are already in value_sets
+        fhir_entities = [c for c in fhir_entities if c.fhir_name not in [b.name for b in value_sets]]
         fhir_entities.extend(
             [
                 FhirEntity(
@@ -687,15 +689,16 @@ class FhirXmlSchemaParser:
                                 FhirXmlSchemaParser.create_concept(concept)
                             )
 
-            fhir_value_sets.append(
-                FhirValueSet(
-                    id_=id_,
-                    name=name,
-                    concepts=fhir_concepts,
-                    url=url,
-                    value_set_url=value_set_url
+            if not "/" in name:
+                fhir_value_sets.append(
+                    FhirValueSet(
+                        id_=id_,
+                        name=name,
+                        concepts=fhir_concepts,
+                        url=url,
+                        value_set_url=value_set_url
+                    )
                 )
-            )
         return fhir_value_sets
 
     @staticmethod

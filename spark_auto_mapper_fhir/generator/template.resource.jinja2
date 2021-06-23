@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     {% endif %}
     {% if property.codeable_type %}
     # Import for CodeableConcept for {{ property.name }}
-    from spark_auto_mapper_fhir.complex_types.{{ property.codeable_type.snake_case_name }} import {{ property.codeable_type.name | replace(".","")}}
+    from spark_auto_mapper_fhir.value_sets.{{ property.codeable_type.snake_case_name }} import {{ property.codeable_type.name | replace(".","")}}
     {% endif %}
 {% endfor %}
 

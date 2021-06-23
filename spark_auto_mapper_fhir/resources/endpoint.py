@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.endpoint_status import EndpointStatus
     from spark_auto_mapper_fhir.complex_types.coding import Coding
     # Import for CodeableConcept for connectionType
-    from spark_auto_mapper_fhir.complex_types.endpoint-contype import endpoint-contype
+    from spark_auto_mapper_fhir.value_sets.endpoint_connection_type import EndpointConnectionType
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for managingOrganization
@@ -28,8 +28,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for payloadType
-    from spark_auto_mapper_fhir.complex_types.payload_type import PayloadType
     from spark_auto_mapper_fhir.complex_types.code import code
     from spark_auto_mapper_fhir.complex_types.url import url
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -49,12 +47,12 @@ class Endpoint(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: EndpointStatus ,
-        connectionType: Coding[endpoint-contype] ,
+        connectionType: Coding[EndpointConnectionType] ,
         name: Optional[FhirString ] = None,
         managingOrganization: Optional[Reference [Union[Organization]]] = None,
         contact: Optional[FhirList[ContactPoint ]] = None,
         period: Optional[Period ] = None,
-        payloadType: FhirList[CodeableConcept[PayloadType] ],
+        payloadType: FhirList[CodeableConcept ],
         payloadMimeType: Optional[FhirList[code ]] = None,
         address: url ,
         header: Optional[FhirList[FhirString ]] = None,

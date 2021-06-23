@@ -20,22 +20,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.appointment_status import AppointmentStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for cancelationReason
-    from spark_auto_mapper_fhir.complex_types.cancelation-reason import cancelation-reason
+    from spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason import AppointmentCancellationReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.complex_types.service-category import service-category
+    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.complex_types.service-type import service-type
+    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.complex_types.specialty import specialty
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for appointmentType
-    from spark_auto_mapper_fhir.complex_types.appointment-type import appointment-type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.complex_types.appt_reason import ApptReason
     from spark_auto_mapper_fhir.complex_types.reference import Reference
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
@@ -77,12 +71,12 @@ class Appointment(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier ]] = None,
         status: AppointmentStatus ,
-        cancelationReason: Optional[CodeableConcept[cancelation-reason] ] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[service-category] ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[service-type] ]] = None,
-        specialty: Optional[FhirList[CodeableConcept[specialty] ]] = None,
-        appointmentType: Optional[CodeableConcept[appointment-type] ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[ApptReason] ]] = None,
+        cancelationReason: Optional[CodeableConcept[AppointmentCancellationReason] ] = None,
+        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory] ]] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceType] ]] = None,
+        specialty: Optional[FhirList[CodeableConcept ]] = None,
+        appointmentType: Optional[CodeableConcept ] = None,
+        reasonCode: Optional[FhirList[CodeableConcept ]] = None,
         reasonReference: Optional[FhirList[Reference [Union[Condition, Procedure, Observation, ImmunizationRecommendation]]]] = None,
         priority: Optional[unsignedInt ] = None,
         description: Optional[FhirString ] = None,
