@@ -22,6 +22,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for appliesTo
+    from spark_auto_mapper_fhir.value_sets.observationreferencerangeappliestocodes import (
+        Observationreferencerangeappliestocodes,
+    )
+
+    # End Import for CodeableConcept for appliesTo
     from spark_auto_mapper_fhir.complex_types.range import Range
 
 
@@ -39,7 +46,9 @@ class ObservationReferenceRange(FhirBackboneElementBase):
         low: Optional[Quantity] = None,
         high: Optional[Quantity] = None,
         type: Optional[CodeableConcept[Observationreferencerangemeaningcodes]] = None,
-        appliesTo: Optional[FhirList[CodeableConcept]] = None,
+        appliesTo: Optional[
+            FhirList[CodeableConcept[Observationreferencerangeappliestocodes]]
+        ] = None,
         age: Optional[Range] = None,
         text: Optional[FhirString] = None,
     ) -> None:

@@ -54,7 +54,7 @@ class SupplementtypecodesValues:
     )
     IncreasedFiberFormula = Supplementtypecodes("443351000124102")
     HydrolyzedProteinFormula = Supplementtypecodes("443771000124106")
-    HydrolyzedPeptidebasedHighProteinEnteralFormula = Supplementtypecodes(
+    HydrolyzedPeptide_basedHighProteinEnteralFormula = Supplementtypecodes(
         "441671000124100"
     )
     HighProteinFormula = Supplementtypecodes("443111000124101")

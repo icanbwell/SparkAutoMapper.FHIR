@@ -22,6 +22,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.complex_types.code import code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for statusReason
+    from spark_auto_mapper_fhir.value_sets.snomedctreasonmedicationnotgivencodes import (
+        Snomedctreasonmedicationnotgivencodes,
+    )
+
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -97,7 +104,9 @@ class MedicationAdministration(FhirResourceBase):
             FhirList[Reference[Union[MedicationAdministration, Procedure]]]
         ] = None,
         status: code,
-        statusReason: Optional[FhirList[CodeableConcept]] = None,
+        statusReason: Optional[
+            FhirList[CodeableConcept[Snomedctreasonmedicationnotgivencodes]]
+        ] = None,
         category: Optional[
             CodeableConcept[MedicationadministrationCategoryCodes]
         ] = None,

@@ -16,6 +16,6 @@ class Compositemeasurescoring(FhirValueSetBase):
 
 class CompositemeasurescoringValues:
     Opportunity = Compositemeasurescoring("opportunity")
-    Allornothing = Compositemeasurescoring("all-or-nothing")
+    All_or_nothing = Compositemeasurescoring("all-or-nothing")
     Linear = Compositemeasurescoring("linear")
     Weighted = Compositemeasurescoring("weighted")

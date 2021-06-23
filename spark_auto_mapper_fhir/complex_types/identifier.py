@@ -12,6 +12,13 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier_use import IdentifierUse
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.identifier_type_codes import (
+        IdentifierTypeCodes,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -33,7 +40,7 @@ class Identifier(FhirComplexTypeBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         use: Optional[IdentifierUse] = None,
-        type: Optional[CodeableConcept] = None,
+        type: Optional[CodeableConcept[IdentifierTypeCodes]] = None,
         system: Optional[uri] = None,
         value: Optional[FhirString] = None,
         period: Optional[Period] = None,

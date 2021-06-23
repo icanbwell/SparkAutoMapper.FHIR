@@ -16,8 +16,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for patientPreparation
+    from spark_auto_mapper_fhir.value_sets.preparepatient import Preparepatient
+
+    # End Import for CodeableConcept for patientPreparation
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for collection
+    from spark_auto_mapper_fhir.value_sets.specimencollection import Specimencollection
+
+    # End Import for CodeableConcept for collection
     from spark_auto_mapper_fhir.backbone_elements.specimen_definition_type_tested import (
         SpecimenDefinitionTypeTested,
     )
@@ -37,9 +47,9 @@ class SpecimenDefinition(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         typeCollected: Optional[CodeableConcept] = None,
-        patientPreparation: Optional[FhirList[CodeableConcept]] = None,
+        patientPreparation: Optional[FhirList[CodeableConcept[Preparepatient]]] = None,
         timeAspect: Optional[FhirString] = None,
-        collection: Optional[FhirList[CodeableConcept]] = None,
+        collection: Optional[FhirList[CodeableConcept[Specimencollection]]] = None,
         typeTested: Optional[FhirList[SpecimenDefinitionTypeTested]] = None,
     ) -> None:
         """

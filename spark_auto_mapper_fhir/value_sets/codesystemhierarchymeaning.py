@@ -16,6 +16,6 @@ class Codesystemhierarchymeaning(FhirValueSetBase):
 
 class CodesystemhierarchymeaningValues:
     GroupedBy = Codesystemhierarchymeaning("grouped-by")
-    Isa = Codesystemhierarchymeaning("is-a")
+    Is_a = Codesystemhierarchymeaning("is-a")
     PartOf = Codesystemhierarchymeaning("part-of")
     ClassifiedWith = Codesystemhierarchymeaning("classified-with")

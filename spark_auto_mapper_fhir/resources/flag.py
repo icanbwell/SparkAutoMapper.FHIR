@@ -21,6 +21,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.flagcode import Flagcode
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -62,7 +67,7 @@ class Flag(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: FlagStatus,
         category: Optional[FhirList[CodeableConcept[Flagcategory]]] = None,
-        code: CodeableConcept,
+        code: CodeableConcept[Flagcode],
         subject: Reference[
             Union[
                 Patient,

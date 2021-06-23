@@ -15,5 +15,5 @@ class Investigationtype(FhirValueSetBase):
 
 
 class InvestigationtypeValues:
-    ExaminationSigns = Investigationtype("271336007")
-    Historysymptoms = Investigationtype("160237006")
+    Examination_Signs = Investigationtype("271336007")
+    History_symptoms = Investigationtype("160237006")

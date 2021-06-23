@@ -19,4 +19,4 @@ class EpisodeofcaretypeValues:
     PostAcuteCare = Episodeofcaretype("pac")
     PostCoordinatedDiabetesProgram = Episodeofcaretype("diab")
     DrugAndAlcoholRehabilitation = Episodeofcaretype("da")
-    CommunitybasedAgedCare = Episodeofcaretype("cacp")
+    Community_basedAgedCare = Episodeofcaretype("cacp")

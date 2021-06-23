@@ -13,6 +13,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.specimencontainertype import (
+        Specimencontainertype,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -30,7 +37,7 @@ class SpecimenContainer(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         description: Optional[FhirString] = None,
-        type: Optional[CodeableConcept] = None,
+        type: Optional[CodeableConcept[Specimencontainertype]] = None,
         capacity: Optional[Quantity] = None,
         specimenQuantity: Optional[Quantity] = None,
     ) -> None:

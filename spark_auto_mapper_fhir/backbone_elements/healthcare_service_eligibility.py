@@ -11,11 +11,6 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
 
@@ -30,7 +25,7 @@ class HealthcareServiceEligibility(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[CodeableConcept[Acmecholcodesblood]] = None,
+        code: Optional[CodeableConcept] = None,
         comment: Optional[markdown] = None,
     ) -> None:
         """

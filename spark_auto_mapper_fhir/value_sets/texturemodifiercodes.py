@@ -15,7 +15,7 @@ class Texturemodifiercodes(FhirValueSetBase):
 
 
 class TexturemodifiercodesValues:
-    CutupFood = Texturemodifiercodes("228053002")
+    Cut_upFood = Texturemodifiercodes("228053002")
     EasyToChewFood = Texturemodifiercodes("439091000124107")
     ChoppedFood = Texturemodifiercodes("228049004")
     GroundFood = Texturemodifiercodes("441881000124103")
@@ -26,6 +26,6 @@ class TexturemodifiercodesValues:
     LiquidizedFood = Texturemodifiercodes("228055009")
     LumpyFood = Texturemodifiercodes("228056005")
     MoistFood = Texturemodifiercodes("441771000124105")
-    SemisolidFood = Texturemodifiercodes("228057001")
+    Semi_solidFood = Texturemodifiercodes("228057001")
     SingleTextureFood = Texturemodifiercodes("228058006")
     SolidFood = Texturemodifiercodes("228060008")

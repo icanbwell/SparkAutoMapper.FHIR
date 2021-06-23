@@ -15,7 +15,7 @@ class Eligibilityrequestpurpose(FhirValueSetBase):
 
 
 class EligibilityrequestpurposeValues:
-    CoverageAuthrequirements = Eligibilityrequestpurpose("auth-requirements")
+    CoverageAuth_requirements = Eligibilityrequestpurpose("auth-requirements")
     CoverageBenefits = Eligibilityrequestpurpose("benefits")
     CoverageDiscovery = Eligibilityrequestpurpose("discovery")
     CoverageValidation = Eligibilityrequestpurpose("validation")

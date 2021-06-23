@@ -16,6 +16,6 @@ class ImplantStatus(FhirValueSetBase):
 
 class ImplantStatusValues:
     Functional = ImplantStatus("functional")
-    Nonfunctional = ImplantStatus("non-functional")
+    Non_functional = ImplantStatus("non-functional")
     Disabled = ImplantStatus("disabled")
     Unknown = ImplantStatus("unknown")

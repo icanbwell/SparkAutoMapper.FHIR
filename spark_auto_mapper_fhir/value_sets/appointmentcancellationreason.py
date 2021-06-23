@@ -17,6 +17,6 @@ class Appointmentcancellationreason(FhirValueSetBase):
 class AppointmentcancellationreasonValues:
     Patient = Appointmentcancellationreason("pat")
     Provider = Appointmentcancellationreason("prov")
-    EquipmentMaintenancerepair = Appointmentcancellationreason("maint")
-    PrepmedIncomplete = Appointmentcancellationreason("meds-inc")
+    EquipmentMaintenance_repair = Appointmentcancellationreason("maint")
+    Prep_medIncomplete = Appointmentcancellationreason("meds-inc")
     Other = Appointmentcancellationreason("other")

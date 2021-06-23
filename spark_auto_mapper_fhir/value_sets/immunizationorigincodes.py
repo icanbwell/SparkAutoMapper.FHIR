@@ -17,6 +17,6 @@ class Immunizationorigincodes(FhirValueSetBase):
 class ImmunizationorigincodesValues:
     OtherProvider = Immunizationorigincodes("provider")
     WrittenRecord = Immunizationorigincodes("record")
-    ParentguardianpatientRecall = Immunizationorigincodes("recall")
+    Parent_guardian_patientRecall = Immunizationorigincodes("recall")
     SchoolRecord = Immunizationorigincodes("school")
     JurisdictionalIis = Immunizationorigincodes("jurisdiction")

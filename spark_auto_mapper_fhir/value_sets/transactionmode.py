@@ -18,4 +18,4 @@ class TransactionmodeValues:
     None_ = Transactionmode("not-supported")
     BatchesSupported = Transactionmode("batch")
     TransactionsSupported = Transactionmode("transaction")
-    BatchesTransactions = Transactionmode("both")
+    Batches_Transactions = Transactionmode("both")

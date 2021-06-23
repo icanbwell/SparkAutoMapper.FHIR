@@ -56,6 +56,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.appointment import Appointment
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.encounterreasoncodes import (
+        Encounterreasoncodes,
+    )
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -114,7 +121,7 @@ class Encounter(FhirResourceBase):
         appointment: Optional[FhirList[Reference[Union[Appointment]]]] = None,
         period: Optional[Period] = None,
         length: Optional[Duration] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[Encounterreasoncodes]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

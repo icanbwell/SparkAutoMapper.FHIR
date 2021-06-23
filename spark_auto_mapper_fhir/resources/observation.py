@@ -49,6 +49,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.loinccodes import Loinccodes
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -81,9 +86,28 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for dataAbsentReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for interpretation
+    from spark_auto_mapper_fhir.value_sets.observationinterpretationcodes import (
+        Observationinterpretationcodes,
+    )
+
+    # End Import for CodeableConcept for interpretation
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for bodySite
+    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
+        Snomedctbodystructures,
+    )
+
+    # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for method
+    from spark_auto_mapper_fhir.value_sets.observationmethods import Observationmethods
+
+    # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for specimen
@@ -161,7 +185,7 @@ class Observation(FhirResourceBase):
         ] = None,
         status: ObservationStatus,
         category: Optional[FhirList[CodeableConcept[Observationcategorycodes]]] = None,
-        code: CodeableConcept,
+        code: CodeableConcept[Loinccodes],
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         focus: Optional[FhirList[Reference[Union[Resource]]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
@@ -181,10 +205,12 @@ class Observation(FhirResourceBase):
             ]
         ] = None,
         dataAbsentReason: Optional[CodeableConcept[Dataabsentreason]] = None,
-        interpretation: Optional[FhirList[CodeableConcept]] = None,
+        interpretation: Optional[
+            FhirList[CodeableConcept[Observationinterpretationcodes]]
+        ] = None,
         note: Optional[FhirList[Annotation]] = None,
-        bodySite: Optional[CodeableConcept] = None,
-        method: Optional[CodeableConcept] = None,
+        bodySite: Optional[CodeableConcept[Snomedctbodystructures]] = None,
+        method: Optional[CodeableConcept[Observationmethods]] = None,
         specimen: Optional[Reference[Union[Specimen]]] = None,
         device: Optional[Reference[Union[Device, DeviceMetric]]] = None,
         referenceRange: Optional[FhirList[ObservationReferenceRange]] = None,

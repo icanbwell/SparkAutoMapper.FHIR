@@ -21,7 +21,7 @@ class ExampleHierarchicalValuesetValues:
     Value = ExampleHierarchicalValueset("value")
     Processing = ExampleHierarchicalValueset("processing")
     Duplicate = ExampleHierarchicalValueset("duplicate")
-    Notfound = ExampleHierarchicalValueset("not-found")
+    Not_found = ExampleHierarchicalValueset("not-found")
     Conflict = ExampleHierarchicalValueset("conflict")
     Lock = ExampleHierarchicalValueset("lock")
     Exception = ExampleHierarchicalValueset("exception")

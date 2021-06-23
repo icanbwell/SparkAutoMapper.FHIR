@@ -16,6 +16,6 @@ class Conditionalreadstatus(FhirValueSetBase):
 
 class ConditionalreadstatusValues:
     NotSupported = Conditionalreadstatus("not-supported")
-    Ifmodifiedsince = Conditionalreadstatus("modified-since")
-    Ifnonematch = Conditionalreadstatus("not-match")
+    If_modified_since = Conditionalreadstatus("modified-since")
+    If_none_match = Conditionalreadstatus("not-match")
     FullSupport = Conditionalreadstatus("full-support")

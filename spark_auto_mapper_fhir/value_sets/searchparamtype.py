@@ -16,7 +16,7 @@ class Searchparamtype(FhirValueSetBase):
 
 class SearchparamtypeValues:
     Number = Searchparamtype("number")
-    Datedatetime = Searchparamtype("date")
+    Date_datetime = Searchparamtype("date")
     String = Searchparamtype("string")
     Token = Searchparamtype("token")
     Reference = Searchparamtype("reference")

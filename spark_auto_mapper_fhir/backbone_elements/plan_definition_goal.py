@@ -17,6 +17,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for description
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for description
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
@@ -24,6 +31,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for start
+    from spark_auto_mapper_fhir.value_sets.goalstartevent import Goalstartevent
+
+    # End Import for CodeableConcept for start
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
     from spark_auto_mapper_fhir.backbone_elements.plan_definition_target import (
@@ -43,9 +55,9 @@ class PlanDefinitionGoal(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[CodeableConcept[Goalcategory]] = None,
-        description: CodeableConcept,
+        description: CodeableConcept[Snomedctclinicalfindings],
         priority: Optional[CodeableConcept[Goalpriority]] = None,
-        start: Optional[CodeableConcept] = None,
+        start: Optional[CodeableConcept[Goalstartevent]] = None,
         addresses: Optional[FhirList[CodeableConcept]] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         target: Optional[FhirList[PlanDefinitionTarget]] = None,

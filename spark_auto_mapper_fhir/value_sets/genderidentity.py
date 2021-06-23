@@ -17,7 +17,7 @@ class Genderidentity(FhirValueSetBase):
 class GenderidentityValues:
     TransgenderFemale = Genderidentity("transgender-female")
     TransgenderMale = Genderidentity("transgender-male")
-    Nonbinary = Genderidentity("non-binary")
+    Non_binary = Genderidentity("non-binary")
     Male = Genderidentity("male")
     Female = Genderidentity("female")
     Other = Genderidentity("other")

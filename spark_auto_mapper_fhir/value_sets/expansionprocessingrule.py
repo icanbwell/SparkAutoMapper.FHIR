@@ -16,5 +16,5 @@ class Expansionprocessingrule(FhirValueSetBase):
 
 class ExpansionprocessingruleValues:
     AllCodes = Expansionprocessingrule("all-codes")
-    GroupsUngroupedCodes = Expansionprocessingrule("ungrouped")
+    Groups_UngroupedCodes = Expansionprocessingrule("ungrouped")
     GroupsOnly = Expansionprocessingrule("groups-only")

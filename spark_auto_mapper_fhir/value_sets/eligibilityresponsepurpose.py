@@ -15,7 +15,7 @@ class Eligibilityresponsepurpose(FhirValueSetBase):
 
 
 class EligibilityresponsepurposeValues:
-    CoverageAuthrequirements = Eligibilityresponsepurpose("auth-requirements")
+    CoverageAuth_requirements = Eligibilityresponsepurpose("auth-requirements")
     CoverageBenefits = Eligibilityresponsepurpose("benefits")
     CoverageDiscovery = Eligibilityresponsepurpose("discovery")
     CoverageValidation = Eligibilityresponsepurpose("validation")

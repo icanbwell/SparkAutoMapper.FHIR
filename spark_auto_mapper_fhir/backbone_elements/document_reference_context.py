@@ -18,7 +18,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for facilityType
+    from spark_auto_mapper_fhir.value_sets.facilitytypecodevalueset import (
+        Facilitytypecodevalueset,
+    )
+
+    # End Import for CodeableConcept for facilityType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for practiceSetting
+    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
+        Practicesettingcodevalueset,
+    )
+
+    # End Import for CodeableConcept for practiceSetting
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for sourcePatientInfo
@@ -45,8 +59,8 @@ class DocumentReferenceContext(FhirBackboneElementBase):
         ] = None,
         event: Optional[FhirList[CodeableConcept]] = None,
         period: Optional[Period] = None,
-        facilityType: Optional[CodeableConcept] = None,
-        practiceSetting: Optional[CodeableConcept] = None,
+        facilityType: Optional[CodeableConcept[Facilitytypecodevalueset]] = None,
+        practiceSetting: Optional[CodeableConcept[Practicesettingcodevalueset]] = None,
         sourcePatientInfo: Optional[Reference[Union[Patient]]] = None,
         related: Optional[FhirList[Reference[Union[Resource]]]] = None,
     ) -> None:

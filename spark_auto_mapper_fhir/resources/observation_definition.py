@@ -25,12 +25,22 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.loinccodes import Loinccodes
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.observation_data_type import (
         ObservationDataType,
     )
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for method
+    from spark_auto_mapper_fhir.value_sets.observationmethods import Observationmethods
+
+    # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.backbone_elements.observation_definition_quantitative_details import (
         ObservationDefinitionQuantitativeDetails,
@@ -69,11 +79,11 @@ class ObservationDefinition(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[FhirList[CodeableConcept[Observationcategorycodes]]] = None,
-        code: CodeableConcept,
+        code: CodeableConcept[Loinccodes],
         identifier: Optional[FhirList[Identifier]] = None,
         permittedDataType: Optional[FhirList[ObservationDataType]] = None,
         multipleResultsAllowed: Optional[FhirBoolean] = None,
-        method: Optional[CodeableConcept] = None,
+        method: Optional[CodeableConcept[Observationmethods]] = None,
         preferredReportName: Optional[FhirString] = None,
         quantitativeDetails: Optional[ObservationDefinitionQuantitativeDetails] = None,
         qualifiedInterval: Optional[

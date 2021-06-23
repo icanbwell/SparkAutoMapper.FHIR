@@ -21,23 +21,23 @@ class OperationoutcomecodesValues:
     YouMustAuthenticateBeforeYouCanUseThisService = Operationoutcomecodes(
         "MSG_AUTH_REQUIRED"
     )
-    BadSyntax_s_MustBeA_s = Operationoutcomecodes("MSG_BAD_FORMAT")
+    BadSyntax_s_MustBeA_s_ = Operationoutcomecodes("MSG_BAD_FORMAT")
     BadSyntaxIn_s = Operationoutcomecodes("MSG_BAD_SYNTAX")
-    UnableToParseFeedentryContentType_s_ = Operationoutcomecodes(
+    UnableToParseFeed_entryContentType_s_ = Operationoutcomecodes(
         "MSG_CANT_PARSE_CONTENT"
     )
-    UnableToParseFeedrootElementName_s_ = Operationoutcomecodes("MSG_CANT_PARSE_ROOT")
+    UnableToParseFeed_rootElementName_s_ = Operationoutcomecodes("MSG_CANT_PARSE_ROOT")
     NewResourceCreated = Operationoutcomecodes("MSG_CREATED")
-    TheDateValue_sIsNotInTheCorrectFormatxmlDateFormatRequired = Operationoutcomecodes(
-        "MSG_DATE_FORMAT"
+    TheDateValue_sIsNotInTheCorrectFormat_xmlDateFormatRequired_ = (
+        Operationoutcomecodes("MSG_DATE_FORMAT")
     )
     ThisResourceHasBeenDeleted = Operationoutcomecodes("MSG_DELETED")
     ResourceDeleted = Operationoutcomecodes("MSG_DELETED_DONE")
     TheResource_s_HasBeenDeleted = Operationoutcomecodes("MSG_DELETED_ID")
     DuplicateId_sForResourceType_s = Operationoutcomecodes("MSG_DUPLICATE_ID")
-    ErrorParsingResourceXml_s = Operationoutcomecodes("MSG_ERROR_PARSING")
+    ErrorParsingResourceXml_s_ = Operationoutcomecodes("MSG_ERROR_PARSING")
     Id_s_HasAnInvalidCharacter_s_ = Operationoutcomecodes("MSG_ID_INVALID")
-    Id_s_TooLonglengthLimit36 = Operationoutcomecodes("MSG_ID_TOO_LONG")
+    Id_s_TooLong_lengthLimit36_ = Operationoutcomecodes("MSG_ID_TOO_LONG")
     IdNotAccepted = Operationoutcomecodes("MSG_INVALID_ID")
     JsonSourceForAResourceShouldStartWithAnObject = Operationoutcomecodes(
         "MSG_JSON_OBJECT"
@@ -47,7 +47,7 @@ class OperationoutcomecodesValues:
     NoResourceFoundMatchingTheQuery_s_ = Operationoutcomecodes("MSG_NO_MATCH")
     NoModuleCouldBeFoundToHandleTheRequest_s_ = Operationoutcomecodes("MSG_NO_MODULE")
     NoSummaryForThisResource = Operationoutcomecodes("MSG_NO_SUMMARY")
-    Operation_sNotAllowedForResource_sdueToLocalConfiguration = Operationoutcomecodes(
+    Operation_sNotAllowedForResource_s_dueToLocalConfiguration_ = Operationoutcomecodes(
         "MSG_OP_NOT_ALLOWED"
     )
     UnknownChainedParameterName_s_ = Operationoutcomecodes("MSG_PARAM_CHAINED")
@@ -55,7 +55,7 @@ class OperationoutcomecodesValues:
     Parameter_s_ModifierIsInvalid = Operationoutcomecodes("MSG_PARAM_MODIFIER_INVALID")
     Parameter_s_IsNotAllowedToRepeat = Operationoutcomecodes("MSG_PARAM_NO_REPEAT")
     Parameter_s_NotUnderstood = Operationoutcomecodes("MSG_PARAM_UNKNOWN")
-    ResourcesWithIdentity_example_CannotBeDeletedforTestingtrainingPurposes = (
+    ResourcesWithIdentity_example_CannotBeDeleted_forTesting_trainingPurposes_ = (
         Operationoutcomecodes("MSG_RESOURCE_EXAMPLE_PROTECTED")
     )
     UnableToAllocateResourceId = Operationoutcomecodes("MSG_RESOURCE_ID_FAIL")
@@ -70,22 +70,22 @@ class OperationoutcomecodesValues:
     DuplicateIdentifierInTransaction_s = Operationoutcomecodes(
         "MSG_TRANSACTION_DUPLICATE_ID"
     )
-    MissingIdentifierInTransactionAnEntryidMustBeProvided = Operationoutcomecodes(
+    MissingIdentifierInTransaction_AnEntry_idMustBeProvided = Operationoutcomecodes(
         "MSG_TRANSACTION_MISSING_ID"
     )
     UnhandledXmlNodeType_s_ = Operationoutcomecodes("MSG_UNHANDLED_NODE_TYPE")
-    UnknownContent_sAt_s = Operationoutcomecodes("MSG_UNKNOWN_CONTENT")
+    UnknownContent_s_At_s = Operationoutcomecodes("MSG_UNKNOWN_CONTENT")
     UnknownFhirHttpOperation = Operationoutcomecodes("MSG_UNKNOWN_OPERATION")
     ResourceType_s_NotRecognised = Operationoutcomecodes("MSG_UNKNOWN_TYPE")
     ExistingResourceUpdated = Operationoutcomecodes("MSG_UPDATED")
     VersionAwareUpdatesAreRequiredForThisResource = Operationoutcomecodes(
         "MSG_VERSION_AWARE"
     )
-    UpdateConflictserverCurrentVersion_s_ClientVersionReferenced_s_ = (
+    UpdateConflict_serverCurrentVersion_s_ClientVersionReferenced_s_ = (
         Operationoutcomecodes("MSG_VERSION_AWARE_CONFLICT")
     )
     VersionSpecificUrlNotRecognised = Operationoutcomecodes("MSG_VERSION_AWARE_URL")
-    ThisDoesNotAppearToBeAFhirElementOrResourcewrongNamespace_s_ = (
+    ThisDoesNotAppearToBeAFhirElementOrResource_wrongNamespace_s_ = (
         Operationoutcomecodes("MSG_WRONG_NS")
     )
     Error_MultipleMatchesExistFor_sSearchParameters_s_ = Operationoutcomecodes(

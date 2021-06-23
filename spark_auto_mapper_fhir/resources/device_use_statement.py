@@ -59,6 +59,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.resources.media import Media
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for bodySite
+    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
+        Snomedctbodystructures,
+    )
+
+    # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 
@@ -111,7 +118,7 @@ class DeviceUseStatement(FhirResourceBase):
                 ]
             ]
         ] = None,
-        bodySite: Optional[CodeableConcept] = None,
+        bodySite: Optional[CodeableConcept[Snomedctbodystructures]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """

@@ -15,4 +15,4 @@ class Udicodes(FhirValueSetBase):
 
 
 class UdicodesValues:
-    Gudidfda = Udicodes("gudid")
+    Gudid_fda_ = Udicodes("gudid")

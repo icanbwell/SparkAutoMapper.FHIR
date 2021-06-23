@@ -21,5 +21,5 @@ class OrganizationaffiliationroleValues:
     Payer = Organizationaffiliationrole("payer")
     Diagnostics = Organizationaffiliationrole("diagnostics")
     Supplier = Organizationaffiliationrole("supplier")
-    Hiehio = Organizationaffiliationrole("HIE/HIO")
+    Hie_hio = Organizationaffiliationrole("HIE/HIO")
     Member = Organizationaffiliationrole("member")

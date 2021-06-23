@@ -21,6 +21,13 @@ if TYPE_CHECKING:
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for relationship
+    from spark_auto_mapper_fhir.value_sets.patientrelationshiptype import (
+        Patientrelationshiptype,
+    )
+
+    # End Import for CodeableConcept for relationship
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.administrative_gender import (
@@ -50,7 +57,9 @@ class RelatedPerson(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         patient: Reference[Union[Patient]],
-        relationship: Optional[FhirList[CodeableConcept]] = None,
+        relationship: Optional[
+            FhirList[CodeableConcept[Patientrelationshiptype]]
+        ] = None,
         name: Optional[FhirList[HumanName]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         gender: Optional[AdministrativeGender] = None,

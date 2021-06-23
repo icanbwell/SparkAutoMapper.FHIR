@@ -28,6 +28,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
+        JurisdictionValueset,
+    )
+
+    # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_actor import (
@@ -64,7 +71,7 @@ class ExampleScenario(FhirResourceBase):
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
         copyright: Optional[markdown] = None,
         purpose: Optional[markdown] = None,
         actor: Optional[FhirList[ExampleScenarioActor]] = None,

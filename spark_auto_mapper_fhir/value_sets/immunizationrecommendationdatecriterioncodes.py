@@ -15,7 +15,7 @@ class Immunizationrecommendationdatecriterioncodes(FhirValueSetBase):
 
 
 class ImmunizationrecommendationdatecriterioncodesValues:
-    _309815 = Immunizationrecommendationdatecriterioncodes("30981-5")
-    _309807 = Immunizationrecommendationdatecriterioncodes("30980-7")
-    _597773 = Immunizationrecommendationdatecriterioncodes("59777-3")
-    _597781 = Immunizationrecommendationdatecriterioncodes("59778-1")
+    _30981_5 = Immunizationrecommendationdatecriterioncodes("30981-5")
+    _30980_7 = Immunizationrecommendationdatecriterioncodes("30980-7")
+    _59777_3 = Immunizationrecommendationdatecriterioncodes("59777-3")
+    _59778_1 = Immunizationrecommendationdatecriterioncodes("59778-1")

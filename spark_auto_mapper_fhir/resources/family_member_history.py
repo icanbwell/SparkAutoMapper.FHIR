@@ -48,6 +48,13 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for sex
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -88,7 +95,9 @@ class FamilyMemberHistory(FhirResourceBase):
         relationship: CodeableConcept,
         sex: Optional[CodeableConcept[Administrativegender]] = None,
         estimatedAge: Optional[FhirBoolean] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[
+            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+        ] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

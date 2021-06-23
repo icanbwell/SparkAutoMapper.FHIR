@@ -15,5 +15,5 @@ class Exceptioncodes(FhirValueSetBase):
 
 
 class ExceptioncodesValues:
-    Studentfulltime = Exceptioncodes("student")
+    Student_fulltime_ = Exceptioncodes("student")
     Disabled = Exceptioncodes("disabled")

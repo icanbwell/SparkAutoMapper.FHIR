@@ -22,6 +22,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for scope
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.consentcategorycodes import (
+        Consentcategorycodes,
+    )
+
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
@@ -71,7 +78,7 @@ class Consent(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: ConsentState,
         scope: CodeableConcept[Consentscopecodes],
-        category: FhirList[CodeableConcept],
+        category: FhirList[CodeableConcept[Consentcategorycodes]],
         patient: Optional[Reference[Union[Patient]]] = None,
         dateTime: Optional[FhirDateTime] = None,
         performer: Optional[

@@ -16,11 +16,11 @@ class Admitsource(FhirValueSetBase):
 
 class AdmitsourceValues:
     TransferredFromOtherHospital = Admitsource("hosp-trans")
-    FromAccidentemergencyDepartment = Admitsource("emd")
+    FromAccident_emergencyDepartment = Admitsource("emd")
     FromOutpatientDepartment = Admitsource("outp")
     BornInHospital = Admitsource("born")
     GeneralPractitionerReferral = Admitsource("gp")
-    MedicalPractitionerphysicianReferral = Admitsource("mp")
+    MedicalPractitioner_physicianReferral = Admitsource("mp")
     FromNursingHome = Admitsource("nursing")
     FromPsychiatricHospital = Admitsource("psych")
     FromRehabilitationFacility = Admitsource("rehab")

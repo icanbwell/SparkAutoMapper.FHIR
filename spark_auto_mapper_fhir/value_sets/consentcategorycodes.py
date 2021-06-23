@@ -22,5 +22,5 @@ class ConsentcategorycodesValues:
     NoticeOfPrivacyPractices = Consentcategorycodes("npp")
     Polst = Consentcategorycodes("polst")
     ResearchInformationAccess = Consentcategorycodes("research")
-    DeidentifiedInformationAccess = Consentcategorycodes("rsdid")
-    ReidentifiableInformationAccess = Consentcategorycodes("rsreid")
+    De_identifiedInformationAccess = Consentcategorycodes("rsdid")
+    Re_identifiableInformationAccess = Consentcategorycodes("rsreid")

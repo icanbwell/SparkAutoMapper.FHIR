@@ -17,6 +17,6 @@ class Slotstatus(FhirValueSetBase):
 class SlotstatusValues:
     Busy = Slotstatus("busy")
     Free = Slotstatus("free")
-    Busyunavailable = Slotstatus("busy-unavailable")
-    Busytentative = Slotstatus("busy-tentative")
+    Busy_unavailable_ = Slotstatus("busy-unavailable")
+    Busy_tentative_ = Slotstatus("busy-tentative")
     EnteredInError = Slotstatus("entered-in-error")

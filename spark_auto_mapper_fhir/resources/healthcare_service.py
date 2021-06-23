@@ -33,6 +33,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for specialty
+    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
+        Practicesettingcodevalueset,
+    )
+
+    # End Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
@@ -64,12 +71,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for program
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for characteristic
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for characteristic
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for communication
+    from spark_auto_mapper_fhir.value_sets.commonlanguages import Commonlanguages
+
+    # End Import for CodeableConcept for communication
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for referralMethod
@@ -107,7 +114,9 @@ class HealthcareService(FhirResourceBase):
         providedBy: Optional[Reference[Union[Organization]]] = None,
         category: Optional[FhirList[CodeableConcept[Servicecategory]]] = None,
         type: Optional[FhirList[CodeableConcept[Servicetype]]] = None,
-        specialty: Optional[FhirList[CodeableConcept]] = None,
+        specialty: Optional[
+            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+        ] = None,
         location: Optional[FhirList[Reference[Union[Location]]]] = None,
         name: Optional[FhirString] = None,
         comment: Optional[FhirString] = None,
@@ -120,8 +129,8 @@ class HealthcareService(FhirResourceBase):
         ] = None,
         eligibility: Optional[FhirList[HealthcareServiceEligibility]] = None,
         program: Optional[FhirList[CodeableConcept[Program]]] = None,
-        characteristic: Optional[FhirList[CodeableConcept[Acmecholcodesblood]]] = None,
-        communication: Optional[FhirList[CodeableConcept]] = None,
+        characteristic: Optional[FhirList[CodeableConcept]] = None,
+        communication: Optional[FhirList[CodeableConcept[Commonlanguages]]] = None,
         referralMethod: Optional[FhirList[CodeableConcept[Referralmethod]]] = None,
         appointmentRequired: Optional[FhirBoolean] = None,
         availableTime: Optional[FhirList[HealthcareServiceAvailableTime]] = None,

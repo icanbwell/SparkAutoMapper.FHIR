@@ -13,7 +13,19 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.participationroletype import (
+        Participationroletype,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for role
+    from spark_auto_mapper_fhir.value_sets.securityroletype import Securityroletype
+
+    # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for who
@@ -29,6 +41,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for media
+    from spark_auto_mapper_fhir.value_sets.mediatypecode import Mediatypecode
+
+    # End Import for CodeableConcept for media
     from spark_auto_mapper_fhir.backbone_elements.audit_event_network import (
         AuditEventNetwork,
     )
@@ -46,8 +63,8 @@ class AuditEventAgent(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept] = None,
-        role: Optional[FhirList[CodeableConcept]] = None,
+        type: Optional[CodeableConcept[Participationroletype]] = None,
+        role: Optional[FhirList[CodeableConcept[Securityroletype]]] = None,
         who: Optional[
             Reference[
                 Union[
@@ -65,7 +82,7 @@ class AuditEventAgent(FhirBackboneElementBase):
         requestor: FhirBoolean,
         location: Optional[Reference[Union[Location]]] = None,
         policy: Optional[FhirList[uri]] = None,
-        media: Optional[Coding] = None,
+        media: Optional[Coding[Mediatypecode]] = None,
         network: Optional[AuditEventNetwork] = None,
         purposeOfUse: Optional[FhirList[CodeableConcept]] = None,
     ) -> None:

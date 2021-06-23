@@ -15,10 +15,10 @@ class Taskcode(FhirValueSetBase):
 
 
 class TaskcodeValues:
-    ActivateapproveTheFocalResource = Taskcode("approve")
+    Activate_approveTheFocalResource = Taskcode("approve")
     FulfillTheFocalRequest = Taskcode("fulfill")
     MarkTheFocalResourceAsNoLongerActive = Taskcode("abort")
     ReplaceTheFocalResourceWithTheInputResource = Taskcode("replace")
     ChangeTheFocalResource = Taskcode("change")
     SuspendTheFocalResource = Taskcode("suspend")
-    ReactivateTheFocalResource = Taskcode("resume")
+    Re_activateTheFocalResource = Taskcode("resume")

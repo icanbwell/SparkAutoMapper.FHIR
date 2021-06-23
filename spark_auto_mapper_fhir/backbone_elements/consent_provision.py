@@ -22,9 +22,21 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for action
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for securityLabel
+    from spark_auto_mapper_fhir.value_sets.all_security_labels import AllSecurityLabels
+
+    # End Import for CodeableConcept for securityLabel
     from spark_auto_mapper_fhir.complex_types.coding import Coding
     from spark_auto_mapper_fhir.complex_types.coding import Coding
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.consentcontentcodes import (
+        Consentcontentcodes,
+    )
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.backbone_elements.consent_data import ConsentData
     from spark_auto_mapper_fhir.backbone_elements.consent_provision import (
@@ -47,10 +59,10 @@ class ConsentProvision(FhirBackboneElementBase):
         period: Optional[Period] = None,
         actor: Optional[FhirList[ConsentActor]] = None,
         action: Optional[FhirList[CodeableConcept[Consentactioncodes]]] = None,
-        securityLabel: Optional[FhirList[Coding]] = None,
+        securityLabel: Optional[FhirList[Coding[AllSecurityLabels]]] = None,
         purpose: Optional[FhirList[Coding]] = None,
         class_: Optional[FhirList[Coding]] = None,
-        code: Optional[FhirList[CodeableConcept]] = None,
+        code: Optional[FhirList[CodeableConcept[Consentcontentcodes]]] = None,
         dataPeriod: Optional[Period] = None,
         data: Optional[FhirList[ConsentData]] = None,
         provision: Optional[FhirList[ConsentProvision]] = None,

@@ -26,6 +26,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for event
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for event
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -112,7 +119,7 @@ class AdverseEvent(FhirResourceBase):
         identifier: Optional[Identifier] = None,
         actuality: AdverseEventActuality,
         category: Optional[FhirList[CodeableConcept[Adverseeventcategory]]] = None,
-        event: Optional[CodeableConcept] = None,
+        event: Optional[CodeableConcept[Snomedctclinicalfindings]] = None,
         subject: Reference[Union[Patient, Group, Practitioner, RelatedPerson]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         date: Optional[FhirDateTime] = None,

@@ -34,12 +34,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subtype
-    from spark_auto_mapper_fhir.value_sets.contractresourceassetsubtypecodes import (
-        Contractresourceassetsubtypecodes,
+    from spark_auto_mapper_fhir.value_sets.contractresourceassetsub_typecodes import (
+        Contractresourceassetsub_typecodes,
     )
 
     # End Import for CodeableConcept for subtype
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for relationship
+    from spark_auto_mapper_fhir.value_sets.consentcontentclass import (
+        Consentcontentclass,
+    )
+
+    # End Import for CodeableConcept for relationship
     from spark_auto_mapper_fhir.backbone_elements.contract_context import (
         ContractContext,
     )
@@ -77,9 +84,9 @@ class ContractAsset(FhirBackboneElementBase):
         ] = None,
         typeReference: Optional[FhirList[Reference[Union[Resource]]]] = None,
         subtype: Optional[
-            FhirList[CodeableConcept[Contractresourceassetsubtypecodes]]
+            FhirList[CodeableConcept[Contractresourceassetsub_typecodes]]
         ] = None,
-        relationship: Optional[Coding] = None,
+        relationship: Optional[Coding[Consentcontentclass]] = None,
         context: Optional[FhirList[ContractContext]] = None,
         condition: Optional[FhirString] = None,
         periodType: Optional[

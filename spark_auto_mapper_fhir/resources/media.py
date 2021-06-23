@@ -31,6 +31,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for modality
+    from spark_auto_mapper_fhir.value_sets.mediamodality import Mediamodality
+
+    # End Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -58,7 +63,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.procedurereasoncodes import (
+        Procedurereasoncodes,
+    )
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for bodySite
+    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
+        Snomedctbodystructures,
+    )
+
+    # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -91,7 +110,7 @@ class Media(FhirResourceBase):
         partOf: Optional[FhirList[Reference[Union[Resource]]]] = None,
         status: EventStatus,
         type: Optional[CodeableConcept[Mediatype]] = None,
-        modality: Optional[CodeableConcept] = None,
+        modality: Optional[CodeableConcept[Mediamodality]] = None,
         view: Optional[CodeableConcept] = None,
         subject: Optional[
             Reference[
@@ -121,8 +140,8 @@ class Media(FhirResourceBase):
                 ]
             ]
         ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
-        bodySite: Optional[CodeableConcept] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[Procedurereasoncodes]]] = None,
+        bodySite: Optional[CodeableConcept[Snomedctbodystructures]] = None,
         deviceName: Optional[FhirString] = None,
         device: Optional[Reference[Union[Device, DeviceMetric, Device]]] = None,
         height: Optional[positiveInt] = None,

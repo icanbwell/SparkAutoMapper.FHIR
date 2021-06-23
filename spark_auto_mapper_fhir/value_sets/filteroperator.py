@@ -16,11 +16,11 @@ class Filteroperator(FhirValueSetBase):
 
 class FilteroperatorValues:
     Equals = Filteroperator("=")
-    IsAbySubsumption = Filteroperator("is-a")
-    DescendentOfbySubsumption = Filteroperator("descendent-of")
-    NotisAbySubsumption = Filteroperator("is-not-a")
+    IsA_bySubsumption_ = Filteroperator("is-a")
+    DescendentOf_bySubsumption_ = Filteroperator("descendent-of")
+    Not_isA_bySubsumption_ = Filteroperator("is-not-a")
     RegularExpression = Filteroperator("regex")
     InSet = Filteroperator("in")
     NotInSet = Filteroperator("not-in")
-    GeneralizesbySubsumption = Filteroperator("generalizes")
+    Generalizes_bySubsumption_ = Filteroperator("generalizes")
     Exists = Filteroperator("exists")

@@ -17,7 +17,7 @@ class Standardsstatus(FhirValueSetBase):
 class StandardsstatusValues:
     Draft = Standardsstatus("draft")
     Normative = Standardsstatus("normative")
-    Trialuse = Standardsstatus("trial-use")
+    Trial_use = Standardsstatus("trial-use")
     Informative = Standardsstatus("informative")
     Deprecated = Standardsstatus("deprecated")
     External = Standardsstatus("external")

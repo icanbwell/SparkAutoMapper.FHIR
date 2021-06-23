@@ -18,5 +18,5 @@ class AddressuseValues:
     Home = Addressuse("home")
     Work = Addressuse("work")
     Temporary = Addressuse("temp")
-    OldIncorrect = Addressuse("old")
+    Old_Incorrect = Addressuse("old")
     Billing = Addressuse("billing")

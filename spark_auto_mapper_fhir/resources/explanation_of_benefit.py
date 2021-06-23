@@ -57,6 +57,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for priority
+    from spark_auto_mapper_fhir.value_sets.processprioritycodes import (
+        Processprioritycodes,
+    )
+
+    # End Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for fundsReserveRequested
@@ -183,7 +190,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         enterer: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         insurer: Reference[Union[Organization]],
         provider: Reference[Union[Practitioner, PractitionerRole, Organization]],
-        priority: Optional[CodeableConcept] = None,
+        priority: Optional[CodeableConcept[Processprioritycodes]] = None,
         fundsReserveRequested: Optional[CodeableConcept[FundsReservationCodes]] = None,
         fundsReserve: Optional[CodeableConcept[FundsReservationCodes]] = None,
         related: Optional[FhirList[ExplanationOfBenefitRelated]] = None,

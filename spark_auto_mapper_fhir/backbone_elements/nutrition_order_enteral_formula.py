@@ -12,6 +12,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for baseFormulaType
+    from spark_auto_mapper_fhir.value_sets.enteralformulatypecodes import (
+        Enteralformulatypecodes,
+    )
+
+    # End Import for CodeableConcept for baseFormulaType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for additiveType
@@ -22,6 +29,11 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for additiveType
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for routeofAdministration
+    from spark_auto_mapper_fhir.value_sets.enteralroutecodes import Enteralroutecodes
+
+    # End Import for CodeableConcept for routeofAdministration
     from spark_auto_mapper_fhir.backbone_elements.nutrition_order_administration import (
         NutritionOrderAdministration,
     )
@@ -39,12 +51,12 @@ class NutritionOrderEnteralFormula(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        baseFormulaType: Optional[CodeableConcept] = None,
+        baseFormulaType: Optional[CodeableConcept[Enteralformulatypecodes]] = None,
         baseFormulaProductName: Optional[FhirString] = None,
         additiveType: Optional[CodeableConcept[Enteralformulaadditivetypecode]] = None,
         additiveProductName: Optional[FhirString] = None,
         caloricDensity: Optional[Quantity] = None,
-        routeofAdministration: Optional[CodeableConcept] = None,
+        routeofAdministration: Optional[CodeableConcept[Enteralroutecodes]] = None,
         administration: Optional[FhirList[NutritionOrderAdministration]] = None,
         maxVolumeToDeliver: Optional[Quantity] = None,
         administrationInstruction: Optional[FhirString] = None,

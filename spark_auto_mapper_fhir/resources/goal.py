@@ -39,6 +39,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for description
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for description
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -68,6 +75,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.risk_assessment import RiskAssessment
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for outcomeCode
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for outcomeCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for outcomeReference
@@ -91,7 +105,7 @@ class Goal(FhirResourceBase):
         achievementStatus: Optional[CodeableConcept[Goalachievementstatus]] = None,
         category: Optional[FhirList[CodeableConcept[Goalcategory]]] = None,
         priority: Optional[CodeableConcept[Goalpriority]] = None,
-        description: CodeableConcept,
+        description: CodeableConcept[Snomedctclinicalfindings],
         subject: Reference[Union[Patient, Group, Organization]],
         target: Optional[FhirList[GoalTarget]] = None,
         statusDate: Optional[FhirDate] = None,
@@ -114,7 +128,9 @@ class Goal(FhirResourceBase):
             ]
         ] = None,
         note: Optional[FhirList[Annotation]] = None,
-        outcomeCode: Optional[FhirList[CodeableConcept]] = None,
+        outcomeCode: Optional[
+            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+        ] = None,
         outcomeReference: Optional[FhirList[Reference[Union[Observation]]]] = None,
     ) -> None:
         """

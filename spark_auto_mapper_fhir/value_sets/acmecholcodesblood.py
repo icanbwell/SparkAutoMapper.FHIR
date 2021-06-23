@@ -15,6 +15,6 @@ class Acmecholcodesblood(FhirValueSetBase):
 
 
 class AcmecholcodesbloodValues:
-    Scholmmoll = Acmecholcodesblood("chol-mmol")
-    Scholmgl = Acmecholcodesblood("chol-mass")
+    Schol_mmol_l_ = Acmecholcodesblood("chol-mmol")
+    Schol_mg_l_ = Acmecholcodesblood("chol-mass")
     Schol = Acmecholcodesblood("chol")

@@ -50,7 +50,7 @@ class EnteralformulatypecodesValues:
     )
     IncreasedFiberFormula = Enteralformulatypecodes("443351000124102")
     HydrolyzedProteinFormula = Enteralformulatypecodes("443771000124106")
-    HydrolyzedPeptidebasedHighProteinEnteralFormula = Enteralformulatypecodes(
+    HydrolyzedPeptide_basedHighProteinEnteralFormula = Enteralformulatypecodes(
         "441671000124100"
     )
     HighProteinFormula = Enteralformulatypecodes("443111000124101")

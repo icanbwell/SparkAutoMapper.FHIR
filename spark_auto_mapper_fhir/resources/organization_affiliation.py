@@ -39,6 +39,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for specialty
+    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
+        Practicesettingcodevalueset,
+    )
+
+    # End Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
@@ -73,7 +80,9 @@ class OrganizationAffiliation(FhirResourceBase):
         participatingOrganization: Optional[Reference[Union[Organization]]] = None,
         network: Optional[FhirList[Reference[Union[Organization]]]] = None,
         code: Optional[FhirList[CodeableConcept[Organizationaffiliationrole]]] = None,
-        specialty: Optional[FhirList[CodeableConcept]] = None,
+        specialty: Optional[
+            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+        ] = None,
         location: Optional[FhirList[Reference[Union[Location]]]] = None,
         healthcareService: Optional[
             FhirList[Reference[Union[HealthcareService]]]

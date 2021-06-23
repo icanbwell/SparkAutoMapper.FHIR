@@ -16,13 +16,13 @@ class MedicationdispenseStatusReasonCodes(FhirValueSetBase):
 
 class MedicationdispenseStatusReasonCodesValues:
     OrderStopped = MedicationdispenseStatusReasonCodes("frr01")
-    StaledatedOrder = MedicationdispenseStatusReasonCodes("frr02")
+    Stale_datedOrder = MedicationdispenseStatusReasonCodes("frr02")
     IncompleteData = MedicationdispenseStatusReasonCodes("frr03")
     ProductUnavailable = MedicationdispenseStatusReasonCodes("frr04")
-    Ethicalreligious = MedicationdispenseStatusReasonCodes("frr05")
+    Ethical_religious = MedicationdispenseStatusReasonCodes("frr05")
     UnableToProvideCare = MedicationdispenseStatusReasonCodes("frr06")
     TryAnotherTreatmentFirst = MedicationdispenseStatusReasonCodes("altchoice")
-    PrescriptionrequestRequiresClarification = MedicationdispenseStatusReasonCodes(
+    Prescription_requestRequiresClarification = MedicationdispenseStatusReasonCodes(
         "clarif"
     )
     DrugLevelTooHigh = MedicationdispenseStatusReasonCodes("drughigh")
@@ -36,5 +36,5 @@ class MedicationdispenseStatusReasonCodesValues:
     SuspectedIntolerance = MedicationdispenseStatusReasonCodes("sintol")
     PatientScheduledForSurgery = MedicationdispenseStatusReasonCodes("surg")
     Washout = MedicationdispenseStatusReasonCodes("washout")
-    DrugNotAvailableOutOfStock = MedicationdispenseStatusReasonCodes("outofstock")
-    DrugNotAvailableOffMarket = MedicationdispenseStatusReasonCodes("offmarket")
+    DrugNotAvailable_OutOfStock = MedicationdispenseStatusReasonCodes("outofstock")
+    DrugNotAvailable_OffMarket = MedicationdispenseStatusReasonCodes("offmarket")

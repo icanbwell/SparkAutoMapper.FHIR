@@ -30,6 +30,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for dietPreference
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for specialCourtesy
+    from spark_auto_mapper_fhir.value_sets.specialcourtesy import Specialcourtesy
+
+    # End Import for CodeableConcept for specialCourtesy
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialArrangement
@@ -69,7 +74,7 @@ class EncounterHospitalization(FhirBackboneElementBase):
         admitSource: Optional[CodeableConcept[Admitsource]] = None,
         reAdmission: Optional[CodeableConcept] = None,
         dietPreference: Optional[FhirList[CodeableConcept[Diet]]] = None,
-        specialCourtesy: Optional[FhirList[CodeableConcept]] = None,
+        specialCourtesy: Optional[FhirList[CodeableConcept[Specialcourtesy]]] = None,
         specialArrangement: Optional[
             FhirList[CodeableConcept[Specialarrangements]]
         ] = None,

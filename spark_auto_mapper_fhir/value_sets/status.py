@@ -20,4 +20,4 @@ class StatusValues:
     InProcess = Status("in-process")
     RequiresRevalidation = Status("req-revalid")
     ValidationFailed = Status("val-fail")
-    RevalidationFailed = Status("reval-fail")
+    Re_validationFailed = Status("reval-fail")

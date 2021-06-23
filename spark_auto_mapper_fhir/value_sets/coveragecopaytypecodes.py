@@ -19,7 +19,7 @@ class CoveragecopaytypecodesValues:
     SpecialistOfficeVisit = Coveragecopaytypecodes("spvisit")
     Emergency = Coveragecopaytypecodes("emergency")
     InpatientHospital = Coveragecopaytypecodes("inpthosp")
-    Televisit = Coveragecopaytypecodes("televisit")
+    Tele_visit = Coveragecopaytypecodes("televisit")
     UrgentCare = Coveragecopaytypecodes("urgentcare")
     CopayPercentage = Coveragecopaytypecodes("copaypct")
     CopayAmount = Coveragecopaytypecodes("copay")

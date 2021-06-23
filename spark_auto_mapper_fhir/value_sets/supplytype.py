@@ -16,4 +16,4 @@ class Supplytype(FhirValueSetBase):
 
 class SupplytypeValues:
     CentralSupply = Supplytype("central")
-    Nonstock = Supplytype("nonstock")
+    Non_stock = Supplytype("nonstock")

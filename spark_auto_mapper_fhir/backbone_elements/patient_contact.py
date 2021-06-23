@@ -11,6 +11,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for relationship
+    from spark_auto_mapper_fhir.value_sets.patientcontactrelationship import (
+        Patientcontactrelationship,
+    )
+
+    # End Import for CodeableConcept for relationship
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.address import Address
@@ -35,7 +42,9 @@ class PatientContact(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        relationship: Optional[FhirList[CodeableConcept]] = None,
+        relationship: Optional[
+            FhirList[CodeableConcept[Patientcontactrelationship]]
+        ] = None,
         name: Optional[HumanName] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[Address] = None,

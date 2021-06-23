@@ -13,11 +13,28 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for substance
+    from spark_auto_mapper_fhir.value_sets.substancecode import Substancecode
+
+    # End Import for CodeableConcept for substance
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for manifestation
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for manifestation
     from spark_auto_mapper_fhir.complex_types.allergy_intolerance_severity import (
         AllergyIntoleranceSeverity,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for exposureRoute
+    from spark_auto_mapper_fhir.value_sets.snomedctroutecodes import Snomedctroutecodes
+
+    # End Import for CodeableConcept for exposureRoute
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 
@@ -32,12 +49,12 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        substance: Optional[CodeableConcept] = None,
-        manifestation: FhirList[CodeableConcept],
+        substance: Optional[CodeableConcept[Substancecode]] = None,
+        manifestation: FhirList[CodeableConcept[Snomedctclinicalfindings]],
         description: Optional[FhirString] = None,
         onset: Optional[FhirDateTime] = None,
         severity: Optional[AllergyIntoleranceSeverity] = None,
-        exposureRoute: Optional[CodeableConcept] = None,
+        exposureRoute: Optional[CodeableConcept[Snomedctroutecodes]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """

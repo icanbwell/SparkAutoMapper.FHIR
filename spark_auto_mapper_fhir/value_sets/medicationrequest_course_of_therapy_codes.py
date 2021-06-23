@@ -16,5 +16,5 @@ class MedicationrequestCourseOfTherapyCodes(FhirValueSetBase):
 
 class MedicationrequestCourseOfTherapyCodesValues:
     ContinuousLongTermTherapy = MedicationrequestCourseOfTherapyCodes("continuous")
-    ShortCourseacuteTherapy = MedicationrequestCourseOfTherapyCodes("acute")
+    ShortCourse_acute_Therapy = MedicationrequestCourseOfTherapyCodes("acute")
     Seasonal = MedicationrequestCourseOfTherapyCodes("seasonal")

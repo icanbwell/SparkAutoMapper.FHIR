@@ -27,17 +27,7 @@ if TYPE_CHECKING:
     # Imports for References for partOf
     from spark_auto_mapper_fhir.complex_types.task_status import TaskStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for businessStatus
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for businessStatus
     from spark_auto_mapper_fhir.complex_types.task_intent import TaskIntent
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -69,6 +59,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for performerType
+    from spark_auto_mapper_fhir.value_sets.procedureperformerrolecodes import (
+        Procedureperformerrolecodes,
+    )
+
+    # End Import for CodeableConcept for performerType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for owner
@@ -85,11 +82,6 @@ if TYPE_CHECKING:
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -130,8 +122,8 @@ class Task(FhirResourceBase):
         groupIdentifier: Optional[Identifier] = None,
         partOf: Optional[FhirList[Reference[Union[Task]]]] = None,
         status: TaskStatus,
-        statusReason: Optional[CodeableConcept[Acmecholcodesblood]] = None,
-        businessStatus: Optional[CodeableConcept[Acmecholcodesblood]] = None,
+        statusReason: Optional[CodeableConcept] = None,
+        businessStatus: Optional[CodeableConcept] = None,
         intent: TaskIntent,
         priority: Optional[RequestPriority] = None,
         code: Optional[CodeableConcept[Taskcode]] = None,
@@ -154,7 +146,9 @@ class Task(FhirResourceBase):
                 ]
             ]
         ] = None,
-        performerType: Optional[FhirList[CodeableConcept]] = None,
+        performerType: Optional[
+            FhirList[CodeableConcept[Procedureperformerrolecodes]]
+        ] = None,
         owner: Optional[
             Reference[
                 Union[
@@ -170,7 +164,7 @@ class Task(FhirResourceBase):
             ]
         ] = None,
         location: Optional[Reference[Union[Location]]] = None,
-        reasonCode: Optional[CodeableConcept[Acmecholcodesblood]] = None,
+        reasonCode: Optional[CodeableConcept] = None,
         reasonReference: Optional[Reference[Union[Resource]]] = None,
         insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
         note: Optional[FhirList[Annotation]] = None,

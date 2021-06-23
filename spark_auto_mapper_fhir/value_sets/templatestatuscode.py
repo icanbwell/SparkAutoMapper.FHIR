@@ -16,7 +16,7 @@ class Templatestatuscode(FhirValueSetBase):
 
 class TemplatestatuscodeValues:
     Draft = Templatestatuscode("draft")
-    UnderPrepublicationReview = Templatestatuscode("pending")
+    UnderPre_publicationReview = Templatestatuscode("pending")
     Active = Templatestatuscode("active")
     InReview = Templatestatuscode("review")
     Cancelled = Templatestatuscode("cancelled")

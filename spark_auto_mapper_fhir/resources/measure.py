@@ -32,6 +32,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
+        JurisdictionValueset,
+    )
+
+    # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
@@ -109,7 +116,7 @@ class Measure(FhirResourceBase):
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
         purpose: Optional[markdown] = None,
         usage: Optional[FhirString] = None,
         copyright: Optional[markdown] = None,

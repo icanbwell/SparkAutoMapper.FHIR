@@ -15,13 +15,13 @@ class Fhirspecimencollectionmethod(FhirValueSetBase):
 
 
 class FhirspecimencollectionmethodValues:
-    AspirationAction = Fhirspecimencollectionmethod("129316008")
-    BiopsyAction = Fhirspecimencollectionmethod("129314006")
-    PunctureAction = Fhirspecimencollectionmethod("129300006")
-    ExcisionAction = Fhirspecimencollectionmethod("129304002")
-    ScrapingAction = Fhirspecimencollectionmethod("129323009")
-    UrineSpecimenCollectionCleanCatch = Fhirspecimencollectionmethod("73416001")
+    Aspiration_Action = Fhirspecimencollectionmethod("129316008")
+    Biopsy_Action = Fhirspecimencollectionmethod("129314006")
+    Puncture_Action = Fhirspecimencollectionmethod("129300006")
+    Excision_Action = Fhirspecimencollectionmethod("129304002")
+    Scraping_Action = Fhirspecimencollectionmethod("129323009")
+    UrineSpecimenCollection_CleanCatch = Fhirspecimencollectionmethod("73416001")
     TimedUrineCollection = Fhirspecimencollectionmethod("225113003")
-    UrineSpecimenCollectionCatheterized = Fhirspecimencollectionmethod("70777001")
+    UrineSpecimenCollection_Catheterized = Fhirspecimencollectionmethod("70777001")
     CollectionOfCoughedSputum = Fhirspecimencollectionmethod("386089008")
-    FingerprickSampling = Fhirspecimencollectionmethod("278450005")
+    Finger_prickSampling = Fhirspecimencollectionmethod("278450005")

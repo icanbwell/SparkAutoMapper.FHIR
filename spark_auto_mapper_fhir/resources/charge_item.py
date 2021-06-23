@@ -54,6 +54,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for bodysite
+    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
+        Snomedctbodystructures,
+    )
+
+    # End Import for CodeableConcept for bodysite
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
     from spark_auto_mapper_fhir.complex_types.money import Money
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -68,6 +75,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reason
+    from spark_auto_mapper_fhir.value_sets.icd_10codes import Icd_10codes
+
+    # End Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for service
@@ -117,7 +129,7 @@ class ChargeItem(FhirResourceBase):
         requestingOrganization: Optional[Reference[Union[Organization]]] = None,
         costCenter: Optional[Reference[Union[Organization]]] = None,
         quantity: Optional[Quantity] = None,
-        bodysite: Optional[FhirList[CodeableConcept]] = None,
+        bodysite: Optional[FhirList[CodeableConcept[Snomedctbodystructures]]] = None,
         factorOverride: Optional[decimal] = None,
         priceOverride: Optional[Money] = None,
         overrideReason: Optional[FhirString] = None,
@@ -134,7 +146,7 @@ class ChargeItem(FhirResourceBase):
             ]
         ] = None,
         enteredDate: Optional[FhirDateTime] = None,
-        reason: Optional[FhirList[CodeableConcept]] = None,
+        reason: Optional[FhirList[CodeableConcept[Icd_10codes]]] = None,
         service: Optional[
             FhirList[
                 Reference[

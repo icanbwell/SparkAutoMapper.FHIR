@@ -17,4 +17,4 @@ class Addresstype(FhirValueSetBase):
 class AddresstypeValues:
     Postal = Addresstype("postal")
     Physical = Addresstype("physical")
-    PostalPhysical = Addresstype("both")
+    Postal_Physical = Addresstype("both")

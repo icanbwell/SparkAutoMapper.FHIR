@@ -17,5 +17,5 @@ class Conceptsubsumptionoutcome(FhirValueSetBase):
 class ConceptsubsumptionoutcomeValues:
     Equivalent = Conceptsubsumptionoutcome("equivalent")
     Subsumes = Conceptsubsumptionoutcome("subsumes")
-    Subsumedby = Conceptsubsumptionoutcome("subsumed-by")
-    Notsubsumed = Conceptsubsumptionoutcome("not-subsumed")
+    Subsumed_by = Conceptsubsumptionoutcome("subsumed-by")
+    Not_subsumed = Conceptsubsumptionoutcome("not-subsumed")

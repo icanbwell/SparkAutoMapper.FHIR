@@ -15,11 +15,11 @@ class Researchstudyphase(FhirValueSetBase):
 
 
 class ResearchstudyphaseValues:
-    Na = Researchstudyphase("n-a")
+    N_a = Researchstudyphase("n-a")
     EarlyPhase1 = Researchstudyphase("early-phase-1")
     Phase1 = Researchstudyphase("phase-1")
-    Phase1phase2 = Researchstudyphase("phase-1-phase-2")
+    Phase1_phase2 = Researchstudyphase("phase-1-phase-2")
     Phase2 = Researchstudyphase("phase-2")
-    Phase2phase3 = Researchstudyphase("phase-2-phase-3")
+    Phase2_phase3 = Researchstudyphase("phase-2-phase-3")
     Phase3 = Researchstudyphase("phase-3")
     Phase4 = Researchstudyphase("phase-4")

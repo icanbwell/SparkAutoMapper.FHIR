@@ -22,12 +22,12 @@ class SmartcapabilitiesValues:
     SupportsOpenidConnect = Smartcapabilities("sso-openid-connect")
     Allows_needPatientBanner_ = Smartcapabilities("context-passthrough-banner")
     Allows_smartStyleStyle_ = Smartcapabilities("context-passthrough-style")
-    Allows_patientLevelLaunchContextehr_ = Smartcapabilities("context-ehr-patient")
-    Allows_encounterLevelLaunchContextehr_ = Smartcapabilities("context-ehr-encounter")
-    Allows_patientLevelLaunchContextstandalone_ = Smartcapabilities(
+    Allows_patientLevelLaunchContext_ehr_ = Smartcapabilities("context-ehr-patient")
+    Allows_encounterLevelLaunchContext_ehr_ = Smartcapabilities("context-ehr-encounter")
+    Allows_patientLevelLaunchContext_standalone_ = Smartcapabilities(
         "context-standalone-patient"
     )
-    Allows_encounterLevelLaunchContextstandalone_ = Smartcapabilities(
+    Allows_encounterLevelLaunchContext_standalone_ = Smartcapabilities(
         "context-standalone-encounter"
     )
     SupportsRefreshToken = Smartcapabilities("permission-offline")

@@ -27,8 +27,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for communicationMethod
-    from spark_auto_mapper_fhir.value_sets.verificationresultcommunicationmethod import (
-        Verificationresultcommunicationmethod,
+    from spark_auto_mapper_fhir.value_sets.verificationresult_communication_method import (
+        Verificationresult_communication_method,
     )
 
     # End Import for CodeableConcept for communicationMethod
@@ -54,7 +54,7 @@ class VerificationResultAttestation(FhirBackboneElementBase):
             Reference[Union[Organization, Practitioner, PractitionerRole]]
         ] = None,
         communicationMethod: Optional[
-            CodeableConcept[Verificationresultcommunicationmethod]
+            CodeableConcept[Verificationresult_communication_method]
         ] = None,
         date: Optional[FhirDate] = None,
         sourceIdentityCertificate: Optional[FhirString] = None,

@@ -11,6 +11,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for role
+    from spark_auto_mapper_fhir.value_sets.participantroles import Participantroles
+
+    # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for member
@@ -38,7 +43,7 @@ class CareTeamParticipant(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: Optional[FhirList[CodeableConcept]] = None,
+        role: Optional[FhirList[CodeableConcept[Participantroles]]] = None,
         member: Optional[
             Reference[
                 Union[

@@ -15,5 +15,5 @@ class Contractsubtypecodes(FhirValueSetBase):
 
 
 class ContractsubtypecodesValues:
-    Disclosureca = Contractsubtypecodes("disclosure-ca")
-    Disclosureus = Contractsubtypecodes("disclosure-us")
+    Disclosure_ca = Contractsubtypecodes("disclosure-ca")
+    Disclosure_us = Contractsubtypecodes("disclosure-us")

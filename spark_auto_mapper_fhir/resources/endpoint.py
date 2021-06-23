@@ -31,6 +31,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for payloadType
+    from spark_auto_mapper_fhir.value_sets.endpointpayloadtype import (
+        Endpointpayloadtype,
+    )
+
+    # End Import for CodeableConcept for payloadType
     from spark_auto_mapper_fhir.complex_types.code import code
     from spark_auto_mapper_fhir.complex_types.url import url
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -55,7 +62,7 @@ class Endpoint(FhirResourceBase):
         managingOrganization: Optional[Reference[Union[Organization]]] = None,
         contact: Optional[FhirList[ContactPoint]] = None,
         period: Optional[Period] = None,
-        payloadType: FhirList[CodeableConcept],
+        payloadType: FhirList[CodeableConcept[Endpointpayloadtype]],
         payloadMimeType: Optional[FhirList[code]] = None,
         address: url,
         header: Optional[FhirList[FhirString]] = None,

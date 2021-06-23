@@ -19,7 +19,7 @@ class DischargedispositionValues:
     AlternativeHome = Dischargedisposition("alt-home")
     OtherHealthcareFacility = Dischargedisposition("other-hcf")
     Hospice = Dischargedisposition("hosp")
-    LongtermCare = Dischargedisposition("long")
+    Long_termCare = Dischargedisposition("long")
     LeftAgainstAdvice = Dischargedisposition("aadvice")
     Expired = Dischargedisposition("exp")
     PsychiatricHospital = Dischargedisposition("psy")

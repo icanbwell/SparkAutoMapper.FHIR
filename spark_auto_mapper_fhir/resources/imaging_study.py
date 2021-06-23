@@ -66,6 +66,13 @@ if TYPE_CHECKING:
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.procedurereasoncodes import (
+        Procedurereasoncodes,
+    )
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -118,7 +125,7 @@ class ImagingStudy(FhirResourceBase):
         procedureReference: Optional[Reference[Union[Procedure]]] = None,
         procedureCode: Optional[FhirList[CodeableConcept]] = None,
         location: Optional[Reference[Union[Location]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[Procedurereasoncodes]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

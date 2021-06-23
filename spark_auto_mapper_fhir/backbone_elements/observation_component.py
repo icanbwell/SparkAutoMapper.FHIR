@@ -11,6 +11,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.loinccodes import Loinccodes
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for dataAbsentReason
@@ -18,6 +23,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for dataAbsentReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for interpretation
+    from spark_auto_mapper_fhir.value_sets.observationinterpretationcodes import (
+        Observationinterpretationcodes,
+    )
+
+    # End Import for CodeableConcept for interpretation
     from spark_auto_mapper_fhir.backbone_elements.observation_reference_range import (
         ObservationReferenceRange,
     )
@@ -34,9 +46,11 @@ class ObservationComponent(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: CodeableConcept,
+        code: CodeableConcept[Loinccodes],
         dataAbsentReason: Optional[CodeableConcept[Dataabsentreason]] = None,
-        interpretation: Optional[FhirList[CodeableConcept]] = None,
+        interpretation: Optional[
+            FhirList[CodeableConcept[Observationinterpretationcodes]]
+        ] = None,
         referenceRange: Optional[FhirList[ObservationReferenceRange]] = None,
     ) -> None:
         """

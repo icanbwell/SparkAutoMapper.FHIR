@@ -12,7 +12,19 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for material
+    from spark_auto_mapper_fhir.value_sets.containermaterials import Containermaterials
+
+    # End Import for CodeableConcept for material
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.specimencontainertype import (
+        Specimencontainertype,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for cap
@@ -36,8 +48,8 @@ class SpecimenDefinitionContainer(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        material: Optional[CodeableConcept] = None,
-        type: Optional[CodeableConcept] = None,
+        material: Optional[CodeableConcept[Containermaterials]] = None,
+        type: Optional[CodeableConcept[Specimencontainertype]] = None,
         cap: Optional[CodeableConcept[Containercap]] = None,
         description: Optional[FhirString] = None,
         capacity: Optional[Quantity] = None,

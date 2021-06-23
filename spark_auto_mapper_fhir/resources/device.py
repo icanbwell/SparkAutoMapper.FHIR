@@ -43,6 +43,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.devicetype import Devicetype
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.backbone_elements.device_specialization import (
         DeviceSpecialization,
     )
@@ -97,7 +102,7 @@ class Device(FhirResourceBase):
         deviceName: Optional[FhirList[DeviceDeviceName]] = None,
         modelNumber: Optional[FhirString] = None,
         partNumber: Optional[FhirString] = None,
-        type: Optional[CodeableConcept] = None,
+        type: Optional[CodeableConcept[Devicetype]] = None,
         specialization: Optional[FhirList[DeviceSpecialization]] = None,
         version: Optional[FhirList[DeviceVersion]] = None,
         property: Optional[FhirList[DeviceProperty]] = None,

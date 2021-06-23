@@ -29,6 +29,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for specialty
+    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
+        Practicesettingcodevalueset,
+    )
+
+    # End Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for actor
@@ -59,7 +66,9 @@ class Schedule(FhirResourceBase):
         active: Optional[FhirBoolean] = None,
         serviceCategory: Optional[FhirList[CodeableConcept[Servicecategory]]] = None,
         serviceType: Optional[FhirList[CodeableConcept[Servicetype]]] = None,
-        specialty: Optional[FhirList[CodeableConcept]] = None,
+        specialty: Optional[
+            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+        ] = None,
         actor: FhirList[
             Reference[
                 Union[

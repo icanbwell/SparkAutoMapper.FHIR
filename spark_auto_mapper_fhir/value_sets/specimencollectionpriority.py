@@ -17,7 +17,7 @@ class Specimencollectionpriority(FhirValueSetBase):
 class SpecimencollectionpriorityValues:
     Stat = Specimencollectionpriority("1")
     Asap = Specimencollectionpriority("2")
-    Asaped = Specimencollectionpriority("3")
+    Asap_ed = Specimencollectionpriority("3")
     Am = Specimencollectionpriority("4")
     Routine = Specimencollectionpriority("5")
     NurseCollect = Specimencollectionpriority("6")

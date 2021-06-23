@@ -16,5 +16,5 @@ class Notetype(FhirValueSetBase):
 
 class NotetypeValues:
     Display = Notetype("display")
-    Printform = Notetype("print")
-    Printoperator = Notetype("printoper")
+    Print_form_ = Notetype("print")
+    Print_operator_ = Notetype("printoper")

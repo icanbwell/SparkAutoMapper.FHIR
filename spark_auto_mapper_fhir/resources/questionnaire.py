@@ -33,12 +33,26 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
+        JurisdictionValueset,
+    )
+
+    # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.questionnairequestioncodes import (
+        Questionnairequestioncodes,
+    )
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.backbone_elements.questionnaire_item import (
         QuestionnaireItem,
     )
@@ -70,13 +84,13 @@ class Questionnaire(FhirResourceBase):
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
         purpose: Optional[markdown] = None,
         copyright: Optional[markdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
-        code: Optional[FhirList[Coding]] = None,
+        code: Optional[FhirList[Coding[Questionnairequestioncodes]]] = None,
         item: Optional[FhirList[QuestionnaireItem]] = None,
     ) -> None:
         """

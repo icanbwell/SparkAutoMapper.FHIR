@@ -15,5 +15,5 @@ class Ldlcodes(FhirValueSetBase):
 
 
 class LdlcodesValues:
-    LdlCholesterolassay = Ldlcodes("18262-6")
-    CholesterolInLdl_massvolume_InSerumOrPlasmaByCalculation = Ldlcodes("13457-7")
+    LdlCholesterol_assay_ = Ldlcodes("18262-6")
+    CholesterolInLdl_mass_volume_InSerumOrPlasmaByCalculation = Ldlcodes("13457-7")

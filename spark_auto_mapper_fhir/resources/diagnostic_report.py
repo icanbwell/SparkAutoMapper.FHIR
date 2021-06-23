@@ -28,7 +28,21 @@ if TYPE_CHECKING:
         DiagnosticReportStatus,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.diagnosticservicesectioncodes import (
+        Diagnosticservicesectioncodes,
+    )
+
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.loincdiagnosticreportcodes import (
+        Loincdiagnosticreportcodes,
+    )
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -72,6 +86,13 @@ if TYPE_CHECKING:
     )
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for conclusionCode
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for conclusionCode
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
 
@@ -102,8 +123,10 @@ class DiagnosticReport(FhirResourceBase):
             ]
         ] = None,
         status: DiagnosticReportStatus,
-        category: Optional[FhirList[CodeableConcept]] = None,
-        code: CodeableConcept,
+        category: Optional[
+            FhirList[CodeableConcept[Diagnosticservicesectioncodes]]
+        ] = None,
+        code: CodeableConcept[Loincdiagnosticreportcodes],
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         issued: Optional[instant] = None,
@@ -122,7 +145,9 @@ class DiagnosticReport(FhirResourceBase):
         imagingStudy: Optional[FhirList[Reference[Union[ImagingStudy]]]] = None,
         media: Optional[FhirList[DiagnosticReportMedia]] = None,
         conclusion: Optional[FhirString] = None,
-        conclusionCode: Optional[FhirList[CodeableConcept]] = None,
+        conclusionCode: Optional[
+            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+        ] = None,
         presentedForm: Optional[FhirList[Attachment]] = None,
     ) -> None:
         """

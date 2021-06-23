@@ -19,7 +19,21 @@ if TYPE_CHECKING:
         CompositionStatus,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.fhirdocumenttypecodes import (
+        Fhirdocumenttypecodes,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.documentclassvalueset import (
+        Documentclassvalueset,
+    )
+
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -74,8 +88,8 @@ class Composition(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         status: CompositionStatus,
-        type: CodeableConcept,
-        category: Optional[FhirList[CodeableConcept]] = None,
+        type: CodeableConcept[Fhirdocumenttypecodes],
+        category: Optional[FhirList[CodeableConcept[Documentclassvalueset]]] = None,
         subject: Optional[Reference[Union[Resource]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         date: FhirDateTime,

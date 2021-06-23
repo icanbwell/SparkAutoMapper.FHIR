@@ -16,9 +16,9 @@ class Studytype(FhirValueSetBase):
 
 class StudytypeValues:
     RandomizedTrial = Studytype("RCT")
-    ControlledTrialnonrandomized = Studytype("CCT")
+    ControlledTrial_non_randomized_ = Studytype("CCT")
     ComparativeCohortStudy = Studytype("cohort")
-    CasecontrolStudy = Studytype("case-control")
+    Case_controlStudy = Studytype("case-control")
     UncontrolledCohortOrCaseSeries = Studytype("series")
     CaseReport = Studytype("case-report")
     MixedMethods = Studytype("mixed")

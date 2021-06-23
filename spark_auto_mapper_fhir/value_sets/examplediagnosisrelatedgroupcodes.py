@@ -16,6 +16,6 @@ class Examplediagnosisrelatedgroupcodes(FhirValueSetBase):
 
 class ExamplediagnosisrelatedgroupcodesValues:
     NormalVaginalDelivery = Examplediagnosisrelatedgroupcodes("100")
-    AppendectomyUncomplicated = Examplediagnosisrelatedgroupcodes("101")
+    Appendectomy_Uncomplicated = Examplediagnosisrelatedgroupcodes("101")
     ToothAbscess = Examplediagnosisrelatedgroupcodes("300")
-    HeadTraumaConcussion = Examplediagnosisrelatedgroupcodes("400")
+    HeadTrauma_Concussion = Examplediagnosisrelatedgroupcodes("400")

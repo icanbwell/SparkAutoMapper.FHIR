@@ -17,5 +17,5 @@ class Systemrestfulinteraction(FhirValueSetBase):
 class SystemrestfulinteractionValues:
     Transaction = Systemrestfulinteraction("transaction")
     Batch = Systemrestfulinteraction("batch")
-    Searchsystem = Systemrestfulinteraction("search-system")
-    Historysystem = Systemrestfulinteraction("history-system")
+    Search_system = Systemrestfulinteraction("search-system")
+    History_system = Systemrestfulinteraction("history-system")

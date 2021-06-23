@@ -15,18 +15,18 @@ class Servicerequestorderdetailscodes(FhirValueSetBase):
 
 
 class ServicerequestorderdetailscodesValues:
-    ContinuousPositiveAirwayPressureVentilationTreatmentregimetherapy = (
+    ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_ = (
         Servicerequestorderdetailscodes("47545007")
     )
-    PressureControlledVentilationprocedure = Servicerequestorderdetailscodes(
+    PressureControlledVentilation_procedure_ = Servicerequestorderdetailscodes(
         "286812008"
     )
-    PatientTriggeredInspiratoryAssistanceprocedure = Servicerequestorderdetailscodes(
+    PatientTriggeredInspiratoryAssistance_procedure_ = Servicerequestorderdetailscodes(
         "243144002"
     )
-    AssistedControlledMandatoryVentilationprocedure = Servicerequestorderdetailscodes(
+    AssistedControlledMandatoryVentilation_procedure_ = Servicerequestorderdetailscodes(
         "243150007"
     )
-    SynchronizedIntermittentMandatoryVentilationprocedure = (
+    SynchronizedIntermittentMandatoryVentilation_procedure_ = (
         Servicerequestorderdetailscodes("59427005")
     )

@@ -21,7 +21,19 @@ if TYPE_CHECKING:
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for bodySite
+    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
+        Snomedctbodystructures,
+    )
+
+    # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for laterality
+    from spark_auto_mapper_fhir.value_sets.laterality import Laterality
+
+    # End Import for CodeableConcept for laterality
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for specimen
@@ -51,8 +63,8 @@ class ImagingStudySeries(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
         numberOfInstances: Optional[unsignedInt] = None,
         endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
-        bodySite: Optional[Coding] = None,
-        laterality: Optional[Coding] = None,
+        bodySite: Optional[Coding[Snomedctbodystructures]] = None,
+        laterality: Optional[Coding[Laterality]] = None,
         specimen: Optional[FhirList[Reference[Union[Specimen]]]] = None,
         started: Optional[FhirDateTime] = None,
         performer: Optional[FhirList[ImagingStudyPerformer]] = None,

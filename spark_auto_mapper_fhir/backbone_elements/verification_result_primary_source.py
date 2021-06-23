@@ -20,33 +20,37 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.primarysourcetype import Primarysourcetype
+    from spark_auto_mapper_fhir.value_sets.primary_source_type import (
+        Primary_source_type,
+    )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for communicationMethod
-    from spark_auto_mapper_fhir.value_sets.verificationresultcommunicationmethod import (
-        Verificationresultcommunicationmethod,
+    from spark_auto_mapper_fhir.value_sets.verificationresult_communication_method import (
+        Verificationresult_communication_method,
     )
 
     # End Import for CodeableConcept for communicationMethod
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for validationStatus
-    from spark_auto_mapper_fhir.value_sets.validationstatus import Validationstatus
+    from spark_auto_mapper_fhir.value_sets.validation_status import Validation_status
 
     # End Import for CodeableConcept for validationStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for canPushUpdates
-    from spark_auto_mapper_fhir.value_sets.canpushupdates import Canpushupdates
+    from spark_auto_mapper_fhir.value_sets.can_push_updates import Can_push_updates
 
     # End Import for CodeableConcept for canPushUpdates
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for pushTypeAvailable
-    from spark_auto_mapper_fhir.value_sets.pushtypeavailable import Pushtypeavailable
+    from spark_auto_mapper_fhir.value_sets.push_type_available import (
+        Push_type_available,
+    )
 
     # End Import for CodeableConcept for pushTypeAvailable
 
@@ -65,15 +69,15 @@ class VerificationResultPrimarySource(FhirBackboneElementBase):
         who: Optional[
             Reference[Union[Organization, Practitioner, PractitionerRole]]
         ] = None,
-        type: Optional[FhirList[CodeableConcept[Primarysourcetype]]] = None,
+        type: Optional[FhirList[CodeableConcept[Primary_source_type]]] = None,
         communicationMethod: Optional[
-            FhirList[CodeableConcept[Verificationresultcommunicationmethod]]
+            FhirList[CodeableConcept[Verificationresult_communication_method]]
         ] = None,
-        validationStatus: Optional[CodeableConcept[Validationstatus]] = None,
+        validationStatus: Optional[CodeableConcept[Validation_status]] = None,
         validationDate: Optional[FhirDateTime] = None,
-        canPushUpdates: Optional[CodeableConcept[Canpushupdates]] = None,
+        canPushUpdates: Optional[CodeableConcept[Can_push_updates]] = None,
         pushTypeAvailable: Optional[
-            FhirList[CodeableConcept[Pushtypeavailable]]
+            FhirList[CodeableConcept[Push_type_available]]
         ] = None,
     ) -> None:
         """

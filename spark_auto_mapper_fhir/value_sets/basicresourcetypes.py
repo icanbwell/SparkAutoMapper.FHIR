@@ -27,7 +27,7 @@ class BasicresourcetypesValues:
     Account = Basicresourcetypes("account")
     Invoice = Basicresourcetypes("invoice")
     InvoiceAdjudication = Basicresourcetypes("adjudicat")
-    PredeterminationRequest = Basicresourcetypes("predetreq")
+    Pre_determinationRequest = Basicresourcetypes("predetreq")
     Predetermination = Basicresourcetypes("predetermine")
     Study = Basicresourcetypes("study")
     Protocol = Basicresourcetypes("protocol")

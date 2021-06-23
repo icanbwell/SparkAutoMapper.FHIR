@@ -16,7 +16,7 @@ class Auditeventaction(FhirValueSetBase):
 
 class AuditeventactionValues:
     Create = Auditeventaction("C")
-    Readviewprint = Auditeventaction("R")
+    Read_view_print = Auditeventaction("R")
     Update = Auditeventaction("U")
     Delete = Auditeventaction("D")
     Execute = Auditeventaction("E")

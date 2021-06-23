@@ -19,17 +19,7 @@ if TYPE_CHECKING:
         ClinicalImpressionStatus,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -63,6 +53,13 @@ if TYPE_CHECKING:
         ClinicalImpressionFinding,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for prognosisCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.clinicalimpressionprognosis import (
+        Clinicalimpressionprognosis,
+    )
+
+    # End Import for CodeableConcept for prognosisCodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for prognosisReference
@@ -88,8 +85,8 @@ class ClinicalImpression(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: ClinicalImpressionStatus,
-        statusReason: Optional[CodeableConcept[Acmecholcodesblood]] = None,
-        code: Optional[CodeableConcept[Acmecholcodesblood]] = None,
+        statusReason: Optional[CodeableConcept] = None,
+        code: Optional[CodeableConcept] = None,
         description: Optional[FhirString] = None,
         subject: Reference[Union[Patient, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
@@ -103,7 +100,9 @@ class ClinicalImpression(FhirResourceBase):
         protocol: Optional[FhirList[uri]] = None,
         summary: Optional[FhirString] = None,
         finding: Optional[FhirList[ClinicalImpressionFinding]] = None,
-        prognosisCodeableConcept: Optional[FhirList[CodeableConcept]] = None,
+        prognosisCodeableConcept: Optional[
+            FhirList[CodeableConcept[Clinicalimpressionprognosis]]
+        ] = None,
         prognosisReference: Optional[FhirList[Reference[Union[RiskAssessment]]]] = None,
         supportingInfo: Optional[FhirList[Reference[Union[Resource]]]] = None,
         note: Optional[FhirList[Annotation]] = None,

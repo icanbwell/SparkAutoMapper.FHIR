@@ -21,7 +21,21 @@ if TYPE_CHECKING:
         ImmunizationStatusCodes,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for statusReason
+    from spark_auto_mapper_fhir.value_sets.immunizationstatusreasoncodes import (
+        Immunizationstatusreasoncodes,
+    )
+
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for vaccineCode
+    from spark_auto_mapper_fhir.value_sets.vaccineadministeredvalueset import (
+        Vaccineadministeredvalueset,
+    )
+
+    # End Import for CodeableConcept for vaccineCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
@@ -33,6 +47,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reportOrigin
+    from spark_auto_mapper_fhir.value_sets.immunizationorigincodes import (
+        Immunizationorigincodes,
+    )
+
+    # End Import for CodeableConcept for reportOrigin
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
@@ -44,13 +65,34 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for site
+    from spark_auto_mapper_fhir.value_sets.codesforimmunizationsiteofadministration import (
+        Codesforimmunizationsiteofadministration,
+    )
+
+    # End Import for CodeableConcept for site
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for route
+    from spark_auto_mapper_fhir.value_sets.immunizationroutecodes import (
+        Immunizationroutecodes,
+    )
+
+    # End Import for CodeableConcept for route
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.backbone_elements.immunization_performer import (
         ImmunizationPerformer,
     )
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.immunizationreasoncodes import (
+        Immunizationreasoncodes,
+    )
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -107,23 +149,25 @@ class Immunization(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: ImmunizationStatusCodes,
-        statusReason: Optional[CodeableConcept] = None,
-        vaccineCode: CodeableConcept,
+        statusReason: Optional[CodeableConcept[Immunizationstatusreasoncodes]] = None,
+        vaccineCode: CodeableConcept[Vaccineadministeredvalueset],
         patient: Reference[Union[Patient]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         recorded: Optional[FhirDateTime] = None,
         primarySource: Optional[FhirBoolean] = None,
-        reportOrigin: Optional[CodeableConcept] = None,
+        reportOrigin: Optional[CodeableConcept[Immunizationorigincodes]] = None,
         location: Optional[Reference[Union[Location]]] = None,
         manufacturer: Optional[Reference[Union[Organization]]] = None,
         lotNumber: Optional[FhirString] = None,
         expirationDate: Optional[FhirDate] = None,
-        site: Optional[CodeableConcept] = None,
-        route: Optional[CodeableConcept] = None,
+        site: Optional[
+            CodeableConcept[Codesforimmunizationsiteofadministration]
+        ] = None,
+        route: Optional[CodeableConcept[Immunizationroutecodes]] = None,
         doseQuantity: Optional[Quantity] = None,
         performer: Optional[FhirList[ImmunizationPerformer]] = None,
         note: Optional[FhirList[Annotation]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[Immunizationreasoncodes]]] = None,
         reasonReference: Optional[
             FhirList[Reference[Union[Condition, Observation, DiagnosticReport]]]
         ] = None,

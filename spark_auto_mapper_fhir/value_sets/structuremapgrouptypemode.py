@@ -17,4 +17,4 @@ class Structuremapgrouptypemode(FhirValueSetBase):
 class StructuremapgrouptypemodeValues:
     NotADefault = Structuremapgrouptypemode("none")
     DefaultForTypeCombination = Structuremapgrouptypemode("types")
-    DefaultForTypeCombination = Structuremapgrouptypemode("type-and-types")
+    DefaultForType_Combination = Structuremapgrouptypemode("type-and-types")

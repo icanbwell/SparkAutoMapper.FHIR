@@ -18,7 +18,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.procedurecodes_snomedct_ import (
+        Procedurecodes_snomedct_,
+    )
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -67,8 +81,10 @@ class CarePlanDetail(FhirBackboneElementBase):
         kind: Optional[CarePlanActivityKind] = None,
         instantiatesCanonical: Optional[FhirList[canonical]] = None,
         instantiatesUri: Optional[FhirList[uri]] = None,
-        code: Optional[CodeableConcept] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        code: Optional[CodeableConcept[Procedurecodes_snomedct_]] = None,
+        reasonCode: Optional[
+            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+        ] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

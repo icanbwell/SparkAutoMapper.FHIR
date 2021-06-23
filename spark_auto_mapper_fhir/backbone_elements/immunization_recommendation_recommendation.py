@@ -12,8 +12,29 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for vaccineCode
+    from spark_auto_mapper_fhir.value_sets.vaccineadministeredvalueset import (
+        Vaccineadministeredvalueset,
+    )
+
+    # End Import for CodeableConcept for vaccineCode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for targetDisease
+    from spark_auto_mapper_fhir.value_sets.immunizationrecommendationtargetdiseasecodes import (
+        Immunizationrecommendationtargetdiseasecodes,
+    )
+
+    # End Import for CodeableConcept for targetDisease
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for contraindicatedVaccineCode
+    from spark_auto_mapper_fhir.value_sets.vaccineadministeredvalueset import (
+        Vaccineadministeredvalueset,
+    )
+
+    # End Import for CodeableConcept for contraindicatedVaccineCode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for forecastStatus
@@ -23,6 +44,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for forecastStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for forecastReason
+    from spark_auto_mapper_fhir.value_sets.immunizationrecommendationreasoncodes import (
+        Immunizationrecommendationreasoncodes,
+    )
+
+    # End Import for CodeableConcept for forecastReason
     from spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_date_criterion import (
         ImmunizationRecommendationDateCriterion,
     )
@@ -50,11 +78,19 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        vaccineCode: Optional[FhirList[CodeableConcept]] = None,
-        targetDisease: Optional[CodeableConcept] = None,
-        contraindicatedVaccineCode: Optional[FhirList[CodeableConcept]] = None,
+        vaccineCode: Optional[
+            FhirList[CodeableConcept[Vaccineadministeredvalueset]]
+        ] = None,
+        targetDisease: Optional[
+            CodeableConcept[Immunizationrecommendationtargetdiseasecodes]
+        ] = None,
+        contraindicatedVaccineCode: Optional[
+            FhirList[CodeableConcept[Vaccineadministeredvalueset]]
+        ] = None,
         forecastStatus: CodeableConcept[Immunizationrecommendationstatuscodes],
-        forecastReason: Optional[FhirList[CodeableConcept]] = None,
+        forecastReason: Optional[
+            FhirList[CodeableConcept[Immunizationrecommendationreasoncodes]]
+        ] = None,
         dateCriterion: Optional[
             FhirList[ImmunizationRecommendationDateCriterion]
         ] = None,

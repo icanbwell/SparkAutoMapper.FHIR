@@ -15,6 +15,6 @@ class Cholcodelegacystatus(FhirValueSetBase):
 
 
 class CholcodelegacystatusValues:
-    Cholmmol = Cholcodelegacystatus("chol-mmol")
-    Cholmass = Cholcodelegacystatus("chol-mass")
+    Chol_mmol = Cholcodelegacystatus("chol-mmol")
+    Chol_mass = Cholcodelegacystatus("chol-mass")
     Chol = Cholcodelegacystatus("chol")

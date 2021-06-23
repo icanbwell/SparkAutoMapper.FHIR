@@ -13,6 +13,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for outcome
+    from spark_auto_mapper_fhir.value_sets.conditionoutcomecodes import (
+        Conditionoutcomecodes,
+    )
+
+    # End Import for CodeableConcept for outcome
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 
@@ -28,7 +35,7 @@ class FamilyMemberHistoryCondition(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept,
-        outcome: Optional[CodeableConcept] = None,
+        outcome: Optional[CodeableConcept[Conditionoutcomecodes]] = None,
         contributedToDeath: Optional[FhirBoolean] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:

@@ -22,7 +22,21 @@ if TYPE_CHECKING:
         CompositionStatus,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.documenttypevalueset import (
+        Documenttypevalueset,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.documentclassvalueset import (
+        Documentclassvalueset,
+    )
+
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -55,6 +69,11 @@ if TYPE_CHECKING:
     )
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for securityLabel
+    from spark_auto_mapper_fhir.value_sets.all_security_labels import AllSecurityLabels
+
+    # End Import for CodeableConcept for securityLabel
     from spark_auto_mapper_fhir.backbone_elements.document_reference_content import (
         DocumentReferenceContent,
     )
@@ -79,8 +98,8 @@ class DocumentReference(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: DocumentReferenceStatus,
         docStatus: Optional[CompositionStatus] = None,
-        type: Optional[CodeableConcept] = None,
-        category: Optional[FhirList[CodeableConcept]] = None,
+        type: Optional[CodeableConcept[Documenttypevalueset]] = None,
+        category: Optional[FhirList[CodeableConcept[Documentclassvalueset]]] = None,
         subject: Optional[
             Reference[Union[Patient, Practitioner, Group, Device]]
         ] = None,
@@ -105,7 +124,7 @@ class DocumentReference(FhirResourceBase):
         custodian: Optional[Reference[Union[Organization]]] = None,
         relatesTo: Optional[FhirList[DocumentReferenceRelatesTo]] = None,
         description: Optional[FhirString] = None,
-        securityLabel: Optional[FhirList[CodeableConcept]] = None,
+        securityLabel: Optional[FhirList[CodeableConcept[AllSecurityLabels]]] = None,
         content: FhirList[DocumentReferenceContent],
         context: Optional[DocumentReferenceContext] = None,
     ) -> None:

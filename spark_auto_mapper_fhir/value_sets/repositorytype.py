@@ -16,11 +16,11 @@ class Repositorytype(FhirValueSetBase):
 
 class RepositorytypeValues:
     ClickAndSee = Repositorytype("directlink")
-    TheUrlIsTheRestfulOrOtherKindOfApiThatCanAccessToTheResult = Repositorytype(
+    TheUrlIsTheRestfulOrOtherKindOfApiThatCanAccessToTheResult_ = Repositorytype(
         "openapi"
     )
     ResultCannotBeAccessUnlessAnAccountIsLoggedIn = Repositorytype("login")
-    ResultNeedToBeFetchedWithApiAndNeedLoginOrCookiesAreRequiredWhenVisitingTheLinkOfResource = Repositorytype(
+    ResultNeedToBeFetchedWithApiAndNeedLogin_OrCookiesAreRequiredWhenVisitingTheLinkOfResource_ = Repositorytype(
         "oauth"
     )
-    SomeOtherComplicatedOrParticularWayToGetResourceFromUrl = Repositorytype("other")
+    SomeOtherComplicatedOrParticularWayToGetResourceFromUrl_ = Repositorytype("other")

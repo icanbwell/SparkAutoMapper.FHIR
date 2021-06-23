@@ -16,6 +16,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.care_team_status import CareTeamStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.careteamcategory import Careteamcategory
+
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -31,6 +36,13 @@ if TYPE_CHECKING:
         CareTeamParticipant,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
+        Snomedctclinicalfindings,
+    )
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -57,13 +69,15 @@ class CareTeam(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[CareTeamStatus] = None,
-        category: Optional[FhirList[CodeableConcept]] = None,
+        category: Optional[FhirList[CodeableConcept[Careteamcategory]]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         period: Optional[Period] = None,
         participant: Optional[FhirList[CareTeamParticipant]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[
+            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+        ] = None,
         reasonReference: Optional[FhirList[Reference[Union[Condition]]]] = None,
         managingOrganization: Optional[FhirList[Reference[Union[Organization]]]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,

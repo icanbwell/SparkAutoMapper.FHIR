@@ -15,5 +15,5 @@ class Conditionstagetype(FhirValueSetBase):
 
 
 class ConditionstagetypeValues:
-    PathologicalStagingqualifierValue = Conditionstagetype("261023001")
-    ClinicalStagingqualifierValue = Conditionstagetype("260998006")
+    PathologicalStaging_qualifierValue_ = Conditionstagetype("261023001")
+    ClinicalStaging_qualifierValue_ = Conditionstagetype("260998006")

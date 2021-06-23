@@ -15,10 +15,10 @@ class Signaturetypecodes(FhirValueSetBase):
 
 
 class SignaturetypecodesValues:
-    AuthorsSignature = Signaturetypecodes("1.2.840.10065.1.12.1.1")
-    CoauthorsSignature = Signaturetypecodes("1.2.840.10065.1.12.1.2")
-    CoparticipantsSignature = Signaturetypecodes("1.2.840.10065.1.12.1.3")
-    TranscriptionistrecorderSignature = Signaturetypecodes("1.2.840.10065.1.12.1.4")
+    Author_sSignature = Signaturetypecodes("1.2.840.10065.1.12.1.1")
+    Coauthor_sSignature = Signaturetypecodes("1.2.840.10065.1.12.1.2")
+    Co_participant_sSignature = Signaturetypecodes("1.2.840.10065.1.12.1.3")
+    Transcriptionist_recorderSignature = Signaturetypecodes("1.2.840.10065.1.12.1.4")
     VerificationSignature = Signaturetypecodes("1.2.840.10065.1.12.1.5")
     ValidationSignature = Signaturetypecodes("1.2.840.10065.1.12.1.6")
     ConsentSignature = Signaturetypecodes("1.2.840.10065.1.12.1.7")
@@ -31,5 +31,5 @@ class SignaturetypecodesValues:
     SourceSignature = Signaturetypecodes("1.2.840.10065.1.12.1.14")
     AddendumSignature = Signaturetypecodes("1.2.840.10065.1.12.1.15")
     ModificationSignature = Signaturetypecodes("1.2.840.10065.1.12.1.16")
-    AdministrativeerroreditSignature = Signaturetypecodes("1.2.840.10065.1.12.1.17")
+    Administrative_error_edit_Signature = Signaturetypecodes("1.2.840.10065.1.12.1.17")
     TimestampSignature = Signaturetypecodes("1.2.840.10065.1.12.1.18")

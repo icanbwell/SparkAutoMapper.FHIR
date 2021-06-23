@@ -16,5 +16,5 @@ class Immunizationstatuscodes(FhirValueSetBase):
 
 class ImmunizationstatuscodesValues:
     Completed = Immunizationstatuscodes("completed")
-    Enteredinerror = Immunizationstatuscodes("entered-in-error")
-    Notdone = Immunizationstatuscodes("not-done")
+    Entered_in_error = Immunizationstatuscodes("entered-in-error")
+    Not_done = Immunizationstatuscodes("not-done")

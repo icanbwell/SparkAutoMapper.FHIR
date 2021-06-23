@@ -12,8 +12,27 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for site
+    from spark_auto_mapper_fhir.value_sets.snomedctanatomicalstructureforadministrationsitecodes import (
+        Snomedctanatomicalstructureforadministrationsitecodes,
+    )
+
+    # End Import for CodeableConcept for site
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for route
+    from spark_auto_mapper_fhir.value_sets.snomedctroutecodes import Snomedctroutecodes
+
+    # End Import for CodeableConcept for route
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for method
+    from spark_auto_mapper_fhir.value_sets.snomedctadministrationmethodcodes import (
+        Snomedctadministrationmethodcodes,
+    )
+
+    # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
 
@@ -29,9 +48,11 @@ class MedicationAdministrationDosage(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         text: Optional[FhirString] = None,
-        site: Optional[CodeableConcept] = None,
-        route: Optional[CodeableConcept] = None,
-        method: Optional[CodeableConcept] = None,
+        site: Optional[
+            CodeableConcept[Snomedctanatomicalstructureforadministrationsitecodes]
+        ] = None,
+        route: Optional[CodeableConcept[Snomedctroutecodes]] = None,
+        method: Optional[CodeableConcept[Snomedctadministrationmethodcodes]] = None,
         dose: Optional[Quantity] = None,
     ) -> None:
         """

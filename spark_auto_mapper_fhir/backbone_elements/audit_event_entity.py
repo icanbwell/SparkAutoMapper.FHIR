@@ -16,6 +16,13 @@ if TYPE_CHECKING:
     # Imports for References for what
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.auditevententitytype import (
+        Auditevententitytype,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for role
@@ -25,7 +32,19 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for lifecycle
+    from spark_auto_mapper_fhir.value_sets.objectlifecycleevents import (
+        Objectlifecycleevents,
+    )
+
+    # End Import for CodeableConcept for lifecycle
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for securityLabel
+    from spark_auto_mapper_fhir.value_sets.all_security_labels import AllSecurityLabels
+
+    # End Import for CodeableConcept for securityLabel
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
     from spark_auto_mapper_fhir.backbone_elements.audit_event_detail import (
         AuditEventDetail,
@@ -44,10 +63,10 @@ class AuditEventEntity(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         what: Optional[Reference[Union[Resource]]] = None,
-        type: Optional[Coding] = None,
+        type: Optional[Coding[Auditevententitytype]] = None,
         role: Optional[Coding[Auditevententityrole]] = None,
-        lifecycle: Optional[Coding] = None,
-        securityLabel: Optional[FhirList[Coding]] = None,
+        lifecycle: Optional[Coding[Objectlifecycleevents]] = None,
+        securityLabel: Optional[FhirList[Coding[AllSecurityLabels]]] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
         query: Optional[base64Binary] = None,

@@ -30,6 +30,13 @@ if TYPE_CHECKING:
     # Imports for References for authority
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for targetDisease
+    from spark_auto_mapper_fhir.value_sets.immunizationevaluationtargetdiseasecodes import (
+        Immunizationevaluationtargetdiseasecodes,
+    )
+
+    # End Import for CodeableConcept for targetDisease
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for immunizationEvent
@@ -71,7 +78,7 @@ class ImmunizationEvaluation(FhirResourceBase):
         patient: Reference[Union[Patient]],
         date: Optional[FhirDateTime] = None,
         authority: Optional[Reference[Union[Organization]]] = None,
-        targetDisease: CodeableConcept,
+        targetDisease: CodeableConcept[Immunizationevaluationtargetdiseasecodes],
         immunizationEvent: Reference[Union[Immunization]],
         doseStatus: CodeableConcept[Immunizationevaluationdosestatuscodes],
         doseStatusReason: Optional[

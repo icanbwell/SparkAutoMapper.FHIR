@@ -22,11 +22,21 @@ if TYPE_CHECKING:
     )
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.fhirdevicetypes import Fhirdevicetypes
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.backbone_elements.device_definition_specialization import (
         DeviceDefinitionSpecialization,
     )
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for safety
+    from spark_auto_mapper_fhir.value_sets.devicesafety import Devicesafety
+
+    # End Import for CodeableConcept for safety
     from spark_auto_mapper_fhir.backbone_elements.product_shelf_life import (
         ProductShelfLife,
     )
@@ -75,10 +85,10 @@ class DeviceDefinition(FhirResourceBase):
         ] = None,
         deviceName: Optional[FhirList[DeviceDefinitionDeviceName]] = None,
         modelNumber: Optional[FhirString] = None,
-        type: Optional[CodeableConcept] = None,
+        type: Optional[CodeableConcept[Fhirdevicetypes]] = None,
         specialization: Optional[FhirList[DeviceDefinitionSpecialization]] = None,
         version: Optional[FhirList[FhirString]] = None,
-        safety: Optional[FhirList[CodeableConcept]] = None,
+        safety: Optional[FhirList[CodeableConcept[Devicesafety]]] = None,
         shelfLifeStorage: Optional[FhirList[ProductShelfLife]] = None,
         physicalCharacteristics: Optional[ProdCharacteristic] = None,
         languageCode: Optional[FhirList[CodeableConcept]] = None,

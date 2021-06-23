@@ -15,6 +15,6 @@ class Clinicalimpressionstatus(FhirValueSetBase):
 
 
 class ClinicalimpressionstatusValues:
-    Inprogress = Clinicalimpressionstatus("in-progress")
+    In_progress = Clinicalimpressionstatus("in-progress")
     Completed = Clinicalimpressionstatus("completed")
-    Enteredinerror = Clinicalimpressionstatus("entered-in-error")
+    Entered_in_error = Clinicalimpressionstatus("entered-in-error")

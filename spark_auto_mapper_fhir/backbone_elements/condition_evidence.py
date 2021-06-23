@@ -11,6 +11,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.manifestationandsymptomcodes import (
+        Manifestationandsymptomcodes,
+    )
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for detail
@@ -28,7 +35,7 @@ class ConditionEvidence(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[FhirList[CodeableConcept]] = None,
+        code: Optional[FhirList[CodeableConcept[Manifestationandsymptomcodes]]] = None,
         detail: Optional[FhirList[Reference[Union[Resource]]]] = None,
     ) -> None:
         """

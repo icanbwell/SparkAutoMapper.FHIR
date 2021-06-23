@@ -24,9 +24,23 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.identifier_type_codes import (
+        IdentifierTypeCodes,
+    )
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
+        JurisdictionValueset,
+    )
+
+    # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.backbone_elements.naming_system_unique_id import (
         NamingSystemUniqueId,
@@ -52,10 +66,10 @@ class NamingSystem(FhirResourceBase):
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         responsible: Optional[FhirString] = None,
-        type: Optional[CodeableConcept] = None,
+        type: Optional[CodeableConcept[IdentifierTypeCodes]] = None,
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
         usage: Optional[FhirString] = None,
         uniqueId: FhirList[NamingSystemUniqueId],
     ) -> None:

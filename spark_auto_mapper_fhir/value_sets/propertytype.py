@@ -15,8 +15,8 @@ class Propertytype(FhirValueSetBase):
 
 
 class PropertytypeValues:
-    CodeinternalReference = Propertytype("code")
-    CodingexternalReference = Propertytype("Coding")
+    Code_internalReference_ = Propertytype("code")
+    Coding_externalReference_ = Propertytype("Coding")
     String = Propertytype("string")
     Integer = Propertytype("integer")
     Boolean = Propertytype("boolean")

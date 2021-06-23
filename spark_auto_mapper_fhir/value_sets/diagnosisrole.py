@@ -19,6 +19,6 @@ class DiagnosisroleValues:
     DischargeDiagnosis = Diagnosisrole("DD")
     ChiefComplaint = Diagnosisrole("CC")
     ComorbidityDiagnosis = Diagnosisrole("CM")
-    PreopDiagnosis = Diagnosisrole("pre-op")
-    PostopDiagnosis = Diagnosisrole("post-op")
+    Pre_opDiagnosis = Diagnosisrole("pre-op")
+    Post_opDiagnosis = Diagnosisrole("post-op")
     Billing = Diagnosisrole("billing")

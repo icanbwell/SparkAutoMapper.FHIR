@@ -24,6 +24,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.address import Address
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for maritalStatus
+    from spark_auto_mapper_fhir.value_sets.marital_status_codes import (
+        MaritalStatusCodes,
+    )
+
+    # End Import for CodeableConcept for maritalStatus
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
     from spark_auto_mapper_fhir.backbone_elements.patient_contact import PatientContact
     from spark_auto_mapper_fhir.backbone_elements.patient_communication import (
@@ -61,7 +68,7 @@ class Patient(FhirResourceBase):
         gender: Optional[AdministrativeGender] = None,
         birthDate: Optional[FhirDate] = None,
         address: Optional[FhirList[Address]] = None,
-        maritalStatus: Optional[CodeableConcept] = None,
+        maritalStatus: Optional[CodeableConcept[MaritalStatusCodes]] = None,
         photo: Optional[FhirList[Attachment]] = None,
         contact: Optional[FhirList[PatientContact]] = None,
         communication: Optional[FhirList[PatientCommunication]] = None,

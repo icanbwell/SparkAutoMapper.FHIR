@@ -13,6 +13,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for security
+    from spark_auto_mapper_fhir.value_sets.all_security_labels import AllSecurityLabels
+
+    # End Import for CodeableConcept for security
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for tag
@@ -37,7 +42,7 @@ class Meta(FhirComplexTypeBase):
         lastUpdated: Optional[instant] = None,
         source: Optional[uri] = None,
         profile: Optional[FhirList[canonical]] = None,
-        security: Optional[FhirList[Coding]] = None,
+        security: Optional[FhirList[Coding[AllSecurityLabels]]] = None,
         tag: Optional[FhirList[Coding[Commontags]]] = None,
     ) -> None:
         """

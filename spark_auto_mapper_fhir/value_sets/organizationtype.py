@@ -25,5 +25,5 @@ class OrganizationtypeValues:
     ReligiousInstitution = Organizationtype("reli")
     ClinicalResearchSponsor = Organizationtype("crs")
     CommunityGroup = Organizationtype("cg")
-    NonhealthcareBusinessOrCorporation = Organizationtype("bus")
+    Non_healthcareBusinessOrCorporation = Organizationtype("bus")
     Other = Organizationtype("other")

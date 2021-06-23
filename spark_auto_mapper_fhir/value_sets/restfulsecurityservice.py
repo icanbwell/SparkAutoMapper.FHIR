@@ -16,7 +16,7 @@ class Restfulsecurityservice(FhirValueSetBase):
 
 class RestfulsecurityserviceValues:
     Oauth = Restfulsecurityservice("OAuth")
-    Smartonfhir = Restfulsecurityservice("SMART-on-FHIR")
+    Smart_on_fhir = Restfulsecurityservice("SMART-on-FHIR")
     Ntlm = Restfulsecurityservice("NTLM")
     Basic = Restfulsecurityservice("Basic")
     Kerberos = Restfulsecurityservice("Kerberos")

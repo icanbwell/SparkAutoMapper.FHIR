@@ -34,7 +34,7 @@ class BenefitcategorycodesValues:
     HospitalRoomAndBoard = Benefitcategorycodes("49")
     MajorMedical = Benefitcategorycodes("55")
     MedicallyRelatedTransportation = Benefitcategorycodes("56")
-    InvitroFertilization = Benefitcategorycodes("61")
+    In_vitroFertilization = Benefitcategorycodes("61")
     MriScan = Benefitcategorycodes("62")
     DonorProcedures = Benefitcategorycodes("63")
     Maternity = Benefitcategorycodes("69")

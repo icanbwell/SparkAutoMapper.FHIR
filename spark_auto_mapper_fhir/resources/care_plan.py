@@ -29,6 +29,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
     from spark_auto_mapper_fhir.complex_types.care_plan_intent import CarePlanIntent
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.careplancategory import Careplancategory
+
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -104,7 +109,7 @@ class CarePlan(FhirResourceBase):
         partOf: Optional[FhirList[Reference[Union[CarePlan]]]] = None,
         status: RequestStatus,
         intent: CarePlanIntent,
-        category: Optional[FhirList[CodeableConcept]] = None,
+        category: Optional[FhirList[CodeableConcept[Careplancategory]]] = None,
         title: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
         subject: Reference[Union[Patient, Group]],

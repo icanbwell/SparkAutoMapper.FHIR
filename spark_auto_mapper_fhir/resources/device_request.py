@@ -51,6 +51,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for performerType
+    from spark_auto_mapper_fhir.value_sets.participantroles import Participantroles
+
+    # End Import for CodeableConcept for performerType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for performer
@@ -114,7 +119,7 @@ class DeviceRequest(FhirResourceBase):
         requester: Optional[
             Reference[Union[Device, Practitioner, PractitionerRole, Organization]]
         ] = None,
-        performerType: Optional[CodeableConcept] = None,
+        performerType: Optional[CodeableConcept[Participantroles]] = None,
         performer: Optional[
             Reference[
                 Union[

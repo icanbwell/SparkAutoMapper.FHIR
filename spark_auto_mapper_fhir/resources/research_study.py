@@ -40,27 +40,19 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for phase
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for focus
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for focus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
-    # Import for CodeableConcept for keyword
-    from spark_auto_mapper_fhir.value_sets.acmecholcodesblood import Acmecholcodesblood
-
-    # End Import for CodeableConcept for keyword
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for location
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
+        JurisdictionValueset,
+    )
+
+    # End Import for CodeableConcept for location
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -118,13 +110,13 @@ class ResearchStudy(FhirResourceBase):
             CodeableConcept[Researchstudyprimarypurposetype]
         ] = None,
         phase: Optional[CodeableConcept[Researchstudyphase]] = None,
-        category: Optional[FhirList[CodeableConcept[Acmecholcodesblood]]] = None,
-        focus: Optional[FhirList[CodeableConcept[Acmecholcodesblood]]] = None,
+        category: Optional[FhirList[CodeableConcept]] = None,
+        focus: Optional[FhirList[CodeableConcept]] = None,
         condition: Optional[FhirList[CodeableConcept]] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
-        keyword: Optional[FhirList[CodeableConcept[Acmecholcodesblood]]] = None,
-        location: Optional[FhirList[CodeableConcept]] = None,
+        keyword: Optional[FhirList[CodeableConcept]] = None,
+        location: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
         description: Optional[markdown] = None,
         enrollment: Optional[FhirList[Reference[Union[Group]]]] = None,
         period: Optional[Period] = None,

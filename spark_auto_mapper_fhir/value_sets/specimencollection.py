@@ -15,13 +15,13 @@ class Specimencollection(FhirValueSetBase):
 
 
 class SpecimencollectionValues:
-    AspirationAction = Specimencollection("129316008")
-    BiopsyAction = Specimencollection("129314006")
-    PunctureAction = Specimencollection("129300006")
-    ExcisionAction = Specimencollection("129304002")
-    ScrapingAction = Specimencollection("129323009")
-    UrineSpecimenCollectionCleanCatch = Specimencollection("73416001")
+    Aspiration_Action = Specimencollection("129316008")
+    Biopsy_Action = Specimencollection("129314006")
+    Puncture_Action = Specimencollection("129300006")
+    Excision_Action = Specimencollection("129304002")
+    Scraping_Action = Specimencollection("129323009")
+    UrineSpecimenCollection_CleanCatch = Specimencollection("73416001")
     TimedUrineCollection = Specimencollection("225113003")
-    UrineSpecimenCollectionCatheterized = Specimencollection("70777001")
+    UrineSpecimenCollection_Catheterized = Specimencollection("70777001")
     CollectionOfCoughedSputum = Specimencollection("386089008")
-    FingerprickSampling = Specimencollection("278450005")
+    Finger_prickSampling = Specimencollection("278450005")

@@ -15,6 +15,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.questionnairequestioncodes import (
+        Questionnairequestioncodes,
+    )
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.questionnaire_item_type import (
         QuestionnaireItemType,
     )
@@ -49,7 +56,7 @@ class QuestionnaireItem(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         linkId: FhirString,
         definition: Optional[uri] = None,
-        code: Optional[FhirList[Coding]] = None,
+        code: Optional[FhirList[Coding[Questionnairequestioncodes]]] = None,
         prefix: Optional[FhirString] = None,
         text: Optional[FhirString] = None,
         type: QuestionnaireItemType,

@@ -17,4 +17,4 @@ class Linkagetype(FhirValueSetBase):
 class LinkagetypeValues:
     SourceOfTruth = Linkagetype("source")
     AlternateRecord = Linkagetype("alternate")
-    HistoricalobsoleteRecord = Linkagetype("historical")
+    Historical_obsoleteRecord = Linkagetype("historical")

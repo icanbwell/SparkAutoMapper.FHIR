@@ -16,10 +16,10 @@ class Adverseeventcausalityassessment(FhirValueSetBase):
 
 class AdverseeventcausalityassessmentValues:
     Certain = Adverseeventcausalityassessment("Certain")
-    Probablylikely = Adverseeventcausalityassessment("Probably-Likely")
+    Probably_likely = Adverseeventcausalityassessment("Probably-Likely")
     Possible = Adverseeventcausalityassessment("Possible")
     Unlikely = Adverseeventcausalityassessment("Unlikely")
-    Conditionalclassified = Adverseeventcausalityassessment("Conditional-Classified")
-    Unassessableunclassifiable = Adverseeventcausalityassessment(
+    Conditional_classified = Adverseeventcausalityassessment("Conditional-Classified")
+    Unassessable_unclassifiable = Adverseeventcausalityassessment(
         "Unassessable-Unclassifiable"
     )

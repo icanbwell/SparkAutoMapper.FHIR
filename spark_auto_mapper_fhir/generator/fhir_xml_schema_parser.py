@@ -248,7 +248,7 @@ class FhirXmlSchemaParser:
                     value_set_matching = [
                         c
                         for c in value_sets
-                        if c.value_set_url == codeable_type.codeable_type_url
+                        if c.url == codeable_type.codeable_type_url
                     ]
                     if value_set_matching:
                         value_set = value_set_matching[0]

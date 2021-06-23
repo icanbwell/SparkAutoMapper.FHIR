@@ -16,6 +16,6 @@ class Encountertype(FhirValueSetBase):
 
 class EncountertypeValues:
     AnnualDiabetesMellitusScreening = Encountertype("ADMS")
-    BoneDrillingboneMarrowPunctionInClinic = Encountertype("BD/BM-clin")
-    InfantColonScreening60Minutes = Encountertype("CCS60")
+    BoneDrilling_boneMarrowPunctionInClinic = Encountertype("BD/BM-clin")
+    InfantColonScreening_60Minutes = Encountertype("CCS60")
     OutpatientKenacortInjection = Encountertype("OKI")

@@ -31,13 +31,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for validationType
-    from spark_auto_mapper_fhir.value_sets.validationtype import Validationtype
+    from spark_auto_mapper_fhir.value_sets.validation_type import Validation_type
 
     # End Import for CodeableConcept for validationType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for validationProcess
-    from spark_auto_mapper_fhir.value_sets.validationprocess import Validationprocess
+    from spark_auto_mapper_fhir.value_sets.validation_process import Validation_process
 
     # End Import for CodeableConcept for validationProcess
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
@@ -46,7 +46,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for failureAction
-    from spark_auto_mapper_fhir.value_sets.failureaction import Failureaction
+    from spark_auto_mapper_fhir.value_sets.failure_action import Failure_action
 
     # End Import for CodeableConcept for failureAction
     from spark_auto_mapper_fhir.backbone_elements.verification_result_primary_source import (
@@ -77,14 +77,14 @@ class VerificationResult(FhirResourceBase):
         need: Optional[CodeableConcept[Need]] = None,
         status: status,
         statusDate: Optional[FhirDateTime] = None,
-        validationType: Optional[CodeableConcept[Validationtype]] = None,
+        validationType: Optional[CodeableConcept[Validation_type]] = None,
         validationProcess: Optional[
-            FhirList[CodeableConcept[Validationprocess]]
+            FhirList[CodeableConcept[Validation_process]]
         ] = None,
         frequency: Optional[Timing] = None,
         lastPerformed: Optional[FhirDateTime] = None,
         nextScheduled: Optional[FhirDate] = None,
-        failureAction: Optional[CodeableConcept[Failureaction]] = None,
+        failureAction: Optional[CodeableConcept[Failure_action]] = None,
         primarySource: Optional[FhirList[VerificationResultPrimarySource]] = None,
         attestation: Optional[VerificationResultAttestation] = None,
         validator: Optional[FhirList[VerificationResultValidator]] = None,

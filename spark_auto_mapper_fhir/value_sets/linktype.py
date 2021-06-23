@@ -15,7 +15,7 @@ class Linktype(FhirValueSetBase):
 
 
 class LinktypeValues:
-    Replacedby = Linktype("replaced-by")
+    Replaced_by = Linktype("replaced-by")
     Replaces = Linktype("replaces")
     Refer = Linktype("refer")
     SeeAlso = Linktype("seealso")

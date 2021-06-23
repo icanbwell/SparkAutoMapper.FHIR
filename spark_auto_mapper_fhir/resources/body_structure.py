@@ -17,8 +17,29 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for morphology
+    from spark_auto_mapper_fhir.value_sets.snomedctmorphologicabnormalities import (
+        Snomedctmorphologicabnormalities,
+    )
+
+    # End Import for CodeableConcept for morphology
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for location
+    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
+        Snomedctbodystructures,
+    )
+
+    # End Import for CodeableConcept for location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for locationQualifier
+    from spark_auto_mapper_fhir.value_sets.bodystructurelocationqualifier import (
+        Bodystructurelocationqualifier,
+    )
+
+    # End Import for CodeableConcept for locationQualifier
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -41,9 +62,11 @@ class BodyStructure(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        morphology: Optional[CodeableConcept] = None,
-        location: Optional[CodeableConcept] = None,
-        locationQualifier: Optional[FhirList[CodeableConcept]] = None,
+        morphology: Optional[CodeableConcept[Snomedctmorphologicabnormalities]] = None,
+        location: Optional[CodeableConcept[Snomedctbodystructures]] = None,
+        locationQualifier: Optional[
+            FhirList[CodeableConcept[Bodystructurelocationqualifier]]
+        ] = None,
         description: Optional[FhirString] = None,
         image: Optional[FhirList[Attachment]] = None,
         patient: Reference[Union[Patient]],

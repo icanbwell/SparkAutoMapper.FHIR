@@ -39,6 +39,6 @@ class NhinPurposeofuseValues:
     Research = NhinPurposeofuse("RESEARCH")
     Threat = NhinPurposeofuse("THREAT")
     Government = NhinPurposeofuse("GOVERNMENT")
-    WorkersComp = NhinPurposeofuse("WORKERSCOMP")
+    Worker_sComp = NhinPurposeofuse("WORKERSCOMP")
     Coverage = NhinPurposeofuse("COVERAGE")
     Request = NhinPurposeofuse("REQUEST")

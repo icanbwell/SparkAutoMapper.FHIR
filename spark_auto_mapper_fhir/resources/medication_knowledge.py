@@ -16,12 +16,24 @@ from spark_fhir_schemas.r4.resources.medicationknowledge import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.snomedctmedicationcodes import (
+        Snomedctmedicationcodes,
+    )
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.code import code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for doseForm
+    from spark_auto_mapper_fhir.value_sets.snomedctformcodes import Snomedctformcodes
+
+    # End Import for CodeableConcept for doseForm
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_related_medication_knowledge import (
@@ -40,6 +52,11 @@ if TYPE_CHECKING:
     )
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for intendedRoute
+    from spark_auto_mapper_fhir.value_sets.snomedctroutecodes import Snomedctroutecodes
+
+    # End Import for CodeableConcept for intendedRoute
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_cost import (
         MedicationKnowledgeCost,
     )
@@ -82,10 +99,10 @@ class MedicationKnowledge(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[CodeableConcept] = None,
+        code: Optional[CodeableConcept[Snomedctmedicationcodes]] = None,
         status: Optional[code] = None,
         manufacturer: Optional[Reference[Union[Organization]]] = None,
-        doseForm: Optional[CodeableConcept] = None,
+        doseForm: Optional[CodeableConcept[Snomedctformcodes]] = None,
         amount: Optional[Quantity] = None,
         synonym: Optional[FhirList[FhirString]] = None,
         relatedMedicationKnowledge: Optional[
@@ -96,7 +113,7 @@ class MedicationKnowledge(FhirResourceBase):
         monograph: Optional[FhirList[MedicationKnowledgeMonograph]] = None,
         ingredient: Optional[FhirList[MedicationKnowledgeIngredient]] = None,
         preparationInstruction: Optional[markdown] = None,
-        intendedRoute: Optional[FhirList[CodeableConcept]] = None,
+        intendedRoute: Optional[FhirList[CodeableConcept[Snomedctroutecodes]]] = None,
         cost: Optional[FhirList[MedicationKnowledgeCost]] = None,
         monitoringProgram: Optional[
             FhirList[MedicationKnowledgeMonitoringProgram]

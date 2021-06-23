@@ -19,5 +19,5 @@ class PractitionerroleValues:
     Nurse = Practitionerrole("nurse")
     Pharmacist = Practitionerrole("pharmacist")
     Researcher = Practitionerrole("researcher")
-    Teachereducator = Practitionerrole("teacher")
+    Teacher_educator = Practitionerrole("teacher")
     IctProfessional = Practitionerrole("ict")

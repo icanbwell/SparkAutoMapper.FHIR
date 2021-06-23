@@ -18,4 +18,4 @@ class ConformanceexpectationValues:
     Shall = Conformanceexpectation("SHALL")
     Should = Conformanceexpectation("SHOULD")
     May = Conformanceexpectation("MAY")
-    Shouldnot = Conformanceexpectation("SHOULD-NOT")
+    Should_not = Conformanceexpectation("SHOULD-NOT")

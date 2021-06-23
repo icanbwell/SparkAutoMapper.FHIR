@@ -16,6 +16,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.account_status import AccountStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.value_sets.accounttypes import Accounttypes
+
+    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -58,7 +63,7 @@ class Account(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: AccountStatus,
-        type: Optional[CodeableConcept] = None,
+        type: Optional[CodeableConcept[Accounttypes]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[
             FhirList[

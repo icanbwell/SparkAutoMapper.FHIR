@@ -15,5 +15,5 @@ class Adverseeventseriousness(FhirValueSetBase):
 
 
 class AdverseeventseriousnessValues:
-    Nonserious = Adverseeventseriousness("Non-serious")
+    Non_serious = Adverseeventseriousness("Non-serious")
     Serious = Adverseeventseriousness("Serious")

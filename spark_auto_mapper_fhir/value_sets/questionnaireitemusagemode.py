@@ -15,8 +15,10 @@ class Questionnaireitemusagemode(FhirValueSetBase):
 
 
 class QuestionnaireitemusagemodeValues:
-    CaptureDisplay = Questionnaireitemusagemode("capture-display")
+    Capture_Display = Questionnaireitemusagemode("capture-display")
     CaptureOnly = Questionnaireitemusagemode("capture")
     DisplayOnly = Questionnaireitemusagemode("display")
     DisplayWhenAnswered = Questionnaireitemusagemode("display-non-empty")
-    CaptureOrIfAnsweredDisplay = Questionnaireitemusagemode("capture-display-non-empty")
+    CaptureOr_IfAnswered_Display = Questionnaireitemusagemode(
+        "capture-display-non-empty"
+    )

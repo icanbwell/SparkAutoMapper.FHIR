@@ -15,9 +15,9 @@ class Synthesistype(FhirValueSetBase):
 
 
 class SynthesistypeValues:
-    SummaryDataMetaanalysis = Synthesistype("std-MA")
-    IndividualPatientDataMetaanalysis = Synthesistype("IPD-MA")
-    IndirectNetworkMetaanalysis = Synthesistype("indirect-NMA")
-    CombinedDirectPlusIndirectNetworkMetaanalysis = Synthesistype("combined-NMA")
+    SummaryDataMeta_analysis = Synthesistype("std-MA")
+    IndividualPatientDataMeta_analysis = Synthesistype("IPD-MA")
+    IndirectNetworkMeta_analysis = Synthesistype("indirect-NMA")
+    CombinedDirectPlusIndirectNetworkMeta_analysis = Synthesistype("combined-NMA")
     RangeOfResults = Synthesistype("range")
     ClassifcationOfResults = Synthesistype("classification")

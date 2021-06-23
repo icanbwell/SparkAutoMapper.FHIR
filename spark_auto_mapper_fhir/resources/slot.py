@@ -28,6 +28,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for specialty
+    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
+        Practicesettingcodevalueset,
+    )
+
+    # End Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -55,7 +62,9 @@ class Slot(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         serviceCategory: Optional[FhirList[CodeableConcept[Servicecategory]]] = None,
         serviceType: Optional[FhirList[CodeableConcept[Servicetype]]] = None,
-        specialty: Optional[FhirList[CodeableConcept]] = None,
+        specialty: Optional[
+            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+        ] = None,
         appointmentType: Optional[CodeableConcept] = None,
         schedule: Reference[Union[Schedule]],
         status: SlotStatus,
