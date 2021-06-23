@@ -174,6 +174,18 @@ class FhirXmlSchemaParser:
                 for c in value_sets
             ]
         )
+
+        # update types
+        # cleaned_type_mapping: Dict[str, str] = {
+        #     "boolean": "FhirBoolean",
+        #     "date": "FhirDate",
+        #     "dateTime": "FhirDateTime",
+        #     "integer": "FhirInteger",
+        #     "string": "FhirString",
+        # }
+        # for fhir_entity in fhir_entities:
+        #     if fhir_entity.fhir_name in cleaned_type_mapping.keys():
+        #         fhir_entity.fhir_name = cleaned_type_mapping[fhir_entity.fhir_name]
         return fhir_entities
 
     @staticmethod
