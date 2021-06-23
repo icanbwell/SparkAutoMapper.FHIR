@@ -32,10 +32,10 @@ class Resource(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        id: Optional[id] = None,
-        meta: Optional[Meta] = None,
-        implicitRules: Optional[uri] = None,
-        language: Optional[code] = None,
+        id: Optional[id ] = None,
+        meta: Optional[Meta ] = None,
+        implicitRules: Optional[uri ] = None,
+        language: Optional[code ] = None,
     ) -> None:
         """
 

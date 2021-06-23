@@ -29,7 +29,7 @@ class Element(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        extension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[Extension ]] = None,
     ) -> None:
         """
 

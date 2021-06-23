@@ -155,9 +155,9 @@ class FhirXmlSchemaParser:
         #             fhir_entity.is_value_set = True
 
         # remove any entities that are already in value_sets
-        fhir_entities = [
-            c for c in fhir_entities if c.fhir_name not in [b.name for b in value_sets]
-        ]
+        # fhir_entities = [
+        #     c for c in fhir_entities if c.fhir_name not in [b.name for b in value_sets]
+        # ]
         fhir_entities.extend(
             [
                 FhirEntity(
@@ -471,10 +471,10 @@ class FhirXmlSchemaParser:
         return fhir_properties
 
     @staticmethod
-    def fix_python_keywords(property_name: str) -> str:
-        return (
-            property_name
-            if property_name
+    def fix_python_keywords(name: str) -> str:
+        result: str = (
+            name
+            if name
             not in [
                 "False",
                 "None",
@@ -512,8 +512,11 @@ class FhirXmlSchemaParser:
                 "with",
                 "yield",
             ]
-            else f"{property_name}_"
+            else f"{name}_"
         )
+        if result and result[0].isdigit():
+            result = "_" + result
+        return result
 
     @staticmethod
     def get_types_for_references() -> List[FhirReferenceType]:
@@ -767,6 +770,7 @@ class FhirXmlSchemaParser:
             .replace("/", "")
             .replace("+", "")
         )
+        cleaned_display = re.sub("[^0-9a-zA-Z]+", "_", cleaned_display)
         cleaned_display = FhirXmlSchemaParser.fix_python_keywords(cleaned_display)
         return cleaned_display
 

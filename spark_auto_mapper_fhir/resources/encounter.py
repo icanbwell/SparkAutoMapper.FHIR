@@ -1,13 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -18,58 +14,84 @@ from spark_fhir_schemas.r4.resources.encounter import EncounterSchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.encounter_status import EncounterStatus
-    from spark_auto_mapper_fhir.backbone_elements.encounter_status_history import EncounterStatusHistory
+    from spark_auto_mapper_fhir.backbone_elements.encounter_status_history import (
+        EncounterStatusHistory,
+    )
     from spark_auto_mapper_fhir.complex_types.coding import Coding
-    from spark_auto_mapper_fhir.backbone_elements.encounter_class_history import EncounterClassHistory
+    from spark_auto_mapper_fhir.backbone_elements.encounter_class_history import (
+        EncounterClassHistory,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for type
     from spark_auto_mapper_fhir.value_sets.encountertype import Encountertype
+
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for episodeOfCare
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
-    from spark_auto_mapper_fhir.backbone_elements.encounter_participant import EncounterParticipant
+    from spark_auto_mapper_fhir.backbone_elements.encounter_participant import (
+        EncounterParticipant,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for appointment
     from spark_auto_mapper_fhir.resources.appointment import Appointment
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.resources.observation import Observation
-    from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
-    from spark_auto_mapper_fhir.backbone_elements.encounter_diagnosis import EncounterDiagnosis
+    from spark_auto_mapper_fhir.resources.immunization_recommendation import (
+        ImmunizationRecommendation,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.encounter_diagnosis import (
+        EncounterDiagnosis,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for account
     from spark_auto_mapper_fhir.resources.account import Account
-    from spark_auto_mapper_fhir.backbone_elements.encounter_hospitalization import EncounterHospitalization
-    from spark_auto_mapper_fhir.backbone_elements.encounter_location import EncounterLocation
+    from spark_auto_mapper_fhir.backbone_elements.encounter_hospitalization import (
+        EncounterHospitalization,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.encounter_location import (
+        EncounterLocation,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for serviceProvider
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
 
 
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class Encounter(FhirResourceBase):
-    """
-    """
+    """ """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -77,85 +99,91 @@ class Encounter(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        status: EncounterStatus ,
-        statusHistory: Optional[FhirList[EncounterStatusHistory ]] = None,
-        class_: Coding ,
-        classHistory: Optional[FhirList[EncounterClassHistory ]] = None,
-        type: Optional[FhirList[CodeableConcept[Encountertype] ]] = None,
-        serviceType: Optional[CodeableConcept[Servicetype] ] = None,
-        priority: Optional[CodeableConcept ] = None,
-        subject: Optional[Reference [Union[Patient, Group]]] = None,
-        episodeOfCare: Optional[FhirList[Reference [Union[EpisodeOfCare]]]] = None,
-        basedOn: Optional[FhirList[Reference [Union[ServiceRequest]]]] = None,
-        participant: Optional[FhirList[EncounterParticipant ]] = None,
-        appointment: Optional[FhirList[Reference [Union[Appointment]]]] = None,
-        period: Optional[Period ] = None,
-        length: Optional[Duration ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept ]] = None,
-        reasonReference: Optional[FhirList[Reference [Union[Condition, Procedure, Observation, ImmunizationRecommendation]]]] = None,
-        diagnosis: Optional[FhirList[EncounterDiagnosis ]] = None,
-        account: Optional[FhirList[Reference [Union[Account]]]] = None,
-        hospitalization: Optional[EncounterHospitalization ] = None,
-        location: Optional[FhirList[EncounterLocation ]] = None,
-        serviceProvider: Optional[Reference [Union[Organization]]] = None,
-        partOf: Optional[Reference [Union[Encounter]]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        status: EncounterStatus,
+        statusHistory: Optional[FhirList[EncounterStatusHistory]] = None,
+        class_: Coding,
+        classHistory: Optional[FhirList[EncounterClassHistory]] = None,
+        type: Optional[FhirList[CodeableConcept[Encountertype]]] = None,
+        serviceType: Optional[CodeableConcept[Servicetype]] = None,
+        priority: Optional[CodeableConcept] = None,
+        subject: Optional[Reference[Union[Patient, Group]]] = None,
+        episodeOfCare: Optional[FhirList[Reference[Union[EpisodeOfCare]]]] = None,
+        basedOn: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
+        participant: Optional[FhirList[EncounterParticipant]] = None,
+        appointment: Optional[FhirList[Reference[Union[Appointment]]]] = None,
+        period: Optional[Period] = None,
+        length: Optional[Duration] = None,
+        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonReference: Optional[
+            FhirList[
+                Reference[
+                    Union[Condition, Procedure, Observation, ImmunizationRecommendation]
+                ]
+            ]
+        ] = None,
+        diagnosis: Optional[FhirList[EncounterDiagnosis]] = None,
+        account: Optional[FhirList[Reference[Union[Account]]]] = None,
+        hospitalization: Optional[EncounterHospitalization] = None,
+        location: Optional[FhirList[EncounterLocation]] = None,
+        serviceProvider: Optional[Reference[Union[Organization]]] = None,
+        partOf: Optional[Reference[Union[Encounter]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifier(s) by which this encounter is known.
-        :param status: planned | arrived | triaged | in-progress | onleave | finished | cancelled +.
-        :param statusHistory: The status history permits the encounter resource to contain the status
-    history without needing to read through the historical versions of the
-    resource, or even have the server store them.
-        :param class_: Concepts representing classification of patient encounter such as ambulatory
-    (outpatient), inpatient, emergency, home health or others due to local
-    variations.
-        :param classHistory: The class history permits the tracking of the encounters transitions without
-    needing to go  through the resource history.  This would be used for a case
-    where an admission starts of as an emergency encounter, then transitions into
-    an inpatient scenario. Doing this and not restarting a new encounter ensures
-    that any lab/diagnostic results can more easily follow the patient and not
-    require re-processing and not get lost or cancelled during a kind of discharge
-    from emergency to inpatient.
-        :param type: Specific type of encounter (e.g. e-mail consultation, surgical day-care,
-    skilled nursing, rehabilitation).
-        :param serviceType: Broad categorization of the service that is to be provided (e.g. cardiology).
-        :param priority: Indicates the urgency of the encounter.
-        :param subject: The patient or group present at the encounter.
-        :param episodeOfCare: Where a specific encounter should be classified as a part of a specific
-    episode(s) of care this field should be used. This association can facilitate
-    grouping of related encounters together for a specific purpose, such as
-    government reporting, issue tracking, association via a common problem.  The
-    association is recorded on the encounter as these are typically created after
-    the episode of care and grouped on entry rather than editing the episode of
-    care to append another encounter to it (the episode of care could span years).
-        :param basedOn: The request this encounter satisfies (e.g. incoming referral or procedure
-    request).
-        :param participant: The list of people responsible for providing the service.
-        :param appointment: The appointment that scheduled this encounter.
-        :param period: The start and end time of the encounter.
-        :param length: Quantity of time the encounter lasted. This excludes the time during leaves of
-    absence.
-        :param reasonCode: Reason the encounter takes place, expressed as a code. For admissions, this
-    can be used for a coded admission diagnosis.
-        :param reasonReference: Reason the encounter takes place, expressed as a code. For admissions, this
-    can be used for a coded admission diagnosis.
-        :param diagnosis: The list of diagnosis relevant to this encounter.
-        :param account: The set of accounts that may be used for billing for this Encounter.
-        :param hospitalization: Details about the admission to a healthcare service.
-        :param location: List of locations where  the patient has been during this encounter.
-        :param serviceProvider: The organization that is primarily responsible for this Encounter's services.
-    This MAY be the same as the organization on the Patient record, however it
-    could be different, such as if the actor performing the services was from an
-    external organization (which may be billed seperately) for an external
-    consultation.  Refer to the example bundle showing an abbreviated set of
-    Encounters for a colonoscopy.
-        :param partOf: Another Encounter of which this encounter is a part of (administratively or in
-    time).
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifier(s) by which this encounter is known.
+            :param status: planned | arrived | triaged | in-progress | onleave | finished | cancelled +.
+            :param statusHistory: The status history permits the encounter resource to contain the status
+        history without needing to read through the historical versions of the
+        resource, or even have the server store them.
+            :param class_: Concepts representing classification of patient encounter such as ambulatory
+        (outpatient), inpatient, emergency, home health or others due to local
+        variations.
+            :param classHistory: The class history permits the tracking of the encounters transitions without
+        needing to go  through the resource history.  This would be used for a case
+        where an admission starts of as an emergency encounter, then transitions into
+        an inpatient scenario. Doing this and not restarting a new encounter ensures
+        that any lab/diagnostic results can more easily follow the patient and not
+        require re-processing and not get lost or cancelled during a kind of discharge
+        from emergency to inpatient.
+            :param type: Specific type of encounter (e.g. e-mail consultation, surgical day-care,
+        skilled nursing, rehabilitation).
+            :param serviceType: Broad categorization of the service that is to be provided (e.g. cardiology).
+            :param priority: Indicates the urgency of the encounter.
+            :param subject: The patient or group present at the encounter.
+            :param episodeOfCare: Where a specific encounter should be classified as a part of a specific
+        episode(s) of care this field should be used. This association can facilitate
+        grouping of related encounters together for a specific purpose, such as
+        government reporting, issue tracking, association via a common problem.  The
+        association is recorded on the encounter as these are typically created after
+        the episode of care and grouped on entry rather than editing the episode of
+        care to append another encounter to it (the episode of care could span years).
+            :param basedOn: The request this encounter satisfies (e.g. incoming referral or procedure
+        request).
+            :param participant: The list of people responsible for providing the service.
+            :param appointment: The appointment that scheduled this encounter.
+            :param period: The start and end time of the encounter.
+            :param length: Quantity of time the encounter lasted. This excludes the time during leaves of
+        absence.
+            :param reasonCode: Reason the encounter takes place, expressed as a code. For admissions, this
+        can be used for a coded admission diagnosis.
+            :param reasonReference: Reason the encounter takes place, expressed as a code. For admissions, this
+        can be used for a coded admission diagnosis.
+            :param diagnosis: The list of diagnosis relevant to this encounter.
+            :param account: The set of accounts that may be used for billing for this Encounter.
+            :param hospitalization: Details about the admission to a healthcare service.
+            :param location: List of locations where  the patient has been during this encounter.
+            :param serviceProvider: The organization that is primarily responsible for this Encounter's services.
+        This MAY be the same as the organization on the Patient record, however it
+        could be different, such as if the actor performing the services was from an
+        external organization (which may be billed seperately) for an external
+        consultation.  Refer to the example bundle showing an abbreviated set of
+        Encounters for a colonoscopy.
+            :param partOf: Another Encounter of which this encounter is a part of (administratively or in
+        time).
         """
         super().__init__(
             resourceType="Encounter",

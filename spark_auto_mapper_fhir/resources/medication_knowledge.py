@@ -1,56 +1,79 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.medicationknowledge import MedicationKnowledgeSchema
+from spark_fhir_schemas.r4.resources.medicationknowledge import (
+    MedicationKnowledgeSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.code import code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_related_medication_knowledge import MedicationKnowledgeRelatedMedicationKnowledge
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_related_medication_knowledge import (
+        MedicationKnowledgeRelatedMedicationKnowledge,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for associatedMedication
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monograph import MedicationKnowledgeMonograph
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_ingredient import MedicationKnowledgeIngredient
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monograph import (
+        MedicationKnowledgeMonograph,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_ingredient import (
+        MedicationKnowledgeIngredient,
+    )
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_cost import MedicationKnowledgeCost
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monitoring_program import MedicationKnowledgeMonitoringProgram
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_administration_guidelines import MedicationKnowledgeAdministrationGuidelines
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_medicine_classification import MedicationKnowledgeMedicineClassification
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging import MedicationKnowledgePackaging
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic import MedicationKnowledgeDrugCharacteristic
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_cost import (
+        MedicationKnowledgeCost,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monitoring_program import (
+        MedicationKnowledgeMonitoringProgram,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_administration_guidelines import (
+        MedicationKnowledgeAdministrationGuidelines,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_medicine_classification import (
+        MedicationKnowledgeMedicineClassification,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging import (
+        MedicationKnowledgePackaging,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic import (
+        MedicationKnowledgeDrugCharacteristic,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for contraindication
     from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory import MedicationKnowledgeRegulatory
-    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics import MedicationKnowledgeKinetics
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory import (
+        MedicationKnowledgeRegulatory,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics import (
+        MedicationKnowledgeKinetics,
+    )
 
 
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class MedicationKnowledge(FhirResourceBase):
-    """
-    """
+    """ """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -58,74 +81,84 @@ class MedicationKnowledge(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[CodeableConcept ] = None,
-        status: Optional[code ] = None,
-        manufacturer: Optional[Reference [Union[Organization]]] = None,
-        doseForm: Optional[CodeableConcept ] = None,
-        amount: Optional[Quantity ] = None,
-        synonym: Optional[FhirList[FhirString ]] = None,
-        relatedMedicationKnowledge: Optional[FhirList[MedicationKnowledgeRelatedMedicationKnowledge ]] = None,
-        associatedMedication: Optional[FhirList[Reference [Union[Medication]]]] = None,
-        productType: Optional[FhirList[CodeableConcept ]] = None,
-        monograph: Optional[FhirList[MedicationKnowledgeMonograph ]] = None,
-        ingredient: Optional[FhirList[MedicationKnowledgeIngredient ]] = None,
-        preparationInstruction: Optional[markdown ] = None,
-        intendedRoute: Optional[FhirList[CodeableConcept ]] = None,
-        cost: Optional[FhirList[MedicationKnowledgeCost ]] = None,
-        monitoringProgram: Optional[FhirList[MedicationKnowledgeMonitoringProgram ]] = None,
-        administrationGuidelines: Optional[FhirList[MedicationKnowledgeAdministrationGuidelines ]] = None,
-        medicineClassification: Optional[FhirList[MedicationKnowledgeMedicineClassification ]] = None,
-        packaging: Optional[MedicationKnowledgePackaging ] = None,
-        drugCharacteristic: Optional[FhirList[MedicationKnowledgeDrugCharacteristic ]] = None,
-        contraindication: Optional[FhirList[Reference [Union[DetectedIssue]]]] = None,
-        regulatory: Optional[FhirList[MedicationKnowledgeRegulatory ]] = None,
-        kinetics: Optional[FhirList[MedicationKnowledgeKinetics ]] = None,
+        code: Optional[CodeableConcept] = None,
+        status: Optional[code] = None,
+        manufacturer: Optional[Reference[Union[Organization]]] = None,
+        doseForm: Optional[CodeableConcept] = None,
+        amount: Optional[Quantity] = None,
+        synonym: Optional[FhirList[FhirString]] = None,
+        relatedMedicationKnowledge: Optional[
+            FhirList[MedicationKnowledgeRelatedMedicationKnowledge]
+        ] = None,
+        associatedMedication: Optional[FhirList[Reference[Union[Medication]]]] = None,
+        productType: Optional[FhirList[CodeableConcept]] = None,
+        monograph: Optional[FhirList[MedicationKnowledgeMonograph]] = None,
+        ingredient: Optional[FhirList[MedicationKnowledgeIngredient]] = None,
+        preparationInstruction: Optional[markdown] = None,
+        intendedRoute: Optional[FhirList[CodeableConcept]] = None,
+        cost: Optional[FhirList[MedicationKnowledgeCost]] = None,
+        monitoringProgram: Optional[
+            FhirList[MedicationKnowledgeMonitoringProgram]
+        ] = None,
+        administrationGuidelines: Optional[
+            FhirList[MedicationKnowledgeAdministrationGuidelines]
+        ] = None,
+        medicineClassification: Optional[
+            FhirList[MedicationKnowledgeMedicineClassification]
+        ] = None,
+        packaging: Optional[MedicationKnowledgePackaging] = None,
+        drugCharacteristic: Optional[
+            FhirList[MedicationKnowledgeDrugCharacteristic]
+        ] = None,
+        contraindication: Optional[FhirList[Reference[Union[DetectedIssue]]]] = None,
+        regulatory: Optional[FhirList[MedicationKnowledgeRegulatory]] = None,
+        kinetics: Optional[FhirList[MedicationKnowledgeKinetics]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param code: A code that specifies this medication, or a textual description if no code is
-    available. Usage note: This could be a standard medication code such as a code
-    from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local
-    formulary code, optionally with translations to other code systems.
-        :param status: A code to indicate if the medication is in active use.  The status refers to
-    the validity about the information of the medication and not to its medicinal
-    properties.
-        :param manufacturer: Describes the details of the manufacturer of the medication product.  This is
-    not intended to represent the distributor of a medication product.
-        :param doseForm: Describes the form of the item.  Powder; tablets; capsule.
-        :param amount: Specific amount of the drug in the packaged product.  For example, when
-    specifying a product that has the same strength (For example, Insulin glargine
-    100 unit per mL solution for injection), this attribute provides additional
-    clarification of the package amount (For example, 3 mL, 10mL, etc.).
-        :param synonym: Additional names for a medication, for example, the name(s) given to a
-    medication in different countries.  For example, acetaminophen and paracetamol
-    or salbutamol and albuterol.
-        :param relatedMedicationKnowledge: Associated or related knowledge about a medication.
-        :param associatedMedication: Associated or related medications.  For example, if the medication is a
-    branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g.
-    Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this
-    would link to a branded product (e.g. Crestor).
-        :param productType: Category of the medication or product (e.g. branded product, therapeutic
-    moeity, generic product, innovator product, etc.).
-        :param monograph: Associated documentation about the medication.
-        :param ingredient: Identifies a particular constituent of interest in the product.
-        :param preparationInstruction: The instructions for preparing the medication.
-        :param intendedRoute: The intended or approved route of administration.
-        :param cost: The price of the medication.
-        :param monitoringProgram: The program under which the medication is reviewed.
-        :param administrationGuidelines: Guidelines for the administration of the medication.
-        :param medicineClassification: Categorization of the medication within a formulary or classification system.
-        :param packaging: Information that only applies to packages (not products).
-        :param drugCharacteristic: Specifies descriptive properties of the medicine, such as color, shape,
-    imprints, etc.
-        :param contraindication: Potential clinical issue with or between medication(s) (for example, drug-drug
-    interaction, drug-disease contraindication, drug-allergy interaction, etc.).
-        :param regulatory: Regulatory information about a medication.
-        :param kinetics: The time course of drug absorption, distribution, metabolism and excretion of
-    a medication from the body.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param code: A code that specifies this medication, or a textual description if no code is
+        available. Usage note: This could be a standard medication code such as a code
+        from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local
+        formulary code, optionally with translations to other code systems.
+            :param status: A code to indicate if the medication is in active use.  The status refers to
+        the validity about the information of the medication and not to its medicinal
+        properties.
+            :param manufacturer: Describes the details of the manufacturer of the medication product.  This is
+        not intended to represent the distributor of a medication product.
+            :param doseForm: Describes the form of the item.  Powder; tablets; capsule.
+            :param amount: Specific amount of the drug in the packaged product.  For example, when
+        specifying a product that has the same strength (For example, Insulin glargine
+        100 unit per mL solution for injection), this attribute provides additional
+        clarification of the package amount (For example, 3 mL, 10mL, etc.).
+            :param synonym: Additional names for a medication, for example, the name(s) given to a
+        medication in different countries.  For example, acetaminophen and paracetamol
+        or salbutamol and albuterol.
+            :param relatedMedicationKnowledge: Associated or related knowledge about a medication.
+            :param associatedMedication: Associated or related medications.  For example, if the medication is a
+        branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g.
+        Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this
+        would link to a branded product (e.g. Crestor).
+            :param productType: Category of the medication or product (e.g. branded product, therapeutic
+        moeity, generic product, innovator product, etc.).
+            :param monograph: Associated documentation about the medication.
+            :param ingredient: Identifies a particular constituent of interest in the product.
+            :param preparationInstruction: The instructions for preparing the medication.
+            :param intendedRoute: The intended or approved route of administration.
+            :param cost: The price of the medication.
+            :param monitoringProgram: The program under which the medication is reviewed.
+            :param administrationGuidelines: Guidelines for the administration of the medication.
+            :param medicineClassification: Categorization of the medication within a formulary or classification system.
+            :param packaging: Information that only applies to packages (not products).
+            :param drugCharacteristic: Specifies descriptive properties of the medicine, such as color, shape,
+        imprints, etc.
+            :param contraindication: Potential clinical issue with or between medication(s) (for example, drug-drug
+        interaction, drug-disease contraindication, drug-allergy interaction, etc.).
+            :param regulatory: Regulatory information about a medication.
+            :param kinetics: The time course of drug absorption, distribution, metabolism and excretion of
+        a medication from the body.
         """
         super().__init__(
             resourceType="MedicationKnowledge",

@@ -36,12 +36,12 @@ class ExampleScenarioInstance(FhirBackboneElementBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        resourceId: string,
-        resourceType: ResourceType,
-        name: Optional[string] = None,
-        description: Optional[markdown] = None,
-        version: Optional[FhirList[ExampleScenarioVersion]] = None,
-        containedInstance: Optional[FhirList[ExampleScenarioContainedInstance]] = None,
+        resourceId: FhirString ,
+        resourceType: ResourceType ,
+        name: Optional[FhirString ] = None,
+        description: Optional[markdown ] = None,
+        version: Optional[FhirList[ExampleScenarioVersion ]] = None,
+        containedInstance: Optional[FhirList[ExampleScenarioContainedInstance ]] = None,
     ) -> None:
         """
 
