@@ -29,7 +29,6 @@ class ChargeItemStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ChargeItemStatus",
             id_=id_,
             meta=meta,
             extension=extension,

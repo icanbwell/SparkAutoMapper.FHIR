@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -50,7 +49,6 @@ class CapabilityStatementResource(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: code,
         profile: Optional[canonical] = None,
@@ -73,7 +71,6 @@ class CapabilityStatementResource(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: A type of resource exposed via the restful interface.
             :param profile: A specification of the profile that describes the solution's overall support
@@ -116,9 +113,7 @@ class CapabilityStatementResource(FhirBackboneElementBase):
         about how to invoke the operation, and the parameters.
         """
         super().__init__(
-            resourceType="CapabilityStatementResource",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             profile=profile,

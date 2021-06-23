@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class ConceptMapGroup(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         source: Optional[uri] = None,
         sourceVersion: Optional[FhirString] = None,
@@ -44,7 +42,6 @@ class ConceptMapGroup(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param source: An absolute URI that identifies the source system where the concepts to be
         mapped are defined.
@@ -61,9 +58,7 @@ class ConceptMapGroup(FhirBackboneElementBase):
         code is specified to have equivalence = unmatched.
         """
         super().__init__(
-            resourceType="ConceptMapGroup",
             id_=id_,
-            meta=meta,
             extension=extension,
             source=source,
             sourceVersion=sourceVersion,

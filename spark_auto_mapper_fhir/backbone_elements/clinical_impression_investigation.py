@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -38,7 +37,6 @@ class ClinicalImpressionInvestigation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept,
         item: Optional[
@@ -60,7 +58,6 @@ class ClinicalImpressionInvestigation(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: A name/code for the group ("set") of investigations. Typically, this will be
         something like "signs", "symptoms", "clinical", "diagnostic", but the list is
@@ -69,9 +66,7 @@ class ClinicalImpressionInvestigation(FhirBackboneElementBase):
             :param item: A record of a specific investigation that was undertaken.
         """
         super().__init__(
-            resourceType="ClinicalImpressionInvestigation",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             item=item,

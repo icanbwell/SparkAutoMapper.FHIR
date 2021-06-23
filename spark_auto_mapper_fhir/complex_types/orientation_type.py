@@ -29,7 +29,6 @@ class orientationType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="orientationType",
             id_=id_,
             meta=meta,
             extension=extension,

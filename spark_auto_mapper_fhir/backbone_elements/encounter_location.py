@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -37,7 +36,6 @@ class EncounterLocation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         location: Reference[Union[Location]],
         status: Optional[EncounterLocationStatus] = None,
@@ -47,7 +45,6 @@ class EncounterLocation(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param location: The location where the encounter takes place.
             :param status: The status of the participants' presence at the specified location during the
@@ -58,9 +55,7 @@ class EncounterLocation(FhirBackboneElementBase):
             :param period: Time period during which the patient was present at the location.
         """
         super().__init__(
-            resourceType="EncounterLocation",
             id_=id_,
-            meta=meta,
             extension=extension,
             location=location,
             status=status,

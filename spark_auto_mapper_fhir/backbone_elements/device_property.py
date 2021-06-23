@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class DeviceProperty(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: CodeableConcept,
         valueQuantity: Optional[FhirList[Quantity]] = None,
@@ -35,16 +33,13 @@ class DeviceProperty(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
         :param valueQuantity: Property value as a quantity.
         :param valueCode: Property value as a code, e.g., NTP4 (synced to NTP).
         """
         super().__init__(
-            resourceType="DeviceProperty",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             valueQuantity=valueQuantity,

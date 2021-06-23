@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -34,7 +33,6 @@ class EpisodeOfCareDiagnosis(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         condition: Reference[Union[Condition]],
         role: Optional[CodeableConcept[Diagnosisrole]] = None,
@@ -43,7 +41,6 @@ class EpisodeOfCareDiagnosis(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param condition: A list of conditions/problems/diagnoses that this episode of care is intended
         to be providing care for.
@@ -52,9 +49,7 @@ class EpisodeOfCareDiagnosis(FhirBackboneElementBase):
             :param rank: Ranking of the diagnosis (for each role type).
         """
         super().__init__(
-            resourceType="EpisodeOfCareDiagnosis",
             id_=id_,
-            meta=meta,
             extension=extension,
             condition=condition,
             role=role,

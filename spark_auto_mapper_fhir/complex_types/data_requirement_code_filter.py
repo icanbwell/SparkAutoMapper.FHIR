@@ -58,7 +58,6 @@ class DataRequirementCodeFilter(FhirComplexTypeBase):
         set or one of the specified codes.
         """
         super().__init__(
-            resourceType="DataRequirementCodeFilter",
             id_=id_,
             meta=meta,
             extension=extension,

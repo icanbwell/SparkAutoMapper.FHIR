@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -43,7 +42,6 @@ class ConsentProvision(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[ConsentProvisionType] = None,
         period: Optional[Period] = None,
@@ -60,7 +58,6 @@ class ConsentProvision(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: Action  to take - permit or deny - when the rule conditions are met.  Not
         permitted in root rule, required in all nested rules.
@@ -82,9 +79,7 @@ class ConsentProvision(FhirBackboneElementBase):
             :param provision: Rules which provide exceptions to the base rule or subrules.
         """
         super().__init__(
-            resourceType="ConsentProvision",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             period=period,

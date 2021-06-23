@@ -29,7 +29,6 @@ class InvoicePriceComponentType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="InvoicePriceComponentType",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class AdverseEventActuality(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AdverseEventActuality",
             id_=id_,
             meta=meta,
             extension=extension,

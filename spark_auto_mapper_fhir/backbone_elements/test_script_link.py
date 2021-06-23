@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class TestScriptLink(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         url: uri,
         description: Optional[FhirString] = None,
@@ -33,15 +31,12 @@ class TestScriptLink(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param url: URL to a particular requirement or feature within the FHIR specification.
         :param description: Short description of the link.
         """
         super().__init__(
-            resourceType="TestScriptLink",
             id_=id_,
-            meta=meta,
             extension=extension,
             url=url,
             description=description,

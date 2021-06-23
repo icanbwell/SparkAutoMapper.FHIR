@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -46,7 +45,6 @@ class ExplanationOfBenefitDetail1(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         productOrService: CodeableConcept[Usclscodes],
         modifier: Optional[FhirList[CodeableConcept[Modifiertypecodes]]] = None,
@@ -61,7 +59,6 @@ class ExplanationOfBenefitDetail1(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param productOrService: When the value is a group code then this item collects a set of related claim
         details, otherwise this contains the product, service, drug or other billing
@@ -83,9 +80,7 @@ class ExplanationOfBenefitDetail1(FhirBackboneElementBase):
             :param subDetail: The third-tier service adjudications for payor added services.
         """
         super().__init__(
-            resourceType="ExplanationOfBenefitDetail1",
             id_=id_,
-            meta=meta,
             extension=extension,
             productOrService=productOrService,
             modifier=modifier,

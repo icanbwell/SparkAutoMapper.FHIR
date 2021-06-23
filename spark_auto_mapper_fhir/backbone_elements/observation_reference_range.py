@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -36,7 +35,6 @@ class ObservationReferenceRange(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         low: Optional[Quantity] = None,
         high: Optional[Quantity] = None,
@@ -48,7 +46,6 @@ class ObservationReferenceRange(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param low: The value of the low bound of the reference range.  The low bound of the
         reference range endpoint is inclusive of the value (e.g.  reference range is
@@ -73,9 +70,7 @@ class ObservationReferenceRange(FhirBackboneElementBase):
         a reference value of "Negative" or a list or table of "normals".
         """
         super().__init__(
-            resourceType="ObservationReferenceRange",
             id_=id_,
-            meta=meta,
             extension=extension,
             low=low,
             high=high,

@@ -37,7 +37,6 @@ class Ratio(FhirComplexTypeBase):
         :param denominator: The value of the denominator.
         """
         super().__init__(
-            resourceType="Ratio",
             id_=id_,
             meta=meta,
             extension=extension,

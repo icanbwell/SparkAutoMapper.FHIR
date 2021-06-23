@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class SubstanceReferenceInformationClassification(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         domain: Optional[CodeableConcept] = None,
         classification: Optional[CodeableConcept] = None,
@@ -40,7 +38,6 @@ class SubstanceReferenceInformationClassification(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param domain: Todo.
         :param classification: Todo.
@@ -48,9 +45,7 @@ class SubstanceReferenceInformationClassification(FhirBackboneElementBase):
         :param source: Todo.
         """
         super().__init__(
-            resourceType="SubstanceReferenceInformationClassification",
             id_=id_,
-            meta=meta,
             extension=extension,
             domain=domain,
             classification=classification,

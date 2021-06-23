@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -57,7 +56,6 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         predecessor: Optional[Identifier] = None,
@@ -77,7 +75,6 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param identifier: Unique identifier for the current payment item for the referenced payable.
             :param predecessor: Unique identifier for the prior payment item for the referenced payable.
@@ -92,9 +89,7 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
             :param amount: The monetary amount allocated from the total payment to the payable.
         """
         super().__init__(
-            resourceType="PaymentReconciliationDetail",
             id_=id_,
-            meta=meta,
             extension=extension,
             identifier=identifier,
             predecessor=predecessor,

@@ -29,7 +29,6 @@ class unsignedInt(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="unsignedInt",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -37,7 +37,6 @@ class Annotation(FhirComplexTypeBase):
         :param text: The text of the annotation in markdown format.
         """
         super().__init__(
-            resourceType="Annotation",
             id_=id_,
             meta=meta,
             extension=extension,

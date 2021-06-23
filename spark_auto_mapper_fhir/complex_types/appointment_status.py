@@ -29,7 +29,6 @@ class AppointmentStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AppointmentStatus",
             id_=id_,
             meta=meta,
             extension=extension,

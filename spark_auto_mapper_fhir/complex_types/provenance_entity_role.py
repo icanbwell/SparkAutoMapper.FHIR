@@ -29,7 +29,6 @@ class ProvenanceEntityRole(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ProvenanceEntityRole",
             id_=id_,
             meta=meta,
             extension=extension,

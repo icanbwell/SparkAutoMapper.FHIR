@@ -29,7 +29,6 @@ class TestReportParticipantType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="TestReportParticipantType",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -44,7 +43,6 @@ class CarePlanActivity(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         outcomeCodeableConcept: Optional[FhirList[CodeableConcept]] = None,
         outcomeReference: Optional[FhirList[Reference[Union[Resource]]]] = None,
@@ -69,7 +67,6 @@ class CarePlanActivity(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param outcomeCodeableConcept: Identifies the outcome at the point when the status of the activity is
         assessed.  For example, the outcome of an education activity could be patient
@@ -86,9 +83,7 @@ class CarePlanActivity(FhirBackboneElementBase):
         procedure etc.
         """
         super().__init__(
-            resourceType="CarePlanActivity",
             id_=id_,
-            meta=meta,
             extension=extension,
             outcomeCodeableConcept=outcomeCodeableConcept,
             outcomeReference=outcomeReference,

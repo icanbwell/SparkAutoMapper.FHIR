@@ -37,7 +37,6 @@ class Range(FhirComplexTypeBase):
         :param high: The high limit. The boundary is inclusive.
         """
         super().__init__(
-            resourceType="Range",
             id_=id_,
             meta=meta,
             extension=extension,

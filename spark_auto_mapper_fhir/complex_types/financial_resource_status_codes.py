@@ -29,7 +29,6 @@ class FinancialResourceStatusCodes(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="FinancialResourceStatusCodes",
             id_=id_,
             meta=meta,
             extension=extension,

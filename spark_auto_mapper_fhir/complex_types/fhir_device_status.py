@@ -29,7 +29,6 @@ class FHIRDeviceStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="FHIRDeviceStatus",
             id_=id_,
             meta=meta,
             extension=extension,

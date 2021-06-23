@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -40,7 +39,6 @@ class ContractSigner(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Coding[Contractsignertypecodes],
         party: Reference[
@@ -51,16 +49,13 @@ class ContractSigner(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: Role of this Contract signer, e.g. notary, grantee.
         :param party: Party which is a signator to this Contract.
         :param signature: Legally binding Contract DSIG signature contents in Base64.
         """
         super().__init__(
-            resourceType="ContractSigner",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             party=party,

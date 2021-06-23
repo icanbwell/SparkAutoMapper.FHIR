@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class ElementDefinitionBinding(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         strength: BindingStrength,
         description: Optional[FhirString] = None,
@@ -35,7 +33,6 @@ class ElementDefinitionBinding(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param strength: Indicates the degree of conformance expectations associated with this binding
         - that is, the degree to which the provided value set must be adhered to in
@@ -45,9 +42,7 @@ class ElementDefinitionBinding(FhirBackboneElementBase):
         to.
         """
         super().__init__(
-            resourceType="ElementDefinitionBinding",
             id_=id_,
-            meta=meta,
             extension=extension,
             strength=strength,
             description=description,

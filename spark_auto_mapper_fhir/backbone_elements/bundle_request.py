@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class BundleRequest(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         method: HTTPVerb,
         url: uri,
@@ -39,7 +37,6 @@ class BundleRequest(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param method: In a transaction or batch, this is the HTTP action to be executed for this
         entry. In a history bundle, this indicates the HTTP action that occurred.
@@ -57,9 +54,7 @@ class BundleRequest(FhirBackboneElementBase):
         follows the "?" (not including the "?").
         """
         super().__init__(
-            resourceType="BundleRequest",
             id_=id_,
-            meta=meta,
             extension=extension,
             method=method,
             url=url,

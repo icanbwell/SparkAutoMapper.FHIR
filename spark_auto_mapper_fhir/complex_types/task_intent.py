@@ -29,7 +29,6 @@ class TaskIntent(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="TaskIntent",
             id_=id_,
             meta=meta,
             extension=extension,

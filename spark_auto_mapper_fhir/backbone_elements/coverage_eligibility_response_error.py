@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,22 +30,18 @@ class CoverageEligibilityResponseError(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept[AdjudicationErrorCodes],
     ) -> None:
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: An error code,from a specified code system, which details why the eligibility
         check could not be performed.
         """
         super().__init__(
-            resourceType="CoverageEligibilityResponseError",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
         )

@@ -29,7 +29,6 @@ class AuditEventOutcome(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AuditEventOutcome",
             id_=id_,
             meta=meta,
             extension=extension,

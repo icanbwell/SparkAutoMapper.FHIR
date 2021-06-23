@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class DeviceUdiCarrier(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         deviceIdentifier: Optional[FhirString] = None,
         issuer: Optional[uri] = None,
@@ -40,7 +38,6 @@ class DeviceUdiCarrier(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param deviceIdentifier: The device identifier (DI) is a mandatory, fixed portion of a UDI that
         identifies the labeler and the specific version or model of a device.
@@ -69,9 +66,7 @@ class DeviceUdiCarrier(FhirBackboneElementBase):
             :param entryType: A coded entry to indicate how the data was entered.
         """
         super().__init__(
-            resourceType="DeviceUdiCarrier",
             id_=id_,
-            meta=meta,
             extension=extension,
             deviceIdentifier=deviceIdentifier,
             issuer=issuer,

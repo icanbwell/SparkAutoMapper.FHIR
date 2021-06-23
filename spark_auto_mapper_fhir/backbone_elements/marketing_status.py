@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class MarketingStatus(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         country: CodeableConcept,
         jurisdiction: Optional[CodeableConcept] = None,
@@ -39,7 +37,6 @@ class MarketingStatus(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param country: The country in which the marketing authorisation has been granted shall be
         specified It should be specified using the ISO 3166 ‑ 1 alpha-2 code elements.
@@ -63,9 +60,7 @@ class MarketingStatus(FhirBackboneElementBase):
         distribution chain.
         """
         super().__init__(
-            resourceType="MarketingStatus",
             id_=id_,
-            meta=meta,
             extension=extension,
             country=country,
             jurisdiction=jurisdiction,

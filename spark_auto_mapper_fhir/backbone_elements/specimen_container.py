@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class SpecimenContainer(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         description: Optional[FhirString] = None,
@@ -39,7 +37,6 @@ class SpecimenContainer(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param identifier: Id for container. There may be multiple; a manufacturer's bar code, lab
         assigned identifier, etc. The container ID may differ from the specimen id in
@@ -52,9 +49,7 @@ class SpecimenContainer(FhirBackboneElementBase):
         appropriate measurements, depending on the specimen type.
         """
         super().__init__(
-            resourceType="SpecimenContainer",
             id_=id_,
-            meta=meta,
             extension=extension,
             identifier=identifier,
             description=description,

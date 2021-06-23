@@ -7,7 +7,6 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -35,7 +34,6 @@ class ContractAnswer(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         valueBoolean: FhirBoolean,
         valueDecimal: decimal,
@@ -53,7 +51,6 @@ class ContractAnswer(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param valueBoolean: None
         :param valueDecimal: None
@@ -69,9 +66,7 @@ class ContractAnswer(FhirBackboneElementBase):
         :param valueReference: None
         """
         super().__init__(
-            resourceType="ContractAnswer",
             id_=id_,
-            meta=meta,
             extension=extension,
             valueBoolean=valueBoolean,
             valueDecimal=valueDecimal,

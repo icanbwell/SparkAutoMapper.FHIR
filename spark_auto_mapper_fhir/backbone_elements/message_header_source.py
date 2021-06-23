@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class MessageHeaderSource(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: Optional[FhirString] = None,
         software: Optional[FhirString] = None,
@@ -37,7 +35,6 @@ class MessageHeaderSource(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: Human-readable name for the source system.
             :param software: May include configuration or other information useful in debugging.
@@ -48,9 +45,7 @@ class MessageHeaderSource(FhirBackboneElementBase):
             :param endpoint: Identifies the routing target to send acknowledgements to.
         """
         super().__init__(
-            resourceType="MessageHeaderSource",
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             software=software,

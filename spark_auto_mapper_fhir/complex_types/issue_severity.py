@@ -29,7 +29,6 @@ class IssueSeverity(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="IssueSeverity",
             id_=id_,
             meta=meta,
             extension=extension,

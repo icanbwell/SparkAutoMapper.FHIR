@@ -29,7 +29,6 @@ class AllergyIntoleranceCriticality(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AllergyIntoleranceCriticality",
             id_=id_,
             meta=meta,
             extension=extension,

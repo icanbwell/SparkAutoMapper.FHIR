@@ -29,7 +29,6 @@ class ListMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ListMode",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -5,7 +5,6 @@ from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -47,7 +46,6 @@ class QuestionnaireItem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         linkId: FhirString,
         definition: Optional[uri] = None,
@@ -69,7 +67,6 @@ class QuestionnaireItem(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param linkId: An identifier that is unique within the Questionnaire allowing linkage to the
         equivalent item in a QuestionnaireResponse resource.
@@ -120,9 +117,7 @@ class QuestionnaireItem(FhirBackboneElementBase):
             :param item: Text, questions and other groups to be nested beneath a question or group.
         """
         super().__init__(
-            resourceType="QuestionnaireItem",
             id_=id_,
-            meta=meta,
             extension=extension,
             linkId=linkId,
             definition=definition,

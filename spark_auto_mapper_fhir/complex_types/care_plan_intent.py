@@ -29,7 +29,6 @@ class CarePlanIntent(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CarePlanIntent",
             id_=id_,
             meta=meta,
             extension=extension,

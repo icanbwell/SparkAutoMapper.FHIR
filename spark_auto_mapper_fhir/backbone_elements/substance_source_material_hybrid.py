@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class SubstanceSourceMaterialHybrid(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         maternalOrganismId: Optional[FhirString] = None,
         maternalOrganismName: Optional[FhirString] = None,
@@ -36,7 +34,6 @@ class SubstanceSourceMaterialHybrid(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param maternalOrganismId: The identifier of the maternal species constituting the hybrid organism shall
         be specified based on a controlled vocabulary. For plants, the parents aren’t
@@ -52,9 +49,7 @@ class SubstanceSourceMaterialHybrid(FhirBackboneElementBase):
             :param hybridType: The hybrid type of an organism shall be specified.
         """
         super().__init__(
-            resourceType="SubstanceSourceMaterialHybrid",
             id_=id_,
-            meta=meta,
             extension=extension,
             maternalOrganismId=maternalOrganismId,
             maternalOrganismName=maternalOrganismName,

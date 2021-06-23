@@ -29,7 +29,6 @@ class SystemRestfulInteraction(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SystemRestfulInteraction",
             id_=id_,
             meta=meta,
             extension=extension,

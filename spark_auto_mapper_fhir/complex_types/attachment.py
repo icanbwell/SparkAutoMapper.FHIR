@@ -59,7 +59,6 @@ class Attachment(FhirComplexTypeBase):
             :param creation: The date that the attachment was first created.
         """
         super().__init__(
-            resourceType="Attachment",
             id_=id_,
             meta=meta,
             extension=extension,

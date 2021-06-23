@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -36,7 +35,6 @@ class ContractContext(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         reference: Optional[Reference[Union[Resource]]] = None,
         code: Optional[
@@ -47,7 +45,6 @@ class ContractContext(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param reference: Asset context reference may include the creator, custodian, or owning Person
         or Organization (e.g., bank, repository),  location held, e.g., building,
@@ -57,9 +54,7 @@ class ContractContext(FhirBackboneElementBase):
             :param text: Context description.
         """
         super().__init__(
-            resourceType="ContractContext",
             id_=id_,
-            meta=meta,
             extension=extension,
             reference=reference,
             code=code,

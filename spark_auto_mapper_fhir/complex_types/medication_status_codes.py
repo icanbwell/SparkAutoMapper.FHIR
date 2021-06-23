@@ -29,7 +29,6 @@ class MedicationStatusCodes(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="MedicationStatusCodes",
             id_=id_,
             meta=meta,
             extension=extension,

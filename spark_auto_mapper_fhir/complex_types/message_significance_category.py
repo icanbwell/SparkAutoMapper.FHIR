@@ -29,7 +29,6 @@ class MessageSignificanceCategory(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="MessageSignificanceCategory",
             id_=id_,
             meta=meta,
             extension=extension,

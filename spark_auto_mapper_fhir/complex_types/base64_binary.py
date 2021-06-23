@@ -29,7 +29,6 @@ class base64Binary(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="base64Binary",
             id_=id_,
             meta=meta,
             extension=extension,

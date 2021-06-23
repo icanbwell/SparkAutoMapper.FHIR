@@ -29,7 +29,6 @@ class BiologicallyDerivedProductStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="BiologicallyDerivedProductStatus",
             id_=id_,
             meta=meta,
             extension=extension,

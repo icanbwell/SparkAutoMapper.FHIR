@@ -29,7 +29,6 @@ class PublicationStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="PublicationStatus",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class StructureMapInputMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="StructureMapInputMode",
             id_=id_,
             meta=meta,
             extension=extension,

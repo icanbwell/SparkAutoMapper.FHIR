@@ -62,7 +62,6 @@ class Address(FhirComplexTypeBase):
             :param period: Time period when address was/is in use.
         """
         super().__init__(
-            resourceType="Address",
             id_=id_,
             meta=meta,
             extension=extension,

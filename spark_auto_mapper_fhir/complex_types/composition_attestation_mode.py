@@ -29,7 +29,6 @@ class CompositionAttestationMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CompositionAttestationMode",
             id_=id_,
             meta=meta,
             extension=extension,

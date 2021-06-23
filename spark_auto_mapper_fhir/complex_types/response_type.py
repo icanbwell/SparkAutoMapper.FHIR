@@ -29,7 +29,6 @@ class ResponseType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ResponseType",
             id_=id_,
             meta=meta,
             extension=extension,

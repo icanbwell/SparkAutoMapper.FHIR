@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -80,7 +79,6 @@ class CoverageEligibilityResponseItem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[CodeableConcept[Benefitcategorycodes]] = None,
         productOrService: Optional[CodeableConcept[Usclscodes]] = None,
@@ -102,7 +100,6 @@ class CoverageEligibilityResponseItem(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param category: Code to identify the general type of benefits under which products and
         services are provided.
@@ -128,9 +125,7 @@ class CoverageEligibilityResponseItem(FhirBackboneElementBase):
         the preauthorization.
         """
         super().__init__(
-            resourceType="CoverageEligibilityResponseItem",
             id_=id_,
-            meta=meta,
             extension=extension,
             category=category,
             productOrService=productOrService,

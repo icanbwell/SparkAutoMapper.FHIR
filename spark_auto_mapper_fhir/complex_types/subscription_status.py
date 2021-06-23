@@ -29,7 +29,6 @@ class SubscriptionStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SubscriptionStatus",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class ValueSetCompose(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         lockedDate: Optional[FhirDate] = None,
         inactive: Optional[FhirBoolean] = None,
@@ -41,7 +39,6 @@ class ValueSetCompose(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param lockedDate: The Locked Date is  the effective date that is used to determine the version
         of all referenced Code Systems and Value Set Definitions included in the
@@ -57,9 +54,7 @@ class ValueSetCompose(FhirBackboneElementBase):
         and/or other value sets.
         """
         super().__init__(
-            resourceType="ValueSetCompose",
             id_=id_,
-            meta=meta,
             extension=extension,
             lockedDate=lockedDate,
             inactive=inactive,

@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class StructureMapStructure(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         url: canonical,
         mode: StructureMapModelMode,
@@ -38,7 +36,6 @@ class StructureMapStructure(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param url: The canonical reference to the structure.
         :param mode: How the referenced structure is used in this mapping.
@@ -46,9 +43,7 @@ class StructureMapStructure(FhirBackboneElementBase):
         :param documentation: Documentation that describes how the structure is used in the mapping.
         """
         super().__init__(
-            resourceType="StructureMapStructure",
             id_=id_,
-            meta=meta,
             extension=extension,
             url=url,
             mode=mode,

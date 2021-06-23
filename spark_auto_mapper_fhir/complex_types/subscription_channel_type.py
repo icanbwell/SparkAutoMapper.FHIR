@@ -29,7 +29,6 @@ class SubscriptionChannelType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SubscriptionChannelType",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -55,7 +55,6 @@ class Identifier(FhirComplexTypeBase):
             :param assigner: Organization that issued/manages the identifier.
         """
         super().__init__(
-            resourceType="Identifier",
             id_=id_,
             meta=meta,
             extension=extension,

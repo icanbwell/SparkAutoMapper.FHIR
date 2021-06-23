@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class DiagnosticReportMedia(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         comment: Optional[FhirString] = None,
         link: Reference[Union[Media]],
@@ -36,7 +34,6 @@ class DiagnosticReportMedia(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param comment: A comment about the image. Typically, this is used to provide an explanation
         for why the image is included, or to draw the viewer's attention to important
@@ -44,9 +41,7 @@ class DiagnosticReportMedia(FhirBackboneElementBase):
             :param link: Reference to the image source.
         """
         super().__init__(
-            resourceType="DiagnosticReportMedia",
             id_=id_,
-            meta=meta,
             extension=extension,
             comment=comment,
             link=link,

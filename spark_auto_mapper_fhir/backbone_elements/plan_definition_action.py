@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -71,7 +70,6 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         prefix: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
@@ -101,7 +99,6 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param prefix: A user-visible prefix for the action.
             :param title: The title of the action displayed to a user.
@@ -147,9 +144,7 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         chosen as part of realizing the action definition.
         """
         super().__init__(
-            resourceType="PlanDefinitionAction",
             id_=id_,
-            meta=meta,
             extension=extension,
             prefix=prefix,
             title=title,

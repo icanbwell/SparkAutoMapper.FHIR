@@ -29,7 +29,6 @@ class ReferenceVersionRules(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ReferenceVersionRules",
             id_=id_,
             meta=meta,
             extension=extension,

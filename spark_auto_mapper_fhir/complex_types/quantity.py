@@ -51,7 +51,6 @@ class Quantity(FhirComplexTypeBase):
             :param code: A computer processable form of the unit in some unit representation system.
         """
         super().__init__(
-            resourceType="Quantity",
             id_=id_,
             meta=meta,
             extension=extension,

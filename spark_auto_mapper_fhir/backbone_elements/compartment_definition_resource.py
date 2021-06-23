@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class CompartmentDefinitionResource(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: code,
         param: Optional[FhirList[FhirString]] = None,
@@ -34,7 +32,6 @@ class CompartmentDefinitionResource(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: The name of a resource supported by the server.
             :param param: The name of a search parameter that represents the link to the compartment.
@@ -43,9 +40,7 @@ class CompartmentDefinitionResource(FhirBackboneElementBase):
             :param documentation: Additional documentation about the resource and compartment.
         """
         super().__init__(
-            resourceType="CompartmentDefinitionResource",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             param=param,

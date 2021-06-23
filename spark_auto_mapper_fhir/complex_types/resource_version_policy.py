@@ -29,7 +29,6 @@ class ResourceVersionPolicy(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ResourceVersionPolicy",
             id_=id_,
             meta=meta,
             extension=extension,

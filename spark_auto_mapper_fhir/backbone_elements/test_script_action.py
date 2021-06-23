@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class TestScriptAction(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         operation: Optional[TestScriptOperation] = None,
         assert_: Optional[TestScriptAssert] = None,
@@ -37,16 +35,13 @@ class TestScriptAction(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param operation: The operation to perform.
             :param assert_: Evaluates the results of previous operations to determine if the server under
         test behaves appropriately.
         """
         super().__init__(
-            resourceType="TestScriptAction",
             id_=id_,
-            meta=meta,
             extension=extension,
             operation=operation,
             assert_=assert_,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class PatientLink(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         other: Reference[Union[Patient, RelatedPerson]],
         type: LinkType,
@@ -37,15 +35,12 @@ class PatientLink(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param other: The other patient resource that the link refers to.
         :param type: The type of link between this patient resource and another patient resource.
         """
         super().__init__(
-            resourceType="PatientLink",
             id_=id_,
-            meta=meta,
             extension=extension,
             other=other,
             type=type,

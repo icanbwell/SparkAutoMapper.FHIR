@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -39,7 +38,6 @@ class EffectEvidenceSynthesisResultsByExposure(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         exposureState: Optional[ExposureState] = None,
@@ -49,7 +47,6 @@ class EffectEvidenceSynthesisResultsByExposure(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param description: Human-readable summary of results by exposure state.
             :param exposureState: Whether these results are for the exposure state or alternative exposure
@@ -58,9 +55,7 @@ class EffectEvidenceSynthesisResultsByExposure(FhirBackboneElementBase):
             :param riskEvidenceSynthesis: Reference to a RiskEvidenceSynthesis resource.
         """
         super().__init__(
-            resourceType="EffectEvidenceSynthesisResultsByExposure",
             id_=id_,
-            meta=meta,
             extension=extension,
             description=description,
             exposureState=exposureState,

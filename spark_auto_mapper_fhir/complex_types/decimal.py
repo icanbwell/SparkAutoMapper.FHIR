@@ -29,7 +29,6 @@ class decimal(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="decimal",
             id_=id_,
             meta=meta,
             extension=extension,

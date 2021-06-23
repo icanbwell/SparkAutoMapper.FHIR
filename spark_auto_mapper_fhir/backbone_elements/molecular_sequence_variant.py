@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class MolecularSequenceVariant(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         start: Optional[FhirInteger] = None,
         end: Optional[FhirInteger] = None,
@@ -41,7 +39,6 @@ class MolecularSequenceVariant(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param start: Start position of the variant on the  reference sequence. If the coordinate
         system is either 0-based or 1-based, then start position is inclusive.
@@ -68,9 +65,7 @@ class MolecularSequenceVariant(FhirBackboneElementBase):
             :param variantPointer: A pointer to an Observation containing variant information.
         """
         super().__init__(
-            resourceType="MolecularSequenceVariant",
             id_=id_,
-            meta=meta,
             extension=extension,
             start=start,
             end=end,

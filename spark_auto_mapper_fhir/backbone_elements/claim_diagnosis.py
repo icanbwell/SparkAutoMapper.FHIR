@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -48,7 +47,6 @@ class ClaimDiagnosis(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         sequence: positiveInt,
         type: Optional[FhirList[CodeableConcept[Examplediagnosistypecodes]]] = None,
@@ -60,7 +58,6 @@ class ClaimDiagnosis(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param sequence: A number to uniquely identify diagnosis entries.
             :param type: When the condition was observed or the relative ranking.
@@ -70,9 +67,7 @@ class ClaimDiagnosis(FhirBackboneElementBase):
         predetermined grouping code system.
         """
         super().__init__(
-            resourceType="ClaimDiagnosis",
             id_=id_,
-            meta=meta,
             extension=extension,
             sequence=sequence,
             type=type,

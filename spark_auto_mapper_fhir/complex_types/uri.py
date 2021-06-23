@@ -29,7 +29,6 @@ class uri(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="uri",
             id_=id_,
             meta=meta,
             extension=extension,

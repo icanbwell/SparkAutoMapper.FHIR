@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class LocationPosition(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         longitude: decimal,
         latitude: decimal,
@@ -35,7 +33,6 @@ class LocationPosition(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param longitude: Longitude. The value domain and the interpretation are the same as for the
         text of the longitude element in KML (see notes below).
@@ -45,9 +42,7 @@ class LocationPosition(FhirBackboneElementBase):
         of the altitude element in KML (see notes below).
         """
         super().__init__(
-            resourceType="LocationPosition",
             id_=id_,
-            meta=meta,
             extension=extension,
             longitude=longitude,
             latitude=latitude,

@@ -119,7 +119,6 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
     {% endfor %}
         """
         super().__init__(
-            resourceType="{{fhir_entity.cleaned_name}}",
             id_=id_,
             meta=meta,
             extension=extension,

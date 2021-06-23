@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class BundleResponse(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         status: FhirString,
         location: Optional[uri] = None,
@@ -37,7 +35,6 @@ class BundleResponse(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param status: The status code returned by processing this entry. The status SHALL start with
         a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description
@@ -52,9 +49,7 @@ class BundleResponse(FhirBackboneElementBase):
         processing this entry in a batch or transaction.
         """
         super().__init__(
-            resourceType="BundleResponse",
             id_=id_,
-            meta=meta,
             extension=extension,
             status=status,
             location=location,

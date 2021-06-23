@@ -29,7 +29,6 @@ class DocumentReferenceStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="DocumentReferenceStatus",
             id_=id_,
             meta=meta,
             extension=extension,

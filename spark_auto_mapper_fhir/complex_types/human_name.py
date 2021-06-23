@@ -52,7 +52,6 @@ class HumanName(FhirComplexTypeBase):
             :param period: Indicates the period of time when this name was valid for the named person.
         """
         super().__init__(
-            resourceType="HumanName",
             id_=id_,
             meta=meta,
             extension=extension,

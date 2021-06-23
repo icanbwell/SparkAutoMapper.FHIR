@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class BundleLink(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         relation: FhirString,
         url: uri,
@@ -33,7 +31,6 @@ class BundleLink(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param relation: A name which details the functional use for this link - see
         [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-
@@ -42,9 +39,7 @@ class BundleLink(FhirBackboneElementBase):
             :param url: The reference details for the link.
         """
         super().__init__(
-            resourceType="BundleLink",
             id_=id_,
-            meta=meta,
             extension=extension,
             relation=relation,
             url=url,

@@ -29,7 +29,6 @@ class EventCapabilityMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="EventCapabilityMode",
             id_=id_,
             meta=meta,
             extension=extension,

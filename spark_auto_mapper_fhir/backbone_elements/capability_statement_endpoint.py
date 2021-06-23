@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class CapabilityStatementEndpoint(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         protocol: Coding[Messagetransport],
         address: url,
@@ -38,7 +36,6 @@ class CapabilityStatementEndpoint(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param protocol: A list of the messaging transport protocol(s) identifiers, supported by this
         endpoint.
@@ -46,9 +43,7 @@ class CapabilityStatementEndpoint(FhirBackboneElementBase):
         addresses for routing, it can be just an identifier.
         """
         super().__init__(
-            resourceType="CapabilityStatementEndpoint",
             id_=id_,
-            meta=meta,
             extension=extension,
             protocol=protocol,
             address=address,

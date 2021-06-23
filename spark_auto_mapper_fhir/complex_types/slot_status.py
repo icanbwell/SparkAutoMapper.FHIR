@@ -29,7 +29,6 @@ class SlotStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SlotStatus",
             id_=id_,
             meta=meta,
             extension=extension,

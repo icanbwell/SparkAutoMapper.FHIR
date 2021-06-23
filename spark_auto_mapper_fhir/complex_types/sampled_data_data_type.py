@@ -29,7 +29,6 @@ class SampledDataDataType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SampledDataDataType",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class FamilyHistoryStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="FamilyHistoryStatus",
             id_=id_,
             meta=meta,
             extension=extension,

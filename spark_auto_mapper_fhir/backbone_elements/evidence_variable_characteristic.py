@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class EvidenceVariableCharacteristic(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         usageContext: Optional[FhirList[UsageContext]] = None,
@@ -38,7 +36,6 @@ class EvidenceVariableCharacteristic(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param description: A short, natural language description of the characteristic that could be used
         to communicate the criteria to an end-user.
@@ -49,9 +46,7 @@ class EvidenceVariableCharacteristic(FhirBackboneElementBase):
             :param groupMeasure: Indicates how elements are aggregated within the study effective period.
         """
         super().__init__(
-            resourceType="EvidenceVariableCharacteristic",
             id_=id_,
-            meta=meta,
             extension=extension,
             description=description,
             usageContext=usageContext,

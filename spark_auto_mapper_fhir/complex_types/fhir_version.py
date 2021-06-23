@@ -29,7 +29,6 @@ class FHIRVersion(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="FHIRVersion",
             id_=id_,
             meta=meta,
             extension=extension,

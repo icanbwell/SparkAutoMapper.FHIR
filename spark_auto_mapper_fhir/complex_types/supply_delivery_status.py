@@ -29,7 +29,6 @@ class SupplyDeliveryStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SupplyDeliveryStatus",
             id_=id_,
             meta=meta,
             extension=extension,

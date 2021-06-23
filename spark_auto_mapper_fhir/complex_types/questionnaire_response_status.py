@@ -29,7 +29,6 @@ class QuestionnaireResponseStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="QuestionnaireResponseStatus",
             id_=id_,
             meta=meta,
             extension=extension,

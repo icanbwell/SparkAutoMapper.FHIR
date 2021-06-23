@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -34,7 +33,6 @@ class SubstanceNucleicAcidSubunit(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         subunit: Optional[FhirInteger] = None,
         sequence: Optional[FhirString] = None,
@@ -48,7 +46,6 @@ class SubstanceNucleicAcidSubunit(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param subunit: Index of linear sequences of nucleic acids in order of decreasing length.
         Sequences of the same length will be ordered by molecular weight. Subunits
@@ -70,9 +67,7 @@ class SubstanceNucleicAcidSubunit(FhirBackboneElementBase):
             :param sugar: 5.3.6.8.1 Sugar ID (Mandatory).
         """
         super().__init__(
-            resourceType="SubstanceNucleicAcidSubunit",
             id_=id_,
-            meta=meta,
             extension=extension,
             subunit=subunit,
             sequence=sequence,

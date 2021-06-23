@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class ElementDefinitionType(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: uri,
         profile: Optional[FhirList[canonical]] = None,
@@ -41,7 +39,6 @@ class ElementDefinitionType(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: URL of Data type or Resource that is a(or the) type used for this element.
         References are URLs that are relative to
@@ -70,9 +67,7 @@ class ElementDefinitionType(FhirBackboneElementBase):
         whether either can be used.
         """
         super().__init__(
-            resourceType="ElementDefinitionType",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             profile=profile,

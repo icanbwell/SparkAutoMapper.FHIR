@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class MedicinalProductPackagedBatchIdentifier(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         outerPackaging: Identifier,
         immediatePackaging: Optional[Identifier] = None,
@@ -33,15 +31,12 @@ class MedicinalProductPackagedBatchIdentifier(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param outerPackaging: A number appearing on the outer packaging of a specific batch.
         :param immediatePackaging: A number appearing on the immediate packaging (and not the outer packaging).
         """
         super().__init__(
-            resourceType="MedicinalProductPackagedBatchIdentifier",
             id_=id_,
-            meta=meta,
             extension=extension,
             outerPackaging=outerPackaging,
             immediatePackaging=immediatePackaging,

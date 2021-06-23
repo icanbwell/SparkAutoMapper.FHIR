@@ -29,7 +29,6 @@ class RestfulCapabilityMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="RestfulCapabilityMode",
             id_=id_,
             meta=meta,
             extension=extension,

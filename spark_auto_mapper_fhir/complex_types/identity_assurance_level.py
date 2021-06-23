@@ -29,7 +29,6 @@ class IdentityAssuranceLevel(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="IdentityAssuranceLevel",
             id_=id_,
             meta=meta,
             extension=extension,

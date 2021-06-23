@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class ClinicalImpressionFinding(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         itemCodeableConcept: Optional[CodeableConcept] = None,
         itemReference: Optional[Reference[Union[Condition, Observation, Media]]] = None,
@@ -40,7 +38,6 @@ class ClinicalImpressionFinding(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param itemCodeableConcept: Specific text or code for finding or diagnosis, which may include ruled-out or
         resolved conditions.
@@ -49,9 +46,7 @@ class ClinicalImpressionFinding(FhirBackboneElementBase):
             :param basis: Which investigations support finding or diagnosis.
         """
         super().__init__(
-            resourceType="ClinicalImpressionFinding",
             id_=id_,
-            meta=meta,
             extension=extension,
             itemCodeableConcept=itemCodeableConcept,
             itemReference=itemReference,

@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class CapabilityStatementImplementation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: FhirString,
         url: Optional[url] = None,
@@ -38,7 +36,6 @@ class CapabilityStatementImplementation(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param description: Information about the specific installation that this capability statement
         relates to.
@@ -48,9 +45,7 @@ class CapabilityStatementImplementation(FhirBackboneElementBase):
         of the data on the server at the specified URL.
         """
         super().__init__(
-            resourceType="CapabilityStatementImplementation",
             id_=id_,
-            meta=meta,
             extension=extension,
             description=description,
             url=url,

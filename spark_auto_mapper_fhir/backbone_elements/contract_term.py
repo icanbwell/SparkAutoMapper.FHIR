@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -50,7 +49,6 @@ class ContractTerm(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         issued: Optional[FhirDateTime] = None,
@@ -67,7 +65,6 @@ class ContractTerm(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param identifier: Unique identifier for this particular Contract Provision.
             :param issued: When this Contract Provision was issued.
@@ -87,9 +84,7 @@ class ContractTerm(FhirBackboneElementBase):
             :param group: Nested group of Contract Provisions.
         """
         super().__init__(
-            resourceType="ContractTerm",
             id_=id_,
-            meta=meta,
             extension=extension,
             identifier=identifier,
             issued=issued,

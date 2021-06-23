@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class SubstanceSourceMaterialPartDescription(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         part: Optional[CodeableConcept] = None,
         partLocation: Optional[CodeableConcept] = None,
@@ -33,7 +31,6 @@ class SubstanceSourceMaterialPartDescription(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param part: Entity of anatomical origin of source material within an organism.
             :param partLocation: The detailed anatomic location when the part can be extracted from different
@@ -41,9 +38,7 @@ class SubstanceSourceMaterialPartDescription(FhirBackboneElementBase):
         apply.
         """
         super().__init__(
-            resourceType="SubstanceSourceMaterialPartDescription",
             id_=id_,
-            meta=meta,
             extension=extension,
             part=part,
             partLocation=partLocation,

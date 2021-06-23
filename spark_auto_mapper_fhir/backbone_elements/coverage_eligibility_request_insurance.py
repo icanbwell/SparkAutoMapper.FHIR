@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class CoverageEligibilityRequestInsurance(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         focal: Optional[FhirBoolean] = None,
         coverage: Reference[Union[Coverage]],
@@ -38,7 +36,6 @@ class CoverageEligibilityRequestInsurance(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param focal: A flag to indicate that this Coverage is to be used for evaluation of this
         request when set to true.
@@ -49,9 +46,7 @@ class CoverageEligibilityRequestInsurance(FhirBackboneElementBase):
         for special business processing purposes.
         """
         super().__init__(
-            resourceType="CoverageEligibilityRequestInsurance",
             id_=id_,
-            meta=meta,
             extension=extension,
             focal=focal,
             coverage=coverage,

@@ -29,7 +29,6 @@ class ConstraintSeverity(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ConstraintSeverity",
             id_=id_,
             meta=meta,
             extension=extension,

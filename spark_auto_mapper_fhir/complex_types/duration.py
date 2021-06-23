@@ -29,7 +29,6 @@ class Duration(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="Duration",
             id_=id_,
             meta=meta,
             extension=extension,

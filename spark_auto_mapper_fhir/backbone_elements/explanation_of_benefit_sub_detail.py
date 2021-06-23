@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -72,7 +71,6 @@ class ExplanationOfBenefitSubDetail(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         sequence: positiveInt,
         revenue: Optional[CodeableConcept[Examplerevenuecentercodes]] = None,
@@ -93,7 +91,6 @@ class ExplanationOfBenefitSubDetail(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param sequence: A claim detail line. Either a simple (a product or service) or a 'group' of
         sub-details which are simple items.
@@ -121,9 +118,7 @@ class ExplanationOfBenefitSubDetail(FhirBackboneElementBase):
             :param adjudication: The adjudication results.
         """
         super().__init__(
-            resourceType="ExplanationOfBenefitSubDetail",
             id_=id_,
-            meta=meta,
             extension=extension,
             sequence=sequence,
             revenue=revenue,

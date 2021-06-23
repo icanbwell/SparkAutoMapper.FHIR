@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -33,7 +32,6 @@ class ExampleScenarioStep(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         process: Optional[FhirList[ExampleScenarioProcess]] = None,
         pause: Optional[FhirBoolean] = None,
@@ -43,7 +41,6 @@ class ExampleScenarioStep(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param process: Nested process.
             :param pause: If there is a pause in the flow.
@@ -52,9 +49,7 @@ class ExampleScenarioStep(FhirBackboneElementBase):
         the base step in exceptional/atypical circumstances.
         """
         super().__init__(
-            resourceType="ExampleScenarioStep",
             id_=id_,
-            meta=meta,
             extension=extension,
             process=process,
             pause=pause,

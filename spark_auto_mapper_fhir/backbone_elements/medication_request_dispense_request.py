@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -33,7 +32,6 @@ class MedicationRequestDispenseRequest(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         initialFill: Optional[MedicationRequestInitialFill] = None,
         dispenseInterval: Optional[Duration] = None,
@@ -46,7 +44,6 @@ class MedicationRequestDispenseRequest(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param initialFill: Indicates the quantity or duration for the first dispense of the medication.
             :param dispenseInterval: The minimum period of time that must occur between dispenses of the
@@ -66,9 +63,7 @@ class MedicationRequestDispenseRequest(FhirBackboneElementBase):
             :param performer: Indicates the intended dispensing Organization specified by the prescriber.
         """
         super().__init__(
-            resourceType="MedicationRequestDispenseRequest",
             id_=id_,
-            meta=meta,
             extension=extension,
             initialFill=initialFill,
             dispenseInterval=dispenseInterval,

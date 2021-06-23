@@ -29,7 +29,6 @@ class ConsentDataMeaning(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ConsentDataMeaning",
             id_=id_,
             meta=meta,
             extension=extension,

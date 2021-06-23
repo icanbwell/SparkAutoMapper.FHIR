@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -39,7 +38,6 @@ class NutritionOrderEnteralFormula(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         baseFormulaType: Optional[CodeableConcept] = None,
         baseFormulaProductName: Optional[FhirString] = None,
@@ -54,7 +52,6 @@ class NutritionOrderEnteralFormula(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param baseFormulaType: The type of enteral or infant formula such as an adult standard formula with
         fiber or a soy-based infant formula.
@@ -81,9 +78,7 @@ class NutritionOrderEnteralFormula(FhirBackboneElementBase):
         instructions or information.
         """
         super().__init__(
-            resourceType="NutritionOrderEnteralFormula",
             id_=id_,
-            meta=meta,
             extension=extension,
             baseFormulaType=baseFormulaType,
             baseFormulaProductName=baseFormulaProductName,

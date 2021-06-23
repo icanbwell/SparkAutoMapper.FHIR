@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -34,7 +33,6 @@ class TaskRestriction(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         repetitions: Optional[positiveInt] = None,
         period: Optional[Period] = None,
@@ -56,7 +54,6 @@ class TaskRestriction(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param repetitions: Indicates the number of times the requested action should occur.
             :param period: Over what time-period is fulfillment sought.
@@ -64,9 +61,7 @@ class TaskRestriction(FhirBackboneElementBase):
         whom is fulfillment sought?
         """
         super().__init__(
-            resourceType="TaskRestriction",
             id_=id_,
-            meta=meta,
             extension=extension,
             repetitions=repetitions,
             period=period,

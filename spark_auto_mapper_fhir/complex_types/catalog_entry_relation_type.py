@@ -29,7 +29,6 @@ class CatalogEntryRelationType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CatalogEntryRelationType",
             id_=id_,
             meta=meta,
             extension=extension,

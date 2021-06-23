@@ -29,7 +29,6 @@ class ConditionalReadStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ConditionalReadStatus",
             id_=id_,
             meta=meta,
             extension=extension,

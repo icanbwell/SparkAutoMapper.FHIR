@@ -29,7 +29,6 @@ class EligibilityRequestPurpose(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="EligibilityRequestPurpose",
             id_=id_,
             meta=meta,
             extension=extension,

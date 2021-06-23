@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class ExampleScenarioActor(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         actorId: FhirString,
         type: ExampleScenarioActorType,
@@ -38,7 +36,6 @@ class ExampleScenarioActor(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param actorId: ID or acronym of actor.
         :param type: The type of actor - person or system.
@@ -46,9 +43,7 @@ class ExampleScenarioActor(FhirBackboneElementBase):
         :param description: The description of the actor.
         """
         super().__init__(
-            resourceType="ExampleScenarioActor",
             id_=id_,
-            meta=meta,
             extension=extension,
             actorId=actorId,
             type=type,

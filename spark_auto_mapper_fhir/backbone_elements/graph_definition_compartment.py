@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class GraphDefinitionCompartment(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         use: GraphCompartmentUse,
         code: CompartmentType,
@@ -42,7 +40,6 @@ class GraphDefinitionCompartment(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param use: Defines how the compartment rule is used - whether it it is used to test
         whether resources are subject to the rule, or whether it is a rule that must
@@ -53,9 +50,7 @@ class GraphDefinitionCompartment(FhirBackboneElementBase):
             :param description: Documentation for FHIRPath expression.
         """
         super().__init__(
-            resourceType="GraphDefinitionCompartment",
             id_=id_,
-            meta=meta,
             extension=extension,
             use=use,
             code=code,

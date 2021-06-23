@@ -29,7 +29,6 @@ class LocationMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="LocationMode",
             id_=id_,
             meta=meta,
             extension=extension,

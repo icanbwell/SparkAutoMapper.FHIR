@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class ConceptMapElement(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[code] = None,
         display: Optional[FhirString] = None,
@@ -37,7 +35,6 @@ class ConceptMapElement(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: Identity (code or path) or the element/item being mapped.
             :param display: The display for the code. The display is only provided to help editors when
@@ -45,9 +42,7 @@ class ConceptMapElement(FhirBackboneElementBase):
             :param target: A concept from the target value set that this concept maps to.
         """
         super().__init__(
-            resourceType="ConceptMapElement",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             display=display,

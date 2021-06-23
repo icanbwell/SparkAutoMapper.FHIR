@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class TestScriptDestination(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         index: FhirInteger,
         profile: Coding[Testscriptprofiledestinationtype],
@@ -40,16 +38,13 @@ class TestScriptDestination(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param index: Abstract name given to a destination server in this test script.  The name is
         provided as a number starting at 1.
             :param profile: The type of destination profile the test system supports.
         """
         super().__init__(
-            resourceType="TestScriptDestination",
             id_=id_,
-            meta=meta,
             extension=extension,
             index=index,
             profile=profile,

@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class SubstanceInstance(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         expiry: Optional[FhirDateTime] = None,
@@ -35,7 +33,6 @@ class SubstanceInstance(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param identifier: Identifier associated with the package/container (usually a label affixed
         directly).
@@ -44,9 +41,7 @@ class SubstanceInstance(FhirBackboneElementBase):
             :param quantity: The amount of the substance.
         """
         super().__init__(
-            resourceType="SubstanceInstance",
             id_=id_,
-            meta=meta,
             extension=extension,
             identifier=identifier,
             expiry=expiry,

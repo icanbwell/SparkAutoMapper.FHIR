@@ -29,7 +29,6 @@ class GoalLifecycleStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="GoalLifecycleStatus",
             id_=id_,
             meta=meta,
             extension=extension,

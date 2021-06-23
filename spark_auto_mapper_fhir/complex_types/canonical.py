@@ -29,7 +29,6 @@ class canonical(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="canonical",
             id_=id_,
             meta=meta,
             extension=extension,

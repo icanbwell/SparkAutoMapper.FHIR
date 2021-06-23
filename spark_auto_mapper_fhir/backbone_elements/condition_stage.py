@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class ConditionStage(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         summary: Optional[CodeableConcept] = None,
         assessment: Optional[
@@ -44,7 +42,6 @@ class ConditionStage(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param summary: A simple summary of the stage such as "Stage 3". The determination of the
         stage is disease-specific.
@@ -53,9 +50,7 @@ class ConditionStage(FhirBackboneElementBase):
             :param type: The kind of staging, such as pathological or clinical staging.
         """
         super().__init__(
-            resourceType="ConditionStage",
             id_=id_,
-            meta=meta,
             extension=extension,
             summary=summary,
             assessment=assessment,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class ClaimResponseItem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         itemSequence: positiveInt,
         noteNumber: Optional[FhirList[positiveInt]] = None,
@@ -41,7 +39,6 @@ class ClaimResponseItem(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param itemSequence: A number to uniquely reference the claim item entries.
             :param noteNumber: The numbers associated with notes below which apply to the adjudication of
@@ -53,9 +50,7 @@ class ClaimResponseItem(FhirBackboneElementBase):
         details which are simple items.
         """
         super().__init__(
-            resourceType="ClaimResponseItem",
             id_=id_,
-            meta=meta,
             extension=extension,
             itemSequence=itemSequence,
             noteNumber=noteNumber,

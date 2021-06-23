@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -37,7 +36,6 @@ class ProcedurePerformer(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         function: Optional[CodeableConcept] = None,
         actor: Reference[
@@ -55,7 +53,6 @@ class ProcedurePerformer(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param function: Distinguishes the type of involvement of the performer in the procedure. For
         example, surgeon, anaesthetist, endoscopist.
@@ -63,9 +60,7 @@ class ProcedurePerformer(FhirBackboneElementBase):
             :param onBehalfOf: The organization the device or practitioner was acting on behalf of.
         """
         super().__init__(
-            resourceType="ProcedurePerformer",
             id_=id_,
-            meta=meta,
             extension=extension,
             function=function,
             actor=actor,

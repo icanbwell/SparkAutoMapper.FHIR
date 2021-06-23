@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -37,7 +36,6 @@ class TimingRepeat(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         count: Optional[positiveInt] = None,
         countMax: Optional[positiveInt] = None,
@@ -57,7 +55,6 @@ class TimingRepeat(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param count: A total count of the desired number of repetitions across the duration of the
         entire timing specification. If countMax is present, this element indicates
@@ -91,9 +88,7 @@ class TimingRepeat(FhirBackboneElementBase):
         to be after the event.
         """
         super().__init__(
-            resourceType="TimingRepeat",
             id_=id_,
-            meta=meta,
             extension=extension,
             count=count,
             countMax=countMax,

@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class ExampleScenarioOperation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         number: FhirString,
         type: Optional[FhirString] = None,
@@ -48,7 +46,6 @@ class ExampleScenarioOperation(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param number: The sequential number of the interaction, e.g. 1.2.5.
         :param type: The type of operation - CRUD.
@@ -62,9 +59,7 @@ class ExampleScenarioOperation(FhirBackboneElementBase):
         :param response: Each resource instance used by the responder.
         """
         super().__init__(
-            resourceType="ExampleScenarioOperation",
             id_=id_,
-            meta=meta,
             extension=extension,
             number=number,
             type=type,

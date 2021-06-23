@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -37,7 +36,6 @@ class SubstanceSourceMaterialOrganism(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         family: Optional[CodeableConcept] = None,
         genus: Optional[CodeableConcept] = None,
@@ -51,7 +49,6 @@ class SubstanceSourceMaterialOrganism(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param family: The family of an organism shall be specified.
             :param genus: The genus of an organism shall be specified; refers to the Latin epithet of
@@ -69,9 +66,7 @@ class SubstanceSourceMaterialOrganism(FhirBackboneElementBase):
             :param organismGeneral: 4.9.13.7.1 Kingdom (Conditional).
         """
         super().__init__(
-            resourceType="SubstanceSourceMaterialOrganism",
             id_=id_,
-            meta=meta,
             extension=extension,
             family=family,
             genus=genus,

@@ -29,7 +29,6 @@ class NoteType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="NoteType",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -36,7 +35,6 @@ class RiskEvidenceSynthesisRiskEstimate(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         type: Optional[CodeableConcept[Riskestimatetype]] = None,
@@ -51,7 +49,6 @@ class RiskEvidenceSynthesisRiskEstimate(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param description: Human-readable summary of risk estimate.
         :param type: Examples include proportion and mean.
@@ -62,9 +59,7 @@ class RiskEvidenceSynthesisRiskEstimate(FhirBackboneElementBase):
         :param precisionEstimate: A description of the precision of the estimate for the effect.
         """
         super().__init__(
-            resourceType="RiskEvidenceSynthesisRiskEstimate",
             id_=id_,
-            meta=meta,
             extension=extension,
             description=description,
             type=type,

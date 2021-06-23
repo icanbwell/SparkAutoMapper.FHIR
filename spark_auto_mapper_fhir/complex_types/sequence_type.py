@@ -29,7 +29,6 @@ class sequenceType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="sequenceType",
             id_=id_,
             meta=meta,
             extension=extension,

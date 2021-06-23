@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class ImmunizationProtocolApplied(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         series: Optional[FhirString] = None,
         authority: Optional[Reference[Union[Organization]]] = None,
@@ -38,7 +36,6 @@ class ImmunizationProtocolApplied(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param series: One possible path to achieve presumed immunity against a disease - within the
         context of an authority.
@@ -47,9 +44,7 @@ class ImmunizationProtocolApplied(FhirBackboneElementBase):
             :param targetDisease: The vaccine preventable disease the dose is being administered against.
         """
         super().__init__(
-            resourceType="ImmunizationProtocolApplied",
             id_=id_,
-            meta=meta,
             extension=extension,
             series=series,
             authority=authority,

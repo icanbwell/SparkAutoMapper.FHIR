@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class SearchParameterComponent(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         definition: canonical,
         expression: FhirString,
@@ -33,16 +31,13 @@ class SearchParameterComponent(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param definition: The definition of the search parameter that describes this part.
             :param expression: A sub-expression that defines how to extract values for this component from
         the output of the main SearchParameter.expression.
         """
         super().__init__(
-            resourceType="SearchParameterComponent",
             id_=id_,
-            meta=meta,
             extension=extension,
             definition=definition,
             expression=expression,

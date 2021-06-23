@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -37,7 +36,6 @@ class StructureMapRule(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: id,
         source: FhirList[StructureMapSource],
@@ -49,7 +47,6 @@ class StructureMapRule(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param name: Name of the rule for internal references.
         :param source: Source inputs to the mapping.
@@ -59,9 +56,7 @@ class StructureMapRule(FhirBackboneElementBase):
         :param documentation: Documentation for this instance of data.
         """
         super().__init__(
-            resourceType="StructureMapRule",
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             source=source,

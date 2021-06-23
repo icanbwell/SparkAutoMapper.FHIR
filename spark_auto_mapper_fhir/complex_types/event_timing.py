@@ -29,7 +29,6 @@ class EventTiming(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="EventTiming",
             id_=id_,
             meta=meta,
             extension=extension,

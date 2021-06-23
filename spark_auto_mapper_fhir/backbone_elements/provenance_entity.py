@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -33,7 +32,6 @@ class ProvenanceEntity(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         role: ProvenanceEntityRole,
         what: Reference[Union[Resource]],
@@ -42,7 +40,6 @@ class ProvenanceEntity(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param role: How the entity was used during the activity.
             :param what: Identity of the  Entity used. May be a logical or physical uri and maybe
@@ -53,9 +50,7 @@ class ProvenanceEntity(FhirBackboneElementBase):
         activity which generated the entity.
         """
         super().__init__(
-            resourceType="ProvenanceEntity",
             id_=id_,
-            meta=meta,
             extension=extension,
             role=role,
             what=what,

@@ -29,7 +29,6 @@ class ListStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ListStatus",
             id_=id_,
             meta=meta,
             extension=extension,

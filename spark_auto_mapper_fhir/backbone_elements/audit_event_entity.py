@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -43,7 +42,6 @@ class AuditEventEntity(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         what: Optional[Reference[Union[Resource]]] = None,
         type: Optional[Coding] = None,
@@ -58,7 +56,6 @@ class AuditEventEntity(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param what: Identifies a specific instance of the entity. The reference should be version
         specific.
@@ -72,9 +69,7 @@ class AuditEventEntity(FhirBackboneElementBase):
             :param detail: Tagged value pairs for conveying additional information about the entity.
         """
         super().__init__(
-            resourceType="AuditEventEntity",
             id_=id_,
-            meta=meta,
             extension=extension,
             what=what,
             type=type,

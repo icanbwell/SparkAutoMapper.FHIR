@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class SubstanceAmount(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         amountType: Optional[CodeableConcept] = None,
         amountText: Optional[FhirString] = None,
@@ -37,7 +35,6 @@ class SubstanceAmount(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param amountType: Most elements that require a quantitative value will also have a field called
         amount type. Amount type should always be specified because the actual value
@@ -50,9 +47,7 @@ class SubstanceAmount(FhirBackboneElementBase):
             :param referenceRange: Reference range of possible or expected values.
         """
         super().__init__(
-            resourceType="SubstanceAmount",
             id_=id_,
-            meta=meta,
             extension=extension,
             amountType=amountType,
             amountText=amountText,

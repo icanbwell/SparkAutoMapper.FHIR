@@ -29,7 +29,6 @@ class SpecimenStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SpecimenStatus",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class VariableType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="VariableType",
             id_=id_,
             meta=meta,
             extension=extension,

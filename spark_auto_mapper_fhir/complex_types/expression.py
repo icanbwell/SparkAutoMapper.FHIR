@@ -49,7 +49,6 @@ class Expression(FhirComplexTypeBase):
             :param reference: A URI that defines where the expression is found.
         """
         super().__init__(
-            resourceType="Expression",
             id_=id_,
             meta=meta,
             extension=extension,

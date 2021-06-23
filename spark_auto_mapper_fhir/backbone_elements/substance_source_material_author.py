@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class SubstanceSourceMaterialAuthor(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         authorType: Optional[CodeableConcept] = None,
         authorDescription: Optional[FhirString] = None,
@@ -33,7 +31,6 @@ class SubstanceSourceMaterialAuthor(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param authorType: The type of author of an organism species shall be specified. The
         parenthetical author of an organism species refers to the first author who
@@ -46,9 +43,7 @@ class SubstanceSourceMaterialAuthor(FhirBackboneElementBase):
         rank).
         """
         super().__init__(
-            resourceType="SubstanceSourceMaterialAuthor",
             id_=id_,
-            meta=meta,
             extension=extension,
             authorType=authorType,
             authorDescription=authorDescription,

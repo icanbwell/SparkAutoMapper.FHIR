@@ -29,7 +29,6 @@ class AssertionResponseTypes(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AssertionResponseTypes",
             id_=id_,
             meta=meta,
             extension=extension,

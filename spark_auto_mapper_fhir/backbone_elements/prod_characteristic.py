@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class ProdCharacteristic(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         height: Optional[Quantity] = None,
         width: Optional[Quantity] = None,
@@ -49,7 +47,6 @@ class ProdCharacteristic(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param height: Where applicable, the height can be specified using a numerical value and its
         unit of measurement The unit of measurement shall be specified in accordance
@@ -86,9 +83,7 @@ class ProdCharacteristic(FhirBackboneElementBase):
         vocabulary shall be used The term and the term identifier shall be used.
         """
         super().__init__(
-            resourceType="ProdCharacteristic",
             id_=id_,
-            meta=meta,
             extension=extension,
             height=height,
             width=width,

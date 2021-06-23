@@ -37,7 +37,6 @@ class Money(FhirComplexTypeBase):
         :param currency: ISO 4217 Currency Code.
         """
         super().__init__(
-            resourceType="Money",
             id_=id_,
             meta=meta,
             extension=extension,

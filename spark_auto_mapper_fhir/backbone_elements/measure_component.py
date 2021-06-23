@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class MeasureComponent(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[CodeableConcept] = None,
         description: Optional[FhirString] = None,
@@ -35,7 +33,6 @@ class MeasureComponent(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: Indicates a meaning for the stratifier component. This can be as simple as a
         unique identifier, or it can establish meaning in a broader context by drawing
@@ -46,9 +43,7 @@ class MeasureComponent(FhirBackboneElementBase):
         referenced library, but it may also be a path to a stratifier element.
         """
         super().__init__(
-            resourceType="MeasureComponent",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             description=description,

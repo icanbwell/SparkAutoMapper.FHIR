@@ -29,7 +29,6 @@ class EndpointStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="EndpointStatus",
             id_=id_,
             meta=meta,
             extension=extension,

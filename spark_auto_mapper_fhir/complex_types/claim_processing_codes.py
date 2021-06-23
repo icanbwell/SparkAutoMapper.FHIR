@@ -29,7 +29,6 @@ class ClaimProcessingCodes(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ClaimProcessingCodes",
             id_=id_,
             meta=meta,
             extension=extension,

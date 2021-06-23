@@ -29,7 +29,6 @@ class SearchComparator(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SearchComparator",
             id_=id_,
             meta=meta,
             extension=extension,

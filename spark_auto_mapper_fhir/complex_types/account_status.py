@@ -29,7 +29,6 @@ class AccountStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AccountStatus",
             id_=id_,
             meta=meta,
             extension=extension,

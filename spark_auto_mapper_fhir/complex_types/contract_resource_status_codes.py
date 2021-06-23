@@ -29,7 +29,6 @@ class ContractResourceStatusCodes(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ContractResourceStatusCodes",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class MedicinalProductPharmaceuticalRouteOfAdministration(FhirBackboneElementBas
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept,
         firstDose: Optional[Quantity] = None,
@@ -46,7 +44,6 @@ class MedicinalProductPharmaceuticalRouteOfAdministration(FhirBackboneElementBas
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: Coded expression for the route.
             :param firstDose: The first dose (dose quantity) administered in humans can be specified, for a
@@ -66,9 +63,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministration(FhirBackboneElementBas
             :param targetSpecies: A species for which this route applies.
         """
         super().__init__(
-            resourceType="MedicinalProductPharmaceuticalRouteOfAdministration",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             firstDose=firstDose,

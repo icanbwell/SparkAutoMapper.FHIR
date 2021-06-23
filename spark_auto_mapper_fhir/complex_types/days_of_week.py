@@ -29,7 +29,6 @@ class DaysOfWeek(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="DaysOfWeek",
             id_=id_,
             meta=meta,
             extension=extension,

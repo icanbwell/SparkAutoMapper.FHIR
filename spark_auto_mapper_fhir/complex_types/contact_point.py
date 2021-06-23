@@ -51,7 +51,6 @@ class ContactPoint(FhirComplexTypeBase):
             :param period: Time period when the contact point was/is in use.
         """
         super().__init__(
-            resourceType="ContactPoint",
             id_=id_,
             meta=meta,
             extension=extension,

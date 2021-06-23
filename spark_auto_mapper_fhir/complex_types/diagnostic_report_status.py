@@ -29,7 +29,6 @@ class DiagnosticReportStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="DiagnosticReportStatus",
             id_=id_,
             meta=meta,
             extension=extension,

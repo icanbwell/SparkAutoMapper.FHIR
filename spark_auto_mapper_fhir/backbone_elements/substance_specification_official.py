@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class SubstanceSpecificationOfficial(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         authority: Optional[CodeableConcept] = None,
         status: Optional[CodeableConcept] = None,
@@ -35,16 +33,13 @@ class SubstanceSpecificationOfficial(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param authority: Which authority uses this official name.
         :param status: The status of the official name.
         :param date: Date of official name change.
         """
         super().__init__(
-            resourceType="SubstanceSpecificationOfficial",
             id_=id_,
-            meta=meta,
             extension=extension,
             authority=authority,
             status=status,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class DeviceMetricCalibration(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[DeviceMetricCalibrationType] = None,
         state: Optional[DeviceMetricCalibrationState] = None,
@@ -39,16 +37,13 @@ class DeviceMetricCalibration(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: Describes the type of the calibration method.
         :param state: Describes the state of the calibration.
         :param time: Describes the time last calibration has been performed.
         """
         super().__init__(
-            resourceType="DeviceMetricCalibration",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             state=state,

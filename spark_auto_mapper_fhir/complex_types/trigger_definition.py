@@ -47,7 +47,6 @@ class TriggerDefinition(FhirComplexTypeBase):
         of the trigger definition and returns whether or not the trigger fires.
         """
         super().__init__(
-            resourceType="TriggerDefinition",
             id_=id_,
             meta=meta,
             extension=extension,

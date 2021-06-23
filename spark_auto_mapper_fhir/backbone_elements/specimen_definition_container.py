@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -36,7 +35,6 @@ class SpecimenDefinitionContainer(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         material: Optional[CodeableConcept] = None,
         type: Optional[CodeableConcept] = None,
@@ -49,7 +47,6 @@ class SpecimenDefinitionContainer(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param material: The type of material of the container.
             :param type: The type of container used to contain this kind of specimen.
@@ -62,9 +59,7 @@ class SpecimenDefinitionContainer(FhirBackboneElementBase):
         specimen.
         """
         super().__init__(
-            resourceType="SpecimenDefinitionContainer",
             id_=id_,
-            meta=meta,
             extension=extension,
             material=material,
             type=type,

@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -35,7 +34,6 @@ class MessageHeaderDestination(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: Optional[FhirString] = None,
         target: Optional[Reference[Union[Device]]] = None,
@@ -47,7 +45,6 @@ class MessageHeaderDestination(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: Human-readable name for the target system.
             :param target: Identifies the target end system in situations where the initial message
@@ -57,9 +54,7 @@ class MessageHeaderDestination(FhirBackboneElementBase):
         department when routing to a specific application isn't sufficient.
         """
         super().__init__(
-            resourceType="MessageHeaderDestination",
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             target=target,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -34,7 +33,6 @@ class ClaimResponseError(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         itemSequence: Optional[positiveInt] = None,
         detailSequence: Optional[positiveInt] = None,
@@ -44,7 +42,6 @@ class ClaimResponseError(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param itemSequence: The sequence number of the line item submitted which contains the error. This
         value is omitted when the error occurs outside of the item structure.
@@ -58,9 +55,7 @@ class ClaimResponseError(FhirBackboneElementBase):
         not be adjudicated.
         """
         super().__init__(
-            resourceType="ClaimResponseError",
             id_=id_,
-            meta=meta,
             extension=extension,
             itemSequence=itemSequence,
             detailSequence=detailSequence,

@@ -29,7 +29,6 @@ class SearchModifierCode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SearchModifierCode",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class boolean(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="boolean",
             id_=id_,
             meta=meta,
             extension=extension,

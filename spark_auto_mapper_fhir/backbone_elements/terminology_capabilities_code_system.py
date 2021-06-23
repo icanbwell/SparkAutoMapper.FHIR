@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class TerminologyCapabilitiesCodeSystem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         uri: Optional[canonical] = None,
         version: Optional[FhirList[TerminologyCapabilitiesVersion]] = None,
@@ -37,16 +35,13 @@ class TerminologyCapabilitiesCodeSystem(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param uri: URI for the Code System.
         :param version: For the code system, a list of versions that are supported by the server.
         :param subsumption: True if subsumption is supported for this version of the code system.
         """
         super().__init__(
-            resourceType="TerminologyCapabilitiesCodeSystem",
             id_=id_,
-            meta=meta,
             extension=extension,
             uri=uri,
             version=version,

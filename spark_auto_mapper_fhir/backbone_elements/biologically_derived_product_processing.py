@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class BiologicallyDerivedProductProcessing(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         procedure: Optional[CodeableConcept] = None,
@@ -38,16 +36,13 @@ class BiologicallyDerivedProductProcessing(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param description: Description of of processing.
         :param procedure: Procesing code.
         :param additive: Substance added during processing.
         """
         super().__init__(
-            resourceType="BiologicallyDerivedProductProcessing",
             id_=id_,
-            meta=meta,
             extension=extension,
             description=description,
             procedure=procedure,

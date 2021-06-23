@@ -29,7 +29,6 @@ class QuestionnaireItemType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="QuestionnaireItemType",
             id_=id_,
             meta=meta,
             extension=extension,

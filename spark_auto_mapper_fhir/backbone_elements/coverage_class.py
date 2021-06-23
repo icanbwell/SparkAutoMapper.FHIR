@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class CoverageClass(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: CodeableConcept,
         value: FhirString,
@@ -34,7 +32,6 @@ class CoverageClass(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: The type of classification for which an insurer-specific class label or number
         and optional name is provided, for example may be used to identify a class of
@@ -43,9 +40,7 @@ class CoverageClass(FhirBackboneElementBase):
             :param name: A short description for the class.
         """
         super().__init__(
-            resourceType="CoverageClass",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             value=value,

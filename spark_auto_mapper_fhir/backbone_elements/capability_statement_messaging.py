@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class CapabilityStatementMessaging(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         endpoint: Optional[FhirList[CapabilityStatementEndpoint]] = None,
         reliableCache: Optional[unsignedInt] = None,
@@ -43,7 +41,6 @@ class CapabilityStatementMessaging(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param endpoint: An endpoint (network accessible address) to which messages and/or replies are
         to be sent.
@@ -56,9 +53,7 @@ class CapabilityStatementMessaging(FhirBackboneElementBase):
         receive.
         """
         super().__init__(
-            resourceType="CapabilityStatementMessaging",
             id_=id_,
-            meta=meta,
             extension=extension,
             endpoint=endpoint,
             reliableCache=reliableCache,

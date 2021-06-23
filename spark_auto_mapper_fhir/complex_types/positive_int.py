@@ -29,7 +29,6 @@ class positiveInt(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="positiveInt",
             id_=id_,
             meta=meta,
             extension=extension,

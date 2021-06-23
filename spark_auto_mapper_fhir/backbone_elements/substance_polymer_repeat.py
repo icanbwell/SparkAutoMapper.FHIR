@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class SubstancePolymerRepeat(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         numberOfUnits: Optional[FhirInteger] = None,
         averageMolecularFormula: Optional[FhirString] = None,
@@ -39,7 +37,6 @@ class SubstancePolymerRepeat(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param numberOfUnits: Todo.
         :param averageMolecularFormula: Todo.
@@ -47,9 +44,7 @@ class SubstancePolymerRepeat(FhirBackboneElementBase):
         :param repeatUnit: Todo.
         """
         super().__init__(
-            resourceType="SubstancePolymerRepeat",
             id_=id_,
-            meta=meta,
             extension=extension,
             numberOfUnits=numberOfUnits,
             averageMolecularFormula=averageMolecularFormula,

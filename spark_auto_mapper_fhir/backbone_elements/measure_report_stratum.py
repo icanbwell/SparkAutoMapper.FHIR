@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class MeasureReportStratum(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         value: Optional[CodeableConcept] = None,
         component: Optional[FhirList[MeasureReportComponent]] = None,
@@ -41,7 +39,6 @@ class MeasureReportStratum(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param value: The value for this stratum, expressed as a CodeableConcept. When defining
         stratifiers on complex values, the value must be rendered such that the value
@@ -53,9 +50,7 @@ class MeasureReportStratum(FhirBackboneElementBase):
         type and scoring method, and based on only the members of this stratum.
         """
         super().__init__(
-            resourceType="MeasureReportStratum",
             id_=id_,
-            meta=meta,
             extension=extension,
             value=value,
             component=component,

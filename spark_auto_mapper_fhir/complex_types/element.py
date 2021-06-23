@@ -44,7 +44,6 @@ class Element(FhirComplexTypeBase):
     requirements that SHALL be met as part of the definition of the extension.
         """
         super().__init__(
-            resourceType="Element",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class ResearchElementType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ResearchElementType",
             id_=id_,
             meta=meta,
             extension=extension,

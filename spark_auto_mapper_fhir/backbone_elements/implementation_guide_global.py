@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class ImplementationGuideGlobal(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: code,
         profile: canonical,
@@ -33,15 +31,12 @@ class ImplementationGuideGlobal(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: The type of resource that all instances must conform to.
         :param profile: A reference to the profile that all instances must conform to.
         """
         super().__init__(
-            resourceType="ImplementationGuideGlobal",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             profile=profile,

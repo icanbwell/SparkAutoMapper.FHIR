@@ -29,7 +29,6 @@ class StructureMapContextType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="StructureMapContextType",
             id_=id_,
             meta=meta,
             extension=extension,

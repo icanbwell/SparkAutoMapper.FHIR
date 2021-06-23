@@ -29,7 +29,6 @@ class integer(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="integer",
             id_=id_,
             meta=meta,
             extension=extension,

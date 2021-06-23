@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class InvoiceLineItem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         sequence: Optional[positiveInt] = None,
         priceComponent: Optional[FhirList[InvoicePriceComponent]] = None,
@@ -35,7 +33,6 @@ class InvoiceLineItem(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param sequence: Sequence in which the items appear on the invoice.
             :param priceComponent: The price for a ChargeItem may be calculated as a base price with
@@ -46,9 +43,7 @@ class InvoiceLineItem(FhirBackboneElementBase):
         prices have been calculated.
         """
         super().__init__(
-            resourceType="InvoiceLineItem",
             id_=id_,
-            meta=meta,
             extension=extension,
             sequence=sequence,
             priceComponent=priceComponent,

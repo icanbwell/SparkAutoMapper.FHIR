@@ -29,7 +29,6 @@ class ActionCardinalityBehavior(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ActionCardinalityBehavior",
             id_=id_,
             meta=meta,
             extension=extension,

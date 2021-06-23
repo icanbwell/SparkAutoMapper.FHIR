@@ -29,7 +29,6 @@ class PropertyRepresentation(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="PropertyRepresentation",
             id_=id_,
             meta=meta,
             extension=extension,

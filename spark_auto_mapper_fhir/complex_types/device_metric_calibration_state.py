@@ -29,7 +29,6 @@ class DeviceMetricCalibrationState(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="DeviceMetricCalibrationState",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class InvoiceStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="InvoiceStatus",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -36,7 +35,6 @@ class MedicationKnowledgeRegulatory(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         regulatoryAuthority: Reference[Union[Organization]],
         substitution: Optional[FhirList[MedicationKnowledgeSubstitution]] = None,
@@ -46,7 +44,6 @@ class MedicationKnowledgeRegulatory(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param regulatoryAuthority: The authority that is specifying the regulations.
             :param substitution: Specifies if changes are allowed when dispensing a medication from a
@@ -56,9 +53,7 @@ class MedicationKnowledgeRegulatory(FhirBackboneElementBase):
         period.
         """
         super().__init__(
-            resourceType="MedicationKnowledgeRegulatory",
             id_=id_,
-            meta=meta,
             extension=extension,
             regulatoryAuthority=regulatoryAuthority,
             substitution=substitution,

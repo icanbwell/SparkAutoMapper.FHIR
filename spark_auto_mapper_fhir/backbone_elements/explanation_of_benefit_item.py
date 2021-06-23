@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -95,7 +94,6 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         sequence: positiveInt,
         careTeamSequence: Optional[FhirList[positiveInt]] = None,
@@ -124,7 +122,6 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param sequence: A number to uniquely identify item entries.
             :param careTeamSequence: Care team members related to this service or product.
@@ -162,9 +159,7 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
             :param detail: Second-tier of goods and services.
         """
         super().__init__(
-            resourceType="ExplanationOfBenefitItem",
             id_=id_,
-            meta=meta,
             extension=extension,
             sequence=sequence,
             careTeamSequence=careTeamSequence,

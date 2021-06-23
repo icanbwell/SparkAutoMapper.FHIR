@@ -36,7 +36,6 @@ class Narrative(FhirComplexTypeBase):
         contain additional data.
         """
         super().__init__(
-            resourceType="Narrative",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -39,7 +38,6 @@ class StructureMapTarget(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         context: Optional[id] = None,
         contextType: Optional[StructureMapContextType] = None,
@@ -53,7 +51,6 @@ class StructureMapTarget(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param context: Type or variable this rule applies to.
         :param contextType: How to interpret the context.
@@ -65,9 +62,7 @@ class StructureMapTarget(FhirBackboneElementBase):
         :param parameter: Parameters to the transform.
         """
         super().__init__(
-            resourceType="StructureMapTarget",
             id_=id_,
-            meta=meta,
             extension=extension,
             context=context,
             contextType=contextType,

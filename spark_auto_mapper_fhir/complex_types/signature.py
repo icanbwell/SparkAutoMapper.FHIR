@@ -101,7 +101,6 @@ class Signature(FhirComplexTypeBase):
         electronically this element would be empty.
         """
         super().__init__(
-            resourceType="Signature",
             id_=id_,
             meta=meta,
             extension=extension,

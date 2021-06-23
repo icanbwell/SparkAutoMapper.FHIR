@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         action: CodeableConcept,
         date: Optional[FhirDateTime] = None,
@@ -39,7 +37,6 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param action: Describes the action that was taken or the observation that was made that
         reduces/eliminates the risk associated with the identified issue.
@@ -48,9 +45,7 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
         responsibility for the mitigation step occurring.
         """
         super().__init__(
-            resourceType="DetectedIssueMitigation",
             id_=id_,
-            meta=meta,
             extension=extension,
             action=action,
             date=date,

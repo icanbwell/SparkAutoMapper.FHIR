@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -50,7 +49,6 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         vaccineCode: Optional[FhirList[CodeableConcept]] = None,
         targetDisease: Optional[CodeableConcept] = None,
@@ -72,7 +70,6 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param vaccineCode: Vaccine(s) or vaccine group that pertain to the recommendation.
             :param targetDisease: The targeted disease for the recommendation.
@@ -93,9 +90,7 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         information.
         """
         super().__init__(
-            resourceType="ImmunizationRecommendationRecommendation",
             id_=id_,
-            meta=meta,
             extension=extension,
             vaccineCode=vaccineCode,
             targetDisease=targetDisease,

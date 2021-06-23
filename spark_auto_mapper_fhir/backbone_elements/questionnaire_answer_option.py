@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,22 +24,18 @@ class QuestionnaireAnswerOption(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         initialSelected: Optional[FhirBoolean] = None,
     ) -> None:
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param initialSelected: Indicates whether the answer value is selected when the list of possible
         answers is initially shown.
         """
         super().__init__(
-            resourceType="QuestionnaireAnswerOption",
             id_=id_,
-            meta=meta,
             extension=extension,
             initialSelected=initialSelected,
         )

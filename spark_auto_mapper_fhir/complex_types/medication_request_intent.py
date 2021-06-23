@@ -29,7 +29,6 @@ class medicationRequestIntent(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="medicationRequestIntent",
             id_=id_,
             meta=meta,
             extension=extension,

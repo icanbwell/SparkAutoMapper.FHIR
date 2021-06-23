@@ -29,7 +29,6 @@ class CodeSystemContentMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CodeSystemContentMode",
             id_=id_,
             meta=meta,
             extension=extension,

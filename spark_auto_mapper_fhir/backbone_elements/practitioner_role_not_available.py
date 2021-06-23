@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class PractitionerRoleNotAvailable(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: FhirString,
         during: Optional[Period] = None,
@@ -33,16 +31,13 @@ class PractitionerRoleNotAvailable(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param description: The reason that can be presented to the user as to why this time is not
         available.
             :param during: Service is not available (seasonally or for a public holiday) from this date.
         """
         super().__init__(
-            resourceType="PractitionerRoleNotAvailable",
             id_=id_,
-            meta=meta,
             extension=extension,
             description=description,
             during=during,

@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -54,7 +53,6 @@ class ExplanationOfBenefitBenefitBalance(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: CodeableConcept[Benefitcategorycodes],
         excluded: Optional[FhirBoolean] = None,
@@ -68,7 +66,6 @@ class ExplanationOfBenefitBenefitBalance(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param category: Code to identify the general type of benefits under which products and
         services are provided.
@@ -84,9 +81,7 @@ class ExplanationOfBenefitBenefitBalance(FhirBackboneElementBase):
             :param financial: Benefits Used to date.
         """
         super().__init__(
-            resourceType="ExplanationOfBenefitBenefitBalance",
             id_=id_,
-            meta=meta,
             extension=extension,
             category=category,
             excluded=excluded,

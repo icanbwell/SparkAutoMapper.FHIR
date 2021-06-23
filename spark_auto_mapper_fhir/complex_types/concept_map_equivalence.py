@@ -29,7 +29,6 @@ class ConceptMapEquivalence(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ConceptMapEquivalence",
             id_=id_,
             meta=meta,
             extension=extension,

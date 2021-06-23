@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -40,7 +39,6 @@ class DocumentReferenceContext(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         encounter: Optional[
             FhirList[Reference[Union[Encounter, EpisodeOfCare]]]
@@ -55,7 +53,6 @@ class DocumentReferenceContext(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param encounter: Describes the clinical encounter or type of care that the document content is
         associated with.
@@ -73,9 +70,7 @@ class DocumentReferenceContext(FhirBackboneElementBase):
             :param related: Related identifiers or resources associated with the DocumentReference.
         """
         super().__init__(
-            resourceType="DocumentReferenceContext",
             id_=id_,
-            meta=meta,
             extension=extension,
             encounter=encounter,
             event=event,

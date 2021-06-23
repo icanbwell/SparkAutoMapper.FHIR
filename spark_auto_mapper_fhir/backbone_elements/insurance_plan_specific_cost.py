@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class InsurancePlanSpecificCost(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: CodeableConcept,
         benefit: Optional[FhirList[InsurancePlanBenefit1]] = None,
@@ -35,16 +33,13 @@ class InsurancePlanSpecificCost(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param category: General category of benefit (Medical; Dental; Vision; Drug; Mental Health;
         Substance Abuse; Hospice, Home Health).
             :param benefit: List of the specific benefits under this category of benefit.
         """
         super().__init__(
-            resourceType="InsurancePlanSpecificCost",
             id_=id_,
-            meta=meta,
             extension=extension,
             category=category,
             benefit=benefit,

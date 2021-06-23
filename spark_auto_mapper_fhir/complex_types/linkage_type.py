@@ -29,7 +29,6 @@ class LinkageType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="LinkageType",
             id_=id_,
             meta=meta,
             extension=extension,

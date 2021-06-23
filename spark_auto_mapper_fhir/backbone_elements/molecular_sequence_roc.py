@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class MolecularSequenceRoc(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         score: Optional[FhirList[FhirInteger]] = None,
         numTP: Optional[FhirList[FhirInteger]] = None,
@@ -40,7 +38,6 @@ class MolecularSequenceRoc(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param score: Invidual data point representing the GQ (genotype quality) score threshold.
             :param numTP: The number of true positives if the GQ score threshold was set to "score"
@@ -55,9 +52,7 @@ class MolecularSequenceRoc(FhirBackboneElementBase):
             :param fMeasure: Calculated fScore if the GQ score threshold was set to "score" field value.
         """
         super().__init__(
-            resourceType="MolecularSequenceRoc",
             id_=id_,
-            meta=meta,
             extension=extension,
             score=score,
             numTP=numTP,

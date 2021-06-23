@@ -29,7 +29,6 @@ class SearchEntryMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SearchEntryMode",
             id_=id_,
             meta=meta,
             extension=extension,

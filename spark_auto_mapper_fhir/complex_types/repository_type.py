@@ -29,7 +29,6 @@ class repositoryType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="repositoryType",
             id_=id_,
             meta=meta,
             extension=extension,

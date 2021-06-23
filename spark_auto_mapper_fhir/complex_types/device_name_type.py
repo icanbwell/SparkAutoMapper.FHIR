@@ -29,7 +29,6 @@ class DeviceNameType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="DeviceNameType",
             id_=id_,
             meta=meta,
             extension=extension,

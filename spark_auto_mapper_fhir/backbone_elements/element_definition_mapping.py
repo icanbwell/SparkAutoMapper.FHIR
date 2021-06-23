@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class ElementDefinitionMapping(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identity: id,
         language: Optional[code] = None,
@@ -36,7 +34,6 @@ class ElementDefinitionMapping(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param identity: An internal reference to the definition of a mapping.
         :param language: Identifies the computable language in which mapping.map is expressed.
@@ -44,9 +41,7 @@ class ElementDefinitionMapping(FhirBackboneElementBase):
         :param comment: Comments that provide information about the mapping or its use.
         """
         super().__init__(
-            resourceType="ElementDefinitionMapping",
             id_=id_,
-            meta=meta,
             extension=extension,
             identity=identity,
             language=language,

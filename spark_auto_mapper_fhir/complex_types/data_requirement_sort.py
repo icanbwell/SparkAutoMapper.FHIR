@@ -40,7 +40,6 @@ class DataRequirementSort(FhirComplexTypeBase):
             :param direction: The direction of the sort, ascending or descending.
         """
         super().__init__(
-            resourceType="DataRequirementSort",
             id_=id_,
             meta=meta,
             extension=extension,

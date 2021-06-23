@@ -29,7 +29,6 @@ class UnitsOfTime(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="UnitsOfTime",
             id_=id_,
             meta=meta,
             extension=extension,

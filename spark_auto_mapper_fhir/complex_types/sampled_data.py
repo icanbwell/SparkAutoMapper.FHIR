@@ -62,7 +62,6 @@ class SampledData(FhirComplexTypeBase):
         and "U" (above detection limit) can also be used in place of a decimal value.
         """
         super().__init__(
-            resourceType="SampledData",
             id_=id_,
             meta=meta,
             extension=extension,

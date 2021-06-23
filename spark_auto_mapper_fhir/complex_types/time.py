@@ -29,7 +29,6 @@ class time(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="time",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -34,7 +33,6 @@ class RiskEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[CodeableConcept[Precisionestimatetype]] = None,
         level: Optional[decimal] = None,
@@ -44,7 +42,6 @@ class RiskEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: Examples include confidence interval and interquartile range.
         :param level: Use 95 for a 95% confidence interval.
@@ -52,9 +49,7 @@ class RiskEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
         :param to: Upper bound of confidence interval.
         """
         super().__init__(
-            resourceType="RiskEvidenceSynthesisPrecisionEstimate",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             level=level,

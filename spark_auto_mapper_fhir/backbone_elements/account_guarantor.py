@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class AccountGuarantor(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         party: Reference[Union[Patient, RelatedPerson, Organization]],
         onHold: Optional[FhirBoolean] = None,
@@ -40,7 +38,6 @@ class AccountGuarantor(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param party: The entity who is responsible.
             :param onHold: A guarantor may be placed on credit hold or otherwise have their role
@@ -49,9 +46,7 @@ class AccountGuarantor(FhirBackboneElementBase):
         account.
         """
         super().__init__(
-            resourceType="AccountGuarantor",
             id_=id_,
-            meta=meta,
             extension=extension,
             party=party,
             onHold=onHold,

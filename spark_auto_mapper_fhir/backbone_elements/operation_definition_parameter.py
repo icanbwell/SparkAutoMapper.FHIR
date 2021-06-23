@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -41,7 +40,6 @@ class OperationDefinitionParameter(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: code,
         use: OperationParameterUse,
@@ -58,7 +56,6 @@ class OperationDefinitionParameter(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: The name of used to identify the parameter.
             :param use: Whether this is an input or an output parameter.
@@ -85,9 +82,7 @@ class OperationDefinitionParameter(FhirBackboneElementBase):
             :param part: The parts of a nested Parameter.
         """
         super().__init__(
-            resourceType="OperationDefinitionParameter",
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             use=use,

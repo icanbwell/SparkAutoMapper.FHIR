@@ -38,7 +38,6 @@ class ContactDetail(FhirComplexTypeBase):
         organization.
         """
         super().__init__(
-            resourceType="ContactDetail",
             id_=id_,
             meta=meta,
             extension=extension,

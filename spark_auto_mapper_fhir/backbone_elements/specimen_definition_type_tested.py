@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -41,7 +40,6 @@ class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         isDerived: Optional[FhirBoolean] = None,
         type: Optional[CodeableConcept] = None,
@@ -57,7 +55,6 @@ class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param isDerived: Primary of secondary specimen.
             :param type: The kind of specimen conditioned for testing expected by lab.
@@ -72,9 +69,7 @@ class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
         temperature interval, prior the testing process.
         """
         super().__init__(
-            resourceType="SpecimenDefinitionTypeTested",
             id_=id_,
-            meta=meta,
             extension=extension,
             isDerived=isDerived,
             type=type,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -35,7 +34,6 @@ class EncounterDiagnosis(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         condition: Reference[Union[Condition, Procedure]],
         use: Optional[CodeableConcept[Diagnosisrole]] = None,
@@ -44,7 +42,6 @@ class EncounterDiagnosis(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param condition: Reason the encounter takes place, as specified using information from another
         resource. For admissions, this is the admission diagnosis. The indication will
@@ -55,9 +52,7 @@ class EncounterDiagnosis(FhirBackboneElementBase):
             :param rank: Ranking of the diagnosis (for each role type).
         """
         super().__init__(
-            resourceType="EncounterDiagnosis",
             id_=id_,
-            meta=meta,
             extension=extension,
             condition=condition,
             use=use,

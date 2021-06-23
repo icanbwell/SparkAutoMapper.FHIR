@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class TerminologyCapabilitiesVersion(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[FhirString] = None,
         isDefault: Optional[FhirBoolean] = None,
@@ -42,7 +40,6 @@ class TerminologyCapabilitiesVersion(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: For version-less code systems, there should be a single version with no
         identifier.
@@ -53,9 +50,7 @@ class TerminologyCapabilitiesVersion(FhirBackboneElementBase):
             :param property: Properties supported for $lookup.
         """
         super().__init__(
-            resourceType="TerminologyCapabilitiesVersion",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             isDefault=isDefault,

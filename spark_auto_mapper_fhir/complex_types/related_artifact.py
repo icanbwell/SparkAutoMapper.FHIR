@@ -58,7 +58,6 @@ class RelatedArtifact(FhirComplexTypeBase):
         knowledge resource.
         """
         super().__init__(
-            resourceType="RelatedArtifact",
             id_=id_,
             meta=meta,
             extension=extension,

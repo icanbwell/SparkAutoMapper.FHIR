@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class Timing(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         event: Optional[FhirList[FhirDateTime]] = None,
         repeat: Optional[TimingRepeat] = None,
@@ -35,7 +33,6 @@ class Timing(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param event: Identifies specific times when the event occurs.
             :param repeat: A set of rules that describe when the event is scheduled.
@@ -47,9 +44,7 @@ class Timing(FhirBackboneElementBase):
         .repeat.bounds still applies over the code (and is not contained in the code).
         """
         super().__init__(
-            resourceType="Timing",
             id_=id_,
-            meta=meta,
             extension=extension,
             event=event,
             repeat=repeat,

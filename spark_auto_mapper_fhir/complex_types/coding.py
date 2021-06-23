@@ -59,7 +59,6 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
         list of available items (codes or displays).
         """
         super().__init__(
-            resourceType="Coding",
             id_=id_,
             meta=meta,
             extension=extension,

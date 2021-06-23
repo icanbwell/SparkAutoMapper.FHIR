@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class CoverageException(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: CodeableConcept[Examplecoveragefinancialexceptioncodes],
         period: Optional[Period] = None,
@@ -40,15 +38,12 @@ class CoverageException(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: The code for the specific exception.
         :param period: The timeframe during when the exception is in force.
         """
         super().__init__(
-            resourceType="CoverageException",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             period=period,

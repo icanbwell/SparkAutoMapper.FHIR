@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class TerminologyCapabilitiesExpansion(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         hierarchical: Optional[FhirBoolean] = None,
         paging: Optional[FhirBoolean] = None,
@@ -39,7 +37,6 @@ class TerminologyCapabilitiesExpansion(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param hierarchical: Whether the server can return nested value sets.
         :param paging: Whether the server supports paging on expansion.
@@ -48,9 +45,7 @@ class TerminologyCapabilitiesExpansion(FhirBackboneElementBase):
         :param textFilter: Documentation about text searching works.
         """
         super().__init__(
-            resourceType="TerminologyCapabilitiesExpansion",
             id_=id_,
-            meta=meta,
             extension=extension,
             hierarchical=hierarchical,
             paging=paging,

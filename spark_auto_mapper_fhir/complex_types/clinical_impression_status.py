@@ -29,7 +29,6 @@ class ClinicalImpressionStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ClinicalImpressionStatus",
             id_=id_,
             meta=meta,
             extension=extension,

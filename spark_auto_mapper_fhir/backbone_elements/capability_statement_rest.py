@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -43,7 +42,6 @@ class CapabilityStatementRest(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         mode: RestfulCapabilityMode,
         documentation: Optional[markdown] = None,
@@ -57,7 +55,6 @@ class CapabilityStatementRest(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param mode: Identifies whether this portion of the statement is describing the ability to
         initiate or receive restful operations.
@@ -79,9 +76,7 @@ class CapabilityStatementRest(FhirBackboneElementBase):
         its canonical URL .
         """
         super().__init__(
-            resourceType="CapabilityStatementRest",
             id_=id_,
-            meta=meta,
             extension=extension,
             mode=mode,
             documentation=documentation,

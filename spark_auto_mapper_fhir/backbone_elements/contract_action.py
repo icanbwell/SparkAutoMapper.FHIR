@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -102,7 +101,6 @@ class ContractAction(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         type: CodeableConcept[Contractactioncodes],
@@ -171,7 +169,6 @@ class ContractAction(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param doNotPerform: True if the term prohibits the  action.
             :param type: Activity or service obligation to be done or not done, performed or not
@@ -206,9 +203,7 @@ class ContractAction(FhirBackboneElementBase):
             :param securityLabelNumber: Security labels that protects the action.
         """
         super().__init__(
-            resourceType="ContractAction",
             id_=id_,
-            meta=meta,
             extension=extension,
             doNotPerform=doNotPerform,
             type=type,

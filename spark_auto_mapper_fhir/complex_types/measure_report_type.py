@@ -29,7 +29,6 @@ class MeasureReportType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="MeasureReportType",
             id_=id_,
             meta=meta,
             extension=extension,

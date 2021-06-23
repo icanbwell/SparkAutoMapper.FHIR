@@ -29,7 +29,6 @@ class StructureDefinitionKind(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="StructureDefinitionKind",
             id_=id_,
             meta=meta,
             extension=extension,

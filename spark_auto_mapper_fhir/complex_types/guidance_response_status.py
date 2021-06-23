@@ -29,7 +29,6 @@ class GuidanceResponseStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="GuidanceResponseStatus",
             id_=id_,
             meta=meta,
             extension=extension,

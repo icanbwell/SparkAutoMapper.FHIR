@@ -29,7 +29,6 @@ class ActionConditionKind(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ActionConditionKind",
             id_=id_,
             meta=meta,
             extension=extension,

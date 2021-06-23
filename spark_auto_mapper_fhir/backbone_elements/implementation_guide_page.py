@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class ImplementationGuidePage(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         title: FhirString,
         generation: GuidePageGeneration,
@@ -39,7 +37,6 @@ class ImplementationGuidePage(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param title: A short title used to represent this page in navigational structures such as
         table of contents, bread crumbs, etc.
@@ -47,9 +44,7 @@ class ImplementationGuidePage(FhirBackboneElementBase):
             :param page: Nested Pages/Sections under this page.
         """
         super().__init__(
-            resourceType="ImplementationGuidePage",
             id_=id_,
-            meta=meta,
             extension=extension,
             title=title,
             generation=generation,

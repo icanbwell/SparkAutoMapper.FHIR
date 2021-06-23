@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class SubscriptionChannel(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: SubscriptionChannelType,
         endpoint: Optional[url] = None,
@@ -39,7 +37,6 @@ class SubscriptionChannel(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: The type of channel to send notifications on.
             :param endpoint: The url that describes the actual end-point to send messages to.
@@ -50,9 +47,7 @@ class SubscriptionChannel(FhirBackboneElementBase):
             :param header: Additional headers / information to send as part of the notification.
         """
         super().__init__(
-            resourceType="SubscriptionChannel",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             endpoint=endpoint,

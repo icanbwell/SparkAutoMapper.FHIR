@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class DeviceDefinitionUdiDeviceIdentifier(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         deviceIdentifier: FhirString,
         issuer: uri,
@@ -35,7 +33,6 @@ class DeviceDefinitionUdiDeviceIdentifier(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param deviceIdentifier: The identifier that is to be associated with every Device that references this
         DeviceDefintiion for the issuer and jurisdication porvided in the
@@ -44,9 +41,7 @@ class DeviceDefinitionUdiDeviceIdentifier(FhirBackboneElementBase):
             :param jurisdiction: The jurisdiction to which the deviceIdentifier applies.
         """
         super().__init__(
-            resourceType="DeviceDefinitionUdiDeviceIdentifier",
             id_=id_,
-            meta=meta,
             extension=extension,
             deviceIdentifier=deviceIdentifier,
             issuer=issuer,

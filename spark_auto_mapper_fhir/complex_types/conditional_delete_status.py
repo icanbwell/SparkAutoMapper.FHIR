@@ -29,7 +29,6 @@ class ConditionalDeleteStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ConditionalDeleteStatus",
             id_=id_,
             meta=meta,
             extension=extension,

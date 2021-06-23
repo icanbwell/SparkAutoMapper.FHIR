@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class InsurancePlanLimit(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         value: Optional[Quantity] = None,
         code: Optional[CodeableConcept] = None,
@@ -33,16 +31,13 @@ class InsurancePlanLimit(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param value: The maximum amount of a service item a plan will pay for a covered benefit.
         For examples. wellness visits, or eyeglasses.
             :param code: The specific limit on the benefit.
         """
         super().__init__(
-            resourceType="InsurancePlanLimit",
             id_=id_,
-            meta=meta,
             extension=extension,
             value=value,
             code=code,

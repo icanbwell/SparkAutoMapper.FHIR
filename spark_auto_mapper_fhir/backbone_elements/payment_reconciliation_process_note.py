@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class PaymentReconciliationProcessNote(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[NoteType] = None,
         text: Optional[FhirString] = None,
@@ -33,15 +31,12 @@ class PaymentReconciliationProcessNote(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: The business purpose of the note text.
         :param text: The explanation or description associated with the processing.
         """
         super().__init__(
-            resourceType="PaymentReconciliationProcessNote",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             text=text,

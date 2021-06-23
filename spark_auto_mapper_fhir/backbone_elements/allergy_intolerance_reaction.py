@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         substance: Optional[CodeableConcept] = None,
         manifestation: FhirList[CodeableConcept],
@@ -45,7 +43,6 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param substance: Identification of the specific substance (or pharmaceutical product)
         considered to be responsible for the Adverse Reaction event. Note: the
@@ -69,9 +66,7 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
             :param note: Additional text about the adverse reaction event not captured in other fields.
         """
         super().__init__(
-            resourceType="AllergyIntoleranceReaction",
             id_=id_,
-            meta=meta,
             extension=extension,
             substance=substance,
             manifestation=manifestation,

@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -37,7 +36,6 @@ class ListEntry(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         flag: Optional[CodeableConcept[Patientmedicinechangetypes]] = None,
         deleted: Optional[FhirBoolean] = None,
@@ -47,7 +45,6 @@ class ListEntry(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param flag: The flag allows the system constructing the list to indicate the role and
         significance of the item in the list.
@@ -56,9 +53,7 @@ class ListEntry(FhirBackboneElementBase):
             :param item: A reference to the actual resource from which data was derived.
         """
         super().__init__(
-            resourceType="ListEntry",
             id_=id_,
-            meta=meta,
             extension=extension,
             flag=flag,
             deleted=deleted,

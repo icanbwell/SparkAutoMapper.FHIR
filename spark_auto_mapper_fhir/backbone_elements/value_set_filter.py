@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class ValueSetFilter(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         property: code,
         op: FilterOperator,
@@ -35,7 +33,6 @@ class ValueSetFilter(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param property: A code that identifies a property or a filter defined in the code system.
             :param op: The kind of operation to perform as a part of the filter criteria.
@@ -47,9 +44,7 @@ class ValueSetFilter(FhirBackboneElementBase):
         operation is 'exists'.
         """
         super().__init__(
-            resourceType="ValueSetFilter",
             id_=id_,
-            meta=meta,
             extension=extension,
             property=property,
             op=op,

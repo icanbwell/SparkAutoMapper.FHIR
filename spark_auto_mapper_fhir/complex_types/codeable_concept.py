@@ -45,7 +45,6 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
         user.
         """
         super().__init__(
-            resourceType="CodeableConcept",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class CodeSearchSupport(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CodeSearchSupport",
             id_=id_,
             meta=meta,
             extension=extension,

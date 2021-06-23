@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class MessageDefinitionFocus(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: code,
         profile: Optional[canonical] = None,
@@ -37,7 +35,6 @@ class MessageDefinitionFocus(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: The kind of resource that must be the focus for this message.
             :param profile: A profile that reflects constraints for the focal resource (and potentially
@@ -48,9 +45,7 @@ class MessageDefinitionFocus(FhirBackboneElementBase):
         to by a message in order for it to be valid against this MessageDefinition.
         """
         super().__init__(
-            resourceType="MessageDefinitionFocus",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             profile=profile,

@@ -29,7 +29,6 @@ class TriggerType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="TriggerType",
             id_=id_,
             meta=meta,
             extension=extension,

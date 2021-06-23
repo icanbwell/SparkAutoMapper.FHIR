@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -35,7 +34,6 @@ class StructureMapGroup(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: id,
         extends: Optional[id] = None,
@@ -47,7 +45,6 @@ class StructureMapGroup(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: A unique name for the group for the convenience of human readers.
             :param extends: Another group that this group adds rules to.
@@ -60,9 +57,7 @@ class StructureMapGroup(FhirBackboneElementBase):
             :param rule: Transform Rule from source to target.
         """
         super().__init__(
-            resourceType="StructureMapGroup",
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             extends=extends,

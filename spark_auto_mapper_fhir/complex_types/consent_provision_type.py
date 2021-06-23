@@ -29,7 +29,6 @@ class ConsentProvisionType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ConsentProvisionType",
             id_=id_,
             meta=meta,
             extension=extension,

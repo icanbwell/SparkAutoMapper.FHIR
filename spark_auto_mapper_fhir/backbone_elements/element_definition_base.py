@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class ElementDefinitionBase(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: FhirString,
         min: unsignedInt,
@@ -34,7 +32,6 @@ class ElementDefinitionBase(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param path: The Path that identifies the base element - this matches the
         ElementDefinition.path for that element. Across FHIR, there is only one base
@@ -44,9 +41,7 @@ class ElementDefinitionBase(FhirBackboneElementBase):
             :param max: Maximum cardinality of the base element identified by the path.
         """
         super().__init__(
-            resourceType="ElementDefinitionBase",
             id_=id_,
-            meta=meta,
             extension=extension,
             path=path,
             min=min,

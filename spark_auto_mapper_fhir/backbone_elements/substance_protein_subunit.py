@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class SubstanceProteinSubunit(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         subunit: Optional[FhirInteger] = None,
         sequence: Optional[FhirString] = None,
@@ -42,7 +40,6 @@ class SubstanceProteinSubunit(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param subunit: Index of primary sequences of amino acids linked through peptide bonds in
         order of decreasing length. Sequences of the same length will be ordered by
@@ -72,9 +69,7 @@ class SubstanceProteinSubunit(FhirBackboneElementBase):
             :param cTerminalModification: The modification at the C-terminal shall be specified.
         """
         super().__init__(
-            resourceType="SubstanceProteinSubunit",
             id_=id_,
-            meta=meta,
             extension=extension,
             subunit=subunit,
             sequence=sequence,

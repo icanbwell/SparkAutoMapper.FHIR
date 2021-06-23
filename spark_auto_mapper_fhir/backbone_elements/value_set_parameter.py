@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,23 +24,19 @@ class ValueSetParameter(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: FhirString,
     ) -> None:
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: Name of the input parameter to the $expand operation; may be a server-assigned
         name for additional default or other server-supplied parameters used to
         control the expansion process.
         """
         super().__init__(
-            resourceType="ValueSetParameter",
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
         )

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -48,7 +47,6 @@ class ContractSecurityLabel(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         number: Optional[FhirList[unsignedInt]] = None,
         classification: Coding[Contractresourcescopecodes],
@@ -60,7 +58,6 @@ class ContractSecurityLabel(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param number: Number used to link this term or term element to the applicable Security
         Label.
@@ -72,9 +69,7 @@ class ContractSecurityLabel(FhirBackboneElementBase):
         elements are to be protected.
         """
         super().__init__(
-            resourceType="ContractSecurityLabel",
             id_=id_,
-            meta=meta,
             extension=extension,
             number=number,
             classification=classification,

@@ -29,7 +29,6 @@ class ParticipantRequired(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ParticipantRequired",
             id_=id_,
             meta=meta,
             extension=extension,

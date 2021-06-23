@@ -29,7 +29,6 @@ class CapabilityStatementKind(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CapabilityStatementKind",
             id_=id_,
             meta=meta,
             extension=extension,

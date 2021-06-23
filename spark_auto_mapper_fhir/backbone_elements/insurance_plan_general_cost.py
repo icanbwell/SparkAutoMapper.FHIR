@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class InsurancePlanGeneralCost(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[CodeableConcept] = None,
         groupSize: Optional[positiveInt] = None,
@@ -37,7 +35,6 @@ class InsurancePlanGeneralCost(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: Type of cost.
         :param groupSize: Number of participants enrolled in the plan.
@@ -45,9 +42,7 @@ class InsurancePlanGeneralCost(FhirBackboneElementBase):
         :param comment: Additional information about the general costs associated with this plan.
         """
         super().__init__(
-            resourceType="InsurancePlanGeneralCost",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             groupSize=groupSize,

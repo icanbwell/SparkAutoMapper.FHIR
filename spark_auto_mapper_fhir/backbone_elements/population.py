@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class Population(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         gender: Optional[CodeableConcept] = None,
         race: Optional[CodeableConcept] = None,
@@ -35,7 +33,6 @@ class Population(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param gender: The gender of the specific population.
             :param race: Race of the specific population.
@@ -43,9 +40,7 @@ class Population(FhirBackboneElementBase):
         applies.
         """
         super().__init__(
-            resourceType="Population",
             id_=id_,
-            meta=meta,
             extension=extension,
             gender=gender,
             race=race,

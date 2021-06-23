@@ -41,7 +41,6 @@ class Contributor(FhirComplexTypeBase):
         contributor.
         """
         super().__init__(
-            resourceType="Contributor",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class ExplanationOfBenefitStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ExplanationOfBenefitStatus",
             id_=id_,
             meta=meta,
             extension=extension,

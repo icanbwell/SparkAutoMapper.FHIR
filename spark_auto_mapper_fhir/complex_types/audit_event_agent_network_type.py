@@ -29,7 +29,6 @@ class AuditEventAgentNetworkType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AuditEventAgentNetworkType",
             id_=id_,
             meta=meta,
             extension=extension,

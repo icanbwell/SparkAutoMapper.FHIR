@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class DocumentReferenceContent(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         attachment: Attachment,
         format: Optional[Coding] = None,
@@ -33,7 +31,6 @@ class DocumentReferenceContent(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param attachment: The document or URL of the document along with critical metadata to prove
         content has integrity.
@@ -41,9 +38,7 @@ class DocumentReferenceContent(FhirBackboneElementBase):
         document conforms to beyond the base format indicated in the mimeType.
         """
         super().__init__(
-            resourceType="DocumentReferenceContent",
             id_=id_,
-            meta=meta,
             extension=extension,
             attachment=attachment,
             format=format,

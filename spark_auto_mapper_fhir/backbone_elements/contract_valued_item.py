@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -48,7 +47,6 @@ class ContractValuedItem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         effectiveTime: Optional[FhirDateTime] = None,
@@ -79,7 +77,6 @@ class ContractValuedItem(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param identifier: Identifies a Contract Valued Item instance.
             :param effectiveTime: Indicates the time during which this Contract ValuedItem information is
@@ -108,9 +105,7 @@ class ContractValuedItem(FhirBackboneElementBase):
         condition.
         """
         super().__init__(
-            resourceType="ContractValuedItem",
             id_=id_,
-            meta=meta,
             extension=extension,
             identifier=identifier,
             effectiveTime=effectiveTime,

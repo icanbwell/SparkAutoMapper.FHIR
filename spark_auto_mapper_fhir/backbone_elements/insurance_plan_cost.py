@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class InsurancePlanCost(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: CodeableConcept,
         applicability: Optional[CodeableConcept] = None,
@@ -37,7 +35,6 @@ class InsurancePlanCost(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: Type of cost (copay; individual cap; family cap; coinsurance; deductible).
             :param applicability: Whether the cost applies to in-network or out-of-network providers (in-
@@ -48,9 +45,7 @@ class InsurancePlanCost(FhirBackboneElementBase):
         rather than currency, e.g. 10% coinsurance).
         """
         super().__init__(
-            resourceType="InsurancePlanCost",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             applicability=applicability,

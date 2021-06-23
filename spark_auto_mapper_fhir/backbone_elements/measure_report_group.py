@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class MeasureReportGroup(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[CodeableConcept] = None,
         population: Optional[FhirList[MeasureReportPopulation]] = None,
@@ -41,7 +39,6 @@ class MeasureReportGroup(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: The meaning of the population group as defined in the measure definition.
             :param population: The populations that make up the population group, one for each type of
@@ -53,9 +50,7 @@ class MeasureReportGroup(FhirBackboneElementBase):
         for each stratifier defined by the measure.
         """
         super().__init__(
-            resourceType="MeasureReportGroup",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             population=population,

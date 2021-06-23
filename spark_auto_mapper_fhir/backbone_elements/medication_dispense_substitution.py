@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class MedicationDispenseSubstitution(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         wasSubstituted: FhirBoolean,
         type: Optional[CodeableConcept] = None,
@@ -43,7 +41,6 @@ class MedicationDispenseSubstitution(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param wasSubstituted: True if the dispenser dispensed a different drug or product from what was
         prescribed.
@@ -55,9 +52,7 @@ class MedicationDispenseSubstitution(FhirBackboneElementBase):
         substitution.
         """
         super().__init__(
-            resourceType="MedicationDispenseSubstitution",
             id_=id_,
-            meta=meta,
             extension=extension,
             wasSubstituted=wasSubstituted,
             type=type,

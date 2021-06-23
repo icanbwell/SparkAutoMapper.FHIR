@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -35,7 +34,6 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         operationType: Optional[CodeableConcept] = None,
         authorisationReferenceNumber: Optional[Identifier] = None,
@@ -47,7 +45,6 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param operationType: The type of manufacturing operation.
         :param authorisationReferenceNumber: Regulatory authorization reference number.
@@ -57,9 +54,7 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
         :param regulator: A regulator which oversees the operation.
         """
         super().__init__(
-            resourceType="MedicinalProductManufacturingBusinessOperation",
             id_=id_,
-            meta=meta,
             extension=extension,
             operationType=operationType,
             authorisationReferenceNumber=authorisationReferenceNumber,

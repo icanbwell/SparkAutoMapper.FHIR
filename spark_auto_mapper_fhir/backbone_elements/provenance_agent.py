@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -50,7 +49,6 @@ class ProvenanceAgent(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[CodeableConcept[Provenanceparticipanttype]] = None,
         role: Optional[FhirList[CodeableConcept]] = None,
@@ -80,7 +78,6 @@ class ProvenanceAgent(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: The participation the agent had with respect to the activity.
             :param role: The function of the agent with respect to the activity. The security role
@@ -89,9 +86,7 @@ class ProvenanceAgent(FhirBackboneElementBase):
             :param onBehalfOf: The individual, device, or organization for whom the change was made.
         """
         super().__init__(
-            resourceType="ProvenanceAgent",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             role=role,

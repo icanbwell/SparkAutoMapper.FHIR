@@ -29,7 +29,6 @@ class SlicingRules(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SlicingRules",
             id_=id_,
             meta=meta,
             extension=extension,

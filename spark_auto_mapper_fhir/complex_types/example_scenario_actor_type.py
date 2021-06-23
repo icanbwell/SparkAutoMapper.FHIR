@@ -29,7 +29,6 @@ class ExampleScenarioActorType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ExampleScenarioActorType",
             id_=id_,
             meta=meta,
             extension=extension,

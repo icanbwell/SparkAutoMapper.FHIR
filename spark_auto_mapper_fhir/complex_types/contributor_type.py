@@ -29,7 +29,6 @@ class ContributorType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ContributorType",
             id_=id_,
             meta=meta,
             extension=extension,

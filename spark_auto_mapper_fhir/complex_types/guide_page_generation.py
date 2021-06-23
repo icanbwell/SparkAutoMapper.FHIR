@@ -29,7 +29,6 @@ class GuidePageGeneration(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="GuidePageGeneration",
             id_=id_,
             meta=meta,
             extension=extension,

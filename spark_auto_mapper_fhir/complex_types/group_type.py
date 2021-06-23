@@ -29,7 +29,6 @@ class GroupType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="GroupType",
             id_=id_,
             meta=meta,
             extension=extension,

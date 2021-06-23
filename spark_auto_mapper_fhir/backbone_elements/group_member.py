@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -35,7 +34,6 @@ class GroupMember(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         entity: Reference[
             Union[
@@ -54,7 +52,6 @@ class GroupMember(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param entity: A reference to the entity that is a member of the group. Must be consistent
         with Group.type. If the entity is another group, then the type must be the
@@ -64,9 +61,7 @@ class GroupMember(FhirBackboneElementBase):
         may have been a member.
         """
         super().__init__(
-            resourceType="GroupMember",
             id_=id_,
-            meta=meta,
             extension=extension,
             entity=entity,
             period=period,

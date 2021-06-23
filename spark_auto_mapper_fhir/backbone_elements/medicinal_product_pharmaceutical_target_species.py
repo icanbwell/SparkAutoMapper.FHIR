@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class MedicinalProductPharmaceuticalTargetSpecies(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept,
         withdrawalPeriod: Optional[
@@ -37,16 +35,13 @@ class MedicinalProductPharmaceuticalTargetSpecies(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: Coded expression for the species.
             :param withdrawalPeriod: A species specific time during which consumption of animal product is not
         appropriate.
         """
         super().__init__(
-            resourceType="MedicinalProductPharmaceuticalTargetSpecies",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             withdrawalPeriod=withdrawalPeriod,

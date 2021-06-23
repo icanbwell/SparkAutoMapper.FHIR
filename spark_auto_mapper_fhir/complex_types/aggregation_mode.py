@@ -29,7 +29,6 @@ class AggregationMode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="AggregationMode",
             id_=id_,
             meta=meta,
             extension=extension,

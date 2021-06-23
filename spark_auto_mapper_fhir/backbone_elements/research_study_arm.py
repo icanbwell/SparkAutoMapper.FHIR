@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class ResearchStudyArm(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: FhirString,
         type: Optional[CodeableConcept] = None,
@@ -34,7 +32,6 @@ class ResearchStudyArm(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: Unique, human-readable label for this arm of the study.
             :param type: Categorization of study arm, e.g. experimental, active comparator, placebo
@@ -43,9 +40,7 @@ class ResearchStudyArm(FhirBackboneElementBase):
         a subject adhering to this arm.
         """
         super().__init__(
-            resourceType="ResearchStudyArm",
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             type=type,

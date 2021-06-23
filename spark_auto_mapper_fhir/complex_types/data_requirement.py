@@ -74,7 +74,6 @@ class DataRequirement(FhirComplexTypeBase):
             :param sort: Specifies the order of the results to be returned.
         """
         super().__init__(
-            resourceType="DataRequirement",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -181,7 +181,6 @@ class Extension(FhirComplexTypeBase):
         :param valueMeta: None
         """
         super().__init__(
-            resourceType="Extension",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class CompartmentType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CompartmentType",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class SubstanceSpecificationProperty(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[CodeableConcept] = None,
         code: Optional[CodeableConcept] = None,
@@ -35,7 +33,6 @@ class SubstanceSpecificationProperty(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param category: A category for this property, e.g. Physical, Chemical, Enzymatic.
             :param code: Property type e.g. viscosity, pH, isoelectric point.
@@ -43,9 +40,7 @@ class SubstanceSpecificationProperty(FhirBackboneElementBase):
         viscosity: measured at 20C with a pH of 7.1).
         """
         super().__init__(
-            resourceType="SubstanceSpecificationProperty",
             id_=id_,
-            meta=meta,
             extension=extension,
             category=category,
             code=code,

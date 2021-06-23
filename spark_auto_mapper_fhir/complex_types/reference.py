@@ -69,7 +69,6 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
         reference.
         """
         super().__init__(
-            resourceType="Reference",
             id_=id_,
             meta=meta,
             extension=extension,

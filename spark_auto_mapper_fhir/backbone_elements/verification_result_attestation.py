@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -47,7 +46,6 @@ class VerificationResultAttestation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         who: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
@@ -67,7 +65,6 @@ class VerificationResultAttestation(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param who: The individual or organization attesting to information.
             :param onBehalfOf: When the who is asserting on behalf of another (organization or individual).
@@ -83,9 +80,7 @@ class VerificationResultAttestation(FhirBackboneElementBase):
         information.
         """
         super().__init__(
-            resourceType="VerificationResultAttestation",
             id_=id_,
-            meta=meta,
             extension=extension,
             who=who,
             onBehalfOf=onBehalfOf,

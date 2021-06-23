@@ -29,7 +29,6 @@ class XPathUsageType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="XPathUsageType",
             id_=id_,
             meta=meta,
             extension=extension,

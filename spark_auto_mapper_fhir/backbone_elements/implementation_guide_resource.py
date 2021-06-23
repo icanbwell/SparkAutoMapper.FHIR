@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class ImplementationGuideResource(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         reference: Reference[Union[Resource]],
         fhirVersion: Optional[FhirList[FHIRVersion]] = None,
@@ -41,7 +39,6 @@ class ImplementationGuideResource(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param reference: Where this resource is found.
             :param fhirVersion: Indicates the FHIR Version(s) this artifact is intended to apply to. If no
@@ -54,9 +51,7 @@ class ImplementationGuideResource(FhirBackboneElementBase):
             :param groupingId: Reference to the id of the grouping this resource appears in.
         """
         super().__init__(
-            resourceType="ImplementationGuideResource",
             id_=id_,
-            meta=meta,
             extension=extension,
             reference=reference,
             fhirVersion=fhirVersion,

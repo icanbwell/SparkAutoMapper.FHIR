@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class SubstanceSpecificationRelationship(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         relationship: Optional[CodeableConcept] = None,
         isDefining: Optional[FhirBoolean] = None,
@@ -42,7 +40,6 @@ class SubstanceSpecificationRelationship(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param relationship: For example "salt to parent", "active moiety", "starting material".
             :param isDefining: For example where an enzyme strongly bonds with a particular substance, this
@@ -54,9 +51,7 @@ class SubstanceSpecificationRelationship(FhirBackboneElementBase):
             :param source: Supporting literature.
         """
         super().__init__(
-            resourceType="SubstanceSpecificationRelationship",
             id_=id_,
-            meta=meta,
             extension=extension,
             relationship=relationship,
             isDefining=isDefining,

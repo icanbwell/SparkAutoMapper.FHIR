@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class MedicationKnowledgeKinetics(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         areaUnderCurve: Optional[FhirList[Quantity]] = None,
         lethalDose50: Optional[FhirList[Quantity]] = None,
@@ -34,7 +32,6 @@ class MedicationKnowledgeKinetics(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param areaUnderCurve: The drug concentration measured at certain discrete points in time.
             :param lethalDose50: The median lethal dose of a drug.
@@ -42,9 +39,7 @@ class MedicationKnowledgeKinetics(FhirBackboneElementBase):
         substance in the body) to decrease by half.
         """
         super().__init__(
-            resourceType="MedicationKnowledgeKinetics",
             id_=id_,
-            meta=meta,
             extension=extension,
             areaUnderCurve=areaUnderCurve,
             lethalDose50=lethalDose50,

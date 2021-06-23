@@ -29,7 +29,6 @@ class Use(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="Use",
             id_=id_,
             meta=meta,
             extension=extension,

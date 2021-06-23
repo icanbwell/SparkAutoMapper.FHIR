@@ -29,7 +29,6 @@ class OperationParameterUse(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="OperationParameterUse",
             id_=id_,
             meta=meta,
             extension=extension,

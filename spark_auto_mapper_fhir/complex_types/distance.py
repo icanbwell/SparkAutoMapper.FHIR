@@ -29,7 +29,6 @@ class Distance(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="Distance",
             id_=id_,
             meta=meta,
             extension=extension,

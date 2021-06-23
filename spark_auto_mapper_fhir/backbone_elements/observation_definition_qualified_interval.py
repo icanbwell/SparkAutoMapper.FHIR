@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -42,7 +41,6 @@ class ObservationDefinitionQualifiedInterval(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[ObservationRangeCategory] = None,
         range: Optional[Range] = None,
@@ -58,7 +56,6 @@ class ObservationDefinitionQualifiedInterval(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param category: The category of interval of values for continuous or ordinal observations
         conforming to this ObservationDefinition.
@@ -75,9 +72,7 @@ class ObservationDefinitionQualifiedInterval(FhirBackboneElementBase):
             :param condition: Text based condition for which the reference range is valid.
         """
         super().__init__(
-            resourceType="ObservationDefinitionQualifiedInterval",
             id_=id_,
-            meta=meta,
             extension=extension,
             category=category,
             range=range,

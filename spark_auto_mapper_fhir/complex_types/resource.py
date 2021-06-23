@@ -55,7 +55,6 @@ class Resource(FhirComplexTypeBase):
         :param language: The base language in which the resource is written.
         """
         super().__init__(
-            resourceType="Resource",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class SpecimenCollection(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         collector: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         duration: Optional[Duration] = None,
@@ -42,7 +40,6 @@ class SpecimenCollection(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param collector: Person who collected the specimen.
             :param duration: The span of time over which the collection of a specimen occurred.
@@ -54,9 +51,7 @@ class SpecimenCollection(FhirBackboneElementBase):
         specimens.
         """
         super().__init__(
-            resourceType="SpecimenCollection",
             id_=id_,
-            meta=meta,
             extension=extension,
             collector=collector,
             duration=duration,

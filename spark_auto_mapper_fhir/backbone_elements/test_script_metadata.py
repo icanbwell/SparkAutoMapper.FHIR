@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class TestScriptMetadata(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         link: Optional[FhirList[TestScriptLink]] = None,
         capability: FhirList[TestScriptCapability],
@@ -35,16 +33,13 @@ class TestScriptMetadata(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param link: A link to the FHIR specification that this test is covering.
             :param capability: Capabilities that must exist and are assumed to function correctly on the FHIR
         server being tested.
         """
         super().__init__(
-            resourceType="TestScriptMetadata",
             id_=id_,
-            meta=meta,
             extension=extension,
             link=link,
             capability=capability,

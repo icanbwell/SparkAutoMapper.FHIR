@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class EncounterParticipant(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[FhirList[CodeableConcept]] = None,
         period: Optional[Period] = None,
@@ -42,7 +40,6 @@ class EncounterParticipant(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: Role of participant in encounter.
             :param period: The period of time that the specified participant participated in the
@@ -50,9 +47,7 @@ class EncounterParticipant(FhirBackboneElementBase):
             :param individual: Persons involved in the encounter other than the patient.
         """
         super().__init__(
-            resourceType="EncounterParticipant",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             period=period,

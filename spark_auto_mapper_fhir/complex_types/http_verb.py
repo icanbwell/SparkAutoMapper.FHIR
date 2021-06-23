@@ -29,7 +29,6 @@ class HTTPVerb(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="HTTPVerb",
             id_=id_,
             meta=meta,
             extension=extension,

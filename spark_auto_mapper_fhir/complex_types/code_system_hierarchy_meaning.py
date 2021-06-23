@@ -29,7 +29,6 @@ class CodeSystemHierarchyMeaning(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="CodeSystemHierarchyMeaning",
             id_=id_,
             meta=meta,
             extension=extension,

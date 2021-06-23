@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class ConsentVerification(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         verified: FhirBoolean,
         verifiedWith: Optional[Reference[Union[Patient, RelatedPerson]]] = None,
@@ -39,16 +37,13 @@ class ConsentVerification(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param verified: Has the instruction been verified.
         :param verifiedWith: Who verified the instruction (Patient, Relative or other Authorized Person).
         :param verificationDate: Date verification was collected.
         """
         super().__init__(
-            resourceType="ConsentVerification",
             id_=id_,
-            meta=meta,
             extension=extension,
             verified=verified,
             verifiedWith=verifiedWith,

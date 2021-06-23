@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -33,7 +32,6 @@ class BiologicallyDerivedProductCollection(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         collector: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         source: Optional[Reference[Union[Patient, Organization]]] = None,
@@ -41,16 +39,13 @@ class BiologicallyDerivedProductCollection(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param collector: Healthcare professional who is performing the collection.
             :param source: The patient or entity, such as a hospital or vendor in the case of a
         processed/manipulated/manufactured product, providing the product.
         """
         super().__init__(
-            resourceType="BiologicallyDerivedProductCollection",
             id_=id_,
-            meta=meta,
             extension=extension,
             collector=collector,
             source=source,

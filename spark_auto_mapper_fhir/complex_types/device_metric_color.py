@@ -29,7 +29,6 @@ class DeviceMetricColor(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="DeviceMetricColor",
             id_=id_,
             meta=meta,
             extension=extension,

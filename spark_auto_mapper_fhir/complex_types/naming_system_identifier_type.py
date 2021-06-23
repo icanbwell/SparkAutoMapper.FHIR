@@ -29,7 +29,6 @@ class NamingSystemIdentifierType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="NamingSystemIdentifierType",
             id_=id_,
             meta=meta,
             extension=extension,

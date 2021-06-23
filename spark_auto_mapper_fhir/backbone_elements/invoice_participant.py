@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -33,7 +32,6 @@ class InvoiceParticipant(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         role: Optional[CodeableConcept] = None,
         actor: Reference[
@@ -50,7 +48,6 @@ class InvoiceParticipant(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param role: Describes the type of involvement (e.g. transcriptionist, creator etc.). If
         the invoice has been created automatically, the Participant may be a billing
@@ -58,9 +55,7 @@ class InvoiceParticipant(FhirBackboneElementBase):
             :param actor: The device, practitioner, etc. who performed or participated in the service.
         """
         super().__init__(
-            resourceType="InvoiceParticipant",
             id_=id_,
-            meta=meta,
             extension=extension,
             role=role,
             actor=actor,

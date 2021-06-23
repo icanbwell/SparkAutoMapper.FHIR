@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class MedicationKnowledgeMedicineClassification(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: CodeableConcept,
         classification: Optional[FhirList[CodeableConcept]] = None,
@@ -33,7 +31,6 @@ class MedicationKnowledgeMedicineClassification(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: The type of category for the medication (for example, therapeutic
         classification, therapeutic sub-classification).
@@ -41,9 +38,7 @@ class MedicationKnowledgeMedicineClassification(FhirBackboneElementBase):
         hypertensive, antibiotic, etc.).
         """
         super().__init__(
-            resourceType="MedicationKnowledgeMedicineClassification",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             classification=classification,

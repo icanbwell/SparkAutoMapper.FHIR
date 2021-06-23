@@ -29,7 +29,6 @@ class GuideParameterCode(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="GuideParameterCode",
             id_=id_,
             meta=meta,
             extension=extension,

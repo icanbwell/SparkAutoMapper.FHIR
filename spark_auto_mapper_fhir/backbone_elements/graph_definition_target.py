@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class GraphDefinitionTarget(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: code,
         params: Optional[FhirString] = None,
@@ -43,7 +41,6 @@ class GraphDefinitionTarget(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param type: Type of resource this link refers to.
         :param params: A set of parameters to look up.
@@ -52,9 +49,7 @@ class GraphDefinitionTarget(FhirBackboneElementBase):
         :param link: Additional links from target resource.
         """
         super().__init__(
-            resourceType="GraphDefinitionTarget",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             params=params,

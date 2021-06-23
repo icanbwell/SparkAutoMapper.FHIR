@@ -29,7 +29,6 @@ class code(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="code",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class Age(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="Age",
             id_=id_,
             meta=meta,
             extension=extension,

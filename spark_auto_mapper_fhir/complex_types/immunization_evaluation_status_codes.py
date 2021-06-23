@@ -29,7 +29,6 @@ class ImmunizationEvaluationStatusCodes(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ImmunizationEvaluationStatusCodes",
             id_=id_,
             meta=meta,
             extension=extension,

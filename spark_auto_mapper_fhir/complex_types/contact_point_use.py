@@ -29,7 +29,6 @@ class ContactPointUse(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ContactPointUse",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class InsurancePlanContact(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         purpose: Optional[CodeableConcept[Contactentitytype]] = None,
         name: Optional[HumanName] = None,
@@ -42,7 +40,6 @@ class InsurancePlanContact(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param purpose: Indicates a purpose for which the contact can be reached.
             :param name: A name associated with the contact.
@@ -51,9 +48,7 @@ class InsurancePlanContact(FhirBackboneElementBase):
             :param address: Visiting or postal addresses for the contact.
         """
         super().__init__(
-            resourceType="InsurancePlanContact",
             id_=id_,
-            meta=meta,
             extension=extension,
             purpose=purpose,
             name=name,

@@ -29,7 +29,6 @@ class TypeDerivationRule(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="TypeDerivationRule",
             id_=id_,
             meta=meta,
             extension=extension,

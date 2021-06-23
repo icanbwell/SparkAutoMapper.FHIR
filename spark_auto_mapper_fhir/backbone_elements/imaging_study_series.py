@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -45,7 +44,6 @@ class ImagingStudySeries(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         uid: id,
         number: Optional[unsignedInt] = None,
@@ -63,7 +61,6 @@ class ImagingStudySeries(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param uid: The DICOM Series Instance UID for the series.
             :param number: The numeric identifier of this series in the study.
@@ -92,9 +89,7 @@ class ImagingStudySeries(FhirBackboneElementBase):
             :param instance: A single SOP instance within the series, e.g. an image, or presentation state.
         """
         super().__init__(
-            resourceType="ImagingStudySeries",
             id_=id_,
-            meta=meta,
             extension=extension,
             uid=uid,
             number=number,

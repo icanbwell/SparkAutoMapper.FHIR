@@ -5,7 +5,6 @@ from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class TestScriptCapability(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         required: FhirBoolean,
         validated: FhirBoolean,
@@ -41,7 +39,6 @@ class TestScriptCapability(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param required: Whether or not the test execution will require the given capabilities of the
         server in order for this test script to execute.
@@ -58,9 +55,7 @@ class TestScriptCapability(FhirBackboneElementBase):
         statement, then all tests in this script are skipped.
         """
         super().__init__(
-            resourceType="TestScriptCapability",
             id_=id_,
-            meta=meta,
             extension=extension,
             required=required,
             validated=validated,

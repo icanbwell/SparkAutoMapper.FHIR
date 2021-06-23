@@ -29,7 +29,6 @@ class GraphCompartmentRule(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="GraphCompartmentRule",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -29,7 +29,6 @@ class EventStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="EventStatus",
             id_=id_,
             meta=meta,
             extension=extension,

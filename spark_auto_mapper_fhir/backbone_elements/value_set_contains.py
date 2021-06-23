@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -33,7 +32,6 @@ class ValueSetContains(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         system: Optional[uri] = None,
         abstract: Optional[FhirBoolean] = None,
@@ -47,7 +45,6 @@ class ValueSetContains(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param system: An absolute URI which is the code system in which the code for this item in
         the expansion is defined.
@@ -73,9 +70,7 @@ class ValueSetContains(FhirBackboneElementBase):
             :param contains: Other codes and entries contained under this entry in the hierarchy.
         """
         super().__init__(
-            resourceType="ValueSetContains",
             id_=id_,
-            meta=meta,
             extension=extension,
             system=system,
             abstract=abstract,

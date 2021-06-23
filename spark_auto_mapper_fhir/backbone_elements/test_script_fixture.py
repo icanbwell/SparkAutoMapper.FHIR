@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class TestScriptFixture(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         autocreate: FhirBoolean,
         autodelete: FhirBoolean,
@@ -37,7 +35,6 @@ class TestScriptFixture(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param autocreate: Whether or not to implicitly create the fixture during setup. If true, the
         fixture is automatically created on each server being tested during setup,
@@ -51,9 +48,7 @@ class TestScriptFixture(FhirBackboneElementBase):
         operations).
         """
         super().__init__(
-            resourceType="TestScriptFixture",
             id_=id_,
-            meta=meta,
             extension=extension,
             autocreate=autocreate,
             autodelete=autodelete,

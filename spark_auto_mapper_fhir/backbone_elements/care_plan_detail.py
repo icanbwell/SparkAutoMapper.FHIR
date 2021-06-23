@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -64,7 +63,6 @@ class CarePlanDetail(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         kind: Optional[CarePlanActivityKind] = None,
         instantiatesCanonical: Optional[FhirList[canonical]] = None,
@@ -106,7 +104,6 @@ class CarePlanDetail(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param kind: A description of the kind of resource the in-line definition of a care plan
         activity is representing.  The CarePlan.activity.detail is an in-line
@@ -145,9 +142,7 @@ class CarePlanDetail(FhirBackboneElementBase):
         specifics about the activity such as body site, method, route, etc.
         """
         super().__init__(
-            resourceType="CarePlanDetail",
             id_=id_,
-            meta=meta,
             extension=extension,
             kind=kind,
             instantiatesCanonical=instantiatesCanonical,

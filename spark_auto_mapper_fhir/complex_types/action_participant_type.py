@@ -29,7 +29,6 @@ class ActionParticipantType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ActionParticipantType",
             id_=id_,
             meta=meta,
             extension=extension,

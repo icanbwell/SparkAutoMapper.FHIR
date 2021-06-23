@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class RelatedPersonCommunication(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         language: CodeableConcept,
         preferred: Optional[FhirBoolean] = None,
@@ -33,7 +31,6 @@ class RelatedPersonCommunication(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param language: The ISO-639-1 alpha 2 code in lower case for the language, optionally followed
         by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g.
@@ -43,9 +40,7 @@ class RelatedPersonCommunication(FhirBackboneElementBase):
         languages he masters up a certain level).
         """
         super().__init__(
-            resourceType="RelatedPersonCommunication",
             id_=id_,
-            meta=meta,
             extension=extension,
             language=language,
             preferred=preferred,

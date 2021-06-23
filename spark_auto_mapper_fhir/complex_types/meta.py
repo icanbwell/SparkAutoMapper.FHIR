@@ -62,7 +62,6 @@ class Meta(FhirComplexTypeBase):
         consider the tags when interpreting the meaning of a resource.
         """
         super().__init__(
-            resourceType="Meta",
             id_=id_,
             meta=meta,
             extension=extension,

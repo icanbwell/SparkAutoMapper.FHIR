@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -31,7 +30,6 @@ class ImplementationGuideManifest(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         rendering: Optional[url] = None,
         resource: FhirList[ImplementationGuideResource1],
@@ -42,7 +40,6 @@ class ImplementationGuideManifest(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param rendering: A pointer to official web page, PDF or other rendering of the implementation
         guide.
@@ -57,9 +54,7 @@ class ImplementationGuideManifest(FhirBackboneElementBase):
         hyperlink in a derived IG.
         """
         super().__init__(
-            resourceType="ImplementationGuideManifest",
             id_=id_,
-            meta=meta,
             extension=extension,
             rendering=rendering,
             resource=resource,

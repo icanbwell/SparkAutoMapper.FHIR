@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class ConceptMapUnmapped(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         mode: ConceptMapGroupUnmappedMode,
         code: Optional[code] = None,
@@ -39,7 +37,6 @@ class ConceptMapUnmapped(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param mode: Defines which action to take if there is no match for the source concept in
         the target system designated for the group. One of 3 actions are possible: use
@@ -56,9 +53,7 @@ class ConceptMapUnmapped(FhirBackboneElementBase):
         source concept.
         """
         super().__init__(
-            resourceType="ConceptMapUnmapped",
             id_=id_,
-            meta=meta,
             extension=extension,
             mode=mode,
             code=code,

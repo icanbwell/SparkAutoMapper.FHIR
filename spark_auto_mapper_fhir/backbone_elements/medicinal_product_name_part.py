@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class MedicinalProductNamePart(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         part: FhirString,
         type: Coding,
@@ -33,15 +31,12 @@ class MedicinalProductNamePart(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param part: A fragment of a product name.
         :param type: Idenifying type for this part of the name (e.g. strength part).
         """
         super().__init__(
-            resourceType="MedicinalProductNamePart",
             id_=id_,
-            meta=meta,
             extension=extension,
             part=part,
             type=type,

@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class MedicinalProductCountryLanguage(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         country: CodeableConcept,
         jurisdiction: Optional[CodeableConcept] = None,
@@ -35,16 +33,13 @@ class MedicinalProductCountryLanguage(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param country: Country code for where this name applies.
         :param jurisdiction: Jurisdiction code for where this name applies.
         :param language: Language code for this name.
         """
         super().__init__(
-            resourceType="MedicinalProductCountryLanguage",
             id_=id_,
-            meta=meta,
             extension=extension,
             country=country,
             jurisdiction=jurisdiction,

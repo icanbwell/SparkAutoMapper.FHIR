@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class NutritionOrderTexture(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         modifier: Optional[CodeableConcept] = None,
         foodType: Optional[CodeableConcept] = None,
@@ -33,7 +31,6 @@ class NutritionOrderTexture(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param modifier: Any texture modifications (for solid foods) that should be made, e.g. easy to
         chew, chopped, ground, and pureed.
@@ -41,9 +38,7 @@ class NutritionOrderTexture(FhirBackboneElementBase):
         applies to.  This could be all foods types.
         """
         super().__init__(
-            resourceType="NutritionOrderTexture",
             id_=id_,
-            meta=meta,
             extension=extension,
             modifier=modifier,
             foodType=foodType,

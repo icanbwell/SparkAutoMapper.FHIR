@@ -29,7 +29,6 @@ class RequestResourceType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="RequestResourceType",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class StructureMapSource(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         context: id,
         min: Optional[FhirInteger] = None,
@@ -46,7 +44,6 @@ class StructureMapSource(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param context: Type or variable this rule applies to.
             :param min: Specified minimum cardinality for the element. This is optional; if present,
@@ -66,9 +63,7 @@ class StructureMapSource(FhirBackboneElementBase):
         when content matching the source rule is found.
         """
         super().__init__(
-            resourceType="StructureMapSource",
             id_=id_,
-            meta=meta,
             extension=extension,
             context=context,
             min=min,

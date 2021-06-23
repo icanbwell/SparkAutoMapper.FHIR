@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class MolecularSequenceStructureVariant(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         variantType: Optional[CodeableConcept] = None,
         exact: Optional[FhirBoolean] = None,
@@ -43,7 +41,6 @@ class MolecularSequenceStructureVariant(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param variantType: Information about chromosome structure variation DNA change type.
             :param exact: Used to indicate if the outer and inner start-end values have the same
@@ -53,9 +50,7 @@ class MolecularSequenceStructureVariant(FhirBackboneElementBase):
             :param inner: Structural variant inner.
         """
         super().__init__(
-            resourceType="MolecularSequenceStructureVariant",
             id_=id_,
-            meta=meta,
             extension=extension,
             variantType=variantType,
             exact=exact,

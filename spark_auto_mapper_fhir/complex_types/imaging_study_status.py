@@ -29,7 +29,6 @@ class ImagingStudyStatus(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="ImagingStudyStatus",
             id_=id_,
             meta=meta,
             extension=extension,

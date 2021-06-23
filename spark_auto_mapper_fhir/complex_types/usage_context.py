@@ -40,7 +40,6 @@ class UsageContext(FhirComplexTypeBase):
         context.
         """
         super().__init__(
-            resourceType="UsageContext",
             id_=id_,
             meta=meta,
             extension=extension,

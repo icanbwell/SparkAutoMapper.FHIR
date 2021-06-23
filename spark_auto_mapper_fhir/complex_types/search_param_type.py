@@ -29,7 +29,6 @@ class SearchParamType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="SearchParamType",
             id_=id_,
             meta=meta,
             extension=extension,

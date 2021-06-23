@@ -26,6 +26,7 @@ class FhirValueSetConcept:
 class FhirValueSet:
     id_: str
     name: str
+    name_snake_case: str
     cleaned_name: str
     concepts: List[FhirValueSetConcept]
     url: str
@@ -163,7 +164,7 @@ class FhirXmlSchemaParser:
                 FhirEntity(
                     type_="ValueSet",
                     fhir_name=c.name,
-                    name_snake_case=FhirXmlSchemaParser.camel_to_snake(c.name),
+                    name_snake_case=c.name_snake_case,
                     cleaned_name=c.cleaned_name,
                     documentation=[],
                     properties=[],
@@ -254,9 +255,7 @@ class FhirXmlSchemaParser:
                         fhir_property.codeable_type = SmartName(
                             name=value_set.name,
                             cleaned_name=value_set.cleaned_name,
-                            snake_case_name=FhirXmlSchemaParser.camel_to_snake(
-                                value_set.cleaned_name
-                            ),
+                            snake_case_name=value_set.name_snake_case,
                         )
 
     @staticmethod
@@ -745,6 +744,9 @@ class FhirXmlSchemaParser:
                     FhirValueSet(
                         id_=id_,
                         name=name,
+                        name_snake_case=FhirXmlSchemaParser.camel_to_snake(
+                            FhirXmlSchemaParser.clean_name(name)
+                        ),
                         cleaned_name=FhirXmlSchemaParser.clean_name(name),
                         concepts=fhir_concepts,
                         url=url,
@@ -770,18 +772,7 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def clean_name(display: str) -> str:
-        cleaned_display: str = (
-            "".join([c.capitalize() for c in display.split(" ")])
-            .replace("-", "")
-            .replace(".", "")
-            .replace("&", "")
-            .replace("'", "")
-            .replace("(", "")
-            .replace(",", "")
-            .replace(")", "")
-            .replace("/", "")
-            .replace("+", "")
-        )
+        cleaned_display: str = "".join([c.capitalize() for c in display.split(" ")])
         cleaned_display = re.sub("[^0-9a-zA-Z]+", "_", cleaned_display)
         cleaned_display = FhirXmlSchemaParser.fix_python_keywords(cleaned_display)
         return cleaned_display
@@ -863,6 +854,7 @@ class FhirXmlSchemaParser:
                 FhirValueSet(
                     id_=id_,
                     name=name,
+                    name_snake_case=FhirXmlSchemaParser.camel_to_snake(name),
                     cleaned_name=FhirXmlSchemaParser.clean_name(name),
                     concepts=fhir_concepts,
                     url=url,

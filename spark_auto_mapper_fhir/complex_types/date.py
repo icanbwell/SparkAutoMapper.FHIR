@@ -29,7 +29,6 @@ class date(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="date",
             id_=id_,
             meta=meta,
             extension=extension,

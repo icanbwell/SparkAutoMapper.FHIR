@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class BundleSearch(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         mode: Optional[SearchEntryMode] = None,
         score: Optional[decimal] = None,
@@ -33,7 +31,6 @@ class BundleSearch(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param mode: Why this entry is in the result set - whether it's included as a match or
         because of an _include requirement, or to convey information or warning
@@ -41,9 +38,7 @@ class BundleSearch(FhirBackboneElementBase):
             :param score: When searching, the server's search ranking score for the entry.
         """
         super().__init__(
-            resourceType="BundleSearch",
             id_=id_,
-            meta=meta,
             extension=extension,
             mode=mode,
             score=score,

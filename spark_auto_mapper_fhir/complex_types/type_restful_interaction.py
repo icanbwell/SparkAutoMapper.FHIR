@@ -29,7 +29,6 @@ class TypeRestfulInteraction(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="TypeRestfulInteraction",
             id_=id_,
             meta=meta,
             extension=extension,

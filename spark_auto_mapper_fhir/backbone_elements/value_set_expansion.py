@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -32,7 +31,6 @@ class ValueSetExpansion(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[uri] = None,
         timestamp: FhirDateTime,
@@ -44,7 +42,6 @@ class ValueSetExpansion(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param identifier: An identifier that uniquely identifies this expansion of the valueset, based
         on a unique combination of the provided parameters, the system default
@@ -65,9 +62,7 @@ class ValueSetExpansion(FhirBackboneElementBase):
             :param contains: The codes that are contained in the value set expansion.
         """
         super().__init__(
-            resourceType="ValueSetExpansion",
             id_=id_,
-            meta=meta,
             extension=extension,
             identifier=identifier,
             timestamp=timestamp,

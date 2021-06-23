@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -28,7 +27,6 @@ class MedicationAdministrationDosage(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         text: Optional[FhirString] = None,
         site: Optional[CodeableConcept] = None,
@@ -39,7 +37,6 @@ class MedicationAdministrationDosage(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param text: Free text dosage can be used for cases where the dosage administered is too
         complex to code. When coded dosage is present, the free text dosage may still
@@ -61,9 +58,7 @@ class MedicationAdministrationDosage(FhirBackboneElementBase):
         swallowing a tablet or giving an injection.
         """
         super().__init__(
-            resourceType="MedicationAdministrationDosage",
             id_=id_,
-            meta=meta,
             extension=extension,
             text=text,
             site=site,

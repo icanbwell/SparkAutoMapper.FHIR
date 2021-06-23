@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class ConceptMapDependsOn(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         property: uri,
         system: Optional[canonical] = None,
@@ -36,7 +34,6 @@ class ConceptMapDependsOn(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param property: A reference to an element that holds a coded value that corresponds to a code
         system property. The idea is that the information model carries an element
@@ -49,9 +46,7 @@ class ConceptMapDependsOn(FhirBackboneElementBase):
         editing the concept map.
         """
         super().__init__(
-            resourceType="ConceptMapDependsOn",
             id_=id_,
-            meta=meta,
             extension=extension,
             property=property,
             system=system,

@@ -29,7 +29,6 @@ class RemittanceOutcome(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="RemittanceOutcome",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -46,7 +46,6 @@ class DataRequirementDateFilter(FhirComplexTypeBase):
         dateTime, Period, Schedule, or Timing.
         """
         super().__init__(
-            resourceType="DataRequirementDateFilter",
             id_=id_,
             meta=meta,
             extension=extension,

@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -26,7 +25,6 @@ class SubstanceSpecificationRepresentation(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[CodeableConcept] = None,
         representation: Optional[FhirString] = None,
@@ -35,7 +33,6 @@ class SubstanceSpecificationRepresentation(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: The type of structure (e.g. Full, Partial, Representative).
             :param representation: The structural representation as text string in a format e.g. InChI, SMILES,
@@ -43,9 +40,7 @@ class SubstanceSpecificationRepresentation(FhirBackboneElementBase):
             :param attachment: An attached file with the structural representation.
         """
         super().__init__(
-            resourceType="SubstanceSpecificationRepresentation",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             representation=representation,

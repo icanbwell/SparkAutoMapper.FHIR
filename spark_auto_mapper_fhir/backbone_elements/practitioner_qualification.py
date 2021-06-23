@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class PractitionerQualification(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         code: CodeableConcept,
@@ -40,7 +38,6 @@ class PractitionerQualification(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param identifier: An identifier that applies to this person's qualification in this role.
         :param code: Coded representation of the qualification.
@@ -48,9 +45,7 @@ class PractitionerQualification(FhirBackboneElementBase):
         :param issuer: Organization that regulates and issues the qualification.
         """
         super().__init__(
-            resourceType="PractitionerQualification",
             id_=id_,
-            meta=meta,
             extension=extension,
             identifier=identifier,
             code=code,

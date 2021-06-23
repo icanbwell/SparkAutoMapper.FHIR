@@ -29,7 +29,6 @@ class UDIEntryType(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="UDIEntryType",
             id_=id_,
             meta=meta,
             extension=extension,

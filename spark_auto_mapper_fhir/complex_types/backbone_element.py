@@ -46,7 +46,6 @@ class BackboneElement(FhirComplexTypeBase):
         itself).
         """
         super().__init__(
-            resourceType="BackboneElement",
             id_=id_,
             meta=meta,
             extension=extension,

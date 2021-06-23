@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class CapabilityStatementSupportedMessage(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         mode: EventCapabilityMode,
         definition: canonical,
@@ -35,7 +33,6 @@ class CapabilityStatementSupportedMessage(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param mode: The mode of this event declaration - whether application is sender or
         receiver.
@@ -43,9 +40,7 @@ class CapabilityStatementSupportedMessage(FhirBackboneElementBase):
         structure, allowed responses, etc.
         """
         super().__init__(
-            resourceType="CapabilityStatementSupportedMessage",
             id_=id_,
-            meta=meta,
             extension=extension,
             mode=mode,
             definition=definition,

@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -46,7 +45,6 @@ class AuditEventAgent(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: Optional[CodeableConcept] = None,
         role: Optional[FhirList[CodeableConcept]] = None,
@@ -74,7 +72,6 @@ class AuditEventAgent(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type: Specification of the participation type the user plays when performing the
         event.
@@ -101,9 +98,7 @@ class AuditEventAgent(FhirBackboneElementBase):
         event being recorded.
         """
         super().__init__(
-            resourceType="AuditEventAgent",
             id_=id_,
-            meta=meta,
             extension=extension,
             type=type,
             role=role,

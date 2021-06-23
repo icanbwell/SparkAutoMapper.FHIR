@@ -29,7 +29,6 @@ class DetectedIssueSeverity(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="DetectedIssueSeverity",
             id_=id_,
             meta=meta,
             extension=extension,

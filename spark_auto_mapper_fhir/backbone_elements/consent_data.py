@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,7 +29,6 @@ class ConsentData(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         meaning: ConsentDataMeaning,
         reference: Reference[Union[Resource]],
@@ -38,16 +36,13 @@ class ConsentData(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param meaning: How the resource reference is interpreted when testing consent restrictions.
             :param reference: A reference to a specific resource that defines which resources are covered by
         this consent.
         """
         super().__init__(
-            resourceType="ConsentData",
             id_=id_,
-            meta=meta,
             extension=extension,
             meaning=meaning,
             reference=reference,

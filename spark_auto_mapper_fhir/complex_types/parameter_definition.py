@@ -56,7 +56,6 @@ class ParameterDefinition(FhirComplexTypeBase):
         that the output data will conform to.
         """
         super().__init__(
-            resourceType="ParameterDefinition",
             id_=id_,
             meta=meta,
             extension=extension,

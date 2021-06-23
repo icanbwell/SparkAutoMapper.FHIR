@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -63,7 +62,6 @@ class CoverageEligibilityRequestItem(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         supportingInfoSequence: Optional[FhirList[positiveInt]] = None,
         category: Optional[CodeableConcept[Benefitcategorycodes]] = None,
@@ -79,7 +77,6 @@ class CoverageEligibilityRequestItem(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param supportingInfoSequence: Exceptions, special conditions and supporting information applicable for this
         service or product line.
@@ -97,9 +94,7 @@ class CoverageEligibilityRequestItem(FhirBackboneElementBase):
             :param detail: The plan/proposal/order describing the proposed service in detail.
         """
         super().__init__(
-            resourceType="CoverageEligibilityRequestItem",
             id_=id_,
-            meta=meta,
             extension=extension,
             supportingInfoSequence=supportingInfoSequence,
             category=category,

@@ -47,7 +47,7 @@ def main() -> int:
     for fhir_entity in fhir_entities:
         # use template to generate new code files
         resource_name: str = fhir_entity.cleaned_name
-        entity_file_name = FhirXmlSchemaParser.camel_to_snake(resource_name)
+        entity_file_name = fhir_entity.name_snake_case
         if fhir_entity.is_value_set:  # valueset
             with open(data_dir.joinpath("template.value_set.jinja2"), "r") as file:
                 template_contents = file.read()

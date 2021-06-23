@@ -40,7 +40,6 @@ class Period(FhirComplexTypeBase):
         expected/planned to end at that time.
         """
         super().__init__(
-            resourceType="Period",
             id_=id_,
             meta=meta,
             extension=extension,

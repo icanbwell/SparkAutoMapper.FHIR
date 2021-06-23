@@ -29,7 +29,6 @@ class VisionBase(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="VisionBase",
             id_=id_,
             meta=meta,
             extension=extension,

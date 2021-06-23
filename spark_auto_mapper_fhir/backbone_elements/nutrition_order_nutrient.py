@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class NutritionOrderNutrient(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         modifier: Optional[CodeableConcept] = None,
         amount: Optional[Quantity] = None,
@@ -33,15 +31,12 @@ class NutritionOrderNutrient(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param modifier: The nutrient that is being modified such as carbohydrate or sodium.
         :param amount: The quantity of the specified nutrient to include in diet.
         """
         super().__init__(
-            resourceType="NutritionOrderNutrient",
             id_=id_,
-            meta=meta,
             extension=extension,
             modifier=modifier,
             amount=amount,

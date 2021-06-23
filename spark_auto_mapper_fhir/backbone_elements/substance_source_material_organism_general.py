@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -27,7 +26,6 @@ class SubstanceSourceMaterialOrganismGeneral(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         kingdom: Optional[CodeableConcept] = None,
         phylum: Optional[CodeableConcept] = None,
@@ -37,7 +35,6 @@ class SubstanceSourceMaterialOrganismGeneral(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param kingdom: The kingdom of an organism shall be specified.
         :param phylum: The phylum of an organism shall be specified.
@@ -45,9 +42,7 @@ class SubstanceSourceMaterialOrganismGeneral(FhirBackboneElementBase):
         :param order: The order of an organism shall be specified,.
         """
         super().__init__(
-            resourceType="SubstanceSourceMaterialOrganismGeneral",
             id_=id_,
-            meta=meta,
             extension=extension,
             kingdom=kingdom,
             phylum=phylum,

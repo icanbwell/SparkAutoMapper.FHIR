@@ -2,7 +2,6 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class ConsentPolicy(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         authority: Optional[uri] = None,
         uri: Optional[uri] = None,
@@ -33,7 +31,6 @@ class ConsentPolicy(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param authority: Entity or Organization having regulatory jurisdiction or accountability for
         enforcing policies pertaining to Consent Directives.
@@ -42,9 +39,7 @@ class ConsentPolicy(FhirBackboneElementBase):
         law.
         """
         super().__init__(
-            resourceType="ConsentPolicy",
             id_=id_,
-            meta=meta,
             extension=extension,
             authority=authority,
             uri=uri,

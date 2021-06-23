@@ -29,7 +29,6 @@ class uuid(FhirComplexTypeBase):
         :param extension: extensions
         """
         super().__init__(
-            resourceType="uuid",
             id_=id_,
             meta=meta,
             extension=extension,

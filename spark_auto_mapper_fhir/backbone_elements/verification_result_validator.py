@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -29,7 +28,6 @@ class VerificationResultValidator(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         organization: Reference[Union[Organization]],
         identityCertificate: Optional[FhirString] = None,
@@ -38,16 +36,13 @@ class VerificationResultValidator(FhirBackboneElementBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param organization: Reference to the organization validating information.
         :param identityCertificate: A digital identity certificate associated with the validator.
         :param attestationSignature: Signed assertion by the validator that they have validated the information.
         """
         super().__init__(
-            resourceType="VerificationResultValidator",
             id_=id_,
-            meta=meta,
             extension=extension,
             organization=organization,
             identityCertificate=identityCertificate,

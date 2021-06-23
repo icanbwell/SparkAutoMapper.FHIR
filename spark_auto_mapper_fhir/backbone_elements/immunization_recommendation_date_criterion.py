@@ -3,7 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -25,7 +24,6 @@ class ImmunizationRecommendationDateCriterion(FhirBackboneElementBase):
         self,
         *,
         id_: FhirId,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept,
         value: FhirDateTime,
@@ -33,16 +31,13 @@ class ImmunizationRecommendationDateCriterion(FhirBackboneElementBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: Date classification of recommendation.  For example, earliest date to give,
         latest date to give, etc.
             :param value: The date whose meaning is specified by dateCriterion.code.
         """
         super().__init__(
-            resourceType="ImmunizationRecommendationDateCriterion",
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             value=value,
