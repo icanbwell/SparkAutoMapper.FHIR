@@ -425,9 +425,7 @@ class FhirXmlSchemaParser:
             if property_type and property_name and property_type != "None":
                 fhir_properties.append(
                     FhirProperty(
-                        name=property_name
-                        if property_name not in ["id", "type", "class"]
-                        else f"{property_name}_",
+                        name=FhirXmlSchemaParser.fix_python_keywords(property_name),
                         type_=property_type,
                         cleaned_type=cleaned_type
                         if cleaned_type not in cleaned_type_mapping
@@ -447,6 +445,51 @@ class FhirXmlSchemaParser:
                     )
                 )
         return fhir_properties
+
+    @staticmethod
+    def fix_python_keywords(property_name: str) -> str:
+        return (
+            property_name
+            if property_name
+            not in [
+                "False",
+                "None",
+                "True",
+                "and",
+                "as",
+                "assert",
+                "async",
+                "await",
+                "break",
+                "class",
+                "continue",
+                "def",
+                "del",
+                "elif",
+                "else",
+                "except",
+                "finally",
+                "for",
+                "from",
+                "global",
+                "if",
+                "import",
+                "in",
+                "is",
+                "lambda",
+                "nonlocal",
+                "not",
+                "or",
+                "pass",
+                "raise",
+                "return",
+                "try",
+                "while",
+                "with",
+                "yield",
+            ]
+            else f"{property_name}_"
+        )
 
     @staticmethod
     def get_types_for_references() -> List[FhirReferenceType]:
@@ -606,8 +649,20 @@ class FhirXmlSchemaParser:
                     display: str = (
                         concept["display"] if "display" in concept else concept["code"]
                     )
-                    cleaned_display: str = "".join(
-                        [c.capitalize() for c in display.split(" ")]
+                    cleaned_display: str = (
+                        "".join([c.capitalize() for c in display.split(" ")])
+                        .replace("-", "")
+                        .replace(".", "")
+                        .replace("&", "")
+                        .replace("'", "")
+                        .replace("(", "")
+                        .replace(",", "")
+                        .replace(")", "")
+                        .replace("/", "")
+                        .replace("+", "")
+                    )
+                    cleaned_display = FhirXmlSchemaParser.fix_python_keywords(
+                        cleaned_display
                     )
                     definition: Optional[str] = concept.get("definition")
                     fhir_concepts.append(

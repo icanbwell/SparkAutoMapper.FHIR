@@ -1,13 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -20,83 +16,117 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.observation import Observation
-    from spark_auto_mapper_fhir.resources.medication_administration import MedicationAdministration
+    from spark_auto_mapper_fhir.resources.medication_administration import (
+        MedicationAdministration,
+    )
     from spark_auto_mapper_fhir.complex_types.event_status import EventStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.complex_types.procedure_negation_reason import ProcedureNegationReason
+    from spark_auto_mapper_fhir.complex_types.procedure_negation_reason import (
+        ProcedureNegationReason,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.complex_types.procedure_category import ProcedureCategory
+    from spark_auto_mapper_fhir.complex_types.procedure_category import (
+        ProcedureCategory,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.procedure_code import ProcedureCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for recorder
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for asserter
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.backbone_elements.procedure_performer import ProcedurePerformer
+    from spark_auto_mapper_fhir.backbone_elements.procedure_performer import (
+        ProcedurePerformer,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.procedure_reason import ProcedureReason
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.body_site import BodySite
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for outcome
     from spark_auto_mapper_fhir.complex_types.procedure_outcome import ProcedureOutcome
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for report
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.resources.composition import Composition
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for complication
-    from spark_auto_mapper_fhir.complex_types.procedure_complication import ProcedureComplication
+    from spark_auto_mapper_fhir.complex_types.procedure_complication import (
+        ProcedureComplication,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for complicationDetail
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for followUp
-    from spark_auto_mapper_fhir.complex_types.procedure_follow_up import ProcedureFollowUp
+    from spark_auto_mapper_fhir.complex_types.procedure_follow_up import (
+        ProcedureFollowUp,
+    )
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-    from spark_auto_mapper_fhir.backbone_elements.procedure_focal_device import ProcedureFocalDevice
+    from spark_auto_mapper_fhir.backbone_elements.procedure_focal_device import (
+        ProcedureFocalDevice,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for usedReference
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.resources.substance import Substance
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for usedCode
     from spark_auto_mapper_fhir.complex_types.procedure_used import ProcedureUsed
 
@@ -104,8 +134,8 @@ if TYPE_CHECKING:
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class Procedure(FhirResourceBase):
-    """
-    """
+    """ """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -113,88 +143,110 @@ class Procedure(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        instantiatesCanonical: Optional[FhirList[canonical ]] = None,
-        instantiatesUri: Optional[FhirList[uri ]] = None,
-        basedOn: Optional[FhirList[Reference [Union[CarePlan, ServiceRequest]]]] = None,
-        partOf: Optional[FhirList[Reference [Union[Procedure, Observation, MedicationAdministration]]]] = None,
-        status: EventStatus ,
-        statusReason: Optional[CodeableConcept[ProcedureNegationReason] ] = None,
-        category: Optional[CodeableConcept[ProcedureCategory] ] = None,
-        code: Optional[CodeableConcept[ProcedureCode] ] = None,
-        subject: Reference [Union[Patient, Group]],
-        encounter: Optional[Reference [Union[Encounter]]] = None,
-        recorder: Optional[Reference [Union[Patient, RelatedPerson, Practitioner, PractitionerRole]]] = None,
-        asserter: Optional[Reference [Union[Patient, RelatedPerson, Practitioner, PractitionerRole]]] = None,
-        performer: Optional[FhirList[ProcedurePerformer ]] = None,
-        location: Optional[Reference [Union[Location]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReason] ]] = None,
-        reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, Procedure, DiagnosticReport, DocumentReference]]]] = None,
-        bodySite: Optional[FhirList[CodeableConcept[BodySite] ]] = None,
-        outcome: Optional[CodeableConcept[ProcedureOutcome] ] = None,
-        report: Optional[FhirList[Reference [Union[DiagnosticReport, DocumentReference, Composition]]]] = None,
-        complication: Optional[FhirList[CodeableConcept[ProcedureComplication] ]] = None,
-        complicationDetail: Optional[FhirList[Reference [Union[Condition]]]] = None,
-        followUp: Optional[FhirList[CodeableConcept[ProcedureFollowUp] ]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        focalDevice: Optional[FhirList[ProcedureFocalDevice ]] = None,
-        usedReference: Optional[FhirList[Reference [Union[Device, Medication, Substance]]]] = None,
-        usedCode: Optional[FhirList[CodeableConcept[ProcedureUsed] ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        instantiatesCanonical: Optional[FhirList[canonical]] = None,
+        instantiatesUri: Optional[FhirList[uri]] = None,
+        basedOn: Optional[FhirList[Reference[Union[CarePlan, ServiceRequest]]]] = None,
+        partOf: Optional[
+            FhirList[Reference[Union[Procedure, Observation, MedicationAdministration]]]
+        ] = None,
+        status: EventStatus,
+        statusReason: Optional[CodeableConcept[ProcedureNegationReason]] = None,
+        category: Optional[CodeableConcept[ProcedureCategory]] = None,
+        code: Optional[CodeableConcept[ProcedureCode]] = None,
+        subject: Reference[Union[Patient, Group]],
+        encounter: Optional[Reference[Union[Encounter]]] = None,
+        recorder: Optional[
+            Reference[Union[Patient, RelatedPerson, Practitioner, PractitionerRole]]
+        ] = None,
+        asserter: Optional[
+            Reference[Union[Patient, RelatedPerson, Practitioner, PractitionerRole]]
+        ] = None,
+        performer: Optional[FhirList[ProcedurePerformer]] = None,
+        location: Optional[Reference[Union[Location]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReason]]] = None,
+        reasonReference: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Condition,
+                        Observation,
+                        Procedure,
+                        DiagnosticReport,
+                        DocumentReference,
+                    ]
+                ]
+            ]
+        ] = None,
+        bodySite: Optional[FhirList[CodeableConcept[BodySite]]] = None,
+        outcome: Optional[CodeableConcept[ProcedureOutcome]] = None,
+        report: Optional[
+            FhirList[Reference[Union[DiagnosticReport, DocumentReference, Composition]]]
+        ] = None,
+        complication: Optional[FhirList[CodeableConcept[ProcedureComplication]]] = None,
+        complicationDetail: Optional[FhirList[Reference[Union[Condition]]]] = None,
+        followUp: Optional[FhirList[CodeableConcept[ProcedureFollowUp]]] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        focalDevice: Optional[FhirList[ProcedureFocalDevice]] = None,
+        usedReference: Optional[
+            FhirList[Reference[Union[Device, Medication, Substance]]]
+        ] = None,
+        usedCode: Optional[FhirList[CodeableConcept[ProcedureUsed]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Business identifiers assigned to this procedure by the performer or other
-    systems which remain constant as the resource is updated and is propagated
-    from server to server.
-        :param instantiatesCanonical: The URL pointing to a FHIR-defined protocol, guideline, order set or other
-    definition that is adhered to in whole or in part by this Procedure.
-        :param instantiatesUri: The URL pointing to an externally maintained protocol, guideline, order set or
-    other definition that is adhered to in whole or in part by this Procedure.
-        :param basedOn: A reference to a resource that contains details of the request for this
-    procedure.
-        :param partOf: A larger event of which this particular procedure is a component or step.
-        :param status: A code specifying the state of the procedure. Generally, this will be the in-
-    progress or completed state.
-        :param statusReason: Captures the reason for the current state of the procedure.
-        :param category: A code that classifies the procedure for searching, sorting and display
-    purposes (e.g. "Surgical Procedure").
-        :param code: The specific procedure that is performed. Use text if the exact nature of the
-    procedure cannot be coded (e.g. "Laparoscopic Appendectomy").
-        :param subject: The person, animal or group on which the procedure was performed.
-        :param encounter: The Encounter during which this Procedure was created or performed or to which
-    the creation of this record is tightly associated.
-        :param recorder: Individual who recorded the record and takes responsibility for its content.
-        :param asserter: Individual who is making the procedure statement.
-        :param performer: Limited to "real" people rather than equipment.
-        :param location: The location where the procedure actually happened.  E.g. a newborn at home, a
-    tracheostomy at a restaurant.
-        :param reasonCode: The coded reason why the procedure was performed. This may be a coded entity
-    of some type, or may simply be present as text.
-        :param reasonReference: The justification of why the procedure was performed.
-        :param bodySite: Detailed and structured anatomical location information. Multiple locations
-    are allowed - e.g. multiple punch biopsies of a lesion.
-        :param outcome: The outcome of the procedure - did it resolve the reasons for the procedure
-    being performed?
-        :param report: This could be a histology result, pathology report, surgical report, etc.
-        :param complication: Any complications that occurred during the procedure, or in the immediate
-    post-performance period. These are generally tracked separately from the
-    notes, which will typically describe the procedure itself rather than any
-    'post procedure' issues.
-        :param complicationDetail: Any complications that occurred during the procedure, or in the immediate
-    post-performance period.
-        :param followUp: If the procedure required specific follow up - e.g. removal of sutures. The
-    follow up may be represented as a simple note or could potentially be more
-    complex, in which case the CarePlan resource can be used.
-        :param note: Any other notes and comments about the procedure.
-        :param focalDevice: A device that is implanted, removed or otherwise manipulated (calibration,
-    battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a
-    focal portion of the Procedure.
-        :param usedReference: Identifies medications, devices and any other substance used as part of the
-    procedure.
-        :param usedCode: Identifies coded items that were used as part of the procedure.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Business identifiers assigned to this procedure by the performer or other
+        systems which remain constant as the resource is updated and is propagated
+        from server to server.
+            :param instantiatesCanonical: The URL pointing to a FHIR-defined protocol, guideline, order set or other
+        definition that is adhered to in whole or in part by this Procedure.
+            :param instantiatesUri: The URL pointing to an externally maintained protocol, guideline, order set or
+        other definition that is adhered to in whole or in part by this Procedure.
+            :param basedOn: A reference to a resource that contains details of the request for this
+        procedure.
+            :param partOf: A larger event of which this particular procedure is a component or step.
+            :param status: A code specifying the state of the procedure. Generally, this will be the in-
+        progress or completed state.
+            :param statusReason: Captures the reason for the current state of the procedure.
+            :param category: A code that classifies the procedure for searching, sorting and display
+        purposes (e.g. "Surgical Procedure").
+            :param code: The specific procedure that is performed. Use text if the exact nature of the
+        procedure cannot be coded (e.g. "Laparoscopic Appendectomy").
+            :param subject: The person, animal or group on which the procedure was performed.
+            :param encounter: The Encounter during which this Procedure was created or performed or to which
+        the creation of this record is tightly associated.
+            :param recorder: Individual who recorded the record and takes responsibility for its content.
+            :param asserter: Individual who is making the procedure statement.
+            :param performer: Limited to "real" people rather than equipment.
+            :param location: The location where the procedure actually happened.  E.g. a newborn at home, a
+        tracheostomy at a restaurant.
+            :param reasonCode: The coded reason why the procedure was performed. This may be a coded entity
+        of some type, or may simply be present as text.
+            :param reasonReference: The justification of why the procedure was performed.
+            :param bodySite: Detailed and structured anatomical location information. Multiple locations
+        are allowed - e.g. multiple punch biopsies of a lesion.
+            :param outcome: The outcome of the procedure - did it resolve the reasons for the procedure
+        being performed?
+            :param report: This could be a histology result, pathology report, surgical report, etc.
+            :param complication: Any complications that occurred during the procedure, or in the immediate
+        post-performance period. These are generally tracked separately from the
+        notes, which will typically describe the procedure itself rather than any
+        'post procedure' issues.
+            :param complicationDetail: Any complications that occurred during the procedure, or in the immediate
+        post-performance period.
+            :param followUp: If the procedure required specific follow up - e.g. removal of sutures. The
+        follow up may be represented as a simple note or could potentially be more
+        complex, in which case the CarePlan resource can be used.
+            :param note: Any other notes and comments about the procedure.
+            :param focalDevice: A device that is implanted, removed or otherwise manipulated (calibration,
+        battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a
+        focal portion of the Procedure.
+            :param usedReference: Identifies medications, devices and any other substance used as part of the
+        procedure.
+            :param usedCode: Identifies coded items that were used as part of the procedure.
         """
         super().__init__(
             resourceType="Procedure",

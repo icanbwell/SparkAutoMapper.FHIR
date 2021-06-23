@@ -25,6 +25,8 @@ if TYPE_CHECKING:
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.service-category import service-category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for type
+    from spark_auto_mapper_fhir.complex_types.service-type import service-type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     # Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.service-specialty import service-specialty
@@ -80,7 +82,7 @@ class HealthcareService(FhirResourceBase):
         active: Optional[FhirBoolean ] = None,
         providedBy: Optional[Reference [Union[Organization]]] = None,
         category: Optional[FhirList[CodeableConcept[service-category] ]] = None,
-        type_: Optional[FhirList[CodeableConcept ]] = None,
+        type: Optional[FhirList[CodeableConcept[service-type] ]] = None,
         specialty: Optional[FhirList[CodeableConcept[service-specialty] ]] = None,
         location: Optional[FhirList[Reference [Union[Location]]]] = None,
         name: Optional[FhirString ] = None,
@@ -112,7 +114,7 @@ class HealthcareService(FhirResourceBase):
     to be used for this.
         :param providedBy: The organization that provides this healthcare service.
         :param category: Identifies the broad category of service being performed or delivered.
-        :param type_: The specific type of service that may be delivered or performed.
+        :param type: The specific type of service that may be delivered or performed.
         :param specialty: Collection of specialties handled by the service site. This is more of a
     medical term.
         :param location: The location(s) where this healthcare service may be provided.
@@ -160,7 +162,7 @@ class HealthcareService(FhirResourceBase):
             active=active,
             providedBy=providedBy,
             category=category,
-            type_=type_,
+            type=type,
             specialty=specialty,
             location=location,
             name=name,

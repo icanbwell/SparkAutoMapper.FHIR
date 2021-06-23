@@ -32,7 +32,7 @@ class Resource(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        id_: Optional[id] = None,
+        id: Optional[id] = None,
         meta: Optional[Meta] = None,
         implicitRules: Optional[uri] = None,
         language: Optional[code] = None,
@@ -42,7 +42,7 @@ class Resource(FhirComplexTypeBase):
         :param id_: id of resource
         :param meta: Meta
         :param extension: extensions
-        :param id_: The logical id of the resource, as used in the URL for the resource. Once
+        :param id: The logical id of the resource, as used in the URL for the resource. Once
     assigned, this value never changes.
         :param meta: The metadata about the resource. This is content that is maintained by the
     infrastructure. Changes to the content might not always be associated with
@@ -58,7 +58,7 @@ class Resource(FhirComplexTypeBase):
             id_=id_,
             meta=meta,
             extension=extension,
-            id_=id_,
+            id=id,
             meta=meta,
             implicitRules=implicitRules,
             language=language,
