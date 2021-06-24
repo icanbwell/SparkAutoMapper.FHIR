@@ -187,6 +187,13 @@ class FhirXmlSchemaParser:
         # for fhir_entity in fhir_entities:
         #     if fhir_entity.fhir_name in cleaned_type_mapping.keys():
         #         fhir_entity.fhir_name = cleaned_type_mapping[fhir_entity.fhir_name]
+
+        exclude_entities: List[str] = ["Resource", "DomainResource", "Element", "List", "FhirString", ""]
+
+        fhir_entities = [
+            f for f in fhir_entities if f.cleaned_name not in exclude_entities
+        ]
+
         return fhir_entities
 
     @staticmethod

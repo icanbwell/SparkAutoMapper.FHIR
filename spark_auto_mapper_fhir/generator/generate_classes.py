@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 import shutil
-from os import path
+from os import path, listdir
 from shutil import copyfile
 
 from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchemaParser
@@ -162,13 +162,23 @@ def main() -> int:
             print(f"{resource_name}: {fhir_entity.type_} is not supported")
         # print(result)
 
-        # copy resource.py
-        print(
-            f'Copying {resources_folder.joinpath("../base_types/resource.py")} to {resources_folder.joinpath("resource.py")}'
-        )
+    # copy resource.py
+    print(
+        f'Copying {resources_folder.joinpath("../base_types/resources")} to {resources_folder}'
+    )
+    from os.path import isfile, join
+
+    resource_files = [
+        f
+        for f in listdir(resources_folder.joinpath("../base_types/resources"))
+        if isfile(join(resources_folder.joinpath("../base_types/resources"), f))
+    ]
+    for resource_file in resource_files:
         copyfile(
-            resources_folder.joinpath("../base_types/resource.py"),
-            resources_folder.joinpath("resource.py"),
+            resources_folder.joinpath("../base_types/resources").joinpath(
+                resource_file
+            ),
+            resources_folder.joinpath(resource_file),
         )
     return 0
 

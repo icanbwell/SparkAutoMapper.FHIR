@@ -16,9 +16,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.location_status import LocationStatus
     from spark_auto_mapper_fhir.complex_types.coding import Coding
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.location_mode import LocationMode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -42,7 +39,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.location_hours_of_operation import (
         LocationHoursOfOperation,
     )
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for endpoint
