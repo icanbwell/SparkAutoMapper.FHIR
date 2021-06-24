@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class ResearchStudyStatusCode(FhirValueSetBase):
     """
     ResearchStudyStatus
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -21,16 +30,10 @@ class ResearchStudyStatusCodeValues:
     AdministrativelyCompleted = ResearchStudyStatusCode("administratively-completed")
     Approved = ResearchStudyStatusCode("approved")
     ClosedToAccrual = ResearchStudyStatusCode("closed-to-accrual")
-    ClosedToAccrualAndIntervention = ResearchStudyStatusCode(
-        "closed-to-accrual-and-intervention"
-    )
+    ClosedToAccrualAndIntervention = ResearchStudyStatusCode("closed-to-accrual-and-intervention")
     Completed = ResearchStudyStatusCode("completed")
     Disapproved = ResearchStudyStatusCode("disapproved")
     InReview = ResearchStudyStatusCode("in-review")
-    TemporarilyClosedToAccrual = ResearchStudyStatusCode(
-        "temporarily-closed-to-accrual"
-    )
-    TemporarilyClosedToAccrualAndIntervention = ResearchStudyStatusCode(
-        "temporarily-closed-to-accrual-and-intervention"
-    )
+    TemporarilyClosedToAccrual = ResearchStudyStatusCode("temporarily-closed-to-accrual")
+    TemporarilyClosedToAccrualAndIntervention = ResearchStudyStatusCode("temporarily-closed-to-accrual-and-intervention")
     Withdrawn = ResearchStudyStatusCode("withdrawn")

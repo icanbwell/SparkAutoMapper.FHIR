@@ -1,18 +1,20 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.substancespecification import (
-    SubstanceSpecificationSchema,
-)
+from spark_fhir_schemas.r4.resources.substancespecification import SubstanceSpecificationSchema
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -21,57 +23,31 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for source
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_moiety import (
-        SubstanceSpecificationMoiety,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_property import (
-        SubstanceSpecificationProperty,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_moiety import SubstanceSpecificationMoiety
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_property import SubstanceSpecificationProperty
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for referenceInformation
-    from spark_auto_mapper_fhir.resources.substance_reference_information import (
-        SubstanceReferenceInformation,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_structure import (
-        SubstanceSpecificationStructure,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_code import (
-        SubstanceSpecificationCode,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_name import (
-        SubstanceSpecificationName,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_molecular_weight import (
-        SubstanceSpecificationMolecularWeight,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship import (
-        SubstanceSpecificationRelationship,
-    )
+    from spark_auto_mapper_fhir.resources.substance_reference_information import SubstanceReferenceInformation
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_structure import SubstanceSpecificationStructure
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_code import SubstanceSpecificationCode
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_name import SubstanceSpecificationName
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_molecular_weight import SubstanceSpecificationMolecularWeight
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship import SubstanceSpecificationRelationship
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for nucleicAcid
-    from spark_auto_mapper_fhir.resources.substance_nucleic_acid import (
-        SubstanceNucleicAcid,
-    )
+    from spark_auto_mapper_fhir.resources.substance_nucleic_acid import SubstanceNucleicAcid
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for polymer
     from spark_auto_mapper_fhir.resources.substance_polymer import SubstancePolymer
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for protein
     from spark_auto_mapper_fhir.resources.substance_protein import SubstanceProtein
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for sourceMaterial
-    from spark_auto_mapper_fhir.resources.substance_source_material import (
-        SubstanceSourceMaterial,
-    )
+    from spark_auto_mapper_fhir.resources.substance_source_material import SubstanceSourceMaterial
 
 
 # This file is auto-generated by generate_classes so do not edit manually
@@ -80,7 +56,6 @@ class SubstanceSpecification(FhirResourceBase):
     """
     SubstanceSpecification
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -88,56 +63,52 @@ class SubstanceSpecification(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[Identifier] = None,
-        type_: Optional[CodeableConcept] = None,
-        status: Optional[CodeableConcept] = None,
-        domain: Optional[CodeableConcept] = None,
-        description: Optional[FhirString] = None,
-        source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
-        comment: Optional[FhirString] = None,
-        moiety: Optional[FhirList[SubstanceSpecificationMoiety]] = None,
-        property: Optional[FhirList[SubstanceSpecificationProperty]] = None,
-        referenceInformation: Optional[
-            Reference[Union[SubstanceReferenceInformation]]
-        ] = None,
-        structure: Optional[SubstanceSpecificationStructure] = None,
-        code: Optional[FhirList[SubstanceSpecificationCode]] = None,
-        name: Optional[FhirList[SubstanceSpecificationName]] = None,
-        molecularWeight: Optional[
-            FhirList[SubstanceSpecificationMolecularWeight]
-        ] = None,
-        relationship: Optional[FhirList[SubstanceSpecificationRelationship]] = None,
-        nucleicAcid: Optional[Reference[Union[SubstanceNucleicAcid]]] = None,
-        polymer: Optional[Reference[Union[SubstancePolymer]]] = None,
-        protein: Optional[Reference[Union[SubstanceProtein]]] = None,
-        sourceMaterial: Optional[Reference[Union[SubstanceSourceMaterial]]] = None,
+        identifier: Optional[Identifier ] = None,
+        type_: Optional[CodeableConcept ] = None,
+        status: Optional[CodeableConcept ] = None,
+        domain: Optional[CodeableConcept ] = None,
+        description: Optional[FhirString ] = None,
+        source: Optional[FhirList[Reference [Union[DocumentReference]]]] = None,
+        comment: Optional[FhirString ] = None,
+        moiety: Optional[FhirList[SubstanceSpecificationMoiety ]] = None,
+        property: Optional[FhirList[SubstanceSpecificationProperty ]] = None,
+        referenceInformation: Optional[Reference [Union[SubstanceReferenceInformation]]] = None,
+        structure: Optional[SubstanceSpecificationStructure ] = None,
+        code: Optional[FhirList[SubstanceSpecificationCode ]] = None,
+        name: Optional[FhirList[SubstanceSpecificationName ]] = None,
+        molecularWeight: Optional[FhirList[SubstanceSpecificationMolecularWeight ]] = None,
+        relationship: Optional[FhirList[SubstanceSpecificationRelationship ]] = None,
+        nucleicAcid: Optional[Reference [Union[SubstanceNucleicAcid]]] = None,
+        polymer: Optional[Reference [Union[SubstancePolymer]]] = None,
+        protein: Optional[Reference [Union[SubstanceProtein]]] = None,
+        sourceMaterial: Optional[Reference [Union[SubstanceSourceMaterial]]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param identifier: Identifier by which this substance is known.
-            :param type_: High level categorization, e.g. polymer or nucleic acid.
-            :param status: Status of substance within the catalogue e.g. approved.
-            :param domain: If the substance applies to only human or veterinary use.
-            :param description: Textual description of the substance.
-            :param source: Supporting literature.
-            :param comment: Textual comment about this record of a substance.
-            :param moiety: Moiety, for structural modifications.
-            :param property: General specifications for this substance, including how it is related to
-        other substances.
-            :param referenceInformation: General information detailing this substance.
-            :param structure: Structural information.
-            :param code: Codes associated with the substance.
-            :param name: Names applicable to this substance.
-            :param molecularWeight: The molecular weight or weight range (for proteins, polymers or nucleic
-        acids).
-            :param relationship: A link between this substance and another, with details of the relationship.
-            :param nucleicAcid: Data items specific to nucleic acids.
-            :param polymer: Data items specific to polymers.
-            :param protein: Data items specific to proteins.
-            :param sourceMaterial: Material or taxonomic/anatomical source for the substance.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param identifier: Identifier by which this substance is known.
+        :param type_: High level categorization, e.g. polymer or nucleic acid.
+        :param status: Status of substance within the catalogue e.g. approved.
+        :param domain: If the substance applies to only human or veterinary use.
+        :param description: Textual description of the substance.
+        :param source: Supporting literature.
+        :param comment: Textual comment about this record of a substance.
+        :param moiety: Moiety, for structural modifications.
+        :param property: General specifications for this substance, including how it is related to
+    other substances.
+        :param referenceInformation: General information detailing this substance.
+        :param structure: Structural information.
+        :param code: Codes associated with the substance.
+        :param name: Names applicable to this substance.
+        :param molecularWeight: The molecular weight or weight range (for proteins, polymers or nucleic
+    acids).
+        :param relationship: A link between this substance and another, with details of the relationship.
+        :param nucleicAcid: Data items specific to nucleic acids.
+        :param polymer: Data items specific to polymers.
+        :param protein: Data items specific to proteins.
+        :param sourceMaterial: Material or taxonomic/anatomical source for the substance.
         """
         super().__init__(
             resourceType="SubstanceSpecification",
@@ -168,6 +139,4 @@ class SubstanceSpecification(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return SubstanceSpecificationSchema.get_schema(
-            include_extension=include_extension
-        )
+        return SubstanceSpecificationSchema.get_schema(include_extension=include_extension)

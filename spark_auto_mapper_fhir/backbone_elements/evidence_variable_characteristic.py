@@ -1,9 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -13,11 +18,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # description (string)
-    pass
+    from spark_auto_mapper_fhir.complex_types.string import string
     # usageContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
-
     # exclude (boolean)
+    from spark_auto_mapper_fhir.complex_types.boolean import boolean
     # timeFromStart (Duration)
     # groupMeasure (GroupMeasure)
     from spark_auto_mapper_fhir.complex_types.group_measure import GroupMeasure
@@ -29,30 +34,29 @@ class EvidenceVariableCharacteristic(FhirBackboneElementBase):
     """
     EvidenceVariable.Characteristic
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        description: Optional[FhirString] = None,
-        usageContext: Optional[FhirList[UsageContext]] = None,
-        exclude: Optional[FhirBoolean] = None,
-        timeFromStart: Optional[Duration] = None,
-        groupMeasure: Optional[GroupMeasure] = None,
+        description: Optional[FhirString ] = None,
+        usageContext: Optional[FhirList[UsageContext ]] = None,
+        exclude: Optional[FhirBoolean ] = None,
+        timeFromStart: Optional[Duration ] = None,
+        groupMeasure: Optional[GroupMeasure ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param description: A short, natural language description of the characteristic that could be used
-        to communicate the criteria to an end-user.
-            :param usageContext: Use UsageContext to define the members of the population, such as Age Ranges,
-        Genders, Settings.
-            :param exclude: When true, members with this characteristic are excluded from the element.
-            :param timeFromStart: Indicates duration from the participant's study entry.
-            :param groupMeasure: Indicates how elements are aggregated within the study effective period.
+        :param id_: id of resource
+        :param extension: extensions
+        :param description: A short, natural language description of the characteristic that could be used
+    to communicate the criteria to an end-user.
+        :param usageContext: Use UsageContext to define the members of the population, such as Age Ranges,
+    Genders, Settings.
+        :param exclude: When true, members with this characteristic are excluded from the element.
+        :param timeFromStart: Indicates duration from the participant's study entry.
+        :param groupMeasure: Indicates how elements are aggregated within the study effective period.
         """
         super().__init__(
             id_=id_,

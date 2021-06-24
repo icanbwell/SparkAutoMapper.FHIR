@@ -1,7 +1,13 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -10,9 +16,11 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.signature_type_codes import SignatureTypeCodesCode
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.instant import instant
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for who
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -21,7 +29,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for onBehalfOf
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -40,7 +47,6 @@ class Signature(FhirComplexTypeBase):
     """
     Signature
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -48,54 +54,34 @@ class Signature(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: FhirList[Coding],
-        when: instant,
-        who: Reference[
-            Union[
-                Practitioner,
-                PractitionerRole,
-                RelatedPerson,
-                Patient,
-                Device,
-                Organization,
-            ]
-        ],
-        onBehalfOf: Optional[
-            Reference[
-                Union[
-                    Practitioner,
-                    PractitionerRole,
-                    RelatedPerson,
-                    Patient,
-                    Device,
-                    Organization,
-                ]
-            ]
-        ] = None,
-        targetFormat: Optional[code] = None,
-        sigFormat: Optional[code] = None,
-        data: Optional[base64Binary] = None,
+        type_: FhirList[Coding[SignatureTypeCodesCode] ],
+        when: instant ,
+        who: Reference [Union[Practitioner, PractitionerRole, RelatedPerson, Patient, Device, Organization]],
+        onBehalfOf: Optional[Reference [Union[Practitioner, PractitionerRole, RelatedPerson, Patient, Device, Organization]]] = None,
+        targetFormat: Optional[code ] = None,
+        sigFormat: Optional[code ] = None,
+        data: Optional[base64Binary ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param type_: An indication of the reason that the entity signed this document. This may be
-        explicitly included as part of the signature information and can be used when
-        determining accountability for various actions concerning the document.
-            :param when: When the digital signature was signed.
-            :param who: A reference to an application-usable description of the identity that signed
-        (e.g. the signature used their private key).
-            :param onBehalfOf: A reference to an application-usable description of the identity that is
-        represented by the signature.
-            :param targetFormat: A mime type that indicates the technical format of the target resources signed
-        by the signature.
-            :param sigFormat: A mime type that indicates the technical format of the signature. Important
-        mime types are application/signature+xml for X ML DigSig, application/jose for
-        JWS, and image/* for a graphical image of a signature, etc.
-            :param data: The base64 encoding of the Signature content. When signature is not recorded
-        electronically this element would be empty.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param type_: An indication of the reason that the entity signed this document. This may be
+    explicitly included as part of the signature information and can be used when
+    determining accountability for various actions concerning the document.
+        :param when: When the digital signature was signed.
+        :param who: A reference to an application-usable description of the identity that signed
+    (e.g. the signature used their private key).
+        :param onBehalfOf: A reference to an application-usable description of the identity that is
+    represented by the signature.
+        :param targetFormat: A mime type that indicates the technical format of the target resources signed
+    by the signature.
+        :param sigFormat: A mime type that indicates the technical format of the signature. Important
+    mime types are application/signature+xml for X ML DigSig, application/jose for
+    JWS, and image/* for a graphical image of a signature, etc.
+        :param data: The base64 encoding of the Signature content. When signature is not recorded
+    electronically this element would be empty.
         """
         super().__init__(
             id_=id_,

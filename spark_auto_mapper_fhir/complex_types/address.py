@@ -1,7 +1,12 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -12,6 +17,13 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.address_use import AddressUse
     from spark_auto_mapper_fhir.complex_types.address_type import AddressType
+    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.string import string
     from spark_auto_mapper_fhir.complex_types.period import Period
 
 
@@ -21,7 +33,6 @@ class Address(FhirComplexTypeBase):
     """
     Address
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -29,39 +40,39 @@ class Address(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        use: Optional[AddressUse] = None,
-        type_: Optional[AddressType] = None,
-        text: Optional[FhirString] = None,
-        line: Optional[FhirList[FhirString]] = None,
-        city: Optional[FhirString] = None,
-        district: Optional[FhirString] = None,
-        state: Optional[FhirString] = None,
-        postalCode: Optional[FhirString] = None,
-        country: Optional[FhirString] = None,
-        period: Optional[Period] = None,
+        use: Optional[AddressUse ] = None,
+        type_: Optional[AddressType ] = None,
+        text: Optional[FhirString ] = None,
+        line: Optional[FhirList[FhirString ]] = None,
+        city: Optional[FhirString ] = None,
+        district: Optional[FhirString ] = None,
+        state: Optional[FhirString ] = None,
+        postalCode: Optional[FhirString ] = None,
+        country: Optional[FhirString ] = None,
+        period: Optional[Period ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param use: The purpose of this address.
-            :param type_: Distinguishes between physical addresses (those you can visit) and mailing
-        addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
-            :param text: Specifies the entire address as it should be displayed e.g. on a postal label.
-        This may be provided instead of or as well as the specific parts.
-            :param line: This component contains the house number, apartment number, street name,
-        street direction,  P.O. Box number, delivery hints, and similar address
-        information.
-            :param city: The name of the city, town, suburb, village or other community or delivery
-        center.
-            :param district: The name of the administrative area (county).
-            :param state: Sub-unit of a country with limited sovereignty in a federally organized
-        country. A code may be used if codes are in common use (e.g. US 2 letter state
-        codes).
-            :param postalCode: A postal code designating a region defined by the postal service.
-            :param country: Country - a nation as commonly understood or generally accepted.
-            :param period: Time period when address was/is in use.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param use: The purpose of this address.
+        :param type_: Distinguishes between physical addresses (those you can visit) and mailing
+    addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+        :param text: Specifies the entire address as it should be displayed e.g. on a postal label.
+    This may be provided instead of or as well as the specific parts.
+        :param line: This component contains the house number, apartment number, street name,
+    street direction,  P.O. Box number, delivery hints, and similar address
+    information.
+        :param city: The name of the city, town, suburb, village or other community or delivery
+    center.
+        :param district: The name of the administrative area (county).
+        :param state: Sub-unit of a country with limited sovereignty in a federally organized
+    country. A code may be used if codes are in common use (e.g. US 2 letter state
+    codes).
+        :param postalCode: A postal code designating a region defined by the postal service.
+        :param country: Country - a nation as commonly understood or generally accepted.
+        :param period: Time period when address was/is in use.
         """
         super().__init__(
             id_=id_,

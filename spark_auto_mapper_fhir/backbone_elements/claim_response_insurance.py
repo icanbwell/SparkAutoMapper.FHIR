@@ -1,9 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -14,18 +19,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # focal (boolean)
+    from spark_auto_mapper_fhir.complex_types.boolean import boolean
     # coverage (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for coverage
     from spark_auto_mapper_fhir.resources.coverage import Coverage
-
     # businessArrangement (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # claimResponse (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for claimResponse
     from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
 
@@ -36,34 +39,33 @@ class ClaimResponseInsurance(FhirBackboneElementBase):
     """
     ClaimResponse.Insurance
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: positiveInt,
-        focal: FhirBoolean,
-        coverage: Reference[Union[Coverage]],
-        businessArrangement: Optional[FhirString] = None,
-        claimResponse: Optional[Reference[Union[ClaimResponse]]] = None,
+        sequence: positiveInt ,
+        focal: FhirBoolean ,
+        coverage: Reference [Union[Coverage]],
+        businessArrangement: Optional[FhirString ] = None,
+        claimResponse: Optional[Reference [Union[ClaimResponse]]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param sequence: A number to uniquely identify insurance entries and provide a sequence of
-        coverages to convey coordination of benefit order.
-            :param focal: A flag to indicate that this Coverage is to be used for adjudication of this
-        claim when set to true.
-            :param coverage: Reference to the insurance card level information contained in the Coverage
-        resource. The coverage issuing insurer will use these details to locate the
-        patient's actual coverage within the insurer's information system.
-            :param businessArrangement: A business agreement number established between the provider and the insurer
-        for special business processing purposes.
-            :param claimResponse: The result of the adjudication of the line items for the Coverage specified in
-        this insurance.
+        :param id_: id of resource
+        :param extension: extensions
+        :param sequence: A number to uniquely identify insurance entries and provide a sequence of
+    coverages to convey coordination of benefit order.
+        :param focal: A flag to indicate that this Coverage is to be used for adjudication of this
+    claim when set to true.
+        :param coverage: Reference to the insurance card level information contained in the Coverage
+    resource. The coverage issuing insurer will use these details to locate the
+    patient's actual coverage within the insurer's information system.
+        :param businessArrangement: A business agreement number established between the provider and the insurer
+    for special business processing purposes.
+        :param claimResponse: The result of the adjudication of the line items for the Coverage specified in
+    this insurance.
         """
         super().__init__(
             id_=id_,

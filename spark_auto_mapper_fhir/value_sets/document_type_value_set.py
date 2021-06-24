@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class DocumentTypeValueSetCode(FhirValueSetBase):
     """
     DocumentTypeValueSet
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -23,44 +32,24 @@ class DocumentTypeValueSetCodeValues:
     AdmissionEvaluationNote = DocumentTypeValueSetCode("67851-6")
     NurseAdmissionEvaluationNote = DocumentTypeValueSetCode("34744-3")
     SurgeryAdmissionEvaluationNote = DocumentTypeValueSetCode("34873-0")
-    EmergencyMedicineEmergencyDepartmentAdmissionEvaluationNote = (
-        DocumentTypeValueSetCode("68552-9")
-    )
+    EmergencyMedicineEmergencyDepartmentAdmissionEvaluationNote = DocumentTypeValueSetCode("68552-9")
     HospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("67852-4")
     CardiologyHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("68471-2")
-    CardiologyMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
-        "68483-7"
-    )
-    CriticalCareMedicineHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
-        "64058-1"
-    )
-    CriticalCareMedicineMedicalStudentHospitalAdmissionEvaluationNote = (
-        DocumentTypeValueSetCode("64070-6")
-    )
+    CardiologyMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("68483-7")
+    CriticalCareMedicineHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64058-1")
+    CriticalCareMedicineMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64070-6")
     GeneralMedicineHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64053-2")
-    GeneralMedicineMedicalStudentHospitalAdmissionEvaluationNote = (
-        DocumentTypeValueSetCode("64054-0")
-    )
-    GeneralMedicinePhysicianAttendingHospitalAdmissionEvaluationNote = (
-        DocumentTypeValueSetCode("34862-3")
-    )
+    GeneralMedicineMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64054-0")
+    GeneralMedicinePhysicianAttendingHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("34862-3")
     PulmonaryHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64062-3")
-    PulmonaryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
-        "64078-9"
-    )
-    SurgeryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
-        "64066-4"
-    )
+    PulmonaryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64078-9")
+    SurgeryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64066-4")
     ThoracicSurgeryHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64060-7")
-    ThoracicSurgeryMedicalStudentHospitalAdmissionEvaluationNote = (
-        DocumentTypeValueSetCode("64074-8")
-    )
+    ThoracicSurgeryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64074-8")
     AdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode("51849-8")
     GeneralMedicineAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode("34763-3")
     HospitalAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode("47039-3")
-    CardiologyHospitalAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "34094-3"
-    )
+    CardiologyHospitalAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode("34094-3")
     AdmissionRequestDocument = DocumentTypeValueSetCode("57830-2")
     AllergiesAndAdverseReactionsDocument = DocumentTypeValueSetCode("48765-2")
     AnaphylaxisActionPlan = DocumentTypeValueSetCode("74152-0")
@@ -76,15 +65,11 @@ class DocumentTypeValueSetCodeValues:
     BirthCertificateDocument = DocumentTypeValueSetCode("71230-7")
     CancerEventReport = DocumentTypeValueSetCode("72134-0")
     ClinicalPresentationDocument = DocumentTypeValueSetCode("55108-5")
-    CommunicationOfCriticalResults_Description_Document = DocumentTypeValueSetCode(
-        "73568-8"
-    )
+    CommunicationOfCriticalResults_Description_Document = DocumentTypeValueSetCode("73568-8")
     ComplexMedicalConditionsActionPlan = DocumentTypeValueSetCode("74144-7")
     ComplicationsDocument = DocumentTypeValueSetCode("55109-3")
     ComprehensiveHistoryAndPhysicalNote = DocumentTypeValueSetCode("34095-0")
-    NursingFacilityComprehensiveHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "34096-8"
-    )
+    NursingFacilityComprehensiveHistoryAndPhysicalNote = DocumentTypeValueSetCode("34096-8")
     ComputerGeneratedRecommendationDocument = DocumentTypeValueSetCode("63485-7")
     ConclusionsDocument = DocumentTypeValueSetCode("55110-1")
     ConferenceNote = DocumentTypeValueSetCode("34098-4")
@@ -144,27 +129,17 @@ class DocumentTypeValueSetCodeValues:
     AllergyAndImmunologyHospitalConsultNote = DocumentTypeValueSetCode("68633-7")
     AudiologyHospitalConsultNote = DocumentTypeValueSetCode("68639-4")
     CardiologyMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("68486-0")
-    ChildAndAdolescentPsychiatryHospitalConsultNote = DocumentTypeValueSetCode(
-        "68648-5"
-    )
+    ChildAndAdolescentPsychiatryHospitalConsultNote = DocumentTypeValueSetCode("68648-5")
     ClinicalBiochemicalGeneticsHospitalConsultNote = DocumentTypeValueSetCode("68651-9")
     ClinicalGeneticsHospitalConsultNote = DocumentTypeValueSetCode("68661-8")
-    CriticalCareMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode(
-        "64072-2"
-    )
+    CriticalCareMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64072-2")
     DermatologyHospitalConsultNote = DocumentTypeValueSetCode("68551-1")
-    Developmental_behavioralPediatricsHospitalConsultNote = DocumentTypeValueSetCode(
-        "68670-9"
-    )
-    GeneralMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode(
-        "64056-5"
-    )
+    Developmental_behavioralPediatricsHospitalConsultNote = DocumentTypeValueSetCode("68670-9")
+    GeneralMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64056-5")
     Multi_specialtyProgramHospitalConsultNote = DocumentTypeValueSetCode("68681-6")
     NeonatalPerinatalMedicineHospitalConsultNote = DocumentTypeValueSetCode("68685-7")
     NeurologicalSurgeryHospitalConsultNote = DocumentTypeValueSetCode("68694-9")
-    NeurologyWithSpecialQualificationsInChildNeurologyHospitalConsultNote = (
-        DocumentTypeValueSetCode("68705-3")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyHospitalConsultNote = DocumentTypeValueSetCode("68705-3")
     ObstetricsAndGynecologyHospitalConsultNote = DocumentTypeValueSetCode("68566-9")
     OccupationalTherapyHospitalConsultNote = DocumentTypeValueSetCode("68570-1")
     OphthalmologyHospitalConsultNote = DocumentTypeValueSetCode("68575-0")
@@ -174,18 +149,14 @@ class DocumentTypeValueSetCodeValues:
     PediatricDermatologyHospitalConsultNote = DocumentTypeValueSetCode("68892-9")
     PediatricEndocrinologyHospitalConsultNote = DocumentTypeValueSetCode("68897-8")
     PediatricGastroenterologyHospitalConsultNote = DocumentTypeValueSetCode("68746-7")
-    PediatricHematology_oncologyHospitalConsultNote = DocumentTypeValueSetCode(
-        "68757-4"
-    )
+    PediatricHematology_oncologyHospitalConsultNote = DocumentTypeValueSetCode("68757-4")
     PediatricInfectiousDiseasesHospitalConsultNote = DocumentTypeValueSetCode("68765-7")
     PediatricNephrologyHospitalConsultNote = DocumentTypeValueSetCode("68869-7")
     PediatricOtolaryngologyHospitalConsultNote = DocumentTypeValueSetCode("68874-7")
     PediatricPulmonologyHospitalConsultNote = DocumentTypeValueSetCode("68787-1")
     PediatricRheumatologyHospitalConsultNote = DocumentTypeValueSetCode("68879-6")
     PediatricSurgeryHospitalConsultNote = DocumentTypeValueSetCode("68802-8")
-    PediatricTransplantHepatologyHospitalConsultNote = DocumentTypeValueSetCode(
-        "68864-8"
-    )
+    PediatricTransplantHepatologyHospitalConsultNote = DocumentTypeValueSetCode("68864-8")
     PediatricUrologyHospitalConsultNote = DocumentTypeValueSetCode("68812-7")
     PediatricsHospitalConsultNote = DocumentTypeValueSetCode("68821-8")
     PharmacyHospitalConsultNote = DocumentTypeValueSetCode("68586-7")
@@ -196,9 +167,7 @@ class DocumentTypeValueSetCodeValues:
     PulmonaryMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64080-5")
     Speech_languagePathologyHospitalConsultNote = DocumentTypeValueSetCode("68846-5")
     SurgeryMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64068-0")
-    ThoracicSurgeryMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode(
-        "64076-3"
-    )
+    ThoracicSurgeryMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64076-3")
     TransplantSurgeryHospitalConsultNote = DocumentTypeValueSetCode("68852-3")
     IntensiveCareUnitConsultNote = DocumentTypeValueSetCode("34100-8")
     LongTermCareFacilityConsultNote = DocumentTypeValueSetCode("51854-8")
@@ -214,51 +183,35 @@ class DocumentTypeValueSetCodeValues:
     CurrentImagingProcedureDescriptionsDocument = DocumentTypeValueSetCode("55111-9")
     CysticFibrosisActionPlan = DocumentTypeValueSetCode("74148-8")
     DeathCertificate = DocumentTypeValueSetCode("64297-5")
-    DemographicInformation_HistoryOfOccupationDocument = DocumentTypeValueSetCode(
-        "74208-0"
-    )
+    DemographicInformation_HistoryOfOccupationDocument = DocumentTypeValueSetCode("74208-0")
     DetailsDocument = DocumentTypeValueSetCode("51899-3")
     DiabetesTypeIActionPlan = DocumentTypeValueSetCode("74150-4")
     DiabetesTypeIIActionPlan = DocumentTypeValueSetCode("74151-2")
-    DiagnosticInterventionalStudyReportInterventionalRadiology = (
-        DocumentTypeValueSetCode("47048-4")
-    )
+    DiagnosticInterventionalStudyReportInterventionalRadiology = DocumentTypeValueSetCode("47048-4")
     DiagnosticStudyNote = DocumentTypeValueSetCode("70004-7")
     AdolescentMedicineDiagnosticStudyNote = DocumentTypeValueSetCode("68611-3")
     AllergyAndImmunologyDiagnosticStudyNote = DocumentTypeValueSetCode("68625-3")
     AudiologyDiagnosticStudyNote = DocumentTypeValueSetCode("68635-2")
-    ChildAndAdolescentPsychiatryDiagnosticStudyNote = DocumentTypeValueSetCode(
-        "68641-0"
-    )
+    ChildAndAdolescentPsychiatryDiagnosticStudyNote = DocumentTypeValueSetCode("68641-0")
     ClinicalGeneticsDiagnosticStudyNote = DocumentTypeValueSetCode("68652-7")
     Multi_specialtyProgramDiagnosticStudyNote = DocumentTypeValueSetCode("68673-3")
     NeurologicalSurgeryDiagnosticStudyNote = DocumentTypeValueSetCode("68687-3")
     NeurologyDiagnosticStudyNote = DocumentTypeValueSetCode("68556-0")
-    NeurologyWithSpecialQualificationsInChildNeurologyDiagnosticStudyNote = (
-        DocumentTypeValueSetCode("68696-4")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyDiagnosticStudyNote = DocumentTypeValueSetCode("68696-4")
     ObstetricsAndGynecologyDiagnosticStudyNote = DocumentTypeValueSetCode("68557-8")
     OrthopaedicSurgeryDiagnosticStudyNote = DocumentTypeValueSetCode("68577-6")
     PainMedicineDiagnosticStudyNote = DocumentTypeValueSetCode("68708-7")
     PediatricCardiologyDiagnosticStudyNote = DocumentTypeValueSetCode("68718-6")
-    PediatricHematology_oncologyDiagnosticStudyNote = DocumentTypeValueSetCode(
-        "68748-3"
-    )
+    PediatricHematology_oncologyDiagnosticStudyNote = DocumentTypeValueSetCode("68748-3")
     PediatricNephrologyDiagnosticStudyNote = DocumentTypeValueSetCode("68767-3")
     PediatricPulmonologyDiagnosticStudyNote = DocumentTypeValueSetCode("68778-0")
     PediatricSurgeryDiagnosticStudyNote = DocumentTypeValueSetCode("68794-7")
-    PediatricTransplantHepatologyDiagnosticStudyNote = DocumentTypeValueSetCode(
-        "68855-6"
-    )
+    PediatricTransplantHepatologyDiagnosticStudyNote = DocumentTypeValueSetCode("68855-6")
     PediatricUrologyDiagnosticStudyNote = DocumentTypeValueSetCode("68804-4")
     RadiologyDiagnosticStudyNote = DocumentTypeValueSetCode("68604-8")
     AudiologyHospitalDiagnosticStudyNote = DocumentTypeValueSetCode("68640-2")
-    NeurologyWithSpecialQualificationsInChildNeurologyHospitalDiagnosticStudyNote = (
-        DocumentTypeValueSetCode("68706-1")
-    )
-    PediatricPulmonologyHospitalDiagnosticStudyNote = DocumentTypeValueSetCode(
-        "68788-9"
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyHospitalDiagnosticStudyNote = DocumentTypeValueSetCode("68706-1")
+    PediatricPulmonologyHospitalDiagnosticStudyNote = DocumentTypeValueSetCode("68788-9")
     PediatricsHospitalDiagnosticStudyNote = DocumentTypeValueSetCode("68822-6")
     DischargeInstructions = DocumentTypeValueSetCode("74213-0")
     EmergencyDepartmentDischargeInstructions = DocumentTypeValueSetCode("60280-5")
@@ -268,14 +221,10 @@ class DocumentTypeValueSetCodeValues:
     AllergyAndImmunologyDischargeSummary = DocumentTypeValueSetCode("68626-1")
     ChildAndAdolescentPsychiatryDischargeSummary = DocumentTypeValueSetCode("68642-8")
     ClinicalGeneticsDischargeSummary = DocumentTypeValueSetCode("68653-5")
-    Developmental_behavioralPediatricsDischargeSummary = DocumentTypeValueSetCode(
-        "68663-4"
-    )
+    Developmental_behavioralPediatricsDischargeSummary = DocumentTypeValueSetCode("68663-4")
     Multi_specialtyProgramDischargeSummary = DocumentTypeValueSetCode("68674-1")
     NeurologicalSurgeryDischargeSummary = DocumentTypeValueSetCode("68688-1")
-    NeurologyWithSpecialQualificationsInChildNeurologyDischargeSummary = (
-        DocumentTypeValueSetCode("68697-2")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyDischargeSummary = DocumentTypeValueSetCode("68697-2")
     NurseDischargeSummary = DocumentTypeValueSetCode("34745-0")
     ObstetricsAndGynecologyDischargeSummary = DocumentTypeValueSetCode("68558-6")
     OphthalmologyDischargeSummary = DocumentTypeValueSetCode("68572-7")
@@ -313,13 +262,9 @@ class DocumentTypeValueSetCodeValues:
     EvaluationAndManagementOfHyperlipidemia = DocumentTypeValueSetCode("34859-9")
     EvaluationAndManagementOfHypertension = DocumentTypeValueSetCode("34860-7")
     EvaluationAndManagementOfSmokingCessation = DocumentTypeValueSetCode("70005-4")
-    HospitalEvaluationAndManagementOfSmokingCessation = DocumentTypeValueSetCode(
-        "64142-3"
-    )
+    HospitalEvaluationAndManagementOfSmokingCessation = DocumentTypeValueSetCode("64142-3")
     EvaluationAndManagementOfSubstanceAbuseNote = DocumentTypeValueSetCode("34857-3")
-    EvaluationOfMentalAndPhysicalIncapacityCertificateDocument = (
-        DocumentTypeValueSetCode("72267-8")
-    )
+    EvaluationOfMentalAndPhysicalIncapacityCertificateDocument = DocumentTypeValueSetCode("72267-8")
     FunctionalStatusAssessmentNote = DocumentTypeValueSetCode("47420-5")
     GroupCounselingNote = DocumentTypeValueSetCode("47043-5")
     MentalHealthGroupCounselingNote = DocumentTypeValueSetCode("34787-2")
@@ -336,26 +281,16 @@ class DocumentTypeValueSetCodeValues:
     HeartDiseaseActionPlan = DocumentTypeValueSetCode("74146-2")
     HistoryAndPhysicalNote = DocumentTypeValueSetCode("34117-2")
     AdolescentMedicineHistoryAndPhysicalNote = DocumentTypeValueSetCode("68614-7")
-    AdvancedHeartFailureAndTransplantCardiologyHistoryAndPhysicalNote = (
-        DocumentTypeValueSetCode("68622-0")
-    )
+    AdvancedHeartFailureAndTransplantCardiologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68622-0")
     AllergyAndImmunologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68628-7")
     AudiologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68637-8")
-    ChildAndAdolescentPsychiatryHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "68644-4"
-    )
+    ChildAndAdolescentPsychiatryHistoryAndPhysicalNote = DocumentTypeValueSetCode("68644-4")
     ClinicalGeneticsHistoryAndPhysicalNote = DocumentTypeValueSetCode("68655-0")
-    Developmental_behavioralPediatricsHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "68665-9"
-    )
+    Developmental_behavioralPediatricsHistoryAndPhysicalNote = DocumentTypeValueSetCode("68665-9")
     Multi_specialtyProgramHistoryAndPhysicalNote = DocumentTypeValueSetCode("68676-6")
-    NeonatalPerinatalMedicineHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "68683-2"
-    )
+    NeonatalPerinatalMedicineHistoryAndPhysicalNote = DocumentTypeValueSetCode("68683-2")
     NeurologicalSurgeryHistoryAndPhysicalNote = DocumentTypeValueSetCode("68690-7")
-    NeurologyWithSpecialQualificationsInChildNeurologyHistoryAndPhysicalNote = (
-        DocumentTypeValueSetCode("68699-8")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68699-8")
     ObstetricsAndGynecologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68560-2")
     OphthalmologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68573-5")
     OrthopaedicSurgeryHistoryAndPhysicalNote = DocumentTypeValueSetCode("68580-0")
@@ -363,23 +298,15 @@ class DocumentTypeValueSetCodeValues:
     PediatricCardiologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68721-0")
     PediatricDermatologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68731-9")
     PediatricEndocrinologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68735-0")
-    PediatricGastroenterologyHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "68740-0"
-    )
-    PediatricHematology_oncologyHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "68751-7"
-    )
-    PediatricInfectiousDiseasesHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "68760-8"
-    )
+    PediatricGastroenterologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68740-0")
+    PediatricHematology_oncologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68751-7")
+    PediatricInfectiousDiseasesHistoryAndPhysicalNote = DocumentTypeValueSetCode("68760-8")
     PediatricNephrologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68770-7")
     PediatricOtolaryngologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68775-6")
     PediatricPulmonologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68781-4")
     PediatricRheumatologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68791-3")
     PediatricSurgeryHistoryAndPhysicalNote = DocumentTypeValueSetCode("68797-0")
-    PediatricTransplantHepatologyHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "68858-0"
-    )
+    PediatricTransplantHepatologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68858-0")
     PediatricUrologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68807-7")
     PediatricsHistoryAndPhysicalNote = DocumentTypeValueSetCode("68817-6")
     PhysicianHistoryAndPhysicalNote = DocumentTypeValueSetCode("28626-0")
@@ -398,37 +325,23 @@ class DocumentTypeValueSetCodeValues:
     InflammatoryBowelDiseaseActionPlan = DocumentTypeValueSetCode("74149-6")
     Provider_unspecifiedInitialAssessment = DocumentTypeValueSetCode("28636-9")
     ChiropracticMedicineInitialAssessmentNote = DocumentTypeValueSetCode("28581-7")
-    Hematology_MedicalOncologyInitialAssessmentNote = DocumentTypeValueSetCode(
-        "68553-7"
-    )
+    Hematology_MedicalOncologyInitialAssessmentNote = DocumentTypeValueSetCode("68553-7")
     Speech_languagePathologyInitialAssessmentNote = DocumentTypeValueSetCode("18740-1")
     HospitalInitialAssessmentNote = DocumentTypeValueSetCode("47044-3")
     CaseManagerHospitalInitialAssessmentNote = DocumentTypeValueSetCode("64065-6")
-    RespiratoryTherapyHospitalInitialAssessmentNote = DocumentTypeValueSetCode(
-        "68470-4"
-    )
+    RespiratoryTherapyHospitalInitialAssessmentNote = DocumentTypeValueSetCode("68470-4")
     NursingFacilityInitialAssessmentNote = DocumentTypeValueSetCode("34119-8")
     OutpatientInitialAssessmentNote = DocumentTypeValueSetCode("34120-6")
     Patient_sHomeInitialAssessmentNote = DocumentTypeValueSetCode("34118-0")
     InjuryEventSummaryDocument = DocumentTypeValueSetCode("74209-8")
     InterRAIAcuteCare_AC_HospitalDocument = DocumentTypeValueSetCode("74188-4")
     InterRAICommunityHealthAssessment_CHA_Document = DocumentTypeValueSetCode("74194-2")
-    InterRAICommunityHealthAssessment_AssistedLivingSupplement_CHA_AL_Document = (
-        DocumentTypeValueSetCode("74191-8")
-    )
-    InterRAICommunityHealthAssessment_DeafblindSupplement_CHA_Db_Document = (
-        DocumentTypeValueSetCode("74190-0")
-    )
-    InterRAICommunityHealthAssessment_FunctionalSupplement_CHA_FS_Document = (
-        DocumentTypeValueSetCode("74193-4")
-    )
-    InterRAICommunityHealthAssessment_MentalHealthSupplement_CHA_MH_Document = (
-        DocumentTypeValueSetCode("74192-6")
-    )
+    InterRAICommunityHealthAssessment_AssistedLivingSupplement_CHA_AL_Document = DocumentTypeValueSetCode("74191-8")
+    InterRAICommunityHealthAssessment_DeafblindSupplement_CHA_Db_Document = DocumentTypeValueSetCode("74190-0")
+    InterRAICommunityHealthAssessment_FunctionalSupplement_CHA_FS_Document = DocumentTypeValueSetCode("74193-4")
+    InterRAICommunityHealthAssessment_MentalHealthSupplement_CHA_MH_Document = DocumentTypeValueSetCode("74192-6")
     InterRAIContactAssessment_CA_Document = DocumentTypeValueSetCode("74197-5")
-    InterRAIEmergencyScreenerForPsychiatry_ESP_Document = DocumentTypeValueSetCode(
-        "74187-6"
-    )
+    InterRAIEmergencyScreenerForPsychiatry_ESP_Document = DocumentTypeValueSetCode("74187-6")
     InterRAIHomeCare_HC_Document = DocumentTypeValueSetCode("74196-7")
     InterRAILongTermCareFacility_LTCF_Document = DocumentTypeValueSetCode("74195-9")
     InterRAIPalliativeCare_PC_Document = DocumentTypeValueSetCode("74189-2")
@@ -436,9 +349,7 @@ class DocumentTypeValueSetCodeValues:
     CardiologyInterventionalProcedureNote = DocumentTypeValueSetCode("34896-1")
     GastroenterologyInterventionalProcedureNote = DocumentTypeValueSetCode("34899-5")
     KeyImagesDocumentRadiology = DocumentTypeValueSetCode("55113-5")
-    LaborAndDeliveryAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode(
-        "57056-4"
-    )
+    LaborAndDeliveryAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode("57056-4")
     LaborAndDeliverySummaryNote = DocumentTypeValueSetCode("57057-2")
     LegalDocument = DocumentTypeValueSetCode("64299-1")
     Letter = DocumentTypeValueSetCode("51852-2")
@@ -447,22 +358,16 @@ class DocumentTypeValueSetCodeValues:
     PlasticSurgeryLetter = DocumentTypeValueSetCode("68593-3")
     HospitalLetter = DocumentTypeValueSetCode("68609-7")
     AdolescentMedicineHospitalLetter = DocumentTypeValueSetCode("68620-4")
-    AdvancedHeartFailureAndTransplantCardiologyHospitalLetter = (
-        DocumentTypeValueSetCode("68624-6")
-    )
+    AdvancedHeartFailureAndTransplantCardiologyHospitalLetter = DocumentTypeValueSetCode("68624-6")
     AllergyAndImmunologyHospitalLetter = DocumentTypeValueSetCode("68634-5")
     ChildAndAdolescentPsychiatryHospitalLetter = DocumentTypeValueSetCode("68649-3")
     ClinicalGeneticsHospitalLetter = DocumentTypeValueSetCode("68662-6")
-    Developmental_behavioralPediatricsHospitalLetter = DocumentTypeValueSetCode(
-        "68671-7"
-    )
+    Developmental_behavioralPediatricsHospitalLetter = DocumentTypeValueSetCode("68671-7")
     Hematology_MedicalOncologyHospitalLetter = DocumentTypeValueSetCode("68555-2")
     Multi_specialtyProgramHospitalLetter = DocumentTypeValueSetCode("68682-4")
     NeonatalPerinatalMedicineHospitalLetter = DocumentTypeValueSetCode("68686-5")
     NeurologicalSurgeryHospitalLetter = DocumentTypeValueSetCode("68695-6")
-    NeurologyWithSpecialQualificationsInChildNeurologyHospitalLetter = (
-        DocumentTypeValueSetCode("68707-9")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyHospitalLetter = DocumentTypeValueSetCode("68707-9")
     ObstetricsAndGynecologyHospitalLetter = DocumentTypeValueSetCode("68567-7")
     OccupationalTherapyHospitalLetter = DocumentTypeValueSetCode("68571-9")
     OphthalmologyHospitalLetter = DocumentTypeValueSetCode("68576-8")
@@ -493,18 +398,14 @@ class DocumentTypeValueSetCodeValues:
     MedicationManagementNote = DocumentTypeValueSetCode("70006-2")
     PharmacyHospitalMedicationManagementNote = DocumentTypeValueSetCode("68587-5")
     MedicationPharmaceuticalAdvice_briefDocument = DocumentTypeValueSetCode("61357-0")
-    MedicationPharmaceuticalAdvice_extendedDocument = DocumentTypeValueSetCode(
-        "61356-2"
-    )
+    MedicationPharmaceuticalAdvice_extendedDocument = DocumentTypeValueSetCode("61356-2")
     MedicationSummaryDocument = DocumentTypeValueSetCode("56445-0")
     MultipleSclerosisActionPlan = DocumentTypeValueSetCode("74145-4")
     MuscularDystrophyActionPlan = DocumentTypeValueSetCode("74147-0")
     NeonatalCareReport = DocumentTypeValueSetCode("59268-3")
     Note = DocumentTypeValueSetCode("34109-9")
     AdolescentMedicineNote = DocumentTypeValueSetCode("68615-4")
-    AdvancedHeartFailureAndTransplantCardiologyNote = DocumentTypeValueSetCode(
-        "68621-2"
-    )
+    AdvancedHeartFailureAndTransplantCardiologyNote = DocumentTypeValueSetCode("68621-2")
     AllergyAndImmunologyNote = DocumentTypeValueSetCode("68629-5")
     AnesthesiologyNote = DocumentTypeValueSetCode("34750-0")
     AudiologyNote = DocumentTypeValueSetCode("68636-0")
@@ -533,9 +434,7 @@ class DocumentTypeValueSetCodeValues:
     NephrologyNote = DocumentTypeValueSetCode("34796-3")
     NeurologicalSurgeryNote = DocumentTypeValueSetCode("34799-7")
     NeurologyNote = DocumentTypeValueSetCode("34905-0")
-    NeurologyWithSpecialQualificationsInChildNeurologyNote = DocumentTypeValueSetCode(
-        "68700-4"
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyNote = DocumentTypeValueSetCode("68700-4")
     NurseNote = DocumentTypeValueSetCode("34746-8")
     NutritionAndDieteticsNote = DocumentTypeValueSetCode("34801-1")
     ObstetricsAndGynecologyNote = DocumentTypeValueSetCode("34778-1")
@@ -589,9 +488,7 @@ class DocumentTypeValueSetCodeValues:
     EmergencyDepartmentNote = DocumentTypeValueSetCode("34111-5")
     NurseEmergencyDepartmentNote = DocumentTypeValueSetCode("57053-1")
     HospitalNote = DocumentTypeValueSetCode("34112-3")
-    CriticalCareMedicinePhysicianAttendingHospitalNote = DocumentTypeValueSetCode(
-        "64069-8"
-    )
+    CriticalCareMedicinePhysicianAttendingHospitalNote = DocumentTypeValueSetCode("64069-8")
     PediatricsHospitalNote = DocumentTypeValueSetCode("68827-5")
     PulmonaryPhysicianAttendingHospitalNote = DocumentTypeValueSetCode("64077-1")
     ThoracicSurgeryPhysicianAttendingHospitalNote = DocumentTypeValueSetCode("64073-0")
@@ -621,157 +518,67 @@ class DocumentTypeValueSetCodeValues:
     NursePlanOfCareNote = DocumentTypeValueSetCode("64295-9")
     PopulationSummaryNote = DocumentTypeValueSetCode("51900-9")
     PostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("67860-7")
-    OphthalmologyPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "67861-5"
-    )
-    SurgeryPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "34875-5"
-    )
-    SurgeryNursePostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "34880-5"
-    )
-    HospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68610-5"
-    )
-    SurgeryHospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68606-3"
-    )
-    OphthalmologyOutpatientPostoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("34867-2")
-    )
+    OphthalmologyPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("67861-5")
+    SurgeryPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34875-5")
+    SurgeryNursePostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34880-5")
+    HospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68610-5")
+    SurgeryHospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68606-3")
+    OphthalmologyOutpatientPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34867-2")
     PowerOfAttorney = DocumentTypeValueSetCode("64298-3")
     PrehospitalSummaryDocument = DocumentTypeValueSetCode("74207-2")
     PreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("67862-3")
-    AdolescentMedicinePreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68616-2")
-    )
-    AdvancedHeartFailureAndTransplantCardiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68623-8"
-    )
-    AnesthesiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "34751-8"
-    )
-    AudiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68638-6"
-    )
-    ClinicalGeneticsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68657-6"
-    )
-    DermatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68550-3"
-    )
-    Multi_specialtyProgramPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68678-2")
-    )
-    NeurologicalSurgeryPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68691-5")
-    )
-    NeurologyWithSpecialQualificationsInChildNeurologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68701-2"
-    )
+    AdolescentMedicinePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68616-2")
+    AdvancedHeartFailureAndTransplantCardiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68623-8")
+    AnesthesiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34751-8")
+    AudiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68638-6")
+    ClinicalGeneticsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68657-6")
+    DermatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68550-3")
+    Multi_specialtyProgramPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68678-2")
+    NeurologicalSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68691-5")
+    NeurologyWithSpecialQualificationsInChildNeurologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68701-2")
     NursePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34747-6")
-    ObstetricsAndGynecologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68562-8")
-    )
-    OphthalmologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "34809-4"
-    )
-    OrthopaedicSurgeryPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68581-8")
-    )
-    PainMedicinePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68713-7"
-    )
-    PediatricCardiologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68723-6")
-    )
-    PediatricDermatologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68732-7")
-    )
-    PediatricEndocrinologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68736-8")
-    )
-    PediatricGastroenterologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68742-6")
-    )
-    PediatricHematology_oncologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68753-3")
-    )
-    PediatricInfectiousDiseasesPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68762-4")
-    )
-    PediatricNephrologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68771-5")
-    )
-    PediatricOtolaryngologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68776-4")
-    )
-    PediatricPulmonologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68783-0")
-    )
-    PediatricRheumatologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68792-1")
-    )
-    PediatricSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68798-8"
-    )
-    PediatricTransplantHepatologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68860-6")
-    )
-    PediatricUrologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68808-5"
-    )
-    PediatricsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68819-2"
-    )
-    PlasticSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68594-1"
-    )
-    PrimaryCarePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68835-8"
-    )
-    Speech_languagePathologyPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68844-0")
-    )
+    ObstetricsAndGynecologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68562-8")
+    OphthalmologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34809-4")
+    OrthopaedicSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68581-8")
+    PainMedicinePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68713-7")
+    PediatricCardiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68723-6")
+    PediatricDermatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68732-7")
+    PediatricEndocrinologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68736-8")
+    PediatricGastroenterologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68742-6")
+    PediatricHematology_oncologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68753-3")
+    PediatricInfectiousDiseasesPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68762-4")
+    PediatricNephrologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68771-5")
+    PediatricOtolaryngologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68776-4")
+    PediatricPulmonologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68783-0")
+    PediatricRheumatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68792-1")
+    PediatricSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68798-8")
+    PediatricTransplantHepatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68860-6")
+    PediatricUrologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68808-5")
+    PediatricsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68819-2")
+    PlasticSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68594-1")
+    PrimaryCarePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68835-8")
+    Speech_languagePathologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68844-0")
     SurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34876-3")
-    SurgeryNursePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "34881-3"
-    )
-    TransplantSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
-        "68850-7"
-    )
-    AnesthesiologyHospitalPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("34123-0")
-    )
-    PediatricsHospitalPreoperativeEvaluationAndManagementNote = (
-        DocumentTypeValueSetCode("68828-3")
-    )
-    PrescriptionForDiagnosticOrSpecialistCareDocument = DocumentTypeValueSetCode(
-        "57832-8"
-    )
+    SurgeryNursePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34881-3")
+    TransplantSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68850-7")
+    AnesthesiologyHospitalPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34123-0")
+    PediatricsHospitalPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68828-3")
+    PrescriptionForDiagnosticOrSpecialistCareDocument = DocumentTypeValueSetCode("57832-8")
     PrescriptionForEyewear = DocumentTypeValueSetCode("64288-4")
-    PrescriptionForMedicalEquipmentOrProductDocument = DocumentTypeValueSetCode(
-        "57829-4"
-    )
+    PrescriptionForMedicalEquipmentOrProductDocument = DocumentTypeValueSetCode("57829-4")
     PrescriptionForMedicationDocument = DocumentTypeValueSetCode("57833-6")
     PrescriptionForRehabilitationDocument = DocumentTypeValueSetCode("57831-0")
     PrescriptionListDocument = DocumentTypeValueSetCode("57828-6")
-    PrescriptionRequestPharmacyDocumentFromPharmacist = DocumentTypeValueSetCode(
-        "73709-8"
-    )
+    PrescriptionRequestPharmacyDocumentFromPharmacist = DocumentTypeValueSetCode("73709-8")
     PriorImagingProcedureDescriptionsDocument = DocumentTypeValueSetCode("55114-3")
     PrivacyPolicyOrganizationDocument = DocumentTypeValueSetCode("57017-6")
     PrivacyPolicyAcknowledgmentDocument = DocumentTypeValueSetCode("57016-8")
     ProcedureConsent = DocumentTypeValueSetCode("64293-4")
     AllergyAndImmunologyProcedureNote = DocumentTypeValueSetCode("68630-3")
     ClinicalGeneticsProcedureNote = DocumentTypeValueSetCode("68658-4")
-    Developmental_behavioralPediatricsProcedureNote = DocumentTypeValueSetCode(
-        "68667-5"
-    )
+    Developmental_behavioralPediatricsProcedureNote = DocumentTypeValueSetCode("68667-5")
     NeurologicalSurgeryProcedureNote = DocumentTypeValueSetCode("68692-3")
-    NeurologyWithSpecialQualificationsInChildNeurologyProcedureNote = (
-        DocumentTypeValueSetCode("68702-0")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyProcedureNote = DocumentTypeValueSetCode("68702-0")
     ObstetricsAndGynecologyProcedureNote = DocumentTypeValueSetCode("68563-6")
     PainMedicineProcedureNote = DocumentTypeValueSetCode("68714-5")
     PediatricCardiologyProcedureNote = DocumentTypeValueSetCode("68724-4")
@@ -789,9 +596,7 @@ class DocumentTypeValueSetCodeValues:
     PediatricsProcedureNote = DocumentTypeValueSetCode("68820-0")
     PrimaryCareProcedureNote = DocumentTypeValueSetCode("68836-6")
     TransplantSurgeryProcedureNote = DocumentTypeValueSetCode("68851-5")
-    PediatricCriticalCareMedicineHospitalProcedureNote = DocumentTypeValueSetCode(
-        "68729-3"
-    )
+    PediatricCriticalCareMedicineHospitalProcedureNote = DocumentTypeValueSetCode("68729-3")
     PediatricsHospitalProcedureNote = DocumentTypeValueSetCode("68829-1")
     ProgressLetter = DocumentTypeValueSetCode("68607-1")
     Provider_unspecifiedProgressNote = DocumentTypeValueSetCode("11506-3")
@@ -808,9 +613,7 @@ class DocumentTypeValueSetCodeValues:
     MentalHealthProgressNote = DocumentTypeValueSetCode("34904-3")
     Multi_specialtyProgramProgressNote = DocumentTypeValueSetCode("68679-0")
     NeurologicalSurgeryProgressNote = DocumentTypeValueSetCode("68693-1")
-    NeurologyWithSpecialQualificationsInChildNeurologyProgressNote = (
-        DocumentTypeValueSetCode("68703-8")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyProgressNote = DocumentTypeValueSetCode("68703-8")
     NurseProgressNote = DocumentTypeValueSetCode("28623-7")
     NursePractitionerProgressNote = DocumentTypeValueSetCode("28575-9")
     ObstetricsAndGynecologyProgressNote = DocumentTypeValueSetCode("68564-4")
@@ -843,39 +646,23 @@ class DocumentTypeValueSetCodeValues:
     HospitalProgressNote = DocumentTypeValueSetCode("34130-5")
     CardiologyHospitalProgressNote = DocumentTypeValueSetCode("68472-0")
     CardiologyMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("68485-2")
-    CardiologyPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
-        "68484-5"
-    )
+    CardiologyPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68484-5")
     CriticalCareMedicineHospitalProgressNote = DocumentTypeValueSetCode("64059-9")
-    CriticalCareMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode(
-        "64071-4"
-    )
-    CriticalCareMedicinePhysicianAttendingHospitalProgressNote = (
-        DocumentTypeValueSetCode("68473-8")
-    )
-    GeneralMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode(
-        "64055-7"
-    )
-    GeneralMedicinePhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
-        "68475-3"
-    )
+    CriticalCareMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64071-4")
+    CriticalCareMedicinePhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68473-8")
+    GeneralMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64055-7")
+    GeneralMedicinePhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68475-3")
     PediatricsHospitalProgressNote = DocumentTypeValueSetCode("68830-9")
     PulmonaryHospitalProgressNote = DocumentTypeValueSetCode("64063-1")
     PulmonaryMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64079-7")
-    PulmonaryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
-        "68478-7"
-    )
+    PulmonaryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68478-7")
     RespiratoryTherapyHospitalProgressNote = DocumentTypeValueSetCode("68479-5")
     SurgeryHospitalProgressNote = DocumentTypeValueSetCode("64057-3")
     SurgeryMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64067-2")
     SurgeryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68480-3")
     ThoracicSurgeryHospitalProgressNote = DocumentTypeValueSetCode("64061-5")
-    ThoracicSurgeryMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode(
-        "64075-5"
-    )
-    ThoracicSurgeryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
-        "68481-1"
-    )
+    ThoracicSurgeryMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64075-5")
+    ThoracicSurgeryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68481-1")
     TransplantSurgeryHospitalProgressNote = DocumentTypeValueSetCode("70238-1")
     IntensiveCareUnitProgressNote = DocumentTypeValueSetCode("34126-3")
     OutpatientProgressNote = DocumentTypeValueSetCode("34131-3")
@@ -888,9 +675,7 @@ class DocumentTypeValueSetCodeValues:
     CaseManagerPatient_sHomeProgressNote = DocumentTypeValueSetCode("34125-5")
     QuestionnaireFormDefinitionSectionDocument = DocumentTypeValueSetCode("74468-0")
     QuestionnaireResponseSectionDocument = DocumentTypeValueSetCode("74465-6")
-    RadiationExposureAndProtectionInformation_Description_DocumentDiagnosticImaging = (
-        DocumentTypeValueSetCode("73569-6")
-    )
+    RadiationExposureAndProtectionInformation_Description_DocumentDiagnosticImaging = DocumentTypeValueSetCode("73569-6")
     ReadinessForDutyLetter = DocumentTypeValueSetCode("64294-2")
     ReadinessForDutyAssessment = DocumentTypeValueSetCode("64284-3")
     ReferralNote = DocumentTypeValueSetCode("57133-1")
@@ -955,18 +740,12 @@ class DocumentTypeValueSetCodeValues:
     RadiationOncologyHospitalSummaryNote = DocumentTypeValueSetCode("68603-0")
     SummaryOfDeathNote = DocumentTypeValueSetCode("47046-8")
     SummaryOfEpisodeNote = DocumentTypeValueSetCode("34133-9")
-    SummaryOfEpisodeNoteEmergencyDepartment_Hospital = DocumentTypeValueSetCode(
-        "74211-4"
-    )
+    SummaryOfEpisodeNoteEmergencyDepartment_Hospital = DocumentTypeValueSetCode("74211-4")
     SummaryPurposeCCDDocument = DocumentTypeValueSetCode("48764-5")
     SupervisoryNote = DocumentTypeValueSetCode("47047-6")
     OutpatientSupervisoryNote = DocumentTypeValueSetCode("67865-6")
-    CardiologyPhysicianAttendingOutpatientSupervisoryNote = DocumentTypeValueSetCode(
-        "34135-4"
-    )
-    GastroenterologyPhysicianAttendingOutpatientSupervisoryNote = (
-        DocumentTypeValueSetCode("34136-2")
-    )
+    CardiologyPhysicianAttendingOutpatientSupervisoryNote = DocumentTypeValueSetCode("34135-4")
+    GastroenterologyPhysicianAttendingOutpatientSupervisoryNote = DocumentTypeValueSetCode("34136-2")
     PhysicianAttendingOutpatientSupervisoryNote = DocumentTypeValueSetCode("34134-7")
     PatientSurgicalOperationConsent = DocumentTypeValueSetCode("61358-8")
     Provider_unspecifiedOperationNote = DocumentTypeValueSetCode("11504-8")
@@ -981,19 +760,13 @@ class DocumentTypeValueSetCodeValues:
     Provider_unspecifiedTransferSummary = DocumentTypeValueSetCode("18761-7")
     AdolescentMedicineTransferSummaryNote = DocumentTypeValueSetCode("68618-8")
     AllergyAndImmunologyTransferSummaryNote = DocumentTypeValueSetCode("68632-9")
-    ChildAndAdolescentPsychiatryTransferSummaryNote = DocumentTypeValueSetCode(
-        "68647-7"
-    )
+    ChildAndAdolescentPsychiatryTransferSummaryNote = DocumentTypeValueSetCode("68647-7")
     ClinicalGeneticsTransferSummaryNote = DocumentTypeValueSetCode("68660-0")
     CriticalCareMedicineTransferSummaryNote = DocumentTypeValueSetCode("34755-9")
-    Developmental_behavioralPediatricsTransferSummaryNote = DocumentTypeValueSetCode(
-        "68669-1"
-    )
+    Developmental_behavioralPediatricsTransferSummaryNote = DocumentTypeValueSetCode("68669-1")
     GeneralMedicineTransferSummaryNote = DocumentTypeValueSetCode("34770-8")
     Multi_specialtyProgramTransferSummaryNote = DocumentTypeValueSetCode("68680-8")
-    NeurologyWithSpecialQualificationsInChildNeurologyTransferSummaryNote = (
-        DocumentTypeValueSetCode("68704-6")
-    )
+    NeurologyWithSpecialQualificationsInChildNeurologyTransferSummaryNote = DocumentTypeValueSetCode("68704-6")
     ObstetricsAndGynecologyTransferSummaryNote = DocumentTypeValueSetCode("68565-1")
     OccupationalTherapyTransferSummaryNote = DocumentTypeValueSetCode("68569-3")
     OphthalmologyTransferSummaryNote = DocumentTypeValueSetCode("68887-9")
@@ -1002,18 +775,14 @@ class DocumentTypeValueSetCodeValues:
     PediatricCardiologyTransferSummaryNote = DocumentTypeValueSetCode("68726-9")
     PediatricEndocrinologyTransferSummaryNote = DocumentTypeValueSetCode("68737-6")
     PediatricGastroenterologyTransferSummaryNote = DocumentTypeValueSetCode("68745-9")
-    PediatricHematology_oncologyTransferSummaryNote = DocumentTypeValueSetCode(
-        "68756-6"
-    )
+    PediatricHematology_oncologyTransferSummaryNote = DocumentTypeValueSetCode("68756-6")
     PediatricInfectiousDiseasesTransferSummaryNote = DocumentTypeValueSetCode("68764-0")
     PediatricNephrologyTransferSummaryNote = DocumentTypeValueSetCode("68772-3")
     PediatricOtolaryngologyTransferSummaryNote = DocumentTypeValueSetCode("68777-2")
     PediatricPulmonologyTransferSummaryNote = DocumentTypeValueSetCode("68786-3")
     PediatricRheumatologyTransferSummaryNote = DocumentTypeValueSetCode("68793-9")
     PediatricSurgeryTransferSummaryNote = DocumentTypeValueSetCode("68801-0")
-    PediatricTransplantHepatologyTransferSummaryNote = DocumentTypeValueSetCode(
-        "68863-0"
-    )
+    PediatricTransplantHepatologyTransferSummaryNote = DocumentTypeValueSetCode("68863-0")
     PediatricUrologyTransferSummaryNote = DocumentTypeValueSetCode("68811-9")
     PediatricsTransferSummaryNote = DocumentTypeValueSetCode("68883-8")
     PlasticSurgeryTransferSummaryNote = DocumentTypeValueSetCode("68596-6")
@@ -1023,330 +792,126 @@ class DocumentTypeValueSetCodeValues:
     TraumaSummaryRegistryReportDocument = DocumentTypeValueSetCode("74198-3")
     EmergencyDepartmentTriageNote = DocumentTypeValueSetCode("54094-8")
     NurseEmergencyDepartmentTriage_careNote = DocumentTypeValueSetCode("57054-9")
-    VACompensationAndPension_CAndP_ExaminationAcromegaly = DocumentTypeValueSetCode(
-        "38932-0"
-    )
-    VACompensationAndPension_CAndP_ExaminationAidAndAttendance_housebound = (
-        DocumentTypeValueSetCode("38933-8")
-    )
-    VACompensationAndPension_CAndP_ExaminationArrhythmias = DocumentTypeValueSetCode(
-        "38934-6"
-    )
-    VACompensationAndPension_CAndP_ExaminationAudio = DocumentTypeValueSetCode(
-        "38936-1"
-    )
-    VACompensationAndPension_CAndP_ExaminationBonesFractures_boneDisease = (
-        DocumentTypeValueSetCode("38937-9")
-    )
-    VACompensationAndPension_CAndP_ExaminationBrain_spinalCord = (
-        DocumentTypeValueSetCode("38938-7")
-    )
-    VACompensationAndPension_CAndP_ExaminationChronicFatigueSyndrome = (
-        DocumentTypeValueSetCode("38939-5")
-    )
-    VACompensationAndPension_CAndP_ExaminationColdInjuryProtocol = (
-        DocumentTypeValueSetCode("38940-3")
-    )
-    VACompensationAndPension_CAndP_ExaminationCranialNerves = DocumentTypeValueSetCode(
-        "38941-1"
-    )
-    VACompensationAndPension_CAndP_ExaminationCushingsSyndrome = (
-        DocumentTypeValueSetCode("38942-9")
-    )
-    VACompensationAndPension_CAndP_ExaminationDental_oral = DocumentTypeValueSetCode(
-        "38943-7"
-    )
-    VACompensationAndPension_CAndP_ExaminationDiabetesMellitus = (
-        DocumentTypeValueSetCode("38944-5")
-    )
-    VACompensationAndPension_CAndP_ExaminationDisabilityInGulfWarVeterans = (
-        DocumentTypeValueSetCode("38956-9")
-    )
-    VACompensationAndPension_CAndP_ExaminationEarDisease = DocumentTypeValueSetCode(
-        "38946-0"
-    )
-    VACompensationAndPension_CAndP_ExaminationEpilepsy_narcolepsy = (
-        DocumentTypeValueSetCode("38949-4")
-    )
-    VACompensationAndPension_CAndP_ExaminationEsophagus_hiatalHernia = (
-        DocumentTypeValueSetCode("38950-2")
-    )
-    VACompensationAndPension_CAndP_ExaminationExtremityJoints = (
-        DocumentTypeValueSetCode("38966-8")
-    )
+    VACompensationAndPension_CAndP_ExaminationAcromegaly = DocumentTypeValueSetCode("38932-0")
+    VACompensationAndPension_CAndP_ExaminationAidAndAttendance_housebound = DocumentTypeValueSetCode("38933-8")
+    VACompensationAndPension_CAndP_ExaminationArrhythmias = DocumentTypeValueSetCode("38934-6")
+    VACompensationAndPension_CAndP_ExaminationAudio = DocumentTypeValueSetCode("38936-1")
+    VACompensationAndPension_CAndP_ExaminationBonesFractures_boneDisease = DocumentTypeValueSetCode("38937-9")
+    VACompensationAndPension_CAndP_ExaminationBrain_spinalCord = DocumentTypeValueSetCode("38938-7")
+    VACompensationAndPension_CAndP_ExaminationChronicFatigueSyndrome = DocumentTypeValueSetCode("38939-5")
+    VACompensationAndPension_CAndP_ExaminationColdInjuryProtocol = DocumentTypeValueSetCode("38940-3")
+    VACompensationAndPension_CAndP_ExaminationCranialNerves = DocumentTypeValueSetCode("38941-1")
+    VACompensationAndPension_CAndP_ExaminationCushingsSyndrome = DocumentTypeValueSetCode("38942-9")
+    VACompensationAndPension_CAndP_ExaminationDental_oral = DocumentTypeValueSetCode("38943-7")
+    VACompensationAndPension_CAndP_ExaminationDiabetesMellitus = DocumentTypeValueSetCode("38944-5")
+    VACompensationAndPension_CAndP_ExaminationDisabilityInGulfWarVeterans = DocumentTypeValueSetCode("38956-9")
+    VACompensationAndPension_CAndP_ExaminationEarDisease = DocumentTypeValueSetCode("38946-0")
+    VACompensationAndPension_CAndP_ExaminationEpilepsy_narcolepsy = DocumentTypeValueSetCode("38949-4")
+    VACompensationAndPension_CAndP_ExaminationEsophagus_hiatalHernia = DocumentTypeValueSetCode("38950-2")
+    VACompensationAndPension_CAndP_ExaminationExtremityJoints = DocumentTypeValueSetCode("38966-8")
     VACompensationAndPension_CAndP_ExaminationEye = DocumentTypeValueSetCode("38951-0")
     VACompensationAndPension_CAndP_ExaminationFeet = DocumentTypeValueSetCode("38952-8")
-    VACompensationAndPension_CAndP_ExaminationFibromyalgia = DocumentTypeValueSetCode(
-        "38953-6"
-    )
-    VACompensationAndPension_CAndP_ExaminationGeneralMedical = DocumentTypeValueSetCode(
-        "38954-4"
-    )
-    VACompensationAndPension_CAndP_ExaminationGeneralMentalDisorders = (
-        DocumentTypeValueSetCode("38969-2")
-    )
-    VACompensationAndPension_CAndP_ExaminationGenitourinary = DocumentTypeValueSetCode(
-        "38955-1"
-    )
-    VACompensationAndPension_CAndP_ExaminationGynecologicalConditions_disordersOfTheBreast = DocumentTypeValueSetCode(
-        "38957-7"
-    )
-    VACompensationAndPension_CAndP_ExaminationHand_thumb_fingers = (
-        DocumentTypeValueSetCode("38958-5")
-    )
-    VACompensationAndPension_CAndP_ExaminationHeart = DocumentTypeValueSetCode(
-        "38959-3"
-    )
-    VACompensationAndPension_CAndP_ExaminationHemicDisorders = DocumentTypeValueSetCode(
-        "38960-1"
-    )
-    VACompensationAndPension_CAndP_ExaminationHIV_relatedIllness = (
-        DocumentTypeValueSetCode("38961-9")
-    )
-    VACompensationAndPension_CAndP_ExaminationHypertension = DocumentTypeValueSetCode(
-        "38962-7"
-    )
-    VACompensationAndPension_CAndP_ExaminationInfectious_immune_nutritionalDisabilities = DocumentTypeValueSetCode(
-        "38963-5"
-    )
-    VACompensationAndPension_CAndP_ExaminationInitialEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode(
-        "38964-3"
-    )
-    VACompensationAndPension_CAndP_ExaminationLarge_smallIntestines = (
-        DocumentTypeValueSetCode("38965-0")
-    )
-    VACompensationAndPension_CAndP_ExaminationLiver_gallBladder_pancreas = (
-        DocumentTypeValueSetCode("38967-6")
-    )
-    VACompensationAndPension_CAndP_ExaminationLymphaticDisorders = (
-        DocumentTypeValueSetCode("38968-4")
-    )
-    VACompensationAndPension_CAndP_ExaminationMentalHealthEatingDisorders = (
-        DocumentTypeValueSetCode("38947-8")
-    )
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousArteries_veins = (
-        DocumentTypeValueSetCode("38935-3")
-    )
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousDigestiveConditions = (
-        DocumentTypeValueSetCode("38945-2")
-    )
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousEndocrineDiseases = (
-        DocumentTypeValueSetCode("38948-6")
-    )
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousNeurologicalDisorders = (
-        DocumentTypeValueSetCode("38972-6")
-    )
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousRespiratoryDiseases = (
-        DocumentTypeValueSetCode("38980-9")
-    )
-    VACompensationAndPension_CAndP_ExaminationMouth_lips_tongue = (
-        DocumentTypeValueSetCode("38970-0")
-    )
-    VACompensationAndPension_CAndP_ExaminationMuscles = DocumentTypeValueSetCode(
-        "38971-8"
-    )
-    VACompensationAndPension_CAndP_ExaminationNose_sinus_larynx_pharynx = (
-        DocumentTypeValueSetCode("38973-4")
-    )
-    VACompensationAndPension_CAndP_ExaminationObstructive_restrictive_interstitialRespiratoryDiseases = DocumentTypeValueSetCode(
-        "38979-1"
-    )
-    VACompensationAndPension_CAndP_ExaminationPeripheralNerves = (
-        DocumentTypeValueSetCode("38974-2")
-    )
-    VACompensationAndPension_CAndP_ExaminationPrisonerOfWarProtocol = (
-        DocumentTypeValueSetCode("38975-9")
-    )
-    VACompensationAndPension_CAndP_ExaminationPulmonaryTuberculosis_mycobacterialDiseases = DocumentTypeValueSetCode(
-        "38976-7"
-    )
-    VACompensationAndPension_CAndP_ExaminationRectum_anus = DocumentTypeValueSetCode(
-        "38977-5"
-    )
-    VACompensationAndPension_CAndP_ExaminationResidualsOfAmputations = (
-        DocumentTypeValueSetCode("38978-3")
-    )
-    VACompensationAndPension_CAndP_ExaminationReviewEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode(
-        "38981-7"
-    )
-    VACompensationAndPension_CAndP_ExaminationScars = DocumentTypeValueSetCode(
-        "38982-5"
-    )
-    VACompensationAndPension_CAndP_ExaminationSenseOfSmell_taste = (
-        DocumentTypeValueSetCode("38983-3")
-    )
-    VACompensationAndPension_CAndP_ExaminationSkinDiseasesOtherThanScars = (
-        DocumentTypeValueSetCode("38984-1")
-    )
-    VACompensationAndPension_CAndP_ExaminationSocial_industrialSurvey = (
-        DocumentTypeValueSetCode("38985-8")
-    )
-    VACompensationAndPension_CAndP_ExaminationSpine = DocumentTypeValueSetCode(
-        "38986-6"
-    )
-    VACompensationAndPension_CAndP_ExaminationStomach_duodenum_peritonealAdhesions = (
-        DocumentTypeValueSetCode("38987-4")
-    )
-    VACompensationAndPension_CAndP_ExaminationThyroid_parathyroidDiseases = (
-        DocumentTypeValueSetCode("38988-2")
-    )
+    VACompensationAndPension_CAndP_ExaminationFibromyalgia = DocumentTypeValueSetCode("38953-6")
+    VACompensationAndPension_CAndP_ExaminationGeneralMedical = DocumentTypeValueSetCode("38954-4")
+    VACompensationAndPension_CAndP_ExaminationGeneralMentalDisorders = DocumentTypeValueSetCode("38969-2")
+    VACompensationAndPension_CAndP_ExaminationGenitourinary = DocumentTypeValueSetCode("38955-1")
+    VACompensationAndPension_CAndP_ExaminationGynecologicalConditions_disordersOfTheBreast = DocumentTypeValueSetCode("38957-7")
+    VACompensationAndPension_CAndP_ExaminationHand_thumb_fingers = DocumentTypeValueSetCode("38958-5")
+    VACompensationAndPension_CAndP_ExaminationHeart = DocumentTypeValueSetCode("38959-3")
+    VACompensationAndPension_CAndP_ExaminationHemicDisorders = DocumentTypeValueSetCode("38960-1")
+    VACompensationAndPension_CAndP_ExaminationHIV_relatedIllness = DocumentTypeValueSetCode("38961-9")
+    VACompensationAndPension_CAndP_ExaminationHypertension = DocumentTypeValueSetCode("38962-7")
+    VACompensationAndPension_CAndP_ExaminationInfectious_immune_nutritionalDisabilities = DocumentTypeValueSetCode("38963-5")
+    VACompensationAndPension_CAndP_ExaminationInitialEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode("38964-3")
+    VACompensationAndPension_CAndP_ExaminationLarge_smallIntestines = DocumentTypeValueSetCode("38965-0")
+    VACompensationAndPension_CAndP_ExaminationLiver_gallBladder_pancreas = DocumentTypeValueSetCode("38967-6")
+    VACompensationAndPension_CAndP_ExaminationLymphaticDisorders = DocumentTypeValueSetCode("38968-4")
+    VACompensationAndPension_CAndP_ExaminationMentalHealthEatingDisorders = DocumentTypeValueSetCode("38947-8")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousArteries_veins = DocumentTypeValueSetCode("38935-3")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousDigestiveConditions = DocumentTypeValueSetCode("38945-2")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousEndocrineDiseases = DocumentTypeValueSetCode("38948-6")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousNeurologicalDisorders = DocumentTypeValueSetCode("38972-6")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousRespiratoryDiseases = DocumentTypeValueSetCode("38980-9")
+    VACompensationAndPension_CAndP_ExaminationMouth_lips_tongue = DocumentTypeValueSetCode("38970-0")
+    VACompensationAndPension_CAndP_ExaminationMuscles = DocumentTypeValueSetCode("38971-8")
+    VACompensationAndPension_CAndP_ExaminationNose_sinus_larynx_pharynx = DocumentTypeValueSetCode("38973-4")
+    VACompensationAndPension_CAndP_ExaminationObstructive_restrictive_interstitialRespiratoryDiseases = DocumentTypeValueSetCode("38979-1")
+    VACompensationAndPension_CAndP_ExaminationPeripheralNerves = DocumentTypeValueSetCode("38974-2")
+    VACompensationAndPension_CAndP_ExaminationPrisonerOfWarProtocol = DocumentTypeValueSetCode("38975-9")
+    VACompensationAndPension_CAndP_ExaminationPulmonaryTuberculosis_mycobacterialDiseases = DocumentTypeValueSetCode("38976-7")
+    VACompensationAndPension_CAndP_ExaminationRectum_anus = DocumentTypeValueSetCode("38977-5")
+    VACompensationAndPension_CAndP_ExaminationResidualsOfAmputations = DocumentTypeValueSetCode("38978-3")
+    VACompensationAndPension_CAndP_ExaminationReviewEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode("38981-7")
+    VACompensationAndPension_CAndP_ExaminationScars = DocumentTypeValueSetCode("38982-5")
+    VACompensationAndPension_CAndP_ExaminationSenseOfSmell_taste = DocumentTypeValueSetCode("38983-3")
+    VACompensationAndPension_CAndP_ExaminationSkinDiseasesOtherThanScars = DocumentTypeValueSetCode("38984-1")
+    VACompensationAndPension_CAndP_ExaminationSocial_industrialSurvey = DocumentTypeValueSetCode("38985-8")
+    VACompensationAndPension_CAndP_ExaminationSpine = DocumentTypeValueSetCode("38986-6")
+    VACompensationAndPension_CAndP_ExaminationStomach_duodenum_peritonealAdhesions = DocumentTypeValueSetCode("38987-4")
+    VACompensationAndPension_CAndP_ExaminationThyroid_parathyroidDiseases = DocumentTypeValueSetCode("38988-2")
     WellChildVisitNote = DocumentTypeValueSetCode("59283-2")
     AbortionConsent = DocumentTypeValueSetCode("52027-0")
     AdministrationOfVasodilatorIntoCatheterOfVein = DocumentTypeValueSetCode("24754-4")
-    AdministrationOfVasodilatorIntoCatheterOfVein_Bilateral = DocumentTypeValueSetCode(
-        "26376-4"
-    )
-    AdministrationOfVasodilatorIntoCatheterOfVein_Left = DocumentTypeValueSetCode(
-        "26377-2"
-    )
-    AdministrationOfVasodilatorIntoCatheterOfVein_Right = DocumentTypeValueSetCode(
-        "26378-0"
-    )
+    AdministrationOfVasodilatorIntoCatheterOfVein_Bilateral = DocumentTypeValueSetCode("26376-4")
+    AdministrationOfVasodilatorIntoCatheterOfVein_Left = DocumentTypeValueSetCode("26377-2")
+    AdministrationOfVasodilatorIntoCatheterOfVein_Right = DocumentTypeValueSetCode("26378-0")
     AdvancedBeneficiaryNotice = DocumentTypeValueSetCode("53243-2")
     AnesthesiaRecords = DocumentTypeValueSetCode("11485-0")
-    PeripheralArteryFluoroscopicAngiogramAdditionalAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("30649-8")
-    )
-    VeinFluoroscopicAngiogramAdditionalAngioplastyWContrastIV = (
-        DocumentTypeValueSetCode("30641-5")
-    )
-    AVShuntFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode(
-        "36760-7"
-    )
-    ExtremityVesselFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode(
-        "36762-3"
-    )
-    UnspecifiedBodyRegionFluoroscopicAngiogramAngioplastyWContrast = (
-        DocumentTypeValueSetCode("69067-7")
-    )
-    AortaFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
-        "24543-1"
-    )
-    BrachiocephalicArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("24580-3")
-    )
-    BrachiocephalicArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26368-1")
-    )
-    BrachiocephalicArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26369-9")
-    )
-    CarotidArteryExtracranialFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("24614-0")
-    )
-    CarotidArteryIntracranialFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("24615-7")
-    )
-    ExtremityArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("35881-2")
-    )
-    FemoralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
-        "24698-3"
-    )
-    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("36763-1")
-    )
-    IliacArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
-        "24766-8"
-    )
-    IliacArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26370-7")
-    )
-    IliacArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26371-5")
-    )
-    IliacArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26372-3")
-    )
-    MesentericArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("24832-8")
-    )
-    PeripheralArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("30648-0")
-    )
-    RenalVesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
-        "25081-1"
-    )
-    TibialArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
-        "25012-6"
-    )
-    TibialArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26373-1")
-    )
-    TibialArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26374-9")
-    )
-    TibialArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("26375-6")
-    )
-    TibioperonealArteriesFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("43793-9")
-    )
-    TibioperonealArteries_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("43794-7")
-    )
-    TibioperonealArteries_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("43795-4")
-    )
-    TibioperonealArteries_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("43792-1")
-    )
-    VesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
-        "25064-7"
-    )
-    VisceralArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
-        DocumentTypeValueSetCode("30836-1")
-    )
-    LowerExtremityVeinFluoroscopicAngiogramAngioplastyWContrastIV = (
-        DocumentTypeValueSetCode("37426-4")
-    )
-    VeinFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode(
-        "30640-7"
-    )
-    InferiorVenaCavaFluoroscopicAngiogramAngioplastyWContrastIV = (
-        DocumentTypeValueSetCode("35882-0")
-    )
+    PeripheralArteryFluoroscopicAngiogramAdditionalAngioplastyWContrastIA = DocumentTypeValueSetCode("30649-8")
+    VeinFluoroscopicAngiogramAdditionalAngioplastyWContrastIV = DocumentTypeValueSetCode("30641-5")
+    AVShuntFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode("36760-7")
+    ExtremityVesselFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode("36762-3")
+    UnspecifiedBodyRegionFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode("69067-7")
+    AortaFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24543-1")
+    BrachiocephalicArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24580-3")
+    BrachiocephalicArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26368-1")
+    BrachiocephalicArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26369-9")
+    CarotidArteryExtracranialFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24614-0")
+    CarotidArteryIntracranialFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24615-7")
+    ExtremityArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("35881-2")
+    FemoralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24698-3")
+    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("36763-1")
+    IliacArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24766-8")
+    IliacArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26370-7")
+    IliacArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26371-5")
+    IliacArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26372-3")
+    MesentericArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24832-8")
+    PeripheralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("30648-0")
+    RenalVesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("25081-1")
+    TibialArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("25012-6")
+    TibialArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26373-1")
+    TibialArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26374-9")
+    TibialArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26375-6")
+    TibioperonealArteriesFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43793-9")
+    TibioperonealArteries_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43794-7")
+    TibioperonealArteries_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43795-4")
+    TibioperonealArteries_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43792-1")
+    VesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("25064-7")
+    VisceralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("30836-1")
+    LowerExtremityVeinFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode("37426-4")
+    VeinFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode("30640-7")
+    InferiorVenaCavaFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode("35882-0")
     AppealDenialLetter = DocumentTypeValueSetCode("52032-0")
-    FemoralVesselAndPoplitealArteryFluoroscopicAngiogramAtherectomyWContrast = (
-        DocumentTypeValueSetCode("36764-9")
-    )
-    IliacArteryFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode(
-        "69135-2"
-    )
-    RenalVesselsFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode(
-        "69253-3"
-    )
-    VesselFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode(
-        "36765-6"
-    )
-    AortaFluoroscopicAngiogramAtherectomyWContrastIA = DocumentTypeValueSetCode(
-        "35883-8"
-    )
-    CoronaryArteriesFluoroscopicAngiogramAtherectomyWContrastIA = (
-        DocumentTypeValueSetCode("36766-4")
-    )
-    AVFistulaFluoroscopicAngiogramAtherectomyWContrastIV = DocumentTypeValueSetCode(
-        "24568-8"
-    )
+    FemoralVesselAndPoplitealArteryFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("36764-9")
+    IliacArteryFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("69135-2")
+    RenalVesselsFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("69253-3")
+    VesselFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("36765-6")
+    AortaFluoroscopicAngiogramAtherectomyWContrastIA = DocumentTypeValueSetCode("35883-8")
+    CoronaryArteriesFluoroscopicAngiogramAtherectomyWContrastIA = DocumentTypeValueSetCode("36766-4")
+    AVFistulaFluoroscopicAngiogramAtherectomyWContrastIV = DocumentTypeValueSetCode("24568-8")
     AudiologyStudy = DocumentTypeValueSetCode("28615-3")
     AutomobileLiability = DocumentTypeValueSetCode("52065-0")
     AutopsyReport = DocumentTypeValueSetCode("18743-5")
-    BiliaryDuctsFluoroscopyBalloonDilatationWContrast = DocumentTypeValueSetCode(
-        "36761-5"
-    )
+    BiliaryDuctsFluoroscopyBalloonDilatationWContrast = DocumentTypeValueSetCode("36761-5")
     BloodBankConsult = DocumentTypeValueSetCode("33720-4")
     BloodGlucoseMonitors = DocumentTypeValueSetCode("52041-1")
     SkeletalSystemDXABoneDensity = DocumentTypeValueSetCode("38268-9")
     SkeletalSystem_axialScanBoneDensity = DocumentTypeValueSetCode("43562-8")
     SkeletalSystem_peripheralScanBoneDensity = DocumentTypeValueSetCode("43563-6")
     BoneMarrowAspirationReport = DocumentTypeValueSetCode("48807-2")
-    UnspecifiedBodyRegionFluoroscopyCentralVeinCatheterPlacementCheck = (
-        DocumentTypeValueSetCode("24631-4")
-    )
+    UnspecifiedBodyRegionFluoroscopyCentralVeinCatheterPlacementCheck = DocumentTypeValueSetCode("24631-4")
     ChargeTicketOrEncounterForm = DocumentTypeValueSetCode("53242-4")
-    ChemotherapyEffectivenessPanel_Identifier_BloodOrTissue = DocumentTypeValueSetCode(
-        "54095-5"
-    )
+    ChemotherapyEffectivenessPanel_Identifier_BloodOrTissue = DocumentTypeValueSetCode("54095-5")
     ChemotherapyRecords = DocumentTypeValueSetCode("11486-8")
     CMS_HistoryOfPresentIllnessPanel = DocumentTypeValueSetCode("71428-7")
     CMS_PastFamily_SocialHistoryPanel = DocumentTypeValueSetCode("71421-2")
@@ -1362,25 +927,15 @@ class DocumentTypeValueSetCodeValues:
     CytologyReportOfBronchoalveolarLavageCytoStain = DocumentTypeValueSetCode("50007-4")
     CytologyReportOfBodyFluidCytoStain = DocumentTypeValueSetCode("47523-6")
     CytologyReportOfBreastDuctalLavageCytoStain = DocumentTypeValueSetCode("47530-1")
-    CytologyReportOfBreastFineNeedleAspirateCytoStain = DocumentTypeValueSetCode(
-        "47521-0"
-    )
+    CytologyReportOfBreastFineNeedleAspirateCytoStain = DocumentTypeValueSetCode("47521-0")
     CytologyReportOfBronchialBrushCytoStain = DocumentTypeValueSetCode("50971-1")
-    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain = (
-        DocumentTypeValueSetCode("47528-5")
-    )
-    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain_thinPrep = (
-        DocumentTypeValueSetCode("47527-7")
-    )
+    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain = DocumentTypeValueSetCode("47528-5")
+    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain_thinPrep = DocumentTypeValueSetCode("47527-7")
     CytologyReportOfNippleDischargeCytoStain = DocumentTypeValueSetCode("47522-8")
     CytologyReportOfSputumCytoStain = DocumentTypeValueSetCode("47520-2")
-    CytologyReportOfThyroidFineNeedleAspirateCytoStain = DocumentTypeValueSetCode(
-        "47524-4"
-    )
+    CytologyReportOfThyroidFineNeedleAspirateCytoStain = DocumentTypeValueSetCode("47524-4")
     CytologyReportOfTissueOtherStain = DocumentTypeValueSetCode("47529-3")
-    CytologyReportOfTissueFineNeedleAspirateCytoStain = DocumentTypeValueSetCode(
-        "33718-8"
-    )
+    CytologyReportOfTissueFineNeedleAspirateCytoStain = DocumentTypeValueSetCode("33718-8")
     CytologyReportOfUrineCytoStain = DocumentTypeValueSetCode("47525-1")
     CytologyReportOfUnspecifiedSpecimenCytoStain = DocumentTypeValueSetCode("47526-9")
     DentalX_raysAndOtherImages_notDICOM_ = DocumentTypeValueSetCode("52040-3")
@@ -1392,51 +947,31 @@ class DocumentTypeValueSetCodeValues:
     PhysicianAttendingDischargeSummary = DocumentTypeValueSetCode("28655-9")
     DriverLicenseImage = DocumentTypeValueSetCode("53245-7")
     EligibilityAcknowledgement = DocumentTypeValueSetCode("53247-3")
-    ExtracranialVesselsFluoroscopicAngiogramEmbolectomyWContrastIA = (
-        DocumentTypeValueSetCode("24684-3")
-    )
-    PulmonaryArteryFluoroscopicAngiogramEmbolectomyWContrastIA = (
-        DocumentTypeValueSetCode("24887-2")
-    )
-    VesselIntracranialFluoroscopicAngiogramEmbolectomyWContrastIV = (
-        DocumentTypeValueSetCode("24553-0")
-    )
-    ArteryFluoroscopicAngiogramEmbolizationWContrastIA = DocumentTypeValueSetCode(
-        "24554-8"
-    )
+    ExtracranialVesselsFluoroscopicAngiogramEmbolectomyWContrastIA = DocumentTypeValueSetCode("24684-3")
+    PulmonaryArteryFluoroscopicAngiogramEmbolectomyWContrastIA = DocumentTypeValueSetCode("24887-2")
+    VesselIntracranialFluoroscopicAngiogramEmbolectomyWContrastIV = DocumentTypeValueSetCode("24553-0")
+    ArteryFluoroscopicAngiogramEmbolizationWContrastIA = DocumentTypeValueSetCode("24554-8")
     EmployeeAssistanceProgram = DocumentTypeValueSetCode("52071-8")
     EMSPatientCareReport_Version3_1DocumentNEMSIS = DocumentTypeValueSetCode("67796-3")
     EnteralNutrition = DocumentTypeValueSetCode("52043-7")
-    SmallBowelCTViewsEnteroclysisWContrastPOViaDuodenalIntubation = (
-        DocumentTypeValueSetCode("30600-1")
-    )
-    SmallBowelFluoroscopyViewsEnteroclysisWContrastPOViaDuodenalIntubation = (
-        DocumentTypeValueSetCode("24923-5")
-    )
+    SmallBowelCTViewsEnteroclysisWContrastPOViaDuodenalIntubation = DocumentTypeValueSetCode("30600-1")
+    SmallBowelFluoroscopyViewsEnteroclysisWContrastPOViaDuodenalIntubation = DocumentTypeValueSetCode("24923-5")
     ExplanationOfBenefits = DocumentTypeValueSetCode("52030-4")
     ExplanationOfBenefitsToSubscriber = DocumentTypeValueSetCode("52031-2")
     ExternalInfusionPump = DocumentTypeValueSetCode("52044-5")
     EyeUltrasoundStudy = DocumentTypeValueSetCode("29272-2")
     FirstReportOfInjury = DocumentTypeValueSetCode("52064-3")
-    FullNewbornScreeningSummaryReportForDisplayOrPrinting = DocumentTypeValueSetCode(
-        "57129-9"
-    )
+    FullNewbornScreeningSummaryReportForDisplayOrPrinting = DocumentTypeValueSetCode("57129-9")
     GaitTrainers = DocumentTypeValueSetCode("52045-2")
     GeneralCorrespondence = DocumentTypeValueSetCode("52033-8")
-    GeneticAnalysisSummaryReportInBloodOrTissueDocumentByMolecularGeneticsMethod = (
-        DocumentTypeValueSetCode("51969-4")
-    )
+    GeneticAnalysisSummaryReportInBloodOrTissueDocumentByMolecularGeneticsMethod = DocumentTypeValueSetCode("51969-4")
     CTGuidanceForAblationOfTissueOfCeliacPlexus = DocumentTypeValueSetCode("46365-3")
     CTGuidanceForAblationOfTissueOfKidney = DocumentTypeValueSetCode("44228-5")
     USGuidanceForAblationOfTissueOfKidney = DocumentTypeValueSetCode("44156-8")
     CTGuidanceForAblationOfTissueOfLiver = DocumentTypeValueSetCode("44101-4")
     USGuidanceForAblationOfTissueOfLiver = DocumentTypeValueSetCode("44155-0")
-    CTGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "58747-7"
-    )
-    USGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "58743-6"
-    )
+    CTGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("58747-7")
+    USGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("58743-6")
     CTGuidanceForAbscessDrainageOfAbdomen = DocumentTypeValueSetCode("35884-6")
     CTGuidanceForAbscessDrainageOfAppendix = DocumentTypeValueSetCode("42280-8")
     USGuidanceForAbscessDrainageOfAppendix = DocumentTypeValueSetCode("42705-4")
@@ -1447,40 +982,24 @@ class DocumentTypeValueSetCodeValues:
     USGuidanceForAbscessDrainageOfLiver = DocumentTypeValueSetCode("42133-9")
     FluoroscopyGuidanceForAbscessDrainageOfLiver = DocumentTypeValueSetCode("39361-1")
     FluoroscopyGuidanceForAbscessDrainageOfNeck = DocumentTypeValueSetCode("69120-4")
-    FluoroscopyGuidanceForAbscessDrainageOfPancreas = DocumentTypeValueSetCode(
-        "69122-0"
-    )
+    FluoroscopyGuidanceForAbscessDrainageOfPancreas = DocumentTypeValueSetCode("69122-0")
     CTGuidanceForAbscessDrainageOfPelvis = DocumentTypeValueSetCode("42286-5")
     USGuidanceForAbscessDrainageOfPelvis = DocumentTypeValueSetCode("44168-3")
     USGuidanceForAbscessDrainageOfPeritonealSpace = DocumentTypeValueSetCode("44169-1")
     CTGuidanceForAbscessDrainageOfPleuralSpace = DocumentTypeValueSetCode("42284-0")
-    FluoroscopyGuidanceForAbscessDrainageOfPleuralSpace = DocumentTypeValueSetCode(
-        "69123-8"
-    )
+    FluoroscopyGuidanceForAbscessDrainageOfPleuralSpace = DocumentTypeValueSetCode("69123-8")
     CTGuidanceForAbscessDrainageOfSubphrenicSpace = DocumentTypeValueSetCode("43502-4")
     USGuidanceForAbscessDrainageOfSubphrenicSpace = DocumentTypeValueSetCode("44166-7")
-    CTGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "30578-9"
-    )
-    USGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "39451-0"
-    )
-    FluoroscopyGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("35885-3")
-    )
+    CTGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30578-9")
+    USGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39451-0")
+    FluoroscopyGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("35885-3")
     ScanGuidanceForAbscessLocalizationLimited = DocumentTypeValueSetCode("39620-0")
     ScanGuidanceForAbscessLocalizationWholeBody = DocumentTypeValueSetCode("39623-4")
     SPECTGuidanceForAbscessLocalizationWholeBody = DocumentTypeValueSetCode("39622-6")
     SPECTGuidanceForAbscessLocalization = DocumentTypeValueSetCode("39621-8")
-    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Left = DocumentTypeValueSetCode(
-        "72533-3"
-    )
-    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Right = DocumentTypeValueSetCode(
-        "72532-5"
-    )
-    CTGuidanceForAnestheticBlockInjectionOfCeliacPlexus = DocumentTypeValueSetCode(
-        "24623-1"
-    )
+    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Left = DocumentTypeValueSetCode("72533-3")
+    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Right = DocumentTypeValueSetCode("72532-5")
+    CTGuidanceForAnestheticBlockInjectionOfCeliacPlexus = DocumentTypeValueSetCode("24623-1")
     CTGuidanceForAnestheticBlockInjectionOfSpine = DocumentTypeValueSetCode("42688-2")
     CTGuidanceForAspirationOfBreast = DocumentTypeValueSetCode("35886-1")
     MammogramGuidanceForAspirationOfBreast = DocumentTypeValueSetCode("24598-5")
@@ -1502,144 +1021,74 @@ class DocumentTypeValueSetCodeValues:
     CTGuidanceForAspirationOfPleuralSpace = DocumentTypeValueSetCode("37491-8")
     USGuidanceForAspirationOfPleuralSpace = DocumentTypeValueSetCode("24662-9")
     FluoroscopyGuidanceForAspirationOfPleuralSpace = DocumentTypeValueSetCode("37887-7")
-    FluoroscopyGuidanceForAspirationOfSpineLumbarSpace = DocumentTypeValueSetCode(
-        "24973-0"
-    )
+    FluoroscopyGuidanceForAspirationOfSpineLumbarSpace = DocumentTypeValueSetCode("24973-0")
     USGuidanceForAspirationOfThyroid = DocumentTypeValueSetCode("42134-7")
     CTGuidanceForAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25043-1")
     USGuidanceForAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30878-3")
-    CTGuidanceForAspirationAndPlacementOfDrainageTubeOfAbdomen = (
-        DocumentTypeValueSetCode("36926-4")
-    )
+    CTGuidanceForAspirationAndPlacementOfDrainageTubeOfAbdomen = DocumentTypeValueSetCode("36926-4")
     CTGuidanceForAspirationOfCystOfAbdomen = DocumentTypeValueSetCode("37210-2")
     FluoroscopyGuidanceForAspirationOfCystOfBone = DocumentTypeValueSetCode("69306-9")
     MammogramGuidanceForAspirationOfCystOfBreast = DocumentTypeValueSetCode("24594-4")
     MRIGuidanceForAspirationOfCystOfBreast = DocumentTypeValueSetCode("69192-3")
     USGuidanceForAspirationOfCystOfBreast = DocumentTypeValueSetCode("30653-0")
-    MammogramGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode(
-        "26343-4"
-    )
-    USGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode(
-        "38012-1"
-    )
-    MammogramGuidanceForAspirationOfCystOfBreast_Left = DocumentTypeValueSetCode(
-        "26344-2"
-    )
+    MammogramGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode("26343-4")
+    USGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode("38012-1")
+    MammogramGuidanceForAspirationOfCystOfBreast_Left = DocumentTypeValueSetCode("26344-2")
     USGuidanceForAspirationOfCystOfBreast_Left = DocumentTypeValueSetCode("42450-7")
-    MammogramGuidanceForAspirationOfCystOfBreast_Right = DocumentTypeValueSetCode(
-        "26345-9"
-    )
+    MammogramGuidanceForAspirationOfCystOfBreast_Right = DocumentTypeValueSetCode("26345-9")
     USGuidanceForAspirationOfCystOfBreast_Right = DocumentTypeValueSetCode("42458-0")
     USGuidanceForAspirationOfCystOfKidney = DocumentTypeValueSetCode("38126-9")
     FluoroscopyGuidanceForAspirationOfCystOfOvary = DocumentTypeValueSetCode("69121-2")
     USGuidanceForAspirationOfCystOfPancreas = DocumentTypeValueSetCode("38133-5")
     USGuidanceForAspirationOfCystOfThyroid = DocumentTypeValueSetCode("42447-3")
-    CTGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "35887-9"
-    )
-    USGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "30698-5"
-    )
-    FluoroscopyGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("24671-0")
-    )
-    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "25042-3"
-    )
-    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion_WContrastIV = (
-        DocumentTypeValueSetCode("25041-5")
-    )
-    CTGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("46281-2")
-    )
-    USGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("46282-0")
-    )
+    CTGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("35887-9")
+    USGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30698-5")
+    FluoroscopyGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("24671-0")
+    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25042-3")
+    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("25041-5")
+    CTGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("46281-2")
+    USGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("46282-0")
     CTGuidanceForFineNeedleAspirationOfAbdomen = DocumentTypeValueSetCode("30602-7")
-    CTGuidanceForFineNeedleAspirationOfAbdomenRetroperitoneum = (
-        DocumentTypeValueSetCode("44107-1")
-    )
-    CTGuidanceForFineNeedleAspirationOfAdrenalGland = DocumentTypeValueSetCode(
-        "44108-9"
-    )
-    MammogramGuidanceForFineNeedleAspirationOfBreast = DocumentTypeValueSetCode(
-        "46387-7"
-    )
+    CTGuidanceForFineNeedleAspirationOfAbdomenRetroperitoneum = DocumentTypeValueSetCode("44107-1")
+    CTGuidanceForFineNeedleAspirationOfAdrenalGland = DocumentTypeValueSetCode("44108-9")
+    MammogramGuidanceForFineNeedleAspirationOfBreast = DocumentTypeValueSetCode("46387-7")
     USGuidanceForFineNeedleAspirationOfBreast = DocumentTypeValueSetCode("44160-0")
-    MammogramGuidanceForFineNeedleAspirationOfBreast_Left = DocumentTypeValueSetCode(
-        "46284-6"
-    )
+    MammogramGuidanceForFineNeedleAspirationOfBreast_Left = DocumentTypeValueSetCode("46284-6")
     USGuidanceForFineNeedleAspirationOfBreast_Left = DocumentTypeValueSetCode("38026-1")
-    MammogramGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode(
-        "46283-8"
-    )
-    USGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode(
-        "38033-7"
-    )
+    MammogramGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode("46283-8")
+    USGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode("38033-7")
     USGuidanceForFineNeedleAspirationOfDeepTissue = DocumentTypeValueSetCode("38135-0")
-    FluoroscopyGuidanceForFineNeedleAspirationOfDeepTissue = DocumentTypeValueSetCode(
-        "44221-0"
-    )
+    FluoroscopyGuidanceForFineNeedleAspirationOfDeepTissue = DocumentTypeValueSetCode("44221-0")
     CTGuidanceForFineNeedleAspirationOfKidney = DocumentTypeValueSetCode("43757-4")
     USGuidanceForFineNeedleAspirationOfKidney = DocumentTypeValueSetCode("44159-2")
-    FluoroscopyGuidanceForFineNeedleAspirationOfKidney = DocumentTypeValueSetCode(
-        "44217-8"
-    )
-    CTGuidanceForFineNeedleAspirationOfKidney_Bilateral = DocumentTypeValueSetCode(
-        "30608-4"
-    )
+    FluoroscopyGuidanceForFineNeedleAspirationOfKidney = DocumentTypeValueSetCode("44217-8")
+    CTGuidanceForFineNeedleAspirationOfKidney_Bilateral = DocumentTypeValueSetCode("30608-4")
     CTGuidanceForFineNeedleAspirationOfLiver = DocumentTypeValueSetCode("30603-5")
     USGuidanceForFineNeedleAspirationOfLiver = DocumentTypeValueSetCode("44158-4")
-    FluoroscopyGuidanceForFineNeedleAspirationOfLiver = DocumentTypeValueSetCode(
-        "44220-2"
-    )
+    FluoroscopyGuidanceForFineNeedleAspirationOfLiver = DocumentTypeValueSetCode("44220-2")
     CTGuidanceForFineNeedleAspirationOfLung = DocumentTypeValueSetCode("30595-3")
     CTGuidanceForFineNeedleAspirationOfLymphNode = DocumentTypeValueSetCode("44103-0")
-    FluoroscopyGuidanceForFineNeedleAspirationOfLymphNode = DocumentTypeValueSetCode(
-        "44219-4"
-    )
+    FluoroscopyGuidanceForFineNeedleAspirationOfLymphNode = DocumentTypeValueSetCode("44219-4")
     CTGuidanceForFineNeedleAspirationOfMediastinum = DocumentTypeValueSetCode("44104-8")
     CTGuidanceForFineNeedleAspirationOfMuscle = DocumentTypeValueSetCode("44105-5")
     CTGuidanceForFineNeedleAspirationOfPancreas = DocumentTypeValueSetCode("30605-0")
     USGuidanceForFineNeedleAspirationOfPancreas = DocumentTypeValueSetCode("44157-6")
-    FluoroscopyGuidanceForFineNeedleAspirationOfPancreas = DocumentTypeValueSetCode(
-        "44218-6"
-    )
+    FluoroscopyGuidanceForFineNeedleAspirationOfPancreas = DocumentTypeValueSetCode("44218-6")
     CTGuidanceForFineNeedleAspirationOfPelvis = DocumentTypeValueSetCode("30606-8")
     CTGuidanceForFineNeedleAspirationOfProstate = DocumentTypeValueSetCode("44106-3")
     USGuidanceForFineNeedleAspirationOfProstate = DocumentTypeValueSetCode("38017-0")
     CTGuidanceForFineNeedleAspirationOfSpleen = DocumentTypeValueSetCode("30610-0")
-    USGuidanceForFineNeedleAspirationOfSuperficialTissue = DocumentTypeValueSetCode(
-        "38136-8"
-    )
-    FluoroscopyGuidanceForFineNeedleAspirationOfSuperficialTissue = (
-        DocumentTypeValueSetCode("69124-6")
-    )
+    USGuidanceForFineNeedleAspirationOfSuperficialTissue = DocumentTypeValueSetCode("38136-8")
+    FluoroscopyGuidanceForFineNeedleAspirationOfSuperficialTissue = DocumentTypeValueSetCode("69124-6")
     USGuidanceForFineNeedleAspirationOfThyroid = DocumentTypeValueSetCode("38019-6")
-    FluoroscopyGuidanceForFineNeedleAspirationOfThyroid = DocumentTypeValueSetCode(
-        "44216-0"
-    )
-    CTGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "30580-5"
-    )
-    USGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "38018-8"
-    )
-    FluoroscopyGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("44215-2")
-    )
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_WContrastIV = (
-        DocumentTypeValueSetCode("24755-1")
-    )
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Bilateral_WContrastIV = (
-        DocumentTypeValueSetCode("26298-0")
-    )
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Left_WContrastIV = (
-        DocumentTypeValueSetCode("26299-8")
-    )
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Right_WContrastIV = (
-        DocumentTypeValueSetCode("26300-4")
-    )
+    FluoroscopyGuidanceForFineNeedleAspirationOfThyroid = DocumentTypeValueSetCode("44216-0")
+    CTGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30580-5")
+    USGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("38018-8")
+    FluoroscopyGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("44215-2")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_WContrastIV = DocumentTypeValueSetCode("24755-1")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26298-0")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Left_WContrastIV = DocumentTypeValueSetCode("26299-8")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Right_WContrastIV = DocumentTypeValueSetCode("26300-4")
     CTGuidanceForBiopsyOfAbdomen = DocumentTypeValueSetCode("30601-9")
     USGuidanceForBiopsyOfAbdomen = DocumentTypeValueSetCode("37913-1")
     FluoroscopyGuidanceForBiopsyOfAbdomen = DocumentTypeValueSetCode("35890-3")
@@ -1729,22 +1178,14 @@ class DocumentTypeValueSetCodeValues:
     CTGuidanceForBiopsyOfUpperExtremity = DocumentTypeValueSetCode("35897-8")
     CTGuidanceForBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25044-9")
     USGuidanceForBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25059-7")
-    FluoroscopyGuidanceForBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "25069-6"
-    )
-    USGuidanceForBiopsyOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "24670-2"
-    )
+    FluoroscopyGuidanceForBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25069-6")
+    USGuidanceForBiopsyOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("24670-2")
     USGuidanceForCoreNeedleBiopsyOfBreast = DocumentTypeValueSetCode("30651-4")
     CTGuidanceForCoreNeedleBiopsyOfLiver = DocumentTypeValueSetCode("24813-8")
     USGuidanceForCoreNeedleBiopsyOfLymphNode = DocumentTypeValueSetCode("69279-8")
     USGuidanceForCoreNeedleBiopsyOfThyroid = DocumentTypeValueSetCode("46285-3")
-    USGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "38024-6"
-    )
-    FluoroscopyGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("69073-5")
-    )
+    USGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("38024-6")
+    FluoroscopyGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("69073-5")
     USGuidanceForExcisionalBiopsyOfBreast = DocumentTypeValueSetCode("42448-1")
     USGuidanceForFineNeedleBiopsyOfBreast = DocumentTypeValueSetCode("30652-2")
     CTGuidanceForNeedleBiopsyOfAbdomen = DocumentTypeValueSetCode("42288-1")
@@ -1761,9 +1202,7 @@ class DocumentTypeValueSetCodeValues:
     FluoroscopyGuidanceForNeedleBiopsyOfChest = DocumentTypeValueSetCode("69225-1")
     CTGuidanceForNeedleBiopsyOfChest_pleura = DocumentTypeValueSetCode("69099-0")
     USGuidanceForNeedleBiopsyOfChest_pleura = DocumentTypeValueSetCode("44171-7")
-    FluoroscopyGuidanceForNeedleBiopsyOfChest_pleura = DocumentTypeValueSetCode(
-        "69127-9"
-    )
+    FluoroscopyGuidanceForNeedleBiopsyOfChest_pleura = DocumentTypeValueSetCode("69127-9")
     CTGuidanceForNeedleBiopsyOfDeepBone = DocumentTypeValueSetCode("43568-5")
     CTGuidanceForNeedleBiopsyOfKidney = DocumentTypeValueSetCode("42289-9")
     USGuidanceForNeedleBiopsyOfKidney_Bilateral = DocumentTypeValueSetCode("38027-9")
@@ -1790,9 +1229,7 @@ class DocumentTypeValueSetCodeValues:
     CTGuidanceForNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode("69100-6")
     MRIGuidanceForNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode("69201-2")
     USGuidanceForNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode("69291-3")
-    FluoroscopyGuidanceForNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode(
-        "69128-7"
-    )
+    FluoroscopyGuidanceForNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode("69128-7")
     CTGuidanceForNeedleBiopsyOfSoftBone = DocumentTypeValueSetCode("43571-9")
     USGuidanceForNeedleBiopsyOfSpinalCord = DocumentTypeValueSetCode("69401-8")
     USGuidanceForNeedleBiopsyOfSpleen = DocumentTypeValueSetCode("38030-3")
@@ -1801,74 +1238,36 @@ class DocumentTypeValueSetCodeValues:
     MRIGuidanceForNeedleBiopsyOfThyroid = DocumentTypeValueSetCode("69202-0")
     USGuidanceForNeedleBiopsyOfThyroid = DocumentTypeValueSetCode("38031-1")
     FluoroscopyGuidanceForNeedleBiopsyOfThyroid = DocumentTypeValueSetCode("69129-5")
-    CTGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "46287-9"
-    )
-    USGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "30700-9"
-    )
-    FluoroscopyGuidanceForNeedleBiopsyOfLiver_WContrastIV = DocumentTypeValueSetCode(
-        "44225-1"
-    )
-    FluoroscopyGuidanceForTransjugularBiopsyOfLiver_WContrastIV = (
-        DocumentTypeValueSetCode("24718-9")
-    )
+    CTGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("46287-9")
+    USGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30700-9")
+    FluoroscopyGuidanceForNeedleBiopsyOfLiver_WContrastIV = DocumentTypeValueSetCode("44225-1")
+    FluoroscopyGuidanceForTransjugularBiopsyOfLiver_WContrastIV = DocumentTypeValueSetCode("24718-9")
     CTGuidanceForBiopsyOfChest_WAndWOContrastIV = DocumentTypeValueSetCode("35910-9")
-    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WAndWOContrastIV = (
-        DocumentTypeValueSetCode("46289-5")
-    )
+    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WAndWOContrastIV = DocumentTypeValueSetCode("46289-5")
     CTGuidanceForBiopsyOfChest_WContrastIV = DocumentTypeValueSetCode("35909-1")
     CTGuidanceForBiopsyOfPelvis_WContrastIV = DocumentTypeValueSetCode("69093-3")
-    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode(
-        "42260-0"
-    )
+    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("42260-0")
     SPECTGuidanceForBiopsyOfBone = DocumentTypeValueSetCode("46366-1")
     SPECTGuidanceForBiopsyOfSuperficialBone = DocumentTypeValueSetCode("46384-4")
     CTGuidanceForBiopsyOfAbdomen_WOContrast = DocumentTypeValueSetCode("69083-4")
     CTGuidanceForBiopsyOfChest_WOContrast = DocumentTypeValueSetCode("35911-7")
     CTGuidanceForBiopsyOfLiver_WOContrast = DocumentTypeValueSetCode("69092-5")
     CTGuidanceForBiopsyOfPelvis_WOContrast = DocumentTypeValueSetCode("69094-1")
-    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode(
-        "46290-3"
-    )
+    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("46290-3")
     FluoroscopyGuidanceForBronchoscopyOfChest = DocumentTypeValueSetCode("35889-5")
-    FluoroscopyGuidanceForCatheterizationOfFallopianTube_Left_Transcervical = (
-        DocumentTypeValueSetCode("64998-8")
-    )
-    FluoroscopyGuidanceForCatheterizationOfFallopianTube_right_Transcervical = (
-        DocumentTypeValueSetCode("64999-6")
-    )
-    FluoroscopyGuidanceForCatheterizationOfFallopianTubes_Transcervical = (
-        DocumentTypeValueSetCode("30818-9")
-    )
-    FluoroscopyGuidanceForCatheterizationOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode(
-        "30892-4"
-    )
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_WContrastIV = (
-        DocumentTypeValueSetCode("24624-9")
-    )
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode(
-        "26331-9"
-    )
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode(
-        "26332-7"
-    )
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode(
-        "26333-5"
-    )
-    FluoroscopyGuidanceForChangeOfDialysisCatheterInUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode(
-        "43558-6"
-    )
+    FluoroscopyGuidanceForCatheterizationOfFallopianTube_Left_Transcervical = DocumentTypeValueSetCode("64998-8")
+    FluoroscopyGuidanceForCatheterizationOfFallopianTube_right_Transcervical = DocumentTypeValueSetCode("64999-6")
+    FluoroscopyGuidanceForCatheterizationOfFallopianTubes_Transcervical = DocumentTypeValueSetCode("30818-9")
+    FluoroscopyGuidanceForCatheterizationOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode("30892-4")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_WContrastIV = DocumentTypeValueSetCode("24624-9")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26331-9")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode("26332-7")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode("26333-5")
+    FluoroscopyGuidanceForChangeOfDialysisCatheterInUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("43558-6")
     CTGuidanceForChangeOfNephrostomyTubeInKidney = DocumentTypeValueSetCode("36769-8")
-    FluoroscopyGuidanceForChangeOfPercutaneousNephrostomyTubeInKidney_Bilateral_WContrast = DocumentTypeValueSetCode(
-        "24781-7"
-    )
-    X_rayGuidanceForChangeOfPercutaneousTubeInUnspecifiedBodyRegion_WContrast = (
-        DocumentTypeValueSetCode("46371-1")
-    )
-    FluoroscopyGuidanceForChangeOfTubeInSinusTract_WContrast = DocumentTypeValueSetCode(
-        "30646-4"
-    )
+    FluoroscopyGuidanceForChangeOfPercutaneousNephrostomyTubeInKidney_Bilateral_WContrast = DocumentTypeValueSetCode("24781-7")
+    X_rayGuidanceForChangeOfPercutaneousTubeInUnspecifiedBodyRegion_WContrast = DocumentTypeValueSetCode("46371-1")
+    FluoroscopyGuidanceForChangeOfTubeInSinusTract_WContrast = DocumentTypeValueSetCode("30646-4")
     USGuidanceForChorionicVillusSampling = DocumentTypeValueSetCode("69400-0")
     USGuidanceForCordocentesis = DocumentTypeValueSetCode("69391-1")
     USGuidanceForCSFAspirationOfSpine = DocumentTypeValueSetCode("38127-7")
@@ -1881,9 +1280,7 @@ class DocumentTypeValueSetCodeValues:
     USGuidanceForDrainageOfAbdomenRetroperitoneum = DocumentTypeValueSetCode("41809-5")
     CTGuidanceForDrainageOfAnus = DocumentTypeValueSetCode("35914-1")
     CTGuidanceForDrainageOfAppendix = DocumentTypeValueSetCode("35915-8")
-    CTGuidanceForDrainageOfBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode(
-        "36770-6"
-    )
+    CTGuidanceForDrainageOfBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode("36770-6")
     CTGuidanceForDrainageOfChest = DocumentTypeValueSetCode("35916-6")
     FluoroscopyGuidanceForDrainageOfChest = DocumentTypeValueSetCode("69078-4")
     USGuidanceForDrainageOfExtremity = DocumentTypeValueSetCode("24692-6")
@@ -1907,142 +1304,68 @@ class DocumentTypeValueSetCodeValues:
     USGuidanceForDrainageOfProstate = DocumentTypeValueSetCode("41798-0")
     CTGuidanceForDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("35922-4")
     USGuidanceForDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30699-3")
-    FluoroscopyGuidanceForDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "43537-0"
-    )
+    FluoroscopyGuidanceForDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("43537-0")
     USGuidanceForDrainageOfCystOfKidney = DocumentTypeValueSetCode("42478-8")
-    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WAndWOContrastIV = (
-        DocumentTypeValueSetCode("46291-1")
-    )
+    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WAndWOContrastIV = DocumentTypeValueSetCode("46291-1")
     CTGuidanceForDrainageOfChest_WContrastIV = DocumentTypeValueSetCode("35923-2")
-    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode(
-        "46292-9"
-    )
+    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("46292-9")
     CTGuidanceForDrainageOfChest_WOContrast = DocumentTypeValueSetCode("35924-0")
-    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode(
-        "46293-7"
-    )
+    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("46293-7")
     FluoroscopyGuidanceForEndoscopyOfStomach = DocumentTypeValueSetCode("35925-7")
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1_5HoursPostContrastRetrograde = DocumentTypeValueSetCode(
-        "43478-7"
-    )
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_15MinutesPostContrastRetrograde = DocumentTypeValueSetCode(
-        "43474-6"
-    )
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1HourPostContrastRetrograde = DocumentTypeValueSetCode(
-        "43477-9"
-    )
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_2HoursPostContrastRetrograde = DocumentTypeValueSetCode(
-        "43473-8"
-    )
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_30MinutesPostContrastRetrograde = DocumentTypeValueSetCode(
-        "43475-3"
-    )
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_45MinutesPostContrastRetrograde = DocumentTypeValueSetCode(
-        "43476-1"
-    )
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1_5HoursPostContrastRetrograde = DocumentTypeValueSetCode("43478-7")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_15MinutesPostContrastRetrograde = DocumentTypeValueSetCode("43474-6")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1HourPostContrastRetrograde = DocumentTypeValueSetCode("43477-9")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_2HoursPostContrastRetrograde = DocumentTypeValueSetCode("43473-8")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_30MinutesPostContrastRetrograde = DocumentTypeValueSetCode("43475-3")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_45MinutesPostContrastRetrograde = DocumentTypeValueSetCode("43476-1")
     AbdomenMRCPWithAndWithoutContrastIV = DocumentTypeValueSetCode("72248-8")
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDucts_WContrastRetrograde = (
-        DocumentTypeValueSetCode("44214-5")
-    )
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode(
-        "30815-5"
-    )
-    FluoroscopyGuidanceForEndoscopyOfPancreaticDuct_WContrastRetrograde = (
-        DocumentTypeValueSetCode("44213-7")
-    )
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDucts_WContrastRetrograde = DocumentTypeValueSetCode("44214-5")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode("30815-5")
+    FluoroscopyGuidanceForEndoscopyOfPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode("44213-7")
     AbdomenMRCPWOContrast = DocumentTypeValueSetCode("58740-2")
-    FluoroscopyGuidanceForFacetJointDenervationOfSpineCervical = (
-        DocumentTypeValueSetCode("72541-6")
-    )
-    FluoroscopyGuidanceForFacetJointDenervationOfSpineLumbar = DocumentTypeValueSetCode(
-        "72542-4"
-    )
-    FluoroscopyGuidanceForFacetJointDenervationOfSpine = DocumentTypeValueSetCode(
-        "72540-8"
-    )
+    FluoroscopyGuidanceForFacetJointDenervationOfSpineCervical = DocumentTypeValueSetCode("72541-6")
+    FluoroscopyGuidanceForFacetJointDenervationOfSpineLumbar = DocumentTypeValueSetCode("72542-4")
+    FluoroscopyGuidanceForFacetJointDenervationOfSpine = DocumentTypeValueSetCode("72540-8")
     FluoroscopyGuidanceForGastrostomyOfStomach = DocumentTypeValueSetCode("35926-5")
     FluoroscopyGuidanceForInjectionOfHip = DocumentTypeValueSetCode("30638-1")
     CTGuidanceForInjectionOfJointSpace = DocumentTypeValueSetCode("24769-2")
-    FluoroscopyGuidanceForInjectionOfMammaryArtery_internal_Left = (
-        DocumentTypeValueSetCode("42334-3")
-    )
+    FluoroscopyGuidanceForInjectionOfMammaryArtery_internal_Left = DocumentTypeValueSetCode("42334-3")
     USGuidanceForInjectionOfPleuralSpace = DocumentTypeValueSetCode("42706-2")
     CTGuidanceForInjectionOfSacroiliacJoint = DocumentTypeValueSetCode("24901-1")
-    FluoroscopyGuidanceForInjectionOfSacroiliacJoint = DocumentTypeValueSetCode(
-        "35927-3"
-    )
-    CTGuidanceForInjectionOfSacroiliacJoint_Bilateral = DocumentTypeValueSetCode(
-        "26319-4"
-    )
+    FluoroscopyGuidanceForInjectionOfSacroiliacJoint = DocumentTypeValueSetCode("35927-3")
+    CTGuidanceForInjectionOfSacroiliacJoint_Bilateral = DocumentTypeValueSetCode("26319-4")
     CTGuidanceForInjectionOfSacroiliacJoint_Left = DocumentTypeValueSetCode("26320-2")
     CTGuidanceForInjectionOfSacroiliacJoint_Right = DocumentTypeValueSetCode("26321-0")
-    FluoroscopyGuidanceForInjectionOfSalivaryGland_Bilateral = DocumentTypeValueSetCode(
-        "48435-2"
-    )
+    FluoroscopyGuidanceForInjectionOfSalivaryGland_Bilateral = DocumentTypeValueSetCode("48435-2")
     FluoroscopyGuidanceForInjectionOfSinuses = DocumentTypeValueSetCode("46392-7")
     FluoroscopyGuidanceForInjectionOfSpine = DocumentTypeValueSetCode("37427-2")
     CTGuidanceForInjectionOfSpineFacetJoint = DocumentTypeValueSetCode("30579-7")
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint = DocumentTypeValueSetCode(
-        "24931-8"
-    )
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Bilateral = (
-        DocumentTypeValueSetCode("26322-8")
-    )
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Left = DocumentTypeValueSetCode(
-        "26323-6"
-    )
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Right = DocumentTypeValueSetCode(
-        "26324-4"
-    )
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint = DocumentTypeValueSetCode("24931-8")
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Bilateral = DocumentTypeValueSetCode("26322-8")
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Left = DocumentTypeValueSetCode("26323-6")
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Right = DocumentTypeValueSetCode("26324-4")
     FluoroscopyGuidanceForInjectionOfSpineCervical = DocumentTypeValueSetCode("70918-8")
-    FluoroscopyGuidanceForInjectionOfSpineCervicalFacetJoint = DocumentTypeValueSetCode(
-        "30812-2"
-    )
+    FluoroscopyGuidanceForInjectionOfSpineCervicalFacetJoint = DocumentTypeValueSetCode("30812-2")
     CTGuidanceForInjectionOfSpine_disc_cervical = DocumentTypeValueSetCode("37493-4")
     FluoroscopyGuidanceForInjectionOfSpineLumbar = DocumentTypeValueSetCode("70919-6")
-    FluoroscopyGuidanceForInjectionOfSpineLumbarFacetJoint = DocumentTypeValueSetCode(
-        "30817-1"
-    )
+    FluoroscopyGuidanceForInjectionOfSpineLumbarFacetJoint = DocumentTypeValueSetCode("30817-1")
     FluoroscopyGuidanceForInjectionOfSpineThoracic = DocumentTypeValueSetCode("70920-4")
-    FluoroscopyGuidanceForInjectionOfSpineThoracicFacetJoint = DocumentTypeValueSetCode(
-        "30814-8"
-    )
+    FluoroscopyGuidanceForInjectionOfSpineThoracicFacetJoint = DocumentTypeValueSetCode("30814-8")
     USGuidanceForInjectionOfThyroid = DocumentTypeValueSetCode("30702-5")
     USGuidanceForInjectionOfJoint = DocumentTypeValueSetCode("72530-9")
     FluoroscopyGuidanceForInjectionOfJoint = DocumentTypeValueSetCode("36771-4")
     FluoroscopyGuidanceForInjectionOfTendon = DocumentTypeValueSetCode("37494-2")
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Bilateral = (
-        DocumentTypeValueSetCode("72537-4")
-    )
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Left = (
-        DocumentTypeValueSetCode("72645-5")
-    )
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Right = (
-        DocumentTypeValueSetCode("72644-8")
-    )
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Bilateral = (
-        DocumentTypeValueSetCode("72536-6")
-    )
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Left = (
-        DocumentTypeValueSetCode("72643-0")
-    )
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Right = (
-        DocumentTypeValueSetCode("72642-2")
-    )
-    FluoroscopyGuidanceForIntercostalNerveDevervationOfSpineThoracic = (
-        DocumentTypeValueSetCode("72543-2")
-    )
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Bilateral = DocumentTypeValueSetCode("72537-4")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Left = DocumentTypeValueSetCode("72645-5")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Right = DocumentTypeValueSetCode("72644-8")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Bilateral = DocumentTypeValueSetCode("72536-6")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Left = DocumentTypeValueSetCode("72643-0")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Right = DocumentTypeValueSetCode("72642-2")
+    FluoroscopyGuidanceForIntercostalNerveDevervationOfSpineThoracic = DocumentTypeValueSetCode("72543-2")
     FluoroscopyGuidanceForKyphoplastyOfSpineLumbar = DocumentTypeValueSetCode("72552-3")
-    FluoroscopyGuidanceForKyphoplastyOfSpineThoracic = DocumentTypeValueSetCode(
-        "72553-1"
-    )
-    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Left = DocumentTypeValueSetCode(
-        "72535-8"
-    )
-    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Right = DocumentTypeValueSetCode(
-        "72534-1"
-    )
+    FluoroscopyGuidanceForKyphoplastyOfSpineThoracic = DocumentTypeValueSetCode("72553-1")
+    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Left = DocumentTypeValueSetCode("72535-8")
+    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Right = DocumentTypeValueSetCode("72534-1")
     MammogramGuidanceForLocalizationOfBreast = DocumentTypeValueSetCode("48735-5")
     USGuidanceForLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode("43759-0")
     CTGuidanceForLocalizationOfBreast_Left = DocumentTypeValueSetCode("35928-1")
@@ -2055,452 +1378,178 @@ class DocumentTypeValueSetCodeValues:
     CTGuidanceForLocalizationOfPlacentaOfUterus = DocumentTypeValueSetCode("42701-3")
     ScanGuidanceForLocalizationOfTumorLimited = DocumentTypeValueSetCode("39760-4")
     SPECTGuidanceForLocalizationOfTumorLimited = DocumentTypeValueSetCode("39759-6")
-    ScanGuidanceForLocalizationOfTumorLimited_WTc_99mSestamibiIV = (
-        DocumentTypeValueSetCode("39761-2")
-    )
-    ScanGuidanceForLocalizationOfTumorMultipleAreas = DocumentTypeValueSetCode(
-        "39953-5"
-    )
+    ScanGuidanceForLocalizationOfTumorLimited_WTc_99mSestamibiIV = DocumentTypeValueSetCode("39761-2")
+    ScanGuidanceForLocalizationOfTumorMultipleAreas = DocumentTypeValueSetCode("39953-5")
     ScanGuidanceForLocalizationOfTumor = DocumentTypeValueSetCode("39763-8")
     SPECTGuidanceForLocalizationOfTumor = DocumentTypeValueSetCode("39762-0")
     ScanGuidanceForLocalizationOfTumorOfBreast = DocumentTypeValueSetCode("39758-8")
     CTGuidanceForNeedleLocalizationOfBreast = DocumentTypeValueSetCode("44110-5")
     USGuidanceForNeedleLocalizationOfBreast = DocumentTypeValueSetCode("24600-9")
-    MammogramGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode(
-        "69068-5"
-    )
-    USGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode(
-        "26313-7"
-    )
+    MammogramGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode("69068-5")
+    USGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode("26313-7")
     USGuidanceForNeedleLocalizationOfBreast_Left = DocumentTypeValueSetCode("26314-5")
     USGuidanceForNeedleLocalizationOfBreast_Right = DocumentTypeValueSetCode("26318-6")
     USGuidanceForNeedleLocalizationOfChest = DocumentTypeValueSetCode("37921-4")
     CTGuidanceForNeedleLocalizationOfSpineCervical = DocumentTypeValueSetCode("42021-6")
     CTGuidanceForNeedleLocalizationOfSpineLumbar = DocumentTypeValueSetCode("42020-8")
-    CTGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "39026-0"
-    )
-    MRIGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "39028-6"
-    )
-    USGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "38032-9"
-    )
-    FluoroscopyGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("39027-8")
-    )
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast = DocumentTypeValueSetCode(
-        "24595-1"
-    )
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Bilateral = (
-        DocumentTypeValueSetCode("26315-2")
-    )
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Left = (
-        DocumentTypeValueSetCode("26316-0")
-    )
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Right = (
-        DocumentTypeValueSetCode("26317-8")
-    )
-    CTGuidanceForNeedleLocalizationOfBreast_WAndWOContrastIV = DocumentTypeValueSetCode(
-        "44118-8"
-    )
+    CTGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39026-0")
+    MRIGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39028-6")
+    USGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("38032-9")
+    FluoroscopyGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39027-8")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast = DocumentTypeValueSetCode("24595-1")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Bilateral = DocumentTypeValueSetCode("26315-2")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Left = DocumentTypeValueSetCode("26316-0")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Right = DocumentTypeValueSetCode("26317-8")
+    CTGuidanceForNeedleLocalizationOfBreast_WAndWOContrastIV = DocumentTypeValueSetCode("44118-8")
     CTGuidanceForNerveBlockOfAbdomen = DocumentTypeValueSetCode("35930-7")
     CTGuidanceForNerveBlockOfPelvis = DocumentTypeValueSetCode("35931-5")
     CTGuidanceForNerveBlockOfSpineCervical = DocumentTypeValueSetCode("70921-2")
     CTGuidanceForNerveBlockOfSpineLumbar = DocumentTypeValueSetCode("35932-3")
     CTGuidanceForNerveBlockOfSpineThoracic = DocumentTypeValueSetCode("70922-0")
-    FluoroscopyGuidanceForPercutaneousBiopsyOfAbdomen = DocumentTypeValueSetCode(
-        "69240-0"
-    )
+    FluoroscopyGuidanceForPercutaneousBiopsyOfAbdomen = DocumentTypeValueSetCode("69240-0")
     USGuidanceForPercutaneousBiopsyOfMuscle = DocumentTypeValueSetCode("42139-6")
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast = DocumentTypeValueSetCode(
-        "24609-0"
-    )
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Bilateral = (
-        DocumentTypeValueSetCode("26334-3")
-    )
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = (
-        DocumentTypeValueSetCode("26335-0")
-    )
-    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = DocumentTypeValueSetCode(
-        "38023-8"
-    )
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = (
-        DocumentTypeValueSetCode("26336-8")
-    )
-    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = DocumentTypeValueSetCode(
-        "38025-3"
-    )
-    MammogramGuidanceForPercutaneousNeedleBiopsyOfBreast = DocumentTypeValueSetCode(
-        "44121-2"
-    )
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfKidney = DocumentTypeValueSetCode(
-        "69245-9"
-    )
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLiver = DocumentTypeValueSetCode(
-        "69246-7"
-    )
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLung = DocumentTypeValueSetCode(
-        "44204-6"
-    )
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfSalivaryGland = (
-        DocumentTypeValueSetCode("69247-5")
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfBiliaryDucts = DocumentTypeValueSetCode(
-        "46372-9"
-    )
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast = DocumentTypeValueSetCode("24609-0")
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Bilateral = DocumentTypeValueSetCode("26334-3")
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = DocumentTypeValueSetCode("26335-0")
+    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = DocumentTypeValueSetCode("38023-8")
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = DocumentTypeValueSetCode("26336-8")
+    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = DocumentTypeValueSetCode("38025-3")
+    MammogramGuidanceForPercutaneousNeedleBiopsyOfBreast = DocumentTypeValueSetCode("44121-2")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfKidney = DocumentTypeValueSetCode("69245-9")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLiver = DocumentTypeValueSetCode("69246-7")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLung = DocumentTypeValueSetCode("44204-6")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode("69247-5")
+    FluoroscopyGuidanceForPercutaneousDrainageOfBiliaryDucts = DocumentTypeValueSetCode("46372-9")
     USGuidanceForPercutaneousDrainageOfCavity = DocumentTypeValueSetCode("62494-0")
-    FluoroscopyGuidanceForPercutaneousDrainageOfCavity = DocumentTypeValueSetCode(
-        "24621-5"
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAbdomen = (
-        DocumentTypeValueSetCode("69241-8")
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAppendix = (
-        DocumentTypeValueSetCode("69242-6")
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfBreast = (
-        DocumentTypeValueSetCode("42422-6")
-    )
-    CTGuidanceForPercutaneousDrainageOfAbscessOfCavity = DocumentTypeValueSetCode(
-        "43444-9"
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfChest = (
-        DocumentTypeValueSetCode("42423-4")
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfLung = (
-        DocumentTypeValueSetCode("69243-4")
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfOvary = (
-        DocumentTypeValueSetCode("44223-6")
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfPelvis = (
-        DocumentTypeValueSetCode("69244-2")
-    )
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("42421-8")
-    )
+    FluoroscopyGuidanceForPercutaneousDrainageOfCavity = DocumentTypeValueSetCode("24621-5")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAbdomen = DocumentTypeValueSetCode("69241-8")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAppendix = DocumentTypeValueSetCode("69242-6")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfBreast = DocumentTypeValueSetCode("42422-6")
+    CTGuidanceForPercutaneousDrainageOfAbscessOfCavity = DocumentTypeValueSetCode("43444-9")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfChest = DocumentTypeValueSetCode("42423-4")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfLung = DocumentTypeValueSetCode("69243-4")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfOvary = DocumentTypeValueSetCode("44223-6")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfPelvis = DocumentTypeValueSetCode("69244-2")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("42421-8")
     CTGuidanceForPercutaneousVertebroplastyOfSpine = DocumentTypeValueSetCode("35933-1")
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpine = DocumentTypeValueSetCode(
-        "35936-4"
-    )
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineCervical = (
-        DocumentTypeValueSetCode("70923-8")
-    )
-    CTGuidanceForPercutaneousVertebroplastyOfSpineLumbar = DocumentTypeValueSetCode(
-        "35934-9"
-    )
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineLumbar = (
-        DocumentTypeValueSetCode("70924-6")
-    )
-    CTGuidanceForPercutaneousVertebroplastyOfSpineThoracic = DocumentTypeValueSetCode(
-        "35935-6"
-    )
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineThoracic = (
-        DocumentTypeValueSetCode("70925-3")
-    )
-    FluoroscopyGuidanceForPeripheralNerveDenervationOfUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("72539-0")
-    )
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpine = DocumentTypeValueSetCode("35936-4")
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineCervical = DocumentTypeValueSetCode("70923-8")
+    CTGuidanceForPercutaneousVertebroplastyOfSpineLumbar = DocumentTypeValueSetCode("35934-9")
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineLumbar = DocumentTypeValueSetCode("70924-6")
+    CTGuidanceForPercutaneousVertebroplastyOfSpineThoracic = DocumentTypeValueSetCode("35935-6")
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineThoracic = DocumentTypeValueSetCode("70925-3")
+    FluoroscopyGuidanceForPeripheralNerveDenervationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("72539-0")
     USGuidanceForPlacementOfCatheterInCentralVein = DocumentTypeValueSetCode("30643-1")
-    FluoroscopyGuidanceForPlacementOfCatheterInUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("35912-5")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForAdminstrationOfThrombolyticInVessel = DocumentTypeValueSetCode(
-        "25028-2"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForVasoconstrictorInfusionInVessels = DocumentTypeValueSetCode(
-        "25029-0"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInArteryInCentralCardiovascularArtery = DocumentTypeValueSetCode(
-        "24613-2"
-    )
-    USGuidanceForPlacementOfCatheterInCentralVein_Tunneled = DocumentTypeValueSetCode(
-        "30644-9"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInHepaticArtery_WContrastIA = (
-        DocumentTypeValueSetCode("25077-9")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_WContrastIV = (
-        DocumentTypeValueSetCode("24625-6")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode(
-        "26310-3"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode(
-        "26311-1"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode(
-        "26312-9"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInPortalVein_WContrastIV = (
-        DocumentTypeValueSetCode("41801-2")
-    )
-    FluoroscopyGuidanceForPlacementOfDecompressionTubeInGastrointestine = (
-        DocumentTypeValueSetCode("24716-3")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Left_WContrastIA = DocumentTypeValueSetCode(
-        "62491-6"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Right_WContrastIA = DocumentTypeValueSetCode(
-        "62492-4"
-    )
-    GuidanceForPlacementOfInfusionPortInUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("25072-0")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfIntraperitonealCatheterInAbdomen = (
-        DocumentTypeValueSetCode("62450-2")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfIVCFilterInInferiorVenaCava_WContrastIV = DocumentTypeValueSetCode(
-        "25026-6"
-    )
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein = (
-        DocumentTypeValueSetCode("25027-4")
-    )
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Bilateral = (
-        DocumentTypeValueSetCode("26307-9")
-    )
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Left = (
-        DocumentTypeValueSetCode("26308-7")
-    )
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Right = (
-        DocumentTypeValueSetCode("26309-5")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein = DocumentTypeValueSetCode(
-        "25024-1"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Bilateral = DocumentTypeValueSetCode(
-        "26304-6"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Left = DocumentTypeValueSetCode(
-        "26305-3"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Right = DocumentTypeValueSetCode(
-        "26306-1"
-    )
-    USGuidanceForPlacementOfNeedleInUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "64993-9"
-    )
+    FluoroscopyGuidanceForPlacementOfCatheterInUnspecifiedBodyRegion = DocumentTypeValueSetCode("35912-5")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForAdminstrationOfThrombolyticInVessel = DocumentTypeValueSetCode("25028-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForVasoconstrictorInfusionInVessels = DocumentTypeValueSetCode("25029-0")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInArteryInCentralCardiovascularArtery = DocumentTypeValueSetCode("24613-2")
+    USGuidanceForPlacementOfCatheterInCentralVein_Tunneled = DocumentTypeValueSetCode("30644-9")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInHepaticArtery_WContrastIA = DocumentTypeValueSetCode("25077-9")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_WContrastIV = DocumentTypeValueSetCode("24625-6")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26310-3")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode("26311-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode("26312-9")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInPortalVein_WContrastIV = DocumentTypeValueSetCode("41801-2")
+    FluoroscopyGuidanceForPlacementOfDecompressionTubeInGastrointestine = DocumentTypeValueSetCode("24716-3")
+    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Left_WContrastIA = DocumentTypeValueSetCode("62491-6")
+    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Right_WContrastIA = DocumentTypeValueSetCode("62492-4")
+    GuidanceForPlacementOfInfusionPortInUnspecifiedBodyRegion = DocumentTypeValueSetCode("25072-0")
+    FluoroscopicAngiogramGuidanceForPlacementOfIntraperitonealCatheterInAbdomen = DocumentTypeValueSetCode("62450-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfIVCFilterInInferiorVenaCava_WContrastIV = DocumentTypeValueSetCode("25026-6")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein = DocumentTypeValueSetCode("25027-4")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Bilateral = DocumentTypeValueSetCode("26307-9")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Left = DocumentTypeValueSetCode("26308-7")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Right = DocumentTypeValueSetCode("26309-5")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein = DocumentTypeValueSetCode("25024-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Bilateral = DocumentTypeValueSetCode("26304-6")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Left = DocumentTypeValueSetCode("26305-3")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Right = DocumentTypeValueSetCode("26306-1")
+    USGuidanceForPlacementOfNeedleInUnspecifiedBodyRegion = DocumentTypeValueSetCode("64993-9")
     USGuidanceForPlacementOfNeedleWireInBreast = DocumentTypeValueSetCode("42456-4")
-    CTGuidanceForPlacementOfNephrostomyTubeInKidney = DocumentTypeValueSetCode(
-        "36772-2"
-    )
-    FluoroscopyGuidanceForPlacementOfPercutaneousNephrostomyInKidney_Bilateral_WContrastViaTube = DocumentTypeValueSetCode(
-        "24779-1"
-    )
-    FluoroscopyGuidanceForPlacementOfPercutaneousNephroureteralStentInKidney_Bilateral = DocumentTypeValueSetCode(
-        "24782-5"
-    )
-    CTGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("35937-2")
-    )
-    USGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("43487-8")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Left = (
-        DocumentTypeValueSetCode("65797-3")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Right = (
-        DocumentTypeValueSetCode("65798-1")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInIliacArtery = (
-        DocumentTypeValueSetCode("69134-5")
-    )
-    FluoroscopyGuidanceForPlacementOfStentInIntrahepaticPortalSystem = (
-        DocumentTypeValueSetCode("25078-7")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein = DocumentTypeValueSetCode(
-        "24756-9"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Bilateral = (
-        DocumentTypeValueSetCode("26301-2")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Left = (
-        DocumentTypeValueSetCode("26302-0")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Right = (
-        DocumentTypeValueSetCode("26303-8")
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery = DocumentTypeValueSetCode(
-        "24555-5"
-    )
-    FluoroscopicAngiogramGuidanceForPlacementOfTransjugularIntrahepaticPortosystemicShuntInPortalVeinAndHepaticVein = DocumentTypeValueSetCode(
-        "51391-1"
-    )
+    CTGuidanceForPlacementOfNephrostomyTubeInKidney = DocumentTypeValueSetCode("36772-2")
+    FluoroscopyGuidanceForPlacementOfPercutaneousNephrostomyInKidney_Bilateral_WContrastViaTube = DocumentTypeValueSetCode("24779-1")
+    FluoroscopyGuidanceForPlacementOfPercutaneousNephroureteralStentInKidney_Bilateral = DocumentTypeValueSetCode("24782-5")
+    CTGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = DocumentTypeValueSetCode("35937-2")
+    USGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = DocumentTypeValueSetCode("43487-8")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Left = DocumentTypeValueSetCode("65797-3")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Right = DocumentTypeValueSetCode("65798-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInIliacArtery = DocumentTypeValueSetCode("69134-5")
+    FluoroscopyGuidanceForPlacementOfStentInIntrahepaticPortalSystem = DocumentTypeValueSetCode("25078-7")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein = DocumentTypeValueSetCode("24756-9")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Bilateral = DocumentTypeValueSetCode("26301-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Left = DocumentTypeValueSetCode("26302-0")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Right = DocumentTypeValueSetCode("26303-8")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery = DocumentTypeValueSetCode("24555-5")
+    FluoroscopicAngiogramGuidanceForPlacementOfTransjugularIntrahepaticPortosystemicShuntInPortalVeinAndHepaticVein = DocumentTypeValueSetCode("51391-1")
     CTGuidanceForPlacementOfTubeInChest = DocumentTypeValueSetCode("35938-0")
     USGuidanceForPlacementOfTubeInChest = DocumentTypeValueSetCode("42140-4")
     FluoroscopyGuidanceForPlacementOfTubeInChest = DocumentTypeValueSetCode("39362-9")
-    FluoroscopyGuidanceForPlacementOfTubeInGastrointestine = DocumentTypeValueSetCode(
-        "30637-3"
-    )
+    FluoroscopyGuidanceForPlacementOfTubeInGastrointestine = DocumentTypeValueSetCode("30637-3")
     FluoroscopyGuidanceForPlacementOfTubeInLiver = DocumentTypeValueSetCode("41799-8")
     FluoroscopyGuidanceForPlacementOfTubeInStomach = DocumentTypeValueSetCode("24995-3")
-    FluoroscopyGuidanceForPlacementOfTubeInUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("44224-4")
-    )
+    FluoroscopyGuidanceForPlacementOfTubeInUnspecifiedBodyRegion = DocumentTypeValueSetCode("44224-4")
     SPECTGuidanceForPlacementOfTubeInChest = DocumentTypeValueSetCode("46373-7")
     CTGuidanceForProcedureOfJointSpace = DocumentTypeValueSetCode("44102-2")
     FluoroscopyGuidanceForProcedureOfJointSpace = DocumentTypeValueSetCode("44222-8")
-    FluoroscopyGuidanceForProcedureOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "30629-0"
-    )
-    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = (
-        DocumentTypeValueSetCode("30581-3")
-    )
-    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = (
-        DocumentTypeValueSetCode("30664-7")
-    )
-    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = (
-        DocumentTypeValueSetCode("30582-1")
-    )
-    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = (
-        DocumentTypeValueSetCode("30665-4")
-    )
-    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "25053-0"
-    )
-    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion_WContrastIV = (
-        DocumentTypeValueSetCode("25054-8")
-    )
+    FluoroscopyGuidanceForProcedureOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30629-0")
+    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("30581-3")
+    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("30664-7")
+    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("30582-1")
+    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("30665-4")
+    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25053-0")
+    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("25054-8")
     USGuidanceForRemovalOfAmnioticFluidFromUterus = DocumentTypeValueSetCode("24537-3")
-    USGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = DocumentTypeValueSetCode(
-        "42141-2"
-    )
-    FluoroscopyGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = (
-        DocumentTypeValueSetCode("72549-9")
-    )
-    FluoroscopicAngiogramGuidanceForRemovalOfCatheterFromCentralVein_WContrastIV = (
-        DocumentTypeValueSetCode("72548-1")
-    )
-    FluoroscopyGuidanceForRemovalOfCVADeviceObstructionFromCentralVein = (
-        DocumentTypeValueSetCode("72547-3")
-    )
-    FluoroscopyGuidanceForRemovalOfCVALumenObstructionFromCentralVein = (
-        DocumentTypeValueSetCode("72546-5")
-    )
+    USGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = DocumentTypeValueSetCode("42141-2")
+    FluoroscopyGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = DocumentTypeValueSetCode("72549-9")
+    FluoroscopicAngiogramGuidanceForRemovalOfCatheterFromCentralVein_WContrastIV = DocumentTypeValueSetCode("72548-1")
+    FluoroscopyGuidanceForRemovalOfCVADeviceObstructionFromCentralVein = DocumentTypeValueSetCode("72547-3")
+    FluoroscopyGuidanceForRemovalOfCVALumenObstructionFromCentralVein = DocumentTypeValueSetCode("72546-5")
     CTGuidanceForRemovalOfFluidFromAbdomen = DocumentTypeValueSetCode("41810-3")
     USGuidanceForRemovalOfFluidFromAbdomen = DocumentTypeValueSetCode("24559-7")
     USGuidanceForRemovalOfFluidFromChest = DocumentTypeValueSetCode("38142-6")
-    FluoroscopyGuidanceForRemovalOfForeignBodyFromUnspecifiedBodyRegion = (
-        DocumentTypeValueSetCode("30628-2")
-    )
-    FluoroscopicAngiogramGuidanceForRemovalOfLongtermPeripheralCatheterFromCentralVein = DocumentTypeValueSetCode(
-        "72538-2"
-    )
-    FluoroscopyGuidanceForRemovalOfPercutaneousNephrostomyTubeFromKidney_Bilateral_WContrast = DocumentTypeValueSetCode(
-        "72544-0"
-    )
+    FluoroscopyGuidanceForRemovalOfForeignBodyFromUnspecifiedBodyRegion = DocumentTypeValueSetCode("30628-2")
+    FluoroscopicAngiogramGuidanceForRemovalOfLongtermPeripheralCatheterFromCentralVein = DocumentTypeValueSetCode("72538-2")
+    FluoroscopyGuidanceForRemovalOfPercutaneousNephrostomyTubeFromKidney_Bilateral_WContrast = DocumentTypeValueSetCode("72544-0")
     USGuidanceForRepairOfPseudoaneurysm_AVFistula = DocumentTypeValueSetCode("24885-6")
-    FluoroscopyGuidanceForRepairOfCVACatheterWithPortOrPumpOfCentralVein = (
-        DocumentTypeValueSetCode("72550-7")
-    )
-    FluoroscopyGuidanceForRepairOfCVACatheterWithoutPortOrPumpOfCentralVein = (
-        DocumentTypeValueSetCode("72551-5")
-    )
-    FluoroscopyGuidanceForReplacementOfPercutaneousCholecystostomyInAbdomen = (
-        DocumentTypeValueSetCode("42017-4")
-    )
-    CTGuidanceForReplacementOfPercutaneousDrainageTubeInAbdomen = (
-        DocumentTypeValueSetCode("52790-3")
-    )
-    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode(
-        "72545-7"
-    )
-    CTGuidanceForReplacementOfPercutaneousDrainageTubeInPelvis = (
-        DocumentTypeValueSetCode("52791-1")
-    )
-    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInStomach = (
-        DocumentTypeValueSetCode("46294-5")
-    )
-    FluoroscopyGuidanceForReplacementOfPercutaneousGastrostomyInStomach = (
-        DocumentTypeValueSetCode("24996-1")
-    )
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_WContrastIV = (
-        DocumentTypeValueSetCode("24626-4")
-    )
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode(
-        "26295-6"
-    )
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode(
-        "26296-4"
-    )
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode(
-        "26297-2"
-    )
-    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast = DocumentTypeValueSetCode(
-        "48740-5"
-    )
-    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Left = (
-        DocumentTypeValueSetCode("48736-3")
-    )
-    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Right = (
-        DocumentTypeValueSetCode("48739-7")
-    )
-    FluoroscopyGuidanceForStoneRemovalOfBiliaryDuctCommon_WContrastIntraBiliaryDuct = (
-        DocumentTypeValueSetCode("24570-4")
-    )
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_WContrastIV = (
-        DocumentTypeValueSetCode("43763-2")
-    )
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Bilateral_WContrastIV = (
-        DocumentTypeValueSetCode("43761-6")
-    )
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Left_WContrastIV = (
-        DocumentTypeValueSetCode("43762-4")
-    )
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Right_WContrastIV = (
-        DocumentTypeValueSetCode("43764-0")
-    )
-    FluoroscopyGuidanceForTriggerPointInjectionOfMuscle = DocumentTypeValueSetCode(
-        "72554-9"
-    )
-    FluoroscopicAngiogramGuidanceForVascularAccessOfVessel = DocumentTypeValueSetCode(
-        "39138-3"
-    )
-    USGuidanceForVascularAccessOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
-        "39139-1"
-    )
+    FluoroscopyGuidanceForRepairOfCVACatheterWithPortOrPumpOfCentralVein = DocumentTypeValueSetCode("72550-7")
+    FluoroscopyGuidanceForRepairOfCVACatheterWithoutPortOrPumpOfCentralVein = DocumentTypeValueSetCode("72551-5")
+    FluoroscopyGuidanceForReplacementOfPercutaneousCholecystostomyInAbdomen = DocumentTypeValueSetCode("42017-4")
+    CTGuidanceForReplacementOfPercutaneousDrainageTubeInAbdomen = DocumentTypeValueSetCode("52790-3")
+    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode("72545-7")
+    CTGuidanceForReplacementOfPercutaneousDrainageTubeInPelvis = DocumentTypeValueSetCode("52791-1")
+    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInStomach = DocumentTypeValueSetCode("46294-5")
+    FluoroscopyGuidanceForReplacementOfPercutaneousGastrostomyInStomach = DocumentTypeValueSetCode("24996-1")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_WContrastIV = DocumentTypeValueSetCode("24626-4")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26295-6")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode("26296-4")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode("26297-2")
+    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast = DocumentTypeValueSetCode("48740-5")
+    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Left = DocumentTypeValueSetCode("48736-3")
+    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Right = DocumentTypeValueSetCode("48739-7")
+    FluoroscopyGuidanceForStoneRemovalOfBiliaryDuctCommon_WContrastIntraBiliaryDuct = DocumentTypeValueSetCode("24570-4")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_WContrastIV = DocumentTypeValueSetCode("43763-2")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("43761-6")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Left_WContrastIV = DocumentTypeValueSetCode("43762-4")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Right_WContrastIV = DocumentTypeValueSetCode("43764-0")
+    FluoroscopyGuidanceForTriggerPointInjectionOfMuscle = DocumentTypeValueSetCode("72554-9")
+    FluoroscopicAngiogramGuidanceForVascularAccessOfVessel = DocumentTypeValueSetCode("39138-3")
+    USGuidanceForVascularAccessOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39139-1")
     MRIGuidance_stereotacticForBiopsyOfBrain = DocumentTypeValueSetCode("36936-3")
-    MammogramGuidance_stereotacticForBiopsyOfBreast = DocumentTypeValueSetCode(
-        "24603-3"
-    )
-    MammogramGuidance_stereotacticForBiopsyOfBreast_Bilateral = (
-        DocumentTypeValueSetCode("26292-3")
-    )
-    MammogramGuidance_stereotacticForBiopsyOfBreast_Left = DocumentTypeValueSetCode(
-        "26293-1"
-    )
-    MammogramGuidance_stereotacticForBiopsyOfBreast_Right = DocumentTypeValueSetCode(
-        "26294-9"
-    )
+    MammogramGuidance_stereotacticForBiopsyOfBreast = DocumentTypeValueSetCode("24603-3")
+    MammogramGuidance_stereotacticForBiopsyOfBreast_Bilateral = DocumentTypeValueSetCode("26292-3")
+    MammogramGuidance_stereotacticForBiopsyOfBreast_Left = DocumentTypeValueSetCode("26293-1")
+    MammogramGuidance_stereotacticForBiopsyOfBreast_Right = DocumentTypeValueSetCode("26294-9")
     CTGuidance_stereotacticForBiopsyOfHead = DocumentTypeValueSetCode("36928-0")
-    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast = (
-        DocumentTypeValueSetCode("46296-0")
-    )
-    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Left = (
-        DocumentTypeValueSetCode("46295-2")
-    )
-    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Right = (
-        DocumentTypeValueSetCode("42433-3")
-    )
-    MammogramGuidance_stereotacticForNeedleBiopsyOfBreast = DocumentTypeValueSetCode(
-        "69160-0"
-    )
-    CTGuidance_stereotacticForBiopsyOfHead_WContrastIV = DocumentTypeValueSetCode(
-        "24585-2"
-    )
-    CTGuidance_stereotacticForBiopsyOfHead_WOContrast = DocumentTypeValueSetCode(
-        "36929-8"
-    )
-    MRIGuidance_stereotacticForLocalizationInBrain_WAndWOContrastIV = (
-        DocumentTypeValueSetCode("44122-0")
-    )
-    MRIGuidance_stereotacticForLocalizationInBrain_WContrastIV = (
-        DocumentTypeValueSetCode("30656-3")
-    )
-    MRIGuidance_stereotacticForLocalizationInBrain_WOContrast = (
-        DocumentTypeValueSetCode("30800-7")
-    )
+    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast = DocumentTypeValueSetCode("46296-0")
+    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Left = DocumentTypeValueSetCode("46295-2")
+    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Right = DocumentTypeValueSetCode("42433-3")
+    MammogramGuidance_stereotacticForNeedleBiopsyOfBreast = DocumentTypeValueSetCode("69160-0")
+    CTGuidance_stereotacticForBiopsyOfHead_WContrastIV = DocumentTypeValueSetCode("24585-2")
+    CTGuidance_stereotacticForBiopsyOfHead_WOContrast = DocumentTypeValueSetCode("36929-8")
+    MRIGuidance_stereotacticForLocalizationInBrain_WAndWOContrastIV = DocumentTypeValueSetCode("44122-0")
+    MRIGuidance_stereotacticForLocalizationInBrain_WContrastIV = DocumentTypeValueSetCode("30656-3")
+    MRIGuidance_stereotacticForLocalizationInBrain_WOContrast = DocumentTypeValueSetCode("30800-7")
     HeterophoriaStudy = DocumentTypeValueSetCode("28632-8")
     HistoryOfMedicalDeviceUse = DocumentTypeValueSetCode("46264-8")
     HistoryOfProceduresDocument = DocumentTypeValueSetCode("47519-4")
@@ -2512,23 +1561,13 @@ class DocumentTypeValueSetCodeValues:
     HysterectomyConsent = DocumentTypeValueSetCode("52028-8")
     ChestFluoroscopyImageIntensifierDuringSurgery = DocumentTypeValueSetCode("24655-3")
     ImmunosuppressiveDrugs = DocumentTypeValueSetCode("52047-8")
-    InhalationChallengeTestReportDocument_WMethacholineInhaled = (
-        DocumentTypeValueSetCode("65806-2")
-    )
-    OccupationalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
-        "11500-6"
-    )
-    PhysicalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
-        "11495-9"
-    )
+    InhalationChallengeTestReportDocument_WMethacholineInhaled = DocumentTypeValueSetCode("65806-2")
+    OccupationalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11500-6")
+    PhysicalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11495-9")
     PhysicianInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11494-2")
     PodiatryInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11496-7")
-    PsychologyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
-        "11497-5"
-    )
-    SocialWorkInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
-        "11498-3"
-    )
+    PsychologyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11497-5")
+    SocialWorkInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11498-3")
     DentistInitialAssessmentNote = DocumentTypeValueSetCode("28572-6")
     NursePractitionerInitialAssessmentNote = DocumentTypeValueSetCode("28621-1")
     NurseInitialAssessmentNote = DocumentTypeValueSetCode("29753-1")
@@ -2645,9 +1684,7 @@ class DocumentTypeValueSetCodeValues:
     CarotidArtery_UnilateralUS = DocumentTypeValueSetCode("43552-9")
     CarotidVesselMRIAngiogram = DocumentTypeValueSetCode("36793-8")
     CarotidVesselsAndNeckVesselsMRIAngiogram = DocumentTypeValueSetCode("30859-3")
-    CeliacVesselsAndSuperiorMesentericVesselsMRIAngiogram = DocumentTypeValueSetCode(
-        "30865-0"
-    )
+    CeliacVesselsAndSuperiorMesentericVesselsMRIAngiogram = DocumentTypeValueSetCode("30865-0")
     CerebralArteryUS = DocumentTypeValueSetCode("46374-5")
     ChestCT = DocumentTypeValueSetCode("24627-2")
     ChestMRI = DocumentTypeValueSetCode("24629-8")
@@ -3169,9 +2206,7 @@ class DocumentTypeValueSetCodeValues:
     VenaCavaMRIAngiogram = DocumentTypeValueSetCode("36081-8")
     InferiorVenaCavaMRI = DocumentTypeValueSetCode("36083-4")
     InferiorVenaCavaMRIAngiogram = DocumentTypeValueSetCode("36082-6")
-    VenaCava_inferiorAndLowerExtremityVeinsMRIAngiogram = DocumentTypeValueSetCode(
-        "36790-4"
-    )
+    VenaCava_inferiorAndLowerExtremityVeinsMRIAngiogram = DocumentTypeValueSetCode("36790-4")
     VesselsUS_doppler = DocumentTypeValueSetCode("39445-2")
     VisceralArteryUS = DocumentTypeValueSetCode("38054-3")
     WristCT = DocumentTypeValueSetCode("37428-0")
@@ -3209,25 +2244,15 @@ class DocumentTypeValueSetCodeValues:
     UnspecifiedBodyRegionCTAnd3DReconstruction = DocumentTypeValueSetCode("41804-6")
     UnspecifiedBodyRegionMRIAnd3DReconstruction = DocumentTypeValueSetCode("39043-5")
     UnspecifiedBodyRegionUSAnd3DReconstruction = DocumentTypeValueSetCode("44165-9")
-    CoronaryArteriesCTAngiogramAnd3DReconstructionWContrastIV = (
-        DocumentTypeValueSetCode("58745-1")
-    )
-    LeftAtriumAndPulmonaryVeinsCTAngiogramAnd3DReconstructionWContrastIV = (
-        DocumentTypeValueSetCode("59255-0")
-    )
+    CoronaryArteriesCTAngiogramAnd3DReconstructionWContrastIV = DocumentTypeValueSetCode("58745-1")
+    LeftAtriumAndPulmonaryVeinsCTAngiogramAnd3DReconstructionWContrastIV = DocumentTypeValueSetCode("59255-0")
     HeadCTAnd3DReconstructionWOContrast = DocumentTypeValueSetCode("69082-6")
     FemurAndHipCTAndAnteversionMeasurement = DocumentTypeValueSetCode("37295-3")
-    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudy = (
-        DocumentTypeValueSetCode("72830-3")
-    )
-    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudyAtRestAndWithExercise = DocumentTypeValueSetCode(
-        "72832-9"
-    )
+    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudy = DocumentTypeValueSetCode("72830-3")
+    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudyAtRestAndWithExercise = DocumentTypeValueSetCode("72832-9")
     BoneSPECT1Phase = DocumentTypeValueSetCode("39879-2")
     BoneSPECT3PhaseWholeBody = DocumentTypeValueSetCode("39881-8")
-    Kidney_BilateralX_rayTomograph3ViewsWContrastIV = DocumentTypeValueSetCode(
-        "30760-3"
-    )
+    Kidney_BilateralX_rayTomograph3ViewsWContrastIV = DocumentTypeValueSetCode("30760-3")
     UnspecifiedBodyRegionMRIAdditionalSequence = DocumentTypeValueSetCode("25055-5")
     SpineThoracicX_rayTomographAP = DocumentTypeValueSetCode("39408-0")
     HeartSPECTBloodPoolAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39862-8")
@@ -3235,22 +2260,14 @@ class DocumentTypeValueSetCodeValues:
     TemporomandibularJointMRICine = DocumentTypeValueSetCode("37435-5")
     UrinaryBladderAndUrethraMRICine = DocumentTypeValueSetCode("42693-2")
     HeartMRICineForBloodFlowVelocityMapping = DocumentTypeValueSetCode("39140-9")
-    HeartMRICineForBloodFlowVelocityMappingWContrastIV = DocumentTypeValueSetCode(
-        "44126-1"
-    )
+    HeartMRICineForBloodFlowVelocityMappingWContrastIV = DocumentTypeValueSetCode("44126-1")
     BrainMRICineForCSFFlow = DocumentTypeValueSetCode("42386-3")
     UnspecifiedBodyRegionMRICineForCSFFlow = DocumentTypeValueSetCode("42387-1")
     HeartMRICineForFunction = DocumentTypeValueSetCode("37434-8")
     SinusesCTCoronal = DocumentTypeValueSetCode("46300-0")
-    Breast_BilateralFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode(
-        "72139-9"
-    )
-    Breast_LeftFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode(
-        "72138-1"
-    )
-    Breast_RightFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode(
-        "72137-3"
-    )
+    Breast_BilateralFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode("72139-9")
+    Breast_LeftFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode("72138-1")
+    Breast_RightFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode("72137-3")
     BrainMRIDiffusionWeighted = DocumentTypeValueSetCode("37436-3")
     Ankle_LeftMRIDynamicWContrastIV = DocumentTypeValueSetCode("43555-2")
     Ankle_RightMRIDynamicWContrastIV = DocumentTypeValueSetCode("43449-8")
@@ -3287,9 +2304,7 @@ class DocumentTypeValueSetCodeValues:
     SPECTForTumorWGA_67IV = DocumentTypeValueSetCode("39678-8")
     SPECTForTumorWTc_99mSestamibiIV = DocumentTypeValueSetCode("39748-9")
     SPECTForTumorWTl_201IV = DocumentTypeValueSetCode("42292-3")
-    HeartSPECTGatedAndEjectionFractionAtRestAndWStressAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("46395-0")
-    )
+    HeartSPECTGatedAndEjectionFractionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("46395-0")
     HeartSPECTGatedAndEjectionFraction = DocumentTypeValueSetCode("39913-9")
     HeartSPECTGatedAndWallMotion = DocumentTypeValueSetCode("39918-8")
     HeartSPECTGatedAtRestAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("46396-8")
@@ -3353,12 +2368,8 @@ class DocumentTypeValueSetCodeValues:
     SinusesCTLimited = DocumentTypeValueSetCode("24913-6")
     UpperExtremityArteryUSLimited = DocumentTypeValueSetCode("41813-7")
     UpperExtremityArteryUS_dopplerLimited = DocumentTypeValueSetCode("38143-4")
-    UpperExtremityArtery_BilateralUS_dopplerLimited = DocumentTypeValueSetCode(
-        "46302-6"
-    )
-    UpperExtremityVesselGraft_BilateralUS_dopplerLimited = DocumentTypeValueSetCode(
-        "44237-6"
-    )
+    UpperExtremityArtery_BilateralUS_dopplerLimited = DocumentTypeValueSetCode("46302-6")
+    UpperExtremityVesselGraft_BilateralUS_dopplerLimited = DocumentTypeValueSetCode("44237-6")
     UpperExtremityVesselsUS_dopplerLimited = DocumentTypeValueSetCode("46303-4")
     UpperExtremity_jointMRILimited = DocumentTypeValueSetCode("36094-1")
     VeinUSLimited = DocumentTypeValueSetCode("39045-0")
@@ -3366,9 +2377,7 @@ class DocumentTypeValueSetCodeValues:
     UnspecifiedBodyRegionCTLimited = DocumentTypeValueSetCode("25039-9")
     UnspecifiedBodyRegionMRILimited = DocumentTypeValueSetCode("48460-0")
     UnspecifiedBodyRegionUS_dopplerLimited = DocumentTypeValueSetCode("69282-2")
-    ExtremityArteries_BilateralUS_dopplerMultisectionLimitedAndPhysiologicArteryStudy = DocumentTypeValueSetCode(
-        "72831-1"
-    )
+    ExtremityArteries_BilateralUS_dopplerMultisectionLimitedAndPhysiologicArteryStudy = DocumentTypeValueSetCode("72831-1")
     HeartMRILimitedCineForFunction = DocumentTypeValueSetCode("44127-9")
     PelvisCTLimitedPelvimetryWOContrast = DocumentTypeValueSetCode("39046-8")
     AbdomenCTLimitedWAndWOContrastIV = DocumentTypeValueSetCode("36102-2")
@@ -3400,53 +2409,29 @@ class DocumentTypeValueSetCodeValues:
     BoneSPECTMultipleAreas = DocumentTypeValueSetCode("39905-5")
     BoneMarrowSPECTMultipleAreas = DocumentTypeValueSetCode("39906-3")
     UnspecifiedBodyRegionUSOfForeignBody = DocumentTypeValueSetCode("39527-7")
-    HeartSPECTPerfusionAndWallMotionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "49569-7"
-    )
-    HeartSPECTPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "43659-2"
-    )
-    HeartSPECTPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode(
-        "39725-7"
-    )
+    HeartSPECTPerfusionAndWallMotionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("49569-7")
+    HeartSPECTPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("43659-2")
+    HeartSPECTPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode("39725-7")
     HeartSPECTPerfusionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39718-2")
-    HeartSPECTPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39724-0"
-    )
-    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IV = DocumentTypeValueSetCode(
-        "39723-2"
-    )
-    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = (
-        DocumentTypeValueSetCode("49568-9")
-    )
+    HeartSPECTPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39724-0")
+    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IV = DocumentTypeValueSetCode("39723-2")
+    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("49568-9")
     HeartSPECTPerfusionAtRestAndWTl_201IV = DocumentTypeValueSetCode("39729-9")
-    HeartSPECTPerfusionWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39700-0"
-    )
-    HeartSPECTPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "49567-1"
-    )
+    HeartSPECTPerfusionWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode("39700-0")
+    HeartSPECTPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("49567-1")
     HeadCTPerfusionWContrastIV = DocumentTypeValueSetCode("39142-5")
     HeartSPECTPerfusion = DocumentTypeValueSetCode("39712-5")
     HeartSPECTPerfusionWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39734-9")
-    HeartSPECTPerfusionWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "39736-4"
-    )
+    HeartSPECTPerfusionWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39736-4")
     HeartSPECTPerfusionWTc_99mSestamibiIV = DocumentTypeValueSetCode("39710-9")
     HeartSPECTPerfusionWTl_201IV = DocumentTypeValueSetCode("39711-7")
     Spine_lumbosacral_Cervical_ThoracicMRISagittal = DocumentTypeValueSetCode("38060-0")
     UnspecifiedBodyRegionCTSagittalAndCoronal = DocumentTypeValueSetCode("25052-2")
-    UnspecifiedBodyRegionCT3DSagittalAndCoronalDisarticulation = (
-        DocumentTypeValueSetCode("25050-6")
-    )
+    UnspecifiedBodyRegionCT3DSagittalAndCoronalDisarticulation = DocumentTypeValueSetCode("25050-6")
     BreastUSScreening = DocumentTypeValueSetCode("42132-1")
-    Breast_BilateralFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode(
-        "72142-3"
-    )
+    Breast_BilateralFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode("72142-3")
     Breast_LeftFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode("72141-5")
-    Breast_RightFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode(
-        "72140-7"
-    )
+    Breast_RightFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode("72140-7")
     BrainMRISpectroscopy = DocumentTypeValueSetCode("37442-1")
     UnspecifiedBodyRegionMRISpectroscopy = DocumentTypeValueSetCode("37443-9")
     SpineCTStereotactic = DocumentTypeValueSetCode("36939-7")
@@ -3457,12 +2442,8 @@ class DocumentTypeValueSetCodeValues:
     PelvisUSTransabdominalAndTransvaginal = DocumentTypeValueSetCode("42455-6")
     PelvisUSTransvaginal = DocumentTypeValueSetCode("24677-7")
     TransvaginalMRI = DocumentTypeValueSetCode("42390-5")
-    LungSPECTVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("39838-8")
-    )
-    LungSPECTVentilationWRadionuclideAerosolInhaled = DocumentTypeValueSetCode(
-        "39898-2"
-    )
+    LungSPECTVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode("39838-8")
+    LungSPECTVentilationWRadionuclideAerosolInhaled = DocumentTypeValueSetCode("39898-2")
     HeartSPECTWallMotion = DocumentTypeValueSetCode("39872-7")
     CTWholeBody = DocumentTypeValueSetCode("46305-9")
     MRIWholeBody = DocumentTypeValueSetCode("46358-8")
@@ -3473,9 +2454,7 @@ class DocumentTypeValueSetCodeValues:
     BoneMarrowSPECTWholeBody = DocumentTypeValueSetCode("39825-5")
     SPECTWholeBodyWTc_99mArcitumomabIV = DocumentTypeValueSetCode("41837-6")
     HeartSPECTAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39658-0")
-    HeartSPECTAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "39662-2"
-    )
+    HeartSPECTAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39662-2")
     HeartSPECTAtRestAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("49566-3")
     HipUSDevelopmentalJointAssessment = DocumentTypeValueSetCode("30711-6")
     HeadUSDuringSurgery = DocumentTypeValueSetCode("24732-0")
@@ -3516,23 +2495,15 @@ class DocumentTypeValueSetCodeValues:
     AortaAbdominalMRIWAndWOContrastIV = DocumentTypeValueSetCode("36273-1")
     AortaAbdominalMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36272-3")
     AortaThoracicMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36274-9")
-    AortaAndFemoralArtery_BilateralCTAngiogramWAndWOContrastIV = (
-        DocumentTypeValueSetCode("30806-4")
-    )
+    AortaAndFemoralArtery_BilateralCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("30806-4")
     AorticArchMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46360-4")
     Axilla_LeftMRIWAndWOContrastIV = DocumentTypeValueSetCode("43509-9")
     Axilla_RightMRIWAndWOContrastIV = DocumentTypeValueSetCode("43511-5")
-    BiliaryDuctsAndPancreaticDuctMRIWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36944-7"
-    )
+    BiliaryDuctsAndPancreaticDuctMRIWAndWOContrastIV = DocumentTypeValueSetCode("36944-7")
     BrainMRIWAndWOContrastIV = DocumentTypeValueSetCode("24587-8")
     Brain_temporalMRIWAndWOContrastIV = DocumentTypeValueSetCode("48694-4")
-    BrainAndInternalAuditoryCanalMRIWAndWOContrastIV = DocumentTypeValueSetCode(
-        "43769-9"
-    )
-    BrainAndPituitaryAndSellaTurcicaMRIWAndWOContrastIV = DocumentTypeValueSetCode(
-        "42392-1"
-    )
+    BrainAndInternalAuditoryCanalMRIWAndWOContrastIV = DocumentTypeValueSetCode("43769-9")
+    BrainAndPituitaryAndSellaTurcicaMRIWAndWOContrastIV = DocumentTypeValueSetCode("42392-1")
     BreastMRIWAndWOContrastIV = DocumentTypeValueSetCode("36276-4")
     BreastImplantMRIWAndWOContrastIV = DocumentTypeValueSetCode("69189-9")
     BreastImplant_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode("69166-7")
@@ -3611,9 +2582,7 @@ class DocumentTypeValueSetCodeValues:
     Hip_RightMRIWAndWOContrastIV = DocumentTypeValueSetCode("36365-5")
     InternalAuditoryCanalCTWAndWOContrastIV = DocumentTypeValueSetCode("36282-2")
     InternalAuditoryCanalMRIWAndWOContrastIV = DocumentTypeValueSetCode("30659-7")
-    InternalAuditoryCanalAndPosteriorFossaMRIWAndWOContrastIV = (
-        DocumentTypeValueSetCode("24740-3")
-    )
+    InternalAuditoryCanalAndPosteriorFossaMRIWAndWOContrastIV = DocumentTypeValueSetCode("24740-3")
     KidneyCTWAndWOContrastIV = DocumentTypeValueSetCode("43768-1")
     KidneyMRIWAndWOContrastIV = DocumentTypeValueSetCode("43775-6")
     Kidney_BilateralCTWAndWOContrastIV = DocumentTypeValueSetCode("36377-0")
@@ -3633,33 +2602,15 @@ class DocumentTypeValueSetCodeValues:
     LiverMRIWAndWOContrastIV = DocumentTypeValueSetCode("30670-4")
     LowerExtremityCTWAndWOContrastIV = DocumentTypeValueSetCode("36288-9")
     LowerExtremityMRIWAndWOContrastIV = DocumentTypeValueSetCode("39291-0")
-    LowerExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36416-6"
-    )
-    LowerExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36849-8"
-    )
-    LowerExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36850-6"
-    )
-    LowerExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "30807-2"
-    )
-    LowerExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "44128-7"
-    )
-    LowerExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "46308-3"
-    )
-    LowerExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36858-9"
-    )
-    LowerExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "46307-5"
-    )
-    LowerExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36859-7"
-    )
+    LowerExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36416-6")
+    LowerExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36849-8")
+    LowerExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36850-6")
+    LowerExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("30807-2")
+    LowerExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("44128-7")
+    LowerExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46308-3")
+    LowerExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36858-9")
+    LowerExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46307-5")
+    LowerExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36859-7")
     LowerExtremity_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode("36289-7")
     LowerExtremityJointMRIWAndWOContrastIV = DocumentTypeValueSetCode("36371-3")
     LowerExtremityJoint_LeftMRIWAndWOContrastIV = DocumentTypeValueSetCode("36372-1")
@@ -3724,12 +2675,8 @@ class DocumentTypeValueSetCodeValues:
     ScrotumAndTesticleMRIWAndWOContrastIV = DocumentTypeValueSetCode("36406-7")
     ShoulderCTWAndWOContrastIV = DocumentTypeValueSetCode("36395-2")
     ShoulderMRIWAndWOContrastIV = DocumentTypeValueSetCode("24906-0")
-    ShoulderVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36864-7"
-    )
-    ShoulderVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36865-4"
-    )
+    ShoulderVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36864-7")
+    ShoulderVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36865-4")
     Shoulder_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode("26202-2")
     Shoulder_LeftCTWAndWOContrastIV = DocumentTypeValueSetCode("36396-0")
     Shoulder_LeftMRIWAndWOContrastIV = DocumentTypeValueSetCode("26203-0")
@@ -3745,40 +2692,26 @@ class DocumentTypeValueSetCodeValues:
     SpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("37505-5")
     SpineCervicalCTWAndWOContrastIV = DocumentTypeValueSetCode("36401-8")
     SpineCervicalMRIWAndWOContrastIV = DocumentTypeValueSetCode("24937-5")
-    CervicalSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "37506-3"
-    )
-    SpineCervicalAndSpineThoracicMRIWAndWOContrastIV = DocumentTypeValueSetCode(
-        "43456-3"
-    )
-    SpineCervicalAndThoracicAndLumbarMRIWAndWOContrastIV = DocumentTypeValueSetCode(
-        "30855-1"
-    )
+    CervicalSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("37506-3")
+    SpineCervicalAndSpineThoracicMRIWAndWOContrastIV = DocumentTypeValueSetCode("43456-3")
+    SpineCervicalAndThoracicAndLumbarMRIWAndWOContrastIV = DocumentTypeValueSetCode("30855-1")
     SpineLumbarCTWAndWOContrastIV = DocumentTypeValueSetCode("36402-6")
     SpineLumbarMRIWAndWOContrastIV = DocumentTypeValueSetCode("24967-2")
     LumbarSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("37507-1")
     SpineThoracicCTWAndWOContrastIV = DocumentTypeValueSetCode("36403-4")
     SpineThoracicMRIWAndWOContrastIV = DocumentTypeValueSetCode("24981-3")
-    ThoracicSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "37508-9"
-    )
+    ThoracicSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("37508-9")
     SpleenCTWAndWOContrastIV = DocumentTypeValueSetCode("24989-6")
     SpleenMRIWAndWOContrastIV = DocumentTypeValueSetCode("36404-2")
     SternoclavicularJointCTWAndWOContrastIV = DocumentTypeValueSetCode("37266-4")
     SternumCTWAndWOContrastIV = DocumentTypeValueSetCode("36405-9")
-    SuperiorMesentericVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "44231-9"
-    )
+    SuperiorMesentericVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("44231-9")
     TemporalBoneCTWAndWOContrastIV = DocumentTypeValueSetCode("36837-3")
     TemporomandibularJointCTWAndWOContrastIV = DocumentTypeValueSetCode("37267-2")
     TemporomandibularJointMRIWAndWOContrastIV = DocumentTypeValueSetCode("37268-0")
-    TemporomandibularJoint_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode(
-        "37269-8"
-    )
+    TemporomandibularJoint_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode("37269-8")
     TemporomandibularJoint_LeftMRIWAndWOContrastIV = DocumentTypeValueSetCode("37270-6")
-    TemporomandibularJoint_RightMRIWAndWOContrastIV = DocumentTypeValueSetCode(
-        "37271-4"
-    )
+    TemporomandibularJoint_RightMRIWAndWOContrastIV = DocumentTypeValueSetCode("37271-4")
     ThighMRIWAndWOContrastIV = DocumentTypeValueSetCode("24703-1")
     Thigh_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode("26196-6")
     Thigh_LeftMRIWAndWOContrastIV = DocumentTypeValueSetCode("26197-4")
@@ -3799,33 +2732,15 @@ class DocumentTypeValueSetCodeValues:
     UpperArm_RightMRIWAndWOContrastIV = DocumentTypeValueSetCode("36370-5")
     UpperExtremityCTWAndWOContrastIV = DocumentTypeValueSetCode("36334-1")
     UpperExtremityMRIWAndWOContrastIV = DocumentTypeValueSetCode("39034-4")
-    UpperExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36417-4"
-    )
-    UpperExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36851-4"
-    )
-    UpperExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36852-2"
-    )
-    UpperExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36421-6"
-    )
-    UpperExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36422-4"
-    )
-    UpperExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "46312-5"
-    )
-    UpperExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36860-5"
-    )
-    UpperExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "46309-1"
-    )
-    UpperExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
-        "36861-3"
-    )
+    UpperExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36417-4")
+    UpperExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36851-4")
+    UpperExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36852-2")
+    UpperExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36421-6")
+    UpperExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36422-4")
+    UpperExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46312-5")
+    UpperExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36860-5")
+    UpperExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46309-1")
+    UpperExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36861-3")
     UpperExtremity_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode("69186-5")
     UpperExtremity_jointMRIWAndWOContrastIV = DocumentTypeValueSetCode("36374-7")
     UpperExtremityJoint_LeftMRIWAndWOContrastIV = DocumentTypeValueSetCode("36840-7")
@@ -3850,13 +2765,9 @@ class DocumentTypeValueSetCodeValues:
     LiverMRIWAndWOFerumoxidesIV = DocumentTypeValueSetCode("43448-0")
     AbdomenCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46318-2")
     ChestCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46317-4")
-    FacialBonesAndMaxillaCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode(
-        "46315-8"
-    )
+    FacialBonesAndMaxillaCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46315-8")
     HeadCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46316-6")
-    InternalAuditoryCanalCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode(
-        "46314-1"
-    )
+    InternalAuditoryCanalCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46314-1")
     PelvisCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46313-3")
     RectumAndColonCT3DWAirContrastPR = DocumentTypeValueSetCode("60515-4")
     BrainMRIWAnesthesia = DocumentTypeValueSetCode("24586-0")
@@ -3870,12 +2781,8 @@ class DocumentTypeValueSetCodeValues:
     AbdomenRetroperitoneumCTWContrast = DocumentTypeValueSetCode("24567-0")
     UnspecifiedBodyRegionUSWContrast = DocumentTypeValueSetCode("38055-0")
     HepaticArteryCTAngiogramWContrastIA = DocumentTypeValueSetCode("36809-2")
-    PulmonaryArtery_BilateralMRIAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "69162-6"
-    )
-    UrinaryBladderAndUrethraSPECTWContrastIntraBladderDuringVoiding = (
-        DocumentTypeValueSetCode("69238-4")
-    )
+    PulmonaryArtery_BilateralMRIAngiogramWContrastIA = DocumentTypeValueSetCode("69162-6")
+    UrinaryBladderAndUrethraSPECTWContrastIntraBladderDuringVoiding = DocumentTypeValueSetCode("69238-4")
     BreastDuctUSWContrastIntraDuct = DocumentTypeValueSetCode("30853-6")
     SalivaryGlandCTWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("36941-3")
     SinusTractCTWContrastIntraSinusTract = DocumentTypeValueSetCode("37237-5")
@@ -3933,9 +2840,7 @@ class DocumentTypeValueSetCodeValues:
     AbdomenAndPelvisCTWContrastIV = DocumentTypeValueSetCode("36813-4")
     AbdominalVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("36828-2")
     AbdominalVesselsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("24533-2")
-    AbdominalVesselsAndPelvisVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "69908-2"
-    )
+    AbdominalVesselsAndPelvisVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("69908-2")
     AdrenalGlandCTWContrastIV = DocumentTypeValueSetCode("36943-9")
     AdrenalGlandMRIWContrastIV = DocumentTypeValueSetCode("44124-6")
     AnkleCTWContrastIV = DocumentTypeValueSetCode("36135-2")
@@ -3949,12 +2854,8 @@ class DocumentTypeValueSetCodeValues:
     AortaCTAngiogramWContrastIV = DocumentTypeValueSetCode("36141-0")
     AortaAbdominalCTWContrastIV = DocumentTypeValueSetCode("36143-6")
     AortaThoracicCTWContrastIV = DocumentTypeValueSetCode("24545-6")
-    AortaAndFemoralArtery_BilateralCTAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "72255-3"
-    )
-    AortaAndLowerExtremityVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "43503-2"
-    )
+    AortaAndFemoralArtery_BilateralCTAngiogramWContrastIV = DocumentTypeValueSetCode("72255-3")
+    AortaAndLowerExtremityVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("43503-2")
     AorticArchCTAngiogramWContrastIV = DocumentTypeValueSetCode("36144-4")
     AorticStentCTAngiogramWContrastIV = DocumentTypeValueSetCode("37499-1")
     AppendixCTWContrastIV = DocumentTypeValueSetCode("36145-1")
@@ -4037,9 +2938,7 @@ class DocumentTypeValueSetCodeValues:
     HeadVeinsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("36826-6")
     HeadVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("36830-8")
     HeadVesselsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("24593-6")
-    HeadVesselsAndNeckVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37498-3"
-    )
+    HeadVesselsAndNeckVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("37498-3")
     HeadSagittalSinusMRIAngiogramWContrastIV = DocumentTypeValueSetCode("24747-8")
     HeartMRIWContrastIV = DocumentTypeValueSetCode("36197-2")
     HipCTWContrastIV = DocumentTypeValueSetCode("36200-4")
@@ -4077,9 +2976,7 @@ class DocumentTypeValueSetCodeValues:
     LowerExtremityVeins_RightCTWContrastIV = DocumentTypeValueSetCode("36825-8")
     LowerExtremityVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("36831-6")
     LowerExtremityVesselsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("46324-0")
-    LowerExtremityVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "44135-2"
-    )
+    LowerExtremityVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode("44135-2")
     LowerExtremity_BilateralCTWContrastIV = DocumentTypeValueSetCode("50755-8")
     LowerExtremity_BilateralMRIWContrastIV = DocumentTypeValueSetCode("36163-4")
     LowerExtremityJointMRIWContrastIV = DocumentTypeValueSetCode("36213-7")
@@ -4092,9 +2989,7 @@ class DocumentTypeValueSetCodeValues:
     LowerLegCTWContrastIV = DocumentTypeValueSetCode("36258-2")
     LowerLegMRIWContrastIV = DocumentTypeValueSetCode("36259-0")
     LowerLegVesselsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("24820-3")
-    LowerLegVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "43512-3"
-    )
+    LowerLegVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode("43512-3")
     LowerLeg_BilateralMRIWContrastIV = DocumentTypeValueSetCode("42695-7")
     LowerLeg_LeftCTWContrastIV = DocumentTypeValueSetCode("36260-8")
     LowerLeg_LeftMRIWContrastIV = DocumentTypeValueSetCode("36261-6")
@@ -4162,9 +3057,7 @@ class DocumentTypeValueSetCodeValues:
     SpineCervicalCTWContrastIV = DocumentTypeValueSetCode("24933-4")
     SpineCervicalMRIWContrastIV = DocumentTypeValueSetCode("24938-3")
     CervicalSpineVesselsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("37501-4")
-    SpineCervicalAndSpineThoracicAndSpineLumbarAndSacrumMRIWContrastIV = (
-        DocumentTypeValueSetCode("38061-8")
-    )
+    SpineCervicalAndSpineThoracicAndSpineLumbarAndSacrumMRIWContrastIV = DocumentTypeValueSetCode("38061-8")
     SpineLumbarCTWContrastIV = DocumentTypeValueSetCode("24964-9")
     SpineLumbarMRIWContrastIV = DocumentTypeValueSetCode("30678-7")
     LumbarSpineVesselsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("37502-2")
@@ -4190,15 +3083,9 @@ class DocumentTypeValueSetCodeValues:
     Thigh_RightMRIWContrastIV = DocumentTypeValueSetCode("36177-4")
     ThoracicOutletMRIWContrastIV = DocumentTypeValueSetCode("36239-2")
     ThoracicOutletVesselsMRIAngiogramWContrastIV = DocumentTypeValueSetCode("24584-5")
-    ThoracicOutletVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "26181-8"
-    )
-    ThoracicOutletVessels_LeftMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "26182-6"
-    )
-    ThoracicOutletVessels_RightMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "26183-4"
-    )
+    ThoracicOutletVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode("26181-8")
+    ThoracicOutletVessels_LeftMRIAngiogramWContrastIV = DocumentTypeValueSetCode("26182-6")
+    ThoracicOutletVessels_RightMRIAngiogramWContrastIV = DocumentTypeValueSetCode("26183-4")
     ThoracicOutlet_LeftMRIWContrastIV = DocumentTypeValueSetCode("36240-0")
     ThoracicOutlet_RightMRIWContrastIV = DocumentTypeValueSetCode("36241-8")
     Toes_LeftMRIWContrastIV = DocumentTypeValueSetCode("72243-9")
@@ -4240,14 +3127,10 @@ class DocumentTypeValueSetCodeValues:
     UnspecifiedBodyRegionMRIAngiogramWContrastIV = DocumentTypeValueSetCode("25058-9")
     RectumAndColonCT3DWContrastIVAndWAirContrastPR = DocumentTypeValueSetCode("72531-7")
     GastrointestineUSWContrastPO = DocumentTypeValueSetCode("39450-2")
-    AbdomenAndPelvisMRIWContrastPOAndWAndWOContrastIV = DocumentTypeValueSetCode(
-        "72246-2"
-    )
+    AbdomenAndPelvisMRIWContrastPOAndWAndWOContrastIV = DocumentTypeValueSetCode("72246-2")
     AbdomenAndPelvisCTWContrastPOAndWContrastIV = DocumentTypeValueSetCode("72250-4")
     AbdomenAndPelvisMRIWContrastPOAndWOContrastIV = DocumentTypeValueSetCode("72247-0")
-    PelvisMRIWContrastPRAtRestAndMaxmalSphincterContractionDuringStrainingAndDefecation = DocumentTypeValueSetCode(
-        "72245-4"
-    )
+    PelvisMRIWContrastPRAtRestAndMaxmalSphincterContractionDuringStrainingAndDefecation = DocumentTypeValueSetCode("72245-4")
     HeartSPECTWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode("39648-1")
     HeartSPECTWDipyridamoleAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("44154-3")
     PelvisMRIWEndorectalCoil = DocumentTypeValueSetCode("42389-7")
@@ -4277,13 +3160,9 @@ class DocumentTypeValueSetCodeValues:
     JointSPECT = DocumentTypeValueSetCode("39938-6")
     AbdomenCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46330-7")
     ChestCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46327-3")
-    FacialBonesAndMaxillaCTWReducedContrastVolumeIV = DocumentTypeValueSetCode(
-        "46326-5"
-    )
+    FacialBonesAndMaxillaCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46326-5")
     HeadCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46328-1")
-    InternalAuditoryCanalCTWReducedContrastVolumeIV = DocumentTypeValueSetCode(
-        "46325-7"
-    )
+    InternalAuditoryCanalCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46325-7")
     PelvisCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46329-9")
     UterusAndFallopianTubesUSWSalineIntrauterine = DocumentTypeValueSetCode("42143-8")
     HeartMRIWStress = DocumentTypeValueSetCode("58750-1")
@@ -4437,15 +3316,9 @@ class DocumentTypeValueSetCodeValues:
     LowerExtremityCTWOContrast = DocumentTypeValueSetCode("30625-8")
     LowerExtremityMRIWOContrast = DocumentTypeValueSetCode("39292-8")
     LowerExtremityVesselsMRIAngiogramWOContrast = DocumentTypeValueSetCode("44129-5")
-    LowerExtremityVessels_BilateralMRIAngiogramWOContrast = DocumentTypeValueSetCode(
-        "36450-5"
-    )
-    LowerExtremityVessels_LeftMRIAngiogramWOContrast = DocumentTypeValueSetCode(
-        "36882-9"
-    )
-    LowerExtremityVessels_RightMRIAngiogramWOContrast = DocumentTypeValueSetCode(
-        "38773-8"
-    )
+    LowerExtremityVessels_BilateralMRIAngiogramWOContrast = DocumentTypeValueSetCode("36450-5")
+    LowerExtremityVessels_LeftMRIAngiogramWOContrast = DocumentTypeValueSetCode("36882-9")
+    LowerExtremityVessels_RightMRIAngiogramWOContrast = DocumentTypeValueSetCode("38773-8")
     LowerExtremity_BilateralCTWOContrast = DocumentTypeValueSetCode("36449-7")
     LowerExtremity_BilateralMRIWOContrast = DocumentTypeValueSetCode("36451-3")
     LowerExtremityJointMRIWOContrast = DocumentTypeValueSetCode("36497-6")
@@ -4535,9 +3408,7 @@ class DocumentTypeValueSetCodeValues:
     SpleenMRIWOContrast = DocumentTypeValueSetCode("36533-8")
     SternoclavicularJointCTWOContrast = DocumentTypeValueSetCode("37282-1")
     SternumCTWOContrast = DocumentTypeValueSetCode("36534-6")
-    SuperiorMesentericVesselsMRIAngiogramWOContrast = DocumentTypeValueSetCode(
-        "44230-1"
-    )
+    SuperiorMesentericVesselsMRIAngiogramWOContrast = DocumentTypeValueSetCode("44230-1")
     TemporalBoneCTWOContrast = DocumentTypeValueSetCode("36866-2")
     TemporalBone_LeftCTWOContrast = DocumentTypeValueSetCode("36867-0")
     TemporalBone_RightCTWOContrast = DocumentTypeValueSetCode("36868-8")
@@ -4593,9 +3464,7 @@ class DocumentTypeValueSetCodeValues:
     UnspecifiedBodyRegionCTWOContrast = DocumentTypeValueSetCode("43525-5")
     UnspecifiedBodyRegionMRIWOContrast = DocumentTypeValueSetCode("69223-6")
     JointMRIWOContrast = DocumentTypeValueSetCode("36871-2")
-    Kidney_BilateralX_rayTomographWOContrastAnd10MPostContrastIV = (
-        DocumentTypeValueSetCode("24787-4")
-    )
+    Kidney_BilateralX_rayTomographWOContrastAnd10MPostContrastIV = DocumentTypeValueSetCode("24787-4")
     HipUSWODevelopmentalJointAssessment = DocumentTypeValueSetCode("30712-4")
     UnspecifiedBodyRegionCTMultisectionalSagittal = DocumentTypeValueSetCode("25051-4")
     NeonatalIntensiveCareRecords = DocumentTypeValueSetCode("29750-7")
@@ -4607,9 +3476,7 @@ class DocumentTypeValueSetCodeValues:
     WoundCareManagementNote = DocumentTypeValueSetCode("46215-0")
     PhysicianEmergencyDepartmentNote = DocumentTypeValueSetCode("28568-4")
     NurseNotes = DocumentTypeValueSetCode("11536-0")
-    NoticeOfDischargeMedicareAppealRights_NODMAR_Form = DocumentTypeValueSetCode(
-        "52066-8"
-    )
+    NoticeOfDischargeMedicareAppealRights_NODMAR_Form = DocumentTypeValueSetCode("52066-8")
     NoticeOfPrivacyPracticesReceipt = DocumentTypeValueSetCode("53244-0")
     NurseryRecords = DocumentTypeValueSetCode("11543-6")
     NursingNotes = DocumentTypeValueSetCode("46208-5")
@@ -4618,42 +3485,24 @@ class DocumentTypeValueSetCodeValues:
     Oxygen = DocumentTypeValueSetCode("52053-6")
     Parenteral = DocumentTypeValueSetCode("52054-4")
     PastFilingLimitJustification = DocumentTypeValueSetCode("52067-6")
-    CatheterFluoroscopyPatencyCheckWContrastViaCatheter = DocumentTypeValueSetCode(
-        "24620-7"
-    )
+    CatheterFluoroscopyPatencyCheckWContrastViaCatheter = DocumentTypeValueSetCode("24620-7")
     BoneMarrowPathologyBiopsyReport = DocumentTypeValueSetCode("33721-2")
     PathologyProcedureNote = DocumentTypeValueSetCode("34122-2")
     PatientDataDocument = DocumentTypeValueSetCode("55188-7")
     PatientSafetyReportEventDocument = DocumentTypeValueSetCode("55750-4")
     PayerLetter = DocumentTypeValueSetCode("52034-6")
-    PoplitealArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode(
-        "24882-3"
-    )
-    PulmonaryArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode(
-        "69252-5"
-    )
-    RenalArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode(
-        "69248-3"
-    )
-    VeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = (
-        DocumentTypeValueSetCode("42018-2")
-    )
-    UpperExtremityVeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIV = DocumentTypeValueSetCode(
-        "69301-0"
-    )
+    PoplitealArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("24882-3")
+    PulmonaryArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("69252-5")
+    RenalArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("69248-3")
+    VeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("42018-2")
+    UpperExtremityVeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIV = DocumentTypeValueSetCode("69301-0")
     PerimetryStudy = DocumentTypeValueSetCode("28629-4")
     PeriodontalServiceAttachment = DocumentTypeValueSetCode("74030-8")
     PerioperativeRecords = DocumentTypeValueSetCode("29752-3")
     PeripheralVesselUS_dopplerPeripheralPlane = DocumentTypeValueSetCode("24875-7")
-    PharmacogeneticAnalysisReportInBloodOrTissueDocumentByMolecularGeneticsMethod = (
-        DocumentTypeValueSetCode("51965-2")
-    )
-    PhysicalFindingsOfHeadAndEarsAndEyesAndNoseAndThroat = DocumentTypeValueSetCode(
-        "51850-6"
-    )
-    PlacementCheckOfGastrostomyTubeWContrastViaGITube = DocumentTypeValueSetCode(
-        "24998-7"
-    )
+    PharmacogeneticAnalysisReportInBloodOrTissueDocumentByMolecularGeneticsMethod = DocumentTypeValueSetCode("51965-2")
+    PhysicalFindingsOfHeadAndEarsAndEyesAndNoseAndThroat = DocumentTypeValueSetCode("51850-6")
+    PlacementCheckOfGastrostomyTubeWContrastViaGITube = DocumentTypeValueSetCode("24998-7")
     PowerOperatedVehicles = DocumentTypeValueSetCode("52055-1")
     PrescriptionForDurableMedicalEquipment_DME_ = DocumentTypeValueSetCode("52063-5")
     CardiacStressStudyProcedure = DocumentTypeValueSetCode("18836-7")
@@ -4665,15 +3514,9 @@ class DocumentTypeValueSetCodeValues:
     ProviderOrders = DocumentTypeValueSetCode("46209-3")
     PublicHealthCaseReportDocument = DocumentTypeValueSetCode("55751-2")
     PurchaseInvoice = DocumentTypeValueSetCode("52075-9")
-    QualityReportingDocumentArchitectureCalculatedSummaryReportPopulationDocument = (
-        DocumentTypeValueSetCode("55184-6")
-    )
-    QualityReportingDocumentArchitectureIncidenceReportDocument = (
-        DocumentTypeValueSetCode("55182-0")
-    )
-    QualityReportingDocumentArchitecturePatientListReportPopulationDocument = (
-        DocumentTypeValueSetCode("55183-8")
-    )
+    QualityReportingDocumentArchitectureCalculatedSummaryReportPopulationDocument = DocumentTypeValueSetCode("55184-6")
+    QualityReportingDocumentArchitectureIncidenceReportDocument = DocumentTypeValueSetCode("55182-0")
+    QualityReportingDocumentArchitecturePatientListReportPopulationDocument = DocumentTypeValueSetCode("55183-8")
     Recommendation_interpretation_Document = DocumentTypeValueSetCode("62385-0")
     ChiropracticRecordsTotalEncounter = DocumentTypeValueSetCode("11514-7")
     OccupationalTherapyRecordsTotalEncounter = DocumentTypeValueSetCode("11521-2")
@@ -4683,9 +3526,7 @@ class DocumentTypeValueSetCodeValues:
     PsychologyRecordsTotalEncounter = DocumentTypeValueSetCode("11518-8")
     SocialServiceRecordsTotalEncounter = DocumentTypeValueSetCode("11519-6")
     SpeechTherapyRecordsTotalEncounter = DocumentTypeValueSetCode("11520-4")
-    ColonFluoroscopyReductionWViewsWBariumContrastPR = DocumentTypeValueSetCode(
-        "44226-9"
-    )
+    ColonFluoroscopyReductionWViewsWBariumContrastPR = DocumentTypeValueSetCode("44226-9")
     ColonFluoroscopyReductionWViewsWContrastPR = DocumentTypeValueSetCode("30636-5")
     AlcoholAnd_orSubstanceAbuseServiceAttachment = DocumentTypeValueSetCode("18823-5")
     CardiacServiceAttachment = DocumentTypeValueSetCode("18824-3")
@@ -4697,13 +3538,9 @@ class DocumentTypeValueSetCodeValues:
     RespiratoryTherapyServiceAttachment = DocumentTypeValueSetCode("19003-3")
     SkilledNursingServiceAttachment = DocumentTypeValueSetCode("19004-1")
     SpeechTherapyServiceAttachment = DocumentTypeValueSetCode("29206-0")
-    VesselFluoroscopicAngiogramRemovalOfForeignBodyFromVascularSpace = (
-        DocumentTypeValueSetCode("25073-8")
-    )
+    VesselFluoroscopicAngiogramRemovalOfForeignBodyFromVascularSpace = DocumentTypeValueSetCode("25073-8")
     RepairOfDurableMedicalEquipment = DocumentTypeValueSetCode("52056-9")
-    UpperGITractReplacementOfPercutaneousGastrojejunostomy = DocumentTypeValueSetCode(
-        "25015-9"
-    )
+    UpperGITractReplacementOfPercutaneousGastrojejunostomy = DocumentTypeValueSetCode("25015-9")
     ReportAddendum_synopticDocument = DocumentTypeValueSetCode("60569-1")
     ReportingParametersDocument = DocumentTypeValueSetCode("55187-9")
     SeatLiftMechanism = DocumentTypeValueSetCode("52057-7")
@@ -4745,9 +3582,7 @@ class DocumentTypeValueSetCodeValues:
     ElectromyogramStudy = DocumentTypeValueSetCode("18749-2")
     FlowCytometryStudy = DocumentTypeValueSetCode("33719-6")
     NystagmogramStudy = DocumentTypeValueSetCode("29754-9")
-    SubscriberInformationIncludingRetroactiveAndPresumptiveEligibility = (
-        DocumentTypeValueSetCode("52038-7")
-    )
+    SubscriberInformationIncludingRetroactiveAndPresumptiveEligibility = DocumentTypeValueSetCode("52038-7")
     SupportSurfaces = DocumentTypeValueSetCode("52061-9")
     DentistOperationNote = DocumentTypeValueSetCode("28583-3")
     Physician_OperationNote = DocumentTypeValueSetCode("28573-4")
@@ -4756,9 +3591,7 @@ class DocumentTypeValueSetCodeValues:
     TemperatureCharts = DocumentTypeValueSetCode("11534-5")
     TiltTableStudy = DocumentTypeValueSetCode("46213-5")
     TonometryStudy = DocumentTypeValueSetCode("28630-2")
-    TranscutaneousElectricalNeuralStimulation_TENS_ = DocumentTypeValueSetCode(
-        "52062-7"
-    )
+    TranscutaneousElectricalNeuralStimulation_TENS_ = DocumentTypeValueSetCode("52062-7")
     NurseTransferNote = DocumentTypeValueSetCode("28651-8")
     PhysicianTransferNote = DocumentTypeValueSetCode("28616-1")
     U_S_StandardCertificateOfDeath_2003Revision = DocumentTypeValueSetCode("69409-1")
@@ -4769,9 +3602,7 @@ class DocumentTypeValueSetCodeValues:
     UnspecifiedBodyRegionFluoroscopy30Minutes = DocumentTypeValueSetCode("25066-2")
     UnspecifiedBodyRegionFluoroscopy45Minutes = DocumentTypeValueSetCode("25067-0")
     UnspecifiedBodyRegionFluoroscopy90Minutes = DocumentTypeValueSetCode("43472-0")
-    UnspecifiedBodyRegionFluoroscopyGreaterThan1Hour = DocumentTypeValueSetCode(
-        "42702-1"
-    )
+    UnspecifiedBodyRegionFluoroscopyGreaterThan1Hour = DocumentTypeValueSetCode("42702-1")
     UnspecifiedBodyRegionFluoroscopyLessThan1Hour = DocumentTypeValueSetCode("42703-9")
     AbdomenX_raySingleView = DocumentTypeValueSetCode("36550-2")
     AnkleX_raySingleView = DocumentTypeValueSetCode("36551-0")
@@ -4849,27 +3680,15 @@ class DocumentTypeValueSetCodeValues:
     SpineCervicalX_raySingleViewPortable = DocumentTypeValueSetCode("30724-9")
     SpineLumbarX_raySingleViewPortable = DocumentTypeValueSetCode("30774-4")
     SpineThoracicX_raySingleViewPortable = DocumentTypeValueSetCode("70932-9")
-    VesselFluoroscopicAngiogramSingleViewWContrastIA = DocumentTypeValueSetCode(
-        "25063-9"
-    )
-    BreastDuctMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode(
-        "69268-1"
-    )
-    BreastDuct_LeftMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode(
-        "49510-1"
-    )
-    BreastDuct_RightMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode(
-        "49509-3"
-    )
-    GastrointestineUpperFluoroscopySingleViewWContrastPO = DocumentTypeValueSetCode(
-        "24715-5"
-    )
+    VesselFluoroscopicAngiogramSingleViewWContrastIA = DocumentTypeValueSetCode("25063-9")
+    BreastDuctMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode("69268-1")
+    BreastDuct_LeftMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode("49510-1")
+    BreastDuct_RightMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode("49509-3")
+    GastrointestineUpperFluoroscopySingleViewWContrastPO = DocumentTypeValueSetCode("24715-5")
     Tibia_BilateralX_ray10DegreeCaudalAngle = DocumentTypeValueSetCode("37513-9")
     Tibia_LeftX_ray10DegreeCaudalAngle = DocumentTypeValueSetCode("37514-7")
     Tibia_RightX_ray10DegreeCaudalAngle = DocumentTypeValueSetCode("38806-6")
-    AcromioclavicularJointX_ray10DegreeCephalicAngle = DocumentTypeValueSetCode(
-        "37467-8"
-    )
+    AcromioclavicularJointX_ray10DegreeCephalicAngle = DocumentTypeValueSetCode("37467-8")
     Shoulder_BilateralX_ray30DegreeCaudalAngle = DocumentTypeValueSetCode("37468-6")
     Knee_RightX_ray30DegreeStanding = DocumentTypeValueSetCode("42431-7")
     ClavicleX_ray45DegreeCephalicAngle = DocumentTypeValueSetCode("69079-2")
@@ -4910,18 +3729,14 @@ class DocumentTypeValueSetCodeValues:
     SkullX_rayAPSingleView = DocumentTypeValueSetCode("69269-9")
     SpineX_rayAPSingleView = DocumentTypeValueSetCode("37877-8")
     SpineCervicalX_rayAPSingleView = DocumentTypeValueSetCode("30725-6")
-    SpineCervicalOdontoidAndCervicalAxisX_rayAPSingleView = DocumentTypeValueSetCode(
-        "24948-2"
-    )
+    SpineCervicalOdontoidAndCervicalAxisX_rayAPSingleView = DocumentTypeValueSetCode("24948-2")
     SpineLumbarX_rayAPSingleView = DocumentTypeValueSetCode("30777-7")
     SpineThoracicX_rayAPSingleView = DocumentTypeValueSetCode("30752-0")
     SpineThoracicAndLumbarX_rayAPSingleView = DocumentTypeValueSetCode("39049-2")
     SternoclavicularJointX_rayAPSingleView = DocumentTypeValueSetCode("37880-2")
     ThumbX_rayAPSingleView = DocumentTypeValueSetCode("37890-1")
     TibiaAndFibulaX_rayAPSingleView = DocumentTypeValueSetCode("37897-6")
-    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode(
-        "39402-3"
-    )
+    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39402-3")
     PelvisX_rayAP20DegreeCephalicAngle = DocumentTypeValueSetCode("37634-3")
     ChestX_rayAPLateral_decubitus = DocumentTypeValueSetCode("30734-8")
     ChestX_rayAPLateral_decubitusPortable = DocumentTypeValueSetCode("30735-5")
@@ -4932,9 +3747,7 @@ class DocumentTypeValueSetCodeValues:
     AbdomenX_rayAPPortableSingleView = DocumentTypeValueSetCode("36588-2")
     ChestX_rayAPPortableSingleView = DocumentTypeValueSetCode("36589-0")
     SpineCervicalX_rayAPPortableSingleView = DocumentTypeValueSetCode("30727-2")
-    SpineCervicalOdontoidAndCervicalAxisX_rayAPPortableSingleView = (
-        DocumentTypeValueSetCode("30729-8")
-    )
+    SpineCervicalOdontoidAndCervicalAxisX_rayAPPortableSingleView = DocumentTypeValueSetCode("30729-8")
     SpineThoracicX_rayAPPortableSingleView = DocumentTypeValueSetCode("30755-3")
     AbdomenX_rayAPRightLateral_decubitus = DocumentTypeValueSetCode("24563-9")
     ChestX_rayAPRightLateral_decubitus = DocumentTypeValueSetCode("43466-2")
@@ -4946,9 +3759,7 @@ class DocumentTypeValueSetCodeValues:
     Knee_BilateralX_rayAPSingleViewStanding = DocumentTypeValueSetCode("26358-2")
     Knee_LeftX_rayAPSingleViewStanding = DocumentTypeValueSetCode("26359-0")
     Knee_RightX_rayAPSingleViewStanding = DocumentTypeValueSetCode("26360-8")
-    LowerExtremity_BilateralX_rayAPSingleViewStanding = DocumentTypeValueSetCode(
-        "44177-4"
-    )
+    LowerExtremity_BilateralX_rayAPSingleViewStanding = DocumentTypeValueSetCode("44177-4")
     LowerExtremity_LeftX_rayAPSingleViewStanding = DocumentTypeValueSetCode("38849-6")
     LowerExtremity_RightX_rayAPSingleViewStanding = DocumentTypeValueSetCode("37733-3")
     PelvisX_rayAPSingleViewStanding = DocumentTypeValueSetCode("42420-0")
@@ -4981,15 +3792,11 @@ class DocumentTypeValueSetCodeValues:
     Hip_RightX_rayDaneliusMiller = DocumentTypeValueSetCode("39514-5")
     PelvisX_rayFerguson = DocumentTypeValueSetCode("37625-1")
     SacroiliacJointX_rayFerguson = DocumentTypeValueSetCode("37650-9")
-    Kidney_BilateralFluoroscopyViewForCystExamination = DocumentTypeValueSetCode(
-        "65799-9"
-    )
+    Kidney_BilateralFluoroscopyViewForCystExamination = DocumentTypeValueSetCode("65799-9")
     Kidney_LeftFluoroscopyViewForCystExamination = DocumentTypeValueSetCode("65800-5")
     Kidney_RightFluoroscopyViewForCystExamination = DocumentTypeValueSetCode("65801-3")
     AbdomenAndFetusX_rayViewForFetalAge = DocumentTypeValueSetCode("37297-9")
-    GastrointestinalSystemAndRespiratorySystemX_rayForForeignBody = (
-        DocumentTypeValueSetCode("39149-0")
-    )
+    GastrointestinalSystemAndRespiratorySystemX_rayForForeignBody = DocumentTypeValueSetCode("39149-0")
     HipX_rayFriedman = DocumentTypeValueSetCode("36973-6")
     ShoulderX_rayGarth = DocumentTypeValueSetCode("37843-0")
     Shoulder_LeftX_rayGarth = DocumentTypeValueSetCode("36974-4")
@@ -5072,9 +3879,7 @@ class DocumentTypeValueSetCodeValues:
     NeckX_rayLateralPortable = DocumentTypeValueSetCode("41774-1")
     SpineThoracicX_rayLateralPortable = DocumentTypeValueSetCode("30757-9")
     SpineLumbosacralJunctionX_rayLateralSpot = DocumentTypeValueSetCode("37515-4")
-    SpineLumbosacralJunctionX_rayLateralSpotStanding = DocumentTypeValueSetCode(
-        "37516-2"
-    )
+    SpineLumbosacralJunctionX_rayLateralSpotStanding = DocumentTypeValueSetCode("37516-2")
     Hip_LeftX_rayLateralDuringSurgery = DocumentTypeValueSetCode("38066-7")
     Hip_RightX_rayLateralDuringSurgery = DocumentTypeValueSetCode("38819-9")
     FootX_rayLateralStanding = DocumentTypeValueSetCode("37001-5")
@@ -5128,9 +3933,7 @@ class DocumentTypeValueSetCodeValues:
     SpineLumbarX_rayObliqueSingleView = DocumentTypeValueSetCode("30778-5")
     SpineThoracicX_rayObliqueSingleView = DocumentTypeValueSetCode("30758-7")
     ThumbX_rayObliqueSingleView = DocumentTypeValueSetCode("37892-7")
-    SpineLumbarX_rayObliqueViewAnd_viewsWRightBendingAndWLeftBending_ = (
-        DocumentTypeValueSetCode("44178-2")
-    )
+    SpineLumbarX_rayObliqueViewAnd_viewsWRightBendingAndWLeftBending_ = DocumentTypeValueSetCode("44178-2")
     Hip_LeftX_rayObliqueCrosstable = DocumentTypeValueSetCode("37545-1")
     Hip_RightX_rayObliqueCrosstable = DocumentTypeValueSetCode("37728-3")
     SpineThoracicX_rayObliquePortable = DocumentTypeValueSetCode("30759-5")
@@ -5169,21 +3972,11 @@ class DocumentTypeValueSetCodeValues:
     Knee_LeftX_rayRosenbergStanding = DocumentTypeValueSetCode("37019-7")
     Knee_RightX_rayRosenbergStanding = DocumentTypeValueSetCode("37752-3")
     AbdomenX_rayRightPosteriorOblique = DocumentTypeValueSetCode("39323-1")
-    FemoralArteryFluoroscopicAngiogramRunoffWAndWOContrastIA = DocumentTypeValueSetCode(
-        "49511-9"
-    )
-    FemoralArteryFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode(
-        "24699-1"
-    )
-    FemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = (
-        DocumentTypeValueSetCode("26178-4")
-    )
-    FemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode(
-        "26179-2"
-    )
-    FemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = (
-        DocumentTypeValueSetCode("26180-0")
-    )
+    FemoralArteryFluoroscopicAngiogramRunoffWAndWOContrastIA = DocumentTypeValueSetCode("49511-9")
+    FemoralArteryFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("24699-1")
+    FemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("26178-4")
+    FemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("26179-2")
+    FemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("26180-0")
     WristX_rayScaphoidSingleView = DocumentTypeValueSetCode("42812-8")
     Wrist_BilateralX_rayScaphoidSingleView = DocumentTypeValueSetCode("42813-6")
     Wrist_LeftX_rayScaphoidSingleView = DocumentTypeValueSetCode("42814-4")
@@ -5192,22 +3985,12 @@ class DocumentTypeValueSetCodeValues:
     SpineThoracicAndLumbarX_rayScoliosisAP = DocumentTypeValueSetCode("30714-0")
     SpineThoracicAndLumbarX_rayScoliosisAPSitting = DocumentTypeValueSetCode("42426-7")
     SpineThoracicAndLumbarX_rayScoliosisAPStanding = DocumentTypeValueSetCode("37659-0")
-    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndInBrace = DocumentTypeValueSetCode(
-        "42428-3"
-    )
-    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBending = (
-        DocumentTypeValueSetCode("42429-1")
-    )
-    SpineThoracicAndLumbarX_rayScoliosisLateralSitting = DocumentTypeValueSetCode(
-        "42427-5"
-    )
-    SpineThoracicAndLumbarX_rayScoliosisLateralStanding = DocumentTypeValueSetCode(
-        "37660-8"
-    )
+    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndInBrace = DocumentTypeValueSetCode("42428-3")
+    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBending = DocumentTypeValueSetCode("42429-1")
+    SpineThoracicAndLumbarX_rayScoliosisLateralSitting = DocumentTypeValueSetCode("42427-5")
+    SpineThoracicAndLumbarX_rayScoliosisLateralStanding = DocumentTypeValueSetCode("37660-8")
     SternoclavicularJointX_raySerendipity = DocumentTypeValueSetCode("37846-3")
-    SternoclavicularJoint_BilateralX_raySerendipity = DocumentTypeValueSetCode(
-        "37298-7"
-    )
+    SternoclavicularJoint_BilateralX_raySerendipity = DocumentTypeValueSetCode("37298-7")
     SternoclavicularJoint_LeftX_raySerendipity = DocumentTypeValueSetCode("37299-5")
     SternoclavicularJoint_RightX_raySerendipity = DocumentTypeValueSetCode("37808-3")
     ThyroidScanSpot = DocumentTypeValueSetCode("43671-7")
@@ -5297,9 +4080,7 @@ class DocumentTypeValueSetCodeValues:
     Hip_LeftX_rayDuringSurgery = DocumentTypeValueSetCode("38065-9")
     Hip_RightX_rayDuringSurgery = DocumentTypeValueSetCode("38818-1")
     HumerusX_rayDuringSurgery = DocumentTypeValueSetCode("42008-3")
-    RectumFluoroscopyPostContrastPRDuringDefecation = DocumentTypeValueSetCode(
-        "24893-0"
-    )
+    RectumFluoroscopyPostContrastPRDuringDefecation = DocumentTypeValueSetCode("24893-0")
     Calcaneus_BilateralX_rayStanding = DocumentTypeValueSetCode("37058-5")
     Hip_BilateralX_rayStanding = DocumentTypeValueSetCode("37059-3")
     Hip_LeftX_rayStanding = DocumentTypeValueSetCode("37207-8")
@@ -5309,21 +4090,13 @@ class DocumentTypeValueSetCodeValues:
     LowerExtremity_RightX_rayStanding = DocumentTypeValueSetCode("37734-1")
     PelvisX_rayStanding = DocumentTypeValueSetCode("37633-5")
     GastrointestineUpperFluoroscopyWAirContrastPO = DocumentTypeValueSetCode("39144-1")
-    UpperGastrointestineAndSmallBowelFluoroscopyWAirContrastPO = (
-        DocumentTypeValueSetCode("41795-6")
-    )
+    UpperGastrointestineAndSmallBowelFluoroscopyWAirContrastPO = DocumentTypeValueSetCode("41795-6")
     WristX_rayWClenchedFist = DocumentTypeValueSetCode("69302-8")
     Wrist_BilateralX_rayWClenchedFist = DocumentTypeValueSetCode("36968-6")
     VesselFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("30639-9")
-    GastrointestineUpperAndGallbladderFluoroscopyWContrastPO = DocumentTypeValueSetCode(
-        "42470-5"
-    )
-    UpperGastrointestineAndSmallBowelFluoroscopyWContrastPO = DocumentTypeValueSetCode(
-        "30809-8"
-    )
-    GastrointestineUpperAndSmallBowelAndGallbladderFluoroscopyWContrastPO = (
-        DocumentTypeValueSetCode("42469-7")
-    )
+    GastrointestineUpperAndGallbladderFluoroscopyWContrastPO = DocumentTypeValueSetCode("42470-5")
+    UpperGastrointestineAndSmallBowelFluoroscopyWContrastPO = DocumentTypeValueSetCode("30809-8")
+    GastrointestineUpperAndSmallBowelAndGallbladderFluoroscopyWContrastPO = DocumentTypeValueSetCode("42469-7")
     ChestX_rayWExpiration = DocumentTypeValueSetCode("38001-4")
     ChestX_rayWInspiration = DocumentTypeValueSetCode("38002-2")
     FetalX_ray = DocumentTypeValueSetCode("37060-1")
@@ -5539,9 +4312,7 @@ class DocumentTypeValueSetCodeValues:
     Spine_lumbarAndSacroiliacJoint_BilateralX_ray = DocumentTypeValueSetCode("24975-5")
     SpineLumbarAndSacrumX_ray = DocumentTypeValueSetCode("37340-7")
     SpineLumbarAndSacrumAndCoccyxX_ray = DocumentTypeValueSetCode("37341-5")
-    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray = DocumentTypeValueSetCode(
-        "37342-3"
-    )
+    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray = DocumentTypeValueSetCode("37342-3")
     SpineLumbosacralJunctionX_ray = DocumentTypeValueSetCode("46340-6")
     SpineThoracicX_ray = DocumentTypeValueSetCode("24983-9")
     SpineThoracicAndLumbarX_ray = DocumentTypeValueSetCode("42692-4")
@@ -5596,12 +4367,8 @@ class DocumentTypeValueSetCodeValues:
     ZygomaticArch_RightX_ray = DocumentTypeValueSetCode("26174-3")
     Knee_BilateralX_rayAnd_APViewStanding_ = DocumentTypeValueSetCode("51387-9")
     Ankle_RightX_rayAnd_viewWManualStress_ = DocumentTypeValueSetCode("39370-2")
-    GastrointestineUpperFluoroscopyAndAPWContrastPO = DocumentTypeValueSetCode(
-        "30635-7"
-    )
-    GastrointestineUpperFluoroscopyAndAPWWaterSolubleContrastPO = (
-        DocumentTypeValueSetCode("42162-8")
-    )
+    GastrointestineUpperFluoroscopyAndAPWContrastPO = DocumentTypeValueSetCode("30635-7")
+    GastrointestineUpperFluoroscopyAndAPWWaterSolubleContrastPO = DocumentTypeValueSetCode("42162-8")
     Wrist_RightX_rayAndCarpalTunnel = DocumentTypeValueSetCode("39400-7")
     HipX_rayAndDaneliusMiller = DocumentTypeValueSetCode("69131-1")
     Hip_LeftX_rayAndDaneliusMiller = DocumentTypeValueSetCode("69140-2")
@@ -5637,18 +4404,10 @@ class DocumentTypeValueSetCodeValues:
     ThyroidScanAndUptakeWI_131PO = DocumentTypeValueSetCode("69236-8")
     ThyroidScanAndUptake = DocumentTypeValueSetCode("43672-5")
     ThyroidScanAndUptakeWTc_99mPertechnetateIV = DocumentTypeValueSetCode("44147-7")
-    KneeX_ray_AP_standing_And_lateral_WHyperextension_ = DocumentTypeValueSetCode(
-        "42405-1"
-    )
-    SpineLumbarX_ray_APWR_bendingAndWL_bendingAndWOBending_AndLateral = (
-        DocumentTypeValueSetCode("42401-0")
-    )
-    SpineLumbarX_ray_AP_WR_bendingAndWL_bending_And_lateral_WFlexionAndWExtension_ = (
-        DocumentTypeValueSetCode("42411-9")
-    )
-    Shoulder_RightX_ray_WInternalRotationAndWExternalRotation_AndAxillary = (
-        DocumentTypeValueSetCode("39392-6")
-    )
+    KneeX_ray_AP_standing_And_lateral_WHyperextension_ = DocumentTypeValueSetCode("42405-1")
+    SpineLumbarX_ray_APWR_bendingAndWL_bendingAndWOBending_AndLateral = DocumentTypeValueSetCode("42401-0")
+    SpineLumbarX_ray_AP_WR_bendingAndWL_bending_And_lateral_WFlexionAndWExtension_ = DocumentTypeValueSetCode("42411-9")
+    Shoulder_RightX_ray_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39392-6")
     FacialBonesX_ray1Or2Views = DocumentTypeValueSetCode("44199-8")
     KneeX_ray1Or2Views = DocumentTypeValueSetCode("44198-0")
     Knee_LeftX_ray1Or2Views = DocumentTypeValueSetCode("47373-6")
@@ -5867,9 +4626,7 @@ class DocumentTypeValueSetCodeValues:
     SpineLumbarAndSacroiliacJointX_ray3Views = DocumentTypeValueSetCode("37257-3")
     SpineLumbarAndSacrumX_ray3Views = DocumentTypeValueSetCode("37259-9")
     SpineLumbarAndSacrumAndCoccyxX_ray3Views = DocumentTypeValueSetCode("37260-7")
-    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray3Views = (
-        DocumentTypeValueSetCode("37261-5")
-    )
+    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray3Views = DocumentTypeValueSetCode("37261-5")
     SpineThoracicX_ray3Views = DocumentTypeValueSetCode("37906-5")
     SternoclavicularJointX_ray3Views = DocumentTypeValueSetCode("37881-0")
     ThumbX_ray3Views = DocumentTypeValueSetCode("37888-5")
@@ -5902,9 +4659,7 @@ class DocumentTypeValueSetCodeValues:
     BoneScan3ViewsPhase = DocumentTypeValueSetCode("39883-4")
     SpineLumbarX_ray3ViewsPortable = DocumentTypeValueSetCode("30776-9")
     Wrist_LeftX_ray3ViewsScaphoid = DocumentTypeValueSetCode("69151-9")
-    Kidney_BilateralX_ray3ViewsSerialWAndWOContrastIV = DocumentTypeValueSetCode(
-        "24778-3"
-    )
+    Kidney_BilateralX_ray3ViewsSerialWAndWOContrastIV = DocumentTypeValueSetCode("24778-3")
     Ankle_LeftX_ray3ViewsStanding = DocumentTypeValueSetCode("69138-6")
     Ankle_RightX_ray3ViewsStanding = DocumentTypeValueSetCode("69254-1")
     Foot_BilateralX_ray3ViewsStanding = DocumentTypeValueSetCode("36947-0")
@@ -5977,9 +4732,7 @@ class DocumentTypeValueSetCodeValues:
     SpineLumbarAndSacroiliacJointX_ray5Views = DocumentTypeValueSetCode("37353-0")
     SpineLumbarAndSacrumX_ray5Views = DocumentTypeValueSetCode("37355-5")
     SpineLumbarAndSacrumAndCoccyxX_ray5Views = DocumentTypeValueSetCode("37356-3")
-    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray5Views = (
-        DocumentTypeValueSetCode("37357-1")
-    )
+    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray5Views = DocumentTypeValueSetCode("37357-1")
     TemporomandibularJoint_BilateralX_ray5Views = DocumentTypeValueSetCode("37350-6")
     Wrist_LeftX_ray5Views = DocumentTypeValueSetCode("37072-6")
     Wrist_RightX_ray5Views = DocumentTypeValueSetCode("37829-9")
@@ -6007,26 +4760,16 @@ class DocumentTypeValueSetCodeValues:
     Ribs_LeftX_rayAnteriorAndLateral = DocumentTypeValueSetCode("38856-1")
     Ribs_RightX_rayAnteriorAndLateral = DocumentTypeValueSetCode("37782-0")
     AbdomenX_rayAPAndAPLeftLateral_decubitus = DocumentTypeValueSetCode("24796-5")
-    AbdomenX_rayAPAndAPLeftLateral_decubitusPortable = DocumentTypeValueSetCode(
-        "24792-4"
-    )
+    AbdomenX_rayAPAndAPLeftLateral_decubitusPortable = DocumentTypeValueSetCode("24792-4")
     ChestX_rayAPAndAPRightLateral_decubitus = DocumentTypeValueSetCode("24653-8")
-    ChestX_rayAPAndAPRightLateral_decubitusPortable = DocumentTypeValueSetCode(
-        "24654-6"
-    )
+    ChestX_rayAPAndAPRightLateral_decubitusPortable = DocumentTypeValueSetCode("24654-6")
     Shoulder_BilateralX_rayAPAndAxillary = DocumentTypeValueSetCode("37080-9")
     Shoulder_BilateralX_rayAPAndAxillaryAndOutlet = DocumentTypeValueSetCode("37081-7")
     Shoulder_LeftX_rayAPAndAxillaryAndOutlet = DocumentTypeValueSetCode("37082-5")
     Shoulder_RightX_rayAPAndAxillaryAndOutlet = DocumentTypeValueSetCode("38781-1")
-    Shoulder_BilateralX_rayAPAndAxillaryAndOutletAnd30DegreeCaudalAngle = (
-        DocumentTypeValueSetCode("39339-7")
-    )
-    Shoulder_LeftX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode(
-        "37083-3"
-    )
-    Shoulder_RightX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode(
-        "38782-9"
-    )
+    Shoulder_BilateralX_rayAPAndAxillaryAndOutletAnd30DegreeCaudalAngle = DocumentTypeValueSetCode("39339-7")
+    Shoulder_LeftX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode("37083-3")
+    Shoulder_RightX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode("38782-9")
     Shoulder_BilateralX_rayAPAndAxillaryAndY = DocumentTypeValueSetCode("37126-0")
     Shoulder_LeftX_rayAPAndAxillaryAndY = DocumentTypeValueSetCode("37084-1")
     Shoulder_RightX_rayAPAndAxillaryAndY = DocumentTypeValueSetCode("38783-7")
@@ -6087,9 +4830,7 @@ class DocumentTypeValueSetCodeValues:
     Patella_RightX_rayAPAndLateral = DocumentTypeValueSetCode("37776-2")
     PelvisX_rayAPAndLateral = DocumentTypeValueSetCode("37620-2")
     PelvisAndHipX_rayAPAndLateral = DocumentTypeValueSetCode("36705-2")
-    Radius_BilateralAndUlna_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode(
-        "36699-7"
-    )
+    Radius_BilateralAndUlna_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode("36699-7")
     Radius_LeftAndUlna_leftX_rayAPAndLateral = DocumentTypeValueSetCode("36700-3")
     Radius_RightAndUlna_RightX_rayAPAndLateral = DocumentTypeValueSetCode("37708-5")
     RadiusAndUlnaX_rayAPAndLateral = DocumentTypeValueSetCode("36698-9")
@@ -6103,18 +4844,14 @@ class DocumentTypeValueSetCodeValues:
     SpineX_rayAPAndLateral = DocumentTypeValueSetCode("24928-4")
     SpineCervicalX_rayAPAndLateral = DocumentTypeValueSetCode("24942-5")
     SpineCervicalAndSpineThoracicX_rayAPAndLateral = DocumentTypeValueSetCode("37361-3")
-    SpineCervicalAndThoracicAndLumbarX_rayAPAndLateral = DocumentTypeValueSetCode(
-        "39067-4"
-    )
+    SpineCervicalAndThoracicAndLumbarX_rayAPAndLateral = DocumentTypeValueSetCode("39067-4")
     SpineCervicothoracicJunctionX_rayAPAndLateral = DocumentTypeValueSetCode("43785-5")
     SpineLumbarX_rayAPAndLateral = DocumentTypeValueSetCode("24970-6")
     SpineThoracicX_rayAPAndLateral = DocumentTypeValueSetCode("30753-8")
     SpineThoracicAndLumbarX_rayAPAndLateral = DocumentTypeValueSetCode("38123-6")
     SpineThoracolumbarJunctionX_rayAPAndLateral = DocumentTypeValueSetCode("37974-3")
     ThumbX_rayAPAndLateral = DocumentTypeValueSetCode("37889-3")
-    Tibia_BilateralAndFibula_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode(
-        "36717-7"
-    )
+    Tibia_BilateralAndFibula_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode("36717-7")
     Tibia_LeftAndFibula_LeftX_rayAPAndLateral = DocumentTypeValueSetCode("36718-5")
     Tibia_RightAndFibula_RightX_rayAPAndLateral = DocumentTypeValueSetCode("37816-6")
     TibiaAndFibulaX_rayAPAndLateral = DocumentTypeValueSetCode("37896-8")
@@ -6161,52 +4898,26 @@ class DocumentTypeValueSetCodeValues:
     Thumb_LeftX_rayAPAndLateralAndOblique = DocumentTypeValueSetCode("36736-7")
     Thumb_RightX_rayAPAndLateralAndOblique = DocumentTypeValueSetCode("37813-3")
     WristX_rayAPAndLateralAndOblique = DocumentTypeValueSetCode("37927-1")
-    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoid = DocumentTypeValueSetCode(
-        "37099-9"
-    )
-    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoidAndSwimmer = (
-        DocumentTypeValueSetCode("38083-2")
-    )
+    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoid = DocumentTypeValueSetCode("37099-9")
+    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoidAndSwimmer = DocumentTypeValueSetCode("38083-2")
     SpineLumbarX_rayAPAndLateralAndObliqueAndSpot = DocumentTypeValueSetCode("37101-3")
-    SpineLumbarX_rayAPAndLateralAndObliqueAndSpotStanding = DocumentTypeValueSetCode(
-        "42410-1"
-    )
-    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunrise = DocumentTypeValueSetCode(
-        "37102-1"
-    )
-    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunriseAndTunnel = (
-        DocumentTypeValueSetCode("37118-7")
-    )
+    SpineLumbarX_rayAPAndLateralAndObliqueAndSpotStanding = DocumentTypeValueSetCode("42410-1")
+    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunrise = DocumentTypeValueSetCode("37102-1")
+    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunriseAndTunnel = DocumentTypeValueSetCode("37118-7")
     KneeX_rayAPAndLateralAndObliqueAndTunnel = DocumentTypeValueSetCode("37115-3")
     Ankle_LeftX_rayAPAndLateralAndObliqueStanding = DocumentTypeValueSetCode("69137-8")
     Ankle_RightX_rayAPAndLateralAndObliqueStanding = DocumentTypeValueSetCode("39371-0")
     Foot_LeftX_rayAPAndLateralAndObliqueStanding = DocumentTypeValueSetCode("39334-8")
     Foot_RightX_rayAPAndLateralAndObliqueStanding = DocumentTypeValueSetCode("39375-1")
-    Ankle_BilateralX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode(
-        "42417-6"
-    )
-    Ankle_LeftX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode(
-        "42418-4"
-    )
-    Ankle_RightX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode(
-        "39369-4"
-    )
+    Ankle_BilateralX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode("42417-6")
+    Ankle_LeftX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode("42418-4")
+    Ankle_RightX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode("39369-4")
     SpineCervicalX_rayAPAndLateralAndOdontoid = DocumentTypeValueSetCode("37103-9")
-    SpineCervicalX_rayAPAndLateralAndOdontoidPortable = DocumentTypeValueSetCode(
-        "37079-1"
-    )
-    ChestX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
-        "39074-0"
-    )
-    KneeX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
-        "39073-2"
-    )
-    Knee_LeftX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
-        "69147-7"
-    )
-    Knee_RightX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
-        "39388-4"
-    )
+    SpineCervicalX_rayAPAndLateralAndOdontoidPortable = DocumentTypeValueSetCode("37079-1")
+    ChestX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39074-0")
+    KneeX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39073-2")
+    Knee_LeftX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("69147-7")
+    Knee_RightX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39388-4")
     SpineLumbarX_rayAPAndLateralAndSpot = DocumentTypeValueSetCode("37105-4")
     KneeX_rayAPAndLateralAndSunrise = DocumentTypeValueSetCode("37106-2")
     Knee_BilateralX_rayAPAndLateralAndSunrise = DocumentTypeValueSetCode("37107-0")
@@ -6216,9 +4927,7 @@ class DocumentTypeValueSetCodeValues:
     Patella_LeftX_rayAPAndLateralAndSunrise = DocumentTypeValueSetCode("37110-4")
     Patella_RightX_rayAPAndLateralAndSunrise = DocumentTypeValueSetCode("38786-0")
     KneeX_rayAPAndLateralAndSunriseAndTunnel = DocumentTypeValueSetCode("37111-2")
-    Knee_BilateralX_rayAPAndLateralAndSunriseAndTunnel = DocumentTypeValueSetCode(
-        "37116-1"
-    )
+    Knee_BilateralX_rayAPAndLateralAndSunriseAndTunnel = DocumentTypeValueSetCode("37116-1")
     Knee_LeftX_rayAPAndLateralAndSunriseAndTunnel = DocumentTypeValueSetCode("37117-9")
     Knee_RightX_rayAPAndLateralAndSunriseAndTunnel = DocumentTypeValueSetCode("37740-8")
     SpineThoracicX_rayAPAndLateralAndSwimmers = DocumentTypeValueSetCode("38009-7")
@@ -6245,9 +4954,7 @@ class DocumentTypeValueSetCodeValues:
     PelvisAndHip_BilateralX_rayAPAndLateralFrog = DocumentTypeValueSetCode("42167-7")
     PelvisAndHip_LeftX_rayAPAndLateralFrog = DocumentTypeValueSetCode("37094-0")
     PelvisAndHip_RightX_rayAPAndLateralFrog = DocumentTypeValueSetCode("38785-2")
-    PelvisAndHip_RightX_rayAPAndLateralFrogPortable = DocumentTypeValueSetCode(
-        "41776-6"
-    )
+    PelvisAndHip_RightX_rayAPAndLateralFrogPortable = DocumentTypeValueSetCode("41776-6")
     AbdomenX_rayAPAndLateralPortable = DocumentTypeValueSetCode("24793-2")
     FemurX_rayAPAndLateralPortable = DocumentTypeValueSetCode("44185-7")
     FootX_rayAPAndLateralPortable = DocumentTypeValueSetCode("44186-5")
@@ -6274,22 +4981,12 @@ class DocumentTypeValueSetCodeValues:
     PelvisX_rayAPAndOblique = DocumentTypeValueSetCode("37621-0")
     SacroiliacJointX_rayAPAndOblique = DocumentTypeValueSetCode("37649-1")
     ToesX_rayAPAndOblique = DocumentTypeValueSetCode("39075-7")
-    SpineCervicalX_rayAPAndObliqueAndLateralWFlexionAndWExtension = (
-        DocumentTypeValueSetCode("37098-1")
-    )
-    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralPortableWFlexionAndWExtension = (
-        DocumentTypeValueSetCode("44187-3")
-    )
-    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralWFlexionAndWExtension = (
-        DocumentTypeValueSetCode("37100-5")
-    )
+    SpineCervicalX_rayAPAndObliqueAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37098-1")
+    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralPortableWFlexionAndWExtension = DocumentTypeValueSetCode("44187-3")
+    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37100-5")
     AbdomenX_rayAPAndObliqueProne = DocumentTypeValueSetCode("24797-3")
-    SpineCervicalX_rayAPAndOdontoidAndLateralCrosstable = DocumentTypeValueSetCode(
-        "37120-3"
-    )
-    SpineCervicalX_rayAPAndOdontoidAndLateralWFlexionAndWExtension = (
-        DocumentTypeValueSetCode("37104-7")
-    )
+    SpineCervicalX_rayAPAndOdontoidAndLateralCrosstable = DocumentTypeValueSetCode("37120-3")
+    SpineCervicalX_rayAPAndOdontoidAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37104-7")
     ChestAndAbdomenX_rayAPAndPAChest = DocumentTypeValueSetCode("42011-7")
     ChestX_rayAPAndPAUpright = DocumentTypeValueSetCode("24642-1")
     KneeX_rayAPAndPAStanding = DocumentTypeValueSetCode("24808-8")
@@ -6314,73 +5011,31 @@ class DocumentTypeValueSetCodeValues:
     ShoulderX_rayAPAndY = DocumentTypeValueSetCode("69266-5")
     Shoulder_LeftX_rayAPAndY = DocumentTypeValueSetCode("37125-2")
     Shoulder_RightX_rayAPAndY = DocumentTypeValueSetCode("38788-6")
-    AbdomenX_rayAP_leftLateral_decubitusAndRightLateral_decubitus_ = (
-        DocumentTypeValueSetCode("24562-1")
-    )
-    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_ = (
-        DocumentTypeValueSetCode("24650-4")
-    )
-    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_Portable = (
-        DocumentTypeValueSetCode("24649-6")
-    )
+    AbdomenX_rayAP_leftLateral_decubitusAndRightLateral_decubitus_ = DocumentTypeValueSetCode("24562-1")
+    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_ = DocumentTypeValueSetCode("24650-4")
+    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_Portable = DocumentTypeValueSetCode("24649-6")
     AbdomenX_rayAP_supineAndLateral_decubitus_ = DocumentTypeValueSetCode("37085-8")
-    AbdomenX_rayAP_supineAndLateral_decubitus_Portable = DocumentTypeValueSetCode(
-        "37076-7"
-    )
+    AbdomenX_rayAP_supineAndLateral_decubitus_Portable = DocumentTypeValueSetCode("37076-7")
     AbdomenX_rayAP_supineAndUpright_ = DocumentTypeValueSetCode("24798-1")
-    ChestAndAbdomenX_rayAP_supineAndUpright_AndPAChest = DocumentTypeValueSetCode(
-        "43463-9"
-    )
+    ChestAndAbdomenX_rayAP_supineAndUpright_AndPAChest = DocumentTypeValueSetCode("43463-9")
     AbdomenX_rayAP_supineAndUpright_Portable = DocumentTypeValueSetCode("24795-7")
     AbdomenX_rayAP_uprightAndLeftLateralDecubitus_ = DocumentTypeValueSetCode("42019-0")
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_ = (
-        DocumentTypeValueSetCode("39329-8")
-    )
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_ = (
-        DocumentTypeValueSetCode("39328-0")
-    )
-    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_ = (
-        DocumentTypeValueSetCode("39395-9")
-    )
-    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = (
-        DocumentTypeValueSetCode("39321-5")
-    )
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = (
-        DocumentTypeValueSetCode("39336-3")
-    )
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = (
-        DocumentTypeValueSetCode("39335-5")
-    )
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndOutlet = DocumentTypeValueSetCode(
-        "39337-1"
-    )
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = (
-        DocumentTypeValueSetCode("39344-7")
-    )
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = (
-        DocumentTypeValueSetCode("39338-9")
-    )
-    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_AndWestPoint = (
-        DocumentTypeValueSetCode("39397-5")
-    )
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndY = (
-        DocumentTypeValueSetCode("39343-9")
-    )
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndY = (
-        DocumentTypeValueSetCode("39348-8")
-    )
-    Shoulder_LeftX_rayAP_WInternalRotation_AndGrasheyAndAxillaryAndOutlet = (
-        DocumentTypeValueSetCode("39325-6")
-    )
-    Shoulder_BilateralX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode(
-        "39346-2"
-    )
-    Shoulder_LeftX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode(
-        "39347-0"
-    )
-    Shoulder_RightX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode(
-        "39396-7"
-    )
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39329-8")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39328-0")
+    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39395-9")
+    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39321-5")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39336-3")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39335-5")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndOutlet = DocumentTypeValueSetCode("39337-1")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = DocumentTypeValueSetCode("39344-7")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = DocumentTypeValueSetCode("39338-9")
+    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_AndWestPoint = DocumentTypeValueSetCode("39397-5")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndY = DocumentTypeValueSetCode("39343-9")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndY = DocumentTypeValueSetCode("39348-8")
+    Shoulder_LeftX_rayAP_WInternalRotation_AndGrasheyAndAxillaryAndOutlet = DocumentTypeValueSetCode("39325-6")
+    Shoulder_BilateralX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode("39346-2")
+    Shoulder_LeftX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode("39347-0")
+    Shoulder_RightX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode("39396-7")
     ChestX_rayAPPortable = DocumentTypeValueSetCode("24632-2")
     HipX_rayAPPortable = DocumentTypeValueSetCode("37075-9")
     ChestAndAbdomenX_rayAPUprightAndAPChest = DocumentTypeValueSetCode("43561-0")
@@ -6392,12 +5047,8 @@ class DocumentTypeValueSetCodeValues:
     Knee_LeftX_rayAPWManualStress = DocumentTypeValueSetCode("37484-3")
     Knee_RightX_rayAPWManualStress = DocumentTypeValueSetCode("37746-5")
     SpineLumbarX_rayAPWRightBendingAndWLeftBending = DocumentTypeValueSetCode("42403-6")
-    SpineLumbarX_rayAPWRightBendingAndWLeftBendingAndWOBending = (
-        DocumentTypeValueSetCode("42408-5")
-    )
-    SpineThoracicX_rayAPWRightBendingAndWLeftBendingAndWOBending = (
-        DocumentTypeValueSetCode("42444-0")
-    )
+    SpineLumbarX_rayAPWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode("42408-5")
+    SpineThoracicX_rayAPWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode("42444-0")
     SpineThoracicX_rayAPWRightBendingAndWOBending = DocumentTypeValueSetCode("42446-5")
     ShoulderX_rayAxillaryAndTranscapular = DocumentTypeValueSetCode("39403-1")
     Shoulder_BilateralX_rayAxillaryAndY = DocumentTypeValueSetCode("37127-8")
@@ -6446,34 +5097,18 @@ class DocumentTypeValueSetCodeValues:
     Breast_RightMammogramDiagnosticLimited = DocumentTypeValueSetCode("26351-7")
     BreastImplant_BilateralMammogramDisplacement = DocumentTypeValueSetCode("46351-3")
     GallbladderScanEjectionFractionWTc_99mDISIDAIV = DocumentTypeValueSetCode("39895-8")
-    HeartScanFirstPassAndEjectionFractionAtRestAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("39887-5")
-    )
+    HeartScanFirstPassAndEjectionFractionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39887-5")
     HeartScanFirstPassAndEjectionFraction = DocumentTypeValueSetCode("39889-1")
     HeartScanFirstPassAndVentricularVolume = DocumentTypeValueSetCode("39885-9")
-    HeartScanFirstPassAndWallMotionAndEjectionFraction = DocumentTypeValueSetCode(
-        "39910-5"
-    )
-    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFraction = (
-        DocumentTypeValueSetCode("39912-1")
-    )
-    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFractionWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39909-7"
-    )
-    HeartScanFirstPassAndWallMotionAndVentricularVolumeWStressAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("39908-9")
-    )
-    HeartScanFirstPassAndWallMotionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39886-7"
-    )
+    HeartScanFirstPassAndWallMotionAndEjectionFraction = DocumentTypeValueSetCode("39910-5")
+    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFraction = DocumentTypeValueSetCode("39912-1")
+    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFractionWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39909-7")
+    HeartScanFirstPassAndWallMotionAndVentricularVolumeWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39908-9")
+    HeartScanFirstPassAndWallMotionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39886-7")
     HeartScanFirstPassAndWallMotion = DocumentTypeValueSetCode("39890-9")
-    HeartScanFirstPassAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39888-3"
-    )
+    HeartScanFirstPassAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39888-3")
     HeartScanFirstPassAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39867-7")
-    HeartScanFirstPassAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39863-6"
-    )
+    HeartScanFirstPassAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39863-6")
     HeartScanFirstPassAtRestAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39866-9")
     HeartScanFirstPass = DocumentTypeValueSetCode("39864-4")
     LeftVentricleScanFirstPass = DocumentTypeValueSetCode("39865-1")
@@ -6497,38 +5132,26 @@ class DocumentTypeValueSetCodeValues:
     BrainScanFlowWTc_99mDTPAIV = DocumentTypeValueSetCode("43642-8")
     RenalVesselsScanFlowWTc_99mDTPAIV = DocumentTypeValueSetCode("43664-2")
     BrainScanFlowWTc_99mGlucoheptonateIV = DocumentTypeValueSetCode("43643-6")
-    Kidney_BilateralAndRenalVesselsScanFlowWTc_99mGlucoheptonateIV = (
-        DocumentTypeValueSetCode("43666-7")
-    )
+    Kidney_BilateralAndRenalVesselsScanFlowWTc_99mGlucoheptonateIV = DocumentTypeValueSetCode("43666-7")
     RenalVesselsScanFlowWTc_99mGlucoheptonateIV = DocumentTypeValueSetCode("43663-4")
     RenalVesselsScanFlowWTc_99mMertiatideIV = DocumentTypeValueSetCode("43665-9")
     HeartScanFlowWTc_99mPertechnetateIV = DocumentTypeValueSetCode("39870-1")
     LiverScanFlowWTc_99mTaggedRBCIV = DocumentTypeValueSetCode("43654-3")
     ScanForAbscessWGA_67IV = DocumentTypeValueSetCode("39685-3")
     LungScanClearanceWTc_99mDTPAAerosolInhaled = DocumentTypeValueSetCode("39940-2")
-    SkullAndFacialBonesAndMandibleX_rayForDentalMeasurement = DocumentTypeValueSetCode(
-        "43787-1"
-    )
+    SkullAndFacialBonesAndMandibleX_rayForDentalMeasurement = DocumentTypeValueSetCode("43787-1")
     ScanForEndocrineTumorMultipleAreasWI_131MIBGIV = DocumentTypeValueSetCode("43648-5")
-    ScanForEndocrineTumorMultipleAreasWIn_111PentetreotideIV = DocumentTypeValueSetCode(
-        "43649-3"
-    )
+    ScanForEndocrineTumorMultipleAreasWIn_111PentetreotideIV = DocumentTypeValueSetCode("43649-3")
     ScanForEndocrineTumorWholeBodyWI_131MIBGIV = DocumentTypeValueSetCode("39827-1")
-    ScanForEndocrineTumorWholeBodyWIn_111PentetreotideIV = DocumentTypeValueSetCode(
-        "39828-9"
-    )
+    ScanForEndocrineTumorWholeBodyWIn_111PentetreotideIV = DocumentTypeValueSetCode("39828-9")
     AbdomenAndFetusX_rayForFetalAge = DocumentTypeValueSetCode("39327-2")
     OrbitX_rayForForeignBody = DocumentTypeValueSetCode("44208-7")
     Orbit_BilateralX_rayForForeignBody = DocumentTypeValueSetCode("30720-7")
     Orbit_LeftX_rayForForeignBody = DocumentTypeValueSetCode("42311-1")
     Orbit_RightX_rayForForeignBody = DocumentTypeValueSetCode("42312-9")
     StomachScanForGastricEmptyingWTc_99mSCPO = DocumentTypeValueSetCode("39768-7")
-    StomachScanForGastricEmptyingLiquidPhaseWRadionuclidePO = DocumentTypeValueSetCode(
-        "39767-9"
-    )
-    StomachScanForGastricEmptyingSolidPhaseWTc_99mSCPO = DocumentTypeValueSetCode(
-        "24997-9"
-    )
+    StomachScanForGastricEmptyingLiquidPhaseWRadionuclidePO = DocumentTypeValueSetCode("39767-9")
+    StomachScanForGastricEmptyingSolidPhaseWTc_99mSCPO = DocumentTypeValueSetCode("24997-9")
     StomachScanForGastricEmptyingWRadionuclidePO = DocumentTypeValueSetCode("39769-5")
     HeartScanForInfarctAndFirstPass = DocumentTypeValueSetCode("39892-5")
     HeartScanForInfarctAndFirstPassWTc_99mPYPIV = DocumentTypeValueSetCode("39891-7")
@@ -6546,30 +5169,18 @@ class DocumentTypeValueSetCodeValues:
     ScanForLymphoma = DocumentTypeValueSetCode("42170-1")
     EsophagusScanForMotilityWRadionuclidePO = DocumentTypeValueSetCode("39672-1")
     AbdomenX_rayForMotilityWithRadioopaqueMarkers = DocumentTypeValueSetCode("72256-1")
-    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresAndEjectionFractionWSincalideAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "24571-2"
-    )
-    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresWTc_99mIV = (
-        DocumentTypeValueSetCode("24572-0")
-    )
+    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresAndEjectionFractionWSincalideAndWRadionuclideIV = DocumentTypeValueSetCode("24571-2")
+    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresWTc_99mIV = DocumentTypeValueSetCode("24572-0")
     TubeFluoroscopyForPatencyWContrastViaTube = DocumentTypeValueSetCode("43788-9")
-    LiverAndBiliaryDuctsAndGallbladderScanForPatencyWTc_99mIV = (
-        DocumentTypeValueSetCode("43789-7")
-    )
+    LiverAndBiliaryDuctsAndGallbladderScanForPatencyWTc_99mIV = DocumentTypeValueSetCode("43789-7")
     EsophagusScanForRefluxWRadionuclidePO = DocumentTypeValueSetCode("39673-9")
     UnspecifiedBodyRegionFluoroscopyForShunt = DocumentTypeValueSetCode("30650-6")
     HeartScanForShuntDetection = DocumentTypeValueSetCode("39665-5")
     HeartScanForShuntDetectionWTc_99mMAAIV = DocumentTypeValueSetCode("39664-8")
     PeritoneovenousShuntScanForPatencyWIn_111IT = DocumentTypeValueSetCode("39848-7")
-    PeritoneovenousShuntScanForPatencyWRadionuclideIT = DocumentTypeValueSetCode(
-        "39849-5"
-    )
-    PeritoneovenousShuntScanForPatencyWTc_99mDTPAIT = DocumentTypeValueSetCode(
-        "24876-5"
-    )
-    PeritoneovenousShuntScanForPatencyWTc_99mMAAInj = DocumentTypeValueSetCode(
-        "44149-3"
-    )
+    PeritoneovenousShuntScanForPatencyWRadionuclideIT = DocumentTypeValueSetCode("39849-5")
+    PeritoneovenousShuntScanForPatencyWTc_99mDTPAIT = DocumentTypeValueSetCode("24876-5")
+    PeritoneovenousShuntScanForPatencyWTc_99mMAAInj = DocumentTypeValueSetCode("44149-3")
     VeinScanForThrombosis = DocumentTypeValueSetCode("39954-3")
     AbdomenAndPelvisScanForTumor = DocumentTypeValueSetCode("44140-2")
     ScanForTumorLimitedWGA_67IV = DocumentTypeValueSetCode("39831-3")
@@ -6582,23 +5193,15 @@ class DocumentTypeValueSetCodeValues:
     ScanForTumorWTc_99mSestamibiIV = DocumentTypeValueSetCode("39750-5")
     ScanForTumorWTl_201IV = DocumentTypeValueSetCode("42305-3")
     ChestX_rayFrontalStereo = DocumentTypeValueSetCode("42397-0")
-    HeartScanGatedAndEjectionFractionAtRestAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("39923-8")
-    )
+    HeartScanGatedAndEjectionFractionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39923-8")
     HeartScanGatedAndEjectionFraction = DocumentTypeValueSetCode("39917-0")
     HeartScanGatedAndFirstPass = DocumentTypeValueSetCode("39919-6")
-    HeartScanGatedAndWallMotionAndEjectionFractionAtRestAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("39925-3")
-    )
+    HeartScanGatedAndWallMotionAndEjectionFractionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39925-3")
     HeartScanGatedAndWallMotionAndEjectionFraction = DocumentTypeValueSetCode("39931-1")
     HeartScanGatedAndWallMotion = DocumentTypeValueSetCode("42306-1")
-    HeartScanGatedAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39929-5"
-    )
+    HeartScanGatedAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39929-5")
     HeartScanGatedAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39921-2")
-    HeartScanGatedAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39924-6"
-    )
+    HeartScanGatedAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39924-6")
     HeartScanGatedAtRestAndWTc_99mPertechnetateIV = DocumentTypeValueSetCode("39922-0")
     HeartScanGatedAtRestAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39920-4")
     HeartScanGated = DocumentTypeValueSetCode("39915-4")
@@ -6647,9 +5250,7 @@ class DocumentTypeValueSetCodeValues:
     Ribs_LeftAndChestX_rayGE3AndPAChestViews = DocumentTypeValueSetCode("48486-5")
     Ribs_RightAndChestX_rayGE3AndPAChestViews = DocumentTypeValueSetCode("48484-0")
     RibsAndChestX_rayGE3AndPAChestViews = DocumentTypeValueSetCode("44191-5")
-    Ribs_UnilateralAndChestX_rayGe3AndPAChestPortableViews = DocumentTypeValueSetCode(
-        "44239-2"
-    )
+    Ribs_UnilateralAndChestX_rayGe3AndPAChestPortableViews = DocumentTypeValueSetCode("44239-2")
     HandX_rayGE3PortableViews = DocumentTypeValueSetCode("44193-1")
     PelvisX_rayGE3PortableViews = DocumentTypeValueSetCode("44192-3")
     ChestX_rayGE4Views = DocumentTypeValueSetCode("44211-1")
@@ -6666,31 +5267,21 @@ class DocumentTypeValueSetCodeValues:
     KneeX_rayGE5Views = DocumentTypeValueSetCode("44195-6")
     SkullX_rayGE5Views = DocumentTypeValueSetCode("43524-8")
     Knee_BilateralX_rayGE5ViewsStanding = DocumentTypeValueSetCode("44197-2")
-    SpineLumbarX_rayGE5ViewsWRightBendingAndWLeftBending = DocumentTypeValueSetCode(
-        "44196-4"
-    )
+    SpineLumbarX_rayGE5ViewsWRightBendingAndWLeftBending = DocumentTypeValueSetCode("44196-4")
     Ankle_BilateralX_rayGE6Views = DocumentTypeValueSetCode("49570-5")
     Shoulder_LeftX_rayGrasheyAndAxillary = DocumentTypeValueSetCode("37160-9")
     Shoulder_RightX_rayGrasheyAndAxillary = DocumentTypeValueSetCode("38793-6")
     Shoulder_LeftX_rayGrasheyAndAxillaryAndOutlet = DocumentTypeValueSetCode("37158-3")
     Shoulder_RightX_rayGrasheyAndAxillaryAndOutlet = DocumentTypeValueSetCode("37806-7")
-    Shoulder_BilateralX_rayGrasheyAndAxillaryAndOutletAndZanca = (
-        DocumentTypeValueSetCode("37161-7")
-    )
+    Shoulder_BilateralX_rayGrasheyAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode("37161-7")
     ShoulderX_rayGrasheyAndAxillaryAndY = DocumentTypeValueSetCode("69267-3")
     Shoulder_LeftX_rayGrasheyAndAxillaryAndY = DocumentTypeValueSetCode("37538-6")
     Shoulder_RightX_rayGrasheyAndAxillaryAndY = DocumentTypeValueSetCode("38789-4")
     Shoulder_LeftX_rayGrasheyAndOutlet = DocumentTypeValueSetCode("37157-5")
     Shoulder_RightX_rayGrasheyAndOutlet = DocumentTypeValueSetCode("38791-0")
-    Shoulder_BilateralX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode(
-        "39350-4"
-    )
-    Shoulder_LeftX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode(
-        "37162-5"
-    )
-    Shoulder_RightX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode(
-        "38794-4"
-    )
+    Shoulder_BilateralX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode("39350-4")
+    Shoulder_LeftX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode("37162-5")
+    Shoulder_RightX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode("38794-4")
     Shoulder_LeftX_rayGrasheyAndWestPoint = DocumentTypeValueSetCode("37167-4")
     Shoulder_RightX_rayGrasheyAndWestPoint = DocumentTypeValueSetCode("38795-1")
     Shoulder_LeftX_rayGrasheyAndY = DocumentTypeValueSetCode("69156-8")
@@ -6703,40 +5294,28 @@ class DocumentTypeValueSetCodeValues:
     PelvisX_rayInletAndOutletAndOblique = DocumentTypeValueSetCode("37627-7")
     FacialBonesX_rayLateralAndCaldwellAndWaters = DocumentTypeValueSetCode("37164-1")
     SinusesX_rayLateralAndCaldwellAndWaters = DocumentTypeValueSetCode("37864-6")
-    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertex = (
-        DocumentTypeValueSetCode("37165-8")
-    )
-    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertexAndTowne = (
-        DocumentTypeValueSetCode("37166-6")
-    )
+    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertex = DocumentTypeValueSetCode("37165-8")
+    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertexAndTowne = DocumentTypeValueSetCode("37166-6")
     SkullX_rayLateralAndCaldwellAndWatersAndTowne = DocumentTypeValueSetCode("37871-1")
     Ankle_BilateralX_rayLateralAndMortise = DocumentTypeValueSetCode("37134-4")
     Ankle_LeftX_rayLateralAndMortise = DocumentTypeValueSetCode("37135-1")
     Ankle_RightX_rayLateralAndMortise = DocumentTypeValueSetCode("37670-7")
-    Ankle_LeftX_rayLateralAndMortiseAndBrodenWManualStress = DocumentTypeValueSetCode(
-        "42382-2"
-    )
+    Ankle_LeftX_rayLateralAndMortiseAndBrodenWManualStress = DocumentTypeValueSetCode("42382-2")
     ScapulaX_rayLateralAndOutlet = DocumentTypeValueSetCode("39366-0")
     Ribs_BilateralAndChestX_rayLateralAndPAChest = DocumentTypeValueSetCode("43464-7")
     Ribs_LeftAndChestX_rayLateralAndPAChest = DocumentTypeValueSetCode("37603-8")
     Ribs_RightAndChestX_rayLateralAndPAChest = DocumentTypeValueSetCode("39100-3")
     RibsAndChestX_rayLateralAndPAChest = DocumentTypeValueSetCode("39101-1")
-    ChestX_rayLateralAndPAWInspirationAndExpiration = DocumentTypeValueSetCode(
-        "39341-3"
-    )
+    ChestX_rayLateralAndPAWInspirationAndExpiration = DocumentTypeValueSetCode("39341-3")
     SternumX_rayLateralAndRightAnteriorOblique = DocumentTypeValueSetCode("39406-4")
-    SternumX_rayLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
-        "39405-6"
-    )
+    SternumX_rayLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39405-6")
     SellaTurcicaX_rayLateralAndTowne = DocumentTypeValueSetCode("42436-6")
     SkullX_rayLateralAndTowne = DocumentTypeValueSetCode("37869-5")
     NasalBonesX_rayLateralAndWaters = DocumentTypeValueSetCode("37605-3")
     SinusesX_rayLateralAndWaters = DocumentTypeValueSetCode("37862-0")
     Shoulder_LeftX_rayLateralAndY = DocumentTypeValueSetCode("37136-9")
     Shoulder_RightX_rayLateralAndY = DocumentTypeValueSetCode("37803-4")
-    SpineLumbarX_rayLateralStandingAndWFlexionAndWExtension = DocumentTypeValueSetCode(
-        "39340-5"
-    )
+    SpineLumbarX_rayLateralStandingAndWFlexionAndWExtension = DocumentTypeValueSetCode("39340-5")
     SpineCervicalX_rayLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37133-6")
     SpineLumbarX_rayLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37132-8")
     SpineThoracicX_rayLateralWFlexionAndWExtension = DocumentTypeValueSetCode("38010-5")
@@ -6746,9 +5325,7 @@ class DocumentTypeValueSetCodeValues:
     Ankle_LeftX_rayLateralWManualStress = DocumentTypeValueSetCode("37474-4")
     Ankle_RightX_rayLateralWManualStress = DocumentTypeValueSetCode("37669-9")
     JointX_rayLateralWManualStress = DocumentTypeValueSetCode("43480-3")
-    Mastoid_BilateralX_rayLawAndMayerAndStenverAndTowne = DocumentTypeValueSetCode(
-        "37541-0"
-    )
+    Mastoid_BilateralX_rayLawAndMayerAndStenverAndTowne = DocumentTypeValueSetCode("37541-0")
     MandibleX_rayLE3Views = DocumentTypeValueSetCode("47380-1")
     SkullX_rayLE3Views = DocumentTypeValueSetCode("43470-4")
     Knee_RightX_rayLE4Views = DocumentTypeValueSetCode("47377-7")
@@ -6773,9 +5350,7 @@ class DocumentTypeValueSetCodeValues:
     Wrist_RightX_rayLimited = DocumentTypeValueSetCode("37642-6")
     ColonFluoroscopyLimitedWAirAndBariumContrastPR = DocumentTypeValueSetCode("41797-2")
     SpineCervicalFluoroscopyLimitedWContrastIT = DocumentTypeValueSetCode("42335-0")
-    SpineCervicalAndThoracicAndLumbarFluoroscopyLimitedWContrastIT = (
-        DocumentTypeValueSetCode("38125-1")
-    )
+    SpineCervicalAndThoracicAndLumbarFluoroscopyLimitedWContrastIT = DocumentTypeValueSetCode("38125-1")
     SpineThoracicFluoroscopyLimitedWContrastIT = DocumentTypeValueSetCode("38120-2")
     KidneyX_rayLimitedWContrastIV = DocumentTypeValueSetCode("37137-7")
     ScanLimitedWGA_67IV = DocumentTypeValueSetCode("39687-9")
@@ -6800,9 +5375,7 @@ class DocumentTypeValueSetCodeValues:
     BoneScanMultipleAreas = DocumentTypeValueSetCode("39904-8")
     BoneMarrowScanMultipleAreas = DocumentTypeValueSetCode("39907-1")
     JointScanMultipleAreas = DocumentTypeValueSetCode("39937-8")
-    ProstateScanMultipleAreasWTc_99mCapromabPendatideIV = DocumentTypeValueSetCode(
-        "39950-1"
-    )
+    ProstateScanMultipleAreasWTc_99mCapromabPendatideIV = DocumentTypeValueSetCode("39950-1")
     ElbowX_rayOblique = DocumentTypeValueSetCode("36608-8")
     Elbow_BilateralX_rayOblique = DocumentTypeValueSetCode("36740-9")
     Elbow_LeftX_rayOblique = DocumentTypeValueSetCode("36741-7")
@@ -6829,25 +5402,15 @@ class DocumentTypeValueSetCodeValues:
     Wrist_LeftX_rayOblique = DocumentTypeValueSetCode("38839-7")
     Wrist_RightX_rayOblique = DocumentTypeValueSetCode("37643-4")
     FootX_rayObliqueAnd_APAndLateral_Standing = DocumentTypeValueSetCode("42398-8")
-    SpineCervicalX_rayObliqueAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode(
-        "37139-3"
-    )
+    SpineCervicalX_rayObliqueAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37139-3")
     KneeX_rayObliqueAndSunrise = DocumentTypeValueSetCode("37154-2")
     KneeX_rayObliqueAndSunriseAndTunnel = DocumentTypeValueSetCode("37155-9")
     UnspecifiedBodyRegionX_rayOfForeignBody = DocumentTypeValueSetCode("43469-6")
     UnspecifiedBodyRegionFluoroscopyOfForeignBody = DocumentTypeValueSetCode("37063-5")
-    TemporomandibularJoint_BilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
-        "37546-9"
-    )
-    TemporomandibularJoint_LeftX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
-        "48491-5"
-    )
-    TemporomandibularJoint_RightX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
-        "48490-7"
-    )
-    TemporomandibularJoint_UnilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
-        "48699-3"
-    )
+    TemporomandibularJoint_BilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("37546-9")
+    TemporomandibularJoint_LeftX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("48491-5")
+    TemporomandibularJoint_RightX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("48490-7")
+    TemporomandibularJoint_UnilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("48699-3")
     Shoulder_BilateralX_rayOutletAndY = DocumentTypeValueSetCode("37152-6")
     Shoulder_LeftX_rayOutletAndY = DocumentTypeValueSetCode("37140-1")
     Shoulder_RightX_rayOutletAndY = DocumentTypeValueSetCode("37804-2")
@@ -6863,12 +5426,8 @@ class DocumentTypeValueSetCodeValues:
     Wrist_LeftX_rayPAAndLateral = DocumentTypeValueSetCode("37548-5")
     Wrist_RightX_rayPAAndLateral = DocumentTypeValueSetCode("37835-6")
     ChestX_rayPAAndLateralAndAPLateral_decubitus = DocumentTypeValueSetCode("37143-5")
-    ChestX_rayPAAndLateralAndAPLeftLateral_decubitus = DocumentTypeValueSetCode(
-        "37144-3"
-    )
-    ChestX_rayPAAndLateralAndAPRightLateral_decubitus = DocumentTypeValueSetCode(
-        "37145-0"
-    )
+    ChestX_rayPAAndLateralAndAPLeftLateral_decubitus = DocumentTypeValueSetCode("37144-3")
+    ChestX_rayPAAndLateralAndAPRightLateral_decubitus = DocumentTypeValueSetCode("37145-0")
     Hand_BilateralX_rayPAAndLateralAndBallCatcher = DocumentTypeValueSetCode("37142-7")
     SinusesX_rayPAAndLateralAndCaldwellAndWaters = DocumentTypeValueSetCode("37860-4")
     ChestX_rayPAAndLateralAndLeftOblique = DocumentTypeValueSetCode("37146-8")
@@ -6885,16 +5444,10 @@ class DocumentTypeValueSetCodeValues:
     ChestX_rayPAAndLateralAndObliqueAndLordotic = DocumentTypeValueSetCode("36758-1")
     MandibleX_rayPAAndLateralAndObliqueAndTowne = DocumentTypeValueSetCode("37148-4")
     ChestX_rayPAAndLateralAndRightOblique = DocumentTypeValueSetCode("37147-6")
-    ChestX_rayPAAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
-        "30742-1"
-    )
-    ChestX_rayPAAndLateralAndRightObliqueAndLeftObliquePortable = (
-        DocumentTypeValueSetCode("30743-9")
-    )
+    ChestX_rayPAAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("30742-1")
+    ChestX_rayPAAndLateralAndRightObliqueAndLeftObliquePortable = DocumentTypeValueSetCode("30743-9")
     ChestX_rayPAAndLateralAndRightOr_leftOblique = DocumentTypeValueSetCode("30744-7")
-    ChestX_rayPAAndLateralAndRightOr_leftObliqueUpright = DocumentTypeValueSetCode(
-        "24643-9"
-    )
+    ChestX_rayPAAndLateralAndRightOr_leftObliqueUpright = DocumentTypeValueSetCode("24643-9")
     Patella_LeftX_rayPAAndLateralAndSunrise = DocumentTypeValueSetCode("37149-2")
     Patella_RightX_rayPAAndLateralAndSunrise = DocumentTypeValueSetCode("38790-2")
     SinusesX_rayPAAndLateralAndWaters = DocumentTypeValueSetCode("37859-6")
@@ -6905,68 +5458,34 @@ class DocumentTypeValueSetCodeValues:
     HandX_rayPAAndOblique = DocumentTypeValueSetCode("39079-9")
     ChestX_rayPAAndRightLateral = DocumentTypeValueSetCode("37141-9")
     SkullX_rayPAAndRightLateralAndLeftLateral = DocumentTypeValueSetCode("39519-4")
-    SkullX_rayPAAndRightLateralAndLeftLateralAndCaldwellAndTowne = (
-        DocumentTypeValueSetCode("39521-0")
-    )
-    SkullX_rayPAAndRightLateralAndLeftLateralAndTowne = DocumentTypeValueSetCode(
-        "39520-2"
-    )
-    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUpright = (
-        DocumentTypeValueSetCode("24646-2")
-    )
-    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUprightPortable = (
-        DocumentTypeValueSetCode("24645-4")
-    )
+    SkullX_rayPAAndRightLateralAndLeftLateralAndCaldwellAndTowne = DocumentTypeValueSetCode("39521-0")
+    SkullX_rayPAAndRightLateralAndLeftLateralAndTowne = DocumentTypeValueSetCode("39520-2")
+    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUpright = DocumentTypeValueSetCode("24646-2")
+    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUprightPortable = DocumentTypeValueSetCode("24645-4")
     ChestX_rayPAAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("37150-0")
     ChestX_rayPAUprightWInspirationAndExpiration = DocumentTypeValueSetCode("24635-5")
     Knee_BilateralX_rayPAStandingAndWFlexion = DocumentTypeValueSetCode("46378-6")
-    HeartScanPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "43660-0"
-    )
-    HeartScanPerfusionQuantitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "43661-8"
-    )
+    HeartScanPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("43660-0")
+    HeartScanPerfusionQuantitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("43661-8")
     HeartScanPerfusionQuantitative = DocumentTypeValueSetCode("43658-4")
     LungScanPerfusionQuantitative = DocumentTypeValueSetCode("43656-8")
-    HeartScanPerfusionAtRestAndWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39719-0"
-    )
-    HeartScanPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode(
-        "43777-2"
-    )
-    HeartScanPerfusionAtRestAndWDipyridamoleAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("39722-4")
-    )
-    HeartScanPerfusionAtRestAndWDipyridamoleAndWTc_99mSestamibiIV = (
-        DocumentTypeValueSetCode("39720-8")
-    )
+    HeartScanPerfusionAtRestAndWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode("39719-0")
+    HeartScanPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode("43777-2")
+    HeartScanPerfusionAtRestAndWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode("39722-4")
+    HeartScanPerfusionAtRestAndWDipyridamoleAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39720-8")
     HeartScanPerfusionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39728-1")
-    HeartScanPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39726-5"
-    )
-    HeartScanPerfusionAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "39727-3"
-    )
+    HeartScanPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39726-5")
+    HeartScanPerfusionAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39727-3")
     HeartScanPerfusionAtRestAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39699-4")
     HeartScanPerfusionWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode("39701-8")
-    HeartScanPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "39731-5"
-    )
+    HeartScanPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39731-5")
     HeartScanPerfusionWAdenosineAndWTl_201IV = DocumentTypeValueSetCode("39735-6")
-    HeartScanPerfusionWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39708-3"
-    )
+    HeartScanPerfusionWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode("39708-3")
     HeartScanPerfusionWDipyridamoleAndWTc_99mIV = DocumentTypeValueSetCode("39709-1")
-    HeartScanPerfusionWDipyridamoleAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "39705-9"
-    )
+    HeartScanPerfusionWDipyridamoleAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39705-9")
     HeartScanPerfusionWDipyridamoleAndWTl_201IV = DocumentTypeValueSetCode("39707-5")
-    HeartScanPerfusionWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39703-4"
-    )
-    HeartScanPerfusionWDobutamineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
-        "39702-6"
-    )
+    HeartScanPerfusionWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode("39703-4")
+    HeartScanPerfusionWDobutamineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39702-6")
     HeartScanPerfusionWDobutamineAndWTl_201IV = DocumentTypeValueSetCode("39733-1")
     LungScanPerfusionWParticulateRadionuclideIV = DocumentTypeValueSetCode("39941-0")
     LungScanPerfusionWRadionuclideGaseousInhaled = DocumentTypeValueSetCode("39833-9")
@@ -6977,9 +5496,7 @@ class DocumentTypeValueSetCodeValues:
     HeartScanPerfusionWStressAndWTl_201IV = DocumentTypeValueSetCode("39715-8")
     HeartScanPerfusionWTc_99mSestamibiIV = DocumentTypeValueSetCode("39704-2")
     HeartScanPerfusionWTl_201IV = DocumentTypeValueSetCode("39714-1")
-    HeartScanPerfusionWTl_201IVAndTc_99mTetrofosminIV = DocumentTypeValueSetCode(
-        "39713-3"
-    )
+    HeartScanPerfusionWTl_201IVAndTc_99mTetrofosminIV = DocumentTypeValueSetCode("39713-3")
     AcetabulumX_rayPortable = DocumentTypeValueSetCode("30765-2")
     Acetabulum_BilateralX_rayPortable = DocumentTypeValueSetCode("30764-5")
     Ankle_LeftX_rayPortable = DocumentTypeValueSetCode("41823-6")
@@ -7027,54 +5544,30 @@ class DocumentTypeValueSetCodeValues:
     AbdomenX_rayRightObliqueAndLeftOblique = DocumentTypeValueSetCode("37138-5")
     ChestX_rayRightObliqueAndLeftOblique = DocumentTypeValueSetCode("41792-3")
     ChestX_rayRightObliqueAndLeftObliqueUpright = DocumentTypeValueSetCode("24651-2")
-    ChestX_rayRightObliqueAndLeftObliqueWNippleMarkers = DocumentTypeValueSetCode(
-        "42414-3"
-    )
+    ChestX_rayRightObliqueAndLeftObliqueWNippleMarkers = DocumentTypeValueSetCode("42414-3")
     Breast_BilateralMammogramRoll = DocumentTypeValueSetCode("37016-3")
     Breast_LeftMammogramRoll = DocumentTypeValueSetCode("37017-1")
     Breast_RightMammogramRoll = DocumentTypeValueSetCode("37775-4")
     ChestX_rayRightOr_leftOblique = DocumentTypeValueSetCode("30740-5")
     ChestX_rayRightOr_leftObliquePortable = DocumentTypeValueSetCode("30739-7")
-    AortaAbdominalFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode(
-        "43479-5"
-    )
-    AortaAndFemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = (
-        DocumentTypeValueSetCode("30838-7")
-    )
-    AortaAndFemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = (
-        DocumentTypeValueSetCode("37364-7")
-    )
-    AortaAndFemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = (
-        DocumentTypeValueSetCode("38799-3")
-    )
+    AortaAbdominalFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("43479-5")
+    AortaAndFemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("30838-7")
+    AortaAndFemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("37364-7")
+    AortaAndFemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("38799-3")
     WristX_rayScaphoid = DocumentTypeValueSetCode("38107-9")
     Wrist_BilateralX_rayScaphoid = DocumentTypeValueSetCode("37304-3")
     Wrist_LeftX_rayScaphoid = DocumentTypeValueSetCode("37302-7")
     Wrist_RightX_rayScaphoid = DocumentTypeValueSetCode("38115-2")
     SpineThoracicAndLumbarX_rayScoliosis = DocumentTypeValueSetCode("24930-0")
-    SpineThoracicAndLumbarX_rayScoliosisAPAndLateral = DocumentTypeValueSetCode(
-        "30715-7"
-    )
-    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralSitting = DocumentTypeValueSetCode(
-        "42424-2"
-    )
-    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralStanding = DocumentTypeValueSetCode(
-        "39367-8"
-    )
-    SpineThoracicAndLumbarX_rayScoliosisAPInTraction = DocumentTypeValueSetCode(
-        "42472-1"
-    )
-    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode(
-        "42425-9"
-    )
-    SpineThoracicAndLumbarX_rayScoliosisAPUprightAndSupine = DocumentTypeValueSetCode(
-        "43569-3"
-    )
+    SpineThoracicAndLumbarX_rayScoliosisAPAndLateral = DocumentTypeValueSetCode("30715-7")
+    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralSitting = DocumentTypeValueSetCode("42424-2")
+    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralStanding = DocumentTypeValueSetCode("39367-8")
+    SpineThoracicAndLumbarX_rayScoliosisAPInTraction = DocumentTypeValueSetCode("42472-1")
+    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode("42425-9")
+    SpineThoracicAndLumbarX_rayScoliosisAPUprightAndSupine = DocumentTypeValueSetCode("43569-3")
     SpineThoracicAndLumbarX_rayScoliosisLateral = DocumentTypeValueSetCode("30716-5")
     SpineThoracicAndLumbarX_rayScoliosisStanding = DocumentTypeValueSetCode("30717-3")
-    SpineThoracicAndLumbarX_rayScoliosisWFlexionAndWExtension = (
-        DocumentTypeValueSetCode("24929-2")
-    )
+    SpineThoracicAndLumbarX_rayScoliosisWFlexionAndWExtension = DocumentTypeValueSetCode("24929-2")
     BreastMammogramScreening = DocumentTypeValueSetCode("24606-6")
     BreastFFDMammogramScreening = DocumentTypeValueSetCode("39153-2")
     BreastImplantX_rayScreening = DocumentTypeValueSetCode("69159-2")
@@ -7135,45 +5628,21 @@ class DocumentTypeValueSetCodeValues:
     Wrist_BilateralX_rayTunnel_carpal = DocumentTypeValueSetCode("43796-2")
     WristX_rayUlnarDeviation = DocumentTypeValueSetCode("69304-4")
     WristX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode("69303-6")
-    Wrist_BilateralX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode(
-        "69072-7"
-    )
-    Wrist_LeftX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode(
-        "37555-0"
-    )
-    Wrist_RightX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode(
-        "38808-2"
-    )
+    Wrist_BilateralX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode("69072-7")
+    Wrist_LeftX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode("37555-0")
+    Wrist_RightX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode("38808-2")
     ChestAndAbdomenX_rayUprightAndPAChest = DocumentTypeValueSetCode("43532-1")
-    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaled = (
-        DocumentTypeValueSetCode("39944-4")
-    )
-    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaledSingleBreath = (
-        DocumentTypeValueSetCode("39948-5")
-    )
-    LungScanVentilationAndEquilibriumWRadionuclideInhaledSingleBreath = (
-        DocumentTypeValueSetCode("39947-7")
-    )
-    LungScanVentilationAndPerfusionAndDifferentialWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39946-9"
-    )
-    LungScanVentilationAndPerfusionWRadionuclideInhaledAndWParticulateRadionuclideIV = (
-        DocumentTypeValueSetCode("39943-6")
-    )
-    PulmonarySystemScanVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("30697-7")
-    )
-    LungScanVentilationAndPerfusionWRadionuclideInhaledSingleBreathAndWParticulateRadionuclideIV = DocumentTypeValueSetCode(
-        "39942-8"
-    )
-    PulmonarySystemScanVentilationAndPerfusionWXe_133InhaledAndWTc_99mMAAIV = (
-        DocumentTypeValueSetCode("24888-0")
-    )
+    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaled = DocumentTypeValueSetCode("39944-4")
+    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaledSingleBreath = DocumentTypeValueSetCode("39948-5")
+    LungScanVentilationAndEquilibriumWRadionuclideInhaledSingleBreath = DocumentTypeValueSetCode("39947-7")
+    LungScanVentilationAndPerfusionAndDifferentialWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode("39946-9")
+    LungScanVentilationAndPerfusionWRadionuclideInhaledAndWParticulateRadionuclideIV = DocumentTypeValueSetCode("39943-6")
+    PulmonarySystemScanVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode("30697-7")
+    LungScanVentilationAndPerfusionWRadionuclideInhaledSingleBreathAndWParticulateRadionuclideIV = DocumentTypeValueSetCode("39942-8")
+    PulmonarySystemScanVentilationAndPerfusionWXe_133InhaledAndWTc_99mMAAIV = DocumentTypeValueSetCode("24888-0")
     LungScanVentilationWRadionuclideAerosolInhaled = DocumentTypeValueSetCode("39835-4")
     LungScanVentilationWRadionuclideGaseousInhaled = DocumentTypeValueSetCode("39836-2")
-    LungScanVentilationWRadionuclideGaseousInhaledSingleBreath = (
-        DocumentTypeValueSetCode("39945-1")
-    )
+    LungScanVentilationWRadionuclideGaseousInhaledSingleBreath = DocumentTypeValueSetCode("39945-1")
     LungScanVentilationWRadionuclideInhaled = DocumentTypeValueSetCode("39837-0")
     LungScanVentilationWTc_99mDTPAAerosolInhaled = DocumentTypeValueSetCode("39834-7")
     LungScanVentilationWXe_133Inhaled = DocumentTypeValueSetCode("46361-2")
@@ -7188,12 +5657,8 @@ class DocumentTypeValueSetCodeValues:
     BoneMarrowScanWholeBody = DocumentTypeValueSetCode("39826-3")
     ScanWholeBodyWTc_99mArcitumomabIV = DocumentTypeValueSetCode("39669-7")
     GallbladderX_ray48HoursPostContrastPO = DocumentTypeValueSetCode("24713-0")
-    HeartScanAtRestAndWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39660-6"
-    )
-    HeartScanAtRestAndWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "39661-4"
-    )
+    HeartScanAtRestAndWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode("39660-6")
+    HeartScanAtRestAndWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode("39661-4")
     HeartScanAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39663-0")
     HeartScanAtRestAndWStressAndWTl_201IV = DocumentTypeValueSetCode("42309-5")
     HeartScanAtRestAndWTl_201IV = DocumentTypeValueSetCode("24750-2")
@@ -7201,12 +5666,8 @@ class DocumentTypeValueSetCodeValues:
     BoneX_rayDuringSurgery = DocumentTypeValueSetCode("24577-9")
     HipX_rayDuringSurgery = DocumentTypeValueSetCode("47372-8")
     UnspecifiedBodyRegionFluoroscopyDuringSurgery = DocumentTypeValueSetCode("25070-4")
-    BiliaryDuctsAndGallbladderFluoroscopyDuringSurgeryWContrastBiliaryDuct = (
-        DocumentTypeValueSetCode("24574-6")
-    )
-    BreastDuctMammogramDuringSurgeryWContrastIntraDuct = DocumentTypeValueSetCode(
-        "46352-1"
-    )
+    BiliaryDuctsAndGallbladderFluoroscopyDuringSurgeryWContrastBiliaryDuct = DocumentTypeValueSetCode("24574-6")
+    BreastDuctMammogramDuringSurgeryWContrastIntraDuct = DocumentTypeValueSetCode("46352-1")
     KidneyX_rayDuringSurgeryWContrastRetrograde = DocumentTypeValueSetCode("43485-2")
     BreastFFDMammogramPostLocalization = DocumentTypeValueSetCode("39150-8")
     BreastMammogramPostWirePlacement = DocumentTypeValueSetCode("69251-7")
@@ -7242,628 +5703,260 @@ class DocumentTypeValueSetCodeValues:
     Kidney_BilateralScanWAndWOTc_99mDTPAIV = DocumentTypeValueSetCode("44233-5")
     Kidney_BilateralScanWAndWOTc_99mMertiatideIV = DocumentTypeValueSetCode("44232-7")
     AcromioclavicularJointX_rayWAndWOWeight = DocumentTypeValueSetCode("37579-0")
-    AcromioclavicularJoint_BilateralX_rayWAndWOWeight = DocumentTypeValueSetCode(
-        "37580-8"
-    )
+    AcromioclavicularJoint_BilateralX_rayWAndWOWeight = DocumentTypeValueSetCode("37580-8")
     AcromioclavicularJoint_LeftX_rayWAndWOWeight = DocumentTypeValueSetCode("37581-6")
     AcromioclavicularJoint_RightX_rayWAndWOWeight = DocumentTypeValueSetCode("37663-2")
     HeartScanWAdenosineAndWTl_201IV = DocumentTypeValueSetCode("39651-5")
     Breast_BilateralMammogramWAir = DocumentTypeValueSetCode("38090-7")
     Breast_LeftMammogramWAir = DocumentTypeValueSetCode("38091-5")
-    GastrointestineUpperFluoroscopyWAirAndBariumContrastPO = DocumentTypeValueSetCode(
-        "39059-1"
-    )
+    GastrointestineUpperFluoroscopyWAirAndBariumContrastPO = DocumentTypeValueSetCode("39059-1")
     ColonFluoroscopyWAirAndBariumContrastPR = DocumentTypeValueSetCode("24666-0")
     ColonFluoroscopyWAirContrastPR = DocumentTypeValueSetCode("46357-0")
     EsophagusFluoroscopyWBariumContrastPO = DocumentTypeValueSetCode("30633-2")
-    GastrointestineUpperFluoroscopyWBariumContrastPO = DocumentTypeValueSetCode(
-        "42683-3"
-    )
-    UpperGastrointestineAndSmallBowelFluoroscopyWBariumContrastPO = (
-        DocumentTypeValueSetCode("43574-3")
-    )
+    GastrointestineUpperFluoroscopyWBariumContrastPO = DocumentTypeValueSetCode("42683-3")
+    UpperGastrointestineAndSmallBowelFluoroscopyWBariumContrastPO = DocumentTypeValueSetCode("43574-3")
     ColonFluoroscopyWBariumContrastPR = DocumentTypeValueSetCode("44227-7")
-    UnspecifiedBodyRegionFluoroscopyWBariumContrastViaFistula = (
-        DocumentTypeValueSetCode("37565-9")
-    )
-    UrinaryBladderFluoroscopyWChainAndContrastIntraBladder = DocumentTypeValueSetCode(
-        "38092-3"
-    )
-    GallbladderScanWCholecystokininAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "41770-9"
-    )
-    LiverAndBiliaryDuctsAndGallbladderScanWCholecystokininAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("43650-1")
-    )
+    UnspecifiedBodyRegionFluoroscopyWBariumContrastViaFistula = DocumentTypeValueSetCode("37565-9")
+    UrinaryBladderFluoroscopyWChainAndContrastIntraBladder = DocumentTypeValueSetCode("38092-3")
+    GallbladderScanWCholecystokininAndWRadionuclideIV = DocumentTypeValueSetCode("41770-9")
+    LiverAndBiliaryDuctsAndGallbladderScanWCholecystokininAndWRadionuclideIV = DocumentTypeValueSetCode("43650-1")
     HeadCisternFluoroscopyVideoWContrast = DocumentTypeValueSetCode("30630-8")
-    IntercranialVesselAndNeckVesselFluoroscopicAngiogramWContrast = (
-        DocumentTypeValueSetCode("30824-7")
-    )
+    IntercranialVesselAndNeckVesselFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("30824-7")
     JejunumFluoroscopyWContrast = DocumentTypeValueSetCode("37585-7")
-    LowerExtremityVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
-        "38853-8"
-    )
-    LowerExtremityVessels_RightFluoroscopicAngiogramWContrast = (
-        DocumentTypeValueSetCode("37765-5")
-    )
+    LowerExtremityVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("38853-8")
+    LowerExtremityVessels_RightFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37765-5")
     PelvisVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37615-2")
-    PeripheralVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
-        "37936-2"
-    )
+    PeripheralVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37936-2")
     RenalVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37640-0")
-    RenalVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
-        "64140-7"
-    )
-    RenalVessels_RightFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
-        "64141-5"
-    )
+    RenalVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("64140-7")
+    RenalVessels_RightFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("64141-5")
     Spine_cavityFluoroscopyWContrast = DocumentTypeValueSetCode("38094-9")
     TesticleVesselsFluoroscopyWContrast = DocumentTypeValueSetCode("37973-5")
     ThreeVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("25005-0")
     TwoVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("25014-2")
-    UpperExtremityVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
-        "37976-8"
-    )
+    UpperExtremityVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37976-8")
     UrinaryBladderAndUrethraFluoroscopyWContrast = DocumentTypeValueSetCode("42014-1")
     VertebralVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37980-0")
     VisceralVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37981-8")
     GallbladderX_rayWContrastAndFattyMealPO = DocumentTypeValueSetCode("37575-8")
     KidneyX_rayWContrastAntegrade = DocumentTypeValueSetCode("38101-2")
     Kidney_BilateralFluoroscopyWContrastAntegrade = DocumentTypeValueSetCode("46376-0")
-    UrinaryBladderAndUrethraFluoroscopyWContrastAntegrade = DocumentTypeValueSetCode(
-        "38100-4"
-    )
+    UrinaryBladderAndUrethraFluoroscopyWContrastAntegrade = DocumentTypeValueSetCode("38100-4")
     KidneyX_rayWContrastAntegradeViaPyelostomy = DocumentTypeValueSetCode("38102-0")
-    AbdominalArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "25030-8"
-    )
+    AbdominalArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("25030-8")
     AdrenalArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30832-0")
-    AdrenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "30831-2"
-    )
-    AdrenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37387-8"
-    )
-    AdrenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37939-6"
-    )
-    AnkleArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "38861-1"
-    )
-    AnkleArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37941-2"
-    )
+    AdrenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30831-2")
+    AdrenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37387-8")
+    AdrenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37939-6")
+    AnkleArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38861-1")
+    AnkleArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37941-2")
     AortaFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24658-7")
     AortaAbdominalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30837-9")
-    AortaArchAndNeckFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "24546-4"
-    )
-    AbdominalAortaAndArteriesFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37366-2")
-    )
+    AortaArchAndNeckFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24546-4")
+    AbdominalAortaAndArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37366-2")
     AorticArchFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("69054-5")
-    AorticArchAndBrachialArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37380-3")
-    )
-    AorticArchAndCarotidArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37381-1")
-    )
-    AorticArchAndCarotidArtery_BilateralAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37587-3"
-    )
-    AorticArchAndCarotidArtery_common_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37588-1")
-    )
-    AorticArchAndCarotidArtery_common_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37589-9")
-    )
-    AorticArchAndCarotidArtery_common_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37590-7")
-    )
-    AorticArchAndCarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37591-5")
-    )
-    AorticArchAndCarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37592-3")
-    )
-    AorticArchAndCarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37593-1")
-    )
-    AorticArchAndCarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37594-9")
-    )
-    AorticArchAndSubclavianArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37382-9")
-    )
-    AorticArchAndSubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37383-7")
-    )
-    AorticArchAndSubclavianArtery_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("38800-9")
-    )
-    AorticArchAndUpperExtremityArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37379-5")
-    )
-    AorticArchAndVertebralArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37384-5")
-    )
-    AorticArchAndVertebralArtery_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37385-2")
-    )
-    AorticArchAndVertebralArtery_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37386-0")
-    )
+    AorticArchAndBrachialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37380-3")
+    AorticArchAndCarotidArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37381-1")
+    AorticArchAndCarotidArtery_BilateralAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37587-3")
+    AorticArchAndCarotidArtery_common_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37588-1")
+    AorticArchAndCarotidArtery_common_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37589-9")
+    AorticArchAndCarotidArtery_common_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37590-7")
+    AorticArchAndCarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37591-5")
+    AorticArchAndCarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37592-3")
+    AorticArchAndCarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37593-1")
+    AorticArchAndCarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37594-9")
+    AorticArchAndSubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37382-9")
+    AorticArchAndSubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37383-7")
+    AorticArchAndSubclavianArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38800-9")
+    AorticArchAndUpperExtremityArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37379-5")
+    AorticArchAndVertebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37384-5")
+    AorticArchAndVertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37385-2")
+    AorticArchAndVertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37386-0")
     AVFistulaFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24551-4")
     BrachialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30828-8")
-    BrachialArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37388-6"
-    )
-    BrachialArteryAndSubclavianArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("24581-1")
-    )
-    BrachiocephalicArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "69077-6"
-    )
-    BronchialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37389-4"
-    )
+    BrachialArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37388-6")
+    BrachialArteryAndSubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24581-1")
+    BrachiocephalicArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("69077-6")
+    BronchialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37389-4")
     CarotidArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24617-3")
-    CarotidArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "26079-4"
-    )
-    CarotidArtery_BilateralAndCerebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "39097-1"
-    )
-    CarotidArtery_cervicalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "39094-8"
-    )
-    CarotidArtery_cervical_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("39098-9")
-    )
-    CarotidArtery_cervical_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("38863-7")
-    )
-    CarotidArtery_cervical_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37945-3")
-    )
-    CarotidArtery_externalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "30821-3"
-    )
-    CarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("30820-5")
-    )
-    CarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37390-2")
-    )
-    CarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37948-7")
-    )
-    CarotidArtery_internal_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("38864-5")
-    )
-    CarotidArtery_internal_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37952-9")
-    )
-    CarotidArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "26080-2"
-    )
-    CarotidArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "26081-0"
-    )
-    CarotidArteryAndCerebralArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("39095-5")
-    )
-    CarotidArteryAndCerebralArteryInternal_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("38865-2")
-    )
-    CarotidArteryAndCerebralArteryInternal_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37953-7")
-    )
-    CarotidArteryAndCerebralArtery_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("38862-9")
-    )
-    CarotidArteryAndCerebralArtery_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37944-6")
-    )
-    CarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37391-0")
-    )
-    CarotidArteryAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37392-8")
-    )
-    CarotidArtery_VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37393-6")
-    )
-    CarotidArtery_VertebralArtery_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37943-8")
-    )
+    CarotidArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26079-4")
+    CarotidArtery_BilateralAndCerebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39097-1")
+    CarotidArtery_cervicalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39094-8")
+    CarotidArtery_cervical_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39098-9")
+    CarotidArtery_cervical_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38863-7")
+    CarotidArtery_cervical_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37945-3")
+    CarotidArtery_externalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30821-3")
+    CarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30820-5")
+    CarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37390-2")
+    CarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37948-7")
+    CarotidArtery_internal_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38864-5")
+    CarotidArtery_internal_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37952-9")
+    CarotidArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26080-2")
+    CarotidArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26081-0")
+    CarotidArteryAndCerebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39095-5")
+    CarotidArteryAndCerebralArteryInternal_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38865-2")
+    CarotidArteryAndCerebralArteryInternal_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37953-7")
+    CarotidArteryAndCerebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38862-9")
+    CarotidArteryAndCerebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37944-6")
+    CarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37391-0")
+    CarotidArteryAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37392-8")
+    CarotidArtery_VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37393-6")
+    CarotidArtery_VertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37943-8")
     CeliacArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24622-3")
-    CeliacArteryAndGastricArtery_LeftAndSuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37403-3"
-    )
-    CeliacArteryAndSuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37394-4"
-    )
+    CeliacArteryAndGastricArtery_LeftAndSuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37403-3")
+    CeliacArteryAndSuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37394-4")
     CerebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37173-2")
-    CervicocerebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "30891-6"
-    )
-    CoronaryArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37174-0"
-    )
+    CervicocerebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30891-6")
+    CoronaryArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37174-0")
     CoronaryGraftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37595-6")
-    ExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "30848-6"
-    )
-    ExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("30849-4")
-    )
-    ExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37395-1"
-    )
-    ExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37949-5"
-    )
+    ExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30848-6")
+    ExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30849-4")
+    ExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37395-1")
+    ExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37949-5")
     FemoralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37175-7")
-    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37176-5")
-    )
+    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37176-5")
     GastricArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37397-7")
-    GastricArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37398-5"
-    )
-    GastricArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "38801-7"
-    )
-    GastroduodenalArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37399-3"
-    )
-    HeadArtery_BilateralAndNeckArtery_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("30822-1")
-    )
-    HeadArtery_left_NeckArtery_leftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("62448-6")
-    )
-    HeadArtery_right_NeckArtery_rightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("62449-4")
-    )
-    HeadArteryAndNeckArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "30823-9"
-    )
+    GastricArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37398-5")
+    GastricArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38801-7")
+    GastroduodenalArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37399-3")
+    HeadArtery_BilateralAndNeckArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30822-1")
+    HeadArtery_left_NeckArtery_leftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62448-6")
+    HeadArtery_right_NeckArtery_rightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62449-4")
+    HeadArteryAndNeckArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30823-9")
     HepaticArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("25076-1")
     IliacArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("43782-2")
-    IliacArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37177-3"
-    )
-    IliacArteryInternalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "24862-5"
-    )
-    IliacArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37178-1"
-    )
-    IliacArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37739-0"
-    )
-    InferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37179-9"
-    )
+    IliacArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37177-3")
+    IliacArteryInternalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24862-5")
+    IliacArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37178-1")
+    IliacArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37739-0")
+    InferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37179-9")
     KidneyArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("25079-5")
-    LowerExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37487-6"
-    )
-    LowerExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("47986-5")
-    )
-    LowerExtremityArteries_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("47987-3")
-    )
-    InternalMammaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "30829-6"
-    )
-    MammaryArtery_internal_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("64995-4")
-    )
-    MammaryArtery_internal_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("65000-2")
-    )
-    MaxillaryArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37401-7"
-    )
-    MesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "24833-6"
-    )
-    PancreaticArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "24860-9"
-    )
+    LowerExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37487-6")
+    LowerExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("47986-5")
+    LowerExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("47987-3")
+    InternalMammaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30829-6")
+    MammaryArtery_internal_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("64995-4")
+    MammaryArtery_internal_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("65000-2")
+    MaxillaryArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37401-7")
+    MesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24833-6")
+    PancreaticArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24860-9")
     PelvisArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30833-8")
-    PelvisArteriesAndLowerExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37935-4"
-    )
-    PeripheralArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "24874-0"
-    )
-    PeripheralArteries_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("44240-0")
-    )
-    PoplitealArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "69249-1"
-    )
-    PoplitealArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37181-5"
-    )
-    PoplitealArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37778-8"
-    )
-    PudendalArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37404-1"
-    )
-    PulmonaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "39057-5"
-    )
-    PulmonaryArtery_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("30830-4")
-    )
-    PulmonaryArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37182-3"
-    )
-    PulmonaryArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37779-6"
-    )
-    RenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "30834-6"
-    )
-    RenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "62446-0"
-    )
-    RenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "62447-8"
-    )
+    PelvisArteriesAndLowerExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37935-4")
+    PeripheralArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24874-0")
+    PeripheralArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("44240-0")
+    PoplitealArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("69249-1")
+    PoplitealArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37181-5")
+    PoplitealArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37778-8")
+    PudendalArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37404-1")
+    PulmonaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39057-5")
+    PulmonaryArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30830-4")
+    PulmonaryArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37182-3")
+    PulmonaryArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37779-6")
+    RenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30834-6")
+    RenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62446-0")
+    RenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62447-8")
     SpinalArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24925-0")
-    SpinalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "26082-8"
-    )
-    SpinalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "26083-6"
-    )
-    SpinalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "26084-4"
-    )
+    SpinalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26082-8")
+    SpinalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26083-6")
+    SpinalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26084-4")
     SplenicArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24992-0")
-    SplenicVeinAndPortalVeinFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "24991-2"
-    )
-    SubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37886-9"
-    )
-    SubclavianArtery_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37405-8")
-    )
-    SubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37406-6"
-    )
-    SubclavianArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37966-9"
-    )
-    SuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37180-7"
-    )
-    SuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37402-5"
-    )
+    SplenicVeinAndPortalVeinFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24991-2")
+    SubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37886-9")
+    SubclavianArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37405-8")
+    SubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37406-6")
+    SubclavianArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37966-9")
+    SuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37180-7")
+    SuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37402-5")
     ThoracicArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38119-4")
     TibialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37900-8")
-    TibioperonealArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37489-2"
-    )
-    UpperExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37977-6"
-    )
-    UpperExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37396-9")
-    )
-    UpperExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37488-4")
-    )
-    UpperExtremityArteries_RightFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37967-7")
-    )
-    UrinaryBladderArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "24576-1"
-    )
+    TibioperonealArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37489-2")
+    UpperExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37977-6")
+    UpperExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37396-9")
+    UpperExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37488-4")
+    UpperExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37967-7")
+    UrinaryBladderArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24576-1")
     UterineArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37979-2")
-    VertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = (
-        DocumentTypeValueSetCode("37407-4")
-    )
-    VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37490-0"
-    )
-    VertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
-        "37968-5"
-    )
+    VertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37407-4")
+    VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37490-0")
+    VertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37968-5")
     VesselsFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("42156-0")
-    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladder = DocumentTypeValueSetCode(
-        "25017-5"
-    )
-    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladderDuringVoiding = (
-        DocumentTypeValueSetCode("43559-4")
-    )
+    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladder = DocumentTypeValueSetCode("25017-5")
+    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladderDuringVoiding = DocumentTypeValueSetCode("43559-4")
     PenisFluoroscopyWContrastIntraCorpusCavernosum = DocumentTypeValueSetCode("37586-5")
     BreastDuctMammogramWContrastIntraDuct = DocumentTypeValueSetCode("39054-2")
-    BreastDuct_BilateralMammogramWContrastIntraDuct = DocumentTypeValueSetCode(
-        "38095-6"
-    )
+    BreastDuct_BilateralMammogramWContrastIntraDuct = DocumentTypeValueSetCode("38095-6")
     BreastDuct_LeftMammogramWContrastIntraDuct = DocumentTypeValueSetCode("38096-4")
     BreastDuct_RightMammogramWContrastIntraDuct = DocumentTypeValueSetCode("38825-6")
-    LacrimalDuctFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode(
-        "30810-6"
-    )
-    LacrimalDuct_BilateralFluoroscopyWContrastIntraLacrimalDuct = (
-        DocumentTypeValueSetCode("38098-0")
-    )
-    LacrimalDuct_LeftFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode(
-        "38099-8"
-    )
-    LacrimalDuct_RightFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode(
-        "38827-2"
-    )
+    LacrimalDuctFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("30810-6")
+    LacrimalDuct_BilateralFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("38098-0")
+    LacrimalDuct_LeftFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("38099-8")
+    LacrimalDuct_RightFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("38827-2")
     NeckFluoroscopyWContrastIntraLarynx = DocumentTypeValueSetCode("24845-0")
-    ExtremityLymphaticsFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
-        "30850-2"
-    )
-    ExtremityLymphatics_BilateralFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("30851-0")
-    )
-    ExtremityLymphatics_LeftFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("37599-8")
-    )
-    ExtremityLymphatics_RightFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("38812-4")
-    )
+    ExtremityLymphaticsFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30850-2")
+    ExtremityLymphatics_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30851-0")
+    ExtremityLymphatics_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37599-8")
+    ExtremityLymphatics_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("38812-4")
     LymphaticsFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("24827-8")
-    LymphaticsAbdominalFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
-        "30839-5"
-    )
-    LymphaticsAbdominal_BilateralFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("30840-3")
-    )
-    LymphaticsAbdominalAndLymphaticsPelvicFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("37597-2")
-    )
-    LymphaticsAbdominalAndLymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
-        "37598-0"
-    )
-    LymphaticsAbdominalAndLymphaticsPelvic_LeftFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("37596-4")
-    )
-    LymphaticsAbdominalAndLymphaticsPelvic_RightFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("38811-6")
-    )
-    Lymphatics_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
-        "37600-4"
-    )
-    LymphaticsPelvicFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
-        "39510-3"
-    )
-    LymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = (
-        DocumentTypeValueSetCode("37601-2")
-    )
-    Lymphatics_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
-        "38813-2"
-    )
+    LymphaticsAbdominalFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30839-5")
+    LymphaticsAbdominal_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30840-3")
+    LymphaticsAbdominalAndLymphaticsPelvicFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37597-2")
+    LymphaticsAbdominalAndLymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37598-0")
+    LymphaticsAbdominalAndLymphaticsPelvic_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37596-4")
+    LymphaticsAbdominalAndLymphaticsPelvic_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("38811-6")
+    Lymphatics_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37600-4")
+    LymphaticsPelvicFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("39510-3")
+    LymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37601-2")
+    Lymphatics_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("38813-2")
     BreastDuctMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode("39148-2")
-    BreastDuct_BilateralMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode(
-        "39146-6"
-    )
-    BreastDuct_LeftMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode(
-        "39145-8"
-    )
-    BreastDuct_RightMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode(
-        "39147-4"
-    )
-    PleuralSpaceFluoroscopyWContrastIntraPleuralSpace = DocumentTypeValueSetCode(
-        "24661-1"
-    )
-    ParotidGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
-        "38116-0"
-    )
-    ParotidGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
-        "38097-2"
-    )
-    ParotidGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
-        "38826-4"
-    )
-    SalivaryGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
-        "24902-9"
-    )
-    SalivaryGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = (
-        DocumentTypeValueSetCode("26067-9")
-    )
-    SalivaryGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
-        "26068-7"
-    )
-    SalivaryGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
-        "26069-5"
-    )
-    SubmandibularGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
-        "38153-3"
-    )
-    SubmandibularGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = (
-        DocumentTypeValueSetCode("48698-5")
-    )
-    SubmandibularGland_LeftFluoroscopyWContrastIntraSalivaryDuct = (
-        DocumentTypeValueSetCode("42460-6")
-    )
-    SubmandibularGland_RightFluoroscopyWContrastIntraSalivaryDuct = (
-        DocumentTypeValueSetCode("48696-9")
-    )
+    BreastDuct_BilateralMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode("39146-6")
+    BreastDuct_LeftMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode("39145-8")
+    BreastDuct_RightMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode("39147-4")
+    PleuralSpaceFluoroscopyWContrastIntraPleuralSpace = DocumentTypeValueSetCode("24661-1")
+    ParotidGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38116-0")
+    ParotidGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38097-2")
+    ParotidGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38826-4")
+    SalivaryGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("24902-9")
+    SalivaryGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("26067-9")
+    SalivaryGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("26068-7")
+    SalivaryGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("26069-5")
+    SubmandibularGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38153-3")
+    SubmandibularGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("48698-5")
+    SubmandibularGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("42460-6")
+    SubmandibularGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("48696-9")
     SinusTractFluoroscopyWContrastIntraSinusTract = DocumentTypeValueSetCode("24912-8")
     StentFluoroscopyWContrastIntraStent = DocumentTypeValueSetCode("24552-2")
     UrethraFluoroscopyWContrastIntraUrethra = DocumentTypeValueSetCode("25016-7")
-    VasDeferensFluoroscopyWContrastIntraVasDeferens = DocumentTypeValueSetCode(
-        "39151-6"
-    )
+    VasDeferensFluoroscopyWContrastIntraVasDeferens = DocumentTypeValueSetCode("39151-6")
     AnkleFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37183-1")
-    Ankle_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "37184-9"
-    )
+    Ankle_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37184-9")
     Ankle_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37185-6")
     Ankle_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37942-0")
     ElbowFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37186-4")
-    Elbow_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "37187-2"
-    )
+    Elbow_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37187-2")
     Elbow_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37188-0")
     Elbow_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37947-9")
     HipFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("24764-3")
-    Hip_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "26070-3"
-    )
+    Hip_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26070-3")
     Hip_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26071-1")
     Hip_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26072-9")
     KneeFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("24800-5")
-    Knee_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "26073-7"
-    )
+    Knee_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26073-7")
     Knee_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26074-5")
     Knee_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26075-2")
-    SacroiliacJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "37647-5"
-    )
-    SacroiliacJoint_BilateralFluoroscopyWContrastIntraarticular = (
-        DocumentTypeValueSetCode("37189-8")
-    )
-    SacroiliacJoint_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "37190-6"
-    )
-    SacroiliacJoint_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "37785-3"
-    )
+    SacroiliacJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37647-5")
+    SacroiliacJoint_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37189-8")
+    SacroiliacJoint_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37190-6")
+    SacroiliacJoint_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37785-3")
     ShoulderFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("24910-2")
-    Shoulder_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "26076-0"
-    )
-    Shoulder_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "26077-8"
-    )
-    Shoulder_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "26078-6"
-    )
-    TemporomandibularJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "37901-6"
-    )
-    TemporomandibularJoint_BilateralFluoroscopyWContrastIntraarticular = (
-        DocumentTypeValueSetCode("37409-0")
-    )
-    TemporomandibularJoint_LeftFluoroscopyWContrastIntraarticular = (
-        DocumentTypeValueSetCode("37410-8")
-    )
-    TemporomandibularJoint_RightFluoroscopyWContrastIntraarticular = (
-        DocumentTypeValueSetCode("37818-2")
-    )
+    Shoulder_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26076-0")
+    Shoulder_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26077-8")
+    Shoulder_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26078-6")
+    TemporomandibularJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37901-6")
+    TemporomandibularJoint_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37409-0")
+    TemporomandibularJoint_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37410-8")
+    TemporomandibularJoint_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37818-2")
     WristFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("25034-0")
-    Wrist_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
-        "37570-9"
-    )
+    Wrist_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37570-9")
     Wrist_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37571-7")
     Wrist_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37641-8")
     JointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37191-4")
@@ -7875,34 +5968,20 @@ class DocumentTypeValueSetCodeValues:
     SpineCervicalFluoroscopyWContrastIntradisc = DocumentTypeValueSetCode("37192-2")
     SpineLumbarFluoroscopyWContrastIntradisc = DocumentTypeValueSetCode("37193-0")
     SpineThoracicFluoroscopyWContrastIntradisc = DocumentTypeValueSetCode("70933-7")
-    UterusAndFallopianTubesFluoroscopyWContrastIntrauterine = DocumentTypeValueSetCode(
-        "25022-5"
-    )
+    UterusAndFallopianTubesFluoroscopyWContrastIntrauterine = DocumentTypeValueSetCode("25022-5")
     PosteriorFossaFluoroscopyWContrastIT = DocumentTypeValueSetCode("30811-4")
     SpineFluoroscopyWContrastIT = DocumentTypeValueSetCode("37572-5")
     SpineCervicalFluoroscopyWContrastIT = DocumentTypeValueSetCode("24947-4")
-    SpineCervicalAndSpineLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode(
-        "38103-8"
-    )
-    SpineCervicalAndThoracicAndLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode(
-        "30808-0"
-    )
+    SpineCervicalAndSpineLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode("38103-8")
+    SpineCervicalAndThoracicAndLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode("30808-0")
     Spine_epiduralSpaceFluoroscopyWContrastIT = DocumentTypeValueSetCode("38104-6")
     SpineLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode("24974-8")
     SpineThoracicFluoroscopyWContrastIT = DocumentTypeValueSetCode("24985-4")
-    AbdominalVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "69066-9"
-    )
+    AbdominalVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("69066-9")
     AdrenalVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30843-7")
-    AdrenalVeinLeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37602-0"
-    )
-    AdrenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "30844-5"
-    )
-    AdrenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37940-4"
-    )
+    AdrenalVeinLeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37602-0")
+    AdrenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30844-5")
+    AdrenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37940-4")
     AVFistulaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("58746-9")
     AVShuntFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("24569-6")
     AzygosVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37411-6")
@@ -7910,132 +5989,60 @@ class DocumentTypeValueSetCodeValues:
     CerebralVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37195-5")
     EpiduralVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30819-7")
     ExtremityVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("39055-9")
-    ExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37412-4"
-    )
-    ExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37413-2"
-    )
-    ExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37950-3"
-    )
-    ExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "42157-8"
-    )
+    ExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37412-4")
+    ExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37413-2")
+    ExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37950-3")
+    ExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("42157-8")
     FemoralVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37416-5")
     HepaticVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("39093-0")
-    InferiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37421-5"
-    )
-    IntraosseousVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37419-9"
-    )
+    InferiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37421-5")
+    IntraosseousVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37419-9")
     JugularVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37197-1")
-    JugularVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37420-7"
-    )
-    JugularVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37954-5"
-    )
+    JugularVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37420-7")
+    JugularVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37954-5")
     KidneyX_rayWContrastIV = DocumentTypeValueSetCode("37607-9")
     Kidney_BilateralX_rayWContrastIV = DocumentTypeValueSetCode("24788-2")
-    LowerExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("37414-0")
-    )
-    LowerExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37196-3"
-    )
-    LowerExtremityVeins_RightFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("37767-1")
-    )
-    LowerExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37574-1"
-    )
+    LowerExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37414-0")
+    LowerExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37196-3")
+    LowerExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37767-1")
+    LowerExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37574-1")
     OrbitVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30825-4")
-    OrbitVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37422-3"
-    )
-    OrbitVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37958-6"
-    )
-    PeripheralVeins_BilateralFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("30852-8")
-    )
-    PeripheralVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "24685-0"
-    )
+    OrbitVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37422-3")
+    OrbitVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37958-6")
+    PeripheralVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30852-8")
+    PeripheralVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("24685-0")
     PortalVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("69250-9")
     RenalVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30847-8")
-    RenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "30846-0"
-    )
+    RenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30846-0")
     RenalVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37423-1")
-    RenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37959-4"
-    )
-    SagittalSinusVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "30827-0"
-    )
-    SagittalSinusVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "65803-9"
-    )
-    SagittalSinusAndJugularVeins_LeftFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("65802-1")
-    )
-    SagittalSinusVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "65804-7"
-    )
-    SagittalSinusAndJugularVeins_RightFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("65805-4")
-    )
-    SagittalSinusAndJugularVeinsFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("30826-2")
-    )
+    RenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37959-4")
+    SagittalSinusVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30827-0")
+    SagittalSinusVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65803-9")
+    SagittalSinusAndJugularVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65802-1")
+    SagittalSinusVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65804-7")
+    SagittalSinusAndJugularVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65805-4")
+    SagittalSinusAndJugularVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30826-2")
     SinusVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37969-3")
     SplenicVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37970-1")
     SubclavianVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37971-9")
-    SuperiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "37972-7"
-    )
-    UpperExtremityVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "24550-6"
-    )
-    UpperExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("37415-7")
-    )
-    UpperExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "38859-5"
-    )
-    UpperExtremityVeins_RightFluoroscopicAngiogramWContrastIV = (
-        DocumentTypeValueSetCode("37824-0")
-    )
+    SuperiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37972-7")
+    UpperExtremityVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("24550-6")
+    UpperExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37415-7")
+    UpperExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("38859-5")
+    UpperExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37824-0")
     VeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("25023-3")
     Vein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("26064-6")
     Vein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("26065-3")
     Vein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("26066-1")
     VenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("25025-8")
-    InferiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "30845-2"
-    )
-    SuperiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
-        "30645-6"
-    )
+    InferiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30845-2")
+    SuperiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30645-6")
     Vessels_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("43554-5")
-    HepaticVeinsFluoroscopicAngiogramWContrastIVAndWHemodynamics = (
-        DocumentTypeValueSetCode("39096-3")
-    )
-    RenalVeinFluoroscopicAngiogramWContrastIVAndWReninSampling = (
-        DocumentTypeValueSetCode("43783-0")
-    )
-    RenalVein_BilateralFluoroscopicAngiogramWContrastIVAndWReninSampling = (
-        DocumentTypeValueSetCode("25080-3")
-    )
-    PeritoneumFluoroscopicAngiogramWContrastPercutaneous = DocumentTypeValueSetCode(
-        "30816-3"
-    )
-    BiliaryDuctsAndGallbladderFluoroscopyWContrastPercutaneousTranshepatic = (
-        DocumentTypeValueSetCode("24575-3")
-    )
+    HepaticVeinsFluoroscopicAngiogramWContrastIVAndWHemodynamics = DocumentTypeValueSetCode("39096-3")
+    RenalVeinFluoroscopicAngiogramWContrastIVAndWReninSampling = DocumentTypeValueSetCode("43783-0")
+    RenalVein_BilateralFluoroscopicAngiogramWContrastIVAndWReninSampling = DocumentTypeValueSetCode("25080-3")
+    PeritoneumFluoroscopicAngiogramWContrastPercutaneous = DocumentTypeValueSetCode("30816-3")
+    BiliaryDuctsAndGallbladderFluoroscopyWContrastPercutaneousTranshepatic = DocumentTypeValueSetCode("24575-3")
     ChestX_rayWContrastPO = DocumentTypeValueSetCode("37200-3")
     ChestFluoroscopyWContrastPO = DocumentTypeValueSetCode("37199-7")
     EsophagusX_rayWContrastPO = DocumentTypeValueSetCode("37198-9")
@@ -8043,60 +6050,28 @@ class DocumentTypeValueSetCodeValues:
     GallbladderX_rayWContrastPO = DocumentTypeValueSetCode("24712-2")
     GastrointestineUpperFluoroscopyWContrastPO = DocumentTypeValueSetCode("42459-8")
     SmallBowelFluoroscopyWContrastPO = DocumentTypeValueSetCode("24924-3")
-    DuodenumFluoroscopyWContrastPOAndHypotonicAgentPerNg = DocumentTypeValueSetCode(
-        "24673-6"
-    )
-    EsophagusAndHypopharynxFluoroscopyVideoWContrastPODuringSwallowing = (
-        DocumentTypeValueSetCode("24681-9")
-    )
+    DuodenumFluoroscopyWContrastPOAndHypotonicAgentPerNg = DocumentTypeValueSetCode("24673-6")
+    EsophagusAndHypopharynxFluoroscopyVideoWContrastPODuringSwallowing = DocumentTypeValueSetCode("24681-9")
     ColonFluoroscopyWContrastPR = DocumentTypeValueSetCode("24667-8")
-    RectumAndUrinaryBladderFluoroscopyWContrastPRAndIntraBladderDuringDefecationAndVoiding = DocumentTypeValueSetCode(
-        "24894-8"
-    )
+    RectumAndUrinaryBladderFluoroscopyWContrastPRAndIntraBladderDuringDefecationAndVoiding = DocumentTypeValueSetCode("24894-8")
     FistulaFluoroscopyWContrastRetrograde = DocumentTypeValueSetCode("39363-7")
     KidneyX_rayWContrastRetrograde = DocumentTypeValueSetCode("38105-3")
     Kidney_BilateralFluoroscopyWContrastRetrograde = DocumentTypeValueSetCode("39349-6")
-    Kidney_BilateralFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode(
-        "30761-1"
-    )
-    Kidney_LeftAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = (
-        DocumentTypeValueSetCode("38873-6")
-    )
-    Kidney_RightAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = (
-        DocumentTypeValueSetCode("38113-7")
-    )
-    UrinaryBladderAndUrethraFluoroscopyWContrastRetrogradeViaUrethra = (
-        DocumentTypeValueSetCode("25020-9")
-    )
-    PortalVeinFluoroscopicAngiogramWContrastTranshepatic = DocumentTypeValueSetCode(
-        "30841-1"
-    )
-    PortalVeinFluoroscopicAngiogramWContrastTranshepaticAndWHemodynamics = (
-        DocumentTypeValueSetCode("30842-9")
-    )
-    UnspecifiedBodyRegionFluoroscopyWContrastViaCatheter = DocumentTypeValueSetCode(
-        "37566-7"
-    )
+    Kidney_BilateralFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("30761-1")
+    Kidney_LeftAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("38873-6")
+    Kidney_RightAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("38113-7")
+    UrinaryBladderAndUrethraFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("25020-9")
+    PortalVeinFluoroscopicAngiogramWContrastTranshepatic = DocumentTypeValueSetCode("30841-1")
+    PortalVeinFluoroscopicAngiogramWContrastTranshepaticAndWHemodynamics = DocumentTypeValueSetCode("30842-9")
+    UnspecifiedBodyRegionFluoroscopyWContrastViaCatheter = DocumentTypeValueSetCode("37566-7")
     ColonFluoroscopyWContrastViaColostomy = DocumentTypeValueSetCode("37567-5")
-    UnspecifiedBodyRegionFluoroscopyWContrastViaFistula = DocumentTypeValueSetCode(
-        "37568-3"
-    )
+    UnspecifiedBodyRegionFluoroscopyWContrastViaFistula = DocumentTypeValueSetCode("37568-3")
     SmallBowelFluoroscopyWContrastViaIleostomy = DocumentTypeValueSetCode("69272-3")
-    Kidney_BilateralFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode(
-        "24780-9"
-    )
-    Kidney_LeftAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = (
-        DocumentTypeValueSetCode("38872-8")
-    )
-    Kidney_RightAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = (
-        DocumentTypeValueSetCode("38112-9")
-    )
-    UrinaryBladderFluoroscopyWContrastViaSuprapubicTube = DocumentTypeValueSetCode(
-        "37569-1"
-    )
-    BiliaryDuctsAndGallbladderFluoroscopyWContrastViaT_tube = DocumentTypeValueSetCode(
-        "30647-2"
-    )
+    Kidney_BilateralFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode("24780-9")
+    Kidney_LeftAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode("38872-8")
+    Kidney_RightAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode("38112-9")
+    UrinaryBladderFluoroscopyWContrastViaSuprapubicTube = DocumentTypeValueSetCode("37569-1")
+    BiliaryDuctsAndGallbladderFluoroscopyWContrastViaT_tube = DocumentTypeValueSetCode("30647-2")
     LungScanWDepreotideAndWRadionuclideIV = DocumentTypeValueSetCode("39696-0")
     HeartScanWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode("42161-0")
     HeartScanWDobutamineAndWTl_201IV = DocumentTypeValueSetCode("39652-3")
@@ -8106,16 +6081,12 @@ class DocumentTypeValueSetCodeValues:
     SpineLumbarX_rayWFlexionAndWExtension = DocumentTypeValueSetCode("24971-4")
     JointX_rayWFlexionAndWExtension = DocumentTypeValueSetCode("43481-1")
     FootX_rayWForcedDorsiflexion = DocumentTypeValueSetCode("30785-0")
-    Kidney_BilateralScanWFurosemideAndWRadionuclideIV = DocumentTypeValueSetCode(
-        "43461-3"
-    )
+    Kidney_BilateralScanWFurosemideAndWRadionuclideIV = DocumentTypeValueSetCode("43461-3")
     ScanWGA_67IV = DocumentTypeValueSetCode("39688-7")
     EsophagusFluoroscopyWGastrografinPO = DocumentTypeValueSetCode("24679-3")
     GastrointestineUpperFluoroscopyWGastrografinPO = DocumentTypeValueSetCode("42684-1")
     ColonFluoroscopyWGastrografinPR = DocumentTypeValueSetCode("42681-7")
-    UnspecifiedBodyRegionFluoroscopyWGastrografinViaFistula = DocumentTypeValueSetCode(
-        "37576-6"
-    )
+    UnspecifiedBodyRegionFluoroscopyWGastrografinViaFistula = DocumentTypeValueSetCode("37576-6")
     Kidney_BilateralScanWI_131IV = DocumentTypeValueSetCode("39850-3")
     ThyroidScanWI_131IV = DocumentTypeValueSetCode("25007-6")
     ScanWI_131MIBGIV = DocumentTypeValueSetCode("39841-2")
@@ -8127,9 +6098,7 @@ class DocumentTypeValueSetCodeValues:
     BoneScanWIn_111TaggedWBCIV = DocumentTypeValueSetCode("25032-4")
     ScanWIn_111TiuxetanIV = DocumentTypeValueSetCode("42708-8")
     ChestX_rayWInspirationAndExpiration = DocumentTypeValueSetCode("30736-3")
-    EsophagusAndHypopharynxFluoroscopyVideoWLiquidAndPasteContrastPODuringSwallowing = (
-        DocumentTypeValueSetCode("24682-7")
-    )
+    EsophagusAndHypopharynxFluoroscopyVideoWLiquidAndPasteContrastPODuringSwallowing = DocumentTypeValueSetCode("24682-7")
     AnkleX_rayWManualStress = DocumentTypeValueSetCode("37556-8")
     Ankle_BilateralX_rayWManualStress = DocumentTypeValueSetCode("37557-6")
     Ankle_LeftX_rayWManualStress = DocumentTypeValueSetCode("37558-4")
@@ -8146,12 +6115,8 @@ class DocumentTypeValueSetCodeValues:
     UnspecifiedBodyRegionX_rayWManualStress = DocumentTypeValueSetCode("39056-7")
     ChestX_rayWNippleMarkers = DocumentTypeValueSetCode("38093-1")
     LacrimalDuctScanWRadionuclideIntraLacrimalDuct = DocumentTypeValueSetCode("39670-5")
-    BreastLymphatics_LeftScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode(
-        "64051-6"
-    )
-    BreastLymphatics_RightScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode(
-        "64052-4"
-    )
+    BreastLymphatics_LeftScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode("64051-6")
+    BreastLymphatics_RightScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode("64052-4")
     LymphaticsScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode("24826-0")
     HeadCisternScanWRadionuclideIT = DocumentTypeValueSetCode("24663-7")
     AdrenalGlandScan = DocumentTypeValueSetCode("42158-6")
@@ -8188,14 +6153,10 @@ class DocumentTypeValueSetCodeValues:
     JointScan = DocumentTypeValueSetCode("39939-4")
     RectumScanWRadionuclidePO = DocumentTypeValueSetCode("39671-3")
     SpleenScanWRadionuclideTaggedHeatDamagedRBCIV = DocumentTypeValueSetCode("39752-1")
-    Kidney_BilateralScanWRadionuclideTransplantScan = DocumentTypeValueSetCode(
-        "24773-4"
-    )
+    Kidney_BilateralScanWRadionuclideTransplantScan = DocumentTypeValueSetCode("24773-4")
     SpineX_rayWRightBendingAndWLeftBending = DocumentTypeValueSetCode("30713-2")
     SpineLumbarX_rayWRightBendingAndWLeftBending = DocumentTypeValueSetCode("42413-5")
-    LiverAndBiliaryDuctsAndGallbladderScanWSincalideAndWRadionuclideIV = (
-        DocumentTypeValueSetCode("43651-9")
-    )
+    LiverAndBiliaryDuctsAndGallbladderScanWSincalideAndWRadionuclideIV = DocumentTypeValueSetCode("43651-9")
     BoneScanWSM153IV = DocumentTypeValueSetCode("39820-6")
     HeartScanWStressAndW201ThIV = DocumentTypeValueSetCode("39666-3")
     HeartScanWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39667-1")
@@ -8207,9 +6168,7 @@ class DocumentTypeValueSetCodeValues:
     Kidney_BilateralScanWTc_99mDMSAIV = DocumentTypeValueSetCode("41771-7")
     ArteryScanWTc_99mDTPAIA = DocumentTypeValueSetCode("39625-9")
     Kidney_BilateralScanWTc_99mDTPAIV = DocumentTypeValueSetCode("39745-5")
-    Kidney_BilateralAndRenalVesselsScanWTc_99mDTPAIV = DocumentTypeValueSetCode(
-        "43667-5"
-    )
+    Kidney_BilateralAndRenalVesselsScanWTc_99mDTPAIV = DocumentTypeValueSetCode("43667-5")
     ScrotumAndTesticleScanWTc_99mDTPAIV = DocumentTypeValueSetCode("39753-9")
     VeinScanWTc_99mDTPAIV = DocumentTypeValueSetCode("39765-3")
     BrainScanWTc_99mGlucoheptonateIV = DocumentTypeValueSetCode("39642-4")
@@ -8224,15 +6183,9 @@ class DocumentTypeValueSetCodeValues:
     Kidney_BilateralScanWTc_99mMertiatideIV = DocumentTypeValueSetCode("39746-3")
     ParotidGlandScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("69233-5")
     ScrotumAndTesticleScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("25001-9")
-    ScrotumAndTesticle_BilateralScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode(
-        "26091-9"
-    )
-    ScrotumAndTesticle_LeftScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode(
-        "26092-7"
-    )
-    ScrotumAndTesticle_RightScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode(
-        "26093-5"
-    )
+    ScrotumAndTesticle_BilateralScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("26091-9")
+    ScrotumAndTesticle_LeftScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("26092-7")
+    ScrotumAndTesticle_RightScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("26093-5")
     BoneMarrowScanWTc_99mSCIV = DocumentTypeValueSetCode("44146-9")
     GastrointestineScanWTc_99mSCIV = DocumentTypeValueSetCode("39689-5")
     LiverScanWTc_99mSCIV = DocumentTypeValueSetCode("69230-1")
@@ -8247,9 +6200,7 @@ class DocumentTypeValueSetCodeValues:
     ParathyroidScanWTI_201SubtractionTc_99mIV = DocumentTypeValueSetCode("24751-0")
     BrainScanWTl_201IV = DocumentTypeValueSetCode("39635-8")
     BreastScanWTl_201IV = DocumentTypeValueSetCode("51389-5")
-    GastrointestineUpperFluoroscopyWWaterSolubleContrastPO = DocumentTypeValueSetCode(
-        "42012-5"
-    )
+    GastrointestineUpperFluoroscopyWWaterSolubleContrastPO = DocumentTypeValueSetCode("42012-5")
     ColonFluoroscopyWWaterSolubleContrastPR = DocumentTypeValueSetCode("24669-4")
     AcromioclavicularJointX_rayWWeight = DocumentTypeValueSetCode("37577-4")
     AcromioclavicularJoint_BilateralX_rayWWeight = DocumentTypeValueSetCode("37578-2")
@@ -8261,39 +6212,25 @@ class DocumentTypeValueSetCodeValues:
     FetalDocumentVitalSignsMeasurements = DocumentTypeValueSetCode("46242-4")
     WorkersCompensation = DocumentTypeValueSetCode("52070-0")
     IndividualCounselingNote = DocumentTypeValueSetCode("74282-5")
-    FDAPackageInsertPMI_StopTakingAndCallYourDoctorSection = DocumentTypeValueSetCode(
-        "71683-7"
-    )
-    FDAPackageInsertPMI_TellYourDoctorBeforeTakingSection = DocumentTypeValueSetCode(
-        "71685-2"
-    )
+    FDAPackageInsertPMI_StopTakingAndCallYourDoctorSection = DocumentTypeValueSetCode("71683-7")
+    FDAPackageInsertPMI_TellYourDoctorBeforeTakingSection = DocumentTypeValueSetCode("71685-2")
     FDAPackageInsertAbuseSection = DocumentTypeValueSetCode("34086-9")
     FDAPackageInsertAccessories = DocumentTypeValueSetCode("60555-0")
     FDAPackageInsertAdverseReactionsSection = DocumentTypeValueSetCode("34084-4")
     FDAPackageInsertAlarms = DocumentTypeValueSetCode("69761-5")
     AncillaryEyeTestsNarrative = DocumentTypeValueSetCode("70946-9")
-    FDAPackageInsertAnimalPharmacology_toxicologySection = DocumentTypeValueSetCode(
-        "34091-9"
-    )
+    FDAPackageInsertAnimalPharmacology_toxicologySection = DocumentTypeValueSetCode("34091-9")
     AnnotationCommentNarrative = DocumentTypeValueSetCode("48767-8")
-    FDAPackageInsertAssemblyOrInstallationInstructions = DocumentTypeValueSetCode(
-        "60556-8"
-    )
+    FDAPackageInsertAssemblyOrInstallationInstructions = DocumentTypeValueSetCode("60556-8")
     ClinicalTrialProtocolAssessmentOfSafetySection = DocumentTypeValueSetCode("35519-8")
     ClinicalTrialProtocolAssessmentSection = DocumentTypeValueSetCode("35517-2")
-    ClinicalTrialProtocolBackgroundInformationSection = DocumentTypeValueSetCode(
-        "35511-5"
-    )
+    ClinicalTrialProtocolBackgroundInformationSection = DocumentTypeValueSetCode("35511-5")
     FDAPackageInsertBoxedWarningSection = DocumentTypeValueSetCode("34066-1")
     FDAPackageInsertCalibrationInstructions = DocumentTypeValueSetCode("60557-6")
     CancerDiagnosisNarrative = DocumentTypeValueSetCode("72135-7")
-    FDAPackageInsertCarcinogenesisAndMutagenesisAndImpairmentOfFertilitySection = (
-        DocumentTypeValueSetCode("34083-6")
-    )
+    FDAPackageInsertCarcinogenesisAndMutagenesisAndImpairmentOfFertilitySection = DocumentTypeValueSetCode("34083-6")
     FDAProductLabelCellularTherapy = DocumentTypeValueSetCode("60684-8")
-    FDAPackageInsertCleaning_Disinfecting_AndSterilizationInstructions = (
-        DocumentTypeValueSetCode("60558-4")
-    )
+    FDAPackageInsertCleaning_Disinfecting_AndSterilizationInstructions = DocumentTypeValueSetCode("60558-4")
     FDAPackageInsertClinicalPharmacologySection = DocumentTypeValueSetCode("34090-1")
     FDAPackageInsertClinicalStudiesSection = DocumentTypeValueSetCode("34092-7")
     ClinicalTrialProtocolClinicalTrialProtocol = DocumentTypeValueSetCode("35528-9")
@@ -8304,21 +6241,15 @@ class DocumentTypeValueSetCodeValues:
     FDAPackageInsertControlledSubstanceSection = DocumentTypeValueSetCode("34085-1")
     Co_paymentAmountNarrative = DocumentTypeValueSetCode("57826-0")
     DataCriteriaNarrative = DocumentTypeValueSetCode("57025-9")
-    ClinicalTrialProtocolDataHandlingAndRecordKeepingSection = DocumentTypeValueSetCode(
-        "35524-8"
-    )
+    ClinicalTrialProtocolDataHandlingAndRecordKeepingSection = DocumentTypeValueSetCode("35524-8")
     FDAPackageInsertDependenceSection = DocumentTypeValueSetCode("34087-7")
     FDAPackageInsertDescriptionSection = DocumentTypeValueSetCode("34089-3")
     FDAPackageInsertDiagramOfDevice = DocumentTypeValueSetCode("69758-1")
-    ClinicalTrialProtocolDirectAccessToSourceData_documentsSection = (
-        DocumentTypeValueSetCode("35521-4")
-    )
+    ClinicalTrialProtocolDirectAccessToSourceData_documentsSection = DocumentTypeValueSetCode("35521-4")
     FDAPackageInsertDisposalAndWasteHandling = DocumentTypeValueSetCode("69763-1")
     FDAPackageInsertDosageAndAdministrationSection = DocumentTypeValueSetCode("34068-7")
     FDAPackageInsertDosageFormsAndStrengthsSection = DocumentTypeValueSetCode("43678-2")
-    FDAPackageInsertDrug_laboratoryTestInteractionsSection = DocumentTypeValueSetCode(
-        "34074-5"
-    )
+    FDAPackageInsertDrug_laboratoryTestInteractionsSection = DocumentTypeValueSetCode("34074-5")
     FDAPackageInsertDrugAbuseAndDependenceSection = DocumentTypeValueSetCode("42227-9")
     FDAPackageInsertDrugInteractionsSection = DocumentTypeValueSetCode("34073-7")
     ClinicalTrialProtocolEfficacyAssessmentSection = DocumentTypeValueSetCode("35518-0")
@@ -8327,23 +6258,17 @@ class DocumentTypeValueSetCodeValues:
     EyeAnteriorSegmentNarrative = DocumentTypeValueSetCode("70943-6")
     EyeExternalNarrative = DocumentTypeValueSetCode("70941-0")
     EyePosteriorSegmentNarrative = DocumentTypeValueSetCode("70944-4")
-    ClinicalTrialProtocolFinancingAndInsuranceSection = DocumentTypeValueSetCode(
-        "35525-5"
-    )
+    ClinicalTrialProtocolFinancingAndInsuranceSection = DocumentTypeValueSetCode("35525-5")
     ClinicalTrialProtocolGeneralInformationSection = DocumentTypeValueSetCode("35510-7")
     FDAPackageInsertGeneralPrecautionsSection = DocumentTypeValueSetCode("34072-9")
-    FDAProductLabelGenericDrugFacilityIdentificationSubmission = (
-        DocumentTypeValueSetCode("71743-9")
-    )
+    FDAProductLabelGenericDrugFacilityIdentificationSubmission = DocumentTypeValueSetCode("71743-9")
     FDAPackageInsertGeriatricUseSection = DocumentTypeValueSetCode("34082-8")
     GoalsNarrative = DocumentTypeValueSetCode("61146-7")
     FDAPackageInsertHealthCareProviderLetter = DocumentTypeValueSetCode("71744-7")
     FDAProductLabelHealthClaimSection = DocumentTypeValueSetCode("69719-3")
     HealthQualityMeasureSupplementalDataNarrative = DocumentTypeValueSetCode("69670-8")
     FDAPackageInsertHowSuppliedSection = DocumentTypeValueSetCode("34069-5")
-    FDAProductLabelIdentificationOfCBER_regulatedGenericDrugFacility = (
-        DocumentTypeValueSetCode("72090-4")
-    )
+    FDAProductLabelIdentificationOfCBER_regulatedGenericDrugFacility = DocumentTypeValueSetCode("72090-4")
     FDAPackageInsertIndexing_AdverseReaction = DocumentTypeValueSetCode("64123-3")
     FDAPackageInsertIndexing_BillingUnit = DocumentTypeValueSetCode("71446-9")
     FDAPackageInsertIndexing_PharmacologicClass = DocumentTypeValueSetCode("60685-5")
@@ -8391,12 +6316,8 @@ class DocumentTypeValueSetCodeValues:
     FDAPackageInsertPMI_CommonSideEffectsSection = DocumentTypeValueSetCode("71681-1")
     FDAPackageInsertPMI_DirectionsForUseSection = DocumentTypeValueSetCode("71684-5")
     FDAPackageInsertPMI_DoNotTakeSection = DocumentTypeValueSetCode("71686-0")
-    FDAPackageInsertPMI_GetEmergencyMedicalHelpSection = DocumentTypeValueSetCode(
-        "71682-9"
-    )
-    FDAPackageInsertPMI_ImportantInformationSection = DocumentTypeValueSetCode(
-        "71687-8"
-    )
+    FDAPackageInsertPMI_GetEmergencyMedicalHelpSection = DocumentTypeValueSetCode("71682-9")
+    FDAPackageInsertPMI_ImportantInformationSection = DocumentTypeValueSetCode("71687-8")
     FDAPackageInsertPMI_UsesSection = DocumentTypeValueSetCode("71688-6")
     PopulationCriteriaNarrative = DocumentTypeValueSetCode("57026-7")
     PopulationStratificationDescriptionNarrative = DocumentTypeValueSetCode("69669-0")
@@ -8412,77 +6333,43 @@ class DocumentTypeValueSetCodeValues:
     ProcedureIndicationsNarrative = DocumentTypeValueSetCode("59768-2")
     ProcedureSpecimensTakenNarrative = DocumentTypeValueSetCode("59773-2")
     ClinicalTrialProtocolPublicationPolicySection = DocumentTypeValueSetCode("35526-3")
-    ClinicalTrialProtocolQualityControlAndQualityAssuranceSection = (
-        DocumentTypeValueSetCode("35522-2")
-    )
+    ClinicalTrialProtocolQualityControlAndQualityAssuranceSection = DocumentTypeValueSetCode("35522-2")
     ReasonForCo_paymentExemptionNarrative = DocumentTypeValueSetCode("57827-8")
     FDAPackageInsertRecentMajorChangesSection = DocumentTypeValueSetCode("43683-2")
     FDAPackageInsertReferencesSection = DocumentTypeValueSetCode("34093-5")
     RefractiveMeasurementsNarrative = DocumentTypeValueSetCode("70938-6")
     FDAPackageInsertRisks = DocumentTypeValueSetCode("69759-9")
-    FDAPackageInsertStructuredProductLabellingIndexingDataElementsSection = (
-        DocumentTypeValueSetCode("48779-3")
-    )
-    FDAPackageInsertStructuredProductLabellingListingDataElementsSection = (
-        DocumentTypeValueSetCode("48780-1")
-    )
-    FDAPackageInsertStructuredProductLabellingMedguideSection = (
-        DocumentTypeValueSetCode("42231-1")
-    )
-    FDAPackageInsertStructuredProductLaballingPatientPackageInsertSection = (
-        DocumentTypeValueSetCode("42230-3")
-    )
-    FDAPackageInsertStructuredProductLaballingSupplementalPatientMaterial = (
-        DocumentTypeValueSetCode("38056-8")
-    )
-    FDAPackageInsertStructuredPatientLabellingUnclassifiedSection = (
-        DocumentTypeValueSetCode("42229-5")
-    )
+    FDAPackageInsertStructuredProductLabellingIndexingDataElementsSection = DocumentTypeValueSetCode("48779-3")
+    FDAPackageInsertStructuredProductLabellingListingDataElementsSection = DocumentTypeValueSetCode("48780-1")
+    FDAPackageInsertStructuredProductLabellingMedguideSection = DocumentTypeValueSetCode("42231-1")
+    FDAPackageInsertStructuredProductLaballingPatientPackageInsertSection = DocumentTypeValueSetCode("42230-3")
+    FDAPackageInsertStructuredProductLaballingSupplementalPatientMaterial = DocumentTypeValueSetCode("38056-8")
+    FDAPackageInsertStructuredPatientLabellingUnclassifiedSection = DocumentTypeValueSetCode("42229-5")
     FDAProductLabelStatementOfIdentitySection = DocumentTypeValueSetCode("69718-5")
     ClinicalTrialProtocolStatisticsSection = DocumentTypeValueSetCode("35520-6")
     FDAPackageInsertStorageAndHandlingSection = DocumentTypeValueSetCode("44425-7")
-    ClinicalTrialProtocolSubjectParticipation_EpochsSection = DocumentTypeValueSetCode(
-        "35515-6"
-    )
-    ClinicalTrialProtocolSubjectSelectionAndWithdrawalSection = (
-        DocumentTypeValueSetCode("35514-9")
-    )
+    ClinicalTrialProtocolSubjectParticipation_EpochsSection = DocumentTypeValueSetCode("35515-6")
+    ClinicalTrialProtocolSubjectSelectionAndWithdrawalSection = DocumentTypeValueSetCode("35514-9")
     SubjectiveNarrative = DocumentTypeValueSetCode("61150-9")
     ClinicalTrialProtocolSupplementsSection = DocumentTypeValueSetCode("35527-1")
     SurgicalOperationNoteImplantsNarrative = DocumentTypeValueSetCode("55122-6")
     FDAPackageInsertTeratogenicEffectsSection = DocumentTypeValueSetCode("34077-8")
-    ClinicalTrialProtocolTreatmentOfSubjects_EpochsSection = DocumentTypeValueSetCode(
-        "35516-4"
-    )
+    ClinicalTrialProtocolTreatmentOfSubjects_EpochsSection = DocumentTypeValueSetCode("35516-4")
     ClinicalTrialProtocolTrialDesignSection = DocumentTypeValueSetCode("35513-1")
     ClinicalTrialProtocolTrialName = DocumentTypeValueSetCode("42796-3")
-    ClinicalTrialProtocolTrialObjectivesAndPurposeSection = DocumentTypeValueSetCode(
-        "35512-3"
-    )
+    ClinicalTrialProtocolTrialObjectivesAndPurposeSection = DocumentTypeValueSetCode("35512-3")
     FDAPackageInsertTroubleshooting = DocumentTypeValueSetCode("69762-3")
-    FDAPackageInsertUseInSpecificPopulationsSection = DocumentTypeValueSetCode(
-        "43684-0"
-    )
+    FDAPackageInsertUseInSpecificPopulationsSection = DocumentTypeValueSetCode("43684-0")
     FDAPackageInsertUserSafetyWarningsSection = DocumentTypeValueSetCode("54433-8")
     VisionTestingNarrative = DocumentTypeValueSetCode("70936-0")
     FDAPackageInsertWarningsAndPrecautionsSection = DocumentTypeValueSetCode("43685-7")
     FDAPackageInsertWarningsSection = DocumentTypeValueSetCode("34071-1")
-    ClinicalDocumentKindOfDocumentFromLOINCDocumentOntology = DocumentTypeValueSetCode(
-        "74477-1"
-    )
+    ClinicalDocumentKindOfDocumentFromLOINCDocumentOntology = DocumentTypeValueSetCode("74477-1")
     ClinicalDocumentRoleFromLOINCDocumentOntology = DocumentTypeValueSetCode("74479-7")
-    ClinicalDocumentSettingFromLOINCDocumentOntology = DocumentTypeValueSetCode(
-        "74476-3"
-    )
-    ClinicalDocumentSubjectMatterDomainFromLOINCDocumentOntology = (
-        DocumentTypeValueSetCode("74480-5")
-    )
-    ClinicalDocumentTypeOfServiceFromLOINCDocumentOntology = DocumentTypeValueSetCode(
-        "74478-9"
-    )
-    ContributingFactorCommunication_DocumentationMERSTH = DocumentTypeValueSetCode(
-        "42566-0"
-    )
+    ClinicalDocumentSettingFromLOINCDocumentOntology = DocumentTypeValueSetCode("74476-3")
+    ClinicalDocumentSubjectMatterDomainFromLOINCDocumentOntology = DocumentTypeValueSetCode("74480-5")
+    ClinicalDocumentTypeOfServiceFromLOINCDocumentOntology = DocumentTypeValueSetCode("74478-9")
+    ContributingFactorCommunication_DocumentationMERSTH = DocumentTypeValueSetCode("42566-0")
     SourceOfDocumentUsedToAbstractCancer = DocumentTypeValueSetCode("21862-8")
     DocumentType = DocumentTypeValueSetCode("69764-9")
     InformationSource = DocumentTypeValueSetCode("48766-0")
@@ -8491,142 +6378,52 @@ class DocumentTypeValueSetCodeValues:
     ReportTemplateSource = DocumentTypeValueSetCode("60573-3")
     ReportTemplateVersionID = DocumentTypeValueSetCode("60574-1")
     Report_sectionHeadingUnspecifiedBodyRegion = DocumentTypeValueSetCode("73983-9")
-    _11_Deoxycorticosterone_Presence_InSerumOrPlasma = DocumentTypeValueSetCode(
-        "40811-2"
-    )
+    _11_Deoxycorticosterone_Presence_InSerumOrPlasma = DocumentTypeValueSetCode("40811-2")
     PhotoDocumentationEye_Left = DocumentTypeValueSetCode("29112-0")
     PhotoDocumentationEye_Right = DocumentTypeValueSetCode("29111-2")
-    PermissionToReleaseImmunizationDataFromSchoolRecord = DocumentTypeValueSetCode(
-        "72169-6"
-    )
+    PermissionToReleaseImmunizationDataFromSchoolRecord = DocumentTypeValueSetCode("72169-6")
     SelfManagement = DocumentTypeValueSetCode("44943-9")
-    _18_Hydroxydeoxycorticosterone_Mass_volume_InSerumOrPlasma = (
-        DocumentTypeValueSetCode("11206-0")
-    )
-    _18_Hydroxydeoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode(
-        "26988-6"
-    )
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma = (
-        DocumentTypeValueSetCode("50081-9")
-    )
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = DocumentTypeValueSetCode(
-        "57553-0"
-    )
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode(
-        "57552-2"
-    )
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = (
-        DocumentTypeValueSetCode("57551-4")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InDriedBloodSpot = DocumentTypeValueSetCode(
-        "53347-1"
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma = DocumentTypeValueSetCode(
-        "1656-8"
-    )
+    _18_Hydroxydeoxycorticosterone_Mass_volume_InSerumOrPlasma = DocumentTypeValueSetCode("11206-0")
+    _18_Hydroxydeoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode("26988-6")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode("50081-9")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = DocumentTypeValueSetCode("57553-0")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode("57552-2")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = DocumentTypeValueSetCode("57551-4")
+    _11_Deoxycorticosterone_Mass_volume_InDriedBloodSpot = DocumentTypeValueSetCode("53347-1")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma = DocumentTypeValueSetCode("1656-8")
     _11_Deoxycorticosterone_Mass_volume_InUrine = DocumentTypeValueSetCode("42855-7")
-    _11_Deoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode(
-        "16110-9"
-    )
-    _11_Deoxycorticosterone_Moles_volume_In24HourUrine = DocumentTypeValueSetCode(
-        "40818-7"
-    )
-    _11_Deoxycorticosterone_Moles_volume_InDriedBloodSpot = DocumentTypeValueSetCode(
-        "53348-9"
-    )
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode(
-        "25561-2"
-    )
-    _11_Deoxycorticosterone_Moles_time_In24HourUrine = DocumentTypeValueSetCode(
-        "55808-0"
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1_5HoursPostXXXChallenge = (
-        DocumentTypeValueSetCode("56611-7")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_15MinutesPostXXXChallenge = (
-        DocumentTypeValueSetCode("56608-3")
-    )
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPost250UgCorticotropin = (
-        DocumentTypeValueSetCode("57493-9")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1HourPostXXXChallenge = (
-        DocumentTypeValueSetCode("40816-1")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1stSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("56602-6")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2_5HoursPostXXXChallenge = (
-        DocumentTypeValueSetCode("56613-3")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_20MinutesPostXXXChallenge = (
-        DocumentTypeValueSetCode("56609-1")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2HoursPostXXXChallenge = (
-        DocumentTypeValueSetCode("56612-5")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2ndSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("56603-4")
-    )
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPost250UgCorticotropin = DocumentTypeValueSetCode(
-        "57492-1"
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_30MinutesPostXXXChallenge = (
-        DocumentTypeValueSetCode("56556-4")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_3rdSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("56604-2")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_40MinutesPostXXXChallenge = (
-        DocumentTypeValueSetCode("56610-9")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_4thSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("56605-9")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_5thSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("59987-8")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_6thSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("59986-0")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_7thSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("59985-2")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_8thSpecimenPostXXXChallenge = (
-        DocumentTypeValueSetCode("59984-5")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_baseline = (
-        DocumentTypeValueSetCode("56555-6")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_postXXXChallenge = (
-        DocumentTypeValueSetCode("16294-1")
-    )
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_pre250UgCorticotropin = (
-        DocumentTypeValueSetCode("57491-3")
-    )
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_preXXXChallenge = (
-        DocumentTypeValueSetCode("56606-7")
-    )
-    _18_Hydroxydeoxycortisol_Creatinine_MassRatio_InUrine = DocumentTypeValueSetCode(
-        "13480-9"
-    )
-    Progesterone_11_Deoxycorticosterone_MassRatio_InSerumOrPlasma = (
-        DocumentTypeValueSetCode("44729-2")
-    )
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode(
-        "69799-5"
-    )
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = (
-        DocumentTypeValueSetCode("57562-1")
-    )
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode(
-        "57561-3"
-    )
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = (
-        DocumentTypeValueSetCode("57560-5")
-    )
-    PerformanceRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode(
-        "72510-1"
-    )
-    ReportingRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode(
-        "72509-3"
-    )
+    _11_Deoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode("16110-9")
+    _11_Deoxycorticosterone_Moles_volume_In24HourUrine = DocumentTypeValueSetCode("40818-7")
+    _11_Deoxycorticosterone_Moles_volume_InDriedBloodSpot = DocumentTypeValueSetCode("53348-9")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode("25561-2")
+    _11_Deoxycorticosterone_Moles_time_In24HourUrine = DocumentTypeValueSetCode("55808-0")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1_5HoursPostXXXChallenge = DocumentTypeValueSetCode("56611-7")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_15MinutesPostXXXChallenge = DocumentTypeValueSetCode("56608-3")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPost250UgCorticotropin = DocumentTypeValueSetCode("57493-9")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1HourPostXXXChallenge = DocumentTypeValueSetCode("40816-1")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1stSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56602-6")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2_5HoursPostXXXChallenge = DocumentTypeValueSetCode("56613-3")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_20MinutesPostXXXChallenge = DocumentTypeValueSetCode("56609-1")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2HoursPostXXXChallenge = DocumentTypeValueSetCode("56612-5")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2ndSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56603-4")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPost250UgCorticotropin = DocumentTypeValueSetCode("57492-1")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_30MinutesPostXXXChallenge = DocumentTypeValueSetCode("56556-4")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_3rdSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56604-2")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_40MinutesPostXXXChallenge = DocumentTypeValueSetCode("56610-9")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_4thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56605-9")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_5thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59987-8")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_6thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59986-0")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_7thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59985-2")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_8thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59984-5")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_baseline = DocumentTypeValueSetCode("56555-6")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_postXXXChallenge = DocumentTypeValueSetCode("16294-1")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_pre250UgCorticotropin = DocumentTypeValueSetCode("57491-3")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_preXXXChallenge = DocumentTypeValueSetCode("56606-7")
+    _18_Hydroxydeoxycortisol_Creatinine_MassRatio_InUrine = DocumentTypeValueSetCode("13480-9")
+    Progesterone_11_Deoxycorticosterone_MassRatio_InSerumOrPlasma = DocumentTypeValueSetCode("44729-2")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode("69799-5")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = DocumentTypeValueSetCode("57562-1")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode("57561-3")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = DocumentTypeValueSetCode("57560-5")
+    PerformanceRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode("72510-1")
+    ReportingRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode("72509-3")

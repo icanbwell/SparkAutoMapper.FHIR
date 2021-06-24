@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,21 +19,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
-
     # status (EncounterLocationStatus)
-    from spark_auto_mapper_fhir.complex_types.encounter_location_status import (
-        EncounterLocationStatus,
-    )
-
+    from spark_auto_mapper_fhir.complex_types.encounter_location_status import EncounterLocationStatus
     # physicalType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for physicalType
     from spark_auto_mapper_fhir.value_sets.location_type import LocationTypeCode
-
     # End Import for CodeableConcept for physicalType
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -38,29 +38,28 @@ class EncounterLocation(FhirBackboneElementBase):
     """
     Encounter.Location
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        location: Reference[Union[Location]],
-        status: Optional[EncounterLocationStatus] = None,
-        physicalType: Optional[CodeableConcept[LocationTypeCode]] = None,
-        period: Optional[Period] = None,
+        location: Reference [Union[Location]],
+        status: Optional[EncounterLocationStatus ] = None,
+        physicalType: Optional[CodeableConcept[LocationTypeCode] ] = None,
+        period: Optional[Period ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param location: The location where the encounter takes place.
-            :param status: The status of the participants' presence at the specified location during the
-        period specified. If the participant is no longer at the location, then the
-        period will have an end date/time.
-            :param physicalType: This will be used to specify the required levels (bed/ward/room/etc.) desired
-        to be recorded to simplify either messaging or query.
-            :param period: Time period during which the patient was present at the location.
+        :param id_: id of resource
+        :param extension: extensions
+        :param location: The location where the encounter takes place.
+        :param status: The status of the participants' presence at the specified location during the
+    period specified. If the participant is no longer at the location, then the
+    period will have an end date/time.
+        :param physicalType: This will be used to specify the required levels (bed/ward/room/etc.) desired
+    to be recorded to simplify either messaging or query.
+        :param period: Time period during which the patient was present at the location.
         """
         super().__init__(
             id_=id_,

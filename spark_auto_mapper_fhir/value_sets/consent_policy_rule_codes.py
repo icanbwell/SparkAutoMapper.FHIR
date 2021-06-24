@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,27 +21,20 @@ class ConsentPolicyRuleCodesCode(FhirValueSetBase):
     """
     ConsentPolicyRuleCodes
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
 
 class ConsentPolicyRuleCodesCodeValues:
     CommonRuleInformedConsent = ConsentPolicyRuleCodesCode("cric")
-    IllinoisConsentByMinorsToMedicalProcedures = ConsentPolicyRuleCodesCode(
-        "illinois-minor-procedure"
-    )
+    IllinoisConsentByMinorsToMedicalProcedures = ConsentPolicyRuleCodesCode("illinois-minor-procedure")
     HIPAAAuthorization = ConsentPolicyRuleCodesCode("hipaa-auth")
     HIPAANoticeOfPrivacyPractices = ConsentPolicyRuleCodesCode("hipaa-npp")
     HIPAARestrictions = ConsentPolicyRuleCodesCode("hipaa-restrictions")
     HIPAAResearchAuthorization = ConsentPolicyRuleCodesCode("hipaa-research")
     HIPAASelf_PayRestriction = ConsentPolicyRuleCodesCode("hipaa-self-pay")
-    MichiganMDHHS_5515ConsentToShareBehavioralHealthInformationForCareCoordinationPurposes = ConsentPolicyRuleCodesCode(
-        "mdhhs-5515"
-    )
-    NewYorkStateSurgicalAndInvasiveProcedureProtocol = ConsentPolicyRuleCodesCode(
-        "nyssipp"
-    )
+    MichiganMDHHS_5515ConsentToShareBehavioralHealthInformationForCareCoordinationPurposes = ConsentPolicyRuleCodesCode("mdhhs-5515")
+    NewYorkStateSurgicalAndInvasiveProcedureProtocol = ConsentPolicyRuleCodesCode("nyssipp")
     VAForm10_0484 = ConsentPolicyRuleCodesCode("va-10-0484")
     VAForm10_0485 = ConsentPolicyRuleCodesCode("va-10-0485")
     VAForm10_5345 = ConsentPolicyRuleCodesCode("va-10-5345")
@@ -46,10 +49,6 @@ class ConsentPolicyRuleCodesCodeValues:
     ATELGAOpt_inConsent = ConsentPolicyRuleCodesCode("at-elga")
     HHSNIHHIPAAResearchAuthorization = ConsentPolicyRuleCodesCode("nih-hipaa")
     NCICancerClinicalTrialConsent = ConsentPolicyRuleCodesCode("nci")
-    NIHGlobalRareDiseasePatientRegistryAndDataRepositoryConsent = (
-        ConsentPolicyRuleCodesCode("nih-grdr")
-    )
-    NIHAuthorizationForTheReleaseOfMedicalInformation = ConsentPolicyRuleCodesCode(
-        "nih-527"
-    )
+    NIHGlobalRareDiseasePatientRegistryAndDataRepositoryConsent = ConsentPolicyRuleCodesCode("nih-grdr")
+    NIHAuthorizationForTheReleaseOfMedicalInformation = ConsentPolicyRuleCodesCode("nih-527")
     PopulationOriginsAndAncestryResearchConsent = ConsentPolicyRuleCodesCode("ga4gh")

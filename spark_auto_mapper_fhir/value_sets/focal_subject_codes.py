@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class FocalSubjectCodesCode(FhirValueSetBase):
     """
     FocalSubjectCodes
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -26,23 +35,13 @@ class FocalSubjectCodesCodeValues:
     Citizenroletype = FocalSubjectCodesCode("_CitizenRoleType")
     Contactroletype = FocalSubjectCodesCode("_ContactRoleType")
     Identifiedentitytype = FocalSubjectCodesCode("_IdentifiedEntityType")
-    Livingsubjectproductionclass = FocalSubjectCodesCode(
-        "_LivingSubjectProductionClass"
-    )
-    Medicationgeneralizationroletype = FocalSubjectCodesCode(
-        "_MedicationGeneralizationRoleType"
-    )
+    Livingsubjectproductionclass = FocalSubjectCodesCode("_LivingSubjectProductionClass")
+    Medicationgeneralizationroletype = FocalSubjectCodesCode("_MedicationGeneralizationRoleType")
     Memberroletype = FocalSubjectCodesCode("_MemberRoleType")
-    Personalrelationshiproletype = FocalSubjectCodesCode(
-        "_PersonalRelationshipRoleType"
-    )
-    Policyorprogramcoverageroletype = FocalSubjectCodesCode(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    Personalrelationshiproletype = FocalSubjectCodesCode("_PersonalRelationshipRoleType")
+    Policyorprogramcoverageroletype = FocalSubjectCodesCode("_PolicyOrProgramCoverageRoleType")
     Researchsubjectrolebasis = FocalSubjectCodesCode("_ResearchSubjectRoleBasis")
-    Servicedeliverylocationroletype = FocalSubjectCodesCode(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    Servicedeliverylocationroletype = FocalSubjectCodesCode("_ServiceDeliveryLocationRoleType")
     Specimenroletype = FocalSubjectCodesCode("_SpecimenRoleType")
     Claimant = FocalSubjectCodesCode("CLAIM")
     CommunityLaboratory = FocalSubjectCodesCode("communityLaboratory")

@@ -1,8 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -13,17 +19,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # usage (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for usage
-    from spark_auto_mapper_fhir.value_sets.measure_data_usage import (
-        MeasureDataUsageCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.measure_data_usage import MeasureDataUsageCode
     # End Import for CodeableConcept for usage
     # description (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # criteria (Expression)
     from spark_auto_mapper_fhir.complex_types.expression import Expression
 
@@ -34,36 +36,35 @@ class MeasureSupplementalData(FhirBackboneElementBase):
     """
     Measure.SupplementalData
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[CodeableConcept] = None,
-        usage: Optional[FhirList[CodeableConcept[MeasureDataUsageCode]]] = None,
-        description: Optional[FhirString] = None,
-        criteria: Expression,
+        code: Optional[CodeableConcept ] = None,
+        usage: Optional[FhirList[CodeableConcept[MeasureDataUsageCode] ]] = None,
+        description: Optional[FhirString ] = None,
+        criteria: Expression ,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param code: Indicates a meaning for the supplemental data. This can be as simple as a
-        unique identifier, or it can establish meaning in a broader context by drawing
-        from a terminology, allowing supplemental data to be correlated across
-        measures.
-            :param usage: An indicator of the intended usage for the supplemental data element.
-        Supplemental data indicates the data is additional information requested to
-        augment the measure information. Risk adjustment factor indicates the data is
-        additional information used to calculate risk adjustment factors when applying
-        a risk model to the measure calculation.
-            :param description: The human readable description of this supplemental data.
-            :param criteria: The criteria for the supplemental data. This is typically the name of a valid
-        expression defined within a referenced library, but it may also be a path to a
-        specific data element. The criteria defines the data to be returned for this
-        element.
+        :param id_: id of resource
+        :param extension: extensions
+        :param code: Indicates a meaning for the supplemental data. This can be as simple as a
+    unique identifier, or it can establish meaning in a broader context by drawing
+    from a terminology, allowing supplemental data to be correlated across
+    measures.
+        :param usage: An indicator of the intended usage for the supplemental data element.
+    Supplemental data indicates the data is additional information requested to
+    augment the measure information. Risk adjustment factor indicates the data is
+    additional information used to calculate risk adjustment factors when applying
+    a risk model to the measure calculation.
+        :param description: The human readable description of this supplemental data.
+        :param criteria: The criteria for the supplemental data. This is typically the name of a valid
+    expression defined within a referenced library, but it may also be a path to a
+    specific data element. The criteria defines the data to be returned for this
+    element.
         """
         super().__init__(
             id_=id_,

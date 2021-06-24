@@ -1,11 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -17,14 +20,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
-    from spark_auto_mapper_fhir.complex_types.administrative_gender import (
-        AdministrativeGender,
-    )
+    from spark_auto_mapper_fhir.complex_types.administrative_gender import AdministrativeGender
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.address import Address
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for managingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -37,7 +37,6 @@ class Person(FhirResourceBase):
     """
     Person
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -45,33 +44,33 @@ class Person(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
-        name: Optional[FhirList[HumanName]] = None,
-        telecom: Optional[FhirList[ContactPoint]] = None,
-        gender: Optional[AdministrativeGender] = None,
-        birthDate: Optional[FhirDate] = None,
-        address: Optional[FhirList[Address]] = None,
-        photo: Optional[Attachment] = None,
-        managingOrganization: Optional[Reference[Union[Organization]]] = None,
-        active: Optional[FhirBoolean] = None,
-        link: Optional[FhirList[PersonLink]] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        name: Optional[FhirList[HumanName ]] = None,
+        telecom: Optional[FhirList[ContactPoint ]] = None,
+        gender: Optional[AdministrativeGender ] = None,
+        birthDate: Optional[FhirDate ] = None,
+        address: Optional[FhirList[Address ]] = None,
+        photo: Optional[Attachment ] = None,
+        managingOrganization: Optional[Reference [Union[Organization]]] = None,
+        active: Optional[FhirBoolean ] = None,
+        link: Optional[FhirList[PersonLink ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param identifier: Identifier for a person within a particular scope.
-            :param name: A name associated with the person.
-            :param telecom: A contact detail for the person, e.g. a telephone number or an email address.
-            :param gender: Administrative Gender.
-            :param birthDate: The birth date for the person.
-            :param address: One or more addresses for the person.
-            :param photo: An image that can be displayed as a thumbnail of the person to enhance the
-        identification of the individual.
-            :param managingOrganization: The organization that is the custodian of the person record.
-            :param active: Whether this person's record is in active use.
-            :param link: Link to a resource that concerns the same actual person.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param identifier: Identifier for a person within a particular scope.
+        :param name: A name associated with the person.
+        :param telecom: A contact detail for the person, e.g. a telephone number or an email address.
+        :param gender: Administrative Gender.
+        :param birthDate: The birth date for the person.
+        :param address: One or more addresses for the person.
+        :param photo: An image that can be displayed as a thumbnail of the person to enhance the
+    identification of the individual.
+        :param managingOrganization: The organization that is the custodian of the person record.
+        :param active: Whether this person's record is in active use.
+        :param link: Link to a resource that concerns the same actual person.
         """
         super().__init__(
             resourceType="Person",

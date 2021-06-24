@@ -1,21 +1,23 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.medicinalproductundesirableeffect import (
-    MedicinalProductUndesirableEffectSchema,
-)
+from spark_fhir_schemas.r4.resources.medicinalproductundesirableeffect import MedicinalProductUndesirableEffectSchema
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
@@ -31,7 +33,6 @@ class MedicinalProductUndesirableEffect(FhirResourceBase):
     """
     MedicinalProductUndesirableEffect
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -39,13 +40,11 @@ class MedicinalProductUndesirableEffect(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        subject: Optional[
-            FhirList[Reference[Union[MedicinalProduct, Medication]]]
-        ] = None,
-        symptomConditionEffect: Optional[CodeableConcept] = None,
-        classification: Optional[CodeableConcept] = None,
-        frequencyOfOccurrence: Optional[CodeableConcept] = None,
-        population: Optional[FhirList[Population]] = None,
+        subject: Optional[FhirList[Reference [Union[MedicinalProduct, Medication]]]] = None,
+        symptomConditionEffect: Optional[CodeableConcept ] = None,
+        classification: Optional[CodeableConcept ] = None,
+        frequencyOfOccurrence: Optional[CodeableConcept ] = None,
+        population: Optional[FhirList[Population ]] = None,
     ) -> None:
         """
 
@@ -73,6 +72,4 @@ class MedicinalProductUndesirableEffect(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MedicinalProductUndesirableEffectSchema.get_schema(
-            include_extension=include_extension
-        )
+        return MedicinalProductUndesirableEffectSchema.get_schema(include_extension=include_extension)

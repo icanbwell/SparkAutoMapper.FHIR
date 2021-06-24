@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class ParentRelationshipCodesCode(FhirValueSetBase):
     """
     ParentRelationshipCodes
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -23,23 +32,13 @@ class ParentRelationshipCodesCodeValues:
     Citizenroletype = ParentRelationshipCodesCode("_CitizenRoleType")
     Contactroletype = ParentRelationshipCodesCode("_ContactRoleType")
     Identifiedentitytype = ParentRelationshipCodesCode("_IdentifiedEntityType")
-    Livingsubjectproductionclass = ParentRelationshipCodesCode(
-        "_LivingSubjectProductionClass"
-    )
-    Medicationgeneralizationroletype = ParentRelationshipCodesCode(
-        "_MedicationGeneralizationRoleType"
-    )
+    Livingsubjectproductionclass = ParentRelationshipCodesCode("_LivingSubjectProductionClass")
+    Medicationgeneralizationroletype = ParentRelationshipCodesCode("_MedicationGeneralizationRoleType")
     Memberroletype = ParentRelationshipCodesCode("_MemberRoleType")
-    Personalrelationshiproletype = ParentRelationshipCodesCode(
-        "_PersonalRelationshipRoleType"
-    )
-    Policyorprogramcoverageroletype = ParentRelationshipCodesCode(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    Personalrelationshiproletype = ParentRelationshipCodesCode("_PersonalRelationshipRoleType")
+    Policyorprogramcoverageroletype = ParentRelationshipCodesCode("_PolicyOrProgramCoverageRoleType")
     Researchsubjectrolebasis = ParentRelationshipCodesCode("_ResearchSubjectRoleBasis")
-    Servicedeliverylocationroletype = ParentRelationshipCodesCode(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    Servicedeliverylocationroletype = ParentRelationshipCodesCode("_ServiceDeliveryLocationRoleType")
     Specimenroletype = ParentRelationshipCodesCode("_SpecimenRoleType")
     Claimant = ParentRelationshipCodesCode("CLAIM")
     CommunityLaboratory = ParentRelationshipCodesCode("communityLaboratory")
@@ -66,23 +65,13 @@ class ParentRelationshipCodesCodeValues:
     Citizenroletype = ParentRelationshipCodesCode("_CitizenRoleType")
     Contactroletype = ParentRelationshipCodesCode("_ContactRoleType")
     Identifiedentitytype = ParentRelationshipCodesCode("_IdentifiedEntityType")
-    Livingsubjectproductionclass = ParentRelationshipCodesCode(
-        "_LivingSubjectProductionClass"
-    )
-    Medicationgeneralizationroletype = ParentRelationshipCodesCode(
-        "_MedicationGeneralizationRoleType"
-    )
+    Livingsubjectproductionclass = ParentRelationshipCodesCode("_LivingSubjectProductionClass")
+    Medicationgeneralizationroletype = ParentRelationshipCodesCode("_MedicationGeneralizationRoleType")
     Memberroletype = ParentRelationshipCodesCode("_MemberRoleType")
-    Personalrelationshiproletype = ParentRelationshipCodesCode(
-        "_PersonalRelationshipRoleType"
-    )
-    Policyorprogramcoverageroletype = ParentRelationshipCodesCode(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    Personalrelationshiproletype = ParentRelationshipCodesCode("_PersonalRelationshipRoleType")
+    Policyorprogramcoverageroletype = ParentRelationshipCodesCode("_PolicyOrProgramCoverageRoleType")
     Researchsubjectrolebasis = ParentRelationshipCodesCode("_ResearchSubjectRoleBasis")
-    Servicedeliverylocationroletype = ParentRelationshipCodesCode(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    Servicedeliverylocationroletype = ParentRelationshipCodesCode("_ServiceDeliveryLocationRoleType")
     Specimenroletype = ParentRelationshipCodesCode("_SpecimenRoleType")
     Claimant = ParentRelationshipCodesCode("CLAIM")
     CommunityLaboratory = ParentRelationshipCodesCode("communityLaboratory")

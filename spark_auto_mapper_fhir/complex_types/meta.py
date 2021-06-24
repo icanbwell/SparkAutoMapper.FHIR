@@ -1,7 +1,13 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -13,18 +19,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
     from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # Import for CodeableConcept for security
-    from spark_auto_mapper_fhir.value_sets.all_security_labels import (
-        AllSecurityLabelsCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.all_security_labels import AllSecurityLabelsCode
     # End Import for CodeableConcept for security
     from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # Import for CodeableConcept for tag
     from spark_auto_mapper_fhir.value_sets.common_tags import CommonTagsCode
-
     # End Import for CodeableConcept for tag
 
 
@@ -34,7 +34,6 @@ class Meta(FhirComplexTypeBase):
     """
     Meta
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -42,33 +41,33 @@ class Meta(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        versionId: Optional[id] = None,
-        lastUpdated: Optional[instant] = None,
-        source: Optional[uri] = None,
-        profile: Optional[FhirList[canonical]] = None,
-        security: Optional[FhirList[Coding[AllSecurityLabelsCode]]] = None,
-        tag: Optional[FhirList[Coding[CommonTagsCode]]] = None,
+        versionId: Optional[id ] = None,
+        lastUpdated: Optional[instant ] = None,
+        source: Optional[uri ] = None,
+        profile: Optional[FhirList[canonical ]] = None,
+        security: Optional[FhirList[Coding[AllSecurityLabelsCode] ]] = None,
+        tag: Optional[FhirList[Coding[CommonTagsCode] ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param versionId: The version specific identifier, as it appears in the version portion of the
-        URL. This value changes when the resource is created, updated, or deleted.
-            :param lastUpdated: When the resource last changed - e.g. when the version changed.
-            :param source: A uri that identifies the source system of the resource. This provides a
-        minimal amount of [[[Provenance]]] information that can be used to track or
-        differentiate the source of information in the resource. The source may
-        identify another FHIR server, document, message, database, etc.
-            :param profile: A list of profiles (references to [[[StructureDefinition]]] resources) that
-        this resource claims to conform to. The URL is a reference to
-        [[[StructureDefinition.url]]].
-            :param security: Security labels applied to this resource. These tags connect specific
-        resources to the overall security policy and infrastructure.
-            :param tag: Tags applied to this resource. Tags are intended to be used to identify and
-        relate resources to process and workflow, and applications are not required to
-        consider the tags when interpreting the meaning of a resource.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param versionId: The version specific identifier, as it appears in the version portion of the
+    URL. This value changes when the resource is created, updated, or deleted.
+        :param lastUpdated: When the resource last changed - e.g. when the version changed.
+        :param source: A uri that identifies the source system of the resource. This provides a
+    minimal amount of [[[Provenance]]] information that can be used to track or
+    differentiate the source of information in the resource. The source may
+    identify another FHIR server, document, message, database, etc.
+        :param profile: A list of profiles (references to [[[StructureDefinition]]] resources) that
+    this resource claims to conform to. The URL is a reference to
+    [[[StructureDefinition.url]]].
+        :param security: Security labels applied to this resource. These tags connect specific
+    resources to the overall security policy and infrastructure.
+        :param tag: Tags applied to this resource. Tags are intended to be used to identify and
+    relate resources to process and workflow, and applications are not required to
+    consider the tags when interpreting the meaning of a resource.
         """
         super().__init__(
             id_=id_,

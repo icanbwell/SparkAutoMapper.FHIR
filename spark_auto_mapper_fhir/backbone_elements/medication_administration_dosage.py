@@ -1,8 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,33 +18,21 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # text (string)
-    pass
+    from spark_auto_mapper_fhir.complex_types.string import string
     # site (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for site
-    from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import (
-        SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode
     # End Import for CodeableConcept for site
     # route (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for route
-    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
-        SNOMEDCTRouteCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import SNOMEDCTRouteCodesCode
     # End Import for CodeableConcept for route
     # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import (
-        SNOMEDCTAdministrationMethodCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import SNOMEDCTAdministrationMethodCodesCode
     # End Import for CodeableConcept for method
     # dose (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
@@ -50,43 +44,40 @@ class MedicationAdministrationDosage(FhirBackboneElementBase):
     """
     MedicationAdministration.Dosage
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        text: Optional[FhirString] = None,
-        site: Optional[
-            CodeableConcept[SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode]
-        ] = None,
-        route: Optional[CodeableConcept[SNOMEDCTRouteCodesCode]] = None,
-        method: Optional[CodeableConcept[SNOMEDCTAdministrationMethodCodesCode]] = None,
-        dose: Optional[Quantity] = None,
+        text: Optional[FhirString ] = None,
+        site: Optional[CodeableConcept[SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode] ] = None,
+        route: Optional[CodeableConcept[SNOMEDCTRouteCodesCode] ] = None,
+        method: Optional[CodeableConcept[SNOMEDCTAdministrationMethodCodesCode] ] = None,
+        dose: Optional[Quantity ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param text: Free text dosage can be used for cases where the dosage administered is too
-        complex to code. When coded dosage is present, the free text dosage may still
-        be present for display to humans.
-
-        The dosage instructions should reflect the dosage of the medication that was
-        administered.
-            :param site: A coded specification of the anatomic site where the medication first entered
-        the body.  For example, "left arm".
-            :param route: A code specifying the route or physiological path of administration of a
-        therapeutic agent into or onto the patient.  For example, topical,
-        intravenous, etc.
-            :param method: A coded value indicating the method by which the medication is intended to be
-        or was introduced into or on the body.  This attribute will most often NOT be
-        populated.  It is most commonly used for injections.  For example, Slow Push,
-        Deep IV.
-            :param dose: The amount of the medication given at one administration event.   Use this
-        value when the administration is essentially an instantaneous event such as a
-        swallowing a tablet or giving an injection.
+        :param id_: id of resource
+        :param extension: extensions
+        :param text: Free text dosage can be used for cases where the dosage administered is too
+    complex to code. When coded dosage is present, the free text dosage may still
+    be present for display to humans.
+    
+    The dosage instructions should reflect the dosage of the medication that was
+    administered.
+        :param site: A coded specification of the anatomic site where the medication first entered
+    the body.  For example, "left arm".
+        :param route: A code specifying the route or physiological path of administration of a
+    therapeutic agent into or onto the patient.  For example, topical,
+    intravenous, etc.
+        :param method: A coded value indicating the method by which the medication is intended to be
+    or was introduced into or on the body.  This attribute will most often NOT be
+    populated.  It is most commonly used for injections.  For example, Slow Push,
+    Deep IV.
+        :param dose: The amount of the medication given at one administration event.   Use this
+    value when the administration is essentially an instantaneous event such as a
+    swallowing a tablet or giving an injection.
         """
         super().__init__(
             id_=id_,

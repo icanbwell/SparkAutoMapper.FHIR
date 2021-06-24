@@ -1,9 +1,13 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -15,25 +19,23 @@ from spark_fhir_schemas.r4.resources.media import MediaSchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.event_status import EventStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.media_type import MediaTypeCode
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.value_sets.media_modality import MediaModalityCode
-
     # End Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -43,12 +45,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.specimen import Specimen
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.instant import instant
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for operator
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -58,24 +58,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import (
-        ProcedureReasonCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import ProcedureReasonCodesCode
     # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
-        SNOMEDCTBodyStructuresCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import SNOMEDCTBodyStructuresCode
     # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.device_metric import DeviceMetric
@@ -94,7 +85,6 @@ class Media(FhirResourceBase):
     """
     Media
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -102,94 +92,68 @@ class Media(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
-        basedOn: Optional[FhirList[Reference[Union[ServiceRequest, CarePlan]]]] = None,
-        partOf: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        status: EventStatus,
-        type_: Optional[CodeableConcept] = None,
-        modality: Optional[CodeableConcept[MediaModalityCode]] = None,
-        view: Optional[CodeableConcept] = None,
-        subject: Optional[
-            Reference[
-                Union[
-                    Patient,
-                    Practitioner,
-                    PractitionerRole,
-                    Group,
-                    Device,
-                    Specimen,
-                    Location,
-                ]
-            ]
-        ] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
-        issued: Optional[instant] = None,
-        operator: Optional[
-            Reference[
-                Union[
-                    Practitioner,
-                    PractitionerRole,
-                    Organization,
-                    CareTeam,
-                    Patient,
-                    Device,
-                    RelatedPerson,
-                ]
-            ]
-        ] = None,
-        reasonCode: Optional[
-            FhirList[CodeableConcept[ProcedureReasonCodesCode]]
-        ] = None,
-        bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
-        deviceName: Optional[FhirString] = None,
-        device: Optional[Reference[Union[Device, DeviceMetric, Device]]] = None,
-        height: Optional[positiveInt] = None,
-        width: Optional[positiveInt] = None,
-        frames: Optional[positiveInt] = None,
-        duration: Optional[decimal] = None,
-        content: Attachment,
-        note: Optional[FhirList[Annotation]] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        basedOn: Optional[FhirList[Reference [Union[ServiceRequest, CarePlan]]]] = None,
+        partOf: Optional[FhirList[Reference [Union[Resource]]]] = None,
+        status: EventStatus ,
+        type_: Optional[CodeableConcept[MediaTypeCode] ] = None,
+        modality: Optional[CodeableConcept[MediaModalityCode] ] = None,
+        view: Optional[CodeableConcept ] = None,
+        subject: Optional[Reference [Union[Patient, Practitioner, PractitionerRole, Group, Device, Specimen, Location]]] = None,
+        encounter: Optional[Reference [Union[Encounter]]] = None,
+        issued: Optional[instant ] = None,
+        operator: Optional[Reference [Union[Practitioner, PractitionerRole, Organization, CareTeam, Patient, Device, RelatedPerson]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCodesCode] ]] = None,
+        bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode] ] = None,
+        deviceName: Optional[FhirString ] = None,
+        device: Optional[Reference [Union[Device, DeviceMetric, Device]]] = None,
+        height: Optional[positiveInt ] = None,
+        width: Optional[positiveInt ] = None,
+        frames: Optional[positiveInt ] = None,
+        duration: Optional[decimal ] = None,
+        content: Attachment ,
+        note: Optional[FhirList[Annotation ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param identifier: Identifiers associated with the image - these may include identifiers for the
-        image itself, identifiers for the context of its collection (e.g. series ids)
-        and context ids such as accession numbers or other workflow identifiers.
-            :param basedOn: A procedure that is fulfilled in whole or in part by the creation of this
-        media.
-            :param partOf: A larger event of which this particular event is a component or step.
-            :param status: The current state of the {{title}}.
-            :param type_: A code that classifies whether the media is an image, video or audio recording
-        or some other media category.
-            :param modality: Details of the type of the media - usually, how it was acquired (what type of
-        device). If images sourced from a DICOM system, are wrapped in a Media
-        resource, then this is the modality.
-            :param view: The name of the imaging view e.g. Lateral or Antero-posterior (AP).
-            :param subject: Who/What this Media is a record of.
-            :param encounter: The encounter that establishes the context for this media.
-            :param issued: The date and time this version of the media was made available to providers,
-        typically after having been reviewed.
-            :param operator: The person who administered the collection of the image.
-            :param reasonCode: Describes why the event occurred in coded or textual form.
-            :param bodySite: Indicates the site on the subject's body where the observation was made (i.e.
-        the target site).
-            :param deviceName: The name of the device / manufacturer of the device  that was used to make the
-        recording.
-            :param device: The device used to collect the media.
-            :param height: Height of the image in pixels (photo/video).
-            :param width: Width of the image in pixels (photo/video).
-            :param frames: The number of frames in a photo. This is used with a multi-page fax, or an
-        imaging acquisition context that takes multiple slices in a single image, or
-        an animated gif. If there is more than one frame, this SHALL have a value in
-        order to alert interface software that a multi-frame capable rendering widget
-        is required.
-            :param duration: The duration of the recording in seconds - for audio and video.
-            :param content: The actual content of the media - inline or by direct reference to the media
-        source file.
-            :param note: Comments made about the media by the performer, subject or other participants.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param identifier: Identifiers associated with the image - these may include identifiers for the
+    image itself, identifiers for the context of its collection (e.g. series ids)
+    and context ids such as accession numbers or other workflow identifiers.
+        :param basedOn: A procedure that is fulfilled in whole or in part by the creation of this
+    media.
+        :param partOf: A larger event of which this particular event is a component or step.
+        :param status: The current state of the {{title}}.
+        :param type_: A code that classifies whether the media is an image, video or audio recording
+    or some other media category.
+        :param modality: Details of the type of the media - usually, how it was acquired (what type of
+    device). If images sourced from a DICOM system, are wrapped in a Media
+    resource, then this is the modality.
+        :param view: The name of the imaging view e.g. Lateral or Antero-posterior (AP).
+        :param subject: Who/What this Media is a record of.
+        :param encounter: The encounter that establishes the context for this media.
+        :param issued: The date and time this version of the media was made available to providers,
+    typically after having been reviewed.
+        :param operator: The person who administered the collection of the image.
+        :param reasonCode: Describes why the event occurred in coded or textual form.
+        :param bodySite: Indicates the site on the subject's body where the observation was made (i.e.
+    the target site).
+        :param deviceName: The name of the device / manufacturer of the device  that was used to make the
+    recording.
+        :param device: The device used to collect the media.
+        :param height: Height of the image in pixels (photo/video).
+        :param width: Width of the image in pixels (photo/video).
+        :param frames: The number of frames in a photo. This is used with a multi-page fax, or an
+    imaging acquisition context that takes multiple slices in a single image, or
+    an animated gif. If there is more than one frame, this SHALL have a value in
+    order to alert interface software that a multi-frame capable rendering widget
+    is required.
+        :param duration: The duration of the recording in seconds - for audio and video.
+        :param content: The actual content of the media - inline or by direct reference to the media
+    source file.
+        :param note: Comments made about the media by the performer, subject or other participants.
         """
         super().__init__(
             resourceType="Media",

@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,112 +19,71 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # careTeamSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # diagnosisSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # procedureSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # informationSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # revenue (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for revenue
-    from spark_auto_mapper_fhir.value_sets.example_revenue_center_codes import (
-        ExampleRevenueCenterCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.example_revenue_center_codes import ExampleRevenueCenterCodesCode
     # End Import for CodeableConcept for revenue
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
-        BenefitCategoryCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import BenefitCategoryCodesCode
     # End Import for CodeableConcept for category
     # productOrService (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodesCode
-
     # End Import for CodeableConcept for productOrService
     # modifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
-        ModifierTypeCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodesCode
     # End Import for CodeableConcept for modifier
     # programCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for programCode
-    from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import (
-        ExampleProgramReasonCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import ExampleProgramReasonCodesCode
     # End Import for CodeableConcept for programCode
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # unitPrice (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
-
     # factor (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # net (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
-
     # udi (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for udi
     from spark_auto_mapper_fhir.resources.device import Device
-
     # bodySite (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.value_sets.oral_site_codes import OralSiteCodesCode
-
     # End Import for CodeableConcept for bodySite
     # subSite (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for subSite
     from spark_auto_mapper_fhir.value_sets.surface_codes import SurfaceCodesCode
-
     # End Import for CodeableConcept for subSite
     # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
-
     # noteNumber (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # adjudication (ExplanationOfBenefit.Adjudication)
-    from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_adjudication import (
-        ExplanationOfBenefitAdjudication,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_adjudication import ExplanationOfBenefitAdjudication
     # detail (ExplanationOfBenefit.Detail)
-    from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_detail import (
-        ExplanationOfBenefitDetail,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_detail import ExplanationOfBenefitDetail
 
 
 # This file is auto-generated by generate_classes so do not edit manually
@@ -126,75 +92,72 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
     """
     ExplanationOfBenefit.Item
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: positiveInt,
-        careTeamSequence: Optional[FhirList[positiveInt]] = None,
-        diagnosisSequence: Optional[FhirList[positiveInt]] = None,
-        procedureSequence: Optional[FhirList[positiveInt]] = None,
-        informationSequence: Optional[FhirList[positiveInt]] = None,
-        revenue: Optional[CodeableConcept[ExampleRevenueCenterCodesCode]] = None,
-        category: Optional[CodeableConcept[BenefitCategoryCodesCode]] = None,
-        productOrService: CodeableConcept[USCLSCodesCode],
-        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode]]] = None,
-        programCode: Optional[
-            FhirList[CodeableConcept[ExampleProgramReasonCodesCode]]
-        ] = None,
-        quantity: Optional[Quantity] = None,
-        unitPrice: Optional[Money] = None,
-        factor: Optional[decimal] = None,
-        net: Optional[Money] = None,
-        udi: Optional[FhirList[Reference[Union[Device]]]] = None,
-        bodySite: Optional[CodeableConcept[OralSiteCodesCode]] = None,
-        subSite: Optional[FhirList[CodeableConcept[SurfaceCodesCode]]] = None,
-        encounter: Optional[FhirList[Reference[Union[Encounter]]]] = None,
-        noteNumber: Optional[FhirList[positiveInt]] = None,
-        adjudication: Optional[FhirList[ExplanationOfBenefitAdjudication]] = None,
-        detail: Optional[FhirList[ExplanationOfBenefitDetail]] = None,
+        sequence: positiveInt ,
+        careTeamSequence: Optional[FhirList[positiveInt ]] = None,
+        diagnosisSequence: Optional[FhirList[positiveInt ]] = None,
+        procedureSequence: Optional[FhirList[positiveInt ]] = None,
+        informationSequence: Optional[FhirList[positiveInt ]] = None,
+        revenue: Optional[CodeableConcept[ExampleRevenueCenterCodesCode] ] = None,
+        category: Optional[CodeableConcept[BenefitCategoryCodesCode] ] = None,
+        productOrService: CodeableConcept[USCLSCodesCode] ,
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode] ]] = None,
+        programCode: Optional[FhirList[CodeableConcept[ExampleProgramReasonCodesCode] ]] = None,
+        quantity: Optional[Quantity ] = None,
+        unitPrice: Optional[Money ] = None,
+        factor: Optional[decimal ] = None,
+        net: Optional[Money ] = None,
+        udi: Optional[FhirList[Reference [Union[Device]]]] = None,
+        bodySite: Optional[CodeableConcept[OralSiteCodesCode] ] = None,
+        subSite: Optional[FhirList[CodeableConcept[SurfaceCodesCode] ]] = None,
+        encounter: Optional[FhirList[Reference [Union[Encounter]]]] = None,
+        noteNumber: Optional[FhirList[positiveInt ]] = None,
+        adjudication: Optional[FhirList[ExplanationOfBenefitAdjudication ]] = None,
+        detail: Optional[FhirList[ExplanationOfBenefitDetail ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param sequence: A number to uniquely identify item entries.
-            :param careTeamSequence: Care team members related to this service or product.
-            :param diagnosisSequence: Diagnoses applicable for this service or product.
-            :param procedureSequence: Procedures applicable for this service or product.
-            :param informationSequence: Exceptions, special conditions and supporting information applicable for this
-        service or product.
-            :param revenue: The type of revenue or cost center providing the product and/or service.
-            :param category: Code to identify the general type of benefits under which products and
-        services are provided.
-            :param productOrService: When the value is a group code then this item collects a set of related claim
-        details, otherwise this contains the product, service, drug or other billing
-        code for the item.
-            :param modifier: Item typification or modifiers codes to convey additional context for the
-        product or service.
-            :param programCode: Identifies the program under which this may be recovered.
-            :param quantity: The number of repetitions of a service or product.
-            :param unitPrice: If the item is not a group then this is the fee for the product or service,
-        otherwise this is the total of the fees for the details of the group.
-            :param factor: A real number that represents a multiplier used in determining the overall
-        value of services delivered and/or goods received. The concept of a Factor
-        allows for a discount or surcharge multiplier to be applied to a monetary
-        amount.
-            :param net: The quantity times the unit price for an additional service or product or
-        charge.
-            :param udi: Unique Device Identifiers associated with this line item.
-            :param bodySite: Physical service site on the patient (limb, tooth, etc.).
-            :param subSite: A region or surface of the bodySite, e.g. limb region or tooth surface(s).
-            :param encounter: A billed item may include goods or services provided in multiple encounters.
-            :param noteNumber: The numbers associated with notes below which apply to the adjudication of
-        this item.
-            :param adjudication: If this item is a group then the values here are a summary of the adjudication
-        of the detail items. If this item is a simple product or service then this is
-        the result of the adjudication of this item.
-            :param detail: Second-tier of goods and services.
+        :param id_: id of resource
+        :param extension: extensions
+        :param sequence: A number to uniquely identify item entries.
+        :param careTeamSequence: Care team members related to this service or product.
+        :param diagnosisSequence: Diagnoses applicable for this service or product.
+        :param procedureSequence: Procedures applicable for this service or product.
+        :param informationSequence: Exceptions, special conditions and supporting information applicable for this
+    service or product.
+        :param revenue: The type of revenue or cost center providing the product and/or service.
+        :param category: Code to identify the general type of benefits under which products and
+    services are provided.
+        :param productOrService: When the value is a group code then this item collects a set of related claim
+    details, otherwise this contains the product, service, drug or other billing
+    code for the item.
+        :param modifier: Item typification or modifiers codes to convey additional context for the
+    product or service.
+        :param programCode: Identifies the program under which this may be recovered.
+        :param quantity: The number of repetitions of a service or product.
+        :param unitPrice: If the item is not a group then this is the fee for the product or service,
+    otherwise this is the total of the fees for the details of the group.
+        :param factor: A real number that represents a multiplier used in determining the overall
+    value of services delivered and/or goods received. The concept of a Factor
+    allows for a discount or surcharge multiplier to be applied to a monetary
+    amount.
+        :param net: The quantity times the unit price for an additional service or product or
+    charge.
+        :param udi: Unique Device Identifiers associated with this line item.
+        :param bodySite: Physical service site on the patient (limb, tooth, etc.).
+        :param subSite: A region or surface of the bodySite, e.g. limb region or tooth surface(s).
+        :param encounter: A billed item may include goods or services provided in multiple encounters.
+        :param noteNumber: The numbers associated with notes below which apply to the adjudication of
+    this item.
+        :param adjudication: If this item is a group then the values here are a summary of the adjudication
+    of the detail items. If this item is a simple product or service then this is
+    the result of the adjudication of this item.
+        :param detail: Second-tier of goods and services.
         """
         super().__init__(
             id_=id_,

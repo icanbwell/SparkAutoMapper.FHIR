@@ -1,9 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -14,35 +19,28 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # issued (dateTime)
+    from spark_auto_mapper_fhir.complex_types.date_time import dateTime
     # applies (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
-
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.contract_term_type_codes import ContractTermTypeCodesCode
+    # End Import for CodeableConcept for type_
     # subType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for subType
-    from spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes import (
-        ContractTermSubtypeCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes import ContractTermSubtypeCodesCode
     # End Import for CodeableConcept for subType
     # text (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # securityLabel (Contract.SecurityLabel)
-    from spark_auto_mapper_fhir.backbone_elements.contract_security_label import (
-        ContractSecurityLabel,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.contract_security_label import ContractSecurityLabel
     # offer (Contract.Offer)
     from spark_auto_mapper_fhir.backbone_elements.contract_offer import ContractOffer
-
     # asset (Contract.Asset)
     from spark_auto_mapper_fhir.backbone_elements.contract_asset import ContractAsset
-
     # action (Contract.Action)
     from spark_auto_mapper_fhir.backbone_elements.contract_action import ContractAction
 
@@ -53,45 +51,44 @@ class ContractTerm(FhirBackboneElementBase):
     """
     Contract.Term
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[Identifier] = None,
-        issued: Optional[FhirDateTime] = None,
-        applies: Optional[Period] = None,
-        type_: Optional[CodeableConcept] = None,
-        subType: Optional[CodeableConcept[ContractTermSubtypeCodesCode]] = None,
-        text: Optional[FhirString] = None,
-        securityLabel: Optional[FhirList[ContractSecurityLabel]] = None,
-        offer: ContractOffer,
-        asset: Optional[FhirList[ContractAsset]] = None,
-        action: Optional[FhirList[ContractAction]] = None,
-        group: Optional[FhirList[ContractTerm]] = None,
+        identifier: Optional[Identifier ] = None,
+        issued: Optional[FhirDateTime ] = None,
+        applies: Optional[Period ] = None,
+        type_: Optional[CodeableConcept[ContractTermTypeCodesCode] ] = None,
+        subType: Optional[CodeableConcept[ContractTermSubtypeCodesCode] ] = None,
+        text: Optional[FhirString ] = None,
+        securityLabel: Optional[FhirList[ContractSecurityLabel ]] = None,
+        offer: ContractOffer ,
+        asset: Optional[FhirList[ContractAsset ]] = None,
+        action: Optional[FhirList[ContractAction ]] = None,
+        group: Optional[FhirList[ContractTerm ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param identifier: Unique identifier for this particular Contract Provision.
-            :param issued: When this Contract Provision was issued.
-            :param applies: Relevant time or time-period when this Contract Provision is applicable.
-            :param type_: A legal clause or condition contained within a contract that requires one or
-        both parties to perform a particular requirement by some specified time or
-        prevents one or both parties from performing a particular requirement by some
-        specified time.
-            :param subType: A specialized legal clause or condition based on overarching contract type.
-            :param text: Statement of a provision in a policy or a contract.
-            :param securityLabel: Security labels that protect the handling of information about the term and
-        its elements, which may be specifically identified..
-            :param offer: The matter of concern in the context of this provision of the agrement.
-            :param asset: Contract Term Asset List.
-            :param action: An actor taking a role in an activity for which it can be assigned some degree
-        of responsibility for the activity taking place.
-            :param group: Nested group of Contract Provisions.
+        :param id_: id of resource
+        :param extension: extensions
+        :param identifier: Unique identifier for this particular Contract Provision.
+        :param issued: When this Contract Provision was issued.
+        :param applies: Relevant time or time-period when this Contract Provision is applicable.
+        :param type_: A legal clause or condition contained within a contract that requires one or
+    both parties to perform a particular requirement by some specified time or
+    prevents one or both parties from performing a particular requirement by some
+    specified time.
+        :param subType: A specialized legal clause or condition based on overarching contract type.
+        :param text: Statement of a provision in a policy or a contract.
+        :param securityLabel: Security labels that protect the handling of information about the term and
+    its elements, which may be specifically identified..
+        :param offer: The matter of concern in the context of this provision of the agrement.
+        :param asset: Contract Term Asset List.
+        :param action: An actor taking a role in an activity for which it can be assigned some degree
+    of responsibility for the activity taking place.
+        :param group: Nested group of Contract Provisions.
         """
         super().__init__(
             id_=id_,

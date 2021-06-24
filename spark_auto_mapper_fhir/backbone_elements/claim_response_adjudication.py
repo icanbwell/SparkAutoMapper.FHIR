@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,25 +19,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.adjudication_value_codes import (
-        AdjudicationValueCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.adjudication_value_codes import AdjudicationValueCodesCode
     # End Import for CodeableConcept for category
     # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.adjudication_reason_codes import (
-        AdjudicationReasonCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.adjudication_reason_codes import AdjudicationReasonCodesCode
     # End Import for CodeableConcept for reason
     # amount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
-
     # value (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
@@ -41,32 +39,31 @@ class ClaimResponseAdjudication(FhirBackboneElementBase):
     """
     ClaimResponse.Adjudication
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: CodeableConcept[AdjudicationValueCodesCode],
-        reason: Optional[CodeableConcept[AdjudicationReasonCodesCode]] = None,
-        amount: Optional[Money] = None,
-        value: Optional[decimal] = None,
+        category: CodeableConcept[AdjudicationValueCodesCode] ,
+        reason: Optional[CodeableConcept[AdjudicationReasonCodesCode] ] = None,
+        amount: Optional[Money ] = None,
+        value: Optional[decimal ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param category: A code to indicate the information type of this adjudication record.
-        Information types may include the value submitted, maximum values or
-        percentages allowed or payable under the plan, amounts that: the patient is
-        responsible for in aggregate or pertaining to this item; amounts paid by other
-        coverages; and, the benefit payable for this item.
-            :param reason: A code supporting the understanding of the adjudication result and explaining
-        variance from expected amount.
-            :param amount: Monetary amount associated with the category.
-            :param value: A non-monetary value associated with the category. Mutually exclusive to the
-        amount element above.
+        :param id_: id of resource
+        :param extension: extensions
+        :param category: A code to indicate the information type of this adjudication record.
+    Information types may include the value submitted, maximum values or
+    percentages allowed or payable under the plan, amounts that: the patient is
+    responsible for in aggregate or pertaining to this item; amounts paid by other
+    coverages; and, the benefit payable for this item.
+        :param reason: A code supporting the understanding of the adjudication result and explaining
+    variance from expected amount.
+        :param amount: Monetary amount associated with the category.
+        :param value: A non-monetary value associated with the category. Mutually exclusive to the
+    amount element above.
         """
         super().__init__(
             id_=id_,

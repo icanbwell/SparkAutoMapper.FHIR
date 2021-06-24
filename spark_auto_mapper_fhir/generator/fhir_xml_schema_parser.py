@@ -101,9 +101,9 @@ class FhirXmlSchemaParser:
         # first read fhir-all.xsd to get a list of resources
         fhir_xsd_all_file: Path = (
             data_dir.joinpath("xsd")
-            .joinpath("definitions.xml")
-            .joinpath("fhir-all-xsd")
-            .joinpath("fhir-all.xsd")
+                .joinpath("definitions.xml")
+                .joinpath("fhir-all-xsd")
+                .joinpath("fhir-all.xsd")
         )
         resources: List[str] = ["fhir-base.xsd"]
 
@@ -117,16 +117,16 @@ class FhirXmlSchemaParser:
         resource_xsd_file_name: str
         for resource_xsd_file_name in resources:
             if (
-                filter_to_resource
-                and not resource_xsd_file_name.startswith(filter_to_resource)
-                and not resource_xsd_file_name == "fhir-base.xsd"
+                    filter_to_resource
+                    and not resource_xsd_file_name.startswith(filter_to_resource)
+                    and not resource_xsd_file_name == "fhir-base.xsd"
             ):
                 continue
             resource_xsd_file: Path = (
                 data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("fhir-all-xsd")
-                .joinpath(resource_xsd_file_name)
+                    .joinpath("definitions.xml")
+                    .joinpath("fhir-all-xsd")
+                    .joinpath(resource_xsd_file_name)
             )
             fhir_entities.extend(
                 FhirXmlSchemaParser._generate_classes_for_resource(resource_xsd_file)
@@ -225,7 +225,7 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def process_types_for_codeable_concepts(
-        fhir_entities: List[FhirEntity], value_sets: List[FhirValueSet]
+            fhir_entities: List[FhirEntity], value_sets: List[FhirValueSet]
     ) -> None:
         codeable_types: List[
             FhirCodeableType
@@ -280,15 +280,18 @@ class FhirXmlSchemaParser:
             if fhir_entity_list:
                 fhir_entity = fhir_entity_list[0]
                 fhir_property_list = [
-                    p for p in fhir_entity.properties if p.name == property_name
+                    p for p in fhir_entity.properties if p.name == FhirXmlSchemaParser.fix_python_keywords(property_name)
                 ]
 
+                if not fhir_property_list:
+                    print(f"WARNING: property {property_name} not found in {fhir_entity.fhir_name}")
                 if fhir_property_list:
                     fhir_property = fhir_property_list[0]
                     value_set_matching = [
                         c
                         for c in value_sets
-                        if c.url == codeable_type.codeable_type_url
+                        if
+                        c.url == codeable_type.codeable_type_url or c.value_set_url == codeable_type.codeable_type_url
                     ]
                     if value_set_matching:
                         value_set = value_set_matching[0]
@@ -451,15 +454,15 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def generate_properties_for_class(
-        inner_complex_type: OrderedDict[str, Any]
+            inner_complex_type: OrderedDict[str, Any]
     ) -> List[FhirProperty]:
         properties: List[OrderedDict[str, Any]] = (
             inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
             if inner_complex_type.get("xs:sequence")
-            and inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
+               and inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
             else inner_complex_type.get("xs:sequence").get("xs:choice").get("xs:element")  # type: ignore
             if inner_complex_type.get("xs:sequence")
-            and inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
+               and inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
             else []
         )
         if isinstance(properties, OrderedDict):
@@ -507,7 +510,7 @@ class FhirXmlSchemaParser:
                         reference_target_resources_names=[],
                         is_back_bone_element="." in property_type,
                         is_basic_type=cleaned_type
-                        in FhirXmlSchemaParser.cleaned_type_mapping,
+                                      in FhirXmlSchemaParser.cleaned_type_mapping,
                         codeable_type=None,
                     )
                 )
@@ -518,45 +521,45 @@ class FhirXmlSchemaParser:
         result: str = (
             name
             if name
-            not in [
-                "False",
-                "None",
-                "True",
-                "and",
-                "as",
-                "assert",
-                "async",
-                "await",
-                "break",
-                "class",
-                "continue",
-                "def",
-                "del",
-                "elif",
-                "else",
-                "except",
-                "finally",
-                "for",
-                "from",
-                "global",
-                "if",
-                "import",
-                "in",
-                "is",
-                "lambda",
-                "nonlocal",
-                "not",
-                "or",
-                "pass",
-                "raise",
-                "return",
-                "try",
-                "while",
-                "with",
-                "yield",
-                "id",
-                "type",
-            ]
+               not in [
+                   "False",
+                   "None",
+                   "True",
+                   "and",
+                   "as",
+                   "assert",
+                   "async",
+                   "await",
+                   "break",
+                   "class",
+                   "continue",
+                   "def",
+                   "del",
+                   "elif",
+                   "else",
+                   "except",
+                   "finally",
+                   "for",
+                   "from",
+                   "global",
+                   "if",
+                   "import",
+                   "in",
+                   "is",
+                   "lambda",
+                   "nonlocal",
+                   "not",
+                   "or",
+                   "pass",
+                   "raise",
+                   "return",
+                   "try",
+                   "while",
+                   "with",
+                   "yield",
+                   "id",
+                   "type",
+               ]
             else f"{name}_"
         )
         if result and result[0].isdigit():
@@ -570,8 +573,8 @@ class FhirXmlSchemaParser:
         # first read fhir-all.xsd to get a list of resources
         de_xml_file: Path = (
             data_dir.joinpath("xsd")
-            .joinpath("definitions.xml")
-            .joinpath("dataelements.xml")
+                .joinpath("definitions.xml")
+                .joinpath("dataelements.xml")
         )
 
         with open(de_xml_file, "r") as file:
@@ -629,8 +632,8 @@ class FhirXmlSchemaParser:
         # first read fhir-all.xsd to get a list of resources
         de_xml_file: Path = (
             data_dir.joinpath("xsd")
-            .joinpath("definitions.xml")
-            .joinpath("dataelements.xml")
+                .joinpath("definitions.xml")
+                .joinpath("dataelements.xml")
         )
 
         with open(de_xml_file, "r") as file:
@@ -706,8 +709,8 @@ class FhirXmlSchemaParser:
 
         value_sets_file: Path = (
             data_dir.joinpath("xsd")
-            .joinpath("definitions.xml")
-            .joinpath("valuesets.xml")
+                .joinpath("definitions.xml")
+                .joinpath("valuesets.xml")
         )
         with open(value_sets_file, "r") as file:
             contents: str = file.read()
@@ -820,8 +823,8 @@ class FhirXmlSchemaParser:
 
         value_sets_json_file: Path = (
             data_dir.joinpath("xsd")
-            .joinpath("definitions.xml")
-            .joinpath("v3-codesystems.xml")
+                .joinpath("definitions.xml")
+                .joinpath("v3-codesystems.xml")
         )
         with open(value_sets_json_file, "r") as file:
             contents: str = file.read()
@@ -861,15 +864,15 @@ class FhirXmlSchemaParser:
                     )
                     cleaned_display: str = (
                         "".join([c.capitalize() for c in display.split(" ")])
-                        .replace("-", "")
-                        .replace(".", "")
-                        .replace("&", "")
-                        .replace("'", "")
-                        .replace("(", "")
-                        .replace(",", "")
-                        .replace(")", "")
-                        .replace("/", "")
-                        .replace("+", "")
+                            .replace("-", "")
+                            .replace(".", "")
+                            .replace("&", "")
+                            .replace("'", "")
+                            .replace("(", "")
+                            .replace(",", "")
+                            .replace(")", "")
+                            .replace("/", "")
+                            .replace("+", "")
                     )
                     cleaned_display = FhirXmlSchemaParser.fix_python_keywords(
                         cleaned_display

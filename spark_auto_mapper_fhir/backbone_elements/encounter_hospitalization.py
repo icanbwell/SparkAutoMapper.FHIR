@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,62 +19,42 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # preAdmissionIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # origin (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for origin
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.resources.organization import Organization
-
     # admitSource (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for admitSource
     from spark_auto_mapper_fhir.value_sets.admit_source import AdmitSourceCode
-
     # End Import for CodeableConcept for admitSource
     # reAdmission (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # dietPreference (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for dietPreference
     from spark_auto_mapper_fhir.value_sets.diet import DietCode
-
     # End Import for CodeableConcept for dietPreference
     # specialCourtesy (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for specialCourtesy
     from spark_auto_mapper_fhir.value_sets.special_courtesy import SpecialCourtesyCode
-
     # End Import for CodeableConcept for specialCourtesy
     # specialArrangement (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for specialArrangement
-    from spark_auto_mapper_fhir.value_sets.special_arrangements import (
-        SpecialArrangementsCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.special_arrangements import SpecialArrangementsCode
     # End Import for CodeableConcept for specialArrangement
     # destination (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for destination
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.resources.organization import Organization
-
     # dischargeDisposition (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for dischargeDisposition
-    from spark_auto_mapper_fhir.value_sets.discharge_disposition import (
-        DischargeDispositionCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.discharge_disposition import DischargeDispositionCode
     # End Import for CodeableConcept for dischargeDisposition
 
 
@@ -77,43 +64,36 @@ class EncounterHospitalization(FhirBackboneElementBase):
     """
     Encounter.Hospitalization
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        preAdmissionIdentifier: Optional[Identifier] = None,
-        origin: Optional[Reference[Union[Location, Organization]]] = None,
-        admitSource: Optional[CodeableConcept[AdmitSourceCode]] = None,
-        reAdmission: Optional[CodeableConcept] = None,
-        dietPreference: Optional[FhirList[CodeableConcept[DietCode]]] = None,
-        specialCourtesy: Optional[
-            FhirList[CodeableConcept[SpecialCourtesyCode]]
-        ] = None,
-        specialArrangement: Optional[
-            FhirList[CodeableConcept[SpecialArrangementsCode]]
-        ] = None,
-        destination: Optional[Reference[Union[Location, Organization]]] = None,
-        dischargeDisposition: Optional[
-            CodeableConcept[DischargeDispositionCode]
-        ] = None,
+        preAdmissionIdentifier: Optional[Identifier ] = None,
+        origin: Optional[Reference [Union[Location, Organization]]] = None,
+        admitSource: Optional[CodeableConcept[AdmitSourceCode] ] = None,
+        reAdmission: Optional[CodeableConcept ] = None,
+        dietPreference: Optional[FhirList[CodeableConcept[DietCode] ]] = None,
+        specialCourtesy: Optional[FhirList[CodeableConcept[SpecialCourtesyCode] ]] = None,
+        specialArrangement: Optional[FhirList[CodeableConcept[SpecialArrangementsCode] ]] = None,
+        destination: Optional[Reference [Union[Location, Organization]]] = None,
+        dischargeDisposition: Optional[CodeableConcept[DischargeDispositionCode] ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param preAdmissionIdentifier: Pre-admission identifier.
-            :param origin: The location/organization from which the patient came before admission.
-            :param admitSource: From where patient was admitted (physician referral, transfer).
-            :param reAdmission: Whether this hospitalization is a readmission and why if known.
-            :param dietPreference: Diet preferences reported by the patient.
-            :param specialCourtesy: Special courtesies (VIP, board member).
-            :param specialArrangement: Any special requests that have been made for this hospitalization encounter,
-        such as the provision of specific equipment or other things.
-            :param destination: Location/organization to which the patient is discharged.
-            :param dischargeDisposition: Category or kind of location after discharge.
+        :param id_: id of resource
+        :param extension: extensions
+        :param preAdmissionIdentifier: Pre-admission identifier.
+        :param origin: The location/organization from which the patient came before admission.
+        :param admitSource: From where patient was admitted (physician referral, transfer).
+        :param reAdmission: Whether this hospitalization is a readmission and why if known.
+        :param dietPreference: Diet preferences reported by the patient.
+        :param specialCourtesy: Special courtesies (VIP, board member).
+        :param specialArrangement: Any special requests that have been made for this hospitalization encounter,
+    such as the provision of specific equipment or other things.
+        :param destination: Location/organization to which the patient is discharged.
+        :param dischargeDisposition: Category or kind of location after discharge.
         """
         super().__init__(
             id_=id_,

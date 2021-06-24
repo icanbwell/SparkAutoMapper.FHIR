@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class EnteralFormulaTypeCodesCode(FhirValueSetBase):
     """
     EnteralFormulaTypeCodes
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -33,9 +42,7 @@ class EnteralFormulaTypeCodesCodeValues:
     PediatricFormula = EnteralFormulaTypeCodesCode("443361000124100")
     PediatricElementalFormula = EnteralFormulaTypeCodesCode("443401000124105")
     PediatricHighEnergyFormula = EnteralFormulaTypeCodesCode("443491000124103")
-    PediatricHighEnergyFormulaWithIncreasedFiber = EnteralFormulaTypeCodesCode(
-        "443501000124106"
-    )
+    PediatricHighEnergyFormulaWithIncreasedFiber = EnteralFormulaTypeCodesCode("443501000124106")
     PediatricHydrolyzedProteinFormula = EnteralFormulaTypeCodesCode("443421000124100")
     PediatricIncreasedFiberFormula = EnteralFormulaTypeCodesCode("443471000124104")
     PediatricReducedEnergyFormula = EnteralFormulaTypeCodesCode("444431000124104")
@@ -47,14 +54,10 @@ class EnteralFormulaTypeCodesCodeValues:
     RenalFormula = EnteralFormulaTypeCodesCode("443481000124101")
     HighEnergyEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode("441571000124104")
     DiabeticEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode("441591000124103")
-    DiabeticHighCalorieHighProteinEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode(
-        "441601000124106"
-    )
+    DiabeticHighCalorieHighProteinEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode("441601000124106")
     IncreasedFiberFormula = EnteralFormulaTypeCodesCode("443351000124102")
     HydrolyzedProteinFormula = EnteralFormulaTypeCodesCode("443771000124106")
-    HydrolyzedPeptide_basedHighProteinEnteralFormula = EnteralFormulaTypeCodesCode(
-        "441671000124100"
-    )
+    HydrolyzedPeptide_basedHighProteinEnteralFormula = EnteralFormulaTypeCodesCode("441671000124100")
     HighProteinFormula = EnteralFormulaTypeCodesCode("443111000124101")
     HighEnergyFormula = EnteralFormulaTypeCodesCode("443431000124102")
     ElementalFormula = EnteralFormulaTypeCodesCode("443411000124108")

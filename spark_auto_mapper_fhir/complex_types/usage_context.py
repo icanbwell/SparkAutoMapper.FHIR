@@ -1,7 +1,13 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -10,12 +16,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.usage_context_type import (
-        UsageContextTypeCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.usage_context_type import UsageContextTypeCode
     # End Import for CodeableConcept for code
 
 
@@ -25,7 +27,6 @@ class UsageContext(FhirComplexTypeBase):
     """
     UsageContext
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -33,15 +34,15 @@ class UsageContext(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Coding[UsageContextTypeCode],
+        code: Coding[UsageContextTypeCode] ,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param code: A code that identifies the type of context being specified by this usage
-        context.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param code: A code that identifies the type of context being specified by this usage
+    context.
         """
         super().__init__(
             id_=id_,

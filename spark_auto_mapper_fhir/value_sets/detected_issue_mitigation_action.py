@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class DetectedIssueMitigationActionCode(FhirValueSetBase):
     """
     DetectedIssueMitigationAction
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -19,83 +28,41 @@ class DetectedIssueMitigationActionCode(FhirValueSetBase):
 class DetectedIssueMitigationActionCodeValues:
     Actaccountcode = DetectedIssueMitigationActionCode("_ActAccountCode")
     Actadjudicationcode = DetectedIssueMitigationActionCode("_ActAdjudicationCode")
-    Actadjudicationresultactioncode = DetectedIssueMitigationActionCode(
-        "_ActAdjudicationResultActionCode"
-    )
-    Actbillablemodifiercode = DetectedIssueMitigationActionCode(
-        "_ActBillableModifierCode"
-    )
-    Actbillingarrangementcode = DetectedIssueMitigationActionCode(
-        "_ActBillingArrangementCode"
-    )
+    Actadjudicationresultactioncode = DetectedIssueMitigationActionCode("_ActAdjudicationResultActionCode")
+    Actbillablemodifiercode = DetectedIssueMitigationActionCode("_ActBillableModifierCode")
+    Actbillingarrangementcode = DetectedIssueMitigationActionCode("_ActBillingArrangementCode")
     Actboundedroicode = DetectedIssueMitigationActionCode("_ActBoundedROICode")
     ActCareProvision = DetectedIssueMitigationActionCode("_ActCareProvisionCode")
-    Actclaimattachmentcategorycode = DetectedIssueMitigationActionCode(
-        "_ActClaimAttachmentCategoryCode"
-    )
+    Actclaimattachmentcategorycode = DetectedIssueMitigationActionCode("_ActClaimAttachmentCategoryCode")
     Actconsenttype = DetectedIssueMitigationActionCode("_ActConsentType")
-    Actcontainerregistrationcode = DetectedIssueMitigationActionCode(
-        "_ActContainerRegistrationCode"
-    )
+    Actcontainerregistrationcode = DetectedIssueMitigationActionCode("_ActContainerRegistrationCode")
     Actcontrolvariable = DetectedIssueMitigationActionCode("_ActControlVariable")
-    Actcoverageconfirmationcode = DetectedIssueMitigationActionCode(
-        "_ActCoverageConfirmationCode"
-    )
+    Actcoverageconfirmationcode = DetectedIssueMitigationActionCode("_ActCoverageConfirmationCode")
     Actcoveragelimitcode = DetectedIssueMitigationActionCode("_ActCoverageLimitCode")
     Actcoveragetypecode = DetectedIssueMitigationActionCode("_ActCoverageTypeCode")
-    Actdetectedissuemanagementcode = DetectedIssueMitigationActionCode(
-        "_ActDetectedIssueManagementCode"
-    )
+    Actdetectedissuemanagementcode = DetectedIssueMitigationActionCode("_ActDetectedIssueManagementCode")
     Actexposurecode = DetectedIssueMitigationActionCode("_ActExposureCode")
-    Actfinancialtransactioncode = DetectedIssueMitigationActionCode(
-        "_ActFinancialTransactionCode"
-    )
+    Actfinancialtransactioncode = DetectedIssueMitigationActionCode("_ActFinancialTransactionCode")
     Actincidentcode = DetectedIssueMitigationActionCode("_ActIncidentCode")
-    Actinformationaccesscode = DetectedIssueMitigationActionCode(
-        "_ActInformationAccessCode"
-    )
-    Actinformationaccesscontextcode = DetectedIssueMitigationActionCode(
-        "_ActInformationAccessContextCode"
-    )
-    Actinformationcategorycode = DetectedIssueMitigationActionCode(
-        "_ActInformationCategoryCode"
-    )
+    Actinformationaccesscode = DetectedIssueMitigationActionCode("_ActInformationAccessCode")
+    Actinformationaccesscontextcode = DetectedIssueMitigationActionCode("_ActInformationAccessContextCode")
+    Actinformationcategorycode = DetectedIssueMitigationActionCode("_ActInformationCategoryCode")
     Actinvoiceelementcode = DetectedIssueMitigationActionCode("_ActInvoiceElementCode")
-    Actinvoiceelementsummarycode = DetectedIssueMitigationActionCode(
-        "_ActInvoiceElementSummaryCode"
-    )
-    Actinvoiceoverridecode = DetectedIssueMitigationActionCode(
-        "_ActInvoiceOverrideCode"
-    )
+    Actinvoiceelementsummarycode = DetectedIssueMitigationActionCode("_ActInvoiceElementSummaryCode")
+    Actinvoiceoverridecode = DetectedIssueMitigationActionCode("_ActInvoiceOverrideCode")
     Actlistcode = DetectedIssueMitigationActionCode("_ActListCode")
-    Actmonitoringprotocolcode = DetectedIssueMitigationActionCode(
-        "_ActMonitoringProtocolCode"
-    )
-    Actnonobservationindicationcode = DetectedIssueMitigationActionCode(
-        "_ActNonObservationIndicationCode"
-    )
-    ActObservationVerification = DetectedIssueMitigationActionCode(
-        "_ActObservationVerificationType"
-    )
+    Actmonitoringprotocolcode = DetectedIssueMitigationActionCode("_ActMonitoringProtocolCode")
+    Actnonobservationindicationcode = DetectedIssueMitigationActionCode("_ActNonObservationIndicationCode")
+    ActObservationVerification = DetectedIssueMitigationActionCode("_ActObservationVerificationType")
     Actpaymentcode = DetectedIssueMitigationActionCode("_ActPaymentCode")
     Actpharmacysupplytype = DetectedIssueMitigationActionCode("_ActPharmacySupplyType")
     Actpolicytype = DetectedIssueMitigationActionCode("_ActPolicyType")
-    Actproductacquisitioncode = DetectedIssueMitigationActionCode(
-        "_ActProductAcquisitionCode"
-    )
-    Actspecimentransportcode = DetectedIssueMitigationActionCode(
-        "_ActSpecimenTransportCode"
-    )
-    Actspecimentreatmentcode = DetectedIssueMitigationActionCode(
-        "_ActSpecimenTreatmentCode"
-    )
-    Actsubstanceadministrationcode = DetectedIssueMitigationActionCode(
-        "_ActSubstanceAdministrationCode"
-    )
+    Actproductacquisitioncode = DetectedIssueMitigationActionCode("_ActProductAcquisitionCode")
+    Actspecimentransportcode = DetectedIssueMitigationActionCode("_ActSpecimenTransportCode")
+    Actspecimentreatmentcode = DetectedIssueMitigationActionCode("_ActSpecimenTreatmentCode")
+    Actsubstanceadministrationcode = DetectedIssueMitigationActionCode("_ActSubstanceAdministrationCode")
     Acttaskcode = DetectedIssueMitigationActionCode("_ActTaskCode")
-    Acttransportationmodecode = DetectedIssueMitigationActionCode(
-        "_ActTransportationModeCode"
-    )
+    Acttransportationmodecode = DetectedIssueMitigationActionCode("_ActTransportationModeCode")
     Observationtype = DetectedIssueMitigationActionCode("_ObservationType")
     Roioverlayshape = DetectedIssueMitigationActionCode("_ROIOverlayShape")
     Corrected = DetectedIssueMitigationActionCode("C")

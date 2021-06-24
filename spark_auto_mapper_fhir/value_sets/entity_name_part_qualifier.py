@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class EntityNamePartQualifierCode(FhirValueSetBase):
     """
     EntityNamePartQualifier
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -24,9 +33,7 @@ class EntityNamePartQualifierCodeValues:
     LegalStatus = EntityNamePartQualifierCode("LS")
     MiddleName = EntityNamePartQualifierCode("MID")
     Prefix = EntityNamePartQualifierCode("PFX")
-    Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode(
-        "PharmaceuticalEntityNamePartQualifiers"
-    )
+    Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode("PharmaceuticalEntityNamePartQualifiers")
     Suffix = EntityNamePartQualifierCode("SFX")
     Titlestyles = EntityNamePartQualifierCode("TitleStyles")
     LegalStatus = EntityNamePartQualifierCode("LS")
@@ -40,11 +47,7 @@ class EntityNamePartQualifierCodeValues:
     MiddleName = EntityNamePartQualifierCode("MID")
     CallMe = EntityNamePartQualifierCode("CL")
     Initial = EntityNamePartQualifierCode("IN")
-    Organizationnamepartqualifier = EntityNamePartQualifierCode(
-        "_OrganizationNamePartQualifier"
-    )
-    Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode(
-        "PharmaceuticalEntityNamePartQualifiers"
-    )
+    Organizationnamepartqualifier = EntityNamePartQualifierCode("_OrganizationNamePartQualifier")
+    Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode("PharmaceuticalEntityNamePartQualifiers")
     Personnamepartqualifier = EntityNamePartQualifierCode("_PersonNamePartQualifier")
     Voorvoegsel = EntityNamePartQualifierCode("VV")

@@ -1,8 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -13,15 +19,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # reference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reference
     from spark_auto_mapper_fhir.resources.resource import Resource
-
     # fhirVersion (FHIRVersion)
     from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
-
     # name (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # description (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # groupingId (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
@@ -32,32 +37,31 @@ class ImplementationGuideResource(FhirBackboneElementBase):
     """
     ImplementationGuide.Resource
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        reference: Reference[Union[Resource]],
-        fhirVersion: Optional[FhirList[FHIRVersion]] = None,
-        name: Optional[FhirString] = None,
-        description: Optional[FhirString] = None,
-        groupingId: Optional[id] = None,
+        reference: Reference [Union[Resource]],
+        fhirVersion: Optional[FhirList[FHIRVersion ]] = None,
+        name: Optional[FhirString ] = None,
+        description: Optional[FhirString ] = None,
+        groupingId: Optional[id ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param reference: Where this resource is found.
-            :param fhirVersion: Indicates the FHIR Version(s) this artifact is intended to apply to. If no
-        versions are specified, the resource is assumed to apply to all the versions
-        stated in ImplementationGuide.fhirVersion.
-            :param name: A human assigned name for the resource. All resources SHOULD have a name, but
-        the name may be extracted from the resource (e.g. ValueSet.name).
-            :param description: A description of the reason that a resource has been included in the
-        implementation guide.
-            :param groupingId: Reference to the id of the grouping this resource appears in.
+        :param id_: id of resource
+        :param extension: extensions
+        :param reference: Where this resource is found.
+        :param fhirVersion: Indicates the FHIR Version(s) this artifact is intended to apply to. If no
+    versions are specified, the resource is assumed to apply to all the versions
+    stated in ImplementationGuide.fhirVersion.
+        :param name: A human assigned name for the resource. All resources SHOULD have a name, but
+    the name may be extracted from the resource (e.g. ValueSet.name).
+        :param description: A description of the reason that a resource has been included in the
+    implementation guide.
+        :param groupingId: Reference to the id of the grouping this resource appears in.
         """
         super().__init__(
             id_=id_,

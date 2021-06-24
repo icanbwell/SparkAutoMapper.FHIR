@@ -1,7 +1,12 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -11,6 +16,7 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.trigger_type import TriggerType
+    from spark_auto_mapper_fhir.complex_types.string import string
     from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
     from spark_auto_mapper_fhir.complex_types.expression import Expression
 
@@ -21,7 +27,6 @@ class TriggerDefinition(FhirComplexTypeBase):
     """
     TriggerDefinition
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -29,24 +34,24 @@ class TriggerDefinition(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: TriggerType,
-        name: Optional[FhirString] = None,
-        data: Optional[FhirList[DataRequirement]] = None,
-        condition: Optional[Expression] = None,
+        type_: TriggerType ,
+        name: Optional[FhirString ] = None,
+        data: Optional[FhirList[DataRequirement ]] = None,
+        condition: Optional[Expression ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param type_: The type of triggering event.
-            :param name: A formal name for the event. This may be an absolute URI that identifies the
-        event formally (e.g. from a trigger registry), or a simple relative URI that
-        identifies the event in a local context.
-            :param data: The triggering data of the event (if this is a data trigger). If more than one
-        data is requirement is specified, then all the data requirements must be true.
-            :param condition: A boolean-valued expression that is evaluated in the context of the container
-        of the trigger definition and returns whether or not the trigger fires.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param type_: The type of triggering event.
+        :param name: A formal name for the event. This may be an absolute URI that identifies the
+    event formally (e.g. from a trigger registry), or a simple relative URI that
+    identifies the event in a local context.
+        :param data: The triggering data of the event (if this is a data trigger). If more than one
+    data is requirement is specified, then all the data requirements must be true.
+        :param condition: A boolean-valued expression that is evaluated in the context of the container
+    of the trigger definition and returns whether or not the trigger fires.
         """
         super().__init__(
             id_=id_,

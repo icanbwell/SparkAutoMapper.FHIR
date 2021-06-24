@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,14 +19,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for role
     from spark_auto_mapper_fhir.value_sets.participant_roles import ParticipantRolesCode
-
     # End Import for CodeableConcept for role
     # member (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for member
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -27,13 +31,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
-
     # onBehalfOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for onBehalfOf
     from spark_auto_mapper_fhir.resources.organization import Organization
-
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -44,41 +45,29 @@ class CareTeamParticipant(FhirBackboneElementBase):
     """
     CareTeam.Participant
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: Optional[FhirList[CodeableConcept[ParticipantRolesCode]]] = None,
-        member: Optional[
-            Reference[
-                Union[
-                    Practitioner,
-                    PractitionerRole,
-                    RelatedPerson,
-                    Patient,
-                    Organization,
-                    CareTeam,
-                ]
-            ]
-        ] = None,
-        onBehalfOf: Optional[Reference[Union[Organization]]] = None,
-        period: Optional[Period] = None,
+        role: Optional[FhirList[CodeableConcept[ParticipantRolesCode] ]] = None,
+        member: Optional[Reference [Union[Practitioner, PractitionerRole, RelatedPerson, Patient, Organization, CareTeam]]] = None,
+        onBehalfOf: Optional[Reference [Union[Organization]]] = None,
+        period: Optional[Period ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param role: Indicates specific responsibility of an individual within the care team, such
-        as "Primary care physician", "Trained social worker counselor", "Caregiver",
-        etc.
-            :param member: The specific person or organization who is participating/expected to
-        participate in the care team.
-            :param onBehalfOf: The organization of the practitioner.
-            :param period: Indicates when the specific member or organization did (or is intended to)
-        come into effect and end.
+        :param id_: id of resource
+        :param extension: extensions
+        :param role: Indicates specific responsibility of an individual within the care team, such
+    as "Primary care physician", "Trained social worker counselor", "Caregiver",
+    etc.
+        :param member: The specific person or organization who is participating/expected to
+    participate in the care team.
+        :param onBehalfOf: The organization of the practitioner.
+        :param period: Indicates when the specific member or organization did (or is intended to)
+    come into effect and end.
         """
         super().__init__(
             id_=id_,

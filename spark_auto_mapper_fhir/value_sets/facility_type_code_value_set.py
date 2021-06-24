@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class FacilityTypeCodeValueSetCode(FhirValueSetBase):
     """
     FacilityTypeCodeValueSet
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -52,30 +61,20 @@ class FacilityTypeCodeValueSetCodeValues:
     HospitalOutpatientOncologyClinic = FacilityTypeCodeValueSetCode("89972002")
     HospitalOutpatientOphthalmologyClinic = FacilityTypeCodeValueSetCode("78088001")
     HospitalOutpatientOrthopedicsClinic = FacilityTypeCodeValueSetCode("78001009")
-    HospitalOutpatientOtorhinolaryngologyClinic = FacilityTypeCodeValueSetCode(
-        "23392004"
-    )
+    HospitalOutpatientOtorhinolaryngologyClinic = FacilityTypeCodeValueSetCode("23392004")
     HospitalOutpatientPainClinic = FacilityTypeCodeValueSetCode("36293008")
     HospitalOutpatientPediatricClinic = FacilityTypeCodeValueSetCode("3729002")
     HospitalOutpatientPeripheralVascularClinic = FacilityTypeCodeValueSetCode("5584006")
     HospitalOutpatientRehabilitationClinic = FacilityTypeCodeValueSetCode("37546005")
-    HospitalOutpatientRespiratoryDiseaseClinic = FacilityTypeCodeValueSetCode(
-        "57159002"
-    )
+    HospitalOutpatientRespiratoryDiseaseClinic = FacilityTypeCodeValueSetCode("57159002")
     HospitalOutpatientRheumatologyClinic = FacilityTypeCodeValueSetCode("331006")
     HospitalOutpatientUrologyClinic = FacilityTypeCodeValueSetCode("50569004")
     HospitalRadiologyFacility = FacilityTypeCodeValueSetCode("79491001")
-    Hospital_basedOutpatientClinicOrDepartment_OTHER_NOTLISTED = (
-        FacilityTypeCodeValueSetCode("33022008")
-    )
-    Fee_for_servicePrivatePhysicians_GroupOffice = FacilityTypeCodeValueSetCode(
-        "19602009"
-    )
+    Hospital_basedOutpatientClinicOrDepartment_OTHER_NOTLISTED = FacilityTypeCodeValueSetCode("33022008")
+    Fee_for_servicePrivatePhysicians_GroupOffice = FacilityTypeCodeValueSetCode("19602009")
     PrivatePhysicians_GroupOffice = FacilityTypeCodeValueSetCode("39350007")
     SoloPracticePrivateOffice = FacilityTypeCodeValueSetCode("83891005")
-    IndependentAmbulatoryCareProviderSite_OTHER_NOTLISTED = (
-        FacilityTypeCodeValueSetCode("394759007")
-    )
+    IndependentAmbulatoryCareProviderSite_OTHER_NOTLISTED = FacilityTypeCodeValueSetCode("394759007")
     AmbulatorySurgeryCenter = FacilityTypeCodeValueSetCode("405607001")
     CareOfTheElderlyDayHospital = FacilityTypeCodeValueSetCode("309900005")
     ElderlyAssessmentClinic = FacilityTypeCodeValueSetCode("275576008")

@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,21 +19,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # itemSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # detailSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # subDetailSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.adjudication_error_codes import (
-        AdjudicationErrorCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.adjudication_error_codes import AdjudicationErrorCodesCode
     # End Import for CodeableConcept for code
 
 
@@ -36,32 +36,31 @@ class ClaimResponseError(FhirBackboneElementBase):
     """
     ClaimResponse.Error
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        itemSequence: Optional[positiveInt] = None,
-        detailSequence: Optional[positiveInt] = None,
-        subDetailSequence: Optional[positiveInt] = None,
-        code: CodeableConcept[AdjudicationErrorCodesCode],
+        itemSequence: Optional[positiveInt ] = None,
+        detailSequence: Optional[positiveInt ] = None,
+        subDetailSequence: Optional[positiveInt ] = None,
+        code: CodeableConcept[AdjudicationErrorCodesCode] ,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param itemSequence: The sequence number of the line item submitted which contains the error. This
-        value is omitted when the error occurs outside of the item structure.
-            :param detailSequence: The sequence number of the detail within the line item submitted which
-        contains the error. This value is omitted when the error occurs outside of the
-        item structure.
-            :param subDetailSequence: The sequence number of the sub-detail within the detail within the line item
-        submitted which contains the error. This value is omitted when the error
-        occurs outside of the item structure.
-            :param code: An error code, from a specified code system, which details why the claim could
-        not be adjudicated.
+        :param id_: id of resource
+        :param extension: extensions
+        :param itemSequence: The sequence number of the line item submitted which contains the error. This
+    value is omitted when the error occurs outside of the item structure.
+        :param detailSequence: The sequence number of the detail within the line item submitted which
+    contains the error. This value is omitted when the error occurs outside of the
+    item structure.
+        :param subDetailSequence: The sequence number of the sub-detail within the detail within the line item
+    submitted which contains the error. This value is omitted when the error
+    occurs outside of the item structure.
+        :param code: An error code, from a specified code system, which details why the claim could
+    not be adjudicated.
         """
         super().__init__(
             id_=id_,

@@ -1,69 +1,50 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.observationdefinition import (
-    ObservationDefinitionSchema,
-)
+from spark_fhir_schemas.r4.resources.observationdefinition import ObservationDefinitionSchema
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.observation_category_codes import (
-        ObservationCategoryCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.observation_category_codes import ObservationCategoryCodesCode
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodesCode
-
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-    from spark_auto_mapper_fhir.complex_types.observation_data_type import (
-        ObservationDataType,
-    )
+    from spark_auto_mapper_fhir.complex_types.observation_data_type import ObservationDataType
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.observation_methods import (
-        ObservationMethodsCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.observation_methods import ObservationMethodsCode
     # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.backbone_elements.observation_definition_quantitative_details import (
-        ObservationDefinitionQuantitativeDetails,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval import (
-        ObservationDefinitionQualifiedInterval,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.observation_definition_quantitative_details import ObservationDefinitionQuantitativeDetails
+    from spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval import ObservationDefinitionQualifiedInterval
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for validCodedValueSet
     from spark_auto_mapper_fhir.resources.value_set import ValueSet
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for normalCodedValueSet
     from spark_auto_mapper_fhir.resources.value_set import ValueSet
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for abnormalCodedValueSet
     from spark_auto_mapper_fhir.resources.value_set import ValueSet
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for criticalCodedValueSet
     from spark_auto_mapper_fhir.resources.value_set import ValueSet
 
@@ -74,7 +55,6 @@ class ObservationDefinition(FhirResourceBase):
     """
     ObservationDefinition
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -82,51 +62,47 @@ class ObservationDefinition(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[
-            FhirList[CodeableConcept[ObservationCategoryCodesCode]]
-        ] = None,
-        code: CodeableConcept[LOINCCodesCode],
-        identifier: Optional[FhirList[Identifier]] = None,
-        permittedDataType: Optional[FhirList[ObservationDataType]] = None,
-        multipleResultsAllowed: Optional[FhirBoolean] = None,
-        method: Optional[CodeableConcept[ObservationMethodsCode]] = None,
-        preferredReportName: Optional[FhirString] = None,
-        quantitativeDetails: Optional[ObservationDefinitionQuantitativeDetails] = None,
-        qualifiedInterval: Optional[
-            FhirList[ObservationDefinitionQualifiedInterval]
-        ] = None,
-        validCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
-        normalCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
-        abnormalCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
-        criticalCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
+        category: Optional[FhirList[CodeableConcept[ObservationCategoryCodesCode] ]] = None,
+        code: CodeableConcept[LOINCCodesCode] ,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        permittedDataType: Optional[FhirList[ObservationDataType ]] = None,
+        multipleResultsAllowed: Optional[FhirBoolean ] = None,
+        method: Optional[CodeableConcept[ObservationMethodsCode] ] = None,
+        preferredReportName: Optional[FhirString ] = None,
+        quantitativeDetails: Optional[ObservationDefinitionQuantitativeDetails ] = None,
+        qualifiedInterval: Optional[FhirList[ObservationDefinitionQualifiedInterval ]] = None,
+        validCodedValueSet: Optional[Reference [Union[ValueSet]]] = None,
+        normalCodedValueSet: Optional[Reference [Union[ValueSet]]] = None,
+        abnormalCodedValueSet: Optional[Reference [Union[ValueSet]]] = None,
+        criticalCodedValueSet: Optional[Reference [Union[ValueSet]]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param category: A code that classifies the general type of observation.
-            :param code: Describes what will be observed. Sometimes this is called the observation
-        "name".
-            :param identifier: A unique identifier assigned to this ObservationDefinition artifact.
-            :param permittedDataType: The data types allowed for the value element of the instance observations
-        conforming to this ObservationDefinition.
-            :param multipleResultsAllowed: Multiple results allowed for observations conforming to this
-        ObservationDefinition.
-            :param method: The method or technique used to perform the observation.
-            :param preferredReportName: The preferred name to be used when reporting the results of observations
-        conforming to this ObservationDefinition.
-            :param quantitativeDetails: Characteristics for quantitative results of this observation.
-            :param qualifiedInterval: Multiple  ranges of results qualified by different contexts for ordinal or
-        continuous observations conforming to this ObservationDefinition.
-            :param validCodedValueSet: The set of valid coded results for the observations  conforming to this
-        ObservationDefinition.
-            :param normalCodedValueSet: The set of normal coded results for the observations conforming to this
-        ObservationDefinition.
-            :param abnormalCodedValueSet: The set of abnormal coded results for the observation conforming to this
-        ObservationDefinition.
-            :param criticalCodedValueSet: The set of critical coded results for the observation conforming to this
-        ObservationDefinition.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param category: A code that classifies the general type of observation.
+        :param code: Describes what will be observed. Sometimes this is called the observation
+    "name".
+        :param identifier: A unique identifier assigned to this ObservationDefinition artifact.
+        :param permittedDataType: The data types allowed for the value element of the instance observations
+    conforming to this ObservationDefinition.
+        :param multipleResultsAllowed: Multiple results allowed for observations conforming to this
+    ObservationDefinition.
+        :param method: The method or technique used to perform the observation.
+        :param preferredReportName: The preferred name to be used when reporting the results of observations
+    conforming to this ObservationDefinition.
+        :param quantitativeDetails: Characteristics for quantitative results of this observation.
+        :param qualifiedInterval: Multiple  ranges of results qualified by different contexts for ordinal or
+    continuous observations conforming to this ObservationDefinition.
+        :param validCodedValueSet: The set of valid coded results for the observations  conforming to this
+    ObservationDefinition.
+        :param normalCodedValueSet: The set of normal coded results for the observations conforming to this
+    ObservationDefinition.
+        :param abnormalCodedValueSet: The set of abnormal coded results for the observation conforming to this
+    ObservationDefinition.
+        :param criticalCodedValueSet: The set of critical coded results for the observation conforming to this
+    ObservationDefinition.
         """
         super().__init__(
             resourceType="ObservationDefinition",
@@ -151,6 +127,4 @@ class ObservationDefinition(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return ObservationDefinitionSchema.get_schema(
-            include_extension=include_extension
-        )
+        return ObservationDefinitionSchema.get_schema(include_extension=include_extension)

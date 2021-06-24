@@ -1,8 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,11 +18,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # autocreate (boolean)
-    pass
+    from spark_auto_mapper_fhir.complex_types.boolean import boolean
     # autodelete (boolean)
+    from spark_auto_mapper_fhir.complex_types.boolean import boolean
     # resource (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for resource
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -27,31 +33,30 @@ class TestScriptFixture(FhirBackboneElementBase):
     """
     TestScript.Fixture
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        autocreate: FhirBoolean,
-        autodelete: FhirBoolean,
-        resource: Optional[Reference[Union[Resource]]] = None,
+        autocreate: FhirBoolean ,
+        autodelete: FhirBoolean ,
+        resource: Optional[Reference [Union[Resource]]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param autocreate: Whether or not to implicitly create the fixture during setup. If true, the
-        fixture is automatically created on each server being tested during setup,
-        therefore no create operation is required for this fixture in the
-        TestScript.setup section.
-            :param autodelete: Whether or not to implicitly delete the fixture during teardown. If true, the
-        fixture is automatically deleted on each server being tested during teardown,
-        therefore no delete operation is required for this fixture in the
-        TestScript.teardown section.
-            :param resource: Reference to the resource (containing the contents of the resource needed for
-        operations).
+        :param id_: id of resource
+        :param extension: extensions
+        :param autocreate: Whether or not to implicitly create the fixture during setup. If true, the
+    fixture is automatically created on each server being tested during setup,
+    therefore no create operation is required for this fixture in the
+    TestScript.setup section.
+        :param autodelete: Whether or not to implicitly delete the fixture during teardown. If true, the
+    fixture is automatically deleted on each server being tested during teardown,
+    therefore no delete operation is required for this fixture in the
+    TestScript.teardown section.
+        :param resource: Reference to the resource (containing the contents of the resource needed for
+    operations).
         """
         super().__init__(
             id_=id_,

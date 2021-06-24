@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -11,13 +18,9 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # meaning (ConsentDataMeaning)
-    from spark_auto_mapper_fhir.complex_types.consent_data_meaning import (
-        ConsentDataMeaning,
-    )
-
+    from spark_auto_mapper_fhir.complex_types.consent_data_meaning import ConsentDataMeaning
     # reference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reference
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -28,23 +31,22 @@ class ConsentData(FhirBackboneElementBase):
     """
     Consent.Data
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        meaning: ConsentDataMeaning,
-        reference: Reference[Union[Resource]],
+        meaning: ConsentDataMeaning ,
+        reference: Reference [Union[Resource]],
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param meaning: How the resource reference is interpreted when testing consent restrictions.
-            :param reference: A reference to a specific resource that defines which resources are covered by
-        this consent.
+        :param id_: id of resource
+        :param extension: extensions
+        :param meaning: How the resource reference is interpreted when testing consent restrictions.
+        :param reference: A reference to a specific resource that defines which resources are covered by
+    this consent.
         """
         super().__init__(
             id_=id_,

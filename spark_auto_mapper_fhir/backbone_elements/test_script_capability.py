@@ -1,10 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -14,14 +18,17 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # required (boolean)
-    pass
+    from spark_auto_mapper_fhir.complex_types.boolean import boolean
     # validated (boolean)
+    from spark_auto_mapper_fhir.complex_types.boolean import boolean
     # description (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # origin (integer)
+    from spark_auto_mapper_fhir.complex_types.integer import integer
     # destination (integer)
+    from spark_auto_mapper_fhir.complex_types.integer import integer
     # link (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # capabilities (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
@@ -32,38 +39,37 @@ class TestScriptCapability(FhirBackboneElementBase):
     """
     TestScript.Capability
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        required: FhirBoolean,
-        validated: FhirBoolean,
-        description: Optional[FhirString] = None,
-        origin: Optional[FhirList[FhirInteger]] = None,
-        destination: Optional[FhirInteger] = None,
-        link: Optional[FhirList[uri]] = None,
-        capabilities: canonical,
+        required: FhirBoolean ,
+        validated: FhirBoolean ,
+        description: Optional[FhirString ] = None,
+        origin: Optional[FhirList[FhirInteger ]] = None,
+        destination: Optional[FhirInteger ] = None,
+        link: Optional[FhirList[uri ]] = None,
+        capabilities: canonical ,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param required: Whether or not the test execution will require the given capabilities of the
-        server in order for this test script to execute.
-            :param validated: Whether or not the test execution will validate the given capabilities of the
-        server in order for this test script to execute.
-            :param description: Description of the capabilities that this test script is requiring the server
-        to support.
-            :param origin: Which origin server these requirements apply to.
-            :param destination: Which server these requirements apply to.
-            :param link: Links to the FHIR specification that describes this interaction and the
-        resources involved in more detail.
-            :param capabilities: Minimum capabilities required of server for test script to execute
-        successfully.   If server does not meet at a minimum the referenced capability
-        statement, then all tests in this script are skipped.
+        :param id_: id of resource
+        :param extension: extensions
+        :param required: Whether or not the test execution will require the given capabilities of the
+    server in order for this test script to execute.
+        :param validated: Whether or not the test execution will validate the given capabilities of the
+    server in order for this test script to execute.
+        :param description: Description of the capabilities that this test script is requiring the server
+    to support.
+        :param origin: Which origin server these requirements apply to.
+        :param destination: Which server these requirements apply to.
+        :param link: Links to the FHIR specification that describes this interaction and the
+    resources involved in more detail.
+        :param capabilities: Minimum capabilities required of server for test script to execute
+    successfully.   If server does not meet at a minimum the referenced capability
+    statement, then all tests in this script are skipped.
         """
         super().__init__(
             id_=id_,

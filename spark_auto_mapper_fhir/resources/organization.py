@@ -1,10 +1,13 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -17,18 +20,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.organization_type import OrganizationTypeCode
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.address import Address
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
-    from spark_auto_mapper_fhir.backbone_elements.organization_contact import (
-        OrganizationContact,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.organization_contact import OrganizationContact
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 
@@ -39,7 +41,6 @@ class Organization(FhirResourceBase):
     """
     Organization
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -47,35 +48,35 @@ class Organization(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
-        active: Optional[FhirBoolean] = None,
-        type_: Optional[FhirList[CodeableConcept]] = None,
-        name: Optional[FhirString] = None,
-        alias: Optional[FhirList[FhirString]] = None,
-        telecom: Optional[FhirList[ContactPoint]] = None,
-        address: Optional[FhirList[Address]] = None,
-        partOf: Optional[Reference[Union[Organization]]] = None,
-        contact: Optional[FhirList[OrganizationContact]] = None,
-        endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        active: Optional[FhirBoolean ] = None,
+        type_: Optional[FhirList[CodeableConcept[OrganizationTypeCode] ]] = None,
+        name: Optional[FhirString ] = None,
+        alias: Optional[FhirList[FhirString ]] = None,
+        telecom: Optional[FhirList[ContactPoint ]] = None,
+        address: Optional[FhirList[Address ]] = None,
+        partOf: Optional[Reference [Union[Organization]]] = None,
+        contact: Optional[FhirList[OrganizationContact ]] = None,
+        endpoint: Optional[FhirList[Reference [Union[Endpoint]]]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param identifier: Identifier for the organization that is used to identify the organization
-        across multiple disparate systems.
-            :param active: Whether the organization's record is still in active use.
-            :param type_: The kind(s) of organization that this is.
-            :param name: A name associated with the organization.
-            :param alias: A list of alternate names that the organization is known as, or was known as
-        in the past.
-            :param telecom: A contact detail for the organization.
-            :param address: An address for the organization.
-            :param partOf: The organization of which this organization forms a part.
-            :param contact: Contact for the organization for a certain purpose.
-            :param endpoint: Technical endpoints providing access to services operated for the
-        organization.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param identifier: Identifier for the organization that is used to identify the organization
+    across multiple disparate systems.
+        :param active: Whether the organization's record is still in active use.
+        :param type_: The kind(s) of organization that this is.
+        :param name: A name associated with the organization.
+        :param alias: A list of alternate names that the organization is known as, or was known as
+    in the past.
+        :param telecom: A contact detail for the organization.
+        :param address: An address for the organization.
+        :param partOf: The organization of which this organization forms a part.
+        :param contact: Contact for the organization for a certain purpose.
+        :param endpoint: Technical endpoints providing access to services operated for the
+    organization.
         """
         super().__init__(
             resourceType="Organization",

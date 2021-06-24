@@ -1,8 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,10 +18,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # maternalOrganismId (string)
-    pass
+    from spark_auto_mapper_fhir.complex_types.string import string
     # maternalOrganismName (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # paternalOrganismId (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # paternalOrganismName (string)
+    from spark_auto_mapper_fhir.complex_types.string import string
     # hybridType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -26,35 +35,34 @@ class SubstanceSourceMaterialHybrid(FhirBackboneElementBase):
     """
     SubstanceSourceMaterial.Hybrid
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        maternalOrganismId: Optional[FhirString] = None,
-        maternalOrganismName: Optional[FhirString] = None,
-        paternalOrganismId: Optional[FhirString] = None,
-        paternalOrganismName: Optional[FhirString] = None,
-        hybridType: Optional[CodeableConcept] = None,
+        maternalOrganismId: Optional[FhirString ] = None,
+        maternalOrganismName: Optional[FhirString ] = None,
+        paternalOrganismId: Optional[FhirString ] = None,
+        paternalOrganismName: Optional[FhirString ] = None,
+        hybridType: Optional[CodeableConcept ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param maternalOrganismId: The identifier of the maternal species constituting the hybrid organism shall
-        be specified based on a controlled vocabulary. For plants, the parents aren’t
-        always known, and it is unlikely that it will be known which is maternal and
-        which is paternal.
-            :param maternalOrganismName: The name of the maternal species constituting the hybrid organism shall be
-        specified. For plants, the parents aren’t always known, and it is unlikely
-        that it will be known which is maternal and which is paternal.
-            :param paternalOrganismId: The identifier of the paternal species constituting the hybrid organism shall
-        be specified based on a controlled vocabulary.
-            :param paternalOrganismName: The name of the paternal species constituting the hybrid organism shall be
-        specified.
-            :param hybridType: The hybrid type of an organism shall be specified.
+        :param id_: id of resource
+        :param extension: extensions
+        :param maternalOrganismId: The identifier of the maternal species constituting the hybrid organism shall
+    be specified based on a controlled vocabulary. For plants, the parents aren’t
+    always known, and it is unlikely that it will be known which is maternal and
+    which is paternal.
+        :param maternalOrganismName: The name of the maternal species constituting the hybrid organism shall be
+    specified. For plants, the parents aren’t always known, and it is unlikely
+    that it will be known which is maternal and which is paternal.
+        :param paternalOrganismId: The identifier of the paternal species constituting the hybrid organism shall
+    be specified based on a controlled vocabulary.
+        :param paternalOrganismName: The name of the paternal species constituting the hybrid organism shall be
+    specified.
+        :param hybridType: The hybrid type of an organism shall be specified.
         """
         super().__init__(
             id_=id_,

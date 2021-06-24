@@ -1,8 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,10 +18,9 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # name (string)
-    pass
+    from spark_auto_mapper_fhir.complex_types.string import string
     # definition (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
-
     # documentation (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
@@ -26,35 +31,34 @@ class CapabilityStatementOperation(FhirBackboneElementBase):
     """
     CapabilityStatement.Operation
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        name: FhirString,
-        definition: canonical,
-        documentation: Optional[markdown] = None,
+        name: FhirString ,
+        definition: canonical ,
+        documentation: Optional[markdown ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param name: The name of the operation or query. For an operation, this is the name
-        prefixed with $ and used in the URL. For a query, this is the name used in the
-        _query parameter when the query is called.
-            :param definition: Where the formal definition can be found. If a server references the base
-        definition of an Operation (i.e. from the specification itself such as
-        ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means it
-        supports the full capabilities of the operation - e.g. both GET and POST
-        invocation.  If it only supports a subset, it must define its own custom
-        [[[OperationDefinition]]] with a 'base' of the original OperationDefinition.
-        The custom definition would describe the specific subset of functionality
-        supported.
-            :param documentation: Documentation that describes anything special about the operation behavior,
-        possibly detailing different behavior for system, type and instance-level
-        invocation of the operation.
+        :param id_: id of resource
+        :param extension: extensions
+        :param name: The name of the operation or query. For an operation, this is the name
+    prefixed with $ and used in the URL. For a query, this is the name used in the
+    _query parameter when the query is called.
+        :param definition: Where the formal definition can be found. If a server references the base
+    definition of an Operation (i.e. from the specification itself such as
+    ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means it
+    supports the full capabilities of the operation - e.g. both GET and POST
+    invocation.  If it only supports a subset, it must define its own custom
+    [[[OperationDefinition]]] with a 'base' of the original OperationDefinition.
+    The custom definition would describe the specific subset of functionality
+    supported.
+        :param documentation: Documentation that describes anything special about the operation behavior,
+    possibly detailing different behavior for system, type and instance-level
+    invocation of the operation.
         """
         super().__init__(
             id_=id_,

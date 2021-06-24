@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class PracticeSettingCodeValueSetCode(FhirValueSetBase):
     """
     PracticeSettingCodeValueSet
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -23,9 +32,7 @@ class PracticeSettingCodeValueSetCodeValues:
     BloodBankingAndTransfusionMedicine = PracticeSettingCodeValueSetCode("421661004")
     BurnsCare = PracticeSettingCodeValueSetCode("408462000")
     Cardiology = PracticeSettingCodeValueSetCode("394579002")
-    ClinicalCytogeneticsAndMolecularGenetics = PracticeSettingCodeValueSetCode(
-        "394804000"
-    )
+    ClinicalCytogeneticsAndMolecularGenetics = PracticeSettingCodeValueSetCode("394804000")
     ClinicalGenetics = PracticeSettingCodeValueSetCode("394580004")
     ClinicalHematology = PracticeSettingCodeValueSetCode("394803006")
     ClinicalImmunology = PracticeSettingCodeValueSetCode("408480009")
@@ -75,9 +82,7 @@ class PracticeSettingCodeValueSetCodeValues:
     Otolaryngology = PracticeSettingCodeValueSetCode("418960008")
     PainManagement = PracticeSettingCodeValueSetCode("394882004")
     PalliativeMedicine = PracticeSettingCodeValueSetCode("394806003")
-    Pediatric_ChildAndAdolescent_Psychiatry = PracticeSettingCodeValueSetCode(
-        "394588006"
-    )
+    Pediatric_ChildAndAdolescent_Psychiatry = PracticeSettingCodeValueSetCode("394588006")
     PediatricCardiology = PracticeSettingCodeValueSetCode("408459003")
     PediatricDentistry = PracticeSettingCodeValueSetCode("394607009")
     PediatricEndocrinology = PracticeSettingCodeValueSetCode("419610006")
@@ -92,9 +97,7 @@ class PracticeSettingCodeValueSetCodeValues:
     PediatricPulmonology = PracticeSettingCodeValueSetCode("419170002")
     PediatricRheumatology = PracticeSettingCodeValueSetCode("419472004")
     PediatricSurgery = PracticeSettingCodeValueSetCode("394539006")
-    PediatricSurgery_boneMarrowTransplantation = PracticeSettingCodeValueSetCode(
-        "420112009"
-    )
+    PediatricSurgery_boneMarrowTransplantation = PracticeSettingCodeValueSetCode("420112009")
     PreventiveMedicine = PracticeSettingCodeValueSetCode("409968004")
     Psychiatry = PracticeSettingCodeValueSetCode("394587001")
     Psychotherapy = PracticeSettingCodeValueSetCode("394913002")
@@ -113,31 +116,19 @@ class PracticeSettingCodeValueSetCodeValues:
     Surgery_CardiothoracicTransplantation = PracticeSettingCodeValueSetCode("408471009")
     Surgery_ColorectalSurgery = PracticeSettingCodeValueSetCode("408464004")
     Surgery_Dental_Endodontics = PracticeSettingCodeValueSetCode("408441001")
-    Surgery_Dental_OralAndMaxillofacialSurgery = PracticeSettingCodeValueSetCode(
-        "408465003"
-    )
+    Surgery_Dental_OralAndMaxillofacialSurgery = PracticeSettingCodeValueSetCode("408465003")
     Surgery_Dental_OralSurgery = PracticeSettingCodeValueSetCode("394605001")
     Surgery_Dental_Orthodontics = PracticeSettingCodeValueSetCode("394608004")
     Surgery_Dental_PeriodontalSurgery = PracticeSettingCodeValueSetCode("408461007")
-    Surgery_Dental_ProstheticDentistry_Prosthodontics_ = (
-        PracticeSettingCodeValueSetCode("408460008")
-    )
-    Surgery_Dental_surgical_Prosthodontics = PracticeSettingCodeValueSetCode(
-        "408460008"
-    )
-    Surgery_Dentistry_RestorativeDentistry = PracticeSettingCodeValueSetCode(
-        "394606000"
-    )
+    Surgery_Dental_ProstheticDentistry_Prosthodontics_ = PracticeSettingCodeValueSetCode("408460008")
+    Surgery_Dental_surgical_Prosthodontics = PracticeSettingCodeValueSetCode("408460008")
+    Surgery_Dentistry_RestorativeDentistry = PracticeSettingCodeValueSetCode("394606000")
     Surgery_Dentistry_surgical = PracticeSettingCodeValueSetCode("408449004")
-    Surgery_Dentistry_surgical_Orthodontics = PracticeSettingCodeValueSetCode(
-        "394608004"
-    )
+    Surgery_Dentistry_surgical_Orthodontics = PracticeSettingCodeValueSetCode("394608004")
     Surgery_DermatologicSurgery = PracticeSettingCodeValueSetCode("418018006")
     Surgery_Ear_NoseAndThroatSurgery = PracticeSettingCodeValueSetCode("394604002")
     Surgery_general = PracticeSettingCodeValueSetCode("394609007")
-    Surgery_HepatobiliaryAndPancreaticSurgery = PracticeSettingCodeValueSetCode(
-        "408474001"
-    )
+    Surgery_HepatobiliaryAndPancreaticSurgery = PracticeSettingCodeValueSetCode("408474001")
     Surgery_Neurosurgery = PracticeSettingCodeValueSetCode("394610002")
     Surgery_PlasticSurgery = PracticeSettingCodeValueSetCode("394611003")
     Surgery_TransplantationSurgery = PracticeSettingCodeValueSetCode("408477008")

@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,7 +21,6 @@ class DetectedIssueCategoryCode(FhirValueSetBase):
     """
     DetectedIssueCategory
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -19,63 +28,39 @@ class DetectedIssueCategoryCode(FhirValueSetBase):
 class DetectedIssueCategoryCodeValues:
     Actaccountcode = DetectedIssueCategoryCode("_ActAccountCode")
     Actadjudicationcode = DetectedIssueCategoryCode("_ActAdjudicationCode")
-    Actadjudicationresultactioncode = DetectedIssueCategoryCode(
-        "_ActAdjudicationResultActionCode"
-    )
+    Actadjudicationresultactioncode = DetectedIssueCategoryCode("_ActAdjudicationResultActionCode")
     Actbillablemodifiercode = DetectedIssueCategoryCode("_ActBillableModifierCode")
     Actbillingarrangementcode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
     Actboundedroicode = DetectedIssueCategoryCode("_ActBoundedROICode")
     ActCareProvision = DetectedIssueCategoryCode("_ActCareProvisionCode")
-    Actclaimattachmentcategorycode = DetectedIssueCategoryCode(
-        "_ActClaimAttachmentCategoryCode"
-    )
+    Actclaimattachmentcategorycode = DetectedIssueCategoryCode("_ActClaimAttachmentCategoryCode")
     Actconsenttype = DetectedIssueCategoryCode("_ActConsentType")
-    Actcontainerregistrationcode = DetectedIssueCategoryCode(
-        "_ActContainerRegistrationCode"
-    )
+    Actcontainerregistrationcode = DetectedIssueCategoryCode("_ActContainerRegistrationCode")
     Actcontrolvariable = DetectedIssueCategoryCode("_ActControlVariable")
-    Actcoverageconfirmationcode = DetectedIssueCategoryCode(
-        "_ActCoverageConfirmationCode"
-    )
+    Actcoverageconfirmationcode = DetectedIssueCategoryCode("_ActCoverageConfirmationCode")
     Actcoveragelimitcode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
     Actcoveragetypecode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
-    Actdetectedissuemanagementcode = DetectedIssueCategoryCode(
-        "_ActDetectedIssueManagementCode"
-    )
+    Actdetectedissuemanagementcode = DetectedIssueCategoryCode("_ActDetectedIssueManagementCode")
     Actexposurecode = DetectedIssueCategoryCode("_ActExposureCode")
-    Actfinancialtransactioncode = DetectedIssueCategoryCode(
-        "_ActFinancialTransactionCode"
-    )
+    Actfinancialtransactioncode = DetectedIssueCategoryCode("_ActFinancialTransactionCode")
     Actincidentcode = DetectedIssueCategoryCode("_ActIncidentCode")
     Actinformationaccesscode = DetectedIssueCategoryCode("_ActInformationAccessCode")
-    Actinformationaccesscontextcode = DetectedIssueCategoryCode(
-        "_ActInformationAccessContextCode"
-    )
-    Actinformationcategorycode = DetectedIssueCategoryCode(
-        "_ActInformationCategoryCode"
-    )
+    Actinformationaccesscontextcode = DetectedIssueCategoryCode("_ActInformationAccessContextCode")
+    Actinformationcategorycode = DetectedIssueCategoryCode("_ActInformationCategoryCode")
     Actinvoiceelementcode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
-    Actinvoiceelementsummarycode = DetectedIssueCategoryCode(
-        "_ActInvoiceElementSummaryCode"
-    )
+    Actinvoiceelementsummarycode = DetectedIssueCategoryCode("_ActInvoiceElementSummaryCode")
     Actinvoiceoverridecode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
     Actlistcode = DetectedIssueCategoryCode("_ActListCode")
     Actmonitoringprotocolcode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
-    Actnonobservationindicationcode = DetectedIssueCategoryCode(
-        "_ActNonObservationIndicationCode"
-    )
-    ActObservationVerification = DetectedIssueCategoryCode(
-        "_ActObservationVerificationType"
-    )
+    Actnonobservationindicationcode = DetectedIssueCategoryCode("_ActNonObservationIndicationCode")
+    ActObservationVerification = DetectedIssueCategoryCode("_ActObservationVerificationType")
     Actpaymentcode = DetectedIssueCategoryCode("_ActPaymentCode")
     Actpharmacysupplytype = DetectedIssueCategoryCode("_ActPharmacySupplyType")
     Actpolicytype = DetectedIssueCategoryCode("_ActPolicyType")
     Actproductacquisitioncode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
     Actspecimentransportcode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
     Actspecimentreatmentcode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
-    Actsubstanceadministrationcode = DetectedIssueCategoryCode(
-        "_ActSubstanceAdministrationCode"
-    )
+    Actsubstanceadministrationcode = DetectedIssueCategoryCode("_ActSubstanceAdministrationCode")
     Acttaskcode = DetectedIssueCategoryCode("_ActTaskCode")
     Acttransportationmodecode = DetectedIssueCategoryCode("_ActTransportationModeCode")
     Observationtype = DetectedIssueCategoryCode("_ObservationType")
@@ -97,63 +82,39 @@ class DetectedIssueCategoryCodeValues:
     Storage = DetectedIssueCategoryCode("STORE")
     Actaccountcode = DetectedIssueCategoryCode("_ActAccountCode")
     Actadjudicationcode = DetectedIssueCategoryCode("_ActAdjudicationCode")
-    Actadjudicationresultactioncode = DetectedIssueCategoryCode(
-        "_ActAdjudicationResultActionCode"
-    )
+    Actadjudicationresultactioncode = DetectedIssueCategoryCode("_ActAdjudicationResultActionCode")
     Actbillablemodifiercode = DetectedIssueCategoryCode("_ActBillableModifierCode")
     Actbillingarrangementcode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
     Actboundedroicode = DetectedIssueCategoryCode("_ActBoundedROICode")
     ActCareProvision = DetectedIssueCategoryCode("_ActCareProvisionCode")
-    Actclaimattachmentcategorycode = DetectedIssueCategoryCode(
-        "_ActClaimAttachmentCategoryCode"
-    )
+    Actclaimattachmentcategorycode = DetectedIssueCategoryCode("_ActClaimAttachmentCategoryCode")
     Actconsenttype = DetectedIssueCategoryCode("_ActConsentType")
-    Actcontainerregistrationcode = DetectedIssueCategoryCode(
-        "_ActContainerRegistrationCode"
-    )
+    Actcontainerregistrationcode = DetectedIssueCategoryCode("_ActContainerRegistrationCode")
     Actcontrolvariable = DetectedIssueCategoryCode("_ActControlVariable")
-    Actcoverageconfirmationcode = DetectedIssueCategoryCode(
-        "_ActCoverageConfirmationCode"
-    )
+    Actcoverageconfirmationcode = DetectedIssueCategoryCode("_ActCoverageConfirmationCode")
     Actcoveragelimitcode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
     Actcoveragetypecode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
-    Actdetectedissuemanagementcode = DetectedIssueCategoryCode(
-        "_ActDetectedIssueManagementCode"
-    )
+    Actdetectedissuemanagementcode = DetectedIssueCategoryCode("_ActDetectedIssueManagementCode")
     Actexposurecode = DetectedIssueCategoryCode("_ActExposureCode")
-    Actfinancialtransactioncode = DetectedIssueCategoryCode(
-        "_ActFinancialTransactionCode"
-    )
+    Actfinancialtransactioncode = DetectedIssueCategoryCode("_ActFinancialTransactionCode")
     Actincidentcode = DetectedIssueCategoryCode("_ActIncidentCode")
     Actinformationaccesscode = DetectedIssueCategoryCode("_ActInformationAccessCode")
-    Actinformationaccesscontextcode = DetectedIssueCategoryCode(
-        "_ActInformationAccessContextCode"
-    )
-    Actinformationcategorycode = DetectedIssueCategoryCode(
-        "_ActInformationCategoryCode"
-    )
+    Actinformationaccesscontextcode = DetectedIssueCategoryCode("_ActInformationAccessContextCode")
+    Actinformationcategorycode = DetectedIssueCategoryCode("_ActInformationCategoryCode")
     Actinvoiceelementcode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
-    Actinvoiceelementsummarycode = DetectedIssueCategoryCode(
-        "_ActInvoiceElementSummaryCode"
-    )
+    Actinvoiceelementsummarycode = DetectedIssueCategoryCode("_ActInvoiceElementSummaryCode")
     Actinvoiceoverridecode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
     Actlistcode = DetectedIssueCategoryCode("_ActListCode")
     Actmonitoringprotocolcode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
-    Actnonobservationindicationcode = DetectedIssueCategoryCode(
-        "_ActNonObservationIndicationCode"
-    )
-    ActObservationVerification = DetectedIssueCategoryCode(
-        "_ActObservationVerificationType"
-    )
+    Actnonobservationindicationcode = DetectedIssueCategoryCode("_ActNonObservationIndicationCode")
+    ActObservationVerification = DetectedIssueCategoryCode("_ActObservationVerificationType")
     Actpaymentcode = DetectedIssueCategoryCode("_ActPaymentCode")
     Actpharmacysupplytype = DetectedIssueCategoryCode("_ActPharmacySupplyType")
     Actpolicytype = DetectedIssueCategoryCode("_ActPolicyType")
     Actproductacquisitioncode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
     Actspecimentransportcode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
     Actspecimentreatmentcode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
-    Actsubstanceadministrationcode = DetectedIssueCategoryCode(
-        "_ActSubstanceAdministrationCode"
-    )
+    Actsubstanceadministrationcode = DetectedIssueCategoryCode("_ActSubstanceAdministrationCode")
     Acttaskcode = DetectedIssueCategoryCode("_ActTaskCode")
     Acttransportationmodecode = DetectedIssueCategoryCode("_ActTransportationModeCode")
     Observationtype = DetectedIssueCategoryCode("_ObservationType")
@@ -175,63 +136,39 @@ class DetectedIssueCategoryCodeValues:
     Storage = DetectedIssueCategoryCode("STORE")
     Actaccountcode = DetectedIssueCategoryCode("_ActAccountCode")
     Actadjudicationcode = DetectedIssueCategoryCode("_ActAdjudicationCode")
-    Actadjudicationresultactioncode = DetectedIssueCategoryCode(
-        "_ActAdjudicationResultActionCode"
-    )
+    Actadjudicationresultactioncode = DetectedIssueCategoryCode("_ActAdjudicationResultActionCode")
     Actbillablemodifiercode = DetectedIssueCategoryCode("_ActBillableModifierCode")
     Actbillingarrangementcode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
     Actboundedroicode = DetectedIssueCategoryCode("_ActBoundedROICode")
     ActCareProvision = DetectedIssueCategoryCode("_ActCareProvisionCode")
-    Actclaimattachmentcategorycode = DetectedIssueCategoryCode(
-        "_ActClaimAttachmentCategoryCode"
-    )
+    Actclaimattachmentcategorycode = DetectedIssueCategoryCode("_ActClaimAttachmentCategoryCode")
     Actconsenttype = DetectedIssueCategoryCode("_ActConsentType")
-    Actcontainerregistrationcode = DetectedIssueCategoryCode(
-        "_ActContainerRegistrationCode"
-    )
+    Actcontainerregistrationcode = DetectedIssueCategoryCode("_ActContainerRegistrationCode")
     Actcontrolvariable = DetectedIssueCategoryCode("_ActControlVariable")
-    Actcoverageconfirmationcode = DetectedIssueCategoryCode(
-        "_ActCoverageConfirmationCode"
-    )
+    Actcoverageconfirmationcode = DetectedIssueCategoryCode("_ActCoverageConfirmationCode")
     Actcoveragelimitcode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
     Actcoveragetypecode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
-    Actdetectedissuemanagementcode = DetectedIssueCategoryCode(
-        "_ActDetectedIssueManagementCode"
-    )
+    Actdetectedissuemanagementcode = DetectedIssueCategoryCode("_ActDetectedIssueManagementCode")
     Actexposurecode = DetectedIssueCategoryCode("_ActExposureCode")
-    Actfinancialtransactioncode = DetectedIssueCategoryCode(
-        "_ActFinancialTransactionCode"
-    )
+    Actfinancialtransactioncode = DetectedIssueCategoryCode("_ActFinancialTransactionCode")
     Actincidentcode = DetectedIssueCategoryCode("_ActIncidentCode")
     Actinformationaccesscode = DetectedIssueCategoryCode("_ActInformationAccessCode")
-    Actinformationaccesscontextcode = DetectedIssueCategoryCode(
-        "_ActInformationAccessContextCode"
-    )
-    Actinformationcategorycode = DetectedIssueCategoryCode(
-        "_ActInformationCategoryCode"
-    )
+    Actinformationaccesscontextcode = DetectedIssueCategoryCode("_ActInformationAccessContextCode")
+    Actinformationcategorycode = DetectedIssueCategoryCode("_ActInformationCategoryCode")
     Actinvoiceelementcode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
-    Actinvoiceelementsummarycode = DetectedIssueCategoryCode(
-        "_ActInvoiceElementSummaryCode"
-    )
+    Actinvoiceelementsummarycode = DetectedIssueCategoryCode("_ActInvoiceElementSummaryCode")
     Actinvoiceoverridecode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
     Actlistcode = DetectedIssueCategoryCode("_ActListCode")
     Actmonitoringprotocolcode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
-    Actnonobservationindicationcode = DetectedIssueCategoryCode(
-        "_ActNonObservationIndicationCode"
-    )
-    ActObservationVerification = DetectedIssueCategoryCode(
-        "_ActObservationVerificationType"
-    )
+    Actnonobservationindicationcode = DetectedIssueCategoryCode("_ActNonObservationIndicationCode")
+    ActObservationVerification = DetectedIssueCategoryCode("_ActObservationVerificationType")
     Actpaymentcode = DetectedIssueCategoryCode("_ActPaymentCode")
     Actpharmacysupplytype = DetectedIssueCategoryCode("_ActPharmacySupplyType")
     Actpolicytype = DetectedIssueCategoryCode("_ActPolicyType")
     Actproductacquisitioncode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
     Actspecimentransportcode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
     Actspecimentreatmentcode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
-    Actsubstanceadministrationcode = DetectedIssueCategoryCode(
-        "_ActSubstanceAdministrationCode"
-    )
+    Actsubstanceadministrationcode = DetectedIssueCategoryCode("_ActSubstanceAdministrationCode")
     Acttaskcode = DetectedIssueCategoryCode("_ActTaskCode")
     Acttransportationmodecode = DetectedIssueCategoryCode("_ActTransportationModeCode")
     Observationtype = DetectedIssueCategoryCode("_ObservationType")

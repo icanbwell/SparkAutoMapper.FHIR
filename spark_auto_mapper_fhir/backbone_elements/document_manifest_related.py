@@ -1,7 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,10 +19,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # ref (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for ref
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -26,24 +31,23 @@ class DocumentManifestRelated(FhirBackboneElementBase):
     """
     DocumentManifest.Related
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[Identifier] = None,
-        ref: Optional[Reference[Union[Resource]]] = None,
+        identifier: Optional[Identifier ] = None,
+        ref: Optional[Reference [Union[Resource]]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param identifier: Related identifier to this DocumentManifest.  For example, Order numbers,
-        accession numbers, XDW workflow numbers.
-            :param ref: Related Resource to this DocumentManifest. For example, Order, ServiceRequest,
-        Procedure, EligibilityRequest, etc.
+        :param id_: id of resource
+        :param extension: extensions
+        :param identifier: Related identifier to this DocumentManifest.  For example, Order numbers,
+    accession numbers, XDW workflow numbers.
+        :param ref: Related Resource to this DocumentManifest. For example, Order, ServiceRequest,
+    Procedure, EligibilityRequest, etc.
         """
         super().__init__(
             id_=id_,

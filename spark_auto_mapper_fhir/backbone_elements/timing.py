@@ -1,8 +1,14 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -12,18 +18,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # event (dateTime)
-    pass
+    from spark_auto_mapper_fhir.complex_types.date_time import dateTime
     # repeat (Timing.Repeat)
     from spark_auto_mapper_fhir.backbone_elements.timing_repeat import TimingRepeat
-
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.timing_abbreviation import (
-        TimingAbbreviationCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.timing_abbreviation import TimingAbbreviationCode
     # End Import for CodeableConcept for code
 
 
@@ -33,29 +34,28 @@ class Timing(FhirBackboneElementBase):
     """
     Timing
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        event: Optional[FhirList[FhirDateTime]] = None,
-        repeat: Optional[TimingRepeat] = None,
-        code: Optional[CodeableConcept[TimingAbbreviationCode]] = None,
+        event: Optional[FhirList[FhirDateTime ]] = None,
+        repeat: Optional[TimingRepeat ] = None,
+        code: Optional[CodeableConcept[TimingAbbreviationCode] ] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param extension: extensions
-            :param event: Identifies specific times when the event occurs.
-            :param repeat: A set of rules that describe when the event is scheduled.
-            :param code: A code for the timing schedule (or just text in code.text). Some codes such as
-        BID are ubiquitous, but many institutions define their own additional codes.
-        If a code is provided, the code is understood to be a complete statement of
-        whatever is specified in the structured timing data, and either the code or
-        the data may be used to interpret the Timing, with the exception that
-        .repeat.bounds still applies over the code (and is not contained in the code).
+        :param id_: id of resource
+        :param extension: extensions
+        :param event: Identifies specific times when the event occurs.
+        :param repeat: A set of rules that describe when the event is scheduled.
+        :param code: A code for the timing schedule (or just text in code.text). Some codes such as
+    BID are ubiquitous, but many institutions define their own additional codes.
+    If a code is provided, the code is understood to be a complete statement of
+    whatever is specified in the structured timing data, and either the code or
+    the data may be used to interpret the Timing, with the exception that
+    .repeat.bounds still applies over the code (and is not contained in the code).
         """
         super().__init__(
             id_=id_,
