@@ -1,20 +1,20 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.effectevidencesynthesis import (
-    EffectEvidenceSynthesisSchema,
-)
+from spark_fhir_schemas.r4.resources.effectevidencesynthesis import EffectEvidenceSynthesisSchema
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
@@ -22,9 +22,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
-    )
+    from spark_auto_mapper_fhir.complex_types.publication_status import PublicationStatus
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -32,22 +30,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
-        JurisdictionValueSet,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import JurisdictionValueSet
     # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
-
     # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -55,52 +47,36 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for synthesisType
     from spark_auto_mapper_fhir.value_sets.synthesis_type import SynthesisType
-
     # End Import for CodeableConcept for synthesisType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for studyType
     from spark_auto_mapper_fhir.value_sets.study_type import StudyType
-
     # End Import for CodeableConcept for studyType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for population
     from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for exposure
     from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for exposureAlternative
     from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for outcome
     from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
-    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_sample_size import (
-        EffectEvidenceSynthesisSampleSize,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_results_by_exposure import (
-        EffectEvidenceSynthesisResultsByExposure,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_effect_estimate import (
-        EffectEvidenceSynthesisEffectEstimate,
-    )
-    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_certainty import (
-        EffectEvidenceSynthesisCertainty,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_sample_size import EffectEvidenceSynthesisSampleSize
+    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_results_by_exposure import EffectEvidenceSynthesisResultsByExposure
+    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_effect_estimate import EffectEvidenceSynthesisEffectEstimate
+    from spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_certainty import EffectEvidenceSynthesisCertainty
 
 
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class EffectEvidenceSynthesis(FhirResourceBase):
-    """ """
-
+    """
+    """
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -108,126 +84,122 @@ class EffectEvidenceSynthesis(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: Optional[uri] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
-        version: Optional[FhirString] = None,
-        name: Optional[FhirString] = None,
-        title: Optional[FhirString] = None,
-        status: PublicationStatus,
-        date: Optional[FhirDateTime] = None,
-        publisher: Optional[FhirString] = None,
-        contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
-        note: Optional[FhirList[Annotation]] = None,
-        useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet]]] = None,
-        copyright: Optional[markdown] = None,
-        approvalDate: Optional[FhirDate] = None,
-        lastReviewDate: Optional[FhirDate] = None,
-        effectivePeriod: Optional[Period] = None,
-        topic: Optional[FhirList[CodeableConcept[DefinitionTopic]]] = None,
-        author: Optional[FhirList[ContactDetail]] = None,
-        editor: Optional[FhirList[ContactDetail]] = None,
-        reviewer: Optional[FhirList[ContactDetail]] = None,
-        endorser: Optional[FhirList[ContactDetail]] = None,
-        relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
-        synthesisType: Optional[CodeableConcept[SynthesisType]] = None,
-        studyType: Optional[CodeableConcept[StudyType]] = None,
-        population: Reference[Union[EvidenceVariable]],
-        exposure: Reference[Union[EvidenceVariable]],
-        exposureAlternative: Reference[Union[EvidenceVariable]],
-        outcome: Reference[Union[EvidenceVariable]],
-        sampleSize: Optional[EffectEvidenceSynthesisSampleSize] = None,
-        resultsByExposure: Optional[
-            FhirList[EffectEvidenceSynthesisResultsByExposure]
-        ] = None,
-        effectEstimate: Optional[
-            FhirList[EffectEvidenceSynthesisEffectEstimate]
-        ] = None,
-        certainty: Optional[FhirList[EffectEvidenceSynthesisCertainty]] = None,
+        url: Optional[uri ] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        version: Optional[FhirString ] = None,
+        name: Optional[FhirString ] = None,
+        title: Optional[FhirString ] = None,
+        status: PublicationStatus ,
+        date: Optional[FhirDateTime ] = None,
+        publisher: Optional[FhirString ] = None,
+        contact: Optional[FhirList[ContactDetail ]] = None,
+        description: Optional[markdown ] = None,
+        note: Optional[FhirList[Annotation ]] = None,
+        useContext: Optional[FhirList[UsageContext ]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet] ]] = None,
+        copyright: Optional[markdown ] = None,
+        approvalDate: Optional[FhirDate ] = None,
+        lastReviewDate: Optional[FhirDate ] = None,
+        effectivePeriod: Optional[Period ] = None,
+        topic: Optional[FhirList[CodeableConcept[DefinitionTopic] ]] = None,
+        author: Optional[FhirList[ContactDetail ]] = None,
+        editor: Optional[FhirList[ContactDetail ]] = None,
+        reviewer: Optional[FhirList[ContactDetail ]] = None,
+        endorser: Optional[FhirList[ContactDetail ]] = None,
+        relatedArtifact: Optional[FhirList[RelatedArtifact ]] = None,
+        synthesisType: Optional[CodeableConcept[SynthesisType] ] = None,
+        studyType: Optional[CodeableConcept[StudyType] ] = None,
+        population: Reference [Union[EvidenceVariable]],
+        exposure: Reference [Union[EvidenceVariable]],
+        exposureAlternative: Reference [Union[EvidenceVariable]],
+        outcome: Reference [Union[EvidenceVariable]],
+        sampleSize: Optional[EffectEvidenceSynthesisSampleSize ] = None,
+        resultsByExposure: Optional[FhirList[EffectEvidenceSynthesisResultsByExposure ]] = None,
+        effectEstimate: Optional[FhirList[EffectEvidenceSynthesisEffectEstimate ]] = None,
+        certainty: Optional[FhirList[EffectEvidenceSynthesisCertainty ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param url: An absolute URI that is used to identify this effect evidence synthesis when
-        it is referenced in a specification, model, design or an instance; also called
-        its canonical identifier. This SHOULD be globally unique and SHOULD be a
-        literal address at which at which an authoritative instance of this effect
-        evidence synthesis is (or will be) published. This URL can be the target of a
-        canonical reference. It SHALL remain the same when the effect evidence
-        synthesis is stored on different servers.
-            :param identifier: A formal identifier that is used to identify this effect evidence synthesis
-        when it is represented in other formats, or referenced in a specification,
-        model, design or an instance.
-            :param version: The identifier that is used to identify this version of the effect evidence
-        synthesis when it is referenced in a specification, model, design or instance.
-        This is an arbitrary value managed by the effect evidence synthesis author and
-        is not expected to be globally unique. For example, it might be a timestamp
-        (e.g. yyyymmdd) if a managed version is not available. There is also no
-        expectation that versions can be placed in a lexicographical sequence.
-            :param name: A natural language name identifying the effect evidence synthesis. This name
-        should be usable as an identifier for the module by machine processing
-        applications such as code generation.
-            :param title: A short, descriptive, user-friendly title for the effect evidence synthesis.
-            :param status: The status of this effect evidence synthesis. Enables tracking the life-cycle
-        of the content.
-            :param date: The date  (and optionally time) when the effect evidence synthesis was
-        published. The date must change when the business version changes and it must
-        change if the status code changes. In addition, it should change when the
-        substantive content of the effect evidence synthesis changes.
-            :param publisher: The name of the organization or individual that published the effect evidence
-        synthesis.
-            :param contact: Contact details to assist a user in finding and communicating with the
-        publisher.
-            :param description: A free text natural language description of the effect evidence synthesis from
-        a consumer's perspective.
-            :param note: A human-readable string to clarify or explain concepts about the resource.
-            :param useContext: The content was developed with a focus and intent of supporting the contexts
-        that are listed. These contexts may be general categories (gender, age, ...)
-        or may be references to specific programs (insurance plans, studies, ...) and
-        may be used to assist with indexing and searching for appropriate effect
-        evidence synthesis instances.
-            :param jurisdiction: A legal or geographic region in which the effect evidence synthesis is
-        intended to be used.
-            :param copyright: A copyright statement relating to the effect evidence synthesis and/or its
-        contents. Copyright statements are generally legal restrictions on the use and
-        publishing of the effect evidence synthesis.
-            :param approvalDate: The date on which the resource content was approved by the publisher. Approval
-        happens once when the content is officially approved for usage.
-            :param lastReviewDate: The date on which the resource content was last reviewed. Review happens
-        periodically after approval but does not change the original approval date.
-            :param effectivePeriod: The period during which the effect evidence synthesis content was or is
-        planned to be in active use.
-            :param topic: Descriptive topics related to the content of the EffectEvidenceSynthesis.
-        Topics provide a high-level categorization grouping types of
-        EffectEvidenceSynthesiss that can be useful for filtering and searching.
-            :param author: An individiual or organization primarily involved in the creation and
-        maintenance of the content.
-            :param editor: An individual or organization primarily responsible for internal coherence of
-        the content.
-            :param reviewer: An individual or organization primarily responsible for review of some aspect
-        of the content.
-            :param endorser: An individual or organization responsible for officially endorsing the content
-        for use in some setting.
-            :param relatedArtifact: Related artifacts such as additional documentation, justification, or
-        bibliographic references.
-            :param synthesisType: Type of synthesis eg meta-analysis.
-            :param studyType: Type of study eg randomized trial.
-            :param population: A reference to a EvidenceVariable resource that defines the population for the
-        research.
-            :param exposure: A reference to a EvidenceVariable resource that defines the exposure for the
-        research.
-            :param exposureAlternative: A reference to a EvidenceVariable resource that defines the comparison
-        exposure for the research.
-            :param outcome: A reference to a EvidenceVariable resomece that defines the outcome for the
-        research.
-            :param sampleSize: A description of the size of the sample involved in the synthesis.
-            :param resultsByExposure: A description of the results for each exposure considered in the effect
-        estimate.
-            :param effectEstimate: The estimated effect of the exposure variant.
-            :param certainty: A description of the certainty of the effect estimate.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param url: An absolute URI that is used to identify this effect evidence synthesis when
+    it is referenced in a specification, model, design or an instance; also called
+    its canonical identifier. This SHOULD be globally unique and SHOULD be a
+    literal address at which at which an authoritative instance of this effect
+    evidence synthesis is (or will be) published. This URL can be the target of a
+    canonical reference. It SHALL remain the same when the effect evidence
+    synthesis is stored on different servers.
+        :param identifier: A formal identifier that is used to identify this effect evidence synthesis
+    when it is represented in other formats, or referenced in a specification,
+    model, design or an instance.
+        :param version: The identifier that is used to identify this version of the effect evidence
+    synthesis when it is referenced in a specification, model, design or instance.
+    This is an arbitrary value managed by the effect evidence synthesis author and
+    is not expected to be globally unique. For example, it might be a timestamp
+    (e.g. yyyymmdd) if a managed version is not available. There is also no
+    expectation that versions can be placed in a lexicographical sequence.
+        :param name: A natural language name identifying the effect evidence synthesis. This name
+    should be usable as an identifier for the module by machine processing
+    applications such as code generation.
+        :param title: A short, descriptive, user-friendly title for the effect evidence synthesis.
+        :param status: The status of this effect evidence synthesis. Enables tracking the life-cycle
+    of the content.
+        :param date: The date  (and optionally time) when the effect evidence synthesis was
+    published. The date must change when the business version changes and it must
+    change if the status code changes. In addition, it should change when the
+    substantive content of the effect evidence synthesis changes.
+        :param publisher: The name of the organization or individual that published the effect evidence
+    synthesis.
+        :param contact: Contact details to assist a user in finding and communicating with the
+    publisher.
+        :param description: A free text natural language description of the effect evidence synthesis from
+    a consumer's perspective.
+        :param note: A human-readable string to clarify or explain concepts about the resource.
+        :param useContext: The content was developed with a focus and intent of supporting the contexts
+    that are listed. These contexts may be general categories (gender, age, ...)
+    or may be references to specific programs (insurance plans, studies, ...) and
+    may be used to assist with indexing and searching for appropriate effect
+    evidence synthesis instances.
+        :param jurisdiction: A legal or geographic region in which the effect evidence synthesis is
+    intended to be used.
+        :param copyright: A copyright statement relating to the effect evidence synthesis and/or its
+    contents. Copyright statements are generally legal restrictions on the use and
+    publishing of the effect evidence synthesis.
+        :param approvalDate: The date on which the resource content was approved by the publisher. Approval
+    happens once when the content is officially approved for usage.
+        :param lastReviewDate: The date on which the resource content was last reviewed. Review happens
+    periodically after approval but does not change the original approval date.
+        :param effectivePeriod: The period during which the effect evidence synthesis content was or is
+    planned to be in active use.
+        :param topic: Descriptive topics related to the content of the EffectEvidenceSynthesis.
+    Topics provide a high-level categorization grouping types of
+    EffectEvidenceSynthesiss that can be useful for filtering and searching.
+        :param author: An individiual or organization primarily involved in the creation and
+    maintenance of the content.
+        :param editor: An individual or organization primarily responsible for internal coherence of
+    the content.
+        :param reviewer: An individual or organization primarily responsible for review of some aspect
+    of the content.
+        :param endorser: An individual or organization responsible for officially endorsing the content
+    for use in some setting.
+        :param relatedArtifact: Related artifacts such as additional documentation, justification, or
+    bibliographic references.
+        :param synthesisType: Type of synthesis eg meta-analysis.
+        :param studyType: Type of study eg randomized trial.
+        :param population: A reference to a EvidenceVariable resource that defines the population for the
+    research.
+        :param exposure: A reference to a EvidenceVariable resource that defines the exposure for the
+    research.
+        :param exposureAlternative: A reference to a EvidenceVariable resource that defines the comparison
+    exposure for the research.
+        :param outcome: A reference to a EvidenceVariable resomece that defines the outcome for the
+    research.
+        :param sampleSize: A description of the size of the sample involved in the synthesis.
+        :param resultsByExposure: A description of the results for each exposure considered in the effect
+    estimate.
+        :param effectEstimate: The estimated effect of the exposure variant.
+        :param certainty: A description of the certainty of the effect estimate.
         """
         super().__init__(
             resourceType="EffectEvidenceSynthesis",
@@ -272,6 +244,4 @@ class EffectEvidenceSynthesis(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return EffectEvidenceSynthesisSchema.get_schema(
-            include_extension=include_extension
-        )
+        return EffectEvidenceSynthesisSchema.get_schema(include_extension=include_extension)

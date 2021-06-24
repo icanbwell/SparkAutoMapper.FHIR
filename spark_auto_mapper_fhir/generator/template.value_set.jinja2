@@ -44,6 +44,7 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class {{fhir_entity.cleaned_name}}(FhirValueSetBase):
     """
+    {{fhir_entity.fhir_name}}
     {% for documentation_item in fhir_entity.documentation %}
         {{ documentation_item }}
     {%  endfor %}

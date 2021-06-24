@@ -1,9 +1,13 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -15,83 +19,57 @@ from spark_fhir_schemas.r4.resources.diagnosticreport import DiagnosticReportSch
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
-    from spark_auto_mapper_fhir.resources.immunization_recommendation import (
-        ImmunizationRecommendation,
-    )
+    from spark_auto_mapper_fhir.resources.immunization_recommendation import ImmunizationRecommendation
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.nutrition_order import NutritionOrder
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
-    from spark_auto_mapper_fhir.complex_types.diagnostic_report_status import (
-        DiagnosticReportStatus,
-    )
+    from spark_auto_mapper_fhir.complex_types.diagnostic_report_status import DiagnosticReportStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes import (
-        DiagnosticServiceSectionCodes,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes import DiagnosticServiceSectionCodes
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.loinc_diagnostic_report_codes import (
-        LOINCDiagnosticReportCodes,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.loinc_diagnostic_report_codes import LOINCDiagnosticReportCodes
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.instant import instant
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for resultsInterpreter
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for specimen
     from spark_auto_mapper_fhir.resources.specimen import Specimen
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for result
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for imagingStudy
     from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
-    from spark_auto_mapper_fhir.backbone_elements.diagnostic_report_media import (
-        DiagnosticReportMedia,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.diagnostic_report_media import DiagnosticReportMedia
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for conclusionCode
-    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
-        SNOMEDCTClinicalFindings,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import SNOMEDCTClinicalFindings
     # End Import for CodeableConcept for conclusionCode
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
@@ -99,8 +77,8 @@ if TYPE_CHECKING:
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class DiagnosticReport(FhirResourceBase):
-    """ """
-
+    """
+    """
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -108,86 +86,62 @@ class DiagnosticReport(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
-        basedOn: Optional[
-            FhirList[
-                Reference[
-                    Union[
-                        CarePlan,
-                        ImmunizationRecommendation,
-                        MedicationRequest,
-                        NutritionOrder,
-                        ServiceRequest,
-                    ]
-                ]
-            ]
-        ] = None,
-        status: DiagnosticReportStatus,
-        category: Optional[
-            FhirList[CodeableConcept[DiagnosticServiceSectionCodes]]
-        ] = None,
-        code: CodeableConcept[LOINCDiagnosticReportCodes],
-        subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
-        issued: Optional[instant] = None,
-        performer: Optional[
-            FhirList[
-                Reference[Union[Practitioner, PractitionerRole, Organization, CareTeam]]
-            ]
-        ] = None,
-        resultsInterpreter: Optional[
-            FhirList[
-                Reference[Union[Practitioner, PractitionerRole, Organization, CareTeam]]
-            ]
-        ] = None,
-        specimen: Optional[FhirList[Reference[Union[Specimen]]]] = None,
-        result: Optional[FhirList[Reference[Union[Observation]]]] = None,
-        imagingStudy: Optional[FhirList[Reference[Union[ImagingStudy]]]] = None,
-        media: Optional[FhirList[DiagnosticReportMedia]] = None,
-        conclusion: Optional[FhirString] = None,
-        conclusionCode: Optional[
-            FhirList[CodeableConcept[SNOMEDCTClinicalFindings]]
-        ] = None,
-        presentedForm: Optional[FhirList[Attachment]] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        basedOn: Optional[FhirList[Reference [Union[CarePlan, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest]]]] = None,
+        status: DiagnosticReportStatus ,
+        category: Optional[FhirList[CodeableConcept[DiagnosticServiceSectionCodes] ]] = None,
+        code: CodeableConcept[LOINCDiagnosticReportCodes] ,
+        subject: Optional[Reference [Union[Patient, Group, Device, Location]]] = None,
+        encounter: Optional[Reference [Union[Encounter]]] = None,
+        issued: Optional[instant ] = None,
+        performer: Optional[FhirList[Reference [Union[Practitioner, PractitionerRole, Organization, CareTeam]]]] = None,
+        resultsInterpreter: Optional[FhirList[Reference [Union[Practitioner, PractitionerRole, Organization, CareTeam]]]] = None,
+        specimen: Optional[FhirList[Reference [Union[Specimen]]]] = None,
+        result: Optional[FhirList[Reference [Union[Observation]]]] = None,
+        imagingStudy: Optional[FhirList[Reference [Union[ImagingStudy]]]] = None,
+        media: Optional[FhirList[DiagnosticReportMedia ]] = None,
+        conclusion: Optional[FhirString ] = None,
+        conclusionCode: Optional[FhirList[CodeableConcept[SNOMEDCTClinicalFindings] ]] = None,
+        presentedForm: Optional[FhirList[Attachment ]] = None,
     ) -> None:
         """
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
-            :param identifier: Identifiers assigned to this report by the performer or other systems.
-            :param basedOn: Details concerning a service requested.
-            :param status: The status of the diagnostic report.
-            :param category: A code that classifies the clinical discipline, department or diagnostic
-        service that created the report (e.g. cardiology, biochemistry, hematology,
-        MRI). This is used for searching, sorting and display purposes.
-            :param code: A code or name that describes this diagnostic report.
-            :param subject: The subject of the report. Usually, but not always, this is a patient.
-        However, diagnostic services also perform analyses on specimens collected from
-        a variety of other sources.
-            :param encounter: The healthcare event  (e.g. a patient and healthcare provider interaction)
-        which this DiagnosticReport is about.
-            :param issued: The date and time that this version of the report was made available to
-        providers, typically after the report was reviewed and verified.
-            :param performer: The diagnostic service that is responsible for issuing the report.
-            :param resultsInterpreter: The practitioner or organization that is responsible for the report's
-        conclusions and interpretations.
-            :param specimen: Details about the specimens on which this diagnostic report is based.
-            :param result: [Observations](observation.html)  that are part of this diagnostic report.
-            :param imagingStudy: One or more links to full details of any imaging performed during the
-        diagnostic investigation. Typically, this is imaging performed by DICOM
-        enabled modalities, but this is not required. A fully enabled PACS viewer can
-        use this information to provide views of the source images.
-            :param media: A list of key images associated with this report. The images are generally
-        created during the diagnostic process, and may be directly of the patient, or
-        of treated specimens (i.e. slides of interest).
-            :param conclusion: Concise and clinically contextualized summary conclusion
-        (interpretation/impression) of the diagnostic report.
-            :param conclusionCode: One or more codes that represent the summary conclusion
-        (interpretation/impression) of the diagnostic report.
-            :param presentedForm: Rich text representation of the entire result as issued by the diagnostic
-        service. Multiple formats are allowed but they SHALL be semantically
-        equivalent.
+        :param id_: id of resource
+        :param meta: Meta
+        :param extension: extensions
+        :param identifier: Identifiers assigned to this report by the performer or other systems.
+        :param basedOn: Details concerning a service requested.
+        :param status: The status of the diagnostic report.
+        :param category: A code that classifies the clinical discipline, department or diagnostic
+    service that created the report (e.g. cardiology, biochemistry, hematology,
+    MRI). This is used for searching, sorting and display purposes.
+        :param code: A code or name that describes this diagnostic report.
+        :param subject: The subject of the report. Usually, but not always, this is a patient.
+    However, diagnostic services also perform analyses on specimens collected from
+    a variety of other sources.
+        :param encounter: The healthcare event  (e.g. a patient and healthcare provider interaction)
+    which this DiagnosticReport is about.
+        :param issued: The date and time that this version of the report was made available to
+    providers, typically after the report was reviewed and verified.
+        :param performer: The diagnostic service that is responsible for issuing the report.
+        :param resultsInterpreter: The practitioner or organization that is responsible for the report's
+    conclusions and interpretations.
+        :param specimen: Details about the specimens on which this diagnostic report is based.
+        :param result: [Observations](observation.html)  that are part of this diagnostic report.
+        :param imagingStudy: One or more links to full details of any imaging performed during the
+    diagnostic investigation. Typically, this is imaging performed by DICOM
+    enabled modalities, but this is not required. A fully enabled PACS viewer can
+    use this information to provide views of the source images.
+        :param media: A list of key images associated with this report. The images are generally
+    created during the diagnostic process, and may be directly of the patient, or
+    of treated specimens (i.e. slides of interest).
+        :param conclusion: Concise and clinically contextualized summary conclusion
+    (interpretation/impression) of the diagnostic report.
+        :param conclusionCode: One or more codes that represent the summary conclusion
+    (interpretation/impression) of the diagnostic report.
+        :param presentedForm: Rich text representation of the entire result as issued by the diagnostic
+    service. Multiple formats are allowed but they SHALL be semantically
+    equivalent.
         """
         super().__init__(
             resourceType="DiagnosticReport",
