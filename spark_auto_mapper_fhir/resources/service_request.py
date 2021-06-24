@@ -94,6 +94,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for locationCode
+    from spark_auto_mapper_fhir.value_sets.service_delivery_location_role_type import (
+        ServiceDeliveryLocationRoleType,
+    )
+
+    # End Import for CodeableConcept for locationCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for locationReference
@@ -207,7 +214,9 @@ class ServiceRequest(FhirResourceBase):
                 ]
             ]
         ] = None,
-        locationCode: Optional[FhirList[CodeableConcept]] = None,
+        locationCode: Optional[
+            FhirList[CodeableConcept[ServiceDeliveryLocationRoleType]]
+        ] = None,
         locationReference: Optional[FhirList[Reference[Union[Location]]]] = None,
         reasonCode: Optional[
             FhirList[CodeableConcept[ProcedureReasonCodesCode]]

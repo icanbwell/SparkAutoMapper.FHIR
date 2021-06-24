@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.act_code import ActCode
+
+    # End Import for CodeableConcept for code
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -36,7 +40,7 @@ class CompositionEvent(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[FhirList[CodeableConcept]] = None,
+        code: Optional[FhirList[CodeableConcept[ActCode]]] = None,
         period: Optional[Period] = None,
         detail: Optional[FhirList[Reference[Union[Resource]]]] = None,
     ) -> None:

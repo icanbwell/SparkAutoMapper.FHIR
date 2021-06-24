@@ -17,8 +17,23 @@ from spark_fhir_schemas.r4.resources.substancespecification import (
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for status
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for status
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for domain
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for domain
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -89,9 +104,9 @@ class SubstanceSpecification(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
-        type_: Optional[CodeableConcept] = None,
-        status: Optional[CodeableConcept] = None,
-        domain: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
+        status: Optional[CodeableConcept[GenericTypeCode]] = None,
+        domain: Optional[CodeableConcept[GenericTypeCode]] = None,
         description: Optional[FhirString] = None,
         source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
         comment: Optional[FhirString] = None,

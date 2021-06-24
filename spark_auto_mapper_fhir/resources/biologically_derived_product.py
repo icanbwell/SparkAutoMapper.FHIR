@@ -20,6 +20,11 @@ if TYPE_CHECKING:
         BiologicallyDerivedProductCategory,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for productCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for productCode
     from spark_auto_mapper_fhir.complex_types.biologically_derived_product_status import (
         BiologicallyDerivedProductStatus,
     )
@@ -61,7 +66,7 @@ class BiologicallyDerivedProduct(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         productCategory: Optional[BiologicallyDerivedProductCategory] = None,
-        productCode: Optional[CodeableConcept] = None,
+        productCode: Optional[CodeableConcept[GenericTypeCode]] = None,
         status: Optional[BiologicallyDerivedProductStatus] = None,
         request: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
         quantity: Optional[FhirInteger] = None,

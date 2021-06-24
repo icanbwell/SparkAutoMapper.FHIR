@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # tissue (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for tissue
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for tissue
     # value (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -33,7 +37,7 @@ class MedicinalProductPharmaceuticalWithdrawalPeriod(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        tissue: CodeableConcept,
+        tissue: CodeableConcept[GenericTypeCode],
         value: Quantity,
         supportingInformation: Optional[FhirString] = None,
     ) -> None:

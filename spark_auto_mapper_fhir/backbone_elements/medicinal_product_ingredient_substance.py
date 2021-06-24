@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     # strength (MedicinalProductIngredient.Strength)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_ingredient_strength import (
         MedicinalProductIngredientStrength,
@@ -32,7 +36,7 @@ class MedicinalProductIngredientSubstance(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: CodeableConcept,
+        code: CodeableConcept[GenericTypeCode],
         strength: Optional[FhirList[MedicinalProductIngredientStrength]] = None,
     ) -> None:
         """

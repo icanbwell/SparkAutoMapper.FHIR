@@ -53,6 +53,13 @@ if TYPE_CHECKING:
     # Imports for References for authorizingPrescription
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.act_pharmacy_supply_type import (
+        ActPharmacySupplyType,
+    )
+
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
@@ -107,7 +114,7 @@ class MedicationDispense(FhirResourceBase):
         authorizingPrescription: Optional[
             FhirList[Reference[Union[MedicationRequest]]]
         ] = None,
-        type_: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[ActPharmacySupplyType]] = None,
         quantity: Optional[Quantity] = None,
         daysSupply: Optional[Quantity] = None,
         whenPrepared: Optional[FhirDateTime] = None,

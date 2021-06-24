@@ -26,7 +26,17 @@ if TYPE_CHECKING:
         ObservationStatus,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for method
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -47,6 +57,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -83,15 +98,15 @@ class RiskAssessment(FhirResourceBase):
         basedOn: Optional[Reference[Union[Resource]]] = None,
         parent: Optional[Reference[Union[Resource]]] = None,
         status: ObservationStatus,
-        method: Optional[CodeableConcept] = None,
-        code: Optional[CodeableConcept] = None,
+        method: Optional[CodeableConcept[GenericTypeCode]] = None,
+        code: Optional[CodeableConcept[GenericTypeCode]] = None,
         subject: Reference[Union[Patient, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         condition: Optional[Reference[Union[Condition]]] = None,
         performer: Optional[
             Reference[Union[Practitioner, PractitionerRole, Device]]
         ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

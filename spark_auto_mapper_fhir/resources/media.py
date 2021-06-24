@@ -37,6 +37,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for view
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for view
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -113,7 +118,7 @@ class Media(FhirResourceBase):
         status: EventStatus,
         type_: Optional[CodeableConcept[MediaTypeCode]] = None,
         modality: Optional[CodeableConcept[MediaModalityCode]] = None,
-        view: Optional[CodeableConcept] = None,
+        view: Optional[CodeableConcept[GenericTypeCode]] = None,
         subject: Optional[
             Reference[
                 Union[

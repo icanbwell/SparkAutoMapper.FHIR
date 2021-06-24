@@ -16,12 +16,24 @@ if TYPE_CHECKING:
     # country (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for country
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for country
     # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for jurisdiction
     # legalStatusOfSupply (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for legalStatusOfSupply
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for legalStatusOfSupply
     # validityPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -40,9 +52,9 @@ class MedicinalProductAuthorizationJurisdictionalAuthorization(FhirBackboneEleme
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        country: Optional[CodeableConcept] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept]] = None,
-        legalStatusOfSupply: Optional[CodeableConcept] = None,
+        country: Optional[CodeableConcept[GenericTypeCode]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        legalStatusOfSupply: Optional[CodeableConcept[GenericTypeCode]] = None,
         validityPeriod: Optional[Period] = None,
     ) -> None:
         """

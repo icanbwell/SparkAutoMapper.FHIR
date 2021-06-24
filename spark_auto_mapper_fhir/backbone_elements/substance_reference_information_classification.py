@@ -13,12 +13,24 @@ if TYPE_CHECKING:
     # domain (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for domain
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for domain
     # classification (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for classification
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for classification
     # subtype (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for subtype
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for subtype
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -39,9 +51,9 @@ class SubstanceReferenceInformationClassification(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        domain: Optional[CodeableConcept] = None,
-        classification: Optional[CodeableConcept] = None,
-        subtype: Optional[FhirList[CodeableConcept]] = None,
+        domain: Optional[CodeableConcept[GenericTypeCode]] = None,
+        classification: Optional[CodeableConcept[GenericTypeCode]] = None,
+        subtype: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
     ) -> None:
         """

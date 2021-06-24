@@ -15,13 +15,48 @@ from spark_fhir_schemas.r4.resources.medicinalproduct import MedicinalProductSch
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for domain
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for domain
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for combinedPharmaceuticalDoseForm
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for combinedPharmaceuticalDoseForm
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for legalStatusOfSupply
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for legalStatusOfSupply
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for additionalMonitoringIndicator
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for additionalMonitoringIndicator
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for paediatricUseIndicator
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for paediatricUseIndicator
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for productClassification
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for productClassification
     from spark_auto_mapper_fhir.backbone_elements.marketing_status import (
         MarketingStatus,
     )
@@ -81,14 +116,20 @@ class MedicinalProduct(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        type_: Optional[CodeableConcept] = None,
-        domain: Optional[Coding] = None,
-        combinedPharmaceuticalDoseForm: Optional[CodeableConcept] = None,
-        legalStatusOfSupply: Optional[CodeableConcept] = None,
-        additionalMonitoringIndicator: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
+        domain: Optional[Coding[GenericTypeCode]] = None,
+        combinedPharmaceuticalDoseForm: Optional[
+            CodeableConcept[GenericTypeCode]
+        ] = None,
+        legalStatusOfSupply: Optional[CodeableConcept[GenericTypeCode]] = None,
+        additionalMonitoringIndicator: Optional[
+            CodeableConcept[GenericTypeCode]
+        ] = None,
         specialMeasures: Optional[FhirList[FhirString]] = None,
-        paediatricUseIndicator: Optional[CodeableConcept] = None,
-        productClassification: Optional[FhirList[CodeableConcept]] = None,
+        paediatricUseIndicator: Optional[CodeableConcept[GenericTypeCode]] = None,
+        productClassification: Optional[
+            FhirList[CodeableConcept[GenericTypeCode]]
+        ] = None,
         marketingStatus: Optional[FhirList[MarketingStatus]] = None,
         pharmaceuticalProduct: Optional[
             FhirList[Reference[Union[MedicinalProductPharmaceutical]]]

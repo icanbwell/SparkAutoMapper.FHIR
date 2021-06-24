@@ -24,8 +24,23 @@ if TYPE_CHECKING:
         MedicinalProductPackaged,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for country
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for country
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for status
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for status
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -33,6 +48,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for legalBasis
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for legalBasis
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_authorization_jurisdictional_authorization import (
         MedicinalProductAuthorizationJurisdictionalAuthorization,
     )
@@ -67,16 +87,16 @@ class MedicinalProductAuthorization(FhirResourceBase):
         subject: Optional[
             Reference[Union[MedicinalProduct, MedicinalProductPackaged]]
         ] = None,
-        country: Optional[FhirList[CodeableConcept]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept]] = None,
-        status: Optional[CodeableConcept] = None,
+        country: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        status: Optional[CodeableConcept[GenericTypeCode]] = None,
         statusDate: Optional[FhirDateTime] = None,
         restoreDate: Optional[FhirDateTime] = None,
         validityPeriod: Optional[Period] = None,
         dataExclusivityPeriod: Optional[Period] = None,
         dateOfFirstAuthorization: Optional[FhirDateTime] = None,
         internationalBirthDate: Optional[FhirDateTime] = None,
-        legalBasis: Optional[CodeableConcept] = None,
+        legalBasis: Optional[CodeableConcept[GenericTypeCode]] = None,
         jurisdictionalAuthorization: Optional[
             FhirList[MedicinalProductAuthorizationJurisdictionalAuthorization]
         ] = None,

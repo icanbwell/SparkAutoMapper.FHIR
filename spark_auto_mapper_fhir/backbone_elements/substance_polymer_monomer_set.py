@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # ratioType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for ratioType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for ratioType
     # startingMaterial (SubstancePolymer.StartingMaterial)
     from spark_auto_mapper_fhir.backbone_elements.substance_polymer_starting_material import (
         SubstancePolymerStartingMaterial,
@@ -32,7 +36,7 @@ class SubstancePolymerMonomerSet(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        ratioType: Optional[CodeableConcept] = None,
+        ratioType: Optional[CodeableConcept[GenericTypeCode]] = None,
         startingMaterial: Optional[FhirList[SubstancePolymerStartingMaterial]] = None,
     ) -> None:
         """

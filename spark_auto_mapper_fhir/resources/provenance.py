@@ -23,6 +23,11 @@ if TYPE_CHECKING:
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reason
+    from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
+
+    # End Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for activity
@@ -58,7 +63,7 @@ class Provenance(FhirResourceBase):
         recorded: instant,
         policy: Optional[FhirList[uri]] = None,
         location: Optional[Reference[Union[Location]]] = None,
-        reason: Optional[FhirList[CodeableConcept]] = None,
+        reason: Optional[FhirList[CodeableConcept[PurposeOfUse]]] = None,
         activity: Optional[CodeableConcept[ProvenanceActivityTypeCode]] = None,
         agent: FhirList[ProvenanceAgent],
         entity: Optional[FhirList[ProvenanceEntity]] = None,

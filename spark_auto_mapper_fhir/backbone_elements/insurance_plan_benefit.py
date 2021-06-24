@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # requirement (string)
     # limit (InsurancePlan.Limit)
     from spark_auto_mapper_fhir.backbone_elements.insurance_plan_limit import (
@@ -34,7 +38,7 @@ class InsurancePlanBenefit(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: CodeableConcept,
+        type_: CodeableConcept[GenericTypeCode],
         requirement: Optional[FhirString] = None,
         limit: Optional[FhirList[InsurancePlanLimit]] = None,
     ) -> None:

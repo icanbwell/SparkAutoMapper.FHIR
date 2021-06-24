@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # diagnosisCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for diagnosisCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for diagnosisCodeableConcept
     # diagnosisReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -30,7 +34,7 @@ class CoverageEligibilityRequestDiagnosis(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        diagnosisCodeableConcept: CodeableConcept,
+        diagnosisCodeableConcept: CodeableConcept[GenericTypeCode],
         diagnosisReference: Reference,
     ) -> None:
         """

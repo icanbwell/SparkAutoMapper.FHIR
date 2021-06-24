@@ -317,6 +317,19 @@ class FhirXmlSchemaParser:
                             snake_case_name=value_set.name_snake_case,
                         )
 
+        # set generic type for everything else
+        for fhir_entity in fhir_entities:
+            for property_ in fhir_entity.properties:
+                if (
+                    property_.cleaned_type in ["CodeableConcept", "Coding"]
+                    and not property_.codeable_type
+                ):
+                    property_.codeable_type = SmartName(
+                        name="generic_type",
+                        cleaned_name="GenericTypeCode",
+                        snake_case_name="generic_type",
+                    )
+
     @staticmethod
     def process_types_for_references(fhir_entities: List[FhirEntity]) -> None:
         references: List[
@@ -719,9 +732,9 @@ class FhirXmlSchemaParser:
 
         fhir_value_sets: List[FhirValueSet] = []
 
-        fhir_code_systems: List[FhirValueSet] = FhirXmlSchemaParser.get_v3_code_systems(
-            data_dir
-        )
+        fhir_v3_code_systems: List[
+            FhirValueSet
+        ] = FhirXmlSchemaParser.get_v3_code_systems(data_dir)
 
         value_sets_file: Path = (
             data_dir.joinpath("xsd")
@@ -773,19 +786,16 @@ class FhirXmlSchemaParser:
                         # find the corresponding item in code systems
                         code_systems: List[FhirValueSet] = [
                             c
-                            for c in fhir_code_systems
+                            for c in fhir_v3_code_systems
                             if c.url == compose_include_code_system
                         ]
                         if code_systems:
                             for code_system in code_systems:
                                 fhir_concepts.extend(code_system.concepts)
                     if "concept" in compose_include:
-                        concepts: List[OrderedDict[str, Any]] = compose_include[
-                            "concept"
-                        ]
+                        concepts = compose_include["concept"]
                         if isinstance(concepts, OrderedDict):
                             concepts = [concepts]
-                        concept: OrderedDict[str, Any]
                         for concept in concepts:
                             fhir_concepts.append(
                                 FhirXmlSchemaParser.create_concept(concept)
@@ -813,6 +823,7 @@ class FhirXmlSchemaParser:
         ] = FhirXmlSchemaParser.get_v2_code_systems(data_dir)
 
         fhir_value_sets.extend(fhir_v2_code_systems)
+        fhir_value_sets.extend(fhir_v3_code_systems)
 
         return fhir_value_sets
 
@@ -841,7 +852,7 @@ class FhirXmlSchemaParser:
         return cleaned_display
 
     @staticmethod
-    def get_v3_code_systems(data_dir) -> List[FhirValueSet]:
+    def get_v3_code_systems(data_dir: Path) -> List[FhirValueSet]:
         fhir_value_sets: List[FhirValueSet] = []
 
         value_sets_json_file: Path = (
@@ -874,13 +885,13 @@ class FhirXmlSchemaParser:
             fhir_concepts: List[FhirValueSetConcept] = []
             value_set_url = None  # value_set["valueSet"]
             if "concept" in value_set:
-                concepts_list: List[Dict[str, Any]] = value_set["concept"]
+                concepts_list: List[OrderedDict[str, Any]] = value_set["concept"]
                 if isinstance(concepts_list, OrderedDict):
                     concepts_list = [concepts_list]
                 concept: OrderedDict[str, Any]
                 for concept in concepts_list:
-                    code: str = concept["code"]["@value"]
-                    display: str = (
+                    code: str = str(concept["code"]["@value"])
+                    display: str = str(
                         concept["display"]["@value"]
                         if "display" in concept
                         else concept["code"]["@value"]
@@ -927,7 +938,7 @@ class FhirXmlSchemaParser:
         return fhir_value_sets
 
     @staticmethod
-    def get_v2_code_systems(data_dir) -> List[FhirValueSet]:
+    def get_v2_code_systems(data_dir: Path) -> List[FhirValueSet]:
         fhir_value_sets: List[FhirValueSet] = []
 
         value_sets_json_file: Path = (
@@ -960,13 +971,13 @@ class FhirXmlSchemaParser:
             fhir_concepts: List[FhirValueSetConcept] = []
             value_set_url = None  # value_set["valueSet"]
             if "concept" in value_set:
-                concepts_list: List[Dict[str, Any]] = value_set["concept"]
+                concepts_list: List[OrderedDict[str, Any]] = value_set["concept"]
                 if isinstance(concepts_list, OrderedDict):
                     concepts_list = [concepts_list]
                 concept: OrderedDict[str, Any]
                 for concept in concepts_list:
-                    code: str = concept["code"]["@value"]
-                    display: str = (
+                    code: str = str(concept["code"]["@value"])
+                    display: str = str(
                         concept["display"]["@value"]
                         if "display" in concept
                         else concept["code"]["@value"]

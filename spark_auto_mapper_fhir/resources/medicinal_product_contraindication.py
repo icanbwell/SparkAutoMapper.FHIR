@@ -20,8 +20,23 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for disease
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for disease
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for diseaseStatus
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for diseaseStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for comorbidity
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for comorbidity
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for therapeuticIndication
@@ -51,9 +66,9 @@ class MedicinalProductContraindication(FhirResourceBase):
         subject: Optional[
             FhirList[Reference[Union[MedicinalProduct, Medication]]]
         ] = None,
-        disease: Optional[CodeableConcept] = None,
-        diseaseStatus: Optional[CodeableConcept] = None,
-        comorbidity: Optional[FhirList[CodeableConcept]] = None,
+        disease: Optional[CodeableConcept[GenericTypeCode]] = None,
+        diseaseStatus: Optional[CodeableConcept[GenericTypeCode]] = None,
+        comorbidity: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         therapeuticIndication: Optional[
             FhirList[Reference[Union[MedicinalProductIndication]]]
         ] = None,

@@ -44,6 +44,11 @@ if TYPE_CHECKING:
         ProdCharacteristic,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for languageCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for languageCode
     from spark_auto_mapper_fhir.backbone_elements.device_definition_capability import (
         DeviceDefinitionCapability,
     )
@@ -93,7 +98,7 @@ class DeviceDefinition(FhirResourceBase):
         safety: Optional[FhirList[CodeableConcept[DeviceSafetyCode]]] = None,
         shelfLifeStorage: Optional[FhirList[ProductShelfLife]] = None,
         physicalCharacteristics: Optional[ProdCharacteristic] = None,
-        languageCode: Optional[FhirList[CodeableConcept]] = None,
+        languageCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         capability: Optional[FhirList[DeviceDefinitionCapability]] = None,
         property: Optional[FhirList[DeviceDefinitionProperty]] = None,
         owner: Optional[Reference[Union[Organization]]] = None,

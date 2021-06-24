@@ -16,15 +16,40 @@ from spark_fhir_schemas.r4.resources.substancesourcematerial import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for sourceMaterialClass
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for sourceMaterialClass
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for sourceMaterialType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for sourceMaterialType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for sourceMaterialState
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for sourceMaterialState
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for countryOfOrigin
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for countryOfOrigin
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for developmentStage
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for developmentStage
     from spark_auto_mapper_fhir.backbone_elements.substance_source_material_fraction_description import (
         SubstanceSourceMaterialFractionDescription,
     )
@@ -50,16 +75,16 @@ class SubstanceSourceMaterial(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sourceMaterialClass: Optional[CodeableConcept] = None,
-        sourceMaterialType: Optional[CodeableConcept] = None,
-        sourceMaterialState: Optional[CodeableConcept] = None,
+        sourceMaterialClass: Optional[CodeableConcept[GenericTypeCode]] = None,
+        sourceMaterialType: Optional[CodeableConcept[GenericTypeCode]] = None,
+        sourceMaterialState: Optional[CodeableConcept[GenericTypeCode]] = None,
         organismId: Optional[Identifier] = None,
         organismName: Optional[FhirString] = None,
         parentSubstanceId: Optional[FhirList[Identifier]] = None,
         parentSubstanceName: Optional[FhirList[FhirString]] = None,
-        countryOfOrigin: Optional[FhirList[CodeableConcept]] = None,
+        countryOfOrigin: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         geographicalLocation: Optional[FhirList[FhirString]] = None,
-        developmentStage: Optional[CodeableConcept] = None,
+        developmentStage: Optional[CodeableConcept[GenericTypeCode]] = None,
         fractionDescription: Optional[
             FhirList[SubstanceSourceMaterialFractionDescription]
         ] = None,

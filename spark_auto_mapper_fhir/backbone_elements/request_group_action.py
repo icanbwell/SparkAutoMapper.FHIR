@@ -22,6 +22,10 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     # documentation (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
@@ -102,7 +106,7 @@ class RequestGroupAction(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
         textEquivalent: Optional[FhirString] = None,
         priority: Optional[RequestPriority] = None,
-        code: Optional[FhirList[CodeableConcept]] = None,
+        code: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         condition: Optional[FhirList[RequestGroupCondition]] = None,
         relatedAction: Optional[FhirList[RequestGroupRelatedAction]] = None,

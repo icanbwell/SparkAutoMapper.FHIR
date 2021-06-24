@@ -26,6 +26,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.location_mode import LocationMode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.service_delivery_location_role_type import (
+        ServiceDeliveryLocationRoleType,
+    )
+
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.address import Address
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -75,7 +82,9 @@ class Location(FhirResourceBase):
         alias: Optional[FhirList[FhirString]] = None,
         description: Optional[FhirString] = None,
         mode: Optional[LocationMode] = None,
-        type_: Optional[FhirList[CodeableConcept]] = None,
+        type_: Optional[
+            FhirList[CodeableConcept[ServiceDeliveryLocationRoleType]]
+        ] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[Address] = None,
         physicalType: Optional[CodeableConcept[LocationTypeCode]] = None,

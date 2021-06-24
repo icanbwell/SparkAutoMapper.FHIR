@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # amountType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for amountType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for amountType
     # amountText (string)
     # referenceRange (SubstanceAmount.ReferenceRange)
     from spark_auto_mapper_fhir.backbone_elements.substance_amount_reference_range import (
@@ -34,7 +38,7 @@ class SubstanceAmount(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        amountType: Optional[CodeableConcept] = None,
+        amountType: Optional[CodeableConcept[GenericTypeCode]] = None,
         amountText: Optional[FhirString] = None,
         referenceRange: Optional[SubstanceAmountReferenceRange] = None,
     ) -> None:

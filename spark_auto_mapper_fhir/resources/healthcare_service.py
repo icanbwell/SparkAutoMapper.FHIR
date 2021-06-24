@@ -71,6 +71,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for program
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for characteristic
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for characteristic
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for communication
@@ -131,7 +136,7 @@ class HealthcareService(FhirResourceBase):
         ] = None,
         eligibility: Optional[FhirList[HealthcareServiceEligibility]] = None,
         program: Optional[FhirList[CodeableConcept[ProgramCode]]] = None,
-        characteristic: Optional[FhirList[CodeableConcept]] = None,
+        characteristic: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         communication: Optional[FhirList[CodeableConcept[CommonLanguagesCode]]] = None,
         referralMethod: Optional[FhirList[CodeableConcept[ReferralMethodCode]]] = None,
         appointmentRequired: Optional[FhirBoolean] = None,

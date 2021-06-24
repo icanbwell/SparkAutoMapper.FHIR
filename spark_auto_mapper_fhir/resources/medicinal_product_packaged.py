@@ -22,6 +22,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for legalStatusOfSupply
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for legalStatusOfSupply
     from spark_auto_mapper_fhir.backbone_elements.marketing_status import (
         MarketingStatus,
     )
@@ -60,7 +65,7 @@ class MedicinalProductPackaged(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         subject: Optional[FhirList[Reference[Union[MedicinalProduct]]]] = None,
         description: Optional[FhirString] = None,
-        legalStatusOfSupply: Optional[CodeableConcept] = None,
+        legalStatusOfSupply: Optional[CodeableConcept[GenericTypeCode]] = None,
         marketingStatus: Optional[FhirList[MarketingStatus]] = None,
         marketingAuthorization: Optional[
             Reference[Union[MedicinalProductAuthorization]]

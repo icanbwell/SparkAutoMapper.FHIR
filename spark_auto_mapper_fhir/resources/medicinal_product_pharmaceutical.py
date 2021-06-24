@@ -16,7 +16,17 @@ from spark_fhir_schemas.r4.resources.medicinalproductpharmaceutical import (
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for administrableDoseForm
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for administrableDoseForm
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for unitOfPresentation
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for unitOfPresentation
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for ingredient
@@ -50,8 +60,8 @@ class MedicinalProductPharmaceutical(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        administrableDoseForm: CodeableConcept,
-        unitOfPresentation: Optional[CodeableConcept] = None,
+        administrableDoseForm: CodeableConcept[GenericTypeCode],
+        unitOfPresentation: Optional[CodeableConcept[GenericTypeCode]] = None,
         ingredient: Optional[
             FhirList[Reference[Union[MedicinalProductIngredient]]]
         ] = None,

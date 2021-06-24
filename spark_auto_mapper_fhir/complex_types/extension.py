@@ -32,7 +32,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for valueCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for valueCodeableConcept
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for valueCoding
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for valueCoding
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -98,8 +108,8 @@ class Extension(FhirComplexTypeBase):
         valueAge: Age,
         valueAnnotation: Annotation,
         valueAttachment: Attachment,
-        valueCodeableConcept: CodeableConcept,
-        valueCoding: Coding,
+        valueCodeableConcept: CodeableConcept[GenericTypeCode],
+        valueCoding: Coding[GenericTypeCode],
         valueContactPoint: ContactPoint,
         valueCount: Count,
         valueDistance: Distance,

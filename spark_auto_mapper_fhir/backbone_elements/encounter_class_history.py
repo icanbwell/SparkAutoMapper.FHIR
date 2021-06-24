@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # class_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # Import for CodeableConcept for class_
+    from spark_auto_mapper_fhir.value_sets.act_encounter_code import ActEncounterCode
+
+    # End Import for CodeableConcept for class_
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -30,7 +34,7 @@ class EncounterClassHistory(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        class_: Coding,
+        class_: Coding[ActEncounterCode],
         period: Period,
     ) -> None:
         """

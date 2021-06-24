@@ -36,6 +36,10 @@ if TYPE_CHECKING:
     # valueCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # Import for CodeableConcept for valueCoding
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for valueCoding
     # valueQuantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -65,7 +69,7 @@ class QuestionnaireInitial(FhirBackboneElementBase):
         valueString: FhirString,
         valueUri: uri,
         valueAttachment: Attachment,
-        valueCoding: Coding,
+        valueCoding: Coding[GenericTypeCode],
         valueQuantity: Quantity,
         valueReference: Reference,
     ) -> None:

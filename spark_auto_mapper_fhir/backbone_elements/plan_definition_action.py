@@ -22,9 +22,17 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for reason
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for reason
     # documentation (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
@@ -116,8 +124,8 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
         textEquivalent: Optional[FhirString] = None,
         priority: Optional[RequestPriority] = None,
-        code: Optional[FhirList[CodeableConcept]] = None,
-        reason: Optional[FhirList[CodeableConcept]] = None,
+        code: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        reason: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         goalId: Optional[FhirList[id]] = None,
         trigger: Optional[FhirList[TriggerDefinition]] = None,

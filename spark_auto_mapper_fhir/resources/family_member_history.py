@@ -38,6 +38,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for relationship
+    from spark_auto_mapper_fhir.value_sets.family_member import FamilyMember
+
+    # End Import for CodeableConcept for relationship
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for sex
@@ -96,7 +101,7 @@ class FamilyMemberHistory(FhirResourceBase):
         patient: Reference[Union[Patient]],
         date: Optional[FhirDateTime] = None,
         name: Optional[FhirString] = None,
-        relationship: CodeableConcept,
+        relationship: CodeableConcept[FamilyMember],
         sex: Optional[CodeableConcept[AdministrativeGenderCode]] = None,
         estimatedAge: Optional[FhirBoolean] = None,
         reasonCode: Optional[

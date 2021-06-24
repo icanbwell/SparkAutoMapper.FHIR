@@ -14,9 +14,17 @@ if TYPE_CHECKING:
     # authority (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for authority
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for authority
     # status (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for status
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for status
     # date (dateTime)
 
 
@@ -33,8 +41,8 @@ class SubstanceSpecificationOfficial(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        authority: Optional[CodeableConcept] = None,
-        status: Optional[CodeableConcept] = None,
+        authority: Optional[CodeableConcept[GenericTypeCode]] = None,
+        status: Optional[CodeableConcept[GenericTypeCode]] = None,
         date: Optional[FhirDateTime] = None,
     ) -> None:
         """

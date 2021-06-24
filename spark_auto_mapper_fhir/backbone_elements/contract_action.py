@@ -31,6 +31,10 @@ if TYPE_CHECKING:
     # intent (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for intent
+    from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
+
+    # End Import for CodeableConcept for intent
     # linkId (string)
     # status (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -98,6 +102,10 @@ if TYPE_CHECKING:
     # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
+
+    # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -136,7 +144,7 @@ class ContractAction(FhirBackboneElementBase):
         doNotPerform: Optional[FhirBoolean] = None,
         type_: CodeableConcept[ContractActionCodesCode],
         subject: Optional[FhirList[ContractSubject]] = None,
-        intent: CodeableConcept,
+        intent: CodeableConcept[PurposeOfUse],
         linkId: Optional[FhirList[FhirString]] = None,
         status: CodeableConcept[ContractResourceActionStatusCodesCode],
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
@@ -177,7 +185,7 @@ class ContractAction(FhirBackboneElementBase):
             ]
         ] = None,
         performerLinkId: Optional[FhirList[FhirString]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[PurposeOfUse]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

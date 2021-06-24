@@ -74,6 +74,11 @@ if TYPE_CHECKING:
     # Imports for References for derivedFrom
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -131,7 +136,7 @@ class MedicationStatement(FhirResourceBase):
             ]
         ] = None,
         derivedFrom: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         reasonReference: Optional[
             FhirList[Reference[Union[Condition, Observation, DiagnosticReport]]]
         ] = None,

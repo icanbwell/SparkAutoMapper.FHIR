@@ -20,9 +20,29 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for diseaseSymptomProcedure
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for diseaseSymptomProcedure
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for diseaseStatus
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for diseaseStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for comorbidity
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for comorbidity
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for intendedEffect
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for intendedEffect
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_indication_other_therapy import (
         MedicinalProductIndicationOtherTherapy,
@@ -53,10 +73,10 @@ class MedicinalProductIndication(FhirResourceBase):
         subject: Optional[
             FhirList[Reference[Union[MedicinalProduct, Medication]]]
         ] = None,
-        diseaseSymptomProcedure: Optional[CodeableConcept] = None,
-        diseaseStatus: Optional[CodeableConcept] = None,
-        comorbidity: Optional[FhirList[CodeableConcept]] = None,
-        intendedEffect: Optional[CodeableConcept] = None,
+        diseaseSymptomProcedure: Optional[CodeableConcept[GenericTypeCode]] = None,
+        diseaseStatus: Optional[CodeableConcept[GenericTypeCode]] = None,
+        comorbidity: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        intendedEffect: Optional[CodeableConcept[GenericTypeCode]] = None,
         duration: Optional[Quantity] = None,
         otherTherapy: Optional[FhirList[MedicinalProductIndicationOtherTherapy]] = None,
         undesirableEffect: Optional[

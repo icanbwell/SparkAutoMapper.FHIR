@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # value (string)
     # name (string)
 
@@ -31,7 +35,7 @@ class CoverageClass(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: CodeableConcept,
+        type_: CodeableConcept[GenericTypeCode],
         value: FhirString,
         name: Optional[FhirString] = None,
     ) -> None:

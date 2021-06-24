@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # relationship (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for relationship
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for relationship
     # isDefining (boolean)
     # amountRatioLowLimit (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
@@ -21,6 +25,10 @@ if TYPE_CHECKING:
     # amountType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for amountType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for amountType
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -41,10 +49,10 @@ class SubstanceSpecificationRelationship(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        relationship: Optional[CodeableConcept] = None,
+        relationship: Optional[CodeableConcept[GenericTypeCode]] = None,
         isDefining: Optional[FhirBoolean] = None,
         amountRatioLowLimit: Optional[Ratio] = None,
-        amountType: Optional[CodeableConcept] = None,
+        amountType: Optional[CodeableConcept[GenericTypeCode]] = None,
         source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
     ) -> None:
         """

@@ -35,6 +35,11 @@ if TYPE_CHECKING:
     )
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for purposeOfEvent
+    from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
+
+    # End Import for CodeableConcept for purposeOfEvent
     from spark_auto_mapper_fhir.backbone_elements.audit_event_agent import (
         AuditEventAgent,
     )
@@ -67,7 +72,7 @@ class AuditEvent(FhirResourceBase):
         recorded: instant,
         outcome: Optional[AuditEventOutcome] = None,
         outcomeDesc: Optional[FhirString] = None,
-        purposeOfEvent: Optional[FhirList[CodeableConcept]] = None,
+        purposeOfEvent: Optional[FhirList[CodeableConcept[PurposeOfUse]]] = None,
         agent: FhirList[AuditEventAgent],
         source: AuditEventSource,
         entity: Optional[FhirList[AuditEventEntity]] = None,

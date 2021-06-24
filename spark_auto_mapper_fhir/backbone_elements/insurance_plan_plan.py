@@ -16,6 +16,10 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # coverageArea (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -53,7 +57,7 @@ class InsurancePlanPlan(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        type_: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         coverageArea: Optional[FhirList[Reference[Union[Location]]]] = None,
         network: Optional[FhirList[Reference[Union[Organization]]]] = None,
         generalCost: Optional[FhirList[InsurancePlanGeneralCost]] = None,

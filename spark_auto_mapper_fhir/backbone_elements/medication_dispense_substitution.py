@@ -16,9 +16,21 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.act_substance_admin_substitution_code import (
+        ActSubstanceAdminSubstitutionCode,
+    )
+
+    # End Import for CodeableConcept for type_
     # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for reason
+    from spark_auto_mapper_fhir.value_sets.substance_admin_substitution_reason import (
+        SubstanceAdminSubstitutionReason,
+    )
+
+    # End Import for CodeableConcept for reason
     # responsibleParty (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -41,8 +53,10 @@ class MedicationDispenseSubstitution(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         wasSubstituted: FhirBoolean,
-        type_: Optional[CodeableConcept] = None,
-        reason: Optional[FhirList[CodeableConcept]] = None,
+        type_: Optional[CodeableConcept[ActSubstanceAdminSubstitutionCode]] = None,
+        reason: Optional[
+            FhirList[CodeableConcept[SubstanceAdminSubstitutionReason]]
+        ] = None,
         responsibleParty: Optional[
             FhirList[Reference[Union[Practitioner, PractitionerRole]]]
         ] = None,

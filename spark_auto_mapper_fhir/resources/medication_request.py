@@ -86,6 +86,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -194,7 +199,7 @@ class MedicationRequest(FhirResourceBase):
             CodeableConcept[ProcedurePerformerRoleCodesCode]
         ] = None,
         recorder: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         reasonReference: Optional[
             FhirList[Reference[Union[Condition, Observation]]]
         ] = None,

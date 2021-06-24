@@ -180,6 +180,18 @@ def main() -> int:
             ),
             resources_folder.joinpath(resource_file),
         )
+    value_set_files = [
+        f
+        for f in listdir(value_sets_folder.joinpath("../base_types/value_sets"))
+        if isfile(join(value_sets_folder.joinpath("../base_types/value_sets"), f))
+    ]
+    for value_set_file in value_set_files:
+        copyfile(
+            value_sets_folder.joinpath("../base_types/value_sets").joinpath(
+                value_set_file
+            ),
+            value_sets_folder.joinpath(value_set_file),
+        )
     return 0
 
 

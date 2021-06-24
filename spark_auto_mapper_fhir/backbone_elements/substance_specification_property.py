@@ -14,9 +14,17 @@ if TYPE_CHECKING:
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for category
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     # parameters (string)
 
 
@@ -33,8 +41,8 @@ class SubstanceSpecificationProperty(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[CodeableConcept] = None,
-        code: Optional[CodeableConcept] = None,
+        category: Optional[CodeableConcept[GenericTypeCode]] = None,
+        code: Optional[CodeableConcept[GenericTypeCode]] = None,
         parameters: Optional[FhirString] = None,
     ) -> None:
         """

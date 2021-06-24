@@ -17,6 +17,10 @@ if TYPE_CHECKING:
     # sopClass (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # Import for CodeableConcept for sopClass
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for sopClass
     # number (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
@@ -37,7 +41,7 @@ class ImagingStudyInstance(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         uid: id,
-        sopClass: Coding,
+        sopClass: Coding[GenericTypeCode],
         number: Optional[unsignedInt] = None,
         title: Optional[FhirString] = None,
     ) -> None:

@@ -14,9 +14,17 @@ if TYPE_CHECKING:
     # stereochemistry (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for stereochemistry
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for stereochemistry
     # opticalActivity (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for opticalActivity
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for opticalActivity
     # molecularFormula (string)
     # molecularFormulaByMoiety (string)
     # isotope (SubstanceSpecification.Isotope)
@@ -54,8 +62,8 @@ class SubstanceSpecificationStructure(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        stereochemistry: Optional[CodeableConcept] = None,
-        opticalActivity: Optional[CodeableConcept] = None,
+        stereochemistry: Optional[CodeableConcept[GenericTypeCode]] = None,
+        opticalActivity: Optional[CodeableConcept[GenericTypeCode]] = None,
         molecularFormula: Optional[FhirString] = None,
         molecularFormulaByMoiety: Optional[FhirString] = None,
         isotope: Optional[FhirList[SubstanceSpecificationIsotope]] = None,

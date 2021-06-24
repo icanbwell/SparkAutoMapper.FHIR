@@ -13,9 +13,17 @@ if TYPE_CHECKING:
     # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for method
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for method
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # amount (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -33,8 +41,8 @@ class SubstanceSpecificationMolecularWeight(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        method: Optional[CodeableConcept] = None,
-        type_: Optional[CodeableConcept] = None,
+        method: Optional[CodeableConcept[GenericTypeCode]] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         amount: Optional[Quantity] = None,
     ) -> None:
         """

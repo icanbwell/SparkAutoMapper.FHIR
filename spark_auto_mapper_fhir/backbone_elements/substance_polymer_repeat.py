@@ -18,6 +18,10 @@ if TYPE_CHECKING:
     # repeatUnitAmountType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for repeatUnitAmountType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for repeatUnitAmountType
     # repeatUnit (SubstancePolymer.RepeatUnit)
     from spark_auto_mapper_fhir.backbone_elements.substance_polymer_repeat_unit import (
         SubstancePolymerRepeatUnit,
@@ -39,7 +43,7 @@ class SubstancePolymerRepeat(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         numberOfUnits: Optional[FhirInteger] = None,
         averageMolecularFormula: Optional[FhirString] = None,
-        repeatUnitAmountType: Optional[CodeableConcept] = None,
+        repeatUnitAmountType: Optional[CodeableConcept[GenericTypeCode]] = None,
         repeatUnit: Optional[FhirList[SubstancePolymerRepeatUnit]] = None,
     ) -> None:
         """

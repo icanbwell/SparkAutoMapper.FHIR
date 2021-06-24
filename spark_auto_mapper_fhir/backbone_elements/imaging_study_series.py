@@ -21,6 +21,10 @@ if TYPE_CHECKING:
     # modality (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # Import for CodeableConcept for modality
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for modality
     # description (string)
     # numberOfInstances (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
@@ -80,7 +84,7 @@ class ImagingStudySeries(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         uid: id,
         number: Optional[unsignedInt] = None,
-        modality: Coding,
+        modality: Coding[GenericTypeCode],
         description: Optional[FhirString] = None,
         numberOfInstances: Optional[unsignedInt] = None,
         endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,

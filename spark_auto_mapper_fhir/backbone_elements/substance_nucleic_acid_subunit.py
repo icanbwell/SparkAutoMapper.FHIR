@@ -22,9 +22,17 @@ if TYPE_CHECKING:
     # fivePrime (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for fivePrime
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for fivePrime
     # threePrime (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for threePrime
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for threePrime
     # linkage (SubstanceNucleicAcid.Linkage)
     from spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_linkage import (
         SubstanceNucleicAcidLinkage,
@@ -53,8 +61,8 @@ class SubstanceNucleicAcidSubunit(FhirBackboneElementBase):
         sequence: Optional[FhirString] = None,
         length: Optional[FhirInteger] = None,
         sequenceAttachment: Optional[Attachment] = None,
-        fivePrime: Optional[CodeableConcept] = None,
-        threePrime: Optional[CodeableConcept] = None,
+        fivePrime: Optional[CodeableConcept[GenericTypeCode]] = None,
+        threePrime: Optional[CodeableConcept[GenericTypeCode]] = None,
         linkage: Optional[FhirList[SubstanceNucleicAcidLinkage]] = None,
         sugar: Optional[FhirList[SubstanceNucleicAcidSugar]] = None,
     ) -> None:

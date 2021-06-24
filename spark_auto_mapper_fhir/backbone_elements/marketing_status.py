@@ -14,12 +14,24 @@ if TYPE_CHECKING:
     # country (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for country
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for country
     # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for jurisdiction
     # status (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for status
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for status
     # dateRange (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -39,9 +51,9 @@ class MarketingStatus(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        country: CodeableConcept,
-        jurisdiction: Optional[CodeableConcept] = None,
-        status: CodeableConcept,
+        country: CodeableConcept[GenericTypeCode],
+        jurisdiction: Optional[CodeableConcept[GenericTypeCode]] = None,
+        status: CodeableConcept[GenericTypeCode],
         dateRange: Period,
         restoreDate: Optional[FhirDateTime] = None,
     ) -> None:

@@ -42,6 +42,10 @@ if TYPE_CHECKING:
     # purpose (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # Import for CodeableConcept for purpose
+    from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
+
+    # End Import for CodeableConcept for purpose
     # class_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
@@ -85,7 +89,7 @@ class ConsentProvision(FhirBackboneElementBase):
         actor: Optional[FhirList[ConsentActor]] = None,
         action: Optional[FhirList[CodeableConcept[ConsentActionCodesCode]]] = None,
         securityLabel: Optional[FhirList[Coding[AllSecurityLabelsCode]]] = None,
-        purpose: Optional[FhirList[Coding]] = None,
+        purpose: Optional[FhirList[Coding[PurposeOfUse]]] = None,
         class_: Optional[FhirList[Coding[ConsentContentClassCode]]] = None,
         code: Optional[FhirList[CodeableConcept[ConsentContentCodesCode]]] = None,
         dataPeriod: Optional[Period] = None,

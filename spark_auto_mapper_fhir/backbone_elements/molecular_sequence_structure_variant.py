@@ -15,6 +15,10 @@ if TYPE_CHECKING:
     # variantType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for variantType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for variantType
     # exact (boolean)
     # length (integer)
     # outer (MolecularSequence.Outer)
@@ -41,7 +45,7 @@ class MolecularSequenceStructureVariant(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        variantType: Optional[CodeableConcept] = None,
+        variantType: Optional[CodeableConcept[GenericTypeCode]] = None,
         exact: Optional[FhirBoolean] = None,
         length: Optional[FhirInteger] = None,
         outer: Optional[MolecularSequenceOuter] = None,

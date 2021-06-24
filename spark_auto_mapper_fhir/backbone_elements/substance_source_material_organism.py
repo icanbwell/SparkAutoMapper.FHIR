@@ -14,15 +14,31 @@ if TYPE_CHECKING:
     # family (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for family
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for family
     # genus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for genus
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for genus
     # species (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for species
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for species
     # intraspecificType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for intraspecificType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for intraspecificType
     # intraspecificDescription (string)
     # author (SubstanceSourceMaterial.Author)
     from spark_auto_mapper_fhir.backbone_elements.substance_source_material_author import (
@@ -53,10 +69,10 @@ class SubstanceSourceMaterialOrganism(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        family: Optional[CodeableConcept] = None,
-        genus: Optional[CodeableConcept] = None,
-        species: Optional[CodeableConcept] = None,
-        intraspecificType: Optional[CodeableConcept] = None,
+        family: Optional[CodeableConcept[GenericTypeCode]] = None,
+        genus: Optional[CodeableConcept[GenericTypeCode]] = None,
+        species: Optional[CodeableConcept[GenericTypeCode]] = None,
+        intraspecificType: Optional[CodeableConcept[GenericTypeCode]] = None,
         intraspecificDescription: Optional[FhirString] = None,
         author: Optional[FhirList[SubstanceSourceMaterialAuthor]] = None,
         hybrid: Optional[SubstanceSourceMaterialHybrid] = None,

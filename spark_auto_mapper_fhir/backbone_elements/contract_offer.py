@@ -35,6 +35,12 @@ if TYPE_CHECKING:
     # decision (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for decision
+    from spark_auto_mapper_fhir.value_sets.act_consent_directive import (
+        ActConsentDirective,
+    )
+
+    # End Import for CodeableConcept for decision
     # decisionMode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -70,7 +76,7 @@ class ContractOffer(FhirBackboneElementBase):
         party: Optional[FhirList[ContractParty]] = None,
         topic: Optional[Reference[Union[Resource]]] = None,
         type_: Optional[CodeableConcept[ContractTermTypeCodesCode]] = None,
-        decision: Optional[CodeableConcept] = None,
+        decision: Optional[CodeableConcept[ActConsentDirective]] = None,
         decisionMode: Optional[
             FhirList[CodeableConcept[ContractResourceDecisionModeCodesCode]]
         ] = None,

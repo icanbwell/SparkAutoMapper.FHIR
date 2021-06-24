@@ -20,6 +20,10 @@ if TYPE_CHECKING:
     # event (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for event
+    from spark_auto_mapper_fhir.value_sets.act_code import ActCode
+
+    # End Import for CodeableConcept for event
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -70,7 +74,7 @@ class DocumentReferenceContext(FhirBackboneElementBase):
         encounter: Optional[
             FhirList[Reference[Union[Encounter, EpisodeOfCare]]]
         ] = None,
-        event: Optional[FhirList[CodeableConcept]] = None,
+        event: Optional[FhirList[CodeableConcept[ActCode]]] = None,
         period: Optional[Period] = None,
         facilityType: Optional[CodeableConcept[FacilityTypeCodeValueSetCode]] = None,
         practiceSetting: Optional[

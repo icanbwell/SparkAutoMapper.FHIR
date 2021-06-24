@@ -13,9 +13,17 @@ if TYPE_CHECKING:
     # geneSequenceOrigin (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for geneSequenceOrigin
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for geneSequenceOrigin
     # gene (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for gene
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for gene
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -36,8 +44,8 @@ class SubstanceReferenceInformationGene(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        geneSequenceOrigin: Optional[CodeableConcept] = None,
-        gene: Optional[CodeableConcept] = None,
+        geneSequenceOrigin: Optional[CodeableConcept[GenericTypeCode]] = None,
+        gene: Optional[CodeableConcept[GenericTypeCode]] = None,
         source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
     ) -> None:
         """

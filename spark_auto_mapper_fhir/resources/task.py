@@ -27,7 +27,17 @@ if TYPE_CHECKING:
     # Imports for References for partOf
     from spark_auto_mapper_fhir.complex_types.task_status import TaskStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for statusReason
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for businessStatus
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for businessStatus
     from spark_auto_mapper_fhir.complex_types.task_intent import TaskIntent
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -82,6 +92,11 @@ if TYPE_CHECKING:
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -124,8 +139,8 @@ class Task(FhirResourceBase):
         groupIdentifier: Optional[Identifier] = None,
         partOf: Optional[FhirList[Reference[Union[Task]]]] = None,
         status: TaskStatus,
-        statusReason: Optional[CodeableConcept] = None,
-        businessStatus: Optional[CodeableConcept] = None,
+        statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
+        businessStatus: Optional[CodeableConcept[GenericTypeCode]] = None,
         intent: TaskIntent,
         priority: Optional[RequestPriority] = None,
         code: Optional[CodeableConcept[TaskCodeCode]] = None,
@@ -166,7 +181,7 @@ class Task(FhirResourceBase):
             ]
         ] = None,
         location: Optional[Reference[Union[Location]]] = None,
-        reasonCode: Optional[CodeableConcept] = None,
+        reasonCode: Optional[CodeableConcept[GenericTypeCode]] = None,
         reasonReference: Optional[Reference[Union[Resource]]] = None,
         insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
         note: Optional[FhirList[Annotation]] = None,

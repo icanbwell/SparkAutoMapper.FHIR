@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # operationType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for operationType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for operationType
     # authorisationReferenceNumber (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -21,6 +25,10 @@ if TYPE_CHECKING:
     # confidentialityIndicator (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for confidentialityIndicator
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for confidentialityIndicator
     # manufacturer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -47,10 +55,10 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        operationType: Optional[CodeableConcept] = None,
+        operationType: Optional[CodeableConcept[GenericTypeCode]] = None,
         authorisationReferenceNumber: Optional[Identifier] = None,
         effectiveDate: Optional[FhirDateTime] = None,
-        confidentialityIndicator: Optional[CodeableConcept] = None,
+        confidentialityIndicator: Optional[CodeableConcept[GenericTypeCode]] = None,
         manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
         regulator: Optional[Reference[Union[Organization]]] = None,
     ) -> None:

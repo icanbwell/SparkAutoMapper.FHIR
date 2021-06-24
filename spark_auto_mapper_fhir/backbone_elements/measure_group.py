@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     # description (string)
     # population (Measure.Population)
     from spark_auto_mapper_fhir.backbone_elements.measure_population import (
@@ -39,7 +43,7 @@ class MeasureGroup(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[CodeableConcept] = None,
+        code: Optional[CodeableConcept[GenericTypeCode]] = None,
         description: Optional[FhirString] = None,
         population: Optional[FhirList[MeasurePopulation]] = None,
         stratifier: Optional[FhirList[MeasureStratifier]] = None,

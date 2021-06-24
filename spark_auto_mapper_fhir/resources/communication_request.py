@@ -27,6 +27,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for statusReason
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -38,6 +43,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for medium
+    from spark_auto_mapper_fhir.value_sets.participation_mode import ParticipationMode
+
+    # End Import for CodeableConcept for medium
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -87,6 +97,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.act_reason import ActReason
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -116,11 +131,11 @@ class CommunicationRequest(FhirResourceBase):
         replaces: Optional[FhirList[Reference[Union[CommunicationRequest]]]] = None,
         groupIdentifier: Optional[Identifier] = None,
         status: RequestStatus,
-        statusReason: Optional[CodeableConcept] = None,
+        statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         category: Optional[FhirList[CodeableConcept[CommunicationCategoryCode]]] = None,
         priority: Optional[RequestPriority] = None,
         doNotPerform: Optional[FhirBoolean] = None,
-        medium: Optional[FhirList[CodeableConcept]] = None,
+        medium: Optional[FhirList[CodeableConcept[ParticipationMode]]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         about: Optional[FhirList[Reference[Union[Resource]]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
@@ -168,7 +183,7 @@ class CommunicationRequest(FhirResourceBase):
                 ]
             ]
         ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ActReason]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

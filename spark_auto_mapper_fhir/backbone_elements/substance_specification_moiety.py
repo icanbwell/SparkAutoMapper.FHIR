@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for role
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for role
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -21,9 +25,17 @@ if TYPE_CHECKING:
     # stereochemistry (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for stereochemistry
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for stereochemistry
     # opticalActivity (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for opticalActivity
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for opticalActivity
     # molecularFormula (string)
 
 
@@ -40,11 +52,11 @@ class SubstanceSpecificationMoiety(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: Optional[CodeableConcept] = None,
+        role: Optional[CodeableConcept[GenericTypeCode]] = None,
         identifier: Optional[Identifier] = None,
         name: Optional[FhirString] = None,
-        stereochemistry: Optional[CodeableConcept] = None,
-        opticalActivity: Optional[CodeableConcept] = None,
+        stereochemistry: Optional[CodeableConcept[GenericTypeCode]] = None,
+        opticalActivity: Optional[CodeableConcept[GenericTypeCode]] = None,
         molecularFormula: Optional[FhirString] = None,
     ) -> None:
         """

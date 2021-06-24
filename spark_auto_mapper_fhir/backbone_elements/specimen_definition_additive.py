@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # additiveCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for additiveCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for additiveCodeableConcept
     # additiveReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -30,7 +34,7 @@ class SpecimenDefinitionAdditive(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        additiveCodeableConcept: CodeableConcept,
+        additiveCodeableConcept: CodeableConcept[GenericTypeCode],
         additiveReference: Reference,
     ) -> None:
         """

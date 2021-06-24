@@ -16,15 +16,27 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # material (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for material
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for material
     # alternateMaterial (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for alternateMaterial
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for alternateMaterial
     # device (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -47,6 +59,10 @@ if TYPE_CHECKING:
     # otherCharacteristics (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for otherCharacteristics
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for otherCharacteristics
     # shelfLifeStorage (ProductShelfLife)
     from spark_auto_mapper_fhir.backbone_elements.product_shelf_life import (
         ProductShelfLife,
@@ -73,17 +89,19 @@ class MedicinalProductPackagedPackageItem(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        type_: CodeableConcept,
+        type_: CodeableConcept[GenericTypeCode],
         quantity: Quantity,
-        material: Optional[FhirList[CodeableConcept]] = None,
-        alternateMaterial: Optional[FhirList[CodeableConcept]] = None,
+        material: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        alternateMaterial: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         device: Optional[FhirList[Reference[Union[DeviceDefinition]]]] = None,
         manufacturedItem: Optional[
             FhirList[Reference[Union[MedicinalProductManufactured]]]
         ] = None,
         packageItem: Optional[FhirList[MedicinalProductPackagedPackageItem]] = None,
         physicalCharacteristics: Optional[ProdCharacteristic] = None,
-        otherCharacteristics: Optional[FhirList[CodeableConcept]] = None,
+        otherCharacteristics: Optional[
+            FhirList[CodeableConcept[GenericTypeCode]]
+        ] = None,
         shelfLifeStorage: Optional[FhirList[ProductShelfLife]] = None,
         manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
     ) -> None:

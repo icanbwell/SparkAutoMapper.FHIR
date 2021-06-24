@@ -18,6 +18,10 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     # factor (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
@@ -39,7 +43,7 @@ class InvoicePriceComponent(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: InvoicePriceComponentType,
-        code: Optional[CodeableConcept] = None,
+        code: Optional[CodeableConcept[GenericTypeCode]] = None,
         factor: Optional[decimal] = None,
         amount: Optional[Money] = None,
     ) -> None:

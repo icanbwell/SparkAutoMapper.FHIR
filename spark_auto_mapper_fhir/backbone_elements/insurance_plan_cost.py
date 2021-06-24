@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # applicability (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -25,6 +29,10 @@ if TYPE_CHECKING:
     # qualifiers (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for qualifiers
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for qualifiers
     # value (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -42,9 +50,9 @@ class InsurancePlanCost(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: CodeableConcept,
+        type_: CodeableConcept[GenericTypeCode],
         applicability: Optional[CodeableConcept[BenefitCostApplicabilityCode]] = None,
-        qualifiers: Optional[FhirList[CodeableConcept]] = None,
+        qualifiers: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         value: Optional[Quantity] = None,
     ) -> None:
         """

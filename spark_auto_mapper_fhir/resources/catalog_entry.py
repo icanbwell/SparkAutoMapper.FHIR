@@ -16,6 +16,11 @@ from spark_fhir_schemas.r4.resources.catalogentry import CatalogEntrySchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -35,6 +40,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.binary import Binary
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for classification
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for classification
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
@@ -42,7 +52,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for additionalCharacteristic
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for additionalCharacteristic
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for additionalClassification
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for additionalClassification
     from spark_auto_mapper_fhir.backbone_elements.catalog_entry_related_entry import (
         CatalogEntryRelatedEntry,
     )
@@ -63,7 +83,7 @@ class CatalogEntry(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        type_: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         orderable: FhirBoolean,
         referencedItem: Reference[
             Union[
@@ -81,13 +101,17 @@ class CatalogEntry(FhirResourceBase):
             ]
         ],
         additionalIdentifier: Optional[FhirList[Identifier]] = None,
-        classification: Optional[FhirList[CodeableConcept]] = None,
+        classification: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         status: Optional[PublicationStatus] = None,
         validityPeriod: Optional[Period] = None,
         validTo: Optional[FhirDateTime] = None,
         lastUpdated: Optional[FhirDateTime] = None,
-        additionalCharacteristic: Optional[FhirList[CodeableConcept]] = None,
-        additionalClassification: Optional[FhirList[CodeableConcept]] = None,
+        additionalCharacteristic: Optional[
+            FhirList[CodeableConcept[GenericTypeCode]]
+        ] = None,
+        additionalClassification: Optional[
+            FhirList[CodeableConcept[GenericTypeCode]]
+        ] = None,
         relatedEntry: Optional[FhirList[CatalogEntryRelatedEntry]] = None,
     ) -> None:
         """

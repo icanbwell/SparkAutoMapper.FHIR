@@ -17,19 +17,39 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # status (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for status
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for status
     # preferred (boolean)
     # language (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for language
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for language
     # domain (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for domain
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for domain
     # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for jurisdiction
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for jurisdiction
     # official (SubstanceSpecification.Official)
     from spark_auto_mapper_fhir.backbone_elements.substance_specification_official import (
         SubstanceSpecificationOfficial,
@@ -56,12 +76,12 @@ class SubstanceSpecificationName(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: FhirString,
-        type_: Optional[CodeableConcept] = None,
-        status: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
+        status: Optional[CodeableConcept[GenericTypeCode]] = None,
         preferred: Optional[FhirBoolean] = None,
-        language: Optional[FhirList[CodeableConcept]] = None,
-        domain: Optional[FhirList[CodeableConcept]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept]] = None,
+        language: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        domain: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         synonym: Optional[FhirList[SubstanceSpecificationName]] = None,
         translation: Optional[FhirList[SubstanceSpecificationName]] = None,
         official: Optional[FhirList[SubstanceSpecificationOfficial]] = None,

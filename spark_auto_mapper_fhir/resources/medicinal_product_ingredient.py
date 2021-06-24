@@ -17,6 +17,11 @@ from spark_fhir_schemas.r4.resources.medicinalproductingredient import (
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for role
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -45,7 +50,7 @@ class MedicinalProductIngredient(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
-        role: CodeableConcept,
+        role: CodeableConcept[GenericTypeCode],
         allergenicIndicator: Optional[FhirBoolean] = None,
         manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
         specifiedSubstance: Optional[

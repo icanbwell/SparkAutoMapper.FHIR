@@ -17,9 +17,19 @@ from spark_fhir_schemas.r4.resources.substancenucleicacid import (
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for sequenceType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for sequenceType
     from spark_auto_mapper_fhir.complex_types.integer import FhirInteger
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for oligoNucleotideType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for oligoNucleotideType
     from spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_subunit import (
         SubstanceNucleicAcidSubunit,
     )
@@ -39,10 +49,10 @@ class SubstanceNucleicAcid(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequenceType: Optional[CodeableConcept] = None,
+        sequenceType: Optional[CodeableConcept[GenericTypeCode]] = None,
         numberOfSubunits: Optional[FhirInteger] = None,
         areaOfHybridisation: Optional[FhirString] = None,
-        oligoNucleotideType: Optional[CodeableConcept] = None,
+        oligoNucleotideType: Optional[CodeableConcept[GenericTypeCode]] = None,
         subunit: Optional[FhirList[SubstanceNucleicAcidSubunit]] = None,
     ) -> None:
         """

@@ -42,11 +42,31 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for phase
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for focus
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for focus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for condition
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for condition
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for keyword
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for keyword
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for location
@@ -114,12 +134,12 @@ class ResearchStudy(FhirResourceBase):
             CodeableConcept[ResearchStudyPrimaryPurposeTypeCode]
         ] = None,
         phase: Optional[CodeableConcept[ResearchStudyPhaseCode]] = None,
-        category: Optional[FhirList[CodeableConcept]] = None,
-        focus: Optional[FhirList[CodeableConcept]] = None,
-        condition: Optional[FhirList[CodeableConcept]] = None,
+        category: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        focus: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        condition: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
-        keyword: Optional[FhirList[CodeableConcept]] = None,
+        keyword: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         location: Optional[FhirList[CodeableConcept[JurisdictionValueSetCode]]] = None,
         description: Optional[markdown] = None,
         enrollment: Optional[FhirList[Reference[Union[Group]]]] = None,

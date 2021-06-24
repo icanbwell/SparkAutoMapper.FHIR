@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # authorType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for authorType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for authorType
     # authorDescription (string)
 
 
@@ -30,7 +34,7 @@ class SubstanceSourceMaterialAuthor(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        authorType: Optional[CodeableConcept] = None,
+        authorType: Optional[CodeableConcept[GenericTypeCode]] = None,
         authorDescription: Optional[FhirString] = None,
     ) -> None:
         """

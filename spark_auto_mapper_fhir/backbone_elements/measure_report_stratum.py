@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # value (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for value
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for value
     # component (MeasureReport.Component)
     from spark_auto_mapper_fhir.backbone_elements.measure_report_component import (
         MeasureReportComponent,
@@ -40,7 +44,7 @@ class MeasureReportStratum(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        value: Optional[CodeableConcept] = None,
+        value: Optional[CodeableConcept[GenericTypeCode]] = None,
         component: Optional[FhirList[MeasureReportComponent]] = None,
         population: Optional[FhirList[MeasureReportPopulation1]] = None,
         measureScore: Optional[Quantity] = None,

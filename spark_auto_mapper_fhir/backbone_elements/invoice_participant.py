@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for role
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for role
     # actor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -38,7 +42,7 @@ class InvoiceParticipant(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: Optional[CodeableConcept] = None,
+        role: Optional[CodeableConcept[GenericTypeCode]] = None,
         actor: Reference[
             Union[
                 Practitioner,

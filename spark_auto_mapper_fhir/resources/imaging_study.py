@@ -19,6 +19,11 @@ if TYPE_CHECKING:
         ImagingStudyStatus,
     )
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for modality
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -61,6 +66,11 @@ if TYPE_CHECKING:
     # Imports for References for procedureReference
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for procedureCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for procedureCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
@@ -104,7 +114,7 @@ class ImagingStudy(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: ImagingStudyStatus,
-        modality: Optional[FhirList[Coding]] = None,
+        modality: Optional[FhirList[Coding[GenericTypeCode]]] = None,
         subject: Reference[Union[Patient, Device, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         started: Optional[FhirDateTime] = None,
@@ -125,7 +135,7 @@ class ImagingStudy(FhirResourceBase):
         numberOfSeries: Optional[unsignedInt] = None,
         numberOfInstances: Optional[unsignedInt] = None,
         procedureReference: Optional[Reference[Union[Procedure]]] = None,
-        procedureCode: Optional[FhirList[CodeableConcept]] = None,
+        procedureCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         location: Optional[Reference[Union[Location]]] = None,
         reasonCode: Optional[
             FhirList[CodeableConcept[ProcedureReasonCodesCode]]

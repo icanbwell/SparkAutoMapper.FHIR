@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # systemType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for systemType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for systemType
     # version (string)
 
 
@@ -30,7 +34,7 @@ class DeviceSpecialization(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        systemType: CodeableConcept,
+        systemType: CodeableConcept[GenericTypeCode],
         version: Optional[FhirString] = None,
     ) -> None:
         """

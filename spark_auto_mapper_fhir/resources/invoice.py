@@ -18,6 +18,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.invoice_status import InvoiceStatus
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -70,7 +75,7 @@ class Invoice(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: InvoiceStatus,
         cancelledReason: Optional[FhirString] = None,
-        type_: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         recipient: Optional[
             Reference[Union[Organization, Patient, RelatedPerson]]

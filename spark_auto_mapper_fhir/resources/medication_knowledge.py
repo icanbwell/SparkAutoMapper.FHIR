@@ -46,6 +46,11 @@ if TYPE_CHECKING:
     # Imports for References for associatedMedication
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for productType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for productType
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monograph import (
         MedicationKnowledgeMonograph,
     )
@@ -115,7 +120,7 @@ class MedicationKnowledge(FhirResourceBase):
             FhirList[MedicationKnowledgeRelatedMedicationKnowledge]
         ] = None,
         associatedMedication: Optional[FhirList[Reference[Union[Medication]]]] = None,
-        productType: Optional[FhirList[CodeableConcept]] = None,
+        productType: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         monograph: Optional[FhirList[MedicationKnowledgeMonograph]] = None,
         ingredient: Optional[FhirList[MedicationKnowledgeIngredient]] = None,
         preparationInstruction: Optional[markdown] = None,

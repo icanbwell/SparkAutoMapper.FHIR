@@ -20,8 +20,23 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for symptomConditionEffect
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for symptomConditionEffect
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for classification
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for classification
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for frequencyOfOccurrence
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for frequencyOfOccurrence
     from spark_auto_mapper_fhir.backbone_elements.population import Population
 
 
@@ -42,9 +57,9 @@ class MedicinalProductUndesirableEffect(FhirResourceBase):
         subject: Optional[
             FhirList[Reference[Union[MedicinalProduct, Medication]]]
         ] = None,
-        symptomConditionEffect: Optional[CodeableConcept] = None,
-        classification: Optional[CodeableConcept] = None,
-        frequencyOfOccurrence: Optional[CodeableConcept] = None,
+        symptomConditionEffect: Optional[CodeableConcept[GenericTypeCode]] = None,
+        classification: Optional[CodeableConcept[GenericTypeCode]] = None,
+        frequencyOfOccurrence: Optional[CodeableConcept[GenericTypeCode]] = None,
         population: Optional[FhirList[Population]] = None,
     ) -> None:
         """

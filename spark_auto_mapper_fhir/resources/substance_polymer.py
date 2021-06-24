@@ -14,8 +14,23 @@ from spark_fhir_schemas.r4.resources.substancepolymer import SubstancePolymerSch
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for class_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for class_
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for geometry
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for geometry
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for copolymerConnectivity
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for copolymerConnectivity
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.backbone_elements.substance_polymer_monomer_set import (
         SubstancePolymerMonomerSet,
@@ -39,9 +54,11 @@ class SubstancePolymer(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        class_: Optional[CodeableConcept] = None,
-        geometry: Optional[CodeableConcept] = None,
-        copolymerConnectivity: Optional[FhirList[CodeableConcept]] = None,
+        class_: Optional[CodeableConcept[GenericTypeCode]] = None,
+        geometry: Optional[CodeableConcept[GenericTypeCode]] = None,
+        copolymerConnectivity: Optional[
+            FhirList[CodeableConcept[GenericTypeCode]]
+        ] = None,
         modification: Optional[FhirList[FhirString]] = None,
         monomerSet: Optional[FhirList[SubstancePolymerMonomerSet]] = None,
         repeat: Optional[FhirList[SubstancePolymerRepeat]] = None,

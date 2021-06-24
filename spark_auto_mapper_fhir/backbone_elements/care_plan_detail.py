@@ -64,6 +64,10 @@ if TYPE_CHECKING:
     # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for statusReason
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for statusReason
     # doNotPerform (boolean)
     # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -122,7 +126,7 @@ class CarePlanDetail(FhirBackboneElementBase):
         ] = None,
         goal: Optional[FhirList[Reference[Union[Goal]]]] = None,
         status: CarePlanActivityStatus,
-        statusReason: Optional[CodeableConcept] = None,
+        statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         location: Optional[Reference[Union[Location]]] = None,
         performer: Optional[

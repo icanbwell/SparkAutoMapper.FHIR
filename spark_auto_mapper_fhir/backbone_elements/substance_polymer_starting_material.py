@@ -14,9 +14,17 @@ if TYPE_CHECKING:
     # material (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for material
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for material
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # isDefining (boolean)
     # amount (SubstanceAmount)
     from spark_auto_mapper_fhir.backbone_elements.substance_amount import (
@@ -37,8 +45,8 @@ class SubstancePolymerStartingMaterial(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        material: Optional[CodeableConcept] = None,
-        type_: Optional[CodeableConcept] = None,
+        material: Optional[CodeableConcept[GenericTypeCode]] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         isDefining: Optional[FhirBoolean] = None,
         amount: Optional[SubstanceAmount] = None,
     ) -> None:

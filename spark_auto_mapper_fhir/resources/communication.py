@@ -46,6 +46,11 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for medium
+    from spark_auto_mapper_fhir.value_sets.participation_mode import ParticipationMode
+
+    # End Import for CodeableConcept for medium
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -136,7 +141,7 @@ class Communication(FhirResourceBase):
         statusReason: Optional[CodeableConcept[CommunicationNotDoneReasonCode]] = None,
         category: Optional[FhirList[CodeableConcept[CommunicationCategoryCode]]] = None,
         priority: Optional[RequestPriority] = None,
-        medium: Optional[FhirList[CodeableConcept]] = None,
+        medium: Optional[FhirList[CodeableConcept[ParticipationMode]]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         topic: Optional[CodeableConcept[CommunicationTopicCode]] = None,
         about: Optional[FhirList[Reference[Union[Resource]]]] = None,

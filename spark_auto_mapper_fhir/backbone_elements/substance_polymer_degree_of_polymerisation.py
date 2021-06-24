@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     # degree (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for degree
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for degree
     # amount (SubstanceAmount)
     from spark_auto_mapper_fhir.backbone_elements.substance_amount import (
         SubstanceAmount,
@@ -32,7 +36,7 @@ class SubstancePolymerDegreeOfPolymerisation(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        degree: Optional[CodeableConcept] = None,
+        degree: Optional[CodeableConcept[GenericTypeCode]] = None,
         amount: Optional[SubstanceAmount] = None,
     ) -> None:
         """

@@ -14,6 +14,10 @@ if TYPE_CHECKING:
     # orientationOfPolymerisation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for orientationOfPolymerisation
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for orientationOfPolymerisation
     # repeatUnit (string)
     # amount (SubstanceAmount)
     from spark_auto_mapper_fhir.backbone_elements.substance_amount import (
@@ -44,7 +48,7 @@ class SubstancePolymerRepeatUnit(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        orientationOfPolymerisation: Optional[CodeableConcept] = None,
+        orientationOfPolymerisation: Optional[CodeableConcept[GenericTypeCode]] = None,
         repeatUnit: Optional[FhirString] = None,
         amount: Optional[SubstanceAmount] = None,
         degreeOfPolymerisation: Optional[

@@ -69,6 +69,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for safety
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for safety
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for parent
@@ -114,7 +119,7 @@ class Device(FhirResourceBase):
         location: Optional[Reference[Union[Location]]] = None,
         url: Optional[uri] = None,
         note: Optional[FhirList[Annotation]] = None,
-        safety: Optional[FhirList[CodeableConcept]] = None,
+        safety: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         parent: Optional[Reference[Union[Device]]] = None,
     ) -> None:
         """

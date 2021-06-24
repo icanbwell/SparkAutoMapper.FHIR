@@ -27,6 +27,10 @@ if TYPE_CHECKING:
     # country (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for country
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for country
     # referenceStrength (MedicinalProductIngredient.ReferenceStrength)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_ingredient_reference_strength import (
         MedicinalProductIngredientReferenceStrength,
@@ -51,7 +55,7 @@ class MedicinalProductIngredientStrength(FhirBackboneElementBase):
         concentration: Optional[Ratio] = None,
         concentrationLowLimit: Optional[Ratio] = None,
         measurementPoint: Optional[FhirString] = None,
-        country: Optional[FhirList[CodeableConcept]] = None,
+        country: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         referenceStrength: Optional[
             FhirList[MedicinalProductIngredientReferenceStrength]
         ] = None,

@@ -16,18 +16,38 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for type_
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for type_
     # interaction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for interaction
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for interaction
     # organism (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for organism
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for organism
     # organismType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for organismType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for organismType
     # amountType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # Import for CodeableConcept for amountType
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for amountType
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -49,11 +69,11 @@ class SubstanceReferenceInformationTarget(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         target: Optional[Identifier] = None,
-        type_: Optional[CodeableConcept] = None,
-        interaction: Optional[CodeableConcept] = None,
-        organism: Optional[CodeableConcept] = None,
-        organismType: Optional[CodeableConcept] = None,
-        amountType: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
+        interaction: Optional[CodeableConcept[GenericTypeCode]] = None,
+        organism: Optional[CodeableConcept[GenericTypeCode]] = None,
+        organismType: Optional[CodeableConcept[GenericTypeCode]] = None,
+        amountType: Optional[CodeableConcept[GenericTypeCode]] = None,
         source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
     ) -> None:
         """

@@ -19,7 +19,17 @@ if TYPE_CHECKING:
         ClinicalImpressionStatus,
     )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for statusReason
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -87,8 +97,8 @@ class ClinicalImpression(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: ClinicalImpressionStatus,
-        statusReason: Optional[CodeableConcept] = None,
-        code: Optional[CodeableConcept] = None,
+        statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
+        code: Optional[CodeableConcept[GenericTypeCode]] = None,
         description: Optional[FhirString] = None,
         subject: Reference[Union[Patient, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,

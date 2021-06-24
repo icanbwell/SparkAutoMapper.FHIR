@@ -29,6 +29,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.request_intent import RequestIntent
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -46,6 +51,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for reasonCode
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -82,14 +92,14 @@ class RequestGroup(FhirResourceBase):
         status: RequestStatus,
         intent: RequestIntent,
         priority: Optional[RequestPriority] = None,
-        code: Optional[CodeableConcept] = None,
+        code: Optional[CodeableConcept[GenericTypeCode]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         authoredOn: Optional[FhirDateTime] = None,
         author: Optional[
             Reference[Union[Device, Practitioner, PractitionerRole]]
         ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[
