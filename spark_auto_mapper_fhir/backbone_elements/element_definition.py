@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.loinccodes import Loinccodes
+    from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodes
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.backbone_elements.element_definition_slicing import (
@@ -68,7 +68,7 @@ class ElementDefinition(FhirBackboneElementBase):
         sliceName: Optional[FhirString] = None,
         sliceIsConstraining: Optional[FhirBoolean] = None,
         label: Optional[FhirString] = None,
-        code: Optional[FhirList[Coding[Loinccodes]]] = None,
+        code: Optional[FhirList[Coding[LOINCCodes]]] = None,
         slicing: Optional[ElementDefinitionSlicing] = None,
         short: Optional[FhirString] = None,
         definition: Optional[markdown] = None,

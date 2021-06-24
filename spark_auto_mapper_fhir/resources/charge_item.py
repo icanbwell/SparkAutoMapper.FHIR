@@ -24,7 +24,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.chargeitemcode import Chargeitemcode
+    from spark_auto_mapper_fhir.value_sets.charge_item_code import ChargeItemCode
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -56,8 +56,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodysite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodysite
@@ -77,7 +77,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.icd_10codes import Icd_10codes
+    from spark_auto_mapper_fhir.value_sets.icd_10_codes import ICD_10Codes
 
     # End Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -121,7 +121,7 @@ class ChargeItem(FhirResourceBase):
         definitionCanonical: Optional[FhirList[canonical]] = None,
         status: ChargeItemStatus,
         partOf: Optional[FhirList[Reference[Union[ChargeItem]]]] = None,
-        code: CodeableConcept[Chargeitemcode],
+        code: CodeableConcept[ChargeItemCode],
         subject: Reference[Union[Patient, Group]],
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
         performer: Optional[FhirList[ChargeItemPerformer]] = None,
@@ -129,7 +129,7 @@ class ChargeItem(FhirResourceBase):
         requestingOrganization: Optional[Reference[Union[Organization]]] = None,
         costCenter: Optional[Reference[Union[Organization]]] = None,
         quantity: Optional[Quantity] = None,
-        bodysite: Optional[FhirList[CodeableConcept[Snomedctbodystructures]]] = None,
+        bodysite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructures]]] = None,
         factorOverride: Optional[decimal] = None,
         priceOverride: Optional[Money] = None,
         overrideReason: Optional[FhirString] = None,
@@ -146,7 +146,7 @@ class ChargeItem(FhirResourceBase):
             ]
         ] = None,
         enteredDate: Optional[FhirDateTime] = None,
-        reason: Optional[FhirList[CodeableConcept[Icd_10codes]]] = None,
+        reason: Optional[FhirList[CodeableConcept[ICD_10Codes]]] = None,
         service: Optional[
             FhirList[
                 Reference[

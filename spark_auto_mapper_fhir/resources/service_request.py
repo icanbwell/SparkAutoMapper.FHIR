@@ -32,8 +32,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.servicerequestcategorycodes import (
-        Servicerequestcategorycodes,
+    from spark_auto_mapper_fhir.value_sets.service_request_category_codes import (
+        ServiceRequestCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
@@ -42,16 +42,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.procedurecodes_snomedct_ import (
-        Procedurecodes_snomedct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_codes_snomedct_ import (
+        ProcedureCodes_SNOMEDCT_,
     )
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for orderDetail
-    from spark_auto_mapper_fhir.value_sets.servicerequestorderdetailscodes import (
-        Servicerequestorderdetailscodes,
+    from spark_auto_mapper_fhir.value_sets.service_request_order_details_codes import (
+        ServiceRequestOrderDetailsCodes,
     )
 
     # End Import for CodeableConcept for orderDetail
@@ -79,7 +79,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for performerType
-    from spark_auto_mapper_fhir.value_sets.participantroles import Participantroles
+    from spark_auto_mapper_fhir.value_sets.participant_roles import ParticipantRoles
 
     # End Import for CodeableConcept for performerType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -101,8 +101,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.procedurereasoncodes import (
-        Procedurereasoncodes,
+    from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import (
+        ProcedureReasonCodes,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -129,8 +129,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
@@ -165,13 +165,13 @@ class ServiceRequest(FhirResourceBase):
         status: RequestStatus,
         intent: RequestIntent,
         category: Optional[
-            FhirList[CodeableConcept[Servicerequestcategorycodes]]
+            FhirList[CodeableConcept[ServiceRequestCategoryCodes]]
         ] = None,
         priority: Optional[RequestPriority] = None,
         doNotPerform: Optional[FhirBoolean] = None,
-        code: Optional[CodeableConcept[Procedurecodes_snomedct_]] = None,
+        code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_]] = None,
         orderDetail: Optional[
-            FhirList[CodeableConcept[Servicerequestorderdetailscodes]]
+            FhirList[CodeableConcept[ServiceRequestOrderDetailsCodes]]
         ] = None,
         subject: Reference[Union[Patient, Group, Location, Device]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
@@ -188,7 +188,7 @@ class ServiceRequest(FhirResourceBase):
                 ]
             ]
         ] = None,
-        performerType: Optional[CodeableConcept[Participantroles]] = None,
+        performerType: Optional[CodeableConcept[ParticipantRoles]] = None,
         performer: Optional[
             FhirList[
                 Reference[
@@ -207,7 +207,7 @@ class ServiceRequest(FhirResourceBase):
         ] = None,
         locationCode: Optional[FhirList[CodeableConcept]] = None,
         locationReference: Optional[FhirList[Reference[Union[Location]]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[Procedurereasoncodes]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCodes]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[
@@ -218,7 +218,7 @@ class ServiceRequest(FhirResourceBase):
         insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
         supportingInfo: Optional[FhirList[Reference[Union[Resource]]]] = None,
         specimen: Optional[FhirList[Reference[Union[Specimen]]]] = None,
-        bodySite: Optional[FhirList[CodeableConcept[Snomedctbodystructures]]] = None,
+        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructures]]] = None,
         note: Optional[FhirList[Annotation]] = None,
         patientInstruction: Optional[FhirString] = None,
         relevantHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,

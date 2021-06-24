@@ -19,20 +19,20 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.value_sets.servicecategory import Servicecategory
+    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
 
     # End Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
 
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
-        Practicesettingcodevalueset,
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSet,
     )
 
     # End Import for CodeableConcept for specialty
@@ -64,10 +64,10 @@ class Schedule(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[Servicecategory]]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[Servicetype]]] = None,
+        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory]]] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceType]]] = None,
         specialty: Optional[
-            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+            FhirList[CodeableConcept[PracticeSettingCodeValueSet]]
         ] = None,
         actor: FhirList[
             Reference[

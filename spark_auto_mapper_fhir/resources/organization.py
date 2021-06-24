@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.organizationtype import Organizationtype
+    from spark_auto_mapper_fhir.value_sets.organization_type import OrganizationType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -52,7 +52,7 @@ class Organization(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        type: Optional[FhirList[CodeableConcept[Organizationtype]]] = None,
+        type: Optional[FhirList[CodeableConcept[OrganizationType]]] = None,
         name: Optional[FhirString] = None,
         alias: Optional[FhirList[FhirString]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,

@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
-        JurisdictionValueset,
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSet,
     )
 
     # End Import for CodeableConcept for jurisdiction
@@ -71,7 +71,7 @@ class ExampleScenario(FhirResourceBase):
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet]]] = None,
         copyright: Optional[markdown] = None,
         purpose: Optional[markdown] = None,
         actor: Optional[FhirList[ExampleScenarioActor]] = None,

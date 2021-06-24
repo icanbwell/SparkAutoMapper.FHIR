@@ -13,13 +13,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for productOrService
-    from spark_auto_mapper_fhir.value_sets.usclscodes import Usclscodes
+    from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodes
 
     # End Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifiertypecodes import Modifiertypecodes
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodes
 
     # End Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
@@ -46,8 +46,8 @@ class ClaimResponseDetail1(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        productOrService: CodeableConcept[Usclscodes],
-        modifier: Optional[FhirList[CodeableConcept[Modifiertypecodes]]] = None,
+        productOrService: CodeableConcept[USCLSCodes],
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodes]]] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
         factor: Optional[decimal] = None,

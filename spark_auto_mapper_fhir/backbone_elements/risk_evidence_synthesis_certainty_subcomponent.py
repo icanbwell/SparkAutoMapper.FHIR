@@ -13,16 +13,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.certaintysubcomponenttype import (
-        Certaintysubcomponenttype,
+    from spark_auto_mapper_fhir.value_sets.certainty_subcomponent_type import (
+        CertaintySubcomponentType,
     )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for rating
-    from spark_auto_mapper_fhir.value_sets.certaintysubcomponentrating import (
-        Certaintysubcomponentrating,
+    from spark_auto_mapper_fhir.value_sets.certainty_subcomponent_rating import (
+        CertaintySubcomponentRating,
     )
 
     # End Import for CodeableConcept for rating
@@ -40,8 +40,8 @@ class RiskEvidenceSynthesisCertaintySubcomponent(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[Certaintysubcomponenttype]] = None,
-        rating: Optional[FhirList[CodeableConcept[Certaintysubcomponentrating]]] = None,
+        type: Optional[CodeableConcept[CertaintySubcomponentType]] = None,
+        rating: Optional[FhirList[CodeableConcept[CertaintySubcomponentRating]]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """

@@ -14,16 +14,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for scope
-    from spark_auto_mapper_fhir.value_sets.contractresourceassetscopecodes import (
-        Contractresourceassetscopecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_asset_scope_codes import (
+        ContractResourceAssetScopeCodes,
     )
 
     # End Import for CodeableConcept for scope
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.contractresourceassettypecodes import (
-        Contractresourceassettypecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_asset_type_codes import (
+        ContractResourceAssetTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -34,16 +34,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subtype
-    from spark_auto_mapper_fhir.value_sets.contractresourceassetsub_typecodes import (
-        Contractresourceassetsub_typecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_asset_sub__type_codes import (
+        ContractResourceAssetSub_TypeCodes,
     )
 
     # End Import for CodeableConcept for subtype
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for relationship
-    from spark_auto_mapper_fhir.value_sets.consentcontentclass import (
-        Consentcontentclass,
+    from spark_auto_mapper_fhir.value_sets.consent_content_class import (
+        ConsentContentClass,
     )
 
     # End Import for CodeableConcept for relationship
@@ -53,8 +53,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for periodType
-    from spark_auto_mapper_fhir.value_sets.contractresourceassetavailiabilitycodes import (
-        Contractresourceassetavailiabilitycodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_asset_availiability_codes import (
+        ContractResourceAssetAvailiabilityCodes,
     )
 
     # End Import for CodeableConcept for periodType
@@ -78,19 +78,19 @@ class ContractAsset(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        scope: Optional[CodeableConcept[Contractresourceassetscopecodes]] = None,
+        scope: Optional[CodeableConcept[ContractResourceAssetScopeCodes]] = None,
         type: Optional[
-            FhirList[CodeableConcept[Contractresourceassettypecodes]]
+            FhirList[CodeableConcept[ContractResourceAssetTypeCodes]]
         ] = None,
         typeReference: Optional[FhirList[Reference[Union[Resource]]]] = None,
         subtype: Optional[
-            FhirList[CodeableConcept[Contractresourceassetsub_typecodes]]
+            FhirList[CodeableConcept[ContractResourceAssetSub_TypeCodes]]
         ] = None,
-        relationship: Optional[Coding[Consentcontentclass]] = None,
+        relationship: Optional[Coding[ConsentContentClass]] = None,
         context: Optional[FhirList[ContractContext]] = None,
         condition: Optional[FhirString] = None,
         periodType: Optional[
-            FhirList[CodeableConcept[Contractresourceassetavailiabilitycodes]]
+            FhirList[CodeableConcept[ContractResourceAssetAvailiabilityCodes]]
         ] = None,
         period: Optional[FhirList[Period]] = None,
         usePeriod: Optional[FhirList[Period]] = None,

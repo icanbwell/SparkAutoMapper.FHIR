@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for standardSequence
-    from spark_auto_mapper_fhir.value_sets.fda_standardsequence import (
-        Fda_standardsequence,
+    from spark_auto_mapper_fhir.value_sets.fda__standard_sequence import (
+        FDA_StandardSequence,
     )
 
     # End Import for CodeableConcept for standardSequence
@@ -24,7 +24,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.fda_method import Fda_method
+    from spark_auto_mapper_fhir.value_sets.fda__method import FDA_Method
 
     # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
@@ -52,11 +52,11 @@ class MolecularSequenceQuality(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: qualityType,
-        standardSequence: Optional[CodeableConcept[Fda_standardsequence]] = None,
+        standardSequence: Optional[CodeableConcept[FDA_StandardSequence]] = None,
         start: Optional[FhirInteger] = None,
         end: Optional[FhirInteger] = None,
         score: Optional[Quantity] = None,
-        method: Optional[CodeableConcept[Fda_method]] = None,
+        method: Optional[CodeableConcept[FDA_Method]] = None,
         truthTP: Optional[decimal] = None,
         queryTP: Optional[decimal] = None,
         truthFN: Optional[decimal] = None,

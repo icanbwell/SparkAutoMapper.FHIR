@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.nutrientmodifiercodes import (
-        Nutrientmodifiercodes,
+    from spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes import (
+        NutrientModifierCodes,
     )
 
     # End Import for CodeableConcept for modifier
@@ -32,7 +32,7 @@ class NutritionOrderNutrient(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        modifier: Optional[CodeableConcept[Nutrientmodifiercodes]] = None,
+        modifier: Optional[CodeableConcept[NutrientModifierCodes]] = None,
         amount: Optional[Quantity] = None,
     ) -> None:
         """

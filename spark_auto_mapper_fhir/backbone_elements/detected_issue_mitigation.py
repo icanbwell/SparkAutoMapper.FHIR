@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for action
-    from spark_auto_mapper_fhir.value_sets.detectedissuemitigationaction import (
-        Detectedissuemitigationaction,
+    from spark_auto_mapper_fhir.value_sets.detected_issue_mitigation_action import (
+        DetectedIssueMitigationAction,
     )
 
     # End Import for CodeableConcept for action
@@ -37,7 +37,7 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        action: CodeableConcept[Detectedissuemitigationaction],
+        action: CodeableConcept[DetectedIssueMitigationAction],
         date: Optional[FhirDateTime] = None,
         author: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
     ) -> None:

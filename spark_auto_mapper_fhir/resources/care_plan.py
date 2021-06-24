@@ -31,7 +31,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.careplancategory import Careplancategory
+    from spark_auto_mapper_fhir.value_sets.care_plan_category import CarePlanCategory
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -109,7 +109,7 @@ class CarePlan(FhirResourceBase):
         partOf: Optional[FhirList[Reference[Union[CarePlan]]]] = None,
         status: RequestStatus,
         intent: CarePlanIntent,
-        category: Optional[FhirList[CodeableConcept[Careplancategory]]] = None,
+        category: Optional[FhirList[CodeableConcept[CarePlanCategory]]] = None,
         title: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
         subject: Reference[Union[Patient, Group]],

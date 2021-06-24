@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for relationship
-    from spark_auto_mapper_fhir.value_sets.examplerelatedclaimrelationshipcodes import (
-        Examplerelatedclaimrelationshipcodes,
+    from spark_auto_mapper_fhir.value_sets.example_related_claim_relationship_codes import (
+        ExampleRelatedClaimRelationshipCodes,
     )
 
     # End Import for CodeableConcept for relationship
@@ -38,7 +38,7 @@ class ClaimRelated(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         claim: Optional[Reference[Union[Claim]]] = None,
         relationship: Optional[
-            CodeableConcept[Examplerelatedclaimrelationshipcodes]
+            CodeableConcept[ExampleRelatedClaimRelationshipCodes]
         ] = None,
         reference: Optional[Identifier] = None,
     ) -> None:

@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for qualitativeRisk
-    from spark_auto_mapper_fhir.value_sets.riskprobability import Riskprobability
+    from spark_auto_mapper_fhir.value_sets.risk_probability import RiskProbability
 
     # End Import for CodeableConcept for qualitativeRisk
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
@@ -33,7 +33,7 @@ class RiskAssessmentPrediction(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         outcome: Optional[CodeableConcept] = None,
-        qualitativeRisk: Optional[CodeableConcept[Riskprobability]] = None,
+        qualitativeRisk: Optional[CodeableConcept[RiskProbability]] = None,
         relativeRisk: Optional[decimal] = None,
         rationale: Optional[FhirString] = None,
     ) -> None:

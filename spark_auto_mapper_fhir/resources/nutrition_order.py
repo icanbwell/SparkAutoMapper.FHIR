@@ -46,7 +46,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for excludeFoodModifier
-    from spark_auto_mapper_fhir.value_sets.foodtypecodes import Foodtypecodes
+    from spark_auto_mapper_fhir.value_sets.food_type_codes import FoodTypeCodes
 
     # End Import for CodeableConcept for excludeFoodModifier
     from spark_auto_mapper_fhir.backbone_elements.nutrition_order_oral_diet import (
@@ -87,7 +87,7 @@ class NutritionOrder(FhirResourceBase):
             FhirList[Reference[Union[AllergyIntolerance]]]
         ] = None,
         foodPreferenceModifier: Optional[FhirList[CodeableConcept[Diet]]] = None,
-        excludeFoodModifier: Optional[FhirList[CodeableConcept[Foodtypecodes]]] = None,
+        excludeFoodModifier: Optional[FhirList[CodeableConcept[FoodTypeCodes]]] = None,
         oralDiet: Optional[NutritionOrderOralDiet] = None,
         supplement: Optional[FhirList[NutritionOrderSupplement]] = None,
         enteralFormula: Optional[NutritionOrderEnteralFormula] = None,

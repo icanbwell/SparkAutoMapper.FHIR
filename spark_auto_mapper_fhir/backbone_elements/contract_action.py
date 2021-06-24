@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.contractactioncodes import (
-        Contractactioncodes,
+    from spark_auto_mapper_fhir.value_sets.contract_action_codes import (
+        ContractActionCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -27,8 +27,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for status
-    from spark_auto_mapper_fhir.value_sets.contractresourceactionstatuscodes import (
-        Contractresourceactionstatuscodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_action_status_codes import (
+        ContractResourceActionStatusCodes,
     )
 
     # End Import for CodeableConcept for status
@@ -50,16 +50,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for performerType
-    from spark_auto_mapper_fhir.value_sets.provenanceparticipanttype import (
-        Provenanceparticipanttype,
+    from spark_auto_mapper_fhir.value_sets.provenance_participant_type import (
+        ProvenanceParticipantType,
     )
 
     # End Import for CodeableConcept for performerType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for performerRole
-    from spark_auto_mapper_fhir.value_sets.provenanceparticipantrole import (
-        Provenanceparticipantrole,
+    from spark_auto_mapper_fhir.value_sets.provenance_participant_role import (
+        ProvenanceParticipantRole,
     )
 
     # End Import for CodeableConcept for performerRole
@@ -103,11 +103,11 @@ class ContractAction(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         doNotPerform: Optional[FhirBoolean] = None,
-        type: CodeableConcept[Contractactioncodes],
+        type: CodeableConcept[ContractActionCodes],
         subject: Optional[FhirList[ContractSubject]] = None,
         intent: CodeableConcept,
         linkId: Optional[FhirList[FhirString]] = None,
-        status: CodeableConcept[Contractresourceactionstatuscodes],
+        status: CodeableConcept[ContractResourceActionStatusCodes],
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
         contextLinkId: Optional[FhirList[FhirString]] = None,
         requester: Optional[
@@ -127,9 +127,9 @@ class ContractAction(FhirBackboneElementBase):
         ] = None,
         requesterLinkId: Optional[FhirList[FhirString]] = None,
         performerType: Optional[
-            FhirList[CodeableConcept[Provenanceparticipanttype]]
+            FhirList[CodeableConcept[ProvenanceParticipantType]]
         ] = None,
-        performerRole: Optional[CodeableConcept[Provenanceparticipantrole]] = None,
+        performerRole: Optional[CodeableConcept[ProvenanceParticipantRole]] = None,
         performer: Optional[
             Reference[
                 Union[

@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.examplecoveragefinancialexceptioncodes import (
-        Examplecoveragefinancialexceptioncodes,
+    from spark_auto_mapper_fhir.value_sets.example_coverage_financial_exception_codes import (
+        ExampleCoverageFinancialExceptionCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -32,7 +32,7 @@ class CoverageException(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: CodeableConcept[Examplecoveragefinancialexceptioncodes],
+        type: CodeableConcept[ExampleCoverageFinancialExceptionCodes],
         period: Optional[Period] = None,
     ) -> None:
         """

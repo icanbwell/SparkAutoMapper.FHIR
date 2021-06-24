@@ -21,16 +21,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.claimcareteamrolecodes import (
-        Claimcareteamrolecodes,
+    from spark_auto_mapper_fhir.value_sets.claim_care_team_role_codes import (
+        ClaimCareTeamRoleCodes,
     )
 
     # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for qualification
-    from spark_auto_mapper_fhir.value_sets.exampleproviderqualificationcodes import (
-        Exampleproviderqualificationcodes,
+    from spark_auto_mapper_fhir.value_sets.example_provider_qualification_codes import (
+        ExampleProviderQualificationCodes,
     )
 
     # End Import for CodeableConcept for qualification
@@ -50,9 +50,9 @@ class ClaimCareTeam(FhirBackboneElementBase):
         sequence: positiveInt,
         provider: Reference[Union[Practitioner, PractitionerRole, Organization]],
         responsible: Optional[FhirBoolean] = None,
-        role: Optional[CodeableConcept[Claimcareteamrolecodes]] = None,
+        role: Optional[CodeableConcept[ClaimCareTeamRoleCodes]] = None,
         qualification: Optional[
-            CodeableConcept[Exampleproviderqualificationcodes]
+            CodeableConcept[ExampleProviderQualificationCodes]
         ] = None,
     ) -> None:
         """

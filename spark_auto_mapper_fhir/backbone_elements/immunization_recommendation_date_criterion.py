@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.immunizationrecommendationdatecriterioncodes import (
-        Immunizationrecommendationdatecriterioncodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_date_criterion_codes import (
+        ImmunizationRecommendationDateCriterionCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -32,7 +32,7 @@ class ImmunizationRecommendationDateCriterion(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: CodeableConcept[Immunizationrecommendationdatecriterioncodes],
+        code: CodeableConcept[ImmunizationRecommendationDateCriterionCodes],
         value: FhirDateTime,
     ) -> None:
         """

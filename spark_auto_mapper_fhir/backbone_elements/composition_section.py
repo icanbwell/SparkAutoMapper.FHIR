@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.documentsectioncodes import (
-        Documentsectioncodes,
+    from spark_auto_mapper_fhir.value_sets.document_section_codes import (
+        DocumentSectionCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -37,7 +37,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for orderedBy
-    from spark_auto_mapper_fhir.value_sets.listordercodes import Listordercodes
+    from spark_auto_mapper_fhir.value_sets.list_order_codes import ListOrderCodes
 
     # End Import for CodeableConcept for orderedBy
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -47,7 +47,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for emptyReason
-    from spark_auto_mapper_fhir.value_sets.listemptyreasons import Listemptyreasons
+    from spark_auto_mapper_fhir.value_sets.list_empty_reasons import ListEmptyReasons
 
     # End Import for CodeableConcept for emptyReason
     from spark_auto_mapper_fhir.backbone_elements.composition_section import (
@@ -67,7 +67,7 @@ class CompositionSection(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         title: Optional[FhirString] = None,
-        code: Optional[CodeableConcept[Documentsectioncodes]] = None,
+        code: Optional[CodeableConcept[DocumentSectionCodes]] = None,
         author: Optional[
             FhirList[
                 Reference[
@@ -85,9 +85,9 @@ class CompositionSection(FhirBackboneElementBase):
         focus: Optional[Reference[Union[Resource]]] = None,
         text: Optional[Narrative] = None,
         mode: Optional[ListMode] = None,
-        orderedBy: Optional[CodeableConcept[Listordercodes]] = None,
+        orderedBy: Optional[CodeableConcept[ListOrderCodes]] = None,
         entry: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        emptyReason: Optional[CodeableConcept[Listemptyreasons]] = None,
+        emptyReason: Optional[CodeableConcept[ListEmptyReasons]] = None,
         section: Optional[FhirList[CompositionSection]] = None,
     ) -> None:
         """

@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for rating
-    from spark_auto_mapper_fhir.value_sets.qualityofevidencerating import (
-        Qualityofevidencerating,
+    from spark_auto_mapper_fhir.value_sets.quality_of_evidence_rating import (
+        QualityOfEvidenceRating,
     )
 
     # End Import for CodeableConcept for rating
@@ -35,7 +35,7 @@ class EffectEvidenceSynthesisCertainty(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        rating: Optional[FhirList[CodeableConcept[Qualityofevidencerating]]] = None,
+        rating: Optional[FhirList[CodeableConcept[QualityOfEvidenceRating]]] = None,
         note: Optional[FhirList[Annotation]] = None,
         certaintySubcomponent: Optional[
             FhirList[EffectEvidenceSynthesisCertaintySubcomponent]

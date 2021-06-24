@@ -17,7 +17,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.basicresourcetypes import Basicresourcetypes
+    from spark_auto_mapper_fhir.value_sets.basic_resource_types import (
+        BasicResourceTypes,
+    )
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -48,7 +50,7 @@ class Basic(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        code: CodeableConcept[Basicresourcetypes],
+        code: CodeableConcept[BasicResourceTypes],
         subject: Optional[Reference[Union[Resource]]] = None,
         created: Optional[FhirDate] = None,
         author: Optional[

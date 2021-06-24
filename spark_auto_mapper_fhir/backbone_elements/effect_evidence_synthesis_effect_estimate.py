@@ -14,14 +14,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.effectestimatetype import Effectestimatetype
+    from spark_auto_mapper_fhir.value_sets.effect_estimate_type import (
+        EffectEstimateType,
+    )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for variantState
-    from spark_auto_mapper_fhir.value_sets.evidencevariantstate import (
-        Evidencevariantstate,
+    from spark_auto_mapper_fhir.value_sets.evidence_variant_state import (
+        EvidenceVariantState,
     )
 
     # End Import for CodeableConcept for variantState
@@ -44,8 +46,8 @@ class EffectEvidenceSynthesisEffectEstimate(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
-        type: Optional[CodeableConcept[Effectestimatetype]] = None,
-        variantState: Optional[CodeableConcept[Evidencevariantstate]] = None,
+        type: Optional[CodeableConcept[EffectEstimateType]] = None,
+        variantState: Optional[CodeableConcept[EvidenceVariantState]] = None,
         value: Optional[decimal] = None,
         unitOfMeasure: Optional[CodeableConcept] = None,
         precisionEstimate: Optional[

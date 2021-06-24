@@ -26,8 +26,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.fhirdevicestatusreason import (
-        Fhirdevicestatusreason,
+    from spark_auto_mapper_fhir.value_sets.fhir_device_status_reason import (
+        FHIRDeviceStatusReason,
     )
 
     # End Import for CodeableConcept for statusReason
@@ -45,7 +45,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.devicetype import Devicetype
+    from spark_auto_mapper_fhir.value_sets.device_type import DeviceType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.backbone_elements.device_specialization import (
@@ -91,7 +91,7 @@ class Device(FhirResourceBase):
         udiCarrier: Optional[FhirList[DeviceUdiCarrier]] = None,
         status: Optional[FHIRDeviceStatus] = None,
         statusReason: Optional[
-            FhirList[CodeableConcept[Fhirdevicestatusreason]]
+            FhirList[CodeableConcept[FHIRDeviceStatusReason]]
         ] = None,
         distinctIdentifier: Optional[FhirString] = None,
         manufacturer: Optional[FhirString] = None,
@@ -102,7 +102,7 @@ class Device(FhirResourceBase):
         deviceName: Optional[FhirList[DeviceDeviceName]] = None,
         modelNumber: Optional[FhirString] = None,
         partNumber: Optional[FhirString] = None,
-        type: Optional[CodeableConcept[Devicetype]] = None,
+        type: Optional[CodeableConcept[DeviceType]] = None,
         specialization: Optional[FhirList[DeviceSpecialization]] = None,
         version: Optional[FhirList[DeviceVersion]] = None,
         property: Optional[FhirList[DeviceProperty]] = None,

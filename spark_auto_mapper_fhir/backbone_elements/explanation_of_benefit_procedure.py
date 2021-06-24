@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.exampleproceduretypecodes import (
-        Exampleproceduretypecodes,
+    from spark_auto_mapper_fhir.value_sets.example_procedure_type_codes import (
+        ExampleProcedureTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -38,7 +38,7 @@ class ExplanationOfBenefitProcedure(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         sequence: positiveInt,
-        type: Optional[FhirList[CodeableConcept[Exampleproceduretypecodes]]] = None,
+        type: Optional[FhirList[CodeableConcept[ExampleProcedureTypeCodes]]] = None,
         date: Optional[FhirDateTime] = None,
         udi: Optional[FhirList[Reference[Union[Device]]]] = None,
     ) -> None:

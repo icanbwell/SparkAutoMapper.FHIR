@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for protocol
-    from spark_auto_mapper_fhir.value_sets.messagetransport import Messagetransport
+    from spark_auto_mapper_fhir.value_sets.message_transport import MessageTransport
 
     # End Import for CodeableConcept for protocol
     from spark_auto_mapper_fhir.complex_types.url import url
@@ -30,7 +30,7 @@ class CapabilityStatementEndpoint(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        protocol: Coding[Messagetransport],
+        protocol: Coding[MessageTransport],
         address: url,
     ) -> None:
         """

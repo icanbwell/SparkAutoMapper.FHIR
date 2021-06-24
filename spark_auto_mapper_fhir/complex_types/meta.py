@@ -21,7 +21,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for tag
-    from spark_auto_mapper_fhir.value_sets.commontags import Commontags
+    from spark_auto_mapper_fhir.value_sets.common_tags import CommonTags
 
     # End Import for CodeableConcept for tag
 
@@ -43,7 +43,7 @@ class Meta(FhirComplexTypeBase):
         source: Optional[uri] = None,
         profile: Optional[FhirList[canonical]] = None,
         security: Optional[FhirList[Coding[AllSecurityLabels]]] = None,
-        tag: Optional[FhirList[Coding[Commontags]]] = None,
+        tag: Optional[FhirList[Coding[CommonTags]]] = None,
     ) -> None:
         """
 

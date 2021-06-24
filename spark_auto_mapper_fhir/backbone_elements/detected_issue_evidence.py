@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.manifestationandsymptomcodes import (
-        Manifestationandsymptomcodes,
+    from spark_auto_mapper_fhir.value_sets.manifestation_and_symptom_codes import (
+        ManifestationAndSymptomCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -35,7 +35,7 @@ class DetectedIssueEvidence(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[FhirList[CodeableConcept[Manifestationandsymptomcodes]]] = None,
+        code: Optional[FhirList[CodeableConcept[ManifestationAndSymptomCodes]]] = None,
         detail: Optional[FhirList[Reference[Union[Resource]]]] = None,
     ) -> None:
         """

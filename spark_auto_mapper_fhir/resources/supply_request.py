@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.supplytype import Supplytype
+    from spark_auto_mapper_fhir.value_sets.supply_type import SupplyType
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
@@ -46,8 +46,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.supplyrequestreason import (
-        Supplyrequestreason,
+    from spark_auto_mapper_fhir.value_sets.supply_request_reason import (
+        SupplyRequestReason,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -85,7 +85,7 @@ class SupplyRequest(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[SupplyRequestStatus] = None,
-        category: Optional[CodeableConcept[Supplytype]] = None,
+        category: Optional[CodeableConcept[SupplyType]] = None,
         priority: Optional[RequestPriority] = None,
         quantity: Quantity,
         parameter: Optional[FhirList[SupplyRequestParameter]] = None,
@@ -105,7 +105,7 @@ class SupplyRequest(FhirResourceBase):
         supplier: Optional[
             FhirList[Reference[Union[Organization, HealthcareService]]]
         ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[Supplyrequestreason]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[SupplyRequestReason]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

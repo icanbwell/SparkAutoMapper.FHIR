@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for function
-    from spark_auto_mapper_fhir.value_sets.immunizationfunctioncodes import (
-        Immunizationfunctioncodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_function_codes import (
+        ImmunizationFunctionCodes,
     )
 
     # End Import for CodeableConcept for function
@@ -37,7 +37,7 @@ class ImmunizationPerformer(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        function: Optional[CodeableConcept[Immunizationfunctioncodes]] = None,
+        function: Optional[CodeableConcept[ImmunizationFunctionCodes]] = None,
         actor: Reference[Union[Practitioner, PractitionerRole, Organization]],
     ) -> None:
         """

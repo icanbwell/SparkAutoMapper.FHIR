@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.paymenttypecodes import Paymenttypecodes
+    from spark_auto_mapper_fhir.value_sets.payment_type_codes import PaymentTypeCodes
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -59,7 +59,7 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         predecessor: Optional[Identifier] = None,
-        type: CodeableConcept[Paymenttypecodes],
+        type: CodeableConcept[PaymentTypeCodes],
         request: Optional[Reference[Union[Resource]]] = None,
         submitter: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]

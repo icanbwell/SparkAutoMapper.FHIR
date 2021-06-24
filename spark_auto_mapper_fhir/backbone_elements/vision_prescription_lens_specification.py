@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for product
-    from spark_auto_mapper_fhir.value_sets.examplevisionprescriptionproductcodes import (
-        Examplevisionprescriptionproductcodes,
+    from spark_auto_mapper_fhir.value_sets.example_vision_prescription_product_codes import (
+        ExampleVisionPrescriptionProductCodes,
     )
 
     # End Import for CodeableConcept for product
@@ -45,7 +45,7 @@ class VisionPrescriptionLensSpecification(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        product: CodeableConcept[Examplevisionprescriptionproductcodes],
+        product: CodeableConcept[ExampleVisionPrescriptionProductCodes],
         eye: VisionEyes,
         sphere: Optional[decimal] = None,
         cylinder: Optional[decimal] = None,

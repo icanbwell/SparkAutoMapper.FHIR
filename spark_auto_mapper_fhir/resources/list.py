@@ -21,8 +21,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.exampleusecodesforlist import (
-        Exampleusecodesforlist,
+    from spark_auto_mapper_fhir.value_sets.example_use_codes_for_list import (
+        ExampleUseCodesForList,
     )
 
     # End Import for CodeableConcept for code
@@ -48,7 +48,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for orderedBy
-    from spark_auto_mapper_fhir.value_sets.listordercodes import Listordercodes
+    from spark_auto_mapper_fhir.value_sets.list_order_codes import ListOrderCodes
 
     # End Import for CodeableConcept for orderedBy
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
@@ -56,7 +56,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for emptyReason
-    from spark_auto_mapper_fhir.value_sets.listemptyreasons import Listemptyreasons
+    from spark_auto_mapper_fhir.value_sets.list_empty_reasons import ListEmptyReasons
 
     # End Import for CodeableConcept for emptyReason
 
@@ -77,17 +77,17 @@ class List(FhirResourceBase):
         status: ListStatus,
         mode: ListMode,
         title: Optional[FhirString] = None,
-        code: Optional[CodeableConcept[Exampleusecodesforlist]] = None,
+        code: Optional[CodeableConcept[ExampleUseCodesForList]] = None,
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         date: Optional[FhirDateTime] = None,
         source: Optional[
             Reference[Union[Practitioner, PractitionerRole, Patient, Device]]
         ] = None,
-        orderedBy: Optional[CodeableConcept[Listordercodes]] = None,
+        orderedBy: Optional[CodeableConcept[ListOrderCodes]] = None,
         note: Optional[FhirList[Annotation]] = None,
         entry: Optional[FhirList[ListEntry]] = None,
-        emptyReason: Optional[CodeableConcept[Listemptyreasons]] = None,
+        emptyReason: Optional[CodeableConcept[ListEmptyReasons]] = None,
     ) -> None:
         """
 

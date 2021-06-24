@@ -772,7 +772,9 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def clean_name(display: str) -> str:
-        cleaned_display: str = "".join([c.capitalize() for c in display.split(" ")])
+        cleaned_display: str = "".join(
+            [c[:1].upper() + c[1:] for c in display.split(" ")]
+        )
         cleaned_display = re.sub("[^0-9a-zA-Z]+", "_", cleaned_display)
         cleaned_display = FhirXmlSchemaParser.fix_python_keywords(cleaned_display)
         return cleaned_display

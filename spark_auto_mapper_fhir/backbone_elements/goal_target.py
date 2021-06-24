@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for measure
-    from spark_auto_mapper_fhir.value_sets.loinccodes import Loinccodes
+    from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodes
 
     # End Import for CodeableConcept for measure
 
@@ -29,7 +29,7 @@ class GoalTarget(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        measure: Optional[CodeableConcept[Loinccodes]] = None,
+        measure: Optional[CodeableConcept[LOINCCodes]] = None,
     ) -> None:
         """
 

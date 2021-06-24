@@ -29,7 +29,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.librarytype import Librarytype
+    from spark_auto_mapper_fhir.value_sets.library_type import LibraryType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
@@ -40,8 +40,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
-        JurisdictionValueset,
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSet,
     )
 
     # End Import for CodeableConcept for jurisdiction
@@ -54,7 +54,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definitiontopic import Definitiontopic
+    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
 
     # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -89,20 +89,20 @@ class Library(FhirResourceBase):
         subtitle: Optional[FhirString] = None,
         status: PublicationStatus,
         experimental: Optional[FhirBoolean] = None,
-        type: CodeableConcept[Librarytype],
+        type: CodeableConcept[LibraryType],
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet]]] = None,
         purpose: Optional[markdown] = None,
         usage: Optional[FhirString] = None,
         copyright: Optional[markdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
-        topic: Optional[FhirList[CodeableConcept[Definitiontopic]]] = None,
+        topic: Optional[FhirList[CodeableConcept[DefinitionTopic]]] = None,
         author: Optional[FhirList[ContactDetail]] = None,
         editor: Optional[FhirList[ContactDetail]] = None,
         reviewer: Optional[FhirList[ContactDetail]] = None,

@@ -14,24 +14,24 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for classification
-    from spark_auto_mapper_fhir.value_sets.contractresourcescopecodes import (
-        Contractresourcescopecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
+        ContractResourceScopeCodes,
     )
 
     # End Import for CodeableConcept for classification
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.contractresourcescopecodes import (
-        Contractresourcescopecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
+        ContractResourceScopeCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for control
-    from spark_auto_mapper_fhir.value_sets.contractresourcesecuritycontrolcodes import (
-        Contractresourcesecuritycontrolcodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes import (
+        ContractResourceSecurityControlCodes,
     )
 
     # End Import for CodeableConcept for control
@@ -49,10 +49,10 @@ class ContractSecurityLabel(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         number: Optional[FhirList[unsignedInt]] = None,
-        classification: Coding[Contractresourcescopecodes],
-        category: Optional[FhirList[Coding[Contractresourcescopecodes]]] = None,
+        classification: Coding[ContractResourceScopeCodes],
+        category: Optional[FhirList[Coding[ContractResourceScopeCodes]]] = None,
         control: Optional[
-            FhirList[Coding[Contractresourcesecuritycontrolcodes]]
+            FhirList[Coding[ContractResourceSecurityControlCodes]]
         ] = None,
     ) -> None:
         """

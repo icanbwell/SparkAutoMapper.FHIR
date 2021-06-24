@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.diagnosisrole import Diagnosisrole
+    from spark_auto_mapper_fhir.value_sets.diagnosis_role import DiagnosisRole
 
     # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
@@ -35,7 +35,7 @@ class EpisodeOfCareDiagnosis(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         condition: Reference[Union[Condition]],
-        role: Optional[CodeableConcept[Diagnosisrole]] = None,
+        role: Optional[CodeableConcept[DiagnosisRole]] = None,
         rank: Optional[positiveInt] = None,
     ) -> None:
         """

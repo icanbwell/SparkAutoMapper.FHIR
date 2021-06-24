@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.measurepopulationtype import (
-        Measurepopulationtype,
+    from spark_auto_mapper_fhir.value_sets.measure_population_type import (
+        MeasurePopulationType,
     )
 
     # End Import for CodeableConcept for code
@@ -36,7 +36,7 @@ class MeasureReportPopulation1(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Optional[CodeableConcept[Measurepopulationtype]] = None,
+        code: Optional[CodeableConcept[MeasurePopulationType]] = None,
         count: Optional[FhirInteger] = None,
         subjectResults: Optional[Reference[Union[List]]] = None,
     ) -> None:

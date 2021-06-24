@@ -23,8 +23,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.contractresourcepartyrolecodes import (
-        Contractresourcepartyrolecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_party_role_codes import (
+        ContractResourcePartyRoleCodes,
     )
 
     # End Import for CodeableConcept for role
@@ -54,7 +54,7 @@ class ContractParty(FhirBackboneElementBase):
                 ]
             ]
         ],
-        role: CodeableConcept[Contractresourcepartyrolecodes],
+        role: CodeableConcept[ContractResourcePartyRoleCodes],
     ) -> None:
         """
 

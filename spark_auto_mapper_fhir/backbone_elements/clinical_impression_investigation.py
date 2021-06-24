@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.investigationtype import Investigationtype
+    from spark_auto_mapper_fhir.value_sets.investigation_type import InvestigationType
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -43,7 +43,7 @@ class ClinicalImpressionInvestigation(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: CodeableConcept[Investigationtype],
+        code: CodeableConcept[InvestigationType],
         item: Optional[
             FhirList[
                 Reference[

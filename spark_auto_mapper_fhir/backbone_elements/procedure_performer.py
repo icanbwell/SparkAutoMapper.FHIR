@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for function
-    from spark_auto_mapper_fhir.value_sets.procedureperformerrolecodes import (
-        Procedureperformerrolecodes,
+    from spark_auto_mapper_fhir.value_sets.procedure_performer_role_codes import (
+        ProcedurePerformerRoleCodes,
     )
 
     # End Import for CodeableConcept for function
@@ -44,7 +44,7 @@ class ProcedurePerformer(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        function: Optional[CodeableConcept[Procedureperformerrolecodes]] = None,
+        function: Optional[CodeableConcept[ProcedurePerformerRoleCodes]] = None,
         actor: Reference[
             Union[
                 Practitioner,

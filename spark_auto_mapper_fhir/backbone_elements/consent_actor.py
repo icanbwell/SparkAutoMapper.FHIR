@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.securityroletype import Securityroletype
+    from spark_auto_mapper_fhir.value_sets.security_role_type import SecurityRoleType
 
     # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -40,7 +40,7 @@ class ConsentActor(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: CodeableConcept[Securityroletype],
+        role: CodeableConcept[SecurityRoleType],
         reference: Reference[
             Union[
                 Device,

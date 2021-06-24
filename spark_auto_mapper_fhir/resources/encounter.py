@@ -24,13 +24,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.encountertype import Encountertype
+    from spark_auto_mapper_fhir.value_sets.encounter_type import EncounterType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
 
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -58,8 +58,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.encounterreasoncodes import (
-        Encounterreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.encounter_reason_codes import (
+        EncounterReasonCodes,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -111,8 +111,8 @@ class Encounter(FhirResourceBase):
         statusHistory: Optional[FhirList[EncounterStatusHistory]] = None,
         class_: Coding,
         classHistory: Optional[FhirList[EncounterClassHistory]] = None,
-        type: Optional[FhirList[CodeableConcept[Encountertype]]] = None,
-        serviceType: Optional[CodeableConcept[Servicetype]] = None,
+        type: Optional[FhirList[CodeableConcept[EncounterType]]] = None,
+        serviceType: Optional[CodeableConcept[ServiceType]] = None,
         priority: Optional[CodeableConcept] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         episodeOfCare: Optional[FhirList[Reference[Union[EpisodeOfCare]]]] = None,
@@ -121,7 +121,7 @@ class Encounter(FhirResourceBase):
         appointment: Optional[FhirList[Reference[Union[Appointment]]]] = None,
         period: Optional[Period] = None,
         length: Optional[Duration] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[Encounterreasoncodes]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[EncounterReasonCodes]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

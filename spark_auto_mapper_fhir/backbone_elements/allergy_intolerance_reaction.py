@@ -15,14 +15,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for substance
-    from spark_auto_mapper_fhir.value_sets.substancecode import Substancecode
+    from spark_auto_mapper_fhir.value_sets.substance_code import SubstanceCode
 
     # End Import for CodeableConcept for substance
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for manifestation
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for manifestation
@@ -32,7 +32,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for exposureRoute
-    from spark_auto_mapper_fhir.value_sets.snomedctroutecodes import Snomedctroutecodes
+    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
+        SNOMEDCTRouteCodes,
+    )
 
     # End Import for CodeableConcept for exposureRoute
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
@@ -49,12 +51,12 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        substance: Optional[CodeableConcept[Substancecode]] = None,
-        manifestation: FhirList[CodeableConcept[Snomedctclinicalfindings]],
+        substance: Optional[CodeableConcept[SubstanceCode]] = None,
+        manifestation: FhirList[CodeableConcept[SNOMEDCTClinicalFindings]],
         description: Optional[FhirString] = None,
         onset: Optional[FhirDateTime] = None,
         severity: Optional[AllergyIntoleranceSeverity] = None,
-        exposureRoute: Optional[CodeableConcept[Snomedctroutecodes]] = None,
+        exposureRoute: Optional[CodeableConcept[SNOMEDCTRouteCodes]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """

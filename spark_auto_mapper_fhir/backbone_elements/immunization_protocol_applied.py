@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for targetDisease
-    from spark_auto_mapper_fhir.value_sets.immunizationtargetdiseasecodes import (
-        Immunizationtargetdiseasecodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_target_disease_codes import (
+        ImmunizationTargetDiseaseCodes,
     )
 
     # End Import for CodeableConcept for targetDisease
@@ -39,7 +39,7 @@ class ImmunizationProtocolApplied(FhirBackboneElementBase):
         series: Optional[FhirString] = None,
         authority: Optional[Reference[Union[Organization]]] = None,
         targetDisease: Optional[
-            FhirList[CodeableConcept[Immunizationtargetdiseasecodes]]
+            FhirList[CodeableConcept[ImmunizationTargetDiseaseCodes]]
         ] = None,
     ) -> None:
         """

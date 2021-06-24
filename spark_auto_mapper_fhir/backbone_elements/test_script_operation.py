@@ -16,8 +16,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.testscriptoperationcode import (
-        Testscriptoperationcode,
+    from spark_auto_mapper_fhir.value_sets.test_script_operation_code import (
+        TestScriptOperationCode,
     )
 
     # End Import for CodeableConcept for type
@@ -47,7 +47,7 @@ class TestScriptOperation(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[Coding[Testscriptoperationcode]] = None,
+        type: Optional[Coding[TestScriptOperationCode]] = None,
         resource: Optional[code] = None,
         label: Optional[FhirString] = None,
         description: Optional[FhirString] = None,

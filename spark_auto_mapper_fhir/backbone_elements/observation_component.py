@@ -13,20 +13,20 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.loinccodes import Loinccodes
+    from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodes
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for dataAbsentReason
-    from spark_auto_mapper_fhir.value_sets.dataabsentreason import Dataabsentreason
+    from spark_auto_mapper_fhir.value_sets.data_absent_reason import DataAbsentReason
 
     # End Import for CodeableConcept for dataAbsentReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for interpretation
-    from spark_auto_mapper_fhir.value_sets.observationinterpretationcodes import (
-        Observationinterpretationcodes,
+    from spark_auto_mapper_fhir.value_sets.observation_interpretation_codes import (
+        ObservationInterpretationCodes,
     )
 
     # End Import for CodeableConcept for interpretation
@@ -46,10 +46,10 @@ class ObservationComponent(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: CodeableConcept[Loinccodes],
-        dataAbsentReason: Optional[CodeableConcept[Dataabsentreason]] = None,
+        code: CodeableConcept[LOINCCodes],
+        dataAbsentReason: Optional[CodeableConcept[DataAbsentReason]] = None,
         interpretation: Optional[
-            FhirList[CodeableConcept[Observationinterpretationcodes]]
+            FhirList[CodeableConcept[ObservationInterpretationCodes]]
         ] = None,
         referenceRange: Optional[FhirList[ObservationReferenceRange]] = None,
     ) -> None:

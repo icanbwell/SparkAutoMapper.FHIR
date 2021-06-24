@@ -33,7 +33,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.actiontype import Actiontype
+    from spark_auto_mapper_fhir.value_sets.action_type import ActionType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.action_grouping_behavior import (
@@ -86,7 +86,7 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         output: Optional[FhirList[DataRequirement]] = None,
         relatedAction: Optional[FhirList[PlanDefinitionRelatedAction]] = None,
         participant: Optional[FhirList[PlanDefinitionParticipant]] = None,
-        type: Optional[CodeableConcept[Actiontype]] = None,
+        type: Optional[CodeableConcept[ActionType]] = None,
         groupingBehavior: Optional[ActionGroupingBehavior] = None,
         selectionBehavior: Optional[ActionSelectionBehavior] = None,
         requiredBehavior: Optional[ActionRequiredBehavior] = None,

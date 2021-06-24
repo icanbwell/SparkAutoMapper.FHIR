@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.timingabbreviation import Timingabbreviation
+    from spark_auto_mapper_fhir.value_sets.timing_abbreviation import TimingAbbreviation
 
     # End Import for CodeableConcept for code
 
@@ -33,7 +33,7 @@ class Timing(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         event: Optional[FhirList[FhirDateTime]] = None,
         repeat: Optional[TimingRepeat] = None,
-        code: Optional[CodeableConcept[Timingabbreviation]] = None,
+        code: Optional[CodeableConcept[TimingAbbreviation]] = None,
     ) -> None:
         """
 

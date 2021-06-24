@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for profile
-    from spark_auto_mapper_fhir.value_sets.testscriptprofiledestinationtype import (
-        Testscriptprofiledestinationtype,
+    from spark_auto_mapper_fhir.value_sets.test_script_profile_destination_type import (
+        TestScriptProfileDestinationType,
     )
 
     # End Import for CodeableConcept for profile
@@ -33,7 +33,7 @@ class TestScriptDestination(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         index: FhirInteger,
-        profile: Coding[Testscriptprofiledestinationtype],
+        profile: Coding[TestScriptProfileDestinationType],
     ) -> None:
         """
 

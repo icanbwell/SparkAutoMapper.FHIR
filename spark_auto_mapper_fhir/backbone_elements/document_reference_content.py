@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for format
-    from spark_auto_mapper_fhir.value_sets.documentreferenceformatcodeset import (
-        Documentreferenceformatcodeset,
+    from spark_auto_mapper_fhir.value_sets.document_reference_format_code_set import (
+        DocumentReferenceFormatCodeSet,
     )
 
     # End Import for CodeableConcept for format
@@ -33,7 +33,7 @@ class DocumentReferenceContent(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         attachment: Attachment,
-        format: Optional[Coding[Documentreferenceformatcodeset]] = None,
+        format: Optional[Coding[DocumentReferenceFormatCodeSet]] = None,
     ) -> None:
         """
 

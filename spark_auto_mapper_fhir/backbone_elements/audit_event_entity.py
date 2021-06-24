@@ -18,24 +18,24 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.auditevententitytype import (
-        Auditevententitytype,
+    from spark_auto_mapper_fhir.value_sets.audit_event_entity_type import (
+        AuditEventEntityType,
     )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.auditevententityrole import (
-        Auditevententityrole,
+    from spark_auto_mapper_fhir.value_sets.audit_event_entity_role import (
+        AuditEventEntityRole,
     )
 
     # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for lifecycle
-    from spark_auto_mapper_fhir.value_sets.objectlifecycleevents import (
-        Objectlifecycleevents,
+    from spark_auto_mapper_fhir.value_sets.object_lifecycle_events import (
+        ObjectLifecycleEvents,
     )
 
     # End Import for CodeableConcept for lifecycle
@@ -63,9 +63,9 @@ class AuditEventEntity(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         what: Optional[Reference[Union[Resource]]] = None,
-        type: Optional[Coding[Auditevententitytype]] = None,
-        role: Optional[Coding[Auditevententityrole]] = None,
-        lifecycle: Optional[Coding[Objectlifecycleevents]] = None,
+        type: Optional[Coding[AuditEventEntityType]] = None,
+        role: Optional[Coding[AuditEventEntityRole]] = None,
+        lifecycle: Optional[Coding[ObjectLifecycleEvents]] = None,
         securityLabel: Optional[FhirList[Coding[AllSecurityLabels]]] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,

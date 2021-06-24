@@ -16,8 +16,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.snomedctmedicationcodes import (
-        Snomedctmedicationcodes,
+    from spark_auto_mapper_fhir.value_sets.snomedct_medication_codes import (
+        SNOMEDCTMedicationCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -31,7 +31,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for form
-    from spark_auto_mapper_fhir.value_sets.snomedctformcodes import Snomedctformcodes
+    from spark_auto_mapper_fhir.value_sets.snomedct_form_codes import SNOMEDCTFormCodes
 
     # End Import for CodeableConcept for form
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
@@ -56,10 +56,10 @@ class Medication(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        code: Optional[CodeableConcept[Snomedctmedicationcodes]] = None,
+        code: Optional[CodeableConcept[SNOMEDCTMedicationCodes]] = None,
         status: Optional[MedicationStatusCodes] = None,
         manufacturer: Optional[Reference[Union[Organization]]] = None,
-        form: Optional[CodeableConcept[Snomedctformcodes]] = None,
+        form: Optional[CodeableConcept[SNOMEDCTFormCodes]] = None,
         amount: Optional[Ratio] = None,
         ingredient: Optional[FhirList[MedicationIngredient]] = None,
         batch: Optional[MedicationBatch] = None,

@@ -20,8 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.contracttermtypecodes import (
-        Contracttermtypecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_term_type_codes import (
+        ContractTermTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -29,8 +29,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for decisionMode
-    from spark_auto_mapper_fhir.value_sets.contractresourcedecisionmodecodes import (
-        Contractresourcedecisionmodecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_decision_mode_codes import (
+        ContractResourceDecisionModeCodes,
     )
 
     # End Import for CodeableConcept for decisionMode
@@ -52,10 +52,10 @@ class ContractOffer(FhirBackboneElementBase):
         identifier: Optional[FhirList[Identifier]] = None,
         party: Optional[FhirList[ContractParty]] = None,
         topic: Optional[Reference[Union[Resource]]] = None,
-        type: Optional[CodeableConcept[Contracttermtypecodes]] = None,
+        type: Optional[CodeableConcept[ContractTermTypeCodes]] = None,
         decision: Optional[CodeableConcept] = None,
         decisionMode: Optional[
-            FhirList[CodeableConcept[Contractresourcedecisionmodecodes]]
+            FhirList[CodeableConcept[ContractResourceDecisionModeCodes]]
         ] = None,
         answer: Optional[FhirList[ContractAnswer]] = None,
         text: Optional[FhirString] = None,

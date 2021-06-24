@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for temperatureQualifier
-    from spark_auto_mapper_fhir.value_sets.handlingconditionset import (
-        Handlingconditionset,
+    from spark_auto_mapper_fhir.value_sets.handling_condition_set import (
+        HandlingConditionSet,
     )
 
     # End Import for CodeableConcept for temperatureQualifier
@@ -33,7 +33,7 @@ class SpecimenDefinitionHandling(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        temperatureQualifier: Optional[CodeableConcept[Handlingconditionset]] = None,
+        temperatureQualifier: Optional[CodeableConcept[HandlingConditionSet]] = None,
         temperatureRange: Optional[Range] = None,
         maxDuration: Optional[Duration] = None,
         instruction: Optional[FhirString] = None,

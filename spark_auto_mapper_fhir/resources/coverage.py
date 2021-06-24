@@ -21,7 +21,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.coverageclasscodes import Coverageclasscodes
+    from spark_auto_mapper_fhir.value_sets.coverage_class_codes import (
+        CoverageClassCodes,
+    )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -44,8 +46,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for relationship
-    from spark_auto_mapper_fhir.value_sets.subscriberrelationshipcodes import (
-        Subscriberrelationshipcodes,
+    from spark_auto_mapper_fhir.value_sets.subscriber_relationship_codes import (
+        SubscriberRelationshipCodes,
     )
 
     # End Import for CodeableConcept for relationship
@@ -83,7 +85,7 @@ class Coverage(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: FinancialResourceStatusCodes,
-        type: Optional[CodeableConcept[Coverageclasscodes]] = None,
+        type: Optional[CodeableConcept[CoverageClassCodes]] = None,
         policyHolder: Optional[
             Reference[Union[Patient, RelatedPerson, Organization]]
         ] = None,
@@ -91,7 +93,7 @@ class Coverage(FhirResourceBase):
         subscriberId: Optional[FhirString] = None,
         beneficiary: Reference[Union[Patient]],
         dependent: Optional[FhirString] = None,
-        relationship: Optional[CodeableConcept[Subscriberrelationshipcodes]] = None,
+        relationship: Optional[CodeableConcept[SubscriberRelationshipCodes]] = None,
         period: Optional[Period] = None,
         payor: FhirList[Reference[Union[Organization, Patient, RelatedPerson]]],
         class_: Optional[FhirList[CoverageClass]] = None,

@@ -13,15 +13,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.provenanceparticipanttype import (
-        Provenanceparticipanttype,
+    from spark_auto_mapper_fhir.value_sets.provenance_participant_type import (
+        ProvenanceParticipantType,
     )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.securityroletype import Securityroletype
+    from spark_auto_mapper_fhir.value_sets.security_role_type import SecurityRoleType
 
     # End Import for CodeableConcept for role
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -55,8 +55,8 @@ class ProvenanceAgent(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[Provenanceparticipanttype]] = None,
-        role: Optional[FhirList[CodeableConcept[Securityroletype]]] = None,
+        type: Optional[CodeableConcept[ProvenanceParticipantType]] = None,
+        role: Optional[FhirList[CodeableConcept[SecurityRoleType]]] = None,
         who: Reference[
             Union[
                 Practitioner,

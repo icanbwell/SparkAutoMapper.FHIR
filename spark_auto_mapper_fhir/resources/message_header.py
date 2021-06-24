@@ -43,8 +43,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.examplemessagereasoncodes import (
-        Examplemessagereasoncodes,
+    from spark_auto_mapper_fhir.value_sets.example_message_reason_codes import (
+        ExampleMessageReasonCodes,
     )
 
     # End Import for CodeableConcept for reason
@@ -80,7 +80,7 @@ class MessageHeader(FhirResourceBase):
         responsible: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
-        reason: Optional[CodeableConcept[Examplemessagereasoncodes]] = None,
+        reason: Optional[CodeableConcept[ExampleMessageReasonCodes]] = None,
         response: Optional[MessageHeaderResponse] = None,
         focus: Optional[FhirList[Reference[Union[Resource]]]] = None,
         definition: Optional[canonical] = None,

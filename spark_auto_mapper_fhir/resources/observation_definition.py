@@ -19,15 +19,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.observationcategorycodes import (
-        Observationcategorycodes,
+    from spark_auto_mapper_fhir.value_sets.observation_category_codes import (
+        ObservationCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.loinccodes import Loinccodes
+    from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodes
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.observationmethods import Observationmethods
+    from spark_auto_mapper_fhir.value_sets.observation_methods import ObservationMethods
 
     # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -78,12 +78,12 @@ class ObservationDefinition(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[FhirList[CodeableConcept[Observationcategorycodes]]] = None,
-        code: CodeableConcept[Loinccodes],
+        category: Optional[FhirList[CodeableConcept[ObservationCategoryCodes]]] = None,
+        code: CodeableConcept[LOINCCodes],
         identifier: Optional[FhirList[Identifier]] = None,
         permittedDataType: Optional[FhirList[ObservationDataType]] = None,
         multipleResultsAllowed: Optional[FhirBoolean] = None,
-        method: Optional[CodeableConcept[Observationmethods]] = None,
+        method: Optional[CodeableConcept[ObservationMethods]] = None,
         preferredReportName: Optional[FhirString] = None,
         quantitativeDetails: Optional[ObservationDefinitionQuantitativeDetails] = None,
         qualifiedInterval: Optional[

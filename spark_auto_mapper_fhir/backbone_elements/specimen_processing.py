@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for procedure
-    from spark_auto_mapper_fhir.value_sets.specimenprocessingprocedure import (
-        Specimenprocessingprocedure,
+    from spark_auto_mapper_fhir.value_sets.specimen_processing_procedure import (
+        SpecimenProcessingProcedure,
     )
 
     # End Import for CodeableConcept for procedure
@@ -37,7 +37,7 @@ class SpecimenProcessing(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
-        procedure: Optional[CodeableConcept[Specimenprocessingprocedure]] = None,
+        procedure: Optional[CodeableConcept[SpecimenProcessingProcedure]] = None,
         additive: Optional[FhirList[Reference[Union[Substance]]]] = None,
     ) -> None:
         """

@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for procedure
-    from spark_auto_mapper_fhir.value_sets.procedurecodes_snomedct_ import (
-        Procedurecodes_snomedct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_codes_snomedct_ import (
+        ProcedureCodes_SNOMEDCT_,
     )
 
     # End Import for CodeableConcept for procedure
@@ -37,7 +37,7 @@ class BiologicallyDerivedProductProcessing(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
-        procedure: Optional[CodeableConcept[Procedurecodes_snomedct_]] = None,
+        procedure: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_]] = None,
         additive: Optional[Reference[Union[Substance]]] = None,
     ) -> None:
         """

@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for additionalInstruction
-    from spark_auto_mapper_fhir.value_sets.snomedctadditionaldosageinstructions import (
-        Snomedctadditionaldosageinstructions,
+    from spark_auto_mapper_fhir.value_sets.snomedct_additional_dosage_instructions import (
+        SNOMEDCTAdditionalDosageInstructions,
     )
 
     # End Import for CodeableConcept for additionalInstruction
@@ -24,22 +24,24 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for site
-    from spark_auto_mapper_fhir.value_sets.snomedctanatomicalstructureforadministrationsitecodes import (
-        Snomedctanatomicalstructureforadministrationsitecodes,
+    from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import (
+        SNOMEDCTAnatomicalStructureForAdministrationSiteCodes,
     )
 
     # End Import for CodeableConcept for site
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for route
-    from spark_auto_mapper_fhir.value_sets.snomedctroutecodes import Snomedctroutecodes
+    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
+        SNOMEDCTRouteCodes,
+    )
 
     # End Import for CodeableConcept for route
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.snomedctadministrationmethodcodes import (
-        Snomedctadministrationmethodcodes,
+    from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import (
+        SNOMEDCTAdministrationMethodCodes,
     )
 
     # End Import for CodeableConcept for method
@@ -65,15 +67,15 @@ class Dosage(FhirBackboneElementBase):
         sequence: Optional[FhirInteger] = None,
         text: Optional[FhirString] = None,
         additionalInstruction: Optional[
-            FhirList[CodeableConcept[Snomedctadditionaldosageinstructions]]
+            FhirList[CodeableConcept[SNOMEDCTAdditionalDosageInstructions]]
         ] = None,
         patientInstruction: Optional[FhirString] = None,
         timing: Optional[Timing] = None,
         site: Optional[
-            CodeableConcept[Snomedctanatomicalstructureforadministrationsitecodes]
+            CodeableConcept[SNOMEDCTAnatomicalStructureForAdministrationSiteCodes]
         ] = None,
-        route: Optional[CodeableConcept[Snomedctroutecodes]] = None,
-        method: Optional[CodeableConcept[Snomedctadministrationmethodcodes]] = None,
+        route: Optional[CodeableConcept[SNOMEDCTRouteCodes]] = None,
+        method: Optional[CodeableConcept[SNOMEDCTAdministrationMethodCodes]] = None,
         doseAndRate: Optional[FhirList[DosageDoseAndRate]] = None,
         maxDosePerPeriod: Optional[Ratio] = None,
         maxDosePerAdministration: Optional[Quantity] = None,

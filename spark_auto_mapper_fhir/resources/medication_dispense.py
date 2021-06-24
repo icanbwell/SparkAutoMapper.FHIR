@@ -22,8 +22,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medicationdispense_category_codes import (
-        MedicationdispenseCategoryCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_dispense_category_codes import (
+        MedicationDispenseCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
@@ -96,7 +96,7 @@ class MedicationDispense(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         partOf: Optional[FhirList[Reference[Union[Procedure]]]] = None,
         status: code,
-        category: Optional[CodeableConcept[MedicationdispenseCategoryCodes]] = None,
+        category: Optional[CodeableConcept[MedicationDispenseCategoryCodes]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
         supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,

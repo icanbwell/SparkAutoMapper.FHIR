@@ -61,8 +61,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
@@ -118,7 +118,7 @@ class DeviceUseStatement(FhirResourceBase):
                 ]
             ]
         ] = None,
-        bodySite: Optional[CodeableConcept[Snomedctbodystructures]] = None,
+        bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructures]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """

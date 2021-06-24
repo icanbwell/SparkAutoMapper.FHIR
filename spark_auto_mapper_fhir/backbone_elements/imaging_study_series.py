@@ -23,8 +23,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
@@ -63,7 +63,7 @@ class ImagingStudySeries(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
         numberOfInstances: Optional[unsignedInt] = None,
         endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
-        bodySite: Optional[Coding[Snomedctbodystructures]] = None,
+        bodySite: Optional[Coding[SNOMEDCTBodyStructures]] = None,
         laterality: Optional[Coding[Laterality]] = None,
         specimen: Optional[FhirList[Reference[Union[Specimen]]]] = None,
         started: Optional[FhirDateTime] = None,

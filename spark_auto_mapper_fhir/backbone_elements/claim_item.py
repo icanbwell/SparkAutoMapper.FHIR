@@ -18,36 +18,36 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for revenue
-    from spark_auto_mapper_fhir.value_sets.examplerevenuecentercodes import (
-        Examplerevenuecentercodes,
+    from spark_auto_mapper_fhir.value_sets.example_revenue_center_codes import (
+        ExampleRevenueCenterCodes,
     )
 
     # End Import for CodeableConcept for revenue
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.benefitcategorycodes import (
-        Benefitcategorycodes,
+    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
+        BenefitCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for productOrService
-    from spark_auto_mapper_fhir.value_sets.usclscodes import Usclscodes
+    from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodes
 
     # End Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifiertypecodes import Modifiertypecodes
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodes
 
     # End Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for programCode
-    from spark_auto_mapper_fhir.value_sets.exampleprogramreasoncodes import (
-        Exampleprogramreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import (
+        ExampleProgramReasonCodes,
     )
 
     # End Import for CodeableConcept for programCode
@@ -62,13 +62,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.oralsitecodes import Oralsitecodes
+    from spark_auto_mapper_fhir.value_sets.oral_site_codes import OralSiteCodes
 
     # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subSite
-    from spark_auto_mapper_fhir.value_sets.surfacecodes import Surfacecodes
+    from spark_auto_mapper_fhir.value_sets.surface_codes import SurfaceCodes
 
     # End Import for CodeableConcept for subSite
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -94,20 +94,20 @@ class ClaimItem(FhirBackboneElementBase):
         diagnosisSequence: Optional[FhirList[positiveInt]] = None,
         procedureSequence: Optional[FhirList[positiveInt]] = None,
         informationSequence: Optional[FhirList[positiveInt]] = None,
-        revenue: Optional[CodeableConcept[Examplerevenuecentercodes]] = None,
-        category: Optional[CodeableConcept[Benefitcategorycodes]] = None,
-        productOrService: CodeableConcept[Usclscodes],
-        modifier: Optional[FhirList[CodeableConcept[Modifiertypecodes]]] = None,
+        revenue: Optional[CodeableConcept[ExampleRevenueCenterCodes]] = None,
+        category: Optional[CodeableConcept[BenefitCategoryCodes]] = None,
+        productOrService: CodeableConcept[USCLSCodes],
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodes]]] = None,
         programCode: Optional[
-            FhirList[CodeableConcept[Exampleprogramreasoncodes]]
+            FhirList[CodeableConcept[ExampleProgramReasonCodes]]
         ] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
         factor: Optional[decimal] = None,
         net: Optional[Money] = None,
         udi: Optional[FhirList[Reference[Union[Device]]]] = None,
-        bodySite: Optional[CodeableConcept[Oralsitecodes]] = None,
-        subSite: Optional[FhirList[CodeableConcept[Surfacecodes]]] = None,
+        bodySite: Optional[CodeableConcept[OralSiteCodes]] = None,
+        subSite: Optional[FhirList[CodeableConcept[SurfaceCodes]]] = None,
         encounter: Optional[FhirList[Reference[Union[Encounter]]]] = None,
         detail: Optional[FhirList[ClaimDetail]] = None,
     ) -> None:

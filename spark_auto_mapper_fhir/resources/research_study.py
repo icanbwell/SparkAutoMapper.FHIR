@@ -28,15 +28,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for primaryPurposeType
-    from spark_auto_mapper_fhir.value_sets.researchstudyprimarypurposetype import (
-        Researchstudyprimarypurposetype,
+    from spark_auto_mapper_fhir.value_sets.research_study_primary_purpose_type import (
+        ResearchStudyPrimaryPurposeType,
     )
 
     # End Import for CodeableConcept for primaryPurposeType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for phase
-    from spark_auto_mapper_fhir.value_sets.researchstudyphase import Researchstudyphase
+    from spark_auto_mapper_fhir.value_sets.research_study_phase import (
+        ResearchStudyPhase,
+    )
 
     # End Import for CodeableConcept for phase
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -48,8 +50,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for location
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
-        JurisdictionValueset,
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSet,
     )
 
     # End Import for CodeableConcept for location
@@ -75,8 +77,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonStopped
-    from spark_auto_mapper_fhir.value_sets.researchstudyreasonstopped import (
-        Researchstudyreasonstopped,
+    from spark_auto_mapper_fhir.value_sets.research_study_reason_stopped import (
+        ResearchStudyReasonStopped,
     )
 
     # End Import for CodeableConcept for reasonStopped
@@ -107,16 +109,16 @@ class ResearchStudy(FhirResourceBase):
         partOf: Optional[FhirList[Reference[Union[ResearchStudy]]]] = None,
         status: ResearchStudyStatus,
         primaryPurposeType: Optional[
-            CodeableConcept[Researchstudyprimarypurposetype]
+            CodeableConcept[ResearchStudyPrimaryPurposeType]
         ] = None,
-        phase: Optional[CodeableConcept[Researchstudyphase]] = None,
+        phase: Optional[CodeableConcept[ResearchStudyPhase]] = None,
         category: Optional[FhirList[CodeableConcept]] = None,
         focus: Optional[FhirList[CodeableConcept]] = None,
         condition: Optional[FhirList[CodeableConcept]] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
         keyword: Optional[FhirList[CodeableConcept]] = None,
-        location: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
+        location: Optional[FhirList[CodeableConcept[JurisdictionValueSet]]] = None,
         description: Optional[markdown] = None,
         enrollment: Optional[FhirList[Reference[Union[Group]]]] = None,
         period: Optional[Period] = None,
@@ -125,7 +127,7 @@ class ResearchStudy(FhirResourceBase):
             Reference[Union[Practitioner, PractitionerRole]]
         ] = None,
         site: Optional[FhirList[Reference[Union[Location]]]] = None,
-        reasonStopped: Optional[CodeableConcept[Researchstudyreasonstopped]] = None,
+        reasonStopped: Optional[CodeableConcept[ResearchStudyReasonStopped]] = None,
         note: Optional[FhirList[Annotation]] = None,
         arm: Optional[FhirList[ResearchStudyArm]] = None,
         objective: Optional[FhirList[ResearchStudyObjective]] = None,

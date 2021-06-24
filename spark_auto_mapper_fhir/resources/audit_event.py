@@ -16,13 +16,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.auditeventid import Auditeventid
+    from spark_auto_mapper_fhir.value_sets.audit_event_id import AuditEventID
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for subtype
-    from spark_auto_mapper_fhir.value_sets.auditeventsub_type import Auditeventsub_type
+    from spark_auto_mapper_fhir.value_sets.audit_event_sub__type import (
+        AuditEventSub_Type,
+    )
 
     # End Import for CodeableConcept for subtype
     from spark_auto_mapper_fhir.complex_types.audit_event_action import AuditEventAction
@@ -56,8 +58,8 @@ class AuditEvent(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Coding[Auditeventid],
-        subtype: Optional[FhirList[Coding[Auditeventsub_type]]] = None,
+        type: Coding[AuditEventID],
+        subtype: Optional[FhirList[Coding[AuditEventSub_Type]]] = None,
         action: Optional[AuditEventAction] = None,
         period: Optional[Period] = None,
         recorded: instant,

@@ -24,16 +24,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.snomedctreasonmedicationnotgivencodes import (
-        Snomedctreasonmedicationnotgivencodes,
+    from spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes import (
+        SNOMEDCTReasonMedicationNotGivenCodes,
     )
 
     # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medicationadministration_category_codes import (
-        MedicationadministrationCategoryCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_administration_category_codes import (
+        MedicationAdministrationCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
@@ -57,8 +57,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.reasonmedicationgivencodes import (
-        Reasonmedicationgivencodes,
+    from spark_auto_mapper_fhir.value_sets.reason_medication_given_codes import (
+        ReasonMedicationGivenCodes,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -105,17 +105,17 @@ class MedicationAdministration(FhirResourceBase):
         ] = None,
         status: code,
         statusReason: Optional[
-            FhirList[CodeableConcept[Snomedctreasonmedicationnotgivencodes]]
+            FhirList[CodeableConcept[SNOMEDCTReasonMedicationNotGivenCodes]]
         ] = None,
         category: Optional[
-            CodeableConcept[MedicationadministrationCategoryCodes]
+            CodeableConcept[MedicationAdministrationCategoryCodes]
         ] = None,
         subject: Reference[Union[Patient, Group]],
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
         supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,
         performer: Optional[FhirList[MedicationAdministrationPerformer]] = None,
         reasonCode: Optional[
-            FhirList[CodeableConcept[Reasonmedicationgivencodes]]
+            FhirList[CodeableConcept[ReasonMedicationGivenCodes]]
         ] = None,
         reasonReference: Optional[
             FhirList[Reference[Union[Condition, Observation, DiagnosticReport]]]

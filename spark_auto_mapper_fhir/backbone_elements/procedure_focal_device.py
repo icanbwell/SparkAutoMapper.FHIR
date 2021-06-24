@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for action
-    from spark_auto_mapper_fhir.value_sets.proceduredeviceactioncodes import (
-        Proceduredeviceactioncodes,
+    from spark_auto_mapper_fhir.value_sets.procedure_device_action_codes import (
+        ProcedureDeviceActionCodes,
     )
 
     # End Import for CodeableConcept for action
@@ -35,7 +35,7 @@ class ProcedureFocalDevice(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        action: Optional[CodeableConcept[Proceduredeviceactioncodes]] = None,
+        action: Optional[CodeableConcept[ProcedureDeviceActionCodes]] = None,
         manipulated: Reference[Union[Device]],
     ) -> None:
         """

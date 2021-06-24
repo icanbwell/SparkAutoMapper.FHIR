@@ -25,7 +25,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for participantType
-    from spark_auto_mapper_fhir.value_sets.participanttype import Participanttype
+    from spark_auto_mapper_fhir.value_sets.participant_type import ParticipantType
 
     # End Import for CodeableConcept for participantType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -60,7 +60,7 @@ class AppointmentResponse(FhirResourceBase):
         appointment: Reference[Union[Appointment]],
         start: Optional[instant] = None,
         end: Optional[instant] = None,
-        participantType: Optional[FhirList[CodeableConcept[Participanttype]]] = None,
+        participantType: Optional[FhirList[CodeableConcept[ParticipantType]]] = None,
         actor: Optional[
             Reference[
                 Union[

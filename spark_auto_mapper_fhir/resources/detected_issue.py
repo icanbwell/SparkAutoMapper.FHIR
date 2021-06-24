@@ -20,8 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.detectedissuecategory import (
-        Detectedissuecategory,
+    from spark_auto_mapper_fhir.value_sets.detected_issue_category import (
+        DetectedIssueCategory,
     )
 
     # End Import for CodeableConcept for code
@@ -66,7 +66,7 @@ class DetectedIssue(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: ObservationStatus,
-        code: Optional[CodeableConcept[Detectedissuecategory]] = None,
+        code: Optional[CodeableConcept[DetectedIssueCategory]] = None,
         severity: Optional[DetectedIssueSeverity] = None,
         patient: Optional[Reference[Union[Patient]]] = None,
         author: Optional[

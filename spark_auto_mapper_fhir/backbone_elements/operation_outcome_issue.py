@@ -16,8 +16,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for details
-    from spark_auto_mapper_fhir.value_sets.operationoutcomecodes import (
-        Operationoutcomecodes,
+    from spark_auto_mapper_fhir.value_sets.operation_outcome_codes import (
+        OperationOutcomeCodes,
     )
 
     # End Import for CodeableConcept for details
@@ -36,7 +36,7 @@ class OperationOutcomeIssue(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         severity: IssueSeverity,
         code: IssueType,
-        details: Optional[CodeableConcept[Operationoutcomecodes]] = None,
+        details: Optional[CodeableConcept[OperationOutcomeCodes]] = None,
         diagnostics: Optional[FhirString] = None,
         location: Optional[FhirList[FhirString]] = None,
         expression: Optional[FhirList[FhirString]] = None,

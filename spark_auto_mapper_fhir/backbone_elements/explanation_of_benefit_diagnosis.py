@@ -14,24 +14,24 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.examplediagnosistypecodes import (
-        Examplediagnosistypecodes,
+    from spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes import (
+        ExampleDiagnosisTypeCodes,
     )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for onAdmission
-    from spark_auto_mapper_fhir.value_sets.examplediagnosisonadmissioncodes import (
-        Examplediagnosisonadmissioncodes,
+    from spark_auto_mapper_fhir.value_sets.example_diagnosis_on_admission_codes import (
+        ExampleDiagnosisOnAdmissionCodes,
     )
 
     # End Import for CodeableConcept for onAdmission
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for packageCode
-    from spark_auto_mapper_fhir.value_sets.examplediagnosisrelatedgroupcodes import (
-        Examplediagnosisrelatedgroupcodes,
+    from spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes import (
+        ExampleDiagnosisRelatedGroupCodes,
     )
 
     # End Import for CodeableConcept for packageCode
@@ -49,10 +49,10 @@ class ExplanationOfBenefitDiagnosis(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         sequence: positiveInt,
-        type: Optional[FhirList[CodeableConcept[Examplediagnosistypecodes]]] = None,
-        onAdmission: Optional[CodeableConcept[Examplediagnosisonadmissioncodes]] = None,
+        type: Optional[FhirList[CodeableConcept[ExampleDiagnosisTypeCodes]]] = None,
+        onAdmission: Optional[CodeableConcept[ExampleDiagnosisOnAdmissionCodes]] = None,
         packageCode: Optional[
-            CodeableConcept[Examplediagnosisrelatedgroupcodes]
+            CodeableConcept[ExampleDiagnosisRelatedGroupCodes]
         ] = None,
     ) -> None:
         """

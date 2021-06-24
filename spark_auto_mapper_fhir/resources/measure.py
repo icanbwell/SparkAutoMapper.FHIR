@@ -34,8 +34,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
-        JurisdictionValueset,
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSet,
     )
 
     # End Import for CodeableConcept for jurisdiction
@@ -48,7 +48,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definitiontopic import Definitiontopic
+    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
 
     # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -61,21 +61,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for scoring
-    from spark_auto_mapper_fhir.value_sets.measurescoring import Measurescoring
+    from spark_auto_mapper_fhir.value_sets.measure_scoring import MeasureScoring
 
     # End Import for CodeableConcept for scoring
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for compositeScoring
-    from spark_auto_mapper_fhir.value_sets.compositemeasurescoring import (
-        Compositemeasurescoring,
+    from spark_auto_mapper_fhir.value_sets.composite_measure_scoring import (
+        CompositeMeasureScoring,
     )
 
     # End Import for CodeableConcept for compositeScoring
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.measuretype import Measuretype
+    from spark_auto_mapper_fhir.value_sets.measure_type import MeasureType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -116,14 +116,14 @@ class Measure(FhirResourceBase):
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet]]] = None,
         purpose: Optional[markdown] = None,
         usage: Optional[FhirString] = None,
         copyright: Optional[markdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
-        topic: Optional[FhirList[CodeableConcept[Definitiontopic]]] = None,
+        topic: Optional[FhirList[CodeableConcept[DefinitionTopic]]] = None,
         author: Optional[FhirList[ContactDetail]] = None,
         editor: Optional[FhirList[ContactDetail]] = None,
         reviewer: Optional[FhirList[ContactDetail]] = None,
@@ -131,9 +131,9 @@ class Measure(FhirResourceBase):
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
         library: Optional[FhirList[canonical]] = None,
         disclaimer: Optional[markdown] = None,
-        scoring: Optional[CodeableConcept[Measurescoring]] = None,
-        compositeScoring: Optional[CodeableConcept[Compositemeasurescoring]] = None,
-        type: Optional[FhirList[CodeableConcept[Measuretype]]] = None,
+        scoring: Optional[CodeableConcept[MeasureScoring]] = None,
+        compositeScoring: Optional[CodeableConcept[CompositeMeasureScoring]] = None,
+        type: Optional[FhirList[CodeableConcept[MeasureType]]] = None,
         riskAdjustment: Optional[FhirString] = None,
         rateAggregation: Optional[FhirString] = None,
         rationale: Optional[markdown] = None,

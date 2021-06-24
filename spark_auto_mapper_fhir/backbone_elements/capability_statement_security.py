@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for service
-    from spark_auto_mapper_fhir.value_sets.restfulsecurityservice import (
-        Restfulsecurityservice,
+    from spark_auto_mapper_fhir.value_sets.restful_security_service import (
+        RestfulSecurityService,
     )
 
     # End Import for CodeableConcept for service
@@ -34,7 +34,7 @@ class CapabilityStatementSecurity(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         cors: Optional[FhirBoolean] = None,
-        service: Optional[FhirList[CodeableConcept[Restfulsecurityservice]]] = None,
+        service: Optional[FhirList[CodeableConcept[RestfulSecurityService]]] = None,
         description: Optional[markdown] = None,
     ) -> None:
         """

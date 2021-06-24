@@ -28,14 +28,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.practitionerrole import Practitionerrole
+    from spark_auto_mapper_fhir.value_sets.practitioner_role import PractitionerRole
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
-        Practicesettingcodevalueset,
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSet,
     )
 
     # End Import for CodeableConcept for specialty
@@ -78,9 +78,9 @@ class PractitionerRole(FhirResourceBase):
         period: Optional[Period] = None,
         practitioner: Optional[Reference[Union[Practitioner]]] = None,
         organization: Optional[Reference[Union[Organization]]] = None,
-        code: Optional[FhirList[CodeableConcept[Practitionerrole]]] = None,
+        code: Optional[FhirList[CodeableConcept[PractitionerRole]]] = None,
         specialty: Optional[
-            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+            FhirList[CodeableConcept[PracticeSettingCodeValueSet]]
         ] = None,
         location: Optional[FhirList[Reference[Union[Location]]]] = None,
         healthcareService: Optional[

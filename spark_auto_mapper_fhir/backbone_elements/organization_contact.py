@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for purpose
-    from spark_auto_mapper_fhir.value_sets.contactentitytype import Contactentitytype
+    from spark_auto_mapper_fhir.value_sets.contact_entity_type import ContactEntityType
 
     # End Import for CodeableConcept for purpose
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
@@ -32,7 +32,7 @@ class OrganizationContact(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        purpose: Optional[CodeableConcept[Contactentitytype]] = None,
+        purpose: Optional[CodeableConcept[ContactEntityType]] = None,
         name: Optional[HumanName] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[Address] = None,

@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for physicalType
-    from spark_auto_mapper_fhir.value_sets.locationtype import Locationtype
+    from spark_auto_mapper_fhir.value_sets.location_type import LocationType
 
     # End Import for CodeableConcept for physicalType
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -39,7 +39,7 @@ class EncounterLocation(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         location: Reference[Union[Location]],
         status: Optional[EncounterLocationStatus] = None,
-        physicalType: Optional[CodeableConcept[Locationtype]] = None,
+        physicalType: Optional[CodeableConcept[LocationType]] = None,
         period: Optional[Period] = None,
     ) -> None:
         """

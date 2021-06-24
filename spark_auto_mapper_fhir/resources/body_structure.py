@@ -19,24 +19,24 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for morphology
-    from spark_auto_mapper_fhir.value_sets.snomedctmorphologicabnormalities import (
-        Snomedctmorphologicabnormalities,
+    from spark_auto_mapper_fhir.value_sets.snomedct_morphologic_abnormalities import (
+        SNOMEDCTMorphologicAbnormalities,
     )
 
     # End Import for CodeableConcept for morphology
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for location
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for locationQualifier
-    from spark_auto_mapper_fhir.value_sets.bodystructurelocationqualifier import (
-        Bodystructurelocationqualifier,
+    from spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier import (
+        BodystructureLocationQualifier,
     )
 
     # End Import for CodeableConcept for locationQualifier
@@ -62,10 +62,10 @@ class BodyStructure(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        morphology: Optional[CodeableConcept[Snomedctmorphologicabnormalities]] = None,
-        location: Optional[CodeableConcept[Snomedctbodystructures]] = None,
+        morphology: Optional[CodeableConcept[SNOMEDCTMorphologicAbnormalities]] = None,
+        location: Optional[CodeableConcept[SNOMEDCTBodyStructures]] = None,
         locationQualifier: Optional[
-            FhirList[CodeableConcept[Bodystructurelocationqualifier]]
+            FhirList[CodeableConcept[BodystructureLocationQualifier]]
         ] = None,
         description: Optional[FhirString] = None,
         image: Optional[FhirList[Attachment]] = None,

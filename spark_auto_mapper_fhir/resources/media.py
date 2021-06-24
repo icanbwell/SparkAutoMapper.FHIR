@@ -27,13 +27,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.mediatype import Mediatype
+    from spark_auto_mapper_fhir.value_sets.media_type import MediaType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modality
-    from spark_auto_mapper_fhir.value_sets.mediamodality import Mediamodality
+    from spark_auto_mapper_fhir.value_sets.media_modality import MediaModality
 
     # End Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -65,16 +65,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.procedurereasoncodes import (
-        Procedurereasoncodes,
+    from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import (
+        ProcedureReasonCodes,
     )
 
     # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
@@ -109,8 +109,8 @@ class Media(FhirResourceBase):
         basedOn: Optional[FhirList[Reference[Union[ServiceRequest, CarePlan]]]] = None,
         partOf: Optional[FhirList[Reference[Union[Resource]]]] = None,
         status: EventStatus,
-        type: Optional[CodeableConcept[Mediatype]] = None,
-        modality: Optional[CodeableConcept[Mediamodality]] = None,
+        type: Optional[CodeableConcept[MediaType]] = None,
+        modality: Optional[CodeableConcept[MediaModality]] = None,
         view: Optional[CodeableConcept] = None,
         subject: Optional[
             Reference[
@@ -140,8 +140,8 @@ class Media(FhirResourceBase):
                 ]
             ]
         ] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[Procedurereasoncodes]]] = None,
-        bodySite: Optional[CodeableConcept[Snomedctbodystructures]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCodes]]] = None,
+        bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructures]] = None,
         deviceName: Optional[FhirString] = None,
         device: Optional[Reference[Union[Device, DeviceMetric, Device]]] = None,
         height: Optional[positiveInt] = None,

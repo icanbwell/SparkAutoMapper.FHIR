@@ -31,16 +31,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.communicationnotdonereason import (
-        Communicationnotdonereason,
+    from spark_auto_mapper_fhir.value_sets.communication_not_done_reason import (
+        CommunicationNotDoneReason,
     )
 
     # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.communicationcategory import (
-        Communicationcategory,
+    from spark_auto_mapper_fhir.value_sets.communication_category import (
+        CommunicationCategory,
     )
 
     # End Import for CodeableConcept for category
@@ -54,7 +54,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.communicationtopic import Communicationtopic
+    from spark_auto_mapper_fhir.value_sets.communication_topic import CommunicationTopic
 
     # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -92,8 +92,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -129,12 +129,12 @@ class Communication(FhirResourceBase):
         partOf: Optional[FhirList[Reference[Union[Resource]]]] = None,
         inResponseTo: Optional[FhirList[Reference[Union[Communication]]]] = None,
         status: EventStatus,
-        statusReason: Optional[CodeableConcept[Communicationnotdonereason]] = None,
-        category: Optional[FhirList[CodeableConcept[Communicationcategory]]] = None,
+        statusReason: Optional[CodeableConcept[CommunicationNotDoneReason]] = None,
+        category: Optional[FhirList[CodeableConcept[CommunicationCategory]]] = None,
         priority: Optional[RequestPriority] = None,
         medium: Optional[FhirList[CodeableConcept]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
-        topic: Optional[CodeableConcept[Communicationtopic]] = None,
+        topic: Optional[CodeableConcept[CommunicationTopic]] = None,
         about: Optional[FhirList[Reference[Union[Resource]]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         sent: Optional[FhirDateTime] = None,
@@ -170,7 +170,7 @@ class Communication(FhirResourceBase):
             ]
         ] = None,
         reasonCode: Optional[
-            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindings]]
         ] = None,
         reasonReference: Optional[
             FhirList[

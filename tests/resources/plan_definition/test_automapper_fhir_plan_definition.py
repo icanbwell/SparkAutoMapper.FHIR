@@ -8,7 +8,6 @@ from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
-from spark_auto_mapper_fhir.valuesets.publication_status import PublicationStatusCode
 
 
 def test_auto_mapper_fhir_plan_definition(spark_session: SparkSession) -> None:

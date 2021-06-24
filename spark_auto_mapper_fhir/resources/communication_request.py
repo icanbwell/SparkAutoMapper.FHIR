@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.communicationcategory import (
-        Communicationcategory,
+    from spark_auto_mapper_fhir.value_sets.communication_category import (
+        CommunicationCategory,
     )
 
     # End Import for CodeableConcept for category
@@ -115,7 +115,7 @@ class CommunicationRequest(FhirResourceBase):
         groupIdentifier: Optional[Identifier] = None,
         status: RequestStatus,
         statusReason: Optional[CodeableConcept] = None,
-        category: Optional[FhirList[CodeableConcept[Communicationcategory]]] = None,
+        category: Optional[FhirList[CodeableConcept[CommunicationCategory]]] = None,
         priority: Optional[RequestPriority] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         medium: Optional[FhirList[CodeableConcept]] = None,

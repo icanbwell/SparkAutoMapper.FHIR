@@ -27,4 +27,4 @@ class MaritalStatusCodesValues:
     Widowed = MaritalStatusCodes("W")
     Noinformation = MaritalStatusCodes("NI")
     NotPresent = MaritalStatusCodes("NP")
-    Unk = MaritalStatusCodes("UNK")
+    UNK = MaritalStatusCodes("UNK")

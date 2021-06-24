@@ -22,7 +22,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for rejectionCriterion
-    from spark_auto_mapper_fhir.value_sets.rejectioncriterion import Rejectioncriterion
+    from spark_auto_mapper_fhir.value_sets.rejection_criterion import RejectionCriterion
 
     # End Import for CodeableConcept for rejectionCriterion
     from spark_auto_mapper_fhir.backbone_elements.specimen_definition_handling import (
@@ -48,7 +48,7 @@ class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
         requirement: Optional[FhirString] = None,
         retentionTime: Optional[Duration] = None,
         rejectionCriterion: Optional[
-            FhirList[CodeableConcept[Rejectioncriterion]]
+            FhirList[CodeableConcept[RejectionCriterion]]
         ] = None,
         handling: Optional[FhirList[SpecimenDefinitionHandling]] = None,
     ) -> None:

@@ -18,7 +18,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.careteamcategory import Careteamcategory
+    from spark_auto_mapper_fhir.value_sets.care_team_category import CareTeamCategory
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -38,8 +38,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -69,14 +69,14 @@ class CareTeam(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[CareTeamStatus] = None,
-        category: Optional[FhirList[CodeableConcept[Careteamcategory]]] = None,
+        category: Optional[FhirList[CodeableConcept[CareTeamCategory]]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         period: Optional[Period] = None,
         participant: Optional[FhirList[CareTeamParticipant]] = None,
         reasonCode: Optional[
-            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindings]]
         ] = None,
         reasonReference: Optional[FhirList[Reference[Union[Condition]]]] = None,
         managingOrganization: Optional[FhirList[Reference[Union[Organization]]]] = None,

@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.adjudicationvaluecodes import (
-        Adjudicationvaluecodes,
+    from spark_auto_mapper_fhir.value_sets.adjudication_value_codes import (
+        AdjudicationValueCodes,
     )
 
     # End Import for CodeableConcept for category
@@ -32,7 +32,7 @@ class ClaimResponseTotal(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: CodeableConcept[Adjudicationvaluecodes],
+        category: CodeableConcept[AdjudicationValueCodes],
         amount: Money,
     ) -> None:
         """

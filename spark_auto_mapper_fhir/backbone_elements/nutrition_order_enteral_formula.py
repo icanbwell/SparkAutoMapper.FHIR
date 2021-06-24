@@ -14,16 +14,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for baseFormulaType
-    from spark_auto_mapper_fhir.value_sets.enteralformulatypecodes import (
-        Enteralformulatypecodes,
+    from spark_auto_mapper_fhir.value_sets.enteral_formula_type_codes import (
+        EnteralFormulaTypeCodes,
     )
 
     # End Import for CodeableConcept for baseFormulaType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for additiveType
-    from spark_auto_mapper_fhir.value_sets.enteralformulaadditivetypecode import (
-        Enteralformulaadditivetypecode,
+    from spark_auto_mapper_fhir.value_sets.enteral_formula_additive_type_code import (
+        EnteralFormulaAdditiveTypeCode,
     )
 
     # End Import for CodeableConcept for additiveType
@@ -31,7 +31,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for routeofAdministration
-    from spark_auto_mapper_fhir.value_sets.enteralroutecodes import Enteralroutecodes
+    from spark_auto_mapper_fhir.value_sets.enteral_route_codes import EnteralRouteCodes
 
     # End Import for CodeableConcept for routeofAdministration
     from spark_auto_mapper_fhir.backbone_elements.nutrition_order_administration import (
@@ -51,12 +51,12 @@ class NutritionOrderEnteralFormula(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        baseFormulaType: Optional[CodeableConcept[Enteralformulatypecodes]] = None,
+        baseFormulaType: Optional[CodeableConcept[EnteralFormulaTypeCodes]] = None,
         baseFormulaProductName: Optional[FhirString] = None,
-        additiveType: Optional[CodeableConcept[Enteralformulaadditivetypecode]] = None,
+        additiveType: Optional[CodeableConcept[EnteralFormulaAdditiveTypeCode]] = None,
         additiveProductName: Optional[FhirString] = None,
         caloricDensity: Optional[Quantity] = None,
-        routeofAdministration: Optional[CodeableConcept[Enteralroutecodes]] = None,
+        routeofAdministration: Optional[CodeableConcept[EnteralRouteCodes]] = None,
         administration: Optional[FhirList[NutritionOrderAdministration]] = None,
         maxVolumeToDeliver: Optional[Quantity] = None,
         administrationInstruction: Optional[FhirString] = None,

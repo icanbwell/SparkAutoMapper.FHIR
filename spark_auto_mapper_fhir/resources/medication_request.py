@@ -21,8 +21,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.medicationrequest_status_reason_codes import (
-        MedicationrequestStatusReasonCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_request_status_reason_codes import (
+        MedicationRequestStatusReasonCodes,
     )
 
     # End Import for CodeableConcept for statusReason
@@ -32,8 +32,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medicationrequest_category_codes import (
-        MedicationrequestCategoryCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_request_category_codes import (
+        MedicationRequestCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
@@ -75,8 +75,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for performerType
-    from spark_auto_mapper_fhir.value_sets.procedureperformerrolecodes import (
-        Procedureperformerrolecodes,
+    from spark_auto_mapper_fhir.value_sets.procedure_performer_role_codes import (
+        ProcedurePerformerRoleCodes,
     )
 
     # End Import for CodeableConcept for performerType
@@ -105,8 +105,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for courseOfTherapyType
-    from spark_auto_mapper_fhir.value_sets.medicationrequest_course_of_therapy_codes import (
-        MedicationrequestCourseOfTherapyCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_request_course_of_therapy_codes import (
+        MedicationRequestCourseOfTherapyCodes,
     )
 
     # End Import for CodeableConcept for courseOfTherapyType
@@ -151,11 +151,11 @@ class MedicationRequest(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: medicationrequestStatus,
         statusReason: Optional[
-            CodeableConcept[MedicationrequestStatusReasonCodes]
+            CodeableConcept[MedicationRequestStatusReasonCodes]
         ] = None,
         intent: medicationRequestIntent,
         category: Optional[
-            FhirList[CodeableConcept[MedicationrequestCategoryCodes]]
+            FhirList[CodeableConcept[MedicationRequestCategoryCodes]]
         ] = None,
         priority: Optional[RequestPriority] = None,
         doNotPerform: Optional[FhirBoolean] = None,
@@ -188,7 +188,7 @@ class MedicationRequest(FhirResourceBase):
                 ]
             ]
         ] = None,
-        performerType: Optional[CodeableConcept[Procedureperformerrolecodes]] = None,
+        performerType: Optional[CodeableConcept[ProcedurePerformerRoleCodes]] = None,
         recorder: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         reasonCode: Optional[FhirList[CodeableConcept]] = None,
         reasonReference: Optional[
@@ -210,7 +210,7 @@ class MedicationRequest(FhirResourceBase):
         ] = None,
         groupIdentifier: Optional[Identifier] = None,
         courseOfTherapyType: Optional[
-            CodeableConcept[MedicationrequestCourseOfTherapyCodes]
+            CodeableConcept[MedicationRequestCourseOfTherapyCodes]
         ] = None,
         insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
         note: Optional[FhirList[Annotation]] = None,

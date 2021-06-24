@@ -14,21 +14,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for material
-    from spark_auto_mapper_fhir.value_sets.containermaterials import Containermaterials
+    from spark_auto_mapper_fhir.value_sets.container_materials import ContainerMaterials
 
     # End Import for CodeableConcept for material
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.specimencontainertype import (
-        Specimencontainertype,
+    from spark_auto_mapper_fhir.value_sets.specimen_container_type import (
+        SpecimenContainerType,
     )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for cap
-    from spark_auto_mapper_fhir.value_sets.containercap import Containercap
+    from spark_auto_mapper_fhir.value_sets.container_cap import ContainerCap
 
     # End Import for CodeableConcept for cap
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
@@ -48,9 +48,9 @@ class SpecimenDefinitionContainer(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        material: Optional[CodeableConcept[Containermaterials]] = None,
-        type: Optional[CodeableConcept[Specimencontainertype]] = None,
-        cap: Optional[CodeableConcept[Containercap]] = None,
+        material: Optional[CodeableConcept[ContainerMaterials]] = None,
+        type: Optional[CodeableConcept[SpecimenContainerType]] = None,
+        cap: Optional[CodeableConcept[ContainerCap]] = None,
         description: Optional[FhirString] = None,
         capacity: Optional[Quantity] = None,
         additive: Optional[FhirList[SpecimenDefinitionAdditive]] = None,

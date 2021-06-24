@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for variantState
-    from spark_auto_mapper_fhir.value_sets.evidencevariantstate import (
-        Evidencevariantstate,
+    from spark_auto_mapper_fhir.value_sets.evidence_variant_state import (
+        EvidenceVariantState,
     )
 
     # End Import for CodeableConcept for variantState
@@ -41,7 +41,7 @@ class EffectEvidenceSynthesisResultsByExposure(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         exposureState: Optional[ExposureState] = None,
-        variantState: Optional[CodeableConcept[Evidencevariantstate]] = None,
+        variantState: Optional[CodeableConcept[EvidenceVariantState]] = None,
         riskEvidenceSynthesis: Reference[Union[RiskEvidenceSynthesis]],
     ) -> None:
         """

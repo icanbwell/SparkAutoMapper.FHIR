@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.medicationknowledge_characteristic_codes import (
-        MedicationknowledgeCharacteristicCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes import (
+        MedicationKnowledgeCharacteristicCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -31,7 +31,7 @@ class MedicationKnowledgeDrugCharacteristic(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[MedicationknowledgeCharacteristicCodes]] = None,
+        type: Optional[CodeableConcept[MedicationKnowledgeCharacteristicCodes]] = None,
     ) -> None:
         """
 

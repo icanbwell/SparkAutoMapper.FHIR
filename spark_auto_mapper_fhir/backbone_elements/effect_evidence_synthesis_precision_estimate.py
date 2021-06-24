@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.precisionestimatetype import (
-        Precisionestimatetype,
+    from spark_auto_mapper_fhir.value_sets.precision_estimate_type import (
+        PrecisionEstimateType,
     )
 
     # End Import for CodeableConcept for type
@@ -34,7 +34,7 @@ class EffectEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[Precisionestimatetype]] = None,
+        type: Optional[CodeableConcept[PrecisionEstimateType]] = None,
         level: Optional[decimal] = None,
         from_: Optional[decimal] = None,
         to: Optional[decimal] = None,

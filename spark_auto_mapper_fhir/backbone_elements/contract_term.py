@@ -17,16 +17,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.contracttermtypecodes import (
-        Contracttermtypecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_term_type_codes import (
+        ContractTermTypeCodes,
     )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subType
-    from spark_auto_mapper_fhir.value_sets.contracttermsubtypecodes import (
-        Contracttermsubtypecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes import (
+        ContractTermSubtypeCodes,
     )
 
     # End Import for CodeableConcept for subType
@@ -53,8 +53,8 @@ class ContractTerm(FhirBackboneElementBase):
         identifier: Optional[Identifier] = None,
         issued: Optional[FhirDateTime] = None,
         applies: Optional[Period] = None,
-        type: Optional[CodeableConcept[Contracttermtypecodes]] = None,
-        subType: Optional[CodeableConcept[Contracttermsubtypecodes]] = None,
+        type: Optional[CodeableConcept[ContractTermTypeCodes]] = None,
+        subType: Optional[CodeableConcept[ContractTermSubtypeCodes]] = None,
         text: Optional[FhirString] = None,
         securityLabel: Optional[FhirList[ContractSecurityLabel]] = None,
         offer: ContractOffer,

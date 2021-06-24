@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.medicationknowledge_package_type_codes import (
-        MedicationknowledgePackageTypeCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes import (
+        MedicationKnowledgePackageTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -32,7 +32,7 @@ class MedicationKnowledgePackaging(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[MedicationknowledgePackageTypeCodes]] = None,
+        type: Optional[CodeableConcept[MedicationKnowledgePackageTypeCodes]] = None,
         quantity: Optional[Quantity] = None,
     ) -> None:
         """

@@ -16,8 +16,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.actionparticipantrole import (
-        Actionparticipantrole,
+    from spark_auto_mapper_fhir.value_sets.action_participant_role import (
+        ActionParticipantRole,
     )
 
     # End Import for CodeableConcept for role
@@ -35,7 +35,7 @@ class ActivityDefinitionParticipant(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type: ActionParticipantType,
-        role: Optional[CodeableConcept[Actionparticipantrole]] = None,
+        role: Optional[CodeableConcept[ActionParticipantRole]] = None,
     ) -> None:
         """
 

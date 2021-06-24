@@ -22,7 +22,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for referenceSeqId
-    from spark_auto_mapper_fhir.value_sets.ensembl import Ensembl
+    from spark_auto_mapper_fhir.value_sets.ensembl import ENSEMBL
 
     # End Import for CodeableConcept for referenceSeqId
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -46,7 +46,7 @@ class MolecularSequenceReferenceSeq(FhirBackboneElementBase):
         chromosome: Optional[CodeableConcept[Chromosome_human]] = None,
         genomeBuild: Optional[FhirString] = None,
         orientation: Optional[orientationType] = None,
-        referenceSeqId: Optional[CodeableConcept[Ensembl]] = None,
+        referenceSeqId: Optional[CodeableConcept[ENSEMBL]] = None,
         referenceSeqPointer: Optional[Reference[Union[MolecularSequence]]] = None,
         referenceSeqString: Optional[FhirString] = None,
         strand: Optional[strandType] = None,

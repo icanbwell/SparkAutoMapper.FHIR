@@ -19,16 +19,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.fhirspecimencollectionmethod import (
-        Fhirspecimencollectionmethod,
+    from spark_auto_mapper_fhir.value_sets.fhir_specimen_collection_method import (
+        FHIRSpecimenCollectionMethod,
     )
 
     # End Import for CodeableConcept for method
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
@@ -48,8 +48,8 @@ class SpecimenCollection(FhirBackboneElementBase):
         collector: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         duration: Optional[Duration] = None,
         quantity: Optional[Quantity] = None,
-        method: Optional[CodeableConcept[Fhirspecimencollectionmethod]] = None,
-        bodySite: Optional[CodeableConcept[Snomedctbodystructures]] = None,
+        method: Optional[CodeableConcept[FHIRSpecimenCollectionMethod]] = None,
+        bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructures]] = None,
     ) -> None:
         """
 

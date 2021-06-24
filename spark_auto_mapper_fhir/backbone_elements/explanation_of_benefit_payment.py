@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.examplepaymenttypecodes import (
-        Examplepaymenttypecodes,
+    from spark_auto_mapper_fhir.value_sets.example_payment_type_codes import (
+        ExamplePaymentTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -23,8 +23,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for adjustmentReason
-    from spark_auto_mapper_fhir.value_sets.paymentadjustmentreasoncodes import (
-        Paymentadjustmentreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.payment_adjustment_reason_codes import (
+        PaymentAdjustmentReasonCodes,
     )
 
     # End Import for CodeableConcept for adjustmentReason
@@ -43,10 +43,10 @@ class ExplanationOfBenefitPayment(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[Examplepaymenttypecodes]] = None,
+        type: Optional[CodeableConcept[ExamplePaymentTypeCodes]] = None,
         adjustment: Optional[Money] = None,
         adjustmentReason: Optional[
-            CodeableConcept[Paymentadjustmentreasoncodes]
+            CodeableConcept[PaymentAdjustmentReasonCodes]
         ] = None,
         date: Optional[FhirDate] = None,
         amount: Optional[Money] = None,

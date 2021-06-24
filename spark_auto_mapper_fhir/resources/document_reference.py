@@ -24,16 +24,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.documenttypevalueset import (
-        Documenttypevalueset,
+    from spark_auto_mapper_fhir.value_sets.document_type_value_set import (
+        DocumentTypeValueSet,
     )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.documentclassvalueset import (
-        Documentclassvalueset,
+    from spark_auto_mapper_fhir.value_sets.document_class_value_set import (
+        DocumentClassValueSet,
     )
 
     # End Import for CodeableConcept for category
@@ -98,8 +98,8 @@ class DocumentReference(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: DocumentReferenceStatus,
         docStatus: Optional[CompositionStatus] = None,
-        type: Optional[CodeableConcept[Documenttypevalueset]] = None,
-        category: Optional[FhirList[CodeableConcept[Documentclassvalueset]]] = None,
+        type: Optional[CodeableConcept[DocumentTypeValueSet]] = None,
+        category: Optional[FhirList[CodeableConcept[DocumentClassValueSet]]] = None,
         subject: Optional[
             Reference[Union[Patient, Practitioner, Group, Device]]
         ] = None,

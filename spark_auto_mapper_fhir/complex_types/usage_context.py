@@ -12,7 +12,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.usagecontexttype import Usagecontexttype
+    from spark_auto_mapper_fhir.value_sets.usage_context_type import UsageContextType
 
     # End Import for CodeableConcept for code
 
@@ -29,7 +29,7 @@ class UsageContext(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: Coding[Usagecontexttype],
+        code: Coding[UsageContextType],
     ) -> None:
         """
 

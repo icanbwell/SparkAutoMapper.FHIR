@@ -22,20 +22,20 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for productOrService
-    from spark_auto_mapper_fhir.value_sets.usclscodes import Usclscodes
+    from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodes
 
     # End Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifiertypecodes import Modifiertypecodes
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodes
 
     # End Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for programCode
-    from spark_auto_mapper_fhir.value_sets.exampleprogramreasoncodes import (
-        Exampleprogramreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import (
+        ExampleProgramReasonCodes,
     )
 
     # End Import for CodeableConcept for programCode
@@ -46,13 +46,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.oralsitecodes import Oralsitecodes
+    from spark_auto_mapper_fhir.value_sets.oral_site_codes import OralSiteCodes
 
     # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subSite
-    from spark_auto_mapper_fhir.value_sets.surfacecodes import Surfacecodes
+    from spark_auto_mapper_fhir.value_sets.surface_codes import SurfaceCodes
 
     # End Import for CodeableConcept for subSite
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
@@ -81,17 +81,17 @@ class ClaimResponseAddItem(FhirBackboneElementBase):
         provider: Optional[
             FhirList[Reference[Union[Practitioner, PractitionerRole, Organization]]]
         ] = None,
-        productOrService: CodeableConcept[Usclscodes],
-        modifier: Optional[FhirList[CodeableConcept[Modifiertypecodes]]] = None,
+        productOrService: CodeableConcept[USCLSCodes],
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodes]]] = None,
         programCode: Optional[
-            FhirList[CodeableConcept[Exampleprogramreasoncodes]]
+            FhirList[CodeableConcept[ExampleProgramReasonCodes]]
         ] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
         factor: Optional[decimal] = None,
         net: Optional[Money] = None,
-        bodySite: Optional[CodeableConcept[Oralsitecodes]] = None,
-        subSite: Optional[FhirList[CodeableConcept[Surfacecodes]]] = None,
+        bodySite: Optional[CodeableConcept[OralSiteCodes]] = None,
+        subSite: Optional[FhirList[CodeableConcept[SurfaceCodes]]] = None,
         noteNumber: Optional[FhirList[positiveInt]] = None,
         adjudication: FhirList[ClaimResponseAdjudication],
         detail: Optional[FhirList[ClaimResponseDetail1]] = None,

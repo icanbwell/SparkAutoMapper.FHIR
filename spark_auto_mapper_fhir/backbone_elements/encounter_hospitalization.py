@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for admitSource
-    from spark_auto_mapper_fhir.value_sets.admitsource import Admitsource
+    from spark_auto_mapper_fhir.value_sets.admit_source import AdmitSource
 
     # End Import for CodeableConcept for admitSource
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -32,14 +32,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialCourtesy
-    from spark_auto_mapper_fhir.value_sets.specialcourtesy import Specialcourtesy
+    from spark_auto_mapper_fhir.value_sets.special_courtesy import SpecialCourtesy
 
     # End Import for CodeableConcept for specialCourtesy
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialArrangement
-    from spark_auto_mapper_fhir.value_sets.specialarrangements import (
-        Specialarrangements,
+    from spark_auto_mapper_fhir.value_sets.special_arrangements import (
+        SpecialArrangements,
     )
 
     # End Import for CodeableConcept for specialArrangement
@@ -51,8 +51,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for dischargeDisposition
-    from spark_auto_mapper_fhir.value_sets.dischargedisposition import (
-        Dischargedisposition,
+    from spark_auto_mapper_fhir.value_sets.discharge_disposition import (
+        DischargeDisposition,
     )
 
     # End Import for CodeableConcept for dischargeDisposition
@@ -71,15 +71,15 @@ class EncounterHospitalization(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         preAdmissionIdentifier: Optional[Identifier] = None,
         origin: Optional[Reference[Union[Location, Organization]]] = None,
-        admitSource: Optional[CodeableConcept[Admitsource]] = None,
+        admitSource: Optional[CodeableConcept[AdmitSource]] = None,
         reAdmission: Optional[CodeableConcept] = None,
         dietPreference: Optional[FhirList[CodeableConcept[Diet]]] = None,
-        specialCourtesy: Optional[FhirList[CodeableConcept[Specialcourtesy]]] = None,
+        specialCourtesy: Optional[FhirList[CodeableConcept[SpecialCourtesy]]] = None,
         specialArrangement: Optional[
-            FhirList[CodeableConcept[Specialarrangements]]
+            FhirList[CodeableConcept[SpecialArrangements]]
         ] = None,
         destination: Optional[Reference[Union[Location, Organization]]] = None,
-        dischargeDisposition: Optional[CodeableConcept[Dischargedisposition]] = None,
+        dischargeDisposition: Optional[CodeableConcept[DischargeDisposition]] = None,
     ) -> None:
         """
 

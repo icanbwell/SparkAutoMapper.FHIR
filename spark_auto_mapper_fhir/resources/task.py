@@ -33,7 +33,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.taskcode import Taskcode
+    from spark_auto_mapper_fhir.value_sets.task_code import TaskCode
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -61,8 +61,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for performerType
-    from spark_auto_mapper_fhir.value_sets.procedureperformerrolecodes import (
-        Procedureperformerrolecodes,
+    from spark_auto_mapper_fhir.value_sets.procedure_performer_role_codes import (
+        ProcedurePerformerRoleCodes,
     )
 
     # End Import for CodeableConcept for performerType
@@ -126,7 +126,7 @@ class Task(FhirResourceBase):
         businessStatus: Optional[CodeableConcept] = None,
         intent: TaskIntent,
         priority: Optional[RequestPriority] = None,
-        code: Optional[CodeableConcept[Taskcode]] = None,
+        code: Optional[CodeableConcept[TaskCode]] = None,
         description: Optional[FhirString] = None,
         focus: Optional[Reference[Union[Resource]]] = None,
         for_: Optional[Reference] = None,
@@ -147,7 +147,7 @@ class Task(FhirResourceBase):
             ]
         ] = None,
         performerType: Optional[
-            FhirList[CodeableConcept[Procedureperformerrolecodes]]
+            FhirList[CodeableConcept[ProcedurePerformerRoleCodes]]
         ] = None,
         owner: Optional[
             Reference[

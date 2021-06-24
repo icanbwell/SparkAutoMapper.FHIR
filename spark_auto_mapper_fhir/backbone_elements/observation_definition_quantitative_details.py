@@ -14,13 +14,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for customaryUnit
-    from spark_auto_mapper_fhir.value_sets.ucumcodes import Ucumcodes
+    from spark_auto_mapper_fhir.value_sets.ucum_codes import UCUMCodes
 
     # End Import for CodeableConcept for customaryUnit
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for unit
-    from spark_auto_mapper_fhir.value_sets.ucumcodes import Ucumcodes
+    from spark_auto_mapper_fhir.value_sets.ucum_codes import UCUMCodes
 
     # End Import for CodeableConcept for unit
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
@@ -37,8 +37,8 @@ class ObservationDefinitionQuantitativeDetails(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        customaryUnit: Optional[CodeableConcept[Ucumcodes]] = None,
-        unit: Optional[CodeableConcept[Ucumcodes]] = None,
+        customaryUnit: Optional[CodeableConcept[UCUMCodes]] = None,
+        unit: Optional[CodeableConcept[UCUMCodes]] = None,
         conversionFactor: Optional[decimal] = None,
         decimalPrecision: Optional[FhirInteger] = None,
     ) -> None:

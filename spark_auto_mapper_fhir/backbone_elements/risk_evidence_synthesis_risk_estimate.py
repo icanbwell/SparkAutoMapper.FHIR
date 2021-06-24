@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.riskestimatetype import Riskestimatetype
+    from spark_auto_mapper_fhir.value_sets.risk_estimate_type import RiskEstimateType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
@@ -37,7 +37,7 @@ class RiskEvidenceSynthesisRiskEstimate(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
-        type: Optional[CodeableConcept[Riskestimatetype]] = None,
+        type: Optional[CodeableConcept[RiskEstimateType]] = None,
         value: Optional[decimal] = None,
         unitOfMeasure: Optional[CodeableConcept] = None,
         denominatorCount: Optional[FhirInteger] = None,

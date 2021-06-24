@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for outcomeCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.careplanactivityoutcome import (
-        Careplanactivityoutcome,
+    from spark_auto_mapper_fhir.value_sets.care_plan_activity_outcome import (
+        CarePlanActivityOutcome,
     )
 
     # End Import for CodeableConcept for outcomeCodeableConcept
@@ -52,7 +52,7 @@ class CarePlanActivity(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         outcomeCodeableConcept: Optional[
-            FhirList[CodeableConcept[Careplanactivityoutcome]]
+            FhirList[CodeableConcept[CarePlanActivityOutcome]]
         ] = None,
         outcomeReference: Optional[FhirList[Reference[Union[Resource]]]] = None,
         progress: Optional[FhirList[Annotation]] = None,

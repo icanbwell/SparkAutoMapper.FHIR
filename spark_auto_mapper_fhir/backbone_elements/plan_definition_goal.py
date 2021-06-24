@@ -13,27 +13,27 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.goalcategory import Goalcategory
+    from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategory
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for description
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for description
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
-    from spark_auto_mapper_fhir.value_sets.goalpriority import Goalpriority
+    from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriority
 
     # End Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for start
-    from spark_auto_mapper_fhir.value_sets.goalstartevent import Goalstartevent
+    from spark_auto_mapper_fhir.value_sets.goal_start_event import GoalStartEvent
 
     # End Import for CodeableConcept for start
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -54,10 +54,10 @@ class PlanDefinitionGoal(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[CodeableConcept[Goalcategory]] = None,
-        description: CodeableConcept[Snomedctclinicalfindings],
-        priority: Optional[CodeableConcept[Goalpriority]] = None,
-        start: Optional[CodeableConcept[Goalstartevent]] = None,
+        category: Optional[CodeableConcept[GoalCategory]] = None,
+        description: CodeableConcept[SNOMEDCTClinicalFindings],
+        priority: Optional[CodeableConcept[GoalPriority]] = None,
+        start: Optional[CodeableConcept[GoalStartEvent]] = None,
         addresses: Optional[FhirList[CodeableConcept]] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         target: Optional[FhirList[PlanDefinitionTarget]] = None,

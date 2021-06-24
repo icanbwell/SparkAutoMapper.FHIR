@@ -30,16 +30,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.diagnosticservicesectioncodes import (
-        Diagnosticservicesectioncodes,
+    from spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes import (
+        DiagnosticServiceSectionCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.loincdiagnosticreportcodes import (
-        Loincdiagnosticreportcodes,
+    from spark_auto_mapper_fhir.value_sets.loinc_diagnostic_report_codes import (
+        LOINCDiagnosticReportCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -88,8 +88,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for conclusionCode
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for conclusionCode
@@ -124,9 +124,9 @@ class DiagnosticReport(FhirResourceBase):
         ] = None,
         status: DiagnosticReportStatus,
         category: Optional[
-            FhirList[CodeableConcept[Diagnosticservicesectioncodes]]
+            FhirList[CodeableConcept[DiagnosticServiceSectionCodes]]
         ] = None,
-        code: CodeableConcept[Loincdiagnosticreportcodes],
+        code: CodeableConcept[LOINCDiagnosticReportCodes],
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         issued: Optional[instant] = None,
@@ -146,7 +146,7 @@ class DiagnosticReport(FhirResourceBase):
         media: Optional[FhirList[DiagnosticReportMedia]] = None,
         conclusion: Optional[FhirString] = None,
         conclusionCode: Optional[
-            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindings]]
         ] = None,
         presentedForm: Optional[FhirList[Attachment]] = None,
     ) -> None:

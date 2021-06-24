@@ -34,8 +34,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
-        JurisdictionValueset,
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSet,
     )
 
     # End Import for CodeableConcept for jurisdiction
@@ -48,7 +48,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definitiontopic import Definitiontopic
+    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
 
     # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -64,8 +64,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.procedurecodes_snomedct_ import (
-        Procedurecodes_snomedct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_codes_snomedct_ import (
+        ProcedureCodes_SNOMEDCT_,
     )
 
     # End Import for CodeableConcept for code
@@ -84,8 +84,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
@@ -136,14 +136,14 @@ class ActivityDefinition(FhirResourceBase):
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet]]] = None,
         purpose: Optional[markdown] = None,
         usage: Optional[FhirString] = None,
         copyright: Optional[markdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
-        topic: Optional[FhirList[CodeableConcept[Definitiontopic]]] = None,
+        topic: Optional[FhirList[CodeableConcept[DefinitionTopic]]] = None,
         author: Optional[FhirList[ContactDetail]] = None,
         editor: Optional[FhirList[ContactDetail]] = None,
         reviewer: Optional[FhirList[ContactDetail]] = None,
@@ -152,7 +152,7 @@ class ActivityDefinition(FhirResourceBase):
         library: Optional[FhirList[canonical]] = None,
         kind: Optional[RequestResourceType] = None,
         profile: Optional[canonical] = None,
-        code: Optional[CodeableConcept[Procedurecodes_snomedct_]] = None,
+        code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_]] = None,
         intent: Optional[RequestIntent] = None,
         priority: Optional[RequestPriority] = None,
         doNotPerform: Optional[FhirBoolean] = None,
@@ -160,7 +160,7 @@ class ActivityDefinition(FhirResourceBase):
         participant: Optional[FhirList[ActivityDefinitionParticipant]] = None,
         quantity: Optional[Quantity] = None,
         dosage: Optional[FhirList[Dosage]] = None,
-        bodySite: Optional[FhirList[CodeableConcept[Snomedctbodystructures]]] = None,
+        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructures]]] = None,
         specimenRequirement: Optional[
             FhirList[Reference[Union[SpecimenDefinition]]]
         ] = None,

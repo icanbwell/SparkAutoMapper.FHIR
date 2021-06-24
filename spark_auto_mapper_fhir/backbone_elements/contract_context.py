@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.contractresourceassetcontextcodes import (
-        Contractresourceassetcontextcodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_asset_context_codes import (
+        ContractResourceAssetContextCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -38,7 +38,7 @@ class ContractContext(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         reference: Optional[Reference[Union[Resource]]] = None,
         code: Optional[
-            FhirList[CodeableConcept[Contractresourceassetcontextcodes]]
+            FhirList[CodeableConcept[ContractResourceAssetContextCodes]]
         ] = None,
         text: Optional[FhirString] = None,
     ) -> None:

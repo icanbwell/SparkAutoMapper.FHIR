@@ -55,8 +55,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for prognosisCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.clinicalimpressionprognosis import (
-        Clinicalimpressionprognosis,
+    from spark_auto_mapper_fhir.value_sets.clinical_impression_prognosis import (
+        ClinicalImpressionPrognosis,
     )
 
     # End Import for CodeableConcept for prognosisCodeableConcept
@@ -101,7 +101,7 @@ class ClinicalImpression(FhirResourceBase):
         summary: Optional[FhirString] = None,
         finding: Optional[FhirList[ClinicalImpressionFinding]] = None,
         prognosisCodeableConcept: Optional[
-            FhirList[CodeableConcept[Clinicalimpressionprognosis]]
+            FhirList[CodeableConcept[ClinicalImpressionPrognosis]]
         ] = None,
         prognosisReference: Optional[FhirList[Reference[Union[RiskAssessment]]]] = None,
         supportingInfo: Optional[FhirList[Reference[Union[Resource]]]] = None,

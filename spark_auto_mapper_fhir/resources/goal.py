@@ -21,28 +21,28 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for achievementStatus
-    from spark_auto_mapper_fhir.value_sets.goalachievementstatus import (
-        Goalachievementstatus,
+    from spark_auto_mapper_fhir.value_sets.goal_achievement_status import (
+        GoalAchievementStatus,
     )
 
     # End Import for CodeableConcept for achievementStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.goalcategory import Goalcategory
+    from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategory
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
-    from spark_auto_mapper_fhir.value_sets.goalpriority import Goalpriority
+    from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriority
 
     # End Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for description
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for description
@@ -77,8 +77,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for outcomeCode
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for outcomeCode
@@ -102,10 +102,10 @@ class Goal(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         lifecycleStatus: GoalLifecycleStatus,
-        achievementStatus: Optional[CodeableConcept[Goalachievementstatus]] = None,
-        category: Optional[FhirList[CodeableConcept[Goalcategory]]] = None,
-        priority: Optional[CodeableConcept[Goalpriority]] = None,
-        description: CodeableConcept[Snomedctclinicalfindings],
+        achievementStatus: Optional[CodeableConcept[GoalAchievementStatus]] = None,
+        category: Optional[FhirList[CodeableConcept[GoalCategory]]] = None,
+        priority: Optional[CodeableConcept[GoalPriority]] = None,
+        description: CodeableConcept[SNOMEDCTClinicalFindings],
         subject: Reference[Union[Patient, Group, Organization]],
         target: Optional[FhirList[GoalTarget]] = None,
         statusDate: Optional[FhirDate] = None,
@@ -129,7 +129,7 @@ class Goal(FhirResourceBase):
         ] = None,
         note: Optional[FhirList[Annotation]] = None,
         outcomeCode: Optional[
-            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindings]]
         ] = None,
         outcomeReference: Optional[FhirList[Reference[Union[Observation]]]] = None,
     ) -> None:

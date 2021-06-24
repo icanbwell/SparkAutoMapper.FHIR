@@ -23,20 +23,20 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.servicecategory import Servicecategory
+    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
-        Practicesettingcodevalueset,
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSet,
     )
 
     # End Import for CodeableConcept for specialty
@@ -56,8 +56,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceProvisionCode
-    from spark_auto_mapper_fhir.value_sets.serviceprovisionconditions import (
-        Serviceprovisionconditions,
+    from spark_auto_mapper_fhir.value_sets.service_provision_conditions import (
+        ServiceProvisionConditions,
     )
 
     # End Import for CodeableConcept for serviceProvisionCode
@@ -74,13 +74,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for communication
-    from spark_auto_mapper_fhir.value_sets.commonlanguages import Commonlanguages
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguages
 
     # End Import for CodeableConcept for communication
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for referralMethod
-    from spark_auto_mapper_fhir.value_sets.referralmethod import Referralmethod
+    from spark_auto_mapper_fhir.value_sets.referral_method import ReferralMethod
 
     # End Import for CodeableConcept for referralMethod
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -112,10 +112,10 @@ class HealthcareService(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         providedBy: Optional[Reference[Union[Organization]]] = None,
-        category: Optional[FhirList[CodeableConcept[Servicecategory]]] = None,
-        type: Optional[FhirList[CodeableConcept[Servicetype]]] = None,
+        category: Optional[FhirList[CodeableConcept[ServiceCategory]]] = None,
+        type: Optional[FhirList[CodeableConcept[ServiceType]]] = None,
         specialty: Optional[
-            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+            FhirList[CodeableConcept[PracticeSettingCodeValueSet]]
         ] = None,
         location: Optional[FhirList[Reference[Union[Location]]]] = None,
         name: Optional[FhirString] = None,
@@ -125,13 +125,13 @@ class HealthcareService(FhirResourceBase):
         telecom: Optional[FhirList[ContactPoint]] = None,
         coverageArea: Optional[FhirList[Reference[Union[Location]]]] = None,
         serviceProvisionCode: Optional[
-            FhirList[CodeableConcept[Serviceprovisionconditions]]
+            FhirList[CodeableConcept[ServiceProvisionConditions]]
         ] = None,
         eligibility: Optional[FhirList[HealthcareServiceEligibility]] = None,
         program: Optional[FhirList[CodeableConcept[Program]]] = None,
         characteristic: Optional[FhirList[CodeableConcept]] = None,
-        communication: Optional[FhirList[CodeableConcept[Commonlanguages]]] = None,
-        referralMethod: Optional[FhirList[CodeableConcept[Referralmethod]]] = None,
+        communication: Optional[FhirList[CodeableConcept[CommonLanguages]]] = None,
+        referralMethod: Optional[FhirList[CodeableConcept[ReferralMethod]]] = None,
         appointmentRequired: Optional[FhirBoolean] = None,
         availableTime: Optional[FhirList[HealthcareServiceAvailableTime]] = None,
         notAvailable: Optional[FhirList[HealthcareServiceNotAvailable]] = None,

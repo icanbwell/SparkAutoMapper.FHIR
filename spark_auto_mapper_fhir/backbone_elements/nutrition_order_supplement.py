@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.supplementtypecodes import (
-        Supplementtypecodes,
+    from spark_auto_mapper_fhir.value_sets.supplement_type_codes import (
+        SupplementTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -34,7 +34,7 @@ class NutritionOrderSupplement(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[Supplementtypecodes]] = None,
+        type: Optional[CodeableConcept[SupplementTypeCodes]] = None,
         productName: Optional[FhirString] = None,
         schedule: Optional[FhirList[Timing]] = None,
         quantity: Optional[Quantity] = None,

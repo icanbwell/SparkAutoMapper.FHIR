@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for summary
-    from spark_auto_mapper_fhir.value_sets.conditionstage import Conditionstage
+    from spark_auto_mapper_fhir.value_sets.condition_stage import ConditionStage
 
     # End Import for CodeableConcept for summary
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -25,7 +25,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.conditionstagetype import Conditionstagetype
+    from spark_auto_mapper_fhir.value_sets.condition_stage_type import (
+        ConditionStageType,
+    )
 
     # End Import for CodeableConcept for type
 
@@ -41,13 +43,13 @@ class ConditionStage(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        summary: Optional[CodeableConcept[Conditionstage]] = None,
+        summary: Optional[CodeableConcept[ConditionStage]] = None,
         assessment: Optional[
             FhirList[
                 Reference[Union[ClinicalImpression, DiagnosticReport, Observation]]
             ]
         ] = None,
-        type: Optional[CodeableConcept[Conditionstagetype]] = None,
+        type: Optional[CodeableConcept[ConditionStageType]] = None,
     ) -> None:
         """
 

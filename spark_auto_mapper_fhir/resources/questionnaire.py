@@ -35,8 +35,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_valueset import (
-        JurisdictionValueset,
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSet,
     )
 
     # End Import for CodeableConcept for jurisdiction
@@ -48,8 +48,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.questionnairequestioncodes import (
-        Questionnairequestioncodes,
+    from spark_auto_mapper_fhir.value_sets.questionnaire_question_codes import (
+        QuestionnaireQuestionCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -84,13 +84,13 @@ class Questionnaire(FhirResourceBase):
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueset]]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet]]] = None,
         purpose: Optional[markdown] = None,
         copyright: Optional[markdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
-        code: Optional[FhirList[Coding[Questionnairequestioncodes]]] = None,
+        code: Optional[FhirList[Coding[QuestionnaireQuestionCodes]]] = None,
         item: Optional[FhirList[QuestionnaireItem]] = None,
     ) -> None:
         """

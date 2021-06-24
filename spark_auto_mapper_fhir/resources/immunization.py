@@ -23,16 +23,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.immunizationstatusreasoncodes import (
-        Immunizationstatusreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_status_reason_codes import (
+        ImmunizationStatusReasonCodes,
     )
 
     # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for vaccineCode
-    from spark_auto_mapper_fhir.value_sets.vaccineadministeredvalueset import (
-        Vaccineadministeredvalueset,
+    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
+        VaccineAdministeredValueSet,
     )
 
     # End Import for CodeableConcept for vaccineCode
@@ -49,8 +49,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reportOrigin
-    from spark_auto_mapper_fhir.value_sets.immunizationorigincodes import (
-        Immunizationorigincodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_origin_codes import (
+        ImmunizationOriginCodes,
     )
 
     # End Import for CodeableConcept for reportOrigin
@@ -67,16 +67,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for site
-    from spark_auto_mapper_fhir.value_sets.codesforimmunizationsiteofadministration import (
-        Codesforimmunizationsiteofadministration,
+    from spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration import (
+        CodesForImmunizationSiteOfAdministration,
     )
 
     # End Import for CodeableConcept for site
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for route
-    from spark_auto_mapper_fhir.value_sets.immunizationroutecodes import (
-        Immunizationroutecodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_route_codes import (
+        ImmunizationRouteCodes,
     )
 
     # End Import for CodeableConcept for route
@@ -88,8 +88,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.immunizationreasoncodes import (
-        Immunizationreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_reason_codes import (
+        ImmunizationReasonCodes,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -103,8 +103,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subpotentReason
-    from spark_auto_mapper_fhir.value_sets.immunizationsubpotentreason import (
-        Immunizationsubpotentreason,
+    from spark_auto_mapper_fhir.value_sets.immunization_subpotent_reason import (
+        ImmunizationSubpotentReason,
     )
 
     # End Import for CodeableConcept for subpotentReason
@@ -114,16 +114,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for programEligibility
-    from spark_auto_mapper_fhir.value_sets.immunizationprogrameligibility import (
-        Immunizationprogrameligibility,
+    from spark_auto_mapper_fhir.value_sets.immunization_program_eligibility import (
+        ImmunizationProgramEligibility,
     )
 
     # End Import for CodeableConcept for programEligibility
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for fundingSource
-    from spark_auto_mapper_fhir.value_sets.immunizationfundingsource import (
-        Immunizationfundingsource,
+    from spark_auto_mapper_fhir.value_sets.immunization_funding_source import (
+        ImmunizationFundingSource,
     )
 
     # End Import for CodeableConcept for fundingSource
@@ -149,37 +149,37 @@ class Immunization(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: ImmunizationStatusCodes,
-        statusReason: Optional[CodeableConcept[Immunizationstatusreasoncodes]] = None,
-        vaccineCode: CodeableConcept[Vaccineadministeredvalueset],
+        statusReason: Optional[CodeableConcept[ImmunizationStatusReasonCodes]] = None,
+        vaccineCode: CodeableConcept[VaccineAdministeredValueSet],
         patient: Reference[Union[Patient]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         recorded: Optional[FhirDateTime] = None,
         primarySource: Optional[FhirBoolean] = None,
-        reportOrigin: Optional[CodeableConcept[Immunizationorigincodes]] = None,
+        reportOrigin: Optional[CodeableConcept[ImmunizationOriginCodes]] = None,
         location: Optional[Reference[Union[Location]]] = None,
         manufacturer: Optional[Reference[Union[Organization]]] = None,
         lotNumber: Optional[FhirString] = None,
         expirationDate: Optional[FhirDate] = None,
         site: Optional[
-            CodeableConcept[Codesforimmunizationsiteofadministration]
+            CodeableConcept[CodesForImmunizationSiteOfAdministration]
         ] = None,
-        route: Optional[CodeableConcept[Immunizationroutecodes]] = None,
+        route: Optional[CodeableConcept[ImmunizationRouteCodes]] = None,
         doseQuantity: Optional[Quantity] = None,
         performer: Optional[FhirList[ImmunizationPerformer]] = None,
         note: Optional[FhirList[Annotation]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[Immunizationreasoncodes]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ImmunizationReasonCodes]]] = None,
         reasonReference: Optional[
             FhirList[Reference[Union[Condition, Observation, DiagnosticReport]]]
         ] = None,
         isSubpotent: Optional[FhirBoolean] = None,
         subpotentReason: Optional[
-            FhirList[CodeableConcept[Immunizationsubpotentreason]]
+            FhirList[CodeableConcept[ImmunizationSubpotentReason]]
         ] = None,
         education: Optional[FhirList[ImmunizationEducation]] = None,
         programEligibility: Optional[
-            FhirList[CodeableConcept[Immunizationprogrameligibility]]
+            FhirList[CodeableConcept[ImmunizationProgramEligibility]]
         ] = None,
-        fundingSource: Optional[CodeableConcept[Immunizationfundingsource]] = None,
+        fundingSource: Optional[CodeableConcept[ImmunizationFundingSource]] = None,
         reaction: Optional[FhirList[ImmunizationReaction]] = None,
         protocolApplied: Optional[FhirList[ImmunizationProtocolApplied]] = None,
     ) -> None:

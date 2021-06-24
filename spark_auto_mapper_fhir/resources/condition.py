@@ -19,8 +19,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.conditioncategorycodes import (
-        Conditioncategorycodes,
+    from spark_auto_mapper_fhir.value_sets.condition_category_codes import (
+        ConditionCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
@@ -29,8 +29,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
@@ -80,10 +80,10 @@ class Condition(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         clinicalStatus: Optional[CodeableConcept] = None,
         verificationStatus: Optional[CodeableConcept] = None,
-        category: Optional[FhirList[CodeableConcept[Conditioncategorycodes]]] = None,
+        category: Optional[FhirList[CodeableConcept[ConditionCategoryCodes]]] = None,
         severity: Optional[CodeableConcept] = None,
         code: Optional[CodeableConcept] = None,
-        bodySite: Optional[FhirList[CodeableConcept[Snomedctbodystructures]]] = None,
+        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructures]]] = None,
         subject: Reference[Union[Patient, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         recordedDate: Optional[FhirDateTime] = None,

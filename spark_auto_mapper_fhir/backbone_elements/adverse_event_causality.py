@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for assessment
-    from spark_auto_mapper_fhir.value_sets.adverseeventcausalityassessment import (
-        Adverseeventcausalityassessment,
+    from spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment import (
+        AdverseEventCausalityAssessment,
     )
 
     # End Import for CodeableConcept for assessment
@@ -27,8 +27,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.adverseeventcausalitymethod import (
-        Adverseeventcausalitymethod,
+    from spark_auto_mapper_fhir.value_sets.adverse_event_causality_method import (
+        AdverseEventCausalityMethod,
     )
 
     # End Import for CodeableConcept for method
@@ -45,10 +45,10 @@ class AdverseEventCausality(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        assessment: Optional[CodeableConcept[Adverseeventcausalityassessment]] = None,
+        assessment: Optional[CodeableConcept[AdverseEventCausalityAssessment]] = None,
         productRelatedness: Optional[FhirString] = None,
         author: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
-        method: Optional[CodeableConcept[Adverseeventcausalitymethod]] = None,
+        method: Optional[CodeableConcept[AdverseEventCausalityMethod]] = None,
     ) -> None:
         """
 

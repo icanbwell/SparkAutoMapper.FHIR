@@ -30,7 +30,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for communication
-    from spark_auto_mapper_fhir.value_sets.commonlanguages import Commonlanguages
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguages
 
     # End Import for CodeableConcept for communication
 
@@ -56,7 +56,7 @@ class Practitioner(FhirResourceBase):
         birthDate: Optional[FhirDate] = None,
         photo: Optional[FhirList[Attachment]] = None,
         qualification: Optional[FhirList[PractitionerQualification]] = None,
-        communication: Optional[FhirList[CodeableConcept[Commonlanguages]]] = None,
+        communication: Optional[FhirList[CodeableConcept[CommonLanguages]]] = None,
     ) -> None:
         """
 

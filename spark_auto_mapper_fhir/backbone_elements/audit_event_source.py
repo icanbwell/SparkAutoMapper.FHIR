@@ -23,8 +23,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.auditeventsourcetype import (
-        Auditeventsourcetype,
+    from spark_auto_mapper_fhir.value_sets.audit_event_source_type import (
+        AuditEventSourceType,
     )
 
     # End Import for CodeableConcept for type
@@ -52,7 +52,7 @@ class AuditEventSource(FhirBackboneElementBase):
                 RelatedPerson,
             ]
         ],
-        type: Optional[FhirList[Coding[Auditeventsourcetype]]] = None,
+        type: Optional[FhirList[Coding[AuditEventSourceType]]] = None,
     ) -> None:
         """
 

@@ -14,22 +14,22 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.claiminformationcategorycodes import (
-        Claiminformationcategorycodes,
+    from spark_auto_mapper_fhir.value_sets.claim_information_category_codes import (
+        ClaimInformationCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.exceptioncodes import Exceptioncodes
+    from spark_auto_mapper_fhir.value_sets.exception_codes import ExceptionCodes
 
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.missingtoothreasoncodes import (
-        Missingtoothreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes import (
+        MissingToothReasonCodes,
     )
 
     # End Import for CodeableConcept for reason
@@ -47,9 +47,9 @@ class ClaimSupportingInfo(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         sequence: positiveInt,
-        category: CodeableConcept[Claiminformationcategorycodes],
-        code: Optional[CodeableConcept[Exceptioncodes]] = None,
-        reason: Optional[CodeableConcept[Missingtoothreasoncodes]] = None,
+        category: CodeableConcept[ClaimInformationCategoryCodes],
+        code: Optional[CodeableConcept[ExceptionCodes]] = None,
+        reason: Optional[CodeableConcept[MissingToothReasonCodes]] = None,
     ) -> None:
         """
 

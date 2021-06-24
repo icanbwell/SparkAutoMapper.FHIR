@@ -21,14 +21,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.claimtypecodes import Claimtypecodes
+    from spark_auto_mapper_fhir.value_sets.claim_type_codes import ClaimTypeCodes
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subType
-    from spark_auto_mapper_fhir.value_sets.exampleclaimsubtypecodes import (
-        Exampleclaimsubtypecodes,
+    from spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes import (
+        ExampleClaimSubTypeCodes,
     )
 
     # End Import for CodeableConcept for subType
@@ -127,8 +127,8 @@ class ClaimResponse(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: FinancialResourceStatusCodes,
-        type: CodeableConcept[Claimtypecodes],
-        subType: Optional[CodeableConcept[Exampleclaimsubtypecodes]] = None,
+        type: CodeableConcept[ClaimTypeCodes],
+        subType: Optional[CodeableConcept[ExampleClaimSubTypeCodes]] = None,
         use: Use,
         patient: Reference[Union[Patient]],
         created: FhirDateTime,

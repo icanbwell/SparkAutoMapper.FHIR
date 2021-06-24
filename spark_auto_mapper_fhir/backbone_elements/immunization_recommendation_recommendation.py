@@ -14,40 +14,40 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for vaccineCode
-    from spark_auto_mapper_fhir.value_sets.vaccineadministeredvalueset import (
-        Vaccineadministeredvalueset,
+    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
+        VaccineAdministeredValueSet,
     )
 
     # End Import for CodeableConcept for vaccineCode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for targetDisease
-    from spark_auto_mapper_fhir.value_sets.immunizationrecommendationtargetdiseasecodes import (
-        Immunizationrecommendationtargetdiseasecodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes import (
+        ImmunizationRecommendationTargetDiseaseCodes,
     )
 
     # End Import for CodeableConcept for targetDisease
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for contraindicatedVaccineCode
-    from spark_auto_mapper_fhir.value_sets.vaccineadministeredvalueset import (
-        Vaccineadministeredvalueset,
+    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
+        VaccineAdministeredValueSet,
     )
 
     # End Import for CodeableConcept for contraindicatedVaccineCode
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for forecastStatus
-    from spark_auto_mapper_fhir.value_sets.immunizationrecommendationstatuscodes import (
-        Immunizationrecommendationstatuscodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes import (
+        ImmunizationRecommendationStatusCodes,
     )
 
     # End Import for CodeableConcept for forecastStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for forecastReason
-    from spark_auto_mapper_fhir.value_sets.immunizationrecommendationreasoncodes import (
-        Immunizationrecommendationreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes import (
+        ImmunizationRecommendationReasonCodes,
     )
 
     # End Import for CodeableConcept for forecastReason
@@ -79,17 +79,17 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         vaccineCode: Optional[
-            FhirList[CodeableConcept[Vaccineadministeredvalueset]]
+            FhirList[CodeableConcept[VaccineAdministeredValueSet]]
         ] = None,
         targetDisease: Optional[
-            CodeableConcept[Immunizationrecommendationtargetdiseasecodes]
+            CodeableConcept[ImmunizationRecommendationTargetDiseaseCodes]
         ] = None,
         contraindicatedVaccineCode: Optional[
-            FhirList[CodeableConcept[Vaccineadministeredvalueset]]
+            FhirList[CodeableConcept[VaccineAdministeredValueSet]]
         ] = None,
-        forecastStatus: CodeableConcept[Immunizationrecommendationstatuscodes],
+        forecastStatus: CodeableConcept[ImmunizationRecommendationStatusCodes],
         forecastReason: Optional[
-            FhirList[CodeableConcept[Immunizationrecommendationreasoncodes]]
+            FhirList[CodeableConcept[ImmunizationRecommendationReasonCodes]]
         ] = None,
         dateCriterion: Optional[
             FhirList[ImmunizationRecommendationDateCriterion]

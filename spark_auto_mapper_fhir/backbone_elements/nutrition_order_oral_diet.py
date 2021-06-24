@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.dietcodes import Dietcodes
+    from spark_auto_mapper_fhir.value_sets.diet_codes import DietCodes
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
@@ -27,8 +27,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for fluidConsistencyType
-    from spark_auto_mapper_fhir.value_sets.fluidconsistencytypecodes import (
-        Fluidconsistencytypecodes,
+    from spark_auto_mapper_fhir.value_sets.fluid_consistency_type_codes import (
+        FluidConsistencyTypeCodes,
     )
 
     # End Import for CodeableConcept for fluidConsistencyType
@@ -45,12 +45,12 @@ class NutritionOrderOralDiet(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[FhirList[CodeableConcept[Dietcodes]]] = None,
+        type: Optional[FhirList[CodeableConcept[DietCodes]]] = None,
         schedule: Optional[FhirList[Timing]] = None,
         nutrient: Optional[FhirList[NutritionOrderNutrient]] = None,
         texture: Optional[FhirList[NutritionOrderTexture]] = None,
         fluidConsistencyType: Optional[
-            FhirList[CodeableConcept[Fluidconsistencytypecodes]]
+            FhirList[CodeableConcept[FluidConsistencyTypeCodes]]
         ] = None,
         instruction: Optional[FhirString] = None,
     ) -> None:

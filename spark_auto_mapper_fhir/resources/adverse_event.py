@@ -20,16 +20,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.adverseeventcategory import (
-        Adverseeventcategory,
+    from spark_auto_mapper_fhir.value_sets.adverse_event_category import (
+        AdverseEventCategory,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for event
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for event
@@ -58,8 +58,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for seriousness
-    from spark_auto_mapper_fhir.value_sets.adverseeventseriousness import (
-        Adverseeventseriousness,
+    from spark_auto_mapper_fhir.value_sets.adverse_event_seriousness import (
+        AdverseEventSeriousness,
     )
 
     # End Import for CodeableConcept for seriousness
@@ -118,8 +118,8 @@ class AdverseEvent(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         actuality: AdverseEventActuality,
-        category: Optional[FhirList[CodeableConcept[Adverseeventcategory]]] = None,
-        event: Optional[CodeableConcept[Snomedctclinicalfindings]] = None,
+        category: Optional[FhirList[CodeableConcept[AdverseEventCategory]]] = None,
+        event: Optional[CodeableConcept[SNOMEDCTClinicalFindings]] = None,
         subject: Reference[Union[Patient, Group, Practitioner, RelatedPerson]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         date: Optional[FhirDateTime] = None,
@@ -127,7 +127,7 @@ class AdverseEvent(FhirResourceBase):
         recordedDate: Optional[FhirDateTime] = None,
         resultingCondition: Optional[FhirList[Reference[Union[Condition]]]] = None,
         location: Optional[Reference[Union[Location]]] = None,
-        seriousness: Optional[CodeableConcept[Adverseeventseriousness]] = None,
+        seriousness: Optional[CodeableConcept[AdverseEventSeriousness]] = None,
         severity: Optional[CodeableConcept] = None,
         outcome: Optional[CodeableConcept] = None,
         recorder: Optional[

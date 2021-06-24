@@ -54,7 +54,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for paymentStatus
-    from spark_auto_mapper_fhir.value_sets.paymentstatuscodes import Paymentstatuscodes
+    from spark_auto_mapper_fhir.value_sets.payment_status_codes import (
+        PaymentStatusCodes,
+    )
 
     # End Import for CodeableConcept for paymentStatus
 
@@ -86,7 +88,7 @@ class PaymentNotice(FhirResourceBase):
         ] = None,
         recipient: Reference[Union[Organization]],
         amount: Money,
-        paymentStatus: Optional[CodeableConcept[Paymentstatuscodes]] = None,
+        paymentStatus: Optional[CodeableConcept[PaymentStatusCodes]] = None,
     ) -> None:
         """
 

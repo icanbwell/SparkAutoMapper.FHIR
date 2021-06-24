@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for flag
-    from spark_auto_mapper_fhir.value_sets.patientmedicinechangetypes import (
-        Patientmedicinechangetypes,
+    from spark_auto_mapper_fhir.value_sets.patient_medicine_change_types import (
+        PatientMedicineChangeTypes,
     )
 
     # End Import for CodeableConcept for flag
@@ -37,7 +37,7 @@ class ListEntry(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        flag: Optional[CodeableConcept[Patientmedicinechangetypes]] = None,
+        flag: Optional[CodeableConcept[PatientMedicineChangeTypes]] = None,
         deleted: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         item: Reference[Union[Resource]],

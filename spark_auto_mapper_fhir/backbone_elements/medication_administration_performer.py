@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for function
-    from spark_auto_mapper_fhir.value_sets.medicationadministration_performer_function_codes import (
-        MedicationadministrationPerformerFunctionCodes,
+    from spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes import (
+        MedicationAdministrationPerformerFunctionCodes,
     )
 
     # End Import for CodeableConcept for function
@@ -40,7 +40,7 @@ class MedicationAdministrationPerformer(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         function: Optional[
-            CodeableConcept[MedicationadministrationPerformerFunctionCodes]
+            CodeableConcept[MedicationAdministrationPerformerFunctionCodes]
         ] = None,
         actor: Reference[
             Union[Practitioner, PractitionerRole, Patient, RelatedPerson, Device]

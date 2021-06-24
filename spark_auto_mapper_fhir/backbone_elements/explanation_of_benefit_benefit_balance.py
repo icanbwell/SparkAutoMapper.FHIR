@@ -15,27 +15,27 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.benefitcategorycodes import (
-        Benefitcategorycodes,
+    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
+        BenefitCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for network
-    from spark_auto_mapper_fhir.value_sets.networktypecodes import Networktypecodes
+    from spark_auto_mapper_fhir.value_sets.network_type_codes import NetworkTypeCodes
 
     # End Import for CodeableConcept for network
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for unit
-    from spark_auto_mapper_fhir.value_sets.unittypecodes import Unittypecodes
+    from spark_auto_mapper_fhir.value_sets.unit_type_codes import UnitTypeCodes
 
     # End Import for CodeableConcept for unit
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for term
-    from spark_auto_mapper_fhir.value_sets.benefittermcodes import Benefittermcodes
+    from spark_auto_mapper_fhir.value_sets.benefit_term_codes import BenefitTermCodes
 
     # End Import for CodeableConcept for term
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_financial import (
@@ -54,13 +54,13 @@ class ExplanationOfBenefitBenefitBalance(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: CodeableConcept[Benefitcategorycodes],
+        category: CodeableConcept[BenefitCategoryCodes],
         excluded: Optional[FhirBoolean] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
-        network: Optional[CodeableConcept[Networktypecodes]] = None,
-        unit: Optional[CodeableConcept[Unittypecodes]] = None,
-        term: Optional[CodeableConcept[Benefittermcodes]] = None,
+        network: Optional[CodeableConcept[NetworkTypeCodes]] = None,
+        unit: Optional[CodeableConcept[UnitTypeCodes]] = None,
+        term: Optional[CodeableConcept[BenefitTermCodes]] = None,
         financial: Optional[FhirList[ExplanationOfBenefitFinancial]] = None,
     ) -> None:
         """

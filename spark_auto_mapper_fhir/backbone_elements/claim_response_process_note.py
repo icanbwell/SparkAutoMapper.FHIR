@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for language
-    from spark_auto_mapper_fhir.value_sets.commonlanguages import Commonlanguages
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguages
 
     # End Import for CodeableConcept for language
 
@@ -35,7 +35,7 @@ class ClaimResponseProcessNote(FhirBackboneElementBase):
         number: Optional[positiveInt] = None,
         type: Optional[NoteType] = None,
         text: FhirString,
-        language: Optional[CodeableConcept[Commonlanguages]] = None,
+        language: Optional[CodeableConcept[CommonLanguages]] = None,
     ) -> None:
         """
 

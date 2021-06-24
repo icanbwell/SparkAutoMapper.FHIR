@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.contractsignertypecodes import (
-        Contractsignertypecodes,
+    from spark_auto_mapper_fhir.value_sets.contract_signer_type_codes import (
+        ContractSignerTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -40,7 +40,7 @@ class ContractSigner(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Coding[Contractsignertypecodes],
+        type: Coding[ContractSignerTypeCodes],
         party: Reference[
             Union[Organization, Patient, Practitioner, PractitionerRole, RelatedPerson]
         ],

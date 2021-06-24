@@ -15,21 +15,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.benefitcategorycodes import (
-        Benefitcategorycodes,
+    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
+        BenefitCategoryCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for productOrService
-    from spark_auto_mapper_fhir.value_sets.usclscodes import Usclscodes
+    from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodes
 
     # End Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifiertypecodes import Modifiertypecodes
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodes
 
     # End Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -40,19 +40,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for network
-    from spark_auto_mapper_fhir.value_sets.networktypecodes import Networktypecodes
+    from spark_auto_mapper_fhir.value_sets.network_type_codes import NetworkTypeCodes
 
     # End Import for CodeableConcept for network
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for unit
-    from spark_auto_mapper_fhir.value_sets.unittypecodes import Unittypecodes
+    from spark_auto_mapper_fhir.value_sets.unit_type_codes import UnitTypeCodes
 
     # End Import for CodeableConcept for unit
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for term
-    from spark_auto_mapper_fhir.value_sets.benefittermcodes import Benefittermcodes
+    from spark_auto_mapper_fhir.value_sets.benefit_term_codes import BenefitTermCodes
 
     # End Import for CodeableConcept for term
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_benefit import (
@@ -61,8 +61,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for authorizationSupporting
-    from spark_auto_mapper_fhir.value_sets.coverageeligibilityresponseauthsupportcodes import (
-        Coverageeligibilityresponseauthsupportcodes,
+    from spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes import (
+        CoverageEligibilityResponseAuthSupportCodes,
     )
 
     # End Import for CodeableConcept for authorizationSupporting
@@ -80,20 +80,20 @@ class CoverageEligibilityResponseItem(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[CodeableConcept[Benefitcategorycodes]] = None,
-        productOrService: Optional[CodeableConcept[Usclscodes]] = None,
-        modifier: Optional[FhirList[CodeableConcept[Modifiertypecodes]]] = None,
+        category: Optional[CodeableConcept[BenefitCategoryCodes]] = None,
+        productOrService: Optional[CodeableConcept[USCLSCodes]] = None,
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodes]]] = None,
         provider: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         excluded: Optional[FhirBoolean] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
-        network: Optional[CodeableConcept[Networktypecodes]] = None,
-        unit: Optional[CodeableConcept[Unittypecodes]] = None,
-        term: Optional[CodeableConcept[Benefittermcodes]] = None,
+        network: Optional[CodeableConcept[NetworkTypeCodes]] = None,
+        unit: Optional[CodeableConcept[UnitTypeCodes]] = None,
+        term: Optional[CodeableConcept[BenefitTermCodes]] = None,
         benefit: Optional[FhirList[CoverageEligibilityResponseBenefit]] = None,
         authorizationRequired: Optional[FhirBoolean] = None,
         authorizationSupporting: Optional[
-            FhirList[CodeableConcept[Coverageeligibilityresponseauthsupportcodes]]
+            FhirList[CodeableConcept[CoverageEligibilityResponseAuthSupportCodes]]
         ] = None,
         authorizationUrl: Optional[uri] = None,
     ) -> None:

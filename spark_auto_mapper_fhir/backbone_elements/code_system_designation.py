@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for use
-    from spark_auto_mapper_fhir.value_sets.designationuse import Designationuse
+    from spark_auto_mapper_fhir.value_sets.designation_use import DesignationUse
 
     # End Import for CodeableConcept for use
 
@@ -32,7 +32,7 @@ class CodeSystemDesignation(FhirBackboneElementBase):
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
         language: Optional[code] = None,
-        use: Optional[Coding[Designationuse]] = None,
+        use: Optional[Coding[DesignationUse]] = None,
         value: FhirString,
     ) -> None:
         """

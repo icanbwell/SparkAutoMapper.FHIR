@@ -13,16 +13,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.adjudicationvaluecodes import (
-        Adjudicationvaluecodes,
+    from spark_auto_mapper_fhir.value_sets.adjudication_value_codes import (
+        AdjudicationValueCodes,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.adjudicationreasoncodes import (
-        Adjudicationreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.adjudication_reason_codes import (
+        AdjudicationReasonCodes,
     )
 
     # End Import for CodeableConcept for reason
@@ -41,8 +41,8 @@ class ClaimResponseAdjudication(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: CodeableConcept[Adjudicationvaluecodes],
-        reason: Optional[CodeableConcept[Adjudicationreasoncodes]] = None,
+        category: CodeableConcept[AdjudicationValueCodes],
+        reason: Optional[CodeableConcept[AdjudicationReasonCodes]] = None,
         amount: Optional[Money] = None,
         value: Optional[decimal] = None,
     ) -> None:

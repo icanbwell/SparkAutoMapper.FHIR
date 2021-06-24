@@ -21,28 +21,28 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for cancelationReason
-    from spark_auto_mapper_fhir.value_sets.appointmentcancellationreason import (
-        Appointmentcancellationreason,
+    from spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason import (
+        AppointmentCancellationReason,
     )
 
     # End Import for CodeableConcept for cancelationReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.value_sets.servicecategory import Servicecategory
+    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
 
     # End Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.servicetype import Servicetype
+    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
 
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practicesettingcodevalueset import (
-        Practicesettingcodevalueset,
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSet,
     )
 
     # End Import for CodeableConcept for specialty
@@ -50,8 +50,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.encounterreasoncodes import (
-        Encounterreasoncodes,
+    from spark_auto_mapper_fhir.value_sets.encounter_reason_codes import (
+        EncounterReasonCodes,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -105,15 +105,15 @@ class Appointment(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: AppointmentStatus,
         cancelationReason: Optional[
-            CodeableConcept[Appointmentcancellationreason]
+            CodeableConcept[AppointmentCancellationReason]
         ] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[Servicecategory]]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[Servicetype]]] = None,
+        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory]]] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceType]]] = None,
         specialty: Optional[
-            FhirList[CodeableConcept[Practicesettingcodevalueset]]
+            FhirList[CodeableConcept[PracticeSettingCodeValueSet]]
         ] = None,
         appointmentType: Optional[CodeableConcept] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[Encounterreasoncodes]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[EncounterReasonCodes]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[

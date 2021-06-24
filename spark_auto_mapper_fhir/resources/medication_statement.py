@@ -37,8 +37,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.snomedctdrugtherapystatuscodes import (
-        Snomedctdrugtherapystatuscodes,
+    from spark_auto_mapper_fhir.value_sets.snomedct_drug_therapy_status_codes import (
+        SNOMEDCTDrugTherapyStatusCodes,
     )
 
     # End Import for CodeableConcept for statusReason
@@ -115,7 +115,7 @@ class MedicationStatement(FhirResourceBase):
         ] = None,
         status: MedicationStatusCodes,
         statusReason: Optional[
-            FhirList[CodeableConcept[Snomedctdrugtherapystatuscodes]]
+            FhirList[CodeableConcept[SNOMEDCTDrugTherapyStatusCodes]]
         ] = None,
         category: Optional[CodeableConcept[MedicationUsageCategoryCodes]] = None,
         subject: Reference[Union[Patient, Group]],

@@ -12,7 +12,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.signaturetypecodes import Signaturetypecodes
+    from spark_auto_mapper_fhir.value_sets.signature_type_codes import (
+        SignatureTypeCodes,
+    )
 
     # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.instant import instant
@@ -51,7 +53,7 @@ class Signature(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: FhirList[Coding[Signaturetypecodes]],
+        type: FhirList[Coding[SignatureTypeCodes]],
         when: instant,
         who: Reference[
             Union[

@@ -18,16 +18,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for context
-    from spark_auto_mapper_fhir.value_sets.observationreferencerangemeaningcodes import (
-        Observationreferencerangemeaningcodes,
+    from spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes import (
+        ObservationReferenceRangeMeaningCodes,
     )
 
     # End Import for CodeableConcept for context
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for appliesTo
-    from spark_auto_mapper_fhir.value_sets.observationreferencerangeappliestocodes import (
-        Observationreferencerangeappliestocodes,
+    from spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes import (
+        ObservationReferenceRangeAppliesToCodes,
     )
 
     # End Import for CodeableConcept for appliesTo
@@ -52,10 +52,10 @@ class ObservationDefinitionQualifiedInterval(FhirBackboneElementBase):
         category: Optional[ObservationRangeCategory] = None,
         range: Optional[Range] = None,
         context: Optional[
-            CodeableConcept[Observationreferencerangemeaningcodes]
+            CodeableConcept[ObservationReferenceRangeMeaningCodes]
         ] = None,
         appliesTo: Optional[
-            FhirList[CodeableConcept[Observationreferencerangeappliestocodes]]
+            FhirList[CodeableConcept[ObservationReferenceRangeAppliesToCodes]]
         ] = None,
         gender: Optional[AdministrativeGender] = None,
         age: Optional[Range] = None,

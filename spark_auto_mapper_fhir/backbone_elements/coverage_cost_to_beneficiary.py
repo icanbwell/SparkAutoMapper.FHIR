@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.coveragecopaytypecodes import (
-        Coveragecopaytypecodes,
+    from spark_auto_mapper_fhir.value_sets.coverage_copay_type_codes import (
+        CoverageCopayTypeCodes,
     )
 
     # End Import for CodeableConcept for type
@@ -34,7 +34,7 @@ class CoverageCostToBeneficiary(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[Coveragecopaytypecodes]] = None,
+        type: Optional[CodeableConcept[CoverageCopayTypeCodes]] = None,
         exception: Optional[FhirList[CoverageException]] = None,
     ) -> None:
         """

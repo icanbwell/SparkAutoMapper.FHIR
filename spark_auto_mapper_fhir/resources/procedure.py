@@ -31,24 +31,24 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.procedurenotperformedreason_snomed_ct_ import (
-        Procedurenotperformedreason_snomed_ct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_not_performed_reason_snomed_ct_ import (
+        ProcedureNotPerformedReason_SNOMED_CT_,
     )
 
     # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.procedurecategorycodes_snomedct_ import (
-        Procedurecategorycodes_snomedct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_category_codes_snomedct_ import (
+        ProcedureCategoryCodes_SNOMEDCT_,
     )
 
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.procedurecodes_snomedct_ import (
-        Procedurecodes_snomedct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_codes_snomedct_ import (
+        ProcedureCodes_SNOMEDCT_,
     )
 
     # End Import for CodeableConcept for code
@@ -85,8 +85,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.procedurereasoncodes import (
-        Procedurereasoncodes,
+    from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import (
+        ProcedureReasonCodes,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -100,16 +100,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedctbodystructures import (
-        Snomedctbodystructures,
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructures,
     )
 
     # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for outcome
-    from spark_auto_mapper_fhir.value_sets.procedureoutcomecodes_snomedct_ import (
-        Procedureoutcomecodes_snomedct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_outcome_codes_snomedct_ import (
+        ProcedureOutcomeCodes_SNOMEDCT_,
     )
 
     # End Import for CodeableConcept for outcome
@@ -127,8 +127,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for followUp
-    from spark_auto_mapper_fhir.value_sets.procedurefollowupcodes_snomedct_ import (
-        Procedurefollowupcodes_snomedct_,
+    from spark_auto_mapper_fhir.value_sets.procedure_follow_up_codes_snomedct_ import (
+        ProcedureFollowUpCodes_SNOMEDCT_,
     )
 
     # End Import for CodeableConcept for followUp
@@ -145,7 +145,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for usedCode
-    from spark_auto_mapper_fhir.value_sets.fhirdevicetypes import Fhirdevicetypes
+    from spark_auto_mapper_fhir.value_sets.fhir_device_types import FHIRDeviceTypes
 
     # End Import for CodeableConcept for usedCode
 
@@ -171,10 +171,10 @@ class Procedure(FhirResourceBase):
         ] = None,
         status: EventStatus,
         statusReason: Optional[
-            CodeableConcept[Procedurenotperformedreason_snomed_ct_]
+            CodeableConcept[ProcedureNotPerformedReason_SNOMED_CT_]
         ] = None,
-        category: Optional[CodeableConcept[Procedurecategorycodes_snomedct_]] = None,
-        code: Optional[CodeableConcept[Procedurecodes_snomedct_]] = None,
+        category: Optional[CodeableConcept[ProcedureCategoryCodes_SNOMEDCT_]] = None,
+        code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_]] = None,
         subject: Reference[Union[Patient, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         recorder: Optional[
@@ -185,7 +185,7 @@ class Procedure(FhirResourceBase):
         ] = None,
         performer: Optional[FhirList[ProcedurePerformer]] = None,
         location: Optional[Reference[Union[Location]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[Procedurereasoncodes]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCodes]]] = None,
         reasonReference: Optional[
             FhirList[
                 Reference[
@@ -199,22 +199,22 @@ class Procedure(FhirResourceBase):
                 ]
             ]
         ] = None,
-        bodySite: Optional[FhirList[CodeableConcept[Snomedctbodystructures]]] = None,
-        outcome: Optional[CodeableConcept[Procedureoutcomecodes_snomedct_]] = None,
+        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructures]]] = None,
+        outcome: Optional[CodeableConcept[ProcedureOutcomeCodes_SNOMEDCT_]] = None,
         report: Optional[
             FhirList[Reference[Union[DiagnosticReport, DocumentReference, Composition]]]
         ] = None,
         complication: Optional[FhirList[CodeableConcept]] = None,
         complicationDetail: Optional[FhirList[Reference[Union[Condition]]]] = None,
         followUp: Optional[
-            FhirList[CodeableConcept[Procedurefollowupcodes_snomedct_]]
+            FhirList[CodeableConcept[ProcedureFollowUpCodes_SNOMEDCT_]]
         ] = None,
         note: Optional[FhirList[Annotation]] = None,
         focalDevice: Optional[FhirList[ProcedureFocalDevice]] = None,
         usedReference: Optional[
             FhirList[Reference[Union[Device, Medication, Substance]]]
         ] = None,
-        usedCode: Optional[FhirList[CodeableConcept[Fhirdevicetypes]]] = None,
+        usedCode: Optional[FhirList[CodeableConcept[FHIRDeviceTypes]]] = None,
     ) -> None:
         """
 

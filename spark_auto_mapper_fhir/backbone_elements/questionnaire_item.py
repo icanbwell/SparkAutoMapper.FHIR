@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.questionnairequestioncodes import (
-        Questionnairequestioncodes,
+    from spark_auto_mapper_fhir.value_sets.questionnaire_question_codes import (
+        QuestionnaireQuestionCodes,
     )
 
     # End Import for CodeableConcept for code
@@ -56,7 +56,7 @@ class QuestionnaireItem(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         linkId: FhirString,
         definition: Optional[uri] = None,
-        code: Optional[FhirList[Coding[Questionnairequestioncodes]]] = None,
+        code: Optional[FhirList[Coding[QuestionnaireQuestionCodes]]] = None,
         prefix: Optional[FhirString] = None,
         text: Optional[FhirString] = None,
         type: QuestionnaireItemType,

@@ -26,8 +26,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for dataAbsentReason
-    from spark_auto_mapper_fhir.value_sets.familyhistoryabsentreason import (
-        Familyhistoryabsentreason,
+    from spark_auto_mapper_fhir.value_sets.family_history_absent_reason import (
+        FamilyHistoryAbsentReason,
     )
 
     # End Import for CodeableConcept for dataAbsentReason
@@ -41,8 +41,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for sex
-    from spark_auto_mapper_fhir.value_sets.administrativegender import (
-        Administrativegender,
+    from spark_auto_mapper_fhir.value_sets.administrative_gender import (
+        AdministrativeGender,
     )
 
     # End Import for CodeableConcept for sex
@@ -50,8 +50,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.snomedctclinicalfindings import (
-        Snomedctclinicalfindings,
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindings,
     )
 
     # End Import for CodeableConcept for reasonCode
@@ -88,15 +88,15 @@ class FamilyMemberHistory(FhirResourceBase):
         instantiatesCanonical: Optional[FhirList[canonical]] = None,
         instantiatesUri: Optional[FhirList[uri]] = None,
         status: FamilyHistoryStatus,
-        dataAbsentReason: Optional[CodeableConcept[Familyhistoryabsentreason]] = None,
+        dataAbsentReason: Optional[CodeableConcept[FamilyHistoryAbsentReason]] = None,
         patient: Reference[Union[Patient]],
         date: Optional[FhirDateTime] = None,
         name: Optional[FhirString] = None,
         relationship: CodeableConcept,
-        sex: Optional[CodeableConcept[Administrativegender]] = None,
+        sex: Optional[CodeableConcept[AdministrativeGender]] = None,
         estimatedAge: Optional[FhirBoolean] = None,
         reasonCode: Optional[
-            FhirList[CodeableConcept[Snomedctclinicalfindings]]
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindings]]
         ] = None,
         reasonReference: Optional[
             FhirList[

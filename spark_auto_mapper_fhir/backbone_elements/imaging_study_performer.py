@@ -13,8 +13,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for function
-    from spark_auto_mapper_fhir.value_sets.imagingstudyseriesperformerfunction import (
-        Imagingstudyseriesperformerfunction,
+    from spark_auto_mapper_fhir.value_sets.imaging_study_series_performer_function import (
+        ImagingStudySeriesPerformerFunction,
     )
 
     # End Import for CodeableConcept for function
@@ -41,7 +41,7 @@ class ImagingStudyPerformer(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        function: Optional[CodeableConcept[Imagingstudyseriesperformerfunction]] = None,
+        function: Optional[CodeableConcept[ImagingStudySeriesPerformerFunction]] = None,
         actor: Reference[
             Union[
                 Practitioner,

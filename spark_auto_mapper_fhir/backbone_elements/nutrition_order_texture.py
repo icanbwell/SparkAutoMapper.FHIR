@@ -13,16 +13,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.texturemodifiercodes import (
-        Texturemodifiercodes,
+    from spark_auto_mapper_fhir.value_sets.texture_modifier_codes import (
+        TextureModifierCodes,
     )
 
     # End Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for foodType
-    from spark_auto_mapper_fhir.value_sets.texturemodifiedfoodtypecodes import (
-        Texturemodifiedfoodtypecodes,
+    from spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes import (
+        TextureModifiedFoodTypeCodes,
     )
 
     # End Import for CodeableConcept for foodType
@@ -39,8 +39,8 @@ class NutritionOrderTexture(FhirBackboneElementBase):
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        modifier: Optional[CodeableConcept[Texturemodifiercodes]] = None,
-        foodType: Optional[CodeableConcept[Texturemodifiedfoodtypecodes]] = None,
+        modifier: Optional[CodeableConcept[TextureModifierCodes]] = None,
+        foodType: Optional[CodeableConcept[TextureModifiedFoodTypeCodes]] = None,
     ) -> None:
         """
 
