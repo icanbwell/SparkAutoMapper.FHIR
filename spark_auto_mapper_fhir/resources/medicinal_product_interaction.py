@@ -1,29 +1,30 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.medicinalproductinteraction import MedicinalProductInteractionSchema
+from spark_fhir_schemas.r4.resources.medicinalproductinteraction import (
+    MedicinalProductInteractionSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.resources.substance import Substance
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.backbone_elements.medicinal_product_interaction_interactant import MedicinalProductInteractionInteractant
+    from spark_auto_mapper_fhir.backbone_elements.medicinal_product_interaction_interactant import (
+        MedicinalProductInteractionInteractant,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -34,7 +35,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class MedicinalProductInteraction(FhirResourceBase):
     """
+    MedicinalProductInteraction
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -42,28 +45,30 @@ class MedicinalProductInteraction(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        subject: Optional[FhirList[Reference [Union[MedicinalProduct, Medication, Substance]]]] = None,
-        description: Optional[FhirString ] = None,
-        interactant: Optional[FhirList[MedicinalProductInteractionInteractant ]] = None,
-        type: Optional[CodeableConcept ] = None,
-        effect: Optional[CodeableConcept ] = None,
-        incidence: Optional[CodeableConcept ] = None,
-        management: Optional[CodeableConcept ] = None,
+        subject: Optional[
+            FhirList[Reference[Union[MedicinalProduct, Medication, Substance]]]
+        ] = None,
+        description: Optional[FhirString] = None,
+        interactant: Optional[FhirList[MedicinalProductInteractionInteractant]] = None,
+        type_: Optional[CodeableConcept] = None,
+        effect: Optional[CodeableConcept] = None,
+        incidence: Optional[CodeableConcept] = None,
+        management: Optional[CodeableConcept] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param subject: The medication for which this is a described interaction.
-        :param description: The interaction described.
-        :param interactant: The specific medication, food or laboratory test that interacts.
-        :param type: The type of the interaction e.g. drug-drug interaction, drug-food interaction,
-    drug-lab test interaction.
-        :param effect: The effect of the interaction, for example "reduced gastric absorption of
-    primary medication".
-        :param incidence: The incidence of the interaction, e.g. theoretical, observed.
-        :param management: Actions for managing the interaction.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param subject: The medication for which this is a described interaction.
+            :param description: The interaction described.
+            :param interactant: The specific medication, food or laboratory test that interacts.
+            :param type_: The type of the interaction e.g. drug-drug interaction, drug-food interaction,
+        drug-lab test interaction.
+            :param effect: The effect of the interaction, for example "reduced gastric absorption of
+        primary medication".
+            :param incidence: The incidence of the interaction, e.g. theoretical, observed.
+            :param management: Actions for managing the interaction.
         """
         super().__init__(
             resourceType="MedicinalProductInteraction",
@@ -73,7 +78,7 @@ class MedicinalProductInteraction(FhirResourceBase):
             subject=subject,
             description=description,
             interactant=interactant,
-            type=type,
+            type_=type_,
             effect=effect,
             incidence=incidence,
             management=management,
@@ -82,4 +87,6 @@ class MedicinalProductInteraction(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MedicinalProductInteractionSchema.get_schema(include_extension=include_extension)
+        return MedicinalProductInteractionSchema.get_schema(
+            include_extension=include_extension
+        )

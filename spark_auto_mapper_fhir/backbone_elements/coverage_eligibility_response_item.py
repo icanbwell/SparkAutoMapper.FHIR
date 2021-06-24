@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,43 +12,82 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import BenefitCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
+        BenefitCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
+    # productOrService (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for productOrService
-    from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodes
+    from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodesCode
+
     # End Import for CodeableConcept for productOrService
+    # modifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodes
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
+        ModifierTypeCodesCode,
+    )
+
     # End Import for CodeableConcept for modifier
+    # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for provider
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.string import string
+
+    # excluded (boolean)
+    # name (string)
+    # description (string)
+    # network (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for network
-    from spark_auto_mapper_fhir.value_sets.network_type_codes import NetworkTypeCodes
+    from spark_auto_mapper_fhir.value_sets.network_type_codes import (
+        NetworkTypeCodesCode,
+    )
+
     # End Import for CodeableConcept for network
+    # unit (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for unit
-    from spark_auto_mapper_fhir.value_sets.unit_type_codes import UnitTypeCodes
+    from spark_auto_mapper_fhir.value_sets.unit_type_codes import UnitTypeCodesCode
+
     # End Import for CodeableConcept for unit
+    # term (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for term
-    from spark_auto_mapper_fhir.value_sets.benefit_term_codes import BenefitTermCodes
+    from spark_auto_mapper_fhir.value_sets.benefit_term_codes import (
+        BenefitTermCodesCode,
+    )
+
     # End Import for CodeableConcept for term
-    from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_benefit import CoverageEligibilityResponseBenefit
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
+    # benefit (CoverageEligibilityResponse.Benefit)
+    from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_benefit import (
+        CoverageEligibilityResponseBenefit,
+    )
+
+    # authorizationRequired (boolean)
+    # authorizationSupporting (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for authorizationSupporting
-    from spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes import CoverageEligibilityResponseAuthSupportCodes
+    from spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes import (
+        CoverageEligibilityResponseAuthSupportCodesCode,
+    )
+
     # End Import for CodeableConcept for authorizationSupporting
+    # authorizationUrl (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
 
 
@@ -61,54 +95,58 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class CoverageEligibilityResponseItem(FhirBackboneElementBase):
     """
+    CoverageEligibilityResponse.Item
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[CodeableConcept[BenefitCategoryCodes] ] = None,
-        productOrService: Optional[CodeableConcept[USCLSCodes] ] = None,
-        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodes] ]] = None,
-        provider: Optional[Reference [Union[Practitioner, PractitionerRole]]] = None,
-        excluded: Optional[FhirBoolean ] = None,
-        name: Optional[FhirString ] = None,
-        description: Optional[FhirString ] = None,
-        network: Optional[CodeableConcept[NetworkTypeCodes] ] = None,
-        unit: Optional[CodeableConcept[UnitTypeCodes] ] = None,
-        term: Optional[CodeableConcept[BenefitTermCodes] ] = None,
-        benefit: Optional[FhirList[CoverageEligibilityResponseBenefit ]] = None,
-        authorizationRequired: Optional[FhirBoolean ] = None,
-        authorizationSupporting: Optional[FhirList[CodeableConcept[CoverageEligibilityResponseAuthSupportCodes] ]] = None,
-        authorizationUrl: Optional[uri ] = None,
+        category: Optional[CodeableConcept[BenefitCategoryCodesCode]] = None,
+        productOrService: Optional[CodeableConcept[USCLSCodesCode]] = None,
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode]]] = None,
+        provider: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
+        excluded: Optional[FhirBoolean] = None,
+        name: Optional[FhirString] = None,
+        description: Optional[FhirString] = None,
+        network: Optional[CodeableConcept[NetworkTypeCodesCode]] = None,
+        unit: Optional[CodeableConcept[UnitTypeCodesCode]] = None,
+        term: Optional[CodeableConcept[BenefitTermCodesCode]] = None,
+        benefit: Optional[FhirList[CoverageEligibilityResponseBenefit]] = None,
+        authorizationRequired: Optional[FhirBoolean] = None,
+        authorizationSupporting: Optional[
+            FhirList[CodeableConcept[CoverageEligibilityResponseAuthSupportCodesCode]]
+        ] = None,
+        authorizationUrl: Optional[uri] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param category: Code to identify the general type of benefits under which products and
-    services are provided.
-        :param productOrService: This contains the product, service, drug or other billing code for the item.
-        :param modifier: Item typification or modifiers codes to convey additional context for the
-    product or service.
-        :param provider: The practitioner who is eligible for the provision of the product or service.
-        :param excluded: True if the indicated class of service is excluded from the plan, missing or
-    False indicates the product or service is included in the coverage.
-        :param name: A short name or tag for the benefit.
-        :param description: A richer description of the benefit or services covered.
-        :param network: Is a flag to indicate whether the benefits refer to in-network providers or
-    out-of-network providers.
-        :param unit: Indicates if the benefits apply to an individual or to the family.
-        :param term: The term or period of the values such as 'maximum lifetime benefit' or
-    'maximum annual visits'.
-        :param benefit: Benefits used to date.
-        :param authorizationRequired: A boolean flag indicating whether a preauthorization is required prior to
-    actual service delivery.
-        :param authorizationSupporting: Codes or comments regarding information or actions associated with the
-    preauthorization.
-        :param authorizationUrl: A web location for obtaining requirements or descriptive information regarding
-    the preauthorization.
+            :param id_: id of resource
+            :param extension: extensions
+            :param category: Code to identify the general type of benefits under which products and
+        services are provided.
+            :param productOrService: This contains the product, service, drug or other billing code for the item.
+            :param modifier: Item typification or modifiers codes to convey additional context for the
+        product or service.
+            :param provider: The practitioner who is eligible for the provision of the product or service.
+            :param excluded: True if the indicated class of service is excluded from the plan, missing or
+        False indicates the product or service is included in the coverage.
+            :param name: A short name or tag for the benefit.
+            :param description: A richer description of the benefit or services covered.
+            :param network: Is a flag to indicate whether the benefits refer to in-network providers or
+        out-of-network providers.
+            :param unit: Indicates if the benefits apply to an individual or to the family.
+            :param term: The term or period of the values such as 'maximum lifetime benefit' or
+        'maximum annual visits'.
+            :param benefit: Benefits used to date.
+            :param authorizationRequired: A boolean flag indicating whether a preauthorization is required prior to
+        actual service delivery.
+            :param authorizationSupporting: Codes or comments regarding information or actions associated with the
+        preauthorization.
+            :param authorizationUrl: A web location for obtaining requirements or descriptive information regarding
+        the preauthorization.
         """
         super().__init__(
             id_=id_,

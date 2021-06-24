@@ -1,13 +1,11 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -21,21 +19,33 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.complex_types.publication_status import PublicationStatus
+    from spark_auto_mapper_fhir.complex_types.publication_status import (
+        PublicationStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import JurisdictionValueSet
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSetCode,
+    )
+
     # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
-    from spark_auto_mapper_fhir.backbone_elements.example_scenario_actor import ExampleScenarioActor
-    from spark_auto_mapper_fhir.backbone_elements.example_scenario_instance import ExampleScenarioInstance
-    from spark_auto_mapper_fhir.backbone_elements.example_scenario_process import ExampleScenarioProcess
+    from spark_auto_mapper_fhir.backbone_elements.example_scenario_actor import (
+        ExampleScenarioActor,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.example_scenario_instance import (
+        ExampleScenarioInstance,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.example_scenario_process import (
+        ExampleScenarioProcess,
+    )
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
 
@@ -43,7 +53,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ExampleScenario(FhirResourceBase):
     """
+    ExampleScenario
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -51,79 +63,81 @@ class ExampleScenario(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: Optional[uri ] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        version: Optional[FhirString ] = None,
-        name: Optional[FhirString ] = None,
-        status: PublicationStatus ,
-        experimental: Optional[FhirBoolean ] = None,
-        date: Optional[FhirDateTime ] = None,
-        publisher: Optional[FhirString ] = None,
-        contact: Optional[FhirList[ContactDetail ]] = None,
-        useContext: Optional[FhirList[UsageContext ]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet] ]] = None,
-        copyright: Optional[markdown ] = None,
-        purpose: Optional[markdown ] = None,
-        actor: Optional[FhirList[ExampleScenarioActor ]] = None,
-        instance: Optional[FhirList[ExampleScenarioInstance ]] = None,
-        process: Optional[FhirList[ExampleScenarioProcess ]] = None,
-        workflow: Optional[FhirList[canonical ]] = None,
+        url: Optional[uri] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        version: Optional[FhirString] = None,
+        name: Optional[FhirString] = None,
+        status: PublicationStatus,
+        experimental: Optional[FhirBoolean] = None,
+        date: Optional[FhirDateTime] = None,
+        publisher: Optional[FhirString] = None,
+        contact: Optional[FhirList[ContactDetail]] = None,
+        useContext: Optional[FhirList[UsageContext]] = None,
+        jurisdiction: Optional[
+            FhirList[CodeableConcept[JurisdictionValueSetCode]]
+        ] = None,
+        copyright: Optional[markdown] = None,
+        purpose: Optional[markdown] = None,
+        actor: Optional[FhirList[ExampleScenarioActor]] = None,
+        instance: Optional[FhirList[ExampleScenarioInstance]] = None,
+        process: Optional[FhirList[ExampleScenarioProcess]] = None,
+        workflow: Optional[FhirList[canonical]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param url: An absolute URI that is used to identify this example scenario when it is
-    referenced in a specification, model, design or an instance; also called its
-    canonical identifier. This SHOULD be globally unique and SHOULD be a literal
-    address at which at which an authoritative instance of this example scenario
-    is (or will be) published. This URL can be the target of a canonical
-    reference. It SHALL remain the same when the example scenario is stored on
-    different servers.
-        :param identifier: A formal identifier that is used to identify this example scenario when it is
-    represented in other formats, or referenced in a specification, model, design
-    or an instance.
-        :param version: The identifier that is used to identify this version of the example scenario
-    when it is referenced in a specification, model, design or instance. This is
-    an arbitrary value managed by the example scenario author and is not expected
-    to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if
-    a managed version is not available. There is also no expectation that versions
-    can be placed in a lexicographical sequence.
-        :param name: A natural language name identifying the example scenario. This name should be
-    usable as an identifier for the module by machine processing applications such
-    as code generation.
-        :param status: The status of this example scenario. Enables tracking the life-cycle of the
-    content.
-        :param experimental: A Boolean value to indicate that this example scenario is authored for testing
-    purposes (or education/evaluation/marketing) and is not intended to be used
-    for genuine usage.
-        :param date: The date  (and optionally time) when the example scenario was published. The
-    date must change when the business version changes and it must change if the
-    status code changes. In addition, it should change when the substantive
-    content of the example scenario changes. (e.g. the 'content logical
-    definition').
-        :param publisher: The name of the organization or individual that published the example
-    scenario.
-        :param contact: Contact details to assist a user in finding and communicating with the
-    publisher.
-        :param useContext: The content was developed with a focus and intent of supporting the contexts
-    that are listed. These contexts may be general categories (gender, age, ...)
-    or may be references to specific programs (insurance plans, studies, ...) and
-    may be used to assist with indexing and searching for appropriate example
-    scenario instances.
-        :param jurisdiction: A legal or geographic region in which the example scenario is intended to be
-    used.
-        :param copyright: A copyright statement relating to the example scenario and/or its contents.
-    Copyright statements are generally legal restrictions on the use and
-    publishing of the example scenario.
-        :param purpose: What the example scenario resource is created for. This should not be used to
-    show the business purpose of the scenario itself, but the purpose of
-    documenting a scenario.
-        :param actor: Actor participating in the resource.
-        :param instance: Each resource and each version that is present in the workflow.
-        :param process: Each major process - a group of operations.
-        :param workflow: Another nested workflow.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param url: An absolute URI that is used to identify this example scenario when it is
+        referenced in a specification, model, design or an instance; also called its
+        canonical identifier. This SHOULD be globally unique and SHOULD be a literal
+        address at which at which an authoritative instance of this example scenario
+        is (or will be) published. This URL can be the target of a canonical
+        reference. It SHALL remain the same when the example scenario is stored on
+        different servers.
+            :param identifier: A formal identifier that is used to identify this example scenario when it is
+        represented in other formats, or referenced in a specification, model, design
+        or an instance.
+            :param version: The identifier that is used to identify this version of the example scenario
+        when it is referenced in a specification, model, design or instance. This is
+        an arbitrary value managed by the example scenario author and is not expected
+        to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if
+        a managed version is not available. There is also no expectation that versions
+        can be placed in a lexicographical sequence.
+            :param name: A natural language name identifying the example scenario. This name should be
+        usable as an identifier for the module by machine processing applications such
+        as code generation.
+            :param status: The status of this example scenario. Enables tracking the life-cycle of the
+        content.
+            :param experimental: A Boolean value to indicate that this example scenario is authored for testing
+        purposes (or education/evaluation/marketing) and is not intended to be used
+        for genuine usage.
+            :param date: The date  (and optionally time) when the example scenario was published. The
+        date must change when the business version changes and it must change if the
+        status code changes. In addition, it should change when the substantive
+        content of the example scenario changes. (e.g. the 'content logical
+        definition').
+            :param publisher: The name of the organization or individual that published the example
+        scenario.
+            :param contact: Contact details to assist a user in finding and communicating with the
+        publisher.
+            :param useContext: The content was developed with a focus and intent of supporting the contexts
+        that are listed. These contexts may be general categories (gender, age, ...)
+        or may be references to specific programs (insurance plans, studies, ...) and
+        may be used to assist with indexing and searching for appropriate example
+        scenario instances.
+            :param jurisdiction: A legal or geographic region in which the example scenario is intended to be
+        used.
+            :param copyright: A copyright statement relating to the example scenario and/or its contents.
+        Copyright statements are generally legal restrictions on the use and
+        publishing of the example scenario.
+            :param purpose: What the example scenario resource is created for. This should not be used to
+        show the business purpose of the scenario itself, but the purpose of
+        documenting a scenario.
+            :param actor: Actor participating in the resource.
+            :param instance: Each resource and each version that is present in the workflow.
+            :param process: Each major process - a group of operations.
+            :param workflow: Another nested workflow.
         """
         super().__init__(
             resourceType="ExampleScenario",

@@ -1,66 +1,87 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.medicationadministration import MedicationAdministrationSchema
+from spark_fhir_schemas.r4.resources.medicationadministration import (
+    MedicationAdministrationSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.complex_types.code import code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes import SNOMEDCTReasonMedicationNotGivenCodes
+    from spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes import (
+        SNOMEDCTReasonMedicationNotGivenCodesCode,
+    )
+
     # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medication_administration_category_codes import MedicationAdministrationCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.medication_administration_category_codes import (
+        MedicationAdministrationCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for context
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for supportingInformation
     from spark_auto_mapper_fhir.resources.resource import Resource
-    from spark_auto_mapper_fhir.backbone_elements.medication_administration_performer import MedicationAdministrationPerformer
+    from spark_auto_mapper_fhir.backbone_elements.medication_administration_performer import (
+        MedicationAdministrationPerformer,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.reason_medication_given_codes import ReasonMedicationGivenCodes
+    from spark_auto_mapper_fhir.value_sets.reason_medication_given_codes import (
+        ReasonMedicationGivenCodesCode,
+    )
+
     # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-    from spark_auto_mapper_fhir.backbone_elements.medication_administration_dosage import MedicationAdministrationDosage
+    from spark_auto_mapper_fhir.backbone_elements.medication_administration_dosage import (
+        MedicationAdministrationDosage,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for eventHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
 
@@ -69,7 +90,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class MedicationAdministration(FhirResourceBase):
     """
+    MedicationAdministration
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -77,61 +100,71 @@ class MedicationAdministration(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        instantiates: Optional[FhirList[uri ]] = None,
-        partOf: Optional[FhirList[Reference [Union[MedicationAdministration, Procedure]]]] = None,
-        status: code ,
-        statusReason: Optional[FhirList[CodeableConcept[SNOMEDCTReasonMedicationNotGivenCodes] ]] = None,
-        category: Optional[CodeableConcept[MedicationAdministrationCategoryCodes] ] = None,
-        subject: Reference [Union[Patient, Group]],
-        context: Optional[Reference [Union[Encounter, EpisodeOfCare]]] = None,
-        supportingInformation: Optional[FhirList[Reference [Union[Resource]]]] = None,
-        performer: Optional[FhirList[MedicationAdministrationPerformer ]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[ReasonMedicationGivenCodes] ]] = None,
-        reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, DiagnosticReport]]]] = None,
-        request: Optional[Reference [Union[MedicationRequest]]] = None,
-        device: Optional[FhirList[Reference [Union[Device]]]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        dosage: Optional[MedicationAdministrationDosage ] = None,
-        eventHistory: Optional[FhirList[Reference [Union[Provenance]]]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        instantiates: Optional[FhirList[uri]] = None,
+        partOf: Optional[
+            FhirList[Reference[Union[MedicationAdministration, Procedure]]]
+        ] = None,
+        status: code,
+        statusReason: Optional[
+            FhirList[CodeableConcept[SNOMEDCTReasonMedicationNotGivenCodesCode]]
+        ] = None,
+        category: Optional[
+            CodeableConcept[MedicationAdministrationCategoryCodesCode]
+        ] = None,
+        subject: Reference[Union[Patient, Group]],
+        context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
+        supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        performer: Optional[FhirList[MedicationAdministrationPerformer]] = None,
+        reasonCode: Optional[
+            FhirList[CodeableConcept[ReasonMedicationGivenCodesCode]]
+        ] = None,
+        reasonReference: Optional[
+            FhirList[Reference[Union[Condition, Observation, DiagnosticReport]]]
+        ] = None,
+        request: Optional[Reference[Union[MedicationRequest]]] = None,
+        device: Optional[FhirList[Reference[Union[Device]]]] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        dosage: Optional[MedicationAdministrationDosage] = None,
+        eventHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifiers associated with this Medication Administration that are defined by
-    business processes and/or used to refer to it when a direct URL reference to
-    the resource itself is not appropriate. They are business identifiers assigned
-    to this resource by the performer or other systems and remain constant as the
-    resource is updated and propagates from server to server.
-        :param instantiates: A protocol, guideline, orderset, or other definition that was adhered to in
-    whole or in part by this event.
-        :param partOf: A larger event of which this particular event is a component or step.
-        :param status: Will generally be set to show that the administration has been completed.  For
-    some long running administrations such as infusions, it is possible for an
-    administration to be started but not completed or it may be paused while some
-    other process is under way.
-        :param statusReason: A code indicating why the administration was not performed.
-        :param category: Indicates where the medication is expected to be consumed or administered.
-        :param subject: The person or animal or group receiving the medication.
-        :param context: The visit, admission, or other contact between patient and health care
-    provider during which the medication administration was performed.
-        :param supportingInformation: Additional information (for example, patient height and weight) that supports
-    the administration of the medication.
-        :param performer: Indicates who or what performed the medication administration and how they
-    were involved.
-        :param reasonCode: A code indicating why the medication was given.
-        :param reasonReference: Condition or observation that supports why the medication was administered.
-        :param request: The original request, instruction or authority to perform the administration.
-        :param device: The device used in administering the medication to the patient.  For example,
-    a particular infusion pump.
-        :param note: Extra information about the medication administration that is not conveyed by
-    the other attributes.
-        :param dosage: Describes the medication dosage information details e.g. dose, rate, site,
-    route, etc.
-        :param eventHistory: A summary of the events of interest that have occurred, such as when the
-    administration was verified.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifiers associated with this Medication Administration that are defined by
+        business processes and/or used to refer to it when a direct URL reference to
+        the resource itself is not appropriate. They are business identifiers assigned
+        to this resource by the performer or other systems and remain constant as the
+        resource is updated and propagates from server to server.
+            :param instantiates: A protocol, guideline, orderset, or other definition that was adhered to in
+        whole or in part by this event.
+            :param partOf: A larger event of which this particular event is a component or step.
+            :param status: Will generally be set to show that the administration has been completed.  For
+        some long running administrations such as infusions, it is possible for an
+        administration to be started but not completed or it may be paused while some
+        other process is under way.
+            :param statusReason: A code indicating why the administration was not performed.
+            :param category: Indicates where the medication is expected to be consumed or administered.
+            :param subject: The person or animal or group receiving the medication.
+            :param context: The visit, admission, or other contact between patient and health care
+        provider during which the medication administration was performed.
+            :param supportingInformation: Additional information (for example, patient height and weight) that supports
+        the administration of the medication.
+            :param performer: Indicates who or what performed the medication administration and how they
+        were involved.
+            :param reasonCode: A code indicating why the medication was given.
+            :param reasonReference: Condition or observation that supports why the medication was administered.
+            :param request: The original request, instruction or authority to perform the administration.
+            :param device: The device used in administering the medication to the patient.  For example,
+        a particular infusion pump.
+            :param note: Extra information about the medication administration that is not conveyed by
+        the other attributes.
+            :param dosage: Describes the medication dosage information details e.g. dose, rate, site,
+        route, etc.
+            :param eventHistory: A summary of the events of interest that have occurred, such as when the
+        administration was verified.
         """
         super().__init__(
             resourceType="MedicationAdministration",
@@ -160,4 +193,6 @@ class MedicationAdministration(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MedicationAdministrationSchema.get_schema(include_extension=include_extension)
+        return MedicationAdministrationSchema.get_schema(
+            include_extension=include_extension
+        )

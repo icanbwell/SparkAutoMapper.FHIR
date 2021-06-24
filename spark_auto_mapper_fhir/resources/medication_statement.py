@@ -1,53 +1,68 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.medicationstatement import MedicationStatementSchema
+from spark_fhir_schemas.r4.resources.medicationstatement import (
+    MedicationStatementSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
-    from spark_auto_mapper_fhir.resources.medication_administration import MedicationAdministration
+    from spark_auto_mapper_fhir.resources.medication_administration import (
+        MedicationAdministration,
+    )
     from spark_auto_mapper_fhir.resources.medication_dispense import MedicationDispense
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.resources.observation import Observation
-    from spark_auto_mapper_fhir.complex_types.medication_status_codes import MedicationStatusCodes
+    from spark_auto_mapper_fhir.complex_types.medication_status_codes import (
+        MedicationStatusCodes,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for statusReason
-    from spark_auto_mapper_fhir.value_sets.snomedct_drug_therapy_status_codes import SNOMEDCTDrugTherapyStatusCodes
+    from spark_auto_mapper_fhir.value_sets.snomedct_drug_therapy_status_codes import (
+        SNOMEDCTDrugTherapyStatusCodesCode,
+    )
+
     # End Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medication_usage_category_codes import MedicationUsageCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.medication_usage_category_codes import (
+        MedicationUsageCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for context
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for informationSource
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -55,10 +70,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for derivedFrom
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
@@ -71,7 +88,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class MedicationStatement(FhirResourceBase):
     """
+    MedicationStatement
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -79,54 +98,78 @@ class MedicationStatement(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        basedOn: Optional[FhirList[Reference [Union[MedicationRequest, CarePlan, ServiceRequest]]]] = None,
-        partOf: Optional[FhirList[Reference [Union[MedicationAdministration, MedicationDispense, MedicationStatement, Procedure, Observation]]]] = None,
-        status: MedicationStatusCodes ,
-        statusReason: Optional[FhirList[CodeableConcept[SNOMEDCTDrugTherapyStatusCodes] ]] = None,
-        category: Optional[CodeableConcept[MedicationUsageCategoryCodes] ] = None,
-        subject: Reference [Union[Patient, Group]],
-        context: Optional[Reference [Union[Encounter, EpisodeOfCare]]] = None,
-        dateAsserted: Optional[FhirDateTime ] = None,
-        informationSource: Optional[Reference [Union[Patient, Practitioner, PractitionerRole, RelatedPerson, Organization]]] = None,
-        derivedFrom: Optional[FhirList[Reference [Union[Resource]]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept ]] = None,
-        reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, DiagnosticReport]]]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        dosage: Optional[FhirList[Dosage ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        basedOn: Optional[
+            FhirList[Reference[Union[MedicationRequest, CarePlan, ServiceRequest]]]
+        ] = None,
+        partOf: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        MedicationAdministration,
+                        MedicationDispense,
+                        MedicationStatement,
+                        Procedure,
+                        Observation,
+                    ]
+                ]
+            ]
+        ] = None,
+        status: MedicationStatusCodes,
+        statusReason: Optional[
+            FhirList[CodeableConcept[SNOMEDCTDrugTherapyStatusCodesCode]]
+        ] = None,
+        category: Optional[CodeableConcept[MedicationUsageCategoryCodesCode]] = None,
+        subject: Reference[Union[Patient, Group]],
+        context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
+        dateAsserted: Optional[FhirDateTime] = None,
+        informationSource: Optional[
+            Reference[
+                Union[
+                    Patient, Practitioner, PractitionerRole, RelatedPerson, Organization
+                ]
+            ]
+        ] = None,
+        derivedFrom: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonReference: Optional[
+            FhirList[Reference[Union[Condition, Observation, DiagnosticReport]]]
+        ] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        dosage: Optional[FhirList[Dosage]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifiers associated with this Medication Statement that are defined by
-    business processes and/or used to refer to it when a direct URL reference to
-    the resource itself is not appropriate. They are business identifiers assigned
-    to this resource by the performer or other systems and remain constant as the
-    resource is updated and propagates from server to server.
-        :param basedOn: A plan, proposal or order that is fulfilled in whole or in part by this event.
-        :param partOf: A larger event of which this particular event is a component or step.
-        :param status: A code representing the patient or other source's judgment about the state of
-    the medication used that this statement is about.  Generally, this will be
-    active or completed.
-        :param statusReason: Captures the reason for the current state of the MedicationStatement.
-        :param category: Indicates where the medication is expected to be consumed or administered.
-        :param subject: The person, animal or group who is/was taking the medication.
-        :param context: The encounter or episode of care that establishes the context for this
-    MedicationStatement.
-        :param dateAsserted: The date when the medication statement was asserted by the information source.
-        :param informationSource: The person or organization that provided the information about the taking of
-    this medication. Note: Use derivedFrom when a MedicationStatement is derived
-    from other resources, e.g. Claim or MedicationRequest.
-        :param derivedFrom: Allows linking the MedicationStatement to the underlying MedicationRequest, or
-    to other information that supports or is used to derive the
-    MedicationStatement.
-        :param reasonCode: A reason for why the medication is being/was taken.
-        :param reasonReference: Condition or observation that supports why the medication is being/was taken.
-        :param note: Provides extra information about the medication statement that is not conveyed
-    by the other attributes.
-        :param dosage: Indicates how the medication is/was or should be taken by the patient.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifiers associated with this Medication Statement that are defined by
+        business processes and/or used to refer to it when a direct URL reference to
+        the resource itself is not appropriate. They are business identifiers assigned
+        to this resource by the performer or other systems and remain constant as the
+        resource is updated and propagates from server to server.
+            :param basedOn: A plan, proposal or order that is fulfilled in whole or in part by this event.
+            :param partOf: A larger event of which this particular event is a component or step.
+            :param status: A code representing the patient or other source's judgment about the state of
+        the medication used that this statement is about.  Generally, this will be
+        active or completed.
+            :param statusReason: Captures the reason for the current state of the MedicationStatement.
+            :param category: Indicates where the medication is expected to be consumed or administered.
+            :param subject: The person, animal or group who is/was taking the medication.
+            :param context: The encounter or episode of care that establishes the context for this
+        MedicationStatement.
+            :param dateAsserted: The date when the medication statement was asserted by the information source.
+            :param informationSource: The person or organization that provided the information about the taking of
+        this medication. Note: Use derivedFrom when a MedicationStatement is derived
+        from other resources, e.g. Claim or MedicationRequest.
+            :param derivedFrom: Allows linking the MedicationStatement to the underlying MedicationRequest, or
+        to other information that supports or is used to derive the
+        MedicationStatement.
+            :param reasonCode: A reason for why the medication is being/was taken.
+            :param reasonReference: Condition or observation that supports why the medication is being/was taken.
+            :param note: Provides extra information about the medication statement that is not conveyed
+        by the other attributes.
+            :param dosage: Indicates how the medication is/was or should be taken by the patient.
         """
         super().__init__(
             resourceType="MedicationStatement",

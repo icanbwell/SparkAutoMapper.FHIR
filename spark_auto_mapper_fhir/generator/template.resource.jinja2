@@ -49,6 +49,7 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class {{fhir_entity.cleaned_name}}(FhirResourceBase):
     """
+    {{fhir_entity.fhir_name}}
     {% for documentation_item in fhir_entity.documentation %}
         {{ documentation_item | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {%  endfor %}

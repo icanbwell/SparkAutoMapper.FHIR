@@ -1,14 +1,12 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,17 +15,31 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
+    # valueBoolean (boolean)
+    pass
+    # valueDecimal (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
-    from spark_auto_mapper_fhir.complex_types.integer import integer
-    from spark_auto_mapper_fhir.complex_types.date import date
-    from spark_auto_mapper_fhir.complex_types.date_time import dateTime
+
+    # valueInteger (integer)
+    # valueDate (date)
+    # valueDateTime (dateTime)
+    # valueTime (time)
     from spark_auto_mapper_fhir.complex_types.time import time
-    from spark_auto_mapper_fhir.complex_types.string import string
+
+    # valueString (string)
+    # valueUri (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # valueAttachment (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # valueCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # valueQuantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # valueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
 
@@ -35,25 +47,27 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ContractAnswer(FhirBackboneElementBase):
     """
+    Contract.Answer
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        valueBoolean: FhirBoolean ,
-        valueDecimal: decimal ,
-        valueInteger: FhirInteger ,
-        valueDate: FhirDate ,
-        valueDateTime: FhirDateTime ,
-        valueTime: time ,
-        valueString: FhirString ,
-        valueUri: uri ,
-        valueAttachment: Attachment ,
-        valueCoding: Coding ,
-        valueQuantity: Quantity ,
-        valueReference: Reference ,
+        valueBoolean: FhirBoolean,
+        valueDecimal: decimal,
+        valueInteger: FhirInteger,
+        valueDate: FhirDate,
+        valueDateTime: FhirDateTime,
+        valueTime: time,
+        valueString: FhirString,
+        valueUri: uri,
+        valueAttachment: Attachment,
+        valueCoding: Coding,
+        valueQuantity: Quantity,
+        valueReference: Reference,
     ) -> None:
         """
 

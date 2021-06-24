@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,10 +11,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.string import string
+    # name (string)
+    pass
+    # software (string)
+    # version (string)
+    # contact (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # endpoint (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 
 
@@ -28,30 +26,32 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class MessageHeaderSource(FhirBackboneElementBase):
     """
+    MessageHeader.Source
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        name: Optional[FhirString ] = None,
-        software: Optional[FhirString ] = None,
-        version: Optional[FhirString ] = None,
-        contact: Optional[ContactPoint ] = None,
-        endpoint: url ,
+        name: Optional[FhirString] = None,
+        software: Optional[FhirString] = None,
+        version: Optional[FhirString] = None,
+        contact: Optional[ContactPoint] = None,
+        endpoint: url,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param name: Human-readable name for the source system.
-        :param software: May include configuration or other information useful in debugging.
-        :param version: Can convey versions of multiple systems in situations where a message passes
-    through multiple hands.
-        :param contact: An e-mail, phone, website or other contact point to use to resolve issues with
-    message communications.
-        :param endpoint: Identifies the routing target to send acknowledgements to.
+            :param id_: id of resource
+            :param extension: extensions
+            :param name: Human-readable name for the source system.
+            :param software: May include configuration or other information useful in debugging.
+            :param version: Can convey versions of multiple systems in situations where a message passes
+        through multiple hands.
+            :param contact: An e-mail, phone, website or other contact point to use to resolve issues with
+        message communications.
+            :param endpoint: Identifies the routing target to send acknowledgements to.
         """
         super().__init__(
             id_=id_,

@@ -1,27 +1,29 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.terminologycapabilities import TerminologyCapabilitiesSchema
+from spark_fhir_schemas.r4.resources.terminologycapabilities import (
+    TerminologyCapabilitiesSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.complex_types.publication_status import PublicationStatus
+    from spark_auto_mapper_fhir.complex_types.publication_status import (
+        PublicationStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -29,28 +31,52 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import JurisdictionValueSet
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSetCode,
+    )
+
     # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
-    from spark_auto_mapper_fhir.complex_types.capability_statement_kind import CapabilityStatementKind
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_software import TerminologyCapabilitiesSoftware
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_implementation import TerminologyCapabilitiesImplementation
+    from spark_auto_mapper_fhir.complex_types.capability_statement_kind import (
+        CapabilityStatementKind,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_software import (
+        TerminologyCapabilitiesSoftware,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_implementation import (
+        TerminologyCapabilitiesImplementation,
+    )
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_code_system import TerminologyCapabilitiesCodeSystem
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_expansion import TerminologyCapabilitiesExpansion
-    from spark_auto_mapper_fhir.complex_types.code_search_support import CodeSearchSupport
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_validate_code import TerminologyCapabilitiesValidateCode
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_translation import TerminologyCapabilitiesTranslation
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_closure import TerminologyCapabilitiesClosure
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_code_system import (
+        TerminologyCapabilitiesCodeSystem,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_expansion import (
+        TerminologyCapabilitiesExpansion,
+    )
+    from spark_auto_mapper_fhir.complex_types.code_search_support import (
+        CodeSearchSupport,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_validate_code import (
+        TerminologyCapabilitiesValidateCode,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_translation import (
+        TerminologyCapabilitiesTranslation,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_closure import (
+        TerminologyCapabilitiesClosure,
+    )
 
 
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class TerminologyCapabilities(FhirResourceBase):
     """
+    TerminologyCapabilities
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -58,104 +84,106 @@ class TerminologyCapabilities(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: Optional[uri ] = None,
-        version: Optional[FhirString ] = None,
-        name: Optional[FhirString ] = None,
-        title: Optional[FhirString ] = None,
-        status: PublicationStatus ,
-        experimental: Optional[FhirBoolean ] = None,
-        date: FhirDateTime ,
-        publisher: Optional[FhirString ] = None,
-        contact: Optional[FhirList[ContactDetail ]] = None,
-        description: Optional[markdown ] = None,
-        useContext: Optional[FhirList[UsageContext ]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet] ]] = None,
-        purpose: Optional[markdown ] = None,
-        copyright: Optional[markdown ] = None,
-        kind: CapabilityStatementKind ,
-        software: Optional[TerminologyCapabilitiesSoftware ] = None,
-        implementation: Optional[TerminologyCapabilitiesImplementation ] = None,
-        lockedDate: Optional[FhirBoolean ] = None,
-        codeSystem: Optional[FhirList[TerminologyCapabilitiesCodeSystem ]] = None,
-        expansion: Optional[TerminologyCapabilitiesExpansion ] = None,
-        codeSearch: Optional[CodeSearchSupport ] = None,
-        validateCode: Optional[TerminologyCapabilitiesValidateCode ] = None,
-        translation: Optional[TerminologyCapabilitiesTranslation ] = None,
-        closure: Optional[TerminologyCapabilitiesClosure ] = None,
+        url: Optional[uri] = None,
+        version: Optional[FhirString] = None,
+        name: Optional[FhirString] = None,
+        title: Optional[FhirString] = None,
+        status: PublicationStatus,
+        experimental: Optional[FhirBoolean] = None,
+        date: FhirDateTime,
+        publisher: Optional[FhirString] = None,
+        contact: Optional[FhirList[ContactDetail]] = None,
+        description: Optional[markdown] = None,
+        useContext: Optional[FhirList[UsageContext]] = None,
+        jurisdiction: Optional[
+            FhirList[CodeableConcept[JurisdictionValueSetCode]]
+        ] = None,
+        purpose: Optional[markdown] = None,
+        copyright: Optional[markdown] = None,
+        kind: CapabilityStatementKind,
+        software: Optional[TerminologyCapabilitiesSoftware] = None,
+        implementation: Optional[TerminologyCapabilitiesImplementation] = None,
+        lockedDate: Optional[FhirBoolean] = None,
+        codeSystem: Optional[FhirList[TerminologyCapabilitiesCodeSystem]] = None,
+        expansion: Optional[TerminologyCapabilitiesExpansion] = None,
+        codeSearch: Optional[CodeSearchSupport] = None,
+        validateCode: Optional[TerminologyCapabilitiesValidateCode] = None,
+        translation: Optional[TerminologyCapabilitiesTranslation] = None,
+        closure: Optional[TerminologyCapabilitiesClosure] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param url: An absolute URI that is used to identify this terminology capabilities when it
-    is referenced in a specification, model, design or an instance; also called
-    its canonical identifier. This SHOULD be globally unique and SHOULD be a
-    literal address at which at which an authoritative instance of this
-    terminology capabilities is (or will be) published. This URL can be the target
-    of a canonical reference. It SHALL remain the same when the terminology
-    capabilities is stored on different servers.
-        :param version: The identifier that is used to identify this version of the terminology
-    capabilities when it is referenced in a specification, model, design or
-    instance. This is an arbitrary value managed by the terminology capabilities
-    author and is not expected to be globally unique. For example, it might be a
-    timestamp (e.g. yyyymmdd) if a managed version is not available. There is also
-    no expectation that versions can be placed in a lexicographical sequence.
-        :param name: A natural language name identifying the terminology capabilities. This name
-    should be usable as an identifier for the module by machine processing
-    applications such as code generation.
-        :param title: A short, descriptive, user-friendly title for the terminology capabilities.
-        :param status: The status of this terminology capabilities. Enables tracking the life-cycle
-    of the content.
-        :param experimental: A Boolean value to indicate that this terminology capabilities is authored for
-    testing purposes (or education/evaluation/marketing) and is not intended to be
-    used for genuine usage.
-        :param date: The date  (and optionally time) when the terminology capabilities was
-    published. The date must change when the business version changes and it must
-    change if the status code changes. In addition, it should change when the
-    substantive content of the terminology capabilities changes.
-        :param publisher: The name of the organization or individual that published the terminology
-    capabilities.
-        :param contact: Contact details to assist a user in finding and communicating with the
-    publisher.
-        :param description: A free text natural language description of the terminology capabilities from
-    a consumer's perspective. Typically, this is used when the capability
-    statement describes a desired rather than an actual solution, for example as a
-    formal expression of requirements as part of an RFP.
-        :param useContext: The content was developed with a focus and intent of supporting the contexts
-    that are listed. These contexts may be general categories (gender, age, ...)
-    or may be references to specific programs (insurance plans, studies, ...) and
-    may be used to assist with indexing and searching for appropriate terminology
-    capabilities instances.
-        :param jurisdiction: A legal or geographic region in which the terminology capabilities is intended
-    to be used.
-        :param purpose: Explanation of why this terminology capabilities is needed and why it has been
-    designed as it has.
-        :param copyright: A copyright statement relating to the terminology capabilities and/or its
-    contents. Copyright statements are generally legal restrictions on the use and
-    publishing of the terminology capabilities.
-        :param kind: The way that this statement is intended to be used, to describe an actual
-    running instance of software, a particular product (kind, not instance of
-    software) or a class of implementation (e.g. a desired purchase).
-        :param software: Software that is covered by this terminology capability statement.  It is used
-    when the statement describes the capabilities of a particular software
-    version, independent of an installation.
-        :param implementation: Identifies a specific implementation instance that is described by the
-    terminology capability statement - i.e. a particular installation, rather than
-    the capabilities of a software program.
-        :param lockedDate: Whether the server supports lockedDate.
-        :param codeSystem: Identifies a code system that is supported by the server. If there is a no
-    code system URL, then this declares the general assumptions a client can make
-    about support for any CodeSystem resource.
-        :param expansion: Information about the [ValueSet/$expand](valueset-operation-expand.html)
-    operation.
-        :param codeSearch: The degree to which the server supports the code search parameter on ValueSet,
-    if it is supported.
-        :param validateCode: Information about the [ValueSet/$validate-code](valueset-operation-validate-
-    code.html) operation.
-        :param translation: Information about the [ConceptMap/$translate](conceptmap-operation-
-    translate.html) operation.
-        :param closure: Whether the $closure operation is supported.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param url: An absolute URI that is used to identify this terminology capabilities when it
+        is referenced in a specification, model, design or an instance; also called
+        its canonical identifier. This SHOULD be globally unique and SHOULD be a
+        literal address at which at which an authoritative instance of this
+        terminology capabilities is (or will be) published. This URL can be the target
+        of a canonical reference. It SHALL remain the same when the terminology
+        capabilities is stored on different servers.
+            :param version: The identifier that is used to identify this version of the terminology
+        capabilities when it is referenced in a specification, model, design or
+        instance. This is an arbitrary value managed by the terminology capabilities
+        author and is not expected to be globally unique. For example, it might be a
+        timestamp (e.g. yyyymmdd) if a managed version is not available. There is also
+        no expectation that versions can be placed in a lexicographical sequence.
+            :param name: A natural language name identifying the terminology capabilities. This name
+        should be usable as an identifier for the module by machine processing
+        applications such as code generation.
+            :param title: A short, descriptive, user-friendly title for the terminology capabilities.
+            :param status: The status of this terminology capabilities. Enables tracking the life-cycle
+        of the content.
+            :param experimental: A Boolean value to indicate that this terminology capabilities is authored for
+        testing purposes (or education/evaluation/marketing) and is not intended to be
+        used for genuine usage.
+            :param date: The date  (and optionally time) when the terminology capabilities was
+        published. The date must change when the business version changes and it must
+        change if the status code changes. In addition, it should change when the
+        substantive content of the terminology capabilities changes.
+            :param publisher: The name of the organization or individual that published the terminology
+        capabilities.
+            :param contact: Contact details to assist a user in finding and communicating with the
+        publisher.
+            :param description: A free text natural language description of the terminology capabilities from
+        a consumer's perspective. Typically, this is used when the capability
+        statement describes a desired rather than an actual solution, for example as a
+        formal expression of requirements as part of an RFP.
+            :param useContext: The content was developed with a focus and intent of supporting the contexts
+        that are listed. These contexts may be general categories (gender, age, ...)
+        or may be references to specific programs (insurance plans, studies, ...) and
+        may be used to assist with indexing and searching for appropriate terminology
+        capabilities instances.
+            :param jurisdiction: A legal or geographic region in which the terminology capabilities is intended
+        to be used.
+            :param purpose: Explanation of why this terminology capabilities is needed and why it has been
+        designed as it has.
+            :param copyright: A copyright statement relating to the terminology capabilities and/or its
+        contents. Copyright statements are generally legal restrictions on the use and
+        publishing of the terminology capabilities.
+            :param kind: The way that this statement is intended to be used, to describe an actual
+        running instance of software, a particular product (kind, not instance of
+        software) or a class of implementation (e.g. a desired purchase).
+            :param software: Software that is covered by this terminology capability statement.  It is used
+        when the statement describes the capabilities of a particular software
+        version, independent of an installation.
+            :param implementation: Identifies a specific implementation instance that is described by the
+        terminology capability statement - i.e. a particular installation, rather than
+        the capabilities of a software program.
+            :param lockedDate: Whether the server supports lockedDate.
+            :param codeSystem: Identifies a code system that is supported by the server. If there is a no
+        code system URL, then this declares the general assumptions a client can make
+        about support for any CodeSystem resource.
+            :param expansion: Information about the [ValueSet/$expand](valueset-operation-expand.html)
+        operation.
+            :param codeSearch: The degree to which the server supports the code search parameter on ValueSet,
+        if it is supported.
+            :param validateCode: Information about the [ValueSet/$validate-code](valueset-operation-validate-
+        code.html) operation.
+            :param translation: Information about the [ConceptMap/$translate](conceptmap-operation-
+        translate.html) operation.
+            :param closure: Whether the $closure operation is supported.
         """
         super().__init__(
             resourceType="TerminologyCapabilities",
@@ -191,4 +219,6 @@ class TerminologyCapabilities(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return TerminologyCapabilitiesSchema.get_schema(include_extension=include_extension)
+        return TerminologyCapabilitiesSchema.get_schema(
+            include_extension=include_extension
+        )

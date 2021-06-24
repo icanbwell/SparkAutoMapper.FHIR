@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,13 +10,22 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # claim (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for claim
     from spark_auto_mapper_fhir.resources.claim import Claim
+
+    # relationship (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for relationship
-    from spark_auto_mapper_fhir.value_sets.example_related_claim_relationship_codes import ExampleRelatedClaimRelationshipCodes
+    from spark_auto_mapper_fhir.value_sets.example_related_claim_relationship_codes import (
+        ExampleRelatedClaimRelationshipCodesCode,
+    )
+
     # End Import for CodeableConcept for relationship
+    # reference (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
 
@@ -31,25 +33,29 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ExplanationOfBenefitRelated(FhirBackboneElementBase):
     """
+    ExplanationOfBenefit.Related
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        claim: Optional[Reference [Union[Claim]]] = None,
-        relationship: Optional[CodeableConcept[ExampleRelatedClaimRelationshipCodes] ] = None,
-        reference: Optional[Identifier ] = None,
+        claim: Optional[Reference[Union[Claim]]] = None,
+        relationship: Optional[
+            CodeableConcept[ExampleRelatedClaimRelationshipCodesCode]
+        ] = None,
+        reference: Optional[Identifier] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param claim: Reference to a related claim.
-        :param relationship: A code to convey how the claims are related.
-        :param reference: An alternate organizational reference to the case or file to which this
-    particular claim pertains.
+            :param id_: id of resource
+            :param extension: extensions
+            :param claim: Reference to a related claim.
+            :param relationship: A code to convey how the claims are related.
+            :param reference: An alternate organizational reference to the case or file to which this
+        particular claim pertains.
         """
         super().__init__(
             id_=id_,

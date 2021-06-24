@@ -1,13 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -20,20 +17,33 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for morphology
-    from spark_auto_mapper_fhir.value_sets.snomedct_morphologic_abnormalities import SNOMEDCTMorphologicAbnormalities
+    from spark_auto_mapper_fhir.value_sets.snomedct_morphologic_abnormalities import (
+        SNOMEDCTMorphologicAbnormalitiesCode,
+    )
+
     # End Import for CodeableConcept for morphology
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for location
-    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import SNOMEDCTBodyStructures
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructuresCode,
+    )
+
     # End Import for CodeableConcept for location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for locationQualifier
-    from spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier import BodystructureLocationQualifier
+    from spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier import (
+        BodystructureLocationQualifierCode,
+    )
+
     # End Import for CodeableConcept for locationQualifier
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
 
@@ -42,7 +52,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class BodyStructure(FhirResourceBase):
     """
+    BodyStructure
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -50,31 +62,35 @@ class BodyStructure(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        active: Optional[FhirBoolean ] = None,
-        morphology: Optional[CodeableConcept[SNOMEDCTMorphologicAbnormalities] ] = None,
-        location: Optional[CodeableConcept[SNOMEDCTBodyStructures] ] = None,
-        locationQualifier: Optional[FhirList[CodeableConcept[BodystructureLocationQualifier] ]] = None,
-        description: Optional[FhirString ] = None,
-        image: Optional[FhirList[Attachment ]] = None,
-        patient: Reference [Union[Patient]],
+        identifier: Optional[FhirList[Identifier]] = None,
+        active: Optional[FhirBoolean] = None,
+        morphology: Optional[
+            CodeableConcept[SNOMEDCTMorphologicAbnormalitiesCode]
+        ] = None,
+        location: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
+        locationQualifier: Optional[
+            FhirList[CodeableConcept[BodystructureLocationQualifierCode]]
+        ] = None,
+        description: Optional[FhirString] = None,
+        image: Optional[FhirList[Attachment]] = None,
+        patient: Reference[Union[Patient]],
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifier for this instance of the anatomical structure.
-        :param active: Whether this body site is in active use.
-        :param morphology: The kind of structure being represented by the body structure at
-    `BodyStructure.location`.  This can define both normal and abnormal
-    morphologies.
-        :param location: The anatomical location or region of the specimen, lesion, or body structure.
-        :param locationQualifier: Qualifier to refine the anatomical location.  These include qualifiers for
-    laterality, relative location, directionality, number, and plane.
-        :param description: A summary, characterization or explanation of the body structure.
-        :param image: Image or images used to identify a location.
-        :param patient: The person to which the body site belongs.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifier for this instance of the anatomical structure.
+            :param active: Whether this body site is in active use.
+            :param morphology: The kind of structure being represented by the body structure at
+        `BodyStructure.location`.  This can define both normal and abnormal
+        morphologies.
+            :param location: The anatomical location or region of the specimen, lesion, or body structure.
+            :param locationQualifier: Qualifier to refine the anatomical location.  These include qualifiers for
+        laterality, relative location, directionality, number, and plane.
+            :param description: A summary, characterization or explanation of the body structure.
+            :param image: Image or images used to identify a location.
+            :param patient: The person to which the body site belongs.
         """
         super().__init__(
             resourceType="BodyStructure",

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
@@ -7,7 +7,6 @@ from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -23,20 +22,23 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.complex_types.publication_status import PublicationStatus
+    from spark_auto_mapper_fhir.complex_types.publication_status import (
+        PublicationStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.library_type import LibraryType
-    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for jurisdiction
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import JurisdictionValueSet
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSetCode,
+    )
+
     # End Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -45,15 +47,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for topic
-    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopic
+    from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopicCode
+
     # End Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
-    from spark_auto_mapper_fhir.complex_types.parameter_definition import ParameterDefinition
+    from spark_auto_mapper_fhir.complex_types.parameter_definition import (
+        ParameterDefinition,
+    )
     from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
@@ -62,7 +68,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Library(FhirResourceBase):
     """
+    Library
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -70,120 +78,122 @@ class Library(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: Optional[uri ] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        version: Optional[FhirString ] = None,
-        name: Optional[FhirString ] = None,
-        title: Optional[FhirString ] = None,
-        subtitle: Optional[FhirString ] = None,
-        status: PublicationStatus ,
-        experimental: Optional[FhirBoolean ] = None,
-        type: CodeableConcept[LibraryType] ,
-        date: Optional[FhirDateTime ] = None,
-        publisher: Optional[FhirString ] = None,
-        contact: Optional[FhirList[ContactDetail ]] = None,
-        description: Optional[markdown ] = None,
-        useContext: Optional[FhirList[UsageContext ]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[JurisdictionValueSet] ]] = None,
-        purpose: Optional[markdown ] = None,
-        usage: Optional[FhirString ] = None,
-        copyright: Optional[markdown ] = None,
-        approvalDate: Optional[FhirDate ] = None,
-        lastReviewDate: Optional[FhirDate ] = None,
-        effectivePeriod: Optional[Period ] = None,
-        topic: Optional[FhirList[CodeableConcept[DefinitionTopic] ]] = None,
-        author: Optional[FhirList[ContactDetail ]] = None,
-        editor: Optional[FhirList[ContactDetail ]] = None,
-        reviewer: Optional[FhirList[ContactDetail ]] = None,
-        endorser: Optional[FhirList[ContactDetail ]] = None,
-        relatedArtifact: Optional[FhirList[RelatedArtifact ]] = None,
-        parameter: Optional[FhirList[ParameterDefinition ]] = None,
-        dataRequirement: Optional[FhirList[DataRequirement ]] = None,
-        content: Optional[FhirList[Attachment ]] = None,
+        url: Optional[uri] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        version: Optional[FhirString] = None,
+        name: Optional[FhirString] = None,
+        title: Optional[FhirString] = None,
+        subtitle: Optional[FhirString] = None,
+        status: PublicationStatus,
+        experimental: Optional[FhirBoolean] = None,
+        type_: CodeableConcept,
+        date: Optional[FhirDateTime] = None,
+        publisher: Optional[FhirString] = None,
+        contact: Optional[FhirList[ContactDetail]] = None,
+        description: Optional[markdown] = None,
+        useContext: Optional[FhirList[UsageContext]] = None,
+        jurisdiction: Optional[
+            FhirList[CodeableConcept[JurisdictionValueSetCode]]
+        ] = None,
+        purpose: Optional[markdown] = None,
+        usage: Optional[FhirString] = None,
+        copyright: Optional[markdown] = None,
+        approvalDate: Optional[FhirDate] = None,
+        lastReviewDate: Optional[FhirDate] = None,
+        effectivePeriod: Optional[Period] = None,
+        topic: Optional[FhirList[CodeableConcept[DefinitionTopicCode]]] = None,
+        author: Optional[FhirList[ContactDetail]] = None,
+        editor: Optional[FhirList[ContactDetail]] = None,
+        reviewer: Optional[FhirList[ContactDetail]] = None,
+        endorser: Optional[FhirList[ContactDetail]] = None,
+        relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
+        parameter: Optional[FhirList[ParameterDefinition]] = None,
+        dataRequirement: Optional[FhirList[DataRequirement]] = None,
+        content: Optional[FhirList[Attachment]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param url: An absolute URI that is used to identify this library when it is referenced in
-    a specification, model, design or an instance; also called its canonical
-    identifier. This SHOULD be globally unique and SHOULD be a literal address at
-    which at which an authoritative instance of this library is (or will be)
-    published. This URL can be the target of a canonical reference. It SHALL
-    remain the same when the library is stored on different servers.
-        :param identifier: A formal identifier that is used to identify this library when it is
-    represented in other formats, or referenced in a specification, model, design
-    or an instance. e.g. CMS or NQF identifiers for a measure artifact. Note that
-    at least one identifier is required for non-experimental active artifacts.
-        :param version: The identifier that is used to identify this version of the library when it is
-    referenced in a specification, model, design or instance. This is an arbitrary
-    value managed by the library author and is not expected to be globally unique.
-    For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
-    not available. There is also no expectation that versions can be placed in a
-    lexicographical sequence. To provide a version consistent with the Decision
-    Support Service specification, use the format Major.Minor.Revision (e.g.
-    1.0.0). For more information on versioning knowledge assets, refer to the
-    Decision Support Service specification. Note that a version is required for
-    non-experimental active artifacts.
-        :param name: A natural language name identifying the library. This name should be usable as
-    an identifier for the module by machine processing applications such as code
-    generation.
-        :param title: A short, descriptive, user-friendly title for the library.
-        :param subtitle: An explanatory or alternate title for the library giving additional
-    information about its content.
-        :param status: The status of this library. Enables tracking the life-cycle of the content.
-        :param experimental: A Boolean value to indicate that this library is authored for testing purposes
-    (or education/evaluation/marketing) and is not intended to be used for genuine
-    usage.
-        :param type: Identifies the type of library such as a Logic Library, Model Definition,
-    Asset Collection, or Module Definition.
-        :param date: The date  (and optionally time) when the library was published. The date must
-    change when the business version changes and it must change if the status code
-    changes. In addition, it should change when the substantive content of the
-    library changes.
-        :param publisher: The name of the organization or individual that published the library.
-        :param contact: Contact details to assist a user in finding and communicating with the
-    publisher.
-        :param description: A free text natural language description of the library from a consumer's
-    perspective.
-        :param useContext: The content was developed with a focus and intent of supporting the contexts
-    that are listed. These contexts may be general categories (gender, age, ...)
-    or may be references to specific programs (insurance plans, studies, ...) and
-    may be used to assist with indexing and searching for appropriate library
-    instances.
-        :param jurisdiction: A legal or geographic region in which the library is intended to be used.
-        :param purpose: Explanation of why this library is needed and why it has been designed as it
-    has.
-        :param usage: A detailed description of how the library is used from a clinical perspective.
-        :param copyright: A copyright statement relating to the library and/or its contents. Copyright
-    statements are generally legal restrictions on the use and publishing of the
-    library.
-        :param approvalDate: The date on which the resource content was approved by the publisher. Approval
-    happens once when the content is officially approved for usage.
-        :param lastReviewDate: The date on which the resource content was last reviewed. Review happens
-    periodically after approval but does not change the original approval date.
-        :param effectivePeriod: The period during which the library content was or is planned to be in active
-    use.
-        :param topic: Descriptive topics related to the content of the library. Topics provide a
-    high-level categorization of the library that can be useful for filtering and
-    searching.
-        :param author: An individiual or organization primarily involved in the creation and
-    maintenance of the content.
-        :param editor: An individual or organization primarily responsible for internal coherence of
-    the content.
-        :param reviewer: An individual or organization primarily responsible for review of some aspect
-    of the content.
-        :param endorser: An individual or organization responsible for officially endorsing the content
-    for use in some setting.
-        :param relatedArtifact: Related artifacts such as additional documentation, justification, or
-    bibliographic references.
-        :param parameter: The parameter element defines parameters used by the library.
-        :param dataRequirement: Describes a set of data that must be provided in order to be able to
-    successfully perform the computations defined by the library.
-        :param content: The content of the library as an Attachment. The content may be a reference to
-    a url, or may be directly embedded as a base-64 string. Either way, the
-    contentType of the attachment determines how to interpret the content.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param url: An absolute URI that is used to identify this library when it is referenced in
+        a specification, model, design or an instance; also called its canonical
+        identifier. This SHOULD be globally unique and SHOULD be a literal address at
+        which at which an authoritative instance of this library is (or will be)
+        published. This URL can be the target of a canonical reference. It SHALL
+        remain the same when the library is stored on different servers.
+            :param identifier: A formal identifier that is used to identify this library when it is
+        represented in other formats, or referenced in a specification, model, design
+        or an instance. e.g. CMS or NQF identifiers for a measure artifact. Note that
+        at least one identifier is required for non-experimental active artifacts.
+            :param version: The identifier that is used to identify this version of the library when it is
+        referenced in a specification, model, design or instance. This is an arbitrary
+        value managed by the library author and is not expected to be globally unique.
+        For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
+        not available. There is also no expectation that versions can be placed in a
+        lexicographical sequence. To provide a version consistent with the Decision
+        Support Service specification, use the format Major.Minor.Revision (e.g.
+        1.0.0). For more information on versioning knowledge assets, refer to the
+        Decision Support Service specification. Note that a version is required for
+        non-experimental active artifacts.
+            :param name: A natural language name identifying the library. This name should be usable as
+        an identifier for the module by machine processing applications such as code
+        generation.
+            :param title: A short, descriptive, user-friendly title for the library.
+            :param subtitle: An explanatory or alternate title for the library giving additional
+        information about its content.
+            :param status: The status of this library. Enables tracking the life-cycle of the content.
+            :param experimental: A Boolean value to indicate that this library is authored for testing purposes
+        (or education/evaluation/marketing) and is not intended to be used for genuine
+        usage.
+            :param type_: Identifies the type of library such as a Logic Library, Model Definition,
+        Asset Collection, or Module Definition.
+            :param date: The date  (and optionally time) when the library was published. The date must
+        change when the business version changes and it must change if the status code
+        changes. In addition, it should change when the substantive content of the
+        library changes.
+            :param publisher: The name of the organization or individual that published the library.
+            :param contact: Contact details to assist a user in finding and communicating with the
+        publisher.
+            :param description: A free text natural language description of the library from a consumer's
+        perspective.
+            :param useContext: The content was developed with a focus and intent of supporting the contexts
+        that are listed. These contexts may be general categories (gender, age, ...)
+        or may be references to specific programs (insurance plans, studies, ...) and
+        may be used to assist with indexing and searching for appropriate library
+        instances.
+            :param jurisdiction: A legal or geographic region in which the library is intended to be used.
+            :param purpose: Explanation of why this library is needed and why it has been designed as it
+        has.
+            :param usage: A detailed description of how the library is used from a clinical perspective.
+            :param copyright: A copyright statement relating to the library and/or its contents. Copyright
+        statements are generally legal restrictions on the use and publishing of the
+        library.
+            :param approvalDate: The date on which the resource content was approved by the publisher. Approval
+        happens once when the content is officially approved for usage.
+            :param lastReviewDate: The date on which the resource content was last reviewed. Review happens
+        periodically after approval but does not change the original approval date.
+            :param effectivePeriod: The period during which the library content was or is planned to be in active
+        use.
+            :param topic: Descriptive topics related to the content of the library. Topics provide a
+        high-level categorization of the library that can be useful for filtering and
+        searching.
+            :param author: An individiual or organization primarily involved in the creation and
+        maintenance of the content.
+            :param editor: An individual or organization primarily responsible for internal coherence of
+        the content.
+            :param reviewer: An individual or organization primarily responsible for review of some aspect
+        of the content.
+            :param endorser: An individual or organization responsible for officially endorsing the content
+        for use in some setting.
+            :param relatedArtifact: Related artifacts such as additional documentation, justification, or
+        bibliographic references.
+            :param parameter: The parameter element defines parameters used by the library.
+            :param dataRequirement: Describes a set of data that must be provided in order to be able to
+        successfully perform the computations defined by the library.
+            :param content: The content of the library as an Attachment. The content may be a reference to
+        a url, or may be directly embedded as a base-64 string. Either way, the
+        contentType of the attachment determines how to interpret the content.
         """
         super().__init__(
             resourceType="Library",
@@ -198,7 +208,7 @@ class Library(FhirResourceBase):
             subtitle=subtitle,
             status=status,
             experimental=experimental,
-            type=type,
+            type_=type_,
             date=date,
             publisher=publisher,
             contact=contact,

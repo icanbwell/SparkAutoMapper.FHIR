@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,12 +10,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.precision_estimate_type import PrecisionEstimateType
-    # End Import for CodeableConcept for type
+
+    # level (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # from_ (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # to (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
 
@@ -30,23 +27,25 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class EffectEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
     """
+    EffectEvidenceSynthesis.PrecisionEstimate
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[CodeableConcept[PrecisionEstimateType] ] = None,
-        level: Optional[decimal ] = None,
-        from_: Optional[decimal ] = None,
-        to: Optional[decimal ] = None,
+        type_: Optional[CodeableConcept] = None,
+        level: Optional[decimal] = None,
+        from_: Optional[decimal] = None,
+        to: Optional[decimal] = None,
     ) -> None:
         """
 
         :param id_: id of resource
         :param extension: extensions
-        :param type: Examples include confidence interval and interquartile range.
+        :param type_: Examples include confidence interval and interquartile range.
         :param level: Use 95 for a 95% confidence interval.
         :param from_: Lower bound of confidence interval.
         :param to: Upper bound of confidence interval.
@@ -54,7 +53,7 @@ class EffectEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
         super().__init__(
             id_=id_,
             extension=extension,
-            type=type,
+            type_=type_,
             level=level,
             from_=from_,
             to=to,

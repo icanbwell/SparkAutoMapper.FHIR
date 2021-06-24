@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,8 +10,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # amount (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
 
@@ -26,32 +24,34 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class SubstanceSpecificationMolecularWeight(FhirBackboneElementBase):
     """
+    SubstanceSpecification.MolecularWeight
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        method: Optional[CodeableConcept ] = None,
-        type: Optional[CodeableConcept ] = None,
-        amount: Optional[Quantity ] = None,
+        method: Optional[CodeableConcept] = None,
+        type_: Optional[CodeableConcept] = None,
+        amount: Optional[Quantity] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param method: The method by which the molecular weight was determined.
-        :param type: Type of molecular weight such as exact, average (also known as. number
-    average), weight average.
-        :param amount: Used to capture quantitative values for a variety of elements. If only limits
-    are given, the arithmetic mean would be the average. If only a single definite
-    value for a given element is given, it would be captured in this field.
+            :param id_: id of resource
+            :param extension: extensions
+            :param method: The method by which the molecular weight was determined.
+            :param type_: Type of molecular weight such as exact, average (also known as. number
+        average), weight average.
+            :param amount: Used to capture quantitative values for a variety of elements. If only limits
+        are given, the arithmetic mean would be the average. If only a single definite
+        value for a given element is given, it would be captured in this field.
         """
         super().__init__(
             id_=id_,
             extension=extension,
             method=method,
-            type=type,
+            type_=type_,
             amount=amount,
         )

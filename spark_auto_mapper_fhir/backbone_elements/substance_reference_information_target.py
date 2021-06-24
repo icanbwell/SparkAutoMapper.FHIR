@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,13 +10,27 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # target (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # interaction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # organism (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # organismType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # amountType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for source
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
@@ -32,27 +39,29 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class SubstanceReferenceInformationTarget(FhirBackboneElementBase):
     """
+    SubstanceReferenceInformation.Target
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        target: Optional[Identifier ] = None,
-        type: Optional[CodeableConcept ] = None,
-        interaction: Optional[CodeableConcept ] = None,
-        organism: Optional[CodeableConcept ] = None,
-        organismType: Optional[CodeableConcept ] = None,
-        amountType: Optional[CodeableConcept ] = None,
-        source: Optional[FhirList[Reference [Union[DocumentReference]]]] = None,
+        target: Optional[Identifier] = None,
+        type_: Optional[CodeableConcept] = None,
+        interaction: Optional[CodeableConcept] = None,
+        organism: Optional[CodeableConcept] = None,
+        organismType: Optional[CodeableConcept] = None,
+        amountType: Optional[CodeableConcept] = None,
+        source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
     ) -> None:
         """
 
         :param id_: id of resource
         :param extension: extensions
         :param target: Todo.
-        :param type: Todo.
+        :param type_: Todo.
         :param interaction: Todo.
         :param organism: Todo.
         :param organismType: Todo.
@@ -63,7 +72,7 @@ class SubstanceReferenceInformationTarget(FhirBackboneElementBase):
             id_=id_,
             extension=extension,
             target=target,
-            type=type,
+            type_=type_,
             interaction=interaction,
             organism=organism,
             organismType=organismType,

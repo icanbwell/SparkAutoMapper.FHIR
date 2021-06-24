@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,7 +10,12 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.system_restful_interaction import SystemRestfulInteraction
+    # code (SystemRestfulInteraction)
+    from spark_auto_mapper_fhir.complex_types.system_restful_interaction import (
+        SystemRestfulInteraction,
+    )
+
+    # documentation (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
 
@@ -25,24 +23,26 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class CapabilityStatementInteraction1(FhirBackboneElementBase):
     """
+    CapabilityStatement.Interaction1
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: SystemRestfulInteraction ,
-        documentation: Optional[markdown ] = None,
+        code: SystemRestfulInteraction,
+        documentation: Optional[markdown] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: A coded identifier of the operation, supported by the system.
-        :param documentation: Guidance specific to the implementation of this operation, such as limitations
-    on the kind of transactions allowed, or information about system wide search
-    is implemented.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: A coded identifier of the operation, supported by the system.
+            :param documentation: Guidance specific to the implementation of this operation, such as limitations
+        on the kind of transactions allowed, or information about system wide search
+        is implemented.
         """
         super().__init__(
             id_=id_,

@@ -1,13 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -20,34 +17,53 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.complex_types.contract_resource_status_codes import ContractResourceStatusCodes
+    from spark_auto_mapper_fhir.complex_types.contract_resource_status_codes import (
+        ContractResourceStatusCodes,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for legalState
-    from spark_auto_mapper_fhir.value_sets.contract_resource_legal_state_codes import ContractResourceLegalStateCodes
+    from spark_auto_mapper_fhir.value_sets.contract_resource_legal_state_codes import (
+        ContractResourceLegalStateCodesCode,
+    )
+
     # End Import for CodeableConcept for legalState
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for instantiatesCanonical
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for contentDerivative
-    from spark_auto_mapper_fhir.value_sets.contract_content_derivation_codes import ContractContentDerivationCodes
+    from spark_auto_mapper_fhir.value_sets.contract_content_derivation_codes import (
+        ContractContentDerivationCodesCode,
+    )
+
     # End Import for CodeableConcept for contentDerivative
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for expirationType
-    from spark_auto_mapper_fhir.value_sets.contract_resource_expiration_type_codes import ContractResourceExpirationTypeCodes
+    from spark_auto_mapper_fhir.value_sets.contract_resource_expiration_type_codes import (
+        ContractResourceExpirationTypeCodesCode,
+    )
+
     # End Import for CodeableConcept for expirationType
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for authority
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for domain
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for site
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -55,33 +71,45 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for scope
-    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import ContractResourceScopeCodes
+    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
+        ContractResourceScopeCodesCode,
+    )
+
     # End Import for CodeableConcept for scope
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.contract_type_codes import ContractTypeCodes
-    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for subType
-    from spark_auto_mapper_fhir.value_sets.contract_subtype_codes import ContractSubtypeCodes
+    from spark_auto_mapper_fhir.value_sets.contract_subtype_codes import (
+        ContractSubtypeCodesCode,
+    )
+
     # End Import for CodeableConcept for subType
-    from spark_auto_mapper_fhir.backbone_elements.contract_content_definition import ContractContentDefinition
+    from spark_auto_mapper_fhir.backbone_elements.contract_content_definition import (
+        ContractContentDefinition,
+    )
     from spark_auto_mapper_fhir.backbone_elements.contract_term import ContractTerm
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for supportingInfo
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for relevantHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
     from spark_auto_mapper_fhir.backbone_elements.contract_signer import ContractSigner
-    from spark_auto_mapper_fhir.backbone_elements.contract_friendly import ContractFriendly
+    from spark_auto_mapper_fhir.backbone_elements.contract_friendly import (
+        ContractFriendly,
+    )
     from spark_auto_mapper_fhir.backbone_elements.contract_legal import ContractLegal
     from spark_auto_mapper_fhir.backbone_elements.contract_rule import ContractRule
 
@@ -90,7 +118,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Contract(FhirResourceBase):
     """
+    Contract
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -98,124 +128,132 @@ class Contract(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        url: Optional[uri ] = None,
-        version: Optional[FhirString ] = None,
-        status: Optional[ContractResourceStatusCodes ] = None,
-        legalState: Optional[CodeableConcept[ContractResourceLegalStateCodes] ] = None,
-        instantiatesCanonical: Optional[Reference [Union[Contract]]] = None,
-        instantiatesUri: Optional[uri ] = None,
-        contentDerivative: Optional[CodeableConcept[ContractContentDerivationCodes] ] = None,
-        issued: Optional[FhirDateTime ] = None,
-        applies: Optional[Period ] = None,
-        expirationType: Optional[CodeableConcept[ContractResourceExpirationTypeCodes] ] = None,
-        subject: Optional[FhirList[Reference [Union[Resource]]]] = None,
-        authority: Optional[FhirList[Reference [Union[Organization]]]] = None,
-        domain: Optional[FhirList[Reference [Union[Location]]]] = None,
-        site: Optional[FhirList[Reference [Union[Location]]]] = None,
-        name: Optional[FhirString ] = None,
-        title: Optional[FhirString ] = None,
-        subtitle: Optional[FhirString ] = None,
-        alias: Optional[FhirList[FhirString ]] = None,
-        author: Optional[Reference [Union[Patient, Practitioner, PractitionerRole, Organization]]] = None,
-        scope: Optional[CodeableConcept[ContractResourceScopeCodes] ] = None,
-        type: Optional[CodeableConcept[ContractTypeCodes] ] = None,
-        subType: Optional[FhirList[CodeableConcept[ContractSubtypeCodes] ]] = None,
-        contentDefinition: Optional[ContractContentDefinition ] = None,
-        term: Optional[FhirList[ContractTerm ]] = None,
-        supportingInfo: Optional[FhirList[Reference [Union[Resource]]]] = None,
-        relevantHistory: Optional[FhirList[Reference [Union[Provenance]]]] = None,
-        signer: Optional[FhirList[ContractSigner ]] = None,
-        friendly: Optional[FhirList[ContractFriendly ]] = None,
-        legal: Optional[FhirList[ContractLegal ]] = None,
-        rule: Optional[FhirList[ContractRule ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        url: Optional[uri] = None,
+        version: Optional[FhirString] = None,
+        status: Optional[ContractResourceStatusCodes] = None,
+        legalState: Optional[
+            CodeableConcept[ContractResourceLegalStateCodesCode]
+        ] = None,
+        instantiatesCanonical: Optional[Reference[Union[Contract]]] = None,
+        instantiatesUri: Optional[uri] = None,
+        contentDerivative: Optional[
+            CodeableConcept[ContractContentDerivationCodesCode]
+        ] = None,
+        issued: Optional[FhirDateTime] = None,
+        applies: Optional[Period] = None,
+        expirationType: Optional[
+            CodeableConcept[ContractResourceExpirationTypeCodesCode]
+        ] = None,
+        subject: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        authority: Optional[FhirList[Reference[Union[Organization]]]] = None,
+        domain: Optional[FhirList[Reference[Union[Location]]]] = None,
+        site: Optional[FhirList[Reference[Union[Location]]]] = None,
+        name: Optional[FhirString] = None,
+        title: Optional[FhirString] = None,
+        subtitle: Optional[FhirString] = None,
+        alias: Optional[FhirList[FhirString]] = None,
+        author: Optional[
+            Reference[Union[Patient, Practitioner, PractitionerRole, Organization]]
+        ] = None,
+        scope: Optional[CodeableConcept[ContractResourceScopeCodesCode]] = None,
+        type_: Optional[CodeableConcept] = None,
+        subType: Optional[FhirList[CodeableConcept[ContractSubtypeCodesCode]]] = None,
+        contentDefinition: Optional[ContractContentDefinition] = None,
+        term: Optional[FhirList[ContractTerm]] = None,
+        supportingInfo: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        relevantHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        signer: Optional[FhirList[ContractSigner]] = None,
+        friendly: Optional[FhirList[ContractFriendly]] = None,
+        legal: Optional[FhirList[ContractLegal]] = None,
+        rule: Optional[FhirList[ContractRule]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Unique identifier for this Contract or a derivative that references a Source
-    Contract.
-        :param url: Canonical identifier for this contract, represented as a URI (globally
-    unique).
-        :param version: An edition identifier used for business purposes to label business significant
-    variants.
-        :param status: The status of the resource instance.
-        :param legalState: Legal states of the formation of a legal instrument, which is a formally
-    executed written document that can be formally attributed to its author,
-    records and formally expresses a legally enforceable act, process, or
-    contractual duty, obligation, or right, and therefore evidences that act,
-    process, or agreement.
-        :param instantiatesCanonical: The URL pointing to a FHIR-defined Contract Definition that is adhered to in
-    whole or part by this Contract.
-        :param instantiatesUri: The URL pointing to an externally maintained definition that is adhered to in
-    whole or in part by this Contract.
-        :param contentDerivative: The minimal content derived from the basal information source at a specific
-    stage in its lifecycle.
-        :param issued: When this  Contract was issued.
-        :param applies: Relevant time or time-period when this Contract is applicable.
-        :param expirationType: Event resulting in discontinuation or termination of this Contract instance by
-    one or more parties to the contract.
-        :param subject: The target entity impacted by or of interest to parties to the agreement.
-        :param authority: A formally or informally recognized grouping of people, principals,
-    organizations, or jurisdictions formed for the purpose of achieving some form
-    of collective action such as the promulgation, administration and enforcement
-    of contracts and policies.
-        :param domain: Recognized governance framework or system operating with a circumscribed scope
-    in accordance with specified principles, policies, processes or procedures for
-    managing rights, actions, or behaviors of parties or principals relative to
-    resources.
-        :param site: Sites in which the contract is complied with,  exercised, or in force.
-        :param name: A natural language name identifying this Contract definition, derivative, or
-    instance in any legal state. Provides additional information about its
-    content. This name should be usable as an identifier for the module by machine
-    processing applications such as code generation.
-        :param title: A short, descriptive, user-friendly title for this Contract definition,
-    derivative, or instance in any legal state.t giving additional information
-    about its content.
-        :param subtitle: An explanatory or alternate user-friendly title for this Contract definition,
-    derivative, or instance in any legal state.t giving additional information
-    about its content.
-        :param alias: Alternative representation of the title for this Contract definition,
-    derivative, or instance in any legal state., e.g., a domain specific contract
-    number related to legislation.
-        :param author: The individual or organization that authored the Contract definition,
-    derivative, or instance in any legal state.
-        :param scope: A selector of legal concerns for this Contract definition, derivative, or
-    instance in any legal state.
-        :param type: A high-level category for the legal instrument, whether constructed as a
-    Contract definition, derivative, or instance in any legal state.  Provides
-    additional information about its content within the context of the Contract's
-    scope to distinguish the kinds of systems that would be interested in the
-    contract.
-        :param subType: Sub-category for the Contract that distinguishes the kinds of systems that
-    would be interested in the Contract within the context of the Contract's
-    scope.
-        :param contentDefinition: Precusory content developed with a focus and intent of supporting the
-    formation a Contract instance, which may be associated with and transformable
-    into a Contract.
-        :param term: One or more Contract Provisions, which may be related and conveyed as a group,
-    and may contain nested groups.
-        :param supportingInfo: Information that may be needed by/relevant to the performer in their execution
-    of this term action.
-        :param relevantHistory: Links to Provenance records for past versions of this Contract definition,
-    derivative, or instance, which identify key state transitions or updates that
-    are likely to be relevant to a user looking at the current version of the
-    Contract.  The Provence.entity indicates the target that was changed in the
-    update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.
-        :param signer: Parties with legal standing in the Contract, including the principal parties,
-    the grantor(s) and grantee(s), which are any person or organization bound by
-    the contract, and any ancillary parties, which facilitate the execution of the
-    contract such as a notary or witness.
-        :param friendly: The "patient friendly language" versionof the Contract in whole or in parts.
-    "Patient friendly language" means the representation of the Contract and
-    Contract Provisions in a manner that is readily accessible and understandable
-    by a layperson in accordance with best practices for communication styles that
-    ensure that those agreeing to or signing the Contract understand the roles,
-    actions, obligations, responsibilities, and implication of the agreement.
-        :param legal: List of Legal expressions or representations of this Contract.
-        :param rule: List of Computable Policy Rule Language Representations of this Contract.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Unique identifier for this Contract or a derivative that references a Source
+        Contract.
+            :param url: Canonical identifier for this contract, represented as a URI (globally
+        unique).
+            :param version: An edition identifier used for business purposes to label business significant
+        variants.
+            :param status: The status of the resource instance.
+            :param legalState: Legal states of the formation of a legal instrument, which is a formally
+        executed written document that can be formally attributed to its author,
+        records and formally expresses a legally enforceable act, process, or
+        contractual duty, obligation, or right, and therefore evidences that act,
+        process, or agreement.
+            :param instantiatesCanonical: The URL pointing to a FHIR-defined Contract Definition that is adhered to in
+        whole or part by this Contract.
+            :param instantiatesUri: The URL pointing to an externally maintained definition that is adhered to in
+        whole or in part by this Contract.
+            :param contentDerivative: The minimal content derived from the basal information source at a specific
+        stage in its lifecycle.
+            :param issued: When this  Contract was issued.
+            :param applies: Relevant time or time-period when this Contract is applicable.
+            :param expirationType: Event resulting in discontinuation or termination of this Contract instance by
+        one or more parties to the contract.
+            :param subject: The target entity impacted by or of interest to parties to the agreement.
+            :param authority: A formally or informally recognized grouping of people, principals,
+        organizations, or jurisdictions formed for the purpose of achieving some form
+        of collective action such as the promulgation, administration and enforcement
+        of contracts and policies.
+            :param domain: Recognized governance framework or system operating with a circumscribed scope
+        in accordance with specified principles, policies, processes or procedures for
+        managing rights, actions, or behaviors of parties or principals relative to
+        resources.
+            :param site: Sites in which the contract is complied with,  exercised, or in force.
+            :param name: A natural language name identifying this Contract definition, derivative, or
+        instance in any legal state. Provides additional information about its
+        content. This name should be usable as an identifier for the module by machine
+        processing applications such as code generation.
+            :param title: A short, descriptive, user-friendly title for this Contract definition,
+        derivative, or instance in any legal state.t giving additional information
+        about its content.
+            :param subtitle: An explanatory or alternate user-friendly title for this Contract definition,
+        derivative, or instance in any legal state.t giving additional information
+        about its content.
+            :param alias: Alternative representation of the title for this Contract definition,
+        derivative, or instance in any legal state., e.g., a domain specific contract
+        number related to legislation.
+            :param author: The individual or organization that authored the Contract definition,
+        derivative, or instance in any legal state.
+            :param scope: A selector of legal concerns for this Contract definition, derivative, or
+        instance in any legal state.
+            :param type_: A high-level category for the legal instrument, whether constructed as a
+        Contract definition, derivative, or instance in any legal state.  Provides
+        additional information about its content within the context of the Contract's
+        scope to distinguish the kinds of systems that would be interested in the
+        contract.
+            :param subType: Sub-category for the Contract that distinguishes the kinds of systems that
+        would be interested in the Contract within the context of the Contract's
+        scope.
+            :param contentDefinition: Precusory content developed with a focus and intent of supporting the
+        formation a Contract instance, which may be associated with and transformable
+        into a Contract.
+            :param term: One or more Contract Provisions, which may be related and conveyed as a group,
+        and may contain nested groups.
+            :param supportingInfo: Information that may be needed by/relevant to the performer in their execution
+        of this term action.
+            :param relevantHistory: Links to Provenance records for past versions of this Contract definition,
+        derivative, or instance, which identify key state transitions or updates that
+        are likely to be relevant to a user looking at the current version of the
+        Contract.  The Provence.entity indicates the target that was changed in the
+        update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.
+            :param signer: Parties with legal standing in the Contract, including the principal parties,
+        the grantor(s) and grantee(s), which are any person or organization bound by
+        the contract, and any ancillary parties, which facilitate the execution of the
+        contract such as a notary or witness.
+            :param friendly: The "patient friendly language" versionof the Contract in whole or in parts.
+        "Patient friendly language" means the representation of the Contract and
+        Contract Provisions in a manner that is readily accessible and understandable
+        by a layperson in accordance with best practices for communication styles that
+        ensure that those agreeing to or signing the Contract understand the roles,
+        actions, obligations, responsibilities, and implication of the agreement.
+            :param legal: List of Legal expressions or representations of this Contract.
+            :param rule: List of Computable Policy Rule Language Representations of this Contract.
         """
         super().__init__(
             resourceType="Contract",
@@ -243,7 +281,7 @@ class Contract(FhirResourceBase):
             alias=alias,
             author=author,
             scope=scope,
-            type=type,
+            type_=type_,
             subType=subType,
             contentDefinition=contentDefinition,
             term=term,

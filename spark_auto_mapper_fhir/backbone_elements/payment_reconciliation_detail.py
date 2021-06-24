@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,32 +11,51 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # predecessor (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.payment_type_codes import PaymentTypeCodes
-    # End Import for CodeableConcept for type
+
+    # request (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # submitter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for submitter
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # response (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for response
     from spark_auto_mapper_fhir.resources.resource import Resource
-    from spark_auto_mapper_fhir.complex_types.date import date
+
+    # date (date)
+    # responsible (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for responsible
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # payee (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for payee
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # amount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
 
 
@@ -50,46 +63,52 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class PaymentReconciliationDetail(FhirBackboneElementBase):
     """
+    PaymentReconciliation.Detail
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[Identifier ] = None,
-        predecessor: Optional[Identifier ] = None,
-        type: CodeableConcept[PaymentTypeCodes] ,
-        request: Optional[Reference [Union[Resource]]] = None,
-        submitter: Optional[Reference [Union[Practitioner, PractitionerRole, Organization]]] = None,
-        response: Optional[Reference [Union[Resource]]] = None,
-        date: Optional[FhirDate ] = None,
-        responsible: Optional[Reference [Union[PractitionerRole]]] = None,
-        payee: Optional[Reference [Union[Practitioner, PractitionerRole, Organization]]] = None,
-        amount: Optional[Money ] = None,
+        identifier: Optional[Identifier] = None,
+        predecessor: Optional[Identifier] = None,
+        type_: CodeableConcept,
+        request: Optional[Reference[Union[Resource]]] = None,
+        submitter: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Organization]]
+        ] = None,
+        response: Optional[Reference[Union[Resource]]] = None,
+        date: Optional[FhirDate] = None,
+        responsible: Optional[Reference[Union[PractitionerRole]]] = None,
+        payee: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Organization]]
+        ] = None,
+        amount: Optional[Money] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param identifier: Unique identifier for the current payment item for the referenced payable.
-        :param predecessor: Unique identifier for the prior payment item for the referenced payable.
-        :param type: Code to indicate the nature of the payment.
-        :param request: A resource, such as a Claim, the evaluation of which could lead to payment.
-        :param submitter: The party which submitted the claim or financial transaction.
-        :param response: A resource, such as a ClaimResponse, which contains a commitment to payment.
-        :param date: The date from the response resource containing a commitment to pay.
-        :param responsible: A reference to the individual who is responsible for inquiries regarding the
-    response and its payment.
-        :param payee: The party which is receiving the payment.
-        :param amount: The monetary amount allocated from the total payment to the payable.
+            :param id_: id of resource
+            :param extension: extensions
+            :param identifier: Unique identifier for the current payment item for the referenced payable.
+            :param predecessor: Unique identifier for the prior payment item for the referenced payable.
+            :param type_: Code to indicate the nature of the payment.
+            :param request: A resource, such as a Claim, the evaluation of which could lead to payment.
+            :param submitter: The party which submitted the claim or financial transaction.
+            :param response: A resource, such as a ClaimResponse, which contains a commitment to payment.
+            :param date: The date from the response resource containing a commitment to pay.
+            :param responsible: A reference to the individual who is responsible for inquiries regarding the
+        response and its payment.
+            :param payee: The party which is receiving the payment.
+            :param amount: The monetary amount allocated from the total payment to the payable.
         """
         super().__init__(
             id_=id_,
             extension=extension,
             identifier=identifier,
             predecessor=predecessor,
-            type=type,
+            type_=type_,
             request=request,
             submitter=submitter,
             response=response,

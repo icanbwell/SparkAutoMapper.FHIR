@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,9 +12,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.backbone_elements.element_definition_discriminator import ElementDefinitionDiscriminator
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
+    # discriminator (ElementDefinition.Discriminator)
+    from spark_auto_mapper_fhir.backbone_elements.element_definition_discriminator import (
+        ElementDefinitionDiscriminator,
+    )
+
+    # description (string)
+    # ordered (boolean)
+    # rules (SlicingRules)
     from spark_auto_mapper_fhir.complex_types.slicing_rules import SlicingRules
 
 
@@ -27,35 +27,37 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ElementDefinitionSlicing(FhirBackboneElementBase):
     """
+    ElementDefinition.Slicing
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        discriminator: Optional[FhirList[ElementDefinitionDiscriminator ]] = None,
-        description: Optional[FhirString ] = None,
-        ordered: Optional[FhirBoolean ] = None,
-        rules: SlicingRules ,
+        discriminator: Optional[FhirList[ElementDefinitionDiscriminator]] = None,
+        description: Optional[FhirString] = None,
+        ordered: Optional[FhirBoolean] = None,
+        rules: SlicingRules,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param discriminator: Designates which child elements are used to discriminate between the slices
-    when processing an instance. If one or more discriminators are provided, the
-    value of the child elements in the instance data SHALL completely distinguish
-    which slice the element in the resource matches based on the allowed values
-    for those elements in each of the slices.
-        :param description: A human-readable text description of how the slicing works. If there is no
-    discriminator, this is required to be present to provide whatever information
-    is possible about how the slices can be differentiated.
-        :param ordered: If the matching elements have to occur in the same order as defined in the
-    profile.
-        :param rules: Whether additional slices are allowed or not. When the slices are ordered,
-    profile authors can also say that additional slices are only allowed at the
-    end.
+            :param id_: id of resource
+            :param extension: extensions
+            :param discriminator: Designates which child elements are used to discriminate between the slices
+        when processing an instance. If one or more discriminators are provided, the
+        value of the child elements in the instance data SHALL completely distinguish
+        which slice the element in the resource matches based on the allowed values
+        for those elements in each of the slices.
+            :param description: A human-readable text description of how the slicing works. If there is no
+        discriminator, this is required to be present to provide whatever information
+        is possible about how the slices can be differentiated.
+            :param ordered: If the matching elements have to occur in the same order as defined in the
+        profile.
+            :param rules: Whether additional slices are allowed or not. When the slices are ordered,
+        profile authors can also say that additional slices are only allowed at the
+        end.
         """
         super().__init__(
             id_=id_,

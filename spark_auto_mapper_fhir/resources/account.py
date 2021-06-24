@@ -1,13 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -20,11 +16,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.account_status import AccountStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.account_types import AccountTypes
-    # End Import for CodeableConcept for type
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
@@ -34,13 +28,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.period import Period
-    from spark_auto_mapper_fhir.backbone_elements.account_coverage import AccountCoverage
+    from spark_auto_mapper_fhir.backbone_elements.account_coverage import (
+        AccountCoverage,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for owner
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.backbone_elements.account_guarantor import AccountGuarantor
+    from spark_auto_mapper_fhir.backbone_elements.account_guarantor import (
+        AccountGuarantor,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
 
 
@@ -48,7 +48,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Account(FhirResourceBase):
     """
+    Account
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -56,41 +58,55 @@ class Account(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        status: AccountStatus ,
-        type: Optional[CodeableConcept[AccountTypes] ] = None,
-        name: Optional[FhirString ] = None,
-        subject: Optional[FhirList[Reference [Union[Patient, Device, Practitioner, PractitionerRole, Location, HealthcareService, Organization]]]] = None,
-        servicePeriod: Optional[Period ] = None,
-        coverage: Optional[FhirList[AccountCoverage ]] = None,
-        owner: Optional[Reference [Union[Organization]]] = None,
-        description: Optional[FhirString ] = None,
-        guarantor: Optional[FhirList[AccountGuarantor ]] = None,
-        partOf: Optional[Reference [Union[Account]]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        status: AccountStatus,
+        type_: Optional[CodeableConcept] = None,
+        name: Optional[FhirString] = None,
+        subject: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Patient,
+                        Device,
+                        Practitioner,
+                        PractitionerRole,
+                        Location,
+                        HealthcareService,
+                        Organization,
+                    ]
+                ]
+            ]
+        ] = None,
+        servicePeriod: Optional[Period] = None,
+        coverage: Optional[FhirList[AccountCoverage]] = None,
+        owner: Optional[Reference[Union[Organization]]] = None,
+        description: Optional[FhirString] = None,
+        guarantor: Optional[FhirList[AccountGuarantor]] = None,
+        partOf: Optional[Reference[Union[Account]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Unique identifier used to reference the account.  Might or might not be
-    intended for human use (e.g. credit card number).
-        :param status: Indicates whether the account is presently used/usable or not.
-        :param type: Categorizes the account for reporting and searching purposes.
-        :param name: Name used for the account when displaying it to humans in reports, etc.
-        :param subject: Identifies the entity which incurs the expenses. While the immediate
-    recipients of services or goods might be entities related to the subject, the
-    expenses were ultimately incurred by the subject of the Account.
-        :param servicePeriod: The date range of services associated with this account.
-        :param coverage: The party(s) that are responsible for covering the payment of this account,
-    and what order should they be applied to the account.
-        :param owner: Indicates the service area, hospital, department, etc. with responsibility for
-    managing the Account.
-        :param description: Provides additional information about what the account tracks and how it is
-    used.
-        :param guarantor: The parties responsible for balancing the account if other payment options
-    fall short.
-        :param partOf: Reference to a parent Account.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Unique identifier used to reference the account.  Might or might not be
+        intended for human use (e.g. credit card number).
+            :param status: Indicates whether the account is presently used/usable or not.
+            :param type_: Categorizes the account for reporting and searching purposes.
+            :param name: Name used for the account when displaying it to humans in reports, etc.
+            :param subject: Identifies the entity which incurs the expenses. While the immediate
+        recipients of services or goods might be entities related to the subject, the
+        expenses were ultimately incurred by the subject of the Account.
+            :param servicePeriod: The date range of services associated with this account.
+            :param coverage: The party(s) that are responsible for covering the payment of this account,
+        and what order should they be applied to the account.
+            :param owner: Indicates the service area, hospital, department, etc. with responsibility for
+        managing the Account.
+            :param description: Provides additional information about what the account tracks and how it is
+        used.
+            :param guarantor: The parties responsible for balancing the account if other payment options
+        fall short.
+            :param partOf: Reference to a parent Account.
         """
         super().__init__(
             resourceType="Account",
@@ -99,7 +115,7 @@ class Account(FhirResourceBase):
             extension=extension,
             identifier=identifier,
             status=status,
-            type=type,
+            type_=type_,
             name=name,
             subject=subject,
             servicePeriod=servicePeriod,

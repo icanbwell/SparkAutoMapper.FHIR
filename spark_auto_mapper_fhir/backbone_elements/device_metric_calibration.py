@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,8 +10,17 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.device_metric_calibration_type import DeviceMetricCalibrationType
-    from spark_auto_mapper_fhir.complex_types.device_metric_calibration_state import DeviceMetricCalibrationState
+    # type_ (DeviceMetricCalibrationType)
+    from spark_auto_mapper_fhir.complex_types.device_metric_calibration_type import (
+        DeviceMetricCalibrationType,
+    )
+
+    # state (DeviceMetricCalibrationState)
+    from spark_auto_mapper_fhir.complex_types.device_metric_calibration_state import (
+        DeviceMetricCalibrationState,
+    )
+
+    # time (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
 
@@ -26,29 +28,31 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class DeviceMetricCalibration(FhirBackboneElementBase):
     """
+    DeviceMetric.Calibration
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: Optional[DeviceMetricCalibrationType ] = None,
-        state: Optional[DeviceMetricCalibrationState ] = None,
-        time: Optional[instant ] = None,
+        type_: Optional[DeviceMetricCalibrationType] = None,
+        state: Optional[DeviceMetricCalibrationState] = None,
+        time: Optional[instant] = None,
     ) -> None:
         """
 
         :param id_: id of resource
         :param extension: extensions
-        :param type: Describes the type of the calibration method.
+        :param type_: Describes the type of the calibration method.
         :param state: Describes the state of the calibration.
         :param time: Describes the time last calibration has been performed.
         """
         super().__init__(
             id_=id_,
             extension=extension,
-            type=type,
+            type_=type_,
             state=state,
             time=time,
         )

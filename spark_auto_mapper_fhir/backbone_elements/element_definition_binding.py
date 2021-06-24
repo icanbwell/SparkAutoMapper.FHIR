@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,8 +11,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # strength (BindingStrength)
     from spark_auto_mapper_fhir.complex_types.binding_strength import BindingStrength
-    from spark_auto_mapper_fhir.complex_types.string import string
+
+    # description (string)
+    # valueSet (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
 
@@ -26,27 +23,29 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ElementDefinitionBinding(FhirBackboneElementBase):
     """
+    ElementDefinition.Binding
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        strength: BindingStrength ,
-        description: Optional[FhirString ] = None,
-        valueSet: Optional[canonical ] = None,
+        strength: BindingStrength,
+        description: Optional[FhirString] = None,
+        valueSet: Optional[canonical] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param strength: Indicates the degree of conformance expectations associated with this binding
-    - that is, the degree to which the provided value set must be adhered to in
-    the instances.
-        :param description: Describes the intended use of this particular set of codes.
-        :param valueSet: Refers to the value set that identifies the set of codes the binding refers
-    to.
+            :param id_: id of resource
+            :param extension: extensions
+            :param strength: Indicates the degree of conformance expectations associated with this binding
+        - that is, the degree to which the provided value set must be adhered to in
+        the instances.
+            :param description: Describes the intended use of this particular set of codes.
+            :param valueSet: Refers to the value set that identifies the set of codes the binding refers
+        to.
         """
         super().__init__(
             id_=id_,

@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,10 +10,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # modifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes import NutrientModifierCodes
+    from spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes import (
+        NutrientModifierCodesCode,
+    )
+
     # End Import for CodeableConcept for modifier
+    # amount (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
 
@@ -28,15 +27,17 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class NutritionOrderNutrient(FhirBackboneElementBase):
     """
+    NutritionOrder.Nutrient
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        modifier: Optional[CodeableConcept[NutrientModifierCodes] ] = None,
-        amount: Optional[Quantity ] = None,
+        modifier: Optional[CodeableConcept[NutrientModifierCodesCode]] = None,
+        amount: Optional[Quantity] = None,
     ) -> None:
         """
 

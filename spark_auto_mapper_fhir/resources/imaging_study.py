@@ -1,13 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -18,49 +15,66 @@ from spark_fhir_schemas.r4.resources.imagingstudy import ImagingStudySchema
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-    from spark_auto_mapper_fhir.complex_types.imaging_study_status import ImagingStudyStatus
+    from spark_auto_mapper_fhir.complex_types.imaging_study_status import (
+        ImagingStudyStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.coding import Coding
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.resources.appointment import Appointment
-    from spark_auto_mapper_fhir.resources.appointment_response import AppointmentResponse
+    from spark_auto_mapper_fhir.resources.appointment_response import (
+        AppointmentResponse,
+    )
     from spark_auto_mapper_fhir.resources.task import Task
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for referrer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for interpreter
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for procedureReference
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import ProcedureReasonCodes
+    from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import (
+        ProcedureReasonCodesCode,
+    )
+
     # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
@@ -69,14 +83,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.string import FhirString
-    from spark_auto_mapper_fhir.backbone_elements.imaging_study_series import ImagingStudySeries
+    from spark_auto_mapper_fhir.backbone_elements.imaging_study_series import (
+        ImagingStudySeries,
+    )
 
 
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
 class ImagingStudy(FhirResourceBase):
     """
+    ImagingStudy
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -84,71 +102,95 @@ class ImagingStudy(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        status: ImagingStudyStatus ,
-        modality: Optional[FhirList[Coding ]] = None,
-        subject: Reference [Union[Patient, Device, Group]],
-        encounter: Optional[Reference [Union[Encounter]]] = None,
-        started: Optional[FhirDateTime ] = None,
-        basedOn: Optional[FhirList[Reference [Union[CarePlan, ServiceRequest, Appointment, AppointmentResponse, Task]]]] = None,
-        referrer: Optional[Reference [Union[Practitioner, PractitionerRole]]] = None,
-        interpreter: Optional[FhirList[Reference [Union[Practitioner, PractitionerRole]]]] = None,
-        endpoint: Optional[FhirList[Reference [Union[Endpoint]]]] = None,
-        numberOfSeries: Optional[unsignedInt ] = None,
-        numberOfInstances: Optional[unsignedInt ] = None,
-        procedureReference: Optional[Reference [Union[Procedure]]] = None,
-        procedureCode: Optional[FhirList[CodeableConcept ]] = None,
-        location: Optional[Reference [Union[Location]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[ProcedureReasonCodes] ]] = None,
-        reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, Media, DiagnosticReport, DocumentReference]]]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        description: Optional[FhirString ] = None,
-        series: Optional[FhirList[ImagingStudySeries ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        status: ImagingStudyStatus,
+        modality: Optional[FhirList[Coding]] = None,
+        subject: Reference[Union[Patient, Device, Group]],
+        encounter: Optional[Reference[Union[Encounter]]] = None,
+        started: Optional[FhirDateTime] = None,
+        basedOn: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        CarePlan, ServiceRequest, Appointment, AppointmentResponse, Task
+                    ]
+                ]
+            ]
+        ] = None,
+        referrer: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
+        interpreter: Optional[
+            FhirList[Reference[Union[Practitioner, PractitionerRole]]]
+        ] = None,
+        endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
+        numberOfSeries: Optional[unsignedInt] = None,
+        numberOfInstances: Optional[unsignedInt] = None,
+        procedureReference: Optional[Reference[Union[Procedure]]] = None,
+        procedureCode: Optional[FhirList[CodeableConcept]] = None,
+        location: Optional[Reference[Union[Location]]] = None,
+        reasonCode: Optional[
+            FhirList[CodeableConcept[ProcedureReasonCodesCode]]
+        ] = None,
+        reasonReference: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Condition,
+                        Observation,
+                        Media,
+                        DiagnosticReport,
+                        DocumentReference,
+                    ]
+                ]
+            ]
+        ] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        description: Optional[FhirString] = None,
+        series: Optional[FhirList[ImagingStudySeries]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifiers for the ImagingStudy such as DICOM Study Instance UID, and
-    Accession Number.
-        :param status: The current state of the ImagingStudy.
-        :param modality: A list of all the series.modality values that are actual acquisition
-    modalities, i.e. those in the DICOM Context Group 29 (value set OID
-    1.2.840.10008.6.1.19).
-        :param subject: The subject, typically a patient, of the imaging study.
-        :param encounter: The healthcare event (e.g. a patient and healthcare provider interaction)
-    during which this ImagingStudy is made.
-        :param started: Date and time the study started.
-        :param basedOn: A list of the diagnostic requests that resulted in this imaging study being
-    performed.
-        :param referrer: The requesting/referring physician.
-        :param interpreter: Who read the study and interpreted the images or other content.
-        :param endpoint: The network service providing access (e.g., query, view, or retrieval) for the
-    study. See implementation notes for information about using DICOM endpoints. A
-    study-level endpoint applies to each series in the study, unless overridden by
-    a series-level endpoint with the same Endpoint.connectionType.
-        :param numberOfSeries: Number of Series in the Study. This value given may be larger than the number
-    of series elements this Resource contains due to resource availability,
-    security, or other factors. This element should be present if any series
-    elements are present.
-        :param numberOfInstances: Number of SOP Instances in Study. This value given may be larger than the
-    number of instance elements this resource contains due to resource
-    availability, security, or other factors. This element should be present if
-    any instance elements are present.
-        :param procedureReference: The procedure which this ImagingStudy was part of.
-        :param procedureCode: The code for the performed procedure type.
-        :param location: The principal physical location where the ImagingStudy was performed.
-        :param reasonCode: Description of clinical condition indicating why the ImagingStudy was
-    requested.
-        :param reasonReference: Indicates another resource whose existence justifies this Study.
-        :param note: Per the recommended DICOM mapping, this element is derived from the Study
-    Description attribute (0008,1030). Observations or findings about the imaging
-    study should be recorded in another resource, e.g. Observation, and not in
-    this element.
-        :param description: The Imaging Manager description of the study. Institution-generated
-    description or classification of the Study (component) performed.
-        :param series: Each study has one or more series of images or other content.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifiers for the ImagingStudy such as DICOM Study Instance UID, and
+        Accession Number.
+            :param status: The current state of the ImagingStudy.
+            :param modality: A list of all the series.modality values that are actual acquisition
+        modalities, i.e. those in the DICOM Context Group 29 (value set OID
+        1.2.840.10008.6.1.19).
+            :param subject: The subject, typically a patient, of the imaging study.
+            :param encounter: The healthcare event (e.g. a patient and healthcare provider interaction)
+        during which this ImagingStudy is made.
+            :param started: Date and time the study started.
+            :param basedOn: A list of the diagnostic requests that resulted in this imaging study being
+        performed.
+            :param referrer: The requesting/referring physician.
+            :param interpreter: Who read the study and interpreted the images or other content.
+            :param endpoint: The network service providing access (e.g., query, view, or retrieval) for the
+        study. See implementation notes for information about using DICOM endpoints. A
+        study-level endpoint applies to each series in the study, unless overridden by
+        a series-level endpoint with the same Endpoint.connectionType.
+            :param numberOfSeries: Number of Series in the Study. This value given may be larger than the number
+        of series elements this Resource contains due to resource availability,
+        security, or other factors. This element should be present if any series
+        elements are present.
+            :param numberOfInstances: Number of SOP Instances in Study. This value given may be larger than the
+        number of instance elements this resource contains due to resource
+        availability, security, or other factors. This element should be present if
+        any instance elements are present.
+            :param procedureReference: The procedure which this ImagingStudy was part of.
+            :param procedureCode: The code for the performed procedure type.
+            :param location: The principal physical location where the ImagingStudy was performed.
+            :param reasonCode: Description of clinical condition indicating why the ImagingStudy was
+        requested.
+            :param reasonReference: Indicates another resource whose existence justifies this Study.
+            :param note: Per the recommended DICOM mapping, this element is derived from the Study
+        Description attribute (0008,1030). Observations or findings about the imaging
+        study should be recorded in another resource, e.g. Observation, and not in
+        this element.
+            :param description: The Imaging Manager description of the study. Institution-generated
+        description or classification of the Study (component) performed.
+            :param series: Each study has one or more series of images or other content.
         """
         super().__init__(
             resourceType="ImagingStudy",

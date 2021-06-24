@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,10 +10,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.adjudication_value_codes import AdjudicationValueCodes
+    from spark_auto_mapper_fhir.value_sets.adjudication_value_codes import (
+        AdjudicationValueCodesCode,
+    )
+
     # End Import for CodeableConcept for category
+    # amount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
 
 
@@ -28,26 +27,28 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ExplanationOfBenefitTotal(FhirBackboneElementBase):
     """
+    ExplanationOfBenefit.Total
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: CodeableConcept[AdjudicationValueCodes] ,
-        amount: Money ,
+        category: CodeableConcept[AdjudicationValueCodesCode],
+        amount: Money,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param category: A code to indicate the information type of this adjudication record.
-    Information types may include: the value submitted, maximum values or
-    percentages allowed or payable under the plan, amounts that the patient is
-    responsible for in aggregate or pertaining to this item, amounts paid by other
-    coverages, and the benefit payable for this item.
-        :param amount: Monetary total amount associated with the category.
+            :param id_: id of resource
+            :param extension: extensions
+            :param category: A code to indicate the information type of this adjudication record.
+        Information types may include: the value submitted, maximum values or
+        percentages allowed or payable under the plan, amounts that the patient is
+        responsible for in aggregate or pertaining to this item, amounts paid by other
+        coverages, and the benefit payable for this item.
+            :param amount: Monetary total amount associated with the category.
         """
         super().__init__(
             id_=id_,

@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,18 +10,34 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # collector (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for collector
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # duration (Duration)
+    # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.fhir_specimen_collection_method import FHIRSpecimenCollectionMethod
+    from spark_auto_mapper_fhir.value_sets.fhir_specimen_collection_method import (
+        FHIRSpecimenCollectionMethodCode,
+    )
+
     # End Import for CodeableConcept for method
+    # bodySite (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import SNOMEDCTBodyStructures
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructuresCode,
+    )
+
     # End Import for CodeableConcept for bodySite
 
 
@@ -36,31 +45,33 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class SpecimenCollection(FhirBackboneElementBase):
     """
+    Specimen.Collection
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        collector: Optional[Reference [Union[Practitioner, PractitionerRole]]] = None,
-        duration: Optional[Duration ] = None,
-        quantity: Optional[Quantity ] = None,
-        method: Optional[CodeableConcept[FHIRSpecimenCollectionMethod] ] = None,
-        bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructures] ] = None,
+        collector: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
+        duration: Optional[Duration] = None,
+        quantity: Optional[Quantity] = None,
+        method: Optional[CodeableConcept[FHIRSpecimenCollectionMethodCode]] = None,
+        bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param collector: Person who collected the specimen.
-        :param duration: The span of time over which the collection of a specimen occurred.
-        :param quantity: The quantity of specimen collected; for instance the volume of a blood sample,
-    or the physical measurement of an anatomic pathology sample.
-        :param method: A coded value specifying the technique that is used to perform the procedure.
-        :param bodySite: Anatomical location from which the specimen was collected (if subject is a
-    patient). This is the target site.  This element is not used for environmental
-    specimens.
+            :param id_: id of resource
+            :param extension: extensions
+            :param collector: Person who collected the specimen.
+            :param duration: The span of time over which the collection of a specimen occurred.
+            :param quantity: The quantity of specimen collected; for instance the volume of a blood sample,
+        or the physical measurement of an anatomic pathology sample.
+            :param method: A coded value specifying the technique that is used to perform the procedure.
+            :param bodySite: Anatomical location from which the specimen was collected (if subject is a
+        patient). This is the target site.  This element is not used for environmental
+        specimens.
         """
         super().__init__(
             id_=id_,

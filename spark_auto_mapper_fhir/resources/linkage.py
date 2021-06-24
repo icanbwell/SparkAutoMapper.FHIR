@@ -1,14 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -19,6 +15,7 @@ from spark_fhir_schemas.r4.resources.linkage import LinkageSchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -30,7 +27,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Linkage(FhirResourceBase):
     """
+    Linkage
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -38,23 +37,25 @@ class Linkage(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        active: Optional[FhirBoolean ] = None,
-        author: Optional[Reference [Union[Practitioner, PractitionerRole, Organization]]] = None,
-        item: FhirList[LinkageItem ],
+        active: Optional[FhirBoolean] = None,
+        author: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Organization]]
+        ] = None,
+        item: FhirList[LinkageItem],
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param active: Indicates whether the asserted set of linkages are considered to be "in
-    effect".
-        :param author: Identifies the user or organization responsible for asserting the linkages as
-    well as the user or organization who establishes the context in which the
-    nature of each linkage is evaluated.
-        :param item: Identifies which record considered as the reference to the same real-world
-    occurrence as well as how the items should be evaluated within the collection
-    of linked items.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param active: Indicates whether the asserted set of linkages are considered to be "in
+        effect".
+            :param author: Identifies the user or organization responsible for asserting the linkages as
+        well as the user or organization who establishes the context in which the
+        nature of each linkage is evaluated.
+            :param item: Identifies which record considered as the reference to the same real-world
+        occurrence as well as how the items should be evaluated within the collection
+        of linked items.
         """
         super().__init__(
             resourceType="Linkage",

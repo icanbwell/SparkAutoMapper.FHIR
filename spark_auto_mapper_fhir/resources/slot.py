@@ -1,13 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -19,19 +16,28 @@ from spark_fhir_schemas.r4.resources.slot import SlotSchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for serviceCategory
-    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategory
+    from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategoryCode
+
     # End Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for serviceType
-    from spark_auto_mapper_fhir.value_sets.service_type import ServiceType
+    from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
+
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import PracticeSettingCodeValueSet
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSetCode,
+    )
+
     # End Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for schedule
     from spark_auto_mapper_fhir.resources.schedule import Schedule
     from spark_auto_mapper_fhir.complex_types.slot_status import SlotStatus
@@ -45,7 +51,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Slot(FhirResourceBase):
     """
+    Slot
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -53,43 +61,47 @@ class Slot(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategory] ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[ServiceType] ]] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCodeValueSet] ]] = None,
-        appointmentType: Optional[CodeableConcept ] = None,
-        schedule: Reference [Union[Schedule]],
-        status: SlotStatus ,
-        start: instant ,
-        end: instant ,
-        overbooked: Optional[FhirBoolean ] = None,
-        comment: Optional[FhirString ] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        serviceCategory: Optional[
+            FhirList[CodeableConcept[ServiceCategoryCode]]
+        ] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
+        specialty: Optional[
+            FhirList[CodeableConcept[PracticeSettingCodeValueSetCode]]
+        ] = None,
+        appointmentType: Optional[CodeableConcept] = None,
+        schedule: Reference[Union[Schedule]],
+        status: SlotStatus,
+        start: instant,
+        end: instant,
+        overbooked: Optional[FhirBoolean] = None,
+        comment: Optional[FhirString] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: External Ids for this item.
-        :param serviceCategory: A broad categorization of the service that is to be performed during this
-    appointment.
-        :param serviceType: The type of appointments that can be booked into this slot (ideally this would
-    be an identifiable service - which is at a location, rather than the location
-    itself). If provided then this overrides the value provided on the
-    availability resource.
-        :param specialty: The specialty of a practitioner that would be required to perform the service
-    requested in this appointment.
-        :param appointmentType: The style of appointment or patient that may be booked in the slot (not
-    service type).
-        :param schedule: The schedule resource that this slot defines an interval of status
-    information.
-        :param status: busy | free | busy-unavailable | busy-tentative | entered-in-error.
-        :param start: Date/Time that the slot is to begin.
-        :param end: Date/Time that the slot is to conclude.
-        :param overbooked: This slot has already been overbooked, appointments are unlikely to be
-    accepted for this time.
-        :param comment: Comments on the slot to describe any extended information. Such as custom
-    constraints on the slot.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: External Ids for this item.
+            :param serviceCategory: A broad categorization of the service that is to be performed during this
+        appointment.
+            :param serviceType: The type of appointments that can be booked into this slot (ideally this would
+        be an identifiable service - which is at a location, rather than the location
+        itself). If provided then this overrides the value provided on the
+        availability resource.
+            :param specialty: The specialty of a practitioner that would be required to perform the service
+        requested in this appointment.
+            :param appointmentType: The style of appointment or patient that may be booked in the slot (not
+        service type).
+            :param schedule: The schedule resource that this slot defines an interval of status
+        information.
+            :param status: busy | free | busy-unavailable | busy-tentative | entered-in-error.
+            :param start: Date/Time that the slot is to begin.
+            :param end: Date/Time that the slot is to conclude.
+            :param overbooked: This slot has already been overbooked, appointments are unlikely to be
+        accepted for this time.
+            :param comment: Comments on the slot to describe any extended information. Such as custom
+        constraints on the slot.
         """
         super().__init__(
             resourceType="Slot",

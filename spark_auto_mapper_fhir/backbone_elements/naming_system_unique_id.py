@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,10 +12,15 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.naming_system_identifier_type import NamingSystemIdentifierType
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
-    from spark_auto_mapper_fhir.complex_types.string import string
+    # type_ (NamingSystemIdentifierType)
+    from spark_auto_mapper_fhir.complex_types.naming_system_identifier_type import (
+        NamingSystemIdentifierType,
+    )
+
+    # value (string)
+    # preferred (boolean)
+    # comment (string)
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
 
@@ -28,36 +28,38 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class NamingSystemUniqueId(FhirBackboneElementBase):
     """
+    NamingSystem.UniqueId
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: NamingSystemIdentifierType ,
-        value: FhirString ,
-        preferred: Optional[FhirBoolean ] = None,
-        comment: Optional[FhirString ] = None,
-        period: Optional[Period ] = None,
+        type_: NamingSystemIdentifierType,
+        value: FhirString,
+        preferred: Optional[FhirBoolean] = None,
+        comment: Optional[FhirString] = None,
+        period: Optional[Period] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type: Identifies the unique identifier scheme used for this particular identifier.
-        :param value: The string that should be sent over the wire to identify the code system or
-    identifier system.
-        :param preferred: Indicates whether this identifier is the "preferred" identifier of this type.
-        :param comment: Notes about the past or intended usage of this identifier.
-        :param period: Identifies the period of time over which this identifier is considered
-    appropriate to refer to the naming system.  Outside of this window, the
-    identifier might be non-deterministic.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Identifies the unique identifier scheme used for this particular identifier.
+            :param value: The string that should be sent over the wire to identify the code system or
+        identifier system.
+            :param preferred: Indicates whether this identifier is the "preferred" identifier of this type.
+            :param comment: Notes about the past or intended usage of this identifier.
+            :param period: Identifies the period of time over which this identifier is considered
+        appropriate to refer to the naming system.  Outside of this window, the
+        identifier might be non-deterministic.
         """
         super().__init__(
             id_=id_,
             extension=extension,
-            type=type,
+            type_=type_,
             value=value,
             preferred=preferred,
             comment=comment,

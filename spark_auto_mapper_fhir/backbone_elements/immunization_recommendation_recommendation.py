@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,34 +11,70 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # vaccineCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for vaccineCode
-    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import VaccineAdministeredValueSet
+    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
+        VaccineAdministeredValueSetCode,
+    )
+
     # End Import for CodeableConcept for vaccineCode
+    # targetDisease (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for targetDisease
-    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes import ImmunizationRecommendationTargetDiseaseCodes
+    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes import (
+        ImmunizationRecommendationTargetDiseaseCodesCode,
+    )
+
     # End Import for CodeableConcept for targetDisease
+    # contraindicatedVaccineCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for contraindicatedVaccineCode
-    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import VaccineAdministeredValueSet
+    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
+        VaccineAdministeredValueSetCode,
+    )
+
     # End Import for CodeableConcept for contraindicatedVaccineCode
+    # forecastStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for forecastStatus
-    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes import ImmunizationRecommendationStatusCodes
+    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes import (
+        ImmunizationRecommendationStatusCodesCode,
+    )
+
     # End Import for CodeableConcept for forecastStatus
+    # forecastReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for forecastReason
-    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes import ImmunizationRecommendationReasonCodes
+    from spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes import (
+        ImmunizationRecommendationReasonCodesCode,
+    )
+
     # End Import for CodeableConcept for forecastReason
-    from spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_date_criterion import ImmunizationRecommendationDateCriterion
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.string import string
+    # dateCriterion (ImmunizationRecommendation.DateCriterion)
+    from spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_date_criterion import (
+        ImmunizationRecommendationDateCriterion,
+    )
+
+    # description (string)
+    # series (string)
+    # supportingImmunization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for supportingImmunization
     from spark_auto_mapper_fhir.resources.immunization import Immunization
-    from spark_auto_mapper_fhir.resources.immunization_evaluation import ImmunizationEvaluation
+    from spark_auto_mapper_fhir.resources.immunization_evaluation import (
+        ImmunizationEvaluation,
+    )
+
+    # supportingPatientInformation (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for supportingPatientInformation
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -53,45 +83,61 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
     """
+    ImmunizationRecommendation.Recommendation
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        vaccineCode: Optional[FhirList[CodeableConcept[VaccineAdministeredValueSet] ]] = None,
-        targetDisease: Optional[CodeableConcept[ImmunizationRecommendationTargetDiseaseCodes] ] = None,
-        contraindicatedVaccineCode: Optional[FhirList[CodeableConcept[VaccineAdministeredValueSet] ]] = None,
-        forecastStatus: CodeableConcept[ImmunizationRecommendationStatusCodes] ,
-        forecastReason: Optional[FhirList[CodeableConcept[ImmunizationRecommendationReasonCodes] ]] = None,
-        dateCriterion: Optional[FhirList[ImmunizationRecommendationDateCriterion ]] = None,
-        description: Optional[FhirString ] = None,
-        series: Optional[FhirString ] = None,
-        supportingImmunization: Optional[FhirList[Reference [Union[Immunization, ImmunizationEvaluation]]]] = None,
-        supportingPatientInformation: Optional[FhirList[Reference [Union[Resource]]]] = None,
+        vaccineCode: Optional[
+            FhirList[CodeableConcept[VaccineAdministeredValueSetCode]]
+        ] = None,
+        targetDisease: Optional[
+            CodeableConcept[ImmunizationRecommendationTargetDiseaseCodesCode]
+        ] = None,
+        contraindicatedVaccineCode: Optional[
+            FhirList[CodeableConcept[VaccineAdministeredValueSetCode]]
+        ] = None,
+        forecastStatus: CodeableConcept[ImmunizationRecommendationStatusCodesCode],
+        forecastReason: Optional[
+            FhirList[CodeableConcept[ImmunizationRecommendationReasonCodesCode]]
+        ] = None,
+        dateCriterion: Optional[
+            FhirList[ImmunizationRecommendationDateCriterion]
+        ] = None,
+        description: Optional[FhirString] = None,
+        series: Optional[FhirString] = None,
+        supportingImmunization: Optional[
+            FhirList[Reference[Union[Immunization, ImmunizationEvaluation]]]
+        ] = None,
+        supportingPatientInformation: Optional[
+            FhirList[Reference[Union[Resource]]]
+        ] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param vaccineCode: Vaccine(s) or vaccine group that pertain to the recommendation.
-        :param targetDisease: The targeted disease for the recommendation.
-        :param contraindicatedVaccineCode: Vaccine(s) which should not be used to fulfill the recommendation.
-        :param forecastStatus: Indicates the patient status with respect to the path to immunity for the
-    target disease.
-        :param forecastReason: The reason for the assigned forecast status.
-        :param dateCriterion: Vaccine date recommendations.  For example, earliest date to administer,
-    latest date to administer, etc.
-        :param description: Contains the description about the protocol under which the vaccine was
-    administered.
-        :param series: One possible path to achieve presumed immunity against a disease - within the
-    context of an authority.
-        :param supportingImmunization: Immunization event history and/or evaluation that supports the status and
-    recommendation.
-        :param supportingPatientInformation: Patient Information that supports the status and recommendation.  This
-    includes patient observations, adverse reactions and allergy/intolerance
-    information.
+            :param id_: id of resource
+            :param extension: extensions
+            :param vaccineCode: Vaccine(s) or vaccine group that pertain to the recommendation.
+            :param targetDisease: The targeted disease for the recommendation.
+            :param contraindicatedVaccineCode: Vaccine(s) which should not be used to fulfill the recommendation.
+            :param forecastStatus: Indicates the patient status with respect to the path to immunity for the
+        target disease.
+            :param forecastReason: The reason for the assigned forecast status.
+            :param dateCriterion: Vaccine date recommendations.  For example, earliest date to administer,
+        latest date to administer, etc.
+            :param description: Contains the description about the protocol under which the vaccine was
+        administered.
+            :param series: One possible path to achieve presumed immunity against a disease - within the
+        context of an authority.
+            :param supportingImmunization: Immunization event history and/or evaluation that supports the status and
+        recommendation.
+            :param supportingPatientInformation: Patient Information that supports the status and recommendation.  This
+        includes patient observations, adverse reactions and allergy/intolerance
+        information.
         """
         super().__init__(
             id_=id_,

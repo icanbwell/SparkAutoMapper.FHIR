@@ -1,13 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -18,24 +15,39 @@ from spark_fhir_schemas.r4.resources.goal import GoalSchema
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-    from spark_auto_mapper_fhir.complex_types.goal_lifecycle_status import GoalLifecycleStatus
+    from spark_auto_mapper_fhir.complex_types.goal_lifecycle_status import (
+        GoalLifecycleStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for achievementStatus
-    from spark_auto_mapper_fhir.value_sets.goal_achievement_status import GoalAchievementStatus
+    from spark_auto_mapper_fhir.value_sets.goal_achievement_status import (
+        GoalAchievementStatusCode,
+    )
+
     # End Import for CodeableConcept for achievementStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategory
+    from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategoryCode
+
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for priority
-    from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriority
+    from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriorityCode
+
     # End Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for description
-    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import SNOMEDCTClinicalFindings
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindingsCode,
+    )
+
     # End Import for CodeableConcept for description
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
@@ -44,25 +56,34 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for expressedBy
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for addresses
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
-    from spark_auto_mapper_fhir.resources.medication_statement import MedicationStatement
+    from spark_auto_mapper_fhir.resources.medication_statement import (
+        MedicationStatement,
+    )
     from spark_auto_mapper_fhir.resources.nutrition_order import NutritionOrder
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.resources.risk_assessment import RiskAssessment
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for outcomeCode
-    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import SNOMEDCTClinicalFindings
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindingsCode,
+    )
+
     # End Import for CodeableConcept for outcomeCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for outcomeReference
     from spark_auto_mapper_fhir.resources.observation import Observation
 
@@ -71,7 +92,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Goal(FhirResourceBase):
     """
+    Goal
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -79,52 +102,69 @@ class Goal(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        lifecycleStatus: GoalLifecycleStatus ,
-        achievementStatus: Optional[CodeableConcept[GoalAchievementStatus] ] = None,
-        category: Optional[FhirList[CodeableConcept[GoalCategory] ]] = None,
-        priority: Optional[CodeableConcept[GoalPriority] ] = None,
-        description: CodeableConcept[SNOMEDCTClinicalFindings] ,
-        subject: Reference [Union[Patient, Group, Organization]],
-        target: Optional[FhirList[GoalTarget ]] = None,
-        statusDate: Optional[FhirDate ] = None,
-        statusReason: Optional[FhirString ] = None,
-        expressedBy: Optional[Reference [Union[Patient, Practitioner, PractitionerRole, RelatedPerson]]] = None,
-        addresses: Optional[FhirList[Reference [Union[Condition, Observation, MedicationStatement, NutritionOrder, ServiceRequest, RiskAssessment]]]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        outcomeCode: Optional[FhirList[CodeableConcept[SNOMEDCTClinicalFindings] ]] = None,
-        outcomeReference: Optional[FhirList[Reference [Union[Observation]]]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        lifecycleStatus: GoalLifecycleStatus,
+        achievementStatus: Optional[CodeableConcept[GoalAchievementStatusCode]] = None,
+        category: Optional[FhirList[CodeableConcept[GoalCategoryCode]]] = None,
+        priority: Optional[CodeableConcept[GoalPriorityCode]] = None,
+        description: CodeableConcept[SNOMEDCTClinicalFindingsCode],
+        subject: Reference[Union[Patient, Group, Organization]],
+        target: Optional[FhirList[GoalTarget]] = None,
+        statusDate: Optional[FhirDate] = None,
+        statusReason: Optional[FhirString] = None,
+        expressedBy: Optional[
+            Reference[Union[Patient, Practitioner, PractitionerRole, RelatedPerson]]
+        ] = None,
+        addresses: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Condition,
+                        Observation,
+                        MedicationStatement,
+                        NutritionOrder,
+                        ServiceRequest,
+                        RiskAssessment,
+                    ]
+                ]
+            ]
+        ] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        outcomeCode: Optional[
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode]]
+        ] = None,
+        outcomeReference: Optional[FhirList[Reference[Union[Observation]]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Business identifiers assigned to this goal by the performer or other systems
-    which remain constant as the resource is updated and propagates from server to
-    server.
-        :param lifecycleStatus: The state of the goal throughout its lifecycle.
-        :param achievementStatus: Describes the progression, or lack thereof, towards the goal against the
-    target.
-        :param category: Indicates a category the goal falls within.
-        :param priority: Identifies the mutually agreed level of importance associated with
-    reaching/sustaining the goal.
-        :param description: Human-readable and/or coded description of a specific desired objective of
-    care, such as "control blood pressure" or "negotiate an obstacle course" or
-    "dance with child at wedding".
-        :param subject: Identifies the patient, group or organization for whom the goal is being
-    established.
-        :param target: Indicates what should be done by when.
-        :param statusDate: Identifies when the current status.  I.e. When initially created, when
-    achieved, when cancelled, etc.
-        :param statusReason: Captures the reason for the current status.
-        :param expressedBy: Indicates whose goal this is - patient goal, practitioner goal, etc.
-        :param addresses: The identified conditions and other health record elements that are intended
-    to be addressed by the goal.
-        :param note: Any comments related to the goal.
-        :param outcomeCode: Identifies the change (or lack of change) at the point when the status of the
-    goal is assessed.
-        :param outcomeReference: Details of what's changed (or not changed).
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Business identifiers assigned to this goal by the performer or other systems
+        which remain constant as the resource is updated and propagates from server to
+        server.
+            :param lifecycleStatus: The state of the goal throughout its lifecycle.
+            :param achievementStatus: Describes the progression, or lack thereof, towards the goal against the
+        target.
+            :param category: Indicates a category the goal falls within.
+            :param priority: Identifies the mutually agreed level of importance associated with
+        reaching/sustaining the goal.
+            :param description: Human-readable and/or coded description of a specific desired objective of
+        care, such as "control blood pressure" or "negotiate an obstacle course" or
+        "dance with child at wedding".
+            :param subject: Identifies the patient, group or organization for whom the goal is being
+        established.
+            :param target: Indicates what should be done by when.
+            :param statusDate: Identifies when the current status.  I.e. When initially created, when
+        achieved, when cancelled, etc.
+            :param statusReason: Captures the reason for the current status.
+            :param expressedBy: Indicates whose goal this is - patient goal, practitioner goal, etc.
+            :param addresses: The identified conditions and other health record elements that are intended
+        to be addressed by the goal.
+            :param note: Any comments related to the goal.
+            :param outcomeCode: Identifies the change (or lack of change) at the point when the status of the
+        goal is assessed.
+            :param outcomeReference: Details of what's changed (or not changed).
         """
         super().__init__(
             resourceType="Goal",

@@ -1,12 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -15,9 +10,9 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.related_artifact_type import RelatedArtifactType
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.related_artifact_type import (
+        RelatedArtifactType,
+    )
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.url import url
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
@@ -28,7 +23,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class RelatedArtifact(FhirComplexTypeBase):
     """
+    RelatedArtifact
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -36,37 +33,37 @@ class RelatedArtifact(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type: RelatedArtifactType ,
-        label: Optional[FhirString ] = None,
-        display: Optional[FhirString ] = None,
-        citation: Optional[markdown ] = None,
-        url: Optional[url ] = None,
-        document: Optional[Attachment ] = None,
-        resource: Optional[canonical ] = None,
+        type_: RelatedArtifactType,
+        label: Optional[FhirString] = None,
+        display: Optional[FhirString] = None,
+        citation: Optional[markdown] = None,
+        url: Optional[url] = None,
+        document: Optional[Attachment] = None,
+        resource: Optional[canonical] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param type: The type of relationship to the related artifact.
-        :param label: A short label that can be used to reference the citation from elsewhere in the
-    containing artifact, such as a footnote index.
-        :param display: A brief description of the document or knowledge resource being referenced,
-    suitable for display to a consumer.
-        :param citation: A bibliographic citation for the related artifact. This text SHOULD be
-    formatted according to an accepted citation format.
-        :param url: A url for the artifact that can be followed to access the actual content.
-        :param document: The document being referenced, represented as an attachment. This is exclusive
-    with the resource element.
-        :param resource: The related resource, such as a library, value set, profile, or other
-    knowledge resource.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param type_: The type of relationship to the related artifact.
+            :param label: A short label that can be used to reference the citation from elsewhere in the
+        containing artifact, such as a footnote index.
+            :param display: A brief description of the document or knowledge resource being referenced,
+        suitable for display to a consumer.
+            :param citation: A bibliographic citation for the related artifact. This text SHOULD be
+        formatted according to an accepted citation format.
+            :param url: A url for the artifact that can be followed to access the actual content.
+            :param document: The document being referenced, represented as an attachment. This is exclusive
+        with the resource element.
+            :param resource: The related resource, such as a library, value set, profile, or other
+        knowledge resource.
         """
         super().__init__(
             id_=id_,
             meta=meta,
             extension=extension,
-            type=type,
+            type_=type_,
             label=label,
             display=display,
             citation=citation,

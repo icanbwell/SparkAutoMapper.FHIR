@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,22 +12,48 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # product (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for product
-    from spark_auto_mapper_fhir.value_sets.example_vision_prescription_product_codes import ExampleVisionPrescriptionProductCodes
+    from spark_auto_mapper_fhir.value_sets.example_vision_prescription_product_codes import (
+        ExampleVisionPrescriptionProductCodesCode,
+    )
+
     # End Import for CodeableConcept for product
+    # eye (VisionEyes)
     from spark_auto_mapper_fhir.complex_types.vision_eyes import VisionEyes
+
+    # sphere (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # cylinder (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
-    from spark_auto_mapper_fhir.complex_types.integer import integer
-    from spark_auto_mapper_fhir.backbone_elements.vision_prescription_prism import VisionPrescriptionPrism
+
+    # axis (integer)
+    # prism (VisionPrescription.Prism)
+    from spark_auto_mapper_fhir.backbone_elements.vision_prescription_prism import (
+        VisionPrescriptionPrism,
+    )
+
+    # add (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # power (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # backCurve (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # diameter (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # duration (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-    from spark_auto_mapper_fhir.complex_types.string import string
-    from spark_auto_mapper_fhir.complex_types.string import string
+
+    # color (string)
+    # brand (string)
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 
@@ -40,47 +61,49 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class VisionPrescriptionLensSpecification(FhirBackboneElementBase):
     """
+    VisionPrescription.LensSpecification
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        product: CodeableConcept[ExampleVisionPrescriptionProductCodes] ,
-        eye: VisionEyes ,
-        sphere: Optional[decimal ] = None,
-        cylinder: Optional[decimal ] = None,
-        axis: Optional[FhirInteger ] = None,
-        prism: Optional[FhirList[VisionPrescriptionPrism ]] = None,
-        add: Optional[decimal ] = None,
-        power: Optional[decimal ] = None,
-        backCurve: Optional[decimal ] = None,
-        diameter: Optional[decimal ] = None,
-        duration: Optional[Quantity ] = None,
-        color: Optional[FhirString ] = None,
-        brand: Optional[FhirString ] = None,
-        note: Optional[FhirList[Annotation ]] = None,
+        product: CodeableConcept[ExampleVisionPrescriptionProductCodesCode],
+        eye: VisionEyes,
+        sphere: Optional[decimal] = None,
+        cylinder: Optional[decimal] = None,
+        axis: Optional[FhirInteger] = None,
+        prism: Optional[FhirList[VisionPrescriptionPrism]] = None,
+        add: Optional[decimal] = None,
+        power: Optional[decimal] = None,
+        backCurve: Optional[decimal] = None,
+        diameter: Optional[decimal] = None,
+        duration: Optional[Quantity] = None,
+        color: Optional[FhirString] = None,
+        brand: Optional[FhirString] = None,
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param product: Identifies the type of vision correction product which is required for the
-    patient.
-        :param eye: The eye for which the lens specification applies.
-        :param sphere: Lens power measured in dioptres (0.25 units).
-        :param cylinder: Power adjustment for astigmatism measured in dioptres (0.25 units).
-        :param axis: Adjustment for astigmatism measured in integer degrees.
-        :param prism: Allows for adjustment on two axis.
-        :param add: Power adjustment for multifocal lenses measured in dioptres (0.25 units).
-        :param power: Contact lens power measured in dioptres (0.25 units).
-        :param backCurve: Back curvature measured in millimetres.
-        :param diameter: Contact lens diameter measured in millimetres.
-        :param duration: The recommended maximum wear period for the lens.
-        :param color: Special color or pattern.
-        :param brand: Brand recommendations or restrictions.
-        :param note: Notes for special requirements such as coatings and lens materials.
+            :param id_: id of resource
+            :param extension: extensions
+            :param product: Identifies the type of vision correction product which is required for the
+        patient.
+            :param eye: The eye for which the lens specification applies.
+            :param sphere: Lens power measured in dioptres (0.25 units).
+            :param cylinder: Power adjustment for astigmatism measured in dioptres (0.25 units).
+            :param axis: Adjustment for astigmatism measured in integer degrees.
+            :param prism: Allows for adjustment on two axis.
+            :param add: Power adjustment for multifocal lenses measured in dioptres (0.25 units).
+            :param power: Contact lens power measured in dioptres (0.25 units).
+            :param backCurve: Back curvature measured in millimetres.
+            :param diameter: Contact lens diameter measured in millimetres.
+            :param duration: The recommended maximum wear period for the lens.
+            :param color: Special color or pattern.
+            :param brand: Brand recommendations or restrictions.
+            :param note: Notes for special requirements such as coatings and lens materials.
         """
         super().__init__(
             id_=id_,

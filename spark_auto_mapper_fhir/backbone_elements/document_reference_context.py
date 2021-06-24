@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,24 +10,46 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
+
+    # event (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # facilityType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for facilityType
-    from spark_auto_mapper_fhir.value_sets.facility_type_code_value_set import FacilityTypeCodeValueSet
+    from spark_auto_mapper_fhir.value_sets.facility_type_code_value_set import (
+        FacilityTypeCodeValueSetCode,
+    )
+
     # End Import for CodeableConcept for facilityType
+    # practiceSetting (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for practiceSetting
-    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import PracticeSettingCodeValueSet
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSetCode,
+    )
+
     # End Import for CodeableConcept for practiceSetting
+    # sourcePatientInfo (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for sourcePatientInfo
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # related (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for related
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -43,39 +58,45 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class DocumentReferenceContext(FhirBackboneElementBase):
     """
+    DocumentReference.Context
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        encounter: Optional[FhirList[Reference [Union[Encounter, EpisodeOfCare]]]] = None,
-        event: Optional[FhirList[CodeableConcept ]] = None,
-        period: Optional[Period ] = None,
-        facilityType: Optional[CodeableConcept[FacilityTypeCodeValueSet] ] = None,
-        practiceSetting: Optional[CodeableConcept[PracticeSettingCodeValueSet] ] = None,
-        sourcePatientInfo: Optional[Reference [Union[Patient]]] = None,
-        related: Optional[FhirList[Reference [Union[Resource]]]] = None,
+        encounter: Optional[
+            FhirList[Reference[Union[Encounter, EpisodeOfCare]]]
+        ] = None,
+        event: Optional[FhirList[CodeableConcept]] = None,
+        period: Optional[Period] = None,
+        facilityType: Optional[CodeableConcept[FacilityTypeCodeValueSetCode]] = None,
+        practiceSetting: Optional[
+            CodeableConcept[PracticeSettingCodeValueSetCode]
+        ] = None,
+        sourcePatientInfo: Optional[Reference[Union[Patient]]] = None,
+        related: Optional[FhirList[Reference[Union[Resource]]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param encounter: Describes the clinical encounter or type of care that the document content is
-    associated with.
-        :param event: This list of codes represents the main clinical acts, such as a colonoscopy or
-    an appendectomy, being documented. In some cases, the event is inherent in the
-    type Code, such as a "History and Physical Report" in which the procedure
-    being documented is necessarily a "History and Physical" act.
-        :param period: The time period over which the service that is described by the document was
-    provided.
-        :param facilityType: The kind of facility where the patient was seen.
-        :param practiceSetting: This property may convey specifics about the practice setting where the
-    content was created, often reflecting the clinical specialty.
-        :param sourcePatientInfo: The Patient Information as known when the document was published. May be a
-    reference to a version specific, or contained.
-        :param related: Related identifiers or resources associated with the DocumentReference.
+            :param id_: id of resource
+            :param extension: extensions
+            :param encounter: Describes the clinical encounter or type of care that the document content is
+        associated with.
+            :param event: This list of codes represents the main clinical acts, such as a colonoscopy or
+        an appendectomy, being documented. In some cases, the event is inherent in the
+        type Code, such as a "History and Physical Report" in which the procedure
+        being documented is necessarily a "History and Physical" act.
+            :param period: The time period over which the service that is described by the document was
+        provided.
+            :param facilityType: The kind of facility where the patient was seen.
+            :param practiceSetting: This property may convey specifics about the practice setting where the
+        content was created, often reflecting the clinical specialty.
+            :param sourcePatientInfo: The Patient Information as known when the document was published. May be a
+        reference to a version specific, or contained.
+            :param related: Related identifiers or resources associated with the DocumentReference.
         """
         super().__init__(
             id_=id_,

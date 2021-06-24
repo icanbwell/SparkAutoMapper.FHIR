@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -18,20 +13,30 @@ from spark_fhir_schemas.r4.resources.provenance import ProvenanceSchema
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for target
     from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.instant import instant
     from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for activity
-    from spark_auto_mapper_fhir.value_sets.provenance_activity_type import ProvenanceActivityType
+    from spark_auto_mapper_fhir.value_sets.provenance_activity_type import (
+        ProvenanceActivityTypeCode,
+    )
+
     # End Import for CodeableConcept for activity
-    from spark_auto_mapper_fhir.backbone_elements.provenance_agent import ProvenanceAgent
-    from spark_auto_mapper_fhir.backbone_elements.provenance_entity import ProvenanceEntity
+    from spark_auto_mapper_fhir.backbone_elements.provenance_agent import (
+        ProvenanceAgent,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.provenance_entity import (
+        ProvenanceEntity,
+    )
     from spark_auto_mapper_fhir.complex_types.signature import Signature
 
 
@@ -39,7 +44,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Provenance(FhirResourceBase):
     """
+    Provenance
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -47,38 +54,38 @@ class Provenance(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        target: FhirList[Reference [Union[Resource]]],
-        recorded: instant ,
-        policy: Optional[FhirList[uri ]] = None,
-        location: Optional[Reference [Union[Location]]] = None,
-        reason: Optional[FhirList[CodeableConcept ]] = None,
-        activity: Optional[CodeableConcept[ProvenanceActivityType] ] = None,
-        agent: FhirList[ProvenanceAgent ],
-        entity: Optional[FhirList[ProvenanceEntity ]] = None,
-        signature: Optional[FhirList[Signature ]] = None,
+        target: FhirList[Reference[Union[Resource]]],
+        recorded: instant,
+        policy: Optional[FhirList[uri]] = None,
+        location: Optional[Reference[Union[Location]]] = None,
+        reason: Optional[FhirList[CodeableConcept]] = None,
+        activity: Optional[CodeableConcept[ProvenanceActivityTypeCode]] = None,
+        agent: FhirList[ProvenanceAgent],
+        entity: Optional[FhirList[ProvenanceEntity]] = None,
+        signature: Optional[FhirList[Signature]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param target: The Reference(s) that were generated or updated by  the activity described in
-    this resource. A provenance can point to more than one target if multiple
-    resources were created/updated by the same activity.
-        :param recorded: The instant of time at which the activity was recorded.
-        :param policy: Policy or plan the activity was defined by. Typically, a single activity may
-    have multiple applicable policy documents, such as patient consent, guarantor
-    funding, etc.
-        :param location: Where the activity occurred, if relevant.
-        :param reason: The reason that the activity was taking place.
-        :param activity: An activity is something that occurs over a period of time and acts upon or
-    with entities; it may include consuming, processing, transforming, modifying,
-    relocating, using, or generating entities.
-        :param agent: An actor taking a role in an activity  for which it can be assigned some
-    degree of responsibility for the activity taking place.
-        :param entity: An entity used in this activity.
-        :param signature: A digital signature on the target Reference(s). The signer should match a
-    Provenance.agent. The purpose of the signature is indicated.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param target: The Reference(s) that were generated or updated by  the activity described in
+        this resource. A provenance can point to more than one target if multiple
+        resources were created/updated by the same activity.
+            :param recorded: The instant of time at which the activity was recorded.
+            :param policy: Policy or plan the activity was defined by. Typically, a single activity may
+        have multiple applicable policy documents, such as patient consent, guarantor
+        funding, etc.
+            :param location: Where the activity occurred, if relevant.
+            :param reason: The reason that the activity was taking place.
+            :param activity: An activity is something that occurs over a period of time and acts upon or
+        with entities; it may include consuming, processing, transforming, modifying,
+        relocating, using, or generating entities.
+            :param agent: An actor taking a role in an activity  for which it can be assigned some
+        degree of responsibility for the activity taking place.
+            :param entity: An entity used in this activity.
+            :param signature: A digital signature on the target Reference(s). The signer should match a
+        Provenance.agent. The purpose of the signature is indicated.
         """
         super().__init__(
             resourceType="Provenance",

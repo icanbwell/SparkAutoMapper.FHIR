@@ -1,13 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -25,12 +22,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for managingEntity
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.backbone_elements.group_characteristic import GroupCharacteristic
+    from spark_auto_mapper_fhir.backbone_elements.group_characteristic import (
+        GroupCharacteristic,
+    )
     from spark_auto_mapper_fhir.backbone_elements.group_member import GroupMember
 
 
@@ -38,7 +38,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class Group(FhirResourceBase):
     """
+    Group
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -46,37 +48,41 @@ class Group(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        active: Optional[FhirBoolean ] = None,
-        type: GroupType ,
-        actual: FhirBoolean ,
-        code: Optional[CodeableConcept ] = None,
-        name: Optional[FhirString ] = None,
-        quantity: Optional[unsignedInt ] = None,
-        managingEntity: Optional[Reference [Union[Organization, RelatedPerson, Practitioner, PractitionerRole]]] = None,
-        characteristic: Optional[FhirList[GroupCharacteristic ]] = None,
-        member: Optional[FhirList[GroupMember ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        active: Optional[FhirBoolean] = None,
+        type_: GroupType,
+        actual: FhirBoolean,
+        code: Optional[CodeableConcept] = None,
+        name: Optional[FhirString] = None,
+        quantity: Optional[unsignedInt] = None,
+        managingEntity: Optional[
+            Reference[
+                Union[Organization, RelatedPerson, Practitioner, PractitionerRole]
+            ]
+        ] = None,
+        characteristic: Optional[FhirList[GroupCharacteristic]] = None,
+        member: Optional[FhirList[GroupMember]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: A unique business identifier for this group.
-        :param active: Indicates whether the record for the group is available for use or is merely
-    being retained for historical purposes.
-        :param type: Identifies the broad classification of the kind of resources the group
-    includes.
-        :param actual: If true, indicates that the resource refers to a specific group of real
-    individuals.  If false, the group defines a set of intended individuals.
-        :param code: Provides a specific type of resource the group includes; e.g. "cow",
-    "syringe", etc.
-        :param name: A label assigned to the group for human identification and communication.
-        :param quantity: A count of the number of resource instances that are part of the group.
-        :param managingEntity: Entity responsible for defining and maintaining Group characteristics and/or
-    registered members.
-        :param characteristic: Identifies traits whose presence r absence is shared by members of the group.
-        :param member: Identifies the resource instances that are members of the group.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: A unique business identifier for this group.
+            :param active: Indicates whether the record for the group is available for use or is merely
+        being retained for historical purposes.
+            :param type_: Identifies the broad classification of the kind of resources the group
+        includes.
+            :param actual: If true, indicates that the resource refers to a specific group of real
+        individuals.  If false, the group defines a set of intended individuals.
+            :param code: Provides a specific type of resource the group includes; e.g. "cow",
+        "syringe", etc.
+            :param name: A label assigned to the group for human identification and communication.
+            :param quantity: A count of the number of resource instances that are part of the group.
+            :param managingEntity: Entity responsible for defining and maintaining Group characteristics and/or
+        registered members.
+            :param characteristic: Identifies traits whose presence r absence is shared by members of the group.
+            :param member: Identifies the resource instances that are members of the group.
         """
         super().__init__(
             resourceType="Group",
@@ -85,7 +91,7 @@ class Group(FhirResourceBase):
             extension=extension,
             identifier=identifier,
             active=active,
-            type=type,
+            type_=type_,
             actual=actual,
             code=code,
             name=name,

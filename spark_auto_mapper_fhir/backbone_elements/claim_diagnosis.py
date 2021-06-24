@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,18 +10,29 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for type
-    from spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes import ExampleDiagnosisTypeCodes
-    # End Import for CodeableConcept for type
+
+    # onAdmission (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for onAdmission
-    from spark_auto_mapper_fhir.value_sets.example_diagnosis_on_admission_codes import ExampleDiagnosisOnAdmissionCodes
+    from spark_auto_mapper_fhir.value_sets.example_diagnosis_on_admission_codes import (
+        ExampleDiagnosisOnAdmissionCodesCode,
+    )
+
     # End Import for CodeableConcept for onAdmission
+    # packageCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for packageCode
-    from spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes import ExampleDiagnosisRelatedGroupCodes
+    from spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes import (
+        ExampleDiagnosisRelatedGroupCodesCode,
+    )
+
     # End Import for CodeableConcept for packageCode
 
 
@@ -36,34 +40,40 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ClaimDiagnosis(FhirBackboneElementBase):
     """
+    Claim.Diagnosis
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: positiveInt ,
-        type: Optional[FhirList[CodeableConcept[ExampleDiagnosisTypeCodes] ]] = None,
-        onAdmission: Optional[CodeableConcept[ExampleDiagnosisOnAdmissionCodes] ] = None,
-        packageCode: Optional[CodeableConcept[ExampleDiagnosisRelatedGroupCodes] ] = None,
+        sequence: positiveInt,
+        type_: Optional[FhirList[CodeableConcept]] = None,
+        onAdmission: Optional[
+            CodeableConcept[ExampleDiagnosisOnAdmissionCodesCode]
+        ] = None,
+        packageCode: Optional[
+            CodeableConcept[ExampleDiagnosisRelatedGroupCodesCode]
+        ] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param sequence: A number to uniquely identify diagnosis entries.
-        :param type: When the condition was observed or the relative ranking.
-        :param onAdmission: Indication of whether the diagnosis was present on admission to a facility.
-        :param packageCode: A package billing code or bundle code used to group products and services to a
-    particular health condition (such as heart attack) which is based on a
-    predetermined grouping code system.
+            :param id_: id of resource
+            :param extension: extensions
+            :param sequence: A number to uniquely identify diagnosis entries.
+            :param type_: When the condition was observed or the relative ranking.
+            :param onAdmission: Indication of whether the diagnosis was present on admission to a facility.
+            :param packageCode: A package billing code or bundle code used to group products and services to a
+        particular health condition (such as heart attack) which is based on a
+        predetermined grouping code system.
         """
         super().__init__(
             id_=id_,
             extension=extension,
             sequence=sequence,
-            type=type,
+            type_=type_,
             onAdmission=onAdmission,
             packageCode=packageCode,
         )

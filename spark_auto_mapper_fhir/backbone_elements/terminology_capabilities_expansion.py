@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,10 +11,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
-    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_parameter import TerminologyCapabilitiesParameter
+    # hierarchical (boolean)
+    pass
+    # paging (boolean)
+    # incomplete (boolean)
+    # parameter (TerminologyCapabilities.Parameter)
+    from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_parameter import (
+        TerminologyCapabilitiesParameter,
+    )
+
+    # textFilter (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
 
@@ -28,18 +28,20 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class TerminologyCapabilitiesExpansion(FhirBackboneElementBase):
     """
+    TerminologyCapabilities.Expansion
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        hierarchical: Optional[FhirBoolean ] = None,
-        paging: Optional[FhirBoolean ] = None,
-        incomplete: Optional[FhirBoolean ] = None,
-        parameter: Optional[FhirList[TerminologyCapabilitiesParameter ]] = None,
-        textFilter: Optional[markdown ] = None,
+        hierarchical: Optional[FhirBoolean] = None,
+        paging: Optional[FhirBoolean] = None,
+        incomplete: Optional[FhirBoolean] = None,
+        parameter: Optional[FhirList[TerminologyCapabilitiesParameter]] = None,
+        textFilter: Optional[markdown] = None,
     ) -> None:
         """
 

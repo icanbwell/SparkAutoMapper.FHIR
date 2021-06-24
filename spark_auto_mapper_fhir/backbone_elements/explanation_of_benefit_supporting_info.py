@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -17,18 +10,33 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.claim_information_category_codes import ClaimInformationCategoryCodes
+    from spark_auto_mapper_fhir.value_sets.claim_information_category_codes import (
+        ClaimInformationCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.exception_codes import ExceptionCodes
+    from spark_auto_mapper_fhir.value_sets.exception_codes import ExceptionCodesCode
+
     # End Import for CodeableConcept for code
+    # reason (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes import MissingToothReasonCodes
+    from spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes import (
+        MissingToothReasonCodesCode,
+    )
+
     # End Import for CodeableConcept for reason
 
 
@@ -36,30 +44,32 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class ExplanationOfBenefitSupportingInfo(FhirBackboneElementBase):
     """
+    ExplanationOfBenefit.SupportingInfo
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: positiveInt ,
-        category: CodeableConcept[ClaimInformationCategoryCodes] ,
-        code: Optional[CodeableConcept[ExceptionCodes] ] = None,
-        reason: Optional[Coding[MissingToothReasonCodes] ] = None,
+        sequence: positiveInt,
+        category: CodeableConcept[ClaimInformationCategoryCodesCode],
+        code: Optional[CodeableConcept[ExceptionCodesCode]] = None,
+        reason: Optional[Coding[MissingToothReasonCodesCode]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param sequence: A number to uniquely identify supporting information entries.
-        :param category: The general class of the information supplied: information; exception;
-    accident, employment; onset, etc.
-        :param code: System and code pertaining to the specific information regarding special
-    conditions relating to the setting, treatment or patient  for which care is
-    sought.
-        :param reason: Provides the reason in the situation where a reason code is required in
-    addition to the content.
+            :param id_: id of resource
+            :param extension: extensions
+            :param sequence: A number to uniquely identify supporting information entries.
+            :param category: The general class of the information supplied: information; exception;
+        accident, employment; onset, etc.
+            :param code: System and code pertaining to the specific information regarding special
+        conditions relating to the setting, treatment or patient  for which care is
+        sought.
+            :param reason: Provides the reason in the situation where a reason code is required in
+        addition to the content.
         """
         super().__init__(
             id_=id_,

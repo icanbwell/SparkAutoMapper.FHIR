@@ -74,6 +74,7 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
 class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
 {% endif %}
     """
+    {{fhir_entity.fhir_name}}
     {% for documentation_item in fhir_entity.documentation %}
         {{ documentation_item }}
     {%  endfor %}

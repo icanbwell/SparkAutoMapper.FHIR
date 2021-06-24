@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -19,26 +14,36 @@ from spark_fhir_schemas.r4.resources.supplydelivery import SupplyDeliverySchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.supply_request import SupplyRequest
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.contract import Contract
-    from spark_auto_mapper_fhir.complex_types.supply_delivery_status import SupplyDeliveryStatus
+    from spark_auto_mapper_fhir.complex_types.supply_delivery_status import (
+        SupplyDeliveryStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    from spark_auto_mapper_fhir.backbone_elements.supply_delivery_supplied_item import SupplyDeliverySuppliedItem
+    from spark_auto_mapper_fhir.backbone_elements.supply_delivery_supplied_item import (
+        SupplyDeliverySuppliedItem,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for supplier
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for destination
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for receiver
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -48,7 +53,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class SupplyDelivery(FhirResourceBase):
     """
+    SupplyDelivery
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -56,35 +63,39 @@ class SupplyDelivery(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        basedOn: Optional[FhirList[Reference [Union[SupplyRequest]]]] = None,
-        partOf: Optional[FhirList[Reference [Union[SupplyDelivery, Contract]]]] = None,
-        status: Optional[SupplyDeliveryStatus ] = None,
-        patient: Optional[Reference [Union[Patient]]] = None,
-        type: Optional[CodeableConcept ] = None,
-        suppliedItem: Optional[SupplyDeliverySuppliedItem ] = None,
-        supplier: Optional[Reference [Union[Practitioner, PractitionerRole, Organization]]] = None,
-        destination: Optional[Reference [Union[Location]]] = None,
-        receiver: Optional[FhirList[Reference [Union[Practitioner, PractitionerRole]]]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        basedOn: Optional[FhirList[Reference[Union[SupplyRequest]]]] = None,
+        partOf: Optional[FhirList[Reference[Union[SupplyDelivery, Contract]]]] = None,
+        status: Optional[SupplyDeliveryStatus] = None,
+        patient: Optional[Reference[Union[Patient]]] = None,
+        type_: Optional[CodeableConcept] = None,
+        suppliedItem: Optional[SupplyDeliverySuppliedItem] = None,
+        supplier: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Organization]]
+        ] = None,
+        destination: Optional[Reference[Union[Location]]] = None,
+        receiver: Optional[
+            FhirList[Reference[Union[Practitioner, PractitionerRole]]]
+        ] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifier for the supply delivery event that is used to identify it across
-    multiple disparate systems.
-        :param basedOn: A plan, proposal or order that is fulfilled in whole or in part by this event.
-        :param partOf: A larger event of which this particular event is a component or step.
-        :param status: A code specifying the state of the dispense event.
-        :param patient: A link to a resource representing the person whom the delivered item is for.
-        :param type: Indicates the type of dispensing event that is performed. Examples include:
-    Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
-        :param suppliedItem: The item that is being delivered or has been supplied.
-        :param supplier: The individual responsible for dispensing the medication, supplier or device.
-        :param destination: Identification of the facility/location where the Supply was shipped to, as
-    part of the dispense event.
-        :param receiver: Identifies the person who picked up the Supply.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifier for the supply delivery event that is used to identify it across
+        multiple disparate systems.
+            :param basedOn: A plan, proposal or order that is fulfilled in whole or in part by this event.
+            :param partOf: A larger event of which this particular event is a component or step.
+            :param status: A code specifying the state of the dispense event.
+            :param patient: A link to a resource representing the person whom the delivered item is for.
+            :param type_: Indicates the type of dispensing event that is performed. Examples include:
+        Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
+            :param suppliedItem: The item that is being delivered or has been supplied.
+            :param supplier: The individual responsible for dispensing the medication, supplier or device.
+            :param destination: Identification of the facility/location where the Supply was shipped to, as
+        part of the dispense event.
+            :param receiver: Identifies the person who picked up the Supply.
         """
         super().__init__(
             resourceType="SupplyDelivery",
@@ -96,7 +107,7 @@ class SupplyDelivery(FhirResourceBase):
             partOf=partOf,
             status=status,
             patient=patient,
-            type=type,
+            type_=type_,
             suppliedItem=suppliedItem,
             supplier=supplier,
             destination=destination,
