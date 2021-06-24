@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import shutil
 from os import path
+from shutil import copyfile
 
 from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchemaParser
 
@@ -160,6 +161,15 @@ def main() -> int:
             # assert False, f"{resource_name}: {fhir_entity.type_} is not supported"
             print(f"{resource_name}: {fhir_entity.type_} is not supported")
         # print(result)
+
+        # copy resource.py
+        print(
+            f'Copying {resources_folder.joinpath("../base_types/resource.py")} to {resources_folder.joinpath("resource.py")}'
+        )
+        copyfile(
+            resources_folder.joinpath("../base_types/resource.py"),
+            resources_folder.joinpath("resource.py"),
+        )
     return 0
 
 

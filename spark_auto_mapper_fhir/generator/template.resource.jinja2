@@ -59,7 +59,9 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
         *,
         id_: FhirId,
         meta: Optional[Meta] = None,
+    {% if fhir_entity.cleaned_name != "DomainResource" %}
         extension: Optional[FhirList[ExtensionBase]] = None,
+    {%  endif %}
     {% for property in fhir_entity.properties %}
         {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.cleaned_type | replace(".","")}}{% if property.codeable_type %}[{{ property.codeable_type.cleaned_name }}]{% endif %} {% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
 
@@ -81,7 +83,9 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
             resourceType="{{fhir_entity.cleaned_name}}",
             id_=id_,
             meta=meta,
+        {% if fhir_entity.cleaned_name != "DomainResource" %}
             extension=extension,
+        {%  endif %}
         {% for property in fhir_entity.properties %}
             {{ property.name }}={{ property.name }},
         {% endfor %}
