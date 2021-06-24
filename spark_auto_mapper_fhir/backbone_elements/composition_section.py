@@ -80,7 +80,7 @@ class CompositionSection(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         title: Optional[FhirString] = None,
         code: Optional[CodeableConcept[DocumentSectionCodesCode]] = None,

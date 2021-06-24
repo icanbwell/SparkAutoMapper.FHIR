@@ -75,7 +75,7 @@ class AuditEventEntity(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         what: Optional[Reference[Union[Resource]]] = None,
         type_: Optional[Coding[AuditEventEntityTypeCode]] = None,

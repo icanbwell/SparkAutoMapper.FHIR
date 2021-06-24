@@ -12,34 +12,47 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.messageheader import MessageHeaderSchema
 
 if TYPE_CHECKING:
+    # destination (MessageHeader.Destination)
     from spark_auto_mapper_fhir.backbone_elements.message_header_destination import (
         MessageHeaderDestination,
     )
+
+    # sender (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for sender
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # enterer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for enterer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # source (MessageHeader.Source)
     from spark_auto_mapper_fhir.backbone_elements.message_header_source import (
         MessageHeaderSource,
     )
+
+    # responsible (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for responsible
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reason
@@ -48,13 +61,18 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for reason
+    # response (MessageHeader.Response)
     from spark_auto_mapper_fhir.backbone_elements.message_header_response import (
         MessageHeaderResponse,
     )
+
+    # focus (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for focus
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # definition (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
 

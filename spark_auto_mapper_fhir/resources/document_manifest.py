@@ -14,17 +14,25 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.documentmanifest import DocumentManifestSchema
 
 if TYPE_CHECKING:
+    # masterIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (DocumentReferenceStatus)
     from spark_auto_mapper_fhir.complex_types.document_reference_status import (
         DocumentReferenceStatus,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.act_code import ActCode
 
     # End Import for CodeableConcept for type_
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -32,7 +40,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for author
@@ -42,6 +54,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # recipient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for recipient
@@ -50,12 +64,20 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # source (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # description (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # content (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for content
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # related (DocumentManifest.Related)
     from spark_auto_mapper_fhir.backbone_elements.document_manifest_related import (
         DocumentManifestRelated,
     )

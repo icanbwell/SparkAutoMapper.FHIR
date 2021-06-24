@@ -18,22 +18,51 @@ from spark_fhir_schemas.r4.resources.chargeitemdefinition import (
 )
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # derivedFromUri (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # partOf (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # replaces (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -42,25 +71,39 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # approvalDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # lastReviewDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.charge_item_code import ChargeItemCodeCode
 
     # End Import for CodeableConcept for code
+    # instance (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for instance
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.resources.substance import Substance
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # applicability (ChargeItemDefinition.Applicability)
     from spark_auto_mapper_fhir.backbone_elements.charge_item_definition_applicability import (
         ChargeItemDefinitionApplicability,
     )
+
+    # propertyGroup (ChargeItemDefinition.PropertyGroup)
     from spark_auto_mapper_fhir.backbone_elements.charge_item_definition_property_group import (
         ChargeItemDefinitionPropertyGroup,
     )

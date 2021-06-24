@@ -103,7 +103,7 @@ class ClaimResponseAddItem(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         itemSequence: Optional[FhirList[positiveInt]] = None,
         detailSequence: Optional[FhirList[positiveInt]] = None,

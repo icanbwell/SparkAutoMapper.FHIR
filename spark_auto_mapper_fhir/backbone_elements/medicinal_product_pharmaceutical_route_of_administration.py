@@ -30,6 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
 
     # maxTreatmentPeriod (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # targetSpecies (MedicinalProductPharmaceutical.TargetSpecies)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_pharmaceutical_target_species import (
         MedicinalProductPharmaceuticalTargetSpecies,
@@ -47,7 +49,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministration(FhirBackboneElementBas
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept[GenericTypeCode],
         firstDose: Optional[Quantity] = None,

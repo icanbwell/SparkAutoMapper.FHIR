@@ -13,7 +13,10 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.diagnosticreport import DiagnosticReportSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
@@ -24,9 +27,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.nutrition_order import NutritionOrder
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # status (DiagnosticReportStatus)
     from spark_auto_mapper_fhir.complex_types.diagnostic_report_status import (
         DiagnosticReportStatus,
     )
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -35,6 +42,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for category
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
@@ -43,6 +51,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for code
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -50,11 +59,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # issued (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # performer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for performer
@@ -62,6 +77,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
+
+    # resultsInterpreter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for resultsInterpreter
@@ -69,22 +86,34 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
+
+    # specimen (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for specimen
     from spark_auto_mapper_fhir.resources.specimen import Specimen
+
+    # result (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for result
     from spark_auto_mapper_fhir.resources.observation import Observation
+
+    # imagingStudy (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for imagingStudy
     from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
+
+    # media (DiagnosticReport.Media)
     from spark_auto_mapper_fhir.backbone_elements.diagnostic_report_media import (
         DiagnosticReportMedia,
     )
+
+    # conclusion (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # conclusionCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for conclusionCode
@@ -93,6 +122,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for conclusionCode
+    # presentedForm (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
 

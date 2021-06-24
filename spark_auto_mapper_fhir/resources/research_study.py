@@ -13,18 +13,28 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.researchstudy import ResearchStudySchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # protocol (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for protocol
     from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf
+    # status (ResearchStudyStatus)
     from spark_auto_mapper_fhir.complex_types.research_study_status import (
         ResearchStudyStatus,
     )
+
+    # primaryPurposeType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for primaryPurposeType
@@ -33,6 +43,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for primaryPurposeType
+    # phase (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for phase
@@ -41,32 +52,41 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for phase
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for category
+    # focus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for focus
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for focus
+    # condition (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for condition
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for condition
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # relatedArtifact (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
+    # keyword (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for keyword
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for keyword
+    # location (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for location
@@ -75,25 +95,38 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for location
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # enrollment (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for enrollment
     from spark_auto_mapper_fhir.resources.group import Group
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # sponsor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for sponsor
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # principalInvestigator (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for principalInvestigator
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # site (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for site
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # reasonStopped (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonStopped
@@ -102,10 +135,15 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for reasonStopped
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # arm (ResearchStudy.Arm)
     from spark_auto_mapper_fhir.backbone_elements.research_study_arm import (
         ResearchStudyArm,
     )
+
+    # objective (ResearchStudy.Objective)
     from spark_auto_mapper_fhir.backbone_elements.research_study_objective import (
         ResearchStudyObjective,
     )

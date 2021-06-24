@@ -44,7 +44,7 @@ class Population(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         gender: Optional[CodeableConcept[GenericTypeCode]] = None,
         race: Optional[CodeableConcept[GenericTypeCode]] = None,

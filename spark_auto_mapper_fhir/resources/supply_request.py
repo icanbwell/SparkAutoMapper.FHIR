@@ -13,22 +13,36 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.supplyrequest import SupplyRequestSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (SupplyRequestStatus)
     from spark_auto_mapper_fhir.complex_types.supply_request_status import (
         SupplyRequestStatus,
     )
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.supply_type import SupplyTypeCode
 
     # End Import for CodeableConcept for category
+    # priority (RequestPriority)
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+
+    # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # parameter (SupplyRequest.Parameter)
     from spark_auto_mapper_fhir.backbone_elements.supply_request_parameter import (
         SupplyRequestParameter,
     )
+
+    # authoredOn (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # requester (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for requester
@@ -38,11 +52,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # supplier (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for supplier
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
+
+    # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
@@ -51,6 +69,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for reasonCode
+    # reasonReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -58,11 +77,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
+
+    # deliverFrom (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for deliverFrom
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # deliverTo (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for deliverTo

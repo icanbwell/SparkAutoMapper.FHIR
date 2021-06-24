@@ -39,7 +39,7 @@ class EncounterDiagnosis(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         condition: Reference[Union[Condition, Procedure]],
         use: Optional[CodeableConcept[DiagnosisRoleCode]] = None,

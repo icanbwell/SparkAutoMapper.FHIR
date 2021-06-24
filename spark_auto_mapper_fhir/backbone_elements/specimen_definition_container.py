@@ -59,7 +59,7 @@ class SpecimenDefinitionContainer(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         material: Optional[CodeableConcept[ContainerMaterialsCode]] = None,
         type_: Optional[CodeableConcept[SpecimenContainerTypeCode]] = None,

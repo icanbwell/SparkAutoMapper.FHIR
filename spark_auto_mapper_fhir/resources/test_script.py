@@ -15,20 +15,45 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.testscript import TestScriptSchema
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -37,31 +62,52 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # origin (TestScript.Origin)
     from spark_auto_mapper_fhir.backbone_elements.test_script_origin import (
         TestScriptOrigin,
     )
+
+    # destination (TestScript.Destination)
     from spark_auto_mapper_fhir.backbone_elements.test_script_destination import (
         TestScriptDestination,
     )
+
+    # metadata (TestScript.Metadata)
     from spark_auto_mapper_fhir.backbone_elements.test_script_metadata import (
         TestScriptMetadata,
     )
+
+    # fixture (TestScript.Fixture)
     from spark_auto_mapper_fhir.backbone_elements.test_script_fixture import (
         TestScriptFixture,
     )
+
+    # profile (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for profile
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # variable (TestScript.Variable)
     from spark_auto_mapper_fhir.backbone_elements.test_script_variable import (
         TestScriptVariable,
     )
+
+    # setup (TestScript.Setup)
     from spark_auto_mapper_fhir.backbone_elements.test_script_setup import (
         TestScriptSetup,
     )
+
+    # test (TestScript.Test)
     from spark_auto_mapper_fhir.backbone_elements.test_script_test import TestScriptTest
+
+    # teardown (TestScript.Teardown)
     from spark_auto_mapper_fhir.backbone_elements.test_script_teardown import (
         TestScriptTeardown,
     )

@@ -49,7 +49,7 @@ class SubstanceReferenceInformationClassification(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         domain: Optional[CodeableConcept[GenericTypeCode]] = None,
         classification: Optional[CodeableConcept[GenericTypeCode]] = None,

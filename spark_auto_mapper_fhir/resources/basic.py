@@ -13,7 +13,10 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.basic import BasicSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
@@ -22,11 +25,16 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for code
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # created (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for author

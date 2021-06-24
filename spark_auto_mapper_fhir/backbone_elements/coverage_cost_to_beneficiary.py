@@ -36,7 +36,7 @@ class CoverageCostToBeneficiary(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[CodeableConcept[CoverageCopayTypeCodesCode]] = None,
         exception: Optional[FhirList[CoverageException]] = None,

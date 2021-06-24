@@ -17,6 +17,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
 
     # resource (ResourceContainer)
+    from spark_auto_mapper_fhir.complex_types.resource_container import (
+        ResourceContainer,
+    )
+
     # search (Bundle.Search)
     from spark_auto_mapper_fhir.backbone_elements.bundle_search import BundleSearch
 
@@ -38,7 +42,7 @@ class BundleEntry(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         link: Optional[FhirList[BundleLink]] = None,
         fullUrl: Optional[uri] = None,

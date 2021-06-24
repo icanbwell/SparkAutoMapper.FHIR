@@ -14,14 +14,20 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.catalogentry import CatalogEntrySchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for type_
+    # orderable (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # referencedItem (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for referencedItem
@@ -38,31 +44,46 @@ if TYPE_CHECKING:
         ObservationDefinition,
     )
     from spark_auto_mapper_fhir.resources.binary import Binary
+
+    # additionalIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # classification (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for classification
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for classification
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # validityPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # validTo (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # lastUpdated (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # additionalCharacteristic (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for additionalCharacteristic
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for additionalCharacteristic
+    # additionalClassification (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for additionalClassification
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for additionalClassification
+    # relatedEntry (CatalogEntry.RelatedEntry)
     from spark_auto_mapper_fhir.backbone_elements.catalog_entry_related_entry import (
         CatalogEntryRelatedEntry,
     )

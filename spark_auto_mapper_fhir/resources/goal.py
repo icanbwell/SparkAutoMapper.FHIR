@@ -14,10 +14,15 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.goal import GoalSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # lifecycleStatus (GoalLifecycleStatus)
     from spark_auto_mapper_fhir.complex_types.goal_lifecycle_status import (
         GoalLifecycleStatus,
     )
+
+    # achievementStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for achievementStatus
@@ -26,18 +31,21 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for achievementStatus
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategoryCode
 
     # End Import for CodeableConcept for category
+    # priority (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriorityCode
 
     # End Import for CodeableConcept for priority
+    # description (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for description
@@ -46,15 +54,24 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for description
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # target (Goal.Target)
     from spark_auto_mapper_fhir.backbone_elements.goal_target import GoalTarget
+
+    # statusDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # statusReason (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # expressedBy (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for expressedBy
@@ -62,6 +79,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # addresses (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for addresses
@@ -73,7 +92,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.nutrition_order import NutritionOrder
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.resources.risk_assessment import RiskAssessment
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # outcomeCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for outcomeCode
@@ -82,6 +105,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for outcomeCode
+    # outcomeReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for outcomeReference

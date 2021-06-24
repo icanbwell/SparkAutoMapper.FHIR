@@ -13,51 +13,82 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.nutritionorder import NutritionOrderSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # instantiatesCanonical (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # instantiatesUri (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # instantiates (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # status (RequestStatus)
     from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
+
+    # intent (RequestIntent)
     from spark_auto_mapper_fhir.complex_types.request_intent import RequestIntent
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # dateTime (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # orderer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for orderer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # allergyIntolerance (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for allergyIntolerance
     from spark_auto_mapper_fhir.resources.allergy_intolerance import AllergyIntolerance
+
+    # foodPreferenceModifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for foodPreferenceModifier
     from spark_auto_mapper_fhir.value_sets.diet import DietCode
 
     # End Import for CodeableConcept for foodPreferenceModifier
+    # excludeFoodModifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for excludeFoodModifier
     from spark_auto_mapper_fhir.value_sets.food_type_codes import FoodTypeCodesCode
 
     # End Import for CodeableConcept for excludeFoodModifier
+    # oralDiet (NutritionOrder.OralDiet)
     from spark_auto_mapper_fhir.backbone_elements.nutrition_order_oral_diet import (
         NutritionOrderOralDiet,
     )
+
+    # supplement (NutritionOrder.Supplement)
     from spark_auto_mapper_fhir.backbone_elements.nutrition_order_supplement import (
         NutritionOrderSupplement,
     )
+
+    # enteralFormula (NutritionOrder.EnteralFormula)
     from spark_auto_mapper_fhir.backbone_elements.nutrition_order_enteral_formula import (
         NutritionOrderEnteralFormula,
     )
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 

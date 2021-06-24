@@ -30,7 +30,7 @@ class AuditEventNetwork(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         address: Optional[FhirString] = None,
         type_: Optional[AuditEventAgentNetworkType] = None,

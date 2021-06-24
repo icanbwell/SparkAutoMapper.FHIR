@@ -58,7 +58,7 @@ class EffectEvidenceSynthesisEffectEstimate(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         type_: Optional[CodeableConcept[EffectEstimateTypeCode]] = None,

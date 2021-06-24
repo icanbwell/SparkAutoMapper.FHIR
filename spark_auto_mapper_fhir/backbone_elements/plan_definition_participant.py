@@ -37,7 +37,7 @@ class PlanDefinitionParticipant(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: ActionParticipantType,
         role: Optional[CodeableConcept[ActionParticipantRoleCode]] = None,

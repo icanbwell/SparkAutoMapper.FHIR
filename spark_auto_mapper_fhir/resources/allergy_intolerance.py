@@ -13,7 +13,10 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.allergyintolerance import AllergyIntoleranceSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # clinicalStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for clinicalStatus
@@ -22,6 +25,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for clinicalStatus
+    # verificationStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for verificationStatus
@@ -30,30 +34,44 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for verificationStatus
+    # type_ (AllergyIntoleranceType)
     from spark_auto_mapper_fhir.complex_types.allergy_intolerance_type import (
         AllergyIntoleranceType,
     )
+
+    # category (AllergyIntoleranceCategory)
     from spark_auto_mapper_fhir.complex_types.allergy_intolerance_category import (
         AllergyIntoleranceCategory,
     )
+
+    # criticality (AllergyIntoleranceCriticality)
     from spark_auto_mapper_fhir.complex_types.allergy_intolerance_criticality import (
         AllergyIntoleranceCriticality,
     )
+
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for code
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # recordedDate (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # recorder (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for recorder
@@ -61,6 +79,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # asserter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for asserter
@@ -68,8 +88,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # lastOccurrence (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # reaction (AllergyIntolerance.Reaction)
     from spark_auto_mapper_fhir.backbone_elements.allergy_intolerance_reaction import (
         AllergyIntoleranceReaction,
     )

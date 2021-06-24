@@ -32,7 +32,7 @@ class TestReportAction(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         operation: Optional[TestReportOperation] = None,
         assert_: Optional[TestReportAssert] = None,

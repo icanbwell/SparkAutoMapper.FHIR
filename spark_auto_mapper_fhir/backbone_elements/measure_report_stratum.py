@@ -42,7 +42,7 @@ class MeasureReportStratum(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         value: Optional[CodeableConcept[GenericTypeCode]] = None,
         component: Optional[FhirList[MeasureReportComponent]] = None,

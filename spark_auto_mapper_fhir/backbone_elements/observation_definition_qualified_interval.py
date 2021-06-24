@@ -62,7 +62,7 @@ class ObservationDefinitionQualifiedInterval(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[ObservationRangeCategory] = None,
         range: Optional[Range] = None,

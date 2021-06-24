@@ -14,24 +14,33 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.healthcareservice import HealthcareServiceSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # active (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # providedBy (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for providedBy
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategoryCode
 
     # End Import for CodeableConcept for category
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
 
     # End Import for CodeableConcept for type_
+    # specialty (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
@@ -40,19 +49,34 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for specialty
+    # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # comment (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # extraDetails (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # photo (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # coverageArea (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for coverageArea
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # serviceProvisionCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceProvisionCode
@@ -61,41 +85,56 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for serviceProvisionCode
+    # eligibility (HealthcareService.Eligibility)
     from spark_auto_mapper_fhir.backbone_elements.healthcare_service_eligibility import (
         HealthcareServiceEligibility,
     )
+
+    # program (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for program
     from spark_auto_mapper_fhir.value_sets.program import ProgramCode
 
     # End Import for CodeableConcept for program
+    # characteristic (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for characteristic
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for characteristic
+    # communication (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for communication
     from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
 
     # End Import for CodeableConcept for communication
+    # referralMethod (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for referralMethod
     from spark_auto_mapper_fhir.value_sets.referral_method import ReferralMethodCode
 
     # End Import for CodeableConcept for referralMethod
+    # appointmentRequired (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # availableTime (HealthcareService.AvailableTime)
     from spark_auto_mapper_fhir.backbone_elements.healthcare_service_available_time import (
         HealthcareServiceAvailableTime,
     )
+
+    # notAvailable (HealthcareService.NotAvailable)
     from spark_auto_mapper_fhir.backbone_elements.healthcare_service_not_available import (
         HealthcareServiceNotAvailable,
     )
+
+    # availabilityExceptions (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # endpoint (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for endpoint

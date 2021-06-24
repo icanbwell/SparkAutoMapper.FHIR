@@ -32,7 +32,7 @@ class ImmunizationEducation(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         documentType: Optional[FhirString] = None,
         reference: Optional[uri] = None,

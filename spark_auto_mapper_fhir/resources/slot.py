@@ -14,19 +14,24 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.slot import SlotSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # serviceCategory (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategoryCode
 
     # End Import for CodeableConcept for serviceCategory
+    # serviceType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
 
     # End Import for CodeableConcept for serviceType
+    # specialty (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
@@ -35,20 +40,32 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for specialty
+    # appointmentType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for appointmentType
     from spark_auto_mapper_fhir.value_sets.v2_0276 import V2_0276
 
     # End Import for CodeableConcept for appointmentType
+    # schedule (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for schedule
     from spark_auto_mapper_fhir.resources.schedule import Schedule
+
+    # status (SlotStatus)
     from spark_auto_mapper_fhir.complex_types.slot_status import SlotStatus
+
+    # start (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # end (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # overbooked (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # comment (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
 

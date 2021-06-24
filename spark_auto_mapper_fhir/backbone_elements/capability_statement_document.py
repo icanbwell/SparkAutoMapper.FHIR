@@ -31,7 +31,7 @@ class CapabilityStatementDocument(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         mode: DocumentMode,
         documentation: Optional[markdown] = None,

@@ -13,10 +13,15 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.adverseevent import AdverseEventSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # actuality (AdverseEventActuality)
     from spark_auto_mapper_fhir.complex_types.adverse_event_actuality import (
         AdverseEventActuality,
     )
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -25,6 +30,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for category
+    # event (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for event
@@ -33,6 +39,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for event
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -40,21 +47,35 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # detected (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # recordedDate (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # resultingCondition (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for resultingCondition
     from spark_auto_mapper_fhir.resources.condition import Condition
+
+    # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # seriousness (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for seriousness
@@ -63,6 +84,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for seriousness
+    # severity (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for severity
@@ -71,6 +93,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for severity
+    # outcome (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for outcome
@@ -79,6 +102,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for outcome
+    # recorder (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for recorder
@@ -86,15 +110,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # contributor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for contributor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # suspectEntity (AdverseEvent.SuspectEntity)
     from spark_auto_mapper_fhir.backbone_elements.adverse_event_suspect_entity import (
         AdverseEventSuspectEntity,
     )
+
+    # subjectMedicalHistory (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subjectMedicalHistory
@@ -108,10 +138,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.resources.media import Media
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
+
+    # referenceDocument (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for referenceDocument
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
+
+    # study (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for study

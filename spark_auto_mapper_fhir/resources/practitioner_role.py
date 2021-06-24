@@ -14,23 +14,35 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.practitionerrole import PractitionerRoleSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # active (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # practitioner (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for practitioner
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+
+    # organization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for organization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.practitioner_role import PractitionerRoleCode
 
     # End Import for CodeableConcept for code
+    # specialty (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
@@ -39,22 +51,35 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for specialty
+    # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # healthcareService (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for healthcareService
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
+
+    # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # availableTime (PractitionerRole.AvailableTime)
     from spark_auto_mapper_fhir.backbone_elements.practitioner_role_available_time import (
         PractitionerRoleAvailableTime,
     )
+
+    # notAvailable (PractitionerRole.NotAvailable)
     from spark_auto_mapper_fhir.backbone_elements.practitioner_role_not_available import (
         PractitionerRoleNotAvailable,
     )
+
+    # availabilityExceptions (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # endpoint (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for endpoint

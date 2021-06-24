@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.parameters import ParametersSchema
 
 if TYPE_CHECKING:
+    # parameter (Parameters.Parameter)
     from spark_auto_mapper_fhir.backbone_elements.parameters_parameter import (
         ParametersParameter,
     )

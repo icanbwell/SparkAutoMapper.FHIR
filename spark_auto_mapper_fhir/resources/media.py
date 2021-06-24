@@ -13,35 +13,47 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.media import MediaSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # status (EventStatus)
     from spark_auto_mapper_fhir.complex_types.event_status import EventStatus
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.media_type import MediaTypeCode
 
     # End Import for CodeableConcept for type_
+    # modality (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.value_sets.media_modality import MediaModalityCode
 
     # End Import for CodeableConcept for modality
+    # view (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for view
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for view
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -52,11 +64,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.specimen import Specimen
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # issued (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # operator (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for operator
@@ -67,6 +85,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
@@ -75,6 +95,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for reasonCode
+    # bodySite (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
@@ -83,18 +104,33 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for bodySite
+    # deviceName (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # device (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.device_metric import DeviceMetric
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # height (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # width (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # frames (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # duration (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # content (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 

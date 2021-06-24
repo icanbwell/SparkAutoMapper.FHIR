@@ -17,20 +17,45 @@ from spark_fhir_schemas.r4.resources.structuredefinition import (
 )
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -39,8 +64,13 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # keyword (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for keyword
@@ -49,26 +79,47 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for keyword
+    # fhirVersion (FHIRVersion)
     from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
+
+    # mapping (StructureDefinition.Mapping)
     from spark_auto_mapper_fhir.backbone_elements.structure_definition_mapping import (
         StructureDefinitionMapping,
     )
+
+    # kind (StructureDefinitionKind)
     from spark_auto_mapper_fhir.complex_types.structure_definition_kind import (
         StructureDefinitionKind,
     )
+
+    # abstract (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # context (StructureDefinition.Context)
     from spark_auto_mapper_fhir.backbone_elements.structure_definition_context import (
         StructureDefinitionContext,
     )
+
+    # contextInvariant (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # type_ (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # baseDefinition (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # derivation (TypeDerivationRule)
     from spark_auto_mapper_fhir.complex_types.type_derivation_rule import (
         TypeDerivationRule,
     )
+
+    # snapshot (StructureDefinition.Snapshot)
     from spark_auto_mapper_fhir.backbone_elements.structure_definition_snapshot import (
         StructureDefinitionSnapshot,
     )
+
+    # differential (StructureDefinition.Differential)
     from spark_auto_mapper_fhir.backbone_elements.structure_definition_differential import (
         StructureDefinitionDifferential,
     )

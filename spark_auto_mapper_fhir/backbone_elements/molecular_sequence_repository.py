@@ -34,7 +34,7 @@ class MolecularSequenceRepository(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: repositoryType,
         url: Optional[uri] = None,

@@ -38,7 +38,7 @@ class CapabilityStatementMessaging(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         endpoint: Optional[FhirList[CapabilityStatementEndpoint]] = None,
         reliableCache: Optional[unsignedInt] = None,

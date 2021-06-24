@@ -30,7 +30,7 @@ class EpisodeOfCareStatusHistory(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         status: EpisodeOfCareStatus,
         period: Period,

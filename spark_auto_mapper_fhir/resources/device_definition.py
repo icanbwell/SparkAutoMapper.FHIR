@@ -13,60 +13,97 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.devicedefinition import DeviceDefinitionSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # udiDeviceIdentifier (DeviceDefinition.UdiDeviceIdentifier)
     from spark_auto_mapper_fhir.backbone_elements.device_definition_udi_device_identifier import (
         DeviceDefinitionUdiDeviceIdentifier,
     )
+
+    # deviceName (DeviceDefinition.DeviceName)
     from spark_auto_mapper_fhir.backbone_elements.device_definition_device_name import (
         DeviceDefinitionDeviceName,
     )
+
+    # modelNumber (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.fhir_device_types import FHIRDeviceTypesCode
 
     # End Import for CodeableConcept for type_
+    # specialization (DeviceDefinition.Specialization)
     from spark_auto_mapper_fhir.backbone_elements.device_definition_specialization import (
         DeviceDefinitionSpecialization,
     )
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # safety (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for safety
     from spark_auto_mapper_fhir.value_sets.device_safety import DeviceSafetyCode
 
     # End Import for CodeableConcept for safety
+    # shelfLifeStorage (ProductShelfLife)
     from spark_auto_mapper_fhir.backbone_elements.product_shelf_life import (
         ProductShelfLife,
     )
+
+    # physicalCharacteristics (ProdCharacteristic)
     from spark_auto_mapper_fhir.backbone_elements.prod_characteristic import (
         ProdCharacteristic,
     )
+
+    # languageCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for languageCode
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for languageCode
+    # capability (DeviceDefinition.Capability)
     from spark_auto_mapper_fhir.backbone_elements.device_definition_capability import (
         DeviceDefinitionCapability,
     )
+
+    # property (DeviceDefinition.Property)
     from spark_auto_mapper_fhir.backbone_elements.device_definition_property import (
         DeviceDefinitionProperty,
     )
+
+    # owner (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for owner
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # contact (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # onlineInformation (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # parentDevice (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for parentDevice
+    # material (DeviceDefinition.Material)
     from spark_auto_mapper_fhir.backbone_elements.device_definition_material import (
         DeviceDefinitionMaterial,
     )

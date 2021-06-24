@@ -64,7 +64,7 @@ class TimingRepeat(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         count: Optional[positiveInt] = None,
         countMax: Optional[positiveInt] = None,

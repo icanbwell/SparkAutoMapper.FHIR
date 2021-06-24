@@ -46,7 +46,7 @@ class AuditEventSource(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         site: Optional[FhirString] = None,
         observer: Reference[

@@ -43,7 +43,7 @@ class MolecularSequenceStructureVariant(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         variantType: Optional[CodeableConcept[GenericTypeCode]] = None,
         exact: Optional[FhirBoolean] = None,

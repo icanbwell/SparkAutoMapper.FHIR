@@ -84,6 +84,7 @@ class FhirXmlSchemaParser:
         "integer": "FhirInteger",
         "string": "FhirString",
         "DataType": "FhirDataType",
+        "list": "FhirList",
     }
 
     @staticmethod
@@ -205,7 +206,6 @@ class FhirXmlSchemaParser:
             "Element",
             "List",
             "FhirString",
-            "",
         ]
 
         fhir_entities = [
@@ -385,7 +385,9 @@ class FhirXmlSchemaParser:
             if fhir_entity_list:
                 fhir_entity = fhir_entity_list[0]
                 fhir_property_list = [
-                    p for p in fhir_entity.properties if p.name == property_name
+                    p
+                    for p in fhir_entity.properties
+                    if p.name == FhirXmlSchemaParser.fix_python_keywords(property_name)
                 ]
 
                 if fhir_property_list:
@@ -822,8 +824,20 @@ class FhirXmlSchemaParser:
             FhirValueSet
         ] = FhirXmlSchemaParser.get_v2_code_systems(data_dir)
 
-        fhir_value_sets.extend(fhir_v2_code_systems)
-        fhir_value_sets.extend(fhir_v3_code_systems)
+        fhir_value_sets.extend(
+            [
+                c
+                for c in fhir_v2_code_systems
+                if c.cleaned_name not in [b.cleaned_name for b in fhir_value_sets]
+            ]
+        )
+        fhir_value_sets.extend(
+            [
+                c
+                for c in fhir_v3_code_systems
+                if c.cleaned_name not in [b.cleaned_name for b in fhir_value_sets]
+            ]
+        )
 
         return fhir_value_sets
 

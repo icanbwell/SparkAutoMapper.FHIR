@@ -15,18 +15,39 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.examplescenario import ExampleScenarioSchema
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -35,17 +56,28 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # actor (ExampleScenario.Actor)
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_actor import (
         ExampleScenarioActor,
     )
+
+    # instance (ExampleScenario.Instance)
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_instance import (
         ExampleScenarioInstance,
     )
+
+    # process (ExampleScenario.Process)
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_process import (
         ExampleScenarioProcess,
     )
+
+    # workflow (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
 

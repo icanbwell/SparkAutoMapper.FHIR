@@ -37,7 +37,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: CodeableConcept[GenericTypeCode],
         reference: FhirList[Reference[Union[MedicationKnowledge]]],

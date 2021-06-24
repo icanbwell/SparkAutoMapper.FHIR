@@ -14,51 +14,89 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.task import TaskSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # instantiatesCanonical (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # instantiatesUri (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # groupIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf
+    # status (TaskStatus)
     from spark_auto_mapper_fhir.complex_types.task_status import TaskStatus
+
+    # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for statusReason
+    # businessStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for businessStatus
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for businessStatus
+    # intent (TaskIntent)
     from spark_auto_mapper_fhir.complex_types.task_intent import TaskIntent
+
+    # priority (RequestPriority)
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.task_code import TaskCodeCode
 
     # End Import for CodeableConcept for code
+    # description (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # focus (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for focus
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # for_ (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # Imports for References for for_
+    from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # executionPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # authoredOn (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # lastModified (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # requester (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for requester
@@ -68,6 +106,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # performerType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for performerType
@@ -76,6 +116,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for performerType
+    # owner (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for owner
@@ -87,34 +128,51 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for reasonCode
+    # reasonReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # insurance (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for insurance
     from spark_auto_mapper_fhir.resources.coverage import Coverage
     from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # relevantHistory (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for relevantHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
+
+    # restriction (Task.Restriction)
     from spark_auto_mapper_fhir.backbone_elements.task_restriction import (
         TaskRestriction,
     )
+
+    # input (Task.Input)
     from spark_auto_mapper_fhir.backbone_elements.task_input import TaskInput
+
+    # output (Task.Output)
     from spark_auto_mapper_fhir.backbone_elements.task_output import TaskOutput
 
 
@@ -146,7 +204,7 @@ class Task(FhirResourceBase):
         code: Optional[CodeableConcept[TaskCodeCode]] = None,
         description: Optional[FhirString] = None,
         focus: Optional[Reference[Union[Resource]]] = None,
-        for_: Optional[Reference] = None,
+        for_: Optional[Reference[Union[Resource]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         executionPeriod: Optional[Period] = None,
         authoredOn: Optional[FhirDateTime] = None,

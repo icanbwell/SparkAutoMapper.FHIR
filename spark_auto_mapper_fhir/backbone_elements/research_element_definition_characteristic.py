@@ -25,11 +25,15 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for unitOfMeasure
     # studyEffectiveDescription (string)
     # studyEffectiveTimeFromStart (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # studyEffectiveGroupMeasure (GroupMeasure)
     from spark_auto_mapper_fhir.complex_types.group_measure import GroupMeasure
 
     # participantEffectiveDescription (string)
     # participantEffectiveTimeFromStart (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # participantEffectiveGroupMeasure (GroupMeasure)
     from spark_auto_mapper_fhir.complex_types.group_measure import GroupMeasure
 
@@ -45,7 +49,7 @@ class ResearchElementDefinitionCharacteristic(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         usageContext: Optional[FhirList[UsageContext]] = None,
         exclude: Optional[FhirBoolean] = None,

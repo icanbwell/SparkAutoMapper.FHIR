@@ -17,19 +17,42 @@ from spark_fhir_schemas.r4.resources.terminologycapabilities import (
 )
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -38,33 +61,56 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # kind (CapabilityStatementKind)
     from spark_auto_mapper_fhir.complex_types.capability_statement_kind import (
         CapabilityStatementKind,
     )
+
+    # software (TerminologyCapabilities.Software)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_software import (
         TerminologyCapabilitiesSoftware,
     )
+
+    # implementation (TerminologyCapabilities.Implementation)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_implementation import (
         TerminologyCapabilitiesImplementation,
     )
+
+    # lockedDate (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # codeSystem (TerminologyCapabilities.CodeSystem)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_code_system import (
         TerminologyCapabilitiesCodeSystem,
     )
+
+    # expansion (TerminologyCapabilities.Expansion)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_expansion import (
         TerminologyCapabilitiesExpansion,
     )
+
+    # codeSearch (CodeSearchSupport)
     from spark_auto_mapper_fhir.complex_types.code_search_support import (
         CodeSearchSupport,
     )
+
+    # validateCode (TerminologyCapabilities.ValidateCode)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_validate_code import (
         TerminologyCapabilitiesValidateCode,
     )
+
+    # translation (TerminologyCapabilities.Translation)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_translation import (
         TerminologyCapabilitiesTranslation,
     )
+
+    # closure (TerminologyCapabilities.Closure)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_closure import (
         TerminologyCapabilitiesClosure,
     )

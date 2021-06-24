@@ -67,7 +67,7 @@ class PlanDefinitionGoal(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[CodeableConcept[GoalCategoryCode]] = None,
         description: CodeableConcept[SNOMEDCTClinicalFindingsCode],

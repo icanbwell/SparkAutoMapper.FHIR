@@ -17,20 +17,45 @@ from spark_fhir_schemas.r4.resources.operationdefinition import (
 )
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # kind (OperationKind)
     from spark_auto_mapper_fhir.complex_types.operation_kind import OperationKind
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -39,20 +64,45 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # affectsState (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # code (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # comment (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # base (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # resource (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # system (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # type_ (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # instance (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # inputProfile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # outputProfile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # parameter (OperationDefinition.Parameter)
     from spark_auto_mapper_fhir.backbone_elements.operation_definition_parameter import (
         OperationDefinitionParameter,
     )
+
+    # overload (OperationDefinition.Overload)
     from spark_auto_mapper_fhir.backbone_elements.operation_definition_overload import (
         OperationDefinitionOverload,
     )

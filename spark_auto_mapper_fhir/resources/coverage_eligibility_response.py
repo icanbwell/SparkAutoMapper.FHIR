@@ -16,48 +16,74 @@ from spark_fhir_schemas.r4.resources.coverageeligibilityresponse import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # purpose (EligibilityResponsePurpose)
     from spark_auto_mapper_fhir.complex_types.eligibility_response_purpose import (
         EligibilityResponsePurpose,
     )
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # requestor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for requestor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # request (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.coverage_eligibility_request import (
         CoverageEligibilityRequest,
     )
+
+    # outcome (RemittanceOutcome)
     from spark_auto_mapper_fhir.complex_types.remittance_outcome import (
         RemittanceOutcome,
     )
+
+    # disposition (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # insurer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # insurance (CoverageEligibilityResponse.Insurance)
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_insurance import (
         CoverageEligibilityResponseInsurance,
     )
+
+    # preAuthRef (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # form (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for form
     from spark_auto_mapper_fhir.value_sets.form_codes import FormCodesCode
 
     # End Import for CodeableConcept for form
+    # error (CoverageEligibilityResponse.Error)
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_error import (
         CoverageEligibilityResponseError,
     )

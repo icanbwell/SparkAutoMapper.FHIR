@@ -38,7 +38,7 @@ class CoverageEligibilityResponseInsurance(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         coverage: Reference[Union[Coverage]],
         inforce: Optional[FhirBoolean] = None,

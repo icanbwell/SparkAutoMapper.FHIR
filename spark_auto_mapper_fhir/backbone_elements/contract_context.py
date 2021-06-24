@@ -40,7 +40,7 @@ class ContractContext(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         reference: Optional[Reference[Union[Resource]]] = None,
         code: Optional[

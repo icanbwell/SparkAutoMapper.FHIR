@@ -19,6 +19,8 @@ if TYPE_CHECKING:
 
     # exclude (boolean)
     # timeFromStart (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # groupMeasure (GroupMeasure)
     from spark_auto_mapper_fhir.complex_types.group_measure import GroupMeasure
 
@@ -34,7 +36,7 @@ class EvidenceVariableCharacteristic(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         usageContext: Optional[FhirList[UsageContext]] = None,

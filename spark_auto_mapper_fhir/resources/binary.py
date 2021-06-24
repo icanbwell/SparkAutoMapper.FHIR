@@ -12,11 +12,16 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.binary import BinarySchema
 
 if TYPE_CHECKING:
+    # contentType (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # securityContext (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for securityContext
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # data (base64Binary)
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
 
 

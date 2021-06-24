@@ -60,7 +60,7 @@ class SubstanceSpecificationStructure(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         stereochemistry: Optional[CodeableConcept[GenericTypeCode]] = None,
         opticalActivity: Optional[CodeableConcept[GenericTypeCode]] = None,

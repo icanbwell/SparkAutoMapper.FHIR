@@ -34,7 +34,7 @@ class SubstancePolymerMonomerSet(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         ratioType: Optional[CodeableConcept[GenericTypeCode]] = None,
         startingMaterial: Optional[FhirList[SubstancePolymerStartingMaterial]] = None,

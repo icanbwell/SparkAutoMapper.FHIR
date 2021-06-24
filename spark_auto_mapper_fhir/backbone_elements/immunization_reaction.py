@@ -34,7 +34,7 @@ class ImmunizationReaction(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         date: Optional[FhirDateTime] = None,
         detail: Optional[Reference[Union[Observation]]] = None,

@@ -12,12 +12,25 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.bundle import BundleSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # type_ (BundleType)
     from spark_auto_mapper_fhir.complex_types.bundle_type import BundleType
+
+    # timestamp (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # total (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # link (Bundle.Link)
     from spark_auto_mapper_fhir.backbone_elements.bundle_link import BundleLink
+
+    # entry (Bundle.Entry)
     from spark_auto_mapper_fhir.backbone_elements.bundle_entry import BundleEntry
+
+    # signature (Signature)
     from spark_auto_mapper_fhir.complex_types.signature import Signature
 
 

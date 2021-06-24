@@ -13,10 +13,15 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.insuranceplan import InsurancePlanSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
@@ -25,35 +30,56 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # alias (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # ownedBy (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for ownedBy
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # administeredBy (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for administeredBy
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # coverageArea (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for coverageArea
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # contact (InsurancePlan.Contact)
     from spark_auto_mapper_fhir.backbone_elements.insurance_plan_contact import (
         InsurancePlanContact,
     )
+
+    # endpoint (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
+
+    # network (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for network
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # coverage (InsurancePlan.Coverage)
     from spark_auto_mapper_fhir.backbone_elements.insurance_plan_coverage import (
         InsurancePlanCoverage,
     )
+
+    # plan (InsurancePlan.Plan)
     from spark_auto_mapper_fhir.backbone_elements.insurance_plan_plan import (
         InsurancePlanPlan,
     )

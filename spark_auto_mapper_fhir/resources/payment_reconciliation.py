@@ -17,42 +17,70 @@ from spark_fhir_schemas.r4.resources.paymentreconciliation import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # paymentIssuer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for paymentIssuer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # request (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.task import Task
+
+    # requestor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for requestor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # outcome (RemittanceOutcome)
     from spark_auto_mapper_fhir.complex_types.remittance_outcome import (
         RemittanceOutcome,
     )
+
+    # disposition (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # paymentDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # paymentAmount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # paymentIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # detail (PaymentReconciliation.Detail)
     from spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_detail import (
         PaymentReconciliationDetail,
     )
+
+    # formCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for formCode
     from spark_auto_mapper_fhir.value_sets.form_codes import FormCodesCode
 
     # End Import for CodeableConcept for formCode
+    # processNote (PaymentReconciliation.ProcessNote)
     from spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_process_note import (
         PaymentReconciliationProcessNote,
     )

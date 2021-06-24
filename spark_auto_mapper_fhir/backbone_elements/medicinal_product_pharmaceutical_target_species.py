@@ -34,7 +34,7 @@ class MedicinalProductPharmaceuticalTargetSpecies(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: CodeableConcept[GenericTypeCode],
         withdrawalPeriod: Optional[

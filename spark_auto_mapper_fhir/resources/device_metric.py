@@ -12,7 +12,10 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.devicemetric import DeviceMetricSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
@@ -21,6 +24,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # unit (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for unit
@@ -29,24 +33,37 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for unit
+    # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for source
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # parent (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for parent
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # operationalStatus (DeviceMetricOperationalStatus)
     from spark_auto_mapper_fhir.complex_types.device_metric_operational_status import (
         DeviceMetricOperationalStatus,
     )
+
+    # color (DeviceMetricColor)
     from spark_auto_mapper_fhir.complex_types.device_metric_color import (
         DeviceMetricColor,
     )
+
+    # category (DeviceMetricCategory)
     from spark_auto_mapper_fhir.complex_types.device_metric_category import (
         DeviceMetricCategory,
     )
+
+    # measurementPeriod (Timing)
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
+
+    # calibration (DeviceMetric.Calibration)
     from spark_auto_mapper_fhir.backbone_elements.device_metric_calibration import (
         DeviceMetricCalibration,
     )

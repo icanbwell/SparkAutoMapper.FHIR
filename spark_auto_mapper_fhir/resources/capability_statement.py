@@ -17,19 +17,42 @@ from spark_fhir_schemas.r4.resources.capabilitystatement import (
 )
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -38,29 +61,56 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # kind (CapabilityStatementKind)
     from spark_auto_mapper_fhir.complex_types.capability_statement_kind import (
         CapabilityStatementKind,
     )
+
+    # instantiates (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # imports (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # software (CapabilityStatement.Software)
     from spark_auto_mapper_fhir.backbone_elements.capability_statement_software import (
         CapabilityStatementSoftware,
     )
+
+    # implementation (CapabilityStatement.Implementation)
     from spark_auto_mapper_fhir.backbone_elements.capability_statement_implementation import (
         CapabilityStatementImplementation,
     )
+
+    # fhirVersion (FHIRVersion)
     from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
+
+    # format (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # patchFormat (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # implementationGuide (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # rest (CapabilityStatement.Rest)
     from spark_auto_mapper_fhir.backbone_elements.capability_statement_rest import (
         CapabilityStatementRest,
     )
+
+    # messaging (CapabilityStatement.Messaging)
     from spark_auto_mapper_fhir.backbone_elements.capability_statement_messaging import (
         CapabilityStatementMessaging,
     )
+
+    # document (CapabilityStatement.Document)
     from spark_auto_mapper_fhir.backbone_elements.capability_statement_document import (
         CapabilityStatementDocument,
     )

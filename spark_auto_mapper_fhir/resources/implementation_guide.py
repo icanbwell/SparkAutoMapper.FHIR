@@ -17,19 +17,42 @@ from spark_fhir_schemas.r4.resources.implementationguide import (
 )
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -38,19 +61,34 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # packageId (id)
     from spark_auto_mapper_fhir.complex_types.id import id
+
+    # license (SPDXLicense)
     from spark_auto_mapper_fhir.complex_types.spdx_license import SPDXLicense
+
+    # fhirVersion (FHIRVersion)
     from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
+
+    # dependsOn (ImplementationGuide.DependsOn)
     from spark_auto_mapper_fhir.backbone_elements.implementation_guide_depends_on import (
         ImplementationGuideDependsOn,
     )
+
+    # global_ (ImplementationGuide.Global)
     from spark_auto_mapper_fhir.backbone_elements.implementation_guide_global import (
         ImplementationGuideGlobal,
     )
+
+    # definition (ImplementationGuide.Definition)
     from spark_auto_mapper_fhir.backbone_elements.implementation_guide_definition import (
         ImplementationGuideDefinition,
     )
+
+    # manifest (ImplementationGuide.Manifest)
     from spark_auto_mapper_fhir.backbone_elements.implementation_guide_manifest import (
         ImplementationGuideManifest,
     )

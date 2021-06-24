@@ -15,19 +15,42 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.searchparameter import SearchParameterSchema
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # derivedFrom (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -36,21 +59,48 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # code (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # base (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # type_ (SearchParamType)
     from spark_auto_mapper_fhir.complex_types.search_param_type import SearchParamType
+
+    # expression (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # xpath (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # xpathUsage (XPathUsageType)
     from spark_auto_mapper_fhir.complex_types.x_path_usage_type import XPathUsageType
+
+    # target (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # multipleOr (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # multipleAnd (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # comparator (SearchComparator)
     from spark_auto_mapper_fhir.complex_types.search_comparator import SearchComparator
+
+    # modifier (SearchModifierCode)
     from spark_auto_mapper_fhir.complex_types.search_modifier_code import (
         SearchModifierCode,
     )
+
+    # chain (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # component (SearchParameter.Component)
     from spark_auto_mapper_fhir.backbone_elements.search_parameter_component import (
         SearchParameterComponent,
     )

@@ -33,6 +33,8 @@ if TYPE_CHECKING:
 
     # requirement (string)
     # retentionTime (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # rejectionCriterion (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -59,7 +61,7 @@ class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         isDerived: Optional[FhirBoolean] = None,
         type_: Optional[CodeableConcept[V2_0487]] = None,

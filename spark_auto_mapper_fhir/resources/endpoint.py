@@ -13,8 +13,13 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.endpoint import EndpointSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (EndpointStatus)
     from spark_auto_mapper_fhir.complex_types.endpoint_status import EndpointStatus
+
+    # connectionType (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for connectionType
@@ -23,13 +28,22 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for connectionType
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # managingOrganization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for managingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # contact (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # payloadType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for payloadType
@@ -38,8 +52,13 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for payloadType
+    # payloadMimeType (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # address (url)
     from spark_auto_mapper_fhir.complex_types.url import url
+
+    # header (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
 

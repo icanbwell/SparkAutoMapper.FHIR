@@ -12,7 +12,10 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.observation import ObservationSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
@@ -24,6 +27,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.nutrition_order import NutritionOrder
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf
@@ -37,9 +42,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.resources.immunization import Immunization
     from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
+
+    # status (ObservationStatus)
     from spark_auto_mapper_fhir.complex_types.observation_status import (
         ObservationStatus,
     )
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -48,12 +57,14 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for category
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodesCode
 
     # End Import for CodeableConcept for code
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -61,15 +72,23 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # focus (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for focus
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # issued (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # performer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for performer
@@ -79,6 +98,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # dataAbsentReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for dataAbsentReason
@@ -87,6 +108,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for dataAbsentReason
+    # interpretation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for interpretation
@@ -95,7 +117,10 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for interpretation
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # bodySite (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
@@ -104,6 +129,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for bodySite
+    # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for method
@@ -112,18 +138,25 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for method
+    # specimen (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for specimen
     from spark_auto_mapper_fhir.resources.specimen import Specimen
+
+    # device (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.device_metric import DeviceMetric
+
+    # referenceRange (Observation.ReferenceRange)
     from spark_auto_mapper_fhir.backbone_elements.observation_reference_range import (
         ObservationReferenceRange,
     )
+
+    # hasMember (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for hasMember
@@ -131,6 +164,8 @@ if TYPE_CHECKING:
         QuestionnaireResponse,
     )
     from spark_auto_mapper_fhir.resources.molecular_sequence import MolecularSequence
+
+    # derivedFrom (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for derivedFrom
@@ -141,6 +176,8 @@ if TYPE_CHECKING:
         QuestionnaireResponse,
     )
     from spark_auto_mapper_fhir.resources.molecular_sequence import MolecularSequence
+
+    # component (Observation.Component)
     from spark_auto_mapper_fhir.backbone_elements.observation_component import (
         ObservationComponent,
     )

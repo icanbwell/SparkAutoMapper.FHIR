@@ -27,7 +27,7 @@ class OperationDefinitionReferencedFrom(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         source: FhirString,
         sourceId: Optional[FhirString] = None,

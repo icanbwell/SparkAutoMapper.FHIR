@@ -15,10 +15,15 @@ from spark_fhir_schemas.r4.resources.coverageeligibilityrequest import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # priority (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
@@ -27,39 +32,58 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for priority
+    # purpose (EligibilityRequestPurpose)
     from spark_auto_mapper_fhir.complex_types.eligibility_request_purpose import (
         EligibilityRequestPurpose,
     )
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # enterer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for enterer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for provider
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # insurer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # facility (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for facility
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # supportingInfo (CoverageEligibilityRequest.SupportingInfo)
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info import (
         CoverageEligibilityRequestSupportingInfo,
     )
+
+    # insurance (CoverageEligibilityRequest.Insurance)
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_insurance import (
         CoverageEligibilityRequestInsurance,
     )
+
+    # item (CoverageEligibilityRequest.Item)
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_item import (
         CoverageEligibilityRequestItem,
     )

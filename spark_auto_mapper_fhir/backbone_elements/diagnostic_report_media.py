@@ -31,7 +31,7 @@ class DiagnosticReportMedia(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         comment: Optional[FhirString] = None,
         link: Reference[Union[Media]],

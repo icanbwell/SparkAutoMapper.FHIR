@@ -38,7 +38,7 @@ class Timing(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         event: Optional[FhirList[FhirDateTime]] = None,
         repeat: Optional[TimingRepeat] = None,

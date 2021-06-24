@@ -14,15 +14,30 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.patient import PatientSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # active (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # name (HumanName)
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # gender (AdministrativeGender)
     from spark_auto_mapper_fhir.complex_types.administrative_gender import (
         AdministrativeGender,
     )
+
+    # birthDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # address (Address)
     from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # maritalStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for maritalStatus
@@ -31,21 +46,32 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for maritalStatus
+    # photo (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # contact (Patient.Contact)
     from spark_auto_mapper_fhir.backbone_elements.patient_contact import PatientContact
+
+    # communication (Patient.Communication)
     from spark_auto_mapper_fhir.backbone_elements.patient_communication import (
         PatientCommunication,
     )
+
+    # generalPractitioner (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for generalPractitioner
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # managingOrganization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for managingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # link (Patient.Link)
     from spark_auto_mapper_fhir.backbone_elements.patient_link import PatientLink
 
 

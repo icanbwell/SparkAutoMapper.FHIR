@@ -13,16 +13,22 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.claim import ClaimSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.claim_type_codes import ClaimTypeCodesCode
 
     # End Import for CodeableConcept for type_
+    # subType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subType
@@ -31,28 +37,43 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for subType
+    # use (Use)
     from spark_auto_mapper_fhir.complex_types.use import Use
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # billablePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # enterer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for enterer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # insurer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for provider
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # priority (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
@@ -61,6 +82,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for priority
+    # fundsReserve (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for fundsReserve
@@ -69,37 +91,64 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for fundsReserve
+    # related (Claim.Related)
     from spark_auto_mapper_fhir.backbone_elements.claim_related import ClaimRelated
+
+    # prescription (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for prescription
     from spark_auto_mapper_fhir.resources.device_request import DeviceRequest
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescription
+
+    # originalPrescription (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for originalPrescription
     from spark_auto_mapper_fhir.resources.device_request import DeviceRequest
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescription
+
+    # payee (Claim.Payee)
     from spark_auto_mapper_fhir.backbone_elements.claim_payee import ClaimPayee
+
+    # referral (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for referral
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # facility (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for facility
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # careTeam (Claim.CareTeam)
     from spark_auto_mapper_fhir.backbone_elements.claim_care_team import ClaimCareTeam
+
+    # supportingInfo (Claim.SupportingInfo)
     from spark_auto_mapper_fhir.backbone_elements.claim_supporting_info import (
         ClaimSupportingInfo,
     )
+
+    # diagnosis (Claim.Diagnosis)
     from spark_auto_mapper_fhir.backbone_elements.claim_diagnosis import ClaimDiagnosis
+
+    # procedure (Claim.Procedure)
     from spark_auto_mapper_fhir.backbone_elements.claim_procedure import ClaimProcedure
+
+    # insurance (Claim.Insurance)
     from spark_auto_mapper_fhir.backbone_elements.claim_insurance import ClaimInsurance
+
+    # accident (Claim.Accident)
     from spark_auto_mapper_fhir.backbone_elements.claim_accident import ClaimAccident
+
+    # item (Claim.Item)
     from spark_auto_mapper_fhir.backbone_elements.claim_item import ClaimItem
+
+    # total (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
 
 

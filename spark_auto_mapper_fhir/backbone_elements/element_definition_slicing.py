@@ -34,7 +34,7 @@ class ElementDefinitionSlicing(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         discriminator: Optional[FhirList[ElementDefinitionDiscriminator]] = None,
         description: Optional[FhirString] = None,

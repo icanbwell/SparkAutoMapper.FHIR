@@ -28,7 +28,7 @@ class NutritionOrderAdministration(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         schedule: Optional[Timing] = None,
         quantity: Optional[Quantity] = None,

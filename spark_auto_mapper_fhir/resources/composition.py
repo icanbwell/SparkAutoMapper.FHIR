@@ -14,10 +14,15 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.composition import CompositionSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (CompositionStatus)
     from spark_auto_mapper_fhir.complex_types.composition_status import (
         CompositionStatus,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
@@ -26,6 +31,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -34,15 +40,22 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for category
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for author
@@ -52,23 +65,37 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # confidentiality (vConfidentialityClassification)
     from spark_auto_mapper_fhir.complex_types.v_confidentiality_classification import (
         vConfidentialityClassification,
     )
+
+    # attester (Composition.Attester)
     from spark_auto_mapper_fhir.backbone_elements.composition_attester import (
         CompositionAttester,
     )
+
+    # custodian (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for custodian
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # relatesTo (Composition.RelatesTo)
     from spark_auto_mapper_fhir.backbone_elements.composition_relates_to import (
         CompositionRelatesTo,
     )
+
+    # event (Composition.Event)
     from spark_auto_mapper_fhir.backbone_elements.composition_event import (
         CompositionEvent,
     )
+
+    # section (Composition.Section)
     from spark_auto_mapper_fhir.backbone_elements.composition_section import (
         CompositionSection,
     )

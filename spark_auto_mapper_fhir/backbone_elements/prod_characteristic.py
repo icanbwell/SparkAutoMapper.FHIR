@@ -55,7 +55,7 @@ class ProdCharacteristic(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         height: Optional[Quantity] = None,
         width: Optional[Quantity] = None,

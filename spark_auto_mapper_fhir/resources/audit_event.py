@@ -13,12 +13,14 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.auditevent import AuditEventSchema
 
 if TYPE_CHECKING:
+    # type_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.audit_event_id import AuditEventIDCode
 
     # End Import for CodeableConcept for type_
+    # subtype (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for subtype
@@ -27,25 +29,41 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for subtype
+    # action (AuditEventAction)
     from spark_auto_mapper_fhir.complex_types.audit_event_action import AuditEventAction
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # recorded (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # outcome (AuditEventOutcome)
     from spark_auto_mapper_fhir.complex_types.audit_event_outcome import (
         AuditEventOutcome,
     )
+
+    # outcomeDesc (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # purposeOfEvent (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for purposeOfEvent
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
 
     # End Import for CodeableConcept for purposeOfEvent
+    # agent (AuditEvent.Agent)
     from spark_auto_mapper_fhir.backbone_elements.audit_event_agent import (
         AuditEventAgent,
     )
+
+    # source (AuditEvent.Source)
     from spark_auto_mapper_fhir.backbone_elements.audit_event_source import (
         AuditEventSource,
     )
+
+    # entity (AuditEvent.Entity)
     from spark_auto_mapper_fhir.backbone_elements.audit_event_entity import (
         AuditEventEntity,
     )

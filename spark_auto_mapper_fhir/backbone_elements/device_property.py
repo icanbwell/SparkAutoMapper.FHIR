@@ -40,7 +40,7 @@ class DeviceProperty(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: CodeableConcept[GenericTypeCode],
         valueQuantity: Optional[FhirList[Quantity]] = None,

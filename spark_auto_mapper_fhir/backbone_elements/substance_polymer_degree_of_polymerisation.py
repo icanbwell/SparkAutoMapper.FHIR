@@ -34,7 +34,7 @@ class SubstancePolymerDegreeOfPolymerisation(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         degree: Optional[CodeableConcept[GenericTypeCode]] = None,
         amount: Optional[SubstanceAmount] = None,

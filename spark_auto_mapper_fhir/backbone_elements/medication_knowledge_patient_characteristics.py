@@ -26,7 +26,7 @@ class MedicationKnowledgePatientCharacteristics(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         value: Optional[FhirList[FhirString]] = None,
     ) -> None:

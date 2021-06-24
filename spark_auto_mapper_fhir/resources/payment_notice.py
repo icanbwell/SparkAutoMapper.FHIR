@@ -14,43 +14,66 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.paymentnotice import PaymentNoticeSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # request (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # response (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for response
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for provider
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # payment (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for payment
     from spark_auto_mapper_fhir.resources.payment_reconciliation import (
         PaymentReconciliation,
     )
+
+    # paymentDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # payee (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for payee
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # recipient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for recipient
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # amount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # paymentStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for paymentStatus

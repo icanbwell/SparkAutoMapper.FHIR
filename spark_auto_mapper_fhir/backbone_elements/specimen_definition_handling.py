@@ -24,6 +24,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.range import Range
 
     # maxDuration (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # instruction (string)
 
 
@@ -38,7 +40,7 @@ class SpecimenDefinitionHandling(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         temperatureQualifier: Optional[
             CodeableConcept[HandlingConditionSetCode]

@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.medicationknowledge import (
 )
 
 if TYPE_CHECKING:
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
@@ -23,11 +24,16 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for code
+    # status (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # manufacturer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # doseForm (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for doseForm
@@ -36,28 +42,44 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for doseForm
+    # amount (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # synonym (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # relatedMedicationKnowledge (MedicationKnowledge.RelatedMedicationKnowledge)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_related_medication_knowledge import (
         MedicationKnowledgeRelatedMedicationKnowledge,
     )
+
+    # associatedMedication (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for associatedMedication
     from spark_auto_mapper_fhir.resources.medication import Medication
+
+    # productType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for productType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for productType
+    # monograph (MedicationKnowledge.Monograph)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monograph import (
         MedicationKnowledgeMonograph,
     )
+
+    # ingredient (MedicationKnowledge.Ingredient)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_ingredient import (
         MedicationKnowledgeIngredient,
     )
+
+    # preparationInstruction (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # intendedRoute (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for intendedRoute
@@ -66,31 +88,48 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for intendedRoute
+    # cost (MedicationKnowledge.Cost)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_cost import (
         MedicationKnowledgeCost,
     )
+
+    # monitoringProgram (MedicationKnowledge.MonitoringProgram)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monitoring_program import (
         MedicationKnowledgeMonitoringProgram,
     )
+
+    # administrationGuidelines (MedicationKnowledge.AdministrationGuidelines)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_administration_guidelines import (
         MedicationKnowledgeAdministrationGuidelines,
     )
+
+    # medicineClassification (MedicationKnowledge.MedicineClassification)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_medicine_classification import (
         MedicationKnowledgeMedicineClassification,
     )
+
+    # packaging (MedicationKnowledge.Packaging)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging import (
         MedicationKnowledgePackaging,
     )
+
+    # drugCharacteristic (MedicationKnowledge.DrugCharacteristic)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic import (
         MedicationKnowledgeDrugCharacteristic,
     )
+
+    # contraindication (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for contraindication
     from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
+
+    # regulatory (MedicationKnowledge.Regulatory)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory import (
         MedicationKnowledgeRegulatory,
     )
+
+    # kinetics (MedicationKnowledge.Kinetics)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics import (
         MedicationKnowledgeKinetics,
     )

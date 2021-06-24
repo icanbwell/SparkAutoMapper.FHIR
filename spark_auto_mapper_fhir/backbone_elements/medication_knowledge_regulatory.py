@@ -43,7 +43,7 @@ class MedicationKnowledgeRegulatory(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         regulatoryAuthority: Reference[Union[Organization]],
         substitution: Optional[FhirList[MedicationKnowledgeSubstitution]] = None,

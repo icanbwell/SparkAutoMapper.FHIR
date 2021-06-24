@@ -13,8 +13,13 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.careteam import CareTeamSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (CareTeamStatus)
     from spark_auto_mapper_fhir.complex_types.care_team_status import CareTeamStatus
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -23,20 +28,31 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for category
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # participant (CareTeam.Participant)
     from spark_auto_mapper_fhir.backbone_elements.care_team_participant import (
         CareTeamParticipant,
     )
+
+    # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
@@ -45,15 +61,22 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for reasonCode
+    # reasonReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
+
+    # managingOrganization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for managingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 

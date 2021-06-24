@@ -15,19 +15,29 @@ from spark_fhir_schemas.r4.resources.appointmentresponse import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # appointment (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for appointment
     from spark_auto_mapper_fhir.resources.appointment import Appointment
+
+    # start (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # end (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # participantType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for participantType
     from spark_auto_mapper_fhir.value_sets.participant_type import ParticipantTypeCode
 
     # End Import for CodeableConcept for participantType
+    # actor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for actor
@@ -38,9 +48,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # participantStatus (ParticipationStatus)
     from spark_auto_mapper_fhir.complex_types.participation_status import (
         ParticipationStatus,
     )
+
+    # comment (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
 

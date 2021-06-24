@@ -27,7 +27,7 @@ class TestScriptTeardown(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         action: FhirList[TestScriptAction2],
     ) -> None:

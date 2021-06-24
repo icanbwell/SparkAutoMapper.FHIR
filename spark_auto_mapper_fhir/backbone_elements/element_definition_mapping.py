@@ -32,7 +32,7 @@ class ElementDefinitionMapping(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identity: id,
         language: Optional[code] = None,

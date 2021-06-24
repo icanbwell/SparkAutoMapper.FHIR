@@ -16,6 +16,8 @@ if TYPE_CHECKING:
     )
 
     # dispenseInterval (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # validityPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -26,6 +28,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # expectedSupplyDuration (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # performer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -44,7 +48,7 @@ class MedicationRequestDispenseRequest(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         initialFill: Optional[MedicationRequestInitialFill] = None,
         dispenseInterval: Optional[Duration] = None,

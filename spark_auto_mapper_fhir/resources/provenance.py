@@ -12,22 +12,32 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.provenance import ProvenanceSchema
 
 if TYPE_CHECKING:
+    # target (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for target
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # recorded (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # policy (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
 
     # End Import for CodeableConcept for reason
+    # activity (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for activity
@@ -36,12 +46,17 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for activity
+    # agent (Provenance.Agent)
     from spark_auto_mapper_fhir.backbone_elements.provenance_agent import (
         ProvenanceAgent,
     )
+
+    # entity (Provenance.Entity)
     from spark_auto_mapper_fhir.backbone_elements.provenance_entity import (
         ProvenanceEntity,
     )
+
+    # signature (Signature)
     from spark_auto_mapper_fhir.complex_types.signature import Signature
 
 

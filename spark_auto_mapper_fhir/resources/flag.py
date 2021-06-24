@@ -12,20 +12,27 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.flag import FlagSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FlagStatus)
     from spark_auto_mapper_fhir.complex_types.flag_status import FlagStatus
+
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.flag_category import FlagCategoryCode
 
     # End Import for CodeableConcept for category
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.flag_code import FlagCodeCode
 
     # End Import for CodeableConcept for code
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -37,11 +44,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.resources.procedure import Procedure
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for author

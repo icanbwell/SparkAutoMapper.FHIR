@@ -28,7 +28,7 @@ class PaymentReconciliationProcessNote(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[NoteType] = None,
         text: Optional[FhirString] = None,

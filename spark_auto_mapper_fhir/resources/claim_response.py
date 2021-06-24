@@ -14,16 +14,22 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.claimresponse import ClaimResponseSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.claim_type_codes import ClaimTypeCodesCode
 
     # End Import for CodeableConcept for type_
+    # subType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subType
@@ -32,32 +38,53 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for subType
+    # use (Use)
     from spark_auto_mapper_fhir.complex_types.use import Use
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # insurer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # requestor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for requestor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # request (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.claim import Claim
+
+    # outcome (ClaimProcessingCodes)
     from spark_auto_mapper_fhir.complex_types.claim_processing_codes import (
         ClaimProcessingCodes,
     )
+
+    # disposition (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # preAuthRef (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # preAuthPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # payeeType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for payeeType
@@ -66,21 +93,32 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for payeeType
+    # item (ClaimResponse.Item)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_item import (
         ClaimResponseItem,
     )
+
+    # addItem (ClaimResponse.AddItem)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_add_item import (
         ClaimResponseAddItem,
     )
+
+    # adjudication (ClaimResponse.Adjudication)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_adjudication import (
         ClaimResponseAdjudication,
     )
+
+    # total (ClaimResponse.Total)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_total import (
         ClaimResponseTotal,
     )
+
+    # payment (ClaimResponse.Payment)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_payment import (
         ClaimResponsePayment,
     )
+
+    # fundsReserve (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for fundsReserve
@@ -89,25 +127,35 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for fundsReserve
+    # formCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for formCode
     from spark_auto_mapper_fhir.value_sets.form_codes import FormCodesCode
 
     # End Import for CodeableConcept for formCode
+    # form (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # processNote (ClaimResponse.ProcessNote)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_process_note import (
         ClaimResponseProcessNote,
     )
+
+    # communicationRequest (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for communicationRequest
     from spark_auto_mapper_fhir.resources.communication_request import (
         CommunicationRequest,
     )
+
+    # insurance (ClaimResponse.Insurance)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_insurance import (
         ClaimResponseInsurance,
     )
+
+    # error (ClaimResponse.Error)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_error import (
         ClaimResponseError,
     )

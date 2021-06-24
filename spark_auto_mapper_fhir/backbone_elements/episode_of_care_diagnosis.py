@@ -38,7 +38,7 @@ class EpisodeOfCareDiagnosis(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         condition: Reference[Union[Condition]],
         role: Optional[CodeableConcept[DiagnosisRoleCode]] = None,

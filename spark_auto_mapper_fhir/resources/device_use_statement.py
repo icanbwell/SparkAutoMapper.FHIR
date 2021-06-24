@@ -13,19 +13,28 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.deviceusestatement import DeviceUseStatementSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # status (DeviceUseStatementStatus)
     from spark_auto_mapper_fhir.complex_types.device_use_statement_status import (
         DeviceUseStatementStatus,
     )
+
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
+
+    # derivedFrom (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for derivedFrom
@@ -37,7 +46,11 @@ if TYPE_CHECKING:
         QuestionnaireResponse,
     )
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
+
+    # recordedOn (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for source
@@ -45,16 +58,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # device (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for reasonCode
+    # reasonReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -63,6 +81,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.resources.media import Media
+
+    # bodySite (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodySite
@@ -71,6 +91,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for bodySite
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 

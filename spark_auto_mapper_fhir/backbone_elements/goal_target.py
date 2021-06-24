@@ -30,7 +30,7 @@ class GoalTarget(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         measure: Optional[CodeableConcept[LOINCCodesCode]] = None,
     ) -> None:

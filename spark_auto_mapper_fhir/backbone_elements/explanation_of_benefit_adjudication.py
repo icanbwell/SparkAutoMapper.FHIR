@@ -46,7 +46,7 @@ class ExplanationOfBenefitAdjudication(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: CodeableConcept[AdjudicationValueCodesCode],
         reason: Optional[CodeableConcept[AdjudicationReasonCodesCode]] = None,

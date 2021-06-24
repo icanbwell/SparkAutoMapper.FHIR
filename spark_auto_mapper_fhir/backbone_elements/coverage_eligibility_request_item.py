@@ -81,7 +81,7 @@ class CoverageEligibilityRequestItem(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         supportingInfoSequence: Optional[FhirList[positiveInt]] = None,
         category: Optional[CodeableConcept[BenefitCategoryCodesCode]] = None,

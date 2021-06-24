@@ -13,15 +13,23 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.account import AccountSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (AccountStatus)
     from spark_auto_mapper_fhir.complex_types.account_status import AccountStatus
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.account_types import AccountTypesCode
 
     # End Import for CodeableConcept for type_
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -32,18 +40,30 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # servicePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # coverage (Account.Coverage)
     from spark_auto_mapper_fhir.backbone_elements.account_coverage import (
         AccountCoverage,
     )
+
+    # owner (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for owner
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # description (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # guarantor (Account.Guarantor)
     from spark_auto_mapper_fhir.backbone_elements.account_guarantor import (
         AccountGuarantor,
     )
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf

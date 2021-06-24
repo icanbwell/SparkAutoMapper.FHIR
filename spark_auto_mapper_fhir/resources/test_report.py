@@ -14,24 +14,47 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.testreport import TestReportSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (TestReportStatus)
     from spark_auto_mapper_fhir.complex_types.test_report_status import TestReportStatus
+
+    # testScript (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for testScript
     from spark_auto_mapper_fhir.resources.test_script import TestScript
+
+    # result (TestReportResult)
     from spark_auto_mapper_fhir.complex_types.test_report_result import TestReportResult
+
+    # score (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # tester (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # issued (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # participant (TestReport.Participant)
     from spark_auto_mapper_fhir.backbone_elements.test_report_participant import (
         TestReportParticipant,
     )
+
+    # setup (TestReport.Setup)
     from spark_auto_mapper_fhir.backbone_elements.test_report_setup import (
         TestReportSetup,
     )
+
+    # test (TestReport.Test)
     from spark_auto_mapper_fhir.backbone_elements.test_report_test import TestReportTest
+
+    # teardown (TestReport.Teardown)
     from spark_auto_mapper_fhir.backbone_elements.test_report_teardown import (
         TestReportTeardown,
     )

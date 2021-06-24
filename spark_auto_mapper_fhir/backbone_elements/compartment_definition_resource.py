@@ -29,7 +29,7 @@ class CompartmentDefinitionResource(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: code,
         param: Optional[FhirList[FhirString]] = None,

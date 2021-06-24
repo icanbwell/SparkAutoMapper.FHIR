@@ -12,7 +12,10 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.medication import MedicationSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
@@ -21,13 +24,18 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for code
+    # status (MedicationStatusCodes)
     from spark_auto_mapper_fhir.complex_types.medication_status_codes import (
         MedicationStatusCodes,
     )
+
+    # manufacturer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # form (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for form
@@ -36,10 +44,15 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for form
+    # amount (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+
+    # ingredient (Medication.Ingredient)
     from spark_auto_mapper_fhir.backbone_elements.medication_ingredient import (
         MedicationIngredient,
     )
+
+    # batch (Medication.Batch)
     from spark_auto_mapper_fhir.backbone_elements.medication_batch import (
         MedicationBatch,
     )

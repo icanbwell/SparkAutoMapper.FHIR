@@ -18,6 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # duration (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -52,7 +54,7 @@ class SpecimenCollection(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         collector: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         duration: Optional[Duration] = None,

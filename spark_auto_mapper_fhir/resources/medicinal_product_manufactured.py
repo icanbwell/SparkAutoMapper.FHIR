@@ -14,32 +14,43 @@ from spark_fhir_schemas.r4.resources.medicinalproductmanufactured import (
 )
 
 if TYPE_CHECKING:
+    # manufacturedDoseForm (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for manufacturedDoseForm
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for manufacturedDoseForm
+    # unitOfPresentation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for unitOfPresentation
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for unitOfPresentation
+    # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # manufacturer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # ingredient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for ingredient
     from spark_auto_mapper_fhir.resources.medicinal_product_ingredient import (
         MedicinalProductIngredient,
     )
+
+    # physicalCharacteristics (ProdCharacteristic)
     from spark_auto_mapper_fhir.backbone_elements.prod_characteristic import (
         ProdCharacteristic,
     )
+
+    # otherCharacteristics (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for otherCharacteristics

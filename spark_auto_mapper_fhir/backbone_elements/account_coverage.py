@@ -31,7 +31,7 @@ class AccountCoverage(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         coverage: Reference[Union[Coverage]],
         priority: Optional[positiveInt] = None,

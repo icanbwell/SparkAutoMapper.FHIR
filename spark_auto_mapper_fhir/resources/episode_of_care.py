@@ -12,13 +12,20 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.episodeofcare import EpisodeOfCareSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (EpisodeOfCareStatus)
     from spark_auto_mapper_fhir.complex_types.episode_of_care_status import (
         EpisodeOfCareStatus,
     )
+
+    # statusHistory (EpisodeOfCare.StatusHistory)
     from spark_auto_mapper_fhir.backbone_elements.episode_of_care_status_history import (
         EpisodeOfCareStatusHistory,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
@@ -27,31 +34,46 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # diagnosis (EpisodeOfCare.Diagnosis)
     from spark_auto_mapper_fhir.backbone_elements.episode_of_care_diagnosis import (
         EpisodeOfCareDiagnosis,
     )
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # managingOrganization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for managingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # referralRequest (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for referralRequest
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # careManager (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for careManager
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # team (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for team
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
+
+    # account (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for account

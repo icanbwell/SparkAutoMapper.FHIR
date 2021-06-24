@@ -14,45 +14,58 @@ from spark_fhir_schemas.r4.resources.medicinalproductindication import (
 )
 
 if TYPE_CHECKING:
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
+
+    # diseaseSymptomProcedure (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for diseaseSymptomProcedure
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for diseaseSymptomProcedure
+    # diseaseStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for diseaseStatus
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for diseaseStatus
+    # comorbidity (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for comorbidity
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for comorbidity
+    # intendedEffect (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for intendedEffect
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for intendedEffect
+    # duration (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # otherTherapy (MedicinalProductIndication.OtherTherapy)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_indication_other_therapy import (
         MedicinalProductIndicationOtherTherapy,
     )
+
+    # undesirableEffect (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for undesirableEffect
     from spark_auto_mapper_fhir.resources.medicinal_product_undesirable_effect import (
         MedicinalProductUndesirableEffect,
     )
+
+    # population (Population)
     from spark_auto_mapper_fhir.backbone_elements.population import Population
 
 

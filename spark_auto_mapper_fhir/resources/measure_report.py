@@ -13,14 +13,23 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.measurereport import MeasureReportSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (MeasureReportStatus)
     from spark_auto_mapper_fhir.complex_types.measure_report_status import (
         MeasureReportStatus,
     )
+
+    # type_ (MeasureReportType)
     from spark_auto_mapper_fhir.complex_types.measure_report_type import (
         MeasureReportType,
     )
+
+    # measure (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -31,7 +40,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.group import Group
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # reporter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reporter
@@ -39,7 +52,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # improvementNotation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for improvementNotation
@@ -48,9 +65,12 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for improvementNotation
+    # group (MeasureReport.Group)
     from spark_auto_mapper_fhir.backbone_elements.measure_report_group import (
         MeasureReportGroup,
     )
+
+    # evaluatedResource (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for evaluatedResource

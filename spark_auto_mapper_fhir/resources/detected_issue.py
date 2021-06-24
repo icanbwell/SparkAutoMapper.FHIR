@@ -13,10 +13,15 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.detectedissue import DetectedIssueSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (ObservationStatus)
     from spark_auto_mapper_fhir.complex_types.observation_status import (
         ObservationStatus,
     )
+
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
@@ -25,28 +30,43 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for code
+    # severity (DetectedIssueSeverity)
     from spark_auto_mapper_fhir.complex_types.detected_issue_severity import (
         DetectedIssueSeverity,
     )
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # implicated (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for implicated
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # evidence (DetectedIssue.Evidence)
     from spark_auto_mapper_fhir.backbone_elements.detected_issue_evidence import (
         DetectedIssueEvidence,
     )
+
+    # detail (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # reference (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # mitigation (DetectedIssue.Mitigation)
     from spark_auto_mapper_fhir.backbone_elements.detected_issue_mitigation import (
         DetectedIssueMitigation,
     )

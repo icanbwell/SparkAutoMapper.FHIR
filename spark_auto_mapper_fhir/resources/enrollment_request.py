@@ -13,25 +13,38 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.enrollmentrequest import EnrollmentRequestSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # insurer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for provider
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # candidate (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for candidate
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # coverage (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for coverage

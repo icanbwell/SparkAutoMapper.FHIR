@@ -40,7 +40,7 @@ class ClinicalImpressionFinding(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         itemCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         itemReference: Optional[Reference[Union[Condition, Observation, Media]]] = None,

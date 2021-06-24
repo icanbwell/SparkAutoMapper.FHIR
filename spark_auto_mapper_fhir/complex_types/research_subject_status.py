@@ -20,7 +20,7 @@ class ResearchSubjectStatus(FhirComplexTypeBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:

@@ -62,7 +62,7 @@ class ProvenanceAgent(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[CodeableConcept[ProvenanceParticipantTypeCode]] = None,
         role: Optional[FhirList[CodeableConcept[SecurityRoleTypeCode]]] = None,

@@ -35,7 +35,7 @@ class MedicinalProductName(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         productName: FhirString,
         namePart: Optional[FhirList[MedicinalProductNamePart]] = None,

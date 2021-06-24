@@ -139,7 +139,7 @@ class ContractAction(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         type_: CodeableConcept[ContractActionCodesCode],

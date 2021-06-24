@@ -86,7 +86,7 @@ class EncounterHospitalization(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         preAdmissionIdentifier: Optional[Identifier] = None,
         origin: Optional[Reference[Union[Location, Organization]]] = None,

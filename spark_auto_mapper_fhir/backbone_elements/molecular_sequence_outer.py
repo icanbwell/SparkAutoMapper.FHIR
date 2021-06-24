@@ -27,7 +27,7 @@ class MolecularSequenceOuter(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         start: Optional[FhirInteger] = None,
         end: Optional[FhirInteger] = None,

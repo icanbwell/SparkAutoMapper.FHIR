@@ -14,27 +14,39 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.imagingstudy import ImagingStudySchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (ImagingStudyStatus)
     from spark_auto_mapper_fhir.complex_types.imaging_study_status import (
         ImagingStudyStatus,
     )
+
+    # modality (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for modality
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.group import Group
+
+    # encounter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # started (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
@@ -45,36 +57,53 @@ if TYPE_CHECKING:
         AppointmentResponse,
     )
     from spark_auto_mapper_fhir.resources.task import Task
+
+    # referrer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for referrer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # interpreter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for interpreter
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # endpoint (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
+
+    # numberOfSeries (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # numberOfInstances (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # procedureReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for procedureReference
     from spark_auto_mapper_fhir.resources.procedure import Procedure
+
+    # procedureCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for procedureCode
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for procedureCode
+    # location (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
@@ -83,6 +112,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for reasonCode
+    # reasonReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -91,8 +121,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.media import Media
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # description (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # series (ImagingStudy.Series)
     from spark_auto_mapper_fhir.backbone_elements.imaging_study_series import (
         ImagingStudySeries,
     )

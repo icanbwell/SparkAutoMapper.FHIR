@@ -35,7 +35,7 @@ class GraphDefinitionLink(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: Optional[FhirString] = None,
         sliceName: Optional[FhirString] = None,

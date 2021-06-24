@@ -13,21 +13,36 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.researchsubject import ResearchSubjectSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (ResearchSubjectStatus)
     from spark_auto_mapper_fhir.complex_types.research_subject_status import (
         ResearchSubjectStatus,
     )
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # study (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for study
     from spark_auto_mapper_fhir.resources.research_study import ResearchStudy
+
+    # individual (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for individual
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # assignedArm (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # actualArm (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # consent (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for consent

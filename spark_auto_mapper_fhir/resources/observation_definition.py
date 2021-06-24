@@ -16,6 +16,7 @@ from spark_fhir_schemas.r4.resources.observationdefinition import (
 )
 
 if TYPE_CHECKING:
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -24,17 +25,25 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for category
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodesCode
 
     # End Import for CodeableConcept for code
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # permittedDataType (ObservationDataType)
     from spark_auto_mapper_fhir.complex_types.observation_data_type import (
         ObservationDataType,
     )
+
+    # multipleResultsAllowed (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for method
@@ -43,25 +52,38 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for method
+    # preferredReportName (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # quantitativeDetails (ObservationDefinition.QuantitativeDetails)
     from spark_auto_mapper_fhir.backbone_elements.observation_definition_quantitative_details import (
         ObservationDefinitionQuantitativeDetails,
     )
+
+    # qualifiedInterval (ObservationDefinition.QualifiedInterval)
     from spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval import (
         ObservationDefinitionQualifiedInterval,
     )
+
+    # validCodedValueSet (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for validCodedValueSet
     from spark_auto_mapper_fhir.resources.value_set import ValueSet
+
+    # normalCodedValueSet (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for normalCodedValueSet
     from spark_auto_mapper_fhir.resources.value_set import ValueSet
+
+    # abnormalCodedValueSet (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for abnormalCodedValueSet
     from spark_auto_mapper_fhir.resources.value_set import ValueSet
+
+    # criticalCodedValueSet (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for criticalCodedValueSet

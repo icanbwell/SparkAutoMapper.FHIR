@@ -15,36 +15,55 @@ from spark_fhir_schemas.r4.resources.biologicallyderivedproduct import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # productCategory (BiologicallyDerivedProductCategory)
     from spark_auto_mapper_fhir.complex_types.biologically_derived_product_category import (
         BiologicallyDerivedProductCategory,
     )
+
+    # productCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for productCode
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for productCode
+    # status (BiologicallyDerivedProductStatus)
     from spark_auto_mapper_fhir.complex_types.biologically_derived_product_status import (
         BiologicallyDerivedProductStatus,
     )
+
+    # request (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # quantity (integer)
     from spark_auto_mapper_fhir.complex_types.integer import FhirInteger
+
+    # parent (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for parent
+    # collection (BiologicallyDerivedProduct.Collection)
     from spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_collection import (
         BiologicallyDerivedProductCollection,
     )
+
+    # processing (BiologicallyDerivedProduct.Processing)
     from spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_processing import (
         BiologicallyDerivedProductProcessing,
     )
+
+    # manipulation (BiologicallyDerivedProduct.Manipulation)
     from spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_manipulation import (
         BiologicallyDerivedProductManipulation,
     )
+
+    # storage (BiologicallyDerivedProduct.Storage)
     from spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_storage import (
         BiologicallyDerivedProductStorage,
     )

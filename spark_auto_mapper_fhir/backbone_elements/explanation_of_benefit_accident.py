@@ -33,7 +33,7 @@ class ExplanationOfBenefitAccident(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         date: Optional[FhirDate] = None,
         type_: Optional[CodeableConcept[ActIncidentCode]] = None,

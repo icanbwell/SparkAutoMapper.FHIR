@@ -33,7 +33,7 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         coding: Optional[FhirList[Coding[_T]]] = None,

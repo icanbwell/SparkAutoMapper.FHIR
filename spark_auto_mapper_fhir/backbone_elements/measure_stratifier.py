@@ -39,7 +39,7 @@ class MeasureStratifier(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,
         description: Optional[FhirString] = None,

@@ -41,7 +41,7 @@ class ImmunizationProtocolApplied(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         series: Optional[FhirString] = None,
         authority: Optional[Reference[Union[Organization]]] = None,

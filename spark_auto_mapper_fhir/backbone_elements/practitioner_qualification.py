@@ -41,7 +41,7 @@ class PractitionerQualification(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         code: CodeableConcept[V2_0360_2_7],

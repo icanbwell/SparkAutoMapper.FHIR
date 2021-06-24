@@ -69,7 +69,7 @@ class DocumentReferenceContext(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         encounter: Optional[
             FhirList[Reference[Union[Encounter, EpisodeOfCare]]]

@@ -65,7 +65,7 @@ class NutritionOrderEnteralFormula(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         baseFormulaType: Optional[CodeableConcept[EnteralFormulaTypeCodesCode]] = None,
         baseFormulaProductName: Optional[FhirString] = None,

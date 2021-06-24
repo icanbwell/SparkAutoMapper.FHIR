@@ -28,7 +28,7 @@ class SearchParameterComponent(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         definition: canonical,
         expression: FhirString,

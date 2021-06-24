@@ -39,7 +39,7 @@ class SubstanceSpecificationProperty(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[CodeableConcept[GenericTypeCode]] = None,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,

@@ -16,16 +16,22 @@ from spark_fhir_schemas.r4.resources.explanationofbenefit import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (ExplanationOfBenefitStatus)
     from spark_auto_mapper_fhir.complex_types.explanation_of_benefit_status import (
         ExplanationOfBenefitStatus,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.claim_type_codes import ClaimTypeCodesCode
 
     # End Import for CodeableConcept for type_
+    # subType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subType
@@ -34,28 +40,43 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for subType
+    # use (Use)
     from spark_auto_mapper_fhir.complex_types.use import Use
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # billablePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # enterer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for enterer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # insurer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for provider
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # priority (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
@@ -64,6 +85,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for priority
+    # fundsReserveRequested (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for fundsReserveRequested
@@ -72,6 +94,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for fundsReserveRequested
+    # fundsReserve (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for fundsReserve
@@ -80,88 +103,144 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for fundsReserve
+    # related (ExplanationOfBenefit.Related)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_related import (
         ExplanationOfBenefitRelated,
     )
+
+    # prescription (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for prescription
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescription
+
+    # originalPrescription (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for originalPrescription
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
+
+    # payee (ExplanationOfBenefit.Payee)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_payee import (
         ExplanationOfBenefitPayee,
     )
+
+    # referral (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for referral
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # facility (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for facility
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # claim (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for claim
     from spark_auto_mapper_fhir.resources.claim import Claim
+
+    # claimResponse (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for claimResponse
     from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
+
+    # outcome (ClaimProcessingCodes)
     from spark_auto_mapper_fhir.complex_types.claim_processing_codes import (
         ClaimProcessingCodes,
     )
+
+    # disposition (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # preAuthRef (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # preAuthRefPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # careTeam (ExplanationOfBenefit.CareTeam)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_care_team import (
         ExplanationOfBenefitCareTeam,
     )
+
+    # supportingInfo (ExplanationOfBenefit.SupportingInfo)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_supporting_info import (
         ExplanationOfBenefitSupportingInfo,
     )
+
+    # diagnosis (ExplanationOfBenefit.Diagnosis)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_diagnosis import (
         ExplanationOfBenefitDiagnosis,
     )
+
+    # procedure (ExplanationOfBenefit.Procedure)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_procedure import (
         ExplanationOfBenefitProcedure,
     )
+
+    # precedence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # insurance (ExplanationOfBenefit.Insurance)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_insurance import (
         ExplanationOfBenefitInsurance,
     )
+
+    # accident (ExplanationOfBenefit.Accident)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_accident import (
         ExplanationOfBenefitAccident,
     )
+
+    # item (ExplanationOfBenefit.Item)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_item import (
         ExplanationOfBenefitItem,
     )
+
+    # addItem (ExplanationOfBenefit.AddItem)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_add_item import (
         ExplanationOfBenefitAddItem,
     )
+
+    # adjudication (ExplanationOfBenefit.Adjudication)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_adjudication import (
         ExplanationOfBenefitAdjudication,
     )
+
+    # total (ExplanationOfBenefit.Total)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_total import (
         ExplanationOfBenefitTotal,
     )
+
+    # payment (ExplanationOfBenefit.Payment)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_payment import (
         ExplanationOfBenefitPayment,
     )
+
+    # formCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for formCode
     from spark_auto_mapper_fhir.value_sets.form_codes import FormCodesCode
 
     # End Import for CodeableConcept for formCode
+    # form (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # processNote (ExplanationOfBenefit.ProcessNote)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_process_note import (
         ExplanationOfBenefitProcessNote,
     )
+
+    # benefitPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # benefitBalance (ExplanationOfBenefit.BenefitBalance)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_benefit_balance import (
         ExplanationOfBenefitBenefitBalance,
     )

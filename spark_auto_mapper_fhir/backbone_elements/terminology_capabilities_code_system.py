@@ -33,7 +33,7 @@ class TerminologyCapabilitiesCodeSystem(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         uri: Optional[canonical] = None,
         version: Optional[FhirList[TerminologyCapabilitiesVersion]] = None,

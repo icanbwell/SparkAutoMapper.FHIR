@@ -13,14 +13,23 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.documentreference import DocumentReferenceSchema
 
 if TYPE_CHECKING:
+    # masterIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (DocumentReferenceStatus)
     from spark_auto_mapper_fhir.complex_types.document_reference_status import (
         DocumentReferenceStatus,
     )
+
+    # docStatus (CompositionStatus)
     from spark_auto_mapper_fhir.complex_types.composition_status import (
         CompositionStatus,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
@@ -29,6 +38,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for category
@@ -37,6 +47,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for category
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -44,7 +55,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # date (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for author
@@ -54,20 +69,30 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # authenticator (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for authenticator
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # custodian (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for custodian
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # relatesTo (DocumentReference.RelatesTo)
     from spark_auto_mapper_fhir.backbone_elements.document_reference_relates_to import (
         DocumentReferenceRelatesTo,
     )
+
+    # description (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # securityLabel (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for securityLabel
@@ -76,9 +101,12 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for securityLabel
+    # content (DocumentReference.Content)
     from spark_auto_mapper_fhir.backbone_elements.document_reference_content import (
         DocumentReferenceContent,
     )
+
+    # context (DocumentReference.Context)
     from spark_auto_mapper_fhir.backbone_elements.document_reference_context import (
         DocumentReferenceContext,
     )

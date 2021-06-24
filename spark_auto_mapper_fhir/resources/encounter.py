@@ -12,59 +12,87 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.encounter import EncounterSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (EncounterStatus)
     from spark_auto_mapper_fhir.complex_types.encounter_status import EncounterStatus
+
+    # statusHistory (Encounter.StatusHistory)
     from spark_auto_mapper_fhir.backbone_elements.encounter_status_history import (
         EncounterStatusHistory,
     )
+
+    # class_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for class_
     from spark_auto_mapper_fhir.value_sets.act_encounter_code import ActEncounterCode
 
     # End Import for CodeableConcept for class_
+    # classHistory (Encounter.ClassHistory)
     from spark_auto_mapper_fhir.backbone_elements.encounter_class_history import (
         EncounterClassHistory,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.encounter_type import EncounterTypeCode
 
     # End Import for CodeableConcept for type_
+    # serviceType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
 
     # End Import for CodeableConcept for serviceType
+    # priority (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.value_sets.act_priority import ActPriority
 
     # End Import for CodeableConcept for priority
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
+
+    # episodeOfCare (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for episodeOfCare
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
+
+    # participant (Encounter.Participant)
     from spark_auto_mapper_fhir.backbone_elements.encounter_participant import (
         EncounterParticipant,
     )
+
+    # appointment (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for appointment
     from spark_auto_mapper_fhir.resources.appointment import Appointment
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # length (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
+    # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reasonCode
@@ -73,6 +101,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for reasonCode
+    # reasonReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reasonReference
@@ -82,23 +111,35 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.immunization_recommendation import (
         ImmunizationRecommendation,
     )
+
+    # diagnosis (Encounter.Diagnosis)
     from spark_auto_mapper_fhir.backbone_elements.encounter_diagnosis import (
         EncounterDiagnosis,
     )
+
+    # account (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for account
     from spark_auto_mapper_fhir.resources.account import Account
+
+    # hospitalization (Encounter.Hospitalization)
     from spark_auto_mapper_fhir.backbone_elements.encounter_hospitalization import (
         EncounterHospitalization,
     )
+
+    # location (Encounter.Location)
     from spark_auto_mapper_fhir.backbone_elements.encounter_location import (
         EncounterLocation,
     )
+
+    # serviceProvider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for serviceProvider
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf

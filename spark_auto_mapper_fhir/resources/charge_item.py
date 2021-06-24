@@ -14,45 +14,70 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.chargeitem import ChargeItemSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # definitionUri (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # definitionCanonical (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # status (ChargeItemStatus)
     from spark_auto_mapper_fhir.complex_types.charge_item_status import ChargeItemStatus
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf
+    # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.charge_item_code import ChargeItemCodeCode
 
     # End Import for CodeableConcept for code
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
+
+    # context (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for context
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
+
+    # performer (ChargeItem.Performer)
     from spark_auto_mapper_fhir.backbone_elements.charge_item_performer import (
         ChargeItemPerformer,
     )
+
+    # performingOrganization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for performingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # requestingOrganization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for requestingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # costCenter (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for costCenter
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # bodysite (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for bodysite
@@ -61,9 +86,16 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for bodysite
+    # factorOverride (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # priceOverride (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # overrideReason (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # enterer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for enterer
@@ -73,13 +105,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # enteredDate (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.value_sets.icd_10_codes import ICD_10CodesCode
 
     # End Import for CodeableConcept for reason
+    # service (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for service
@@ -93,11 +130,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.resources.supply_delivery import SupplyDelivery
+
+    # account (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for account
     from spark_auto_mapper_fhir.resources.account import Account
+
+    # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # supportingInformation (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for supportingInformation

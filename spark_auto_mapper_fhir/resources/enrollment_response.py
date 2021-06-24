@@ -14,23 +14,38 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.enrollmentresponse import EnrollmentResponseSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # request (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.enrollment_request import EnrollmentRequest
+
+    # outcome (RemittanceOutcome)
     from spark_auto_mapper_fhir.complex_types.remittance_outcome import (
         RemittanceOutcome,
     )
+
+    # disposition (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # created (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # organization (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for organization
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # requestProvider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for requestProvider

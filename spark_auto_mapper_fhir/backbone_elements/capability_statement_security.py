@@ -37,7 +37,7 @@ class CapabilityStatementSecurity(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         cors: Optional[FhirBoolean] = None,
         service: Optional[FhirList[CodeableConcept[RestfulSecurityServiceCode]]] = None,

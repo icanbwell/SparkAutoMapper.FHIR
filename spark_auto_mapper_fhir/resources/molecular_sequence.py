@@ -14,43 +14,73 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.molecularsequence import MolecularSequenceSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # type_ (sequenceType)
     from spark_auto_mapper_fhir.complex_types.sequence_type import sequenceType
+
+    # coordinateSystem (integer)
     from spark_auto_mapper_fhir.complex_types.integer import FhirInteger
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # specimen (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for specimen
     from spark_auto_mapper_fhir.resources.specimen import Specimen
+
+    # device (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
+
+    # performer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # referenceSeq (MolecularSequence.ReferenceSeq)
     from spark_auto_mapper_fhir.backbone_elements.molecular_sequence_reference_seq import (
         MolecularSequenceReferenceSeq,
     )
+
+    # variant (MolecularSequence.Variant)
     from spark_auto_mapper_fhir.backbone_elements.molecular_sequence_variant import (
         MolecularSequenceVariant,
     )
+
+    # observedSeq (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # quality (MolecularSequence.Quality)
     from spark_auto_mapper_fhir.backbone_elements.molecular_sequence_quality import (
         MolecularSequenceQuality,
     )
+
+    # readCoverage (integer)
     from spark_auto_mapper_fhir.complex_types.integer import FhirInteger
+
+    # repository (MolecularSequence.Repository)
     from spark_auto_mapper_fhir.backbone_elements.molecular_sequence_repository import (
         MolecularSequenceRepository,
     )
+
+    # pointer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for pointer
+    # structureVariant (MolecularSequence.StructureVariant)
     from spark_auto_mapper_fhir.backbone_elements.molecular_sequence_structure_variant import (
         MolecularSequenceStructureVariant,
     )

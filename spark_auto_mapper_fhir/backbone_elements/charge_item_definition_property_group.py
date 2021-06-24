@@ -32,7 +32,7 @@ class ChargeItemDefinitionPropertyGroup(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         applicability: Optional[FhirList[ChargeItemDefinitionApplicability]] = None,
         priceComponent: Optional[FhirList[ChargeItemDefinitionPriceComponent]] = None,

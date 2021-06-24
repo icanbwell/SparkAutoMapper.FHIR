@@ -54,7 +54,7 @@ class NutritionOrderOralDiet(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[FhirList[CodeableConcept[DietCodesCode]]] = None,
         schedule: Optional[FhirList[Timing]] = None,

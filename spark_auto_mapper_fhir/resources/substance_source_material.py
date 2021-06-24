@@ -15,47 +15,67 @@ from spark_fhir_schemas.r4.resources.substancesourcematerial import (
 )
 
 if TYPE_CHECKING:
+    # sourceMaterialClass (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for sourceMaterialClass
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for sourceMaterialClass
+    # sourceMaterialType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for sourceMaterialType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for sourceMaterialType
+    # sourceMaterialState (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for sourceMaterialState
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for sourceMaterialState
+    # organismId (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # organismName (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # parentSubstanceId (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # parentSubstanceName (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # countryOfOrigin (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for countryOfOrigin
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for countryOfOrigin
+    # geographicalLocation (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # developmentStage (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for developmentStage
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for developmentStage
+    # fractionDescription (SubstanceSourceMaterial.FractionDescription)
     from spark_auto_mapper_fhir.backbone_elements.substance_source_material_fraction_description import (
         SubstanceSourceMaterialFractionDescription,
     )
+
+    # organism (SubstanceSourceMaterial.Organism)
     from spark_auto_mapper_fhir.backbone_elements.substance_source_material_organism import (
         SubstanceSourceMaterialOrganism,
     )
+
+    # partDescription (SubstanceSourceMaterial.PartDescription)
     from spark_auto_mapper_fhir.backbone_elements.substance_source_material_part_description import (
         SubstanceSourceMaterialPartDescription,
     )

@@ -16,21 +16,48 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.measure import MeasureSchema
 
 if TYPE_CHECKING:
+    # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # name (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # subtitle (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # status (PublicationStatus)
     from spark_auto_mapper_fhir.complex_types.publication_status import (
         PublicationStatus,
     )
+
+    # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # publisher (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
@@ -39,31 +66,60 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for jurisdiction
+    # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # usage (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # copyright (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # approvalDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # lastReviewDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # topic (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopicCode
 
     # End Import for CodeableConcept for topic
+    # author (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # editor (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # reviewer (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # endorser (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # relatedArtifact (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
+    # library (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # disclaimer (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # scoring (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for scoring
     from spark_auto_mapper_fhir.value_sets.measure_scoring import MeasureScoringCode
 
     # End Import for CodeableConcept for scoring
+    # compositeScoring (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for compositeScoring
@@ -72,16 +128,26 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for compositeScoring
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.measure_type import MeasureTypeCode
 
     # End Import for CodeableConcept for type_
+    # riskAdjustment (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # rateAggregation (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # rationale (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # clinicalRecommendationStatement (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # improvementNotation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for improvementNotation
@@ -90,9 +156,16 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for improvementNotation
+    # definition (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # guidance (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # group (Measure.Group)
     from spark_auto_mapper_fhir.backbone_elements.measure_group import MeasureGroup
+
+    # supplementalData (Measure.SupplementalData)
     from spark_auto_mapper_fhir.backbone_elements.measure_supplemental_data import (
         MeasureSupplementalData,
     )

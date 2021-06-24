@@ -53,7 +53,7 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         operationType: Optional[CodeableConcept[GenericTypeCode]] = None,
         authorisationReferenceNumber: Optional[Identifier] = None,

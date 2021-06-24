@@ -28,7 +28,7 @@ class PlanDefinitionDynamicValue(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: Optional[FhirString] = None,
         expression: Optional[Expression] = None,

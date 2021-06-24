@@ -16,19 +16,30 @@ from spark_fhir_schemas.r4.resources.immunizationevaluation import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (ImmunizationEvaluationStatusCodes)
     from spark_auto_mapper_fhir.complex_types.immunization_evaluation_status_codes import (
         ImmunizationEvaluationStatusCodes,
     )
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # authority (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for authority
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # targetDisease (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for targetDisease
@@ -37,10 +48,13 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for targetDisease
+    # immunizationEvent (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for immunizationEvent
     from spark_auto_mapper_fhir.resources.immunization import Immunization
+
+    # doseStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for doseStatus
@@ -49,6 +63,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for doseStatus
+    # doseStatusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for doseStatusReason
@@ -57,7 +72,10 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for doseStatusReason
+    # description (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # series (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
 

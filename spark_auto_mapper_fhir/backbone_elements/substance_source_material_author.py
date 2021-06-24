@@ -32,7 +32,7 @@ class SubstanceSourceMaterialAuthor(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         authorType: Optional[CodeableConcept[GenericTypeCode]] = None,
         authorDescription: Optional[FhirString] = None,

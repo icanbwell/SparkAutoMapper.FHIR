@@ -38,7 +38,7 @@ class ValueSetInclude(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         system: Optional[uri] = None,
         version: Optional[FhirString] = None,

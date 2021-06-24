@@ -14,10 +14,15 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.coverage import CoverageSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (FinancialResourceStatusCodes)
     from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
         FinancialResourceStatusCodes,
     )
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
@@ -26,23 +31,34 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # policyHolder (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for policyHolder
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # subscriber (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subscriber
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # subscriberId (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # beneficiary (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for beneficiary
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # dependent (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # relationship (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for relationship
@@ -51,20 +67,35 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for relationship
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # payor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for payor
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # class_ (Coverage.Class)
     from spark_auto_mapper_fhir.backbone_elements.coverage_class import CoverageClass
+
+    # order (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # network (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
+
+    # costToBeneficiary (Coverage.CostToBeneficiary)
     from spark_auto_mapper_fhir.backbone_elements.coverage_cost_to_beneficiary import (
         CoverageCostToBeneficiary,
     )
+
+    # subrogation (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # contract (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for contract

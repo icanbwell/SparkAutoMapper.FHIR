@@ -14,19 +14,38 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.practitioner import PractitionerSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # active (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # name (HumanName)
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # address (Address)
     from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # gender (AdministrativeGender)
     from spark_auto_mapper_fhir.complex_types.administrative_gender import (
         AdministrativeGender,
     )
+
+    # birthDate (date)
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
+
+    # photo (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # qualification (Practitioner.Qualification)
     from spark_auto_mapper_fhir.backbone_elements.practitioner_qualification import (
         PractitionerQualification,
     )
+
+    # communication (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for communication

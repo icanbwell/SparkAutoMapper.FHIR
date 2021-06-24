@@ -51,7 +51,7 @@ class SubstanceSourceMaterialOrganismGeneral(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         kingdom: Optional[CodeableConcept[GenericTypeCode]] = None,
         phylum: Optional[CodeableConcept[GenericTypeCode]] = None,

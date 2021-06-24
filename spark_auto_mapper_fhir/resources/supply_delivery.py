@@ -12,41 +12,59 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.supplydelivery import SupplyDeliverySchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.supply_request import SupplyRequest
+
+    # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.contract import Contract
+
+    # status (SupplyDeliveryStatus)
     from spark_auto_mapper_fhir.complex_types.supply_delivery_status import (
         SupplyDeliveryStatus,
     )
+
+    # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.supply_item_type import SupplyItemTypeCode
 
     # End Import for CodeableConcept for type_
+    # suppliedItem (SupplyDelivery.SuppliedItem)
     from spark_auto_mapper_fhir.backbone_elements.supply_delivery_supplied_item import (
         SupplyDeliverySuppliedItem,
     )
+
+    # supplier (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for supplier
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # destination (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for destination
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # receiver (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for receiver

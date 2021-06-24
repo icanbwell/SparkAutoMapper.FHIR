@@ -40,7 +40,7 @@ class InsurancePlanContact(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         purpose: Optional[CodeableConcept[ContactEntityTypeCode]] = None,
         name: Optional[HumanName] = None,

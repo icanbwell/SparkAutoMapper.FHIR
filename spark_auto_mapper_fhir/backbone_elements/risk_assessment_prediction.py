@@ -42,7 +42,7 @@ class RiskAssessmentPrediction(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         outcome: Optional[CodeableConcept[GenericTypeCode]] = None,
         qualitativeRisk: Optional[CodeableConcept[RiskProbabilityCode]] = None,

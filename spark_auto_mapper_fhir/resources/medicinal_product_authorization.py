@@ -15,7 +15,10 @@ from spark_fhir_schemas.r4.resources.medicinalproductauthorization import (
 )
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
@@ -23,47 +26,71 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medicinal_product_packaged import (
         MedicinalProductPackaged,
     )
+
+    # country (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for country
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for country
+    # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for jurisdiction
+    # status (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for status
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for status
+    # statusDate (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # restoreDate (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # validityPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # dataExclusivityPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # dateOfFirstAuthorization (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # internationalBirthDate (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
+
+    # legalBasis (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for legalBasis
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for legalBasis
+    # jurisdictionalAuthorization (MedicinalProductAuthorization.JurisdictionalAuthorization)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_authorization_jurisdictional_authorization import (
         MedicinalProductAuthorizationJurisdictionalAuthorization,
     )
+
+    # holder (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for holder
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # regulator (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for regulator
     from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # procedure (MedicinalProductAuthorization.Procedure)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_authorization_procedure import (
         MedicinalProductAuthorizationProcedure,
     )

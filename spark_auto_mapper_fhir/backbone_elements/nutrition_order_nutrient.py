@@ -34,7 +34,7 @@ class NutritionOrderNutrient(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         modifier: Optional[CodeableConcept[NutrientModifierCodesCode]] = None,
         amount: Optional[Quantity] = None,

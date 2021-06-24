@@ -28,7 +28,7 @@ class BundleSearch(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         mode: Optional[SearchEntryMode] = None,
         score: Optional[decimal] = None,

@@ -32,7 +32,7 @@ class StructureDefinitionMapping(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identity: id,
         uri: Optional[uri] = None,

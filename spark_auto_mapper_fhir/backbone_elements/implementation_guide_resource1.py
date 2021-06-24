@@ -31,7 +31,7 @@ class ImplementationGuideResource1(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         reference: Reference[Union[Resource]],
         relativePath: Optional[url] = None,

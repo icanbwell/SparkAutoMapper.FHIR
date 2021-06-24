@@ -14,38 +14,48 @@ from spark_fhir_schemas.r4.resources.medicinalproductcontraindication import (
 )
 
 if TYPE_CHECKING:
+    # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
+
+    # disease (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for disease
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for disease
+    # diseaseStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for diseaseStatus
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for diseaseStatus
+    # comorbidity (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for comorbidity
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for comorbidity
+    # therapeuticIndication (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for therapeuticIndication
     from spark_auto_mapper_fhir.resources.medicinal_product_indication import (
         MedicinalProductIndication,
     )
+
+    # otherTherapy (MedicinalProductContraindication.OtherTherapy)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_contraindication_other_therapy import (
         MedicinalProductContraindicationOtherTherapy,
     )
+
+    # population (Population)
     from spark_auto_mapper_fhir.backbone_elements.population import Population
 
 

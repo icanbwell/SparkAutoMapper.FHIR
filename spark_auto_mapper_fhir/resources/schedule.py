@@ -14,20 +14,27 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.schedule import ScheduleSchema
 
 if TYPE_CHECKING:
+    # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # active (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
+
+    # serviceCategory (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategoryCode
 
     # End Import for CodeableConcept for serviceCategory
+    # serviceType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
 
     # End Import for CodeableConcept for serviceType
+    # specialty (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for specialty
@@ -36,6 +43,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for specialty
+    # actor (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for actor
@@ -46,7 +54,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
     from spark_auto_mapper_fhir.resources.location import Location
+
+    # planningHorizon (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # comment (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
 

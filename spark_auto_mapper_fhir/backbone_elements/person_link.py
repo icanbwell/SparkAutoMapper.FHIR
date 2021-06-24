@@ -36,7 +36,7 @@ class PersonLink(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         target: Reference[Union[Patient, Practitioner, RelatedPerson, Person]],
         assurance: Optional[IdentityAssuranceLevel] = None,
