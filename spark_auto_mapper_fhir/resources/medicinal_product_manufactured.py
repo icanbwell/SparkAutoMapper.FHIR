@@ -1,32 +1,35 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.medicinalproductmanufactured import MedicinalProductManufacturedSchema
+from spark_fhir_schemas.r4.resources.medicinalproductmanufactured import (
+    MedicinalProductManufacturedSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for ingredient
-    from spark_auto_mapper_fhir.resources.medicinal_product_ingredient import MedicinalProductIngredient
-    from spark_auto_mapper_fhir.backbone_elements.prod_characteristic import ProdCharacteristic
+    from spark_auto_mapper_fhir.resources.medicinal_product_ingredient import (
+        MedicinalProductIngredient,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.prod_characteristic import (
+        ProdCharacteristic,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
 
@@ -36,6 +39,7 @@ class MedicinalProductManufactured(FhirResourceBase):
     """
     MedicinalProductManufactured
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -43,29 +47,31 @@ class MedicinalProductManufactured(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        manufacturedDoseForm: CodeableConcept ,
-        unitOfPresentation: Optional[CodeableConcept ] = None,
-        quantity: Quantity ,
-        manufacturer: Optional[FhirList[Reference [Union[Organization]]]] = None,
-        ingredient: Optional[FhirList[Reference [Union[MedicinalProductIngredient]]]] = None,
-        physicalCharacteristics: Optional[ProdCharacteristic ] = None,
-        otherCharacteristics: Optional[FhirList[CodeableConcept ]] = None,
+        manufacturedDoseForm: CodeableConcept,
+        unitOfPresentation: Optional[CodeableConcept] = None,
+        quantity: Quantity,
+        manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
+        ingredient: Optional[
+            FhirList[Reference[Union[MedicinalProductIngredient]]]
+        ] = None,
+        physicalCharacteristics: Optional[ProdCharacteristic] = None,
+        otherCharacteristics: Optional[FhirList[CodeableConcept]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param manufacturedDoseForm: Dose form as manufactured and before any transformation into the
-    pharmaceutical product.
-        :param unitOfPresentation: The “real world” units in which the quantity of the manufactured item is
-    described.
-        :param quantity: The quantity or "count number" of the manufactured item.
-        :param manufacturer: Manufacturer of the item (Note that this should be named "manufacturer" but it
-    currently causes technical issues).
-        :param ingredient: Ingredient.
-        :param physicalCharacteristics: Dimensions, color etc.
-        :param otherCharacteristics: Other codeable characteristics.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param manufacturedDoseForm: Dose form as manufactured and before any transformation into the
+        pharmaceutical product.
+            :param unitOfPresentation: The “real world” units in which the quantity of the manufactured item is
+        described.
+            :param quantity: The quantity or "count number" of the manufactured item.
+            :param manufacturer: Manufacturer of the item (Note that this should be named "manufacturer" but it
+        currently causes technical issues).
+            :param ingredient: Ingredient.
+            :param physicalCharacteristics: Dimensions, color etc.
+            :param otherCharacteristics: Other codeable characteristics.
         """
         super().__init__(
             resourceType="MedicinalProductManufactured",
@@ -84,4 +90,6 @@ class MedicinalProductManufactured(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MedicinalProductManufacturedSchema.get_schema(include_extension=include_extension)
+        return MedicinalProductManufacturedSchema.get_schema(
+            include_extension=include_extension
+        )

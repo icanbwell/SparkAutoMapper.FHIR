@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,14 +12,19 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
+    pass
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.document_section_codes import DocumentSectionCodesCode
+    from spark_auto_mapper_fhir.value_sets.document_section_codes import (
+        DocumentSectionCodesCode,
+    )
+
     # End Import for CodeableConcept for code
     # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -33,27 +32,40 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.organization import Organization
+
     # focus (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for focus
     from spark_auto_mapper_fhir.resources.resource import Resource
+
     # text (Narrative)
     from spark_auto_mapper_fhir.complex_types.narrative import Narrative
+
     # mode (ListMode)
     from spark_auto_mapper_fhir.complex_types.list_mode import ListMode
+
     # orderedBy (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for orderedBy
     from spark_auto_mapper_fhir.value_sets.list_order_codes import ListOrderCodesCode
+
     # End Import for CodeableConcept for orderedBy
     # entry (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for entry
     from spark_auto_mapper_fhir.resources.resource import Resource
+
     # emptyReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for emptyReason
-    from spark_auto_mapper_fhir.value_sets.list_empty_reasons import ListEmptyReasonsCode
+    from spark_auto_mapper_fhir.value_sets.list_empty_reasons import (
+        ListEmptyReasonsCode,
+    )
+
     # End Import for CodeableConcept for emptyReason
 
 
@@ -63,55 +75,69 @@ class CompositionSection(FhirBackboneElementBase):
     """
     Composition.Section
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        title: Optional[FhirString ] = None,
-        code: Optional[CodeableConcept[DocumentSectionCodesCode] ] = None,
-        author: Optional[FhirList[Reference [Union[Practitioner, PractitionerRole, Device, Patient, RelatedPerson, Organization]]]] = None,
-        focus: Optional[Reference [Union[Resource]]] = None,
-        text: Optional[Narrative ] = None,
-        mode: Optional[ListMode ] = None,
-        orderedBy: Optional[CodeableConcept[ListOrderCodesCode] ] = None,
-        entry: Optional[FhirList[Reference [Union[Resource]]]] = None,
-        emptyReason: Optional[CodeableConcept[ListEmptyReasonsCode] ] = None,
-        section: Optional[FhirList[CompositionSection ]] = None,
+        title: Optional[FhirString] = None,
+        code: Optional[CodeableConcept[DocumentSectionCodesCode]] = None,
+        author: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Practitioner,
+                        PractitionerRole,
+                        Device,
+                        Patient,
+                        RelatedPerson,
+                        Organization,
+                    ]
+                ]
+            ]
+        ] = None,
+        focus: Optional[Reference[Union[Resource]]] = None,
+        text: Optional[Narrative] = None,
+        mode: Optional[ListMode] = None,
+        orderedBy: Optional[CodeableConcept[ListOrderCodesCode]] = None,
+        entry: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        emptyReason: Optional[CodeableConcept[ListEmptyReasonsCode]] = None,
+        section: Optional[FhirList[CompositionSection]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param title: The label for this particular section.  This will be part of the rendered
-    content for the document, and is often used to build a table of contents.
-        :param code: A code identifying the kind of content contained within the section. This must
-    be consistent with the section title.
-        :param author: Identifies who is responsible for the information in this section, not
-    necessarily who typed it in.
-        :param focus: The actual focus of the section when it is not the subject of the composition,
-    but instead represents something or someone associated with the subject such
-    as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is
-    specified, the focus is assumed to be focus of the parent section, or, for a
-    section in the Composition itself, the subject of the composition. Sections
-    with a focus SHALL only include resources where the logical subject (patient,
-    subject, focus, etc.) matches the section focus, or the resources have no
-    logical subject (few resources).
-        :param text: A human-readable narrative that contains the attested content of the section,
-    used to represent the content of the resource to a human. The narrative need
-    not encode all the structured data, but is required to contain sufficient
-    detail to make it "clinically safe" for a human to just read the narrative.
-        :param mode: How the entry list was prepared - whether it is a working list that is
-    suitable for being maintained on an ongoing basis, or if it represents a
-    snapshot of a list of items from another source, or whether it is a prepared
-    list where items may be marked as added, modified or deleted.
-        :param orderedBy: Specifies the order applied to the items in the section entries.
-        :param entry: A reference to the actual resource from which the narrative in the section is
-    derived.
-        :param emptyReason: If the section is empty, why the list is empty. An empty section typically has
-    some text explaining the empty reason.
-        :param section: A nested sub-section within this section.
+            :param id_: id of resource
+            :param extension: extensions
+            :param title: The label for this particular section.  This will be part of the rendered
+        content for the document, and is often used to build a table of contents.
+            :param code: A code identifying the kind of content contained within the section. This must
+        be consistent with the section title.
+            :param author: Identifies who is responsible for the information in this section, not
+        necessarily who typed it in.
+            :param focus: The actual focus of the section when it is not the subject of the composition,
+        but instead represents something or someone associated with the subject such
+        as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is
+        specified, the focus is assumed to be focus of the parent section, or, for a
+        section in the Composition itself, the subject of the composition. Sections
+        with a focus SHALL only include resources where the logical subject (patient,
+        subject, focus, etc.) matches the section focus, or the resources have no
+        logical subject (few resources).
+            :param text: A human-readable narrative that contains the attested content of the section,
+        used to represent the content of the resource to a human. The narrative need
+        not encode all the structured data, but is required to contain sufficient
+        detail to make it "clinically safe" for a human to just read the narrative.
+            :param mode: How the entry list was prepared - whether it is a working list that is
+        suitable for being maintained on an ongoing basis, or if it represents a
+        snapshot of a list of items from another source, or whether it is a prepared
+        list where items may be marked as added, modified or deleted.
+            :param orderedBy: Specifies the order applied to the items in the section entries.
+            :param entry: A reference to the actual resource from which the narrative in the section is
+        derived.
+            :param emptyReason: If the section is empty, why the list is empty. An empty section typically has
+        some text explaining the empty reason.
+            :param section: A nested sub-section within this section.
         """
         super().__init__(
             id_=id_,

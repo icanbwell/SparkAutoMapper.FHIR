@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class CommonUCUMUnitsCode(FhirValueSetBase):
     """
     Common UCUM units
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -369,7 +360,9 @@ class CommonUCUMUnitsCodeValues:
     ThousandPerMilliLiter = CommonUCUMUnitsCode("10*3/mL")
     ThousandsPerMicroLiter = CommonUCUMUnitsCode("10*3/uL")
     ThousandCopiesPerMilliLiter = CommonUCUMUnitsCode("10*3{Copies}/mL")
-    _theNumberTenForArbitraryPowers_3_Polarization_U = CommonUCUMUnitsCode("10*-3{Polarization'U}")
+    _theNumberTenForArbitraryPowers_3_Polarization_U = CommonUCUMUnitsCode(
+        "10*-3{Polarization'U}"
+    )
     OneHundredThousand = CommonUCUMUnitsCode("10*5")
     Million = CommonUCUMUnitsCode("10*6")
     MillionInternationalUnit = CommonUCUMUnitsCode("10*6.[iU]")
@@ -381,7 +374,9 @@ class CommonUCUMUnitsCodeValues:
     MillionPerMilliliter = CommonUCUMUnitsCode("10*6/mL")
     _theNumberTenForArbitraryPowers_6_millimeter_3_ = CommonUCUMUnitsCode("10*6/mm3")
     MillionPerMicroliter = CommonUCUMUnitsCode("10*6/uL")
-    _theNumberTenForArbitraryPowers_6_Immunofluorescence_U = CommonUCUMUnitsCode("10*-6{Immunofluorescence'U}")
+    _theNumberTenForArbitraryPowers_6_Immunofluorescence_U = CommonUCUMUnitsCode(
+        "10*-6{Immunofluorescence'U}"
+    )
     TenToEighth = CommonUCUMUnitsCode("10*8")
     BillionPerLiter = CommonUCUMUnitsCode("10*9/L")
     BillionPerMilliliter = CommonUCUMUnitsCode("10*9/mL")
@@ -563,7 +558,9 @@ class CommonUCUMUnitsCodeValues:
     Milligram_Tot_Volume = CommonUCUMUnitsCode("mg/{Tot'Volume}")
     Milligram_Volume = CommonUCUMUnitsCode("mg/{Volume}")
     MilligramPerDay = CommonUCUMUnitsCode("mg/d")
-    Milligram_Day_173_theNumberTenForArbitraryPowers_2_meter_2_ = CommonUCUMUnitsCode("mg/d/(173.10*-2.m2)")
+    Milligram_Day_173_theNumberTenForArbitraryPowers_2_meter_2_ = CommonUCUMUnitsCode(
+        "mg/d/(173.10*-2.m2)"
+    )
     MilligramPerDeciliter = CommonUCUMUnitsCode("mg/dL")
     MilligramPerGram = CommonUCUMUnitsCode("mg/g")
     Milligram_GramCre = CommonUCUMUnitsCode("mg/g{Cre}")
@@ -611,7 +608,9 @@ class CommonUCUMUnitsCodeValues:
     MilliliterPerSquareMeter = CommonUCUMUnitsCode("mL/m2")
     MilliliterPerMillibar = CommonUCUMUnitsCode("mL/mbar")
     MilliliterPerMinute = CommonUCUMUnitsCode("mL/min")
-    Milliliter_Minute_173_theNumberTenForArbitraryPowers_2_meter_2_ = CommonUCUMUnitsCode("mL/min/(173.10*-2.m2)")
+    Milliliter_Minute_173_theNumberTenForArbitraryPowers_2_meter_2_ = (
+        CommonUCUMUnitsCode("mL/min/(173.10*-2.m2)")
+    )
     MilliliterPerMinutePer1_73SquareMeter = CommonUCUMUnitsCode("mL/min/{1.73_m2}")
     MilliliterPerMinutePerSquareMeter = CommonUCUMUnitsCode("mL/min/m2")
     MilliliterPerMillimeter = CommonUCUMUnitsCode("mL/mm")
@@ -737,7 +736,9 @@ class CommonUCUMUnitsCodeValues:
     NanomolePerMeterPerMilligramOfProtein = CommonUCUMUnitsCode("nmol/m/mg{protein}")
     NanomolePerMilligram = CommonUCUMUnitsCode("nmol/mg")
     NanomolePerMilligramPerHour = CommonUCUMUnitsCode("nmol/mg/h")
-    NanomolePerMinutePerMilligramOfHemoglobin = CommonUCUMUnitsCode("nmol/min/mg{hemoglobin}")
+    NanomolePerMinutePerMilligramOfHemoglobin = CommonUCUMUnitsCode(
+        "nmol/min/mg{hemoglobin}"
+    )
     NanomolePerMinutePerMilligramOfProtein = CommonUCUMUnitsCode("nmol/min/mg{protein}")
     NanomolePerMinutePerMilliliter = CommonUCUMUnitsCode("nmol/min/mL")
     NanomolePerMilliliter = CommonUCUMUnitsCode("nmol/mL")
@@ -906,7 +907,9 @@ class CommonUCUMUnitsCodeValues:
     Microvolt = CommonUCUMUnitsCode("uV")
     Volt = CommonUCUMUnitsCode("V")
     Week = CommonUCUMUnitsCode("wk")
-    _10MicronewtonSecondPerCentimeterToTheFifthPowerPerSquareMeter = CommonUCUMUnitsCode("10.uN.s/(cm5.m2)")
+    _10MicronewtonSecondPerCentimeterToTheFifthPowerPerSquareMeter = (
+        CommonUCUMUnitsCode("10.uN.s/(cm5.m2)")
+    )
     _10ThousandPerMicroliter = CommonUCUMUnitsCode("10*4/uL")
     _24Hour = CommonUCUMUnitsCode("24.h")
     Amp_re = CommonUCUMUnitsCode("A")
@@ -942,7 +945,9 @@ class CommonUCUMUnitsCodeValues:
     EnzymeUnitPerLiterAt37DegCelsius = CommonUCUMUnitsCode("U{37Cel}/L")
     EnzymeUnitPerTrillionRedBloodCells = CommonUCUMUnitsCode("U/10*12{RBCs}")
     Farad = CommonUCUMUnitsCode("F")
-    FemtomolePerMilligramOfCytosolProtein = CommonUCUMUnitsCode("fmol/mg{cytosol_protein}")
+    FemtomolePerMilligramOfCytosolProtein = CommonUCUMUnitsCode(
+        "fmol/mg{cytosol_protein}"
+    )
     FemtomolePerMilligramOfProtein = CommonUCUMUnitsCode("fmol/mg{protein}")
     FluorescentIntensityUnit = CommonUCUMUnitsCode("{FIU}")
     Fraction = CommonUCUMUnitsCode("{fraction}")
@@ -1083,8 +1088,12 @@ class CommonUCUMUnitsCodeValues:
     NanogramPerMillionRedBloodCells = CommonUCUMUnitsCode("ng/10*6{RBCs}")
     NanomoleBoneCollagenEquivalent = CommonUCUMUnitsCode("nmol{BCE}")
     NanomoleBoneCollagenEquivalentPerLiter = CommonUCUMUnitsCode("nmol{BCE}/L")
-    NanomoleBoneCollagenEquivalentPerMillimoleOfCreatinine = CommonUCUMUnitsCode("nmol{BCE}/mmol{creat}")
-    NanomoleOf1_2CystinePerMilligramOfProtein = CommonUCUMUnitsCode("nmol{1/2cys}/mg{protein}")
+    NanomoleBoneCollagenEquivalentPerMillimoleOfCreatinine = CommonUCUMUnitsCode(
+        "nmol{BCE}/mmol{creat}"
+    )
+    NanomoleOf1_2CystinePerMilligramOfProtein = CommonUCUMUnitsCode(
+        "nmol{1/2cys}/mg{protein}"
+    )
     NanomoleOfATP = CommonUCUMUnitsCode("nmol{ATP}")
     NanomolePerDeciliterOfGlomerularFiltrate = CommonUCUMUnitsCode("nmol/dL{GF}")
     NanomolePerMilligramOfCreatinine = CommonUCUMUnitsCode("nmol/mg{creat}")
@@ -1311,9 +1320,13 @@ class CommonUCUMUnitsCodeValues:
     CopiesPerMilliLiter = CommonUCUMUnitsCode("{Copies}/mL")
     CrossingThreshold = CommonUCUMUnitsCode("{Ct}")
     EhrlichUnitsPerDeciLiter = CommonUCUMUnitsCode("{Ehrlich_U}/dL")
-    EhrlichUnitsPerDeciLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode("{EhrlichU}/dL")
+    EhrlichUnitsPerDeciLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode(
+        "{EhrlichU}/dL"
+    )
     ElisaUnitsPerMilliLiter = CommonUCUMUnitsCode("{Elisa_U}/mL")
-    ElisaUnitsPerMilliLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode("{ElisaU}/mL")
+    ElisaUnitsPerMilliLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode(
+        "{ElisaU}/mL"
+    )
     HOMEOPATHICPOTENCYOFCENTESIMALKORSAKOVIANSERIES = CommonUCUMUnitsCode("{kp_C}")
     RedBloodCellCount = CommonUCUMUnitsCode("{rbc}")
     SpermatozoaPerMilliLiter = CommonUCUMUnitsCode("{Spermatozoa}/mL")

@@ -1,14 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -19,29 +15,41 @@ from spark_fhir_schemas.r4.resources.medicationdispense import MedicationDispens
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.complex_types.code import code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.medication_dispense_category_codes import MedicationDispenseCategoryCodesCode
+    from spark_auto_mapper_fhir.value_sets.medication_dispense_category_codes import (
+        MedicationDispenseCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for context
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for supportingInformation
     from spark_auto_mapper_fhir.resources.resource import Resource
-    from spark_auto_mapper_fhir.backbone_elements.medication_dispense_performer import MedicationDispensePerformer
+    from spark_auto_mapper_fhir.backbone_elements.medication_dispense_performer import (
+        MedicationDispensePerformer,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for authorizingPrescription
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -50,19 +58,25 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for destination
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for receiver
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
-    from spark_auto_mapper_fhir.backbone_elements.medication_dispense_substitution import MedicationDispenseSubstitution
+    from spark_auto_mapper_fhir.backbone_elements.medication_dispense_substitution import (
+        MedicationDispenseSubstitution,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for detectedIssue
     from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for eventHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
 
@@ -73,6 +87,7 @@ class MedicationDispense(FhirResourceBase):
     """
     MedicationDispense
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -80,75 +95,77 @@ class MedicationDispense(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        partOf: Optional[FhirList[Reference [Union[Procedure]]]] = None,
-        status: code ,
-        category: Optional[CodeableConcept[MedicationDispenseCategoryCodesCode] ] = None,
-        subject: Optional[Reference [Union[Patient, Group]]] = None,
-        context: Optional[Reference [Union[Encounter, EpisodeOfCare]]] = None,
-        supportingInformation: Optional[FhirList[Reference [Union[Resource]]]] = None,
-        performer: Optional[FhirList[MedicationDispensePerformer ]] = None,
-        location: Optional[Reference [Union[Location]]] = None,
-        authorizingPrescription: Optional[FhirList[Reference [Union[MedicationRequest]]]] = None,
-        type_: Optional[CodeableConcept ] = None,
-        quantity: Optional[Quantity ] = None,
-        daysSupply: Optional[Quantity ] = None,
-        whenPrepared: Optional[FhirDateTime ] = None,
-        whenHandedOver: Optional[FhirDateTime ] = None,
-        destination: Optional[Reference [Union[Location]]] = None,
-        receiver: Optional[FhirList[Reference [Union[Patient, Practitioner]]]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        dosageInstruction: Optional[FhirList[Dosage ]] = None,
-        substitution: Optional[MedicationDispenseSubstitution ] = None,
-        detectedIssue: Optional[FhirList[Reference [Union[DetectedIssue]]]] = None,
-        eventHistory: Optional[FhirList[Reference [Union[Provenance]]]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        partOf: Optional[FhirList[Reference[Union[Procedure]]]] = None,
+        status: code,
+        category: Optional[CodeableConcept[MedicationDispenseCategoryCodesCode]] = None,
+        subject: Optional[Reference[Union[Patient, Group]]] = None,
+        context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
+        supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        performer: Optional[FhirList[MedicationDispensePerformer]] = None,
+        location: Optional[Reference[Union[Location]]] = None,
+        authorizingPrescription: Optional[
+            FhirList[Reference[Union[MedicationRequest]]]
+        ] = None,
+        type_: Optional[CodeableConcept] = None,
+        quantity: Optional[Quantity] = None,
+        daysSupply: Optional[Quantity] = None,
+        whenPrepared: Optional[FhirDateTime] = None,
+        whenHandedOver: Optional[FhirDateTime] = None,
+        destination: Optional[Reference[Union[Location]]] = None,
+        receiver: Optional[FhirList[Reference[Union[Patient, Practitioner]]]] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        dosageInstruction: Optional[FhirList[Dosage]] = None,
+        substitution: Optional[MedicationDispenseSubstitution] = None,
+        detectedIssue: Optional[FhirList[Reference[Union[DetectedIssue]]]] = None,
+        eventHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifiers associated with this Medication Dispense that are defined by
-    business processes and/or used to refer to it when a direct URL reference to
-    the resource itself is not appropriate. They are business identifiers assigned
-    to this resource by the performer or other systems and remain constant as the
-    resource is updated and propagates from server to server.
-        :param partOf: The procedure that trigger the dispense.
-        :param status: A code specifying the state of the set of dispense events.
-        :param category: Indicates the type of medication dispense (for example, where the medication
-    is expected to be consumed or administered (i.e. inpatient or outpatient)).
-        :param subject: A link to a resource representing the person or the group to whom the
-    medication will be given.
-        :param context: The encounter or episode of care that establishes the context for this event.
-        :param supportingInformation: Additional information that supports the medication being dispensed.
-        :param performer: Indicates who or what performed the event.
-        :param location: The principal physical location where the dispense was performed.
-        :param authorizingPrescription: Indicates the medication order that is being dispensed against.
-        :param type_: Indicates the type of dispensing event that is performed. For example, Trial
-    Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
-        :param quantity: The amount of medication that has been dispensed. Includes unit of measure.
-        :param daysSupply: The amount of medication expressed as a timing amount.
-        :param whenPrepared: The time when the dispensed product was packaged and reviewed.
-        :param whenHandedOver: The time the dispensed product was provided to the patient or their
-    representative.
-        :param destination: Identification of the facility/location where the medication was shipped to,
-    as part of the dispense event.
-        :param receiver: Identifies the person who picked up the medication.  This will usually be a
-    patient or their caregiver, but some cases exist where it can be a healthcare
-    professional.
-        :param note: Extra information about the dispense that could not be conveyed in the other
-    attributes.
-        :param dosageInstruction: Indicates how the medication is to be used by the patient.
-        :param substitution: Indicates whether or not substitution was made as part of the dispense.  In
-    some cases, substitution will be expected but does not happen, in other cases
-    substitution is not expected but does happen.  This block explains what
-    substitution did or did not happen and why.  If nothing is specified,
-    substitution was not done.
-        :param detectedIssue: Indicates an actual or potential clinical issue with or between one or more
-    active or proposed clinical actions for a patient; e.g. drug-drug interaction,
-    duplicate therapy, dosage alert etc.
-        :param eventHistory: A summary of the events of interest that have occurred, such as when the
-    dispense was verified.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifiers associated with this Medication Dispense that are defined by
+        business processes and/or used to refer to it when a direct URL reference to
+        the resource itself is not appropriate. They are business identifiers assigned
+        to this resource by the performer or other systems and remain constant as the
+        resource is updated and propagates from server to server.
+            :param partOf: The procedure that trigger the dispense.
+            :param status: A code specifying the state of the set of dispense events.
+            :param category: Indicates the type of medication dispense (for example, where the medication
+        is expected to be consumed or administered (i.e. inpatient or outpatient)).
+            :param subject: A link to a resource representing the person or the group to whom the
+        medication will be given.
+            :param context: The encounter or episode of care that establishes the context for this event.
+            :param supportingInformation: Additional information that supports the medication being dispensed.
+            :param performer: Indicates who or what performed the event.
+            :param location: The principal physical location where the dispense was performed.
+            :param authorizingPrescription: Indicates the medication order that is being dispensed against.
+            :param type_: Indicates the type of dispensing event that is performed. For example, Trial
+        Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
+            :param quantity: The amount of medication that has been dispensed. Includes unit of measure.
+            :param daysSupply: The amount of medication expressed as a timing amount.
+            :param whenPrepared: The time when the dispensed product was packaged and reviewed.
+            :param whenHandedOver: The time the dispensed product was provided to the patient or their
+        representative.
+            :param destination: Identification of the facility/location where the medication was shipped to,
+        as part of the dispense event.
+            :param receiver: Identifies the person who picked up the medication.  This will usually be a
+        patient or their caregiver, but some cases exist where it can be a healthcare
+        professional.
+            :param note: Extra information about the dispense that could not be conveyed in the other
+        attributes.
+            :param dosageInstruction: Indicates how the medication is to be used by the patient.
+            :param substitution: Indicates whether or not substitution was made as part of the dispense.  In
+        some cases, substitution will be expected but does not happen, in other cases
+        substitution is not expected but does happen.  This block explains what
+        substitution did or did not happen and why.  If nothing is specified,
+        substitution was not done.
+            :param detectedIssue: Indicates an actual or potential clinical issue with or between one or more
+        active or proposed clinical actions for a patient; e.g. drug-drug interaction,
+        duplicate therapy, dosage alert etc.
+            :param eventHistory: A summary of the events of interest that have occurred, such as when the
+        dispense was verified.
         """
         super().__init__(
             resourceType="MedicationDispense",

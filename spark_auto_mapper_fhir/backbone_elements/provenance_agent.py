@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -19,16 +12,25 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for type_
-    from spark_auto_mapper_fhir.value_sets.provenance_participant_type import ProvenanceParticipantTypeCode
+    from spark_auto_mapper_fhir.value_sets.provenance_participant_type import (
+        ProvenanceParticipantTypeCode,
+    )
+
     # End Import for CodeableConcept for type_
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.security_role_type import SecurityRoleTypeCode
+    from spark_auto_mapper_fhir.value_sets.security_role_type import (
+        SecurityRoleTypeCode,
+    )
+
     # End Import for CodeableConcept for role
     # who (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for who
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -36,8 +38,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.organization import Organization
+
     # onBehalfOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for onBehalfOf
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -53,26 +57,47 @@ class ProvenanceAgent(FhirBackboneElementBase):
     """
     Provenance.Agent
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: Optional[CodeableConcept[ProvenanceParticipantTypeCode] ] = None,
-        role: Optional[FhirList[CodeableConcept[SecurityRoleTypeCode] ]] = None,
-        who: Reference [Union[Practitioner, PractitionerRole, RelatedPerson, Patient, Device, Organization]],
-        onBehalfOf: Optional[Reference [Union[Practitioner, PractitionerRole, RelatedPerson, Patient, Device, Organization]]] = None,
+        type_: Optional[CodeableConcept[ProvenanceParticipantTypeCode]] = None,
+        role: Optional[FhirList[CodeableConcept[SecurityRoleTypeCode]]] = None,
+        who: Reference[
+            Union[
+                Practitioner,
+                PractitionerRole,
+                RelatedPerson,
+                Patient,
+                Device,
+                Organization,
+            ]
+        ],
+        onBehalfOf: Optional[
+            Reference[
+                Union[
+                    Practitioner,
+                    PractitionerRole,
+                    RelatedPerson,
+                    Patient,
+                    Device,
+                    Organization,
+                ]
+            ]
+        ] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The participation the agent had with respect to the activity.
-        :param role: The function of the agent with respect to the activity. The security role
-    enabling the agent with respect to the activity.
-        :param who: The individual, device or organization that participated in the event.
-        :param onBehalfOf: The individual, device, or organization for whom the change was made.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The participation the agent had with respect to the activity.
+            :param role: The function of the agent with respect to the activity. The security role
+        enabling the agent with respect to the activity.
+            :param who: The individual, device or organization that participated in the event.
+            :param onBehalfOf: The individual, device, or organization for whom the change was made.
         """
         super().__init__(
             id_=id_,

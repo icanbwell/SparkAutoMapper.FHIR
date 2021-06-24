@@ -1,14 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -19,20 +15,26 @@ from spark_fhir_schemas.r4.resources.guidanceresponse import GuidanceResponseSch
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-    from spark_auto_mapper_fhir.complex_types.guidance_response_status import GuidanceResponseStatus
+    from spark_auto_mapper_fhir.complex_types.guidance_response_status import (
+        GuidanceResponseStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
@@ -40,12 +42,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for evaluationMessage
     from spark_auto_mapper_fhir.resources.operation_outcome import OperationOutcome
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for outputParameters
     from spark_auto_mapper_fhir.resources.parameters import Parameters
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for result
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.resources.request_group import RequestGroup
@@ -58,6 +63,7 @@ class GuidanceResponse(FhirResourceBase):
     """
     GuidanceResponse
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -65,62 +71,70 @@ class GuidanceResponse(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        requestIdentifier: Optional[Identifier ] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        status: GuidanceResponseStatus ,
-        subject: Optional[Reference [Union[Patient, Group]]] = None,
-        encounter: Optional[Reference [Union[Encounter]]] = None,
-        occurrenceDateTime: Optional[FhirDateTime ] = None,
-        performer: Optional[Reference [Union[Device]]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept ]] = None,
-        reasonReference: Optional[FhirList[Reference [Union[Condition, Observation, DiagnosticReport, DocumentReference]]]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        evaluationMessage: Optional[FhirList[Reference [Union[OperationOutcome]]]] = None,
-        outputParameters: Optional[Reference [Union[Parameters]]] = None,
-        result: Optional[Reference [Union[CarePlan, RequestGroup]]] = None,
-        dataRequirement: Optional[FhirList[DataRequirement ]] = None,
+        requestIdentifier: Optional[Identifier] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        status: GuidanceResponseStatus,
+        subject: Optional[Reference[Union[Patient, Group]]] = None,
+        encounter: Optional[Reference[Union[Encounter]]] = None,
+        occurrenceDateTime: Optional[FhirDateTime] = None,
+        performer: Optional[Reference[Union[Device]]] = None,
+        reasonCode: Optional[FhirList[CodeableConcept]] = None,
+        reasonReference: Optional[
+            FhirList[
+                Reference[
+                    Union[Condition, Observation, DiagnosticReport, DocumentReference]
+                ]
+            ]
+        ] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        evaluationMessage: Optional[
+            FhirList[Reference[Union[OperationOutcome]]]
+        ] = None,
+        outputParameters: Optional[Reference[Union[Parameters]]] = None,
+        result: Optional[Reference[Union[CarePlan, RequestGroup]]] = None,
+        dataRequirement: Optional[FhirList[DataRequirement]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param requestIdentifier: The identifier of the request associated with this response. If an identifier
-    was given as part of the request, it will be reproduced here to enable the
-    requester to more easily identify the response in a multi-request scenario.
-        :param identifier: Allows a service to provide  unique, business identifiers for the response.
-        :param status: The status of the response. If the evaluation is completed successfully, the
-    status will indicate success. However, in order to complete the evaluation,
-    the engine may require more information. In this case, the status will be
-    data-required, and the response will contain a description of the additional
-    required information. If the evaluation completed successfully, but the engine
-    determines that a potentially more accurate response could be provided if more
-    data was available, the status will be data-requested, and the response will
-    contain a description of the additional requested information.
-        :param subject: The patient for which the request was processed.
-        :param encounter: The encounter during which this response was created or to which the creation
-    of this record is tightly associated.
-        :param occurrenceDateTime: Indicates when the guidance response was processed.
-        :param performer: Provides a reference to the device that performed the guidance.
-        :param reasonCode: Describes the reason for the guidance response in coded or textual form.
-        :param reasonReference: Indicates the reason the request was initiated. This is typically provided as
-    a parameter to the evaluation and echoed by the service, although for some use
-    cases, such as subscription- or event-based scenarios, it may provide an
-    indication of the cause for the response.
-        :param note: Provides a mechanism to communicate additional information about the response.
-        :param evaluationMessage: Messages resulting from the evaluation of the artifact or artifacts. As part
-    of evaluating the request, the engine may produce informational or warning
-    messages. These messages will be provided by this element.
-        :param outputParameters: The output parameters of the evaluation, if any. Many modules will result in
-    the return of specific resources such as procedure or communication requests
-    that are returned as part of the operation result. However, modules may define
-    specific outputs that would be returned as the result of the evaluation, and
-    these would be returned in this element.
-        :param result: The actions, if any, produced by the evaluation of the artifact.
-        :param dataRequirement: If the evaluation could not be completed due to lack of information, or
-    additional information would potentially result in a more accurate response,
-    this element will a description of the data required in order to proceed with
-    the evaluation. A subsequent request to the service should include this data.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param requestIdentifier: The identifier of the request associated with this response. If an identifier
+        was given as part of the request, it will be reproduced here to enable the
+        requester to more easily identify the response in a multi-request scenario.
+            :param identifier: Allows a service to provide  unique, business identifiers for the response.
+            :param status: The status of the response. If the evaluation is completed successfully, the
+        status will indicate success. However, in order to complete the evaluation,
+        the engine may require more information. In this case, the status will be
+        data-required, and the response will contain a description of the additional
+        required information. If the evaluation completed successfully, but the engine
+        determines that a potentially more accurate response could be provided if more
+        data was available, the status will be data-requested, and the response will
+        contain a description of the additional requested information.
+            :param subject: The patient for which the request was processed.
+            :param encounter: The encounter during which this response was created or to which the creation
+        of this record is tightly associated.
+            :param occurrenceDateTime: Indicates when the guidance response was processed.
+            :param performer: Provides a reference to the device that performed the guidance.
+            :param reasonCode: Describes the reason for the guidance response in coded or textual form.
+            :param reasonReference: Indicates the reason the request was initiated. This is typically provided as
+        a parameter to the evaluation and echoed by the service, although for some use
+        cases, such as subscription- or event-based scenarios, it may provide an
+        indication of the cause for the response.
+            :param note: Provides a mechanism to communicate additional information about the response.
+            :param evaluationMessage: Messages resulting from the evaluation of the artifact or artifacts. As part
+        of evaluating the request, the engine may produce informational or warning
+        messages. These messages will be provided by this element.
+            :param outputParameters: The output parameters of the evaluation, if any. Many modules will result in
+        the return of specific resources such as procedure or communication requests
+        that are returned as part of the operation result. However, modules may define
+        specific outputs that would be returned as the result of the evaluation, and
+        these would be returned in this element.
+            :param result: The actions, if any, produced by the evaluation of the artifact.
+            :param dataRequirement: If the evaluation could not be completed due to lack of information, or
+        additional information would potentially result in a more accurate response,
+        this element will a description of the data required in order to proceed with
+        the evaluation. A subsequent request to the service should include this data.
         """
         super().__init__(
             resourceType="GuidanceResponse",

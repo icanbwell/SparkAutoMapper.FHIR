@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class DICOMControlledTerminologyDefinitionsCode(FhirValueSetBase):
     """
     DICOM Controlled Terminology Definitions
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -33,7 +24,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     UltrasoundBoneDensitometry = DICOMControlledTerminologyDefinitionsCode("BDUS")
     BiomagneticImaging = DICOMControlledTerminologyDefinitionsCode("BI")
     BoneMineralDensitometry = DICOMControlledTerminologyDefinitionsCode("BMD")
-    ComputerAssistedDetection_Diagnosis = DICOMControlledTerminologyDefinitionsCode("CAD")
+    ComputerAssistedDetection_Diagnosis = DICOMControlledTerminologyDefinitionsCode(
+        "CAD"
+    )
     ImageCapture = DICOMControlledTerminologyDefinitionsCode("CAPTURE")
     ColorFlowDoppler = DICOMControlledTerminologyDefinitionsCode("CD")
     Cinefluorography = DICOMControlledTerminologyDefinitionsCode("CF")
@@ -65,7 +58,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     HardCopy = DICOMControlledTerminologyDefinitionsCode("HC")
     HemodynamicWaveform = DICOMControlledTerminologyDefinitionsCode("HD")
     Intra_oralRadiography = DICOMControlledTerminologyDefinitionsCode("IO")
-    IntravascularOpticalCoherenceTomography = DICOMControlledTerminologyDefinitionsCode("IVOCT")
+    IntravascularOpticalCoherenceTomography = DICOMControlledTerminologyDefinitionsCode(
+        "IVOCT"
+    )
     IntravascularUltrasound = DICOMControlledTerminologyDefinitionsCode("IVUS")
     Keratometry = DICOMControlledTerminologyDefinitionsCode("KER")
     KeyObjectSelection = DICOMControlledTerminologyDefinitionsCode("KO")
@@ -113,7 +108,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     StereometricRelationship = DICOMControlledTerminologyDefinitionsCode("SMR")
     StructuredReportDocument = DICOMControlledTerminologyDefinitionsCode("SR")
     SubjectiveRefraction = DICOMControlledTerminologyDefinitionsCode("SRF")
-    Single_photonEmissionComputedTomography = DICOMControlledTerminologyDefinitionsCode("ST")
+    Single_photonEmissionComputedTomography = DICOMControlledTerminologyDefinitionsCode(
+        "ST"
+    )
     Thermography = DICOMControlledTerminologyDefinitionsCode("TG")
     UnknownSex = DICOMControlledTerminologyDefinitionsCode("U")
     Unavailable = DICOMControlledTerminologyDefinitionsCode("UNAVAILABLE")
@@ -125,17 +122,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     X_RayAngiography = DICOMControlledTerminologyDefinitionsCode("XA")
     External_cameraPhotography = DICOMControlledTerminologyDefinitionsCode("XC")
     DigitalTimecode_NOS_ = DICOMControlledTerminologyDefinitionsCode("109001")
-    ECG_basedGatingSignal_Processed = DICOMControlledTerminologyDefinitionsCode("109002")
+    ECG_basedGatingSignal_Processed = DICOMControlledTerminologyDefinitionsCode(
+        "109002"
+    )
     IRIG_BTimecode = DICOMControlledTerminologyDefinitionsCode("109003")
     X_RayFluoroscopyOnSignal = DICOMControlledTerminologyDefinitionsCode("109004")
     X_RayOnTrigger = DICOMControlledTerminologyDefinitionsCode("109005")
     DifferentialSignal = DICOMControlledTerminologyDefinitionsCode("109006")
     HisBundleElectrogram = DICOMControlledTerminologyDefinitionsCode("109007")
     MonopoleSignal = DICOMControlledTerminologyDefinitionsCode("109008")
-    Pacing_electrical_Stimulus_Voltage = DICOMControlledTerminologyDefinitionsCode("109009")
+    Pacing_electrical_Stimulus_Voltage = DICOMControlledTerminologyDefinitionsCode(
+        "109009"
+    )
     RadioFrequencyAblation_Power = DICOMControlledTerminologyDefinitionsCode("109010")
-    VoltageMeasurementByBasketCatheter = DICOMControlledTerminologyDefinitionsCode("109011")
-    VoltageMeasurementByMappingCatheter = DICOMControlledTerminologyDefinitionsCode("109012")
+    VoltageMeasurementByBasketCatheter = DICOMControlledTerminologyDefinitionsCode(
+        "109011"
+    )
+    VoltageMeasurementByMappingCatheter = DICOMControlledTerminologyDefinitionsCode(
+        "109012"
+    )
     VoltageMeasurement_NOS = DICOMControlledTerminologyDefinitionsCode("109013")
     _35_OfThermalCO = DICOMControlledTerminologyDefinitionsCode("109014")
     _70_OfThermalCO = DICOMControlledTerminologyDefinitionsCode("109015")
@@ -151,10 +156,14 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MaxDp_dt = DICOMControlledTerminologyDefinitionsCode("109025")
     MaxNegDp_dt = DICOMControlledTerminologyDefinitionsCode("109026")
     MeanBloodPressure = DICOMControlledTerminologyDefinitionsCode("109027")
-    PeakOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode("109028")
+    PeakOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode(
+        "109028"
+    )
     StartOfExpiration = DICOMControlledTerminologyDefinitionsCode("109029")
     StartOfInspiration = DICOMControlledTerminologyDefinitionsCode("109030")
-    StartOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode("109031")
+    StartOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode(
+        "109031"
+    )
     SystolicPressure_Average = DICOMControlledTerminologyDefinitionsCode("109032")
     SystolicPeakPressure = DICOMControlledTerminologyDefinitionsCode("109033")
     VWavePeakPressure = DICOMControlledTerminologyDefinitionsCode("109034")
@@ -169,7 +178,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     RWave = DICOMControlledTerminologyDefinitionsCode("109043")
     SWave = DICOMControlledTerminologyDefinitionsCode("109044")
     StartOfAtrialContraction = DICOMControlledTerminologyDefinitionsCode("109045")
-    StartOfAtrialContraction_subsequent_ = DICOMControlledTerminologyDefinitionsCode("109046")
+    StartOfAtrialContraction_subsequent_ = DICOMControlledTerminologyDefinitionsCode(
+        "109046"
+    )
     StimulationAtRate1Interval = DICOMControlledTerminologyDefinitionsCode("109047")
     StimulationAtRate2Interval = DICOMControlledTerminologyDefinitionsCode("109048")
     StimulationAtRate3Interval = DICOMControlledTerminologyDefinitionsCode("109049")
@@ -205,7 +216,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ModifyingEquipment = DICOMControlledTerminologyDefinitionsCode("109103")
     De_identifyingEquipment = DICOMControlledTerminologyDefinitionsCode("109104")
     FrameExtractingEquipment = DICOMControlledTerminologyDefinitionsCode("109105")
-    EnhancedMulti_frameConversionEquipment = DICOMControlledTerminologyDefinitionsCode("109106")
+    EnhancedMulti_frameConversionEquipment = DICOMControlledTerminologyDefinitionsCode(
+        "109106"
+    )
     Voice = DICOMControlledTerminologyDefinitionsCode("109110")
     Operator_sNarrative = DICOMControlledTerminologyDefinitionsCode("109111")
     AmbientRoomEnvironment = DICOMControlledTerminologyDefinitionsCode("109112")
@@ -232,20 +245,34 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     AmericanRareBreedAssociation = DICOMControlledTerminologyDefinitionsCode("109204")
     AnimalRegistryUnlimited = DICOMControlledTerminologyDefinitionsCode("109205")
     AnimalResearchFoundation = DICOMControlledTerminologyDefinitionsCode("109206")
-    CanadianBorderCollieAssociation = DICOMControlledTerminologyDefinitionsCode("109207")
+    CanadianBorderCollieAssociation = DICOMControlledTerminologyDefinitionsCode(
+        "109207"
+    )
     CanadianKennelClub = DICOMControlledTerminologyDefinitionsCode("109208")
-    CanadianLivestockRecordsAssociation = DICOMControlledTerminologyDefinitionsCode("109209")
+    CanadianLivestockRecordsAssociation = DICOMControlledTerminologyDefinitionsCode(
+        "109209"
+    )
     CanineFederationOfCanada = DICOMControlledTerminologyDefinitionsCode("109210")
     ContinentalKennelClub = DICOMControlledTerminologyDefinitionsCode("109211")
     DogRegistryOfAmerica = DICOMControlledTerminologyDefinitionsCode("109212")
-    FederationOfInternationalCanines = DICOMControlledTerminologyDefinitionsCode("109213")
-    InternationalProgressiveDogBreeders_Alliance = DICOMControlledTerminologyDefinitionsCode("109214")
+    FederationOfInternationalCanines = DICOMControlledTerminologyDefinitionsCode(
+        "109213"
+    )
+    InternationalProgressiveDogBreeders_Alliance = (
+        DICOMControlledTerminologyDefinitionsCode("109214")
+    )
     NationalKennelClub = DICOMControlledTerminologyDefinitionsCode("109215")
-    NorthAmericanPurebredDogRegistry = DICOMControlledTerminologyDefinitionsCode("109216")
+    NorthAmericanPurebredDogRegistry = DICOMControlledTerminologyDefinitionsCode(
+        "109216"
+    )
     UnitedAllBreedRegistry = DICOMControlledTerminologyDefinitionsCode("109217")
     UnitedKennelClub = DICOMControlledTerminologyDefinitionsCode("109218")
-    UniversalKennelClubInternational = DICOMControlledTerminologyDefinitionsCode("109219")
-    WorkingCanineAssociationOfCanada = DICOMControlledTerminologyDefinitionsCode("109220")
+    UniversalKennelClubInternational = DICOMControlledTerminologyDefinitionsCode(
+        "109219"
+    )
+    WorkingCanineAssociationOfCanada = DICOMControlledTerminologyDefinitionsCode(
+        "109220"
+    )
     WorldKennelClub = DICOMControlledTerminologyDefinitionsCode("109221")
     WorldWideKennelClub = DICOMControlledTerminologyDefinitionsCode("109222")
     OverallImageQualityEvaluation = DICOMControlledTerminologyDefinitionsCode("109701")
@@ -407,7 +434,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PaperDocument = DICOMControlledTerminologyDefinitionsCode("110038")
     ApplicationActivity = DICOMControlledTerminologyDefinitionsCode("110100")
     AuditLogUsed = DICOMControlledTerminologyDefinitionsCode("110101")
-    BeginTransferringDICOMInstances = DICOMControlledTerminologyDefinitionsCode("110102")
+    BeginTransferringDICOMInstances = DICOMControlledTerminologyDefinitionsCode(
+        "110102"
+    )
     DICOMInstancesAccessed = DICOMControlledTerminologyDefinitionsCode("110103")
     DICOMInstancesTransferred = DICOMControlledTerminologyDefinitionsCode("110104")
     DICOMStudyDeleted = DICOMControlledTerminologyDefinitionsCode("110105")
@@ -435,7 +464,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     UseOfRestrictedFunction = DICOMControlledTerminologyDefinitionsCode("110132")
     AuditRecordingStopped = DICOMControlledTerminologyDefinitionsCode("110133")
     AuditRecordingStarted = DICOMControlledTerminologyDefinitionsCode("110134")
-    ObjectSecurityAttributesChanged = DICOMControlledTerminologyDefinitionsCode("110135")
+    ObjectSecurityAttributesChanged = DICOMControlledTerminologyDefinitionsCode(
+        "110135"
+    )
     SecurityRolesChanged = DICOMControlledTerminologyDefinitionsCode("110136")
     UserSecurityAttributesChanged = DICOMControlledTerminologyDefinitionsCode("110137")
     EmergencyOverrideStopped = DICOMControlledTerminologyDefinitionsCode("110138")
@@ -456,19 +487,31 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DoctorCanceledProcedure = DICOMControlledTerminologyDefinitionsCode("110500")
     EquipmentFailure = DICOMControlledTerminologyDefinitionsCode("110501")
     IncorrectProcedureOrdered = DICOMControlledTerminologyDefinitionsCode("110502")
-    PatientAllergicToMedia_contrast = DICOMControlledTerminologyDefinitionsCode("110503")
+    PatientAllergicToMedia_contrast = DICOMControlledTerminologyDefinitionsCode(
+        "110503"
+    )
     PatientDied = DICOMControlledTerminologyDefinitionsCode("110504")
-    PatientRefusedToContinueProcedure = DICOMControlledTerminologyDefinitionsCode("110505")
-    PatientTakenForTreatmentOrSurgery = DICOMControlledTerminologyDefinitionsCode("110506")
+    PatientRefusedToContinueProcedure = DICOMControlledTerminologyDefinitionsCode(
+        "110505"
+    )
+    PatientTakenForTreatmentOrSurgery = DICOMControlledTerminologyDefinitionsCode(
+        "110506"
+    )
     PatientDidNotArrive = DICOMControlledTerminologyDefinitionsCode("110507")
     PatientPregnant = DICOMControlledTerminologyDefinitionsCode("110508")
-    ChangeOfProcedureForCorrectCharging = DICOMControlledTerminologyDefinitionsCode("110509")
+    ChangeOfProcedureForCorrectCharging = DICOMControlledTerminologyDefinitionsCode(
+        "110509"
+    )
     DuplicateOrder = DICOMControlledTerminologyDefinitionsCode("110510")
     NursingUnitCancel = DICOMControlledTerminologyDefinitionsCode("110511")
     IncorrectSideOrdered = DICOMControlledTerminologyDefinitionsCode("110512")
-    DiscontinuedForUnspecifiedReason = DICOMControlledTerminologyDefinitionsCode("110513")
+    DiscontinuedForUnspecifiedReason = DICOMControlledTerminologyDefinitionsCode(
+        "110513"
+    )
     IncorrectWorklistEntrySelected = DICOMControlledTerminologyDefinitionsCode("110514")
-    PatientConditionPreventedContinuing = DICOMControlledTerminologyDefinitionsCode("110515")
+    PatientConditionPreventedContinuing = DICOMControlledTerminologyDefinitionsCode(
+        "110515"
+    )
     EquipmentChange = DICOMControlledTerminologyDefinitionsCode("110516")
     PatientMovement = DICOMControlledTerminologyDefinitionsCode("110518")
     OperatorError = DICOMControlledTerminologyDefinitionsCode("110519")
@@ -478,37 +521,77 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MediaFailure = DICOMControlledTerminologyDefinitionsCode("110524")
     ResourcePre_empted = DICOMControlledTerminologyDefinitionsCode("110526")
     ResourceInadequate = DICOMControlledTerminologyDefinitionsCode("110527")
-    DiscontinuedProcedureStepRescheduled = DICOMControlledTerminologyDefinitionsCode("110528")
-    DiscontinuedProcedureStepReschedulingRecommended = DICOMControlledTerminologyDefinitionsCode("110529")
+    DiscontinuedProcedureStepRescheduled = DICOMControlledTerminologyDefinitionsCode(
+        "110528"
+    )
+    DiscontinuedProcedureStepReschedulingRecommended = (
+        DICOMControlledTerminologyDefinitionsCode("110529")
+    )
     VentralDiencephalon = DICOMControlledTerminologyDefinitionsCode("110700")
     WhiteMatterT1Hypointensity = DICOMControlledTerminologyDefinitionsCode("110701")
     WhiteMatterT2Hyperintensity = DICOMControlledTerminologyDefinitionsCode("110702")
-    SuperiorLongitudinalFasciculusI = DICOMControlledTerminologyDefinitionsCode("110703")
-    SuperiorLongitudinalFasciculusII = DICOMControlledTerminologyDefinitionsCode("110704")
-    SuperiorLongitudinalFasciculusIII = DICOMControlledTerminologyDefinitionsCode("110705")
+    SuperiorLongitudinalFasciculusI = DICOMControlledTerminologyDefinitionsCode(
+        "110703"
+    )
+    SuperiorLongitudinalFasciculusII = DICOMControlledTerminologyDefinitionsCode(
+        "110704"
+    )
+    SuperiorLongitudinalFasciculusIII = DICOMControlledTerminologyDefinitionsCode(
+        "110705"
+    )
     PerilesionalWhiteMatter = DICOMControlledTerminologyDefinitionsCode("110706")
-    SpinTaggingPerfusionMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110800")
-    ContrastAgentAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110801")
-    TimeOfFlightAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110802")
-    ProtonDensityWeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110803")
+    SpinTaggingPerfusionMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110800"
+    )
+    ContrastAgentAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110801"
+    )
+    TimeOfFlightAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110802"
+    )
+    ProtonDensityWeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110803"
+    )
     T1WeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110804")
     T2WeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110805")
     T2_WeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110806")
     FieldMapMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110807")
     FractionalAnisotropy = DICOMControlledTerminologyDefinitionsCode("110808")
     RelativeAnisotropy = DICOMControlledTerminologyDefinitionsCode("110809")
-    VolumetricDiffusionDxxComponent = DICOMControlledTerminologyDefinitionsCode("110810")
-    VolumetricDiffusionDxyComponent = DICOMControlledTerminologyDefinitionsCode("110811")
-    VolumetricDiffusionDxzComponent = DICOMControlledTerminologyDefinitionsCode("110812")
-    VolumetricDiffusionDyyComponent = DICOMControlledTerminologyDefinitionsCode("110813")
-    VolumetricDiffusionDyzComponent = DICOMControlledTerminologyDefinitionsCode("110814")
-    VolumetricDiffusionDzzComponent = DICOMControlledTerminologyDefinitionsCode("110815")
-    T1WeightedDynamicContrastEnhancedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110816")
-    T2WeightedDynamicContrastEnhancedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110817")
-    T2_WeightedDynamicContrastEnhancedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110818")
+    VolumetricDiffusionDxxComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110810"
+    )
+    VolumetricDiffusionDxyComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110811"
+    )
+    VolumetricDiffusionDxzComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110812"
+    )
+    VolumetricDiffusionDyyComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110813"
+    )
+    VolumetricDiffusionDyzComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110814"
+    )
+    VolumetricDiffusionDzzComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110815"
+    )
+    T1WeightedDynamicContrastEnhancedMRSignalIntensity = (
+        DICOMControlledTerminologyDefinitionsCode("110816")
+    )
+    T2WeightedDynamicContrastEnhancedMRSignalIntensity = (
+        DICOMControlledTerminologyDefinitionsCode("110817")
+    )
+    T2_WeightedDynamicContrastEnhancedMRSignalIntensity = (
+        DICOMControlledTerminologyDefinitionsCode("110818")
+    )
     BloodOxygenationLevel = DICOMControlledTerminologyDefinitionsCode("110819")
-    NuclearMedicineProjectionActivity = DICOMControlledTerminologyDefinitionsCode("110820")
-    NuclearMedicineTomographicActivity = DICOMControlledTerminologyDefinitionsCode("110821")
+    NuclearMedicineProjectionActivity = DICOMControlledTerminologyDefinitionsCode(
+        "110820"
+    )
+    NuclearMedicineTomographicActivity = DICOMControlledTerminologyDefinitionsCode(
+        "110821"
+    )
     SpatialDisplacementXComponent = DICOMControlledTerminologyDefinitionsCode("110822")
     SpatialDisplacementYComponent = DICOMControlledTerminologyDefinitionsCode("110823")
     SpatialDisplacementZComponent = DICOMControlledTerminologyDefinitionsCode("110824")
@@ -541,8 +624,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     X_RayAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("110851")
     MRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110852")
     BinarySegmentation = DICOMControlledTerminologyDefinitionsCode("110853")
-    FractionalProbabilisticSegmentation = DICOMControlledTerminologyDefinitionsCode("110854")
-    FractionalOccupancySegmentation = DICOMControlledTerminologyDefinitionsCode("110855")
+    FractionalProbabilisticSegmentation = DICOMControlledTerminologyDefinitionsCode(
+        "110854"
+    )
+    FractionalOccupancySegmentation = DICOMControlledTerminologyDefinitionsCode(
+        "110855"
+    )
     LinearDisplacement = DICOMControlledTerminologyDefinitionsCode("110856")
     PhotonEnergy = DICOMControlledTerminologyDefinitionsCode("110857")
     Time = DICOMControlledTerminologyDefinitionsCode("110858")
@@ -571,9 +658,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ImageOrientation_Patient_RowX = DICOMControlledTerminologyDefinitionsCode("110904")
     ImageOrientation_Patient_RowY = DICOMControlledTerminologyDefinitionsCode("110905")
     ImageOrientation_Patient_RowZ = DICOMControlledTerminologyDefinitionsCode("110906")
-    ImageOrientation_Patient_ColumnX = DICOMControlledTerminologyDefinitionsCode("110907")
-    ImageOrientation_Patient_ColumnY = DICOMControlledTerminologyDefinitionsCode("110908")
-    ImageOrientation_Patient_ColumnZ = DICOMControlledTerminologyDefinitionsCode("110909")
+    ImageOrientation_Patient_ColumnX = DICOMControlledTerminologyDefinitionsCode(
+        "110907"
+    )
+    ImageOrientation_Patient_ColumnY = DICOMControlledTerminologyDefinitionsCode(
+        "110908"
+    )
+    ImageOrientation_Patient_ColumnZ = DICOMControlledTerminologyDefinitionsCode(
+        "110909"
+    )
     PixelDataRows = DICOMControlledTerminologyDefinitionsCode("110910")
     PixelDataColumns = DICOMControlledTerminologyDefinitionsCode("110911")
     AlgorithmName = DICOMControlledTerminologyDefinitionsCode("111001")
@@ -582,7 +675,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     AnalysisPerformed = DICOMControlledTerminologyDefinitionsCode("111004")
     AssessmentCategory = DICOMControlledTerminologyDefinitionsCode("111005")
     BreastComposition = DICOMControlledTerminologyDefinitionsCode("111006")
-    BreastOutlineIncludingPectoralMuscleTissue = DICOMControlledTerminologyDefinitionsCode("111007")
+    BreastOutlineIncludingPectoralMuscleTissue = (
+        DICOMControlledTerminologyDefinitionsCode("111007")
+    )
     CalcificationDistribution = DICOMControlledTerminologyDefinitionsCode("111008")
     CalcificationType = DICOMControlledTerminologyDefinitionsCode("111009")
     Center = DICOMControlledTerminologyDefinitionsCode("111010")
@@ -592,13 +687,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ClockfaceOrRegion = DICOMControlledTerminologyDefinitionsCode("111014")
     CompositeFeature = DICOMControlledTerminologyDefinitionsCode("111015")
     CompositeType = DICOMControlledTerminologyDefinitionsCode("111016")
-    CADProcessingAndFindingsSummary = DICOMControlledTerminologyDefinitionsCode("111017")
+    CADProcessingAndFindingsSummary = DICOMControlledTerminologyDefinitionsCode(
+        "111017"
+    )
     ContentDate = DICOMControlledTerminologyDefinitionsCode("111018")
     ContentTime = DICOMControlledTerminologyDefinitionsCode("111019")
     Depth = DICOMControlledTerminologyDefinitionsCode("111020")
     DescriptionOfChange = DICOMControlledTerminologyDefinitionsCode("111021")
     DetectionPerformed = DICOMControlledTerminologyDefinitionsCode("111022")
-    DifferentialDiagnosis_Impression = DICOMControlledTerminologyDefinitionsCode("111023")
+    DifferentialDiagnosis_Impression = DICOMControlledTerminologyDefinitionsCode(
+        "111023"
+    )
     FailedAnalyses = DICOMControlledTerminologyDefinitionsCode("111024")
     FailedDetections = DICOMControlledTerminologyDefinitionsCode("111025")
     HorizontalPixelSpacing = DICOMControlledTerminologyDefinitionsCode("111026")
@@ -609,7 +708,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ImageView = DICOMControlledTerminologyDefinitionsCode("111031")
     ImageViewModifier = DICOMControlledTerminologyDefinitionsCode("111032")
     ImpressionDescription = DICOMControlledTerminologyDefinitionsCode("111033")
-    IndividualImpression_Recommendation = DICOMControlledTerminologyDefinitionsCode("111034")
+    IndividualImpression_Recommendation = DICOMControlledTerminologyDefinitionsCode(
+        "111034"
+    )
     LesionDensity = DICOMControlledTerminologyDefinitionsCode("111035")
     MammographyCADReport = DICOMControlledTerminologyDefinitionsCode("111036")
     Margins = DICOMControlledTerminologyDefinitionsCode("111037")
@@ -664,11 +765,19 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Cooper_sLigamentChanges = DICOMControlledTerminologyDefinitionsCode("111111")
     MassInTheSkin = DICOMControlledTerminologyDefinitionsCode("111112")
     MassOnTheSkin = DICOMControlledTerminologyDefinitionsCode("111113")
-    PostProcedureMammogramsForMarkerPlacement = DICOMControlledTerminologyDefinitionsCode("111120")
-    Follow_upPostBiopsyAsDirectedByClinician = DICOMControlledTerminologyDefinitionsCode("111121")
-    KnownBiopsyProvenMalignancy_TakeAppropriateAction = DICOMControlledTerminologyDefinitionsCode("111122")
+    PostProcedureMammogramsForMarkerPlacement = (
+        DICOMControlledTerminologyDefinitionsCode("111120")
+    )
+    Follow_upPostBiopsyAsDirectedByClinician = (
+        DICOMControlledTerminologyDefinitionsCode("111121")
+    )
+    KnownBiopsyProvenMalignancy_TakeAppropriateAction = (
+        DICOMControlledTerminologyDefinitionsCode("111122")
+    )
     MarkerPlacement = DICOMControlledTerminologyDefinitionsCode("111123")
-    PersonalHistoryOfBreastCancerWithMastectomy = DICOMControlledTerminologyDefinitionsCode("111124")
+    PersonalHistoryOfBreastCancerWithMastectomy = (
+        DICOMControlledTerminologyDefinitionsCode("111124")
+    )
     KnownBiopsyProvenMalignancy = DICOMControlledTerminologyDefinitionsCode("111125")
     ImageDetectedMass = DICOMControlledTerminologyDefinitionsCode("111126")
     Targeted = DICOMControlledTerminologyDefinitionsCode("111127")
@@ -681,25 +790,53 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     OldFilmsForComparison = DICOMControlledTerminologyDefinitionsCode("111138")
     Ductography = DICOMControlledTerminologyDefinitionsCode("111139")
     NormalIntervalFollow_up = DICOMControlledTerminologyDefinitionsCode("111140")
-    AnyDecisionToBiopsyShouldBeBasedOnClinicalAssessment = DICOMControlledTerminologyDefinitionsCode("111141")
-    Follow_upAtShortInterval_1_11Months_ = DICOMControlledTerminologyDefinitionsCode("111142")
+    AnyDecisionToBiopsyShouldBeBasedOnClinicalAssessment = (
+        DICOMControlledTerminologyDefinitionsCode("111141")
+    )
+    Follow_upAtShortInterval_1_11Months_ = DICOMControlledTerminologyDefinitionsCode(
+        "111142"
+    )
     BiopsyShouldBeConsidered = DICOMControlledTerminologyDefinitionsCode("111143")
     NeedleLocalizationAndBiopsy = DICOMControlledTerminologyDefinitionsCode("111144")
     HistologyUsingCoreBiopsy = DICOMControlledTerminologyDefinitionsCode("111145")
-    SuggestiveOfMalignancy_TakeAppropriateAction = DICOMControlledTerminologyDefinitionsCode("111146")
+    SuggestiveOfMalignancy_TakeAppropriateAction = (
+        DICOMControlledTerminologyDefinitionsCode("111146")
+    )
     CytologicAnalysis = DICOMControlledTerminologyDefinitionsCode("111147")
-    BiopsyShouldBeStronglyConsidered = DICOMControlledTerminologyDefinitionsCode("111148")
-    HighlySuggestiveOfMalignancy_TakeAppropriateAction = DICOMControlledTerminologyDefinitionsCode("111149")
-    PresentationRequired_RenderingDeviceIsExpectedToPresent = DICOMControlledTerminologyDefinitionsCode("111150")
-    PresentationOptional_RenderingDeviceMayPresent = DICOMControlledTerminologyDefinitionsCode("111151")
-    NotForPresentation_RenderingDeviceExpectedNotToPresent = DICOMControlledTerminologyDefinitionsCode("111152")
-    TargetContentItemsAreRelatedTemporally = DICOMControlledTerminologyDefinitionsCode("111153")
-    TargetContentItemsAreRelatedSpatially = DICOMControlledTerminologyDefinitionsCode("111154")
-    TargetContentItemsAreRelatedContra_laterally = DICOMControlledTerminologyDefinitionsCode("111155")
+    BiopsyShouldBeStronglyConsidered = DICOMControlledTerminologyDefinitionsCode(
+        "111148"
+    )
+    HighlySuggestiveOfMalignancy_TakeAppropriateAction = (
+        DICOMControlledTerminologyDefinitionsCode("111149")
+    )
+    PresentationRequired_RenderingDeviceIsExpectedToPresent = (
+        DICOMControlledTerminologyDefinitionsCode("111150")
+    )
+    PresentationOptional_RenderingDeviceMayPresent = (
+        DICOMControlledTerminologyDefinitionsCode("111151")
+    )
+    NotForPresentation_RenderingDeviceExpectedNotToPresent = (
+        DICOMControlledTerminologyDefinitionsCode("111152")
+    )
+    TargetContentItemsAreRelatedTemporally = DICOMControlledTerminologyDefinitionsCode(
+        "111153"
+    )
+    TargetContentItemsAreRelatedSpatially = DICOMControlledTerminologyDefinitionsCode(
+        "111154"
+    )
+    TargetContentItemsAreRelatedContra_laterally = (
+        DICOMControlledTerminologyDefinitionsCode("111155")
+    )
     FeatureDetectedOnTheOnlyImage = DICOMControlledTerminologyDefinitionsCode("111156")
-    FeatureDetectedOnOnlyOneOfTheImages = DICOMControlledTerminologyDefinitionsCode("111157")
-    FeatureDetectedOnMultipleImages = DICOMControlledTerminologyDefinitionsCode("111158")
-    FeatureDetectedOnImagesFromMultipleModalities = DICOMControlledTerminologyDefinitionsCode("111159")
+    FeatureDetectedOnOnlyOneOfTheImages = DICOMControlledTerminologyDefinitionsCode(
+        "111157"
+    )
+    FeatureDetectedOnMultipleImages = DICOMControlledTerminologyDefinitionsCode(
+        "111158"
+    )
+    FeatureDetectedOnImagesFromMultipleModalities = (
+        DICOMControlledTerminologyDefinitionsCode("111159")
+    )
     ScarTissue = DICOMControlledTerminologyDefinitionsCode("111168")
     JWire = DICOMControlledTerminologyDefinitionsCode("111170")
     Pacemaker = DICOMControlledTerminologyDefinitionsCode("111171")
@@ -708,36 +845,74 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     IDPlate = DICOMControlledTerminologyDefinitionsCode("111174")
     OtherMarker = DICOMControlledTerminologyDefinitionsCode("111175")
     Unspecified = DICOMControlledTerminologyDefinitionsCode("111176")
-    ViewAndLateralityMarkerIsMissing = DICOMControlledTerminologyDefinitionsCode("111177")
-    ViewAndLateralityMarkerDoesNotHaveBothViewAndLaterality = DICOMControlledTerminologyDefinitionsCode("111178")
-    ViewAndLateralityMarkerDoesNotHaveApprovedCodes = DICOMControlledTerminologyDefinitionsCode("111179")
-    ViewAndLateralityMarkerIsNotNearTheAxilla = DICOMControlledTerminologyDefinitionsCode("111180")
-    ViewAndLateralityMarkerOverlapsBreastTissue = DICOMControlledTerminologyDefinitionsCode("111181")
-    ViewAndLateralityMarkerIsPartiallyObscured = DICOMControlledTerminologyDefinitionsCode("111182")
-    ViewAndLateralityMarkerIsIncorrect = DICOMControlledTerminologyDefinitionsCode("111183")
-    ViewAndLateralityMarkerIsOffImage = DICOMControlledTerminologyDefinitionsCode("111184")
+    ViewAndLateralityMarkerIsMissing = DICOMControlledTerminologyDefinitionsCode(
+        "111177"
+    )
+    ViewAndLateralityMarkerDoesNotHaveBothViewAndLaterality = (
+        DICOMControlledTerminologyDefinitionsCode("111178")
+    )
+    ViewAndLateralityMarkerDoesNotHaveApprovedCodes = (
+        DICOMControlledTerminologyDefinitionsCode("111179")
+    )
+    ViewAndLateralityMarkerIsNotNearTheAxilla = (
+        DICOMControlledTerminologyDefinitionsCode("111180")
+    )
+    ViewAndLateralityMarkerOverlapsBreastTissue = (
+        DICOMControlledTerminologyDefinitionsCode("111181")
+    )
+    ViewAndLateralityMarkerIsPartiallyObscured = (
+        DICOMControlledTerminologyDefinitionsCode("111182")
+    )
+    ViewAndLateralityMarkerIsIncorrect = DICOMControlledTerminologyDefinitionsCode(
+        "111183"
+    )
+    ViewAndLateralityMarkerIsOffImage = DICOMControlledTerminologyDefinitionsCode(
+        "111184"
+    )
     FlashIsNotNearEdgeOfFilm = DICOMControlledTerminologyDefinitionsCode("111185")
-    FlashIsIlligible_DoesNotFit_OrIsLopsided = DICOMControlledTerminologyDefinitionsCode("111186")
-    FlashDoesn_tIncludePatientNameAndAdditionalPatientId = DICOMControlledTerminologyDefinitionsCode("111187")
-    FlashDoesn_tIncludeDateOfExamination = DICOMControlledTerminologyDefinitionsCode("111188")
-    FlashDoesn_tIncludeFacilityNameAndLocation = DICOMControlledTerminologyDefinitionsCode("111189")
-    FlashDoesn_tIncludeTechnologistIdentification = DICOMControlledTerminologyDefinitionsCode("111190")
-    FlashDoesn_tIncludeCassette_screen_detectorIdentification = DICOMControlledTerminologyDefinitionsCode("111191")
-    FlashDoesn_tIncludeMammographyUnitIdentification = DICOMControlledTerminologyDefinitionsCode("111192")
+    FlashIsIlligible_DoesNotFit_OrIsLopsided = (
+        DICOMControlledTerminologyDefinitionsCode("111186")
+    )
+    FlashDoesn_tIncludePatientNameAndAdditionalPatientId = (
+        DICOMControlledTerminologyDefinitionsCode("111187")
+    )
+    FlashDoesn_tIncludeDateOfExamination = DICOMControlledTerminologyDefinitionsCode(
+        "111188"
+    )
+    FlashDoesn_tIncludeFacilityNameAndLocation = (
+        DICOMControlledTerminologyDefinitionsCode("111189")
+    )
+    FlashDoesn_tIncludeTechnologistIdentification = (
+        DICOMControlledTerminologyDefinitionsCode("111190")
+    )
+    FlashDoesn_tIncludeCassette_screen_detectorIdentification = (
+        DICOMControlledTerminologyDefinitionsCode("111191")
+    )
+    FlashDoesn_tIncludeMammographyUnitIdentification = (
+        DICOMControlledTerminologyDefinitionsCode("111192")
+    )
     DateStickerIsMissing = DICOMControlledTerminologyDefinitionsCode("111193")
     TechnicalFactorsMissing = DICOMControlledTerminologyDefinitionsCode("111194")
     CollimationTooCloseToBreast = DICOMControlledTerminologyDefinitionsCode("111195")
     InadequateCompression = DICOMControlledTerminologyDefinitionsCode("111196")
     MLOInsufficientPectoralMuscle = DICOMControlledTerminologyDefinitionsCode("111197")
-    MLONoFatIsVisualizedPosteriorToFibroglandularTissues = DICOMControlledTerminologyDefinitionsCode("111198")
-    MLOPoorSeparationOfDeepAndSuperficialBreastTissues = DICOMControlledTerminologyDefinitionsCode("111199")
+    MLONoFatIsVisualizedPosteriorToFibroglandularTissues = (
+        DICOMControlledTerminologyDefinitionsCode("111198")
+    )
+    MLOPoorSeparationOfDeepAndSuperficialBreastTissues = (
+        DICOMControlledTerminologyDefinitionsCode("111199")
+    )
     MLOEvidenceOfMotionBlur = DICOMControlledTerminologyDefinitionsCode("111200")
     MLOInframammaryFoldIsNotOpen = DICOMControlledTerminologyDefinitionsCode("111201")
     CCNotAllMedialTissueVisualized = DICOMControlledTerminologyDefinitionsCode("111202")
     CCNippleNotCenteredOnImage = DICOMControlledTerminologyDefinitionsCode("111203")
-    CCPosteriorNippleLineDoesNotMeasureWithin1CmOfMLO = DICOMControlledTerminologyDefinitionsCode("111204")
+    CCPosteriorNippleLineDoesNotMeasureWithin1CmOfMLO = (
+        DICOMControlledTerminologyDefinitionsCode("111204")
+    )
     NippleNotInProfile = DICOMControlledTerminologyDefinitionsCode("111205")
-    InsufficientImplantDisplacementIncorrect = DICOMControlledTerminologyDefinitionsCode("111206")
+    InsufficientImplantDisplacementIncorrect = (
+        DICOMControlledTerminologyDefinitionsCode("111206")
+    )
     ImageArtifact_s_ = DICOMControlledTerminologyDefinitionsCode("111207")
     GridArtifact_s_ = DICOMControlledTerminologyDefinitionsCode("111208")
     Positioning = DICOMControlledTerminologyDefinitionsCode("111209")
@@ -746,7 +921,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     OverExposed = DICOMControlledTerminologyDefinitionsCode("111212")
     NoImage = DICOMControlledTerminologyDefinitionsCode("111213")
     DetectorArtifact_s_ = DICOMControlledTerminologyDefinitionsCode("111214")
-    Artifact_s_OtherThanGridOrDetectorArtifact = DICOMControlledTerminologyDefinitionsCode("111215")
+    Artifact_s_OtherThanGridOrDetectorArtifact = (
+        DICOMControlledTerminologyDefinitionsCode("111215")
+    )
     MechanicalFailure = DICOMControlledTerminologyDefinitionsCode("111216")
     ElectricalFailure = DICOMControlledTerminologyDefinitionsCode("111217")
     SoftwareFailure = DICOMControlledTerminologyDefinitionsCode("111218")
@@ -757,19 +934,43 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PartiallySucceeded = DICOMControlledTerminologyDefinitionsCode("111223")
     Failed = DICOMControlledTerminologyDefinitionsCode("111224")
     NotAttempted = DICOMControlledTerminologyDefinitionsCode("111225")
-    IndividualImpression_RecommendationAnalysis = DICOMControlledTerminologyDefinitionsCode("111233")
-    OverallImpression_RecommendationAnalysis = DICOMControlledTerminologyDefinitionsCode("111234")
-    Unusable_QualityRendersImageUnusable = DICOMControlledTerminologyDefinitionsCode("111235")
-    Usable_DoesNotMeetTheQualityControlStandard = DICOMControlledTerminologyDefinitionsCode("111236")
-    Usable_MeetsTheQualityControlStandard = DICOMControlledTerminologyDefinitionsCode("111237")
-    MammographyQualityControlManual1999_ACR = DICOMControlledTerminologyDefinitionsCode("111238")
+    IndividualImpression_RecommendationAnalysis = (
+        DICOMControlledTerminologyDefinitionsCode("111233")
+    )
+    OverallImpression_RecommendationAnalysis = (
+        DICOMControlledTerminologyDefinitionsCode("111234")
+    )
+    Unusable_QualityRendersImageUnusable = DICOMControlledTerminologyDefinitionsCode(
+        "111235"
+    )
+    Usable_DoesNotMeetTheQualityControlStandard = (
+        DICOMControlledTerminologyDefinitionsCode("111236")
+    )
+    Usable_MeetsTheQualityControlStandard = DICOMControlledTerminologyDefinitionsCode(
+        "111237"
+    )
+    MammographyQualityControlManual1999_ACR = DICOMControlledTerminologyDefinitionsCode(
+        "111238"
+    )
     Title21CFRSection900_SubpartB = DICOMControlledTerminologyDefinitionsCode("111239")
-    InstitutionallyDefinedQualityControlStandard = DICOMControlledTerminologyDefinitionsCode("111240")
-    AllAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode("111241")
-    AllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode("111242")
-    NotAllAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode("111243")
-    NotAllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode("111244")
-    NoAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode("111245")
+    InstitutionallyDefinedQualityControlStandard = (
+        DICOMControlledTerminologyDefinitionsCode("111240")
+    )
+    AllAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111241"
+    )
+    AllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111242"
+    )
+    NotAllAlgorithmsSucceeded_WithoutFindings = (
+        DICOMControlledTerminologyDefinitionsCode("111243")
+    )
+    NotAllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111244"
+    )
+    NoAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111245"
+    )
     Adenolipoma = DICOMControlledTerminologyDefinitionsCode("111248")
     DuctalHyperplasia = DICOMControlledTerminologyDefinitionsCode("111249")
     Adenomyoepithelioma = DICOMControlledTerminologyDefinitionsCode("111250")
@@ -788,7 +989,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Fibroadenolipoma = DICOMControlledTerminologyDefinitionsCode("111264")
     ForeignBody_reaction_ = DICOMControlledTerminologyDefinitionsCode("111265")
     Galactocele = DICOMControlledTerminologyDefinitionsCode("111269")
-    Hemangioma_Nonparenchymal_Subcutaneous = DICOMControlledTerminologyDefinitionsCode("111271")
+    Hemangioma_Nonparenchymal_Subcutaneous = DICOMControlledTerminologyDefinitionsCode(
+        "111271"
+    )
     Hyperplasia_Usual = DICOMControlledTerminologyDefinitionsCode("111273")
     JuvenilePapillomatosis = DICOMControlledTerminologyDefinitionsCode("111277")
     LactatingAdenoma = DICOMControlledTerminologyDefinitionsCode("111278")
@@ -802,7 +1005,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Neurofibromatosis = DICOMControlledTerminologyDefinitionsCode("111288")
     OilCyst_fatNecrosisCyst_ = DICOMControlledTerminologyDefinitionsCode("111290")
     PostReductionMammoplasty = DICOMControlledTerminologyDefinitionsCode("111291")
-    PseudoangiomatousStromalHyperplasia = DICOMControlledTerminologyDefinitionsCode("111292")
+    PseudoangiomatousStromalHyperplasia = DICOMControlledTerminologyDefinitionsCode(
+        "111292"
+    )
     RadialScar = DICOMControlledTerminologyDefinitionsCode("111293")
     SclerosingAdenosis = DICOMControlledTerminologyDefinitionsCode("111294")
     SiliconeGranuloma = DICOMControlledTerminologyDefinitionsCode("111296")
@@ -815,38 +1020,62 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     BloodVessel_vascular_Invasion = DICOMControlledTerminologyDefinitionsCode("111303")
     CarcinomaInChildren = DICOMControlledTerminologyDefinitionsCode("111304")
     CarcinomaInEctopicBreast = DICOMControlledTerminologyDefinitionsCode("111305")
-    CarcinomaWithEndocrineDifferentiation = DICOMControlledTerminologyDefinitionsCode("111306")
+    CarcinomaWithEndocrineDifferentiation = DICOMControlledTerminologyDefinitionsCode(
+        "111306"
+    )
     BasalCellCarcinomaOfNipple = DICOMControlledTerminologyDefinitionsCode("111307")
     CarcinomaWithMetaplasia = DICOMControlledTerminologyDefinitionsCode("111308")
     CartilaginousAndOsseousChange = DICOMControlledTerminologyDefinitionsCode("111309")
-    CarcinomaInPregnancyAndLactation = DICOMControlledTerminologyDefinitionsCode("111310")
+    CarcinomaInPregnancyAndLactation = DICOMControlledTerminologyDefinitionsCode(
+        "111310"
+    )
     Carcinosarcoma = DICOMControlledTerminologyDefinitionsCode("111311")
-    IntraductalComedocarcinomaWithNecrosis = DICOMControlledTerminologyDefinitionsCode("111312")
+    IntraductalComedocarcinomaWithNecrosis = DICOMControlledTerminologyDefinitionsCode(
+        "111312"
+    )
     IntraductalCarcinoma_LowGrade = DICOMControlledTerminologyDefinitionsCode("111313")
-    IntraductalCarcinomaMicro_papillary = DICOMControlledTerminologyDefinitionsCode("111314")
+    IntraductalCarcinomaMicro_papillary = DICOMControlledTerminologyDefinitionsCode(
+        "111314"
+    )
     IntracysticPapillaryCarcinoma = DICOMControlledTerminologyDefinitionsCode("111315")
     InvasiveAndIn_situCarcinoma = DICOMControlledTerminologyDefinitionsCode("111316")
     InvasiveLobularCarcinoma = DICOMControlledTerminologyDefinitionsCode("111317")
     LeukemicInfiltration = DICOMControlledTerminologyDefinitionsCode("111318")
     LympathicVesselInvasion = DICOMControlledTerminologyDefinitionsCode("111320")
     Lymphoma = DICOMControlledTerminologyDefinitionsCode("111321")
-    OccultCarcinomaPresentingWithAxillaryLymphNodeMetastases = DICOMControlledTerminologyDefinitionsCode("111322")
+    OccultCarcinomaPresentingWithAxillaryLymphNodeMetastases = (
+        DICOMControlledTerminologyDefinitionsCode("111322")
+    )
     MetastaticCancerToTheBreast = DICOMControlledTerminologyDefinitionsCode("111323")
-    MetastaticCancerToTheBreastFromTheColon = DICOMControlledTerminologyDefinitionsCode("111324")
-    MetastaticCancerToTheBreastFromTheLung = DICOMControlledTerminologyDefinitionsCode("111325")
+    MetastaticCancerToTheBreastFromTheColon = DICOMControlledTerminologyDefinitionsCode(
+        "111324"
+    )
+    MetastaticCancerToTheBreastFromTheLung = DICOMControlledTerminologyDefinitionsCode(
+        "111325"
+    )
     MetastaticMelanomaToTheBreast = DICOMControlledTerminologyDefinitionsCode("111326")
-    MetastaticCancerToTheBreastFromTheOvary = DICOMControlledTerminologyDefinitionsCode("111327")
+    MetastaticCancerToTheBreastFromTheOvary = DICOMControlledTerminologyDefinitionsCode(
+        "111327"
+    )
     MetastaticSarcomaToTheBreast = DICOMControlledTerminologyDefinitionsCode("111328")
     MultifocalIntraductalCarcinoma = DICOMControlledTerminologyDefinitionsCode("111329")
-    MetastaticDiseaseToAxillaryNode = DICOMControlledTerminologyDefinitionsCode("111330")
+    MetastaticDiseaseToAxillaryNode = DICOMControlledTerminologyDefinitionsCode(
+        "111330"
+    )
     MalignantFibrousHistiocytoma = DICOMControlledTerminologyDefinitionsCode("111331")
-    MultifocalInvasiveDuctalCarcinoma = DICOMControlledTerminologyDefinitionsCode("111332")
-    MetastasisToAnIntramammaryLymphNode = DICOMControlledTerminologyDefinitionsCode("111333")
+    MultifocalInvasiveDuctalCarcinoma = DICOMControlledTerminologyDefinitionsCode(
+        "111332"
+    )
+    MetastasisToAnIntramammaryLymphNode = DICOMControlledTerminologyDefinitionsCode(
+        "111333"
+    )
     MalignantMelanomaOfNipple = DICOMControlledTerminologyDefinitionsCode("111334")
     NeoplasmOfTheMammarySkin = DICOMControlledTerminologyDefinitionsCode("111335")
     PapillaryCarcinomaIn_situ = DICOMControlledTerminologyDefinitionsCode("111336")
     RecurrentMalignancy = DICOMControlledTerminologyDefinitionsCode("111338")
-    SquamousCellCarcinomaOfTheNipple = DICOMControlledTerminologyDefinitionsCode("111340")
+    SquamousCellCarcinomaOfTheNipple = DICOMControlledTerminologyDefinitionsCode(
+        "111340"
+    )
     IntraductalCarcinoma_HighGrade = DICOMControlledTerminologyDefinitionsCode("111341")
     InvasiveCribriformCarcinoma = DICOMControlledTerminologyDefinitionsCode("111342")
     AngularMargins = DICOMControlledTerminologyDefinitionsCode("111343")
@@ -856,7 +1085,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     CalcificationsOutsideOfAMass = DICOMControlledTerminologyDefinitionsCode("111347")
     BreastBackgroundEchotexture = DICOMControlledTerminologyDefinitionsCode("111350")
     HomogeneousFatEchotexture = DICOMControlledTerminologyDefinitionsCode("111351")
-    HomogeneousFibroglandularEchotexture = DICOMControlledTerminologyDefinitionsCode("111352")
+    HomogeneousFibroglandularEchotexture = DICOMControlledTerminologyDefinitionsCode(
+        "111352"
+    )
     HeterogeneousEchotexture = DICOMControlledTerminologyDefinitionsCode("111353")
     Orientation = DICOMControlledTerminologyDefinitionsCode("111354")
     Parallel = DICOMControlledTerminologyDefinitionsCode("111355")
@@ -874,22 +1105,40 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     NoPosteriorAcousticFeatures = DICOMControlledTerminologyDefinitionsCode("111367")
     PosteriorEnhancement = DICOMControlledTerminologyDefinitionsCode("111368")
     PosteriorShadowing = DICOMControlledTerminologyDefinitionsCode("111369")
-    CombinedPosteriorEnhancementAndShadowing = DICOMControlledTerminologyDefinitionsCode("111370")
-    IdentifiableEffectOnSurroundingTissues = DICOMControlledTerminologyDefinitionsCode("111371")
+    CombinedPosteriorEnhancementAndShadowing = (
+        DICOMControlledTerminologyDefinitionsCode("111370")
+    )
+    IdentifiableEffectOnSurroundingTissues = DICOMControlledTerminologyDefinitionsCode(
+        "111371"
+    )
     Vascularity = DICOMControlledTerminologyDefinitionsCode("111372")
     VascularityNotPresent = DICOMControlledTerminologyDefinitionsCode("111373")
     VascularityNotAssessed = DICOMControlledTerminologyDefinitionsCode("111374")
     VascularityPresentInLesion = DICOMControlledTerminologyDefinitionsCode("111375")
-    VascularityPresentImmediatelyAdjacentToLesion = DICOMControlledTerminologyDefinitionsCode("111376")
-    DiffuselyIncreasedVascularityInSurroundingTissue = DICOMControlledTerminologyDefinitionsCode("111377")
+    VascularityPresentImmediatelyAdjacentToLesion = (
+        DICOMControlledTerminologyDefinitionsCode("111376")
+    )
+    DiffuselyIncreasedVascularityInSurroundingTissue = (
+        DICOMControlledTerminologyDefinitionsCode("111377")
+    )
     CorrelationToOtherFindings = DICOMControlledTerminologyDefinitionsCode("111380")
-    CorrelatesToPhysicalExamFindings = DICOMControlledTerminologyDefinitionsCode("111381")
-    CorrelatesToMammographyFindings = DICOMControlledTerminologyDefinitionsCode("111382")
+    CorrelatesToPhysicalExamFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111381"
+    )
+    CorrelatesToMammographyFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111382"
+    )
     CorrelatesToMRIFindings = DICOMControlledTerminologyDefinitionsCode("111383")
     CorrelatesToUltrasoundFindings = DICOMControlledTerminologyDefinitionsCode("111384")
-    CorrelatesToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode("111385")
-    NoCorrelationToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode("111386")
-    NoCorrelationToClinicalFindings = DICOMControlledTerminologyDefinitionsCode("111387")
+    CorrelatesToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111385"
+    )
+    NoCorrelationToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111386"
+    )
+    NoCorrelationToClinicalFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111387"
+    )
     MalignancyType = DICOMControlledTerminologyDefinitionsCode("111388")
     InvasiveBreastCarcinoma = DICOMControlledTerminologyDefinitionsCode("111389")
     OtherMalignancyType = DICOMControlledTerminologyDefinitionsCode("111390")
@@ -917,13 +1166,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     NarrativeSummary = DICOMControlledTerminologyDefinitionsCode("111412")
     OverallAssessment = DICOMControlledTerminologyDefinitionsCode("111413")
     SupplementaryData = DICOMControlledTerminologyDefinitionsCode("111414")
-    AdditionalEvaluationRequestedFromPriorStudy = DICOMControlledTerminologyDefinitionsCode("111415")
-    Follow_upAtShortIntervalFromPriorStudy = DICOMControlledTerminologyDefinitionsCode("111416")
-    HistoryOfBreastAugmentation_Asymptomatic = DICOMControlledTerminologyDefinitionsCode("111417")
+    AdditionalEvaluationRequestedFromPriorStudy = (
+        DICOMControlledTerminologyDefinitionsCode("111415")
+    )
+    Follow_upAtShortIntervalFromPriorStudy = DICOMControlledTerminologyDefinitionsCode(
+        "111416"
+    )
+    HistoryOfBreastAugmentation_Asymptomatic = (
+        DICOMControlledTerminologyDefinitionsCode("111417")
+    )
     ReviewOfAnOutsideStudy = DICOMControlledTerminologyDefinitionsCode("111418")
-    AdditionalEvaluationRequestedFromAbnormalScreeningExam = DICOMControlledTerminologyDefinitionsCode("111419")
+    AdditionalEvaluationRequestedFromAbnormalScreeningExam = (
+        DICOMControlledTerminologyDefinitionsCode("111419")
+    )
     HistoryOfBenignBreastBiopsy = DICOMControlledTerminologyDefinitionsCode("111420")
-    PersonalHistoryOfBreastCancerWithBreastConservationTherapy = DICOMControlledTerminologyDefinitionsCode("111421")
+    PersonalHistoryOfBreastCancerWithBreastConservationTherapy = (
+        DICOMControlledTerminologyDefinitionsCode("111421")
+    )
     PhysicalExaminationResults = DICOMControlledTerminologyDefinitionsCode("111423")
     ComparisonToPreviousFindings = DICOMControlledTerminologyDefinitionsCode("111424")
     IntraluminalFillingDefect = DICOMControlledTerminologyDefinitionsCode("111425")
@@ -944,8 +1203,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     IncisionMade = DICOMControlledTerminologyDefinitionsCode("111440")
     MicroclipPlaced = DICOMControlledTerminologyDefinitionsCode("111441")
     ConfirmationOfTarget = DICOMControlledTerminologyDefinitionsCode("111442")
-    TargetCompletelyContainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode("111443")
-    TargetPartiallyObtainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode("111444")
+    TargetCompletelyContainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode(
+        "111443"
+    )
+    TargetPartiallyObtainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode(
+        "111444"
+    )
     TargetNotInTheSpecimen = DICOMControlledTerminologyDefinitionsCode("111445")
     CalcificationsSeenInTheCore = DICOMControlledTerminologyDefinitionsCode("111446")
     LesionCompletelyRemoved = DICOMControlledTerminologyDefinitionsCode("111447")
@@ -964,7 +1227,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ComplexCyst = DICOMControlledTerminologyDefinitionsCode("111460")
     IntracysticLesion = DICOMControlledTerminologyDefinitionsCode("111461")
     SolidMass = DICOMControlledTerminologyDefinitionsCode("111462")
-    SupplementaryDataForIntervention = DICOMControlledTerminologyDefinitionsCode("111463")
+    SupplementaryDataForIntervention = DICOMControlledTerminologyDefinitionsCode(
+        "111463"
+    )
     ProcedureModifier = DICOMControlledTerminologyDefinitionsCode("111464")
     NeedleGauge = DICOMControlledTerminologyDefinitionsCode("111465")
     SeverityOfComplication = DICOMControlledTerminologyDefinitionsCode("111466")
@@ -979,8 +1244,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     EstrogenReceptor = DICOMControlledTerminologyDefinitionsCode("111475")
     ProgesteroneReceptor = DICOMControlledTerminologyDefinitionsCode("111476")
     SPhase = DICOMControlledTerminologyDefinitionsCode("111477")
-    Non_bloodyDischarge_fromNipple_ = DICOMControlledTerminologyDefinitionsCode("111478")
-    DifficultPhysical_clinicalExamination = DICOMControlledTerminologyDefinitionsCode("111479")
+    Non_bloodyDischarge_fromNipple_ = DICOMControlledTerminologyDefinitionsCode(
+        "111478"
+    )
+    DifficultPhysical_clinicalExamination = DICOMControlledTerminologyDefinitionsCode(
+        "111479"
+    )
     CancerElsewhere = DICOMControlledTerminologyDefinitionsCode("111480")
     SalineImplant = DICOMControlledTerminologyDefinitionsCode("111481")
     PolyurethaneImplant = DICOMControlledTerminologyDefinitionsCode("111482")
@@ -1011,14 +1280,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     FreeSilicone = DICOMControlledTerminologyDefinitionsCode("111508")
     HerniatedImplant = DICOMControlledTerminologyDefinitionsCode("111509")
     Explantation = DICOMControlledTerminologyDefinitionsCode("111510")
-    RelevantPatientInformationForBreastImaging = DICOMControlledTerminologyDefinitionsCode("111511")
+    RelevantPatientInformationForBreastImaging = (
+        DICOMControlledTerminologyDefinitionsCode("111511")
+    )
     MedicationHistory = DICOMControlledTerminologyDefinitionsCode("111512")
     RelevantPreviousProcedures = DICOMControlledTerminologyDefinitionsCode("111513")
     RelevantIndicatedProblems = DICOMControlledTerminologyDefinitionsCode("111514")
     RelevantRiskFactors = DICOMControlledTerminologyDefinitionsCode("111515")
     MedicationType = DICOMControlledTerminologyDefinitionsCode("111516")
     RelevantPatientInformation = DICOMControlledTerminologyDefinitionsCode("111517")
-    AgeWhenFirstMenstrualPeriodOccurred = DICOMControlledTerminologyDefinitionsCode("111518")
+    AgeWhenFirstMenstrualPeriodOccurred = DICOMControlledTerminologyDefinitionsCode(
+        "111518"
+    )
     AgeAtFirstFullTermPregnancy = DICOMControlledTerminologyDefinitionsCode("111519")
     AgeAtMenopause = DICOMControlledTerminologyDefinitionsCode("111520")
     AgeWhenHysterectomyPerformed = DICOMControlledTerminologyDefinitionsCode("111521")
@@ -1042,7 +1315,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MenopausalPhase = DICOMControlledTerminologyDefinitionsCode("111539")
     SideOfFamily = DICOMControlledTerminologyDefinitionsCode("111540")
     Maternal = DICOMControlledTerminologyDefinitionsCode("111541")
-    UnspecifiedGynecologicalHormone = DICOMControlledTerminologyDefinitionsCode("111542")
+    UnspecifiedGynecologicalHormone = DICOMControlledTerminologyDefinitionsCode(
+        "111542"
+    )
     BreastFeedingHistory = DICOMControlledTerminologyDefinitionsCode("111543")
     AverageBreastFeedingPeriod = DICOMControlledTerminologyDefinitionsCode("111544")
     SubstanceUseHistory = DICOMControlledTerminologyDefinitionsCode("111545")
@@ -1053,15 +1328,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PersonalBreastCancerHistory = DICOMControlledTerminologyDefinitionsCode("111550")
     HistoryOfEndometrialCancer = DICOMControlledTerminologyDefinitionsCode("111551")
     HistoryOfOvarianCancer = DICOMControlledTerminologyDefinitionsCode("111552")
-    HistoryOfHighRiskLesionOnPreviousBiopsy = DICOMControlledTerminologyDefinitionsCode("111553")
+    HistoryOfHighRiskLesionOnPreviousBiopsy = DICOMControlledTerminologyDefinitionsCode(
+        "111553"
+    )
     PostMenopausalPatient = DICOMControlledTerminologyDefinitionsCode("111554")
     LateChildBearing_after30_ = DICOMControlledTerminologyDefinitionsCode("111555")
     BRCA1BreastCancerGene = DICOMControlledTerminologyDefinitionsCode("111556")
     BRCA2BreastCancerGene = DICOMControlledTerminologyDefinitionsCode("111557")
     BRCA3BreastCancerGene = DICOMControlledTerminologyDefinitionsCode("111558")
-    WeakFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode("111559")
-    IntermediateFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode("111560")
-    VeryStrongFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode("111561")
+    WeakFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
+        "111559"
+    )
+    IntermediateFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
+        "111560"
+    )
+    VeryStrongFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
+        "111561"
+    )
     FamilyHistoryOfProstateCancer = DICOMControlledTerminologyDefinitionsCode("111562")
     FamilyHistoryUnknown = DICOMControlledTerminologyDefinitionsCode("111563")
     NippleDischargeCytology = DICOMControlledTerminologyDefinitionsCode("111564")
@@ -1070,11 +1353,19 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     GynecologicCondition = DICOMControlledTerminologyDefinitionsCode("111567")
     GynecologicSurgery = DICOMControlledTerminologyDefinitionsCode("111568")
     PreviousLBWOrIUGRBirth = DICOMControlledTerminologyDefinitionsCode("111569")
-    PreviousFetalMalformation_syndrome = DICOMControlledTerminologyDefinitionsCode("111570")
-    PreviousRHNegativeOrBloodDyscrasiaAtBirth = DICOMControlledTerminologyDefinitionsCode("111571")
+    PreviousFetalMalformation_syndrome = DICOMControlledTerminologyDefinitionsCode(
+        "111570"
+    )
+    PreviousRHNegativeOrBloodDyscrasiaAtBirth = (
+        DICOMControlledTerminologyDefinitionsCode("111571")
+    )
     HistoryOfMultipleFetuses = DICOMControlledTerminologyDefinitionsCode("111572")
-    CurrentPregnancy_KnownOrSuspectedMalformations_syndromes = DICOMControlledTerminologyDefinitionsCode("111573")
-    FamilyHistory_FetalMalformation_syndrome = DICOMControlledTerminologyDefinitionsCode("111574")
+    CurrentPregnancy_KnownOrSuspectedMalformations_syndromes = (
+        DICOMControlledTerminologyDefinitionsCode("111573")
+    )
+    FamilyHistory_FetalMalformation_syndrome = (
+        DICOMControlledTerminologyDefinitionsCode("111574")
+    )
     High = DICOMControlledTerminologyDefinitionsCode("111575")
     Medium = DICOMControlledTerminologyDefinitionsCode("111576")
     Low = DICOMControlledTerminologyDefinitionsCode("111577")
@@ -1090,7 +1381,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     NoKnownExposure = DICOMControlledTerminologyDefinitionsCode("111587")
     RecallForTechnicalReasons = DICOMControlledTerminologyDefinitionsCode("111590")
     RecallForImagingFindings = DICOMControlledTerminologyDefinitionsCode("111591")
-    RecallForPatientSymptoms_ClinicalFindings = DICOMControlledTerminologyDefinitionsCode("111592")
+    RecallForPatientSymptoms_ClinicalFindings = (
+        DICOMControlledTerminologyDefinitionsCode("111592")
+    )
     LBWOrIUGR = DICOMControlledTerminologyDefinitionsCode("111593")
     GreenFilter = DICOMControlledTerminologyDefinitionsCode("111601")
     RedFilter = DICOMControlledTerminologyDefinitionsCode("111602")
@@ -1115,7 +1408,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     HalfValueLayer = DICOMControlledTerminologyDefinitionsCode("111634")
     X_RayGrid = DICOMControlledTerminologyDefinitionsCode("111635")
     EntranceExposureAtRP = DICOMControlledTerminologyDefinitionsCode("111636")
-    AccumulatedAverageGlandularDose = DICOMControlledTerminologyDefinitionsCode("111637")
+    AccumulatedAverageGlandularDose = DICOMControlledTerminologyDefinitionsCode(
+        "111637"
+    )
     PatientEquivalentThickness = DICOMControlledTerminologyDefinitionsCode("111638")
     FixedGrid = DICOMControlledTerminologyDefinitionsCode("111641")
     FocusedGrid = DICOMControlledTerminologyDefinitionsCode("111642")
@@ -1138,13 +1433,19 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PrescriptionVisualAcuity = DICOMControlledTerminologyDefinitionsCode("111687")
     RightEyeRx = DICOMControlledTerminologyDefinitionsCode("111688")
     LeftEyeRx = DICOMControlledTerminologyDefinitionsCode("111689")
-    MacularGridThicknessAndVolumeReport = DICOMControlledTerminologyDefinitionsCode("111690")
-    NumberOfImagesUsedForMacularMeasurements = DICOMControlledTerminologyDefinitionsCode("111691")
+    MacularGridThicknessAndVolumeReport = DICOMControlledTerminologyDefinitionsCode(
+        "111690"
+    )
+    NumberOfImagesUsedForMacularMeasurements = (
+        DICOMControlledTerminologyDefinitionsCode("111691")
+    )
     NumberOfSamplesUsedPerImage = DICOMControlledTerminologyDefinitionsCode("111692")
     AnalysisQualityRating = DICOMControlledTerminologyDefinitionsCode("111693")
     ImageSetQualityRating = DICOMControlledTerminologyDefinitionsCode("111694")
     InterferingTearsOrDrops = DICOMControlledTerminologyDefinitionsCode("111695")
-    VisualFixationQualityDuringAcquisition = DICOMControlledTerminologyDefinitionsCode("111696")
+    VisualFixationQualityDuringAcquisition = DICOMControlledTerminologyDefinitionsCode(
+        "111696"
+    )
     VisualFixationQualityProblem = DICOMControlledTerminologyDefinitionsCode("111697")
     OphthalmicMacularGridProblem = DICOMControlledTerminologyDefinitionsCode("111698")
     SpecimenContainerIdentifier = DICOMControlledTerminologyDefinitionsCode("111700")
@@ -1153,7 +1454,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ProcessingStepDescription = DICOMControlledTerminologyDefinitionsCode("111703")
     SamplingMethod = DICOMControlledTerminologyDefinitionsCode("111704")
     ParentSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode("111705")
-    IssuerOfParentSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode("111706")
+    IssuerOfParentSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode(
+        "111706"
+    )
     ParentSpecimenType = DICOMControlledTerminologyDefinitionsCode("111707")
     PositionFrameOfReference = DICOMControlledTerminologyDefinitionsCode("111708")
     LocationOfSamplingSite = DICOMControlledTerminologyDefinitionsCode("111709")
@@ -1166,8 +1469,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     LocationOfSpecimenZOffset = DICOMControlledTerminologyDefinitionsCode("111721")
     VisualMarkingOfSpecimen = DICOMControlledTerminologyDefinitionsCode("111723")
     IssuerOfSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode("111724")
-    DissectionWithEntireSpecimenSubmission = DICOMControlledTerminologyDefinitionsCode("111726")
-    DissectionWithRepresentativeSectionsSubmission = DICOMControlledTerminologyDefinitionsCode("111727")
+    DissectionWithEntireSpecimenSubmission = DICOMControlledTerminologyDefinitionsCode(
+        "111726"
+    )
+    DissectionWithRepresentativeSectionsSubmission = (
+        DICOMControlledTerminologyDefinitionsCode("111727")
+    )
     SpecimenStorage = DICOMControlledTerminologyDefinitionsCode("111729")
     TransmissionIllumination = DICOMControlledTerminologyDefinitionsCode("111741")
     ReflectionIllumination = DICOMControlledTerminologyDefinitionsCode("111742")
@@ -1176,8 +1483,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DarkfieldIllumination = DICOMControlledTerminologyDefinitionsCode("111745")
     ObliqueIllumination = DICOMControlledTerminologyDefinitionsCode("111746")
     PhaseContrastIllumination = DICOMControlledTerminologyDefinitionsCode("111747")
-    DifferentialInterferenceContrast = DICOMControlledTerminologyDefinitionsCode("111748")
-    TotalInternalReflectionFluorescence = DICOMControlledTerminologyDefinitionsCode("111749")
+    DifferentialInterferenceContrast = DICOMControlledTerminologyDefinitionsCode(
+        "111748"
+    )
+    TotalInternalReflectionFluorescence = DICOMControlledTerminologyDefinitionsCode(
+        "111749"
+    )
     UltrasoundContact = DICOMControlledTerminologyDefinitionsCode("111750")
     UltrasoundImmersion = DICOMControlledTerminologyDefinitionsCode("111751")
     Optical = DICOMControlledTerminologyDefinitionsCode("111752")
@@ -1206,8 +1517,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MeasurementFromThisDevice = DICOMControlledTerminologyDefinitionsCode("111780")
     ExternalDataSource = DICOMControlledTerminologyDefinitionsCode("111781")
     AxialMeasurementsSOPInstance = DICOMControlledTerminologyDefinitionsCode("111782")
-    RefractiveMeasurementsSOPInstance = DICOMControlledTerminologyDefinitionsCode("111783")
-    StandardDeviationOfMeasurementsUsed = DICOMControlledTerminologyDefinitionsCode("111786")
+    RefractiveMeasurementsSOPInstance = DICOMControlledTerminologyDefinitionsCode(
+        "111783"
+    )
+    StandardDeviationOfMeasurementsUsed = DICOMControlledTerminologyDefinitionsCode(
+        "111786"
+    )
     SignalToNoiseRatio = DICOMControlledTerminologyDefinitionsCode("111787")
     SphericalProjection = DICOMControlledTerminologyDefinitionsCode("111791")
     SurfaceContourMapping = DICOMControlledTerminologyDefinitionsCode("111792")
@@ -1216,26 +1531,52 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     VisualField30_2TestPattern = DICOMControlledTerminologyDefinitionsCode("111802")
     VisualField60_4TestPattern = DICOMControlledTerminologyDefinitionsCode("111803")
     VisualFieldMaculaTestPattern = DICOMControlledTerminologyDefinitionsCode("111804")
-    VisualFieldCentral40PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111805")
-    VisualFieldCentral76PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111806")
-    VisualFieldPeripheral60PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111807")
-    VisualFieldFullField81PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111808")
-    VisualFieldFullField120PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111809")
+    VisualFieldCentral40PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111805"
+    )
+    VisualFieldCentral76PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111806"
+    )
+    VisualFieldPeripheral60PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111807"
+    )
+    VisualFieldFullField81PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111808"
+    )
+    VisualFieldFullField120PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111809"
+    )
     VisualFieldGTestPattern = DICOMControlledTerminologyDefinitionsCode("111810")
     VisualFieldMTestPattern = DICOMControlledTerminologyDefinitionsCode("111811")
     VisualField07TestPattern = DICOMControlledTerminologyDefinitionsCode("111812")
     VisualFieldLVCTestPattern = DICOMControlledTerminologyDefinitionsCode("111813")
     VisualFieldCentralTestPattern = DICOMControlledTerminologyDefinitionsCode("111814")
-    VisualFieldSITA_StandardTestStrategy = DICOMControlledTerminologyDefinitionsCode("111815")
-    VisualFieldSITA_SWAPTestStrategy = DICOMControlledTerminologyDefinitionsCode("111816")
-    VisualFieldSITA_FastTestStrategy = DICOMControlledTerminologyDefinitionsCode("111817")
-    VisualFieldFullThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode("111818")
+    VisualFieldSITA_StandardTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111815"
+    )
+    VisualFieldSITA_SWAPTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111816"
+    )
+    VisualFieldSITA_FastTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111817"
+    )
+    VisualFieldFullThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111818"
+    )
     VisualFieldFastPacTestStrategy = DICOMControlledTerminologyDefinitionsCode("111819")
-    VisualFieldFullFromPriorTestStrategy = DICOMControlledTerminologyDefinitionsCode("111820")
+    VisualFieldFullFromPriorTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111820"
+    )
     VisualFieldOptimaTestStrategy = DICOMControlledTerminologyDefinitionsCode("111821")
-    VisualFieldTwo_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode("111822")
-    VisualFieldThree_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode("111823")
-    VisualFieldQuantify_DefectsTestStrategy = DICOMControlledTerminologyDefinitionsCode("111824")
+    VisualFieldTwo_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111822"
+    )
+    VisualFieldThree_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111823"
+    )
+    VisualFieldQuantify_DefectsTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111824"
+    )
     VisualFieldTOPTestStrategy = DICOMControlledTerminologyDefinitionsCode("111825")
     VisualFieldDynamicTestStrategy = DICOMControlledTerminologyDefinitionsCode("111826")
     VisualFieldNormalTestStrategy = DICOMControlledTerminologyDefinitionsCode("111827")
@@ -1244,9 +1585,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     VisualFieldLVSTestStrategy = DICOMControlledTerminologyDefinitionsCode("111830")
     VisualFieldGATETestStrategy = DICOMControlledTerminologyDefinitionsCode("111831")
     VisualFieldGATEiTestStrategy = DICOMControlledTerminologyDefinitionsCode("111832")
-    VisualField2LT_DynamicTestStrategy = DICOMControlledTerminologyDefinitionsCode("111833")
-    VisualField2LT_NormalTestStrategy = DICOMControlledTerminologyDefinitionsCode("111834")
-    VisualFieldFastThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode("111835")
+    VisualField2LT_DynamicTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111833"
+    )
+    VisualField2LT_NormalTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111834"
+    )
+    VisualFieldFastThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111835"
+    )
     VisualFieldCLIPTestStrategy = DICOMControlledTerminologyDefinitionsCode("111836")
     VisualFieldCLASSStrategy = DICOMControlledTerminologyDefinitionsCode("111837")
     AgeCorrected = DICOMControlledTerminologyDefinitionsCode("111838")
@@ -1262,10 +1609,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Borderline = DICOMControlledTerminologyDefinitionsCode("111848")
     AbnormallyHighSensitivity = DICOMControlledTerminologyDefinitionsCode("111849")
     GeneralReductionInSensitivity = DICOMControlledTerminologyDefinitionsCode("111850")
-    BorderlineAndGeneralReductionInSensitivity = DICOMControlledTerminologyDefinitionsCode("111851")
+    BorderlineAndGeneralReductionInSensitivity = (
+        DICOMControlledTerminologyDefinitionsCode("111851")
+    )
     VisualFieldIndex = DICOMControlledTerminologyDefinitionsCode("111852")
-    VisualFieldLossDueToDiffuseDefect = DICOMControlledTerminologyDefinitionsCode("111853")
-    VisualFieldLossDueToLocalDefect = DICOMControlledTerminologyDefinitionsCode("111854")
+    VisualFieldLossDueToDiffuseDefect = DICOMControlledTerminologyDefinitionsCode(
+        "111853"
+    )
+    VisualFieldLossDueToLocalDefect = DICOMControlledTerminologyDefinitionsCode(
+        "111854"
+    )
     GlaucomaHemifieldTestAnalysis = DICOMControlledTerminologyDefinitionsCode("111855")
     OpticalFixationMeasurements = DICOMControlledTerminologyDefinitionsCode("111856")
     MaculaCentered = DICOMControlledTerminologyDefinitionsCode("111900")
@@ -1273,9 +1626,13 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     LesionCentered = DICOMControlledTerminologyDefinitionsCode("111902")
     Disc_maculaCentered = DICOMControlledTerminologyDefinitionsCode("111903")
     Mid_peripheral_superior = DICOMControlledTerminologyDefinitionsCode("111904")
-    Mid_peripheral_superiorTemporal = DICOMControlledTerminologyDefinitionsCode("111905")
+    Mid_peripheral_superiorTemporal = DICOMControlledTerminologyDefinitionsCode(
+        "111905"
+    )
     Mid_peripheral_temporal = DICOMControlledTerminologyDefinitionsCode("111906")
-    Mid_peripheral_inferiorTemporal = DICOMControlledTerminologyDefinitionsCode("111907")
+    Mid_peripheral_inferiorTemporal = DICOMControlledTerminologyDefinitionsCode(
+        "111907"
+    )
     Mid_peripheral_inferior = DICOMControlledTerminologyDefinitionsCode("111908")
     Mid_peripheral_inferiorNasal = DICOMControlledTerminologyDefinitionsCode("111909")
     Mid_peripheral_nasal = DICOMControlledTerminologyDefinitionsCode("111910")
@@ -1291,16 +1648,28 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     TimeDomain = DICOMControlledTerminologyDefinitionsCode("111920")
     SpectralDomain = DICOMControlledTerminologyDefinitionsCode("111921")
     NoCornealCompensation = DICOMControlledTerminologyDefinitionsCode("111922")
-    CornealBirefringenceCompensation = DICOMControlledTerminologyDefinitionsCode("111923")
+    CornealBirefringenceCompensation = DICOMControlledTerminologyDefinitionsCode(
+        "111923"
+    )
     RetinalTopography = DICOMControlledTerminologyDefinitionsCode("111924")
-    RetinalNerveFiberLayerThickness = DICOMControlledTerminologyDefinitionsCode("111925")
+    RetinalNerveFiberLayerThickness = DICOMControlledTerminologyDefinitionsCode(
+        "111925"
+    )
     GanglionCellComplexThickness = DICOMControlledTerminologyDefinitionsCode("111926")
-    TotalRetinalThickness_ILMToIS_OS_ = DICOMControlledTerminologyDefinitionsCode("111927")
-    TotalRetinalThickness_ILMToRPE_ = DICOMControlledTerminologyDefinitionsCode("111928")
+    TotalRetinalThickness_ILMToIS_OS_ = DICOMControlledTerminologyDefinitionsCode(
+        "111927"
+    )
+    TotalRetinalThickness_ILMToRPE_ = DICOMControlledTerminologyDefinitionsCode(
+        "111928"
+    )
     TotalRetinalThickness_ILMToBM_ = DICOMControlledTerminologyDefinitionsCode("111929")
     AbsoluteOphthalmicThickness = DICOMControlledTerminologyDefinitionsCode("111930")
-    ThicknessDeviationCategoryFromNormativeData = DICOMControlledTerminologyDefinitionsCode("111931")
-    ThicknessDeviationFromNormativeData = DICOMControlledTerminologyDefinitionsCode("111932")
+    ThicknessDeviationCategoryFromNormativeData = (
+        DICOMControlledTerminologyDefinitionsCode("111931")
+    )
+    ThicknessDeviationFromNormativeData = DICOMControlledTerminologyDefinitionsCode(
+        "111932"
+    )
     RelatedOphthalmicThicknessMap = DICOMControlledTerminologyDefinitionsCode("111933")
     Disc_Fovea = DICOMControlledTerminologyDefinitionsCode("111934")
     P_5_ = DICOMControlledTerminologyDefinitionsCode("111935")
@@ -1313,9 +1682,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     CornealRefractivePowerMap = DICOMControlledTerminologyDefinitionsCode("111942")
     CornealElevationMap = DICOMControlledTerminologyDefinitionsCode("111943")
     CornealWavefrontMap = DICOMControlledTerminologyDefinitionsCode("111944")
-    Elevation_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode("111945")
-    Reflection_basedCornealTopographer = DICOMControlledTerminologyDefinitionsCode("111946")
-    Interferometry_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode("111947")
+    Elevation_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode(
+        "111945"
+    )
+    Reflection_basedCornealTopographer = DICOMControlledTerminologyDefinitionsCode(
+        "111946"
+    )
+    Interferometry_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode(
+        "111947"
+    )
     ChestCADReport = DICOMControlledTerminologyDefinitionsCode("112000")
     Opacity = DICOMControlledTerminologyDefinitionsCode("112001")
     SeriesInstanceUID = DICOMControlledTerminologyDefinitionsCode("112002")
@@ -1334,8 +1709,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     BorderShape = DICOMControlledTerminologyDefinitionsCode("112015")
     BaselineCategory = DICOMControlledTerminologyDefinitionsCode("112016")
     CavityExtentAsPercentOfVolume = DICOMControlledTerminologyDefinitionsCode("112017")
-    CalcificationExtentAsPercentOfSurface = DICOMControlledTerminologyDefinitionsCode("112018")
-    CalcificationExtentAsPercentOfVolume = DICOMControlledTerminologyDefinitionsCode("112019")
+    CalcificationExtentAsPercentOfSurface = DICOMControlledTerminologyDefinitionsCode(
+        "112018"
+    )
+    CalcificationExtentAsPercentOfVolume = DICOMControlledTerminologyDefinitionsCode(
+        "112019"
+    )
     ResponseEvaluation = DICOMControlledTerminologyDefinitionsCode("112020")
     ResponseEvaluationMethod = DICOMControlledTerminologyDefinitionsCode("112021")
     RECIST = DICOMControlledTerminologyDefinitionsCode("112022")
@@ -1344,14 +1723,20 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     SizeDescriptor = DICOMControlledTerminologyDefinitionsCode("112025")
     WidthDescriptor = DICOMControlledTerminologyDefinitionsCode("112026")
     OpacityDescriptor = DICOMControlledTerminologyDefinitionsCode("112027")
-    AbnormalDistributionOfAnatomicStructure = DICOMControlledTerminologyDefinitionsCode("112028")
+    AbnormalDistributionOfAnatomicStructure = DICOMControlledTerminologyDefinitionsCode(
+        "112028"
+    )
     WHO = DICOMControlledTerminologyDefinitionsCode("112029")
     CalcificationDescriptor = DICOMControlledTerminologyDefinitionsCode("112030")
     AttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112031")
-    ThresholdAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112032")
+    ThresholdAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode(
+        "112032"
+    )
     AbnormalOpacity = DICOMControlledTerminologyDefinitionsCode("112033")
     CalculationDescription = DICOMControlledTerminologyDefinitionsCode("112034")
-    PerformanceOfPediatricAndAdultChestRadiography_ACR = DICOMControlledTerminologyDefinitionsCode("112035")
+    PerformanceOfPediatricAndAdultChestRadiography_ACR = (
+        DICOMControlledTerminologyDefinitionsCode("112035")
+    )
     ACRPositionStatement = DICOMControlledTerminologyDefinitionsCode("112036")
     Non_lesionModifier = DICOMControlledTerminologyDefinitionsCode("112037")
     OsseousModifier = DICOMControlledTerminologyDefinitionsCode("112038")
@@ -1361,9 +1746,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     TargetLesionPartialResponse = DICOMControlledTerminologyDefinitionsCode("112042")
     TargetLesionProgressiveDisease = DICOMControlledTerminologyDefinitionsCode("112043")
     TargetLesionStableDisease = DICOMControlledTerminologyDefinitionsCode("112044")
-    Non_TargetLesionCompleteResponse = DICOMControlledTerminologyDefinitionsCode("112045")
-    Non_TargetLesionIncompleteResponseOrStableDisease = DICOMControlledTerminologyDefinitionsCode("112046")
-    Non_TargetLesionProgressiveDisease = DICOMControlledTerminologyDefinitionsCode("112047")
+    Non_TargetLesionCompleteResponse = DICOMControlledTerminologyDefinitionsCode(
+        "112045"
+    )
+    Non_TargetLesionIncompleteResponseOrStableDisease = (
+        DICOMControlledTerminologyDefinitionsCode("112046")
+    )
+    Non_TargetLesionProgressiveDisease = DICOMControlledTerminologyDefinitionsCode(
+        "112047"
+    )
     CurrentResponse = DICOMControlledTerminologyDefinitionsCode("112048")
     BestOverallResponse = DICOMControlledTerminologyDefinitionsCode("112049")
     AnatomicIdentifier = DICOMControlledTerminologyDefinitionsCode("112050")
@@ -1499,10 +1890,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MaximumAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112180")
     MeanAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112181")
     MedianAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112182")
-    StandardDeviationOfAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112183")
-    PerformanceOfPediatricAndAdultThoracicCT = DICOMControlledTerminologyDefinitionsCode("112184")
-    PerformanceOfCTForDetectionOfPulmonaryEmbolismInAdults = DICOMControlledTerminologyDefinitionsCode("112185")
-    PerformanceOfHigh_ResolutionCTOfTheLungsInAdults = DICOMControlledTerminologyDefinitionsCode("112186")
+    StandardDeviationOfAttenuationCoefficient = (
+        DICOMControlledTerminologyDefinitionsCode("112183")
+    )
+    PerformanceOfPediatricAndAdultThoracicCT = (
+        DICOMControlledTerminologyDefinitionsCode("112184")
+    )
+    PerformanceOfCTForDetectionOfPulmonaryEmbolismInAdults = (
+        DICOMControlledTerminologyDefinitionsCode("112185")
+    )
+    PerformanceOfHigh_ResolutionCTOfTheLungsInAdults = (
+        DICOMControlledTerminologyDefinitionsCode("112186")
+    )
     UnspecifiedMethodOfCalculation = DICOMControlledTerminologyDefinitionsCode("112187")
     Two_dimensionalMethod = DICOMControlledTerminologyDefinitionsCode("112188")
     Three_dimensionalMethod = DICOMControlledTerminologyDefinitionsCode("112189")
@@ -1513,28 +1912,46 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MassOfBreast = DICOMControlledTerminologyDefinitionsCode("112195")
     AreaOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112196")
     VolumeOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112197")
-    PercentageOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112198")
+    PercentageOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode(
+        "112198"
+    )
     MassOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112199")
-    AverageCalcificationDistanceInACalcificationCluster = DICOMControlledTerminologyDefinitionsCode("112200")
-    StandardDeviationDistanceOfCalcificationsInACluster = DICOMControlledTerminologyDefinitionsCode("112201")
+    AverageCalcificationDistanceInACalcificationCluster = (
+        DICOMControlledTerminologyDefinitionsCode("112200")
+    )
+    StandardDeviationDistanceOfCalcificationsInACluster = (
+        DICOMControlledTerminologyDefinitionsCode("112201")
+    )
     ColonCADReport = DICOMControlledTerminologyDefinitionsCode("112220")
     ColonOverallAssessment = DICOMControlledTerminologyDefinitionsCode("112222")
     ImageSetProperties = DICOMControlledTerminologyDefinitionsCode("112224")
     SliceThickness = DICOMControlledTerminologyDefinitionsCode("112225")
     SpacingBetweenSlices = DICOMControlledTerminologyDefinitionsCode("112226")
     FrameOfReferenceUID = DICOMControlledTerminologyDefinitionsCode("112227")
-    RecumbentPatientPositionWithRespectToGravity = DICOMControlledTerminologyDefinitionsCode("112228")
+    RecumbentPatientPositionWithRespectToGravity = (
+        DICOMControlledTerminologyDefinitionsCode("112228")
+    )
     IdentifyingSegment = DICOMControlledTerminologyDefinitionsCode("112229")
     PolypStalkWidth = DICOMControlledTerminologyDefinitionsCode("112232")
     DistanceFromAnus = DICOMControlledTerminologyDefinitionsCode("112233")
     AnatomicNon_colon = DICOMControlledTerminologyDefinitionsCode("112238")
-    C0_InadequateStudy_AwaitingPriorComparisons = DICOMControlledTerminologyDefinitionsCode("112240")
+    C0_InadequateStudy_AwaitingPriorComparisons = (
+        DICOMControlledTerminologyDefinitionsCode("112240")
+    )
     C1_NormalColonOrBenignLesion = DICOMControlledTerminologyDefinitionsCode("112241")
-    C2_IntermediatePolypOrIndeterminateFinding = DICOMControlledTerminologyDefinitionsCode("112242")
-    C3_Polyp_PossiblyAdvancedAdenoma = DICOMControlledTerminologyDefinitionsCode("112243")
+    C2_IntermediatePolypOrIndeterminateFinding = (
+        DICOMControlledTerminologyDefinitionsCode("112242")
+    )
+    C3_Polyp_PossiblyAdvancedAdenoma = DICOMControlledTerminologyDefinitionsCode(
+        "112243"
+    )
     C4_ColonicMass_LikelyMalignant = DICOMControlledTerminologyDefinitionsCode("112244")
-    ACRGuideline_PerformanceOfAdultCTColonography = DICOMControlledTerminologyDefinitionsCode("112248")
-    ACRStandard_CTMedicalPhysicsPerformanceMonitoring = DICOMControlledTerminologyDefinitionsCode("112249")
+    ACRGuideline_PerformanceOfAdultCTColonography = (
+        DICOMControlledTerminologyDefinitionsCode("112248")
+    )
+    ACRStandard_CTMedicalPhysicsPerformanceMonitoring = (
+        DICOMControlledTerminologyDefinitionsCode("112249")
+    )
     AP_45 = DICOMControlledTerminologyDefinitionsCode("112300")
     AP_45 = DICOMControlledTerminologyDefinitionsCode("112301")
     AnatomicalAxisOfFemur = DICOMControlledTerminologyDefinitionsCode("112302")
@@ -1552,7 +1969,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     NeckComponent = DICOMControlledTerminologyDefinitionsCode("112314")
     MonoblockStem = DICOMControlledTerminologyDefinitionsCode("112315")
     ProstheticShaftAugment = DICOMControlledTerminologyDefinitionsCode("112316")
-    FemoralHeadResurfacingComponent = DICOMControlledTerminologyDefinitionsCode("112317")
+    FemoralHeadResurfacingComponent = DICOMControlledTerminologyDefinitionsCode(
+        "112317"
+    )
     Pinning = DICOMControlledTerminologyDefinitionsCode("112318")
     Sewing = DICOMControlledTerminologyDefinitionsCode("112319")
     Bolting = DICOMControlledTerminologyDefinitionsCode("112320")
@@ -1560,9 +1979,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DistalCentralizer = DICOMControlledTerminologyDefinitionsCode("112325")
     Generic2DPlanning = DICOMControlledTerminologyDefinitionsCode("112340")
     Generic3DPlanning = DICOMControlledTerminologyDefinitionsCode("112341")
-    GenericPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode("112342")
-    GenericPlanningForKneeReplacement = DICOMControlledTerminologyDefinitionsCode("112343")
-    M_llerMethodPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode("112344")
+    GenericPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode(
+        "112342"
+    )
+    GenericPlanningForKneeReplacement = DICOMControlledTerminologyDefinitionsCode(
+        "112343"
+    )
+    M_llerMethodPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode(
+        "112344"
+    )
     ImplantationPlan = DICOMControlledTerminologyDefinitionsCode("112345")
     SelectedImplantComponent = DICOMControlledTerminologyDefinitionsCode("112346")
     ComponentID = DICOMControlledTerminologyDefinitionsCode("112347")
@@ -1581,25 +2006,45 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PatientDataUsedDuringPlanning = DICOMControlledTerminologyDefinitionsCode("112361")
     DegreesOfFreedomSpecification = DICOMControlledTerminologyDefinitionsCode("112362")
     DegreeOfFreedomID = DICOMControlledTerminologyDefinitionsCode("112363")
-    RelatedPatientDataNotUsedDuringPlanning = DICOMControlledTerminologyDefinitionsCode("112364")
+    RelatedPatientDataNotUsedDuringPlanning = DICOMControlledTerminologyDefinitionsCode(
+        "112364"
+    )
     RelatedImplantationReports = DICOMControlledTerminologyDefinitionsCode("112365")
     ImplantAssemblyTemplate = DICOMControlledTerminologyDefinitionsCode("112366")
-    PlanningInformationForIntraoperativeUsage = DICOMControlledTerminologyDefinitionsCode("112367")
+    PlanningInformationForIntraoperativeUsage = (
+        DICOMControlledTerminologyDefinitionsCode("112367")
+    )
     ImplantationPatientPositioning = DICOMControlledTerminologyDefinitionsCode("112368")
     FiducialIntent = DICOMControlledTerminologyDefinitionsCode("112369")
     ComponentType = DICOMControlledTerminologyDefinitionsCode("112370")
     ManufacturerImplantTemplate = DICOMControlledTerminologyDefinitionsCode("112371")
     DerivedPlanningImages = DICOMControlledTerminologyDefinitionsCode("112372")
     OtherDerivedPlanningData = DICOMControlledTerminologyDefinitionsCode("112373")
-    ConnectedImplantationPlanComponent = DICOMControlledTerminologyDefinitionsCode("112374")
+    ConnectedImplantationPlanComponent = DICOMControlledTerminologyDefinitionsCode(
+        "112374"
+    )
     PlanningMethod = DICOMControlledTerminologyDefinitionsCode("112375")
-    DegreeOfFreedomExactTranslationalValue = DICOMControlledTerminologyDefinitionsCode("112376")
-    DegreeOfFreedomMinimumTranslationalValue = DICOMControlledTerminologyDefinitionsCode("112377")
-    DegreeOfFreedomMaximumTranslationalValue = DICOMControlledTerminologyDefinitionsCode("112378")
-    DegreeOfFreedomExactRotationalTranslationValue = DICOMControlledTerminologyDefinitionsCode("112379")
-    DegreeOfFreedomMinimumRotationalValue = DICOMControlledTerminologyDefinitionsCode("112380")
-    DegreeOfFreedomMaximumRotationalValue = DICOMControlledTerminologyDefinitionsCode("112381")
-    Peri_operativePhotographicImaging = DICOMControlledTerminologyDefinitionsCode("112700")
+    DegreeOfFreedomExactTranslationalValue = DICOMControlledTerminologyDefinitionsCode(
+        "112376"
+    )
+    DegreeOfFreedomMinimumTranslationalValue = (
+        DICOMControlledTerminologyDefinitionsCode("112377")
+    )
+    DegreeOfFreedomMaximumTranslationalValue = (
+        DICOMControlledTerminologyDefinitionsCode("112378")
+    )
+    DegreeOfFreedomExactRotationalTranslationValue = (
+        DICOMControlledTerminologyDefinitionsCode("112379")
+    )
+    DegreeOfFreedomMinimumRotationalValue = DICOMControlledTerminologyDefinitionsCode(
+        "112380"
+    )
+    DegreeOfFreedomMaximumRotationalValue = DICOMControlledTerminologyDefinitionsCode(
+        "112381"
+    )
+    Peri_operativePhotographicImaging = DICOMControlledTerminologyDefinitionsCode(
+        "112700"
+    )
     GrossSpecimenImaging = DICOMControlledTerminologyDefinitionsCode("112701")
     SlideMicroscopy = DICOMControlledTerminologyDefinitionsCode("112702")
     WholeSlideImaging = DICOMControlledTerminologyDefinitionsCode("112703")
@@ -1619,7 +2064,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     _20X = DICOMControlledTerminologyDefinitionsCode("112717")
     _40X = DICOMControlledTerminologyDefinitionsCode("112718")
     NominalEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode("112719")
-    HighThresholdEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode("112720")
+    HighThresholdEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode(
+        "112720"
+    )
     NoEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode("112721")
     OfInterest = DICOMControlledTerminologyDefinitionsCode("113000")
     RejectedForQualityReasons = DICOMControlledTerminologyDefinitionsCode("113001")
@@ -1648,9 +2095,13 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     CompleteStudyContent = DICOMControlledTerminologyDefinitionsCode("113032")
     SignedCompleteStudyContent = DICOMControlledTerminologyDefinitionsCode("113033")
     CompleteAcquisitionContent = DICOMControlledTerminologyDefinitionsCode("113034")
-    SignedCompleteAcquisitionContent = DICOMControlledTerminologyDefinitionsCode("113035")
+    SignedCompleteAcquisitionContent = DICOMControlledTerminologyDefinitionsCode(
+        "113035"
+    )
     GroupOfFramesForDisplay = DICOMControlledTerminologyDefinitionsCode("113036")
-    RejectedForPatientSafetyReasons = DICOMControlledTerminologyDefinitionsCode("113037")
+    RejectedForPatientSafetyReasons = DICOMControlledTerminologyDefinitionsCode(
+        "113037"
+    )
     IncorrectModalityWorklistEntry = DICOMControlledTerminologyDefinitionsCode("113038")
     DataRetentionPolicyExpired = DICOMControlledTerminologyDefinitionsCode("113039")
     LossyCompression = DICOMControlledTerminologyDefinitionsCode("113040")
@@ -1663,7 +2114,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PixelByPixelMask = DICOMControlledTerminologyDefinitionsCode("113047")
     PixelByPixelMaximum = DICOMControlledTerminologyDefinitionsCode("113048")
     PixelByPixelMean = DICOMControlledTerminologyDefinitionsCode("113049")
-    MetaboliteMapsFromSpectroscopyData = DICOMControlledTerminologyDefinitionsCode("113050")
+    MetaboliteMapsFromSpectroscopyData = DICOMControlledTerminologyDefinitionsCode(
+        "113050"
+    )
     PixelByPixelMinimum = DICOMControlledTerminologyDefinitionsCode("113051")
     MeanTransitTime = DICOMControlledTerminologyDefinitionsCode("113052")
     PixelByPixelMultiplication = DICOMControlledTerminologyDefinitionsCode("113053")
@@ -1695,7 +2148,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MinimumIntensityProjection = DICOMControlledTerminologyDefinitionsCode("113079")
     GlutamateAndGlutamine = DICOMControlledTerminologyDefinitionsCode("113080")
     Choline_CreatineRatio = DICOMControlledTerminologyDefinitionsCode("113081")
-    N_acetylaspartate_CreatineRatio = DICOMControlledTerminologyDefinitionsCode("113082")
+    N_acetylaspartate_CreatineRatio = DICOMControlledTerminologyDefinitionsCode(
+        "113082"
+    )
     N_acetylaspartate_CholineRatio = DICOMControlledTerminologyDefinitionsCode("113083")
     SpatialResampling = DICOMControlledTerminologyDefinitionsCode("113085")
     EdgeEnhancement = DICOMControlledTerminologyDefinitionsCode("113086")
@@ -1703,36 +2158,70 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     GaussianBlur = DICOMControlledTerminologyDefinitionsCode("113088")
     UnsharpMask = DICOMControlledTerminologyDefinitionsCode("113089")
     ImageStitching = DICOMControlledTerminologyDefinitionsCode("113090")
-    Spatially_relatedFramesExtractedFromTheVolume = DICOMControlledTerminologyDefinitionsCode("113091")
-    Temporally_relatedFramesExtractedFromTheSetOfVolumes = DICOMControlledTerminologyDefinitionsCode("113092")
-    PolarToRectangularScanConversion = DICOMControlledTerminologyDefinitionsCode("113093")
+    Spatially_relatedFramesExtractedFromTheVolume = (
+        DICOMControlledTerminologyDefinitionsCode("113091")
+    )
+    Temporally_relatedFramesExtractedFromTheSetOfVolumes = (
+        DICOMControlledTerminologyDefinitionsCode("113092")
+    )
+    PolarToRectangularScanConversion = DICOMControlledTerminologyDefinitionsCode(
+        "113093"
+    )
     CreatineAndCholine = DICOMControlledTerminologyDefinitionsCode("113094")
     LipidAndLactate = DICOMControlledTerminologyDefinitionsCode("113095")
     Creatine_Choline_CitrateRatio = DICOMControlledTerminologyDefinitionsCode("113096")
-    Multi_energyProportionalWeighting = DICOMControlledTerminologyDefinitionsCode("113097")
-    BasicApplicationConfidentialityProfile = DICOMControlledTerminologyDefinitionsCode("113100")
+    Multi_energyProportionalWeighting = DICOMControlledTerminologyDefinitionsCode(
+        "113097"
+    )
+    BasicApplicationConfidentialityProfile = DICOMControlledTerminologyDefinitionsCode(
+        "113100"
+    )
     CleanPixelDataOption = DICOMControlledTerminologyDefinitionsCode("113101")
-    CleanRecognizableVisualFeaturesOption = DICOMControlledTerminologyDefinitionsCode("113102")
+    CleanRecognizableVisualFeaturesOption = DICOMControlledTerminologyDefinitionsCode(
+        "113102"
+    )
     CleanGraphicsOption = DICOMControlledTerminologyDefinitionsCode("113103")
     CleanStructuredContentOption = DICOMControlledTerminologyDefinitionsCode("113104")
     CleanDescriptorsOption = DICOMControlledTerminologyDefinitionsCode("113105")
-    RetainLongitudinalTemporalInformationFullDatesOption = DICOMControlledTerminologyDefinitionsCode("113106")
-    RetainLongitudinalTemporalInformationModifiedDatesOption = DICOMControlledTerminologyDefinitionsCode("113107")
-    RetainPatientCharacteristicsOption = DICOMControlledTerminologyDefinitionsCode("113108")
+    RetainLongitudinalTemporalInformationFullDatesOption = (
+        DICOMControlledTerminologyDefinitionsCode("113106")
+    )
+    RetainLongitudinalTemporalInformationModifiedDatesOption = (
+        DICOMControlledTerminologyDefinitionsCode("113107")
+    )
+    RetainPatientCharacteristicsOption = DICOMControlledTerminologyDefinitionsCode(
+        "113108"
+    )
     RetainDeviceIdentityOption = DICOMControlledTerminologyDefinitionsCode("113109")
     RetainUIDsOption = DICOMControlledTerminologyDefinitionsCode("113110")
     RetainSafePrivateOption = DICOMControlledTerminologyDefinitionsCode("113111")
-    RadiopharmaceuticalRadiationDoseReport = DICOMControlledTerminologyDefinitionsCode("113500")
-    RadiopharmaceuticalAdministration = DICOMControlledTerminologyDefinitionsCode("113502")
-    RadiopharmaceuticalAdministrationEventUID = DICOMControlledTerminologyDefinitionsCode("113503")
-    IntravenousExtravasationSymptoms = DICOMControlledTerminologyDefinitionsCode("113505")
+    RadiopharmaceuticalRadiationDoseReport = DICOMControlledTerminologyDefinitionsCode(
+        "113500"
+    )
+    RadiopharmaceuticalAdministration = DICOMControlledTerminologyDefinitionsCode(
+        "113502"
+    )
+    RadiopharmaceuticalAdministrationEventUID = (
+        DICOMControlledTerminologyDefinitionsCode("113503")
+    )
+    IntravenousExtravasationSymptoms = DICOMControlledTerminologyDefinitionsCode(
+        "113505"
+    )
     EstimatedExtravasationActivity = DICOMControlledTerminologyDefinitionsCode("113506")
     AdministeredActivity = DICOMControlledTerminologyDefinitionsCode("113507")
-    Pre_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode("113508")
-    Post_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode("113509")
+    Pre_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode(
+        "113508"
+    )
+    Post_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode(
+        "113509"
+    )
     DrugProductIdentifier = DICOMControlledTerminologyDefinitionsCode("113510")
-    RadiopharmaceuticalDispenseUnitIdentifier = DICOMControlledTerminologyDefinitionsCode("113511")
-    RadiopharmaceuticalLotIdentifier = DICOMControlledTerminologyDefinitionsCode("113512")
+    RadiopharmaceuticalDispenseUnitIdentifier = (
+        DICOMControlledTerminologyDefinitionsCode("113511")
+    )
+    RadiopharmaceuticalLotIdentifier = DICOMControlledTerminologyDefinitionsCode(
+        "113512"
+    )
     ReagentVialIdentifier = DICOMControlledTerminologyDefinitionsCode("113513")
     RadionuclideVialIdentifier = DICOMControlledTerminologyDefinitionsCode("113514")
     PrescriptionIdentifier = DICOMControlledTerminologyDefinitionsCode("113516")
@@ -1745,7 +2234,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MIRDOSE = DICOMControlledTerminologyDefinitionsCode("113526")
     OLINDA_EXM = DICOMControlledTerminologyDefinitionsCode("113527")
     PackageInsert = DICOMControlledTerminologyDefinitionsCode("113528")
-    InstitutionallyApprovedEstimates = DICOMControlledTerminologyDefinitionsCode("113529")
+    InstitutionallyApprovedEstimates = DICOMControlledTerminologyDefinitionsCode(
+        "113529"
+    )
     InvestigationalNewDrug = DICOMControlledTerminologyDefinitionsCode("113530")
     ActivityMeasurementDevice = DICOMControlledTerminologyDefinitionsCode("113540")
     DoseCalibrator = DICOMControlledTerminologyDefinitionsCode("113541")
@@ -1759,16 +2250,30 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     HighThyroidUptake = DICOMControlledTerminologyDefinitionsCode("113562")
     SeverelyJaundiced = DICOMControlledTerminologyDefinitionsCode("113563")
     ExtravasationVisibleInImage = DICOMControlledTerminologyDefinitionsCode("113568")
-    Cockroft_GaultFormulaEstimationOfGFR = DICOMControlledTerminologyDefinitionsCode("113570")
+    Cockroft_GaultFormulaEstimationOfGFR = DICOMControlledTerminologyDefinitionsCode(
+        "113570"
+    )
     CKD_EPIFormulaEstimationOfGFR = DICOMControlledTerminologyDefinitionsCode("113571")
     GlomerularFiltrationRate_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113572")
-    GlomerularFiltrationRateNon_black_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113573")
-    GlomerularFiltrationRateBlack_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113574")
-    GlomerularFiltrationRateFemale_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113575")
-    GlomerularFiltrationRateCystatin_basedFormula = DICOMControlledTerminologyDefinitionsCode("113576")
-    GlomerularFiltrationRateCreatinine_basedFormula_Schwartz_ = DICOMControlledTerminologyDefinitionsCode("113577")
+    GlomerularFiltrationRateNon_black_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
+        "113573"
+    )
+    GlomerularFiltrationRateBlack_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
+        "113574"
+    )
+    GlomerularFiltrationRateFemale_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
+        "113575"
+    )
+    GlomerularFiltrationRateCystatin_basedFormula = (
+        DICOMControlledTerminologyDefinitionsCode("113576")
+    )
+    GlomerularFiltrationRateCreatinine_basedFormula_Schwartz_ = (
+        DICOMControlledTerminologyDefinitionsCode("113577")
+    )
     Small_32_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode("113601")
-    Medium_32_0_38_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode("113602")
+    Medium_32_0_38_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode(
+        "113602"
+    )
     Large_38_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode("113603")
     IrradiationEventLabel = DICOMControlledTerminologyDefinitionsCode("113605")
     LabelType = DICOMControlledTerminologyDefinitionsCode("113606")
@@ -1794,18 +2299,30 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     LinearSpiculation = DICOMControlledTerminologyDefinitionsCode("113665")
     PixelatedSpiculations = DICOMControlledTerminologyDefinitionsCode("113666")
     OrthogonalLocationArc = DICOMControlledTerminologyDefinitionsCode("113669")
-    OrthogonalLocationArcInnerMargin = DICOMControlledTerminologyDefinitionsCode("113670")
-    OrthogonalLocationArcOuterMargin = DICOMControlledTerminologyDefinitionsCode("113671")
+    OrthogonalLocationArcInnerMargin = DICOMControlledTerminologyDefinitionsCode(
+        "113670"
+    )
+    OrthogonalLocationArcOuterMargin = DICOMControlledTerminologyDefinitionsCode(
+        "113671"
+    )
     QualityControlIntent = DICOMControlledTerminologyDefinitionsCode("113680")
     Phantom = DICOMControlledTerminologyDefinitionsCode("113681")
     ACRAccreditationPhantom_CT = DICOMControlledTerminologyDefinitionsCode("113682")
     ACRAccreditationPhantom_MR = DICOMControlledTerminologyDefinitionsCode("113683")
-    ACRAccreditationPhantom_Mammography = DICOMControlledTerminologyDefinitionsCode("113684")
-    ACRAccreditationPhantom_StereotacticBreastBiopsy = DICOMControlledTerminologyDefinitionsCode("113685")
+    ACRAccreditationPhantom_Mammography = DICOMControlledTerminologyDefinitionsCode(
+        "113684"
+    )
+    ACRAccreditationPhantom_StereotacticBreastBiopsy = (
+        DICOMControlledTerminologyDefinitionsCode("113685")
+    )
     ACRAccreditationPhantom_ECT = DICOMControlledTerminologyDefinitionsCode("113686")
     ACRAccreditationPhantom_PET = DICOMControlledTerminologyDefinitionsCode("113687")
-    ACRAccreditationPhantom_ECT_PET = DICOMControlledTerminologyDefinitionsCode("113688")
-    ACRAccreditationPhantom_PETFaceplate = DICOMControlledTerminologyDefinitionsCode("113689")
+    ACRAccreditationPhantom_ECT_PET = DICOMControlledTerminologyDefinitionsCode(
+        "113688"
+    )
+    ACRAccreditationPhantom_PETFaceplate = DICOMControlledTerminologyDefinitionsCode(
+        "113689"
+    )
     IECHeadDosimetryPhantom = DICOMControlledTerminologyDefinitionsCode("113690")
     IECBodyDosimetryPhantom = DICOMControlledTerminologyDefinitionsCode("113691")
     NEMAXR21_2000Phantom = DICOMControlledTerminologyDefinitionsCode("113692")
@@ -1823,11 +2340,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     CalibrationResponsibleParty = DICOMControlledTerminologyDefinitionsCode("113724")
     Dose_RP_Total = DICOMControlledTerminologyDefinitionsCode("113725")
     FluoroDoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode("113726")
-    AcquisitionDoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode("113727")
+    AcquisitionDoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode(
+        "113727"
+    )
     FluoroDose_RP_Total = DICOMControlledTerminologyDefinitionsCode("113728")
     AcquisitionDose_RP_Total = DICOMControlledTerminologyDefinitionsCode("113729")
     TotalFluoroTime = DICOMControlledTerminologyDefinitionsCode("113730")
-    TotalNumberOfRadiographicFrames = DICOMControlledTerminologyDefinitionsCode("113731")
+    TotalNumberOfRadiographicFrames = DICOMControlledTerminologyDefinitionsCode(
+        "113731"
+    )
     FluoroMode = DICOMControlledTerminologyDefinitionsCode("113732")
     KVP = DICOMControlledTerminologyDefinitionsCode("113733")
     X_RayTubeCurrent = DICOMControlledTerminologyDefinitionsCode("113734")
@@ -1873,10 +2394,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PulseWidth = DICOMControlledTerminologyDefinitionsCode("113793")
     DoseMeasurementDevice = DICOMControlledTerminologyDefinitionsCode("113794")
     AcquiredImage = DICOMControlledTerminologyDefinitionsCode("113795")
-    DLPToEConversionViaMCComputation = DICOMControlledTerminologyDefinitionsCode("113800")
-    CTDIfreeairToEConversionViaMCComputation = DICOMControlledTerminologyDefinitionsCode("113801")
+    DLPToEConversionViaMCComputation = DICOMControlledTerminologyDefinitionsCode(
+        "113800"
+    )
+    CTDIfreeairToEConversionViaMCComputation = (
+        DICOMControlledTerminologyDefinitionsCode("113801")
+    )
     DLPToEConversionViaMeasurement = DICOMControlledTerminologyDefinitionsCode("113802")
-    CTDIfreeairToEConversionViaMeasurement = DICOMControlledTerminologyDefinitionsCode("113803")
+    CTDIfreeairToEConversionViaMeasurement = DICOMControlledTerminologyDefinitionsCode(
+        "113803"
+    )
     SequencedAcquisition = DICOMControlledTerminologyDefinitionsCode("113804")
     ConstantAngleAcquisition = DICOMControlledTerminologyDefinitionsCode("113805")
     StationaryAcquisition = DICOMControlledTerminologyDefinitionsCode("113806")
@@ -1930,14 +2457,20 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     MPPSContent = DICOMControlledTerminologyDefinitionsCode("113858")
     IrradiatingDevice = DICOMControlledTerminologyDefinitionsCode("113859")
     _15cmFromIsocenterTowardSource = DICOMControlledTerminologyDefinitionsCode("113860")
-    _30cmInFrontOfImageInputSurface = DICOMControlledTerminologyDefinitionsCode("113861")
+    _30cmInFrontOfImageInputSurface = DICOMControlledTerminologyDefinitionsCode(
+        "113861"
+    )
     _1cmAboveTabletop = DICOMControlledTerminologyDefinitionsCode("113862")
     _30cmAboveTabletop = DICOMControlledTerminologyDefinitionsCode("113863")
     _15cmFromTableCenterline = DICOMControlledTerminologyDefinitionsCode("113864")
-    EntranceExposureToA4_2CmBreastThickness = DICOMControlledTerminologyDefinitionsCode("113865")
+    EntranceExposureToA4_2CmBreastThickness = DICOMControlledTerminologyDefinitionsCode(
+        "113865"
+    )
     CopiedFromImageAttributes = DICOMControlledTerminologyDefinitionsCode("113866")
     ComputedFromImageAttributes = DICOMControlledTerminologyDefinitionsCode("113867")
-    DerivedFromHuman_ReadableReports = DICOMControlledTerminologyDefinitionsCode("113868")
+    DerivedFromHuman_ReadableReports = DICOMControlledTerminologyDefinitionsCode(
+        "113868"
+    )
     PersonName = DICOMControlledTerminologyDefinitionsCode("113870")
     PersonID = DICOMControlledTerminologyDefinitionsCode("113871")
     PersonIDIssuer = DICOMControlledTerminologyDefinitionsCode("113872")
@@ -1951,10 +2484,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DeviceSerialNumber = DICOMControlledTerminologyDefinitionsCode("113880")
     AllPlanes = DICOMControlledTerminologyDefinitionsCode("113890")
     LengthOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode("113893")
-    TopZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode("113895")
-    BottomZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode("113896")
+    TopZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode(
+        "113895"
+    )
+    BottomZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode(
+        "113896"
+    )
     TopZLocationOfScanningLength = DICOMControlledTerminologyDefinitionsCode("113897")
-    BottomZLocationOfScanningLength = DICOMControlledTerminologyDefinitionsCode("113898")
+    BottomZLocationOfScanningLength = DICOMControlledTerminologyDefinitionsCode(
+        "113898"
+    )
     ExposedRange = DICOMControlledTerminologyDefinitionsCode("113899")
     DoseCheckAlertDetails = DICOMControlledTerminologyDefinitionsCode("113900")
     DLPAlertValueConfigured = DICOMControlledTerminologyDefinitionsCode("113901")
@@ -1962,26 +2501,38 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DLPAlertValue = DICOMControlledTerminologyDefinitionsCode("113903")
     CTDIvolAlertValue = DICOMControlledTerminologyDefinitionsCode("113904")
     AccumulatedDLPForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113905")
-    AccumulatedCTDIvolForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113906")
+    AccumulatedCTDIvolForwardEstimate = DICOMControlledTerminologyDefinitionsCode(
+        "113906"
+    )
     ReasonForProceeding = DICOMControlledTerminologyDefinitionsCode("113907")
     DoseCheckNotificationDetails = DICOMControlledTerminologyDefinitionsCode("113908")
     DLPNotificationValueConfigured = DICOMControlledTerminologyDefinitionsCode("113909")
-    CTDIvolNotificationValueConfigured = DICOMControlledTerminologyDefinitionsCode("113910")
+    CTDIvolNotificationValueConfigured = DICOMControlledTerminologyDefinitionsCode(
+        "113910"
+    )
     DLPNotificationValue = DICOMControlledTerminologyDefinitionsCode("113911")
     CTDIvolNotificationValue = DICOMControlledTerminologyDefinitionsCode("113912")
     DLPForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113913")
     CTDIvolForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113914")
     RadiationExposure = DICOMControlledTerminologyDefinitionsCode("113921")
-    RadioactiveSubstanceAdministered = DICOMControlledTerminologyDefinitionsCode("113922")
-    RadiationExposureAndProtectionInformation = DICOMControlledTerminologyDefinitionsCode("113923")
+    RadioactiveSubstanceAdministered = DICOMControlledTerminologyDefinitionsCode(
+        "113922"
+    )
+    RadiationExposureAndProtectionInformation = (
+        DICOMControlledTerminologyDefinitionsCode("113923")
+    )
     SizeSpecificDoseEstimation = DICOMControlledTerminologyDefinitionsCode("113930")
     MeasuredLateralDimension = DICOMControlledTerminologyDefinitionsCode("113931")
     MeasuredAPDimension = DICOMControlledTerminologyDefinitionsCode("113932")
     DerivedEffectiveDiameter = DICOMControlledTerminologyDefinitionsCode("113933")
     AAPM204LateralDimension = DICOMControlledTerminologyDefinitionsCode("113934")
     AAPM204APDimension = DICOMControlledTerminologyDefinitionsCode("113935")
-    AAPM204SumOfLateralAndAPDimension = DICOMControlledTerminologyDefinitionsCode("113936")
-    AAPM204EffectiveDiameterEstimatedFromPatientAge = DICOMControlledTerminologyDefinitionsCode("113937")
+    AAPM204SumOfLateralAndAPDimension = DICOMControlledTerminologyDefinitionsCode(
+        "113936"
+    )
+    AAPM204EffectiveDiameterEstimatedFromPatientAge = (
+        DICOMControlledTerminologyDefinitionsCode("113937")
+    )
     SystemCalculated = DICOMControlledTerminologyDefinitionsCode("113940")
     InDetectorPlane = DICOMControlledTerminologyDefinitionsCode("113941")
     X_RayReadingDevice = DICOMControlledTerminologyDefinitionsCode("113942")
@@ -1999,9 +2550,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     UprightStandMount = DICOMControlledTerminologyDefinitionsCode("113954")
     C_ArmMount = DICOMControlledTerminologyDefinitionsCode("113955")
     CR_DRMechanicalConfiguration = DICOMControlledTerminologyDefinitionsCode("113956")
-    Fluoroscopy_GuidedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode("113957")
-    IntegratedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode("113958")
-    Cassette_basedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode("113959")
+    Fluoroscopy_GuidedProjectionRadiographySystem = (
+        DICOMControlledTerminologyDefinitionsCode("113957")
+    )
+    IntegratedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode(
+        "113958"
+    )
+    Cassette_basedProjectionRadiographySystem = (
+        DICOMControlledTerminologyDefinitionsCode("113959")
+    )
     ReconstructionAlgorithm = DICOMControlledTerminologyDefinitionsCode("113961")
     FilteredBackProjection = DICOMControlledTerminologyDefinitionsCode("113962")
     IterativeReconstruction = DICOMControlledTerminologyDefinitionsCode("113963")
@@ -2040,15 +2597,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Person = DICOMControlledTerminologyDefinitionsCode("121006")
     Device = DICOMControlledTerminologyDefinitionsCode("121007")
     PersonObserverName = DICOMControlledTerminologyDefinitionsCode("121008")
-    PersonObserver_sOrganizationName = DICOMControlledTerminologyDefinitionsCode("121009")
-    PersonObserver_sRoleInTheOrganization = DICOMControlledTerminologyDefinitionsCode("121010")
-    PersonObserver_sRoleInThisProcedure = DICOMControlledTerminologyDefinitionsCode("121011")
+    PersonObserver_sOrganizationName = DICOMControlledTerminologyDefinitionsCode(
+        "121009"
+    )
+    PersonObserver_sRoleInTheOrganization = DICOMControlledTerminologyDefinitionsCode(
+        "121010"
+    )
+    PersonObserver_sRoleInThisProcedure = DICOMControlledTerminologyDefinitionsCode(
+        "121011"
+    )
     DeviceObserverUID = DICOMControlledTerminologyDefinitionsCode("121012")
     DeviceObserverName = DICOMControlledTerminologyDefinitionsCode("121013")
     DeviceObserverManufacturer = DICOMControlledTerminologyDefinitionsCode("121014")
     DeviceObserverModelName = DICOMControlledTerminologyDefinitionsCode("121015")
     DeviceObserverSerialNumber = DICOMControlledTerminologyDefinitionsCode("121016")
-    DeviceObserverPhysicalLocationDuringObservation = DICOMControlledTerminologyDefinitionsCode("121017")
+    DeviceObserverPhysicalLocationDuringObservation = (
+        DICOMControlledTerminologyDefinitionsCode("121017")
+    )
     ProcedureStudyInstanceUID = DICOMControlledTerminologyDefinitionsCode("121018")
     ProcedureStudyComponentUID = DICOMControlledTerminologyDefinitionsCode("121019")
     PlacerNumber = DICOMControlledTerminologyDefinitionsCode("121020")
@@ -2080,7 +2645,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     CountryOfLanguage = DICOMControlledTerminologyDefinitionsCode("121046")
     LanguageOfValue = DICOMControlledTerminologyDefinitionsCode("121047")
     LanguageOfNameAndValue = DICOMControlledTerminologyDefinitionsCode("121048")
-    LanguageOfContentItemAndDescendants = DICOMControlledTerminologyDefinitionsCode("121049")
+    LanguageOfContentItemAndDescendants = DICOMControlledTerminologyDefinitionsCode(
+        "121049"
+    )
     EquivalentMeaningOfConceptName = DICOMControlledTerminologyDefinitionsCode("121050")
     EquivalentMeaningOfValue = DICOMControlledTerminologyDefinitionsCode("121051")
     PresenceOfProperty = DICOMControlledTerminologyDefinitionsCode("121052")
@@ -2151,8 +2718,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PatientStatusOrEvent = DICOMControlledTerminologyDefinitionsCode("121123")
     ProcedureActionItemID = DICOMControlledTerminologyDefinitionsCode("121124")
     DateTimeOfRecordingOfLogEntry = DICOMControlledTerminologyDefinitionsCode("121125")
-    PerformedProcedureStepSOPInstanceUID = DICOMControlledTerminologyDefinitionsCode("121126")
-    PerformedProcedureStepSOPClassUID = DICOMControlledTerminologyDefinitionsCode("121127")
+    PerformedProcedureStepSOPInstanceUID = DICOMControlledTerminologyDefinitionsCode(
+        "121126"
+    )
+    PerformedProcedureStepSOPClassUID = DICOMControlledTerminologyDefinitionsCode(
+        "121127"
+    )
     ProcedureActionDuration = DICOMControlledTerminologyDefinitionsCode("121128")
     StartProcedureActionItem = DICOMControlledTerminologyDefinitionsCode("121130")
     EndProcedureActionItem = DICOMControlledTerminologyDefinitionsCode("121131")
@@ -2175,7 +2746,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     LotIdentifier = DICOMControlledTerminologyDefinitionsCode("121149")
     DeviceCode = DICOMControlledTerminologyDefinitionsCode("121150")
     LesionIdentifier = DICOMControlledTerminologyDefinitionsCode("121151")
-    PersonAdministeringDrug_contrast = DICOMControlledTerminologyDefinitionsCode("121152")
+    PersonAdministeringDrug_contrast = DICOMControlledTerminologyDefinitionsCode(
+        "121152"
+    )
     LesionRisk = DICOMControlledTerminologyDefinitionsCode("121153")
     InterventionAttemptIdentifier = DICOMControlledTerminologyDefinitionsCode("121154")
     Deployment = DICOMControlledTerminologyDefinitionsCode("121155")
@@ -2204,7 +2777,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DeviceSubjectManufacturer = DICOMControlledTerminologyDefinitionsCode("121194")
     DeviceSubjectModelName = DICOMControlledTerminologyDefinitionsCode("121195")
     DeviceSubjectSerialNumber = DICOMControlledTerminologyDefinitionsCode("121196")
-    DeviceSubjectPhysicalLocationDuringObservation = DICOMControlledTerminologyDefinitionsCode("121197")
+    DeviceSubjectPhysicalLocationDuringObservation = (
+        DICOMControlledTerminologyDefinitionsCode("121197")
+    )
     DeviceSubjectUID = DICOMControlledTerminologyDefinitionsCode("121198")
     IllustrationOfROI = DICOMControlledTerminologyDefinitionsCode("121200")
     AreaOutline = DICOMControlledTerminologyDefinitionsCode("121201")
@@ -2216,10 +2791,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PathLength = DICOMControlledTerminologyDefinitionsCode("121211")
     PerimeterOutline = DICOMControlledTerminologyDefinitionsCode("121213")
     ReferencedSegmentationFrame = DICOMControlledTerminologyDefinitionsCode("121214")
-    VolumeEstimatedFromSingle2DRegion = DICOMControlledTerminologyDefinitionsCode("121216")
-    VolumeEstimatedFromThreeOrMoreNon_coplanar2DRegions = DICOMControlledTerminologyDefinitionsCode("121217")
-    VolumeEstimatedFromTwoNon_coplanar2DRegions = DICOMControlledTerminologyDefinitionsCode("121218")
-    VolumeOfBoundingThreeDimensionalRegion = DICOMControlledTerminologyDefinitionsCode("121219")
+    VolumeEstimatedFromSingle2DRegion = DICOMControlledTerminologyDefinitionsCode(
+        "121216"
+    )
+    VolumeEstimatedFromThreeOrMoreNon_coplanar2DRegions = (
+        DICOMControlledTerminologyDefinitionsCode("121217")
+    )
+    VolumeEstimatedFromTwoNon_coplanar2DRegions = (
+        DICOMControlledTerminologyDefinitionsCode("121218")
+    )
+    VolumeOfBoundingThreeDimensionalRegion = DICOMControlledTerminologyDefinitionsCode(
+        "121219"
+    )
     VolumeOfCircumscribedSphere = DICOMControlledTerminologyDefinitionsCode("121220")
     VolumeOfEllipsoid = DICOMControlledTerminologyDefinitionsCode("121221")
     VolumeOfSphere = DICOMControlledTerminologyDefinitionsCode("121222")
@@ -2230,52 +2813,90 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DistanceFromNipple = DICOMControlledTerminologyDefinitionsCode("121242")
     DistanceFromSkin = DICOMControlledTerminologyDefinitionsCode("121243")
     DistanceFromChestWall = DICOMControlledTerminologyDefinitionsCode("121244")
-    PatientExposureToIonizingRadiation = DICOMControlledTerminologyDefinitionsCode("121290")
+    PatientExposureToIonizingRadiation = DICOMControlledTerminologyDefinitionsCode(
+        "121290"
+    )
     ResultsCommunicated = DICOMControlledTerminologyDefinitionsCode("121291")
     SimultaneousDoppler = DICOMControlledTerminologyDefinitionsCode("121301")
     SimultaneousHemodynamic = DICOMControlledTerminologyDefinitionsCode("121302")
     SimultaneousECG = DICOMControlledTerminologyDefinitionsCode("121303")
     SimultaneousVoiceNarrative = DICOMControlledTerminologyDefinitionsCode("121304")
-    SimultaneousRespiratoryWaveform = DICOMControlledTerminologyDefinitionsCode("121305")
-    SimultaneousArterialPulseWaveform = DICOMControlledTerminologyDefinitionsCode("121306")
-    SimultaneousPhonocardiographicWaveform = DICOMControlledTerminologyDefinitionsCode("121307")
+    SimultaneousRespiratoryWaveform = DICOMControlledTerminologyDefinitionsCode(
+        "121305"
+    )
+    SimultaneousArterialPulseWaveform = DICOMControlledTerminologyDefinitionsCode(
+        "121306"
+    )
+    SimultaneousPhonocardiographicWaveform = DICOMControlledTerminologyDefinitionsCode(
+        "121307"
+    )
     Localizer = DICOMControlledTerminologyDefinitionsCode("121311")
     BiopsyLocalizer = DICOMControlledTerminologyDefinitionsCode("121312")
     OtherPartialViews = DICOMControlledTerminologyDefinitionsCode("121313")
     OtherImageOfBiplanePair = DICOMControlledTerminologyDefinitionsCode("121314")
     OtherImageOfStereoscopicPair = DICOMControlledTerminologyDefinitionsCode("121315")
-    ImagesRelatedToStandaloneObject = DICOMControlledTerminologyDefinitionsCode("121316")
+    ImagesRelatedToStandaloneObject = DICOMControlledTerminologyDefinitionsCode(
+        "121316"
+    )
     Spectroscopy = DICOMControlledTerminologyDefinitionsCode("121317")
-    SpectroscopyDataForWaterPhaseCorrection = DICOMControlledTerminologyDefinitionsCode("121318")
+    SpectroscopyDataForWaterPhaseCorrection = DICOMControlledTerminologyDefinitionsCode(
+        "121318"
+    )
     UncompressedPredecessor = DICOMControlledTerminologyDefinitionsCode("121320")
-    MaskImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode("121321")
-    SourceImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode("121322")
-    SourceSeriesForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode("121323")
+    MaskImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
+        "121321"
+    )
+    SourceImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
+        "121322"
+    )
+    SourceSeriesForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
+        "121323"
+    )
     SourceImage = DICOMControlledTerminologyDefinitionsCode("121324")
     LossyCompressedImage = DICOMControlledTerminologyDefinitionsCode("121325")
     AlternateSOPClassInstance = DICOMControlledTerminologyDefinitionsCode("121326")
     FullFidelityImage = DICOMControlledTerminologyDefinitionsCode("121327")
-    AlternatePhotometricInterpretationImage = DICOMControlledTerminologyDefinitionsCode("121328")
+    AlternatePhotometricInterpretationImage = DICOMControlledTerminologyDefinitionsCode(
+        "121328"
+    )
     SourceImageForMontage = DICOMControlledTerminologyDefinitionsCode("121329")
     LossyCompressedPredecessor = DICOMControlledTerminologyDefinitionsCode("121330")
     EquivalentCDADocument = DICOMControlledTerminologyDefinitionsCode("121331")
-    CompleteRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode("121332")
-    PartialRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode("121333")
-    ExtendedRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode("121334")
+    CompleteRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
+        "121332"
+    )
+    PartialRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
+        "121333"
+    )
+    ExtendedRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
+        "121334"
+    )
     SourceDocument = DICOMControlledTerminologyDefinitionsCode("121335")
     AnatomicImage = DICOMControlledTerminologyDefinitionsCode("121338")
     FunctionalImage = DICOMControlledTerminologyDefinitionsCode("121339")
     SpectralFilteredImage = DICOMControlledTerminologyDefinitionsCode("121340")
     DeviceLocalizer = DICOMControlledTerminologyDefinitionsCode("121341")
     DoseImage = DICOMControlledTerminologyDefinitionsCode("121342")
-    AcquisitionFramesCorrespondingToVolume = DICOMControlledTerminologyDefinitionsCode("121346")
-    VolumeCorrespondingToSpatially_relatedAcquisitionFrames = DICOMControlledTerminologyDefinitionsCode("121347")
+    AcquisitionFramesCorrespondingToVolume = DICOMControlledTerminologyDefinitionsCode(
+        "121346"
+    )
+    VolumeCorrespondingToSpatially_relatedAcquisitionFrames = (
+        DICOMControlledTerminologyDefinitionsCode("121347")
+    )
     TemporalPredecessor = DICOMControlledTerminologyDefinitionsCode("121348")
     TemporalSuccessor = DICOMControlledTerminologyDefinitionsCode("121349")
-    SameAcquisitionAtLowerResolution = DICOMControlledTerminologyDefinitionsCode("121350")
-    SameAcquisitionAtHigherResolution = DICOMControlledTerminologyDefinitionsCode("121351")
-    SameAcquisitionAtDifferentFocalDepth = DICOMControlledTerminologyDefinitionsCode("121352")
-    SameAcquisitionAtDifferentSpectralBand = DICOMControlledTerminologyDefinitionsCode("121353")
+    SameAcquisitionAtLowerResolution = DICOMControlledTerminologyDefinitionsCode(
+        "121350"
+    )
+    SameAcquisitionAtHigherResolution = DICOMControlledTerminologyDefinitionsCode(
+        "121351"
+    )
+    SameAcquisitionAtDifferentFocalDepth = DICOMControlledTerminologyDefinitionsCode(
+        "121352"
+    )
+    SameAcquisitionAtDifferentSpectralBand = DICOMControlledTerminologyDefinitionsCode(
+        "121353"
+    )
     ImagedContainerLabel = DICOMControlledTerminologyDefinitionsCode("121354")
     ForProcessingPredecessor = DICOMControlledTerminologyDefinitionsCode("121358")
     ReplacedReport = DICOMControlledTerminologyDefinitionsCode("121360")
@@ -2283,9 +2904,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PreliminaryReport = DICOMControlledTerminologyDefinitionsCode("121362")
     PartialReport = DICOMControlledTerminologyDefinitionsCode("121363")
     ComposedFromPriorDoses = DICOMControlledTerminologyDefinitionsCode("121370")
-    ComposedFromPriorDosesAndCurrentPlan = DICOMControlledTerminologyDefinitionsCode("121371")
-    SourceDoseForComposingCurrentDose = DICOMControlledTerminologyDefinitionsCode("121372")
-    ActiveIngredientUndilutedConcentration = DICOMControlledTerminologyDefinitionsCode("121380")
+    ComposedFromPriorDosesAndCurrentPlan = DICOMControlledTerminologyDefinitionsCode(
+        "121371"
+    )
+    SourceDoseForComposingCurrentDose = DICOMControlledTerminologyDefinitionsCode(
+        "121372"
+    )
+    ActiveIngredientUndilutedConcentration = DICOMControlledTerminologyDefinitionsCode(
+        "121380"
+    )
     Contrast_BolusIngredientOpaque = DICOMControlledTerminologyDefinitionsCode("121381")
     QuantityAdministered = DICOMControlledTerminologyDefinitionsCode("121382")
     MassAdministered = DICOMControlledTerminologyDefinitionsCode("121383")
@@ -2319,54 +2946,124 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ServiceDeliveryLocation = DICOMControlledTerminologyDefinitionsCode("121434")
     ServicePerformer = DICOMControlledTerminologyDefinitionsCode("121435")
     MedicalDeviceUsed = DICOMControlledTerminologyDefinitionsCode("121436")
-    PharmacologicAndExerciseStressTest = DICOMControlledTerminologyDefinitionsCode("121437")
+    PharmacologicAndExerciseStressTest = DICOMControlledTerminologyDefinitionsCode(
+        "121437"
+    )
     PacedStressTest = DICOMControlledTerminologyDefinitionsCode("121438")
-    CorrectionOfCongenitalCardiovascularDeformity = DICOMControlledTerminologyDefinitionsCode("121439")
+    CorrectionOfCongenitalCardiovascularDeformity = (
+        DICOMControlledTerminologyDefinitionsCode("121439")
+    )
     RTPatientSetup = DICOMControlledTerminologyDefinitionsCode("121701")
-    RTPatientPositionAcquisition_SinglePlaneMV = DICOMControlledTerminologyDefinitionsCode("121702")
-    RTPatientPositionAcquisition_DualPlaneMV = DICOMControlledTerminologyDefinitionsCode("121703")
-    RTPatientPositionAcquisition_SinglePlaneKV = DICOMControlledTerminologyDefinitionsCode("121704")
-    RTPatientPositionAcquisition_DualPlaneKV = DICOMControlledTerminologyDefinitionsCode("121705")
-    RTPatientPositionAcquisition_DualPlaneKV_MV = DICOMControlledTerminologyDefinitionsCode("121706")
-    RTPatientPositionAcquisition_CTKV = DICOMControlledTerminologyDefinitionsCode("121707")
-    RTPatientPositionAcquisition_CTMV = DICOMControlledTerminologyDefinitionsCode("121708")
-    RTPatientPositionAcquisition_Optical = DICOMControlledTerminologyDefinitionsCode("121709")
-    RTPatientPositionAcquisition_Ultrasound = DICOMControlledTerminologyDefinitionsCode("121710")
-    RTPatientPositionAcquisition_SpatialFiducials = DICOMControlledTerminologyDefinitionsCode("121711")
-    RTPatientPositionRegistration_SinglePlane = DICOMControlledTerminologyDefinitionsCode("121712")
-    RTPatientPositionRegistration_DualPlane = DICOMControlledTerminologyDefinitionsCode("121713")
-    RTPatientPositionRegistration_3DCTGeneral = DICOMControlledTerminologyDefinitionsCode("121714")
-    RTPatientPositionRegistration_3DCTMarker_based = DICOMControlledTerminologyDefinitionsCode("121715")
-    RTPatientPositionRegistration_3DCTVolume_based = DICOMControlledTerminologyDefinitionsCode("121716")
-    RTPatientPositionRegistration_3DOn2DReference = DICOMControlledTerminologyDefinitionsCode("121717")
-    RTPatientPositionRegistration_2DOn3DReference = DICOMControlledTerminologyDefinitionsCode("121718")
-    RTPatientPositionRegistration_Optical = DICOMControlledTerminologyDefinitionsCode("121719")
-    RTPatientPositionRegistration_Ultrasound = DICOMControlledTerminologyDefinitionsCode("121720")
-    RTPatientPositionRegistration_SpatialFiducials = DICOMControlledTerminologyDefinitionsCode("121721")
+    RTPatientPositionAcquisition_SinglePlaneMV = (
+        DICOMControlledTerminologyDefinitionsCode("121702")
+    )
+    RTPatientPositionAcquisition_DualPlaneMV = (
+        DICOMControlledTerminologyDefinitionsCode("121703")
+    )
+    RTPatientPositionAcquisition_SinglePlaneKV = (
+        DICOMControlledTerminologyDefinitionsCode("121704")
+    )
+    RTPatientPositionAcquisition_DualPlaneKV = (
+        DICOMControlledTerminologyDefinitionsCode("121705")
+    )
+    RTPatientPositionAcquisition_DualPlaneKV_MV = (
+        DICOMControlledTerminologyDefinitionsCode("121706")
+    )
+    RTPatientPositionAcquisition_CTKV = DICOMControlledTerminologyDefinitionsCode(
+        "121707"
+    )
+    RTPatientPositionAcquisition_CTMV = DICOMControlledTerminologyDefinitionsCode(
+        "121708"
+    )
+    RTPatientPositionAcquisition_Optical = DICOMControlledTerminologyDefinitionsCode(
+        "121709"
+    )
+    RTPatientPositionAcquisition_Ultrasound = DICOMControlledTerminologyDefinitionsCode(
+        "121710"
+    )
+    RTPatientPositionAcquisition_SpatialFiducials = (
+        DICOMControlledTerminologyDefinitionsCode("121711")
+    )
+    RTPatientPositionRegistration_SinglePlane = (
+        DICOMControlledTerminologyDefinitionsCode("121712")
+    )
+    RTPatientPositionRegistration_DualPlane = DICOMControlledTerminologyDefinitionsCode(
+        "121713"
+    )
+    RTPatientPositionRegistration_3DCTGeneral = (
+        DICOMControlledTerminologyDefinitionsCode("121714")
+    )
+    RTPatientPositionRegistration_3DCTMarker_based = (
+        DICOMControlledTerminologyDefinitionsCode("121715")
+    )
+    RTPatientPositionRegistration_3DCTVolume_based = (
+        DICOMControlledTerminologyDefinitionsCode("121716")
+    )
+    RTPatientPositionRegistration_3DOn2DReference = (
+        DICOMControlledTerminologyDefinitionsCode("121717")
+    )
+    RTPatientPositionRegistration_2DOn3DReference = (
+        DICOMControlledTerminologyDefinitionsCode("121718")
+    )
+    RTPatientPositionRegistration_Optical = DICOMControlledTerminologyDefinitionsCode(
+        "121719"
+    )
+    RTPatientPositionRegistration_Ultrasound = (
+        DICOMControlledTerminologyDefinitionsCode("121720")
+    )
+    RTPatientPositionRegistration_SpatialFiducials = (
+        DICOMControlledTerminologyDefinitionsCode("121721")
+    )
     RTPatientPositionAdjustment = DICOMControlledTerminologyDefinitionsCode("121722")
-    RTPatientPositionIn_treatment_sessionReview = DICOMControlledTerminologyDefinitionsCode("121723")
-    RTTreatmentSimulationWithInternalVerification = DICOMControlledTerminologyDefinitionsCode("121724")
-    RTTreatmentSimulationWithExternalVerification = DICOMControlledTerminologyDefinitionsCode("121725")
-    RTTreatmentWithInternalVerification = DICOMControlledTerminologyDefinitionsCode("121726")
-    RTTreatmentWithExternalVerification = DICOMControlledTerminologyDefinitionsCode("121727")
-    RTTreatmentQAWithInternalVerification = DICOMControlledTerminologyDefinitionsCode("121728")
-    RTTreatmentQAWithExternalVerification = DICOMControlledTerminologyDefinitionsCode("121729")
+    RTPatientPositionIn_treatment_sessionReview = (
+        DICOMControlledTerminologyDefinitionsCode("121723")
+    )
+    RTTreatmentSimulationWithInternalVerification = (
+        DICOMControlledTerminologyDefinitionsCode("121724")
+    )
+    RTTreatmentSimulationWithExternalVerification = (
+        DICOMControlledTerminologyDefinitionsCode("121725")
+    )
+    RTTreatmentWithInternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121726"
+    )
+    RTTreatmentWithExternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121727"
+    )
+    RTTreatmentQAWithInternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121728"
+    )
+    RTTreatmentQAWithExternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121729"
+    )
     RTMachineQA = DICOMControlledTerminologyDefinitionsCode("121730")
     RTTreatmentQAByRTPlanDoseCheck = DICOMControlledTerminologyDefinitionsCode("121731")
-    RTTreatmentQAByRTPlanDifferenceCheck = DICOMControlledTerminologyDefinitionsCode("121732")
-    RTTreatmentQAByRTIonPlanDoseCheck = DICOMControlledTerminologyDefinitionsCode("121733")
-    RTTreatmentQAWithRTIonPlanDifferenceCheck = DICOMControlledTerminologyDefinitionsCode("121734")
+    RTTreatmentQAByRTPlanDifferenceCheck = DICOMControlledTerminologyDefinitionsCode(
+        "121732"
+    )
+    RTTreatmentQAByRTIonPlanDoseCheck = DICOMControlledTerminologyDefinitionsCode(
+        "121733"
+    )
+    RTTreatmentQAWithRTIonPlanDifferenceCheck = (
+        DICOMControlledTerminologyDefinitionsCode("121734")
+    )
     TreatmentDeliveryType = DICOMControlledTerminologyDefinitionsCode("121740")
     PatientCalledToProcedureRoom = DICOMControlledTerminologyDefinitionsCode("122001")
     PatientAdmittedToProcedureRoom = DICOMControlledTerminologyDefinitionsCode("122002")
-    PatientGivenPre_procedureInstruction = DICOMControlledTerminologyDefinitionsCode("122003")
+    PatientGivenPre_procedureInstruction = DICOMControlledTerminologyDefinitionsCode(
+        "122003"
+    )
     PatientInformedConsentGiven = DICOMControlledTerminologyDefinitionsCode("122004")
     PatientAdvanceDirectiveGiven = DICOMControlledTerminologyDefinitionsCode("122005")
     NilPerOs_NPO_StatusConfirmed = DICOMControlledTerminologyDefinitionsCode("122006")
     PatientAssistedToTable = DICOMControlledTerminologyDefinitionsCode("122007")
     PatientPreppedAndDraped = DICOMControlledTerminologyDefinitionsCode("122008")
-    PatientConnectedToContinuousMonitoring = DICOMControlledTerminologyDefinitionsCode("122009")
-    PatientTransferredToHoldingArea = DICOMControlledTerminologyDefinitionsCode("122010")
+    PatientConnectedToContinuousMonitoring = DICOMControlledTerminologyDefinitionsCode(
+        "122009"
+    )
+    PatientTransferredToHoldingArea = DICOMControlledTerminologyDefinitionsCode(
+        "122010"
+    )
     PatientTransferredToSurgery = DICOMControlledTerminologyDefinitionsCode("122011")
     PatientTransferredToCCU = DICOMControlledTerminologyDefinitionsCode("122012")
     PatientDisoriented = DICOMControlledTerminologyDefinitionsCode("122020")
@@ -2379,14 +3076,24 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PatientSedated = DICOMControlledTerminologyDefinitionsCode("122027")
     PatientAsleep = DICOMControlledTerminologyDefinitionsCode("122028")
     PatientUnresponsive = DICOMControlledTerminologyDefinitionsCode("122029")
-    PatientHasRespiratoryDifficulty = DICOMControlledTerminologyDefinitionsCode("122030")
+    PatientHasRespiratoryDifficulty = DICOMControlledTerminologyDefinitionsCode(
+        "122030"
+    )
     PatientCoughed = DICOMControlledTerminologyDefinitionsCode("122031")
-    PatientDisconnectedFromContinuousMonitoring = DICOMControlledTerminologyDefinitionsCode("122032")
+    PatientDisconnectedFromContinuousMonitoring = (
+        DICOMControlledTerminologyDefinitionsCode("122032")
+    )
     HemostasisAchieved = DICOMControlledTerminologyDefinitionsCode("122033")
     HemostasisNotAchieved_Oozing = DICOMControlledTerminologyDefinitionsCode("122034")
-    HemostasisNotAchieved_ActivelyBleeding = DICOMControlledTerminologyDefinitionsCode("122035")
-    PatientGivenPost_procedureInstruction = DICOMControlledTerminologyDefinitionsCode("122036")
-    PatientDischargedFromDepartment = DICOMControlledTerminologyDefinitionsCode("122037")
+    HemostasisNotAchieved_ActivelyBleeding = DICOMControlledTerminologyDefinitionsCode(
+        "122035"
+    )
+    PatientGivenPost_procedureInstruction = DICOMControlledTerminologyDefinitionsCode(
+        "122036"
+    )
+    PatientDischargedFromDepartment = DICOMControlledTerminologyDefinitionsCode(
+        "122037"
+    )
     PatientPronouncedDead = DICOMControlledTerminologyDefinitionsCode("122038")
     PatientTransferredToMorgue = DICOMControlledTerminologyDefinitionsCode("122039")
     PersonnelArrived = DICOMControlledTerminologyDefinitionsCode("122041")
@@ -2395,7 +3102,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ConsultationWith = DICOMControlledTerminologyDefinitionsCode("122044")
     OfficeCalled = DICOMControlledTerminologyDefinitionsCode("122045")
     EquipmentFailure = DICOMControlledTerminologyDefinitionsCode("122046")
-    EquipmentBroughtToProcedureRoom = DICOMControlledTerminologyDefinitionsCode("122047")
+    EquipmentBroughtToProcedureRoom = DICOMControlledTerminologyDefinitionsCode(
+        "122047"
+    )
     EquipmentReady = DICOMControlledTerminologyDefinitionsCode("122048")
     EquipmentRemoved = DICOMControlledTerminologyDefinitionsCode("122049")
     Bioptome = DICOMControlledTerminologyDefinitionsCode("122052")
@@ -2407,7 +3116,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ArterialConduitAngiography = DICOMControlledTerminologyDefinitionsCode("122058")
     SinglePlaneAngiography = DICOMControlledTerminologyDefinitionsCode("122059")
     Bi_planeAngiography = DICOMControlledTerminologyDefinitionsCode("122060")
-    PercutaneousCoronaryIntervention = DICOMControlledTerminologyDefinitionsCode("122061")
+    PercutaneousCoronaryIntervention = DICOMControlledTerminologyDefinitionsCode(
+        "122061"
+    )
     _15_LeadECG = DICOMControlledTerminologyDefinitionsCode("122062")
     Pre_procedureLog = DICOMControlledTerminologyDefinitionsCode("122072")
     CurrentProcedureEvidence = DICOMControlledTerminologyDefinitionsCode("122073")
@@ -2431,18 +3142,26 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Concentration = DICOMControlledTerminologyDefinitionsCode("122093")
     RateOfAdministration = DICOMControlledTerminologyDefinitionsCode("122094")
     DurationOfAdministration = DICOMControlledTerminologyDefinitionsCode("122095")
-    VolumeUnadministeredOrDiscarded = DICOMControlledTerminologyDefinitionsCode("122096")
+    VolumeUnadministeredOrDiscarded = DICOMControlledTerminologyDefinitionsCode(
+        "122096"
+    )
     CatheterCurve = DICOMControlledTerminologyDefinitionsCode("122097")
     TransmitFrequency = DICOMControlledTerminologyDefinitionsCode("122098")
     STChangeFromBaseline = DICOMControlledTerminologyDefinitionsCode("122099")
     AneurysmOnCitedVessel = DICOMControlledTerminologyDefinitionsCode("122101")
-    GraftToCitedSegment_ProximalSection = DICOMControlledTerminologyDefinitionsCode("122102")
+    GraftToCitedSegment_ProximalSection = DICOMControlledTerminologyDefinitionsCode(
+        "122102"
+    )
     GraftToCitedSegment_MidSection = DICOMControlledTerminologyDefinitionsCode("122103")
-    GraftToCitedSegment_DistalSection = DICOMControlledTerminologyDefinitionsCode("122104")
+    GraftToCitedSegment_DistalSection = DICOMControlledTerminologyDefinitionsCode(
+        "122104"
+    )
     DateTimeOfIntervention = DICOMControlledTerminologyDefinitionsCode("122105")
     DurationOfIntervention = DICOMControlledTerminologyDefinitionsCode("122106")
     BaselineStenosisMeasurement = DICOMControlledTerminologyDefinitionsCode("122107")
-    Post_InterventionStenosisMeasurement = DICOMControlledTerminologyDefinitionsCode("122108")
+    Post_InterventionStenosisMeasurement = DICOMControlledTerminologyDefinitionsCode(
+        "122108"
+    )
     BaselineTIMIFlow = DICOMControlledTerminologyDefinitionsCode("122109")
     Post_InterventionTIMIFlow = DICOMControlledTerminologyDefinitionsCode("122110")
     PrimaryInterventionDevice = DICOMControlledTerminologyDefinitionsCode("122111")
@@ -2451,7 +3170,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ThinningMyocardium = DICOMControlledTerminologyDefinitionsCode("122114")
     HemodynamicsReport = DICOMControlledTerminologyDefinitionsCode("122120")
     AtrialPressureMeasurements = DICOMControlledTerminologyDefinitionsCode("122121")
-    VentricularPressureMeasurements = DICOMControlledTerminologyDefinitionsCode("122122")
+    VentricularPressureMeasurements = DICOMControlledTerminologyDefinitionsCode(
+        "122122"
+    )
     GradientAssessment = DICOMControlledTerminologyDefinitionsCode("122123")
     BloodVelocityMeasurements = DICOMControlledTerminologyDefinitionsCode("122124")
     BloodLabMeasurements = DICOMControlledTerminologyDefinitionsCode("122125")
@@ -2488,7 +3209,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PulmonaryFlow = DICOMControlledTerminologyDefinitionsCode("122161")
     SystemicFlow = DICOMControlledTerminologyDefinitionsCode("122162")
     DischargeDateTime = DICOMControlledTerminologyDefinitionsCode("122163")
-    CoronaryArteryBypassDuringThisAdmission = DICOMControlledTerminologyDefinitionsCode("122164")
+    CoronaryArteryBypassDuringThisAdmission = DICOMControlledTerminologyDefinitionsCode(
+        "122164"
+    )
     DateOfDeath = DICOMControlledTerminologyDefinitionsCode("122165")
     DeathDuringThisAdmission = DICOMControlledTerminologyDefinitionsCode("122166")
     DeathDuringCatheterization = DICOMControlledTerminologyDefinitionsCode("122167")
@@ -2496,8 +3219,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     CoronaryLesion_50_Stenosis = DICOMControlledTerminologyDefinitionsCode("122171")
     AcuteMIPresent = DICOMControlledTerminologyDefinitionsCode("122172")
     STElevationOnsetDateTime = DICOMControlledTerminologyDefinitionsCode("122173")
-    NumberOfLesionInterventionsAttempted = DICOMControlledTerminologyDefinitionsCode("122175")
-    NumberOfLesionInterventionsSuccessful = DICOMControlledTerminologyDefinitionsCode("122176")
+    NumberOfLesionInterventionsAttempted = DICOMControlledTerminologyDefinitionsCode(
+        "122175"
+    )
+    NumberOfLesionInterventionsSuccessful = DICOMControlledTerminologyDefinitionsCode(
+        "122176"
+    )
     ProcedureResult = DICOMControlledTerminologyDefinitionsCode("122177")
     LesionInterventionInformation = DICOMControlledTerminologyDefinitionsCode("122178")
     Peri_proceduralMIOccurred = DICOMControlledTerminologyDefinitionsCode("122179")
@@ -2510,10 +3237,14 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PulmonaryArterialContent_FCpa_ = DICOMControlledTerminologyDefinitionsCode("122188")
     PulmonaryVenousContent_FCpv_ = DICOMControlledTerminologyDefinitionsCode("122189")
     MaxDp_dt_P = DICOMControlledTerminologyDefinitionsCode("122190")
-    VentricularEndDiastolicPressure = DICOMControlledTerminologyDefinitionsCode("122191")
+    VentricularEndDiastolicPressure = DICOMControlledTerminologyDefinitionsCode(
+        "122191"
+    )
     IndicatorAppearanceTime = DICOMControlledTerminologyDefinitionsCode("122192")
     MaximumPressureAcceleration = DICOMControlledTerminologyDefinitionsCode("122193")
-    VentricularSystolicBloodPressure = DICOMControlledTerminologyDefinitionsCode("122194")
+    VentricularSystolicBloodPressure = DICOMControlledTerminologyDefinitionsCode(
+        "122194"
+    )
     PulseStrength = DICOMControlledTerminologyDefinitionsCode("122195")
     CWavePressure = DICOMControlledTerminologyDefinitionsCode("122196")
     GradientPressure_Average = DICOMControlledTerminologyDefinitionsCode("122197")
@@ -2536,11 +3267,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     TotalPulmonaryResistance = DICOMControlledTerminologyDefinitionsCode("122215")
     TotalVascularResistance = DICOMControlledTerminologyDefinitionsCode("122216")
     CoronaryFlowReserve = DICOMControlledTerminologyDefinitionsCode("122217")
-    Diastolic_SystolicVelocityRatio = DICOMControlledTerminologyDefinitionsCode("122218")
+    Diastolic_SystolicVelocityRatio = DICOMControlledTerminologyDefinitionsCode(
+        "122218"
+    )
     HyperemicRatio = DICOMControlledTerminologyDefinitionsCode("122219")
     HemodynamicResistanceIndex = DICOMControlledTerminologyDefinitionsCode("122220")
     ThoraxDiameter_Sagittal = DICOMControlledTerminologyDefinitionsCode("122221")
-    ProcedureEnvironmentalCharacteristics = DICOMControlledTerminologyDefinitionsCode("122222")
+    ProcedureEnvironmentalCharacteristics = DICOMControlledTerminologyDefinitionsCode(
+        "122222"
+    )
     RoomOxygenConcentration = DICOMControlledTerminologyDefinitionsCode("122223")
     RoomTemperature = DICOMControlledTerminologyDefinitionsCode("122224")
     RoomBarometricPressure = DICOMControlledTerminologyDefinitionsCode("122225")
@@ -2548,24 +3283,46 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     RightToLeftFlow = DICOMControlledTerminologyDefinitionsCode("122228")
     ArteriovenousDifference = DICOMControlledTerminologyDefinitionsCode("122229")
     _10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode("122230")
-    ComparativeAverage10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode("122231")
+    ComparativeAverage10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode(
+        "122231"
+    )
     ComparativeLow10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode("122232")
     LDLCholesterolScoreSheetForMen = DICOMControlledTerminologyDefinitionsCode("122233")
-    LDLCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode("122234")
-    TotalCholesterolScoreSheetForMen = DICOMControlledTerminologyDefinitionsCode("122235")
-    TotalCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode("122236")
+    LDLCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode(
+        "122234"
+    )
+    TotalCholesterolScoreSheetForMen = DICOMControlledTerminologyDefinitionsCode(
+        "122235"
+    )
+    TotalCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode(
+        "122236"
+    )
     CorrectedSinusNodeRecoveryTime = DICOMControlledTerminologyDefinitionsCode("122237")
-    MaxVolumeNormalizedTo50mmHgPulsePressure = DICOMControlledTerminologyDefinitionsCode("122238")
+    MaxVolumeNormalizedTo50mmHgPulsePressure = (
+        DICOMControlledTerminologyDefinitionsCode("122238")
+    )
     OxygenConsumption = DICOMControlledTerminologyDefinitionsCode("122239")
-    BSA_3_207_WT_0_7285_0_0188Log_WT_HT_0_3 = DICOMControlledTerminologyDefinitionsCode("122240")
+    BSA_3_207_WT_0_7285_0_0188Log_WT_HT_0_3 = DICOMControlledTerminologyDefinitionsCode(
+        "122240"
+    )
     BSA_0_007184_WT_0_425_HT_0_725 = DICOMControlledTerminologyDefinitionsCode("122241")
-    BSA_0_0235_WT_0_51456_HT_0_42246 = DICOMControlledTerminologyDefinitionsCode("122242")
-    BSA_0_024265_WT_0_5378_HT_0_3964 = DICOMControlledTerminologyDefinitionsCode("122243")
+    BSA_0_0235_WT_0_51456_HT_0_42246 = DICOMControlledTerminologyDefinitionsCode(
+        "122242"
+    )
+    BSA_0_024265_WT_0_5378_HT_0_3964 = DICOMControlledTerminologyDefinitionsCode(
+        "122243"
+    )
     BSA_HT_WT_36_0_5 = DICOMControlledTerminologyDefinitionsCode("122244")
     BSA_1321_0_3433_WT = DICOMControlledTerminologyDefinitionsCode("122245")
-    BSA_0_0004688_WT_0_8168_0_0154_Log_WT_ = DICOMControlledTerminologyDefinitionsCode("122246")
-    VO2male_BSA_138_1_11_49_Loge_age_0_378_HRf_ = DICOMControlledTerminologyDefinitionsCode("122247")
-    VO2female_BSA_138_1_17_04_Loge_age_0_378_HRf_ = DICOMControlledTerminologyDefinitionsCode("122248")
+    BSA_0_0004688_WT_0_8168_0_0154_Log_WT_ = DICOMControlledTerminologyDefinitionsCode(
+        "122246"
+    )
+    VO2male_BSA_138_1_11_49_Loge_age_0_378_HRf_ = (
+        DICOMControlledTerminologyDefinitionsCode("122247")
+    )
+    VO2female_BSA_138_1_17_04_Loge_age_0_378_HRf_ = (
+        DICOMControlledTerminologyDefinitionsCode("122248")
+    )
     VO2_VeSTPD_10_FIO2_FE02_ = DICOMControlledTerminologyDefinitionsCode("122249")
     VO2_152_BSA = DICOMControlledTerminologyDefinitionsCode("122250")
     VO2_175_BSA = DICOMControlledTerminologyDefinitionsCode("122251")
@@ -2579,8 +3336,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     If_age_18y_P50_27_2 = DICOMControlledTerminologyDefinitionsCode("122259")
     If_age_40y_P50_27_4 = DICOMControlledTerminologyDefinitionsCode("122260")
     If_age_60y_P50_29_3 = DICOMControlledTerminologyDefinitionsCode("122261")
-    Area_Flow_44_5_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode("122262")
-    MVA_Flow_38_0_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode("122263")
+    Area_Flow_44_5_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode(
+        "122262"
+    )
+    MVA_Flow_38_0_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode(
+        "122263"
+    )
     BMI_Wt_Ht_2 = DICOMControlledTerminologyDefinitionsCode("122265")
     BSA_0_007358_WT_0_425_HT_0_725 = DICOMControlledTerminologyDefinitionsCode("122266")
     BSA_0_010265_WT_0_423_HT_0_651 = DICOMControlledTerminologyDefinitionsCode("122267")
@@ -2600,10 +3361,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     AirwayPartiallyObstructed = DICOMControlledTerminologyDefinitionsCode("122282")
     AirwaySeverelyObstructed = DICOMControlledTerminologyDefinitionsCode("122283")
     NotVisualized = DICOMControlledTerminologyDefinitionsCode("122288")
-    QuantitativeArteriographyReport = DICOMControlledTerminologyDefinitionsCode("122291")
-    QuantitativeVentriculographyReport = DICOMControlledTerminologyDefinitionsCode("122292")
-    GuidewireCrossingLesionUnsuccessful = DICOMControlledTerminologyDefinitionsCode("122301")
-    GuidewireCrossingLesionSuccessful = DICOMControlledTerminologyDefinitionsCode("122302")
+    QuantitativeArteriographyReport = DICOMControlledTerminologyDefinitionsCode(
+        "122291"
+    )
+    QuantitativeVentriculographyReport = DICOMControlledTerminologyDefinitionsCode(
+        "122292"
+    )
+    GuidewireCrossingLesionUnsuccessful = DICOMControlledTerminologyDefinitionsCode(
+        "122301"
+    )
+    GuidewireCrossingLesionSuccessful = DICOMControlledTerminologyDefinitionsCode(
+        "122302"
+    )
     AngioplastyBalloonInflated = DICOMControlledTerminologyDefinitionsCode("122303")
     AngioplastyBalloonDeflated = DICOMControlledTerminologyDefinitionsCode("122304")
     DeviceDeployed = DICOMControlledTerminologyDefinitionsCode("122305")
@@ -2611,7 +3380,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ObjectRemoved = DICOMControlledTerminologyDefinitionsCode("122307")
     RadiationApplied = DICOMControlledTerminologyDefinitionsCode("122308")
     RadiationRemoved = DICOMControlledTerminologyDefinitionsCode("122309")
-    InterventionalDevicePlacementUnsuccessful = DICOMControlledTerminologyDefinitionsCode("122310")
+    InterventionalDevicePlacementUnsuccessful = (
+        DICOMControlledTerminologyDefinitionsCode("122310")
+    )
     InterventionalDevicePlaced = DICOMControlledTerminologyDefinitionsCode("122311")
     InterventionPerformed = DICOMControlledTerminologyDefinitionsCode("122312")
     InterventionalDeviceWithdrawn = DICOMControlledTerminologyDefinitionsCode("122313")
@@ -2624,15 +3395,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PlaquePlusMediaThickness = DICOMControlledTerminologyDefinitionsCode("122331")
     LumenPerimeter = DICOMControlledTerminologyDefinitionsCode("122332")
     EEMCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode("122333")
-    PlaquePlusMediaCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode("122334")
-    In_StentNeointimalCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode("122335")
-    VascularVolumeMeasurementLength = DICOMControlledTerminologyDefinitionsCode("122336")
+    PlaquePlusMediaCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode(
+        "122334"
+    )
+    In_StentNeointimalCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode(
+        "122335"
+    )
+    VascularVolumeMeasurementLength = DICOMControlledTerminologyDefinitionsCode(
+        "122336"
+    )
     RelativePosition = DICOMControlledTerminologyDefinitionsCode("122337")
     StentVolumeObstruction = DICOMControlledTerminologyDefinitionsCode("122339")
     FiducialFeature = DICOMControlledTerminologyDefinitionsCode("122340")
     CalciumLength = DICOMControlledTerminologyDefinitionsCode("122341")
     LumenEccentricityIndex = DICOMControlledTerminologyDefinitionsCode("122343")
-    PlaquePlusMediaEccentricityIndex = DICOMControlledTerminologyDefinitionsCode("122344")
+    PlaquePlusMediaEccentricityIndex = DICOMControlledTerminologyDefinitionsCode(
+        "122344"
+    )
     RemodelingIndex = DICOMControlledTerminologyDefinitionsCode("122345")
     StentSymmetryIndex = DICOMControlledTerminologyDefinitionsCode("122346")
     StentExpansionIndex = DICOMControlledTerminologyDefinitionsCode("122347")
@@ -2680,7 +3459,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ForAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122403")
     Reconstructed = DICOMControlledTerminologyDefinitionsCode("122404")
     AlgorithmManufacturer = DICOMControlledTerminologyDefinitionsCode("122405")
-    LeftAtrialEjectionFractionByAngiography = DICOMControlledTerminologyDefinitionsCode("122406")
+    LeftAtrialEjectionFractionByAngiography = DICOMControlledTerminologyDefinitionsCode(
+        "122406"
+    )
     LeftAtrialEDVolume = DICOMControlledTerminologyDefinitionsCode("122407")
     LeftAtrialESVolume = DICOMControlledTerminologyDefinitionsCode("122408")
     ContourRealignment = DICOMControlledTerminologyDefinitionsCode("122410")
@@ -2713,8 +3494,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     RCARegionInROAProjection = DICOMControlledTerminologyDefinitionsCode("122465")
     SingleLADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122466")
     SingleRCARegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122467")
-    MultipleLADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122468")
-    MultipleRCARegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122469")
+    MultipleLADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode(
+        "122468"
+    )
+    MultipleRCARegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode(
+        "122469"
+    )
     LADRegionInLAOProjection = DICOMControlledTerminologyDefinitionsCode("122470")
     RCARegionInLAOProjection = DICOMControlledTerminologyDefinitionsCode("122471")
     CFXRegionInLAOProjection = DICOMControlledTerminologyDefinitionsCode("122472")
@@ -2734,14 +3519,22 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     InterpolatedLocalReference = DICOMControlledTerminologyDefinitionsCode("122490")
     MeanLocalReference = DICOMControlledTerminologyDefinitionsCode("122491")
     RadialBasedWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode("122493")
-    RegionalContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode("122495")
+    RegionalContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode(
+        "122495"
+    )
     RadialShortening = DICOMControlledTerminologyDefinitionsCode("122496")
-    LandmarkBasedWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode("122497")
-    SliceContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode("122498")
+    LandmarkBasedWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode(
+        "122497"
+    )
+    SliceContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode(
+        "122498"
+    )
     FrameToFrameAnalysis = DICOMControlledTerminologyDefinitionsCode("122499")
     AreaOfClosedIrregularPolygon = DICOMControlledTerminologyDefinitionsCode("122501")
     AreaOfAClosedNURBS = DICOMControlledTerminologyDefinitionsCode("122502")
-    IntegrationOfSumOfClosedAreasOnContiguousSlices = DICOMControlledTerminologyDefinitionsCode("122503")
+    IntegrationOfSumOfClosedAreasOnContiguousSlices = (
+        DICOMControlledTerminologyDefinitionsCode("122503")
+    )
     Calibration = DICOMControlledTerminologyDefinitionsCode("122505")
     LeftContour = DICOMControlledTerminologyDefinitionsCode("122507")
     RightContour = DICOMControlledTerminologyDefinitionsCode("122508")
@@ -2749,7 +3542,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     LengthLuminalSegment = DICOMControlledTerminologyDefinitionsCode("122510")
     GraphIncrement = DICOMControlledTerminologyDefinitionsCode("122511")
     SiteOfMaximumLuminal = DICOMControlledTerminologyDefinitionsCode("122516")
-    DensitometricLuminalCross_sectionalAreaGraph = DICOMControlledTerminologyDefinitionsCode("122517")
+    DensitometricLuminalCross_sectionalAreaGraph = (
+        DICOMControlledTerminologyDefinitionsCode("122517")
+    )
     PositionOfProximalBorder = DICOMControlledTerminologyDefinitionsCode("122528")
     PositionOfDistalBorder = DICOMControlledTerminologyDefinitionsCode("122529")
     PlaqueArea = DICOMControlledTerminologyDefinitionsCode("122542")
@@ -2774,7 +3569,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     BSA_1_219 = DICOMControlledTerminologyDefinitionsCode("122572")
     EquidistantMethod = DICOMControlledTerminologyDefinitionsCode("122574")
     UserSelectedMethod = DICOMControlledTerminologyDefinitionsCode("122575")
-    LeftVentricularPosterobasalSegment = DICOMControlledTerminologyDefinitionsCode("122582")
+    LeftVentricularPosterobasalSegment = DICOMControlledTerminologyDefinitionsCode(
+        "122582"
+    )
     CardiovascularAnalysisReport = DICOMControlledTerminologyDefinitionsCode("122600")
     VentricularAnalysis = DICOMControlledTerminologyDefinitionsCode("122601")
     MyocardialPerfusionAnalysis = DICOMControlledTerminologyDefinitionsCode("122602")
@@ -2783,8 +3580,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     VascularMorphologicalAnalysis = DICOMControlledTerminologyDefinitionsCode("122605")
     VascularFunctionalAnalysis = DICOMControlledTerminologyDefinitionsCode("122606")
     ThickeningAnalysis = DICOMControlledTerminologyDefinitionsCode("122607")
-    AbsoluteValuesOfVentricularMeasurements = DICOMControlledTerminologyDefinitionsCode("122608")
-    NormalizedValuesOfVentricularMeasurements = DICOMControlledTerminologyDefinitionsCode("122609")
+    AbsoluteValuesOfVentricularMeasurements = DICOMControlledTerminologyDefinitionsCode(
+        "122608"
+    )
+    NormalizedValuesOfVentricularMeasurements = (
+        DICOMControlledTerminologyDefinitionsCode("122609")
+    )
     ReferencePoint = DICOMControlledTerminologyDefinitionsCode("122611")
     CentralBreathingPosition = DICOMControlledTerminologyDefinitionsCode("122612")
     PeakEjectionRate = DICOMControlledTerminologyDefinitionsCode("122616")
@@ -2793,7 +3594,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PeakFillingTime = DICOMControlledTerminologyDefinitionsCode("122619")
     PapillaryMuscleExcluded = DICOMControlledTerminologyDefinitionsCode("122620")
     PapillaryMuscleIncluded = DICOMControlledTerminologyDefinitionsCode("122621")
-    WallThicknessRatioEnd_systolicToEnd_diastolic = DICOMControlledTerminologyDefinitionsCode("122624")
+    WallThicknessRatioEnd_systolicToEnd_diastolic = (
+        DICOMControlledTerminologyDefinitionsCode("122624")
+    )
     CurveFitMethod = DICOMControlledTerminologyDefinitionsCode("122627")
     BaselineResultCorrection = DICOMControlledTerminologyDefinitionsCode("122628")
     SignalEarliestPeakTime = DICOMControlledTerminologyDefinitionsCode("122631")
@@ -2819,11 +3622,19 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     CalciumVolume = DICOMControlledTerminologyDefinitionsCode("122660")
     CalciumMass = DICOMControlledTerminologyDefinitionsCode("122661")
     LateContrastEnhancement = DICOMControlledTerminologyDefinitionsCode("122664")
-    TimeIntervalSinceInjectionOfContrastMedia = DICOMControlledTerminologyDefinitionsCode("122665")
+    TimeIntervalSinceInjectionOfContrastMedia = (
+        DICOMControlledTerminologyDefinitionsCode("122665")
+    )
     TimeRelativeToR_wavePeak = DICOMControlledTerminologyDefinitionsCode("122666")
-    BloodVelocityVs_TimeOfCardiacCycle = DICOMControlledTerminologyDefinitionsCode("122667")
-    TimeIntervalSinceDetectionOfContrastBolus = DICOMControlledTerminologyDefinitionsCode("122668")
-    PapillaryMuscleIncluded_Excluded = DICOMControlledTerminologyDefinitionsCode("122670")
+    BloodVelocityVs_TimeOfCardiacCycle = DICOMControlledTerminologyDefinitionsCode(
+        "122667"
+    )
+    TimeIntervalSinceDetectionOfContrastBolus = (
+        DICOMControlledTerminologyDefinitionsCode("122668")
+    )
+    PapillaryMuscleIncluded_Excluded = DICOMControlledTerminologyDefinitionsCode(
+        "122670"
+    )
     Anterior_Posterior = DICOMControlledTerminologyDefinitionsCode("122675")
     Endoleak = DICOMControlledTerminologyDefinitionsCode("122680")
     StentFracture = DICOMControlledTerminologyDefinitionsCode("122683")
@@ -2833,18 +3644,24 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     SiteOfLumenMaximum = DICOMControlledTerminologyDefinitionsCode("122687")
     X_Concept = DICOMControlledTerminologyDefinitionsCode("122698")
     Y_Concept = DICOMControlledTerminologyDefinitionsCode("122699")
-    IndicationsForPharmacologicalStress = DICOMControlledTerminologyDefinitionsCode("122700")
+    IndicationsForPharmacologicalStress = DICOMControlledTerminologyDefinitionsCode(
+        "122700"
+    )
     ProcedureTimeBase = DICOMControlledTerminologyDefinitionsCode("122701")
     TreadmillSpeed = DICOMControlledTerminologyDefinitionsCode("122702")
     TreadmillGradient = DICOMControlledTerminologyDefinitionsCode("122703")
     ErgometerPower = DICOMControlledTerminologyDefinitionsCode("122704")
-    PharmacologicalStressAgentDoseRate = DICOMControlledTerminologyDefinitionsCode("122705")
+    PharmacologicalStressAgentDoseRate = DICOMControlledTerminologyDefinitionsCode(
+        "122705"
+    )
     RatingOfPerceivedExertion = DICOMControlledTerminologyDefinitionsCode("122706")
     NumberOfEctopicBeats = DICOMControlledTerminologyDefinitionsCode("122707")
     DoubleProduct = DICOMControlledTerminologyDefinitionsCode("122708")
     ActivityWorkload = DICOMControlledTerminologyDefinitionsCode("122709")
     TimeSinceStartOfStage = DICOMControlledTerminologyDefinitionsCode("122710")
-    ExerciseDurationAfterStressAgentInjection = DICOMControlledTerminologyDefinitionsCode("122711")
+    ExerciseDurationAfterStressAgentInjection = (
+        DICOMControlledTerminologyDefinitionsCode("122711")
+    )
     ImagingStartTime = DICOMControlledTerminologyDefinitionsCode("122712")
     AttenuationCorrectionMethod = DICOMControlledTerminologyDefinitionsCode("122713")
     PharmacologicalStressAgentDose = DICOMControlledTerminologyDefinitionsCode("122715")
@@ -2853,8 +3670,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     PeakDoubleProduct = DICOMControlledTerminologyDefinitionsCode("122718")
     OSEMAlgorithm = DICOMControlledTerminologyDefinitionsCode("122720")
     ChangMethod = DICOMControlledTerminologyDefinitionsCode("122721")
-    AlgorithmicAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122726")
-    NMTransmissionAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122727")
+    AlgorithmicAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode(
+        "122726"
+    )
+    NMTransmissionAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode(
+        "122727"
+    )
     CT_basedAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122728")
     NoAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122729")
     BazettQTcAlgorithm = DICOMControlledTerminologyDefinitionsCode("122730")
@@ -2872,8 +3693,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DiaphragmaticAttenuation = DICOMControlledTerminologyDefinitionsCode("122745")
     FalsePositiveDefectFinding = DICOMControlledTerminologyDefinitionsCode("122748")
     Non_diagnostic_LowHeartRate = DICOMControlledTerminologyDefinitionsCode("122750")
-    Non_diagnostic_RestingSTAbnormalities = DICOMControlledTerminologyDefinitionsCode("122751")
-    Non_diagnostic_VentricularPacingOrLBBB = DICOMControlledTerminologyDefinitionsCode("122752")
+    Non_diagnostic_RestingSTAbnormalities = DICOMControlledTerminologyDefinitionsCode(
+        "122751"
+    )
+    Non_diagnostic_VentricularPacingOrLBBB = DICOMControlledTerminologyDefinitionsCode(
+        "122752"
+    )
     Non_diagnosticECG = DICOMControlledTerminologyDefinitionsCode("122753")
     StronglyPositive = DICOMControlledTerminologyDefinitionsCode("122755")
     StronglyPositive_STElevation = DICOMControlledTerminologyDefinitionsCode("122756")
@@ -2881,54 +3706,90 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     STDepression_Upsloping = DICOMControlledTerminologyDefinitionsCode("122758")
     STDepression_Downsloping = DICOMControlledTerminologyDefinitionsCode("122759")
     StressTestScore = DICOMControlledTerminologyDefinitionsCode("122760")
-    NumberOfDiseasedVesselTerritories = DICOMControlledTerminologyDefinitionsCode("122762")
+    NumberOfDiseasedVesselTerritories = DICOMControlledTerminologyDefinitionsCode(
+        "122762"
+    )
     WeightExceedsEquipmentLimit = DICOMControlledTerminologyDefinitionsCode("122764")
     DifferenceInEjectionFraction = DICOMControlledTerminologyDefinitionsCode("122768")
     DifferenceInEDLVVolume = DICOMControlledTerminologyDefinitionsCode("122769")
-    RatioOfAchievedToPredictedMaximalOxygenConsumption = DICOMControlledTerminologyDefinitionsCode("122770")
-    RatioOfAchievedToPredictedFunctionalCapacity = DICOMControlledTerminologyDefinitionsCode("122771")
+    RatioOfAchievedToPredictedMaximalOxygenConsumption = (
+        DICOMControlledTerminologyDefinitionsCode("122770")
+    )
+    RatioOfAchievedToPredictedFunctionalCapacity = (
+        DICOMControlledTerminologyDefinitionsCode("122771")
+    )
     AerobicIndex = DICOMControlledTerminologyDefinitionsCode("122772")
     ST_HRIndex = DICOMControlledTerminologyDefinitionsCode("122773")
     AgreementWithPriorFindings = DICOMControlledTerminologyDefinitionsCode("122775")
     DisagreementWithPriorFindings = DICOMControlledTerminologyDefinitionsCode("122776")
-    RestThallium_stressTechnetiumProcedure = DICOMControlledTerminologyDefinitionsCode("122781")
-    RestTechnetium_stressTechnetium1DayProcedure = DICOMControlledTerminologyDefinitionsCode("122782")
-    RestTechnetium_stressTechnetium2DayProcedure = DICOMControlledTerminologyDefinitionsCode("122783")
-    StressTechnetium_restTechnetium1DayProcedure = DICOMControlledTerminologyDefinitionsCode("122784")
+    RestThallium_stressTechnetiumProcedure = DICOMControlledTerminologyDefinitionsCode(
+        "122781"
+    )
+    RestTechnetium_stressTechnetium1DayProcedure = (
+        DICOMControlledTerminologyDefinitionsCode("122782")
+    )
+    RestTechnetium_stressTechnetium2DayProcedure = (
+        DICOMControlledTerminologyDefinitionsCode("122783")
+    )
+    StressTechnetium_restTechnetium1DayProcedure = (
+        DICOMControlledTerminologyDefinitionsCode("122784")
+    )
     NMMyocardialViabilityProcedure = DICOMControlledTerminologyDefinitionsCode("122785")
-    PETMyocardialPerfusion_RestOnly = DICOMControlledTerminologyDefinitionsCode("122791")
-    PETMyocardialPerfusion_StressOnly = DICOMControlledTerminologyDefinitionsCode("122792")
-    PETMyocardialPerfusion_RestAndStress = DICOMControlledTerminologyDefinitionsCode("122793")
-    PETMyocardialViability_RestOnly = DICOMControlledTerminologyDefinitionsCode("122795")
-    PETMyocardialViability_StressOnly = DICOMControlledTerminologyDefinitionsCode("122796")
-    PETMyocardialViability_RestAndStress = DICOMControlledTerminologyDefinitionsCode("122797")
+    PETMyocardialPerfusion_RestOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122791"
+    )
+    PETMyocardialPerfusion_StressOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122792"
+    )
+    PETMyocardialPerfusion_RestAndStress = DICOMControlledTerminologyDefinitionsCode(
+        "122793"
+    )
+    PETMyocardialViability_RestOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122795"
+    )
+    PETMyocardialViability_StressOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122796"
+    )
+    PETMyocardialViability_RestAndStress = DICOMControlledTerminologyDefinitionsCode(
+        "122797"
+    )
     AnginalEquivalent = DICOMControlledTerminologyDefinitionsCode("122799")
     Radiopharmaceutical = DICOMControlledTerminologyDefinitionsCode("123001")
     RadiopharmaceuticalStartTime = DICOMControlledTerminologyDefinitionsCode("123003")
     RadiopharmaceuticalStopTime = DICOMControlledTerminologyDefinitionsCode("123004")
     RadiopharmaceuticalVolume = DICOMControlledTerminologyDefinitionsCode("123005")
     RadionuclideTotalDose = DICOMControlledTerminologyDefinitionsCode("123006")
-    RadiopharmaceuticalSpecificActivity = DICOMControlledTerminologyDefinitionsCode("123007")
+    RadiopharmaceuticalSpecificActivity = DICOMControlledTerminologyDefinitionsCode(
+        "123007"
+    )
     RadionuclideSyringeCounts = DICOMControlledTerminologyDefinitionsCode("123009")
-    RadionuclideResidualSyringeCounts = DICOMControlledTerminologyDefinitionsCode("123010")
+    RadionuclideResidualSyringeCounts = DICOMControlledTerminologyDefinitionsCode(
+        "123010"
+    )
     Contrast_BolusAgent = DICOMControlledTerminologyDefinitionsCode("123011")
     Pre_Medication = DICOMControlledTerminologyDefinitionsCode("123012")
     TargetRegion = DICOMControlledTerminologyDefinitionsCode("123014")
     ImagingDirection = DICOMControlledTerminologyDefinitionsCode("123015")
     ImagingConditions = DICOMControlledTerminologyDefinitionsCode("123016")
-    Caudal10DegreeDistal_cranioproximalOblique = DICOMControlledTerminologyDefinitionsCode("123019")
+    Caudal10DegreeDistal_cranioproximalOblique = (
+        DICOMControlledTerminologyDefinitionsCode("123019")
+    )
     NeighborhoodAnalysis = DICOMControlledTerminologyDefinitionsCode("123101")
     AdaptiveFiltering = DICOMControlledTerminologyDefinitionsCode("123102")
     EdgeDetection = DICOMControlledTerminologyDefinitionsCode("123103")
     MorphologicalOperations = DICOMControlledTerminologyDefinitionsCode("123104")
     HistogramAnalysis = DICOMControlledTerminologyDefinitionsCode("123105")
-    Multi_Scale_ResolutionFiltering = DICOMControlledTerminologyDefinitionsCode("123106")
+    Multi_Scale_ResolutionFiltering = DICOMControlledTerminologyDefinitionsCode(
+        "123106"
+    )
     ClusterAnalysis = DICOMControlledTerminologyDefinitionsCode("123107")
     MultispectralProcessing = DICOMControlledTerminologyDefinitionsCode("123108")
     ManualProcessing = DICOMControlledTerminologyDefinitionsCode("123109")
     ArtificialIntelligence = DICOMControlledTerminologyDefinitionsCode("123110")
     DeformableModels = DICOMControlledTerminologyDefinitionsCode("123111")
-    OB_GYNUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode("125000")
+    OB_GYNUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode(
+        "125000"
+    )
     FetalBiometryRatios = DICOMControlledTerminologyDefinitionsCode("125001")
     FetalBiometry = DICOMControlledTerminologyDefinitionsCode("125002")
     FetalLongBones = DICOMControlledTerminologyDefinitionsCode("125003")
@@ -2960,16 +3821,24 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     LeftHemisphereMostInferior = DICOMControlledTerminologyDefinitionsCode("125038")
     Background = DICOMControlledTerminologyDefinitionsCode("125040")
     RegistrationInput = DICOMControlledTerminologyDefinitionsCode("125041")
-    VascularUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode("125100")
+    VascularUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode(
+        "125100"
+    )
     VesselBranch = DICOMControlledTerminologyDefinitionsCode("125101")
     GraftType = DICOMControlledTerminologyDefinitionsCode("125102")
     MeasurementOrientation = DICOMControlledTerminologyDefinitionsCode("125105")
     DopplerAngle = DICOMControlledTerminologyDefinitionsCode("125106")
     SampleVolumeDepth = DICOMControlledTerminologyDefinitionsCode("125107")
-    PediatricCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode("125195")
+    PediatricCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode(
+        "125195"
+    )
     FetalCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode("125196")
-    AdultCongenitalCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode("125197")
-    AdultEchocardiographyProcedureReport = DICOMControlledTerminologyDefinitionsCode("125200")
+    AdultCongenitalCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode(
+        "125197"
+    )
+    AdultEchocardiographyProcedureReport = DICOMControlledTerminologyDefinitionsCode(
+        "125200"
+    )
     IllustrationOfFinding = DICOMControlledTerminologyDefinitionsCode("125201")
     LVWallMotionScoreIndex = DICOMControlledTerminologyDefinitionsCode("125202")
     AcquisitionProtocol = DICOMControlledTerminologyDefinitionsCode("125203")
@@ -2982,26 +3851,38 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     AreaByPressureHalf_Time = DICOMControlledTerminologyDefinitionsCode("125210")
     BiplaneEllipse = DICOMControlledTerminologyDefinitionsCode("125211")
     ContinuityEquation = DICOMControlledTerminologyDefinitionsCode("125212")
-    ContinuityEquationByMeanVelocity = DICOMControlledTerminologyDefinitionsCode("125213")
-    ContinuityEquationByPeakVelocity = DICOMControlledTerminologyDefinitionsCode("125214")
-    ContinuityEquationByVelocityTimeIntegral = DICOMControlledTerminologyDefinitionsCode("125215")
+    ContinuityEquationByMeanVelocity = DICOMControlledTerminologyDefinitionsCode(
+        "125213"
+    )
+    ContinuityEquationByPeakVelocity = DICOMControlledTerminologyDefinitionsCode(
+        "125214"
+    )
+    ContinuityEquationByVelocityTimeIntegral = (
+        DICOMControlledTerminologyDefinitionsCode("125215")
+    )
     ProximalIsovelocitySurfaceArea = DICOMControlledTerminologyDefinitionsCode("125216")
     FullBernoulli = DICOMControlledTerminologyDefinitionsCode("125217")
     SimplifiedBernoulli = DICOMControlledTerminologyDefinitionsCode("125218")
     DopplerVolumeFlow = DICOMControlledTerminologyDefinitionsCode("125219")
     Planimetry = DICOMControlledTerminologyDefinitionsCode("125220")
     LeftVentricleMassByM_mode = DICOMControlledTerminologyDefinitionsCode("125221")
-    LeftVentricleMassByTruncatedEllipse = DICOMControlledTerminologyDefinitionsCode("125222")
+    LeftVentricleMassByTruncatedEllipse = DICOMControlledTerminologyDefinitionsCode(
+        "125222"
+    )
     _4PointSegmentFindingScale = DICOMControlledTerminologyDefinitionsCode("125223")
     _5PointSegmentFindingScale = DICOMControlledTerminologyDefinitionsCode("125224")
-    _5PointSegmentFindingScaleWithGradedHypokinesis = DICOMControlledTerminologyDefinitionsCode("125225")
+    _5PointSegmentFindingScaleWithGradedHypokinesis = (
+        DICOMControlledTerminologyDefinitionsCode("125225")
+    )
     SinglePlaneEllipse = DICOMControlledTerminologyDefinitionsCode("125226")
     ModifiedSimpson = DICOMControlledTerminologyDefinitionsCode("125227")
     BulletMethod = DICOMControlledTerminologyDefinitionsCode("125228")
     PowerDoppler = DICOMControlledTerminologyDefinitionsCode("125230")
     _3DMode = DICOMControlledTerminologyDefinitionsCode("125231")
     StartOfDrugDoseAdministration = DICOMControlledTerminologyDefinitionsCode("125233")
-    StartOfContrastAgentAdministration = DICOMControlledTerminologyDefinitionsCode("125234")
+    StartOfContrastAgentAdministration = DICOMControlledTerminologyDefinitionsCode(
+        "125234"
+    )
     DestructionOfMicrobubbles = DICOMControlledTerminologyDefinitionsCode("125235")
     OnsetOfExercise = DICOMControlledTerminologyDefinitionsCode("125236")
     CessationOfExercise = DICOMControlledTerminologyDefinitionsCode("125237")
@@ -3010,12 +3891,24 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     LineScanPattern = DICOMControlledTerminologyDefinitionsCode("125240")
     PlaneScanPattern = DICOMControlledTerminologyDefinitionsCode("125241")
     VolumeScanPattern = DICOMControlledTerminologyDefinitionsCode("125242")
-    Non_imagingDopplerUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125251")
-    LinearUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125252")
-    CurvedLinearUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125253")
-    SectorUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125254")
-    RadialUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125255")
-    RingUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125256")
+    Non_imagingDopplerUltrasoundTransducerGeometry = (
+        DICOMControlledTerminologyDefinitionsCode("125251")
+    )
+    LinearUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125252"
+    )
+    CurvedLinearUltrasoundTransducerGeometry = (
+        DICOMControlledTerminologyDefinitionsCode("125253")
+    )
+    SectorUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125254"
+    )
+    RadialUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125255"
+    )
+    RingUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125256"
+    )
     FixedBeamDirection = DICOMControlledTerminologyDefinitionsCode("125257")
     MechanicalBeamSteering = DICOMControlledTerminologyDefinitionsCode("125258")
     PhasedBeamSteering = DICOMControlledTerminologyDefinitionsCode("125259")
@@ -3025,9 +3918,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     EndorectalTransducer = DICOMControlledTerminologyDefinitionsCode("125264")
     IntravascularTransducer = DICOMControlledTerminologyDefinitionsCode("125265")
     LeftVentricleMassByAreaLength = DICOMControlledTerminologyDefinitionsCode("125270")
-    LeftVentricleMassByM_mode_AdjustedByHeight = DICOMControlledTerminologyDefinitionsCode("125271")
-    LeftVentricleMassByTruncatedEllipse_AdjustedByHeight = DICOMControlledTerminologyDefinitionsCode("125272")
-    LeftVentricleMassByAreaLength_AdjustedByHeight = DICOMControlledTerminologyDefinitionsCode("125273")
+    LeftVentricleMassByM_mode_AdjustedByHeight = (
+        DICOMControlledTerminologyDefinitionsCode("125271")
+    )
+    LeftVentricleMassByTruncatedEllipse_AdjustedByHeight = (
+        DICOMControlledTerminologyDefinitionsCode("125272")
+    )
+    LeftVentricleMassByAreaLength_AdjustedByHeight = (
+        DICOMControlledTerminologyDefinitionsCode("125273")
+    )
     CARDIOsphere = DICOMControlledTerminologyDefinitionsCode("125901")
     Echovist = DICOMControlledTerminologyDefinitionsCode("125902")
     Imagify = DICOMControlledTerminologyDefinitionsCode("125903")
@@ -3038,7 +3937,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Targestar_P = DICOMControlledTerminologyDefinitionsCode("125908")
     ImagingMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126000")
     OncologyMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126001")
-    DynamicContrastMRMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126002")
+    DynamicContrastMRMeasurementReport = DICOMControlledTerminologyDefinitionsCode(
+        "126002"
+    )
     PETMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126003")
     ImagingMeasurements = DICOMControlledTerminologyDefinitionsCode("126010")
     DerivedImagingMeasurements = DICOMControlledTerminologyDefinitionsCode("126011")
@@ -3052,10 +3953,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Glycolysis = DICOMControlledTerminologyDefinitionsCode("126034")
     TotalLesionProliferation = DICOMControlledTerminologyDefinitionsCode("126035")
     ProliferativeActivity = DICOMControlledTerminologyDefinitionsCode("126036")
-    StandardizedAddedMetabolicActivity_SAM_ = DICOMControlledTerminologyDefinitionsCode("126037")
-    StandardizedAddedMetabolicActivity_SAM_Background = DICOMControlledTerminologyDefinitionsCode("126038")
+    StandardizedAddedMetabolicActivity_SAM_ = DICOMControlledTerminologyDefinitionsCode(
+        "126037"
+    )
+    StandardizedAddedMetabolicActivity_SAM_Background = (
+        DICOMControlledTerminologyDefinitionsCode("126038")
+    )
     LesionToBackgroundSUVRatio = DICOMControlledTerminologyDefinitionsCode("126039")
-    BackgroundForLesionToBackgroundSUVRatio = DICOMControlledTerminologyDefinitionsCode("126040")
+    BackgroundForLesionToBackgroundSUVRatio = DICOMControlledTerminologyDefinitionsCode(
+        "126040"
+    )
     FractalDimension = DICOMControlledTerminologyDefinitionsCode("126050")
     Skewness = DICOMControlledTerminologyDefinitionsCode("126051")
     Kurtosis = DICOMControlledTerminologyDefinitionsCode("126052")
@@ -3066,7 +3973,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     DissimilarityOfGLCM = DICOMControlledTerminologyDefinitionsCode("126064")
     ASMOfGLCM = DICOMControlledTerminologyDefinitionsCode("126065")
     CorrelationOfGLCM = DICOMControlledTerminologyDefinitionsCode("126066")
-    GrayLevelCo_occurrenceMatrix_GLCM_ = DICOMControlledTerminologyDefinitionsCode("126067")
+    GrayLevelCo_occurrenceMatrix_GLCM_ = DICOMControlledTerminologyDefinitionsCode(
+        "126067"
+    )
     SubjectTimePointIdentifier = DICOMControlledTerminologyDefinitionsCode("126070")
     ProtocolTimePointIdentifier = DICOMControlledTerminologyDefinitionsCode("126071")
     TimePointType = DICOMControlledTerminologyDefinitionsCode("126072")
@@ -3075,18 +3984,32 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Eligibility = DICOMControlledTerminologyDefinitionsCode("126075")
     RECIST1_0 = DICOMControlledTerminologyDefinitionsCode("126080")
     RECIST1_1 = DICOMControlledTerminologyDefinitionsCode("126081")
-    RealWorldValueMapUsedForMeasurement = DICOMControlledTerminologyDefinitionsCode("126100")
+    RealWorldValueMapUsedForMeasurement = DICOMControlledTerminologyDefinitionsCode(
+        "126100"
+    )
     ImageLibraryGroup = DICOMControlledTerminologyDefinitionsCode("126200")
     AcquisitionDate = DICOMControlledTerminologyDefinitionsCode("126201")
     AcquisitionTime = DICOMControlledTerminologyDefinitionsCode("126202")
     PETRadionuclideIncubationTime = DICOMControlledTerminologyDefinitionsCode("126203")
     R2_Coefficient = DICOMControlledTerminologyDefinitionsCode("126220")
-    PerfusionAnalysisByStableXenonCTTechnique = DICOMControlledTerminologyDefinitionsCode("126300")
-    PerfusionAnalysisByIVIodinatedContrastCTTechnique = DICOMControlledTerminologyDefinitionsCode("126301")
-    PerfusionAnalysisByArterialSpinLabelingMRTechnique = DICOMControlledTerminologyDefinitionsCode("126302")
-    PerfusionAnalysisBySusceptibilityMRTechnique = DICOMControlledTerminologyDefinitionsCode("126303")
-    LeastMeanSquare_LMS_Deconvolution = DICOMControlledTerminologyDefinitionsCode("126310")
-    SingularValueDecomposition_SVD_Deconvolution = DICOMControlledTerminologyDefinitionsCode("126311")
+    PerfusionAnalysisByStableXenonCTTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126300")
+    )
+    PerfusionAnalysisByIVIodinatedContrastCTTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126301")
+    )
+    PerfusionAnalysisByArterialSpinLabelingMRTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126302")
+    )
+    PerfusionAnalysisBySusceptibilityMRTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126303")
+    )
+    LeastMeanSquare_LMS_Deconvolution = DICOMControlledTerminologyDefinitionsCode(
+        "126310"
+    )
+    SingularValueDecomposition_SVD_Deconvolution = (
+        DICOMControlledTerminologyDefinitionsCode("126311")
+    )
     Ktrans = DICOMControlledTerminologyDefinitionsCode("126312")
     Kep = DICOMControlledTerminologyDefinitionsCode("126313")
     Ve = DICOMControlledTerminologyDefinitionsCode("126314")
@@ -3097,7 +4020,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Vp = DICOMControlledTerminologyDefinitionsCode("126331")
     StandardToftsModel = DICOMControlledTerminologyDefinitionsCode("126340")
     ExtendedToftsModel = DICOMControlledTerminologyDefinitionsCode("126341")
-    Model_freeConcentration_timeQuantitification = DICOMControlledTerminologyDefinitionsCode("126342")
+    Model_freeConcentration_timeQuantitification = (
+        DICOMControlledTerminologyDefinitionsCode("126342")
+    )
     FirstPassLeakageProfile_FPLP_ = DICOMControlledTerminologyDefinitionsCode("126343")
     Shutter_SpeedModel_SSM_ = DICOMControlledTerminologyDefinitionsCode("126344")
     T1ByMultipleFlipAngles = DICOMControlledTerminologyDefinitionsCode("126350")
@@ -3111,8 +4036,12 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     BlindEstimationOfAIF = DICOMControlledTerminologyDefinitionsCode("126364")
     TimeOfPeakConcentration = DICOMControlledTerminologyDefinitionsCode("126370")
     BolusArrivalTime = DICOMControlledTerminologyDefinitionsCode("126371")
-    TimeOfLeadingHalf_PeakConcentration = DICOMControlledTerminologyDefinitionsCode("126372")
-    TemporalDerivativeExceedsThreshold = DICOMControlledTerminologyDefinitionsCode("126373")
+    TimeOfLeadingHalf_PeakConcentration = DICOMControlledTerminologyDefinitionsCode(
+        "126372"
+    )
+    TemporalDerivativeExceedsThreshold = DICOMControlledTerminologyDefinitionsCode(
+        "126373"
+    )
     TemporalDerivativeThreshold = DICOMControlledTerminologyDefinitionsCode("126374")
     MaximumSlope = DICOMControlledTerminologyDefinitionsCode("126375")
     MaximumDifference = DICOMControlledTerminologyDefinitionsCode("126376")
@@ -3129,9 +4058,15 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     SUVbsa = DICOMControlledTerminologyDefinitionsCode("126403")
     SUVibw = DICOMControlledTerminologyDefinitionsCode("126404")
     SUVBodyWeightCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126410")
-    SUVLeanBodyMassCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126411")
-    SUVBodySurfaceAreaCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126412")
-    SUVIdealBodyWeightCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126413")
+    SUVLeanBodyMassCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
+        "126411"
+    )
+    SUVBodySurfaceAreaCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
+        "126412"
+    )
+    SUVIdealBodyWeightCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
+        "126413"
+    )
     PittsburghCompoundBC_11_ = DICOMControlledTerminologyDefinitionsCode("126500")
     FlorbetabenF_18_ = DICOMControlledTerminologyDefinitionsCode("126501")
     T807F_18_ = DICOMControlledTerminologyDefinitionsCode("126502")
@@ -3171,14 +4106,34 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     NifeneF_18_ = DICOMControlledTerminologyDefinitionsCode("126714")
     CLR1404I_124_ = DICOMControlledTerminologyDefinitionsCode("126715")
     CLR1404I_131_ = DICOMControlledTerminologyDefinitionsCode("126716")
-    IEC6127PatientSupportContinuousAngle = DICOMControlledTerminologyDefinitionsCode("126801")
-    IEC6127TableTopContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode("126802")
-    IEC6127TableTopContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode("126803")
-    IEC6127TableTopEccentricAxisDistance = DICOMControlledTerminologyDefinitionsCode("126804")
-    IEC6127TableTopContinuousEccentricAngle = DICOMControlledTerminologyDefinitionsCode("126805")
+    IEC6127PatientSupportContinuousAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126801"
+    )
+    IEC6127TableTopContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126802"
+    )
+    IEC6127TableTopContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126803"
+    )
+    IEC6127TableTopEccentricAxisDistance = DICOMControlledTerminologyDefinitionsCode(
+        "126804"
+    )
+    IEC6127TableTopContinuousEccentricAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126805"
+    )
     IEC6127TableTopLateralPosition = DICOMControlledTerminologyDefinitionsCode("126806")
-    IEC6127TableTopLongitudinalPosition = DICOMControlledTerminologyDefinitionsCode("126807")
-    IEC6127TableTopVerticalPosition = DICOMControlledTerminologyDefinitionsCode("126808")
-    IEC6127GantryContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode("126809")
-    IEC6127GantryContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode("126810")
-    IEC6127GantryContinuousYawAngle = DICOMControlledTerminologyDefinitionsCode("126811")
+    IEC6127TableTopLongitudinalPosition = DICOMControlledTerminologyDefinitionsCode(
+        "126807"
+    )
+    IEC6127TableTopVerticalPosition = DICOMControlledTerminologyDefinitionsCode(
+        "126808"
+    )
+    IEC6127GantryContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126809"
+    )
+    IEC6127GantryContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126810"
+    )
+    IEC6127GantryContinuousYawAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126811"
+    )

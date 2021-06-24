@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class ParticipationRoleTypeCode(FhirValueSetBase):
     """
     ParticipationRoleType
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -64,13 +55,23 @@ class ParticipationRoleTypeCodeValues:
     Citizenroletype = ParticipationRoleTypeCode("_CitizenRoleType")
     Contactroletype = ParticipationRoleTypeCode("_ContactRoleType")
     Identifiedentitytype = ParticipationRoleTypeCode("_IdentifiedEntityType")
-    Livingsubjectproductionclass = ParticipationRoleTypeCode("_LivingSubjectProductionClass")
-    Medicationgeneralizationroletype = ParticipationRoleTypeCode("_MedicationGeneralizationRoleType")
+    Livingsubjectproductionclass = ParticipationRoleTypeCode(
+        "_LivingSubjectProductionClass"
+    )
+    Medicationgeneralizationroletype = ParticipationRoleTypeCode(
+        "_MedicationGeneralizationRoleType"
+    )
     Memberroletype = ParticipationRoleTypeCode("_MemberRoleType")
-    Personalrelationshiproletype = ParticipationRoleTypeCode("_PersonalRelationshipRoleType")
-    Policyorprogramcoverageroletype = ParticipationRoleTypeCode("_PolicyOrProgramCoverageRoleType")
+    Personalrelationshiproletype = ParticipationRoleTypeCode(
+        "_PersonalRelationshipRoleType"
+    )
+    Policyorprogramcoverageroletype = ParticipationRoleTypeCode(
+        "_PolicyOrProgramCoverageRoleType"
+    )
     Researchsubjectrolebasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
-    Servicedeliverylocationroletype = ParticipationRoleTypeCode("_ServiceDeliveryLocationRoleType")
+    Servicedeliverylocationroletype = ParticipationRoleTypeCode(
+        "_ServiceDeliveryLocationRoleType"
+    )
     Specimenroletype = ParticipationRoleTypeCode("_SpecimenRoleType")
     Claimant = ParticipationRoleTypeCode("CLAIM")
     CommunityLaboratory = ParticipationRoleTypeCode("communityLaboratory")
@@ -116,13 +117,23 @@ class ParticipationRoleTypeCodeValues:
     Citizenroletype = ParticipationRoleTypeCode("_CitizenRoleType")
     Contactroletype = ParticipationRoleTypeCode("_ContactRoleType")
     Identifiedentitytype = ParticipationRoleTypeCode("_IdentifiedEntityType")
-    Livingsubjectproductionclass = ParticipationRoleTypeCode("_LivingSubjectProductionClass")
-    Medicationgeneralizationroletype = ParticipationRoleTypeCode("_MedicationGeneralizationRoleType")
+    Livingsubjectproductionclass = ParticipationRoleTypeCode(
+        "_LivingSubjectProductionClass"
+    )
+    Medicationgeneralizationroletype = ParticipationRoleTypeCode(
+        "_MedicationGeneralizationRoleType"
+    )
     Memberroletype = ParticipationRoleTypeCode("_MemberRoleType")
-    Personalrelationshiproletype = ParticipationRoleTypeCode("_PersonalRelationshipRoleType")
-    Policyorprogramcoverageroletype = ParticipationRoleTypeCode("_PolicyOrProgramCoverageRoleType")
+    Personalrelationshiproletype = ParticipationRoleTypeCode(
+        "_PersonalRelationshipRoleType"
+    )
+    Policyorprogramcoverageroletype = ParticipationRoleTypeCode(
+        "_PolicyOrProgramCoverageRoleType"
+    )
     Researchsubjectrolebasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
-    Servicedeliverylocationroletype = ParticipationRoleTypeCode("_ServiceDeliveryLocationRoleType")
+    Servicedeliverylocationroletype = ParticipationRoleTypeCode(
+        "_ServiceDeliveryLocationRoleType"
+    )
     Specimenroletype = ParticipationRoleTypeCode("_SpecimenRoleType")
     Claimant = ParticipationRoleTypeCode("CLAIM")
     CommunityLaboratory = ParticipationRoleTypeCode("communityLaboratory")
@@ -143,8 +154,12 @@ class ParticipationRoleTypeCodeValues:
     NamedInsured = ParticipationRoleTypeCode("NAMED")
     Psychcf = ParticipationRoleTypeCode("PSYCHCF")
     Subscriber = ParticipationRoleTypeCode("SUBSCR")
-    Authorizedparticipationfunction = ParticipationRoleTypeCode("_AuthorizedParticipationFunction")
-    Coverageparticipationfunction = ParticipationRoleTypeCode("_CoverageParticipationFunction")
+    Authorizedparticipationfunction = ParticipationRoleTypeCode(
+        "_AuthorizedParticipationFunction"
+    )
+    Coverageparticipationfunction = ParticipationRoleTypeCode(
+        "_CoverageParticipationFunction"
+    )
     AdmittingPhysician = ParticipationRoleTypeCode("ADMPHYS")
     Anesthesist = ParticipationRoleTypeCode("ANEST")
     AnesthesiaNurse = ParticipationRoleTypeCode("ANRS")

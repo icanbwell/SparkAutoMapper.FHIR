@@ -1,14 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -19,39 +15,67 @@ from spark_fhir_schemas.r4.resources.condition import ConditionSchema
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for clinicalStatus
+    from spark_auto_mapper_fhir.value_sets.condition_clinical_status_codes import (
+        ConditionClinicalStatusCodesCode,
+    )
+
+    # End Import for CodeableConcept for clinicalStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for verificationStatus
+    from spark_auto_mapper_fhir.value_sets.condition_verification_status import (
+        ConditionVerificationStatusCode,
+    )
+
+    # End Import for CodeableConcept for verificationStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.condition_category_codes import ConditionCategoryCodesCode
+    from spark_auto_mapper_fhir.value_sets.condition_category_codes import (
+        ConditionCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for bodySite
-    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import SNOMEDCTBodyStructuresCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructuresCode,
+    )
+
     # End Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for recorder
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for asserter
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.backbone_elements.condition_stage import ConditionStage
-    from spark_auto_mapper_fhir.backbone_elements.condition_evidence import ConditionEvidence
+    from spark_auto_mapper_fhir.backbone_elements.condition_evidence import (
+        ConditionEvidence,
+    )
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 
@@ -61,6 +85,7 @@ class Condition(FhirResourceBase):
     """
     Condition
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -68,50 +93,62 @@ class Condition(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        clinicalStatus: Optional[CodeableConcept ] = None,
-        verificationStatus: Optional[CodeableConcept ] = None,
-        category: Optional[FhirList[CodeableConcept[ConditionCategoryCodesCode] ]] = None,
-        severity: Optional[CodeableConcept ] = None,
-        code: Optional[CodeableConcept ] = None,
-        bodySite: Optional[FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode] ]] = None,
-        subject: Reference [Union[Patient, Group]],
-        encounter: Optional[Reference [Union[Encounter]]] = None,
-        recordedDate: Optional[FhirDateTime ] = None,
-        recorder: Optional[Reference [Union[Practitioner, PractitionerRole, Patient, RelatedPerson]]] = None,
-        asserter: Optional[Reference [Union[Practitioner, PractitionerRole, Patient, RelatedPerson]]] = None,
-        stage: Optional[FhirList[ConditionStage ]] = None,
-        evidence: Optional[FhirList[ConditionEvidence ]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        clinicalStatus: Optional[
+            CodeableConcept[ConditionClinicalStatusCodesCode]
+        ] = None,
+        verificationStatus: Optional[
+            CodeableConcept[ConditionVerificationStatusCode]
+        ] = None,
+        category: Optional[
+            FhirList[CodeableConcept[ConditionCategoryCodesCode]]
+        ] = None,
+        severity: Optional[CodeableConcept] = None,
+        code: Optional[CodeableConcept] = None,
+        bodySite: Optional[
+            FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
+        ] = None,
+        subject: Reference[Union[Patient, Group]],
+        encounter: Optional[Reference[Union[Encounter]]] = None,
+        recordedDate: Optional[FhirDateTime] = None,
+        recorder: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Patient, RelatedPerson]]
+        ] = None,
+        asserter: Optional[
+            Reference[Union[Practitioner, PractitionerRole, Patient, RelatedPerson]]
+        ] = None,
+        stage: Optional[FhirList[ConditionStage]] = None,
+        evidence: Optional[FhirList[ConditionEvidence]] = None,
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Business identifiers assigned to this condition by the performer or other
-    systems which remain constant as the resource is updated and propagates from
-    server to server.
-        :param clinicalStatus: The clinical status of the condition.
-        :param verificationStatus: The verification status to support the clinical status of the condition.
-        :param category: A category assigned to the condition.
-        :param severity: A subjective assessment of the severity of the condition as evaluated by the
-    clinician.
-        :param code: Identification of the condition, problem or diagnosis.
-        :param bodySite: The anatomical location where this condition manifests itself.
-        :param subject: Indicates the patient or group who the condition record is associated with.
-        :param encounter: The Encounter during which this Condition was created or to which the creation
-    of this record is tightly associated.
-        :param recordedDate: The recordedDate represents when this particular Condition record was created
-    in the system, which is often a system-generated date.
-        :param recorder: Individual who recorded the record and takes responsibility for its content.
-        :param asserter: Individual who is making the condition statement.
-        :param stage: Clinical stage or grade of a condition. May include formal severity
-    assessments.
-        :param evidence: Supporting evidence / manifestations that are the basis of the Condition's
-    verification status, such as evidence that confirmed or refuted the condition.
-        :param note: Additional information about the Condition. This is a general notes/comments
-    entry  for description of the Condition, its diagnosis and prognosis.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Business identifiers assigned to this condition by the performer or other
+        systems which remain constant as the resource is updated and propagates from
+        server to server.
+            :param clinicalStatus: The clinical status of the condition.
+            :param verificationStatus: The verification status to support the clinical status of the condition.
+            :param category: A category assigned to the condition.
+            :param severity: A subjective assessment of the severity of the condition as evaluated by the
+        clinician.
+            :param code: Identification of the condition, problem or diagnosis.
+            :param bodySite: The anatomical location where this condition manifests itself.
+            :param subject: Indicates the patient or group who the condition record is associated with.
+            :param encounter: The Encounter during which this Condition was created or to which the creation
+        of this record is tightly associated.
+            :param recordedDate: The recordedDate represents when this particular Condition record was created
+        in the system, which is often a system-generated date.
+            :param recorder: Individual who recorded the record and takes responsibility for its content.
+            :param asserter: Individual who is making the condition statement.
+            :param stage: Clinical stage or grade of a condition. May include formal severity
+        assessments.
+            :param evidence: Supporting evidence / manifestations that are the basis of the Condition's
+        verification status, such as evidence that confirmed or refuted the condition.
+            :param note: Additional information about the Condition. This is a general notes/comments
+        entry  for description of the Condition, its diagnosis and prognosis.
         """
         super().__init__(
             resourceType="Condition",

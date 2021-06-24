@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class SignatureTypeCodesCode(FhirValueSetBase):
     """
     SignatureTypeCodes
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -29,7 +20,9 @@ class SignatureTypeCodesCodeValues:
     Author_sSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.1")
     Coauthor_sSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.2")
     Co_participant_sSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.3")
-    Transcriptionist_RecorderSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.4")
+    Transcriptionist_RecorderSignature = SignatureTypeCodesCode(
+        "1.2.840.10065.1.12.1.4"
+    )
     VerificationSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.5")
     ValidationSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.6")
     ConsentSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.7")
@@ -42,5 +35,7 @@ class SignatureTypeCodesCodeValues:
     SourceSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.14")
     AddendumSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.15")
     ModificationSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.16")
-    Administrative_Error_Edit_Signature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.17")
+    Administrative_Error_Edit_Signature = SignatureTypeCodesCode(
+        "1.2.840.10065.1.12.1.17"
+    )
     TimestampSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.18")

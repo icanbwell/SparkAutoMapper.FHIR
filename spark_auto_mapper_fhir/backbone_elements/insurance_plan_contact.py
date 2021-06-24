@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -19,13 +12,19 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # purpose (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for purpose
-    from spark_auto_mapper_fhir.value_sets.contact_entity_type import ContactEntityTypeCode
+    from spark_auto_mapper_fhir.value_sets.contact_entity_type import (
+        ContactEntityTypeCode,
+    )
+
     # End Import for CodeableConcept for purpose
     # name (HumanName)
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
     # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
     # address (Address)
     from spark_auto_mapper_fhir.complex_types.address import Address
 
@@ -36,26 +35,27 @@ class InsurancePlanContact(FhirBackboneElementBase):
     """
     InsurancePlan.Contact
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        purpose: Optional[CodeableConcept[ContactEntityTypeCode] ] = None,
-        name: Optional[HumanName ] = None,
-        telecom: Optional[FhirList[ContactPoint ]] = None,
-        address: Optional[Address ] = None,
+        purpose: Optional[CodeableConcept[ContactEntityTypeCode]] = None,
+        name: Optional[HumanName] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
+        address: Optional[Address] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param purpose: Indicates a purpose for which the contact can be reached.
-        :param name: A name associated with the contact.
-        :param telecom: A contact detail (e.g. a telephone number or an email address) by which the
-    party may be contacted.
-        :param address: Visiting or postal addresses for the contact.
+            :param id_: id of resource
+            :param extension: extensions
+            :param purpose: Indicates a purpose for which the contact can be reached.
+            :param name: A name associated with the contact.
+            :param telecom: A contact detail (e.g. a telephone number or an email address) by which the
+        party may be contacted.
+            :param address: Visiting or postal addresses for the contact.
         """
         super().__init__(
             id_=id_,

@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,48 +12,74 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # prefix (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
+    pass
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
     # textEquivalent (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
     # priority (RequestPriority)
     from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # documentation (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
     # condition (RequestGroup.Condition)
-    from spark_auto_mapper_fhir.backbone_elements.request_group_condition import RequestGroupCondition
+    from spark_auto_mapper_fhir.backbone_elements.request_group_condition import (
+        RequestGroupCondition,
+    )
+
     # relatedAction (RequestGroup.RelatedAction)
-    from spark_auto_mapper_fhir.backbone_elements.request_group_related_action import RequestGroupRelatedAction
+    from spark_auto_mapper_fhir.backbone_elements.request_group_related_action import (
+        RequestGroupRelatedAction,
+    )
+
     # participant (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for participant
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.device import Device
+
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.action_type import ActionTypeCode
+
     # End Import for CodeableConcept for type_
     # groupingBehavior (ActionGroupingBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_grouping_behavior import ActionGroupingBehavior
+    from spark_auto_mapper_fhir.complex_types.action_grouping_behavior import (
+        ActionGroupingBehavior,
+    )
+
     # selectionBehavior (ActionSelectionBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_selection_behavior import ActionSelectionBehavior
+    from spark_auto_mapper_fhir.complex_types.action_selection_behavior import (
+        ActionSelectionBehavior,
+    )
+
     # requiredBehavior (ActionRequiredBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_required_behavior import ActionRequiredBehavior
+    from spark_auto_mapper_fhir.complex_types.action_required_behavior import (
+        ActionRequiredBehavior,
+    )
+
     # precheckBehavior (ActionPrecheckBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_precheck_behavior import ActionPrecheckBehavior
+    from spark_auto_mapper_fhir.complex_types.action_precheck_behavior import (
+        ActionPrecheckBehavior,
+    )
+
     # cardinalityBehavior (ActionCardinalityBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_cardinality_behavior import ActionCardinalityBehavior
+    from spark_auto_mapper_fhir.complex_types.action_cardinality_behavior import (
+        ActionCardinalityBehavior,
+    )
+
     # resource (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for resource
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -70,62 +90,71 @@ class RequestGroupAction(FhirBackboneElementBase):
     """
     RequestGroup.Action
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        prefix: Optional[FhirString ] = None,
-        title: Optional[FhirString ] = None,
-        description: Optional[FhirString ] = None,
-        textEquivalent: Optional[FhirString ] = None,
-        priority: Optional[RequestPriority ] = None,
-        code: Optional[FhirList[CodeableConcept ]] = None,
-        documentation: Optional[FhirList[RelatedArtifact ]] = None,
-        condition: Optional[FhirList[RequestGroupCondition ]] = None,
-        relatedAction: Optional[FhirList[RequestGroupRelatedAction ]] = None,
-        participant: Optional[FhirList[Reference [Union[Patient, Practitioner, PractitionerRole, RelatedPerson, Device]]]] = None,
-        type_: Optional[CodeableConcept[ActionTypeCode] ] = None,
-        groupingBehavior: Optional[ActionGroupingBehavior ] = None,
-        selectionBehavior: Optional[ActionSelectionBehavior ] = None,
-        requiredBehavior: Optional[ActionRequiredBehavior ] = None,
-        precheckBehavior: Optional[ActionPrecheckBehavior ] = None,
-        cardinalityBehavior: Optional[ActionCardinalityBehavior ] = None,
-        resource: Optional[Reference [Union[Resource]]] = None,
-        action: Optional[FhirList[RequestGroupAction ]] = None,
+        prefix: Optional[FhirString] = None,
+        title: Optional[FhirString] = None,
+        description: Optional[FhirString] = None,
+        textEquivalent: Optional[FhirString] = None,
+        priority: Optional[RequestPriority] = None,
+        code: Optional[FhirList[CodeableConcept]] = None,
+        documentation: Optional[FhirList[RelatedArtifact]] = None,
+        condition: Optional[FhirList[RequestGroupCondition]] = None,
+        relatedAction: Optional[FhirList[RequestGroupRelatedAction]] = None,
+        participant: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Patient, Practitioner, PractitionerRole, RelatedPerson, Device
+                    ]
+                ]
+            ]
+        ] = None,
+        type_: Optional[CodeableConcept[ActionTypeCode]] = None,
+        groupingBehavior: Optional[ActionGroupingBehavior] = None,
+        selectionBehavior: Optional[ActionSelectionBehavior] = None,
+        requiredBehavior: Optional[ActionRequiredBehavior] = None,
+        precheckBehavior: Optional[ActionPrecheckBehavior] = None,
+        cardinalityBehavior: Optional[ActionCardinalityBehavior] = None,
+        resource: Optional[Reference[Union[Resource]]] = None,
+        action: Optional[FhirList[RequestGroupAction]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param prefix: A user-visible prefix for the action.
-        :param title: The title of the action displayed to a user.
-        :param description: A short description of the action used to provide a summary to display to the
-    user.
-        :param textEquivalent: A text equivalent of the action to be performed. This provides a human-
-    interpretable description of the action when the definition is consumed by a
-    system that might not be capable of interpreting it dynamically.
-        :param priority: Indicates how quickly the action should be addressed with respect to other
-    actions.
-        :param code: A code that provides meaning for the action or action group. For example, a
-    section may have a LOINC code for a section of a documentation template.
-        :param documentation: Didactic or other informational resources associated with the action that can
-    be provided to the CDS recipient. Information resources can include inline
-    text commentary and links to web resources.
-        :param condition: An expression that describes applicability criteria, or start/stop conditions
-    for the action.
-        :param relatedAction: A relationship to another action such as "before" or "30-60 minutes after
-    start of".
-        :param participant: The participant that should perform or be responsible for this action.
-        :param type_: The type of action to perform (create, update, remove).
-        :param groupingBehavior: Defines the grouping behavior for the action and its children.
-        :param selectionBehavior: Defines the selection behavior for the action and its children.
-        :param requiredBehavior: Defines expectations around whether an action is required.
-        :param precheckBehavior: Defines whether the action should usually be preselected.
-        :param cardinalityBehavior: Defines whether the action can be selected multiple times.
-        :param resource: The resource that is the target of the action (e.g. CommunicationRequest).
-        :param action: Sub actions.
+            :param id_: id of resource
+            :param extension: extensions
+            :param prefix: A user-visible prefix for the action.
+            :param title: The title of the action displayed to a user.
+            :param description: A short description of the action used to provide a summary to display to the
+        user.
+            :param textEquivalent: A text equivalent of the action to be performed. This provides a human-
+        interpretable description of the action when the definition is consumed by a
+        system that might not be capable of interpreting it dynamically.
+            :param priority: Indicates how quickly the action should be addressed with respect to other
+        actions.
+            :param code: A code that provides meaning for the action or action group. For example, a
+        section may have a LOINC code for a section of a documentation template.
+            :param documentation: Didactic or other informational resources associated with the action that can
+        be provided to the CDS recipient. Information resources can include inline
+        text commentary and links to web resources.
+            :param condition: An expression that describes applicability criteria, or start/stop conditions
+        for the action.
+            :param relatedAction: A relationship to another action such as "before" or "30-60 minutes after
+        start of".
+            :param participant: The participant that should perform or be responsible for this action.
+            :param type_: The type of action to perform (create, update, remove).
+            :param groupingBehavior: Defines the grouping behavior for the action and its children.
+            :param selectionBehavior: Defines the selection behavior for the action and its children.
+            :param requiredBehavior: Defines expectations around whether an action is required.
+            :param precheckBehavior: Defines whether the action should usually be preselected.
+            :param cardinalityBehavior: Defines whether the action can be selected multiple times.
+            :param resource: The resource that is the target of the action (e.g. CommunicationRequest).
+            :param action: Sub actions.
         """
         super().__init__(
             id_=id_,

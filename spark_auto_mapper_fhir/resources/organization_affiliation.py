@@ -1,50 +1,62 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.organizationaffiliation import OrganizationAffiliationSchema
+from spark_fhir_schemas.r4.resources.organizationaffiliation import (
+    OrganizationAffiliationSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for organization
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for participatingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for network
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.organization_affiliation_role import OrganizationAffiliationRoleCode
+    from spark_auto_mapper_fhir.value_sets.organization_affiliation_role import (
+        OrganizationAffiliationRoleCode,
+    )
+
     # End Import for CodeableConcept for code
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import PracticeSettingCodeValueSetCode
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSetCode,
+    )
+
     # End Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for healthcareService
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 
@@ -55,6 +67,7 @@ class OrganizationAffiliation(FhirResourceBase):
     """
     OrganizationAffiliation
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -62,41 +75,47 @@ class OrganizationAffiliation(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        active: Optional[FhirBoolean ] = None,
-        period: Optional[Period ] = None,
-        organization: Optional[Reference [Union[Organization]]] = None,
-        participatingOrganization: Optional[Reference [Union[Organization]]] = None,
-        network: Optional[FhirList[Reference [Union[Organization]]]] = None,
-        code: Optional[FhirList[CodeableConcept[OrganizationAffiliationRoleCode] ]] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCodeValueSetCode] ]] = None,
-        location: Optional[FhirList[Reference [Union[Location]]]] = None,
-        healthcareService: Optional[FhirList[Reference [Union[HealthcareService]]]] = None,
-        telecom: Optional[FhirList[ContactPoint ]] = None,
-        endpoint: Optional[FhirList[Reference [Union[Endpoint]]]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        active: Optional[FhirBoolean] = None,
+        period: Optional[Period] = None,
+        organization: Optional[Reference[Union[Organization]]] = None,
+        participatingOrganization: Optional[Reference[Union[Organization]]] = None,
+        network: Optional[FhirList[Reference[Union[Organization]]]] = None,
+        code: Optional[
+            FhirList[CodeableConcept[OrganizationAffiliationRoleCode]]
+        ] = None,
+        specialty: Optional[
+            FhirList[CodeableConcept[PracticeSettingCodeValueSetCode]]
+        ] = None,
+        location: Optional[FhirList[Reference[Union[Location]]]] = None,
+        healthcareService: Optional[
+            FhirList[Reference[Union[HealthcareService]]]
+        ] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
+        endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Business identifiers that are specific to this role.
-        :param active: Whether this organization affiliation record is in active use.
-        :param period: The period during which the participatingOrganization is affiliated with the
-    primary organization.
-        :param organization: Organization where the role is available (primary organization/has members).
-        :param participatingOrganization: The Participating Organization provides/performs the role(s) defined by the
-    code to the Primary Organization (e.g. providing services or is a member of).
-        :param network: Health insurance provider network in which the participatingOrganization
-    provides the role's services (if defined) at the indicated locations (if
-    defined).
-        :param code: Definition of the role the participatingOrganization plays in the association.
-        :param specialty: Specific specialty of the participatingOrganization in the context of the
-    role.
-        :param location: The location(s) at which the role occurs.
-        :param healthcareService: Healthcare services provided through the role.
-        :param telecom: Contact details at the participatingOrganization relevant to this Affiliation.
-        :param endpoint: Technical endpoints providing access to services operated for this role.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Business identifiers that are specific to this role.
+            :param active: Whether this organization affiliation record is in active use.
+            :param period: The period during which the participatingOrganization is affiliated with the
+        primary organization.
+            :param organization: Organization where the role is available (primary organization/has members).
+            :param participatingOrganization: The Participating Organization provides/performs the role(s) defined by the
+        code to the Primary Organization (e.g. providing services or is a member of).
+            :param network: Health insurance provider network in which the participatingOrganization
+        provides the role's services (if defined) at the indicated locations (if
+        defined).
+            :param code: Definition of the role the participatingOrganization plays in the association.
+            :param specialty: Specific specialty of the participatingOrganization in the context of the
+        role.
+            :param location: The location(s) at which the role occurs.
+            :param healthcareService: Healthcare services provided through the role.
+            :param telecom: Contact details at the participatingOrganization relevant to this Affiliation.
+            :param endpoint: Technical endpoints providing access to services operated for this role.
         """
         super().__init__(
             resourceType="OrganizationAffiliation",
@@ -120,4 +139,6 @@ class OrganizationAffiliation(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return OrganizationAffiliationSchema.get_schema(include_extension=include_extension)
+        return OrganizationAffiliationSchema.get_schema(
+            include_extension=include_extension
+        )

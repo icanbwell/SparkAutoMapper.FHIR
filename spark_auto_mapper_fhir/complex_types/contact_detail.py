@@ -1,12 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -15,7 +10,6 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.string import string
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 
 
@@ -25,6 +19,7 @@ class ContactDetail(FhirComplexTypeBase):
     """
     ContactDetail
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -32,17 +27,17 @@ class ContactDetail(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        name: Optional[FhirString ] = None,
-        telecom: Optional[FhirList[ContactPoint ]] = None,
+        name: Optional[FhirString] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param name: The name of an individual to contact.
-        :param telecom: The contact details for the individual (if a name was provided) or the
-    organization.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param name: The name of an individual to contact.
+            :param telecom: The contact details for the individual (if a name was provided) or the
+        organization.
         """
         super().__init__(
             id_=id_,

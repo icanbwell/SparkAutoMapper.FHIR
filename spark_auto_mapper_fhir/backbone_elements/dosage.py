@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,39 +13,59 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # sequence (integer)
-    from spark_auto_mapper_fhir.complex_types.integer import integer
+    pass
     # text (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
     # additionalInstruction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for additionalInstruction
-    from spark_auto_mapper_fhir.value_sets.snomedct_additional_dosage_instructions import SNOMEDCTAdditionalDosageInstructionsCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_additional_dosage_instructions import (
+        SNOMEDCTAdditionalDosageInstructionsCode,
+    )
+
     # End Import for CodeableConcept for additionalInstruction
     # patientInstruction (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
     # timing (Timing)
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
+
     # site (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for site
-    from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import (
+        SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode,
+    )
+
     # End Import for CodeableConcept for site
     # route (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for route
-    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import SNOMEDCTRouteCodesCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
+        SNOMEDCTRouteCodesCode,
+    )
+
     # End Import for CodeableConcept for route
     # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import SNOMEDCTAdministrationMethodCodesCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import (
+        SNOMEDCTAdministrationMethodCodesCode,
+    )
+
     # End Import for CodeableConcept for method
     # doseAndRate (Dosage.DoseAndRate)
-    from spark_auto_mapper_fhir.backbone_elements.dosage_dose_and_rate import DosageDoseAndRate
+    from spark_auto_mapper_fhir.backbone_elements.dosage_dose_and_rate import (
+        DosageDoseAndRate,
+    )
+
     # maxDosePerPeriod (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+
     # maxDosePerAdministration (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
     # maxDosePerLifetime (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -61,45 +76,50 @@ class Dosage(FhirBackboneElementBase):
     """
     Dosage
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: Optional[FhirInteger ] = None,
-        text: Optional[FhirString ] = None,
-        additionalInstruction: Optional[FhirList[CodeableConcept[SNOMEDCTAdditionalDosageInstructionsCode] ]] = None,
-        patientInstruction: Optional[FhirString ] = None,
-        timing: Optional[Timing ] = None,
-        site: Optional[CodeableConcept[SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode] ] = None,
-        route: Optional[CodeableConcept[SNOMEDCTRouteCodesCode] ] = None,
-        method: Optional[CodeableConcept[SNOMEDCTAdministrationMethodCodesCode] ] = None,
-        doseAndRate: Optional[FhirList[DosageDoseAndRate ]] = None,
-        maxDosePerPeriod: Optional[Ratio ] = None,
-        maxDosePerAdministration: Optional[Quantity ] = None,
-        maxDosePerLifetime: Optional[Quantity ] = None,
+        sequence: Optional[FhirInteger] = None,
+        text: Optional[FhirString] = None,
+        additionalInstruction: Optional[
+            FhirList[CodeableConcept[SNOMEDCTAdditionalDosageInstructionsCode]]
+        ] = None,
+        patientInstruction: Optional[FhirString] = None,
+        timing: Optional[Timing] = None,
+        site: Optional[
+            CodeableConcept[SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode]
+        ] = None,
+        route: Optional[CodeableConcept[SNOMEDCTRouteCodesCode]] = None,
+        method: Optional[CodeableConcept[SNOMEDCTAdministrationMethodCodesCode]] = None,
+        doseAndRate: Optional[FhirList[DosageDoseAndRate]] = None,
+        maxDosePerPeriod: Optional[Ratio] = None,
+        maxDosePerAdministration: Optional[Quantity] = None,
+        maxDosePerLifetime: Optional[Quantity] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param sequence: Indicates the order in which the dosage instructions should be applied or
-    interpreted.
-        :param text: Free text dosage instructions e.g. SIG.
-        :param additionalInstruction: Supplemental instructions to the patient on how to take the medication  (e.g.
-    "with meals" or"take half to one hour before food") or warnings for the
-    patient about the medication (e.g. "may cause drowsiness" or "avoid exposure
-    of skin to direct sunlight or sunlamps").
-        :param patientInstruction: Instructions in terms that are understood by the patient or consumer.
-        :param timing: When medication should be administered.
-        :param site: Body site to administer to.
-        :param route: How drug should enter body.
-        :param method: Technique for administering medication.
-        :param doseAndRate: The amount of medication administered.
-        :param maxDosePerPeriod: Upper limit on medication per unit of time.
-        :param maxDosePerAdministration: Upper limit on medication per administration.
-        :param maxDosePerLifetime: Upper limit on medication per lifetime of the patient.
+            :param id_: id of resource
+            :param extension: extensions
+            :param sequence: Indicates the order in which the dosage instructions should be applied or
+        interpreted.
+            :param text: Free text dosage instructions e.g. SIG.
+            :param additionalInstruction: Supplemental instructions to the patient on how to take the medication  (e.g.
+        "with meals" or"take half to one hour before food") or warnings for the
+        patient about the medication (e.g. "may cause drowsiness" or "avoid exposure
+        of skin to direct sunlight or sunlamps").
+            :param patientInstruction: Instructions in terms that are understood by the patient or consumer.
+            :param timing: When medication should be administered.
+            :param site: Body site to administer to.
+            :param route: How drug should enter body.
+            :param method: Technique for administering medication.
+            :param doseAndRate: The amount of medication administered.
+            :param maxDosePerPeriod: Upper limit on medication per unit of time.
+            :param maxDosePerAdministration: Upper limit on medication per administration.
+            :param maxDosePerLifetime: Upper limit on medication per lifetime of the patient.
         """
         super().__init__(
             id_=id_,

@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class SPDXLicenseCode(FhirValueSetBase):
     """
     SPDXLicense
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -75,7 +66,9 @@ class SPDXLicenseCodeValues:
     BSDWithAttribution = SPDXLicenseCode("BSD-3-Clause-Attribution")
     BSD3_ClauseClearLicense = SPDXLicenseCode("BSD-3-Clause-Clear")
     LawrenceBerkeleyNationalLabsBSDVariantLicense = SPDXLicenseCode("BSD-3-Clause-LBNL")
-    BSD3_ClauseNoNuclearLicense2014 = SPDXLicenseCode("BSD-3-Clause-No-Nuclear-License-2014")
+    BSD3_ClauseNoNuclearLicense2014 = SPDXLicenseCode(
+        "BSD-3-Clause-No-Nuclear-License-2014"
+    )
     BSD3_ClauseNoNuclearLicense = SPDXLicenseCode("BSD-3-Clause-No-Nuclear-License")
     BSD3_ClauseNoNuclearWarranty = SPDXLicenseCode("BSD-3-Clause-No-Nuclear-Warranty")
     BSD3_Clause_New_Or_Revised_License = SPDXLicenseCode("BSD-3-Clause")
@@ -97,27 +90,53 @@ class SPDXLicenseCodeValues:
     CreativeCommonsAttributionNonCommercial2_0Generic = SPDXLicenseCode("CC-BY-NC-2.0")
     CreativeCommonsAttributionNonCommercial2_5Generic = SPDXLicenseCode("CC-BY-NC-2.5")
     CreativeCommonsAttributionNonCommercial3_0Unported = SPDXLicenseCode("CC-BY-NC-3.0")
-    CreativeCommonsAttributionNonCommercial4_0International = SPDXLicenseCode("CC-BY-NC-4.0")
-    CreativeCommonsAttributionNonCommercialNoDerivatives1_0Generic = SPDXLicenseCode("CC-BY-NC-ND-1.0")
-    CreativeCommonsAttributionNonCommercialNoDerivatives2_0Generic = SPDXLicenseCode("CC-BY-NC-ND-2.0")
-    CreativeCommonsAttributionNonCommercialNoDerivatives2_5Generic = SPDXLicenseCode("CC-BY-NC-ND-2.5")
-    CreativeCommonsAttributionNonCommercialNoDerivatives3_0Unported = SPDXLicenseCode("CC-BY-NC-ND-3.0")
-    CreativeCommonsAttributionNonCommercialNoDerivatives4_0International = SPDXLicenseCode("CC-BY-NC-ND-4.0")
-    CreativeCommonsAttributionNonCommercialShareAlike1_0Generic = SPDXLicenseCode("CC-BY-NC-SA-1.0")
-    CreativeCommonsAttributionNonCommercialShareAlike2_0Generic = SPDXLicenseCode("CC-BY-NC-SA-2.0")
-    CreativeCommonsAttributionNonCommercialShareAlike2_5Generic = SPDXLicenseCode("CC-BY-NC-SA-2.5")
-    CreativeCommonsAttributionNonCommercialShareAlike3_0Unported = SPDXLicenseCode("CC-BY-NC-SA-3.0")
-    CreativeCommonsAttributionNonCommercialShareAlike4_0International = SPDXLicenseCode("CC-BY-NC-SA-4.0")
+    CreativeCommonsAttributionNonCommercial4_0International = SPDXLicenseCode(
+        "CC-BY-NC-4.0"
+    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives1_0Generic = SPDXLicenseCode(
+        "CC-BY-NC-ND-1.0"
+    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives2_0Generic = SPDXLicenseCode(
+        "CC-BY-NC-ND-2.0"
+    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives2_5Generic = SPDXLicenseCode(
+        "CC-BY-NC-ND-2.5"
+    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives3_0Unported = SPDXLicenseCode(
+        "CC-BY-NC-ND-3.0"
+    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives4_0International = (
+        SPDXLicenseCode("CC-BY-NC-ND-4.0")
+    )
+    CreativeCommonsAttributionNonCommercialShareAlike1_0Generic = SPDXLicenseCode(
+        "CC-BY-NC-SA-1.0"
+    )
+    CreativeCommonsAttributionNonCommercialShareAlike2_0Generic = SPDXLicenseCode(
+        "CC-BY-NC-SA-2.0"
+    )
+    CreativeCommonsAttributionNonCommercialShareAlike2_5Generic = SPDXLicenseCode(
+        "CC-BY-NC-SA-2.5"
+    )
+    CreativeCommonsAttributionNonCommercialShareAlike3_0Unported = SPDXLicenseCode(
+        "CC-BY-NC-SA-3.0"
+    )
+    CreativeCommonsAttributionNonCommercialShareAlike4_0International = SPDXLicenseCode(
+        "CC-BY-NC-SA-4.0"
+    )
     CreativeCommonsAttributionNoDerivatives1_0Generic = SPDXLicenseCode("CC-BY-ND-1.0")
     CreativeCommonsAttributionNoDerivatives2_0Generic = SPDXLicenseCode("CC-BY-ND-2.0")
     CreativeCommonsAttributionNoDerivatives2_5Generic = SPDXLicenseCode("CC-BY-ND-2.5")
     CreativeCommonsAttributionNoDerivatives3_0Unported = SPDXLicenseCode("CC-BY-ND-3.0")
-    CreativeCommonsAttributionNoDerivatives4_0International = SPDXLicenseCode("CC-BY-ND-4.0")
+    CreativeCommonsAttributionNoDerivatives4_0International = SPDXLicenseCode(
+        "CC-BY-ND-4.0"
+    )
     CreativeCommonsAttributionShareAlike1_0Generic = SPDXLicenseCode("CC-BY-SA-1.0")
     CreativeCommonsAttributionShareAlike2_0Generic = SPDXLicenseCode("CC-BY-SA-2.0")
     CreativeCommonsAttributionShareAlike2_5Generic = SPDXLicenseCode("CC-BY-SA-2.5")
     CreativeCommonsAttributionShareAlike3_0Unported = SPDXLicenseCode("CC-BY-SA-3.0")
-    CreativeCommonsAttributionShareAlike4_0International = SPDXLicenseCode("CC-BY-SA-4.0")
+    CreativeCommonsAttributionShareAlike4_0International = SPDXLicenseCode(
+        "CC-BY-SA-4.0"
+    )
     CreativeCommonsZeroV1_0Universal = SPDXLicenseCode("CC0-1.0")
     CommonDevelopmentAndDistributionLicense1_0 = SPDXLicenseCode("CDDL-1.0")
     CommonDevelopmentAndDistributionLicense1_1 = SPDXLicenseCode("CDDL-1.1")
@@ -131,7 +150,9 @@ class SPDXLicenseCodeValues:
     CeCILL_CFreeSoftwareLicenseAgreement = SPDXLicenseCode("CECILL-C")
     ClarifiedArtisticLicense = SPDXLicenseCode("ClArtistic")
     CNRIJythonLicense = SPDXLicenseCode("CNRI-Jython")
-    CNRIPythonOpenSourceGPLCompatibleLicenseAgreement = SPDXLicenseCode("CNRI-Python-GPL-Compatible")
+    CNRIPythonOpenSourceGPLCompatibleLicenseAgreement = SPDXLicenseCode(
+        "CNRI-Python-GPL-Compatible"
+    )
     CNRIPythonLicense = SPDXLicenseCode("CNRI-Python")
     CondorPublicLicenseV1_1 = SPDXLicenseCode("Condor-1.1")
     CommonPublicAttributionLicense1_0 = SPDXLicenseCode("CPAL-1.0")
@@ -241,7 +262,9 @@ class SPDXLicenseCodeValues:
     Mpich2License = SPDXLicenseCode("mpich2")
     MozillaPublicLicense1_0 = SPDXLicenseCode("MPL-1.0")
     MozillaPublicLicense1_1 = SPDXLicenseCode("MPL-1.1")
-    MozillaPublicLicense2_0_noCopyleftException_ = SPDXLicenseCode("MPL-2.0-no-copyleft-exception")
+    MozillaPublicLicense2_0_noCopyleftException_ = SPDXLicenseCode(
+        "MPL-2.0-no-copyleft-exception"
+    )
     MozillaPublicLicense2_0 = SPDXLicenseCode("MPL-2.0")
     MicrosoftPublicLicense = SPDXLicenseCode("MS-PL")
     MicrosoftReciprocalLicense = SPDXLicenseCode("MS-RL")
@@ -340,8 +363,12 @@ class SPDXLicenseCodeValues:
     TMateOpenSourceLicense = SPDXLicenseCode("TMate")
     TORQUEV2_5_SoftwareLicenseV1_1 = SPDXLicenseCode("TORQUE-1.1")
     TrussterOpenSourceLicense = SPDXLicenseCode("TOSL")
-    UnicodeLicenseAgreement_DataFilesAndSoftware_2015_ = SPDXLicenseCode("Unicode-DFS-2015")
-    UnicodeLicenseAgreement_DataFilesAndSoftware_2016_ = SPDXLicenseCode("Unicode-DFS-2016")
+    UnicodeLicenseAgreement_DataFilesAndSoftware_2015_ = SPDXLicenseCode(
+        "Unicode-DFS-2015"
+    )
+    UnicodeLicenseAgreement_DataFilesAndSoftware_2016_ = SPDXLicenseCode(
+        "Unicode-DFS-2016"
+    )
     UnicodeTermsOfUse = SPDXLicenseCode("Unicode-TOU")
     TheUnlicense = SPDXLicenseCode("Unlicense")
     UniversalPermissiveLicenseV1_0 = SPDXLicenseCode("UPL-1.0")

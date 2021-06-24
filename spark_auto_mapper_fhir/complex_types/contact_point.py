@@ -1,12 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -15,8 +10,9 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.contact_point_system import ContactPointSystem
-    from spark_auto_mapper_fhir.complex_types.string import string
+    from spark_auto_mapper_fhir.complex_types.contact_point_system import (
+        ContactPointSystem,
+    )
     from spark_auto_mapper_fhir.complex_types.contact_point_use import ContactPointUse
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -28,6 +24,7 @@ class ContactPoint(FhirComplexTypeBase):
     """
     ContactPoint
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -35,25 +32,25 @@ class ContactPoint(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        system: Optional[ContactPointSystem ] = None,
-        value: Optional[FhirString ] = None,
-        use: Optional[ContactPointUse ] = None,
-        rank: Optional[positiveInt ] = None,
-        period: Optional[Period ] = None,
+        system: Optional[ContactPointSystem] = None,
+        value: Optional[FhirString] = None,
+        use: Optional[ContactPointUse] = None,
+        rank: Optional[positiveInt] = None,
+        period: Optional[Period] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param system: Telecommunications form for contact point - what communications system is
-    required to make use of the contact.
-        :param value: The actual contact point details, in a form that is meaningful to the
-    designated communication system (i.e. phone number or email address).
-        :param use: Identifies the purpose for the contact point.
-        :param rank: Specifies a preferred order in which to use a set of contacts. ContactPoints
-    with lower rank values are more preferred than those with higher rank values.
-        :param period: Time period when the contact point was/is in use.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param system: Telecommunications form for contact point - what communications system is
+        required to make use of the contact.
+            :param value: The actual contact point details, in a form that is meaningful to the
+        designated communication system (i.e. phone number or email address).
+            :param use: Identifies the purpose for the contact point.
+            :param rank: Specifies a preferred order in which to use a set of contacts. ContactPoints
+        with lower rank values are more preferred than those with higher rank values.
+            :param period: Time period when the contact point was/is in use.
         """
         super().__init__(
             id_=id_,

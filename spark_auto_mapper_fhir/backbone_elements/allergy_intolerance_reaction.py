@@ -1,14 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -19,24 +14,35 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # substance (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for substance
     from spark_auto_mapper_fhir.value_sets.substance_code import SubstanceCodeCode
+
     # End Import for CodeableConcept for substance
     # manifestation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for manifestation
-    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import SNOMEDCTClinicalFindingsCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindingsCode,
+    )
+
     # End Import for CodeableConcept for manifestation
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
     # onset (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import dateTime
     # severity (AllergyIntoleranceSeverity)
-    from spark_auto_mapper_fhir.complex_types.allergy_intolerance_severity import AllergyIntoleranceSeverity
+    from spark_auto_mapper_fhir.complex_types.allergy_intolerance_severity import (
+        AllergyIntoleranceSeverity,
+    )
+
     # exposureRoute (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for exposureRoute
-    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import SNOMEDCTRouteCodesCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
+        SNOMEDCTRouteCodesCode,
+    )
+
     # End Import for CodeableConcept for exposureRoute
     # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
@@ -48,44 +54,45 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
     """
     AllergyIntolerance.Reaction
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        substance: Optional[CodeableConcept[SubstanceCodeCode] ] = None,
-        manifestation: FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode] ],
-        description: Optional[FhirString ] = None,
-        onset: Optional[FhirDateTime ] = None,
-        severity: Optional[AllergyIntoleranceSeverity ] = None,
-        exposureRoute: Optional[CodeableConcept[SNOMEDCTRouteCodesCode] ] = None,
-        note: Optional[FhirList[Annotation ]] = None,
+        substance: Optional[CodeableConcept[SubstanceCodeCode]] = None,
+        manifestation: FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode]],
+        description: Optional[FhirString] = None,
+        onset: Optional[FhirDateTime] = None,
+        severity: Optional[AllergyIntoleranceSeverity] = None,
+        exposureRoute: Optional[CodeableConcept[SNOMEDCTRouteCodesCode]] = None,
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param substance: Identification of the specific substance (or pharmaceutical product)
-    considered to be responsible for the Adverse Reaction event. Note: the
-    substance for a specific reaction may be different from the substance
-    identified as the cause of the risk, but it must be consistent with it. For
-    instance, it may be a more specific substance (e.g. a brand medication) or a
-    composite product that includes the identified substance. It must be
-    clinically safe to only process the 'code' and ignore the
-    'reaction.substance'.  If a receiving system is unable to confirm that
-    AllergyIntolerance.reaction.substance falls within the semantic scope of
-    AllergyIntolerance.code, then the receiving system should ignore
-    AllergyIntolerance.reaction.substance.
-        :param manifestation: Clinical symptoms and/or signs that are observed or associated with the
-    adverse reaction event.
-        :param description: Text description about the reaction as a whole, including details of the
-    manifestation if required.
-        :param onset: Record of the date and/or time of the onset of the Reaction.
-        :param severity: Clinical assessment of the severity of the reaction event as a whole,
-    potentially considering multiple different manifestations.
-        :param exposureRoute: Identification of the route by which the subject was exposed to the substance.
-        :param note: Additional text about the adverse reaction event not captured in other fields.
+            :param id_: id of resource
+            :param extension: extensions
+            :param substance: Identification of the specific substance (or pharmaceutical product)
+        considered to be responsible for the Adverse Reaction event. Note: the
+        substance for a specific reaction may be different from the substance
+        identified as the cause of the risk, but it must be consistent with it. For
+        instance, it may be a more specific substance (e.g. a brand medication) or a
+        composite product that includes the identified substance. It must be
+        clinically safe to only process the 'code' and ignore the
+        'reaction.substance'.  If a receiving system is unable to confirm that
+        AllergyIntolerance.reaction.substance falls within the semantic scope of
+        AllergyIntolerance.code, then the receiving system should ignore
+        AllergyIntolerance.reaction.substance.
+            :param manifestation: Clinical symptoms and/or signs that are observed or associated with the
+        adverse reaction event.
+            :param description: Text description about the reaction as a whole, including details of the
+        manifestation if required.
+            :param onset: Record of the date and/or time of the onset of the Reaction.
+            :param severity: Clinical assessment of the severity of the reaction event as a whole,
+        potentially considering multiple different manifestations.
+            :param exposureRoute: Identification of the route by which the subject was exposed to the substance.
+            :param note: Additional text about the adverse reaction event not captured in other fields.
         """
         super().__init__(
             id_=id_,

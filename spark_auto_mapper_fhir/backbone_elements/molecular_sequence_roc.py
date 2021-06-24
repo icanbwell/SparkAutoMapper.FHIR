@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,17 +12,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # score (integer)
-    from spark_auto_mapper_fhir.complex_types.integer import integer
+    pass
     # numTP (integer)
-    from spark_auto_mapper_fhir.complex_types.integer import integer
     # numFP (integer)
-    from spark_auto_mapper_fhir.complex_types.integer import integer
     # numFN (integer)
-    from spark_auto_mapper_fhir.complex_types.integer import integer
     # precision (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
     # sensitivity (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
     # fMeasure (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
@@ -39,35 +32,36 @@ class MolecularSequenceRoc(FhirBackboneElementBase):
     """
     MolecularSequence.Roc
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        score: Optional[FhirList[FhirInteger ]] = None,
-        numTP: Optional[FhirList[FhirInteger ]] = None,
-        numFP: Optional[FhirList[FhirInteger ]] = None,
-        numFN: Optional[FhirList[FhirInteger ]] = None,
-        precision: Optional[FhirList[decimal ]] = None,
-        sensitivity: Optional[FhirList[decimal ]] = None,
-        fMeasure: Optional[FhirList[decimal ]] = None,
+        score: Optional[FhirList[FhirInteger]] = None,
+        numTP: Optional[FhirList[FhirInteger]] = None,
+        numFP: Optional[FhirList[FhirInteger]] = None,
+        numFN: Optional[FhirList[FhirInteger]] = None,
+        precision: Optional[FhirList[decimal]] = None,
+        sensitivity: Optional[FhirList[decimal]] = None,
+        fMeasure: Optional[FhirList[decimal]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param score: Invidual data point representing the GQ (genotype quality) score threshold.
-        :param numTP: The number of true positives if the GQ score threshold was set to "score"
-    field value.
-        :param numFP: The number of false positives if the GQ score threshold was set to "score"
-    field value.
-        :param numFN: The number of false negatives if the GQ score threshold was set to "score"
-    field value.
-        :param precision: Calculated precision if the GQ score threshold was set to "score" field value.
-        :param sensitivity: Calculated sensitivity if the GQ score threshold was set to "score" field
-    value.
-        :param fMeasure: Calculated fScore if the GQ score threshold was set to "score" field value.
+            :param id_: id of resource
+            :param extension: extensions
+            :param score: Invidual data point representing the GQ (genotype quality) score threshold.
+            :param numTP: The number of true positives if the GQ score threshold was set to "score"
+        field value.
+            :param numFP: The number of false positives if the GQ score threshold was set to "score"
+        field value.
+            :param numFN: The number of false negatives if the GQ score threshold was set to "score"
+        field value.
+            :param precision: Calculated precision if the GQ score threshold was set to "score" field value.
+            :param sensitivity: Calculated sensitivity if the GQ score threshold was set to "score" field
+        value.
+            :param fMeasure: Calculated fScore if the GQ score threshold was set to "score" field value.
         """
         super().__init__(
             id_=id_,

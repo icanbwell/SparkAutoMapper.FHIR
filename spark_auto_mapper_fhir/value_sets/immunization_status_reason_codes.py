@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,35 +11,76 @@ class ImmunizationStatusReasonCodesCode(FhirValueSetBase):
     """
     ImmunizationStatusReasonCodes
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
 
 class ImmunizationStatusReasonCodesCodeValues:
-    Actaccommodationreason = ImmunizationStatusReasonCodesCode("_ActAccommodationReason")
+    Actaccommodationreason = ImmunizationStatusReasonCodesCode(
+        "_ActAccommodationReason"
+    )
     Actcoveragereason = ImmunizationStatusReasonCodesCode("_ActCoverageReason")
-    Actinformationmanagementreason = ImmunizationStatusReasonCodesCode("_ActInformationManagementReason")
+    Actinformationmanagementreason = ImmunizationStatusReasonCodesCode(
+        "_ActInformationManagementReason"
+    )
     Actinvalidreason = ImmunizationStatusReasonCodesCode("_ActInvalidReason")
-    Actinvoicecancelreason = ImmunizationStatusReasonCodesCode("_ActInvoiceCancelReason")
-    Actnoimmunizationreason = ImmunizationStatusReasonCodesCode("_ActNoImmunizationReason")
-    Actsupplyfulfillmentrefusalreason = ImmunizationStatusReasonCodesCode("_ActSupplyFulfillmentRefusalReason")
-    Clinicalresearcheventreason = ImmunizationStatusReasonCodesCode("_ClinicalResearchEventReason")
-    Clinicalresearchobservationreason = ImmunizationStatusReasonCodesCode("_ClinicalResearchObservationReason")
-    Combinedpharmacyordersuspendreasoncode = ImmunizationStatusReasonCodesCode("_CombinedPharmacyOrderSuspendReasonCode")
-    Controlactnullificationreasoncode = ImmunizationStatusReasonCodesCode("_ControlActNullificationReasonCode")
-    Controlactnullificationrefusalreasontype = ImmunizationStatusReasonCodesCode("_ControlActNullificationRefusalReasonType")
+    Actinvoicecancelreason = ImmunizationStatusReasonCodesCode(
+        "_ActInvoiceCancelReason"
+    )
+    Actnoimmunizationreason = ImmunizationStatusReasonCodesCode(
+        "_ActNoImmunizationReason"
+    )
+    Actsupplyfulfillmentrefusalreason = ImmunizationStatusReasonCodesCode(
+        "_ActSupplyFulfillmentRefusalReason"
+    )
+    Clinicalresearcheventreason = ImmunizationStatusReasonCodesCode(
+        "_ClinicalResearchEventReason"
+    )
+    Clinicalresearchobservationreason = ImmunizationStatusReasonCodesCode(
+        "_ClinicalResearchObservationReason"
+    )
+    Combinedpharmacyordersuspendreasoncode = ImmunizationStatusReasonCodesCode(
+        "_CombinedPharmacyOrderSuspendReasonCode"
+    )
+    Controlactnullificationreasoncode = ImmunizationStatusReasonCodesCode(
+        "_ControlActNullificationReasonCode"
+    )
+    Controlactnullificationrefusalreasontype = ImmunizationStatusReasonCodesCode(
+        "_ControlActNullificationRefusalReasonType"
+    )
     Controlactreason = ImmunizationStatusReasonCodesCode("_ControlActReason")
-    Genericupdatereasoncode = ImmunizationStatusReasonCodesCode("_GenericUpdateReasonCode")
-    PatientProfileQueryReason = ImmunizationStatusReasonCodesCode("_PatientProfileQueryReasonCode")
-    Pharmacysupplyrequestfulfillerrevisionrefusalreasoncode = ImmunizationStatusReasonCodesCode("_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode")
+    Genericupdatereasoncode = ImmunizationStatusReasonCodesCode(
+        "_GenericUpdateReasonCode"
+    )
+    PatientProfileQueryReason = ImmunizationStatusReasonCodesCode(
+        "_PatientProfileQueryReasonCode"
+    )
+    Pharmacysupplyrequestfulfillerrevisionrefusalreasoncode = (
+        ImmunizationStatusReasonCodesCode(
+            "_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode"
+        )
+    )
     Refusalreasoncode = ImmunizationStatusReasonCodesCode("_RefusalReasonCode")
     Schedulingactreason = ImmunizationStatusReasonCodesCode("_SchedulingActReason")
-    Statusrevisionrefusalreasoncode = ImmunizationStatusReasonCodesCode("_StatusRevisionRefusalReasonCode")
-    Substanceadministrationpermissionrefusalreasoncode = ImmunizationStatusReasonCodesCode("_SubstanceAdministrationPermissionRefusalReasonCode")
-    Substanceadminsubstitutionnotallowedreason = ImmunizationStatusReasonCodesCode("_SubstanceAdminSubstitutionNotAllowedReason")
-    Substanceadminsubstitutionreason = ImmunizationStatusReasonCodesCode("_SubstanceAdminSubstitutionReason")
+    Statusrevisionrefusalreasoncode = ImmunizationStatusReasonCodesCode(
+        "_StatusRevisionRefusalReasonCode"
+    )
+    Substanceadministrationpermissionrefusalreasoncode = (
+        ImmunizationStatusReasonCodesCode(
+            "_SubstanceAdministrationPermissionRefusalReasonCode"
+        )
+    )
+    Substanceadminsubstitutionnotallowedreason = ImmunizationStatusReasonCodesCode(
+        "_SubstanceAdminSubstitutionNotAllowedReason"
+    )
+    Substanceadminsubstitutionreason = ImmunizationStatusReasonCodesCode(
+        "_SubstanceAdminSubstitutionReason"
+    )
     Transferactreason = ImmunizationStatusReasonCodesCode("_TransferActReason")
-    Actbillableservicereason = ImmunizationStatusReasonCodesCode("_ActBillableServiceReason")
+    Actbillableservicereason = ImmunizationStatusReasonCodesCode(
+        "_ActBillableServiceReason"
+    )
     Bonus = ImmunizationStatusReasonCodesCode("BONUS")
     ChildrenOnly = ImmunizationStatusReasonCodesCode("CHD")
     DependentsOnly = ImmunizationStatusReasonCodesCode("DEP")

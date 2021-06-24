@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,7 +11,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # code (TypeRestfulInteraction)
-    from spark_auto_mapper_fhir.complex_types.type_restful_interaction import TypeRestfulInteraction
+    from spark_auto_mapper_fhir.complex_types.type_restful_interaction import (
+        TypeRestfulInteraction,
+    )
+
     # documentation (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
@@ -29,23 +25,24 @@ class CapabilityStatementInteraction(FhirBackboneElementBase):
     """
     CapabilityStatement.Interaction
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: TypeRestfulInteraction ,
-        documentation: Optional[markdown ] = None,
+        code: TypeRestfulInteraction,
+        documentation: Optional[markdown] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: Coded identifier of the operation, supported by the system resource.
-        :param documentation: Guidance specific to the implementation of this operation, such as 'delete is
-    a logical delete' or 'updates are only allowed with version id' or 'creates
-    permitted from pre-authorized certificates only'.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: Coded identifier of the operation, supported by the system resource.
+            :param documentation: Guidance specific to the implementation of this operation, such as 'delete is
+        a logical delete' or 'updates are only allowed with version id' or 'creates
+        permitted from pre-authorized certificates only'.
         """
         super().__init__(
             id_=id_,

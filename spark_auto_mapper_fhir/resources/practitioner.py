@@ -1,14 +1,11 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -22,13 +19,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
     from spark_auto_mapper_fhir.complex_types.address import Address
-    from spark_auto_mapper_fhir.complex_types.administrative_gender import AdministrativeGender
+    from spark_auto_mapper_fhir.complex_types.administrative_gender import (
+        AdministrativeGender,
+    )
     from spark_auto_mapper_fhir.complex_types.date import FhirDate
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
-    from spark_auto_mapper_fhir.backbone_elements.practitioner_qualification import PractitionerQualification
+    from spark_auto_mapper_fhir.backbone_elements.practitioner_qualification import (
+        PractitionerQualification,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for communication
     from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
+
     # End Import for CodeableConcept for communication
 
 
@@ -38,6 +41,7 @@ class Practitioner(FhirResourceBase):
     """
     Practitioner
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -45,40 +49,40 @@ class Practitioner(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        active: Optional[FhirBoolean ] = None,
-        name: Optional[FhirList[HumanName ]] = None,
-        telecom: Optional[FhirList[ContactPoint ]] = None,
-        address: Optional[FhirList[Address ]] = None,
-        gender: Optional[AdministrativeGender ] = None,
-        birthDate: Optional[FhirDate ] = None,
-        photo: Optional[FhirList[Attachment ]] = None,
-        qualification: Optional[FhirList[PractitionerQualification ]] = None,
-        communication: Optional[FhirList[CodeableConcept[CommonLanguagesCode] ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        active: Optional[FhirBoolean] = None,
+        name: Optional[FhirList[HumanName]] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
+        address: Optional[FhirList[Address]] = None,
+        gender: Optional[AdministrativeGender] = None,
+        birthDate: Optional[FhirDate] = None,
+        photo: Optional[FhirList[Attachment]] = None,
+        qualification: Optional[FhirList[PractitionerQualification]] = None,
+        communication: Optional[FhirList[CodeableConcept[CommonLanguagesCode]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: An identifier that applies to this person in this role.
-        :param active: Whether this practitioner's record is in active use.
-        :param name: The name(s) associated with the practitioner.
-        :param telecom: A contact detail for the practitioner, e.g. a telephone number or an email
-    address.
-        :param address: Address(es) of the practitioner that are not role specific (typically home
-    address).
-    Work addresses are not typically entered in this property as they are usually
-    role dependent.
-        :param gender: Administrative Gender - the gender that the person is considered to have for
-    administration and record keeping purposes.
-        :param birthDate: The date of birth for the practitioner.
-        :param photo: Image of the person.
-        :param qualification: The official certifications, training, and licenses that authorize or
-    otherwise pertain to the provision of care by the practitioner.  For example,
-    a medical license issued by a medical board authorizing the practitioner to
-    practice medicine within a certian locality.
-        :param communication: A language the practitioner can use in patient communication.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: An identifier that applies to this person in this role.
+            :param active: Whether this practitioner's record is in active use.
+            :param name: The name(s) associated with the practitioner.
+            :param telecom: A contact detail for the practitioner, e.g. a telephone number or an email
+        address.
+            :param address: Address(es) of the practitioner that are not role specific (typically home
+        address).
+        Work addresses are not typically entered in this property as they are usually
+        role dependent.
+            :param gender: Administrative Gender - the gender that the person is considered to have for
+        administration and record keeping purposes.
+            :param birthDate: The date of birth for the practitioner.
+            :param photo: Image of the person.
+            :param qualification: The official certifications, training, and licenses that authorize or
+        otherwise pertain to the provision of care by the practitioner.  For example,
+        a medical license issued by a medical board authorizing the practitioner to
+        practice medicine within a certian locality.
+            :param communication: A language the practitioner can use in patient communication.
         """
         super().__init__(
             resourceType="Practitioner",

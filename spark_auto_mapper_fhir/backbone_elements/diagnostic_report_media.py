@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,9 +12,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # comment (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
+    pass
     # link (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for link
     from spark_auto_mapper_fhir.resources.media import Media
 
@@ -31,23 +26,24 @@ class DiagnosticReportMedia(FhirBackboneElementBase):
     """
     DiagnosticReport.Media
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        comment: Optional[FhirString ] = None,
-        link: Reference [Union[Media]],
+        comment: Optional[FhirString] = None,
+        link: Reference[Union[Media]],
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param comment: A comment about the image. Typically, this is used to provide an explanation
-    for why the image is included, or to draw the viewer's attention to important
-    features.
-        :param link: Reference to the image source.
+            :param id_: id of resource
+            :param extension: extensions
+            :param comment: A comment about the image. Typically, this is used to provide an explanation
+        for why the image is included, or to draw the viewer's attention to important
+        features.
+            :param link: Reference to the image source.
         """
         super().__init__(
             id_=id_,

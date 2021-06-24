@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class AccountTypesCode(FhirValueSetBase):
     """
     AccountTypes
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -28,7 +19,9 @@ class AccountTypesCode(FhirValueSetBase):
 class AccountTypesCodeValues:
     Actaccountcode = AccountTypesCode("_ActAccountCode")
     Actadjudicationcode = AccountTypesCode("_ActAdjudicationCode")
-    Actadjudicationresultactioncode = AccountTypesCode("_ActAdjudicationResultActionCode")
+    Actadjudicationresultactioncode = AccountTypesCode(
+        "_ActAdjudicationResultActionCode"
+    )
     Actbillablemodifiercode = AccountTypesCode("_ActBillableModifierCode")
     Actbillingarrangementcode = AccountTypesCode("_ActBillingArrangementCode")
     Actboundedroicode = AccountTypesCode("_ActBoundedROICode")
@@ -45,14 +38,18 @@ class AccountTypesCodeValues:
     Actfinancialtransactioncode = AccountTypesCode("_ActFinancialTransactionCode")
     Actincidentcode = AccountTypesCode("_ActIncidentCode")
     Actinformationaccesscode = AccountTypesCode("_ActInformationAccessCode")
-    Actinformationaccesscontextcode = AccountTypesCode("_ActInformationAccessContextCode")
+    Actinformationaccesscontextcode = AccountTypesCode(
+        "_ActInformationAccessContextCode"
+    )
     Actinformationcategorycode = AccountTypesCode("_ActInformationCategoryCode")
     Actinvoiceelementcode = AccountTypesCode("_ActInvoiceElementCode")
     Actinvoiceelementsummarycode = AccountTypesCode("_ActInvoiceElementSummaryCode")
     Actinvoiceoverridecode = AccountTypesCode("_ActInvoiceOverrideCode")
     Actlistcode = AccountTypesCode("_ActListCode")
     Actmonitoringprotocolcode = AccountTypesCode("_ActMonitoringProtocolCode")
-    Actnonobservationindicationcode = AccountTypesCode("_ActNonObservationIndicationCode")
+    Actnonobservationindicationcode = AccountTypesCode(
+        "_ActNonObservationIndicationCode"
+    )
     ActObservationVerification = AccountTypesCode("_ActObservationVerificationType")
     Actpaymentcode = AccountTypesCode("_ActPaymentCode")
     Actpharmacysupplytype = AccountTypesCode("_ActPharmacySupplyType")

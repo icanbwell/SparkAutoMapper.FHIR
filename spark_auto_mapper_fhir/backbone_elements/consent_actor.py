@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -19,11 +12,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.security_role_type import SecurityRoleTypeCode
+    from spark_auto_mapper_fhir.value_sets.security_role_type import (
+        SecurityRoleTypeCode,
+    )
+
     # End Import for CodeableConcept for role
     # reference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reference
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.group import Group
@@ -41,24 +39,36 @@ class ConsentActor(FhirBackboneElementBase):
     """
     Consent.Actor
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: CodeableConcept[SecurityRoleTypeCode] ,
-        reference: Reference [Union[Device, Group, CareTeam, Organization, Patient, Practitioner, RelatedPerson, PractitionerRole]],
+        role: CodeableConcept[SecurityRoleTypeCode],
+        reference: Reference[
+            Union[
+                Device,
+                Group,
+                CareTeam,
+                Organization,
+                Patient,
+                Practitioner,
+                RelatedPerson,
+                PractitionerRole,
+            ]
+        ],
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param role: How the individual is involved in the resources content that is described in
-    the exception.
-        :param reference: The resource that identifies the actor. To identify actors by type, use group
-    to identify a set of actors by some property they share (e.g. 'admitting
-    officers').
+            :param id_: id of resource
+            :param extension: extensions
+            :param role: How the individual is involved in the resources content that is described in
+        the exception.
+            :param reference: The resource that identifies the actor. To identify actors by type, use group
+        to identify a set of actors by some property they share (e.g. 'admitting
+        officers').
         """
         super().__init__(
             id_=id_,

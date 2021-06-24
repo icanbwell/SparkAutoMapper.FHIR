@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class AnimalBreedsCode(FhirValueSetBase):
     """
     AnimalBreeds
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -209,7 +200,9 @@ class AnimalBreedsCodeValues:
     GulfCoastNativeSheepBreed_organism_ = AnimalBreedsCode("131731007")
     DorperSheepBreed_organism_ = AnimalBreedsCode("131732000")
     DevonClosewoolSheepBreed_organism_ = AnimalBreedsCode("131733005")
-    DeutschesBlaukoepfigesFleischschafSheepBreed_organism_ = AnimalBreedsCode("131734004")
+    DeutschesBlaukoepfigesFleischschafSheepBreed_organism_ = AnimalBreedsCode(
+        "131734004"
+    )
     DerbyshireGritstoneSheepBreed_organism_ = AnimalBreedsCode("131735003")
     CoburgerFuchsschafSheepBreed_organism_ = AnimalBreedsCode("131736002")
     DanishLandraceSheepBreed_organism_ = AnimalBreedsCode("131737006")
@@ -938,7 +931,9 @@ class AnimalBreedsCodeValues:
     ElegantWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131961005")
     BritishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("132732003")
     SwissWarmbloodHorseBreed_organism_ = AnimalBreedsCode("132763004")
-    EastFriesianWarmblood_ModernType_HorseBreed_organism_ = AnimalBreedsCode("132767003")
+    EastFriesianWarmblood_ModernType_HorseBreed_organism_ = AnimalBreedsCode(
+        "132767003"
+    )
     DutchWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133022007")
     SlovakWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133085007")
     SwedishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133144000")
@@ -1406,7 +1401,9 @@ class AnimalBreedsCodeValues:
     PolishSimmentalCattleBreed_organism_ = AnimalBreedsCode("133415006")
     PolledJerseyCattleBreed_organism_ = AnimalBreedsCode("133416007")
     PolledLincolnRedCattleBreed_organism_ = AnimalBreedsCode("133417003")
-    PolledShorthorn_UnitedStatesOfAmerica_CattleBreed_organism_ = AnimalBreedsCode("133418008")
+    PolledShorthorn_UnitedStatesOfAmerica_CattleBreed_organism_ = AnimalBreedsCode(
+        "133418008"
+    )
     PolledSimmentalCattleBreed_organism_ = AnimalBreedsCode("133419000")
     PolledSussexCattleBreed_organism_ = AnimalBreedsCode("133430002")
     PolledWelshBlackCattleBreed_organism_ = AnimalBreedsCode("133431003")
@@ -1760,7 +1757,9 @@ class AnimalBreedsCodeValues:
     FuzhouBlackPigBreed_organism_ = AnimalBreedsCode("132285009")
     MinbeiSpottedPigBreed_organism_ = AnimalBreedsCode("132286005")
     LantangPigBreed_organism_ = AnimalBreedsCode("132287001")
-    LiangGuangSmallSpotted_GuangdongSmallEarPigBreed_organism_ = AnimalBreedsCode("132288006")
+    LiangGuangSmallSpotted_GuangdongSmallEarPigBreed_organism_ = AnimalBreedsCode(
+        "132288006"
+    )
     LonglinPigBreed_organism_ = AnimalBreedsCode("132289003")
     YuedongBlackPigBreed_organism_ = AnimalBreedsCode("132290007")
     XiangPigBreed_organism_ = AnimalBreedsCode("132291006")
@@ -1800,7 +1799,9 @@ class AnimalBreedsCodeValues:
     KoronadalPigBreed_organism_ = AnimalBreedsCode("133179003")
     OhminiPigBreed_organism_ = AnimalBreedsCode("133180000")
     ClawnPigBreed_organism_ = AnimalBreedsCode("133181001")
-    SusScrofaDomesticPigXJapaneseWildBoarIntragenusHybrid_organism_ = AnimalBreedsCode("133182008")
+    SusScrofaDomesticPigXJapaneseWildBoarIntragenusHybrid_organism_ = AnimalBreedsCode(
+        "133182008"
+    )
     KangarooIslandPigBreed_organism_ = AnimalBreedsCode("133183003")
     CaptainCookerPigBreed_organism_ = AnimalBreedsCode("133184009")
     WestAfricanPigBreed_organism_ = AnimalBreedsCode("133185005")

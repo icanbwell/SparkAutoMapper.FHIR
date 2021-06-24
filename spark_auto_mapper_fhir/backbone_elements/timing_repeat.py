@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -19,30 +12,43 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # count (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
     # countMax (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
     # duration (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
     # durationMax (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
     # durationUnit (UnitsOfTime)
     from spark_auto_mapper_fhir.complex_types.units_of_time import UnitsOfTime
+
     # frequency (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
     # frequencyMax (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
     # period (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
     # periodMax (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
     # periodUnit (UnitsOfTime)
     from spark_auto_mapper_fhir.complex_types.units_of_time import UnitsOfTime
+
     # dayOfWeek (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
     # timeOfDay (time)
     from spark_auto_mapper_fhir.complex_types.time import time
+
     # when (EventTiming)
     from spark_auto_mapper_fhir.complex_types.event_timing import EventTiming
+
     # offset (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
@@ -53,61 +59,62 @@ class TimingRepeat(FhirBackboneElementBase):
     """
     Timing.Repeat
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        count: Optional[positiveInt ] = None,
-        countMax: Optional[positiveInt ] = None,
-        duration: Optional[decimal ] = None,
-        durationMax: Optional[decimal ] = None,
-        durationUnit: Optional[UnitsOfTime ] = None,
-        frequency: Optional[positiveInt ] = None,
-        frequencyMax: Optional[positiveInt ] = None,
-        period: Optional[decimal ] = None,
-        periodMax: Optional[decimal ] = None,
-        periodUnit: Optional[UnitsOfTime ] = None,
-        dayOfWeek: Optional[FhirList[code ]] = None,
-        timeOfDay: Optional[FhirList[time ]] = None,
-        when: Optional[FhirList[EventTiming ]] = None,
-        offset: Optional[unsignedInt ] = None,
+        count: Optional[positiveInt] = None,
+        countMax: Optional[positiveInt] = None,
+        duration: Optional[decimal] = None,
+        durationMax: Optional[decimal] = None,
+        durationUnit: Optional[UnitsOfTime] = None,
+        frequency: Optional[positiveInt] = None,
+        frequencyMax: Optional[positiveInt] = None,
+        period: Optional[decimal] = None,
+        periodMax: Optional[decimal] = None,
+        periodUnit: Optional[UnitsOfTime] = None,
+        dayOfWeek: Optional[FhirList[code]] = None,
+        timeOfDay: Optional[FhirList[time]] = None,
+        when: Optional[FhirList[EventTiming]] = None,
+        offset: Optional[unsignedInt] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param count: A total count of the desired number of repetitions across the duration of the
-    entire timing specification. If countMax is present, this element indicates
-    the lower bound of the allowed range of count values.
-        :param countMax: If present, indicates that the count is a range - so to perform the action
-    between [count] and [countMax] times.
-        :param duration: How long this thing happens for when it happens. If durationMax is present,
-    this element indicates the lower bound of the allowed range of the duration.
-        :param durationMax: If present, indicates that the duration is a range - so to perform the action
-    between [duration] and [durationMax] time length.
-        :param durationUnit: The units of time for the duration, in UCUM units.
-        :param frequency: The number of times to repeat the action within the specified period. If
-    frequencyMax is present, this element indicates the lower bound of the allowed
-    range of the frequency.
-        :param frequencyMax: If present, indicates that the frequency is a range - so to repeat between
-    [frequency] and [frequencyMax] times within the period or period range.
-        :param period: Indicates the duration of time over which repetitions are to occur; e.g. to
-    express "3 times per day", 3 would be the frequency and "1 day" would be the
-    period. If periodMax is present, this element indicates the lower bound of the
-    allowed range of the period length.
-        :param periodMax: If present, indicates that the period is a range from [period] to [periodMax],
-    allowing expressing concepts such as "do this once every 3-5 days.
-        :param periodUnit: The units of time for the period in UCUM units.
-        :param dayOfWeek: If one or more days of week is provided, then the action happens only on the
-    specified day(s).
-        :param timeOfDay: Specified time of day for action to take place.
-        :param when: An approximate time period during the day, potentially linked to an event of
-    daily living that indicates when the action should occur.
-        :param offset: The number of minutes from the event. If the event code does not indicate
-    whether the minutes is before or after the event, then the offset is assumed
-    to be after the event.
+            :param id_: id of resource
+            :param extension: extensions
+            :param count: A total count of the desired number of repetitions across the duration of the
+        entire timing specification. If countMax is present, this element indicates
+        the lower bound of the allowed range of count values.
+            :param countMax: If present, indicates that the count is a range - so to perform the action
+        between [count] and [countMax] times.
+            :param duration: How long this thing happens for when it happens. If durationMax is present,
+        this element indicates the lower bound of the allowed range of the duration.
+            :param durationMax: If present, indicates that the duration is a range - so to perform the action
+        between [duration] and [durationMax] time length.
+            :param durationUnit: The units of time for the duration, in UCUM units.
+            :param frequency: The number of times to repeat the action within the specified period. If
+        frequencyMax is present, this element indicates the lower bound of the allowed
+        range of the frequency.
+            :param frequencyMax: If present, indicates that the frequency is a range - so to repeat between
+        [frequency] and [frequencyMax] times within the period or period range.
+            :param period: Indicates the duration of time over which repetitions are to occur; e.g. to
+        express "3 times per day", 3 would be the frequency and "1 day" would be the
+        period. If periodMax is present, this element indicates the lower bound of the
+        allowed range of the period length.
+            :param periodMax: If present, indicates that the period is a range from [period] to [periodMax],
+        allowing expressing concepts such as "do this once every 3-5 days.
+            :param periodUnit: The units of time for the period in UCUM units.
+            :param dayOfWeek: If one or more days of week is provided, then the action happens only on the
+        specified day(s).
+            :param timeOfDay: Specified time of day for action to take place.
+            :param when: An approximate time period during the day, potentially linked to an event of
+        daily living that indicates when the action should occur.
+            :param offset: The number of minutes from the event. If the event code does not indicate
+        whether the minutes is before or after the event, then the offset is assumed
+        to be after the event.
         """
         super().__init__(
             id_=id_,

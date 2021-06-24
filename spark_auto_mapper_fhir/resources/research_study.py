@@ -1,13 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -20,60 +16,79 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for protocol
     from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for partOf
-    from spark_auto_mapper_fhir.complex_types.research_study_status import ResearchStudyStatus
+    from spark_auto_mapper_fhir.complex_types.research_study_status import (
+        ResearchStudyStatus,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for primaryPurposeType
-    from spark_auto_mapper_fhir.value_sets.research_study_primary_purpose_type import ResearchStudyPrimaryPurposeTypeCode
+    from spark_auto_mapper_fhir.value_sets.research_study_primary_purpose_type import (
+        ResearchStudyPrimaryPurposeTypeCode,
+    )
+
     # End Import for CodeableConcept for primaryPurposeType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for phase
-    from spark_auto_mapper_fhir.value_sets.research_study_phase import ResearchStudyPhaseCode
+    from spark_auto_mapper_fhir.value_sets.research_study_phase import (
+        ResearchStudyPhaseCode,
+    )
+
     # End Import for CodeableConcept for phase
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBloodCode
-    # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for focus
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBloodCode
-    # End Import for CodeableConcept for focus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-    # Import for CodeableConcept for keyword
-    from spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood import ACMECholCodesBloodCode
-    # End Import for CodeableConcept for keyword
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for location
-    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import JurisdictionValueSetCode
+    from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
+        JurisdictionValueSetCode,
+    )
+
     # End Import for CodeableConcept for location
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for enrollment
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for sponsor
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for principalInvestigator
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for site
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for reasonStopped
-    from spark_auto_mapper_fhir.value_sets.research_study_reason_stopped import ResearchStudyReasonStoppedCode
+    from spark_auto_mapper_fhir.value_sets.research_study_reason_stopped import (
+        ResearchStudyReasonStoppedCode,
+    )
+
     # End Import for CodeableConcept for reasonStopped
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-    from spark_auto_mapper_fhir.backbone_elements.research_study_arm import ResearchStudyArm
-    from spark_auto_mapper_fhir.backbone_elements.research_study_objective import ResearchStudyObjective
+    from spark_auto_mapper_fhir.backbone_elements.research_study_arm import (
+        ResearchStudyArm,
+    )
+    from spark_auto_mapper_fhir.backbone_elements.research_study_objective import (
+        ResearchStudyObjective,
+    )
 
 
 # This file is auto-generated by generate_classes so do not edit manually
@@ -82,6 +97,7 @@ class ResearchStudy(FhirResourceBase):
     """
     ResearchStudy
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -89,79 +105,83 @@ class ResearchStudy(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        title: Optional[FhirString ] = None,
-        protocol: Optional[FhirList[Reference [Union[PlanDefinition]]]] = None,
-        partOf: Optional[FhirList[Reference [Union[ResearchStudy]]]] = None,
-        status: ResearchStudyStatus ,
-        primaryPurposeType: Optional[CodeableConcept[ResearchStudyPrimaryPurposeTypeCode] ] = None,
-        phase: Optional[CodeableConcept[ResearchStudyPhaseCode] ] = None,
-        category: Optional[FhirList[CodeableConcept[ACMECholCodesBloodCode] ]] = None,
-        focus: Optional[FhirList[CodeableConcept[ACMECholCodesBloodCode] ]] = None,
-        condition: Optional[FhirList[CodeableConcept ]] = None,
-        contact: Optional[FhirList[ContactDetail ]] = None,
-        relatedArtifact: Optional[FhirList[RelatedArtifact ]] = None,
-        keyword: Optional[FhirList[CodeableConcept[ACMECholCodesBloodCode] ]] = None,
-        location: Optional[FhirList[CodeableConcept[JurisdictionValueSetCode] ]] = None,
-        description: Optional[markdown ] = None,
-        enrollment: Optional[FhirList[Reference [Union[Group]]]] = None,
-        period: Optional[Period ] = None,
-        sponsor: Optional[Reference [Union[Organization]]] = None,
-        principalInvestigator: Optional[Reference [Union[Practitioner, PractitionerRole]]] = None,
-        site: Optional[FhirList[Reference [Union[Location]]]] = None,
-        reasonStopped: Optional[CodeableConcept[ResearchStudyReasonStoppedCode] ] = None,
-        note: Optional[FhirList[Annotation ]] = None,
-        arm: Optional[FhirList[ResearchStudyArm ]] = None,
-        objective: Optional[FhirList[ResearchStudyObjective ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        title: Optional[FhirString] = None,
+        protocol: Optional[FhirList[Reference[Union[PlanDefinition]]]] = None,
+        partOf: Optional[FhirList[Reference[Union[ResearchStudy]]]] = None,
+        status: ResearchStudyStatus,
+        primaryPurposeType: Optional[
+            CodeableConcept[ResearchStudyPrimaryPurposeTypeCode]
+        ] = None,
+        phase: Optional[CodeableConcept[ResearchStudyPhaseCode]] = None,
+        category: Optional[FhirList[CodeableConcept]] = None,
+        focus: Optional[FhirList[CodeableConcept]] = None,
+        condition: Optional[FhirList[CodeableConcept]] = None,
+        contact: Optional[FhirList[ContactDetail]] = None,
+        relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
+        keyword: Optional[FhirList[CodeableConcept]] = None,
+        location: Optional[FhirList[CodeableConcept[JurisdictionValueSetCode]]] = None,
+        description: Optional[markdown] = None,
+        enrollment: Optional[FhirList[Reference[Union[Group]]]] = None,
+        period: Optional[Period] = None,
+        sponsor: Optional[Reference[Union[Organization]]] = None,
+        principalInvestigator: Optional[
+            Reference[Union[Practitioner, PractitionerRole]]
+        ] = None,
+        site: Optional[FhirList[Reference[Union[Location]]]] = None,
+        reasonStopped: Optional[CodeableConcept[ResearchStudyReasonStoppedCode]] = None,
+        note: Optional[FhirList[Annotation]] = None,
+        arm: Optional[FhirList[ResearchStudyArm]] = None,
+        objective: Optional[FhirList[ResearchStudyObjective]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Identifiers assigned to this research study by the sponsor or other systems.
-        :param title: A short, descriptive user-friendly label for the study.
-        :param protocol: The set of steps expected to be performed as part of the execution of the
-    study.
-        :param partOf: A larger research study of which this particular study is a component or step.
-        :param status: The current state of the study.
-        :param primaryPurposeType: The type of study based upon the intent of the study's activities. A
-    classification of the intent of the study.
-        :param phase: The stage in the progression of a therapy from initial experimental use in
-    humans in clinical trials to post-market evaluation.
-        :param category: Codes categorizing the type of study such as investigational vs.
-    observational, type of blinding, type of randomization, safety vs. efficacy,
-    etc.
-        :param focus: The medication(s), food(s), therapy(ies), device(s) or other concerns or
-    interventions that the study is seeking to gain more information about.
-        :param condition: The condition that is the focus of the study.  For example, In a study to
-    examine risk factors for Lupus, might have as an inclusion criterion "healthy
-    volunteer", but the target condition code would be a Lupus SNOMED code.
-        :param contact: Contact details to assist a user in learning more about or engaging with the
-    study.
-        :param relatedArtifact: Citations, references and other related documents.
-        :param keyword: Key terms to aid in searching for or filtering the study.
-        :param location: Indicates a country, state or other region where the study is taking place.
-        :param description: A full description of how the study is being conducted.
-        :param enrollment: Reference to a Group that defines the criteria for and quantity of subjects
-    participating in the study.  E.g. " 200 female Europeans between the ages of
-    20 and 45 with early onset diabetes".
-        :param period: Identifies the start date and the expected (or actual, depending on status)
-    end date for the study.
-        :param sponsor: An organization that initiates the investigation and is legally responsible
-    for the study.
-        :param principalInvestigator: A researcher in a study who oversees multiple aspects of the study, such as
-    concept development, protocol writing, protocol submission for IRB approval,
-    participant recruitment, informed consent, data collection, analysis,
-    interpretation and presentation.
-        :param site: A facility in which study activities are conducted.
-        :param reasonStopped: A description and/or code explaining the premature termination of the study.
-        :param note: Comments made about the study by the performer, subject or other participants.
-        :param arm: Describes an expected sequence of events for one of the participants of a
-    study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out,
-    follow-up.
-        :param objective: A goal that the study is aiming to achieve in terms of a scientific question
-    to be answered by the analysis of data collected during the study.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Identifiers assigned to this research study by the sponsor or other systems.
+            :param title: A short, descriptive user-friendly label for the study.
+            :param protocol: The set of steps expected to be performed as part of the execution of the
+        study.
+            :param partOf: A larger research study of which this particular study is a component or step.
+            :param status: The current state of the study.
+            :param primaryPurposeType: The type of study based upon the intent of the study's activities. A
+        classification of the intent of the study.
+            :param phase: The stage in the progression of a therapy from initial experimental use in
+        humans in clinical trials to post-market evaluation.
+            :param category: Codes categorizing the type of study such as investigational vs.
+        observational, type of blinding, type of randomization, safety vs. efficacy,
+        etc.
+            :param focus: The medication(s), food(s), therapy(ies), device(s) or other concerns or
+        interventions that the study is seeking to gain more information about.
+            :param condition: The condition that is the focus of the study.  For example, In a study to
+        examine risk factors for Lupus, might have as an inclusion criterion "healthy
+        volunteer", but the target condition code would be a Lupus SNOMED code.
+            :param contact: Contact details to assist a user in learning more about or engaging with the
+        study.
+            :param relatedArtifact: Citations, references and other related documents.
+            :param keyword: Key terms to aid in searching for or filtering the study.
+            :param location: Indicates a country, state or other region where the study is taking place.
+            :param description: A full description of how the study is being conducted.
+            :param enrollment: Reference to a Group that defines the criteria for and quantity of subjects
+        participating in the study.  E.g. " 200 female Europeans between the ages of
+        20 and 45 with early onset diabetes".
+            :param period: Identifies the start date and the expected (or actual, depending on status)
+        end date for the study.
+            :param sponsor: An organization that initiates the investigation and is legally responsible
+        for the study.
+            :param principalInvestigator: A researcher in a study who oversees multiple aspects of the study, such as
+        concept development, protocol writing, protocol submission for IRB approval,
+        participant recruitment, informed consent, data collection, analysis,
+        interpretation and presentation.
+            :param site: A facility in which study activities are conducted.
+            :param reasonStopped: A description and/or code explaining the premature termination of the study.
+            :param note: Comments made about the study by the performer, subject or other participants.
+            :param arm: Describes an expected sequence of events for one of the participants of a
+        study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out,
+        follow-up.
+            :param objective: A goal that the study is aiming to achieve in terms of a scientific question
+        to be answered by the analysis of data collected during the study.
         """
         super().__init__(
             resourceType="ResearchStudy",

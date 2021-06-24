@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,35 +11,80 @@ class ISO21089_2017HealthRecordLifecycleEventsCode(FhirValueSetBase):
     """
     ISO 21089-2017 Health Record Lifecycle Events
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
 
 class ISO21089_2017HealthRecordLifecycleEventsCodeValues:
-    Access_ViewRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("access")
-    AddLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("hold")
-    Amend_Update_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("amend")
-    ArchiveRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("archive")
+    Access_ViewRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "access"
+    )
+    AddLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "hold"
+    )
+    Amend_Update_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "amend"
+    )
+    ArchiveRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "archive"
+    )
     AttestRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("attest")
-    DecryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("decrypt")
-    De_Identify_Anononymize_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("deidentify")
-    DeprecateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("deprecate")
-    Destroy_DeleteRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("destroy")
-    DiscloseRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("disclose")
-    EncryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("encrypt")
-    ExtractRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("extract")
+    DecryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "decrypt"
+    )
+    De_Identify_Anononymize_RecordLifecycleEvent = (
+        ISO21089_2017HealthRecordLifecycleEventsCode("deidentify")
+    )
+    DeprecateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "deprecate"
+    )
+    Destroy_DeleteRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "destroy"
+    )
+    DiscloseRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "disclose"
+    )
+    EncryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "encrypt"
+    )
+    ExtractRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "extract"
+    )
     LinkRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("link")
     MergeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("merge")
-    Originate_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("originate")
-    PseudonymizeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("pseudonymize")
-    Re_activateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("reactivate")
-    Receive_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("receive")
-    Re_identifyRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("reidentify")
-    RemoveLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("unhold")
-    Report_Output_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("report")
-    RestoreRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("restore")
-    Transform_TranslateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("transform")
-    TransmitRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("transmit")
+    Originate_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "originate"
+    )
+    PseudonymizeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "pseudonymize"
+    )
+    Re_activateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "reactivate"
+    )
+    Receive_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "receive"
+    )
+    Re_identifyRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "reidentify"
+    )
+    RemoveLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "unhold"
+    )
+    Report_Output_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "report"
+    )
+    RestoreRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "restore"
+    )
+    Transform_TranslateRecordLifecycleEvent = (
+        ISO21089_2017HealthRecordLifecycleEventsCode("transform")
+    )
+    TransmitRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "transmit"
+    )
     UnlinkRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("unlink")
-    UnmergeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("unmerge")
+    UnmergeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
+        "unmerge"
+    )
     VerifyRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("verify")

@@ -1,13 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -20,27 +16,41 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.care_team_status import CareTeamStatus
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.care_team_category import CareTeamCategoryCode
+    from spark_auto_mapper_fhir.value_sets.care_team_category import (
+        CareTeamCategoryCode,
+    )
+
     # End Import for CodeableConcept for category
     from spark_auto_mapper_fhir.complex_types.string import FhirString
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.complex_types.period import Period
-    from spark_auto_mapper_fhir.backbone_elements.care_team_participant import CareTeamParticipant
+    from spark_auto_mapper_fhir.backbone_elements.care_team_participant import (
+        CareTeamParticipant,
+    )
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import SNOMEDCTClinicalFindingsCode
+    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
+        SNOMEDCTClinicalFindingsCode,
+    )
+
     # End Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for managingOrganization
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -53,6 +63,7 @@ class CareTeam(FhirResourceBase):
     """
     CareTeam
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -60,45 +71,47 @@ class CareTeam(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        status: Optional[CareTeamStatus ] = None,
-        category: Optional[FhirList[CodeableConcept[CareTeamCategoryCode] ]] = None,
-        name: Optional[FhirString ] = None,
-        subject: Optional[Reference [Union[Patient, Group]]] = None,
-        encounter: Optional[Reference [Union[Encounter]]] = None,
-        period: Optional[Period ] = None,
-        participant: Optional[FhirList[CareTeamParticipant ]] = None,
-        reasonCode: Optional[FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode] ]] = None,
-        reasonReference: Optional[FhirList[Reference [Union[Condition]]]] = None,
-        managingOrganization: Optional[FhirList[Reference [Union[Organization]]]] = None,
-        telecom: Optional[FhirList[ContactPoint ]] = None,
-        note: Optional[FhirList[Annotation ]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        status: Optional[CareTeamStatus] = None,
+        category: Optional[FhirList[CodeableConcept[CareTeamCategoryCode]]] = None,
+        name: Optional[FhirString] = None,
+        subject: Optional[Reference[Union[Patient, Group]]] = None,
+        encounter: Optional[Reference[Union[Encounter]]] = None,
+        period: Optional[Period] = None,
+        participant: Optional[FhirList[CareTeamParticipant]] = None,
+        reasonCode: Optional[
+            FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode]]
+        ] = None,
+        reasonReference: Optional[FhirList[Reference[Union[Condition]]]] = None,
+        managingOrganization: Optional[FhirList[Reference[Union[Organization]]]] = None,
+        telecom: Optional[FhirList[ContactPoint]] = None,
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: Business identifiers assigned to this care team by the performer or other
-    systems which remain constant as the resource is updated and propagates from
-    server to server.
-        :param status: Indicates the current state of the care team.
-        :param category: Identifies what kind of team.  This is to support differentiation between
-    multiple co-existing teams, such as care plan team, episode of care team,
-    longitudinal care team.
-        :param name: A label for human use intended to distinguish like teams.  E.g. the "red" vs.
-    "green" trauma teams.
-        :param subject: Identifies the patient or group whose intended care is handled by the team.
-        :param encounter: The Encounter during which this CareTeam was created or to which the creation
-    of this record is tightly associated.
-        :param period: Indicates when the team did (or is intended to) come into effect and end.
-        :param participant: Identifies all people and organizations who are expected to be involved in the
-    care team.
-        :param reasonCode: Describes why the care team exists.
-        :param reasonReference: Condition(s) that this care team addresses.
-        :param managingOrganization: The organization responsible for the care team.
-        :param telecom: A central contact detail for the care team (that applies to all members).
-        :param note: Comments made about the CareTeam.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: Business identifiers assigned to this care team by the performer or other
+        systems which remain constant as the resource is updated and propagates from
+        server to server.
+            :param status: Indicates the current state of the care team.
+            :param category: Identifies what kind of team.  This is to support differentiation between
+        multiple co-existing teams, such as care plan team, episode of care team,
+        longitudinal care team.
+            :param name: A label for human use intended to distinguish like teams.  E.g. the "red" vs.
+        "green" trauma teams.
+            :param subject: Identifies the patient or group whose intended care is handled by the team.
+            :param encounter: The Encounter during which this CareTeam was created or to which the creation
+        of this record is tightly associated.
+            :param period: Indicates when the team did (or is intended to) come into effect and end.
+            :param participant: Identifies all people and organizations who are expected to be involved in the
+        care team.
+            :param reasonCode: Describes why the care team exists.
+            :param reasonReference: Condition(s) that this care team addresses.
+            :param managingOrganization: The organization responsible for the care team.
+            :param telecom: A central contact detail for the care team (that applies to all members).
+            :param note: Comments made about the CareTeam.
         """
         super().__init__(
             resourceType="CareTeam",

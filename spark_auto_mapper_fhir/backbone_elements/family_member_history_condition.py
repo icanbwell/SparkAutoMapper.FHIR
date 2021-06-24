@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -19,13 +13,17 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # outcome (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for outcome
-    from spark_auto_mapper_fhir.value_sets.condition_outcome_codes import ConditionOutcomeCodesCode
+    from spark_auto_mapper_fhir.value_sets.condition_outcome_codes import (
+        ConditionOutcomeCodesCode,
+    )
+
     # End Import for CodeableConcept for outcome
     # contributedToDeath (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import boolean
     # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
@@ -36,29 +34,30 @@ class FamilyMemberHistoryCondition(FhirBackboneElementBase):
     """
     FamilyMemberHistory.Condition
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: CodeableConcept ,
-        outcome: Optional[CodeableConcept[ConditionOutcomeCodesCode] ] = None,
-        contributedToDeath: Optional[FhirBoolean ] = None,
-        note: Optional[FhirList[Annotation ]] = None,
+        code: CodeableConcept,
+        outcome: Optional[CodeableConcept[ConditionOutcomeCodesCode]] = None,
+        contributedToDeath: Optional[FhirBoolean] = None,
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: The actual condition specified. Could be a coded condition (like MI or
-    Diabetes) or a less specific string like 'cancer' depending on how much is
-    known about the condition and the capabilities of the creating system.
-        :param outcome: Indicates what happened following the condition.  If the condition resulted in
-    death, deceased date is captured on the relation.
-        :param contributedToDeath: This condition contributed to the cause of death of the related person. If
-    contributedToDeath is not populated, then it is unknown.
-        :param note: An area where general notes can be placed about this specific condition.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: The actual condition specified. Could be a coded condition (like MI or
+        Diabetes) or a less specific string like 'cancer' depending on how much is
+        known about the condition and the capabilities of the creating system.
+            :param outcome: Indicates what happened following the condition.  If the condition resulted in
+        death, deceased date is captured on the relation.
+            :param contributedToDeath: This condition contributed to the cause of death of the related person. If
+        contributedToDeath is not populated, then it is unknown.
+            :param note: An area where general notes can be placed about this specific condition.
         """
         super().__init__(
             id_=id_,

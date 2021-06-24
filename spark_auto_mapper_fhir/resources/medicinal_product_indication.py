@@ -1,23 +1,21 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_fhir_schemas.r4.resources.medicinalproductindication import MedicinalProductIndicationSchema
+from spark_fhir_schemas.r4.resources.medicinalproductindication import (
+    MedicinalProductIndicationSchema,
+)
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
     from spark_auto_mapper_fhir.resources.medication import Medication
@@ -26,10 +24,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-    from spark_auto_mapper_fhir.backbone_elements.medicinal_product_indication_other_therapy import MedicinalProductIndicationOtherTherapy
+    from spark_auto_mapper_fhir.backbone_elements.medicinal_product_indication_other_therapy import (
+        MedicinalProductIndicationOtherTherapy,
+    )
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for undesirableEffect
-    from spark_auto_mapper_fhir.resources.medicinal_product_undesirable_effect import MedicinalProductUndesirableEffect
+    from spark_auto_mapper_fhir.resources.medicinal_product_undesirable_effect import (
+        MedicinalProductUndesirableEffect,
+    )
     from spark_auto_mapper_fhir.backbone_elements.population import Population
 
 
@@ -39,6 +42,7 @@ class MedicinalProductIndication(FhirResourceBase):
     """
     MedicinalProductIndication
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -46,31 +50,35 @@ class MedicinalProductIndication(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        subject: Optional[FhirList[Reference [Union[MedicinalProduct, Medication]]]] = None,
-        diseaseSymptomProcedure: Optional[CodeableConcept ] = None,
-        diseaseStatus: Optional[CodeableConcept ] = None,
-        comorbidity: Optional[FhirList[CodeableConcept ]] = None,
-        intendedEffect: Optional[CodeableConcept ] = None,
-        duration: Optional[Quantity ] = None,
-        otherTherapy: Optional[FhirList[MedicinalProductIndicationOtherTherapy ]] = None,
-        undesirableEffect: Optional[FhirList[Reference [Union[MedicinalProductUndesirableEffect]]]] = None,
-        population: Optional[FhirList[Population ]] = None,
+        subject: Optional[
+            FhirList[Reference[Union[MedicinalProduct, Medication]]]
+        ] = None,
+        diseaseSymptomProcedure: Optional[CodeableConcept] = None,
+        diseaseStatus: Optional[CodeableConcept] = None,
+        comorbidity: Optional[FhirList[CodeableConcept]] = None,
+        intendedEffect: Optional[CodeableConcept] = None,
+        duration: Optional[Quantity] = None,
+        otherTherapy: Optional[FhirList[MedicinalProductIndicationOtherTherapy]] = None,
+        undesirableEffect: Optional[
+            FhirList[Reference[Union[MedicinalProductUndesirableEffect]]]
+        ] = None,
+        population: Optional[FhirList[Population]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param subject: The medication for which this is an indication.
-        :param diseaseSymptomProcedure: The disease, symptom or procedure that is the indication for treatment.
-        :param diseaseStatus: The status of the disease or symptom for which the indication applies.
-        :param comorbidity: Comorbidity (concurrent condition) or co-infection as part of the indication.
-        :param intendedEffect: The intended effect, aim or strategy to be achieved by the indication.
-        :param duration: Timing or duration information as part of the indication.
-        :param otherTherapy: Information about the use of the medicinal product in relation to other
-    therapies described as part of the indication.
-        :param undesirableEffect: Describe the undesirable effects of the medicinal product.
-        :param population: The population group to which this applies.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param subject: The medication for which this is an indication.
+            :param diseaseSymptomProcedure: The disease, symptom or procedure that is the indication for treatment.
+            :param diseaseStatus: The status of the disease or symptom for which the indication applies.
+            :param comorbidity: Comorbidity (concurrent condition) or co-infection as part of the indication.
+            :param intendedEffect: The intended effect, aim or strategy to be achieved by the indication.
+            :param duration: Timing or duration information as part of the indication.
+            :param otherTherapy: Information about the use of the medicinal product in relation to other
+        therapies described as part of the indication.
+            :param undesirableEffect: Describe the undesirable effects of the medicinal product.
+            :param population: The population group to which this applies.
         """
         super().__init__(
             resourceType="MedicinalProductIndication",
@@ -91,4 +99,6 @@ class MedicinalProductIndication(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
-        return MedicinalProductIndicationSchema.get_schema(include_extension=include_extension)
+        return MedicinalProductIndicationSchema.get_schema(
+            include_extension=include_extension
+        )

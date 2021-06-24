@@ -1,13 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -20,18 +17,27 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategoryCode
+
     # End Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
+
     # End Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import PracticeSettingCodeValueSetCode
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
+        PracticeSettingCodeValueSetCode,
+    )
+
     # End Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for actor
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -50,6 +56,7 @@ class Schedule(FhirResourceBase):
     """
     Schedule
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -57,37 +64,53 @@ class Schedule(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        active: Optional[FhirBoolean ] = None,
-        serviceCategory: Optional[FhirList[CodeableConcept[ServiceCategoryCode] ]] = None,
-        serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode] ]] = None,
-        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCodeValueSetCode] ]] = None,
-        actor: FhirList[Reference [Union[Patient, Practitioner, PractitionerRole, RelatedPerson, Device, HealthcareService, Location]]],
-        planningHorizon: Optional[Period ] = None,
-        comment: Optional[FhirString ] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        active: Optional[FhirBoolean] = None,
+        serviceCategory: Optional[
+            FhirList[CodeableConcept[ServiceCategoryCode]]
+        ] = None,
+        serviceType: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
+        specialty: Optional[
+            FhirList[CodeableConcept[PracticeSettingCodeValueSetCode]]
+        ] = None,
+        actor: FhirList[
+            Reference[
+                Union[
+                    Patient,
+                    Practitioner,
+                    PractitionerRole,
+                    RelatedPerson,
+                    Device,
+                    HealthcareService,
+                    Location,
+                ]
+            ]
+        ],
+        planningHorizon: Optional[Period] = None,
+        comment: Optional[FhirString] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: External Ids for this item.
-        :param active: Whether this schedule record is in active use or should not be used (such as
-    was entered in error).
-        :param serviceCategory: A broad categorization of the service that is to be performed during this
-    appointment.
-        :param serviceType: The specific service that is to be performed during this appointment.
-        :param specialty: The specialty of a practitioner that would be required to perform the service
-    requested in this appointment.
-        :param actor: Slots that reference this schedule resource provide the availability details
-    to these referenced resource(s).
-        :param planningHorizon: The period of time that the slots that reference this Schedule resource cover
-    (even if none exist). These  cover the amount of time that an organization's
-    planning horizon; the interval for which they are currently accepting
-    appointments. This does not define a "template" for planning outside these
-    dates.
-        :param comment: Comments on the availability to describe any extended information. Such as
-    custom constraints on the slots that may be associated.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: External Ids for this item.
+            :param active: Whether this schedule record is in active use or should not be used (such as
+        was entered in error).
+            :param serviceCategory: A broad categorization of the service that is to be performed during this
+        appointment.
+            :param serviceType: The specific service that is to be performed during this appointment.
+            :param specialty: The specialty of a practitioner that would be required to perform the service
+        requested in this appointment.
+            :param actor: Slots that reference this schedule resource provide the availability details
+        to these referenced resource(s).
+            :param planningHorizon: The period of time that the slots that reference this Schedule resource cover
+        (even if none exist). These  cover the amount of time that an organization's
+        planning horizon; the interval for which they are currently accepting
+        appointments. This does not define a "template" for planning outside these
+        dates.
+            :param comment: Comments on the availability to describe any extended information. Such as
+        custom constraints on the slots that may be associated.
         """
         super().__init__(
             resourceType="Schedule",

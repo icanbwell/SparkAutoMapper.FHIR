@@ -1,14 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -18,13 +12,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # status (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
+    pass
     # location (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
+
     # etag (string)
-    from spark_auto_mapper_fhir.complex_types.string import string
     # lastModified (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
     # outcome (ResourceContainer)
 
 
@@ -34,33 +29,34 @@ class BundleResponse(FhirBackboneElementBase):
     """
     Bundle.Response
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        status: FhirString ,
-        location: Optional[uri ] = None,
-        etag: Optional[FhirString ] = None,
-        lastModified: Optional[instant ] = None,
-        outcome: Optional[ResourceContainer ] = None,
+        status: FhirString,
+        location: Optional[uri] = None,
+        etag: Optional[FhirString] = None,
+        lastModified: Optional[instant] = None,
+        outcome: Optional[ResourceContainer] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param status: The status code returned by processing this entry. The status SHALL start with
-    a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description
-    associated with the status code.
-        :param location: The location header created by processing this operation, populated if the
-    operation returns a location.
-        :param etag: The Etag for the resource, if the operation for the entry produced a versioned
-    resource (see [Resource Metadata and Versioning](http.html#versioning) and
-    [Managing Resource Contention](http.html#concurrency)).
-        :param lastModified: The date/time that the resource was modified on the server.
-        :param outcome: An OperationOutcome containing hints and warnings produced as part of
-    processing this entry in a batch or transaction.
+            :param id_: id of resource
+            :param extension: extensions
+            :param status: The status code returned by processing this entry. The status SHALL start with
+        a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description
+        associated with the status code.
+            :param location: The location header created by processing this operation, populated if the
+        operation returns a location.
+            :param etag: The Etag for the resource, if the operation for the entry produced a versioned
+        resource (see [Resource Metadata and Versioning](http.html#versioning) and
+        [Managing Resource Contention](http.html#concurrency)).
+            :param lastModified: The date/time that the resource was modified on the server.
+            :param outcome: An OperationOutcome containing hints and warnings produced as part of
+        processing this entry in a batch or transaction.
         """
         super().__init__(
             id_=id_,

@@ -1,14 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -19,13 +12,21 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # modifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.texture_modifier_codes import TextureModifierCodesCode
+    from spark_auto_mapper_fhir.value_sets.texture_modifier_codes import (
+        TextureModifierCodesCode,
+    )
+
     # End Import for CodeableConcept for modifier
     # foodType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for foodType
-    from spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes import TextureModifiedFoodTypeCodesCode
+    from spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes import (
+        TextureModifiedFoodTypeCodesCode,
+    )
+
     # End Import for CodeableConcept for foodType
 
 
@@ -35,23 +36,24 @@ class NutritionOrderTexture(FhirBackboneElementBase):
     """
     NutritionOrder.Texture
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
         id_: FhirId,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        modifier: Optional[CodeableConcept[TextureModifierCodesCode] ] = None,
-        foodType: Optional[CodeableConcept[TextureModifiedFoodTypeCodesCode] ] = None,
+        modifier: Optional[CodeableConcept[TextureModifierCodesCode]] = None,
+        foodType: Optional[CodeableConcept[TextureModifiedFoodTypeCodesCode]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param modifier: Any texture modifications (for solid foods) that should be made, e.g. easy to
-    chew, chopped, ground, and pureed.
-        :param foodType: The food type(s) (e.g. meats, all foods)  that the texture modification
-    applies to.  This could be all foods types.
+            :param id_: id of resource
+            :param extension: extensions
+            :param modifier: Any texture modifications (for solid foods) that should be made, e.g. easy to
+        chew, chopped, ground, and pureed.
+            :param foodType: The food type(s) (e.g. meats, all foods)  that the texture modification
+        applies to.  This could be all foods types.
         """
         super().__init__(
             id_=id_,

@@ -1,12 +1,7 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -17,13 +12,17 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier_use import IdentifierUse
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for type_
-    from spark_auto_mapper_fhir.value_sets.identifier_type_codes import IdentifierTypeCodesCode
+    from spark_auto_mapper_fhir.value_sets.identifier_type_codes import (
+        IdentifierTypeCodesCode,
+    )
+
     # End Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.complex_types.uri import uri
-    from spark_auto_mapper_fhir.complex_types.string import string
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for assigner
     from spark_auto_mapper_fhir.resources.organization import Organization
 
@@ -34,6 +33,7 @@ class Identifier(FhirComplexTypeBase):
     """
     Identifier
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -41,27 +41,27 @@ class Identifier(FhirComplexTypeBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        use: Optional[IdentifierUse ] = None,
-        type_: Optional[CodeableConcept[IdentifierTypeCodesCode] ] = None,
-        system: Optional[uri ] = None,
-        value: Optional[FhirString ] = None,
-        period: Optional[Period ] = None,
-        assigner: Optional[Reference [Union[Organization]]] = None,
+        use: Optional[IdentifierUse] = None,
+        type_: Optional[CodeableConcept[IdentifierTypeCodesCode]] = None,
+        system: Optional[uri] = None,
+        value: Optional[FhirString] = None,
+        period: Optional[Period] = None,
+        assigner: Optional[Reference[Union[Organization]]] = None,
     ) -> None:
         """
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param use: The purpose of this identifier.
-        :param type_: A coded type for the identifier that can be used to determine which identifier
-    to use for a specific purpose.
-        :param system: Establishes the namespace for the value - that is, a URL that describes a set
-    values that are unique.
-        :param value: The portion of the identifier typically relevant to the user and which is
-    unique within the context of the system.
-        :param period: Time period during which identifier is/was valid for use.
-        :param assigner: Organization that issued/manages the identifier.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param use: The purpose of this identifier.
+            :param type_: A coded type for the identifier that can be used to determine which identifier
+        to use for a specific purpose.
+            :param system: Establishes the namespace for the value - that is, a URL that describes a set
+        values that are unique.
+            :param value: The portion of the identifier typically relevant to the user and which is
+        unique within the context of the system.
+            :param period: Time period during which identifier is/was valid for use.
+            :param assigner: Organization that issued/manages the identifier.
         """
         super().__init__(
             id_=id_,
