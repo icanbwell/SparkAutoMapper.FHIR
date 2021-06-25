@@ -3,7 +3,6 @@ from pathlib import Path
 from typing import OrderedDict, Any, List, Union, Dict, Optional
 import re
 
-# noinspection PyPackageRequirements
 from spark_pipeline_framework.utilities.flattener import flatten
 from xmltodict import parse
 
@@ -416,6 +415,22 @@ class FhirXmlSchemaParser:
                         else c.name
                         for c in fhir_property.reference_target_resources
                     ]
+
+        # set generic type for everything else
+        for fhir_entity in fhir_entities:
+            for property_ in fhir_entity.properties:
+                if (
+                    property_.cleaned_type in ["Reference"]
+                    and not property_.reference_target_resources
+                ):
+                    property_.reference_target_resources = [
+                        SmartName(
+                            name="Resource",
+                            cleaned_name="Resource",
+                            snake_case_name="resource",
+                        )
+                    ]
+                    property_.reference_target_resources_names = ["Resource"]
 
     @staticmethod
     def _generate_classes_for_resource(resource_xsd_file: Path) -> List[FhirEntity]:

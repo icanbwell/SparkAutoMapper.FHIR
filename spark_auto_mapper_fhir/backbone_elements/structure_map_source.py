@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -143,6 +143,9 @@ if TYPE_CHECKING:
     # defaultValueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
+    # Imports for References for defaultValueReference
+    from spark_auto_mapper_fhir.resources.resource import Resource
+
     # defaultValueSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 
@@ -246,7 +249,7 @@ class StructureMapSource(FhirBackboneElementBase):
         defaultValueQuantity: Optional[Quantity] = None,
         defaultValueRange: Optional[Range] = None,
         defaultValueRatio: Optional[Ratio] = None,
-        defaultValueReference: Optional[Reference] = None,
+        defaultValueReference: Optional[Reference[Union[Resource]]] = None,
         defaultValueSampledData: Optional[SampledData] = None,
         defaultValueSignature: Optional[Signature] = None,
         defaultValueTiming: Optional[Timing] = None,

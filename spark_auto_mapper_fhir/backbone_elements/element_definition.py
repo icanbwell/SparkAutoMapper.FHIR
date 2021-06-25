@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -207,6 +207,9 @@ if TYPE_CHECKING:
     # defaultValueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
+    # Imports for References for defaultValueReference
+    from spark_auto_mapper_fhir.resources.resource import Resource
+
     # defaultValueSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 
@@ -359,6 +362,9 @@ if TYPE_CHECKING:
     # fixedReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
+    # Imports for References for fixedReference
+    from spark_auto_mapper_fhir.resources.resource import Resource
+
     # fixedSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 
@@ -510,6 +516,9 @@ if TYPE_CHECKING:
 
     # patternReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # Imports for References for patternReference
+    from spark_auto_mapper_fhir.resources.resource import Resource
 
     # patternSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
@@ -675,7 +684,7 @@ class ElementDefinition(FhirBackboneElementBase):
         defaultValueQuantity: Optional[Quantity] = None,
         defaultValueRange: Optional[Range] = None,
         defaultValueRatio: Optional[Ratio] = None,
-        defaultValueReference: Optional[Reference] = None,
+        defaultValueReference: Optional[Reference[Union[Resource]]] = None,
         defaultValueSampledData: Optional[SampledData] = None,
         defaultValueSignature: Optional[Signature] = None,
         defaultValueTiming: Optional[Timing] = None,
@@ -725,7 +734,7 @@ class ElementDefinition(FhirBackboneElementBase):
         fixedQuantity: Optional[Quantity] = None,
         fixedRange: Optional[Range] = None,
         fixedRatio: Optional[Ratio] = None,
-        fixedReference: Optional[Reference] = None,
+        fixedReference: Optional[Reference[Union[Resource]]] = None,
         fixedSampledData: Optional[SampledData] = None,
         fixedSignature: Optional[Signature] = None,
         fixedTiming: Optional[Timing] = None,
@@ -775,7 +784,7 @@ class ElementDefinition(FhirBackboneElementBase):
         patternQuantity: Optional[Quantity] = None,
         patternRange: Optional[Range] = None,
         patternRatio: Optional[Ratio] = None,
-        patternReference: Optional[Reference] = None,
+        patternReference: Optional[Reference[Union[Resource]]] = None,
         patternSampledData: Optional[SampledData] = None,
         patternSignature: Optional[Signature] = None,
         patternTiming: Optional[Timing] = None,

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -57,6 +57,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.range import Range
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # Imports for References for valueReference
+    from spark_auto_mapper_fhir.resources.resource import Resource
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
     from spark_auto_mapper_fhir.complex_types.signature import Signature
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
@@ -126,7 +129,7 @@ class Extension(FhirComplexTypeBase):
         valueQuantity: Optional[Quantity] = None,
         valueRange: Optional[Range] = None,
         valueRatio: Optional[Ratio] = None,
-        valueReference: Optional[Reference] = None,
+        valueReference: Optional[Reference[Union[Resource]]] = None,
         valueSampledData: Optional[SampledData] = None,
         valueSignature: Optional[Signature] = None,
         valueTiming: Optional[Timing] = None,

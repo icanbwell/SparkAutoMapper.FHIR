@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -132,6 +132,9 @@ if TYPE_CHECKING:
     # valueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
+    # Imports for References for valueReference
+    from spark_auto_mapper_fhir.resources.resource import Resource
+
     # valueSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 
@@ -226,7 +229,7 @@ class TaskOutput(FhirBackboneElementBase):
         valueQuantity: Optional[Quantity] = None,
         valueRange: Optional[Range] = None,
         valueRatio: Optional[Ratio] = None,
-        valueReference: Optional[Reference] = None,
+        valueReference: Optional[Reference[Union[Resource]]] = None,
         valueSampledData: Optional[SampledData] = None,
         valueSignature: Optional[Signature] = None,
         valueTiming: Optional[Timing] = None,
