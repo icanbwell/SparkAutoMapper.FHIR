@@ -4,6 +4,7 @@ from typing import OrderedDict, Any, List, Union, Dict, Optional
 import re
 
 # noinspection PyPackageRequirements
+from spark_pipeline_framework.utilities.flattener import flatten
 from xmltodict import parse
 
 
@@ -84,7 +85,7 @@ class FhirXmlSchemaParser:
         "integer": "FhirInteger",
         "string": "FhirString",
         "DataType": "FhirDataType",
-        "list": "FhirList",
+        "List": "FhirList",
     }
 
     @staticmethod
@@ -384,12 +385,21 @@ class FhirXmlSchemaParser:
             # find the corresponding fhir entity
             if fhir_entity_list:
                 fhir_entity = fhir_entity_list[0]
-                fhir_property_list = [
-                    p
-                    for p in fhir_entity.properties
-                    if p.name == FhirXmlSchemaParser.fix_python_keywords(property_name)
-                ]
-
+                if property_name.endswith("[x]"):  # handle choice properties
+                    property_name_prefix = property_name.split("[")[0]
+                    fhir_property_list = [
+                        p
+                        for p in fhir_entity.properties
+                        if p.name.startswith(property_name_prefix)
+                        and p.type_ == "Reference"
+                    ]
+                else:
+                    fhir_property_list = [
+                        p
+                        for p in fhir_entity.properties
+                        if p.name
+                        == FhirXmlSchemaParser.fix_python_keywords(property_name)
+                    ]
                 if fhir_property_list:
                     fhir_property = fhir_property_list[0]
                     fhir_property.reference_target_resources = [
@@ -401,7 +411,10 @@ class FhirXmlSchemaParser:
                         for c in reference.target_resources
                     ]
                     fhir_property.reference_target_resources_names = [
-                        c.name for c in fhir_property.reference_target_resources
+                        FhirXmlSchemaParser.cleaned_type_mapping[c.name]
+                        if c.name in FhirXmlSchemaParser.cleaned_type_mapping
+                        else c.name
+                        for c in fhir_property.reference_target_resources
                     ]
 
     @staticmethod
@@ -491,19 +504,32 @@ class FhirXmlSchemaParser:
             inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
             if inner_complex_type.get("xs:sequence")
             and inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
-            else inner_complex_type.get("xs:sequence").get("xs:choice").get("xs:element")  # type: ignore
-            if inner_complex_type.get("xs:sequence")
-            and inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
             else []
         )
         if isinstance(properties, OrderedDict):
             properties = [properties]
+        # combine element properties with choice properties
+        choice_properties: List[OrderedDict[str, Any]] = (
+            inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
+            if inner_complex_type.get("xs:sequence")
+            and inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
+            else []
+        )
+        if isinstance(choice_properties, OrderedDict):
+            choice_properties = [choice_properties]
+        choice_properties = flatten([c["xs:element"] for c in choice_properties])
+        properties.extend(choice_properties)
+
         fhir_properties: List[FhirProperty] = []
         property_: OrderedDict[str, Any]
         for property_ in properties:
             property_name: str = str(property_.get("@name"))
-            min_occurs: str = str(property_.get("@minOccurs"))
-            max_occurs: str = str(property_.get("@maxOccurs"))
+            min_occurs: str = str(
+                property_.get("@minOccurs") if "@minOccurs" in property_ else 0
+            )
+            max_occurs: str = str(
+                property_.get("@maxOccurs") if "@maxOccurs" in property_ else 1
+            )
             property_type: str = str(property_.get("@type"))
             property_documentation_dict: Optional[OrderedDict[str, Any]] = (
                 property_.get("xs:annotation").get("xs:documentation")  # type: ignore

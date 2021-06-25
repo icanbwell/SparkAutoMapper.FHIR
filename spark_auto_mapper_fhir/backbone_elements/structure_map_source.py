@@ -1,9 +1,13 @@
 from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -30,6 +34,157 @@ if TYPE_CHECKING:
     # condition (string)
     # check (string)
     # logMessage (string)
+    # defaultValueBase64Binary (base64Binary)
+    from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
+
+    # defaultValueBoolean (boolean)
+    # defaultValueCanonical (canonical)
+    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # defaultValueCode (code)
+    from spark_auto_mapper_fhir.complex_types.code import code
+
+    # defaultValueDate (date)
+    # defaultValueDateTime (dateTime)
+    # defaultValueDecimal (decimal)
+    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # defaultValueId (id)
+    from spark_auto_mapper_fhir.complex_types.id import id
+
+    # defaultValueInstant (instant)
+    from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # defaultValueInteger (integer)
+    # defaultValueMarkdown (markdown)
+    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # defaultValueOid (oid)
+    from spark_auto_mapper_fhir.complex_types.oid import oid
+
+    # defaultValuePositiveInt (positiveInt)
+    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # defaultValueString (string)
+    # defaultValueTime (time)
+    from spark_auto_mapper_fhir.complex_types.time import time
+
+    # defaultValueUnsignedInt (unsignedInt)
+    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # defaultValueUri (uri)
+    from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # defaultValueUrl (url)
+    from spark_auto_mapper_fhir.complex_types.url import url
+
+    # defaultValueUuid (uuid)
+    from spark_auto_mapper_fhir.complex_types.uuid import uuid
+
+    # defaultValueAddress (Address)
+    from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # defaultValueAge (Age)
+    from spark_auto_mapper_fhir.complex_types.age import Age
+
+    # defaultValueAnnotation (Annotation)
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # defaultValueAttachment (Attachment)
+    from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # defaultValueCodeableConcept (CodeableConcept)
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for defaultValueCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for defaultValueCodeableConcept
+    # defaultValueCoding (Coding)
+    from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for defaultValueCoding
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for defaultValueCoding
+    # defaultValueContactPoint (ContactPoint)
+    from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # defaultValueCount (Count)
+    from spark_auto_mapper_fhir.complex_types.count import Count
+
+    # defaultValueDistance (Distance)
+    from spark_auto_mapper_fhir.complex_types.distance import Distance
+
+    # defaultValueDuration (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
+    # defaultValueHumanName (HumanName)
+    from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # defaultValueIdentifier (Identifier)
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # defaultValueMoney (Money)
+    from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # defaultValuePeriod (Period)
+    from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # defaultValueQuantity (Quantity)
+    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # defaultValueRange (Range)
+    from spark_auto_mapper_fhir.complex_types.range import Range
+
+    # defaultValueRatio (Ratio)
+    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+
+    # defaultValueReference (Reference)
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # defaultValueSampledData (SampledData)
+    from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
+
+    # defaultValueSignature (Signature)
+    from spark_auto_mapper_fhir.complex_types.signature import Signature
+
+    # defaultValueTiming (Timing)
+    from spark_auto_mapper_fhir.backbone_elements.timing import Timing
+
+    # defaultValueContactDetail (ContactDetail)
+    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # defaultValueContributor (Contributor)
+    from spark_auto_mapper_fhir.complex_types.contributor import Contributor
+
+    # defaultValueDataRequirement (DataRequirement)
+    from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
+
+    # defaultValueExpression (Expression)
+    from spark_auto_mapper_fhir.complex_types.expression import Expression
+
+    # defaultValueParameterDefinition (ParameterDefinition)
+    from spark_auto_mapper_fhir.complex_types.parameter_definition import (
+        ParameterDefinition,
+    )
+
+    # defaultValueRelatedArtifact (RelatedArtifact)
+    from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
+    # defaultValueTriggerDefinition (TriggerDefinition)
+    from spark_auto_mapper_fhir.complex_types.trigger_definition import (
+        TriggerDefinition,
+    )
+
+    # defaultValueUsageContext (UsageContext)
+    from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # defaultValueDosage (Dosage)
+    from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
+
+    # defaultValueMeta (Meta)
+    from spark_auto_mapper_fhir.complex_types.meta import Meta
 
 
 # This file is auto-generated by generate_classes so do not edit manually
@@ -55,6 +210,56 @@ class StructureMapSource(FhirBackboneElementBase):
         condition: Optional[FhirString] = None,
         check: Optional[FhirString] = None,
         logMessage: Optional[FhirString] = None,
+        defaultValueBase64Binary: Optional[base64Binary] = None,
+        defaultValueBoolean: Optional[FhirBoolean] = None,
+        defaultValueCanonical: Optional[canonical] = None,
+        defaultValueCode: Optional[code] = None,
+        defaultValueDate: Optional[FhirDate] = None,
+        defaultValueDateTime: Optional[FhirDateTime] = None,
+        defaultValueDecimal: Optional[decimal] = None,
+        defaultValueId: Optional[id] = None,
+        defaultValueInstant: Optional[instant] = None,
+        defaultValueInteger: Optional[FhirInteger] = None,
+        defaultValueMarkdown: Optional[markdown] = None,
+        defaultValueOid: Optional[oid] = None,
+        defaultValuePositiveInt: Optional[positiveInt] = None,
+        defaultValueString: Optional[FhirString] = None,
+        defaultValueTime: Optional[time] = None,
+        defaultValueUnsignedInt: Optional[unsignedInt] = None,
+        defaultValueUri: Optional[uri] = None,
+        defaultValueUrl: Optional[url] = None,
+        defaultValueUuid: Optional[uuid] = None,
+        defaultValueAddress: Optional[Address] = None,
+        defaultValueAge: Optional[Age] = None,
+        defaultValueAnnotation: Optional[Annotation] = None,
+        defaultValueAttachment: Optional[Attachment] = None,
+        defaultValueCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        defaultValueCoding: Optional[Coding[GenericTypeCode]] = None,
+        defaultValueContactPoint: Optional[ContactPoint] = None,
+        defaultValueCount: Optional[Count] = None,
+        defaultValueDistance: Optional[Distance] = None,
+        defaultValueDuration: Optional[Duration] = None,
+        defaultValueHumanName: Optional[HumanName] = None,
+        defaultValueIdentifier: Optional[Identifier] = None,
+        defaultValueMoney: Optional[Money] = None,
+        defaultValuePeriod: Optional[Period] = None,
+        defaultValueQuantity: Optional[Quantity] = None,
+        defaultValueRange: Optional[Range] = None,
+        defaultValueRatio: Optional[Ratio] = None,
+        defaultValueReference: Optional[Reference] = None,
+        defaultValueSampledData: Optional[SampledData] = None,
+        defaultValueSignature: Optional[Signature] = None,
+        defaultValueTiming: Optional[Timing] = None,
+        defaultValueContactDetail: Optional[ContactDetail] = None,
+        defaultValueContributor: Optional[Contributor] = None,
+        defaultValueDataRequirement: Optional[DataRequirement] = None,
+        defaultValueExpression: Optional[Expression] = None,
+        defaultValueParameterDefinition: Optional[ParameterDefinition] = None,
+        defaultValueRelatedArtifact: Optional[RelatedArtifact] = None,
+        defaultValueTriggerDefinition: Optional[TriggerDefinition] = None,
+        defaultValueUsageContext: Optional[UsageContext] = None,
+        defaultValueDosage: Optional[Dosage] = None,
+        defaultValueMeta: Optional[Meta] = None,
     ) -> None:
         """
 
@@ -76,6 +281,56 @@ class StructureMapSource(FhirBackboneElementBase):
         instead of completing.
             :param logMessage: A FHIRPath expression which specifies a message to put in the transform log
         when content matching the source rule is found.
+            :param defaultValueBase64Binary: None
+            :param defaultValueBoolean: None
+            :param defaultValueCanonical: None
+            :param defaultValueCode: None
+            :param defaultValueDate: None
+            :param defaultValueDateTime: None
+            :param defaultValueDecimal: None
+            :param defaultValueId: None
+            :param defaultValueInstant: None
+            :param defaultValueInteger: None
+            :param defaultValueMarkdown: None
+            :param defaultValueOid: None
+            :param defaultValuePositiveInt: None
+            :param defaultValueString: None
+            :param defaultValueTime: None
+            :param defaultValueUnsignedInt: None
+            :param defaultValueUri: None
+            :param defaultValueUrl: None
+            :param defaultValueUuid: None
+            :param defaultValueAddress: None
+            :param defaultValueAge: None
+            :param defaultValueAnnotation: None
+            :param defaultValueAttachment: None
+            :param defaultValueCodeableConcept: None
+            :param defaultValueCoding: None
+            :param defaultValueContactPoint: None
+            :param defaultValueCount: None
+            :param defaultValueDistance: None
+            :param defaultValueDuration: None
+            :param defaultValueHumanName: None
+            :param defaultValueIdentifier: None
+            :param defaultValueMoney: None
+            :param defaultValuePeriod: None
+            :param defaultValueQuantity: None
+            :param defaultValueRange: None
+            :param defaultValueRatio: None
+            :param defaultValueReference: None
+            :param defaultValueSampledData: None
+            :param defaultValueSignature: None
+            :param defaultValueTiming: None
+            :param defaultValueContactDetail: None
+            :param defaultValueContributor: None
+            :param defaultValueDataRequirement: None
+            :param defaultValueExpression: None
+            :param defaultValueParameterDefinition: None
+            :param defaultValueRelatedArtifact: None
+            :param defaultValueTriggerDefinition: None
+            :param defaultValueUsageContext: None
+            :param defaultValueDosage: None
+            :param defaultValueMeta: None
         """
         super().__init__(
             id_=id_,
@@ -90,4 +345,54 @@ class StructureMapSource(FhirBackboneElementBase):
             condition=condition,
             check=check,
             logMessage=logMessage,
+            defaultValueBase64Binary=defaultValueBase64Binary,
+            defaultValueBoolean=defaultValueBoolean,
+            defaultValueCanonical=defaultValueCanonical,
+            defaultValueCode=defaultValueCode,
+            defaultValueDate=defaultValueDate,
+            defaultValueDateTime=defaultValueDateTime,
+            defaultValueDecimal=defaultValueDecimal,
+            defaultValueId=defaultValueId,
+            defaultValueInstant=defaultValueInstant,
+            defaultValueInteger=defaultValueInteger,
+            defaultValueMarkdown=defaultValueMarkdown,
+            defaultValueOid=defaultValueOid,
+            defaultValuePositiveInt=defaultValuePositiveInt,
+            defaultValueString=defaultValueString,
+            defaultValueTime=defaultValueTime,
+            defaultValueUnsignedInt=defaultValueUnsignedInt,
+            defaultValueUri=defaultValueUri,
+            defaultValueUrl=defaultValueUrl,
+            defaultValueUuid=defaultValueUuid,
+            defaultValueAddress=defaultValueAddress,
+            defaultValueAge=defaultValueAge,
+            defaultValueAnnotation=defaultValueAnnotation,
+            defaultValueAttachment=defaultValueAttachment,
+            defaultValueCodeableConcept=defaultValueCodeableConcept,
+            defaultValueCoding=defaultValueCoding,
+            defaultValueContactPoint=defaultValueContactPoint,
+            defaultValueCount=defaultValueCount,
+            defaultValueDistance=defaultValueDistance,
+            defaultValueDuration=defaultValueDuration,
+            defaultValueHumanName=defaultValueHumanName,
+            defaultValueIdentifier=defaultValueIdentifier,
+            defaultValueMoney=defaultValueMoney,
+            defaultValuePeriod=defaultValuePeriod,
+            defaultValueQuantity=defaultValueQuantity,
+            defaultValueRange=defaultValueRange,
+            defaultValueRatio=defaultValueRatio,
+            defaultValueReference=defaultValueReference,
+            defaultValueSampledData=defaultValueSampledData,
+            defaultValueSignature=defaultValueSignature,
+            defaultValueTiming=defaultValueTiming,
+            defaultValueContactDetail=defaultValueContactDetail,
+            defaultValueContributor=defaultValueContributor,
+            defaultValueDataRequirement=defaultValueDataRequirement,
+            defaultValueExpression=defaultValueExpression,
+            defaultValueParameterDefinition=defaultValueParameterDefinition,
+            defaultValueRelatedArtifact=defaultValueRelatedArtifact,
+            defaultValueTriggerDefinition=defaultValueTriggerDefinition,
+            defaultValueUsageContext=defaultValueUsageContext,
+            defaultValueDosage=defaultValueDosage,
+            defaultValueMeta=defaultValueMeta,
         )

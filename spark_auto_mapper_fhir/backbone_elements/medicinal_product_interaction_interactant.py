@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -12,6 +12,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     # itemReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # Imports for References for itemReference
+    from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
+    from spark_auto_mapper_fhir.resources.medication import Medication
+    from spark_auto_mapper_fhir.resources.substance import Substance
+    from spark_auto_mapper_fhir.resources.observation_definition import (
+        ObservationDefinition,
+    )
 
     # itemCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -35,8 +43,12 @@ class MedicinalProductInteractionInteractant(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        itemReference: Reference,
-        itemCodeableConcept: CodeableConcept[GenericTypeCode],
+        itemReference: Optional[
+            Reference[
+                Union[MedicinalProduct, Medication, Substance, ObservationDefinition]
+            ]
+        ] = None,
+        itemCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """
 

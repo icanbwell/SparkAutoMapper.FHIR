@@ -36,11 +36,11 @@ class StructureMapParameter(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        valueId: id,
-        valueString: FhirString,
-        valueBoolean: FhirBoolean,
-        valueInteger: FhirInteger,
-        valueDecimal: decimal,
+        valueId: Optional[id] = None,
+        valueString: Optional[FhirString] = None,
+        valueBoolean: Optional[FhirBoolean] = None,
+        valueInteger: Optional[FhirInteger] = None,
+        valueDecimal: Optional[decimal] = None,
     ) -> None:
         """
 

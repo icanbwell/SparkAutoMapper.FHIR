@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -29,6 +30,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.url import url
     from spark_auto_mapper_fhir.complex_types.uuid import uuid
     from spark_auto_mapper_fhir.complex_types.address import Address
+    from spark_auto_mapper_fhir.complex_types.age import Age
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -44,6 +46,9 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for valueCoding
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+    from spark_auto_mapper_fhir.complex_types.count import Count
+    from spark_auto_mapper_fhir.complex_types.distance import Distance
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
     from spark_auto_mapper_fhir.complex_types.money import Money
@@ -85,56 +90,56 @@ class Extension(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        valueBase64Binary: base64Binary,
-        valueBoolean: FhirBoolean,
-        valueCanonical: canonical,
-        valueCode: code,
-        valueDate: FhirDate,
-        valueDateTime: FhirDateTime,
-        valueDecimal: decimal,
-        valueId: id,
-        valueInstant: instant,
-        valueInteger: FhirInteger,
-        valueMarkdown: markdown,
-        valueOid: oid,
-        valuePositiveInt: positiveInt,
-        valueString: FhirString,
-        valueTime: time,
-        valueUnsignedInt: unsignedInt,
-        valueUri: uri,
-        valueUrl: url,
-        valueUuid: uuid,
-        valueAddress: Address,
-        valueAge: Age,
-        valueAnnotation: Annotation,
-        valueAttachment: Attachment,
-        valueCodeableConcept: CodeableConcept[GenericTypeCode],
-        valueCoding: Coding[GenericTypeCode],
-        valueContactPoint: ContactPoint,
-        valueCount: Count,
-        valueDistance: Distance,
-        valueDuration: Duration,
-        valueHumanName: HumanName,
-        valueIdentifier: Identifier,
-        valueMoney: Money,
-        valuePeriod: Period,
-        valueQuantity: Quantity,
-        valueRange: Range,
-        valueRatio: Ratio,
-        valueReference: Reference,
-        valueSampledData: SampledData,
-        valueSignature: Signature,
-        valueTiming: Timing,
-        valueContactDetail: ContactDetail,
-        valueContributor: Contributor,
-        valueDataRequirement: DataRequirement,
-        valueExpression: Expression,
-        valueParameterDefinition: ParameterDefinition,
-        valueRelatedArtifact: RelatedArtifact,
-        valueTriggerDefinition: TriggerDefinition,
-        valueUsageContext: UsageContext,
-        valueDosage: Dosage,
-        valueMeta: Meta,
+        valueBase64Binary: Optional[base64Binary] = None,
+        valueBoolean: Optional[FhirBoolean] = None,
+        valueCanonical: Optional[canonical] = None,
+        valueCode: Optional[code] = None,
+        valueDate: Optional[FhirDate] = None,
+        valueDateTime: Optional[FhirDateTime] = None,
+        valueDecimal: Optional[decimal] = None,
+        valueId: Optional[id] = None,
+        valueInstant: Optional[instant] = None,
+        valueInteger: Optional[FhirInteger] = None,
+        valueMarkdown: Optional[markdown] = None,
+        valueOid: Optional[oid] = None,
+        valuePositiveInt: Optional[positiveInt] = None,
+        valueString: Optional[FhirString] = None,
+        valueTime: Optional[time] = None,
+        valueUnsignedInt: Optional[unsignedInt] = None,
+        valueUri: Optional[uri] = None,
+        valueUrl: Optional[url] = None,
+        valueUuid: Optional[uuid] = None,
+        valueAddress: Optional[Address] = None,
+        valueAge: Optional[Age] = None,
+        valueAnnotation: Optional[Annotation] = None,
+        valueAttachment: Optional[Attachment] = None,
+        valueCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        valueCoding: Optional[Coding[GenericTypeCode]] = None,
+        valueContactPoint: Optional[ContactPoint] = None,
+        valueCount: Optional[Count] = None,
+        valueDistance: Optional[Distance] = None,
+        valueDuration: Optional[Duration] = None,
+        valueHumanName: Optional[HumanName] = None,
+        valueIdentifier: Optional[Identifier] = None,
+        valueMoney: Optional[Money] = None,
+        valuePeriod: Optional[Period] = None,
+        valueQuantity: Optional[Quantity] = None,
+        valueRange: Optional[Range] = None,
+        valueRatio: Optional[Ratio] = None,
+        valueReference: Optional[Reference] = None,
+        valueSampledData: Optional[SampledData] = None,
+        valueSignature: Optional[Signature] = None,
+        valueTiming: Optional[Timing] = None,
+        valueContactDetail: Optional[ContactDetail] = None,
+        valueContributor: Optional[Contributor] = None,
+        valueDataRequirement: Optional[DataRequirement] = None,
+        valueExpression: Optional[Expression] = None,
+        valueParameterDefinition: Optional[ParameterDefinition] = None,
+        valueRelatedArtifact: Optional[RelatedArtifact] = None,
+        valueTriggerDefinition: Optional[TriggerDefinition] = None,
+        valueUsageContext: Optional[UsageContext] = None,
+        valueDosage: Optional[Dosage] = None,
+        valueMeta: Optional[Meta] = None,
     ) -> None:
         """
 

@@ -8,6 +8,9 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
+
 {% if fhir_entity.cleaned_name != "Meta" %}
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 {% endif %}
@@ -28,8 +31,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
     {% elif property.fhir_type == "Element" %}
     from spark_auto_mapper_fhir.complex_types.{{ property.type_snake_case }} import {{ property.type_ | replace(".","")}}
-{#    from spark_auto_mapper_fhir.valuesets.{{ property.type_snake_case }} import {{ property.type_ }}#}
-{#    from spark_auto_mapper_fhir.fhir_types.{{ property.type_snake_case }} import {{ property.type_ }}#}
+    {%  else %}
+    from spark_auto_mapper_fhir.complex_types.{{ property.type_snake_case }} import {{ property.cleaned_type | replace(".","")}}
     {% endif %}
     {% if property.reference_target_resources %}
     # Imports for References for {{ property.name }}

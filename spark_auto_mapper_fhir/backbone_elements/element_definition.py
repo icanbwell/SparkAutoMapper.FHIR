@@ -2,9 +2,12 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -95,6 +98,504 @@ if TYPE_CHECKING:
         ElementDefinitionMapping,
     )
 
+    # defaultValueBase64Binary (base64Binary)
+    from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
+
+    # defaultValueBoolean (boolean)
+    # defaultValueCanonical (canonical)
+    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # defaultValueCode (code)
+    from spark_auto_mapper_fhir.complex_types.code import code
+
+    # defaultValueDate (date)
+    # defaultValueDateTime (dateTime)
+    # defaultValueDecimal (decimal)
+    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # defaultValueId (id)
+    from spark_auto_mapper_fhir.complex_types.id import id
+
+    # defaultValueInstant (instant)
+    from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # defaultValueInteger (integer)
+    # defaultValueMarkdown (markdown)
+    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # defaultValueOid (oid)
+    from spark_auto_mapper_fhir.complex_types.oid import oid
+
+    # defaultValuePositiveInt (positiveInt)
+    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # defaultValueString (string)
+    # defaultValueTime (time)
+    from spark_auto_mapper_fhir.complex_types.time import time
+
+    # defaultValueUnsignedInt (unsignedInt)
+    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # defaultValueUri (uri)
+    from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # defaultValueUrl (url)
+    from spark_auto_mapper_fhir.complex_types.url import url
+
+    # defaultValueUuid (uuid)
+    from spark_auto_mapper_fhir.complex_types.uuid import uuid
+
+    # defaultValueAddress (Address)
+    from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # defaultValueAge (Age)
+    from spark_auto_mapper_fhir.complex_types.age import Age
+
+    # defaultValueAnnotation (Annotation)
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # defaultValueAttachment (Attachment)
+    from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # defaultValueCodeableConcept (CodeableConcept)
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for defaultValueCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for defaultValueCodeableConcept
+    # defaultValueCoding (Coding)
+    from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for defaultValueCoding
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for defaultValueCoding
+    # defaultValueContactPoint (ContactPoint)
+    from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # defaultValueCount (Count)
+    from spark_auto_mapper_fhir.complex_types.count import Count
+
+    # defaultValueDistance (Distance)
+    from spark_auto_mapper_fhir.complex_types.distance import Distance
+
+    # defaultValueDuration (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
+    # defaultValueHumanName (HumanName)
+    from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # defaultValueIdentifier (Identifier)
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # defaultValueMoney (Money)
+    from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # defaultValuePeriod (Period)
+    from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # defaultValueQuantity (Quantity)
+    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # defaultValueRange (Range)
+    from spark_auto_mapper_fhir.complex_types.range import Range
+
+    # defaultValueRatio (Ratio)
+    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+
+    # defaultValueReference (Reference)
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # defaultValueSampledData (SampledData)
+    from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
+
+    # defaultValueSignature (Signature)
+    from spark_auto_mapper_fhir.complex_types.signature import Signature
+
+    # defaultValueTiming (Timing)
+    from spark_auto_mapper_fhir.backbone_elements.timing import Timing
+
+    # defaultValueContactDetail (ContactDetail)
+    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # defaultValueContributor (Contributor)
+    from spark_auto_mapper_fhir.complex_types.contributor import Contributor
+
+    # defaultValueDataRequirement (DataRequirement)
+    from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
+
+    # defaultValueExpression (Expression)
+    from spark_auto_mapper_fhir.complex_types.expression import Expression
+
+    # defaultValueParameterDefinition (ParameterDefinition)
+    from spark_auto_mapper_fhir.complex_types.parameter_definition import (
+        ParameterDefinition,
+    )
+
+    # defaultValueRelatedArtifact (RelatedArtifact)
+    from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
+    # defaultValueTriggerDefinition (TriggerDefinition)
+    from spark_auto_mapper_fhir.complex_types.trigger_definition import (
+        TriggerDefinition,
+    )
+
+    # defaultValueUsageContext (UsageContext)
+    from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # defaultValueDosage (Dosage)
+    from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
+
+    # defaultValueMeta (Meta)
+    from spark_auto_mapper_fhir.complex_types.meta import Meta
+
+    # fixedBase64Binary (base64Binary)
+    from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
+
+    # fixedBoolean (boolean)
+    # fixedCanonical (canonical)
+    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # fixedCode (code)
+    from spark_auto_mapper_fhir.complex_types.code import code
+
+    # fixedDate (date)
+    # fixedDateTime (dateTime)
+    # fixedDecimal (decimal)
+    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # fixedId (id)
+    from spark_auto_mapper_fhir.complex_types.id import id
+
+    # fixedInstant (instant)
+    from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # fixedInteger (integer)
+    # fixedMarkdown (markdown)
+    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # fixedOid (oid)
+    from spark_auto_mapper_fhir.complex_types.oid import oid
+
+    # fixedPositiveInt (positiveInt)
+    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # fixedString (string)
+    # fixedTime (time)
+    from spark_auto_mapper_fhir.complex_types.time import time
+
+    # fixedUnsignedInt (unsignedInt)
+    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # fixedUri (uri)
+    from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # fixedUrl (url)
+    from spark_auto_mapper_fhir.complex_types.url import url
+
+    # fixedUuid (uuid)
+    from spark_auto_mapper_fhir.complex_types.uuid import uuid
+
+    # fixedAddress (Address)
+    from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # fixedAge (Age)
+    from spark_auto_mapper_fhir.complex_types.age import Age
+
+    # fixedAnnotation (Annotation)
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # fixedAttachment (Attachment)
+    from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # fixedCodeableConcept (CodeableConcept)
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for fixedCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for fixedCodeableConcept
+    # fixedCoding (Coding)
+    from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for fixedCoding
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for fixedCoding
+    # fixedContactPoint (ContactPoint)
+    from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # fixedCount (Count)
+    from spark_auto_mapper_fhir.complex_types.count import Count
+
+    # fixedDistance (Distance)
+    from spark_auto_mapper_fhir.complex_types.distance import Distance
+
+    # fixedDuration (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
+    # fixedHumanName (HumanName)
+    from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # fixedIdentifier (Identifier)
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # fixedMoney (Money)
+    from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # fixedPeriod (Period)
+    from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # fixedQuantity (Quantity)
+    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # fixedRange (Range)
+    from spark_auto_mapper_fhir.complex_types.range import Range
+
+    # fixedRatio (Ratio)
+    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+
+    # fixedReference (Reference)
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # fixedSampledData (SampledData)
+    from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
+
+    # fixedSignature (Signature)
+    from spark_auto_mapper_fhir.complex_types.signature import Signature
+
+    # fixedTiming (Timing)
+    from spark_auto_mapper_fhir.backbone_elements.timing import Timing
+
+    # fixedContactDetail (ContactDetail)
+    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # fixedContributor (Contributor)
+    from spark_auto_mapper_fhir.complex_types.contributor import Contributor
+
+    # fixedDataRequirement (DataRequirement)
+    from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
+
+    # fixedExpression (Expression)
+    from spark_auto_mapper_fhir.complex_types.expression import Expression
+
+    # fixedParameterDefinition (ParameterDefinition)
+    from spark_auto_mapper_fhir.complex_types.parameter_definition import (
+        ParameterDefinition,
+    )
+
+    # fixedRelatedArtifact (RelatedArtifact)
+    from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
+    # fixedTriggerDefinition (TriggerDefinition)
+    from spark_auto_mapper_fhir.complex_types.trigger_definition import (
+        TriggerDefinition,
+    )
+
+    # fixedUsageContext (UsageContext)
+    from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # fixedDosage (Dosage)
+    from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
+
+    # fixedMeta (Meta)
+    from spark_auto_mapper_fhir.complex_types.meta import Meta
+
+    # patternBase64Binary (base64Binary)
+    from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
+
+    # patternBoolean (boolean)
+    # patternCanonical (canonical)
+    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # patternCode (code)
+    from spark_auto_mapper_fhir.complex_types.code import code
+
+    # patternDate (date)
+    # patternDateTime (dateTime)
+    # patternDecimal (decimal)
+    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # patternId (id)
+    from spark_auto_mapper_fhir.complex_types.id import id
+
+    # patternInstant (instant)
+    from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # patternInteger (integer)
+    # patternMarkdown (markdown)
+    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # patternOid (oid)
+    from spark_auto_mapper_fhir.complex_types.oid import oid
+
+    # patternPositiveInt (positiveInt)
+    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # patternString (string)
+    # patternTime (time)
+    from spark_auto_mapper_fhir.complex_types.time import time
+
+    # patternUnsignedInt (unsignedInt)
+    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # patternUri (uri)
+    from spark_auto_mapper_fhir.complex_types.uri import uri
+
+    # patternUrl (url)
+    from spark_auto_mapper_fhir.complex_types.url import url
+
+    # patternUuid (uuid)
+    from spark_auto_mapper_fhir.complex_types.uuid import uuid
+
+    # patternAddress (Address)
+    from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # patternAge (Age)
+    from spark_auto_mapper_fhir.complex_types.age import Age
+
+    # patternAnnotation (Annotation)
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # patternAttachment (Attachment)
+    from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # patternCodeableConcept (CodeableConcept)
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for patternCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for patternCodeableConcept
+    # patternCoding (Coding)
+    from spark_auto_mapper_fhir.complex_types.coding import Coding
+
+    # Import for CodeableConcept for patternCoding
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for patternCoding
+    # patternContactPoint (ContactPoint)
+    from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # patternCount (Count)
+    from spark_auto_mapper_fhir.complex_types.count import Count
+
+    # patternDistance (Distance)
+    from spark_auto_mapper_fhir.complex_types.distance import Distance
+
+    # patternDuration (Duration)
+    from spark_auto_mapper_fhir.complex_types.duration import Duration
+
+    # patternHumanName (HumanName)
+    from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # patternIdentifier (Identifier)
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # patternMoney (Money)
+    from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # patternPeriod (Period)
+    from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # patternQuantity (Quantity)
+    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # patternRange (Range)
+    from spark_auto_mapper_fhir.complex_types.range import Range
+
+    # patternRatio (Ratio)
+    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+
+    # patternReference (Reference)
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # patternSampledData (SampledData)
+    from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
+
+    # patternSignature (Signature)
+    from spark_auto_mapper_fhir.complex_types.signature import Signature
+
+    # patternTiming (Timing)
+    from spark_auto_mapper_fhir.backbone_elements.timing import Timing
+
+    # patternContactDetail (ContactDetail)
+    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # patternContributor (Contributor)
+    from spark_auto_mapper_fhir.complex_types.contributor import Contributor
+
+    # patternDataRequirement (DataRequirement)
+    from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
+
+    # patternExpression (Expression)
+    from spark_auto_mapper_fhir.complex_types.expression import Expression
+
+    # patternParameterDefinition (ParameterDefinition)
+    from spark_auto_mapper_fhir.complex_types.parameter_definition import (
+        ParameterDefinition,
+    )
+
+    # patternRelatedArtifact (RelatedArtifact)
+    from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
+    # patternTriggerDefinition (TriggerDefinition)
+    from spark_auto_mapper_fhir.complex_types.trigger_definition import (
+        TriggerDefinition,
+    )
+
+    # patternUsageContext (UsageContext)
+    from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # patternDosage (Dosage)
+    from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
+
+    # patternMeta (Meta)
+    from spark_auto_mapper_fhir.complex_types.meta import Meta
+
+    # minValueDate (date)
+    # minValueDateTime (dateTime)
+    # minValueInstant (instant)
+    from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # minValueTime (time)
+    from spark_auto_mapper_fhir.complex_types.time import time
+
+    # minValueDecimal (decimal)
+    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # minValueInteger (integer)
+    # minValuePositiveInt (positiveInt)
+    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # minValueUnsignedInt (unsignedInt)
+    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # minValueQuantity (Quantity)
+    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # maxValueDate (date)
+    # maxValueDateTime (dateTime)
+    # maxValueInstant (instant)
+    from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # maxValueTime (time)
+    from spark_auto_mapper_fhir.complex_types.time import time
+
+    # maxValueDecimal (decimal)
+    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # maxValueInteger (integer)
+    # maxValuePositiveInt (positiveInt)
+    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # maxValueUnsignedInt (unsignedInt)
+    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # maxValueQuantity (Quantity)
+    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
 
 # This file is auto-generated by generate_classes so do not edit manually
 # noinspection PyPep8Naming
@@ -138,6 +639,174 @@ class ElementDefinition(FhirBackboneElementBase):
         isSummary: Optional[FhirBoolean] = None,
         binding: Optional[ElementDefinitionBinding] = None,
         mapping: Optional[FhirList[ElementDefinitionMapping]] = None,
+        defaultValueBase64Binary: Optional[base64Binary] = None,
+        defaultValueBoolean: Optional[FhirBoolean] = None,
+        defaultValueCanonical: Optional[canonical] = None,
+        defaultValueCode: Optional[code] = None,
+        defaultValueDate: Optional[FhirDate] = None,
+        defaultValueDateTime: Optional[FhirDateTime] = None,
+        defaultValueDecimal: Optional[decimal] = None,
+        defaultValueId: Optional[id] = None,
+        defaultValueInstant: Optional[instant] = None,
+        defaultValueInteger: Optional[FhirInteger] = None,
+        defaultValueMarkdown: Optional[markdown] = None,
+        defaultValueOid: Optional[oid] = None,
+        defaultValuePositiveInt: Optional[positiveInt] = None,
+        defaultValueString: Optional[FhirString] = None,
+        defaultValueTime: Optional[time] = None,
+        defaultValueUnsignedInt: Optional[unsignedInt] = None,
+        defaultValueUri: Optional[uri] = None,
+        defaultValueUrl: Optional[url] = None,
+        defaultValueUuid: Optional[uuid] = None,
+        defaultValueAddress: Optional[Address] = None,
+        defaultValueAge: Optional[Age] = None,
+        defaultValueAnnotation: Optional[Annotation] = None,
+        defaultValueAttachment: Optional[Attachment] = None,
+        defaultValueCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        defaultValueCoding: Optional[Coding[GenericTypeCode]] = None,
+        defaultValueContactPoint: Optional[ContactPoint] = None,
+        defaultValueCount: Optional[Count] = None,
+        defaultValueDistance: Optional[Distance] = None,
+        defaultValueDuration: Optional[Duration] = None,
+        defaultValueHumanName: Optional[HumanName] = None,
+        defaultValueIdentifier: Optional[Identifier] = None,
+        defaultValueMoney: Optional[Money] = None,
+        defaultValuePeriod: Optional[Period] = None,
+        defaultValueQuantity: Optional[Quantity] = None,
+        defaultValueRange: Optional[Range] = None,
+        defaultValueRatio: Optional[Ratio] = None,
+        defaultValueReference: Optional[Reference] = None,
+        defaultValueSampledData: Optional[SampledData] = None,
+        defaultValueSignature: Optional[Signature] = None,
+        defaultValueTiming: Optional[Timing] = None,
+        defaultValueContactDetail: Optional[ContactDetail] = None,
+        defaultValueContributor: Optional[Contributor] = None,
+        defaultValueDataRequirement: Optional[DataRequirement] = None,
+        defaultValueExpression: Optional[Expression] = None,
+        defaultValueParameterDefinition: Optional[ParameterDefinition] = None,
+        defaultValueRelatedArtifact: Optional[RelatedArtifact] = None,
+        defaultValueTriggerDefinition: Optional[TriggerDefinition] = None,
+        defaultValueUsageContext: Optional[UsageContext] = None,
+        defaultValueDosage: Optional[Dosage] = None,
+        defaultValueMeta: Optional[Meta] = None,
+        fixedBase64Binary: Optional[base64Binary] = None,
+        fixedBoolean: Optional[FhirBoolean] = None,
+        fixedCanonical: Optional[canonical] = None,
+        fixedCode: Optional[code] = None,
+        fixedDate: Optional[FhirDate] = None,
+        fixedDateTime: Optional[FhirDateTime] = None,
+        fixedDecimal: Optional[decimal] = None,
+        fixedId: Optional[id] = None,
+        fixedInstant: Optional[instant] = None,
+        fixedInteger: Optional[FhirInteger] = None,
+        fixedMarkdown: Optional[markdown] = None,
+        fixedOid: Optional[oid] = None,
+        fixedPositiveInt: Optional[positiveInt] = None,
+        fixedString: Optional[FhirString] = None,
+        fixedTime: Optional[time] = None,
+        fixedUnsignedInt: Optional[unsignedInt] = None,
+        fixedUri: Optional[uri] = None,
+        fixedUrl: Optional[url] = None,
+        fixedUuid: Optional[uuid] = None,
+        fixedAddress: Optional[Address] = None,
+        fixedAge: Optional[Age] = None,
+        fixedAnnotation: Optional[Annotation] = None,
+        fixedAttachment: Optional[Attachment] = None,
+        fixedCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        fixedCoding: Optional[Coding[GenericTypeCode]] = None,
+        fixedContactPoint: Optional[ContactPoint] = None,
+        fixedCount: Optional[Count] = None,
+        fixedDistance: Optional[Distance] = None,
+        fixedDuration: Optional[Duration] = None,
+        fixedHumanName: Optional[HumanName] = None,
+        fixedIdentifier: Optional[Identifier] = None,
+        fixedMoney: Optional[Money] = None,
+        fixedPeriod: Optional[Period] = None,
+        fixedQuantity: Optional[Quantity] = None,
+        fixedRange: Optional[Range] = None,
+        fixedRatio: Optional[Ratio] = None,
+        fixedReference: Optional[Reference] = None,
+        fixedSampledData: Optional[SampledData] = None,
+        fixedSignature: Optional[Signature] = None,
+        fixedTiming: Optional[Timing] = None,
+        fixedContactDetail: Optional[ContactDetail] = None,
+        fixedContributor: Optional[Contributor] = None,
+        fixedDataRequirement: Optional[DataRequirement] = None,
+        fixedExpression: Optional[Expression] = None,
+        fixedParameterDefinition: Optional[ParameterDefinition] = None,
+        fixedRelatedArtifact: Optional[RelatedArtifact] = None,
+        fixedTriggerDefinition: Optional[TriggerDefinition] = None,
+        fixedUsageContext: Optional[UsageContext] = None,
+        fixedDosage: Optional[Dosage] = None,
+        fixedMeta: Optional[Meta] = None,
+        patternBase64Binary: Optional[base64Binary] = None,
+        patternBoolean: Optional[FhirBoolean] = None,
+        patternCanonical: Optional[canonical] = None,
+        patternCode: Optional[code] = None,
+        patternDate: Optional[FhirDate] = None,
+        patternDateTime: Optional[FhirDateTime] = None,
+        patternDecimal: Optional[decimal] = None,
+        patternId: Optional[id] = None,
+        patternInstant: Optional[instant] = None,
+        patternInteger: Optional[FhirInteger] = None,
+        patternMarkdown: Optional[markdown] = None,
+        patternOid: Optional[oid] = None,
+        patternPositiveInt: Optional[positiveInt] = None,
+        patternString: Optional[FhirString] = None,
+        patternTime: Optional[time] = None,
+        patternUnsignedInt: Optional[unsignedInt] = None,
+        patternUri: Optional[uri] = None,
+        patternUrl: Optional[url] = None,
+        patternUuid: Optional[uuid] = None,
+        patternAddress: Optional[Address] = None,
+        patternAge: Optional[Age] = None,
+        patternAnnotation: Optional[Annotation] = None,
+        patternAttachment: Optional[Attachment] = None,
+        patternCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        patternCoding: Optional[Coding[GenericTypeCode]] = None,
+        patternContactPoint: Optional[ContactPoint] = None,
+        patternCount: Optional[Count] = None,
+        patternDistance: Optional[Distance] = None,
+        patternDuration: Optional[Duration] = None,
+        patternHumanName: Optional[HumanName] = None,
+        patternIdentifier: Optional[Identifier] = None,
+        patternMoney: Optional[Money] = None,
+        patternPeriod: Optional[Period] = None,
+        patternQuantity: Optional[Quantity] = None,
+        patternRange: Optional[Range] = None,
+        patternRatio: Optional[Ratio] = None,
+        patternReference: Optional[Reference] = None,
+        patternSampledData: Optional[SampledData] = None,
+        patternSignature: Optional[Signature] = None,
+        patternTiming: Optional[Timing] = None,
+        patternContactDetail: Optional[ContactDetail] = None,
+        patternContributor: Optional[Contributor] = None,
+        patternDataRequirement: Optional[DataRequirement] = None,
+        patternExpression: Optional[Expression] = None,
+        patternParameterDefinition: Optional[ParameterDefinition] = None,
+        patternRelatedArtifact: Optional[RelatedArtifact] = None,
+        patternTriggerDefinition: Optional[TriggerDefinition] = None,
+        patternUsageContext: Optional[UsageContext] = None,
+        patternDosage: Optional[Dosage] = None,
+        patternMeta: Optional[Meta] = None,
+        minValueDate: Optional[FhirDate] = None,
+        minValueDateTime: Optional[FhirDateTime] = None,
+        minValueInstant: Optional[instant] = None,
+        minValueTime: Optional[time] = None,
+        minValueDecimal: Optional[decimal] = None,
+        minValueInteger: Optional[FhirInteger] = None,
+        minValuePositiveInt: Optional[positiveInt] = None,
+        minValueUnsignedInt: Optional[unsignedInt] = None,
+        minValueQuantity: Optional[Quantity] = None,
+        maxValueDate: Optional[FhirDate] = None,
+        maxValueDateTime: Optional[FhirDateTime] = None,
+        maxValueInstant: Optional[instant] = None,
+        maxValueTime: Optional[time] = None,
+        maxValueDecimal: Optional[decimal] = None,
+        maxValueInteger: Optional[FhirInteger] = None,
+        maxValuePositiveInt: Optional[positiveInt] = None,
+        maxValueUnsignedInt: Optional[unsignedInt] = None,
+        maxValueQuantity: Optional[Quantity] = None,
     ) -> None:
         """
 
@@ -230,6 +899,174 @@ class ElementDefinition(FhirBackboneElementBase):
         Quantity), or the data types (string, uri).
             :param mapping: Identifies a concept from an external specification that roughly corresponds
         to this element.
+            :param defaultValueBase64Binary: None
+            :param defaultValueBoolean: None
+            :param defaultValueCanonical: None
+            :param defaultValueCode: None
+            :param defaultValueDate: None
+            :param defaultValueDateTime: None
+            :param defaultValueDecimal: None
+            :param defaultValueId: None
+            :param defaultValueInstant: None
+            :param defaultValueInteger: None
+            :param defaultValueMarkdown: None
+            :param defaultValueOid: None
+            :param defaultValuePositiveInt: None
+            :param defaultValueString: None
+            :param defaultValueTime: None
+            :param defaultValueUnsignedInt: None
+            :param defaultValueUri: None
+            :param defaultValueUrl: None
+            :param defaultValueUuid: None
+            :param defaultValueAddress: None
+            :param defaultValueAge: None
+            :param defaultValueAnnotation: None
+            :param defaultValueAttachment: None
+            :param defaultValueCodeableConcept: None
+            :param defaultValueCoding: None
+            :param defaultValueContactPoint: None
+            :param defaultValueCount: None
+            :param defaultValueDistance: None
+            :param defaultValueDuration: None
+            :param defaultValueHumanName: None
+            :param defaultValueIdentifier: None
+            :param defaultValueMoney: None
+            :param defaultValuePeriod: None
+            :param defaultValueQuantity: None
+            :param defaultValueRange: None
+            :param defaultValueRatio: None
+            :param defaultValueReference: None
+            :param defaultValueSampledData: None
+            :param defaultValueSignature: None
+            :param defaultValueTiming: None
+            :param defaultValueContactDetail: None
+            :param defaultValueContributor: None
+            :param defaultValueDataRequirement: None
+            :param defaultValueExpression: None
+            :param defaultValueParameterDefinition: None
+            :param defaultValueRelatedArtifact: None
+            :param defaultValueTriggerDefinition: None
+            :param defaultValueUsageContext: None
+            :param defaultValueDosage: None
+            :param defaultValueMeta: None
+            :param fixedBase64Binary: None
+            :param fixedBoolean: None
+            :param fixedCanonical: None
+            :param fixedCode: None
+            :param fixedDate: None
+            :param fixedDateTime: None
+            :param fixedDecimal: None
+            :param fixedId: None
+            :param fixedInstant: None
+            :param fixedInteger: None
+            :param fixedMarkdown: None
+            :param fixedOid: None
+            :param fixedPositiveInt: None
+            :param fixedString: None
+            :param fixedTime: None
+            :param fixedUnsignedInt: None
+            :param fixedUri: None
+            :param fixedUrl: None
+            :param fixedUuid: None
+            :param fixedAddress: None
+            :param fixedAge: None
+            :param fixedAnnotation: None
+            :param fixedAttachment: None
+            :param fixedCodeableConcept: None
+            :param fixedCoding: None
+            :param fixedContactPoint: None
+            :param fixedCount: None
+            :param fixedDistance: None
+            :param fixedDuration: None
+            :param fixedHumanName: None
+            :param fixedIdentifier: None
+            :param fixedMoney: None
+            :param fixedPeriod: None
+            :param fixedQuantity: None
+            :param fixedRange: None
+            :param fixedRatio: None
+            :param fixedReference: None
+            :param fixedSampledData: None
+            :param fixedSignature: None
+            :param fixedTiming: None
+            :param fixedContactDetail: None
+            :param fixedContributor: None
+            :param fixedDataRequirement: None
+            :param fixedExpression: None
+            :param fixedParameterDefinition: None
+            :param fixedRelatedArtifact: None
+            :param fixedTriggerDefinition: None
+            :param fixedUsageContext: None
+            :param fixedDosage: None
+            :param fixedMeta: None
+            :param patternBase64Binary: None
+            :param patternBoolean: None
+            :param patternCanonical: None
+            :param patternCode: None
+            :param patternDate: None
+            :param patternDateTime: None
+            :param patternDecimal: None
+            :param patternId: None
+            :param patternInstant: None
+            :param patternInteger: None
+            :param patternMarkdown: None
+            :param patternOid: None
+            :param patternPositiveInt: None
+            :param patternString: None
+            :param patternTime: None
+            :param patternUnsignedInt: None
+            :param patternUri: None
+            :param patternUrl: None
+            :param patternUuid: None
+            :param patternAddress: None
+            :param patternAge: None
+            :param patternAnnotation: None
+            :param patternAttachment: None
+            :param patternCodeableConcept: None
+            :param patternCoding: None
+            :param patternContactPoint: None
+            :param patternCount: None
+            :param patternDistance: None
+            :param patternDuration: None
+            :param patternHumanName: None
+            :param patternIdentifier: None
+            :param patternMoney: None
+            :param patternPeriod: None
+            :param patternQuantity: None
+            :param patternRange: None
+            :param patternRatio: None
+            :param patternReference: None
+            :param patternSampledData: None
+            :param patternSignature: None
+            :param patternTiming: None
+            :param patternContactDetail: None
+            :param patternContributor: None
+            :param patternDataRequirement: None
+            :param patternExpression: None
+            :param patternParameterDefinition: None
+            :param patternRelatedArtifact: None
+            :param patternTriggerDefinition: None
+            :param patternUsageContext: None
+            :param patternDosage: None
+            :param patternMeta: None
+            :param minValueDate: None
+            :param minValueDateTime: None
+            :param minValueInstant: None
+            :param minValueTime: None
+            :param minValueDecimal: None
+            :param minValueInteger: None
+            :param minValuePositiveInt: None
+            :param minValueUnsignedInt: None
+            :param minValueQuantity: None
+            :param maxValueDate: None
+            :param maxValueDateTime: None
+            :param maxValueInstant: None
+            :param maxValueTime: None
+            :param maxValueDecimal: None
+            :param maxValueInteger: None
+            :param maxValuePositiveInt: None
+            :param maxValueUnsignedInt: None
+            :param maxValueQuantity: None
         """
         super().__init__(
             id_=id_,
@@ -263,4 +1100,172 @@ class ElementDefinition(FhirBackboneElementBase):
             isSummary=isSummary,
             binding=binding,
             mapping=mapping,
+            defaultValueBase64Binary=defaultValueBase64Binary,
+            defaultValueBoolean=defaultValueBoolean,
+            defaultValueCanonical=defaultValueCanonical,
+            defaultValueCode=defaultValueCode,
+            defaultValueDate=defaultValueDate,
+            defaultValueDateTime=defaultValueDateTime,
+            defaultValueDecimal=defaultValueDecimal,
+            defaultValueId=defaultValueId,
+            defaultValueInstant=defaultValueInstant,
+            defaultValueInteger=defaultValueInteger,
+            defaultValueMarkdown=defaultValueMarkdown,
+            defaultValueOid=defaultValueOid,
+            defaultValuePositiveInt=defaultValuePositiveInt,
+            defaultValueString=defaultValueString,
+            defaultValueTime=defaultValueTime,
+            defaultValueUnsignedInt=defaultValueUnsignedInt,
+            defaultValueUri=defaultValueUri,
+            defaultValueUrl=defaultValueUrl,
+            defaultValueUuid=defaultValueUuid,
+            defaultValueAddress=defaultValueAddress,
+            defaultValueAge=defaultValueAge,
+            defaultValueAnnotation=defaultValueAnnotation,
+            defaultValueAttachment=defaultValueAttachment,
+            defaultValueCodeableConcept=defaultValueCodeableConcept,
+            defaultValueCoding=defaultValueCoding,
+            defaultValueContactPoint=defaultValueContactPoint,
+            defaultValueCount=defaultValueCount,
+            defaultValueDistance=defaultValueDistance,
+            defaultValueDuration=defaultValueDuration,
+            defaultValueHumanName=defaultValueHumanName,
+            defaultValueIdentifier=defaultValueIdentifier,
+            defaultValueMoney=defaultValueMoney,
+            defaultValuePeriod=defaultValuePeriod,
+            defaultValueQuantity=defaultValueQuantity,
+            defaultValueRange=defaultValueRange,
+            defaultValueRatio=defaultValueRatio,
+            defaultValueReference=defaultValueReference,
+            defaultValueSampledData=defaultValueSampledData,
+            defaultValueSignature=defaultValueSignature,
+            defaultValueTiming=defaultValueTiming,
+            defaultValueContactDetail=defaultValueContactDetail,
+            defaultValueContributor=defaultValueContributor,
+            defaultValueDataRequirement=defaultValueDataRequirement,
+            defaultValueExpression=defaultValueExpression,
+            defaultValueParameterDefinition=defaultValueParameterDefinition,
+            defaultValueRelatedArtifact=defaultValueRelatedArtifact,
+            defaultValueTriggerDefinition=defaultValueTriggerDefinition,
+            defaultValueUsageContext=defaultValueUsageContext,
+            defaultValueDosage=defaultValueDosage,
+            defaultValueMeta=defaultValueMeta,
+            fixedBase64Binary=fixedBase64Binary,
+            fixedBoolean=fixedBoolean,
+            fixedCanonical=fixedCanonical,
+            fixedCode=fixedCode,
+            fixedDate=fixedDate,
+            fixedDateTime=fixedDateTime,
+            fixedDecimal=fixedDecimal,
+            fixedId=fixedId,
+            fixedInstant=fixedInstant,
+            fixedInteger=fixedInteger,
+            fixedMarkdown=fixedMarkdown,
+            fixedOid=fixedOid,
+            fixedPositiveInt=fixedPositiveInt,
+            fixedString=fixedString,
+            fixedTime=fixedTime,
+            fixedUnsignedInt=fixedUnsignedInt,
+            fixedUri=fixedUri,
+            fixedUrl=fixedUrl,
+            fixedUuid=fixedUuid,
+            fixedAddress=fixedAddress,
+            fixedAge=fixedAge,
+            fixedAnnotation=fixedAnnotation,
+            fixedAttachment=fixedAttachment,
+            fixedCodeableConcept=fixedCodeableConcept,
+            fixedCoding=fixedCoding,
+            fixedContactPoint=fixedContactPoint,
+            fixedCount=fixedCount,
+            fixedDistance=fixedDistance,
+            fixedDuration=fixedDuration,
+            fixedHumanName=fixedHumanName,
+            fixedIdentifier=fixedIdentifier,
+            fixedMoney=fixedMoney,
+            fixedPeriod=fixedPeriod,
+            fixedQuantity=fixedQuantity,
+            fixedRange=fixedRange,
+            fixedRatio=fixedRatio,
+            fixedReference=fixedReference,
+            fixedSampledData=fixedSampledData,
+            fixedSignature=fixedSignature,
+            fixedTiming=fixedTiming,
+            fixedContactDetail=fixedContactDetail,
+            fixedContributor=fixedContributor,
+            fixedDataRequirement=fixedDataRequirement,
+            fixedExpression=fixedExpression,
+            fixedParameterDefinition=fixedParameterDefinition,
+            fixedRelatedArtifact=fixedRelatedArtifact,
+            fixedTriggerDefinition=fixedTriggerDefinition,
+            fixedUsageContext=fixedUsageContext,
+            fixedDosage=fixedDosage,
+            fixedMeta=fixedMeta,
+            patternBase64Binary=patternBase64Binary,
+            patternBoolean=patternBoolean,
+            patternCanonical=patternCanonical,
+            patternCode=patternCode,
+            patternDate=patternDate,
+            patternDateTime=patternDateTime,
+            patternDecimal=patternDecimal,
+            patternId=patternId,
+            patternInstant=patternInstant,
+            patternInteger=patternInteger,
+            patternMarkdown=patternMarkdown,
+            patternOid=patternOid,
+            patternPositiveInt=patternPositiveInt,
+            patternString=patternString,
+            patternTime=patternTime,
+            patternUnsignedInt=patternUnsignedInt,
+            patternUri=patternUri,
+            patternUrl=patternUrl,
+            patternUuid=patternUuid,
+            patternAddress=patternAddress,
+            patternAge=patternAge,
+            patternAnnotation=patternAnnotation,
+            patternAttachment=patternAttachment,
+            patternCodeableConcept=patternCodeableConcept,
+            patternCoding=patternCoding,
+            patternContactPoint=patternContactPoint,
+            patternCount=patternCount,
+            patternDistance=patternDistance,
+            patternDuration=patternDuration,
+            patternHumanName=patternHumanName,
+            patternIdentifier=patternIdentifier,
+            patternMoney=patternMoney,
+            patternPeriod=patternPeriod,
+            patternQuantity=patternQuantity,
+            patternRange=patternRange,
+            patternRatio=patternRatio,
+            patternReference=patternReference,
+            patternSampledData=patternSampledData,
+            patternSignature=patternSignature,
+            patternTiming=patternTiming,
+            patternContactDetail=patternContactDetail,
+            patternContributor=patternContributor,
+            patternDataRequirement=patternDataRequirement,
+            patternExpression=patternExpression,
+            patternParameterDefinition=patternParameterDefinition,
+            patternRelatedArtifact=patternRelatedArtifact,
+            patternTriggerDefinition=patternTriggerDefinition,
+            patternUsageContext=patternUsageContext,
+            patternDosage=patternDosage,
+            patternMeta=patternMeta,
+            minValueDate=minValueDate,
+            minValueDateTime=minValueDateTime,
+            minValueInstant=minValueInstant,
+            minValueTime=minValueTime,
+            minValueDecimal=minValueDecimal,
+            minValueInteger=minValueInteger,
+            minValuePositiveInt=minValuePositiveInt,
+            minValueUnsignedInt=minValueUnsignedInt,
+            minValueQuantity=minValueQuantity,
+            maxValueDate=maxValueDate,
+            maxValueDateTime=maxValueDateTime,
+            maxValueInstant=maxValueInstant,
+            maxValueTime=maxValueTime,
+            maxValueDecimal=maxValueDecimal,
+            maxValueInteger=maxValueInteger,
+            maxValuePositiveInt=maxValuePositiveInt,
+            maxValueUnsignedInt=maxValueUnsignedInt,
+            maxValueQuantity=maxValueQuantity,
         )
