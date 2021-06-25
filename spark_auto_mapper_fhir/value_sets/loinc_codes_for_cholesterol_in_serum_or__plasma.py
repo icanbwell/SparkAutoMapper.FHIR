@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -21,6 +11,7 @@ class LOINCCodesForCholesterolInSerum_or_PlasmaCode(FhirValueSetBase):
     """
     LOINC Codes for Cholesterol in Serum_or_Plasma
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -28,5 +19,7 @@ class LOINCCodesForCholesterolInSerum_or_PlasmaCode(FhirValueSetBase):
 class LOINCCodesForCholesterolInSerum_or_PlasmaCodeValues:
     Cholesterol_Moles_Volume_ = LOINCCodesForCholesterolInSerum_or_PlasmaCode("14647-2")
     Cholesterol_Mass_Volume_ = LOINCCodesForCholesterolInSerum_or_PlasmaCode("2093-3")
-    Cholesterol_MassOrMoles_Volume_ = LOINCCodesForCholesterolInSerum_or_PlasmaCode("35200-5")
+    Cholesterol_MassOrMoles_Volume_ = LOINCCodesForCholesterolInSerum_or_PlasmaCode(
+        "35200-5"
+    )
     Cholesterol_Percentile_ = LOINCCodesForCholesterolInSerum_or_PlasmaCode("9342-7")
