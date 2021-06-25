@@ -23,7 +23,7 @@ class AuditEventEntityRoleCodeValues:
     DomainResource = AuditEventEntityRoleCode("4")
     MasterFile = AuditEventEntityRoleCode("5")
     User = AuditEventEntityRoleCode("6")
-    List = AuditEventEntityRoleCode("7")
+    List_ = AuditEventEntityRoleCode("7")
     Doctor = AuditEventEntityRoleCode("8")
     Subscriber = AuditEventEntityRoleCode("9")
     Guarantor = AuditEventEntityRoleCode("10")

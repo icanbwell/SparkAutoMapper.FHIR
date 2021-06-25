@@ -159,7 +159,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for complication
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
+        Condition_or_Problem_or_DiagnosisCodesCode,
+    )
 
     # End Import for CodeableConcept for complication
     # complicationDetail (Reference)
@@ -278,7 +280,9 @@ class Procedure(FhirResourceBase):
         report: Optional[
             FhirList[Reference[Union[DiagnosticReport, DocumentReference, Composition]]]
         ] = None,
-        complication: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        complication: Optional[
+            FhirList[CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]]
+        ] = None,
         complicationDetail: Optional[FhirList[Reference[Union[Condition]]]] = None,
         followUp: Optional[
             FhirList[CodeableConcept[ProcedureFollowUpCodes_SNOMEDCT_Code]]

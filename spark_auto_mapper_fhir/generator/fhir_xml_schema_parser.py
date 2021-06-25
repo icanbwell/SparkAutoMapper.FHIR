@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import OrderedDict, Any, List, Union, Dict, Optional
 import re
 
-from spark_pipeline_framework.utilities.flattener import flatten
+from spark_pipeline_framework.utilities.flattener import flatten  # type: ignore
 from xmltodict import parse
 
 
@@ -84,7 +84,7 @@ class FhirXmlSchemaParser:
         "integer": "FhirInteger",
         "string": "FhirString",
         "DataType": "FhirDataType",
-        "List": "FhirList",
+        "List": "List_",
     }
 
     @staticmethod
@@ -204,8 +204,6 @@ class FhirXmlSchemaParser:
             "Resource",
             "DomainResource",
             "Element",
-            "List",
-            "FhirString",
         ]
 
         fhir_entities = [
@@ -404,7 +402,9 @@ class FhirXmlSchemaParser:
                     fhir_property.reference_target_resources = [
                         SmartName(
                             name=c,
-                            cleaned_name=c,
+                            cleaned_name=FhirXmlSchemaParser.cleaned_type_mapping[c]
+                            if c in FhirXmlSchemaParser.cleaned_type_mapping
+                            else c,
                             snake_case_name=FhirXmlSchemaParser.camel_to_snake(c),
                         )
                         for c in reference.target_resources
@@ -631,6 +631,7 @@ class FhirXmlSchemaParser:
                 "yield",
                 "id",
                 "type",
+                "List",
             ]
             else f"{name}_"
         )
@@ -843,7 +844,8 @@ class FhirXmlSchemaParser:
                             fhir_concepts.append(
                                 FhirXmlSchemaParser.create_concept(concept)
                             )
-
+            if "/" in name:
+                name = name.replace("/", "_or_")
             if "/" not in name:
                 fhir_value_sets.append(
                     FhirValueSet(

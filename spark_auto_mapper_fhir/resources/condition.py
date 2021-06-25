@@ -48,14 +48,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for severity
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.condition_or__diagnosis_severity import (
+        Condition_or_DiagnosisSeverityCode,
+    )
 
     # End Import for CodeableConcept for severity
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
+        Condition_or_Problem_or_DiagnosisCodesCode,
+    )
 
     # End Import for CodeableConcept for code
     # bodySite (CodeableConcept)
@@ -167,8 +171,10 @@ class Condition(FhirResourceBase):
         category: Optional[
             FhirList[CodeableConcept[ConditionCategoryCodesCode]]
         ] = None,
-        severity: Optional[CodeableConcept[GenericTypeCode]] = None,
-        code: Optional[CodeableConcept[GenericTypeCode]] = None,
+        severity: Optional[CodeableConcept[Condition_or_DiagnosisSeverityCode]] = None,
+        code: Optional[
+            CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]
+        ] = None,
         bodySite: Optional[
             FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
         ] = None,

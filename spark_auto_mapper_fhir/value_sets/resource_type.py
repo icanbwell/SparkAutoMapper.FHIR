@@ -87,7 +87,7 @@ class ResourceTypeCodeValues:
     Invoice = ResourceTypeCode("Invoice")
     Library = ResourceTypeCode("Library")
     Linkage = ResourceTypeCode("Linkage")
-    List = ResourceTypeCode("List")
+    List_ = ResourceTypeCode("List")
     Location = ResourceTypeCode("Location")
     Measure = ResourceTypeCode("Measure")
     MeasureReport = ResourceTypeCode("MeasureReport")

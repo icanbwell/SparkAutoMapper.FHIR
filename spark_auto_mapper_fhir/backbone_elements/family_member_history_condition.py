@@ -16,7 +16,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
+        Condition_or_Problem_or_DiagnosisCodesCode,
+    )
 
     # End Import for CodeableConcept for code
     # outcome (CodeableConcept)
@@ -57,7 +59,7 @@ class FamilyMemberHistoryCondition(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: CodeableConcept[GenericTypeCode],
+        code: CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode],
         outcome: Optional[CodeableConcept[ConditionOutcomeCodesCode]] = None,
         contributedToDeath: Optional[FhirBoolean] = None,
         note: Optional[FhirList[Annotation]] = None,

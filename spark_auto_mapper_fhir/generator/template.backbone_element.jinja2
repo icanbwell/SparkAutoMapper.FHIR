@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -36,7 +37,7 @@ if TYPE_CHECKING:
     # Imports for References for {{ property.name }}
             {% for reference_target_resource in property.reference_target_resources %}
                 {% if reference_target_resource.name != fhir_entity.cleaned_name %}
-    from spark_auto_mapper_fhir.resources.{{ reference_target_resource.snake_case_name }} import {{ reference_target_resource.name | replace(".","") }}
+    from spark_auto_mapper_fhir.resources.{{ reference_target_resource.snake_case_name }} import {{ reference_target_resource.cleaned_name | replace(".","") }}
                 {% endif %}
             {% endfor %}
         {% endif %}

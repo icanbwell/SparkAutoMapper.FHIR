@@ -44,7 +44,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for addresses
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
+        Condition_or_Problem_or_DiagnosisCodesCode,
+    )
 
     # End Import for CodeableConcept for addresses
     # documentation (RelatedArtifact)
@@ -73,7 +75,9 @@ class PlanDefinitionGoal(FhirBackboneElementBase):
         description: CodeableConcept[SNOMEDCTClinicalFindingsCode],
         priority: Optional[CodeableConcept[GoalPriorityCode]] = None,
         start: Optional[CodeableConcept[GoalStartEventCode]] = None,
-        addresses: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        addresses: Optional[
+            FhirList[CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]]
+        ] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         target: Optional[FhirList[PlanDefinitionTarget]] = None,
     ) -> None:

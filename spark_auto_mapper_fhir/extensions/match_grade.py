@@ -5,7 +5,7 @@ from spark_auto_mapper_fhir.extensions.custom.match_grade_extension_item import 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
-from spark_auto_mapper_fhir.valuesets.match_grade import MatchGradeCode
+from spark_auto_mapper_fhir.value_sets.match_grade import MatchGradeCode
 
 
 class MatchGrade(ExtensionBase):

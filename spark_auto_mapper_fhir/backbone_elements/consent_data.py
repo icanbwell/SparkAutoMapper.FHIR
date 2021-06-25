@@ -4,6 +4,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,

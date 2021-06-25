@@ -51,7 +51,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for view
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.media_collection_view_or__projection import (
+        MediaCollectionView_or_ProjectionCode,
+    )
 
     # End Import for CodeableConcept for view
     # subject (Reference)
@@ -161,7 +163,7 @@ class Media(FhirResourceBase):
         status: EventStatus,
         type_: Optional[CodeableConcept[MediaTypeCode]] = None,
         modality: Optional[CodeableConcept[MediaModalityCode]] = None,
-        view: Optional[CodeableConcept[GenericTypeCode]] = None,
+        view: Optional[CodeableConcept[MediaCollectionView_or_ProjectionCode]] = None,
         subject: Optional[
             Reference[
                 Union[

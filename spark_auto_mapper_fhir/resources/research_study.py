@@ -70,7 +70,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for condition
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
+        Condition_or_Problem_or_DiagnosisCodesCode,
+    )
 
     # End Import for CodeableConcept for condition
     # contact (ContactDetail)
@@ -174,7 +176,9 @@ class ResearchStudy(FhirResourceBase):
         phase: Optional[CodeableConcept[ResearchStudyPhaseCode]] = None,
         category: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         focus: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        condition: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        condition: Optional[
+            FhirList[CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]]
+        ] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
         keyword: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,

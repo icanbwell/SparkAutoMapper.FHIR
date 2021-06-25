@@ -15,7 +15,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for itemCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
+        Condition_or_Problem_or_DiagnosisCodesCode,
+    )
 
     # End Import for CodeableConcept for itemCodeableConcept
     # itemReference (Reference)
@@ -42,7 +44,9 @@ class ClinicalImpressionFinding(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        itemCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        itemCodeableConcept: Optional[
+            CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]
+        ] = None,
         itemReference: Optional[Reference[Union[Condition, Observation, Media]]] = None,
         basis: Optional[FhirString] = None,
     ) -> None:

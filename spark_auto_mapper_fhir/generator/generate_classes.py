@@ -192,6 +192,18 @@ def main() -> int:
             ),
             value_sets_folder.joinpath(value_set_file),
         )
+    complex_types_files = [
+        f
+        for f in listdir(complex_types_folder.joinpath("../base_types/complex_types"))
+        if isfile(join(complex_types_folder.joinpath("../base_types/complex_types"), f))
+    ]
+    for complex_type_file in complex_types_files:
+        copyfile(
+            complex_types_folder.joinpath("../base_types/complex_types").joinpath(
+                complex_type_file
+            ),
+            complex_types_folder.joinpath(complex_type_file),
+        )
     return 0
 
 

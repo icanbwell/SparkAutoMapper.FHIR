@@ -54,7 +54,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_or__product__condition_and_negation_codes import (
+        AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode,
+    )
 
     # End Import for CodeableConcept for code
     # patient (Reference)
@@ -141,7 +143,11 @@ class AllergyIntolerance(FhirResourceBase):
         type_: Optional[AllergyIntoleranceType] = None,
         category: Optional[FhirList[AllergyIntoleranceCategory]] = None,
         criticality: Optional[AllergyIntoleranceCriticality] = None,
-        code: Optional[CodeableConcept[GenericTypeCode]] = None,
+        code: Optional[
+            CodeableConcept[
+                AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode
+            ]
+        ] = None,
         patient: Reference[Union[Patient]],
         encounter: Optional[Reference[Union[Encounter]]] = None,
         recordedDate: Optional[FhirDateTime] = None,
