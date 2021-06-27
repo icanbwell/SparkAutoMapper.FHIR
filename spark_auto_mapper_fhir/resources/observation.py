@@ -82,8 +82,7 @@ class Observation(FhirResourceBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        status: ObservationStatusCode,
-        code: CodeableConcept[LOINCCode],
+        *,
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
@@ -116,10 +115,12 @@ class Observation(FhirResourceBase):
                 ]
             ]
         ] = None,
+        status: ObservationStatusCode,
         category: Optional[FhirList[CodeableConcept[ObservationCategoryCode]]] = None,
+        code: CodeableConcept[LOINCCode],
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
-        focus: Optional[FhirList[Any]] = None,
-        encounter: Optional[Encounter] = None,
+        focus: Optional[FhirList[Reference[Any]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         effectiveDateTime: Optional[FhirDateTime] = None,
         effectivePeriod: Optional[Period] = None,
         effectiveTiming: Optional[Timing] = None,
@@ -151,7 +152,9 @@ class Observation(FhirResourceBase):
         valueDateTime: Optional[FhirDateTime] = None,
         valuePeriod: Optional[Period] = None,
         dataAbsentReason: Optional[CodeableConcept[DataAbsentReasonCode]] = None,
-        interpretation: Optional[FhirList[ObservationInterpretationCode]] = None,
+        interpretation: Optional[
+            FhirList[CodeableConcept[ObservationInterpretationCode]]
+        ] = None,
         note: Optional[FhirList[Annotation]] = None,
         bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
         method: Optional[CodeableConcept[ObservationMethodsCode]] = None,
