@@ -40,9 +40,10 @@ class ObservationComponentBackboneElement(FhirBackboneElementBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
-        code: CodeableConcept[LOINCCode],
+        *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
+        code: CodeableConcept[LOINCCode],
         valueQuantity: Optional[Quantity] = None,
         valueCodeableConcept: Optional[CodeableConcept[FhirValueSetBase]] = None,
         valueString: Optional[FhirString] = None,
