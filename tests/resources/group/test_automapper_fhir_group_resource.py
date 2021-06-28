@@ -7,7 +7,6 @@ from spark_auto_mapper_fhir.backbone_elements.group_member import GroupMember
 from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCodeValues
 from spark_auto_mapper_fhir.value_sets.identifier_type_codes import (
@@ -46,7 +45,7 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
     ).complex(
         Group(
             id_=FhirId(A.column("practitioner_id")),
-            meta=Meta(source=FhirUri("http://medstarhealth.org/provider")),
+            meta=Meta(source="http://medstarhealth.org/provider"),
             identifier=FhirList(
                 [
                     Identifier(
@@ -68,6 +67,7 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
                 ]
             ),
             type_=GroupTypeCodeValues.Practitioner,
+            actual=True,
             name=A.text("Medstar Affiliated Practitioner"),
             member=FhirList(
                 [

@@ -4,6 +4,7 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -11,8 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # code (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
+    pass
     # profile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
@@ -41,7 +41,7 @@ class ElementDefinitionType(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: uri,
+        code: FhirUri,
         profile: Optional[FhirList[canonical]] = None,
         targetProfile: Optional[FhirList[canonical]] = None,
         aggregation: Optional[FhirList[AggregationMode]] = None,

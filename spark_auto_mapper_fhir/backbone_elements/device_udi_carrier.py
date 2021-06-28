@@ -5,6 +5,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -14,11 +15,7 @@ if TYPE_CHECKING:
     # deviceIdentifier (string)
     pass
     # issuer (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # jurisdiction (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # carrierAIDC (base64Binary)
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
 
@@ -41,8 +38,8 @@ class DeviceUdiCarrier(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         deviceIdentifier: Optional[FhirString] = None,
-        issuer: Optional[uri] = None,
-        jurisdiction: Optional[uri] = None,
+        issuer: Optional[FhirUri] = None,
+        jurisdiction: Optional[FhirUri] = None,
         carrierAIDC: Optional[base64Binary] = None,
         carrierHRF: Optional[FhirString] = None,
         entryType: Optional[UDIEntryTypeCode] = None,

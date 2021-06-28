@@ -6,6 +6,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -15,8 +16,6 @@ if TYPE_CHECKING:
     # documentType (string)
     pass
     # reference (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # publicationDate (dateTime)
     # presentationDate (dateTime)
 
@@ -35,7 +34,7 @@ class ImmunizationEducation(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         documentType: Optional[FhirString] = None,
-        reference: Optional[uri] = None,
+        reference: Optional[FhirUri] = None,
         publicationDate: Optional[FhirDateTime] = None,
         presentationDate: Optional[FhirDateTime] = None,
     ) -> None:

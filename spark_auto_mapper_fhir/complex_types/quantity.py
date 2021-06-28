@@ -3,6 +3,7 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -15,7 +16,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.quantity_comparator import (
         QuantityComparatorCode,
     )
-    from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.code import code
 
 
@@ -36,7 +36,7 @@ class Quantity(FhirComplexTypeBase):
         value: Optional[decimal] = None,
         comparator: Optional[QuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,
-        system: Optional[uri] = None,
+        system: Optional[FhirUri] = None,
         code: Optional[code] = None,
     ) -> None:
         """

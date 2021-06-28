@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -20,8 +21,6 @@ if TYPE_CHECKING:
     # origin (integer)
     # destination (integer)
     # link (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # capabilities (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
@@ -44,7 +43,7 @@ class TestScriptCapability(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
         origin: Optional[FhirList[FhirInteger]] = None,
         destination: Optional[FhirInteger] = None,
-        link: Optional[FhirList[uri]] = None,
+        link: Optional[FhirList[FhirUri]] = None,
         capabilities: canonical,
     ) -> None:
         """

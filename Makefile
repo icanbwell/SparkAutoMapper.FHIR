@@ -55,4 +55,5 @@ sphinx-html:
 
 .PHONY:classes
 classes:
-	docker-compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py
+	docker-compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py && \
+	make run-pre-commit

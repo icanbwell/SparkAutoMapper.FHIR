@@ -9,6 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.contract import ContractSchema
@@ -18,7 +19,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # version (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -42,7 +43,7 @@ if TYPE_CHECKING:
 
     # Imports for References for instantiatesCanonical
     # instantiatesUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # contentDerivative (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -216,14 +217,14 @@ class Contract(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        url: Optional[uri] = None,
+        url: Optional[FhirUri] = None,
         version: Optional[FhirString] = None,
         status: Optional[ContractResourceStatusCodesCode] = None,
         legalState: Optional[
             CodeableConcept[ContractResourceLegalStateCodesCode]
         ] = None,
         instantiatesCanonical: Optional[Reference[Union[Contract]]] = None,
-        instantiatesUri: Optional[uri] = None,
+        instantiatesUri: Optional[FhirUri] = None,
         contentDerivative: Optional[
             CodeableConcept[ContractContentDerivationCodesCode]
         ] = None,

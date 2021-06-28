@@ -9,6 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.documentmanifest import DocumentManifestSchema
@@ -66,7 +67,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # source (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # description (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -132,7 +133,7 @@ class DocumentManifest(FhirResourceBase):
                 ]
             ]
         ] = None,
-        source: Optional[uri] = None,
+        source: Optional[FhirUri] = None,
         description: Optional[FhirString] = None,
         content: FhirList[Reference[Union[Resource]]],
         related: Optional[FhirList[DocumentManifestRelated]] = None,

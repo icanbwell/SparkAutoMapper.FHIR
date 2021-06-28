@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.familymemberhistory import (
@@ -25,7 +26,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # instantiatesUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # status (FamilyHistoryStatus)
     from spark_auto_mapper_fhir.value_sets.family_history_status import (
@@ -152,7 +153,7 @@ class FamilyMemberHistory(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirList[canonical]] = None,
-        instantiatesUri: Optional[FhirList[uri]] = None,
+        instantiatesUri: Optional[FhirList[FhirUri]] = None,
         status: FamilyHistoryStatusCode,
         dataAbsentReason: Optional[
             CodeableConcept[FamilyHistoryAbsentReasonCode]

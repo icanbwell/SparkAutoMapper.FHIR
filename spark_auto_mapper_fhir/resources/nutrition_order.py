@@ -8,6 +8,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.nutritionorder import NutritionOrderSchema
@@ -20,10 +21,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # instantiatesUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # instantiates (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # status (RequestStatus)
     from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
@@ -108,8 +109,8 @@ class NutritionOrder(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirList[canonical]] = None,
-        instantiatesUri: Optional[FhirList[uri]] = None,
-        instantiates: Optional[FhirList[uri]] = None,
+        instantiatesUri: Optional[FhirList[FhirUri]] = None,
+        instantiates: Optional[FhirList[FhirUri]] = None,
         status: RequestStatusCode,
         intent: RequestIntentCode,
         patient: Reference[Union[Patient]],

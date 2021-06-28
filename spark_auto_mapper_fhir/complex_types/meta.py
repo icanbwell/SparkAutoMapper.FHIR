@@ -2,6 +2,7 @@ from __future__ import annotations
 from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -11,7 +12,6 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
     from spark_auto_mapper_fhir.complex_types.instant import instant
-    from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
@@ -45,7 +45,7 @@ class Meta(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         versionId: Optional[id] = None,
         lastUpdated: Optional[instant] = None,
-        source: Optional[uri] = None,
+        source: Optional[FhirUri] = None,
         profile: Optional[FhirList[canonical]] = None,
         security: Optional[FhirList[Coding[AllSecurityLabelsCode]]] = None,
         tag: Optional[FhirList[Coding[CommonTagsCode]]] = None,

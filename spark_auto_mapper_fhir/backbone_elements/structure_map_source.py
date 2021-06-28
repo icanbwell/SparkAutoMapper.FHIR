@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -73,8 +74,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # defaultValueUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # defaultValueUrl (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 
@@ -231,7 +230,7 @@ class StructureMapSource(FhirBackboneElementBase):
         defaultValueString: Optional[FhirString] = None,
         defaultValueTime: Optional[time] = None,
         defaultValueUnsignedInt: Optional[unsignedInt] = None,
-        defaultValueUri: Optional[uri] = None,
+        defaultValueUri: Optional[FhirUri] = None,
         defaultValueUrl: Optional[url] = None,
         defaultValueUuid: Optional[uuid] = None,
         defaultValueAddress: Optional[Address] = None,

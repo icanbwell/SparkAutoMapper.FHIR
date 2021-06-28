@@ -3,7 +3,7 @@ import shutil
 from os import path, listdir
 from pathlib import Path
 from shutil import copyfile
-from typing import Union, List, Callable, Iterable
+from typing import Union
 
 from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchemaParser
 
@@ -12,17 +12,17 @@ def my_copytree(
     src: Union[Path, str],
     dst: Union[Path, str],
     symlinks: bool = False,
-    ignore: Union[
-        None,
-        Callable[[str, List[str]], Iterable[str]],
-        Callable[[Union[str, os.PathLike[str]], List[str]], Iterable[str]],
-    ] = None,
+    # ignore: Union[
+    #     None,
+    #     Callable[[str, List[str]], Iterable[str]],
+    #     Callable[[Union[str, os.PathLike[str]], List[str]], Iterable[str]],
+    # ] = None,
 ) -> None:
     for item in os.listdir(src):
         s = os.path.join(src, item)
         d = os.path.join(dst, item)
         if os.path.isdir(s):
-            shutil.copytree(s, d, symlinks, ignore)
+            shutil.copytree(s, d, symlinks)
         else:
             shutil.copy2(s, d)
 

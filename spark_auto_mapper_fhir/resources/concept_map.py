@@ -10,13 +10,14 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.conceptmap import ConceptMapSchema
 
 if TYPE_CHECKING:
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -74,13 +75,13 @@ if TYPE_CHECKING:
     )
 
     # sourceUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # sourceCanonical (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # targetUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # targetCanonical (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
@@ -100,7 +101,7 @@ class ConceptMap(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: Optional[uri] = None,
+        url: Optional[FhirUri] = None,
         identifier: Optional[Identifier] = None,
         version: Optional[FhirString] = None,
         name: Optional[FhirString] = None,
@@ -118,9 +119,9 @@ class ConceptMap(FhirResourceBase):
         purpose: Optional[markdown] = None,
         copyright: Optional[markdown] = None,
         group: Optional[FhirList[ConceptMapGroup]] = None,
-        sourceUri: Optional[uri] = None,
+        sourceUri: Optional[FhirUri] = None,
         sourceCanonical: Optional[canonical] = None,
-        targetUri: Optional[uri] = None,
+        targetUri: Optional[FhirUri] = None,
         targetCanonical: Optional[canonical] = None,
     ) -> None:
         """

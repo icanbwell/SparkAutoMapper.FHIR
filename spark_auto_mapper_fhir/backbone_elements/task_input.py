@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -63,8 +64,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # valueUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # valueUrl (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 
@@ -212,7 +211,7 @@ class TaskInput(FhirBackboneElementBase):
         valueString: Optional[FhirString] = None,
         valueTime: Optional[time] = None,
         valueUnsignedInt: Optional[unsignedInt] = None,
-        valueUri: Optional[uri] = None,
+        valueUri: Optional[FhirUri] = None,
         valueUrl: Optional[url] = None,
         valueUuid: Optional[uuid] = None,
         valueAddress: Optional[Address] = None,

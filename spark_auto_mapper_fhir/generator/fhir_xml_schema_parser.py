@@ -88,6 +88,7 @@ class FhirXmlSchemaParser:
         "string": "FhirString",
         "DataType": "FhirDataType",
         "List": "List_",
+        "uri": "FhirUri",
     }
 
     @staticmethod

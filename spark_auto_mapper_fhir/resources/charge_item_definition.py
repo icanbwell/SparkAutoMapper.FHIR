@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.chargeitemdefinition import (
@@ -19,7 +20,7 @@ from spark_fhir_schemas.r4.resources.chargeitemdefinition import (
 
 if TYPE_CHECKING:
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -31,7 +32,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # derivedFromUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # partOf (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
@@ -123,11 +124,11 @@ class ChargeItemDefinition(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: uri,
+        url: FhirUri,
         identifier: Optional[FhirList[Identifier]] = None,
         version: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
-        derivedFromUri: Optional[FhirList[uri]] = None,
+        derivedFromUri: Optional[FhirList[FhirUri]] = None,
         partOf: Optional[FhirList[canonical]] = None,
         replaces: Optional[FhirList[canonical]] = None,
         status: PublicationStatusCode,

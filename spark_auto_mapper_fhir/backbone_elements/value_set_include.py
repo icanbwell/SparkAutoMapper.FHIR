@@ -5,6 +5,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -12,8 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # system (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
+    pass
     # version (string)
     # concept (ValueSet.Concept)
     from spark_auto_mapper_fhir.backbone_elements.value_set_concept import (
@@ -40,7 +40,7 @@ class ValueSetInclude(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        system: Optional[uri] = None,
+        system: Optional[FhirUri] = None,
         version: Optional[FhirString] = None,
         concept: Optional[FhirList[ValueSetConcept]] = None,
         filter: Optional[FhirList[ValueSetFilter]] = None,

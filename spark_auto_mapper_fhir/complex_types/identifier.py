@@ -3,6 +3,7 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -20,7 +21,6 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
-    from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.period import Period
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -44,7 +44,7 @@ class Identifier(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         use: Optional[IdentifierUseCode] = None,
         type_: Optional[CodeableConcept[IdentifierTypeCodesCode]] = None,
-        system: Optional[uri] = None,
+        system: Optional[FhirUri] = None,
         value: Optional[FhirString] = None,
         period: Optional[Period] = None,
         assigner: Optional[Reference[Union[Organization]]] = None,

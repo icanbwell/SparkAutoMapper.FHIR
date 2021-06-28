@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -60,8 +61,6 @@ if TYPE_CHECKING:
     )
 
     # contentReference (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # type_ (ElementDefinition.Type)
     from spark_auto_mapper_fhir.backbone_elements.element_definition_type import (
         ElementDefinitionType,
@@ -138,8 +137,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # defaultValueUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # defaultValueUrl (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 
@@ -295,8 +292,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # fixedUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # fixedUrl (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 
@@ -452,8 +447,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # patternUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # patternUrl (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 
@@ -641,7 +634,7 @@ class ElementDefinition(FhirBackboneElementBase):
         min: Optional[unsignedInt] = None,
         max: Optional[FhirString] = None,
         base: Optional[ElementDefinitionBase] = None,
-        contentReference: Optional[uri] = None,
+        contentReference: Optional[FhirUri] = None,
         type_: Optional[FhirList[ElementDefinitionType]] = None,
         meaningWhenMissing: Optional[markdown] = None,
         orderMeaning: Optional[FhirString] = None,
@@ -671,7 +664,7 @@ class ElementDefinition(FhirBackboneElementBase):
         defaultValueString: Optional[FhirString] = None,
         defaultValueTime: Optional[time] = None,
         defaultValueUnsignedInt: Optional[unsignedInt] = None,
-        defaultValueUri: Optional[uri] = None,
+        defaultValueUri: Optional[FhirUri] = None,
         defaultValueUrl: Optional[url] = None,
         defaultValueUuid: Optional[uuid] = None,
         defaultValueAddress: Optional[Address] = None,
@@ -721,7 +714,7 @@ class ElementDefinition(FhirBackboneElementBase):
         fixedString: Optional[FhirString] = None,
         fixedTime: Optional[time] = None,
         fixedUnsignedInt: Optional[unsignedInt] = None,
-        fixedUri: Optional[uri] = None,
+        fixedUri: Optional[FhirUri] = None,
         fixedUrl: Optional[url] = None,
         fixedUuid: Optional[uuid] = None,
         fixedAddress: Optional[Address] = None,
@@ -771,7 +764,7 @@ class ElementDefinition(FhirBackboneElementBase):
         patternString: Optional[FhirString] = None,
         patternTime: Optional[time] = None,
         patternUnsignedInt: Optional[unsignedInt] = None,
-        patternUri: Optional[uri] = None,
+        patternUri: Optional[FhirUri] = None,
         patternUrl: Optional[url] = None,
         patternUuid: Optional[uuid] = None,
         patternAddress: Optional[Address] = None,

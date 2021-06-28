@@ -5,6 +5,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -14,8 +15,6 @@ if TYPE_CHECKING:
     # linkId (string)
     pass
     # definition (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
-
     # text (string)
     # answer (QuestionnaireResponse.Answer)
     from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_answer import (
@@ -37,7 +36,7 @@ class QuestionnaireResponseItem(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         linkId: FhirString,
-        definition: Optional[uri] = None,
+        definition: Optional[FhirUri] = None,
         text: Optional[FhirString] = None,
         answer: Optional[FhirList[QuestionnaireResponseAnswer]] = None,
         item: Optional[FhirList[QuestionnaireResponseItem]] = None,

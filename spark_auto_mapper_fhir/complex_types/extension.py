@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
@@ -26,7 +27,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
     from spark_auto_mapper_fhir.complex_types.time import time
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-    from spark_auto_mapper_fhir.complex_types.uri import uri
     from spark_auto_mapper_fhir.complex_types.url import url
     from spark_auto_mapper_fhir.complex_types.uuid import uuid
     from spark_auto_mapper_fhir.complex_types.address import Address
@@ -109,7 +109,7 @@ class Extension(FhirComplexTypeBase):
         valueString: Optional[FhirString] = None,
         valueTime: Optional[time] = None,
         valueUnsignedInt: Optional[unsignedInt] = None,
-        valueUri: Optional[uri] = None,
+        valueUri: Optional[FhirUri] = None,
         valueUrl: Optional[url] = None,
         valueUuid: Optional[uuid] = None,
         valueAddress: Optional[Address] = None,

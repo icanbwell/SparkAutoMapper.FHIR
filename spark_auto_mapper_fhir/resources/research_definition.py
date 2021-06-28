@@ -11,13 +11,14 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.researchdefinition import ResearchDefinitionSchema
 
 if TYPE_CHECKING:
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import uri
+    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
 
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -175,7 +176,7 @@ class ResearchDefinition(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: Optional[uri] = None,
+        url: Optional[FhirUri] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         version: Optional[FhirString] = None,
         name: Optional[FhirString] = None,
