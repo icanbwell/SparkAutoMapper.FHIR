@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class EventTimingCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class EventTimingCodeValues:
+    """
+    Event occurs during the morning. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
+
     Morning = EventTimingCode("MORN")
+    """
+    Event occurs during the early morning. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     EarlyMorning = EventTimingCode("MORN.early")
+    """
+    Event occurs during the late morning. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     LateMorning = EventTimingCode("MORN.late")
+    """
+    Event occurs around 12:00pm. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     Noon = EventTimingCode("NOON")
+    """
+    Event occurs during the afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     Afternoon = EventTimingCode("AFT")
+    """
+    Event occurs during the early afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     EarlyAfternoon = EventTimingCode("AFT.early")
+    """
+    Event occurs during the late afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     LateAfternoon = EventTimingCode("AFT.late")
+    """
+    Event occurs during the evening. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     Evening = EventTimingCode("EVE")
+    """
+    Event occurs during the early evening. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     EarlyEvening = EventTimingCode("EVE.early")
+    """
+    Event occurs during the late evening. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     LateEvening = EventTimingCode("EVE.late")
+    """
+    Event occurs during the night. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     Night = EventTimingCode("NIGHT")
+    """
+    Event occurs [offset] after subject goes to sleep. The exact time is unspecified and established by institution convention or patient interpretation.
+    """
     AfterSleep = EventTimingCode("PHS")

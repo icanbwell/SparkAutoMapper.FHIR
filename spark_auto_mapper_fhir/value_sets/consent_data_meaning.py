@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ConsentDataMeaningCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/consent-data-meaning
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/consent-data-meaning"
+
 
 class ConsentDataMeaningCodeValues:
+    """
+    The consent applies directly to the instance of the resource.
+    """
+
     Instance = ConsentDataMeaningCode("instance")
+    """
+    The consent applies directly to the instance of the resource and instances it refers to.
+    """
     Related = ConsentDataMeaningCode("related")
+    """
+    The consent applies directly to the instance of the resource and instances that refer to it.
+    """
     Dependents = ConsentDataMeaningCode("dependents")
+    """
+    The consent applies to instances of resources that are authored by.
+    """
     AuthoredBy = ConsentDataMeaningCode("authoredby")

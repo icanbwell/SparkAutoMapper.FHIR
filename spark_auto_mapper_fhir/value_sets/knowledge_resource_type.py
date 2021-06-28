@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class KnowledgeResourceTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/knowledge-resource-types
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/knowledge-resource-types"
+
 
 class KnowledgeResourceTypeCodeValues:
+    """
+    The definition of a specific activity to be taken, independent of any particular patient or context.
+    """
+
     ActivityDefinition = KnowledgeResourceTypeCode("ActivityDefinition")
+    """
+    A set of codes drawn from one or more code systems.
+    """
     CodeSystem = KnowledgeResourceTypeCode("CodeSystem")
+    """
+    A map from one set of concepts to one or more other concepts.
+    """
     ConceptMap = KnowledgeResourceTypeCode("ConceptMap")
+    """
+    Represents a library of quality improvement components.
+    """
     Library = KnowledgeResourceTypeCode("Library")
+    """
+    A quality measure definition.
+    """
     Measure = KnowledgeResourceTypeCode("Measure")
+    """
+    The definition of a plan for a series of actions, independent of any specific patient or context.
+    """
     PlanDefinition = KnowledgeResourceTypeCode("PlanDefinition")
+    """
+    Structural Definition.
+    """
     StructureDefinition = KnowledgeResourceTypeCode("StructureDefinition")
+    """
+    A Map of relationships between 2 structures that can be used to transform data.
+    """
     StructureMap = KnowledgeResourceTypeCode("StructureMap")
+    """
+    A set of codes drawn from one or more code systems.
+    """
     ValueSet = KnowledgeResourceTypeCode("ValueSet")

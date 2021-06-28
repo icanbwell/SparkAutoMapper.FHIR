@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,34 +16,85 @@ class ObservationInterpretationCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ObservationInterpretationCodesCodeValues:
+    """
+    Codes that specify interpretation of genetic analysis, such as "positive", "negative", "carrier", "responsive", etc.
+    """
+
     Geneticobservationinterpretation = ObservationInterpretationCodesCode(
         "_GeneticObservationInterpretation"
     )
+    """
+    Interpretations of change of quantity and/or severity. At most one of B or W and one of U or D allowed.
+    """
     Observationinterpretationchange = ObservationInterpretationCodesCode(
         "_ObservationInterpretationChange"
     )
+    """
+    Technical exceptions resulting in the inability to provide an interpretation. At most one allowed. Does not imply normality or severity.
+    """
     Observationinterpretationexceptions = ObservationInterpretationCodesCode(
         "_ObservationInterpretationExceptions"
     )
+    """
+    Interpretation of normality or degree of abnormality (including critical or "alert" level). Concepts in this category are mutually exclusive, i.e., at most one is allowed.
+    """
     Observationinterpretationnormality = ObservationInterpretationCodesCode(
         "_ObservationInterpretationNormality"
     )
+    """
+    Interpretations of anti-microbial susceptibility testing results (microbiology). At most one allowed.
+    """
     Observationinterpretationsusceptibility = ObservationInterpretationCodesCode(
         "_ObservationInterpretationSusceptibility"
     )
+    """
+    The observation/test result is interpreted as being outside the inclusion range for a particular protocol within which the result is being reported.
+
+
+                        Example: A positive result on a Hepatitis screening test.
+                           Open Issue: EX, HX, LX: These three concepts do not seem to meet a clear need in the vocabulary, and their use in observation interpretation appears likely to be covered by other existing concepts (e.g., A, H, L).  The only apparent significant difference is their reference to use in protocols for exclusion of study subjects.
+These concepts/codes were proposed by RCRIM for use in the CTLaboratory message.  They were submitted and approved in the November 2005 Harmonization cycle in proposal "030103C_VOCAB_RCRIM_l_quade_RCRIM Obs Interp_20051028154455".  However, this proposal was not fully implemented in the vocabulary.  The proposal recommended creation of the x_ClinicalResearchExclusion domain in ObservationInterpretation with a value set including those three concepts/codes, but there is no subdomain of that name or equivalent with a binding to either of the value sets that contain these concepts/codes.
+Members of the OO WG have recently attempted to contact members of RCRIM regarding these concepts, both by email and at the recent WGM in Atlanta, without response.  It is felt by OO that the best course of action to take at this time is to add this comprehensive Open Issue rather than deprecate these three concepts at this time, until further discussion is held.
+    """
     OutsideThreshold = ObservationInterpretationCodesCode("EX")
+    """
+    Hold for Medical Review
+
+                        
+                           Usage Note: This code is not intended for use in V3 artifacts.  It is included in the code system to maintain alignment with the V2 Table 0078 "Interpretation Codes."
+    """
     HoldForMedicalReview = ObservationInterpretationCodesCode("HM")
+    """
+    Interpretations of the presence or absence of a component / analyte or organism in a test or of a sign in a clinical observation. In keeping with laboratory data processing practice, these concepts provide a categorical interpretation of the "meaning" of the quantitative value for the same observation.
+    """
     Observationinterpretationdetection = ObservationInterpretationCodesCode(
         "ObservationInterpretationDetection"
     )
+    """
+    Interpretation of the observed result taking into account additional information (contraindicators) about the patient's situation. Concepts in this category are mutually exclusive, i.e., at most one is allowed.
+    """
     Observationinterpretationexpectation = ObservationInterpretationCodesCode(
         "ObservationInterpretationExpectation"
     )
+    """
+    Interpretation qualifiers in separate OBX segments
+
+                        
+                           Usage Note: This code is not intended for use in V3 artifacts.  It is included in the code system to maintain alignment with the V2 Table 0078 "Interpretation Codes."
+    """
     InterpretationQualifiersInSeparateObxSegments = ObservationInterpretationCodesCode(
         "OBX"
     )
+    """
+    Interpretations of the presence and level of reactivity of the specified component / analyte with the reagent in the performed laboratory test.
+    """
     Reactivityobservationinterpretation = ObservationInterpretationCodesCode(
         "ReactivityObservationInterpretation"
     )

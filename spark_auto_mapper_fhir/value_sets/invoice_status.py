@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class InvoiceStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/invoice-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/invoice-status"
+
 
 class InvoiceStatusCodeValues:
+    """
+    the invoice has been prepared but not yet finalized.
+    """
+
     Draft = InvoiceStatusCode("draft")
+    """
+    the invoice has been finalized and sent to the recipient.
+    """
     Issued = InvoiceStatusCode("issued")
+    """
+    the invoice has been balaced / completely paid.
+    """
     Balanced = InvoiceStatusCode("balanced")
+    """
+    the invoice was cancelled.
+    """
     Cancelled = InvoiceStatusCode("cancelled")
+    """
+    the invoice was determined as entered in error before it was issued.
+    """
     EnteredInError = InvoiceStatusCode("entered-in-error")

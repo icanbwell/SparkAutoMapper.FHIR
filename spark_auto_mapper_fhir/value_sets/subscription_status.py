@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class SubscriptionStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/subscription-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/subscription-status"
+
 
 class SubscriptionStatusCodeValues:
+    """
+    The client has requested the subscription, and the server has not yet set it up.
+    """
+
     Requested = SubscriptionStatusCode("requested")
+    """
+    The subscription is active.
+    """
     Active = SubscriptionStatusCode("active")
+    """
+    The server has an error executing the notification.
+    """
     Error = SubscriptionStatusCode("error")
+    """
+    Too many errors have occurred or the subscription has expired.
+    """
     Off = SubscriptionStatusCode("off")

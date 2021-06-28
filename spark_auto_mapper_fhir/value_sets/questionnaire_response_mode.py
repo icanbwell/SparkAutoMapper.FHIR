@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class QuestionnaireResponseModeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class QuestionnaireResponseModeCodeValues:
+    """
+    Participation by non-human-languaged based electronic signal
+    """
+
     ElectronicData = QuestionnaireResponseModeCode("ELECTRONIC")
+    """
+    Participation by direct action where subject and actor are in the same location. (The participation involves more than communication.)
+    """
     PhysicalPresence = QuestionnaireResponseModeCode("PHYSICAL")
+    """
+    Participation by direct action where subject and actor are in separate locations, and the actions of the actor are transmitted by electronic or mechanical means. (The participation involves more than communication.)
+    """
     RemotePresence = QuestionnaireResponseModeCode("REMOTE")
+    """
+    Participation by voice communication
+    """
     Verbal = QuestionnaireResponseModeCode("VERBAL")
+    """
+    Participation by human language recorded on a physical material
+    """
     Written = QuestionnaireResponseModeCode("WRITTEN")
+    """
+    None
+    """
     ELECTRONIC = QuestionnaireResponseModeCode("ELECTRONIC")
+    """
+    None
+    """
     VERBAL = QuestionnaireResponseModeCode("VERBAL")
+    """
+    None
+    """
     WRITTEN = QuestionnaireResponseModeCode("WRITTEN")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class MedicationrequestStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medicationrequest-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationrequest-status"
+
 
 class MedicationrequestStatusCodeValues:
+    """
+    The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
+    """
+
     Active = MedicationrequestStatusCode("active")
+    """
+    Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called 'suspended'.
+    """
     OnHold = MedicationrequestStatusCode("on-hold")
+    """
+    The prescription has been withdrawn before any administrations have occurred
+    """
     Cancelled = MedicationrequestStatusCode("cancelled")
+    """
+    All actions that are implied by the prescription have occurred.
+    """
     Completed = MedicationrequestStatusCode("completed")
+    """
+    Some of the actions that are implied by the medication request may have occurred.  For example, the medication may have been dispensed and the patient may have taken some of the medication.  Clinical decision support systems should take this status into account
+    """
     EnteredInError = MedicationrequestStatusCode("entered-in-error")
+    """
+    Actions implied by the prescription are to be permanently halted, before all of the administrations occurred. This should not be used if the original order was entered in error
+    """
     Stopped = MedicationrequestStatusCode("stopped")
+    """
+    The prescription is not yet 'actionable', e.g. it is a work in progress, requires sign-off, verification or needs to be run through decision support process.
+    """
     Draft = MedicationrequestStatusCode("draft")
+    """
+    The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.
+    """
     Unknown = MedicationrequestStatusCode("unknown")

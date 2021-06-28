@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,51 @@ class MediaTypeCodeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class MediaTypeCodeCodeValues:
+    """
+    None
+    """
+
     _110030 = MediaTypeCodeCode("110030")
+    """
+    None
+    """
     _110031 = MediaTypeCodeCode("110031")
+    """
+    None
+    """
     _110032 = MediaTypeCodeCode("110032")
+    """
+    None
+    """
     _110033 = MediaTypeCodeCode("110033")
+    """
+    None
+    """
     _110034 = MediaTypeCodeCode("110034")
+    """
+    None
+    """
     _110035 = MediaTypeCodeCode("110035")
+    """
+    None
+    """
     _110036 = MediaTypeCodeCode("110036")
+    """
+    None
+    """
     _110037 = MediaTypeCodeCode("110037")
+    """
+    None
+    """
     _110010 = MediaTypeCodeCode("110010")
+    """
+    None
+    """
     _110038 = MediaTypeCodeCode("110038")

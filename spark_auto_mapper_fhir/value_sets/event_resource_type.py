@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,39 +16,147 @@ class EventResourceTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/event-resource-types
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/event-resource-types"
+
 
 class EventResourceTypeCodeValues:
+    """
+    Item containing charge code(s) associated with the provision of healthcare provider products.
+    """
+
     ChargeItem = EventResourceTypeCode("ChargeItem")
+    """
+    Remittance resource.
+    """
     ClaimResponse = EventResourceTypeCode("ClaimResponse")
+    """
+    A clinical assessment performed when planning treatments and management strategies for a patient.
+    """
     ClinicalImpression = EventResourceTypeCode("ClinicalImpression")
+    """
+    A record of information transmitted from a sender to a receiver.
+    """
     Communication = EventResourceTypeCode("Communication")
+    """
+    A set of resources composed into a single coherent clinical statement with clinical attestation.
+    """
     Composition = EventResourceTypeCode("Composition")
+    """
+    Detailed information about conditions, problems or diagnoses.
+    """
     Condition = EventResourceTypeCode("Condition")
+    """
+    A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time.
+    """
     Consent = EventResourceTypeCode("Consent")
+    """
+    Insurance or medical plan or a payment agreement.
+    """
     Coverage = EventResourceTypeCode("Coverage")
+    """
+    Record of use of a device.
+    """
     DeviceUseStatement = EventResourceTypeCode("DeviceUseStatement")
+    """
+    A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports.
+    """
     DiagnosticReport = EventResourceTypeCode("DiagnosticReport")
+    """
+    A list that defines a set of documents.
+    """
     DocumentManifest = EventResourceTypeCode("DocumentManifest")
+    """
+    A reference to a document.
+    """
     DocumentReference = EventResourceTypeCode("DocumentReference")
+    """
+    An interaction during which services are provided to the patient.
+    """
     Encounter = EventResourceTypeCode("Encounter")
+    """
+    EnrollmentResponse resource.
+    """
     EnrollmentResponse = EventResourceTypeCode("EnrollmentResponse")
+    """
+    An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility.
+    """
     EpisodeOfCare = EventResourceTypeCode("EpisodeOfCare")
+    """
+    Explanation of Benefit resource.
+    """
     ExplanationOfBenefit = EventResourceTypeCode("ExplanationOfBenefit")
+    """
+    Information about patient's relatives, relevant for patient.
+    """
     FamilyMemberHistory = EventResourceTypeCode("FamilyMemberHistory")
+    """
+    The formal response to a guidance request.
+    """
     GuidanceResponse = EventResourceTypeCode("GuidanceResponse")
+    """
+    A set of images produced in single study (one or more series of references images).
+    """
     ImagingStudy = EventResourceTypeCode("ImagingStudy")
+    """
+    Immunization event information.
+    """
     Immunization = EventResourceTypeCode("Immunization")
+    """
+    Results of a measure evaluation.
+    """
     MeasureReport = EventResourceTypeCode("MeasureReport")
+    """
+    A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
+    """
     Media = EventResourceTypeCode("Media")
+    """
+    Administration of medication to a patient.
+    """
     MedicationAdministration = EventResourceTypeCode("MedicationAdministration")
+    """
+    Dispensing a medication to a named patient.
+    """
     MedicationDispense = EventResourceTypeCode("MedicationDispense")
+    """
+    Record of medication being taken by a patient.
+    """
     MedicationStatement = EventResourceTypeCode("MedicationStatement")
+    """
+    Measurements and simple assertions.
+    """
     Observation = EventResourceTypeCode("Observation")
+    """
+    PaymentNotice request.
+    """
     PaymentNotice = EventResourceTypeCode("PaymentNotice")
+    """
+    PaymentReconciliation resource.
+    """
     PaymentReconciliation = EventResourceTypeCode("PaymentReconciliation")
+    """
+    An action that is being or was performed on a patient.
+    """
     Procedure = EventResourceTypeCode("Procedure")
+    """
+    ProcessResponse resource.
+    """
     ProcessResponse = EventResourceTypeCode("ProcessResponse")
+    """
+    A structured set of questions and their answers.
+    """
     QuestionnaireResponse = EventResourceTypeCode("QuestionnaireResponse")
+    """
+    Potential outcomes for a subject with likelihood.
+    """
     RiskAssessment = EventResourceTypeCode("RiskAssessment")
+    """
+    Delivery of bulk Supplies.
+    """
     SupplyDelivery = EventResourceTypeCode("SupplyDelivery")
+    """
+    A task to be performed.
+    """
     Task = EventResourceTypeCode("Task")

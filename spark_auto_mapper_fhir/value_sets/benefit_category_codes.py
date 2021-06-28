@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,33 +16,123 @@ class BenefitCategoryCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/ex-benefitcategory
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-benefitcategory"
+
 
 class BenefitCategoryCodesCodeValues:
+    """
+    Medical Care.
+    """
+
     MedicalCare = BenefitCategoryCodesCode("1")
+    """
+    Surgical.
+    """
     Surgical = BenefitCategoryCodesCode("2")
+    """
+    Consultation.
+    """
     Consultation = BenefitCategoryCodesCode("3")
+    """
+    Diagnostic XRay.
+    """
     DiagnosticXRay = BenefitCategoryCodesCode("4")
+    """
+    Diagnostic Lab.
+    """
     DiagnosticLab = BenefitCategoryCodesCode("5")
+    """
+    Renal Supplies excluding Dialysis.
+    """
     RenalSupplies = BenefitCategoryCodesCode("14")
+    """
+    Diagnostic Dental.
+    """
     DiagnosticDental = BenefitCategoryCodesCode("23")
+    """
+    Periodontics.
+    """
     Periodontics = BenefitCategoryCodesCode("24")
+    """
+    Restorative.
+    """
     Restorative = BenefitCategoryCodesCode("25")
+    """
+    Endodontics.
+    """
     Endodontics = BenefitCategoryCodesCode("26")
+    """
+    Maxillofacial Prosthetics.
+    """
     MaxillofacialProsthetics = BenefitCategoryCodesCode("27")
+    """
+    Adjunctive Dental Services.
+    """
     AdjunctiveDentalServices = BenefitCategoryCodesCode("28")
+    """
+    Health Benefit Plan Coverage.
+    """
     HealthBenefitPlanCoverage = BenefitCategoryCodesCode("30")
+    """
+    Dental Care.
+    """
     DentalCare = BenefitCategoryCodesCode("35")
+    """
+    Dental Crowns.
+    """
     DentalCrowns = BenefitCategoryCodesCode("36")
+    """
+    Dental Accident.
+    """
     DentalAccident = BenefitCategoryCodesCode("37")
+    """
+    Hospital Room and Board.
+    """
     HospitalRoomAndBoard = BenefitCategoryCodesCode("49")
+    """
+    Major Medical.
+    """
     MajorMedical = BenefitCategoryCodesCode("55")
+    """
+    Medically Related Transportation.
+    """
     MedicallyRelatedTransportation = BenefitCategoryCodesCode("56")
+    """
+    In-vitro Fertilization.
+    """
     In_vitroFertilization = BenefitCategoryCodesCode("61")
+    """
+    MRI Scan.
+    """
     MRIScan = BenefitCategoryCodesCode("62")
+    """
+    Donor Procedures such as organ harvest.
+    """
     DonorProcedures = BenefitCategoryCodesCode("63")
+    """
+    Maternity.
+    """
     Maternity = BenefitCategoryCodesCode("69")
+    """
+    Renal dialysis.
+    """
     RenalDialysis = BenefitCategoryCodesCode("76")
+    """
+    Medical Coverage.
+    """
     MedicalCoverage = BenefitCategoryCodesCode("F1")
+    """
+    Dental Coverage.
+    """
     DentalCoverage = BenefitCategoryCodesCode("F3")
+    """
+    Hearing Coverage.
+    """
     HearingCoverage = BenefitCategoryCodesCode("F4")
+    """
+    Vision Coverage.
+    """
     VisionCoverage = BenefitCategoryCodesCode("F6")

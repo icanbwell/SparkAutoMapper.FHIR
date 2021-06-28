@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class StructureDefinitionKindCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/structure-definition-kind
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/structure-definition-kind"
+
 
 class StructureDefinitionKindCodeValues:
+    """
+    A primitive type that has a value and an extension. These can be used throughout complex datatype, Resource and extension definitions. Only the base specification can define primitive types.
+    """
+
     PrimitiveDataType = StructureDefinitionKindCode("primitive-type")
+    """
+    A  complex structure that defines a set of data elements that is suitable for use in 'resources'. The base specification defines a number of complex types, and other specifications can define additional types. These structures do not have a maintained identity.
+    """
     ComplexDataType = StructureDefinitionKindCode("complex-type")
+    """
+    A 'resource' - a directed acyclic graph of elements that aggregrates other types into an identifiable entity. The base FHIR resources are defined by the FHIR specification itself but other 'resources' can be defined in additional specifications (though these will not be recognised as 'resources' by the FHIR specification (i.e. they do not get end-points etc, or act as the targets of references in FHIR defined resources - though other specificatiosn can treat them this way).
+    """
     Resource = StructureDefinitionKindCode("resource")
+    """
+    A pattern or a template that is not intended to be a real resource or complex type.
+    """
     Logical = StructureDefinitionKindCode("logical")

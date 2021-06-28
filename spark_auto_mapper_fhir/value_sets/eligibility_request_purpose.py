@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class EligibilityRequestPurposeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/eligibilityrequest-purpose
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/eligibilityrequest-purpose"
+
 
 class EligibilityRequestPurposeCodeValues:
+    """
+    The prior authorization requirements for the listed, or discovered if specified, converages for the categories of service and/or specifed biling codes are requested.
+    """
+
     CoverageAuth_requirements = EligibilityRequestPurposeCode("auth-requirements")
+    """
+    The plan benefits and optionally benefits consumed  for the listed, or discovered if specified, converages are requested.
+    """
     CoverageBenefits = EligibilityRequestPurposeCode("benefits")
+    """
+    The insurer is requested to report on any coverages which they are aware of in addition to any specifed.
+    """
     CoverageDiscovery = EligibilityRequestPurposeCode("discovery")
+    """
+    A check that the specified coverages are in-force is requested.
+    """
     CoverageValidation = EligibilityRequestPurposeCode("validation")

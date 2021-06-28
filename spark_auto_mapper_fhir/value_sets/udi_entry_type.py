@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class UDIEntryTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/udi-entry-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/udi-entry-type"
+
 
 class UDIEntryTypeCodeValues:
+    """
+    a barcodescanner captured the data from the device label.
+    """
+
     Barcode = UDIEntryTypeCode("barcode")
+    """
+    An RFID chip reader captured the data from the device label.
+    """
     RFID = UDIEntryTypeCode("rfid")
+    """
+    The data was read from the label by a person and manually entered. (e.g.  via a keyboard).
+    """
     Manual = UDIEntryTypeCode("manual")
+    """
+    The data originated from a patient's implant card and was read by an operator.
+    """
     Card = UDIEntryTypeCode("card")
+    """
+    The data originated from a patient source and was not directly scanned or read from a label or card.
+    """
     SelfReported = UDIEntryTypeCode("self-reported")
+    """
+    The method of data capture has not been determined.
+    """
     Unknown = UDIEntryTypeCode("unknown")

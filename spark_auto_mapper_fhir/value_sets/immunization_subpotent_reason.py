@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ImmunizationSubpotentReasonCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/immunization-subpotent-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/immunization-subpotent-reason"
+
 
 class ImmunizationSubpotentReasonCodeValues:
+    """
+    The full volume of the dose was not administered to the patient.
+    """
+
     PartialDose = ImmunizationSubpotentReasonCode("partial")
+    """
+    The vaccine experienced a cold chain break.
+    """
     ColdChainBreak = ImmunizationSubpotentReasonCode("coldchainbreak")
+    """
+    The vaccine was recalled by the manufacturer.
+    """
     ManufacturerRecall = ImmunizationSubpotentReasonCode("recall")

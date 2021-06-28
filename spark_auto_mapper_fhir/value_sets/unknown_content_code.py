@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class UnknownContentCodeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/unknown-content-code
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/unknown-content-code"
+
 
 class UnknownContentCodeCodeValues:
+    """
+    The application does not accept either unknown elements or extensions.
+    """
+
     NeitherElementsOrExtensions = UnknownContentCodeCode("no")
+    """
+    The application accepts unknown extensions, but not unknown elements.
+    """
     UnknownExtensions = UnknownContentCodeCode("extensions")
+    """
+    The application accepts unknown elements, but not unknown extensions.
+    """
     UnknownElements = UnknownContentCodeCode("elements")
+    """
+    The application accepts unknown elements and extensions.
+    """
     UnknownElementsAndExtensions = UnknownContentCodeCode("both")

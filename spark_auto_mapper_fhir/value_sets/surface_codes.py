@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class SurfaceCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/surface
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/surface"
+
 
 class SurfaceCodesCodeValues:
+    """
+    The surface of a tooth that is closest to the midline (middle) of the face.
+    """
+
     Mesial = SurfaceCodesCode("M")
+    """
+    The chewing surface of posterior teeth.
+    """
     Occlusal = SurfaceCodesCode("O")
+    """
+    The biting edge of anterior teeth.
+    """
     Incisal = SurfaceCodesCode("I")
+    """
+    The surface of a tooth that faces away from the midline of the face.
+    """
     Distal = SurfaceCodesCode("D")
+    """
+    The surface of a posterior tooth facing the cheeks.
+    """
     Buccal = SurfaceCodesCode("B")
+    """
+    The surface of a tooth facing the lips.
+    """
     Ventral = SurfaceCodesCode("V")
+    """
+    The surface of a tooth facing the tongue.
+    """
     Lingual = SurfaceCodesCode("L")
+    """
+    The Mesioclusal surfaces of a tooth.
+    """
     Mesioclusal = SurfaceCodesCode("MO")
+    """
+    The Distoclusal surfaces of a tooth.
+    """
     Distoclusal = SurfaceCodesCode("DO")
+    """
+    The Distoincisal surfaces of a tooth.
+    """
     Distoincisal = SurfaceCodesCode("DI")
+    """
+    The Mesioclusodistal surfaces of a tooth.
+    """
     Mesioclusodistal = SurfaceCodesCode("MOD")

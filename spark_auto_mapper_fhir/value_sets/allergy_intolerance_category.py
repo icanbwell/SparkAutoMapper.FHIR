@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class AllergyIntoleranceCategoryCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/allergy-intolerance-category
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/allergy-intolerance-category"
+
 
 class AllergyIntoleranceCategoryCodeValues:
+    """
+    Any substance consumed to provide nutritional support for the body.
+    """
+
     Food = AllergyIntoleranceCategoryCode("food")
+    """
+    Substances administered to achieve a physiological effect.
+    """
     Medication = AllergyIntoleranceCategoryCode("medication")
+    """
+    Any substances that are encountered in the environment, including any substance not already classified as food, medication, or biologic.
+    """
     Environment = AllergyIntoleranceCategoryCode("environment")
+    """
+    A preparation that is synthesized from living organisms or their products, especially a human or animal protein, such as a hormone or antitoxin, that is used as a diagnostic, preventive, or therapeutic agent. Examples of biologic medications include: vaccines; allergenic extracts, which are used for both diagnosis and treatment (for example, allergy shots); gene therapies; cellular therapies.  There are other biologic products, such as tissues, which are not typically associated with allergies.
+    """
     Biologic = AllergyIntoleranceCategoryCode("biologic")

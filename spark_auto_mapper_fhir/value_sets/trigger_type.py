@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class TriggerTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/trigger-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/trigger-type"
+
 
 class TriggerTypeCodeValues:
+    """
+    The trigger occurs in response to a specific named event, and no other information about the trigger is specified. Named events are completely pre-coordinated, and the formal semantics of the trigger are not provided.
+    """
+
     NamedEvent = TriggerTypeCode("named-event")
+    """
+    The trigger occurs at a specific time or periodically as described by a timing or schedule. A periodic event cannot have any data elements, but may have a name assigned as a shorthand for the event.
+    """
     Periodic = TriggerTypeCode("periodic")
+    """
+    The trigger occurs whenever data of a particular type is changed in any way, either added, modified, or removed.
+    """
     DataChanged = TriggerTypeCode("data-changed")
+    """
+    The trigger occurs whenever data of a particular type is accessed.
+    """
     DataAccessed = TriggerTypeCode("data-accessed")
+    """
+    The trigger occurs whenever access to data of a particular type is completed.
+    """
     DataAccessEnded = TriggerTypeCode("data-access-ended")

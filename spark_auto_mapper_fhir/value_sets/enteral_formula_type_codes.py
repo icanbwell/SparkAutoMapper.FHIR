@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,47 +16,161 @@ class EnteralFormulaTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class EnteralFormulaTypeCodesCodeValues:
+    """
+    None
+    """
+
     AdultCriticalCareFormula = EnteralFormulaTypeCodesCode("443031000124106")
+    """
+    None
+    """
     AdultDiabetesSpecialtyFormula = EnteralFormulaTypeCodesCode("443051000124104")
+    """
+    None
+    """
     AdultElementalFormula = EnteralFormulaTypeCodesCode("442911000124109")
+    """
+    None
+    """
     AdultHepaticSpecialtyFormula = EnteralFormulaTypeCodesCode("443021000124108")
+    """
+    None
+    """
     AdultHighEnergyFormula = EnteralFormulaTypeCodesCode("442971000124100")
+    """
+    None
+    """
     AdultHydrolyzedProteinFormula = EnteralFormulaTypeCodesCode("442981000124102")
+    """
+    None
+    """
     AdultHighProteinFormula = EnteralFormulaTypeCodesCode("442991000124104")
+    """
+    None
+    """
     AdultHighProteinHighFiberFormula = EnteralFormulaTypeCodesCode("443011000124100")
+    """
+    None
+    """
     AdultLowCarbohydrateFormula = EnteralFormulaTypeCodesCode("442961000124107")
+    """
+    None
+    """
     AdultPulmonarySpecialtyFormula = EnteralFormulaTypeCodesCode("442951000124105")
+    """
+    None
+    """
     AdultRenalSpecialtyFormula = EnteralFormulaTypeCodesCode("442941000124108")
+    """
+    None
+    """
     AdultStandardFormula = EnteralFormulaTypeCodesCode("442921000124101")
+    """
+    None
+    """
     AdultSoyProteinIsolateFormula = EnteralFormulaTypeCodesCode("442931000124103")
+    """
+    None
+    """
     PediatricFormula = EnteralFormulaTypeCodesCode("443361000124100")
+    """
+    None
+    """
     PediatricElementalFormula = EnteralFormulaTypeCodesCode("443401000124105")
+    """
+    None
+    """
     PediatricHighEnergyFormula = EnteralFormulaTypeCodesCode("443491000124103")
+    """
+    None
+    """
     PediatricHighEnergyFormulaWithIncreasedFiber = EnteralFormulaTypeCodesCode(
         "443501000124106"
     )
+    """
+    None
+    """
     PediatricHydrolyzedProteinFormula = EnteralFormulaTypeCodesCode("443421000124100")
+    """
+    None
+    """
     PediatricIncreasedFiberFormula = EnteralFormulaTypeCodesCode("443471000124104")
+    """
+    None
+    """
     PediatricReducedEnergyFormula = EnteralFormulaTypeCodesCode("444431000124104")
+    """
+    None
+    """
     PediatricStandardFormula = EnteralFormulaTypeCodesCode("443451000124109")
+    """
+    None
+    """
     StandardEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode("441561000124106")
+    """
+    None
+    """
     StandardFormula = EnteralFormulaTypeCodesCode("443461000124106")
+    """
+    None
+    """
     StandardEnteralFormula = EnteralFormulaTypeCodesCode("441531000124102")
+    """
+    None
+    """
     SoyBasedFormula = EnteralFormulaTypeCodesCode("443561000124107")
+    """
+    None
+    """
     RenalFormula = EnteralFormulaTypeCodesCode("443481000124101")
+    """
+    None
+    """
     HighEnergyEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode("441571000124104")
+    """
+    None
+    """
     DiabeticEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode("441591000124103")
+    """
+    None
+    """
     DiabeticHighCalorieHighProteinEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode(
         "441601000124106"
     )
+    """
+    None
+    """
     IncreasedFiberFormula = EnteralFormulaTypeCodesCode("443351000124102")
+    """
+    None
+    """
     HydrolyzedProteinFormula = EnteralFormulaTypeCodesCode("443771000124106")
+    """
+    None
+    """
     HydrolyzedPeptide_basedHighProteinEnteralFormula = EnteralFormulaTypeCodesCode(
         "441671000124100"
     )
+    """
+    None
+    """
     HighProteinFormula = EnteralFormulaTypeCodesCode("443111000124101")
+    """
+    None
+    """
     HighEnergyFormula = EnteralFormulaTypeCodesCode("443431000124102")
+    """
+    None
+    """
     ElementalFormula = EnteralFormulaTypeCodesCode("443411000124108")
+    """
+    None
+    """
     AdultFormula = EnteralFormulaTypeCodesCode("442651000124102")

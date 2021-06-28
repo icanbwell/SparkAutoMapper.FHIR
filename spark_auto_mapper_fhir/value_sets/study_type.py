@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class StudyTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/study-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/study-type"
+
 
 class StudyTypeCodeValues:
+    """
+    randomized controlled trial.
+    """
+
     RandomizedTrial = StudyTypeCode("RCT")
+    """
+    controlled (but not randomized) trial.
+    """
     ControlledTrial_non_randomized_ = StudyTypeCode("CCT")
+    """
+    observational study comparing cohorts.
+    """
     ComparativeCohortStudy = StudyTypeCode("cohort")
+    """
+    case-control study.
+    """
     Case_controlStudy = StudyTypeCode("case-control")
+    """
+    uncontrolled cohort or case series.
+    """
     UncontrolledCohortOrCaseSeries = StudyTypeCode("series")
+    """
+    a single case report.
+    """
     CaseReport = StudyTypeCode("case-report")
+    """
+    a combination of 1 or more types of studies.
+    """
     MixedMethods = StudyTypeCode("mixed")

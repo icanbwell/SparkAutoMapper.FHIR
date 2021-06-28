@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class AdjudicationValueCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/adjudication
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/adjudication"
+
 
 class AdjudicationValueCodesCodeValues:
+    """
+    The total submitted amount for the claim or group or line item.
+    """
+
     SubmittedAmount = AdjudicationValueCodesCode("submitted")
+    """
+    Patient Co-Payment
+    """
     CoPay = AdjudicationValueCodesCode("copay")
+    """
+    Amount of the change which is considered for adjudication.
+    """
     EligibleAmount = AdjudicationValueCodesCode("eligible")
+    """
+    Amount deducted from the eligible amount prior to adjudication.
+    """
     Deductible = AdjudicationValueCodesCode("deductible")
+    """
+    The amount of deductible which could not allocated to other line items.
+    """
     UnallocatedDeductible = AdjudicationValueCodesCode("unallocdeduct")
+    """
+    Eligible Percentage.
+    """
     Eligible_ = AdjudicationValueCodesCode("eligpercent")
+    """
+    The amount of tax.
+    """
     Tax = AdjudicationValueCodesCode("tax")
+    """
+    Amount payable under the coverage
+    """
     BenefitAmount = AdjudicationValueCodesCode("benefit")

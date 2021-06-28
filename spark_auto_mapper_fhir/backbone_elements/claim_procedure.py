@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.example_procedure_type_codes import (
         ExampleProcedureTypeCodesCode,
@@ -33,6 +34,7 @@ if TYPE_CHECKING:
     # procedureCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for procedureCodeableConcept
     # Import for CodeableConcept for procedureCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

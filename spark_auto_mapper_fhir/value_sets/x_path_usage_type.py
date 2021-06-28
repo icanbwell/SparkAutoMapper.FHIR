@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class XPathUsageTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/search-xpath-usage
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/search-xpath-usage"
+
 
 class XPathUsageTypeCodeValues:
+    """
+    The search parameter is derived directly from the selected nodes based on the type definitions.
+    """
+
     Normal = XPathUsageTypeCode("normal")
+    """
+    The search parameter is derived by a phonetic transform from the selected nodes.
+    """
     Phonetic = XPathUsageTypeCode("phonetic")
+    """
+    The search parameter is based on a spatial transform of the selected nodes.
+    """
     Nearby = XPathUsageTypeCode("nearby")
+    """
+    The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
+    """
     Distance = XPathUsageTypeCode("distance")
+    """
+    The interpretation of the xpath statement is unknown (and can't be automated).
+    """
     Other = XPathUsageTypeCode("other")

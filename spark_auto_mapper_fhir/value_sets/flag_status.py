@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class FlagStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/flag-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/flag-status"
+
 
 class FlagStatusCodeValues:
+    """
+    A current flag that should be displayed to a user. A system may use the category to determine which user roles should view the flag.
+    """
+
     Active = FlagStatusCode("active")
+    """
+    The flag no longer needs to be displayed.
+    """
     Inactive = FlagStatusCode("inactive")
+    """
+    The flag was added in error and should no longer be displayed.
+    """
     EnteredInError = FlagStatusCode("entered-in-error")

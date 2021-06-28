@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class DeviceNameTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/device-nametype
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/device-nametype"
+
 
 class DeviceNameTypeCodeValues:
+    """
+    UDI Label name.
+    """
+
     UDILabelName = DeviceNameTypeCode("udi-label-name")
+    """
+    User Friendly name.
+    """
     UserFriendlyName = DeviceNameTypeCode("user-friendly-name")
+    """
+    Patient Reported name.
+    """
     PatientReportedName = DeviceNameTypeCode("patient-reported-name")
+    """
+    Manufacturer name.
+    """
     ManufacturerName = DeviceNameTypeCode("manufacturer-name")
+    """
+    Model name.
+    """
     ModelName = DeviceNameTypeCode("model-name")
+    """
+    other.
+    """
     Other = DeviceNameTypeCode("other")

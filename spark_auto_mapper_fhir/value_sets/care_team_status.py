@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class CareTeamStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/care-team-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/care-team-status"
+
 
 class CareTeamStatusCodeValues:
+    """
+    The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
+    """
+
     Proposed = CareTeamStatusCode("proposed")
+    """
+    The care team is currently participating in the coordination and delivery of care.
+    """
     Active = CareTeamStatusCode("active")
+    """
+    The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
+    """
     Suspended = CareTeamStatusCode("suspended")
+    """
+    The care team was, but is no longer, participating in the coordination and delivery of care.
+    """
     Inactive = CareTeamStatusCode("inactive")
+    """
+    The care team should have never existed.
+    """
     EnteredInError = CareTeamStatusCode("entered-in-error")

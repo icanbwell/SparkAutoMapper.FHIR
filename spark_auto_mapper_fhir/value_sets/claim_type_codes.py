@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class ClaimTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/claim-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/claim-type"
+
 
 class ClaimTypeCodesCodeValues:
+    """
+    Hospital, clinic and typically inpatient claims.
+    """
+
     Institutional = ClaimTypeCodesCode("institutional")
+    """
+    Dental, Denture and Hygiene claims.
+    """
     Oral = ClaimTypeCodesCode("oral")
+    """
+    Pharmacy claims for goods and services.
+    """
     Pharmacy = ClaimTypeCodesCode("pharmacy")
+    """
+    Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
+    """
     Professional = ClaimTypeCodesCode("professional")
+    """
+    Vision claims for professional services and products such as glasses and contact lenses.
+    """
     Vision = ClaimTypeCodesCode("vision")

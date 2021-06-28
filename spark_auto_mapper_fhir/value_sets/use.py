@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class UseCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/claim-use
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/claim-use"
+
 
 class UseCodeValues:
+    """
+    The treatment is complete and this represents a Claim for the services.
+    """
+
     Claim = UseCode("claim")
+    """
+    The treatment is proposed and this represents a Pre-authorization for the services.
+    """
     Preauthorization = UseCode("preauthorization")
+    """
+    The treatment is proposed and this represents a Pre-determination for the services.
+    """
     Predetermination = UseCode("predetermination")

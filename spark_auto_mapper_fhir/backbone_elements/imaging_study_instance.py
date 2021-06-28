@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     # sopClass (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for sopClass
     # Import for CodeableConcept for sopClass
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

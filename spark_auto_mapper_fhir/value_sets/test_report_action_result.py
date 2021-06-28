@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class TestReportActionResultCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/report-action-result-codes
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/report-action-result-codes"
+
 
 class TestReportActionResultCodeValues:
+    """
+    The action was successful.
+    """
+
     Pass = TestReportActionResultCode("pass")
+    """
+    The action was skipped.
+    """
     Skip = TestReportActionResultCode("skip")
+    """
+    The action failed.
+    """
     Fail = TestReportActionResultCode("fail")
+    """
+    The action passed but with warnings.
+    """
     Warning = TestReportActionResultCode("warning")
+    """
+    The action encountered a fatal error and the engine was unable to process.
+    """
     Error = TestReportActionResultCode("error")

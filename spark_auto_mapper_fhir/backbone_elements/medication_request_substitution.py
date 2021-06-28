@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for reason
     # Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.value_sets.substance_admin_substitution_reason import (
         SubstanceAdminSubstitutionReason,
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # allowedCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for allowedCodeableConcept
     # Import for CodeableConcept for allowedCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

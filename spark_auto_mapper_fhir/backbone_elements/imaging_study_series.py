@@ -21,6 +21,7 @@ if TYPE_CHECKING:
     # modality (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for modality
     # Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -38,6 +39,7 @@ if TYPE_CHECKING:
     # bodySite (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for bodySite
     # Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
         SNOMEDCTBodyStructuresCode,
@@ -47,6 +49,7 @@ if TYPE_CHECKING:
     # laterality (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for laterality
     # Import for CodeableConcept for laterality
     from spark_auto_mapper_fhir.value_sets.laterality import LateralityCode
 

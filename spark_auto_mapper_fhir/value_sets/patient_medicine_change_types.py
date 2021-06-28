@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class PatientMedicineChangeTypesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/list-item-flag
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/list-item-flag"
+
 
 class PatientMedicineChangeTypesCodeValues:
+    """
+    No change has been made to the status of this medicine item.
+    """
+
     Unchanged = PatientMedicineChangeTypesCode("01")
+    """
+    The medicine item has changed. The change may be described in an extension (not defined yet)
+    """
     Changed = PatientMedicineChangeTypesCode("02")
+    """
+    The prescription for this medicine item was cancelled by an authorized health care provider. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patient's clinical condition.
+    """
     Cancelled = PatientMedicineChangeTypesCode("03")
+    """
+    A new medicine item has been prescribed
+    """
     Prescribed = PatientMedicineChangeTypesCode("04")
+    """
+    Administration of this medication item that the patient is currently taking is stopped or recommended to be stopped (i.e. instructed to be ceased by a health care provider). This cessation is anticipated to be permanent. The Change Description should describe the reason for cessation. Example uses: the medication in question is considered ineffective or has caused serious adverse effects. This value applies both to the cessation of a medication that is prescribed by another healthcare provider or patient self-administration of OTC medicines.
+    """
     Ceased = PatientMedicineChangeTypesCode("05")
+    """
+    Administration of this medication item that the patient is currently taking is on hold, or instructed or recommended by a health care provider to be temporarily stopped, or subject to clinical review (i.e. the stop may be temporary or permanent depending on the outcome of clinical review), or temporarily suspended as a pre-requisite to certain surgical or diagnostic procedures.
+    """
     Suspended = PatientMedicineChangeTypesCode("06")

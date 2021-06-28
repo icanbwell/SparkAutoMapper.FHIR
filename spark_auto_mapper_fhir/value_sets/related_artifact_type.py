@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class RelatedArtifactTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/related-artifact-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/related-artifact-type"
+
 
 class RelatedArtifactTypeCodeValues:
+    """
+    Additional documentation for the knowledge resource. This would include additional instructions on usage as well as additional information on clinical context or appropriateness.
+    """
+
     Documentation = RelatedArtifactTypeCode("documentation")
+    """
+    A summary of the justification for the knowledge resource including supporting evidence, relevant guidelines, or other clinically important information. This information is intended to provide a way to make the justification for the knowledge resource available to the consumer of interventions or results produced by the knowledge resource.
+    """
     Justification = RelatedArtifactTypeCode("justification")
+    """
+    Bibliographic citation for papers, references, or other relevant material for the knowledge resource. This is intended to allow for citation of related material, but that was not necessarily specifically prepared in connection with this knowledge resource.
+    """
     Citation = RelatedArtifactTypeCode("citation")
+    """
+    The previous version of the knowledge resource.
+    """
     Predecessor = RelatedArtifactTypeCode("predecessor")
+    """
+    The next version of the knowledge resource.
+    """
     Successor = RelatedArtifactTypeCode("successor")
+    """
+    The knowledge resource is derived from the related artifact. This is intended to capture the relationship in which a particular knowledge resource is based on the content of another artifact, but is modified to capture either a different set of overall requirements, or a more specific set of requirements such as those involved in a particular institution or clinical setting.
+    """
     DerivedFrom = RelatedArtifactTypeCode("derived-from")
+    """
+    The knowledge resource depends on the given related artifact.
+    """
     DependsOn = RelatedArtifactTypeCode("depends-on")
+    """
+    The knowledge resource is composed of the given related artifact.
+    """
     ComposedOf = RelatedArtifactTypeCode("composed-of")

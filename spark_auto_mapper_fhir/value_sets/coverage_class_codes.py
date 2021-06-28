@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class CoverageClassCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/coverage-class
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/coverage-class"
+
 
 class CoverageClassCodesCodeValues:
+    """
+    An employee group
+    """
+
     Group = CoverageClassCodesCode("group")
+    """
+    A sub-group of an employee group
+    """
     SubGroup = CoverageClassCodesCode("subgroup")
+    """
+    A specific suite of benefits.
+    """
     Plan = CoverageClassCodesCode("plan")
+    """
+    A subset of a specific suite of benefits.
+    """
     SubPlan = CoverageClassCodesCode("subplan")
+    """
+    A class of benefits.
+    """
     Class = CoverageClassCodesCode("class")
+    """
+    A subset of a class of benefits.
+    """
     SubClass = CoverageClassCodesCode("subclass")
+    """
+    A sequence number associated with a short-term continuance of the coverage.
+    """
     Sequence = CoverageClassCodesCode("sequence")
+    """
+    Pharmacy benefit manager's Business Identification Number.
+    """
     RXBIN = CoverageClassCodesCode("rxbin")
+    """
+    A Pharmacy Benefit Manager specified Processor Control Number.
+    """
     RXPCN = CoverageClassCodesCode("rxpcn")
+    """
+    A Pharmacy Benefit Manager specified Member ID.
+    """
     RXId = CoverageClassCodesCode("rxid")
+    """
+    A Pharmacy Benefit Manager specified Group number.
+    """
     RXGroup = CoverageClassCodesCode("rxgroup")

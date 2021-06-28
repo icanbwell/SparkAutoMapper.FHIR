@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class QualityOfEvidenceRatingCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/evidence-quality
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/evidence-quality"
+
 
 class QualityOfEvidenceRatingCodeValues:
+    """
+    High quality evidence.
+    """
+
     HighQuality = QualityOfEvidenceRatingCode("high")
+    """
+    Moderate quality evidence.
+    """
     ModerateQuality = QualityOfEvidenceRatingCode("moderate")
+    """
+    Low quality evidence.
+    """
     LowQuality = QualityOfEvidenceRatingCode("low")
+    """
+    Very low quality evidence.
+    """
     VeryLowQuality = QualityOfEvidenceRatingCode("very-low")

@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for category
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategoryCode
 
@@ -20,6 +21,7 @@ if TYPE_CHECKING:
     # description (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for description
     # Import for CodeableConcept for description
     from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
         SNOMEDCTClinicalFindingsCode,
@@ -29,6 +31,7 @@ if TYPE_CHECKING:
     # priority (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for priority
     # Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriorityCode
 
@@ -36,6 +39,7 @@ if TYPE_CHECKING:
     # start (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for start
     # Import for CodeableConcept for start
     from spark_auto_mapper_fhir.value_sets.goal_start_event import GoalStartEventCode
 
@@ -43,6 +47,7 @@ if TYPE_CHECKING:
     # addresses (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for addresses
     # Import for CodeableConcept for addresses
     from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
         Condition_or_Problem_or_DiagnosisCodesCode,

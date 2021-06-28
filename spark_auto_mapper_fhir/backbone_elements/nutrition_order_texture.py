@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # modifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for modifier
     # Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.value_sets.texture_modifier_codes import (
         TextureModifierCodesCode,
@@ -22,6 +23,7 @@ if TYPE_CHECKING:
     # foodType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for foodType
     # Import for CodeableConcept for foodType
     from spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes import (
         TextureModifiedFoodTypeCodesCode,

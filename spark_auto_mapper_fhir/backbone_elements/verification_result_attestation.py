@@ -31,6 +31,7 @@ if TYPE_CHECKING:
     # communicationMethod (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for communicationMethod
     # Import for CodeableConcept for communicationMethod
     from spark_auto_mapper_fhir.value_sets.verificationresult_communication_method import (
         Verificationresult_communication_methodCode,

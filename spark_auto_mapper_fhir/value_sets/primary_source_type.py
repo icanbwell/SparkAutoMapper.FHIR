@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,49 @@ class Primary_source_typeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/verificationresult-primary-source-type
+    """
+    codeset: FhirUri = (
+        "http://hl7.org/fhir/ValueSet/verificationresult-primary-source-type"
+    )
+
 
 class Primary_source_typeCodeValues:
+    """
+    None
+    """
+
     LicenseBoard = Primary_source_typeCode("lic-board")
+    """
+    None
+    """
     PrimaryEducation = Primary_source_typeCode("prim")
+    """
+    None
+    """
     ContinuingEducation = Primary_source_typeCode("cont-ed")
+    """
+    None
+    """
     PostalService = Primary_source_typeCode("post-serv")
+    """
+    None
+    """
     RelationshipOwner = Primary_source_typeCode("rel-own")
+    """
+    None
+    """
     RegistrationAuthority = Primary_source_typeCode("reg-auth")
+    """
+    None
+    """
     LegalSource = Primary_source_typeCode("legal")
+    """
+    None
+    """
     IssuingSource = Primary_source_typeCode("issuer")
+    """
+    None
+    """
     AuthoritativeSource = Primary_source_typeCode("auth-source")

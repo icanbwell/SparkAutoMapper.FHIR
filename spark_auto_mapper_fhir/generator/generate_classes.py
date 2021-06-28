@@ -1,10 +1,30 @@
 import os
-from pathlib import Path
 import shutil
 from os import path, listdir
+from pathlib import Path
 from shutil import copyfile
+from typing import Union, List, Callable, Iterable
 
 from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchemaParser
+
+
+def my_copytree(
+    src: Union[Path, str],
+    dst: Union[Path, str],
+    symlinks: bool = False,
+    ignore: Union[
+        None,
+        Callable[[str, List[str]], Iterable[str]],
+        Callable[[Union[str, os.PathLike[str]], List[str]], Iterable[str]],
+    ] = None,
+) -> None:
+    for item in os.listdir(src):
+        s = os.path.join(src, item)
+        d = os.path.join(dst, item)
+        if os.path.isdir(s):
+            shutil.copytree(s, d, symlinks, ignore)
+        else:
+            shutil.copy2(s, d)
 
 
 def main() -> int:
@@ -168,6 +188,7 @@ def main() -> int:
     )
     from os.path import isfile, join
 
+    # resources
     resource_files = [
         f
         for f in listdir(resources_folder.joinpath("../base_types/resources"))
@@ -180,18 +201,68 @@ def main() -> int:
             ),
             resources_folder.joinpath(resource_file),
         )
+    # value_sets
+    # value_set_files = [
+    #     f
+    #     for f in listdir(value_sets_folder.joinpath("../base_types/value_sets"))
+    #     if isfile(join(value_sets_folder.joinpath("../base_types/value_sets"), f))
+    # ]
+    # for value_set_file in value_set_files:
+    #     copyfile(
+    #         value_sets_folder.joinpath("../base_types/value_sets").joinpath(
+    #             value_set_file
+    #         ),
+    #         value_sets_folder.joinpath(value_set_file),
+    #     )
+
+    my_copytree(
+        value_sets_folder.joinpath("../base_types/value_sets"), value_sets_folder
+    )
+    # value_sets custom
+    # value_set_files = [
+    #     f
+    #     for f in listdir(value_sets_folder.joinpath("../base_types/value_sets/custom"))
+    #     if isfile(join(value_sets_folder.joinpath("../base_types/value_sets/custom"), f))
+    # ]
+    # for value_set_file in value_set_files:
+    #     copyfile(
+    #         value_sets_folder.joinpath("../base_types/value_sets/custom").joinpath(
+    #             value_set_file
+    #         ),
+    #         value_sets_folder.joinpath("custom").joinpath(value_set_file),
+    #     )
+    #
+    # # value_sets da_vinci
+    # value_set_files = [
+    #     f
+    #     for f in listdir(value_sets_folder.joinpath("../base_types/value_sets/da_vinci"))
+    #     if isfile(join(value_sets_folder.joinpath("../base_types/value_sets/da_vinci"), f))
+    # ]
+    # for value_set_file in value_set_files:
+    #     copyfile(
+    #         value_sets_folder.joinpath("../base_types/value_sets/da_vinci").joinpath(
+    #             value_set_file
+    #         ),
+    #         value_sets_folder.joinpath("da_vinci").joinpath(value_set_file),
+    #     )
+
+    # value_sets us_core
     value_set_files = [
         f
-        for f in listdir(value_sets_folder.joinpath("../base_types/value_sets"))
-        if isfile(join(value_sets_folder.joinpath("../base_types/value_sets"), f))
+        for f in listdir(value_sets_folder.joinpath("../base_types/value_sets/us_core"))
+        if isfile(
+            join(value_sets_folder.joinpath("../base_types/value_sets/us_core"), f)
+        )
     ]
     for value_set_file in value_set_files:
         copyfile(
-            value_sets_folder.joinpath("../base_types/value_sets").joinpath(
+            value_sets_folder.joinpath("../base_types/value_sets/us_core").joinpath(
                 value_set_file
             ),
-            value_sets_folder.joinpath(value_set_file),
+            value_sets_folder.joinpath("us_core").joinpath(value_set_file),
         )
+
+    # complex types
     complex_types_files = [
         f
         for f in listdir(complex_types_folder.joinpath("../base_types/complex_types"))

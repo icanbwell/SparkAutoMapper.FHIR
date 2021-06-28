@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,61 +16,235 @@ class CommonLanguagesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class CommonLanguagesCodeValues:
+    """
+    None
+    """
+
     Arabic = CommonLanguagesCode("ar")
+    """
+    None
+    """
     Bengali = CommonLanguagesCode("bn")
+    """
+    None
+    """
     Czech = CommonLanguagesCode("cs")
+    """
+    None
+    """
     Danish = CommonLanguagesCode("da")
+    """
+    None
+    """
     German = CommonLanguagesCode("de")
+    """
+    None
+    """
     German_Austria_ = CommonLanguagesCode("de-AT")
+    """
+    None
+    """
     German_Switzerland_ = CommonLanguagesCode("de-CH")
+    """
+    None
+    """
     German_Germany_ = CommonLanguagesCode("de-DE")
+    """
+    None
+    """
     Greek = CommonLanguagesCode("el")
+    """
+    None
+    """
     English = CommonLanguagesCode("en")
+    """
+    None
+    """
     English_Australia_ = CommonLanguagesCode("en-AU")
+    """
+    None
+    """
     English_Canada_ = CommonLanguagesCode("en-CA")
+    """
+    None
+    """
     English_GreatBritain_ = CommonLanguagesCode("en-GB")
+    """
+    None
+    """
     English_India_ = CommonLanguagesCode("en-IN")
+    """
+    None
+    """
     English_NewZeland_ = CommonLanguagesCode("en-NZ")
+    """
+    None
+    """
     English_Singapore_ = CommonLanguagesCode("en-SG")
+    """
+    None
+    """
     English_UnitedStates_ = CommonLanguagesCode("en-US")
+    """
+    None
+    """
     Spanish = CommonLanguagesCode("es")
+    """
+    None
+    """
     Spanish_Argentina_ = CommonLanguagesCode("es-AR")
+    """
+    None
+    """
     Spanish_Spain_ = CommonLanguagesCode("es-ES")
+    """
+    None
+    """
     Spanish_Uruguay_ = CommonLanguagesCode("es-UY")
+    """
+    None
+    """
     Finnish = CommonLanguagesCode("fi")
+    """
+    None
+    """
     French = CommonLanguagesCode("fr")
+    """
+    None
+    """
     French_Belgium_ = CommonLanguagesCode("fr-BE")
+    """
+    None
+    """
     French_Switzerland_ = CommonLanguagesCode("fr-CH")
+    """
+    None
+    """
     French_France_ = CommonLanguagesCode("fr-FR")
+    """
+    None
+    """
     Frysian = CommonLanguagesCode("fy")
+    """
+    None
+    """
     Frysian_Netherlands_ = CommonLanguagesCode("fy-NL")
+    """
+    None
+    """
     Hindi = CommonLanguagesCode("hi")
+    """
+    None
+    """
     Croatian = CommonLanguagesCode("hr")
+    """
+    None
+    """
     Italian = CommonLanguagesCode("it")
+    """
+    None
+    """
     Italian_Switzerland_ = CommonLanguagesCode("it-CH")
+    """
+    None
+    """
     Italian_Italy_ = CommonLanguagesCode("it-IT")
+    """
+    None
+    """
     Japanese = CommonLanguagesCode("ja")
+    """
+    None
+    """
     Korean = CommonLanguagesCode("ko")
+    """
+    None
+    """
     Dutch = CommonLanguagesCode("nl")
+    """
+    None
+    """
     Dutch_Belgium_ = CommonLanguagesCode("nl-BE")
+    """
+    None
+    """
     Dutch_Netherlands_ = CommonLanguagesCode("nl-NL")
+    """
+    None
+    """
     Norwegian = CommonLanguagesCode("no")
+    """
+    None
+    """
     Norwegian_Norway_ = CommonLanguagesCode("no-NO")
+    """
+    None
+    """
     Punjabi = CommonLanguagesCode("pa")
+    """
+    None
+    """
     Polish = CommonLanguagesCode("pl")
+    """
+    None
+    """
     Portuguese = CommonLanguagesCode("pt")
+    """
+    None
+    """
     Portuguese_Brazil_ = CommonLanguagesCode("pt-BR")
+    """
+    None
+    """
     Russian = CommonLanguagesCode("ru")
+    """
+    None
+    """
     Russian_Russia_ = CommonLanguagesCode("ru-RU")
+    """
+    None
+    """
     Serbian = CommonLanguagesCode("sr")
+    """
+    None
+    """
     Serbian_Serbia_ = CommonLanguagesCode("sr-RS")
+    """
+    None
+    """
     Swedish = CommonLanguagesCode("sv")
+    """
+    None
+    """
     Swedish_Sweden_ = CommonLanguagesCode("sv-SE")
+    """
+    None
+    """
     Telegu = CommonLanguagesCode("te")
+    """
+    None
+    """
     Chinese = CommonLanguagesCode("zh")
+    """
+    None
+    """
     Chinese_China_ = CommonLanguagesCode("zh-CN")
+    """
+    None
+    """
     Chinese_HongKong_ = CommonLanguagesCode("zh-HK")
+    """
+    None
+    """
     Chinese_Singapore_ = CommonLanguagesCode("zh-SG")
+    """
+    None
+    """
     Chinese_Taiwan_ = CommonLanguagesCode("zh-TW")

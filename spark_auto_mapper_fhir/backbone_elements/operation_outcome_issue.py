@@ -20,6 +20,7 @@ if TYPE_CHECKING:
     # details (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for details
     # Import for CodeableConcept for details
     from spark_auto_mapper_fhir.value_sets.operation_outcome_codes import (
         OperationOutcomeCodesCode,

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ActionConditionKindCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/action-condition-kind
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-condition-kind"
+
 
 class ActionConditionKindCodeValues:
+    """
+    The condition describes whether or not a given action is applicable.
+    """
+
     Applicability = ActionConditionKindCode("applicability")
+    """
+    The condition is a starting condition for the action.
+    """
     Start = ActionConditionKindCode("start")
+    """
+    The condition is a stop, or exit condition for the action.
+    """
     Stop = ActionConditionKindCode("stop")

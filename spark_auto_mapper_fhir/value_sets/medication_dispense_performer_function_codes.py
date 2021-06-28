@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,29 @@ class MedicationDispensePerformerFunctionCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medicationdispense-performer-function
+    """
+    codeset: FhirUri = (
+        "http://hl7.org/fhir/ValueSet/medicationdispense-performer-function"
+    )
+
 
 class MedicationDispensePerformerFunctionCodesCodeValues:
+    """
+    Recorded the details of the request
+    """
+
     DataEnterer = MedicationDispensePerformerFunctionCodesCode("dataenterer")
+    """
+    Prepared the medication.
+    """
     Packager = MedicationDispensePerformerFunctionCodesCode("packager")
+    """
+    Performed initial quality assurance on the prepared medication
+    """
     Checker = MedicationDispensePerformerFunctionCodesCode("checker")
+    """
+    Performed the final quality assurance on the prepared medication against the request. Typically, this is a pharmacist function.
+    """
     FinalChecker = MedicationDispensePerformerFunctionCodesCode("finalchecker")

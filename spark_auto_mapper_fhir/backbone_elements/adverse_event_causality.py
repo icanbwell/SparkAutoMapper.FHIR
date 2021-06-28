@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # assessment (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for assessment
     # Import for CodeableConcept for assessment
     from spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment import (
         AdverseEventCausalityAssessmentCode,
@@ -31,6 +32,7 @@ if TYPE_CHECKING:
     # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for method
     # Import for CodeableConcept for method
     from spark_auto_mapper_fhir.value_sets.adverse_event_causality_method import (
         AdverseEventCausalityMethodCode,

@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.effect_estimate_type import (
         EffectEstimateTypeCode,
@@ -25,6 +26,7 @@ if TYPE_CHECKING:
     # variantState (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for variantState
     # Import for CodeableConcept for variantState
     from spark_auto_mapper_fhir.value_sets.evidence_variant_state import (
         EvidenceVariantStateCode,
@@ -37,6 +39,7 @@ if TYPE_CHECKING:
     # unitOfMeasure (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for unitOfMeasure
     # Import for CodeableConcept for unitOfMeasure
     from spark_auto_mapper_fhir.value_sets.ucum_codes import UCUMCodesCode
 

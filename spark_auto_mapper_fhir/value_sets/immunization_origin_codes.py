@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class ImmunizationOriginCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ImmunizationOriginCodesCodeValues:
+    """
+    The data for the immunization event originated with another provider.
+    """
+
     OtherProvider = ImmunizationOriginCodesCode("provider")
+    """
+    The data for the immunization event originated with a written record for the patient.
+    """
     WrittenRecord = ImmunizationOriginCodesCode("record")
+    """
+    The data for the immunization event originated from the recollection of the patient or parent/guardian of the patient.
+    """
     Parent_Guardian_PatientRecall = ImmunizationOriginCodesCode("recall")
+    """
+    The data for the immunization event originated with a school record for the patient.
+    """
     SchoolRecord = ImmunizationOriginCodesCode("school")
+    """
+    The data for the immunization event originated with an immunization information system (IIS) or registry operating within the jurisdiction.
+    """
     JurisdictionalIIS = ImmunizationOriginCodesCode("jurisdiction")

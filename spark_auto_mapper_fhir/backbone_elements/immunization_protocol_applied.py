@@ -22,6 +22,7 @@ if TYPE_CHECKING:
     # targetDisease (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for targetDisease
     # Import for CodeableConcept for targetDisease
     from spark_auto_mapper_fhir.value_sets.immunization_target_disease_codes import (
         ImmunizationTargetDiseaseCodesCode,

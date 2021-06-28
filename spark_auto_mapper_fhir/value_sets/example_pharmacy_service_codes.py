@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class ExamplePharmacyServiceCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/service-pharmacy
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/service-pharmacy"
+
 
 class ExamplePharmacyServiceCodesCodeValues:
+    """
+    Smoking cessation
+    """
+
     SmokingCessation = ExamplePharmacyServiceCodesCode("smokecess")
+    """
+    Flu Shot
+    """
     FluShot = ExamplePharmacyServiceCodesCode("flushot")
+    """
+    The wholesale price of the medication.
+    """
     DrugCost = ExamplePharmacyServiceCodesCode("drugcost")
+    """
+    The additional cost assessed on the drug.
+    """
     Markup = ExamplePharmacyServiceCodesCode("markup")
+    """
+    The professional fee charged for dispensing the product or service.
+    """
     DispenseFee = ExamplePharmacyServiceCodesCode("dispensefee")
+    """
+    The professional fee charged for compounding the medication.
+    """
     CompoundingFee = ExamplePharmacyServiceCodesCode("compoundfee")

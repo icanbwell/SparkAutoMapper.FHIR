@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.example_payment_type_codes import (
         ExamplePaymentTypeCodesCode,
@@ -26,6 +27,7 @@ if TYPE_CHECKING:
     # adjustmentReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for adjustmentReason
     # Import for CodeableConcept for adjustmentReason
     from spark_auto_mapper_fhir.value_sets.payment_adjustment_reason_codes import (
         PaymentAdjustmentReasonCodesCode,

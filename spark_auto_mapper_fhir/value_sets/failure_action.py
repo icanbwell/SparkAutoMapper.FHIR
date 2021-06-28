@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class Failure_actionCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/verificationresult-failure-action
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/verificationresult-failure-action"
+
 
 class Failure_actionCodeValues:
+    """
+    None
+    """
+
     Fatal = Failure_actionCode("fatal")
+    """
+    None
+    """
     Warning = Failure_actionCode("warn")
+    """
+    None
+    """
     RecordOnly = Failure_actionCode("rec-only")
+    """
+    None
+    """
     None_ = Failure_actionCode("none")

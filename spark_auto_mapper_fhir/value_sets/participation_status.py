@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ParticipationStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/participationstatus
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/participationstatus"
+
 
 class ParticipationStatusCodeValues:
+    """
+    The participant has accepted the appointment.
+    """
+
     Accepted = ParticipationStatusCode("accepted")
+    """
+    The participant has declined the appointment and will not participate in the appointment.
+    """
     Declined = ParticipationStatusCode("declined")
+    """
+    The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.
+    """
     Tentative = ParticipationStatusCode("tentative")
+    """
+    The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.
+    """
     NeedsAction = ParticipationStatusCode("needs-action")

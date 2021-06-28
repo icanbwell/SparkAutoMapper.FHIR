@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,18 +16,63 @@ class MedicationRequestStatusReasonCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medicationrequest-status-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationrequest-status-reason"
+
 
 class MedicationRequestStatusReasonCodesCodeValues:
+    """
+    This therapy has been ordered as a backup to a preferred therapy. This order will be released when and if the preferred therapy is unsuccessful.
+    """
+
     TryAnotherTreatmentFirst = MedicationRequestStatusReasonCodesCode("altchoice")
+    """
+    Clarification is required before the order can be acted upon.
+    """
     PrescriptionRequiresClarification = MedicationRequestStatusReasonCodesCode("clarif")
+    """
+    The current level of the medication in the patient's system is too high. The medication is suspended to allow the level to subside to a safer level.
+    """
     DrugLevelTooHigh = MedicationRequestStatusReasonCodesCode("drughigh")
+    """
+    The patient has been admitted to a care facility and their community medications are suspended until hospital discharge.
+    """
     AdmissionToHospital = MedicationRequestStatusReasonCodesCode("hospadm")
+    """
+    The therapy would interfere with a planned lab test and the therapy is being withdrawn until the test is completed.
+    """
     LabInterferenceIssues = MedicationRequestStatusReasonCodesCode("labint")
+    """
+    Patient not available for a period of time due to a scheduled therapy, leave of absence or other reason.
+    """
     PatientNotAvailable = MedicationRequestStatusReasonCodesCode("non-avail")
+    """
+    The patient is pregnant or breast feeding. The therapy will be resumed when the pregnancy is complete and the patient is no longer breastfeeding.
+    """
     ParentIsPregnant_breastFeeding = MedicationRequestStatusReasonCodesCode("preg")
+    """
+    The patient is believed to be allergic to a substance that is part of the therapy and the therapy is being temporarily withdrawn to confirm.
+    """
     Allergy = MedicationRequestStatusReasonCodesCode("salg")
+    """
+    The drug interacts with a short-term treatment that is more urgently required. This order will be resumed when the short-term treatment is complete.
+    """
     DrugInteractsWithAnotherDrug = MedicationRequestStatusReasonCodesCode("sddi")
+    """
+    The drug interacts with a short-term treatment that is more urgently required. This order will be resumed when the short-term treatment is complete.
+    """
     DuplicateTherapy = MedicationRequestStatusReasonCodesCode("sdupther")
+    """
+    The drug interacts with a short-term treatment that is more urgently required. This order will be resumed when the short-term treatment is complete.
+    """
     SuspectedIntolerance = MedicationRequestStatusReasonCodesCode("sintol")
+    """
+    The drug is contraindicated for patients receiving surgery and the patient is scheduled to be admitted for surgery in the near future. The drug will be resumed when the patient has sufficiently recovered from the surgery.
+    """
     PatientScheduledForSurgery_ = MedicationRequestStatusReasonCodesCode("surg")
+    """
+    The patient was previously receiving a medication contraindicated with the current medication. The current medication will remain on hold until the prior medication has been cleansed from their system.
+    """
     WaitingForOldDrugToWashOut = MedicationRequestStatusReasonCodesCode("washout")

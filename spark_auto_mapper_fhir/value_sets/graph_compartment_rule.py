@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class GraphCompartmentRuleCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/graph-compartment-rule
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/graph-compartment-rule"
+
 
 class GraphCompartmentRuleCodeValues:
+    """
+    The compartment must be identical (the same literal reference).
+    """
+
     Identical = GraphCompartmentRuleCode("identical")
+    """
+    The compartment must be the same - the record must be about the same patient, but the reference may be different.
+    """
     Matching = GraphCompartmentRuleCode("matching")
+    """
+    The compartment must be different.
+    """
     Different = GraphCompartmentRuleCode("different")
+    """
+    The compartment rule is defined in the accompanying FHIRPath expression.
+    """
     Custom = GraphCompartmentRuleCode("custom")

@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # kingdom (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for kingdom
     # Import for CodeableConcept for kingdom
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -20,6 +21,7 @@ if TYPE_CHECKING:
     # phylum (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for phylum
     # Import for CodeableConcept for phylum
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -27,6 +29,7 @@ if TYPE_CHECKING:
     # class_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for class_
     # Import for CodeableConcept for class_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -34,6 +37,7 @@ if TYPE_CHECKING:
     # order (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for order
     # Import for CodeableConcept for order
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

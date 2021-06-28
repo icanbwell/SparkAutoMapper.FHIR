@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,51 @@ class InsurancePlanTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/insuranceplan-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/insuranceplan-type"
+
 
 class InsurancePlanTypeCodeValues:
+    """
+    None
+    """
+
     Medical = InsurancePlanTypeCode("medical")
+    """
+    None
+    """
     Dental = InsurancePlanTypeCode("dental")
+    """
+    None
+    """
     MentalHealth = InsurancePlanTypeCode("mental")
+    """
+    None
+    """
     SubstanceAbuse = InsurancePlanTypeCode("subst-ab")
+    """
+    None
+    """
     Vision = InsurancePlanTypeCode("vision")
+    """
+    None
+    """
     Drug = InsurancePlanTypeCode("Drug")
+    """
+    None
+    """
     ShortTerm = InsurancePlanTypeCode("short-term")
+    """
+    None
+    """
     LongTermCare = InsurancePlanTypeCode("long-term")
+    """
+    None
+    """
     Hospice = InsurancePlanTypeCode("hospice")
+    """
+    None
+    """
     HomeHealth = InsurancePlanTypeCode("home")

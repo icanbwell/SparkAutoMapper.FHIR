@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ACMECholCodesBloodCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ACMECholCodesBloodCodeValues:
+    """
+    Serum Cholesterol, in mmol/L
+    """
+
     SChol_mmol_L_ = ACMECholCodesBloodCode("chol-mmol")
+    """
+    Serum Cholesterol, in mg/L
+    """
     SChol_mg_L_ = ACMECholCodesBloodCode("chol-mass")
+    """
+    Serum Cholesterol
+    """
     SChol = ACMECholCodesBloodCode("chol")

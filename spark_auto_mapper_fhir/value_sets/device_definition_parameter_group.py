@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class DeviceDefinitionParameterGroupCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/parameter-group
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/parameter-group"
+
 
 class DeviceDefinitionParameterGroupCodeValues:
+    """
+    Haemodynamic Parameter Group - MDC_PGRP_HEMO.
+    """
+
     HaemodynamicParameterGroup = DeviceDefinitionParameterGroupCode("haemodynamic")
+    """
+    ECG Parameter Group - MDC_PGRP_ECG.
+    """
     ECGParameterGroup = DeviceDefinitionParameterGroupCode("ecg")
+    """
+    Respiratory Parameter Group - MDC_PGRP_RESP.
+    """
     RespiratoryParameterGroup = DeviceDefinitionParameterGroupCode("respiratory")
+    """
+    Ventilation Parameter Group - MDC_PGRP_VENT.
+    """
     VentilationParameterGroup = DeviceDefinitionParameterGroupCode("ventilation")
+    """
+    Neurological Parameter Group - MDC_PGRP_NEURO.
+    """
     NeurologicalParameterGroup = DeviceDefinitionParameterGroupCode("neurological")
+    """
+    Drug Delivery Parameter Group - MDC_PGRP_DRUG.
+    """
     DrugDeliveryParameterGroup = DeviceDefinitionParameterGroupCode("drug-delivery")
+    """
+    Fluid Chemistry Parameter Group - MDC_PGRP_FLUID.
+    """
     FluidChemistryParameterGroup = DeviceDefinitionParameterGroupCode("fluid-chemistry")
+    """
+    Blood Chemistry Parameter Group - MDC_PGRP_BLOOD_CHEM.
+    """
     BloodChemistryParameterGroup = DeviceDefinitionParameterGroupCode("blood-chemistry")
+    """
+    Miscellaneous Parameter Group - MDC_PGRP_MISC.
+    """
     MiscellaneousParameterGroup = DeviceDefinitionParameterGroupCode("miscellaneous")

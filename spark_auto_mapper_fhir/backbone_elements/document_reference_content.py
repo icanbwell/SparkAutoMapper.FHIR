@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # format (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for format
     # Import for CodeableConcept for format
     from spark_auto_mapper_fhir.value_sets.document_reference_format_code_set import (
         DocumentReferenceFormatCodeSetCode,

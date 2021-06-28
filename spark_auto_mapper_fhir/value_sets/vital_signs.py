@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,18 +16,63 @@ class VitalSignsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class VitalSignsCodeValues:
+    """
+    None
+    """
+
     _85353_1 = VitalSignsCode("85353-1")
+    """
+    None
+    """
     _9279_1 = VitalSignsCode("9279-1")
+    """
+    None
+    """
     _8867_4 = VitalSignsCode("8867-4")
+    """
+    None
+    """
     _2708_6 = VitalSignsCode("2708-6")
+    """
+    None
+    """
     _8310_5 = VitalSignsCode("8310-5")
+    """
+    None
+    """
     _8302_2 = VitalSignsCode("8302-2")
+    """
+    None
+    """
     _9843_4 = VitalSignsCode("9843-4")
+    """
+    None
+    """
     _29463_7 = VitalSignsCode("29463-7")
+    """
+    None
+    """
     _39156_5 = VitalSignsCode("39156-5")
+    """
+    None
+    """
     _85354_9 = VitalSignsCode("85354-9")
+    """
+    None
+    """
     _8480_6 = VitalSignsCode("8480-6")
+    """
+    None
+    """
     _8462_4 = VitalSignsCode("8462-4")
+    """
+    None
+    """
     _8478_0 = VitalSignsCode("8478-0")

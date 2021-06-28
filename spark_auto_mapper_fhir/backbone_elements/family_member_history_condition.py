@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
         Condition_or_Problem_or_DiagnosisCodesCode,
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # outcome (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for outcome
     # Import for CodeableConcept for outcome
     from spark_auto_mapper_fhir.value_sets.condition_outcome_codes import (
         ConditionOutcomeCodesCode,

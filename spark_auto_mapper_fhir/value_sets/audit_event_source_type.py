@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class AuditEventSourceTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/audit-source-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/audit-source-type"
+
 
 class AuditEventSourceTypeCodeValues:
+    """
+    End-user display device, diagnostic device.
+    """
+
     UserDevice = AuditEventSourceTypeCode("1")
+    """
+    Data acquisition device or instrument.
+    """
     DataInterface = AuditEventSourceTypeCode("2")
+    """
+    Web Server process or thread.
+    """
     WebServer = AuditEventSourceTypeCode("3")
+    """
+    Application Server process or thread.
+    """
     ApplicationServer = AuditEventSourceTypeCode("4")
+    """
+    Database Server process or thread.
+    """
     DatabaseServer = AuditEventSourceTypeCode("5")
+    """
+    Security server, e.g. a domain controller.
+    """
     SecurityServer = AuditEventSourceTypeCode("6")
+    """
+    ISO level 1-3 network component.
+    """
     NetworkDevice = AuditEventSourceTypeCode("7")
+    """
+    ISO level 4-6 operating software.
+    """
     NetworkRouter = AuditEventSourceTypeCode("8")
+    """
+    Other kind of device (defined by DICOM, but some other code/system can be used).
+    """
     Other = AuditEventSourceTypeCode("9")

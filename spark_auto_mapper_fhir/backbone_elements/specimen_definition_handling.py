@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # temperatureQualifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for temperatureQualifier
     # Import for CodeableConcept for temperatureQualifier
     from spark_auto_mapper_fhir.value_sets.handling_condition_set import (
         HandlingConditionSetCode,

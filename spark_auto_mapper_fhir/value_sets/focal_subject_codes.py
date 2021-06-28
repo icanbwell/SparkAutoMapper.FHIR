@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,52 +16,199 @@ class FocalSubjectCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class FocalSubjectCodesCodeValues:
+    """
+    None
+    """
+
     Fetus = FocalSubjectCodesCode("83418008")
+    """
+    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    """
     Participation = FocalSubjectCodesCode("PART")
+    """
+    None
+    """
     Donor = FocalSubjectCodesCode("DON")
+    """
+    Concepts characterizing the type of association formed by player and scoper when there is a recognized Affiliate role by which the two parties are related.
+
+                        
+                           Examples: Business Partner, Business Associate, Colleague
+    """
     Affiliationroletype = FocalSubjectCodesCode("_AffiliationRoleType")
+    """
+    AssignedRoleType
+    """
     Assignedroletype = FocalSubjectCodesCode("_AssignedRoleType")
+    """
+    Defines types of certifications for all entities
+    """
     Certifiedentitytype = FocalSubjectCodesCode("_CertifiedEntityType")
+    """
+    A role type used to qualify a person's legal status within a country or nation.
+    """
     Citizenroletype = FocalSubjectCodesCode("_CitizenRoleType")
+    """
+    Types of contact for Role code "CON"
+    """
     Contactroletype = FocalSubjectCodesCode("_ContactRoleType")
+    """
+    Definition: A code representing the type of identifier that has been assigned to the identified entity (IDENT).
+
+                        
+                           Examples: Example values include Social Insurance Number, Product Catalog ID, Product Model Number.
+    """
     Identifiedentitytype = FocalSubjectCodesCode("_IdentifiedEntityType")
+    """
+    Code indicating the primary use for which a living subject is bred or grown
+    """
     Livingsubjectproductionclass = FocalSubjectCodesCode(
         "_LivingSubjectProductionClass"
     )
+    """
+    Identifies the specific hierarchical relationship between the playing and scoping medications. 
+
+                        
+                           Examples: Generic, Generic Formulation, Therapeutic Class, etc.
+    """
     Medicationgeneralizationroletype = FocalSubjectCodesCode(
         "_MedicationGeneralizationRoleType"
     )
+    """
+    Types of membership for Role code "MBR"
+    """
     Memberroletype = FocalSubjectCodesCode("_MemberRoleType")
+    """
+    PersonalRelationshipRoleType
+    """
     Personalrelationshiproletype = FocalSubjectCodesCode(
         "_PersonalRelationshipRoleType"
     )
+    """
+    Description: A role recognized through the eligibility of an identified party for benefits covered under an insurance policy or a program based on meeting eligibility criteria.
+
+                        Eligibility as a covered party may be conditioned on the party meeting criteria to qualify for coverage under a policy or program, which may be mandated by law.  These criteria may be: 
+
+                        
+                           
+                              The sole basis for coverage, e.g., being differently abled may qualify a person for disability coverage
+
+                           
+                           
+                              May more fully qualify a covered party role e.g, being differently abled may qualify an adult child as a dependent
+
+                           
+                           
+                              May impact the level of coverage for a covered party under a policy or program, e.g., being differently abled may qualify a program eligible for additional benefits.
+
+                           
+                        
+                        
+                           Discussion:  The Abstract Value Set "CoverageRoleType", which was developed for use in the Canadian realm "pre-coordinate" coverage roles with other roles that a covered party must play in order to be eligible for coverage, e.g., "handicapped dependent".   These role.codes may only be used with COVPTY to avoid overlapping concepts that would result from using them to specify the specializations of COVPTY, e.g., the role.class DEPEN should not be used with the role.code family dependent because that relationship has overlapping concepts due to the role.code precoodination and is conveyed in FICO with the personal relationship role that has a PART role link to the covered party role.  For the same reasons, the role.class DEPEN should not be used with the role.code HANDIC (handicapped dependent); the role.code DIFFABLE (differently abled) should be used instead.
+
+                        In summary, the coded concepts in the Abstract Value Set "CoveredPartyRoleType" can be "post-coordinated" with the "RoleClassCoveredParty" Abstract Value Set.  Decoupling these concepts is intended to support an expansive range of covered party concepts and their semantic comparability.
+    """
     Policyorprogramcoverageroletype = FocalSubjectCodesCode(
         "_PolicyOrProgramCoverageRoleType"
     )
+    """
+    Specifies the administrative functionality within a formal experimental design for which the ResearchSubject role was established.  Examples: screening - role is used for pre-enrollment evaluation portion of the design; enrolled - role is used for subjects admitted to the active treatment portion of the design.
+    """
     Researchsubjectrolebasis = FocalSubjectCodesCode("_ResearchSubjectRoleBasis")
+    """
+    A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
+    """
     Servicedeliverylocationroletype = FocalSubjectCodesCode(
         "_ServiceDeliveryLocationRoleType"
     )
+    """
+    SpecimenRoleType
+    """
     Specimenroletype = FocalSubjectCodesCode("_SpecimenRoleType")
+    """
+    A party that makes a claim for coverage under a policy.
+    """
     Claimant = FocalSubjectCodesCode("CLAIM")
+    """
+    Community Laboratory
+    """
     CommunityLaboratory = FocalSubjectCodesCode("communityLaboratory")
+    """
+    An individual or organization that makes or gives a promise, assurance, pledge to pay or has paid the healthcare service provider.
+    """
     Guarantor = FocalSubjectCodesCode("GT")
+    """
+    Home Health
+    """
     HomeHealth = FocalSubjectCodesCode("homeHealth")
+    """
+    Laboratory
+    """
     Laboratory = FocalSubjectCodesCode("laboratory")
+    """
+    Pathologist
+    """
     Pathologist = FocalSubjectCodesCode("pathologist")
+    """
+    Policy holder for the insurance policy.
+    """
     PolicyHolder = FocalSubjectCodesCode("PH")
+    """
+    Phlebotomist
+    """
     Phlebotomist = FocalSubjectCodesCode("phlebotomist")
+    """
+    A party that meets the eligibility criteria for coverage under a program.
+    """
     ProgramEligible = FocalSubjectCodesCode("PROG")
+    """
+    The recipient for the service(s) and/or product(s) when they are not the covered party.
+    """
     Patient = FocalSubjectCodesCode("PT")
+    """
+    Self
+    """
     Self = FocalSubjectCodesCode("subject")
+    """
+    Third Party
+    """
     ThirdParty = FocalSubjectCodesCode("thirdParty")
+    """
+    None
+    """
     Dep = FocalSubjectCodesCode("DEP")
+    """
+    A party covered under a policy based on association with a subscriber.
+    """
     Dependent = FocalSubjectCodesCode("DEPEN")
+    """
+    A member of the covered party's family. This could be the spouse, a parent, a grand parent, a sibling, etc.
+    """
     FamilyMember = FocalSubjectCodesCode("FM")
+    """
+    A party covered under a policy as the policyholder.
+    """
     Individual = FocalSubjectCodesCode("INDIV")
+    """
+    A party to an insurance policy to whom the insurer agrees to indemnify for losses, provides benefits for, or renders services.
+    """
     NamedInsured = FocalSubjectCodesCode("NAMED")
+    """
+    None
+    """
     Psychcf = FocalSubjectCodesCode("PSYCHCF")
+    """
+    A party covered under a policy based on association with a sponsor who is the policy holder, and whose association may provide for the eligibility of dependents for coverage
+    """
     Subscriber = FocalSubjectCodesCode("SUBSCR")
+    """
+    None
+    """
     Spouse = FocalSubjectCodesCode("SPS")

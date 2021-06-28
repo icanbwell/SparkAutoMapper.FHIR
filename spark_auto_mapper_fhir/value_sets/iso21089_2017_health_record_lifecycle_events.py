@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,76 +16,163 @@ class ISO21089_2017HealthRecordLifecycleEventsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ISO21089_2017HealthRecordLifecycleEventsCodeValues:
+    """
+    Occurs when an agent causes the system to obtain and open a record entry for inspection or review.
+    """
+
     Access_ViewRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "access"
     )
+    """
+    Occurs when an agent causes the system to tag or otherwise indicate special access management and suspension of record entry deletion/destruction, if deemed relevant to a lawsuit or which are reasonably anticipated to be relevant or to fulfill organizational policy under the legal doctrine of “duty to preserve”.
+    """
     AddLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "hold"
     )
+    """
+    Occurs when an agent makes any change to record entry content currently residing in storage considered permanent (persistent).
+    """
     Amend_Update_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "amend"
     )
+    """
+    Occurs when an agent causes the system to create and move archive artifacts containing record entry content, typically to long-term offline storage.
+    """
     ArchiveRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "archive"
     )
+    """
+    Occurs when an agent causes the system to capture the agent’s digital signature (or equivalent indication) during formal validation of record entry content.
+    """
     AttestRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("attest")
+    """
+    Occurs when an agent causes the system to decode record entry content from a cipher.
+    """
     DecryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "decrypt"
     )
+    """
+    Occurs when an agent causes the system to scrub record entry content to reduce the association between a set of identifying data and the data subject in a way that might or might not be reversible.
+    """
     De_Identify_Anononymize_RecordLifecycleEvent = (
         ISO21089_2017HealthRecordLifecycleEventsCode("deidentify")
     )
+    """
+    Occurs when an agent causes the system to tag record entry(ies) as obsolete, erroneous or untrustworthy, to warn against its future use.
+    """
     DeprecateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "deprecate"
     )
+    """
+    Occurs when an agent causes the system to permanently erase record entry content from the system.
+    """
     Destroy_DeleteRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "destroy"
     )
+    """
+    Occurs when an agent causes the system to release, transfer, provision access to, or otherwise divulge record entry content.
+    """
     DiscloseRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "disclose"
     )
+    """
+    Occurs when an agent causes the system to encode record entry content in a cipher.
+    """
     EncryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "encrypt"
     )
+    """
+    Occurs when an agent causes the system to selectively pull out a subset of record entry content, based on explicit criteria.
+    """
     ExtractRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "extract"
     )
+    """
+    Occurs when an agent causes the system to connect related record entries.
+    """
     LinkRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("link")
+    """
+    Occurs when an agent causes the system to combine or join content from two or more record entries, resulting in a single logical record entry.
+    """
     MergeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("merge")
+    """
+    Occurs when an agent causes the system to: a) initiate capture of potential record content, and b) incorporate that content into the storage considered a permanent part of the health record.
+    """
     Originate_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "originate"
     )
+    """
+    Occurs when an agent causes the system to remove record entry content to reduce the association between a set of identifying data and the data subject in a way that may be reversible.
+    """
     PseudonymizeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "pseudonymize"
     )
+    """
+    Occurs when an agent causes the system to recreate or restore full status to record entries previously deleted or deprecated.
+    """
     Re_activateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "reactivate"
     )
+    """
+    Occurs when an agent causes the system to a) initiate capture of data content from elsewhere, and b) incorporate that content into the storage considered a permanent part of the health record.
+    """
     Receive_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "receive"
     )
+    """
+    Occurs when an agent causes the system to restore information to data that allows identification of information source and/or information subject.
+    """
     Re_identifyRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "reidentify"
     )
+    """
+    Occurs when an agent causes the system to remove a tag or other cues for special access management had required to fulfill organizational policy under the legal doctrine of “duty to preserve”.
+    """
     RemoveLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "unhold"
     )
+    """
+    Occurs when an agent causes the system to produce and deliver record entry content in a particular form and manner.
+    """
     Report_Output_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "report"
     )
+    """
+    Occurs when an agent causes the system to recreate record entries and their content from a previous created archive artefact.
+    """
     RestoreRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "restore"
     )
+    """
+    Occurs when an agent causes the system to change the form, language or code system used to represent record entry content.
+    """
     Transform_TranslateRecordLifecycleEvent = (
         ISO21089_2017HealthRecordLifecycleEventsCode("transform")
     )
+    """
+    Occurs when an agent causes the system to send record entry content from one (EHR/PHR/other) system to another.
+    """
     TransmitRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "transmit"
     )
+    """
+    Occurs when an agent causes the system to disconnect two or more record entries previously connected, rendering them separate (disconnected) again.
+    """
     UnlinkRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("unlink")
+    """
+    Occurs when an agent causes the system to reverse a previous record entry merge operation, rendering them separate again.
+    """
     UnmergeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
         "unmerge"
     )
+    """
+    Occurs when an agent causes the system to confirm compliance of data or data objects with regulations, requirements, specifications, or other imposed conditions based on organizational policy.
+    """
     VerifyRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("verify")

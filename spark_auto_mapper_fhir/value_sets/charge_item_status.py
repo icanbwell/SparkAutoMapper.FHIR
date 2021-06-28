@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class ChargeItemStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/chargeitem-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/chargeitem-status"
+
 
 class ChargeItemStatusCodeValues:
+    """
+    The charge item has been entered, but the charged service is not  yet complete, so it shall not be billed yet but might be used in the context of pre-authorization.
+    """
+
     Planned = ChargeItemStatusCode("planned")
+    """
+    The charge item is ready for billing.
+    """
     Billable = ChargeItemStatusCode("billable")
+    """
+    The charge item has been determined to be not billable (e.g. due to rules associated with the billing code).
+    """
     NotBillable = ChargeItemStatusCode("not-billable")
+    """
+    The processing of the charge was aborted.
+    """
     Aborted = ChargeItemStatusCode("aborted")
+    """
+    The charge item has been billed (e.g. a billing engine has generated financial transactions by applying the associated ruled for the charge item to the context of the Encounter, and placed them into Claims/Invoices.
+    """
     Billed = ChargeItemStatusCode("billed")
+    """
+    The charge item has been entered in error and should not be processed for billing.
+    """
     EnteredInError = ChargeItemStatusCode("entered-in-error")
+    """
+    The authoring system does not know which of the status values currently applies for this charge item  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+    """
     Unknown = ChargeItemStatusCode("unknown")

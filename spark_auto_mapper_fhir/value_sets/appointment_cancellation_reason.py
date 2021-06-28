@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class AppointmentCancellationReasonCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/appointment-cancellation-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason"
+
 
 class AppointmentCancellationReasonCodeValues:
+    """
+    None
+    """
+
     Patient = AppointmentCancellationReasonCode("pat")
+    """
+    None
+    """
     Provider = AppointmentCancellationReasonCode("prov")
+    """
+    None
+    """
     EquipmentMaintenance_Repair = AppointmentCancellationReasonCode("maint")
+    """
+    None
+    """
     Prep_MedIncomplete = AppointmentCancellationReasonCode("meds-inc")
+    """
+    None
+    """
     Other = AppointmentCancellationReasonCode("other")

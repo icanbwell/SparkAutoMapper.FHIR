@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,51 @@ class CoverageCopayTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/coverage-copay-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/coverage-copay-type"
+
 
 class CoverageCopayTypeCodesCodeValues:
+    """
+    An office visit for a general practitioner of a discipline.
+    """
+
     GPOfficeVisit = CoverageCopayTypeCodesCode("gpvisit")
+    """
+    An office visit for a specialist practitioner of a discipline
+    """
     SpecialistOfficeVisit = CoverageCopayTypeCodesCode("spvisit")
+    """
+    An episode in an emergency department.
+    """
     Emergency = CoverageCopayTypeCodesCode("emergency")
+    """
+    An episode of an Inpatient hospital stay.
+    """
     InpatientHospital = CoverageCopayTypeCodesCode("inpthosp")
+    """
+    A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video conference.
+    """
     Tele_visit = CoverageCopayTypeCodesCode("televisit")
+    """
+    A visit to an urgent care facility - typically a community care clinic.
+    """
     UrgentCare = CoverageCopayTypeCodesCode("urgentcare")
+    """
+    A standard percentage applied to all classes or service or product not otherwise specified.
+    """
     CopayPercentage = CoverageCopayTypeCodesCode("copaypct")
+    """
+    A standard fixed currency amount applied to all classes or service or product not otherwise specified.
+    """
     CopayAmount = CoverageCopayTypeCodesCode("copay")
+    """
+    The accumulated amount of patient payment before the coverage begins to pay for services.
+    """
     Deductible = CoverageCopayTypeCodesCode("deductible")
+    """
+    The maximum amout of payment for services which a patient, or family, is expected to incur - typically annually.
+    """
     MaximumOutOfPocket = CoverageCopayTypeCodesCode("maxoutofpocket")

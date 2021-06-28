@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class MeasureScoringCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/measure-scoring
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/measure-scoring"
+
 
 class MeasureScoringCodeValues:
+    """
+    The measure score is defined using a proportion.
+    """
+
     Proportion = MeasureScoringCode("proportion")
+    """
+    The measure score is defined using a ratio.
+    """
     Ratio = MeasureScoringCode("ratio")
+    """
+    The score is defined by a calculation of some quantity.
+    """
     ContinuousVariable = MeasureScoringCode("continuous-variable")
+    """
+    The measure is a cohort definition.
+    """
     Cohort = MeasureScoringCode("cohort")

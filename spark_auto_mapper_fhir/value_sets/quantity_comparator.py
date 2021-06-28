@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class QuantityComparatorCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/quantity-comparator
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/quantity-comparator"
+
 
 class QuantityComparatorCodeValues:
+    """
+    The actual value is less than the given value.
+    """
+
     LessThan = QuantityComparatorCode("<")
+    """
+    The actual value is less than or equal to the given value.
+    """
     LessOrEqualTo = QuantityComparatorCode("<=")
+    """
+    The actual value is greater than or equal to the given value.
+    """
     GreaterOrEqualTo = QuantityComparatorCode(">=")
+    """
+    The actual value is greater than the given value.
+    """
     GreaterThan = QuantityComparatorCode(">")

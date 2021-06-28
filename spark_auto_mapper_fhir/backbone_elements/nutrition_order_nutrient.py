@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # modifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for modifier
     # Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes import (
         NutrientModifierCodesCode,

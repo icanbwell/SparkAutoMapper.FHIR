@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class CapabilityStatementKindCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/capability-statement-kind
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/capability-statement-kind"
+
 
 class CapabilityStatementKindCodeValues:
+    """
+    The CapabilityStatement instance represents the present capabilities of a specific system instance.  This is the kind returned by /metadata for a FHIR server end-point.
+    """
+
     Instance = CapabilityStatementKindCode("instance")
+    """
+    The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
+    """
     Capability = CapabilityStatementKindCode("capability")
+    """
+    The CapabilityStatement instance represents a set of requirements for other systems to meet; e.g. as part of an implementation guide or 'request for proposal'.
+    """
     Requirements = CapabilityStatementKindCode("requirements")

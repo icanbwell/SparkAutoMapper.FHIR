@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,40 +16,151 @@ class TimingAbbreviationCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class TimingAbbreviationCodeValues:
+    """
+    Every morning at institution specified times.
+    """
+
     Am = TimingAbbreviationCode("AM")
+    """
+    At bedtime (institution specified time).
+    """
     AtBedtime = TimingAbbreviationCode("BED")
+    """
+    Two times a day at institution specified time
+    """
     Bid = TimingAbbreviationCode("BID")
+    """
+    Regular business days (Monday to Friday excluding holidays)
+    """
     Jb = TimingAbbreviationCode("JB")
+    """
+    Regular weekends (Saturday and Sunday excluding holidays)
+    """
     Je = TimingAbbreviationCode("JE")
+    """
+    Holidays
+    """
     Gtsabbreviationholidays = TimingAbbreviationCode("JH")
+    """
+    Monthly at institution specified time.
+    """
     Monthly = TimingAbbreviationCode("MO")
+    """
+    Every afternoon at institution specified times.
+    """
     Pm = TimingAbbreviationCode("PM")
+    """
+    Every hour at institution specified times.
+    """
     EveryHour = TimingAbbreviationCode("Q1H")
+    """
+    Every 2 hours at institution specified times.
+    """
     Every2Hours = TimingAbbreviationCode("Q2H")
+    """
+    Every 3 hours at institution specified times.
+    """
     Every3Hours = TimingAbbreviationCode("Q3H")
+    """
+    Every 4 hours at institution specified time
+    """
     Q4h = TimingAbbreviationCode("Q4H")
+    """
+    Every 6 hours at institution specified time
+    """
     Q6h = TimingAbbreviationCode("Q6H")
+    """
+    Every 8 hours at institution specified times.
+    """
     Every8Hours = TimingAbbreviationCode("Q8H")
+    """
+    Every day at institution specified times.
+    """
     Qd = TimingAbbreviationCode("QD")
+    """
+    Four times a day at institution specified time
+    """
     Qid = TimingAbbreviationCode("QID")
+    """
+    Every other day at institution specified times.
+    """
     Qod = TimingAbbreviationCode("QOD")
+    """
+    Three times a day at institution specified time
+    """
     Tid = TimingAbbreviationCode("TID")
+    """
+    Weekly at institution specified time.
+    """
     Weekly = TimingAbbreviationCode("WK")
+    """
+    None
+    """
     BID = TimingAbbreviationCode("BID")
+    """
+    None
+    """
     TID = TimingAbbreviationCode("TID")
+    """
+    None
+    """
     QID = TimingAbbreviationCode("QID")
+    """
+    None
+    """
     AM = TimingAbbreviationCode("AM")
+    """
+    None
+    """
     PM = TimingAbbreviationCode("PM")
+    """
+    None
+    """
     QD = TimingAbbreviationCode("QD")
+    """
+    None
+    """
     QOD = TimingAbbreviationCode("QOD")
+    """
+    None
+    """
     EveryHour = TimingAbbreviationCode("Q1H")
+    """
+    None
+    """
     Every2Hours = TimingAbbreviationCode("Q2H")
+    """
+    None
+    """
     Every3Hours = TimingAbbreviationCode("Q3H")
+    """
+    None
+    """
     Q4H = TimingAbbreviationCode("Q4H")
+    """
+    None
+    """
     Q6H = TimingAbbreviationCode("Q6H")
+    """
+    None
+    """
     Every8Hours = TimingAbbreviationCode("Q8H")
+    """
+    None
+    """
     AtBedtime = TimingAbbreviationCode("BED")
+    """
+    None
+    """
     Weekly = TimingAbbreviationCode("WK")
+    """
+    None
+    """
     Monthly = TimingAbbreviationCode("MO")

@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # rating (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for rating
     # Import for CodeableConcept for rating
     from spark_auto_mapper_fhir.value_sets.quality_of_evidence_rating import (
         QualityOfEvidenceRatingCode,

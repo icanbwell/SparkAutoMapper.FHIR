@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class AssertionResponseTypesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/assert-response-code-types
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/assert-response-code-types"
+
 
 class AssertionResponseTypesCodeValues:
+    """
+    Response code is 200.
+    """
+
     Okay = AssertionResponseTypesCode("okay")
+    """
+    Response code is 201.
+    """
     Created = AssertionResponseTypesCode("created")
+    """
+    Response code is 204.
+    """
     NoContent = AssertionResponseTypesCode("noContent")
+    """
+    Response code is 304.
+    """
     NotModified = AssertionResponseTypesCode("notModified")
+    """
+    Response code is 400.
+    """
     Bad = AssertionResponseTypesCode("bad")
+    """
+    Response code is 403.
+    """
     Forbidden = AssertionResponseTypesCode("forbidden")
+    """
+    Response code is 404.
+    """
     NotFound = AssertionResponseTypesCode("notFound")
+    """
+    Response code is 405.
+    """
     MethodNotAllowed = AssertionResponseTypesCode("methodNotAllowed")
+    """
+    Response code is 409.
+    """
     Conflict = AssertionResponseTypesCode("conflict")
+    """
+    Response code is 410.
+    """
     Gone = AssertionResponseTypesCode("gone")
+    """
+    Response code is 412.
+    """
     PreconditionFailed = AssertionResponseTypesCode("preconditionFailed")
+    """
+    Response code is 422.
+    """
     Unprocessable = AssertionResponseTypesCode("unprocessable")

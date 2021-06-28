@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class BodystructureLocationQualifierCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class BodystructureLocationQualifierCodeValues:
+    """
+    None
+    """
+
     UnilateralLeft = BodystructureLocationQualifierCode("419161000")
+    """
+    None
+    """
     UnilateralRight = BodystructureLocationQualifierCode("419465000")
+    """
+    None
+    """
     Bilateral = BodystructureLocationQualifierCode("51440002")
+    """
+    None
+    """
     Upper = BodystructureLocationQualifierCode("261183002")
+    """
+    None
+    """
     Lower = BodystructureLocationQualifierCode("261122009")
+    """
+    None
+    """
     Medial = BodystructureLocationQualifierCode("255561001")
+    """
+    None
+    """
     Lateral = BodystructureLocationQualifierCode("49370004")
+    """
+    None
+    """
     Superior = BodystructureLocationQualifierCode("264217000")
+    """
+    None
+    """
     Inferior = BodystructureLocationQualifierCode("261089000")
+    """
+    None
+    """
     Posterior = BodystructureLocationQualifierCode("255551008")
+    """
+    None
+    """
     Below = BodystructureLocationQualifierCode("351726001")
+    """
+    None
+    """
     Above = BodystructureLocationQualifierCode("352730000")

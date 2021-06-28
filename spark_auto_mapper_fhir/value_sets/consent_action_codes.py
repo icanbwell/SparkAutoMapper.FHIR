@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class ConsentActionCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/consent-action
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/consent-action"
+
 
 class ConsentActionCodesCodeValues:
+    """
+    Gather retrieved information for storage
+    """
+
     Collect = ConsentActionCodesCode("collect")
+    """
+    Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
+    """
     Access = ConsentActionCodesCode("access")
+    """
+    Utilize the retrieved information
+    """
     Use = ConsentActionCodesCode("use")
+    """
+    Transfer retrieved information
+    """
     Disclose = ConsentActionCodesCode("disclose")
+    """
+    Allow retrieval of a patient's information for the purpose of update or rectify
+    """
     AccessAndCorrect = ConsentActionCodesCode("correct")

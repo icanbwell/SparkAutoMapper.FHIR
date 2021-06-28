@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ActionParticipantTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/action-participant-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-participant-type"
+
 
 class ActionParticipantTypeCodeValues:
+    """
+    The participant is the patient under evaluation.
+    """
+
     Patient = ActionParticipantTypeCode("patient")
+    """
+    The participant is a practitioner involved in the patient's care.
+    """
     Practitioner = ActionParticipantTypeCode("practitioner")
+    """
+    The participant is a person related to the patient.
+    """
     RelatedPerson = ActionParticipantTypeCode("related-person")
+    """
+    The participant is a system or device used in the care of the patient.
+    """
     Device = ActionParticipantTypeCode("device")

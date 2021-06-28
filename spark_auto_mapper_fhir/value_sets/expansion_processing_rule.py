@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ExpansionProcessingRuleCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/expansion-processing-rule
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/expansion-processing-rule"
+
 
 class ExpansionProcessingRuleCodeValues:
+    """
+    The expansion (when in UI mode) includes all codes *and* any defined groups (in extensions).
+    """
+
     AllCodes = ExpansionProcessingRuleCode("all-codes")
+    """
+    The expanion (when in UI mode) lists the groups, and then any codes that have not been included in a group.
+    """
     Groups_UngroupedCodes = ExpansionProcessingRuleCode("ungrouped")
+    """
+    The expansion (when in UI mode) only includes the defined groups.
+    """
     GroupsOnly = ExpansionProcessingRuleCode("groups-only")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,19 +16,67 @@ class ClaimInformationCategoryCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/claim-informationcategory
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+
 
 class ClaimInformationCategoryCodesCodeValues:
+    """
+    Codes conveying additional situation and condition information.
+    """
+
     Information = ClaimInformationCategoryCodesCode("info")
+    """
+    Discharge status and discharge to locations.
+    """
     Discharge = ClaimInformationCategoryCodesCode("discharge")
+    """
+    Period, start or end dates of aspects of the Condition.
+    """
     Onset = ClaimInformationCategoryCodesCode("onset")
+    """
+    Nature and date of the related event e.g. Last exam, service, X-ray etc.
+    """
     RelatedServices = ClaimInformationCategoryCodesCode("related")
+    """
+    Insurance policy exceptions.
+    """
     Exception = ClaimInformationCategoryCodesCode("exception")
+    """
+    Materials being forwarded, e.g. Models, molds, images, documents.
+    """
     MaterialsForwarded = ClaimInformationCategoryCodesCode("material")
+    """
+    Materials attached such as images, documents and resources.
+    """
     Attachment = ClaimInformationCategoryCodesCode("attachment")
+    """
+    Teeth which are missing for any reason, for example: prior extraction, never developed.
+    """
     MissingTooth = ClaimInformationCategoryCodesCode("missingtooth")
+    """
+    The type of prosthesis and date of supply if a previously supplied prosthesis.
+    """
     Prosthesis = ClaimInformationCategoryCodesCode("prosthesis")
+    """
+    Other information identified by the type.system.
+    """
     Other = ClaimInformationCategoryCodesCode("other")
+    """
+    An indication that the patient was hospitalized, the period if known otherwise a Yes/No (boolean).
+    """
     Hospitalized = ClaimInformationCategoryCodesCode("hospitalized")
+    """
+    An indication that the patient was unable to work, the period if known otherwise a Yes/No (boolean).
+    """
     EmploymentImpacted = ClaimInformationCategoryCodesCode("employmentimpacted")
+    """
+    The external cause of an illness or injury.
+    """
     ExternalCaause = ClaimInformationCategoryCodesCode("externalcause")
+    """
+    The reason for the patient visit.
+    """
     PatientReasonForVisit = ClaimInformationCategoryCodesCode("patientreasonforvisit")

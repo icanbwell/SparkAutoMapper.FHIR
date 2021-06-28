@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class ProvenanceParticipantRoleCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/provenance-agent-role
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/provenance-agent-role"
+
 
 class ProvenanceParticipantRoleCodeValues:
+    """
+    A person entering the data into the originating system
+    """
+
     Enterer = ProvenanceParticipantRoleCode("enterer")
+    """
+    A person, animal, organization or device that who actually and principally carries out the activity
+    """
     Performer = ProvenanceParticipantRoleCode("performer")
+    """
+    A party that originates the resource and therefore has responsibility for the information given in the resource and ownership of this resource
+    """
     Author = ProvenanceParticipantRoleCode("author")
+    """
+    A person who verifies the correctness and appropriateness of activity
+    """
     Verifier = ProvenanceParticipantRoleCode("verifier")
+    """
+    A verifier who attests to the accuracy of the resource
+    """
     Attester = ProvenanceParticipantRoleCode("attester")
+    """
+    A person who reported information that contributed to the resource
+    """
     Informant = ProvenanceParticipantRoleCode("informant")
+    """
+    The entity that is accountable for maintaining a true an accurate copy of the original record
+    """
     Custodian = ProvenanceParticipantRoleCode("custodian")
+    """
+    A device that operates independently of an author on custodian's algorithms for data extraction of existing information for purpose of generating a new artifact.
+    """
     Assembler = ProvenanceParticipantRoleCode("assembler")
+    """
+    A device used by an author to record new information, which may also be used by the author to select existing information for aggregation with newly recorded information for the purpose of generating a new artifact.
+    """
     Composer = ProvenanceParticipantRoleCode("composer")

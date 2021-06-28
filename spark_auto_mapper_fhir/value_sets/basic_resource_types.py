@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,21 +16,75 @@ class BasicResourceTypesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/basic-resource-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/basic-resource-type"
+
 
 class BasicResourceTypesCodeValues:
+    """
+    An assertion of permission for an activity or set of activities to occur, possibly subject to particular limitations; e.g. surgical consent, information disclosure consent, etc.
+    """
+
     Consent = BasicResourceTypesCode("consent")
+    """
+    A request that care of a particular type be provided to a patient.  Could involve the transfer of care, a consult, etc.
+    """
     Referral = BasicResourceTypesCode("referral")
+    """
+    An undesired reaction caused by exposure to some agent (e.g. a medication, immunization, food, or environmental agent).
+    """
     AdverseEvent = BasicResourceTypesCode("advevent")
+    """
+    A request that a time be scheduled for a type of service for a specified patient, potentially subject to other constraints
+    """
     AppointmentRequest = BasicResourceTypesCode("aptmtreq")
+    """
+    The transition of a patient or set of material from one location to another
+    """
     Transfer = BasicResourceTypesCode("transfer")
+    """
+    The specification of a set of food and/or other nutritional material to be delivered to a patient.
+    """
     Diet = BasicResourceTypesCode("diet")
+    """
+    An occurrence of a non-care-related event in the healthcare domain, such as approvals, reviews, etc.
+    """
     AdministrativeActivity = BasicResourceTypesCode("adminact")
+    """
+    Record of a situation where a subject was exposed to a substance.  Usually of interest to public health.
+    """
     Exposure = BasicResourceTypesCode("exposure")
+    """
+    A formalized inquiry into the circumstances surrounding a particular unplanned event or potential event for the purposes of identifying possible causes and contributing factors for the event
+    """
     Investigation = BasicResourceTypesCode("investigation")
+    """
+    A financial instrument used to track costs, charges or other amounts.
+    """
     Account = BasicResourceTypesCode("account")
+    """
+    A request for payment for goods and/or services.  Includes the idea of a healthcare insurance claim.
+    """
     Invoice = BasicResourceTypesCode("invoice")
+    """
+    The determination of what will be paid against a particular invoice based on coverage, plan rules, etc.
+    """
     InvoiceAdjudication = BasicResourceTypesCode("adjudicat")
+    """
+    A request for a pre-determination of the cost that would be paid under an insurance plan for a hypothetical claim for goods or services
+    """
     Pre_determinationRequest = BasicResourceTypesCode("predetreq")
+    """
+    An adjudication of what would be paid under an insurance plan for a hypothetical claim for goods or services
+    """
     Predetermination = BasicResourceTypesCode("predetermine")
+    """
+    An investigation to determine information about a particular therapy or product
+    """
     Study = BasicResourceTypesCode("study")
+    """
+    A set of (possibly conditional) steps to be taken to achieve some aim.  Includes study protocols, treatment protocols, emergency protocols, etc.
+    """
     Protocol = BasicResourceTypesCode("protocol")

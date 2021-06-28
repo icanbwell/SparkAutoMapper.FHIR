@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,28 +16,103 @@ class AuditEventSub_TypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class AuditEventSub_TypeCodeValues:
+    """
+    None
+    """
+
     _110120 = AuditEventSub_TypeCode("110120")
+    """
+    None
+    """
     _110121 = AuditEventSub_TypeCode("110121")
+    """
+    None
+    """
     _110122 = AuditEventSub_TypeCode("110122")
+    """
+    None
+    """
     _110123 = AuditEventSub_TypeCode("110123")
+    """
+    None
+    """
     _110124 = AuditEventSub_TypeCode("110124")
+    """
+    None
+    """
     _110125 = AuditEventSub_TypeCode("110125")
+    """
+    None
+    """
     _110126 = AuditEventSub_TypeCode("110126")
+    """
+    None
+    """
     _110127 = AuditEventSub_TypeCode("110127")
+    """
+    None
+    """
     _110128 = AuditEventSub_TypeCode("110128")
+    """
+    None
+    """
     _110129 = AuditEventSub_TypeCode("110129")
+    """
+    None
+    """
     _110130 = AuditEventSub_TypeCode("110130")
+    """
+    None
+    """
     _110131 = AuditEventSub_TypeCode("110131")
+    """
+    None
+    """
     _110132 = AuditEventSub_TypeCode("110132")
+    """
+    None
+    """
     _110133 = AuditEventSub_TypeCode("110133")
+    """
+    None
+    """
     _110134 = AuditEventSub_TypeCode("110134")
+    """
+    None
+    """
     _110135 = AuditEventSub_TypeCode("110135")
+    """
+    None
+    """
     _110136 = AuditEventSub_TypeCode("110136")
+    """
+    None
+    """
     _110137 = AuditEventSub_TypeCode("110137")
+    """
+    None
+    """
     _110138 = AuditEventSub_TypeCode("110138")
+    """
+    None
+    """
     _110139 = AuditEventSub_TypeCode("110139")
+    """
+    None
+    """
     _110140 = AuditEventSub_TypeCode("110140")
+    """
+    None
+    """
     _110141 = AuditEventSub_TypeCode("110141")
+    """
+    None
+    """
     _110142 = AuditEventSub_TypeCode("110142")

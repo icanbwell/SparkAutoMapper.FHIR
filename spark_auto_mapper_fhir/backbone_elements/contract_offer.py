@@ -27,6 +27,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.contract_term_type_codes import (
         ContractTermTypeCodesCode,
@@ -36,6 +37,7 @@ if TYPE_CHECKING:
     # decision (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for decision
     # Import for CodeableConcept for decision
     from spark_auto_mapper_fhir.value_sets.act_consent_directive import (
         ActConsentDirective,
@@ -45,6 +47,7 @@ if TYPE_CHECKING:
     # decisionMode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for decisionMode
     # Import for CodeableConcept for decisionMode
     from spark_auto_mapper_fhir.value_sets.contract_resource_decision_mode_codes import (
         ContractResourceDecisionModeCodesCode,

@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # flag (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for flag
     # Import for CodeableConcept for flag
     from spark_auto_mapper_fhir.value_sets.patient_medicine_change_types import (
         PatientMedicineChangeTypesCode,

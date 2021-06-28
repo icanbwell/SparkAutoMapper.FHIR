@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,18 +16,63 @@ class SpecialCourtesyCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class SpecialCourtesyCodeValues:
+    """
+    extended courtesy
+    """
+
     ExtendedCourtesy = SpecialCourtesyCode("EXT")
+    """
+    normal courtesy
+    """
     NormalCourtesy = SpecialCourtesyCode("NRM")
+    """
+    professional courtesy
+    """
     ProfessionalCourtesy = SpecialCourtesyCode("PRF")
+    """
+    Courtesies extended to the staff of the entity providing service.
+    """
     Staff = SpecialCourtesyCode("STF")
+    """
+    very important person
+    """
     VeryImportantPerson = SpecialCourtesyCode("VIP")
+    """
+    None
+    """
     EXT = SpecialCourtesyCode("EXT")
+    """
+    None
+    """
     NRM = SpecialCourtesyCode("NRM")
+    """
+    None
+    """
     PRF = SpecialCourtesyCode("PRF")
+    """
+    None
+    """
     STF = SpecialCourtesyCode("STF")
+    """
+    None
+    """
     VIP = SpecialCourtesyCode("VIP")
+    """
+    Description:The value is exceptional (missing, omitted, incomplete, improper). No information as to the reason for being an exceptional value is provided. This is the most general exceptional value. It is also the default exceptional value.
+    """
     Noinformation = SpecialCourtesyCode("NI")
+    """
+    Value is not present in a message.  This is only defined in messages, never in application data!  All values not present in the message must be replaced by the applicable default, or no-information (NI) as the default of all defaults.
+    """
     NotPresent = SpecialCourtesyCode("NP")
+    """
+    None
+    """
     UNK = SpecialCourtesyCode("UNK")

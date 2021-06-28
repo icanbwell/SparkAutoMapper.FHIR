@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,31 @@ class EncounterLocationStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/encounter-location-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-location-status"
+
 
 class EncounterLocationStatusCodeValues:
+    """
+    The patient is planned to be moved to this location at some point in the future.
+    """
+
     Planned = EncounterLocationStatusCode("planned")
+    """
+    The patient is currently at this location, or was between the period specified.
+
+A system may update these records when the patient leaves the location to either reserved, or completed.
+    """
     Active = EncounterLocationStatusCode("active")
+    """
+    This location is held empty for this patient.
+    """
     Reserved = EncounterLocationStatusCode("reserved")
+    """
+    The patient was at this location during the period specified.
+
+Not to be used when the patient is currently at the location.
+    """
     Completed = EncounterLocationStatusCode("completed")

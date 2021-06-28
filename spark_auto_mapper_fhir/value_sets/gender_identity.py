@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class GenderIdentityCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class GenderIdentityCodeValues:
+    """
+    the patient identifies as transgender male-to-female
+    """
+
     TransgenderFemale = GenderIdentityCode("transgender-female")
+    """
+    the patient identifies as transgender female-to-male
+    """
     TransgenderMale = GenderIdentityCode("transgender-male")
+    """
+    the patient identifies with neither/both female and male
+    """
     Non_binary = GenderIdentityCode("non-binary")
+    """
+    the patient identifies as male
+    """
     Male = GenderIdentityCode("male")
+    """
+    the patient identifies as female
+    """
     Female = GenderIdentityCode("female")
+    """
+    other gender identity
+    """
     Other = GenderIdentityCode("other")
+    """
+    the patient does not wish to disclose his gender identity
+    """
     DoesNotWishToDisclose = GenderIdentityCode("non-disclose")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class ImagingStudySeriesPerformerFunctionCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ImagingStudySeriesPerformerFunctionCodeValues:
+    """
+    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    """
+
     Participation = ImagingStudySeriesPerformerFunctionCode("PART")
+    """
+    None
+    """
     Consultant = ImagingStudySeriesPerformerFunctionCode("CON")
+    """
+    None
+    """
     Verifier = ImagingStudySeriesPerformerFunctionCode("VRF")
+    """
+    None
+    """
     Performer = ImagingStudySeriesPerformerFunctionCode("PRF")
+    """
+    None
+    """
     SecondaryPerformer = ImagingStudySeriesPerformerFunctionCode("SPRF")
+    """
+    None
+    """
     Referrer = ImagingStudySeriesPerformerFunctionCode("REF")

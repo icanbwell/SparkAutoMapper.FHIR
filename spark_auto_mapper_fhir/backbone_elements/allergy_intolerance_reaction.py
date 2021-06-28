@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     # substance (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for substance
     # Import for CodeableConcept for substance
     from spark_auto_mapper_fhir.value_sets.substance_code import SubstanceCodeCode
 
@@ -22,6 +23,7 @@ if TYPE_CHECKING:
     # manifestation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for manifestation
     # Import for CodeableConcept for manifestation
     from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
         SNOMEDCTClinicalFindingsCode,
@@ -38,6 +40,7 @@ if TYPE_CHECKING:
     # exposureRoute (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for exposureRoute
     # Import for CodeableConcept for exposureRoute
     from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
         SNOMEDCTRouteCodesCode,

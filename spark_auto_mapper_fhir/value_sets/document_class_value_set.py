@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,52 +16,193 @@ class DocumentClassValueSetCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class DocumentClassValueSetCodeValues:
+    """
+    None
+    """
+
     HistoryOfImmunization = DocumentClassValueSetCode("11369-6")
+    """
+    None
+    """
     AnesthesiaRecords = DocumentClassValueSetCode("11485-0")
+    """
+    None
+    """
     ChemotherapyRecords = DocumentClassValueSetCode("11486-8")
+    """
+    None
+    """
     ConsultNote = DocumentClassValueSetCode("11488-4")
+    """
+    None
+    """
     Provider_unspecifiedProgressNote = DocumentClassValueSetCode("11506-3")
+    """
+    None
+    """
     NurseryRecords = DocumentClassValueSetCode("11543-6")
+    """
+    None
+    """
     LaborAndDeliveryRecords = DocumentClassValueSetCode("15508-5")
+    """
+    None
+    """
     RadiologyStudies_set_ = DocumentClassValueSetCode("18726-0")
+    """
+    None
+    """
     Provider_unspecifiedTransferSummary = DocumentClassValueSetCode("18761-7")
+    """
+    None
+    """
     DischargeSummary = DocumentClassValueSetCode("18842-5")
+    """
+    None
+    """
     LaboratoryStudies_set_ = DocumentClassValueSetCode("26436-6")
+    """
+    None
+    """
     CardiologyStudies_set_ = DocumentClassValueSetCode("26441-6")
+    """
+    None
+    """
     ObstetricalStudies_set_ = DocumentClassValueSetCode("26442-4")
+    """
+    None
+    """
     GastroenterologyEndoscopyStudies_set_ = DocumentClassValueSetCode("27895-2")
+    """
+    None
+    """
     PulmonaryStudies_set_ = DocumentClassValueSetCode("27896-0")
+    """
+    None
+    """
     NeuromuscularElectrophysiologyStudies_set_ = DocumentClassValueSetCode("27897-8")
+    """
+    None
+    """
     PathologyStudies_set_ = DocumentClassValueSetCode("27898-6")
+    """
+    None
+    """
     Provider_unspecifiedProcedureNote = DocumentClassValueSetCode("28570-0")
+    """
+    None
+    """
     Ophthalmology_optometryStudies_set_ = DocumentClassValueSetCode("28619-5")
+    """
+    None
+    """
     MiscellaneousStudies_set_ = DocumentClassValueSetCode("28634-4")
+    """
+    None
+    """
     DialysisRecords = DocumentClassValueSetCode("29749-9")
+    """
+    None
+    """
     NeonatalIntensiveCareRecords = DocumentClassValueSetCode("29750-7")
+    """
+    None
+    """
     CriticalCareRecords = DocumentClassValueSetCode("29751-5")
+    """
+    None
+    """
     PerioperativeRecords = DocumentClassValueSetCode("29752-3")
+    """
+    None
+    """
     EvaluationAndManagementNote = DocumentClassValueSetCode("34109-9")
+    """
+    None
+    """
     Provider_unspecified_HistoryAndPhysicalNote = DocumentClassValueSetCode("34117-2")
+    """
+    None
+    """
     InterventionalProcedureNote = DocumentClassValueSetCode("34121-4")
+    """
+    None
+    """
     PathologyProcedureNote = DocumentClassValueSetCode("34122-2")
+    """
+    None
+    """
     SummarizationOfEpisodeNote = DocumentClassValueSetCode("34133-9")
+    """
+    None
+    """
     TransferOfCareReferralNote = DocumentClassValueSetCode("34140-4")
+    """
+    None
+    """
     TelephoneEncounterNote = DocumentClassValueSetCode("34748-4")
+    """
+    None
+    """
     GeneralSurgeryPre_operativeEvaluationAndManagementNote = DocumentClassValueSetCode(
         "34775-7"
     )
+    """
+    None
+    """
     InpatientAdmissionHistoryAndPhysicalNote = DocumentClassValueSetCode("47039-3")
+    """
+    None
+    """
     CounselingNote = DocumentClassValueSetCode("47042-7")
+    """
+    None
+    """
     StudyReportDocument = DocumentClassValueSetCode("47045-0")
+    """
+    None
+    """
     SummaryOfDeath = DocumentClassValueSetCode("47046-8")
+    """
+    None
+    """
     Non_patientCommunication = DocumentClassValueSetCode("47049-2")
+    """
+    None
+    """
     PrivacyPolicyOrganizationDocument = DocumentClassValueSetCode("57017-6")
+    """
+    None
+    """
     PrivacyPolicyAcknowledgmentDocument = DocumentClassValueSetCode("57016-8")
+    """
+    None
+    """
     MedicationSummaryDocument = DocumentClassValueSetCode("56445-0")
+    """
+    None
+    """
     PersonalHealthMonitoringReportDocument = DocumentClassValueSetCode("53576-5")
+    """
+    None
+    """
     PlanOfCareNote = DocumentClassValueSetCode("56447-6")
+    """
+    None
+    """
     DiagnosticImagingStudy = DocumentClassValueSetCode("18748-4")
+    """
+    None
+    """
     SurgicalOperationNote = DocumentClassValueSetCode("11504-8")
+    """
+    None
+    """
     ReferralNote = DocumentClassValueSetCode("57133-1")

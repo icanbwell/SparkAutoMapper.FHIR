@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.diet_codes import DietCodesCode
 
@@ -34,6 +35,7 @@ if TYPE_CHECKING:
     # fluidConsistencyType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for fluidConsistencyType
     # Import for CodeableConcept for fluidConsistencyType
     from spark_auto_mapper_fhir.value_sets.fluid_consistency_type_codes import (
         FluidConsistencyTypeCodesCode,

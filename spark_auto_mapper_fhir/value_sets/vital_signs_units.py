@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class VitalSignsUnitsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class VitalSignsUnitsCodeValues:
+    """
+    None
+    """
+
     Percent = VitalSignsUnitsCode("%")
+    """
+    None
+    """
     Centimeter = VitalSignsUnitsCode("cm")
+    """
+    None
+    """
     Inch_international_ = VitalSignsUnitsCode("[in_i]")
+    """
+    None
+    """
     Kilogram = VitalSignsUnitsCode("kg")
+    """
+    None
+    """
     Gram = VitalSignsUnitsCode("g")
+    """
+    None
+    """
     Pound_USAndBritish_ = VitalSignsUnitsCode("[lb_av]")
+    """
+    None
+    """
     DegreeCelsius = VitalSignsUnitsCode("Cel")
+    """
+    None
+    """
     DegreeFahrenheit = VitalSignsUnitsCode("[degF]")
+    """
+    None
+    """
     MillimeterOfMercury = VitalSignsUnitsCode("mm[Hg]")
+    """
+    None
+    """
     PerMinute = VitalSignsUnitsCode("/min")
+    """
+    None
+    """
     Kilogram_meter_2_ = VitalSignsUnitsCode("kg/m2")
+    """
+    None
+    """
     SquareMeter = VitalSignsUnitsCode("m2")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,37 @@ class Validation_processCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/verificationresult-validation-process
+    """
+    codeset: FhirUri = (
+        "http://hl7.org/fhir/ValueSet/verificationresult-validation-process"
+    )
+
 
 class Validation_processCodeValues:
+    """
+    None
+    """
+
     EditCheck = Validation_processCode("edit-check")
+    """
+    None
+    """
     ValueSet = Validation_processCode("valueset")
+    """
+    None
+    """
     PrimarySource = Validation_processCode("primary")
+    """
+    None
+    """
     MultipleSources = Validation_processCode("multi")
+    """
+    None
+    """
     Standalone = Validation_processCode("standalone")
+    """
+    None
+    """
     InContext = Validation_processCode("in-context")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class RequestIntentCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/request-intent
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/request-intent"
+
 
 class RequestIntentCodeValues:
+    """
+    The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.
+    """
+
     Proposal = RequestIntentCode("proposal")
+    """
+    The request represents an intention to ensure something occurs without providing an authorization for others to act.
+    """
     Plan = RequestIntentCode("plan")
+    """
+    The request represents a legally binding instruction authored by a Patient or RelatedPerson.
+    """
     Directive = RequestIntentCode("directive")
+    """
+    The request represents a request/demand and authorization for action by a Practitioner.
+    """
     Order = RequestIntentCode("order")
+    """
+    The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to [[[RequestGroup]]] for additional information on how this status is used.
+    """
     Option = RequestIntentCode("option")

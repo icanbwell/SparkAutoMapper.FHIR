@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class EnteralFormulaAdditiveTypeCodeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/entformula-additive
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/entformula-additive"
+
 
 class EnteralFormulaAdditiveTypeCodeCodeValues:
+    """
+    Modular lipid enteral formula component
+    """
+
     Lipid = EnteralFormulaAdditiveTypeCodeCode("lipid")
+    """
+    Modular protein enteral formula component
+    """
     Protein = EnteralFormulaAdditiveTypeCodeCode("protein")
+    """
+    Modular carbohydrate enteral formula component
+    """
     Carbohydrate = EnteralFormulaAdditiveTypeCodeCode("carbohydrate")
+    """
+    Modular fiber enteral formula component
+    """
     Fiber = EnteralFormulaAdditiveTypeCodeCode("fiber")
+    """
+    Added water
+    """
     Water = EnteralFormulaAdditiveTypeCodeCode("water")

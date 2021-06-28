@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # classification (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for classification
     # Import for CodeableConcept for classification
     from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
         ContractResourceScopeCodesCode,
@@ -25,6 +26,7 @@ if TYPE_CHECKING:
     # category (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for category
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
         ContractResourceScopeCodesCode,
@@ -34,6 +36,7 @@ if TYPE_CHECKING:
     # control (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for control
     # Import for CodeableConcept for control
     from spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes import (
         ContractResourceSecurityControlCodesCode,

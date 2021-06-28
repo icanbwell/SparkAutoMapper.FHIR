@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class SupplyRequestReasonCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/supplyrequest-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/supplyrequest-reason"
+
 
 class SupplyRequestReasonCodeValues:
+    """
+    The supply has been requested for use in direct patient care.
+    """
+
     PatientCare = SupplyRequestReasonCode("patient-care")
+    """
+    The supply has been requested for creating or replenishing ward stock.
+    """
     WardStock = SupplyRequestReasonCode("ward-stock")

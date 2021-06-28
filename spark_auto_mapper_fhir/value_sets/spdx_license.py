@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,387 +16,1431 @@ class SPDXLicenseCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/spdx-license
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/spdx-license"
+
 
 class SPDXLicenseCodeValues:
+    """
+    Not an open source license.
+    """
+
     NotOpenSource = SPDXLicenseCode("not-open-source")
+    """
+    BSD Zero Clause License.
+    """
     BSDZeroClauseLicense = SPDXLicenseCode("0BSD")
+    """
+    Attribution Assurance License.
+    """
     AttributionAssuranceLicense = SPDXLicenseCode("AAL")
+    """
+    Abstyles License.
+    """
     AbstylesLicense = SPDXLicenseCode("Abstyles")
+    """
+    Adobe Systems Incorporated Source Code License Agreement.
+    """
     AdobeSystemsIncorporatedSourceCodeLicenseAgreement = SPDXLicenseCode("Adobe-2006")
+    """
+    Adobe Glyph List License.
+    """
     AdobeGlyphListLicense = SPDXLicenseCode("Adobe-Glyph")
+    """
+    Amazon Digital Services License.
+    """
     AmazonDigitalServicesLicense = SPDXLicenseCode("ADSL")
+    """
+    Academic Free License v1.1.
+    """
     AcademicFreeLicenseV1_1 = SPDXLicenseCode("AFL-1.1")
+    """
+    Academic Free License v1.2.
+    """
     AcademicFreeLicenseV1_2 = SPDXLicenseCode("AFL-1.2")
+    """
+    Academic Free License v2.0.
+    """
     AcademicFreeLicenseV2_0 = SPDXLicenseCode("AFL-2.0")
+    """
+    Academic Free License v2.1.
+    """
     AcademicFreeLicenseV2_1 = SPDXLicenseCode("AFL-2.1")
+    """
+    Academic Free License v3.0.
+    """
     AcademicFreeLicenseV3_0 = SPDXLicenseCode("AFL-3.0")
+    """
+    Afmparse License.
+    """
     AfmparseLicense = SPDXLicenseCode("Afmparse")
+    """
+    Affero General Public License v1.0 only.
+    """
     AfferoGeneralPublicLicenseV1_0Only = SPDXLicenseCode("AGPL-1.0-only")
+    """
+    Affero General Public License v1.0 or later.
+    """
     AfferoGeneralPublicLicenseV1_0OrLater = SPDXLicenseCode("AGPL-1.0-or-later")
+    """
+    GNU Affero General Public License v3.0 only.
+    """
     GNUAfferoGeneralPublicLicenseV3_0Only = SPDXLicenseCode("AGPL-3.0-only")
+    """
+    GNU Affero General Public License v3.0 or later.
+    """
     GNUAfferoGeneralPublicLicenseV3_0OrLater = SPDXLicenseCode("AGPL-3.0-or-later")
+    """
+    Aladdin Free Public License.
+    """
     AladdinFreePublicLicense = SPDXLicenseCode("Aladdin")
+    """
+    AMD's plpa_map.c License.
+    """
     AMD_sPlpa_map_cLicense = SPDXLicenseCode("AMDPLPA")
+    """
+    Apple MIT License.
+    """
     AppleMITLicense = SPDXLicenseCode("AML")
+    """
+    Academy of Motion Picture Arts and Sciences BSD.
+    """
     AcademyOfMotionPictureArtsAndSciencesBSD = SPDXLicenseCode("AMPAS")
+    """
+    ANTLR Software Rights Notice.
+    """
     ANTLRSoftwareRightsNotice = SPDXLicenseCode("ANTLR-PD")
+    """
+    Apache License 1.0.
+    """
     ApacheLicense1_0 = SPDXLicenseCode("Apache-1.0")
+    """
+    Apache License 1.1.
+    """
     ApacheLicense1_1 = SPDXLicenseCode("Apache-1.1")
+    """
+    Apache License 2.0.
+    """
     ApacheLicense2_0 = SPDXLicenseCode("Apache-2.0")
+    """
+    Adobe Postscript AFM License.
+    """
     AdobePostscriptAFMLicense = SPDXLicenseCode("APAFML")
+    """
+    Adaptive Public License 1.0.
+    """
     AdaptivePublicLicense1_0 = SPDXLicenseCode("APL-1.0")
+    """
+    Apple Public Source License 1.0.
+    """
     ApplePublicSourceLicense1_0 = SPDXLicenseCode("APSL-1.0")
+    """
+    Apple Public Source License 1.1.
+    """
     ApplePublicSourceLicense1_1 = SPDXLicenseCode("APSL-1.1")
+    """
+    Apple Public Source License 1.2.
+    """
     ApplePublicSourceLicense1_2 = SPDXLicenseCode("APSL-1.2")
+    """
+    Apple Public Source License 2.0.
+    """
     ApplePublicSourceLicense2_0 = SPDXLicenseCode("APSL-2.0")
+    """
+    Artistic License 1.0 w/clause 8.
+    """
     ArtisticLicense1_0W_clause8 = SPDXLicenseCode("Artistic-1.0-cl8")
+    """
+    Artistic License 1.0 (Perl).
+    """
     ArtisticLicense1_0_Perl_ = SPDXLicenseCode("Artistic-1.0-Perl")
+    """
+    Artistic License 1.0.
+    """
     ArtisticLicense1_0 = SPDXLicenseCode("Artistic-1.0")
+    """
+    Artistic License 2.0.
+    """
     ArtisticLicense2_0 = SPDXLicenseCode("Artistic-2.0")
+    """
+    Bahyph License.
+    """
     BahyphLicense = SPDXLicenseCode("Bahyph")
+    """
+    Barr License.
+    """
     BarrLicense = SPDXLicenseCode("Barr")
+    """
+    Beerware License.
+    """
     BeerwareLicense = SPDXLicenseCode("Beerware")
+    """
+    BitTorrent Open Source License v1.0.
+    """
     BitTorrentOpenSourceLicenseV1_0 = SPDXLicenseCode("BitTorrent-1.0")
+    """
+    BitTorrent Open Source License v1.1.
+    """
     BitTorrentOpenSourceLicenseV1_1 = SPDXLicenseCode("BitTorrent-1.1")
+    """
+    Borceux license.
+    """
     BorceuxLicense = SPDXLicenseCode("Borceux")
+    """
+    BSD 1-Clause License.
+    """
     BSD1_ClauseLicense = SPDXLicenseCode("BSD-1-Clause")
+    """
+    BSD 2-Clause FreeBSD License.
+    """
     BSD2_ClauseFreeBSDLicense = SPDXLicenseCode("BSD-2-Clause-FreeBSD")
+    """
+    BSD 2-Clause NetBSD License.
+    """
     BSD2_ClauseNetBSDLicense = SPDXLicenseCode("BSD-2-Clause-NetBSD")
+    """
+    BSD-2-Clause Plus Patent License.
+    """
     BSD_2_ClausePlusPatentLicense = SPDXLicenseCode("BSD-2-Clause-Patent")
+    """
+    BSD 2-Clause "Simplified" License.
+    """
     BSD2_Clause_Simplified_License = SPDXLicenseCode("BSD-2-Clause")
+    """
+    BSD with attribution.
+    """
     BSDWithAttribution = SPDXLicenseCode("BSD-3-Clause-Attribution")
+    """
+    BSD 3-Clause Clear License.
+    """
     BSD3_ClauseClearLicense = SPDXLicenseCode("BSD-3-Clause-Clear")
+    """
+    Lawrence Berkeley National Labs BSD variant license.
+    """
     LawrenceBerkeleyNationalLabsBSDVariantLicense = SPDXLicenseCode("BSD-3-Clause-LBNL")
+    """
+    BSD 3-Clause No Nuclear License 2014.
+    """
     BSD3_ClauseNoNuclearLicense2014 = SPDXLicenseCode(
         "BSD-3-Clause-No-Nuclear-License-2014"
     )
+    """
+    BSD 3-Clause No Nuclear License.
+    """
     BSD3_ClauseNoNuclearLicense = SPDXLicenseCode("BSD-3-Clause-No-Nuclear-License")
+    """
+    BSD 3-Clause No Nuclear Warranty.
+    """
     BSD3_ClauseNoNuclearWarranty = SPDXLicenseCode("BSD-3-Clause-No-Nuclear-Warranty")
+    """
+    BSD 3-Clause "New" or "Revised" License.
+    """
     BSD3_Clause_New_Or_Revised_License = SPDXLicenseCode("BSD-3-Clause")
+    """
+    BSD-4-Clause (University of California-Specific).
+    """
     BSD_4_Clause_UniversityOfCalifornia_Specific_ = SPDXLicenseCode("BSD-4-Clause-UC")
+    """
+    BSD 4-Clause "Original" or "Old" License.
+    """
     BSD4_Clause_Original_Or_Old_License = SPDXLicenseCode("BSD-4-Clause")
+    """
+    BSD Protection License.
+    """
     BSDProtectionLicense = SPDXLicenseCode("BSD-Protection")
+    """
+    BSD Source Code Attribution.
+    """
     BSDSourceCodeAttribution = SPDXLicenseCode("BSD-Source-Code")
+    """
+    Boost Software License 1.0.
+    """
     BoostSoftwareLicense1_0 = SPDXLicenseCode("BSL-1.0")
+    """
+    bzip2 and libbzip2 License v1.0.5.
+    """
     Bzip2AndLibbzip2LicenseV1_0_5 = SPDXLicenseCode("bzip2-1.0.5")
+    """
+    bzip2 and libbzip2 License v1.0.6.
+    """
     Bzip2AndLibbzip2LicenseV1_0_6 = SPDXLicenseCode("bzip2-1.0.6")
+    """
+    Caldera License.
+    """
     CalderaLicense = SPDXLicenseCode("Caldera")
+    """
+    Computer Associates Trusted Open Source License 1.1.
+    """
     ComputerAssociatesTrustedOpenSourceLicense1_1 = SPDXLicenseCode("CATOSL-1.1")
+    """
+    Creative Commons Attribution 1.0 Generic.
+    """
     CreativeCommonsAttribution1_0Generic = SPDXLicenseCode("CC-BY-1.0")
+    """
+    Creative Commons Attribution 2.0 Generic.
+    """
     CreativeCommonsAttribution2_0Generic = SPDXLicenseCode("CC-BY-2.0")
+    """
+    Creative Commons Attribution 2.5 Generic.
+    """
     CreativeCommonsAttribution2_5Generic = SPDXLicenseCode("CC-BY-2.5")
+    """
+    Creative Commons Attribution 3.0 Unported.
+    """
     CreativeCommonsAttribution3_0Unported = SPDXLicenseCode("CC-BY-3.0")
+    """
+    Creative Commons Attribution 4.0 International.
+    """
     CreativeCommonsAttribution4_0International = SPDXLicenseCode("CC-BY-4.0")
+    """
+    Creative Commons Attribution Non Commercial 1.0 Generic.
+    """
     CreativeCommonsAttributionNonCommercial1_0Generic = SPDXLicenseCode("CC-BY-NC-1.0")
+    """
+    Creative Commons Attribution Non Commercial 2.0 Generic.
+    """
     CreativeCommonsAttributionNonCommercial2_0Generic = SPDXLicenseCode("CC-BY-NC-2.0")
+    """
+    Creative Commons Attribution Non Commercial 2.5 Generic.
+    """
     CreativeCommonsAttributionNonCommercial2_5Generic = SPDXLicenseCode("CC-BY-NC-2.5")
+    """
+    Creative Commons Attribution Non Commercial 3.0 Unported.
+    """
     CreativeCommonsAttributionNonCommercial3_0Unported = SPDXLicenseCode("CC-BY-NC-3.0")
+    """
+    Creative Commons Attribution Non Commercial 4.0 International.
+    """
     CreativeCommonsAttributionNonCommercial4_0International = SPDXLicenseCode(
         "CC-BY-NC-4.0"
     )
+    """
+    Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic.
+    """
     CreativeCommonsAttributionNonCommercialNoDerivatives1_0Generic = SPDXLicenseCode(
         "CC-BY-NC-ND-1.0"
     )
+    """
+    Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic.
+    """
     CreativeCommonsAttributionNonCommercialNoDerivatives2_0Generic = SPDXLicenseCode(
         "CC-BY-NC-ND-2.0"
     )
+    """
+    Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic.
+    """
     CreativeCommonsAttributionNonCommercialNoDerivatives2_5Generic = SPDXLicenseCode(
         "CC-BY-NC-ND-2.5"
     )
+    """
+    Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported.
+    """
     CreativeCommonsAttributionNonCommercialNoDerivatives3_0Unported = SPDXLicenseCode(
         "CC-BY-NC-ND-3.0"
     )
+    """
+    Creative Commons Attribution Non Commercial No Derivatives 4.0 International.
+    """
     CreativeCommonsAttributionNonCommercialNoDerivatives4_0International = (
         SPDXLicenseCode("CC-BY-NC-ND-4.0")
     )
+    """
+    Creative Commons Attribution Non Commercial Share Alike 1.0 Generic.
+    """
     CreativeCommonsAttributionNonCommercialShareAlike1_0Generic = SPDXLicenseCode(
         "CC-BY-NC-SA-1.0"
     )
+    """
+    Creative Commons Attribution Non Commercial Share Alike 2.0 Generic.
+    """
     CreativeCommonsAttributionNonCommercialShareAlike2_0Generic = SPDXLicenseCode(
         "CC-BY-NC-SA-2.0"
     )
+    """
+    Creative Commons Attribution Non Commercial Share Alike 2.5 Generic.
+    """
     CreativeCommonsAttributionNonCommercialShareAlike2_5Generic = SPDXLicenseCode(
         "CC-BY-NC-SA-2.5"
     )
+    """
+    Creative Commons Attribution Non Commercial Share Alike 3.0 Unported.
+    """
     CreativeCommonsAttributionNonCommercialShareAlike3_0Unported = SPDXLicenseCode(
         "CC-BY-NC-SA-3.0"
     )
+    """
+    Creative Commons Attribution Non Commercial Share Alike 4.0 International.
+    """
     CreativeCommonsAttributionNonCommercialShareAlike4_0International = SPDXLicenseCode(
         "CC-BY-NC-SA-4.0"
     )
+    """
+    Creative Commons Attribution No Derivatives 1.0 Generic.
+    """
     CreativeCommonsAttributionNoDerivatives1_0Generic = SPDXLicenseCode("CC-BY-ND-1.0")
+    """
+    Creative Commons Attribution No Derivatives 2.0 Generic.
+    """
     CreativeCommonsAttributionNoDerivatives2_0Generic = SPDXLicenseCode("CC-BY-ND-2.0")
+    """
+    Creative Commons Attribution No Derivatives 2.5 Generic.
+    """
     CreativeCommonsAttributionNoDerivatives2_5Generic = SPDXLicenseCode("CC-BY-ND-2.5")
+    """
+    Creative Commons Attribution No Derivatives 3.0 Unported.
+    """
     CreativeCommonsAttributionNoDerivatives3_0Unported = SPDXLicenseCode("CC-BY-ND-3.0")
+    """
+    Creative Commons Attribution No Derivatives 4.0 International.
+    """
     CreativeCommonsAttributionNoDerivatives4_0International = SPDXLicenseCode(
         "CC-BY-ND-4.0"
     )
+    """
+    Creative Commons Attribution Share Alike 1.0 Generic.
+    """
     CreativeCommonsAttributionShareAlike1_0Generic = SPDXLicenseCode("CC-BY-SA-1.0")
+    """
+    Creative Commons Attribution Share Alike 2.0 Generic.
+    """
     CreativeCommonsAttributionShareAlike2_0Generic = SPDXLicenseCode("CC-BY-SA-2.0")
+    """
+    Creative Commons Attribution Share Alike 2.5 Generic.
+    """
     CreativeCommonsAttributionShareAlike2_5Generic = SPDXLicenseCode("CC-BY-SA-2.5")
+    """
+    Creative Commons Attribution Share Alike 3.0 Unported.
+    """
     CreativeCommonsAttributionShareAlike3_0Unported = SPDXLicenseCode("CC-BY-SA-3.0")
+    """
+    Creative Commons Attribution Share Alike 4.0 International.
+    """
     CreativeCommonsAttributionShareAlike4_0International = SPDXLicenseCode(
         "CC-BY-SA-4.0"
     )
+    """
+    Creative Commons Zero v1.0 Universal.
+    """
     CreativeCommonsZeroV1_0Universal = SPDXLicenseCode("CC0-1.0")
+    """
+    Common Development and Distribution License 1.0.
+    """
     CommonDevelopmentAndDistributionLicense1_0 = SPDXLicenseCode("CDDL-1.0")
+    """
+    Common Development and Distribution License 1.1.
+    """
     CommonDevelopmentAndDistributionLicense1_1 = SPDXLicenseCode("CDDL-1.1")
+    """
+    Community Data License Agreement Permissive 1.0.
+    """
     CommunityDataLicenseAgreementPermissive1_0 = SPDXLicenseCode("CDLA-Permissive-1.0")
+    """
+    Community Data License Agreement Sharing 1.0.
+    """
     CommunityDataLicenseAgreementSharing1_0 = SPDXLicenseCode("CDLA-Sharing-1.0")
+    """
+    CeCILL Free Software License Agreement v1.0.
+    """
     CeCILLFreeSoftwareLicenseAgreementV1_0 = SPDXLicenseCode("CECILL-1.0")
+    """
+    CeCILL Free Software License Agreement v1.1.
+    """
     CeCILLFreeSoftwareLicenseAgreementV1_1 = SPDXLicenseCode("CECILL-1.1")
+    """
+    CeCILL Free Software License Agreement v2.0.
+    """
     CeCILLFreeSoftwareLicenseAgreementV2_0 = SPDXLicenseCode("CECILL-2.0")
+    """
+    CeCILL Free Software License Agreement v2.1.
+    """
     CeCILLFreeSoftwareLicenseAgreementV2_1 = SPDXLicenseCode("CECILL-2.1")
+    """
+    CeCILL-B Free Software License Agreement.
+    """
     CeCILL_BFreeSoftwareLicenseAgreement = SPDXLicenseCode("CECILL-B")
+    """
+    CeCILL-C Free Software License Agreement.
+    """
     CeCILL_CFreeSoftwareLicenseAgreement = SPDXLicenseCode("CECILL-C")
+    """
+    Clarified Artistic License.
+    """
     ClarifiedArtisticLicense = SPDXLicenseCode("ClArtistic")
+    """
+    CNRI Jython License.
+    """
     CNRIJythonLicense = SPDXLicenseCode("CNRI-Jython")
+    """
+    CNRI Python Open Source GPL Compatible License Agreement.
+    """
     CNRIPythonOpenSourceGPLCompatibleLicenseAgreement = SPDXLicenseCode(
         "CNRI-Python-GPL-Compatible"
     )
+    """
+    CNRI Python License.
+    """
     CNRIPythonLicense = SPDXLicenseCode("CNRI-Python")
+    """
+    Condor Public License v1.1.
+    """
     CondorPublicLicenseV1_1 = SPDXLicenseCode("Condor-1.1")
+    """
+    Common Public Attribution License 1.0.
+    """
     CommonPublicAttributionLicense1_0 = SPDXLicenseCode("CPAL-1.0")
+    """
+    Common Public License 1.0.
+    """
     CommonPublicLicense1_0 = SPDXLicenseCode("CPL-1.0")
+    """
+    Code Project Open License 1.02.
+    """
     CodeProjectOpenLicense1_02 = SPDXLicenseCode("CPOL-1.02")
+    """
+    Crossword License.
+    """
     CrosswordLicense = SPDXLicenseCode("Crossword")
+    """
+    CrystalStacker License.
+    """
     CrystalStackerLicense = SPDXLicenseCode("CrystalStacker")
+    """
+    CUA Office Public License v1.0.
+    """
     CUAOfficePublicLicenseV1_0 = SPDXLicenseCode("CUA-OPL-1.0")
+    """
+    Cube License.
+    """
     CubeLicense = SPDXLicenseCode("Cube")
+    """
+    curl License.
+    """
     CurlLicense = SPDXLicenseCode("curl")
+    """
+    Deutsche Freie Software Lizenz.
+    """
     DeutscheFreieSoftwareLizenz = SPDXLicenseCode("D-FSL-1.0")
+    """
+    diffmark license.
+    """
     DiffmarkLicense = SPDXLicenseCode("diffmark")
+    """
+    DOC License.
+    """
     DOCLicense = SPDXLicenseCode("DOC")
+    """
+    Dotseqn License.
+    """
     DotseqnLicense = SPDXLicenseCode("Dotseqn")
+    """
+    DSDP License.
+    """
     DSDPLicense = SPDXLicenseCode("DSDP")
+    """
+    dvipdfm License.
+    """
     DvipdfmLicense = SPDXLicenseCode("dvipdfm")
+    """
+    Educational Community License v1.0.
+    """
     EducationalCommunityLicenseV1_0 = SPDXLicenseCode("ECL-1.0")
+    """
+    Educational Community License v2.0.
+    """
     EducationalCommunityLicenseV2_0 = SPDXLicenseCode("ECL-2.0")
+    """
+    Eiffel Forum License v1.0.
+    """
     EiffelForumLicenseV1_0 = SPDXLicenseCode("EFL-1.0")
+    """
+    Eiffel Forum License v2.0.
+    """
     EiffelForumLicenseV2_0 = SPDXLicenseCode("EFL-2.0")
+    """
+    eGenix.com Public License 1.1.0.
+    """
     EGenix_comPublicLicense1_1_0 = SPDXLicenseCode("eGenix")
+    """
+    Entessa Public License v1.0.
+    """
     EntessaPublicLicenseV1_0 = SPDXLicenseCode("Entessa")
+    """
+    Eclipse Public License 1.0.
+    """
     EclipsePublicLicense1_0 = SPDXLicenseCode("EPL-1.0")
+    """
+    Eclipse Public License 2.0.
+    """
     EclipsePublicLicense2_0 = SPDXLicenseCode("EPL-2.0")
+    """
+    Erlang Public License v1.1.
+    """
     ErlangPublicLicenseV1_1 = SPDXLicenseCode("ErlPL-1.1")
+    """
+    EU DataGrid Software License.
+    """
     EUDataGridSoftwareLicense = SPDXLicenseCode("EUDatagrid")
+    """
+    European Union Public License 1.0.
+    """
     EuropeanUnionPublicLicense1_0 = SPDXLicenseCode("EUPL-1.0")
+    """
+    European Union Public License 1.1.
+    """
     EuropeanUnionPublicLicense1_1 = SPDXLicenseCode("EUPL-1.1")
+    """
+    European Union Public License 1.2.
+    """
     EuropeanUnionPublicLicense1_2 = SPDXLicenseCode("EUPL-1.2")
+    """
+    Eurosym License.
+    """
     EurosymLicense = SPDXLicenseCode("Eurosym")
+    """
+    Fair License.
+    """
     FairLicense = SPDXLicenseCode("Fair")
+    """
+    Frameworx Open License 1.0.
+    """
     FrameworxOpenLicense1_0 = SPDXLicenseCode("Frameworx-1.0")
+    """
+    FreeImage Public License v1.0.
+    """
     FreeImagePublicLicenseV1_0 = SPDXLicenseCode("FreeImage")
+    """
+    FSF All Permissive License.
+    """
     FSFAllPermissiveLicense = SPDXLicenseCode("FSFAP")
+    """
+    FSF Unlimited License.
+    """
     FSFUnlimitedLicense = SPDXLicenseCode("FSFUL")
+    """
+    FSF Unlimited License (with License Retention).
+    """
     FSFUnlimitedLicense_withLicenseRetention_ = SPDXLicenseCode("FSFULLR")
+    """
+    Freetype Project License.
+    """
     FreetypeProjectLicense = SPDXLicenseCode("FTL")
+    """
+    GNU Free Documentation License v1.1 only.
+    """
     GNUFreeDocumentationLicenseV1_1Only = SPDXLicenseCode("GFDL-1.1-only")
+    """
+    GNU Free Documentation License v1.1 or later.
+    """
     GNUFreeDocumentationLicenseV1_1OrLater = SPDXLicenseCode("GFDL-1.1-or-later")
+    """
+    GNU Free Documentation License v1.2 only.
+    """
     GNUFreeDocumentationLicenseV1_2Only = SPDXLicenseCode("GFDL-1.2-only")
+    """
+    GNU Free Documentation License v1.2 or later.
+    """
     GNUFreeDocumentationLicenseV1_2OrLater = SPDXLicenseCode("GFDL-1.2-or-later")
+    """
+    GNU Free Documentation License v1.3 only.
+    """
     GNUFreeDocumentationLicenseV1_3Only = SPDXLicenseCode("GFDL-1.3-only")
+    """
+    GNU Free Documentation License v1.3 or later.
+    """
     GNUFreeDocumentationLicenseV1_3OrLater = SPDXLicenseCode("GFDL-1.3-or-later")
+    """
+    Giftware License.
+    """
     GiftwareLicense = SPDXLicenseCode("Giftware")
+    """
+    GL2PS License.
+    """
     GL2PSLicense = SPDXLicenseCode("GL2PS")
+    """
+    3dfx Glide License.
+    """
     _3dfxGlideLicense = SPDXLicenseCode("Glide")
+    """
+    Glulxe License.
+    """
     GlulxeLicense = SPDXLicenseCode("Glulxe")
+    """
+    gnuplot License.
+    """
     GnuplotLicense = SPDXLicenseCode("gnuplot")
+    """
+    GNU General Public License v1.0 only.
+    """
     GNUGeneralPublicLicenseV1_0Only = SPDXLicenseCode("GPL-1.0-only")
+    """
+    GNU General Public License v1.0 or later.
+    """
     GNUGeneralPublicLicenseV1_0OrLater = SPDXLicenseCode("GPL-1.0-or-later")
+    """
+    GNU General Public License v2.0 only.
+    """
     GNUGeneralPublicLicenseV2_0Only = SPDXLicenseCode("GPL-2.0-only")
+    """
+    GNU General Public License v2.0 or later.
+    """
     GNUGeneralPublicLicenseV2_0OrLater = SPDXLicenseCode("GPL-2.0-or-later")
+    """
+    GNU General Public License v3.0 only.
+    """
     GNUGeneralPublicLicenseV3_0Only = SPDXLicenseCode("GPL-3.0-only")
+    """
+    GNU General Public License v3.0 or later.
+    """
     GNUGeneralPublicLicenseV3_0OrLater = SPDXLicenseCode("GPL-3.0-or-later")
+    """
+    gSOAP Public License v1.3b.
+    """
     GSOAPPublicLicenseV1_3b = SPDXLicenseCode("gSOAP-1.3b")
+    """
+    Haskell Language Report License.
+    """
     HaskellLanguageReportLicense = SPDXLicenseCode("HaskellReport")
+    """
+    Historical Permission Notice and Disclaimer.
+    """
     HistoricalPermissionNoticeAndDisclaimer = SPDXLicenseCode("HPND")
+    """
+    IBM PowerPC Initialization and Boot Software.
+    """
     IBMPowerPCInitializationAndBootSoftware = SPDXLicenseCode("IBM-pibs")
+    """
+    ICU License.
+    """
     ICULicense = SPDXLicenseCode("ICU")
+    """
+    Independent JPEG Group License.
+    """
     IndependentJPEGGroupLicense = SPDXLicenseCode("IJG")
+    """
+    ImageMagick License.
+    """
     ImageMagickLicense = SPDXLicenseCode("ImageMagick")
+    """
+    iMatix Standard Function Library Agreement.
+    """
     IMatixStandardFunctionLibraryAgreement = SPDXLicenseCode("iMatix")
+    """
+    Imlib2 License.
+    """
     Imlib2License = SPDXLicenseCode("Imlib2")
+    """
+    Info-ZIP License.
+    """
     Info_ZIPLicense = SPDXLicenseCode("Info-ZIP")
+    """
+    Intel ACPI Software License Agreement.
+    """
     IntelACPISoftwareLicenseAgreement = SPDXLicenseCode("Intel-ACPI")
+    """
+    Intel Open Source License.
+    """
     IntelOpenSourceLicense = SPDXLicenseCode("Intel")
+    """
+    Interbase Public License v1.0.
+    """
     InterbasePublicLicenseV1_0 = SPDXLicenseCode("Interbase-1.0")
+    """
+    IPA Font License.
+    """
     IPAFontLicense = SPDXLicenseCode("IPA")
+    """
+    IBM Public License v1.0.
+    """
     IBMPublicLicenseV1_0 = SPDXLicenseCode("IPL-1.0")
+    """
+    ISC License.
+    """
     ISCLicense = SPDXLicenseCode("ISC")
+    """
+    JasPer License.
+    """
     JasPerLicense = SPDXLicenseCode("JasPer-2.0")
+    """
+    JSON License.
+    """
     JSONLicense = SPDXLicenseCode("JSON")
+    """
+    Licence Art Libre 1.2.
+    """
     LicenceArtLibre1_2 = SPDXLicenseCode("LAL-1.2")
+    """
+    Licence Art Libre 1.3.
+    """
     LicenceArtLibre1_3 = SPDXLicenseCode("LAL-1.3")
+    """
+    Latex2e License.
+    """
     Latex2eLicense = SPDXLicenseCode("Latex2e")
+    """
+    Leptonica License.
+    """
     LeptonicaLicense = SPDXLicenseCode("Leptonica")
+    """
+    GNU Library General Public License v2 only.
+    """
     GNULibraryGeneralPublicLicenseV2Only = SPDXLicenseCode("LGPL-2.0-only")
+    """
+    GNU Library General Public License v2 or later.
+    """
     GNULibraryGeneralPublicLicenseV2OrLater = SPDXLicenseCode("LGPL-2.0-or-later")
+    """
+    GNU Lesser General Public License v2.1 only.
+    """
     GNULesserGeneralPublicLicenseV2_1Only = SPDXLicenseCode("LGPL-2.1-only")
+    """
+    GNU Lesser General Public License v2.1 or later.
+    """
     GNULesserGeneralPublicLicenseV2_1OrLater = SPDXLicenseCode("LGPL-2.1-or-later")
+    """
+    GNU Lesser General Public License v3.0 only.
+    """
     GNULesserGeneralPublicLicenseV3_0Only = SPDXLicenseCode("LGPL-3.0-only")
+    """
+    GNU Lesser General Public License v3.0 or later.
+    """
     GNULesserGeneralPublicLicenseV3_0OrLater = SPDXLicenseCode("LGPL-3.0-or-later")
+    """
+    Lesser General Public License For Linguistic Resources.
+    """
     LesserGeneralPublicLicenseForLinguisticResources = SPDXLicenseCode("LGPLLR")
+    """
+    libpng License.
+    """
     LibpngLicense = SPDXLicenseCode("Libpng")
+    """
+    libtiff License.
+    """
     LibtiffLicense = SPDXLicenseCode("libtiff")
+    """
+    Licence Libre du Québec – Permissive version 1.1.
+    """
     LicenceLibreDuQu_bec_PermissiveVersion1_1 = SPDXLicenseCode("LiLiQ-P-1.1")
+    """
+    Licence Libre du Québec – Réciprocité version 1.1.
+    """
     LicenceLibreDuQu_bec_R_ciprocit_Version1_1 = SPDXLicenseCode("LiLiQ-R-1.1")
+    """
+    Licence Libre du Québec – Réciprocité forte version 1.1.
+    """
     LicenceLibreDuQu_bec_R_ciprocit_ForteVersion1_1 = SPDXLicenseCode("LiLiQ-Rplus-1.1")
+    """
+    Linux Kernel Variant of OpenIB.org license.
+    """
     LinuxKernelVariantOfOpenIB_orgLicense = SPDXLicenseCode("Linux-OpenIB")
+    """
+    Lucent Public License Version 1.0.
+    """
     LucentPublicLicenseVersion1_0 = SPDXLicenseCode("LPL-1.0")
+    """
+    Lucent Public License v1.02.
+    """
     LucentPublicLicenseV1_02 = SPDXLicenseCode("LPL-1.02")
+    """
+    LaTeX Project Public License v1.0.
+    """
     LaTeXProjectPublicLicenseV1_0 = SPDXLicenseCode("LPPL-1.0")
+    """
+    LaTeX Project Public License v1.1.
+    """
     LaTeXProjectPublicLicenseV1_1 = SPDXLicenseCode("LPPL-1.1")
+    """
+    LaTeX Project Public License v1.2.
+    """
     LaTeXProjectPublicLicenseV1_2 = SPDXLicenseCode("LPPL-1.2")
+    """
+    LaTeX Project Public License v1.3a.
+    """
     LaTeXProjectPublicLicenseV1_3a = SPDXLicenseCode("LPPL-1.3a")
+    """
+    LaTeX Project Public License v1.3c.
+    """
     LaTeXProjectPublicLicenseV1_3c = SPDXLicenseCode("LPPL-1.3c")
+    """
+    MakeIndex License.
+    """
     MakeIndexLicense = SPDXLicenseCode("MakeIndex")
+    """
+    MirOS License.
+    """
     MirOSLicense = SPDXLicenseCode("MirOS")
+    """
+    MIT No Attribution.
+    """
     MITNoAttribution = SPDXLicenseCode("MIT-0")
+    """
+    Enlightenment License (e16).
+    """
     EnlightenmentLicense_e16_ = SPDXLicenseCode("MIT-advertising")
+    """
+    CMU License.
+    """
     CMULicense = SPDXLicenseCode("MIT-CMU")
+    """
+    enna License.
+    """
     EnnaLicense = SPDXLicenseCode("MIT-enna")
+    """
+    feh License.
+    """
     FehLicense = SPDXLicenseCode("MIT-feh")
+    """
+    MIT License.
+    """
     MITLicense = SPDXLicenseCode("MIT")
+    """
+    MIT +no-false-attribs license.
+    """
     MIT_no_false_attribsLicense = SPDXLicenseCode("MITNFA")
+    """
+    Motosoto License.
+    """
     MotosotoLicense = SPDXLicenseCode("Motosoto")
+    """
+    mpich2 License.
+    """
     Mpich2License = SPDXLicenseCode("mpich2")
+    """
+    Mozilla Public License 1.0.
+    """
     MozillaPublicLicense1_0 = SPDXLicenseCode("MPL-1.0")
+    """
+    Mozilla Public License 1.1.
+    """
     MozillaPublicLicense1_1 = SPDXLicenseCode("MPL-1.1")
+    """
+    Mozilla Public License 2.0 (no copyleft exception).
+    """
     MozillaPublicLicense2_0_noCopyleftException_ = SPDXLicenseCode(
         "MPL-2.0-no-copyleft-exception"
     )
+    """
+    Mozilla Public License 2.0.
+    """
     MozillaPublicLicense2_0 = SPDXLicenseCode("MPL-2.0")
+    """
+    Microsoft Public License.
+    """
     MicrosoftPublicLicense = SPDXLicenseCode("MS-PL")
+    """
+    Microsoft Reciprocal License.
+    """
     MicrosoftReciprocalLicense = SPDXLicenseCode("MS-RL")
+    """
+    Matrix Template Library License.
+    """
     MatrixTemplateLibraryLicense = SPDXLicenseCode("MTLL")
+    """
+    Multics License.
+    """
     MulticsLicense = SPDXLicenseCode("Multics")
+    """
+    Mup License.
+    """
     MupLicense = SPDXLicenseCode("Mup")
+    """
+    NASA Open Source Agreement 1.3.
+    """
     NASAOpenSourceAgreement1_3 = SPDXLicenseCode("NASA-1.3")
+    """
+    Naumen Public License.
+    """
     NaumenPublicLicense = SPDXLicenseCode("Naumen")
+    """
+    Net Boolean Public License v1.
+    """
     NetBooleanPublicLicenseV1 = SPDXLicenseCode("NBPL-1.0")
+    """
+    University of Illinois/NCSA Open Source License.
+    """
     UniversityOfIllinois_NCSAOpenSourceLicense = SPDXLicenseCode("NCSA")
+    """
+    Net-SNMP License.
+    """
     Net_SNMPLicense = SPDXLicenseCode("Net-SNMP")
+    """
+    NetCDF license.
+    """
     NetCDFLicense = SPDXLicenseCode("NetCDF")
+    """
+    Newsletr License.
+    """
     NewsletrLicense = SPDXLicenseCode("Newsletr")
+    """
+    Nethack General Public License.
+    """
     NethackGeneralPublicLicense = SPDXLicenseCode("NGPL")
+    """
+    Norwegian Licence for Open Government Data.
+    """
     NorwegianLicenceForOpenGovernmentData = SPDXLicenseCode("NLOD-1.0")
+    """
+    No Limit Public License.
+    """
     NoLimitPublicLicense = SPDXLicenseCode("NLPL")
+    """
+    Nokia Open Source License.
+    """
     NokiaOpenSourceLicense = SPDXLicenseCode("Nokia")
+    """
+    Netizen Open Source License.
+    """
     NetizenOpenSourceLicense = SPDXLicenseCode("NOSL")
+    """
+    Noweb License.
+    """
     NowebLicense = SPDXLicenseCode("Noweb")
+    """
+    Netscape Public License v1.0.
+    """
     NetscapePublicLicenseV1_0 = SPDXLicenseCode("NPL-1.0")
+    """
+    Netscape Public License v1.1.
+    """
     NetscapePublicLicenseV1_1 = SPDXLicenseCode("NPL-1.1")
+    """
+    Non-Profit Open Software License 3.0.
+    """
     Non_ProfitOpenSoftwareLicense3_0 = SPDXLicenseCode("NPOSL-3.0")
+    """
+    NRL License.
+    """
     NRLLicense = SPDXLicenseCode("NRL")
+    """
+    NTP License.
+    """
     NTPLicense = SPDXLicenseCode("NTP")
+    """
+    Open CASCADE Technology Public License.
+    """
     OpenCASCADETechnologyPublicLicense = SPDXLicenseCode("OCCT-PL")
+    """
+    OCLC Research Public License 2.0.
+    """
     OCLCResearchPublicLicense2_0 = SPDXLicenseCode("OCLC-2.0")
+    """
+    ODC Open Database License v1.0.
+    """
     ODCOpenDatabaseLicenseV1_0 = SPDXLicenseCode("ODbL-1.0")
+    """
+    SIL Open Font License 1.0.
+    """
     SILOpenFontLicense1_0 = SPDXLicenseCode("OFL-1.0")
+    """
+    SIL Open Font License 1.1.
+    """
     SILOpenFontLicense1_1 = SPDXLicenseCode("OFL-1.1")
+    """
+    Open Group Test Suite License.
+    """
     OpenGroupTestSuiteLicense = SPDXLicenseCode("OGTSL")
+    """
+    Open LDAP Public License v1.1.
+    """
     OpenLDAPPublicLicenseV1_1 = SPDXLicenseCode("OLDAP-1.1")
+    """
+    Open LDAP Public License v1.2.
+    """
     OpenLDAPPublicLicenseV1_2 = SPDXLicenseCode("OLDAP-1.2")
+    """
+    Open LDAP Public License v1.3.
+    """
     OpenLDAPPublicLicenseV1_3 = SPDXLicenseCode("OLDAP-1.3")
+    """
+    Open LDAP Public License v1.4.
+    """
     OpenLDAPPublicLicenseV1_4 = SPDXLicenseCode("OLDAP-1.4")
+    """
+    Open LDAP Public License v2.0.1.
+    """
     OpenLDAPPublicLicenseV2_0_1 = SPDXLicenseCode("OLDAP-2.0.1")
+    """
+    Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B).
+    """
     OpenLDAPPublicLicenseV2_0_orPossibly2_0AAnd2_0B_ = SPDXLicenseCode("OLDAP-2.0")
+    """
+    Open LDAP Public License v2.1.
+    """
     OpenLDAPPublicLicenseV2_1 = SPDXLicenseCode("OLDAP-2.1")
+    """
+    Open LDAP Public License v2.2.1.
+    """
     OpenLDAPPublicLicenseV2_2_1 = SPDXLicenseCode("OLDAP-2.2.1")
+    """
+    Open LDAP Public License 2.2.2.
+    """
     OpenLDAPPublicLicense2_2_2 = SPDXLicenseCode("OLDAP-2.2.2")
+    """
+    Open LDAP Public License v2.2.
+    """
     OpenLDAPPublicLicenseV2_2 = SPDXLicenseCode("OLDAP-2.2")
+    """
+    Open LDAP Public License v2.3.
+    """
     OpenLDAPPublicLicenseV2_3 = SPDXLicenseCode("OLDAP-2.3")
+    """
+    Open LDAP Public License v2.4.
+    """
     OpenLDAPPublicLicenseV2_4 = SPDXLicenseCode("OLDAP-2.4")
+    """
+    Open LDAP Public License v2.5.
+    """
     OpenLDAPPublicLicenseV2_5 = SPDXLicenseCode("OLDAP-2.5")
+    """
+    Open LDAP Public License v2.6.
+    """
     OpenLDAPPublicLicenseV2_6 = SPDXLicenseCode("OLDAP-2.6")
+    """
+    Open LDAP Public License v2.7.
+    """
     OpenLDAPPublicLicenseV2_7 = SPDXLicenseCode("OLDAP-2.7")
+    """
+    Open LDAP Public License v2.8.
+    """
     OpenLDAPPublicLicenseV2_8 = SPDXLicenseCode("OLDAP-2.8")
+    """
+    Open Market License.
+    """
     OpenMarketLicense = SPDXLicenseCode("OML")
+    """
+    OpenSSL License.
+    """
     OpenSSLLicense = SPDXLicenseCode("OpenSSL")
+    """
+    Open Public License v1.0.
+    """
     OpenPublicLicenseV1_0 = SPDXLicenseCode("OPL-1.0")
+    """
+    OSET Public License version 2.1.
+    """
     OSETPublicLicenseVersion2_1 = SPDXLicenseCode("OSET-PL-2.1")
+    """
+    Open Software License 1.0.
+    """
     OpenSoftwareLicense1_0 = SPDXLicenseCode("OSL-1.0")
+    """
+    Open Software License 1.1.
+    """
     OpenSoftwareLicense1_1 = SPDXLicenseCode("OSL-1.1")
+    """
+    Open Software License 2.0.
+    """
     OpenSoftwareLicense2_0 = SPDXLicenseCode("OSL-2.0")
+    """
+    Open Software License 2.1.
+    """
     OpenSoftwareLicense2_1 = SPDXLicenseCode("OSL-2.1")
+    """
+    Open Software License 3.0.
+    """
     OpenSoftwareLicense3_0 = SPDXLicenseCode("OSL-3.0")
+    """
+    ODC Public Domain Dedication & License 1.0.
+    """
     ODCPublicDomainDedication_License1_0 = SPDXLicenseCode("PDDL-1.0")
+    """
+    PHP License v3.0.
+    """
     PHPLicenseV3_0 = SPDXLicenseCode("PHP-3.0")
+    """
+    PHP License v3.01.
+    """
     PHPLicenseV3_01 = SPDXLicenseCode("PHP-3.01")
+    """
+    Plexus Classworlds License.
+    """
     PlexusClassworldsLicense = SPDXLicenseCode("Plexus")
+    """
+    PostgreSQL License.
+    """
     PostgreSQLLicense = SPDXLicenseCode("PostgreSQL")
+    """
+    psfrag License.
+    """
     PsfragLicense = SPDXLicenseCode("psfrag")
+    """
+    psutils License.
+    """
     PsutilsLicense = SPDXLicenseCode("psutils")
+    """
+    Python License 2.0.
+    """
     PythonLicense2_0 = SPDXLicenseCode("Python-2.0")
+    """
+    Qhull License.
+    """
     QhullLicense = SPDXLicenseCode("Qhull")
+    """
+    Q Public License 1.0.
+    """
     QPublicLicense1_0 = SPDXLicenseCode("QPL-1.0")
+    """
+    Rdisc License.
+    """
     RdiscLicense = SPDXLicenseCode("Rdisc")
+    """
+    Red Hat eCos Public License v1.1.
+    """
     RedHatECosPublicLicenseV1_1 = SPDXLicenseCode("RHeCos-1.1")
+    """
+    Reciprocal Public License 1.1.
+    """
     ReciprocalPublicLicense1_1 = SPDXLicenseCode("RPL-1.1")
+    """
+    Reciprocal Public License 1.5.
+    """
     ReciprocalPublicLicense1_5 = SPDXLicenseCode("RPL-1.5")
+    """
+    RealNetworks Public Source License v1.0.
+    """
     RealNetworksPublicSourceLicenseV1_0 = SPDXLicenseCode("RPSL-1.0")
+    """
+    RSA Message-Digest License.
+    """
     RSAMessage_DigestLicense = SPDXLicenseCode("RSA-MD")
+    """
+    Ricoh Source Code Public License.
+    """
     RicohSourceCodePublicLicense = SPDXLicenseCode("RSCPL")
+    """
+    Ruby License.
+    """
     RubyLicense = SPDXLicenseCode("Ruby")
+    """
+    Sax Public Domain Notice.
+    """
     SaxPublicDomainNotice = SPDXLicenseCode("SAX-PD")
+    """
+    Saxpath License.
+    """
     SaxpathLicense = SPDXLicenseCode("Saxpath")
+    """
+    SCEA Shared Source License.
+    """
     SCEASharedSourceLicense = SPDXLicenseCode("SCEA")
+    """
+    Sendmail License.
+    """
     SendmailLicense = SPDXLicenseCode("Sendmail")
+    """
+    SGI Free Software License B v1.0.
+    """
     SGIFreeSoftwareLicenseBV1_0 = SPDXLicenseCode("SGI-B-1.0")
+    """
+    SGI Free Software License B v1.1.
+    """
     SGIFreeSoftwareLicenseBV1_1 = SPDXLicenseCode("SGI-B-1.1")
+    """
+    SGI Free Software License B v2.0.
+    """
     SGIFreeSoftwareLicenseBV2_0 = SPDXLicenseCode("SGI-B-2.0")
+    """
+    Simple Public License 2.0.
+    """
     SimplePublicLicense2_0 = SPDXLicenseCode("SimPL-2.0")
+    """
+    Sun Industry Standards Source License v1.2.
+    """
     SunIndustryStandardsSourceLicenseV1_2 = SPDXLicenseCode("SISSL-1.2")
+    """
+    Sun Industry Standards Source License v1.1.
+    """
     SunIndustryStandardsSourceLicenseV1_1 = SPDXLicenseCode("SISSL")
+    """
+    Sleepycat License.
+    """
     SleepycatLicense = SPDXLicenseCode("Sleepycat")
+    """
+    Standard ML of New Jersey License.
+    """
     StandardMLOfNewJerseyLicense = SPDXLicenseCode("SMLNJ")
+    """
+    Secure Messaging Protocol Public License.
+    """
     SecureMessagingProtocolPublicLicense = SPDXLicenseCode("SMPPL")
+    """
+    SNIA Public License 1.1.
+    """
     SNIAPublicLicense1_1 = SPDXLicenseCode("SNIA")
+    """
+    Spencer License 86.
+    """
     SpencerLicense86 = SPDXLicenseCode("Spencer-86")
+    """
+    Spencer License 94.
+    """
     SpencerLicense94 = SPDXLicenseCode("Spencer-94")
+    """
+    Spencer License 99.
+    """
     SpencerLicense99 = SPDXLicenseCode("Spencer-99")
+    """
+    Sun Public License v1.0.
+    """
     SunPublicLicenseV1_0 = SPDXLicenseCode("SPL-1.0")
+    """
+    SugarCRM Public License v1.1.3.
+    """
     SugarCRMPublicLicenseV1_1_3 = SPDXLicenseCode("SugarCRM-1.1.3")
+    """
+    Scheme Widget Library (SWL) Software License Agreement.
+    """
     SchemeWidgetLibrary_SWL_SoftwareLicenseAgreement = SPDXLicenseCode("SWL")
+    """
+    TCL/TK License.
+    """
     TCL_TKLicense = SPDXLicenseCode("TCL")
+    """
+    TCP Wrappers License.
+    """
     TCPWrappersLicense = SPDXLicenseCode("TCP-wrappers")
+    """
+    TMate Open Source License.
+    """
     TMateOpenSourceLicense = SPDXLicenseCode("TMate")
+    """
+    TORQUE v2.5+ Software License v1.1.
+    """
     TORQUEV2_5_SoftwareLicenseV1_1 = SPDXLicenseCode("TORQUE-1.1")
+    """
+    Trusster Open Source License.
+    """
     TrussterOpenSourceLicense = SPDXLicenseCode("TOSL")
+    """
+    Unicode License Agreement - Data Files and Software (2015).
+    """
     UnicodeLicenseAgreement_DataFilesAndSoftware_2015_ = SPDXLicenseCode(
         "Unicode-DFS-2015"
     )
+    """
+    Unicode License Agreement - Data Files and Software (2016).
+    """
     UnicodeLicenseAgreement_DataFilesAndSoftware_2016_ = SPDXLicenseCode(
         "Unicode-DFS-2016"
     )
+    """
+    Unicode Terms of Use.
+    """
     UnicodeTermsOfUse = SPDXLicenseCode("Unicode-TOU")
+    """
+    The Unlicense.
+    """
     TheUnlicense = SPDXLicenseCode("Unlicense")
+    """
+    Universal Permissive License v1.0.
+    """
     UniversalPermissiveLicenseV1_0 = SPDXLicenseCode("UPL-1.0")
+    """
+    Vim License.
+    """
     VimLicense = SPDXLicenseCode("Vim")
+    """
+    VOSTROM Public License for Open Source.
+    """
     VOSTROMPublicLicenseForOpenSource = SPDXLicenseCode("VOSTROM")
+    """
+    Vovida Software License v1.0.
+    """
     VovidaSoftwareLicenseV1_0 = SPDXLicenseCode("VSL-1.0")
+    """
+    W3C Software Notice and License (1998-07-20).
+    """
     W3CSoftwareNoticeAndLicense_1998_07_20_ = SPDXLicenseCode("W3C-19980720")
+    """
+    W3C Software Notice and Document License (2015-05-13).
+    """
     W3CSoftwareNoticeAndDocumentLicense_2015_05_13_ = SPDXLicenseCode("W3C-20150513")
+    """
+    W3C Software Notice and License (2002-12-31).
+    """
     W3CSoftwareNoticeAndLicense_2002_12_31_ = SPDXLicenseCode("W3C")
+    """
+    Sybase Open Watcom Public License 1.0.
+    """
     SybaseOpenWatcomPublicLicense1_0 = SPDXLicenseCode("Watcom-1.0")
+    """
+    Wsuipa License.
+    """
     WsuipaLicense = SPDXLicenseCode("Wsuipa")
+    """
+    Do What The F*ck You Want To Public License.
+    """
     DoWhatTheF_ckYouWantToPublicLicense = SPDXLicenseCode("WTFPL")
+    """
+    X11 License.
+    """
     X11License = SPDXLicenseCode("X11")
+    """
+    Xerox License.
+    """
     XeroxLicense = SPDXLicenseCode("Xerox")
+    """
+    XFree86 License 1.1.
+    """
     XFree86License1_1 = SPDXLicenseCode("XFree86-1.1")
+    """
+    xinetd License.
+    """
     XinetdLicense = SPDXLicenseCode("xinetd")
+    """
+    X.Net License.
+    """
     X_NetLicense = SPDXLicenseCode("Xnet")
+    """
+    XPP License.
+    """
     XPPLicense = SPDXLicenseCode("xpp")
+    """
+    XSkat License.
+    """
     XSkatLicense = SPDXLicenseCode("XSkat")
+    """
+    Yahoo! Public License v1.0.
+    """
     Yahoo_PublicLicenseV1_0 = SPDXLicenseCode("YPL-1.0")
+    """
+    Yahoo! Public License v1.1.
+    """
     Yahoo_PublicLicenseV1_1 = SPDXLicenseCode("YPL-1.1")
+    """
+    Zed License.
+    """
     ZedLicense = SPDXLicenseCode("Zed")
+    """
+    Zend License v2.0.
+    """
     ZendLicenseV2_0 = SPDXLicenseCode("Zend-2.0")
+    """
+    Zimbra Public License v1.3.
+    """
     ZimbraPublicLicenseV1_3 = SPDXLicenseCode("Zimbra-1.3")
+    """
+    Zimbra Public License v1.4.
+    """
     ZimbraPublicLicenseV1_4 = SPDXLicenseCode("Zimbra-1.4")
+    """
+    zlib/libpng License with Acknowledgement.
+    """
     Zlib_libpngLicenseWithAcknowledgement = SPDXLicenseCode("zlib-acknowledgement")
+    """
+    zlib License.
+    """
     ZlibLicense = SPDXLicenseCode("Zlib")
+    """
+    Zope Public License 1.1.
+    """
     ZopePublicLicense1_1 = SPDXLicenseCode("ZPL-1.1")
+    """
+    Zope Public License 2.0.
+    """
     ZopePublicLicense2_0 = SPDXLicenseCode("ZPL-2.0")
+    """
+    Zope Public License 2.1.
+    """
     ZopePublicLicense2_1 = SPDXLicenseCode("ZPL-2.1")

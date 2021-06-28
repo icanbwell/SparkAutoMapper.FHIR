@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class QuestionnaireItemTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/item-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/item-type"
+
 
 class QuestionnaireItemTypeCodeValues:
+    """
+    An item with no direct answer but should have at least one child item.
+    """
+
     Group = QuestionnaireItemTypeCode("group")
+    """
+    Text for display that will not capture an answer or have child items.
+    """
     Display = QuestionnaireItemTypeCode("display")
+    """
+    An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).
+    """
     Question = QuestionnaireItemTypeCode("question")

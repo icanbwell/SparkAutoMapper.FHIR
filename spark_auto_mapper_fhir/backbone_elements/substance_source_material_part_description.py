@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # part (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for part
     # Import for CodeableConcept for part
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -20,6 +21,7 @@ if TYPE_CHECKING:
     # partLocation (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for partLocation
     # Import for CodeableConcept for partLocation
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

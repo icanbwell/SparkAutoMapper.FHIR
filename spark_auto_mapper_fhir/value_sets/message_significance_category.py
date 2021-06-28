@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class MessageSignificanceCategoryCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/message-significance-category
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/message-significance-category"
+
 
 class MessageSignificanceCategoryCodeValues:
+    """
+    The message represents/requests a change that should not be processed more than once; e.g., making a booking for an appointment.
+    """
+
     Consequence = MessageSignificanceCategoryCode("consequence")
+    """
+    The message represents a response to query for current information. Retrospective processing is wrong and/or wasteful.
+    """
     Currency = MessageSignificanceCategoryCode("currency")
+    """
+    The content is not necessarily intended to be current, and it can be reprocessed, though there may be version issues created by processing old notifications.
+    """
     Notification = MessageSignificanceCategoryCode("notification")

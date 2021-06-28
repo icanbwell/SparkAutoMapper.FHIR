@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class SearchComparatorCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/search-comparator
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/search-comparator"
+
 
 class SearchComparatorCodeValues:
+    """
+    the value for the parameter in the resource is equal to the provided value.
+    """
+
     Equals = SearchComparatorCode("eq")
+    """
+    the value for the parameter in the resource is not equal to the provided value.
+    """
     NotEquals = SearchComparatorCode("ne")
+    """
+    the value for the parameter in the resource is greater than the provided value.
+    """
     GreaterThan = SearchComparatorCode("gt")
+    """
+    the value for the parameter in the resource is less than the provided value.
+    """
     LessThan = SearchComparatorCode("lt")
+    """
+    the value for the parameter in the resource is greater or equal to the provided value.
+    """
     GreaterOrEquals = SearchComparatorCode("ge")
+    """
+    the value for the parameter in the resource is less or equal to the provided value.
+    """
     LessOfEqual = SearchComparatorCode("le")
+    """
+    the value for the parameter in the resource starts after the provided value.
+    """
     StartsAfter = SearchComparatorCode("sa")
+    """
+    the value for the parameter in the resource ends before the provided value.
+    """
     EndsBefore = SearchComparatorCode("eb")
+    """
+    the value for the parameter in the resource is approximately the same to the provided value.
+    """
     Approximately = SearchComparatorCode("ap")

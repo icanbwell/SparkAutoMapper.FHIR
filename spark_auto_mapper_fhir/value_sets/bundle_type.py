@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class BundleTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/bundle-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/bundle-type"
+
 
 class BundleTypeCodeValues:
+    """
+    The bundle is a document. The first resource is a Composition.
+    """
+
     Document = BundleTypeCode("document")
+    """
+    The bundle is a message. The first resource is a MessageHeader.
+    """
     Message = BundleTypeCode("message")
+    """
+    The bundle is a transaction - intended to be processed by a server as an atomic commit.
+    """
     Transaction = BundleTypeCode("transaction")
+    """
+    The bundle is a transaction response. Because the response is a transaction response, the transaction has succeeded, and all responses are error free.
+    """
     TransactionResponse = BundleTypeCode("transaction-response")
+    """
+    The bundle is a set of actions - intended to be processed by a server as a group of independent actions.
+    """
     Batch = BundleTypeCode("batch")
+    """
+    The bundle is a batch response. Note that as a batch, some responses may indicate failure and others success.
+    """
     BatchResponse = BundleTypeCode("batch-response")
+    """
+    The bundle is a list of resources from a history interaction on a server.
+    """
     HistoryList = BundleTypeCode("history")
+    """
+    The bundle is a list of resources returned as a result of a search/query interaction, operation, or message.
+    """
     SearchResults = BundleTypeCode("searchset")
+    """
+    The bundle is a set of resources collected into a single package for ease of distribution that imposes no processing obligations or behavioral rules beyond persistence.
+    """
     Collection = BundleTypeCode("collection")

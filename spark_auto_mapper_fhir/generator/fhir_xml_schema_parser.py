@@ -76,6 +76,7 @@ class FhirEntity:
     is_back_bone_element: bool
     is_value_set: bool = False
     value_set_concepts: Optional[List[FhirValueSetConcept]] = None
+    value_set_url: Optional[str] = None
 
 
 class FhirXmlSchemaParser:
@@ -185,6 +186,7 @@ class FhirXmlSchemaParser:
                     is_back_bone_element=False,
                     is_value_set=True,
                     value_set_concepts=c.concepts,
+                    value_set_url=c.value_set_url,
                 )
                 for c in value_sets
             ]

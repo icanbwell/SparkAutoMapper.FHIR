@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes import (
         ExampleDiagnosisTypeCodesCode,
@@ -25,6 +26,7 @@ if TYPE_CHECKING:
     # onAdmission (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for onAdmission
     # Import for CodeableConcept for onAdmission
     from spark_auto_mapper_fhir.value_sets.example_diagnosis_on_admission_codes import (
         ExampleDiagnosisOnAdmissionCodesCode,
@@ -34,6 +36,7 @@ if TYPE_CHECKING:
     # packageCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for packageCode
     # Import for CodeableConcept for packageCode
     from spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes import (
         ExampleDiagnosisRelatedGroupCodesCode,
@@ -43,6 +46,7 @@ if TYPE_CHECKING:
     # diagnosisCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for diagnosisCodeableConcept
     # Import for CodeableConcept for diagnosisCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

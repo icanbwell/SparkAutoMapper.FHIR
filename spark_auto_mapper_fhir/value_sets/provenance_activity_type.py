@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,105 +16,406 @@ class ProvenanceActivityTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ProvenanceActivityTypeCodeValues:
+    """
+    A completion status in which a document has been signed manually or electronically by one or more individuals who attest to its accuracy.  No explicit determination is made that the assigned individual has performed the authentication.  While the standard allows multiple instances of authentication, it would be typical to have a single instance of authentication, usually by the assigned individual.
+    """
+
     Authenticated = ProvenanceActivityTypeCode("AU")
+    """
+    A completion status in which information has been orally recorded but not yet transcribed.
+    """
     Dictated = ProvenanceActivityTypeCode("DI")
+    """
+    A completion status in which document content, other than dictation, has been received but has not been translated into the final electronic format.  Examples include paper documents, whether hand-written or typewritten, and intermediate electronic forms, such as voice to text.
+    """
     Documented = ProvenanceActivityTypeCode("DO")
+    """
+    A completion status in which information is known to be missing from a transcribed document.
+    """
     Incomplete = ProvenanceActivityTypeCode("IN")
+    """
+    A workflow status where the material has been assigned to personnel to perform the task of transcription. The document remains in this state until the document is transcribed.
+    """
     InProgress = ProvenanceActivityTypeCode("IP")
+    """
+    A completion status in which a document has been signed manually or electronically by the individual who is legally responsible for that document. This is the most mature state in the workflow progression.
+    """
     LegallyAuthenticated = ProvenanceActivityTypeCode("LA")
+    """
+    A completion status in which a document was created in error or was placed in the wrong chart. The document is no longer available.
+    """
     NullifiedDocument = ProvenanceActivityTypeCode("NU")
+    """
+    A completion status in which a document is transcribed but not authenticated.
+    """
     Preauthenticated = ProvenanceActivityTypeCode("PA")
+    """
+    A completion status where the document is complete and there is no expectation that the document will be signed.
+    """
     UnsignedCompletedDocument = ProvenanceActivityTypeCode("UC")
+    """
+    None
+    """
     LA = ProvenanceActivityTypeCode("LA")
+    """
+    An account represents a grouping of financial transactions that are tracked and reported together with a single balance. 	 	Examples of account codes (types) are Patient billing accounts (collection of charges), Cost centers; Cash.
+    """
     Actaccountcode = ProvenanceActivityTypeCode("_ActAccountCode")
+    """
+    Includes coded responses that will occur as a result of the adjudication of an electronic invoice at a summary level and provides guidance on interpretation of the referenced adjudication results.
+    """
     Actadjudicationcode = ProvenanceActivityTypeCode("_ActAdjudicationCode")
+    """
+    Actions to be carried out by the recipient of the Adjudication Result information.
+    """
     Actadjudicationresultactioncode = ProvenanceActivityTypeCode(
         "_ActAdjudicationResultActionCode"
     )
+    """
+    Definition:An identifying modifier code for healthcare interventions or procedures.
+    """
     Actbillablemodifiercode = ProvenanceActivityTypeCode("_ActBillableModifierCode")
+    """
+    The type of provision(s)  made for reimbursing for the deliver of healthcare services and/or goods provided by a Provider, over a specified period.
+    """
     Actbillingarrangementcode = ProvenanceActivityTypeCode("_ActBillingArrangementCode")
+    """
+    Type of bounded ROI.
+    """
     Actboundedroicode = ProvenanceActivityTypeCode("_ActBoundedROICode")
+    """
+    Description:The type and scope of responsibility taken-on by the performer of the Act for a specific subject of care.
+    """
     ActCareProvision = ProvenanceActivityTypeCode("_ActCareProvisionCode")
+    """
+    Description: Coded types of attachments included to support a healthcare claim.
+    """
     Actclaimattachmentcategorycode = ProvenanceActivityTypeCode(
         "_ActClaimAttachmentCategoryCode"
     )
+    """
+    Definition: The type of consent directive, e.g., to consent or dissent to collect, access, or use in specific ways within an EHRS or for health information exchange; or to disclose  health information  for purposes such as research.
+    """
     Actconsenttype = ProvenanceActivityTypeCode("_ActConsentType")
+    """
+    Constrains the ActCode to the domain of Container Registration
+    """
     Actcontainerregistrationcode = ProvenanceActivityTypeCode(
         "_ActContainerRegistrationCode"
     )
+    """
+    An observation form that determines parameters or attributes of an Act. Examples are the settings of a ventilator machine as parameters of a ventilator treatment act; the controls on dillution factors of a chemical analyzer as a parameter of a laboratory observation act; the settings of a physiologic measurement assembly (e.g., time skew) or the position of the body while measuring blood pressure.
+
+                        Control variables are forms of observations because just as with clinical observations, the Observation.code determines the parameter and the Observation.value assigns the value. While control variables sometimes can be observed (by noting the control settings or an actually measured feedback loop) they are not primary observations, in the sense that a control variable without a primary act is of no use (e.g., it makes no sense to record a blood pressure position without recording a blood pressure, whereas it does make sense to record a systolic blood pressure without a diastolic blood pressure).
+    """
     Actcontrolvariable = ProvenanceActivityTypeCode("_ActControlVariable")
+    """
+    Response to an insurance coverage eligibility query or authorization request.
+    """
     Actcoverageconfirmationcode = ProvenanceActivityTypeCode(
         "_ActCoverageConfirmationCode"
     )
+    """
+    Criteria that are applicable to the authorized coverage.
+    """
     Actcoveragelimitcode = ProvenanceActivityTypeCode("_ActCoverageLimitCode")
+    """
+    Definition: Set of codes indicating the type of insurance policy or program that pays for the cost of benefits provided to covered parties.
+    """
     Actcoveragetypecode = ProvenanceActivityTypeCode("_ActCoverageTypeCode")
+    """
+    Codes dealing with the management of Detected Issue observations
+    """
     Actdetectedissuemanagementcode = ProvenanceActivityTypeCode(
         "_ActDetectedIssueManagementCode"
     )
+    """
+    Concepts that identify the type or nature of exposure interaction.  Examples include "household", "care giver", "intimate partner", "common space", "common substance", etc. to further describe the nature of interaction.
+    """
     Actexposurecode = ProvenanceActivityTypeCode("_ActExposureCode")
+    """
+    ActFinancialTransactionCode
+    """
     Actfinancialtransactioncode = ProvenanceActivityTypeCode(
         "_ActFinancialTransactionCode"
     )
+    """
+    Set of codes indicating the type of incident or accident.
+    """
     Actincidentcode = ProvenanceActivityTypeCode("_ActIncidentCode")
+    """
+    Description: The type of health information to which the subject of the information or the subject's delegate consents or dissents.
+    """
     Actinformationaccesscode = ProvenanceActivityTypeCode("_ActInformationAccessCode")
+    """
+    Concepts conveying the context in which authorization given under jurisdictional law, by organizational policy, or by a patient consent directive permits the collection, access, use or disclosure of specified patient health information.
+    """
     Actinformationaccesscontextcode = ProvenanceActivityTypeCode(
         "_ActInformationAccessContextCode"
     )
+    """
+    Definition:Indicates the set of information types which may be manipulated or referenced, such as for recommending access restrictions.
+    """
     Actinformationcategorycode = ProvenanceActivityTypeCode(
         "_ActInformationCategoryCode"
     )
+    """
+    Type of invoice element that is used to assist in describing an Invoice that is either submitted for adjudication or for which is returned on adjudication results.
+    """
     Actinvoiceelementcode = ProvenanceActivityTypeCode("_ActInvoiceElementCode")
+    """
+    Identifies the different types of summary information that can be reported by queries dealing with Statement of Financial Activity (SOFA).  The summary information is generally used to help resolve balance discrepancies between providers and payors.
+    """
     Actinvoiceelementsummarycode = ProvenanceActivityTypeCode(
         "_ActInvoiceElementSummaryCode"
     )
+    """
+    Includes coded responses that will occur as a result of the adjudication of an electronic invoice at a summary level and provides guidance on interpretation of the referenced adjudication results.
+    """
     Actinvoiceoverridecode = ProvenanceActivityTypeCode("_ActInvoiceOverrideCode")
+    """
+    Provides codes associated with ActClass value of LIST (working list)
+    """
     Actlistcode = ProvenanceActivityTypeCode("_ActListCode")
+    """
+    Identifies types of monitoring programs
+    """
     Actmonitoringprotocolcode = ProvenanceActivityTypeCode("_ActMonitoringProtocolCode")
+    """
+    Description:Concepts representing indications (reasons for clinical action) other than diagnosis and symptoms.
+    """
     Actnonobservationindicationcode = ProvenanceActivityTypeCode(
         "_ActNonObservationIndicationCode"
     )
+    """
+    Identifies the type of verification investigation being undertaken with respect to the subject of the verification activity.
+
+                        
+                           Examples:
+                        
+
+                        
+                           
+                              Verification of eligibility for coverage under a policy or program - aka enrolled/covered by a policy or program
+
+                           
+                           
+                              Verification of record - e.g., person has record in an immunization registry
+
+                           
+                           
+                              Verification of enumeration - e.g. NPI
+
+                           
+                           
+                              Verification of Board Certification - provider specific
+
+                           
+                           
+                              Verification of Certification - e.g. JAHCO, NCQA, URAC
+
+                           
+                           
+                              Verification of Conformance - e.g. entity use with HIPAA, conformant to the CCHIT EHR system criteria
+
+                           
+                           
+                              Verification of Provider Credentials
+
+                           
+                           
+                              Verification of no adverse findings - e.g. on National Provider Data Bank, Health Integrity Protection Data Base (HIPDB)
+    """
     ActObservationVerification = ProvenanceActivityTypeCode(
         "_ActObservationVerificationType"
     )
+    """
+    Code identifying the method or the movement of payment instructions.
+
+                        Codes are drawn from X12 data element 591 (PaymentMethodCode)
+    """
     Actpaymentcode = ProvenanceActivityTypeCode("_ActPaymentCode")
+    """
+    Identifies types of dispensing events
+    """
     Actpharmacysupplytype = ProvenanceActivityTypeCode("_ActPharmacySupplyType")
+    """
+    Description:Types of policies that further specify the ActClassPolicy value set.
+    """
     Actpolicytype = ProvenanceActivityTypeCode("_ActPolicyType")
+    """
+    The method that a product is obtained for use by the subject of the supply act (e.g. patient).  Product examples are consumable or durable goods.
+    """
     Actproductacquisitioncode = ProvenanceActivityTypeCode("_ActProductAcquisitionCode")
+    """
+    Transportation of a specimen.
+    """
     Actspecimentransportcode = ProvenanceActivityTypeCode("_ActSpecimenTransportCode")
+    """
+    Set of codes related to specimen treatments
+    """
     Actspecimentreatmentcode = ProvenanceActivityTypeCode("_ActSpecimenTreatmentCode")
+    """
+    Description: Describes the type of substance administration being performed.  This should not be used to carry codes for identification of products.  Use an associated role or entity to carry such information.
+    """
     Actsubstanceadministrationcode = ProvenanceActivityTypeCode(
         "_ActSubstanceAdministrationCode"
     )
+    """
+    Description: A task or action that a user may perform in a clinical information system (e.g., medication order entry, laboratory test results review, problem list entry).
+    """
     Acttaskcode = ProvenanceActivityTypeCode("_ActTaskCode")
+    """
+    Characterizes how a transportation act was or will be carried out.
+
+                        
+                           Examples: Via private transport, via public transit, via courier.
+    """
     Acttransportationmodecode = ProvenanceActivityTypeCode("_ActTransportationModeCode")
+    """
+    Identifies the kinds of observations that can be performed
+    """
     Observationtype = ProvenanceActivityTypeCode("_ObservationType")
+    """
+    Shape of the region on the object being referenced
+    """
     Roioverlayshape = ProvenanceActivityTypeCode("_ROIOverlayShape")
+    """
+    Description:Indicates that result data has been corrected.
+    """
     Corrected = ProvenanceActivityTypeCode("C")
+    """
+    Code set to define specialized/allowed diets
+    """
     Diet = ProvenanceActivityTypeCode("DIET")
+    """
+    Definition: A public or government health program that administers and funds coverage for prescription drugs to assist program eligible who meet financial and health status criteria.
+    """
     DrugProgram = ProvenanceActivityTypeCode("DRUGPRG")
+    """
+    Description:Indicates that a result is complete.  No further results are to come.  This maps to the 'complete' state in the observation result status code.
+    """
     Final = ProvenanceActivityTypeCode("F")
+    """
+    Description:Indicates that a result is incomplete.  There are further results to come.  This maps to the 'active' state in the observation result status code.
+    """
     Preliminary = ProvenanceActivityTypeCode("PRLMN")
+    """
+    An observation identifying security metadata about an IT resource (data, information object, service, or system capability), which may be used to make access control decisions.  Security metadata are used to name security labels.  
+
+                        
+                           Rationale: According to ISO/TS 22600-3:2009(E) A.9.1.7 SECURITY LABEL MATCHING, Security label matching compares the initiator's clearance to the target's security label.  All of the following must be true for authorization to be granted:
+
+                        
+                           The security policy identifiers shall be identical
+                           The classification level of the initiator shall be greater than or equal to that of the target (that is, there shall be at least one value in the classification list of the clearance greater than or equal to the classification of the target), and 
+                           For each security category in the target label, there shall be a security category of the same type in the initiator's clearance and the initiator's classification level shall dominate that of the target.
+                        
+                        
+                           Examples: SecurityObservationType  security label fields include:
+
+                        
+                           Confidentiality classification
+                           Compartment category
+                           Sensitivity category
+                           Security mechanisms used to ensure data integrity or to perform authorized data transformation
+                           Indicators of an IT resource completeness, veracity, reliability, trustworthiness, or provenance.
+                        
+                        
+                           Usage Note: SecurityObservationType codes designate security label field types, which are valued with an applicable SecurityObservationValue code as the "security label tag".
+    """
     Securityobservationtype = ProvenanceActivityTypeCode("SECOBS")
+    """
+    Definition: A government health program that provides coverage on a fee for service basis for health services to persons meeting eligibility criteria such as income, location of residence, access to other coverages, health condition, and age, the cost of which is to some extent subsidized by public funds.
+
+                        
+                           Discussion: The structure and business processes for underwriting and administering a subsidized fee for service program is further specified by the Underwriter and Payer Role.class and Role.code.
+    """
     SubsidizedFeeForServiceProgram = ProvenanceActivityTypeCode("SUBSIDFFS")
+    """
+    Definition: Government mandated program providing coverage, disability income, and vocational rehabilitation for injuries sustained in the work place or in the course of employment.  Employers may either self-fund the program, purchase commercial coverage, or pay a premium to a government entity that administers the program.  Employees may be required to pay premiums toward the cost of coverage as well.
+    """
     workersCompensationProgram = ProvenanceActivityTypeCode("WRKCOMP")
+    """
+    An identifying code for healthcare interventions/procedures.
+    """
     Actprocedurecode = ProvenanceActivityTypeCode("_ActProcedureCode")
+    """
+    Domain provides the root for HL7-defined detailed or rich codes for the Act classes.
+    """
     Hl7definedactcodes = ProvenanceActivityTypeCode("_HL7DefinedActCodes")
+    """
+    None
+    """
     Copay = ProvenanceActivityTypeCode("COPAY")
+    """
+    None
+    """
     Deduct = ProvenanceActivityTypeCode("DEDUCT")
+    """
+    None
+    """
     Doseind = ProvenanceActivityTypeCode("DOSEIND")
+    """
+    None
+    """
     Pra = ProvenanceActivityTypeCode("PRA")
+    """
+    The act of putting something away for safe keeping. The "something" may be physical object such as a specimen, or information, such as observations regarding a specimen.
+    """
     Storage = ProvenanceActivityTypeCode("STORE")
+    """
+    None
+    """
     ANONY = ProvenanceActivityTypeCode("ANONY")
+    """
+    None
+    """
     DEID = ProvenanceActivityTypeCode("DEID")
+    """
+    None
+    """
     MASK = ProvenanceActivityTypeCode("MASK")
+    """
+    None
+    """
     LABEL = ProvenanceActivityTypeCode("LABEL")
+    """
+    None
+    """
     PSEUD = ProvenanceActivityTypeCode("PSEUD")
+    """
+    Description:Act on an object or objects.
+    """
     Operate = ProvenanceActivityTypeCode("OPERATE")
+    """
+    None
+    """
     CREATE = ProvenanceActivityTypeCode("CREATE")
+    """
+    None
+    """
     DELETE = ProvenanceActivityTypeCode("DELETE")
+    """
+    None
+    """
     UPDATE = ProvenanceActivityTypeCode("UPDATE")
+    """
+    None
+    """
     APPEND = ProvenanceActivityTypeCode("APPEND")
+    """
+    None
+    """
     NULLIFY = ProvenanceActivityTypeCode("NULLIFY")
+    """
+    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    """
     Participation = ProvenanceActivityTypeCode("PART")

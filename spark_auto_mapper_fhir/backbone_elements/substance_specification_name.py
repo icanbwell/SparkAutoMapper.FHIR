@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # status (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for status
     # Import for CodeableConcept for status
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -32,6 +34,7 @@ if TYPE_CHECKING:
     # language (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for language
     # Import for CodeableConcept for language
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -39,6 +42,7 @@ if TYPE_CHECKING:
     # domain (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for domain
     # Import for CodeableConcept for domain
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -46,6 +50,7 @@ if TYPE_CHECKING:
     # jurisdiction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for jurisdiction
     # Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

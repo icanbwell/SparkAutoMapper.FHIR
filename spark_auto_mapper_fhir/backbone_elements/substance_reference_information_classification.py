@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # domain (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for domain
     # Import for CodeableConcept for domain
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -20,6 +21,7 @@ if TYPE_CHECKING:
     # classification (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for classification
     # Import for CodeableConcept for classification
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -27,6 +29,7 @@ if TYPE_CHECKING:
     # subtype (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for subtype
     # Import for CodeableConcept for subtype
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

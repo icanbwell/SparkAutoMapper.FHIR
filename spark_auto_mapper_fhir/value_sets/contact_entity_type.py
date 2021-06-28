@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class ContactEntityTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/contactentity-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/contactentity-type"
+
 
 class ContactEntityTypeCodeValues:
+    """
+    Contact details for information regarding to billing/general finance enquiries.
+    """
+
     Billing = ContactEntityTypeCode("BILL")
+    """
+    Contact details for administrative enquiries.
+    """
     Administrative = ContactEntityTypeCode("ADMIN")
+    """
+    Contact details for issues related to Human Resources, such as staff matters, OH&S etc.
+    """
     HumanResource = ContactEntityTypeCode("HR")
+    """
+    Contact details for dealing with issues related to insurance claims/adjudication/payment.
+    """
     Payor = ContactEntityTypeCode("PAYOR")
+    """
+    Generic information contact for patients.
+    """
     Patient = ContactEntityTypeCode("PATINF")
+    """
+    Dedicated contact point for matters relating to press enquiries.
+    """
     Press = ContactEntityTypeCode("PRESS")

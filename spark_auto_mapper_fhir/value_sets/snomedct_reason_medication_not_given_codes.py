@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class SNOMEDCTReasonMedicationNotGivenCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class SNOMEDCTReasonMedicationNotGivenCodesCodeValues:
+    """
+    No reason known.
+    """
+
     None_ = SNOMEDCTReasonMedicationNotGivenCodesCode("a")
+    """
+    The patient was not available when the dose was scheduled.
+    """
     Away = SNOMEDCTReasonMedicationNotGivenCodesCode("b")
+    """
+    The patient was asleep when the dose was scheduled.
+    """
     Asleep = SNOMEDCTReasonMedicationNotGivenCodesCode("c")
+    """
+    The patient was given the medication and immediately vomited it back.
+    """
     Vomit = SNOMEDCTReasonMedicationNotGivenCodesCode("d")

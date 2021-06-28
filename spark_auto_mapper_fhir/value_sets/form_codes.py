@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class FormCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/forms
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/forms"
+
 
 class FormCodesCodeValues:
+    """
+    Example: The #1 form to be used when printing this information.
+    """
+
     Form_1 = FormCodesCode("1")
+    """
+    Example: The #2 form to be used when printing this information.
+    """
     Form_1 = FormCodesCode("2")

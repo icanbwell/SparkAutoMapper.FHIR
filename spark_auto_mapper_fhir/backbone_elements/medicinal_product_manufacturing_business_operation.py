@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # operationType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for operationType
     # Import for CodeableConcept for operationType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -25,6 +26,7 @@ if TYPE_CHECKING:
     # confidentialityIndicator (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for confidentialityIndicator
     # Import for CodeableConcept for confidentialityIndicator
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

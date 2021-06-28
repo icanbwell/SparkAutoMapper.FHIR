@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.v2_0487 import V2_0487
 
@@ -38,6 +39,7 @@ if TYPE_CHECKING:
     # rejectionCriterion (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for rejectionCriterion
     # Import for CodeableConcept for rejectionCriterion
     from spark_auto_mapper_fhir.value_sets.rejection_criterion import (
         RejectionCriterionCode,

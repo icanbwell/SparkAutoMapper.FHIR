@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class CommunicationTopicCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/communication-topic
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/communication-topic"
+
 
 class CommunicationTopicCodeValues:
+    """
+    The purpose or content of the communication is a prescription refill request.
+    """
+
     PrescriptionRefillRequest = CommunicationTopicCode("prescription-refill-request")
+    """
+    The purpose or content of the communication is a progress update.
+    """
     ProgressUpdate = CommunicationTopicCode("progress-update")
+    """
+    The purpose or content of the communication is to report labs.
+    """
     ReportLabs = CommunicationTopicCode("report-labs")
+    """
+    The purpose or content of the communication is an appointment reminder.
+    """
     AppointmentReminder = CommunicationTopicCode("appointment-reminder")
+    """
+    The purpose or content of the communication is a phone consult.
+    """
     PhoneConsult = CommunicationTopicCode("phone-consult")
+    """
+    The purpose or content of the communication is a summary report.
+    """
     SummaryReport = CommunicationTopicCode("summary-report")

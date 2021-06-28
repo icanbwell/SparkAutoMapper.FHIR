@@ -5,6 +5,9 @@ from pyspark.sql import SparkSession, Column, DataFrame
 # noinspection PyUnresolvedReferences
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
+from spark_auto_mapper_fhir.value_sets.publication_status import (
+    PublicationStatusCodeValues,
+)
 
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
@@ -30,7 +33,7 @@ def test_auto_mapper_fhir_plan_definition(spark_session: SparkSession) -> None:
         view="members", source_view="patients", keys=["member_id"]
     ).complex(
         PlanDefinition(
-            id_=FhirId(A.column("member_id")), status=PublicationStatusCode.Active
+            id_=FhirId(A.column("member_id")), status=PublicationStatusCodeValues.Active
         )
     )
 

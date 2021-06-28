@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ReferenceVersionRulesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/reference-version-rules
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/reference-version-rules"
+
 
 class ReferenceVersionRulesCodeValues:
+    """
+    The reference may be either version independent or version specific.
+    """
+
     EitherSpecificOrIndependent = ReferenceVersionRulesCode("either")
+    """
+    The reference must be version independent.
+    """
     VersionIndependent = ReferenceVersionRulesCode("independent")
+    """
+    The reference must be version specific.
+    """
     VersionSpecific = ReferenceVersionRulesCode("specific")

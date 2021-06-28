@@ -19,6 +19,7 @@ if TYPE_CHECKING:
     # variantState (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for variantState
     # Import for CodeableConcept for variantState
     from spark_auto_mapper_fhir.value_sets.evidence_variant_state import (
         EvidenceVariantStateCode,

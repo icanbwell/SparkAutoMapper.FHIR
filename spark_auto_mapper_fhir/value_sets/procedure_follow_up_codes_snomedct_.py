@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,51 @@ class ProcedureFollowUpCodes_SNOMEDCT_Code(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ProcedureFollowUpCodes_SNOMEDCT_CodeValues:
+    """
+    None
+    """
+
     _18949003 = ProcedureFollowUpCodes_SNOMEDCT_Code("18949003")
+    """
+    None
+    """
     _30549001 = ProcedureFollowUpCodes_SNOMEDCT_Code("30549001")
+    """
+    None
+    """
     _241031001 = ProcedureFollowUpCodes_SNOMEDCT_Code("241031001")
+    """
+    None
+    """
     _35963001 = ProcedureFollowUpCodes_SNOMEDCT_Code("35963001")
+    """
+    None
+    """
     _225164002 = ProcedureFollowUpCodes_SNOMEDCT_Code("225164002")
+    """
+    None
+    """
     _447346005 = ProcedureFollowUpCodes_SNOMEDCT_Code("447346005")
+    """
+    None
+    """
     _229506003 = ProcedureFollowUpCodes_SNOMEDCT_Code("229506003")
+    """
+    None
+    """
     _274441001 = ProcedureFollowUpCodes_SNOMEDCT_Code("274441001")
+    """
+    None
+    """
     _394725008 = ProcedureFollowUpCodes_SNOMEDCT_Code("394725008")
+    """
+    None
+    """
     _359825008 = ProcedureFollowUpCodes_SNOMEDCT_Code("359825008")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class MedicationAdministrationStatusCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medication-admin-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medication-admin-status"
+
 
 class MedicationAdministrationStatusCodesCodeValues:
+    """
+    The administration has started but has not yet completed.
+    """
+
     InProgress = MedicationAdministrationStatusCodesCode("in-progress")
+    """
+    The administration was terminated prior to any impact on the subject (though preparatory actions may have been taken)
+    """
     NotDone = MedicationAdministrationStatusCodesCode("not-done")
+    """
+    Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
+    """
     OnHold = MedicationAdministrationStatusCodesCode("on-hold")
+    """
+    All actions that are implied by the administration have occurred.
+    """
     Completed = MedicationAdministrationStatusCodesCode("completed")
+    """
+    The administration was entered in error and therefore nullified.
+    """
     EnteredInError = MedicationAdministrationStatusCodesCode("entered-in-error")
+    """
+    Actions implied by the administration have been permanently halted, before all of them occurred.
+    """
     Stopped = MedicationAdministrationStatusCodesCode("stopped")
+    """
+    The authoring system does not know which of the status values currently applies for this request. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, it's just not known which one.
+    """
     Unknown = MedicationAdministrationStatusCodesCode("unknown")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class RestfulSecurityServiceCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/restful-security-service
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/restful-security-service"
+
 
 class RestfulSecurityServiceCodeValues:
+    """
+    OAuth (unspecified version see oauth.net).
+    """
+
     OAuth = RestfulSecurityServiceCode("OAuth")
+    """
+    OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
+    """
     SMART_on_FHIR = RestfulSecurityServiceCode("SMART-on-FHIR")
+    """
+    Microsoft NTLM Authentication.
+    """
     NTLM = RestfulSecurityServiceCode("NTLM")
+    """
+    Basic authentication defined in HTTP specification.
+    """
     Basic = RestfulSecurityServiceCode("Basic")
+    """
+    see http://www.ietf.org/rfc/rfc4120.txt.
+    """
     Kerberos = RestfulSecurityServiceCode("Kerberos")
+    """
+    SSL where client must have a certificate registered with the server.
+    """
     Certificates = RestfulSecurityServiceCode("Certificates")

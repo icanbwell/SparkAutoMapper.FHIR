@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class DeviceMetricColorCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/metric-color
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/metric-color"
+
 
 class DeviceMetricColorCodeValues:
+    """
+    Color for representation - black.
+    """
+
     ColorBlack = DeviceMetricColorCode("black")
+    """
+    Color for representation - red.
+    """
     ColorRed = DeviceMetricColorCode("red")
+    """
+    Color for representation - green.
+    """
     ColorGreen = DeviceMetricColorCode("green")
+    """
+    Color for representation - yellow.
+    """
     ColorYellow = DeviceMetricColorCode("yellow")
+    """
+    Color for representation - blue.
+    """
     ColorBlue = DeviceMetricColorCode("blue")
+    """
+    Color for representation - magenta.
+    """
     ColorMagenta = DeviceMetricColorCode("magenta")
+    """
+    Color for representation - cyan.
+    """
     ColorCyan = DeviceMetricColorCode("cyan")
+    """
+    Color for representation - white.
+    """
     ColorWhite = DeviceMetricColorCode("white")

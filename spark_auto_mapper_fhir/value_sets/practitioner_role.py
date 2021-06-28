@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class PractitionerRoleCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class PractitionerRoleCodeValues:
+    """
+    A qualified/registered medical practitioner
+    """
+
     Doctor = PractitionerRoleCode("doctor")
+    """
+    A practitioner with nursing experience that may be qualified/registered
+    """
     Nurse = PractitionerRoleCode("nurse")
+    """
+    A qualified/registered/licensed pharmacist
+    """
     Pharmacist = PractitionerRoleCode("pharmacist")
+    """
+    A practitioner that may perform research
+    """
     Researcher = PractitionerRoleCode("researcher")
+    """
+    Someone who is able to provide educational services
+    """
     Teacher_educator = PractitionerRoleCode("teacher")
+    """
+    Someone who is qualified in Information and Communication Technologies
+    """
     ICTProfessional = PractitionerRoleCode("ict")

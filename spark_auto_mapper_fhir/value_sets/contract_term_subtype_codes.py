@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ContractTermSubtypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/contract-term-subtype
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/contract-term-subtype"
+
 
 class ContractTermSubtypeCodesCodeValues:
+    """
+    Terms that go to the very root of a contract.
+    """
+
     Condition = ContractTermSubtypeCodesCode("condition")
+    """
+    Less imperative than a condition, so the contract will survive a breach
+    """
     Warranty = ContractTermSubtypeCodesCode("warranty")
+    """
+    Breach of which might or might not go to the root of the contract depending upon the nature of the breach
+    """
     Innominate = ContractTermSubtypeCodesCode("innominate")

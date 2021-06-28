@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class ICD_10CodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ICD_10CodesCodeValues:
+    """
+    None
+    """
+
     DIAG_1 = ICD_10CodesCode("123456")
+    """
+    None
+    """
     DIAG_1a = ICD_10CodesCode("123457")
+    """
+    None
+    """
     DIAG_2 = ICD_10CodesCode("987654")
+    """
+    None
+    """
     DIAG_3 = ICD_10CodesCode("123987")
+    """
+    None
+    """
     DIAG_4 = ICD_10CodesCode("112233")
+    """
+    None
+    """
     DIAG_5 = ICD_10CodesCode("997755")
+    """
+    None
+    """
     DIAG_6 = ICD_10CodesCode("321789")

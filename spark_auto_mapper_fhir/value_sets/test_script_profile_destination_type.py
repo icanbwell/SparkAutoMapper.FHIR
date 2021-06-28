@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,31 @@ class TestScriptProfileDestinationTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/testscript-profile-destination-types
+    """
+    codeset: FhirUri = (
+        "http://hl7.org/fhir/ValueSet/testscript-profile-destination-types"
+    )
+
 
 class TestScriptProfileDestinationTypeCodeValues:
+    """
+    General FHIR server used to respond to operations sent from a FHIR client.
+    """
+
     FHIRServer = TestScriptProfileDestinationTypeCode("FHIR-Server")
+    """
+    A FHIR server acting as a Structured Data Capture Form Manager.
+    """
     FHIRSDCFormManager = TestScriptProfileDestinationTypeCode("FHIR-SDC-FormManager")
+    """
+    A FHIR server acting as a Structured Data Capture Form Processor.
+    """
     FHIRSDCFormProcessor = TestScriptProfileDestinationTypeCode(
         "FHIR-SDC-FormProcessor"
     )
+    """
+    A FHIR server acting as a Structured Data Capture Form Receiver.
+    """
     FHIRSDCFormReceiver = TestScriptProfileDestinationTypeCode("FHIR-SDC-FormReceiver")

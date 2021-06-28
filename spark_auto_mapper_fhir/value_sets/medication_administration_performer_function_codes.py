@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class MedicationAdministrationPerformerFunctionCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/med-admin-perform-function
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/med-admin-perform-function"
+
 
 class MedicationAdministrationPerformerFunctionCodesCodeValues:
+    """
+    A person, non-person living subject, organization or device that who actually and principally carries out the action
+    """
+
     Performer = MedicationAdministrationPerformerFunctionCodesCode("performer")
+    """
+    A person who verifies the correctness and appropriateness of the service (plan, order, event, etc.) and hence takes on accountability.
+    """
     Verifier = MedicationAdministrationPerformerFunctionCodesCode("verifier")
+    """
+    A person witnessing the action happening without doing anything. A witness is not necessarily aware, much less approves of anything stated in the service event. Example for a witness is students watching an operation or an advanced directive witness.
+    """
     Witness = MedicationAdministrationPerformerFunctionCodesCode("witness")

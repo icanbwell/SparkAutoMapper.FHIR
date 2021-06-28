@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # measure (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for measure
     # Import for CodeableConcept for measure
     from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodesCode
 
@@ -29,6 +30,7 @@ if TYPE_CHECKING:
     # detailCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for detailCodeableConcept
     # Import for CodeableConcept for detailCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

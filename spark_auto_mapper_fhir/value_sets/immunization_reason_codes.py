@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class ImmunizationReasonCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ImmunizationReasonCodesCodeValues:
+    """
+    None
+    """
+
     _429060002 = ImmunizationReasonCodesCode("429060002")
+    """
+    None
+    """
     _281657000 = ImmunizationReasonCodesCode("281657000")

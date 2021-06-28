@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,36 +16,135 @@ class CanonicalStatusCodesForFHIRResourcesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/resource-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/resource-status"
+
 
 class CanonicalStatusCodesForFHIRResourcesCodeValues:
+    """
+    The resource was created in error, and should not be treated as valid (note: in many cases, for various data integrity related reasons, the information cannot be removed from the record)
+    """
+
     Error = CanonicalStatusCodesForFHIRResourcesCode("error")
+    """
+    The resource describes an action or plan that is proposed, and not yet approved by the participants
+    """
     Proposed = CanonicalStatusCodesForFHIRResourcesCode("proposed")
+    """
+    The resource describes a course of action that is planned and agreed/approved, but at the time of recording was still future
+    """
     Planned = CanonicalStatusCodesForFHIRResourcesCode("planned")
+    """
+    The information in the resource is still being prepared and edited
+    """
     Draft = CanonicalStatusCodesForFHIRResourcesCode("draft")
+    """
+    A fulfiller has been asked to perform this action, but it has not yet occurred
+    """
     Requested = CanonicalStatusCodesForFHIRResourcesCode("requested")
+    """
+    The fulfiller has received the request, but not yet agreed to carry out the action
+    """
     Received = CanonicalStatusCodesForFHIRResourcesCode("received")
+    """
+    The fulfiller chose not to perform the action
+    """
     Declined = CanonicalStatusCodesForFHIRResourcesCode("declined")
+    """
+    The fulfiller has decided to perform the action, and plans are in train to do this in the future
+    """
     Accepted = CanonicalStatusCodesForFHIRResourcesCode("accepted")
+    """
+    The pre-conditions for the action are all fulfilled, and it is imminent
+    """
     Arrived = CanonicalStatusCodesForFHIRResourcesCode("arrived")
+    """
+    The resource describes information that is currently valid or a process that is presently occuring
+    """
     Active = CanonicalStatusCodesForFHIRResourcesCode("active")
+    """
+    The process described/requested in this resource has been halted for some reason
+    """
     Suspended = CanonicalStatusCodesForFHIRResourcesCode("suspended")
+    """
+    The process described/requested in the resource could not be completed, and no further action is planned
+    """
     Failed = CanonicalStatusCodesForFHIRResourcesCode("failed")
+    """
+    The information in this resource has been replaced by information in another resource
+    """
     Replaced = CanonicalStatusCodesForFHIRResourcesCode("replaced")
+    """
+    The process described/requested in the resource has been completed, and no further action is planned
+    """
     Complete = CanonicalStatusCodesForFHIRResourcesCode("complete")
+    """
+    The resource describes information that is no longer valid or a process that is stopped occurring
+    """
     Inactive = CanonicalStatusCodesForFHIRResourcesCode("inactive")
+    """
+    The process described/requested in the resource did not complete - usually due to some workflow error, and no further action is planned
+    """
     Abandoned = CanonicalStatusCodesForFHIRResourcesCode("abandoned")
+    """
+    Authoring system does not know the status
+    """
     Unknown = CanonicalStatusCodesForFHIRResourcesCode("unknown")
+    """
+    The information in this resource is not yet approved
+    """
     Unconfirmed = CanonicalStatusCodesForFHIRResourcesCode("unconfirmed")
+    """
+    The information in this resource is approved
+    """
     Confirmed = CanonicalStatusCodesForFHIRResourcesCode("confirmed")
+    """
+    The issue identified by this resource is no longer of concern
+    """
     Resolved = CanonicalStatusCodesForFHIRResourcesCode("resolved")
+    """
+    This information has been ruled out by testing and evaluation
+    """
     Refuted = CanonicalStatusCodesForFHIRResourcesCode("refuted")
+    """
+    Potentially true?
+    """
     Differential = CanonicalStatusCodesForFHIRResourcesCode("differential")
+    """
+    This information is still being assembled
+    """
     Partial = CanonicalStatusCodesForFHIRResourcesCode("partial")
+    """
+    not available at this time/location
+    """
     Busy_unavailable = CanonicalStatusCodesForFHIRResourcesCode("busy-unavailable")
+    """
+    Free for scheduling
+    """
     Free = CanonicalStatusCodesForFHIRResourcesCode("free")
+    """
+    Ready to act
+    """
     On_target = CanonicalStatusCodesForFHIRResourcesCode("on-target")
+    """
+    Ahead of the planned timelines
+    """
     Ahead_of_target = CanonicalStatusCodesForFHIRResourcesCode("ahead-of-target")
+    """
+    None
+    """
     Behind_target = CanonicalStatusCodesForFHIRResourcesCode("behind-target")
+    """
+    Behind the planned timelines
+    """
     Not_ready = CanonicalStatusCodesForFHIRResourcesCode("not-ready")
+    """
+    The device transducer is disconnected
+    """
     Transduc_discon = CanonicalStatusCodesForFHIRResourcesCode("transduc-discon")
+    """
+    The hardware is disconnected
+    """
     Hw_discon = CanonicalStatusCodesForFHIRResourcesCode("hw-discon")

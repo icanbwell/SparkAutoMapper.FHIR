@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     # vaccineCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for vaccineCode
     # Import for CodeableConcept for vaccineCode
     from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
         VaccineAdministeredValueSetCode,
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # targetDisease (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for targetDisease
     # Import for CodeableConcept for targetDisease
     from spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes import (
         ImmunizationRecommendationTargetDiseaseCodesCode,
@@ -33,6 +35,7 @@ if TYPE_CHECKING:
     # contraindicatedVaccineCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for contraindicatedVaccineCode
     # Import for CodeableConcept for contraindicatedVaccineCode
     from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
         VaccineAdministeredValueSetCode,
@@ -42,6 +45,7 @@ if TYPE_CHECKING:
     # forecastStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for forecastStatus
     # Import for CodeableConcept for forecastStatus
     from spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes import (
         ImmunizationRecommendationStatusCodesCode,
@@ -51,6 +55,7 @@ if TYPE_CHECKING:
     # forecastReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for forecastReason
     # Import for CodeableConcept for forecastReason
     from spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes import (
         ImmunizationRecommendationReasonCodesCode,

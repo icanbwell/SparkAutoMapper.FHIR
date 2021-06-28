@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class DiscriminatorTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/discriminator-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/discriminator-type"
+
 
 class DiscriminatorTypeCodeValues:
+    """
+    The slices have different values in the nominated element.
+    """
+
     Value = DiscriminatorTypeCode("value")
+    """
+    The slices are differentiated by the presence or absence of the nominated element.
+    """
     Exists = DiscriminatorTypeCode("exists")
+    """
+    The slices have different values in the nominated element, as determined by testing them against the applicable ElementDefinition.pattern[x].
+    """
     Pattern = DiscriminatorTypeCode("pattern")
+    """
+    The slices are differentiated by type of the nominated element.
+    """
     Type = DiscriminatorTypeCode("type")
+    """
+    The slices are differentiated by conformance of the nominated element to a specified profile. Note that if the path specifies .resolve() then the profile is the target profile on the reference. In this case, validation by the possible profiles is required to differentiate the slices.
+    """
     Profile = DiscriminatorTypeCode("profile")

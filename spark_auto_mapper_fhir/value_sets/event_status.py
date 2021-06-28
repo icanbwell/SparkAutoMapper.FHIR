@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class EventStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/event-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/event-status"
+
 
 class EventStatusCodeValues:
+    """
+    The core event has not started yet, but some staging activities have begun (e.g. surgical suite preparation).  Preparation stages may be tracked for billing purposes.
+    """
+
     Preparation = EventStatusCode("preparation")
+    """
+    The event is currently occurring.
+    """
     InProgress = EventStatusCode("in-progress")
+    """
+    The event was terminated prior to any activity beyond preparation.  I.e. The 'main' activity has not yet begun.  The boundary between preparatory and the 'main' activity is context-specific.
+    """
     NotDone = EventStatusCode("not-done")
+    """
+    The event has been temporarily stopped but is expected to resume in the future.
+    """
     OnHold = EventStatusCode("on-hold")
+    """
+    The event was terminated prior to the full completion of the intended activity but after at least some of the 'main' activity (beyond preparation) has occurred.
+    """
     Stopped = EventStatusCode("stopped")
+    """
+    The event has now concluded.
+    """
     Completed = EventStatusCode("completed")
+    """
+    This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "stopped" rather than "entered-in-error".).
+    """
     EnteredInError = EventStatusCode("entered-in-error")
+    """
+    The authoring/source system does not know which of the status values currently applies for this event.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.
+    """
     Unknown = EventStatusCode("unknown")

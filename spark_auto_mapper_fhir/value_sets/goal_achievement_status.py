@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class GoalAchievementStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/goal-achievement
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/goal-achievement"
+
 
 class GoalAchievementStatusCodeValues:
+    """
+    The goal is being sought but has not yet been reached. (Also applies if the goal was reached in the past but there has been regression and the goal is again being sought).
+    """
+
     InProgress = GoalAchievementStatusCode("in-progress")
+    """
+    The goal has been met.
+    """
     Achieved = GoalAchievementStatusCode("achieved")
+    """
+    The goal has not been met and there might or might not have been progress towards target.
+    """
     NotAchieved = GoalAchievementStatusCode("not-achieved")

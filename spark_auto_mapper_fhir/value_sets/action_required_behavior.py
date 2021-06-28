@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ActionRequiredBehaviorCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/action-required-behavior
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-required-behavior"
+
 
 class ActionRequiredBehaviorCodeValues:
+    """
+    An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
+    """
+
     Must = ActionRequiredBehaviorCode("must")
+    """
+    An action with this behavior may be included in the set of actions processed by the end user.
+    """
     Could = ActionRequiredBehaviorCode("could")
+    """
+    An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included.
+    """
     MustUnlessDocumented = ActionRequiredBehaviorCode("must-unless-documented")

@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     # standardSequence (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for standardSequence
     # Import for CodeableConcept for standardSequence
     from spark_auto_mapper_fhir.value_sets.fda__standard_sequence import (
         FDA_StandardSequenceCode,
@@ -31,6 +32,7 @@ if TYPE_CHECKING:
     # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for method
     # Import for CodeableConcept for method
     from spark_auto_mapper_fhir.value_sets.fda__method import FDA_MethodCode
 

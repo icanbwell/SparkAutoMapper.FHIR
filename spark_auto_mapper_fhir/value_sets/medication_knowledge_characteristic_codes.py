@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class MedicationKnowledgeCharacteristicCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic"
+
 
 class MedicationKnowledgeCharacteristicCodesCodeValues:
+    """
+    Identyifying marks on product
+    """
+
     ImprintCode = MedicationKnowledgeCharacteristicCodesCode("imprintcd")
+    """
+    Description of size of the product
+    """
     Size = MedicationKnowledgeCharacteristicCodesCode("size")
+    """
+    Description of the shape of the product
+    """
     Shape = MedicationKnowledgeCharacteristicCodesCode("shape")
+    """
+    Description of the color of the product
+    """
     Color = MedicationKnowledgeCharacteristicCodesCode("color")
+    """
+    Description of the coating of the product
+    """
     Coating = MedicationKnowledgeCharacteristicCodesCode("coating")
+    """
+    Description of the scoring of the product
+    """
     Scoring = MedicationKnowledgeCharacteristicCodesCode("scoring")
+    """
+    Description of the Logo of the product
+    """
     Logo = MedicationKnowledgeCharacteristicCodesCode("logo")

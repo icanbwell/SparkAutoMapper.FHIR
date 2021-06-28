@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,32 +16,119 @@ class NHINPurposeOfUseCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/nhin-purposeofuse
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/nhin-purposeofuse"
+
 
 class NHINPurposeOfUseCodeValues:
+    """
+    Treatment
+    """
+
     Treatment = NHINPurposeOfUseCode("TREATMENT")
+    """
+    Payment
+    """
     Payment = NHINPurposeOfUseCode("PAYMENT")
+    """
+    Healthcare Operations
+    """
     Operations = NHINPurposeOfUseCode("OPERATIONS")
+    """
+    System Administration
+    """
     Sysadmin = NHINPurposeOfUseCode("SYSADMIN")
+    """
+    Fraud detection
+    """
     Fraud = NHINPurposeOfUseCode("FRAUD")
+    """
+    Use or disclosure of Psychotherapy Notes
+    """
     Psychotherapy = NHINPurposeOfUseCode("PSYCHOTHERAPY")
+    """
+    Use or disclosure by the covered entity for its own training programs
+    """
     Training = NHINPurposeOfUseCode("TRAINING")
+    """
+    Use or disclosure by the covered entity to defend itself in a legal action
+    """
     Legal = NHINPurposeOfUseCode("LEGAL")
+    """
+    Marketing
+    """
     Marketing = NHINPurposeOfUseCode("MARKETING")
+    """
+    Use and disclosure for facility directories
+    """
     Directory = NHINPurposeOfUseCode("DIRECTORY")
+    """
+    Disclose to a family member, other relative, or a close personal friend of the individual
+    """
     Family = NHINPurposeOfUseCode("FAMILY")
+    """
+    Uses and disclosures with the individual present.
+    """
     Present = NHINPurposeOfUseCode("PRESENT")
+    """
+    Permission cannot practicably be provided because of the individual's incapacity or an emergency.
+    """
     Emergency = NHINPurposeOfUseCode("EMERGENCY")
+    """
+    Use and disclosures for disaster relief purposes.
+    """
     Disaster = NHINPurposeOfUseCode("DISASTER")
+    """
+    Uses and disclosures for public health activities.
+    """
     PublicHealth = NHINPurposeOfUseCode("PUBLICHEALTH")
+    """
+    Disclosures about victims of abuse, neglect or domestic violence.
+    """
     Abuse = NHINPurposeOfUseCode("ABUSE")
+    """
+    Uses and disclosures for health oversight activities.
+    """
     Oversight = NHINPurposeOfUseCode("OVERSIGHT")
+    """
+    Disclosures for judicial and administrative proceedings.
+    """
     Judicial = NHINPurposeOfUseCode("JUDICIAL")
+    """
+    Disclosures for law enforcement purposes.
+    """
     LawEnforcement = NHINPurposeOfUseCode("LAW")
+    """
+    Uses and disclosures about decedents.
+    """
     Deceased = NHINPurposeOfUseCode("DECEASED")
+    """
+    Uses and disclosures for cadaveric organ,  eye or tissue donation purposes
+    """
     Donation = NHINPurposeOfUseCode("DONATION")
+    """
+    Uses and disclosures for research purposes.
+    """
     Research = NHINPurposeOfUseCode("RESEARCH")
+    """
+    Uses and disclosures to avert a serious threat to health or safety.
+    """
     Threat = NHINPurposeOfUseCode("THREAT")
+    """
+    Uses and disclosures for specialized government functions.
+    """
     Government = NHINPurposeOfUseCode("GOVERNMENT")
+    """
+    Disclosures for workers' compensation.
+    """
     Worker_sComp = NHINPurposeOfUseCode("WORKERSCOMP")
+    """
+    Disclosures for insurance or disability coverage determination
+    """
     Coverage = NHINPurposeOfUseCode("COVERAGE")
+    """
+    Request of the Individual
+    """
     Request = NHINPurposeOfUseCode("REQUEST")

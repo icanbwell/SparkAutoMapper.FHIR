@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,25 +16,91 @@ class USCLSCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/service-uscls
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/service-uscls"
+
 
 class USCLSCodesCodeValues:
+    """
+    Exam, comp, primary
+    """
+
     Exam_Comp_Primary = USCLSCodesCode("1101")
+    """
+    Exam, comp, mixed
+    """
     Exam_Comp_Mixed = USCLSCodesCode("1102")
+    """
+    Exam, comp, permanent
+    """
     Exam_Comp_Permanent = USCLSCodesCode("1103")
+    """
+    Exam, recall
+    """
     Exam_Recall = USCLSCodesCode("1201")
+    """
+    Exam, emergency
+    """
     Exam_Emergency = USCLSCodesCode("1205")
+    """
+    Radiograph, series (12)
+    """
     Radiograph_Series_12_ = USCLSCodesCode("2101")
+    """
+    Radiograph, series (16)
+    """
     Radiograph_Series_16_ = USCLSCodesCode("2102")
+    """
+    Radiograph, bitewing
+    """
     Radiograph_Bitewing = USCLSCodesCode("2141")
+    """
+    Radiograph, panoramic
+    """
     Radiograph_Panoramic = USCLSCodesCode("2601")
+    """
+    Polishing, 1 unit
+    """
     Polishing_1Unit = USCLSCodesCode("11101")
+    """
+    Polishing, 2 unit
+    """
     Polishing_2Unit = USCLSCodesCode("11102")
+    """
+    Polishing, 3 unit
+    """
     Polishing_3Unit = USCLSCodesCode("11103")
+    """
+    Polishing, 4 unit
+    """
     Polishing_4Unit = USCLSCodesCode("11104")
+    """
+    Amalgam, 1 surface
+    """
     Amalgam_1Surface = USCLSCodesCode("21211")
+    """
+    Amalgam, 2 surface
+    """
     Amalgam_2Surface = USCLSCodesCode("21212")
+    """
+    Crown, PFM
+    """
     Crown_PFM = USCLSCodesCode("27211")
+    """
+    Maryland Bridge
+    """
     MarylandBridge = USCLSCodesCode("67211")
+    """
+    Lab, commercial
+    """
     Lab_Commercial = USCLSCodesCode("99111")
+    """
+    Lab, in office
+    """
     Lab_InOffice = USCLSCodesCode("99333")
+    """
+    Expense
+    """
     Expense = USCLSCodesCode("99555")

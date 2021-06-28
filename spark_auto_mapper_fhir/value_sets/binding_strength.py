@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class BindingStrengthCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/binding-strength
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/binding-strength"
+
 
 class BindingStrengthCodeValues:
+    """
+    To be conformant, the concept in this element SHALL be from the specified value set.
+    """
+
     Required = BindingStrengthCode("required")
+    """
+    To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.
+    """
     Extensible = BindingStrengthCode("extensible")
+    """
+    Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.
+    """
     Preferred = BindingStrengthCode("preferred")
+    """
+    Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.
+    """
     Example = BindingStrengthCode("example")

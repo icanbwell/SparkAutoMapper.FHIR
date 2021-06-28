@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class NarrativeStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/narrative-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/narrative-status"
+
 
 class NarrativeStatusCodeValues:
+    """
+    The contents of the narrative are entirely generated from the core elements in the content.
+    """
+
     Generated = NarrativeStatusCode("generated")
+    """
+    The contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. The narrative SHALL reflect the impact of all modifier extensions.
+    """
     Extensions = NarrativeStatusCode("extensions")
+    """
+    The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.
+    """
     Additional = NarrativeStatusCode("additional")
+    """
+    The contents of the narrative are some equivalent of "No human-readable text provided in this case".
+    """
     Empty = NarrativeStatusCode("empty")

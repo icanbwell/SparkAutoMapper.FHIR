@@ -96,6 +96,7 @@ if TYPE_CHECKING:
     # defaultValueCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for defaultValueCodeableConcept
     # Import for CodeableConcept for defaultValueCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -103,6 +104,7 @@ if TYPE_CHECKING:
     # defaultValueCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for defaultValueCoding
     # Import for CodeableConcept for defaultValueCoding
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

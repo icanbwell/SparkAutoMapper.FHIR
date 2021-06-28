@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class ExampleDiagnosisTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/ex-diagnosistype
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-diagnosistype"
+
 
 class ExampleDiagnosisTypeCodesCodeValues:
+    """
+    The diagnosis given as the reason why the patient was admitted to the hospital.
+    """
+
     AdmittingDiagnosis = ExampleDiagnosisTypeCodesCode("admitting")
+    """
+    A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than diagnostic tests.
+    """
     ClinicalDiagnosis = ExampleDiagnosisTypeCodesCode("clinical")
+    """
+    One of a set of the possible diagnoses that could be connected to the signs, symptoms, and lab findings.
+    """
     DifferentialDiagnosis = ExampleDiagnosisTypeCodesCode("differential")
+    """
+    The diagnosis given when the patient is discharged from the hospital.
+    """
     DischargeDiagnosis = ExampleDiagnosisTypeCodesCode("discharge")
+    """
+    A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient.
+    """
     LaboratoryDiagnosis = ExampleDiagnosisTypeCodesCode("laboratory")
+    """
+    A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance.
+    """
     NursingDiagnosis = ExampleDiagnosisTypeCodesCode("nursing")
+    """
+    A diagnosis determined prior to birth.
+    """
     PrenatalDiagnosis = ExampleDiagnosisTypeCodesCode("prenatal")
+    """
+    The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.
+    """
     PrincipalDiagnosis = ExampleDiagnosisTypeCodesCode("principal")
+    """
+    A diagnosis based primarily on the results from medical imaging studies.
+    """
     RadiologyDiagnosis = ExampleDiagnosisTypeCodesCode("radiology")
+    """
+    A diagnosis determined using telemedicine techniques.
+    """
     RemoteDiagnosis = ExampleDiagnosisTypeCodesCode("remote")
+    """
+    The labeling of an illness in a specific historical event using modern knowledge, methods and disease classifications.
+    """
     RetrospectiveDiagnosis = ExampleDiagnosisTypeCodesCode("retrospective")
+    """
+    A diagnosis determined by the patient.
+    """
     SelfDiagnosis = ExampleDiagnosisTypeCodesCode("self")

@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # function (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for function
     # Import for CodeableConcept for function
     from spark_auto_mapper_fhir.value_sets.immunization_function_codes import (
         ImmunizationFunctionCodesCode,

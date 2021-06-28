@@ -24,6 +24,7 @@ if TYPE_CHECKING:
     # action (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for action
     # Import for CodeableConcept for action
     from spark_auto_mapper_fhir.value_sets.consent_action_codes import (
         ConsentActionCodesCode,
@@ -33,6 +34,7 @@ if TYPE_CHECKING:
     # securityLabel (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for securityLabel
     # Import for CodeableConcept for securityLabel
     from spark_auto_mapper_fhir.value_sets.all_security_labels import (
         AllSecurityLabelsCode,
@@ -42,6 +44,7 @@ if TYPE_CHECKING:
     # purpose (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for purpose
     # Import for CodeableConcept for purpose
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
 
@@ -49,6 +52,7 @@ if TYPE_CHECKING:
     # class_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for class_
     # Import for CodeableConcept for class_
     from spark_auto_mapper_fhir.value_sets.consent_content_class import (
         ConsentContentClassCode,
@@ -58,6 +62,7 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.consent_content_codes import (
         ConsentContentCodesCode,

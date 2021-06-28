@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class EndpointStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/endpoint-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/endpoint-status"
+
 
 class EndpointStatusCodeValues:
+    """
+    This endpoint is expected to be active and can be used.
+    """
+
     Active = EndpointStatusCode("active")
+    """
+    This endpoint is temporarily unavailable.
+    """
     Suspended = EndpointStatusCode("suspended")
+    """
+    This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken.
+    """
     Error = EndpointStatusCode("error")
+    """
+    This endpoint is no longer to be used.
+    """
     Off = EndpointStatusCode("off")
+    """
+    This instance should not have been part of this patient's medical record.
+    """
     EnteredInError = EndpointStatusCode("entered-in-error")
+    """
+    This endpoint is not intended for production usage.
+    """
     Test = EndpointStatusCode("test")

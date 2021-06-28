@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,19 +16,67 @@ class LocationTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/location-physical-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/location-physical-type"
+
 
 class LocationTypeCodeValues:
+    """
+    A collection of buildings or other locations such as a site or a campus.
+    """
+
     Site = LocationTypeCode("si")
+    """
+    Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but is considered a defined/allocated space.
+    """
     Building = LocationTypeCode("bu")
+    """
+    A Wing within a Building, this often contains levels, rooms and corridors.
+    """
     Wing = LocationTypeCode("wi")
+    """
+    A Ward is a section of a medical facility that may contain rooms and other types of location.
+    """
     Ward = LocationTypeCode("wa")
+    """
+    A Level in a multi-level Building/Structure.
+    """
     Level = LocationTypeCode("lvl")
+    """
+    Any corridor within a Building, that may connect rooms.
+    """
     Corridor = LocationTypeCode("co")
+    """
+    A space that is allocated as a room, it may have walls/roof etc., but does not require these.
+    """
     Room = LocationTypeCode("ro")
+    """
+    A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about, but the space it may occupy.
+    """
     Bed = LocationTypeCode("bd")
+    """
+    A means of transportation.
+    """
     Vehicle = LocationTypeCode("ve")
+    """
+    A residential dwelling. Usually used to reference a location that a person/patient may reside.
+    """
     House = LocationTypeCode("ho")
+    """
+    A container that can store goods, equipment, medications or other items.
+    """
     Cabinet = LocationTypeCode("ca")
+    """
+    A defined path to travel between 2 points that has a known name.
+    """
     Road = LocationTypeCode("rd")
+    """
+    A defined physical boundary of something, such as a flood risk zone, region, postcode
+    """
     Area = LocationTypeCode("area")
+    """
+    A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government - e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise), Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an physical boundary
+    """
     Jurisdiction = LocationTypeCode("jdn")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,29 +16,107 @@ class Chromosome_humanCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/chromosome-human
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/chromosome-human"
+
 
 class Chromosome_humanCodeValues:
+    """
+    chromosome 1.
+    """
+
     Chromosome1 = Chromosome_humanCode("1")
+    """
+    chromosome 2.
+    """
     Chromosome2 = Chromosome_humanCode("2")
+    """
+    chromosome 3.
+    """
     Chromosome3 = Chromosome_humanCode("3")
+    """
+    chromosome 4.
+    """
     Chromosome4 = Chromosome_humanCode("4")
+    """
+    chromosome 5.
+    """
     Chromosome5 = Chromosome_humanCode("5")
+    """
+    chromosome 6.
+    """
     Chromosome6 = Chromosome_humanCode("6")
+    """
+    chromosome 7.
+    """
     Chromosome7 = Chromosome_humanCode("7")
+    """
+    chromosome 8.
+    """
     Chromosome8 = Chromosome_humanCode("8")
+    """
+    chromosome 9.
+    """
     Chromosome9 = Chromosome_humanCode("9")
+    """
+    chromosome 10.
+    """
     Chromosome10 = Chromosome_humanCode("10")
+    """
+    chromosome 11.
+    """
     Chromosome11 = Chromosome_humanCode("11")
+    """
+    chromosome 12.
+    """
     Chromosome12 = Chromosome_humanCode("12")
+    """
+    chromosome 13.
+    """
     Chromosome13 = Chromosome_humanCode("13")
+    """
+    chromosome 14.
+    """
     Chromosome14 = Chromosome_humanCode("14")
+    """
+    chromosome 15.
+    """
     Chromosome15 = Chromosome_humanCode("15")
+    """
+    chromosome 16.
+    """
     Chromosome16 = Chromosome_humanCode("16")
+    """
+    chromosome 17.
+    """
     Chromosome17 = Chromosome_humanCode("17")
+    """
+    chromosome 18.
+    """
     Chromosome18 = Chromosome_humanCode("18")
+    """
+    chromosome 19.
+    """
     Chromosome19 = Chromosome_humanCode("19")
+    """
+    chromosome 20.
+    """
     Chromosome20 = Chromosome_humanCode("20")
+    """
+    chromosome 21.
+    """
     Chromosome21 = Chromosome_humanCode("21")
+    """
+    chromosome 22.
+    """
     Chromosome22 = Chromosome_humanCode("22")
+    """
+    chromosome X.
+    """
     ChromosomeX = Chromosome_humanCode("X")
+    """
+    chromosome Y.
+    """
     ChromosomeY = Chromosome_humanCode("Y")

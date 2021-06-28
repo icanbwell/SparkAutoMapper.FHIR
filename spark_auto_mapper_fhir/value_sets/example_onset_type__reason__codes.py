@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ExampleOnsetType_Reason_CodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/ex-onsettype
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-onsettype"
+
 
 class ExampleOnsetType_Reason_CodesCodeValues:
+    """
+    Date of last examination.
+    """
+
     LastExam = ExampleOnsetType_Reason_CodesCode("lxm")
+    """
+    Date when symptoms were first noticed.
+    """
     StartOfSymptoms = ExampleOnsetType_Reason_CodesCode("sym")
+    """
+    Start date of last menstruation.
+    """
     LastMenstruation = ExampleOnsetType_Reason_CodesCode("lmn")

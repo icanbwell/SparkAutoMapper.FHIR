@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class AlternativeCodeKindCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/composition-altcode-kind
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/composition-altcode-kind"
+
 
 class AlternativeCodeKindCodeValues:
+    """
+    The code is an alternative code that can be used in any of the circumstances that the primary code can be used.
+    """
+
     AlternateCode = AlternativeCodeKindCode("alternate")
+    """
+    The code should no longer be used, but was used in the past.
+    """
     Deprecated = AlternativeCodeKindCode("deprecated")
+    """
+    The code is an alternative to be used when a case insensitive code is required (when the primary codes are case sensitive).
+    """
     CaseInsensitive = AlternativeCodeKindCode("case-insensitive")
+    """
+    The code is an alternative to be used when a case sensitive code is required (when the primary codes are case insensitive).
+    """
     CaseSensitive = AlternativeCodeKindCode("case-sensitive")
+    """
+    The code is an alternative for the primary code that is built using the expression grammar defined by the code system.
+    """
     Expression = AlternativeCodeKindCode("expression")

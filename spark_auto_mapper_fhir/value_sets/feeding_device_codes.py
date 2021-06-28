@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,27 +16,99 @@ class FeedingDeviceCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class FeedingDeviceCodesCodeValues:
+    """
+    Standard nipple definition:
+    """
+
     StandardNipple = FeedingDeviceCodesCode("standard-nipple")
+    """
+    Preemie nipple definition:
+    """
     PreemieNipple = FeedingDeviceCodesCode("preemie-nipple")
+    """
+    Orthodontic nipple definition:
+    """
     OrthodonticNipple = FeedingDeviceCodesCode("ortho-nipple")
+    """
+    Slow flow nipple definition:
+    """
     SlowFlowNipple = FeedingDeviceCodesCode("sloflo-nipple")
+    """
+    Middle flow nipple definition:
+    """
     MiddleFlowNipple = FeedingDeviceCodesCode("midflo-nipple")
+    """
+    Enlarged, cross-cut nipple definition:
+    """
     Enlarged_Cross_cutNipple = FeedingDeviceCodesCode("bigcut-nipple")
+    """
+    Haberman bottle definition:
+    """
     HabermanBottle = FeedingDeviceCodesCode("haberman-bottle")
+    """
+    Sippy cup with valve definition:
+    """
     SippyCupWithValve = FeedingDeviceCodesCode("sippy-valve")
+    """
+    Sippy cup without valve definition:
+    """
     SippyCupWithoutValve = FeedingDeviceCodesCode("sippy-no-valve")
+    """
+    Provale Cup definition:
+    """
     ProvaleCup = FeedingDeviceCodesCode("provale-cup")
+    """
+    Glass with lid/sippy cup definition:
+    """
     GlassWithLid_sippyCup = FeedingDeviceCodesCode("glass-lid")
+    """
+    Double handhold on glass/cup definition:
+    """
     DoubleHandholdOnGlass_cup = FeedingDeviceCodesCode("handhold-cup")
+    """
+    Rubber matting under tray definition:
+    """
     RubberMattingUnderTray = FeedingDeviceCodesCode("rubber-mat")
+    """
+    Straw definition:
+    """
     Straw = FeedingDeviceCodesCode("straw")
+    """
+    Nose cup definition:
+    """
     NoseCup = FeedingDeviceCodesCode("nose-cup")
+    """
+    Scoop plate definition:
+    """
     ScoopPlate = FeedingDeviceCodesCode("scoop-plate")
+    """
+    Hand wrap utensil holder definition:
+    """
     HandWrapUtensilHolder = FeedingDeviceCodesCode("utensil-holder")
+    """
+    Foam handle utensils definition:
+    """
     FoamHandleUtensils = FeedingDeviceCodesCode("foam-handle")
+    """
+    Angled utensils definition:
+    """
     AngledUtensils = FeedingDeviceCodesCode("angled-utensil")
+    """
+    Spout cup definition:
+    """
     SpoutCup = FeedingDeviceCodesCode("spout-cup")
+    """
+    Automated feeding devices definition:
+    """
     AutomatedFeedingDevices = FeedingDeviceCodesCode("autofeeding-device")
+    """
+    Rocker knife definition:
+    """
     RockerKnife = FeedingDeviceCodesCode("rocker-knife")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,50 +16,191 @@ class ProgramCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/program
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/program"
+
 
 class ProgramCodeValues:
+    """
+    None
+    """
+
     AcquiredBrainInjury_ABI_Program_ = ProgramCode("1")
+    """
+    None
+    """
     ABISlowToRecover_ABISTR_Program = ProgramCode("2")
+    """
+    None
+    """
     AccessPrograms = ProgramCode("3")
+    """
+    None
+    """
     AdultAndFurtherEducation_ACFE_Program = ProgramCode("4")
+    """
+    None
+    """
     AdultDayActivityAndSupportServices_ADASS_Program = ProgramCode("5")
+    """
+    None
+    """
     AdultDayCareProgram = ProgramCode("6")
+    """
+    None
+    """
     ATSS_AdultTrainingSupportService_ = ProgramCode("7")
+    """
+    None
+    """
     CommunityAgedCarePackages_CACP_ = ProgramCode("8")
+    """
+    None
+    """
     CareCoordination_SupplementaryServices_CCSS_ = ProgramCode("9")
+    """
+    None
+    """
     CognitiveDementiaMemoryService_CDAMS_ = ProgramCode("10")
+    """
+    None
+    """
     ChildFIRST = ProgramCode("11")
+    """
+    None
+    """
     Children_sContactServices = ProgramCode("12")
+    """
+    None
+    """
     CommunityVisitorsScheme = ProgramCode("13")
+    """
+    None
+    """
     CPP_CommunityPartnersProgram_ = ProgramCode("14")
+    """
+    None
+    """
     ClosingTheGap_CTG_ = ProgramCode("15")
+    """
+    None
+    """
     CoordinatedVeterans_Care_CVC_Program = ProgramCode("16")
+    """
+    None
+    """
     DayProgram = ProgramCode("17")
+    """
+    None
+    """
     DropInProgram = ProgramCode("18")
+    """
+    None
+    """
     EarlyYearsProgram = ProgramCode("19")
+    """
+    None
+    """
     EmployeeAssistanceProgram = ProgramCode("20")
+    """
+    None
+    """
     HomeAndCommunityCare_HACC_ = ProgramCode("21")
+    """
+    None
+    """
     HospitalAdmissionRiskProgram_HARP_ = ProgramCode("22")
+    """
+    None
+    """
     HospitalInTheHome_HITH_Program = ProgramCode("23")
+    """
+    None
+    """
     ICTP_IntensiveCommunityTreatmentProgram_ = ProgramCode("24")
+    """
+    None
+    """
     IFSS_IntensiveFamilySupportProgram_ = ProgramCode("25")
+    """
+    None
+    """
     JPET_JobPlacement_EducationAndTraining_ = ProgramCode("26")
+    """
+    None
+    """
     KooriJuvenileJusticeProgram = ProgramCode("27")
+    """
+    None
+    """
     LanguageLiteracyAndNumeracyProgram = ProgramCode("28")
+    """
+    None
+    """
     LifeSkillsProgram = ProgramCode("29")
+    """
+    None
+    """
     LMP_LifestyleModificationProgram_ = ProgramCode("30")
+    """
+    None
+    """
     MedsCheckProgram = ProgramCode("31")
+    """
+    None
+    """
     Methadone_BuprenorphineProgram = ProgramCode("32")
+    """
+    None
+    """
     NationalDisabilitiesInsuranceScheme_NDIS_ = ProgramCode("33")
+    """
+    None
+    """
     NationalDiabetesServicesScheme_NDSS_ = ProgramCode("34")
+    """
+    None
+    """
     Needle_SyringeProgram = ProgramCode("35")
+    """
+    None
+    """
     NPEPProgram = ProgramCode("36")
+    """
+    None
+    """
     PersonalSupportProgram = ProgramCode("37")
+    """
+    None
+    """
     PartnersInRecovery_PIR_Program = ProgramCode("38")
+    """
+    None
+    """
     Pre_employmentProgram = ProgramCode("39")
+    """
+    None
+    """
     ReconnectProgram = ProgramCode("40")
+    """
+    None
+    """
     SexualAbuseCounsellingAndPreventionProgram_SACPP_ = ProgramCode("41")
+    """
+    None
+    """
     SocialSupportPrograms = ProgramCode("42")
+    """
+    None
+    """
     SupportedResidentialService_SRS_ = ProgramCode("43")
+    """
+    None
+    """
     TasmanianAboriginalCentre_TAC_ = ProgramCode("44")
+    """
+    None
+    """
     Victim_sAssistanceProgram = ProgramCode("45")

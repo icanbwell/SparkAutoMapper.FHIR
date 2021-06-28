@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # gender (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for gender
     # Import for CodeableConcept for gender
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -20,6 +21,7 @@ if TYPE_CHECKING:
     # race (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for race
     # Import for CodeableConcept for race
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -27,6 +29,7 @@ if TYPE_CHECKING:
     # physiologicalCondition (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for physiologicalCondition
     # Import for CodeableConcept for physiologicalCondition
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -37,6 +40,7 @@ if TYPE_CHECKING:
     # ageCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for ageCodeableConcept
     # Import for CodeableConcept for ageCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

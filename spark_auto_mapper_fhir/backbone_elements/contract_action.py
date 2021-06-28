@@ -18,6 +18,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.contract_action_codes import (
         ContractActionCodesCode,
@@ -32,6 +33,7 @@ if TYPE_CHECKING:
     # intent (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for intent
     # Import for CodeableConcept for intent
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
 
@@ -40,6 +42,7 @@ if TYPE_CHECKING:
     # status (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for status
     # Import for CodeableConcept for status
     from spark_auto_mapper_fhir.value_sets.contract_resource_action_status_codes import (
         ContractResourceActionStatusCodesCode,
@@ -70,6 +73,7 @@ if TYPE_CHECKING:
     # performerType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for performerType
     # Import for CodeableConcept for performerType
     from spark_auto_mapper_fhir.value_sets.provenance_participant_type import (
         ProvenanceParticipantTypeCode,
@@ -79,6 +83,7 @@ if TYPE_CHECKING:
     # performerRole (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for performerRole
     # Import for CodeableConcept for performerRole
     from spark_auto_mapper_fhir.value_sets.provenance_participant_role import (
         ProvenanceParticipantRoleCode,
@@ -103,6 +108,7 @@ if TYPE_CHECKING:
     # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for reasonCode
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
 

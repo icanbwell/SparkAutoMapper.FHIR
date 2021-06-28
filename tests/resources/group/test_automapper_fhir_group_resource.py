@@ -2,12 +2,14 @@ from typing import Dict
 
 from pyspark.sql import SparkSession, DataFrame, Column
 from spark_auto_mapper.automappers.automapper import AutoMapper
+from spark_auto_mapper_fhir.backbone_elements.group_member import GroupMember
+
 from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCode
+from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCodeValues
 from spark_auto_mapper_fhir.value_sets.identifier_type_codes import (
     IdentifierTypeCodesCode,
 )
@@ -65,11 +67,11 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
                     )
                 ]
             ),
-            type_=GroupTypeCode.practitioner,
+            type_=GroupTypeCodeValues.Practitioner,
             name=A.text("Medstar Affiliated Practitioner"),
             member=FhirList(
                 [
-                    GroupMemberBackboneElement(
+                    GroupMember(
                         entity=Reference(
                             reference=FhirReference(
                                 "Practitioner",

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,2385 +16,9501 @@ class AnimalBreedsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class AnimalBreedsCodeValues:
+    """
+    None
+    """
+
     PygmyGoat_organism_ = AnimalBreedsCode("684003")
+    """
+    None
+    """
     RambouilletSheep_organism_ = AnimalBreedsCode("2124007")
+    """
+    None
+    """
     RomneyMarshSheep_organism_ = AnimalBreedsCode("3099004")
+    """
+    None
+    """
     SouthdownSheep_organism_ = AnimalBreedsCode("3566006")
+    """
+    None
+    """
     ShropshireSheep_organism_ = AnimalBreedsCode("4574003")
+    """
+    None
+    """
     PiedmonteseCattleBreed_organism_ = AnimalBreedsCode("4880003")
+    """
+    None
+    """
     MontdaleSheep_organism_ = AnimalBreedsCode("5164003")
+    """
+    None
+    """
     SantaGertrudisCattleBreed_organism_ = AnimalBreedsCode("5345000")
+    """
+    None
+    """
     FrenchAlpineGoat_organism_ = AnimalBreedsCode("5438004")
+    """
+    None
+    """
     LeicesterSheep_organism_ = AnimalBreedsCode("6431001")
+    """
+    None
+    """
     HornedHereford_organism_ = AnimalBreedsCode("7843000")
+    """
+    None
+    """
     CamarronGoat_organism_ = AnimalBreedsCode("9230001")
+    """
+    None
+    """
     PolledHereford_organism_ = AnimalBreedsCode("9277006")
+    """
+    None
+    """
     KerryHillSheep_organism_ = AnimalBreedsCode("11967001")
+    """
+    None
+    """
     PanamaSheep_organism_ = AnimalBreedsCode("13934009")
+    """
+    None
+    """
     AngloNubianGoat_organism_ = AnimalBreedsCode("16015002")
+    """
+    None
+    """
     BeefmasterCattleBreed_organism_ = AnimalBreedsCode("16042001")
+    """
+    None
+    """
     DomesticGoose_organism_ = AnimalBreedsCode("23469003")
+    """
+    None
+    """
     PekinDuck_organism_ = AnimalBreedsCode("24438005")
+    """
+    None
+    """
     BarbadosSheep_organism_ = AnimalBreedsCode("25660007")
+    """
+    None
+    """
     BrangusCattleBreed_organism_ = AnimalBreedsCode("28336001")
+    """
+    None
+    """
     SwissAlpineGoat_organism_ = AnimalBreedsCode("28360002")
+    """
+    None
+    """
     ToggenburgGoat_organism_ = AnimalBreedsCode("30089001")
+    """
+    None
+    """
     RomanovSheep_organism_ = AnimalBreedsCode("32145006")
+    """
+    None
+    """
     WiltshireHornSheep_organism_ = AnimalBreedsCode("39855006")
+    """
+    None
+    """
     PerendaleSheep_organism_ = AnimalBreedsCode("41706005")
+    """
+    None
+    """
     DebouilletSheep_organism_ = AnimalBreedsCode("44835005")
+    """
+    None
+    """
     MouflonSheep_organism_ = AnimalBreedsCode("45690005")
+    """
+    None
+    """
     DelaineMerinoSheep_organism_ = AnimalBreedsCode("46392004")
+    """
+    None
+    """
     ClunForestSheep_organism_ = AnimalBreedsCode("48697009")
+    """
+    None
+    """
     CheviotSheep_organism_ = AnimalBreedsCode("50717006")
+    """
+    None
+    """
     OxfordDownSheep_organism_ = AnimalBreedsCode("53360003")
+    """
+    None
+    """
     LaManchaGoat_organism_ = AnimalBreedsCode("55530007")
+    """
+    None
+    """
     NavajoSheep_organism_ = AnimalBreedsCode("59210004")
+    """
+    None
+    """
     AngoraGoat_organism_ = AnimalBreedsCode("64158000")
+    """
+    None
+    """
     KarakulSheep_organism_ = AnimalBreedsCode("64591001")
+    """
+    None
+    """
     BlackFacedHighlandSheep_organism_ = AnimalBreedsCode("65187008")
+    """
+    None
+    """
     LincolnSheep_organism_ = AnimalBreedsCode("65492002")
+    """
+    None
+    """
     CotswoldSheep_organism_ = AnimalBreedsCode("67414001")
+    """
+    None
+    """
     CorriedaleSheep_organism_ = AnimalBreedsCode("67515002")
+    """
+    None
+    """
     AlpineGoat_organism_ = AnimalBreedsCode("70431006")
+    """
+    None
+    """
     FinnishLandraceSheep_organism_ = AnimalBreedsCode("72329005")
+    """
+    None
+    """
     SuffolkSheep_organism_ = AnimalBreedsCode("72648002")
+    """
+    None
+    """
     AmericanMerinoSheep_organism_ = AnimalBreedsCode("73191001")
+    """
+    None
+    """
     RockAlpineGoat_organism_ = AnimalBreedsCode("74745008")
+    """
+    None
+    """
     RomedaleSheep_organism_ = AnimalBreedsCode("79603002")
+    """
+    None
+    """
     HampshireDownSheep_organism_ = AnimalBreedsCode("82440005")
+    """
+    None
+    """
     HungarianGoose_organism_ = AnimalBreedsCode("83842004")
+    """
+    None
+    """
     HornedDorsetSheepBreed_organism_ = AnimalBreedsCode("86920006")
+    """
+    None
+    """
     NorthCountyCheviotSheep_organism_ = AnimalBreedsCode("87962009")
+    """
+    None
+    """
     TargheeSheep_organism_ = AnimalBreedsCode("89665001")
+    """
+    None
+    """
     ChamoiseeGoat_organism_ = AnimalBreedsCode("89708009")
+    """
+    None
+    """
     ChineseGoose_organism_ = AnimalBreedsCode("91460002")
+    """
+    None
+    """
     No_tailSheep_organism_ = AnimalBreedsCode("112486002")
+    """
+    None
+    """
     RomneletSheep_organism_ = AnimalBreedsCode("112487006")
+    """
+    None
+    """
     PilgrimGoose_organism_ = AnimalBreedsCode("112496006")
+    """
+    None
+    """
     MixedBreedGoat_organism_ = AnimalBreedsCode("131607005")
+    """
+    None
+    """
     AustralianGoatBreed_organism_ = AnimalBreedsCode("131608000")
+    """
+    None
+    """
     ArapawaIslandGoatBreed_organism_ = AnimalBreedsCode("131609008")
+    """
+    None
+    """
     MalteseGoatBreed_organism_ = AnimalBreedsCode("131610003")
+    """
+    None
+    """
     Proven_aleGoatBreed_organism_ = AnimalBreedsCode("131611004")
+    """
+    None
+    """
     NegraSerranaGoatBreed_organism_ = AnimalBreedsCode("131612006")
+    """
+    None
+    """
     OrobicaGoatBreed_organism_ = AnimalBreedsCode("131613001")
+    """
+    None
+    """
     Roya_VesubieGoatBreed_organism_ = AnimalBreedsCode("131614007")
+    """
+    None
+    """
     RetintaExtremenaGoatBreed_organism_ = AnimalBreedsCode("131615008")
+    """
+    None
+    """
     AppenzellGoatBreed_organism_ = AnimalBreedsCode("131616009")
+    """
+    None
+    """
     AmericanCashmereGoatBreed_organism_ = AnimalBreedsCode("131617000")
+    """
+    None
+    """
     AltaiMountainGoatBreed_organism_ = AnimalBreedsCode("131618005")
+    """
+    None
+    """
     PyreneanGoatBreed_organism_ = AnimalBreedsCode("131619002")
+    """
+    None
+    """
     BagotGoatBreed_organism_ = AnimalBreedsCode("131620008")
+    """
+    None
+    """
     RussianWhiteGoatBreed_organism_ = AnimalBreedsCode("131621007")
+    """
+    None
+    """
     Moxot_GoatBreed_organism_ = AnimalBreedsCode("131622000")
+    """
+    None
+    """
     MyotonicGoatBreed_organism_ = AnimalBreedsCode("131623005")
+    """
+    None
+    """
     NachiGoatBreed_organism_ = AnimalBreedsCode("131624004")
+    """
+    None
+    """
     NigerianDwarfGoatBreed_organism_ = AnimalBreedsCode("131625003")
+    """
+    None
+    """
     SardaGoatBreed_organism_ = AnimalBreedsCode("131626002")
+    """
+    None
+    """
     SerpentinaGoatBreed_organism_ = AnimalBreedsCode("131627006")
+    """
+    None
+    """
     SerranaGoatBreed_organism_ = AnimalBreedsCode("131628001")
+    """
+    None
+    """
     VerataGoatBreed_organism_ = AnimalBreedsCode("131629009")
+    """
+    None
+    """
     VerzascaBlackGoatBreed_organism_ = AnimalBreedsCode("131630004")
+    """
+    None
+    """
     NorwegianGoatBreed_organism_ = AnimalBreedsCode("131631000")
+    """
+    None
+    """
     OberhasliGoatBreed_organism_ = AnimalBreedsCode("131632007")
+    """
+    None
+    """
     PeacockGoatBreed_organism_ = AnimalBreedsCode("131633002")
+    """
+    None
+    """
     PhilippineGoatBreed_organism_ = AnimalBreedsCode("131634008")
+    """
+    None
+    """
     LoashanGoatBreed_organism_ = AnimalBreedsCode("131635009")
+    """
+    None
+    """
     SanClementeGoatBreed_organism_ = AnimalBreedsCode("131636005")
+    """
+    None
+    """
     SomaliGoatBreed_organism_ = AnimalBreedsCode("131637001")
+    """
+    None
+    """
     SpanishGoatBreed_organism_ = AnimalBreedsCode("131638006")
+    """
+    None
+    """
     RoveGoatBreed_organism_ = AnimalBreedsCode("131639003")
+    """
+    None
+    """
     SRDGoatBreed_organism_ = AnimalBreedsCode("131640001")
+    """
+    None
+    """
     SwedishLandraceGoatBreed_organism_ = AnimalBreedsCode("131641002")
+    """
+    None
+    """
     ThuringianGoatBreed_organism_ = AnimalBreedsCode("131642009")
+    """
+    None
+    """
     UzbekBlackGoatBreed_organism_ = AnimalBreedsCode("131643004")
+    """
+    None
+    """
     ZhongweiGoatBreed_organism_ = AnimalBreedsCode("131644005")
+    """
+    None
+    """
     BarbariGoatBreed_organism_ = AnimalBreedsCode("131645006")
+    """
+    None
+    """
     PoitouGoatBreed_organism_ = AnimalBreedsCode("131646007")
+    """
+    None
+    """
     RepartidaGoatBreed_organism_ = AnimalBreedsCode("131647003")
+    """
+    None
+    """
     BootedGoatBreed_organism_ = AnimalBreedsCode("131648008")
+    """
+    None
+    """
     CorsicanGoatBreed_organism_ = AnimalBreedsCode("131649000")
+    """
+    None
+    """
     ChaparGoatBreed_organism_ = AnimalBreedsCode("131650000")
+    """
+    None
+    """
     Canind_GoatBreed_organism_ = AnimalBreedsCode("131651001")
+    """
+    None
+    """
     CanaryIslandGoatBreed_organism_ = AnimalBreedsCode("131652008")
+    """
+    None
+    """
     DaeraDinPanahGoatBreed_organism_ = AnimalBreedsCode("131653003")
+    """
+    None
+    """
     BritishAlpineGoatBreed_organism_ = AnimalBreedsCode("131654009")
+    """
+    None
+    """
     BhujGoatBreed_organism_ = AnimalBreedsCode("131655005")
+    """
+    None
+    """
     BoerGoatBreed_organism_ = AnimalBreedsCode("131656006")
+    """
+    None
+    """
     BenadirGoatBreed_organism_ = AnimalBreedsCode("131657002")
+    """
+    None
+    """
     Cr_oleAntillesGoatBreed_organism_ = AnimalBreedsCode("131658007")
+    """
+    None
+    """
     BeetalGoatBreed_organism_ = AnimalBreedsCode("131659004")
+    """
+    None
+    """
     GoldenGuernseyGoatBreed_organism_ = AnimalBreedsCode("131660009")
+    """
+    None
+    """
     DanishLandraceGoatBreed_organism_ = AnimalBreedsCode("131661008")
+    """
+    None
+    """
     KaghaniGoatBreed_organism_ = AnimalBreedsCode("131662001")
+    """
+    None
+    """
     IrishGoatBreed_organism_ = AnimalBreedsCode("131663006")
+    """
+    None
+    """
     GrisonsStripedGoatBreed_organism_ = AnimalBreedsCode("131664000")
+    """
+    None
+    """
     JiningGrayGoatBreed_organism_ = AnimalBreedsCode("131665004")
+    """
+    None
+    """
     FinnishLandraceGoatBreed_organism_ = AnimalBreedsCode("131666003")
+    """
+    None
+    """
     ErzgebirgGoatBreed_organism_ = AnimalBreedsCode("131667007")
+    """
+    None
+    """
     KamoriGoatBreed_organism_ = AnimalBreedsCode("131668002")
+    """
+    None
+    """
     DonGoatBreed_organism_ = AnimalBreedsCode("131669005")
+    """
+    None
+    """
     KikoGoatBreed_organism_ = AnimalBreedsCode("131670006")
+    """
+    None
+    """
     KinderGoatBreed_organism_ = AnimalBreedsCode("131671005")
+    """
+    None
+    """
     PygoraGoatBreed_organism_ = AnimalBreedsCode("131672003")
+    """
+    None
+    """
     WoodenLegGoatBreed_organism_ = AnimalBreedsCode("131673008")
+    """
+    None
+    """
     AlpineChamoiseeGoatBreed_organism_ = AnimalBreedsCode("131674002")
+    """
+    None
+    """
     MassifCentralGoatBreed_organism_ = AnimalBreedsCode("131675001")
+    """
+    None
+    """
     Malague_aGoatBreed_organism_ = AnimalBreedsCode("131676000")
+    """
+    None
+    """
     AlgarviaGoatBreed_organism_ = AnimalBreedsCode("131677009")
+    """
+    None
+    """
     BritishSaanenGoatBreed_organism_ = AnimalBreedsCode("131678004")
+    """
+    None
+    """
     BritishToggenburgGoatBreed_organism_ = AnimalBreedsCode("131679007")
+    """
+    None
+    """
     B_ndnerGoatBreed_organism_ = AnimalBreedsCode("131680005")
+    """
+    None
+    """
     BlancaAndaluzaGoatBreed_organism_ = AnimalBreedsCode("131681009")
+    """
+    None
+    """
     BlancaCeltibericaGoatBreed_organism_ = AnimalBreedsCode("131682002")
+    """
+    None
+    """
     BraviaGoatBreed_organism_ = AnimalBreedsCode("131683007")
+    """
+    None
+    """
     BlackGrisonneGoatBreed_organism_ = AnimalBreedsCode("131684001")
+    """
+    None
+    """
     ChamoisOfTheAlpsGoatBreed_organism_ = AnimalBreedsCode("131685000")
+    """
+    None
+    """
     CharnequeriaGoatBreed_organism_ = AnimalBreedsCode("131686004")
+    """
+    None
+    """
     CarpatheGoatBreed_organism_ = AnimalBreedsCode("131687008")
+    """
+    None
+    """
     ColNoirDuValaisGoatBreed_organism_ = AnimalBreedsCode("131688003")
+    """
+    None
+    """
     DamaniGoatBreed_organism_ = AnimalBreedsCode("131689006")
+    """
+    None
+    """
     DesFosses_CommunesDeL_Ouest_GoatBreed_organism_ = AnimalBreedsCode("131690002")
+    """
+    None
+    """
     EnglishGoatBreed_organism_ = AnimalBreedsCode("131691003")
+    """
+    None
+    """
     EnglishGuernseyGoatBreed_organism_ = AnimalBreedsCode("131692005")
+    """
+    None
+    """
     GermanColoredGoatBreed_organism_ = AnimalBreedsCode("131693000")
+    """
+    None
+    """
     GuadarramaGoatBreed_organism_ = AnimalBreedsCode("131694006")
+    """
+    None
+    """
     GarganicaGoatBreed_organism_ = AnimalBreedsCode("131695007")
+    """
+    None
+    """
     GirgentanaGoatBreed_organism_ = AnimalBreedsCode("131696008")
+    """
+    None
+    """
     JonicaGoatBreed_organism_ = AnimalBreedsCode("131697004")
+    """
+    None
+    """
     Murciana_GranadinaGoatBreed_organism_ = AnimalBreedsCode("131698009")
+    """
+    None
+    """
     B_ndnerOberlandSheepBreed_organism_ = AnimalBreedsCode("131699001")
+    """
+    None
+    """
     BritishMilkSheepBreed_organism_ = AnimalBreedsCode("131700000")
+    """
+    None
+    """
     BrillenschafSheepBreed_organism_ = AnimalBreedsCode("131701001")
+    """
+    None
+    """
     BrecknockHillCheviotSheepBreed_organism_ = AnimalBreedsCode("131702008")
+    """
+    None
+    """
     CholistaniSheepBreed_organism_ = AnimalBreedsCode("131703003")
+    """
+    None
+    """
     BibrikSheepBreed_organism_ = AnimalBreedsCode("131704009")
+    """
+    None
+    """
     ColumbiaSheepBreed_organism_ = AnimalBreedsCode("131705005")
+    """
+    None
+    """
     BlackWelshMountainSheepBreed_organism_ = AnimalBreedsCode("131706006")
+    """
+    None
+    """
     BlackheadPersianSheepBreed_organism_ = AnimalBreedsCode("131707002")
+    """
+    None
+    """
     BleuDuMaineSheepBreed_organism_ = AnimalBreedsCode("131708007")
+    """
+    None
+    """
     BluefacedLeicesterSheepBreed_organism_ = AnimalBreedsCode("131709004")
+    """
+    None
+    """
     BondSheepBreed_organism_ = AnimalBreedsCode("131710009")
+    """
+    None
+    """
     BorderLeicesterSheepBreed_organism_ = AnimalBreedsCode("131711008")
+    """
+    None
+    """
     BoreraySheepBreed_organism_ = AnimalBreedsCode("131712001")
+    """
+    None
+    """
     BovskaSheepBreed_organism_ = AnimalBreedsCode("131713006")
+    """
+    None
+    """
     BraunesBergschafSheepBreed_organism_ = AnimalBreedsCode("131714000")
+    """
+    None
+    """
     BrazilianSomaliSheepBreed_organism_ = AnimalBreedsCode("131715004")
+    """
+    None
+    """
     BeulahSpeckled_FaceSheepBreed_organism_ = AnimalBreedsCode("131716003")
+    """
+    None
+    """
     DartmoorSheepBreed_organism_ = AnimalBreedsCode("131717007")
+    """
+    None
+    """
     FabrianeseSheepBreed_organism_ = AnimalBreedsCode("131718002")
+    """
+    None
+    """
     ExmoorHornSheepBreed_organism_ = AnimalBreedsCode("131719005")
+    """
+    None
+    """
     ElliottdaleSheepBreed_organism_ = AnimalBreedsCode("131720004")
+    """
+    None
+    """
     DrysdaleSheepBreed_organism_ = AnimalBreedsCode("131721000")
+    """
+    None
+    """
     DorsetDownSheepBreed_organism_ = AnimalBreedsCode("131722007")
+    """
+    None
+    """
     GermanBlackheadedMuttonSheepBreed_organism_ = AnimalBreedsCode("131723002")
+    """
+    None
+    """
     KookaSheepBreed_organism_ = AnimalBreedsCode("131724008")
+    """
+    None
+    """
     FriesianMilkSheepBreed_organism_ = AnimalBreedsCode("131725009")
+    """
+    None
+    """
     GansuAlpineFine_woolSheepBreed_organism_ = AnimalBreedsCode("131726005")
+    """
+    None
+    """
     GermanWhiteheadedMuttonSheepBreed_organism_ = AnimalBreedsCode("131727001")
+    """
+    None
+    """
     GraueGehoernteHeidschnuckeSheepBreed_organism_ = AnimalBreedsCode("131728006")
+    """
+    None
+    """
     HanSheepBreed_organism_ = AnimalBreedsCode("131729003")
+    """
+    None
+    """
     GromarkSheepBreed_organism_ = AnimalBreedsCode("131730008")
+    """
+    None
+    """
     GulfCoastNativeSheepBreed_organism_ = AnimalBreedsCode("131731007")
+    """
+    None
+    """
     DorperSheepBreed_organism_ = AnimalBreedsCode("131732000")
+    """
+    None
+    """
     DevonClosewoolSheepBreed_organism_ = AnimalBreedsCode("131733005")
+    """
+    None
+    """
     DeutschesBlaukoepfigesFleischschafSheepBreed_organism_ = AnimalBreedsCode(
         "131734004"
     )
+    """
+    None
+    """
     DerbyshireGritstoneSheepBreed_organism_ = AnimalBreedsCode("131735003")
+    """
+    None
+    """
     CoburgerFuchsschafSheepBreed_organism_ = AnimalBreedsCode("131736002")
+    """
+    None
+    """
     DanishLandraceSheepBreed_organism_ = AnimalBreedsCode("131737006")
+    """
+    None
+    """
     GuteSheepBreed_organism_ = AnimalBreedsCode("131738001")
+    """
+    None
+    """
     HampshireSheepBreed_organism_ = AnimalBreedsCode("131739009")
+    """
+    None
+    """
     GentileDiPugliaSheepBreed_organism_ = AnimalBreedsCode("131740006")
+    """
+    None
+    """
     GermanMountainSheepBreed_organism_ = AnimalBreedsCode("131741005")
+    """
+    None
+    """
     LuzeinSheepBreed_organism_ = AnimalBreedsCode("131742003")
+    """
+    None
+    """
     KatahdinSheepBreed_organism_ = AnimalBreedsCode("131743008")
+    """
+    None
+    """
     LeineschafSheepBreed_organism_ = AnimalBreedsCode("131744002")
+    """
+    None
+    """
     LincolnLongwoolSheepBreed_organism_ = AnimalBreedsCode("131745001")
+    """
+    None
+    """
     LlanwenogSheepBreed_organism_ = AnimalBreedsCode("131746000")
+    """
+    None
+    """
     LleynSheepBreed_organism_ = AnimalBreedsCode("131747009")
+    """
+    None
+    """
     DamaraSheepBreed_organism_ = AnimalBreedsCode("131748004")
+    """
+    None
+    """
     DamaniSheepBreed_organism_ = AnimalBreedsCode("131749007")
+    """
+    None
+    """
     DalesbredSheepBreed_organism_ = AnimalBreedsCode("131750007")
+    """
+    None
+    """
     DalaSheepBreed_organism_ = AnimalBreedsCode("131751006")
+    """
+    None
+    """
     CriolloSheepBreed_organism_ = AnimalBreedsCode("131752004")
+    """
+    None
+    """
     CormoSheepBreed_organism_ = AnimalBreedsCode("131753009")
+    """
+    None
+    """
     LatiSheepBreed_organism_ = AnimalBreedsCode("131754003")
+    """
+    None
+    """
     LonkSheepBreed_organism_ = AnimalBreedsCode("131755002")
+    """
+    None
+    """
     LangheSheepBreed_organism_ = AnimalBreedsCode("131756001")
+    """
+    None
+    """
     ManxLoaghtanSheepBreed_organism_ = AnimalBreedsCode("131757005")
+    """
+    None
+    """
     MasaiSheepBreed_organism_ = AnimalBreedsCode("131758000")
+    """
+    None
+    """
     MerinolandschafSheepBreed_organism_ = AnimalBreedsCode("131759008")
+    """
+    None
+    """
     LohiSheepBreed_organism_ = AnimalBreedsCode("131760003")
+    """
+    None
+    """
     Ile_de_FranceSheepBreed_organism_ = AnimalBreedsCode("131761004")
+    """
+    None
+    """
     HashtNagriSheepBreed_organism_ = AnimalBreedsCode("131762006")
+    """
+    None
+    """
     HazaragieSheepBreed_organism_ = AnimalBreedsCode("131763001")
+    """
+    None
+    """
     CoopworthSheepBreed_organism_ = AnimalBreedsCode("131764007")
+    """
+    None
+    """
     ComisanaSheepBreed_organism_ = AnimalBreedsCode("131765008")
+    """
+    None
+    """
     ComebackSheepBreed_organism_ = AnimalBreedsCode("131766009")
+    """
+    None
+    """
     SicilianBarbarySheepBreed_organism_ = AnimalBreedsCode("131767000")
+    """
+    None
+    """
     AfricanaSheepBreed_organism_ = AnimalBreedsCode("131768005")
+    """
+    None
+    """
     WelshMountainBadgerFacedSheepBreed_organism_ = AnimalBreedsCode("131769002")
+    """
+    None
+    """
     HebrideanSheepBreed_organism_ = AnimalBreedsCode("131770001")
+    """
+    None
+    """
     HeidschnuckeSheepBreed_organism_ = AnimalBreedsCode("131771002")
+    """
+    None
+    """
     HerdwickSheepBreed_organism_ = AnimalBreedsCode("131772009")
+    """
+    None
+    """
     HillRadnorSheepBreed_organism_ = AnimalBreedsCode("131773004")
+    """
+    None
+    """
     IcelandicSheepBreed_organism_ = AnimalBreedsCode("131774005")
+    """
+    None
+    """
     HarnaiSheepBreed_organism_ = AnimalBreedsCode("131775006")
+    """
+    None
+    """
     IstrianPramenkaSheepBreed_organism_ = AnimalBreedsCode("131776007")
+    """
+    None
+    """
     JacobSheepBreed_organism_ = AnimalBreedsCode("131777003")
+    """
+    None
+    """
     JezerskosolcavskaSheepBreed_organism_ = AnimalBreedsCode("131778008")
+    """
+    None
+    """
     KachhiSheepBreed_organism_ = AnimalBreedsCode("131779000")
+    """
+    None
+    """
     WensleydaleSheepBreed_organism_ = AnimalBreedsCode("131780002")
+    """
+    None
+    """
     WestAfricanDwarfSheepBreed_organism_ = AnimalBreedsCode("131781003")
+    """
+    None
+    """
     WhiteSuffolkSheepBreed_organism_ = AnimalBreedsCode("131782005")
+    """
+    None
+    """
     WhitefaceDartmoorSheepBreed_organism_ = AnimalBreedsCode("131783000")
+    """
+    None
+    """
     WhitefaceWoodlandSheepBreed_organism_ = AnimalBreedsCode("131784006")
+    """
+    None
+    """
     XinjiangFinewoolSheepBreed_organism_ = AnimalBreedsCode("131785007")
+    """
+    None
+    """
     KajliSheepBreed_organism_ = AnimalBreedsCode("131786008")
+    """
+    None
+    """
     HogIslandSheepBreed_organism_ = AnimalBreedsCode("131787004")
+    """
+    None
+    """
     BielleseSheepBreed_organism_ = AnimalBreedsCode("131788009")
+    """
+    None
+    """
     ChiosSheepBreed_organism_ = AnimalBreedsCode("131789001")
+    """
+    None
+    """
     SantaCruzSheepBreed_organism_ = AnimalBreedsCode("131790005")
+    """
+    None
+    """
     CharollaisSheepBreed_organism_ = AnimalBreedsCode("131791009")
+    """
+    None
+    """
     CastlemilkMooritSheepBreed_organism_ = AnimalBreedsCode("131792002")
+    """
+    None
+    """
     CampanianBarbarySheepBreed_organism_ = AnimalBreedsCode("131793007")
+    """
+    None
+    """
     CaliforniaVariegatedMutantSheepBreed_organism_ = AnimalBreedsCode("131794001")
+    """
+    None
+    """
     CaliforniaRedSheepBreed_organism_ = AnimalBreedsCode("131795000")
+    """
+    None
+    """
     SopravissanaSheepBreed_organism_ = AnimalBreedsCode("131796004")
+    """
+    None
+    """
     SomaliSheepBreed_organism_ = AnimalBreedsCode("131797008")
+    """
+    None
+    """
     WelshHillSpeckledFaceSheepBreed_organism_ = AnimalBreedsCode("131798003")
+    """
+    None
+    """
     SkuddeSheepBreed_organism_ = AnimalBreedsCode("131799006")
+    """
+    None
+    """
     WaziriSheepBreed_organism_ = AnimalBreedsCode("131800005")
+    """
+    None
+    """
     ShetlandSheepBreed_organism_ = AnimalBreedsCode("131801009")
+    """
+    None
+    """
     CambridgeSheepBreed_organism_ = AnimalBreedsCode("131802002")
+    """
+    None
+    """
     SolognoteSheepBreed_organism_ = AnimalBreedsCode("131803007")
+    """
+    None
+    """
     CayugaBreedDuck_organism_ = AnimalBreedsCode("131810001")
+    """
+    None
+    """
     RunnerBreedDuck_organism_ = AnimalBreedsCode("131811002")
+    """
+    None
+    """
     CallBreedDuck_organism_ = AnimalBreedsCode("131812009")
+    """
+    None
+    """
     OrpingtonBreedDuck_organism_ = AnimalBreedsCode("131813004")
+    """
+    None
+    """
     CrestedBreedDuck_organism_ = AnimalBreedsCode("131814005")
+    """
+    None
+    """
     PommeranianBreedDuck_organism_ = AnimalBreedsCode("131815006")
+    """
+    None
+    """
     RoughFellSheepBreed_organism_ = AnimalBreedsCode("131816007")
+    """
+    None
+    """
     BlueSwedishBreedDuck_organism_ = AnimalBreedsCode("131817003")
+    """
+    None
+    """
     Golden300HybridBreedDuck_organism_ = AnimalBreedsCode("131818008")
+    """
+    None
+    """
     AnconaBreedDuck_organism_ = AnimalBreedsCode("131820006")
+    """
+    None
+    """
     AustralianSpottedBreedDuck_organism_ = AnimalBreedsCode("131821005")
+    """
+    None
+    """
     SwaledaleSheepBreed_organism_ = AnimalBreedsCode("131822003")
+    """
+    None
+    """
     PolypaySheepBreed_organism_ = AnimalBreedsCode("131823008")
+    """
+    None
+    """
     AylesburyBreedDuck_organism_ = AnimalBreedsCode("131824002")
+    """
+    None
+    """
     BlackEastIndiesBreedDuck_organism_ = AnimalBreedsCode("131825001")
+    """
+    None
+    """
     CoastBreedDuck_organism_ = AnimalBreedsCode("131826000")
+    """
+    None
+    """
     KromsnaveleendBreedDuck_organism_ = AnimalBreedsCode("131827009")
+    """
+    None
+    """
     SilverAppleyardBreedDuck_organism_ = AnimalBreedsCode("131829007")
+    """
+    None
+    """
     PagliarolaSheepBreed_organism_ = AnimalBreedsCode("131830002")
+    """
+    None
+    """
     PomeranianCoarsewoolSheepBreed_organism_ = AnimalBreedsCode("131831003")
+    """
+    None
+    """
     Sheep_BreedUndeterminedSheepBreed_organism_ = AnimalBreedsCode("131832005")
+    """
+    None
+    """
     OrkneySheepBreed_organism_ = AnimalBreedsCode("131833000")
+    """
+    None
+    """
     OldNorwegianSheepBreed_organism_ = AnimalBreedsCode("131834006")
+    """
+    None
+    """
     OldFormatSheepBreed_organism_ = AnimalBreedsCode("131835007")
+    """
+    None
+    """
     NorwegianFurSheepBreed_organism_ = AnimalBreedsCode("131836008")
+    """
+    None
+    """
     NorfolkHornSheepBreed_organism_ = AnimalBreedsCode("131837004")
+    """
+    None
+    """
     Navajo_ChurroSheepBreed_organism_ = AnimalBreedsCode("131838009")
+    """
+    None
+    """
     SwedishYellowBreedDuck_organism_ = AnimalBreedsCode("131839001")
+    """
+    None
+    """
     DiepholzGooseBreed_organism_ = AnimalBreedsCode("131840004")
+    """
+    None
+    """
     AfricanGooseBreed_organism_ = AnimalBreedsCode("131841000")
+    """
+    None
+    """
     EmbdenGooseBreed_organism_ = AnimalBreedsCode("131843002")
+    """
+    None
+    """
     ChineseWhiteGooseBreed_organism_ = AnimalBreedsCode("131844008")
+    """
+    None
+    """
     ChineseBrownGooseBreed_organism_ = AnimalBreedsCode("131845009")
+    """
+    None
+    """
     AmericanBuffGooseBreed_organism_ = AnimalBreedsCode("131847001")
+    """
+    None
+    """
     PomeranianGooseBreed_organism_ = AnimalBreedsCode("131848006")
+    """
+    None
+    """
     RomanGooseBreed_organism_ = AnimalBreedsCode("131849003")
+    """
+    None
+    """
     ScaniaGooseBreed_organism_ = AnimalBreedsCode("131850003")
+    """
+    None
+    """
     RackaSheepBreed_organism_ = AnimalBreedsCode("131851004")
+    """
+    None
+    """
     RasaAragonesaSheepBreed_organism_ = AnimalBreedsCode("131852006")
+    """
+    None
+    """
     RedEngadineSheepBreed_organism_ = AnimalBreedsCode("131853001")
+    """
+    None
+    """
     RhoenschafSheepBreed_organism_ = AnimalBreedsCode("131854007")
+    """
+    None
+    """
     SebastopolGooseBreed_organism_ = AnimalBreedsCode("131855008")
+    """
+    None
+    """
     SwedishIslandGooseBreed_organism_ = AnimalBreedsCode("131856009")
+    """
+    None
+    """
     Vend_enSheepBreed_organism_ = AnimalBreedsCode("131914009")
+    """
+    None
+    """
     SaxonyBreedDuck_organism_ = AnimalBreedsCode("131918007")
+    """
+    None
+    """
     BergamascaSheepBreed_organism_ = AnimalBreedsCode("132681007")
+    """
+    None
+    """
     PortlandSheepBreed_organism_ = AnimalBreedsCode("132682000")
+    """
+    None
+    """
     WeisseHornloseHeidschnuckeSheepBreed_organism_ = AnimalBreedsCode("132684004")
+    """
+    None
+    """
     DrentsHeideschaapSheepBreed_organism_ = AnimalBreedsCode("132685003")
+    """
+    None
+    """
     KameroenSheepBreed_organism_ = AnimalBreedsCode("132686002")
+    """
+    None
+    """
     MergellandSheepBreed_organism_ = AnimalBreedsCode("132687006")
+    """
+    None
+    """
     OuessantSheepBreed_organism_ = AnimalBreedsCode("132688001")
+    """
+    None
+    """
     CanadianArcottSheepBreed_organism_ = AnimalBreedsCode("132689009")
+    """
+    None
+    """
     NoordhollanderSheepBreed_organism_ = AnimalBreedsCode("132690000")
+    """
+    None
+    """
     Rijnlam_ASheepBreed_organism_ = AnimalBreedsCode("132697002")
+    """
+    None
+    """
     SchoonebekerSheepBreed_organism_ = AnimalBreedsCode("132698007")
+    """
+    None
+    """
     WallisBlacknosedSheepBreed_organism_ = AnimalBreedsCode("132699004")
+    """
+    None
+    """
     KhakiCampbellBreedDuck_organism_ = AnimalBreedsCode("132700003")
+    """
+    None
+    """
     NewfoundlandSheepBreed_organism_ = AnimalBreedsCode("132701004")
+    """
+    None
+    """
     WallisCountrySheepBreed_organism_ = AnimalBreedsCode("132702006")
+    """
+    None
+    """
     RideauArcottSheepBreed_organism_ = AnimalBreedsCode("132703001")
+    """
+    None
+    """
     TukidaleSheepBreed_organism_ = AnimalBreedsCode("132704007")
+    """
+    None
+    """
     PolwarthSheepBreed_organism_ = AnimalBreedsCode("132705008")
+    """
+    None
+    """
     RyelandSheepBreed_organism_ = AnimalBreedsCode("132706009")
+    """
+    None
+    """
     ThalliSheepBreed_organism_ = AnimalBreedsCode("132707000")
+    """
+    None
+    """
     TongSheepBreed_organism_ = AnimalBreedsCode("132708005")
+    """
+    None
+    """
     TouabireSheepBreed_organism_ = AnimalBreedsCode("132709002")
+    """
+    None
+    """
     TunisSheepBreed_organism_ = AnimalBreedsCode("132710007")
+    """
+    None
+    """
     TyrolMountainSheepBreed_organism_ = AnimalBreedsCode("132711006")
+    """
+    None
+    """
     UdaSheepBreed_organism_ = AnimalBreedsCode("132712004")
+    """
+    None
+    """
     GermanMuttonMerinoSheepBreed_organism_ = AnimalBreedsCode("132716001")
+    """
+    None
+    """
     Medium_WoolMerinoSheepBreed_organism_ = AnimalBreedsCode("132717005")
+    """
+    None
+    """
     FonthillMerinoSheepBreed_organism_ = AnimalBreedsCode("132718000")
+    """
+    None
+    """
     SouthAfricanMuttonMerinoSheepBreed_organism_ = AnimalBreedsCode("132719008")
+    """
+    None
+    """
     StrongWoolMerinoSheepBreed_organism_ = AnimalBreedsCode("132720002")
+    """
+    None
+    """
     PollMerinoSheepBreed_organism_ = AnimalBreedsCode("132721003")
+    """
+    None
+    """
     FineMerinoSheepBreed_organism_ = AnimalBreedsCode("132722005")
+    """
+    None
+    """
     SouthAfricanMerinoSheepBreed_organism_ = AnimalBreedsCode("132723000")
+    """
+    None
+    """
     SuperfineMerinoSheepBreed_organism_ = AnimalBreedsCode("132724006")
+    """
+    None
+    """
     BooroolaMerinoSheepBreed_organism_ = AnimalBreedsCode("132735001")
+    """
+    None
+    """
     MiniatureHerefordCattleBreed_organism_ = AnimalBreedsCode("132770004")
+    """
+    None
+    """
     SarPlaninaSheepBreed_organism_ = AnimalBreedsCode("132783003")
+    """
+    None
+    """
     SantaIn_sSheepBreed_organism_ = AnimalBreedsCode("132784009")
+    """
+    None
+    """
     Sahel_typeSheepBreed_organism_ = AnimalBreedsCode("132785005")
+    """
+    None
+    """
     RygjaSheepBreed_organism_ = AnimalBreedsCode("132786006")
+    """
+    None
+    """
     RyaSheepBreed_organism_ = AnimalBreedsCode("132787002")
+    """
+    None
+    """
     MoghaniSheepBreed_organism_ = AnimalBreedsCode("132788007")
+    """
+    None
+    """
     RougeDeL_QuestSheepBreed_organism_ = AnimalBreedsCode("132789004")
+    """
+    None
+    """
     SoaySheepBreed_organism_ = AnimalBreedsCode("132790008")
+    """
+    None
+    """
     SouthSuffolkSheepBreed_organism_ = AnimalBreedsCode("132791007")
+    """
+    None
+    """
     SouthWalesMountainSheepBreed_organism_ = AnimalBreedsCode("132792000")
+    """
+    None
+    """
     Sp_lsauSheepBreed_organism_ = AnimalBreedsCode("132793005")
+    """
+    None
+    """
     SpiegelSheepBreed_organism_ = AnimalBreedsCode("132794004")
+    """
+    None
+    """
     St_CroixSheepBreed_organism_ = AnimalBreedsCode("132795003")
+    """
+    None
+    """
     SteigarSheepBreed_organism_ = AnimalBreedsCode("132796002")
+    """
+    None
+    """
     SteinschafSheepBreed_organism_ = AnimalBreedsCode("132797006")
+    """
+    None
+    """
     WelshMountainSheepBreed_organism_ = AnimalBreedsCode("132798001")
+    """
+    None
+    """
     SwedishFurSheepBreed_organism_ = AnimalBreedsCode("132799009")
+    """
+    None
+    """
     TeeswaterSheepBreed_organism_ = AnimalBreedsCode("132800008")
+    """
+    None
+    """
     TexelSheepBreed_organism_ = AnimalBreedsCode("132801007")
+    """
+    None
+    """
     Pelib_eySheepBreed_organism_ = AnimalBreedsCode("132802000")
+    """
+    None
+    """
     MoradaNovaSheepBreed_organism_ = AnimalBreedsCode("132803005")
+    """
+    None
+    """
     BalkhiSheepBreed_organism_ = AnimalBreedsCode("132804004")
+    """
+    None
+    """
     BavarianForestSheepBreed_organism_ = AnimalBreedsCode("132805003")
+    """
+    None
+    """
     BarbadosBlackbellySheepBreed_organism_ = AnimalBreedsCode("132806002")
+    """
+    None
+    """
     RomneySheepBreed_organism_ = AnimalBreedsCode("132807006")
+    """
+    None
+    """
     AwassiSheepBreed_organism_ = AnimalBreedsCode("132808001")
+    """
+    None
+    """
     ArapawaIslandSheepBreed_organism_ = AnimalBreedsCode("132809009")
+    """
+    None
+    """
     ArabiSheepBreed_organism_ = AnimalBreedsCode("132810004")
+    """
+    None
+    """
     ApennineSheepBreed_organism_ = AnimalBreedsCode("132811000")
+    """
+    None
+    """
     AmericanTunisSheepBreed_organism_ = AnimalBreedsCode("132812007")
+    """
+    None
+    """
     BalwenWelshMountainSheepBreed_organism_ = AnimalBreedsCode("132813002")
+    """
+    None
+    """
     PrianganSheepBreed_organism_ = AnimalBreedsCode("132814008")
+    """
+    None
+    """
     RaboLargoSheepBreed_organism_ = AnimalBreedsCode("132815009")
+    """
+    None
+    """
     AltaySheepBreed_organism_ = AnimalBreedsCode("132845007")
+    """
+    None
+    """
     FaeroesSheepBreed_organism_ = AnimalBreedsCode("132846008")
+    """
+    None
+    """
     PittIslandSheepBreed_organism_ = AnimalBreedsCode("132849001")
+    """
+    None
+    """
     PinziritaSheepBreed_organism_ = AnimalBreedsCode("132851002")
+    """
+    None
+    """
     SardinianSheepBreed_organism_ = AnimalBreedsCode("132852009")
+    """
+    None
+    """
     EastFriesianSheepBreed_organism_ = AnimalBreedsCode("132853004")
+    """
+    None
+    """
     UjumqinSheepBreed_organism_ = AnimalBreedsCode("132854005")
+    """
+    None
+    """
     DLSSheepBreed_organism_ = AnimalBreedsCode("132855006")
+    """
+    None
+    """
     WalachenschafSheepBreed_organism_ = AnimalBreedsCode("132856007")
+    """
+    None
+    """
     OutaouaisArcottSheepBreed_organism_ = AnimalBreedsCode("132857003")
+    """
+    None
+    """
     OssimiSheepBreed_organism_ = AnimalBreedsCode("132858008")
+    """
+    None
+    """
     BentheimerLandschafSheepBreed_organism_ = AnimalBreedsCode("132859000")
+    """
+    None
+    """
     BarbadoSheepBreed_organism_ = AnimalBreedsCode("132860005")
+    """
+    None
+    """
     BaluchiSheepBreed_organism_ = AnimalBreedsCode("132861009")
+    """
+    None
+    """
     PoitouDonkeyBreed_organism_ = AnimalBreedsCode("132958007")
+    """
+    None
+    """
     MammothJackStockDonkeyBreed_organism_ = AnimalBreedsCode("132959004")
+    """
+    None
+    """
     LargeStandardDonkey_organism_ = AnimalBreedsCode("132987008")
+    """
+    None
+    """
     StandardDonkey_organism_ = AnimalBreedsCode("132988003")
+    """
+    None
+    """
     MiniatureDonkey_organism_ = AnimalBreedsCode("132989006")
+    """
+    None
+    """
     GarranoTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132990002")
+    """
+    None
+    """
     KoninkTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132991003")
+    """
+    None
+    """
     AsturianTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132992005")
+    """
+    None
+    """
     PottokTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132993000")
+    """
+    None
+    """
     GayalCattleBreed_organism_ = AnimalBreedsCode("133702003")
+    """
+    None
+    """
     AmericanBisonXCattleBreed_organism_ = AnimalBreedsCode("133703008")
+    """
+    None
+    """
     AustralianBrafordCattleBreed_organism_ = AnimalBreedsCode("133704002")
+    """
+    None
+    """
     AustralianFriesianSahiwalCattleBreed_organism_ = AnimalBreedsCode("133715007")
+    """
+    None
+    """
     BrafordCattleBreed_organism_ = AnimalBreedsCode("133716008")
+    """
+    None
+    """
     BrahmousinCattleBreed_organism_ = AnimalBreedsCode("133717004")
+    """
+    None
+    """
     CanchimCattleBreed_organism_ = AnimalBreedsCode("133718009")
+    """
+    None
+    """
     CharbrayCattleBreed_organism_ = AnimalBreedsCode("133719001")
+    """
+    None
+    """
     DroughtmasterCattleBreed_organism_ = AnimalBreedsCode("133720007")
+    """
+    None
+    """
     GelbrayCattleBreed_organism_ = AnimalBreedsCode("133731004")
+    """
+    None
+    """
     JamaicaBlackCattleBreed_organism_ = AnimalBreedsCode("133732006")
+    """
+    None
+    """
     JamaicaHopeCattleBreed_organism_ = AnimalBreedsCode("133733001")
+    """
+    None
+    """
     JamaicaRedCattleBreed_organism_ = AnimalBreedsCode("133734007")
+    """
+    None
+    """
     KaranFriesCattleBreed_organism_ = AnimalBreedsCode("133735008")
+    """
+    None
+    """
     KaranSwissCattleBreed_organism_ = AnimalBreedsCode("133736009")
+    """
+    None
+    """
     MandalongCattleBreed_organism_ = AnimalBreedsCode("133747002")
+    """
+    None
+    """
     AustralianMilkingZebuCattleBreed_organism_ = AnimalBreedsCode("133748007")
+    """
+    None
+    """
     RedBrangusCattleBreed_organism_ = AnimalBreedsCode("133749004")
+    """
+    None
+    """
     SantaCruzCattleBreed_organism_ = AnimalBreedsCode("133750004")
+    """
+    None
+    """
     SiboneyCattleBreed_organism_ = AnimalBreedsCode("133751000")
+    """
+    None
+    """
     BambaraCattleBreed_organism_ = AnimalBreedsCode("133752007")
+    """
+    None
+    """
     BambeyCattleBreed_organism_ = AnimalBreedsCode("133763005")
+    """
+    None
+    """
     BatanesBlackCattleBreed_organism_ = AnimalBreedsCode("133764004")
+    """
+    None
+    """
     BorgouCattleBreed_organism_ = AnimalBreedsCode("133765003")
+    """
+    None
+    """
     BrahornCattleBreed_organism_ = AnimalBreedsCode("133766002")
+    """
+    None
+    """
     BralersCattleBreed_organism_ = AnimalBreedsCode("133767006")
+    """
+    None
+    """
     Bra_MaineCattleBreed_organism_ = AnimalBreedsCode("133768001")
+    """
+    None
+    """
     Bra_SwissCattleBreed_organism_ = AnimalBreedsCode("133779006")
+    """
+    None
+    """
     BravonCattleBreed_organism_ = AnimalBreedsCode("133780009")
+    """
+    None
+    """
     BrazilianDairyHybridCattle_organism_ = AnimalBreedsCode("133781008")
+    """
+    None
+    """
     BurmeseCattleBreed_organism_ = AnimalBreedsCode("133782001")
+    """
+    None
+    """
     BushuevCattleBreed_organism_ = AnimalBreedsCode("133783006")
+    """
+    None
+    """
     CaiuaCattleBreed_organism_ = AnimalBreedsCode("133784000")
+    """
+    None
+    """
     CarazebuCattleBreed_organism_ = AnimalBreedsCode("133795006")
+    """
+    None
+    """
     CentralAsianZebuCattleBreed_organism_ = AnimalBreedsCode("133796007")
+    """
+    None
+    """
     CharfordCattleBreed_organism_ = AnimalBreedsCode("133797003")
+    """
+    None
+    """
     CubanCriolloCattleBreed_organism_ = AnimalBreedsCode("133798008")
+    """
+    None
+    """
     CubanZebuCattleBreed_organism_ = AnimalBreedsCode("133799000")
+    """
+    None
+    """
     DishtyCattleBreed_organism_ = AnimalBreedsCode("133800001")
+    """
+    None
+    """
     DjakoreCattleBreed_organism_ = AnimalBreedsCode("133801002")
+    """
+    None
+    """
     GambianN_DamaCattleBreed_organism_ = AnimalBreedsCode("133802009")
+    """
+    None
+    """
     GhanaSangaCattleBreed_organism_ = AnimalBreedsCode("133803004")
+    """
+    None
+    """
     GirolandoCattleBreed_organism_ = AnimalBreedsCode("133804005")
+    """
+    None
+    """
     GuzerandoCattleBreed_organism_ = AnimalBreedsCode("133805006")
+    """
+    None
+    """
     HattonCattleBreed_organism_ = AnimalBreedsCode("133806007")
+    """
+    None
+    """
     IbageCattleBreed_organism_ = AnimalBreedsCode("133807003")
+    """
+    None
+    """
     IraqiCattleBreed_organism_ = AnimalBreedsCode("133808008")
+    """
+    None
+    """
     JerdiCattleBreed_organism_ = AnimalBreedsCode("133809000")
+    """
+    None
+    """
     JersindCattleBreed_organism_ = AnimalBreedsCode("133810005")
+    """
+    None
+    """
     JotkoCattleBreed_organism_ = AnimalBreedsCode("133811009")
+    """
+    None
+    """
     KanemCattleBreed_organism_ = AnimalBreedsCode("133812002")
+    """
+    None
+    """
     KetekuCattleBreed_organism_ = AnimalBreedsCode("133813007")
+    """
+    None
+    """
     LaviniaCattleBreed_organism_ = AnimalBreedsCode("133814001")
+    """
+    None
+    """
     LocalIndianDairyCattleBreed_organism_ = AnimalBreedsCode("133815000")
+    """
+    None
+    """
     MantiqueiraCattleBreed_organism_ = AnimalBreedsCode("133816004")
+    """
+    None
+    """
     NdaguCattleBreed_organism_ = AnimalBreedsCode("133817008")
+    """
+    None
+    """
     NormanzuCattleBreed_organism_ = AnimalBreedsCode("133818003")
+    """
+    None
+    """
     NubaMountainCattleBreed_organism_ = AnimalBreedsCode("133819006")
+    """
+    None
+    """
     PabnaCattleBreed_organism_ = AnimalBreedsCode("133820000")
+    """
+    None
+    """
     MixedPerijaneroCattleBreed_organism_ = AnimalBreedsCode("133821001")
+    """
+    None
+    """
     PitangueirasCattleBreed_organism_ = AnimalBreedsCode("133822008")
+    """
+    None
+    """
     QuasahCattleBreed_organism_ = AnimalBreedsCode("133823003")
+    """
+    None
+    """
     RanaCattle_organism_ = AnimalBreedsCode("133824009")
+    """
+    None
+    """
     RangerCattle_organism_ = AnimalBreedsCode("133825005")
+    """
+    None
+    """
     ReniteloCattleBreed_organism_ = AnimalBreedsCode("133826006")
+    """
+    None
+    """
     RiopardenzeCattleBreed_organism_ = AnimalBreedsCode("133827002")
+    """
+    None
+    """
     RustaqiCattleBreed_organism_ = AnimalBreedsCode("133828007")
+    """
+    None
+    """
     SabreCattleBreed_organism_ = AnimalBreedsCode("133829004")
+    """
+    None
+    """
     SahfordCattleBreed_organism_ = AnimalBreedsCode("133830009")
+    """
+    None
+    """
     Schwyz_ZeboidCattleBreed_organism_ = AnimalBreedsCode("133831008")
+    """
+    None
+    """
     SuiaCattleBreed_organism_ = AnimalBreedsCode("133832001")
+    """
+    None
+    """
     SuisbuCattleBreed_organism_ = AnimalBreedsCode("133833006")
+    """
+    None
+    """
     SunandiniCattleBreed_organism_ = AnimalBreedsCode("133834000")
+    """
+    None
+    """
     TainoCattleBreed_organism_ = AnimalBreedsCode("133835004")
+    """
+    None
+    """
     ThibarCattleBreed_organism_ = AnimalBreedsCode("133836003")
+    """
+    None
+    """
     ToubouCattleBreed_organism_ = AnimalBreedsCode("133837007")
+    """
+    None
+    """
     TropicalCattleBreed_organism_ = AnimalBreedsCode("133838002")
+    """
+    None
+    """
     TSSH_1CattleBreed_organism_ = AnimalBreedsCode("133839005")
+    """
+    None
+    """
     VictoriaCattleBreed_organism_ = AnimalBreedsCode("133840007")
+    """
+    None
+    """
     WokalupCattleBreed_organism_ = AnimalBreedsCode("133841006")
+    """
+    None
+    """
     MaduraCattleBreed_organism_ = AnimalBreedsCode("133842004")
+    """
+    None
+    """
     GalwaySheepBreed_organism_ = AnimalBreedsCode("406660008")
+    """
+    None
+    """
     MixedBreedSheep_organism_ = AnimalBreedsCode("406722006")
+    """
+    None
+    """
     MoulardDuckBreed_organism_ = AnimalBreedsCode("409911001")
+    """
+    None
+    """
     CapraHircus_organism_ = AnimalBreedsCode("125097000")
+    """
+    None
+    """
     OvisAries_organism_ = AnimalBreedsCode("125099002")
+    """
+    None
+    """
     DorsetSheepSuperbreed_organism_ = AnimalBreedsCode("25327001")
+    """
+    None
+    """
     MerinoSheepSuperbreed_organism_ = AnimalBreedsCode("125101009")
+    """
+    None
+    """
     SaanenGoat_organism_ = AnimalBreedsCode("21208000")
+    """
+    None
+    """
     BisonBisonXSimmentalHybridCattleBreed_organism_ = AnimalBreedsCode("424705003")
+    """
+    None
+    """
     SaddlebredHorseSuperbreed_organism_ = AnimalBreedsCode("427136006")
+    """
+    None
+    """
     EquusCaballus_organism_ = AnimalBreedsCode("35354009")
+    """
+    None
+    """
     EquusCaballusGmeliniXEquusCaballusCaballus_organism_ = AnimalBreedsCode("125086000")
+    """
+    None
+    """
     AbtenauerHorseBreed_organism_ = AnimalBreedsCode("133068005")
+    """
+    None
+    """
     AdaevHorseBreed_organism_ = AnimalBreedsCode("133069002")
+    """
+    None
+    """
     AlbanianHorseBreed_organism_ = AnimalBreedsCode("133070001")
+    """
+    None
+    """
     AlterRealHorseBreed_organism_ = AnimalBreedsCode("133071002")
+    """
+    None
+    """
     AltaiHorseBreed_organism_ = AnimalBreedsCode("133120002")
+    """
+    None
+    """
     Akhal_TekeHorseBreed_organism_ = AnimalBreedsCode("133121003")
+    """
+    None
+    """
     AbyssinianHorseBreed_organism_ = AnimalBreedsCode("133122005")
+    """
+    None
+    """
     ClydesdaleHorse_organism_ = AnimalBreedsCode("1247002")
+    """
+    None
+    """
     AmericanPaintHorse_organism_ = AnimalBreedsCode("7623008")
+    """
+    None
+    """
     BelgianHorse_organism_ = AnimalBreedsCode("22720009")
+    """
+    None
+    """
     AmericanCreamHorse_organism_ = AnimalBreedsCode("26837006")
+    """
+    None
+    """
     AmericanTrotterHorse_organism_ = AnimalBreedsCode("26973000")
+    """
+    None
+    """
     ClevelandBayHorse_organism_ = AnimalBreedsCode("41092008")
+    """
+    None
+    """
     AmericanAlbinoHorse_organism_ = AnimalBreedsCode("45790002")
+    """
+    None
+    """
     AmericanPony_organism_ = AnimalBreedsCode("46408008")
+    """
+    None
+    """
     CanadianHorse_organism_ = AnimalBreedsCode("47842004")
+    """
+    None
+    """
     ArabianHorse_organism_ = AnimalBreedsCode("54098002")
+    """
+    None
+    """
     AmericanMiniatureHorse_organism_ = AnimalBreedsCode("54699009")
+    """
+    None
+    """
     AppaloosaHorse_organism_ = AnimalBreedsCode("55167009")
+    """
+    None
+    """
     AmericanTunisHorse_organism_ = AnimalBreedsCode("72394007")
+    """
+    None
+    """
     AndalusianHorse_organism_ = AnimalBreedsCode("80777007")
+    """
+    None
+    """
     AmericanBuckskinHorse_organism_ = AnimalBreedsCode("90050009")
+    """
+    None
+    """
     AraAppaloosaHorseBreed_organism_ = AnimalBreedsCode("131862004")
+    """
+    None
+    """
     ArgentineCriolloHorseBreed_organism_ = AnimalBreedsCode("131863009")
+    """
+    None
+    """
     ArgentinePoloPonyHorseBreed_organism_ = AnimalBreedsCode("131864003")
+    """
+    None
+    """
     AustralianPonyHorseBreed_organism_ = AnimalBreedsCode("131865002")
+    """
+    None
+    """
     AuxoisHorseBreed_organism_ = AnimalBreedsCode("131866001")
+    """
+    None
+    """
     AveligneseHorseBreed_organism_ = AnimalBreedsCode("131867005")
+    """
+    None
+    """
     AzerbaijanHorseBreed_organism_ = AnimalBreedsCode("131868000")
+    """
+    None
+    """
     AzoresHorseBreed_organism_ = AnimalBreedsCode("131869008")
+    """
+    None
+    """
     BaliHorseBreed_organism_ = AnimalBreedsCode("131870009")
+    """
+    None
+    """
     BalikunHorseBreed_organism_ = AnimalBreedsCode("131871008")
+    """
+    None
+    """
     BankerHorseHorseBreed_organism_ = AnimalBreedsCode("131873006")
+    """
+    None
+    """
     BardigianoHorseBreed_organism_ = AnimalBreedsCode("131874000")
+    """
+    None
+    """
     BatakHorseBreed_organism_ = AnimalBreedsCode("131875004")
+    """
+    None
+    """
     BelgianArdennaisHorseBreed_organism_ = AnimalBreedsCode("131877007")
+    """
+    None
+    """
     BelgianHalfbloodHorseBreed_organism_ = AnimalBreedsCode("131878002")
+    """
+    None
+    """
     BhutiaHorseBreed_organism_ = AnimalBreedsCode("131880008")
+    """
+    None
+    """
     BlackSeaHorseHorseBreed_organism_ = AnimalBreedsCode("131881007")
+    """
+    None
+    """
     BosnianHorseBreed_organism_ = AnimalBreedsCode("131882000")
+    """
+    None
+    """
     BoulonnaisHorseBreed_organism_ = AnimalBreedsCode("131883005")
+    """
+    None
+    """
     BrandenburgHorseBreed_organism_ = AnimalBreedsCode("131884004")
+    """
+    None
+    """
     BrazilianSportHorseHorseBreed_organism_ = AnimalBreedsCode("131885003")
+    """
+    None
+    """
     BritishAppaloosaHorseBreed_organism_ = AnimalBreedsCode("131886002")
+    """
+    None
+    """
     BritishRidingPonyHorseBreed_organism_ = AnimalBreedsCode("131887006")
+    """
+    None
+    """
     BritishSpottedPonyHorseBreed_organism_ = AnimalBreedsCode("131888001")
+    """
+    None
+    """
     BuohaiHorseBreed_organism_ = AnimalBreedsCode("131889009")
+    """
+    None
+    """
     BuryatHorseBreed_organism_ = AnimalBreedsCode("131890000")
+    """
+    None
+    """
     CalabrianHorseBreed_organism_ = AnimalBreedsCode("131891001")
+    """
+    None
+    """
     CamargueHorseBreed_organism_ = AnimalBreedsCode("131892008")
+    """
+    None
+    """
     CanadianCuttingHorseHorseBreed_organism_ = AnimalBreedsCode("131893003")
+    """
+    None
+    """
     CanadianRusticPonyHorseBreed_organism_ = AnimalBreedsCode("131894009")
+    """
+    None
+    """
     CanadianSportHorseHorseBreed_organism_ = AnimalBreedsCode("131895005")
+    """
+    None
+    """
     CanikHorseBreed_organism_ = AnimalBreedsCode("131896006")
+    """
+    None
+    """
     CapeHorseHorseBreed_organism_ = AnimalBreedsCode("131897002")
+    """
+    None
+    """
     CerbatHorseBreed_organism_ = AnimalBreedsCode("131898007")
+    """
+    None
+    """
     ChakouyiHorseBreed_organism_ = AnimalBreedsCode("131899004")
+    """
+    None
+    """
     CharaHorseHorseBreed_organism_ = AnimalBreedsCode("131900009")
+    """
+    None
+    """
     ChickasawHorseBreed_organism_ = AnimalBreedsCode("131901008")
+    """
+    None
+    """
     ChiloteHorseBreed_organism_ = AnimalBreedsCode("131902001")
+    """
+    None
+    """
     ChineseKazakhHorseBreed_organism_ = AnimalBreedsCode("131903006")
+    """
+    None
+    """
     ChineseMongolianHorseBreed_organism_ = AnimalBreedsCode("131904000")
+    """
+    None
+    """
     ChumbivilcasHorseBreed_organism_ = AnimalBreedsCode("131905004")
+    """
+    None
+    """
     ChumyshHorseBreed_organism_ = AnimalBreedsCode("131906003")
+    """
+    None
+    """
     CiritHorseBreed_organism_ = AnimalBreedsCode("131907007")
+    """
+    None
+    """
     BadenWurttemburgHorseBreed_organism_ = AnimalBreedsCode("132731005")
+    """
+    None
+    """
     AmericanIndianHorseHorseBreed_organism_ = AnimalBreedsCode("132951001")
+    """
+    None
+    """
     AmericanMustangHorseBreed_organism_ = AnimalBreedsCode("132952008")
+    """
+    None
+    """
     AmericanQuarterHorseHorseBreed_organism_ = AnimalBreedsCode("132953003")
+    """
+    None
+    """
     AmericanShetlandPonyHorseBreed_organism_ = AnimalBreedsCode("132954009")
+    """
+    None
+    """
     AnadoluHorseBreed_organism_ = AnimalBreedsCode("132955005")
+    """
+    None
+    """
     AndeanHorseBreed_organism_ = AnimalBreedsCode("132956006")
+    """
+    None
+    """
     Anglo_KabardaHorseBreed_organism_ = AnimalBreedsCode("132957002")
+    """
+    None
+    """
     Anglo_ArabHorseBreed_organism_ = AnimalBreedsCode("133044002")
+    """
+    None
+    """
     AmericanBashkirCurlyHorseBreed_organism_ = AnimalBreedsCode("133072009")
+    """
+    None
+    """
     ChincoteaguePonyHorseBreed_organism_ = AnimalBreedsCode("133101004")
+    """
+    None
+    """
     ArdennesHorseBreed_organism_ = AnimalBreedsCode("133116001")
+    """
+    None
+    """
     AmericanWalkingPonyHorseBreed_organism_ = AnimalBreedsCode("133117005")
+    """
+    None
+    """
     AztecaHorseBreed_organism_ = AnimalBreedsCode("133118000")
+    """
+    None
+    """
     AmericanCreamDraftHorseBreed_organism_ = AnimalBreedsCode("133119008")
+    """
+    None
+    """
     BhirumPonyHorseBreed_organism_ = AnimalBreedsCode("133123000")
+    """
+    None
+    """
     ChejuHorseBreed_organism_ = AnimalBreedsCode("133124006")
+    """
+    None
+    """
     CayuseHorseBreed_organism_ = AnimalBreedsCode("133125007")
+    """
+    None
+    """
     CaspianHorseBreed_organism_ = AnimalBreedsCode("133126008")
+    """
+    None
+    """
     CarthusianHorseBreed_organism_ = AnimalBreedsCode("133127004")
+    """
+    None
+    """
     CampolinaHorseBreed_organism_ = AnimalBreedsCode("133128009")
+    """
+    None
+    """
     ByelorussianHarnessHorseBreed_organism_ = AnimalBreedsCode("133129001")
+    """
+    None
+    """
     BudyonnyHorseBreed_organism_ = AnimalBreedsCode("133130006")
+    """
+    None
+    """
     AustralianBrumbyHorseBreed_organism_ = AnimalBreedsCode("133131005")
+    """
+    None
+    """
     AustralianStockHorseHorseBreed_organism_ = AnimalBreedsCode("133132003")
+    """
+    None
+    """
     BasutoPonyHorseBreed_organism_ = AnimalBreedsCode("133133008")
+    """
+    None
+    """
     BashkirCurlyHorseBreed_organism_ = AnimalBreedsCode("133134002")
+    """
+    None
+    """
     BashkirHorseBreed_organism_ = AnimalBreedsCode("133135001")
+    """
+    None
+    """
     BarbHorseBreed_organism_ = AnimalBreedsCode("133136000")
+    """
+    None
+    """
     Ban_eiHorseBreed_organism_ = AnimalBreedsCode("133137009")
+    """
+    None
+    """
     CarpathianPonyHorseBreed_organism_ = AnimalBreedsCode("133138004")
+    """
+    None
+    """
     BaluchiHorseBreed_organism_ = AnimalBreedsCode("133139007")
+    """
+    None
+    """
     BalearicHorseBreed_organism_ = AnimalBreedsCode("133140009")
+    """
+    None
+    """
     ChileanCorraleroHorseBreed_organism_ = AnimalBreedsCode("133141008")
+    """
+    None
+    """
     BretonHorseBreed_organism_ = AnimalBreedsCode("133142001")
+    """
+    None
+    """
     BrabantHorse_organism_ = AnimalBreedsCode("406711007")
+    """
+    None
+    """
     GalicenoHorse_organism_ = AnimalBreedsCode("6220006")
+    """
+    None
+    """
     HunterHorse_organism_ = AnimalBreedsCode("19356005")
+    """
+    None
+    """
     HolsteinerHorse_organism_ = AnimalBreedsCode("25813002")
+    """
+    None
+    """
     LipizzanerHorse_organism_ = AnimalBreedsCode("41754002")
+    """
+    None
+    """
     HaflingerHorse_organism_ = AnimalBreedsCode("54447000")
+    """
+    None
+    """
     HanoverianHorse_organism_ = AnimalBreedsCode("66168008")
+    """
+    None
+    """
     IcelandicHorse_organism_ = AnimalBreedsCode("70457009")
+    """
+    None
+    """
     FjordHorse_organism_ = AnimalBreedsCode("89648005")
+    """
+    None
+    """
     HackneyHorse_organism_ = AnimalBreedsCode("112488001")
+    """
+    None
+    """
     EquusCaballusGmelini_organism_ = AnimalBreedsCode("125084002")
+    """
+    None
+    """
     ColombianCriolloHorseBreed_organism_ = AnimalBreedsCode("131804001")
+    """
+    None
+    """
     ComtoisHorseBreed_organism_ = AnimalBreedsCode("131805000")
+    """
+    None
+    """
     CorsicanHorseBreed_organism_ = AnimalBreedsCode("131806004")
+    """
+    None
+    """
     CostaRicanSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("131807008")
+    """
+    None
+    """
     CostenoHorseBreed_organism_ = AnimalBreedsCode("131808003")
+    """
+    None
+    """
     CubanPasoHorseBreed_organism_ = AnimalBreedsCode("131809006")
+    """
+    None
+    """
     HuculHorseBreed_organism_ = AnimalBreedsCode("131861006")
+    """
+    None
+    """
     IrishDraftHorseBreed_organism_ = AnimalBreedsCode("131908002")
+    """
+    None
+    """
     IrishHunterHorseBreed_organism_ = AnimalBreedsCode("131909005")
+    """
+    None
+    """
     CubanTrotterHorseBreed_organism_ = AnimalBreedsCode("131910000")
+    """
+    None
+    """
     ItalianHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("131911001")
+    """
+    None
+    """
     JabeHorseBreed_organism_ = AnimalBreedsCode("131912008")
+    """
+    None
+    """
     JavaHorseBreed_organism_ = AnimalBreedsCode("131913003")
+    """
+    None
+    """
     JinhongHorseBreed_organism_ = AnimalBreedsCode("131916006")
+    """
+    None
+    """
     JinzhouHorseBreed_organism_ = AnimalBreedsCode("131917002")
+    """
+    None
+    """
     DanubianHorseBreed_organism_ = AnimalBreedsCode("131919004")
+    """
+    None
+    """
     KarachaiHorseBreed_organism_ = AnimalBreedsCode("131920005")
+    """
+    None
+    """
     KarakacanHorseBreed_organism_ = AnimalBreedsCode("131921009")
+    """
+    None
+    """
     KathiawariHorseBreed_organism_ = AnimalBreedsCode("131922002")
+    """
+    None
+    """
     Ke_Er_QinHorseBreed_organism_ = AnimalBreedsCode("131923007")
+    """
+    None
+    """
     KirgizHorseBreed_organism_ = AnimalBreedsCode("131924001")
+    """
+    None
+    """
     KuznetHorseBreed_organism_ = AnimalBreedsCode("131925000")
+    """
+    None
+    """
     LandaisHorseBreed_organism_ = AnimalBreedsCode("131926004")
+    """
+    None
+    """
     LewitzerHorseBreed_organism_ = AnimalBreedsCode("131927008")
+    """
+    None
+    """
     LichuanHorseBreed_organism_ = AnimalBreedsCode("131928003")
+    """
+    None
+    """
     LijiangHorseBreed_organism_ = AnimalBreedsCode("131929006")
+    """
+    None
+    """
     LlaneroHorseBreed_organism_ = AnimalBreedsCode("131930001")
+    """
+    None
+    """
     LombokHorseBreed_organism_ = AnimalBreedsCode("131931002")
+    """
+    None
+    """
     LundyPonyHorseBreed_organism_ = AnimalBreedsCode("131932009")
+    """
+    None
+    """
     MalakanHorseBreed_organism_ = AnimalBreedsCode("131933004")
+    """
+    None
+    """
     MalopolskiHorseBreed_organism_ = AnimalBreedsCode("131934005")
+    """
+    None
+    """
     DatongHorseBreed_organism_ = AnimalBreedsCode("131935006")
+    """
+    None
+    """
     MangalargaPaulistaHorseBreed_organism_ = AnimalBreedsCode("131936007")
+    """
+    None
+    """
     DulmenPonyHorseBreed_organism_ = AnimalBreedsCode("131937003")
+    """
+    None
+    """
     DutchTuigpaardHorseBreed_organism_ = AnimalBreedsCode("131947000")
+    """
+    None
+    """
     EastAndSoutheastAnadoluHorseBreed_organism_ = AnimalBreedsCode("131948005")
+    """
+    None
+    """
     EnglishHackHorseBreed_organism_ = AnimalBreedsCode("131964002")
+    """
+    None
+    """
     GermanRidingPonyHorseBreed_organism_ = AnimalBreedsCode("131972000")
+    """
+    None
+    """
     GuanzhongHorseBreed_organism_ = AnimalBreedsCode("131973005")
+    """
+    None
+    """
     GuizhouHorseBreed_organism_ = AnimalBreedsCode("131974004")
+    """
+    None
+    """
     GuoxiaHorseBreed_organism_ = AnimalBreedsCode("131975003")
+    """
+    None
+    """
     ErlunchunHorseBreed_organism_ = AnimalBreedsCode("131976002")
+    """
+    None
+    """
     HalfSaddlebredHorseBreed_organism_ = AnimalBreedsCode("131977006")
+    """
+    None
+    """
     FloresHorseBreed_organism_ = AnimalBreedsCode("131978001")
+    """
+    None
+    """
     FreibergHorseBreed_organism_ = AnimalBreedsCode("131979009")
+    """
+    None
+    """
     HessenHorseBreed_organism_ = AnimalBreedsCode("131980007")
+    """
+    None
+    """
     HinisHorseBreed_organism_ = AnimalBreedsCode("131981006")
+    """
+    None
+    """
     HirzaiHorseBreed_organism_ = AnimalBreedsCode("131982004")
+    """
+    None
+    """
     HungarianColdbloodHorseBreed_organism_ = AnimalBreedsCode("131983009")
+    """
+    None
+    """
     HungarianDunHorseBreed_organism_ = AnimalBreedsCode("131984003")
+    """
+    None
+    """
     HungarianSportHorseHorseBreed_organism_ = AnimalBreedsCode("131985002")
+    """
+    None
+    """
     InternationalStripedHorseHorseBreed_organism_ = AnimalBreedsCode("131986001")
+    """
+    None
+    """
     IrishCobHorseBreed_organism_ = AnimalBreedsCode("131987005")
+    """
+    None
+    """
     FrenchCobHorseBreed_organism_ = AnimalBreedsCode("131990004")
+    """
+    None
+    """
     FrenchSaddlePonyHorseBreed_organism_ = AnimalBreedsCode("131991000")
+    """
+    None
+    """
     FinnhorseDraftHorseBreed_organism_ = AnimalBreedsCode("131993002")
+    """
+    None
+    """
     IsraeliHorseBreed_organism_ = AnimalBreedsCode("132733008")
+    """
+    None
+    """
     FrenchArdennaisHorseBreed_organism_ = AnimalBreedsCode("132734002")
+    """
+    None
+    """
     CukurovaHorseBreed_organism_ = AnimalBreedsCode("132736000")
+    """
+    None
+    """
     CzechColdbloodHorseBreed_organism_ = AnimalBreedsCode("132737009")
+    """
+    None
+    """
     CzechoslovakianSmallRidingHorseHorseBreed_organism_ = AnimalBreedsCode("132738004")
+    """
+    None
+    """
     JianchangHorseBreed_organism_ = AnimalBreedsCode("132739007")
+    """
+    None
+    """
     JielinHorseBreed_organism_ = AnimalBreedsCode("132740009")
+    """
+    None
+    """
     EleiaHorseBreed_organism_ = AnimalBreedsCode("132742001")
+    """
+    None
+    """
     EnglishCobHorseBreed_organism_ = AnimalBreedsCode("132743006")
+    """
+    None
+    """
     EnglishHunterHorseBreed_organism_ = AnimalBreedsCode("132746003")
+    """
+    None
+    """
     EriskayPonyHorseBreed_organism_ = AnimalBreedsCode("132747007")
+    """
+    None
+    """
     HackneyPonyHorseBreed_organism_ = AnimalBreedsCode("132748002")
+    """
+    None
+    """
     EstonianDraftHorseBreed_organism_ = AnimalBreedsCode("132749005")
+    """
+    None
+    """
     HeiheHorseBreed_organism_ = AnimalBreedsCode("132750005")
+    """
+    None
+    """
     HeilongkaingHorseBreed_organism_ = AnimalBreedsCode("132751009")
+    """
+    None
+    """
     DanishSportPonyHorseBreed_organism_ = AnimalBreedsCode("132757008")
+    """
+    None
+    """
     KabardaHorseBreed_organism_ = AnimalBreedsCode("132758003")
+    """
+    None
+    """
     KalmykHorseBreed_organism_ = AnimalBreedsCode("132759006")
+    """
+    None
+    """
     MangalargaMarchadorHorseBreed_organism_ = AnimalBreedsCode("132760001")
+    """
+    None
+    """
     DonHorseBreed_organism_ = AnimalBreedsCode("132761002")
+    """
+    None
+    """
     EastBulgarianHorseBreed_organism_ = AnimalBreedsCode("132765006")
+    """
+    None
+    """
     EastFriesian_OldType_HorseBreed_organism_ = AnimalBreedsCode("132766007")
+    """
+    None
+    """
     FrenchTrotterHorseBreed_organism_ = AnimalBreedsCode("132774008")
+    """
+    None
+    """
     FuriosoHorseBreed_organism_ = AnimalBreedsCode("132775009")
+    """
+    None
+    """
     DanishOldenborgHorseBreed_organism_ = AnimalBreedsCode("132779003")
+    """
+    None
+    """
     FellPonyHorseBreed_organism_ = AnimalBreedsCode("132996008")
+    """
+    None
+    """
     DutchDraftHorseBreed_organism_ = AnimalBreedsCode("133016003")
+    """
+    None
+    """
     EgyptianHorseBreed_organism_ = AnimalBreedsCode("133017007")
+    """
+    None
+    """
     EstonianNativeHorseBreed_organism_ = AnimalBreedsCode("133018002")
+    """
+    None
+    """
     ExmoorPonyHorseBreed_organism_ = AnimalBreedsCode("133019005")
+    """
+    None
+    """
     FaeroesIslandHorseHorseBreed_organism_ = AnimalBreedsCode("133020004")
+    """
+    None
+    """
     FalabellaHorseBreed_organism_ = AnimalBreedsCode("133021000")
+    """
+    None
+    """
     DongolaHorseBreed_organism_ = AnimalBreedsCode("133023002")
+    """
+    None
+    """
     D_leHorseBreed_organism_ = AnimalBreedsCode("133024008")
+    """
+    None
+    """
     DjermaHorseBreed_organism_ = AnimalBreedsCode("133025009")
+    """
+    None
+    """
     DelibozHorseBreed_organism_ = AnimalBreedsCode("133026005")
+    """
+    None
+    """
     DartmoorPonyHorseBreed_organism_ = AnimalBreedsCode("133027001")
+    """
+    None
+    """
     CriouloHorseBreed_organism_ = AnimalBreedsCode("133028006")
+    """
+    None
+    """
     FinnhorseHorseBreed_organism_ = AnimalBreedsCode("133029003")
+    """
+    None
+    """
     M_BayarHorseBreed_organism_ = AnimalBreedsCode("133034004")
+    """
+    None
+    """
     LusitanoHorseBreed_organism_ = AnimalBreedsCode("133035003")
+    """
+    None
+    """
     KisberFelverHorseBreed_organism_ = AnimalBreedsCode("133043008")
+    """
+    None
+    """
     IomudHorseBreed_organism_ = AnimalBreedsCode("133047009")
+    """
+    None
+    """
     JutlandHorseBreed_organism_ = AnimalBreedsCode("133048004")
+    """
+    None
+    """
     KarabairHorseBreed_organism_ = AnimalBreedsCode("133049007")
+    """
+    None
+    """
     KarabakhHorseBreed_organism_ = AnimalBreedsCode("133050007")
+    """
+    None
+    """
     KazakhHorseBreed_organism_ = AnimalBreedsCode("133051006")
+    """
+    None
+    """
     MangalargaHorseBreed_organism_ = AnimalBreedsCode("133052004")
+    """
+    None
+    """
     KirdiPonyHorseBreed_organism_ = AnimalBreedsCode("133053009")
+    """
+    None
+    """
     KisoHorseBreed_organism_ = AnimalBreedsCode("133054003")
+    """
+    None
+    """
     KladrubyHorseBreed_organism_ = AnimalBreedsCode("133055002")
+    """
+    None
+    """
     KnabstrupHorseBreed_organism_ = AnimalBreedsCode("133056001")
+    """
+    None
+    """
     KushumHorseBreed_organism_ = AnimalBreedsCode("133057005")
+    """
+    None
+    """
     KustanaiHorseBreed_organism_ = AnimalBreedsCode("133058000")
+    """
+    None
+    """
     LatvianHorseBreed_organism_ = AnimalBreedsCode("133059008")
+    """
+    None
+    """
     LithuanianHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133060003")
+    """
+    None
+    """
     LokaiHorseBreed_organism_ = AnimalBreedsCode("133061004")
+    """
+    None
+    """
     KigerMustangHorseBreed_organism_ = AnimalBreedsCode("133062006")
+    """
+    None
+    """
     CriolloHorseBreed_organism_ = AnimalBreedsCode("133095000")
+    """
+    None
+    """
     HequHorseBreed_organism_ = AnimalBreedsCode("133096004")
+    """
+    None
+    """
     ConnemaraPonyHorseBreed_organism_ = AnimalBreedsCode("133097008")
+    """
+    None
+    """
     ColoradoRangerHorseBreed_organism_ = AnimalBreedsCode("133098003")
+    """
+    None
+    """
     DalesPonyHorseBreed_organism_ = AnimalBreedsCode("133099006")
+    """
+    None
+    """
     GotlandHorseBreed_organism_ = AnimalBreedsCode("133100003")
+    """
+    None
+    """
     HokkaidoHorseBreed_organism_ = AnimalBreedsCode("133102006")
+    """
+    None
+    """
     HighlandPonyHorseBreed_organism_ = AnimalBreedsCode("133103001")
+    """
+    None
+    """
     GroningenHorseBreed_organism_ = AnimalBreedsCode("133104007")
+    """
+    None
+    """
     CubanPintoHorseBreed_organism_ = AnimalBreedsCode("133105008")
+    """
+    None
+    """
     FleuveHorseBreed_organism_ = AnimalBreedsCode("133106009")
+    """
+    None
+    """
     GidranHorseBreed_organism_ = AnimalBreedsCode("133108005")
+    """
+    None
+    """
     GelderlandHorseBreed_organism_ = AnimalBreedsCode("133109002")
+    """
+    None
+    """
     GalicianPonyHorseBreed_organism_ = AnimalBreedsCode("133110007")
+    """
+    None
+    """
     FriesianHorseBreed_organism_ = AnimalBreedsCode("133111006")
+    """
+    None
+    """
     FrederiksborgHorseBreed_organism_ = AnimalBreedsCode("133112004")
+    """
+    None
+    """
     FoutaHorseBreed_organism_ = AnimalBreedsCode("133113009")
+    """
+    None
+    """
     FloridaCrackerHorseBreed_organism_ = AnimalBreedsCode("133114003")
+    """
+    None
+    """
     GuangxiHorseBreed_organism_ = AnimalBreedsCode("133115002")
+    """
+    None
+    """
     GypsyVannerHorse_organism_ = AnimalBreedsCode("406714004")
+    """
+    None
+    """
     PercheronHorse_organism_ = AnimalBreedsCode("1006005")
+    """
+    None
+    """
     ThoroughbredHorse_organism_ = AnimalBreedsCode("4288003")
+    """
+    None
+    """
     PeruvianPasoHorse_organism_ = AnimalBreedsCode("4960000")
+    """
+    None
+    """
     MissouriFoxTrottingHorse_organism_ = AnimalBreedsCode("12360007")
+    """
+    None
+    """
     ShireHorse_organism_ = AnimalBreedsCode("13487004")
+    """
+    None
+    """
     MorganHorse_organism_ = AnimalBreedsCode("21295007")
+    """
+    None
+    """
     NewForestPony_organism_ = AnimalBreedsCode("26699009")
+    """
+    None
+    """
     StandardbredHorse_organism_ = AnimalBreedsCode("34200004")
+    """
+    None
+    """
     NormanCoachHorse_organism_ = AnimalBreedsCode("39532001")
+    """
+    None
+    """
     PalominoHorse_organism_ = AnimalBreedsCode("41738000")
+    """
+    None
+    """
     TennesseeWalkingHorse_organism_ = AnimalBreedsCode("51023000")
+    """
+    None
+    """
     SuffolkHorse_organism_ = AnimalBreedsCode("53567001")
+    """
+    None
+    """
     PasoFinoHorse_organism_ = AnimalBreedsCode("56086005")
+    """
+    None
+    """
     Pinto_organism_ = AnimalBreedsCode("58264006")
+    """
+    None
+    """
     ShetlandPony_organism_ = AnimalBreedsCode("69067004")
+    """
+    None
+    """
     SpanishMustangHorse_organism_ = AnimalBreedsCode("76302002")
+    """
+    None
+    """
     QuarterHorse_organism_ = AnimalBreedsCode("76467006")
+    """
+    None
+    """
     MaremmanaHorseBreed_organism_ = AnimalBreedsCode("131938008")
+    """
+    None
+    """
     MarwariHorseBreed_organism_ = AnimalBreedsCode("131939000")
+    """
+    None
+    """
     MegezhHorseBreed_organism_ = AnimalBreedsCode("131940003")
+    """
+    None
+    """
     MegrelHorseBreed_organism_ = AnimalBreedsCode("131941004")
+    """
+    None
+    """
     MerensHorseBreed_organism_ = AnimalBreedsCode("131942006")
+    """
+    None
+    """
     MessaraHorseBreed_organism_ = AnimalBreedsCode("131943001")
+    """
+    None
+    """
     SumbaHorseBreed_organism_ = AnimalBreedsCode("131944007")
+    """
+    None
+    """
     SumbawaHorseBreed_organism_ = AnimalBreedsCode("131945008")
+    """
+    None
+    """
     SwedishArdennesHorseBreed_organism_ = AnimalBreedsCode("131946009")
+    """
+    None
+    """
     ThaiPonyHorseBreed_organism_ = AnimalBreedsCode("131949002")
+    """
+    None
+    """
     ThessalonianHorseBreed_organism_ = AnimalBreedsCode("131950002")
+    """
+    None
+    """
     TibetanHorseBreed_organism_ = AnimalBreedsCode("131951003")
+    """
+    None
+    """
     TielingHorseBreed_organism_ = AnimalBreedsCode("131952005")
+    """
+    None
+    """
     MezenHorseBreed_organism_ = AnimalBreedsCode("131988000")
+    """
+    None
+    """
     MezohegyesSportHorseHorseBreed_organism_ = AnimalBreedsCode("131989008")
+    """
+    None
+    """
     MurakozHorseBreed_organism_ = AnimalBreedsCode("131992007")
+    """
+    None
+    """
     MecklenburgHorseBreed_organism_ = AnimalBreedsCode("131994008")
+    """
+    None
+    """
     ManipuriHorseBreed_organism_ = AnimalBreedsCode("132762009")
+    """
+    None
+    """
     TavdaHorseBreed_organism_ = AnimalBreedsCode("132764005")
+    """
+    None
+    """
     MinusinHorseBreed_organism_ = AnimalBreedsCode("132772007")
+    """
+    None
+    """
     MorochucoHorseBreed_organism_ = AnimalBreedsCode("132773002")
+    """
+    None
+    """
     MurgheseHorseBreed_organism_ = AnimalBreedsCode("132776005")
+    """
+    None
+    """
     MytileneHorseBreed_organism_ = AnimalBreedsCode("132777001")
+    """
+    None
+    """
     NamibDesertHorseHorseBreed_organism_ = AnimalBreedsCode("132778006")
+    """
+    None
+    """
     NarymHorseBreed_organism_ = AnimalBreedsCode("132960009")
+    """
+    None
+    """
     NationalSpottedSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("132961008")
+    """
+    None
+    """
     NigerianHorseBreed_organism_ = AnimalBreedsCode("132962001")
+    """
+    None
+    """
     NorthSwedishTrotterHorseBreed_organism_ = AnimalBreedsCode("132963006")
+    """
+    None
+    """
     OrientalHorseHorseBreed_organism_ = AnimalBreedsCode("132964000")
+    """
+    None
+    """
     RhinelandHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("132965004")
+    """
+    None
+    """
     RomanianSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("132966003")
+    """
+    None
+    """
     RottalHorseBreed_organism_ = AnimalBreedsCode("132967007")
+    """
+    None
+    """
     RoyalCanadianMountedPoliceHorseHorseBreed_organism_ = AnimalBreedsCode("132968002")
+    """
+    None
+    """
     RussianSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("132969005")
+    """
+    None
+    """
     SableIslandHorseHorseBreed_organism_ = AnimalBreedsCode("132970006")
+    """
+    None
+    """
     PanjeHorseBreed_organism_ = AnimalBreedsCode("132971005")
+    """
+    None
+    """
     PatibarcinaHorseBreed_organism_ = AnimalBreedsCode("132972003")
+    """
+    None
+    """
     PechoraHorseBreed_organism_ = AnimalBreedsCode("132973008")
+    """
+    None
+    """
     PeneiaHorseBreed_organism_ = AnimalBreedsCode("132974002")
+    """
+    None
+    """
     PerianganHorseBreed_organism_ = AnimalBreedsCode("132975001")
+    """
+    None
+    """
     PersianArabHorseBreed_organism_ = AnimalBreedsCode("132976000")
+    """
+    None
+    """
     PetisoArgentinoHorseBreed_organism_ = AnimalBreedsCode("132977009")
+    """
+    None
+    """
     PolishDraftHorseBreed_organism_ = AnimalBreedsCode("132978004")
+    """
+    None
+    """
     PriobHorseBreed_organism_ = AnimalBreedsCode("132979007")
+    """
+    None
+    """
     RahvanHorseBreed_organism_ = AnimalBreedsCode("132980005")
+    """
+    None
+    """
     SalernoHorseBreed_organism_ = AnimalBreedsCode("132981009")
+    """
+    None
+    """
     SandalwoodHorseBreed_organism_ = AnimalBreedsCode("132982002")
+    """
+    None
+    """
     SandanHorseBreed_organism_ = AnimalBreedsCode("132983007")
+    """
+    None
+    """
     PindosHorseBreed_organism_ = AnimalBreedsCode("132984001")
+    """
+    None
+    """
     PiquiraPonyHorseBreed_organism_ = AnimalBreedsCode("132985000")
+    """
+    None
+    """
     PlevenHorseBreed_organism_ = AnimalBreedsCode("132986004")
+    """
+    None
+    """
     RussianTrotterHorseBreed_organism_ = AnimalBreedsCode("132994006")
+    """
+    None
+    """
     NationalShowHorseHorseBreed_organism_ = AnimalBreedsCode("132997004")
+    """
+    None
+    """
     TawleedHorseBreed_organism_ = AnimalBreedsCode("133001001")
+    """
+    None
+    """
     NewKirgizHorseBreed_organism_ = AnimalBreedsCode("133010009")
+    """
+    None
+    """
     OldenburgHorseBreed_organism_ = AnimalBreedsCode("133011008")
+    """
+    None
+    """
     MisakiHorseBreed_organism_ = AnimalBreedsCode("133012001")
+    """
+    None
+    """
     MiyakoHorseBreed_organism_ = AnimalBreedsCode("133013006")
+    """
+    None
+    """
     MongolianHorseBreed_organism_ = AnimalBreedsCode("133014000")
+    """
+    None
+    """
     SanfratelloHorseBreed_organism_ = AnimalBreedsCode("133030008")
+    """
+    None
+    """
     MorabHorseBreed_organism_ = AnimalBreedsCode("133031007")
+    """
+    None
+    """
     MoyleHorseBreed_organism_ = AnimalBreedsCode("133032000")
+    """
+    None
+    """
     MustangHorseBreed_organism_ = AnimalBreedsCode("133033005")
+    """
+    None
+    """
     NewfoundlandPonyHorseBreed_organism_ = AnimalBreedsCode("133036002")
+    """
+    None
+    """
     NomaHorseBreed_organism_ = AnimalBreedsCode("133037006")
+    """
+    None
+    """
     NooitgedachtPonyHorseBreed_organism_ = AnimalBreedsCode("133038001")
+    """
+    None
+    """
     NordlandHorseBreed_organism_ = AnimalBreedsCode("133039009")
+    """
+    None
+    """
     NoricHorseBreed_organism_ = AnimalBreedsCode("133040006")
+    """
+    None
+    """
     NorthSwedishHorseHorseBreed_organism_ = AnimalBreedsCode("133041005")
+    """
+    None
+    """
     NortheasternHorseBreed_organism_ = AnimalBreedsCode("133042003")
+    """
+    None
+    """
     NoniusHorseBreed_organism_ = AnimalBreedsCode("133045001")
+    """
+    None
+    """
     NooitgedachtHorseBreed_organism_ = AnimalBreedsCode("133046000")
+    """
+    None
+    """
     PonyOfTheAmericasHorseBreed_organism_ = AnimalBreedsCode("133063001")
+    """
+    None
+    """
     PintabianHorseBreed_organism_ = AnimalBreedsCode("133064007")
+    """
+    None
+    """
     PantaneiroHorseBreed_organism_ = AnimalBreedsCode("133065008")
+    """
+    None
+    """
     OrlovTrotterHorseBreed_organism_ = AnimalBreedsCode("133066009")
+    """
+    None
+    """
     NorthernArdennaisHorseBreed_organism_ = AnimalBreedsCode("133067000")
+    """
+    None
+    """
     PoitouMuleProducerHorseBreed_organism_ = AnimalBreedsCode("133073004")
+    """
+    None
+    """
     PolesianHorseBreed_organism_ = AnimalBreedsCode("133074005")
+    """
+    None
+    """
     SardinianAnglo_ArabHorseBreed_organism_ = AnimalBreedsCode("133075006")
+    """
+    None
+    """
     SardinianPonyHorseBreed_organism_ = AnimalBreedsCode("133076007")
+    """
+    None
+    """
     SarvarHorseBreed_organism_ = AnimalBreedsCode("133077003")
+    """
+    None
+    """
     SchleswigHorseBreed_organism_ = AnimalBreedsCode("133078008")
+    """
+    None
+    """
     SchwarzwalderFuchseHorseBreed_organism_ = AnimalBreedsCode("133079000")
+    """
+    None
+    """
     SenneHorseBreed_organism_ = AnimalBreedsCode("133080002")
+    """
+    None
+    """
     ShanHorseBreed_organism_ = AnimalBreedsCode("133081003")
+    """
+    None
+    """
     SilesianHorseBreed_organism_ = AnimalBreedsCode("133082005")
+    """
+    None
+    """
     SiniHorseBreed_organism_ = AnimalBreedsCode("133083000")
+    """
+    None
+    """
     SkyrosHorseBreed_organism_ = AnimalBreedsCode("133084006")
+    """
+    None
+    """
     SokolkaHorseBreed_organism_ = AnimalBreedsCode("133086008")
+    """
+    None
+    """
     SouthAfricanMiniatureHorseBreed_organism_ = AnimalBreedsCode("133087004")
+    """
+    None
+    """
     SouthGermanColdbloodHorseBreed_organism_ = AnimalBreedsCode("133088009")
+    """
+    None
+    """
     SouthwestSpanishMustangHorseBreed_organism_ = AnimalBreedsCode("133089001")
+    """
+    None
+    """
     Spanish_AmericanHorseHorseBreed_organism_ = AnimalBreedsCode("133090005")
+    """
+    None
+    """
     SpanishAnglo_ArabHorseBreed_organism_ = AnimalBreedsCode("133091009")
+    """
+    None
+    """
     SpanishColonialHorseHorseBreed_organism_ = AnimalBreedsCode("133092002")
+    """
+    None
+    """
     SpitiHorseBreed_organism_ = AnimalBreedsCode("133093007")
+    """
+    None
+    """
     SulawesiHorseBreed_organism_ = AnimalBreedsCode("133094001")
+    """
+    None
+    """
     TaishuhHorseBreed_organism_ = AnimalBreedsCode("133143006")
+    """
+    None
+    """
     SudanCountry_BredHorseBreed_organism_ = AnimalBreedsCode("133145004")
+    """
+    None
+    """
     Spanish_NormanHorseBreed_organism_ = AnimalBreedsCode("133146003")
+    """
+    None
+    """
     SpanishBarbHorseBreed_organism_ = AnimalBreedsCode("133147007")
+    """
+    None
+    """
     SovietHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133148002")
+    """
+    None
+    """
     SorraiaHorseBreed_organism_ = AnimalBreedsCode("133149005")
+    """
+    None
+    """
     SomaliPonyHorseBreed_organism_ = AnimalBreedsCode("133150005")
+    """
+    None
+    """
     TerskHorseBreed_organism_ = AnimalBreedsCode("133151009")
+    """
+    None
+    """
     ShagyaHorseBreed_organism_ = AnimalBreedsCode("133152002")
+    """
+    None
+    """
     SelleFrancaisHorseBreed_organism_ = AnimalBreedsCode("133153007")
+    """
+    None
+    """
     SanheHorseBreed_organism_ = AnimalBreedsCode("133154001")
+    """
+    None
+    """
     RussianHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133155000")
+    """
+    None
+    """
     RockyMountainHorseHorseBreed_organism_ = AnimalBreedsCode("133156004")
+    """
+    None
+    """
     RackingHorseHorseBreed_organism_ = AnimalBreedsCode("133157008")
+    """
+    None
+    """
     QuarterPonyHorseBreed_organism_ = AnimalBreedsCode("133158003")
+    """
+    None
+    """
     QuarabHorseBreed_organism_ = AnimalBreedsCode("133159006")
+    """
+    None
+    """
     Single_FootingHorseHorseBreed_organism_ = AnimalBreedsCode("133160001")
+    """
+    None
+    """
     MurgeseHorse_organism_ = AnimalBreedsCode("406715003")
+    """
+    None
+    """
     MixedBreedHorse_organism_ = AnimalBreedsCode("406721004")
+    """
+    None
+    """
     Pony_organism_ = AnimalBreedsCode("3997000")
+    """
+    None
+    """
     VikingHorse_organism_ = AnimalBreedsCode("1118004")
+    """
+    None
+    """
     TrakehnerHorse_organism_ = AnimalBreedsCode("1789009")
+    """
+    None
+    """
     WelshWalkingHorse_organism_ = AnimalBreedsCode("8089006")
+    """
+    None
+    """
     WestphalianHorse_organism_ = AnimalBreedsCode("25369002")
+    """
+    None
+    """
     YorkshireCoachHorse_organism_ = AnimalBreedsCode("31633003")
+    """
+    None
+    """
     WaziriHorseBreed_organism_ = AnimalBreedsCode("131872001")
+    """
+    None
+    """
     TimorHorseBreed_organism_ = AnimalBreedsCode("131953000")
+    """
+    None
+    """
     TrakyaHorseBreed_organism_ = AnimalBreedsCode("131954006")
+    """
+    None
+    """
     TroteEnGallopeHorseBreed_organism_ = AnimalBreedsCode("131955007")
+    """
+    None
+    """
     TurkomanHorseBreed_organism_ = AnimalBreedsCode("131956008")
+    """
+    None
+    """
     TushinHorseBreed_organism_ = AnimalBreedsCode("131957004")
+    """
+    None
+    """
     TuvaHorseBreed_organism_ = AnimalBreedsCode("131958009")
+    """
+    None
+    """
     UzunyaylaHorseBreed_organism_ = AnimalBreedsCode("131959001")
+    """
+    None
+    """
     VoronezhCoachHorseHorseBreed_organism_ = AnimalBreedsCode("131960006")
+    """
+    None
+    """
     WelshCobHorseBreed_organism_ = AnimalBreedsCode("131962003")
+    """
+    None
+    """
     WelshMountainPonyHorseBreed_organism_ = AnimalBreedsCode("131963008")
+    """
+    None
+    """
     WurttembergHorseBreed_organism_ = AnimalBreedsCode("131965001")
+    """
+    None
+    """
     XilingolHorseBreed_organism_ = AnimalBreedsCode("131966000")
+    """
+    None
+    """
     YanqiHorseBreed_organism_ = AnimalBreedsCode("131967009")
+    """
+    None
+    """
     YemeniHorsesHorseBreed_organism_ = AnimalBreedsCode("131968004")
+    """
+    None
+    """
     YiliHorseBreed_organism_ = AnimalBreedsCode("131969007")
+    """
+    None
+    """
     YiwuHorseBreed_organism_ = AnimalBreedsCode("131970008")
+    """
+    None
+    """
     YunnanHorseBreed_organism_ = AnimalBreedsCode("131971007")
+    """
+    None
+    """
     WielkopolskiHorseBreed_organism_ = AnimalBreedsCode("132741008")
+    """
+    None
+    """
     WelshPonyHorseBreed_organism_ = AnimalBreedsCode("132744000")
+    """
+    None
+    """
     WelshPonyOfCobTypeHorseBreed_organism_ = AnimalBreedsCode("132745004")
+    """
+    None
+    """
     WestAfricanBarbHorseBreed_organism_ = AnimalBreedsCode("132995007")
+    """
+    None
+    """
     ZhemaichuHorseBreed_organism_ = AnimalBreedsCode("132998009")
+    """
+    None
+    """
     YonaguniHorseBreed_organism_ = AnimalBreedsCode("132999001")
+    """
+    None
+    """
     YakutHorseBreed_organism_ = AnimalBreedsCode("133000000")
+    """
+    None
+    """
     WesternSudanPonyHorseBreed_organism_ = AnimalBreedsCode("133002008")
+    """
+    None
+    """
     WeleraPonyHorseBreed_organism_ = AnimalBreedsCode("133003003")
+    """
+    None
+    """
     VyatkaHorseBreed_organism_ = AnimalBreedsCode("133004009")
+    """
+    None
+    """
     VladimirHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133005005")
+    """
+    None
+    """
     VlaamperdHorseBreed_organism_ = AnimalBreedsCode("133006006")
+    """
+    None
+    """
     UkrainianSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("133007002")
+    """
+    None
+    """
     ToriHorseBreed_organism_ = AnimalBreedsCode("133008007")
+    """
+    None
+    """
     TokaraHorseBreed_organism_ = AnimalBreedsCode("133009004")
+    """
+    None
+    """
     WalerHorseBreed_organism_ = AnimalBreedsCode("133015004")
+    """
+    None
+    """
     AmericanSaddlebredHorse_organism_ = AnimalBreedsCode("42724005")
+    """
+    None
+    """
     GoldenAmericanSaddlebredHorseBreed_organism_ = AnimalBreedsCode("133107000")
+    """
+    None
+    """
     Ari_geoisPonyBreed_organism_ = AnimalBreedsCode("396488006")
+    """
+    None
+    """
     DanishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131819000")
+    """
+    None
+    """
     BavarianWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131876003")
+    """
+    None
+    """
     BelgianWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131879005")
+    """
+    None
+    """
     CzechWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131915005")
+    """
+    None
+    """
     ElegantWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131961005")
+    """
+    None
+    """
     BritishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("132732003")
+    """
+    None
+    """
     SwissWarmbloodHorseBreed_organism_ = AnimalBreedsCode("132763004")
+    """
+    None
+    """
     EastFriesianWarmblood_ModernType_HorseBreed_organism_ = AnimalBreedsCode(
         "132767003"
     )
+    """
+    None
+    """
     DutchWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133022007")
+    """
+    None
+    """
     SlovakWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133085007")
+    """
+    None
+    """
     SwedishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133144000")
+    """
+    None
+    """
     BosFrontalis_organism_ = AnimalBreedsCode("125092006")
+    """
+    None
+    """
     AfricanderCattleBreed_organism_ = AnimalBreedsCode("131426006")
+    """
+    None
+    """
     AliabDinkaCattleBreed_organism_ = AnimalBreedsCode("131441006")
+    """
+    None
+    """
     AlurCattleBreed_organism_ = AnimalBreedsCode("131442004")
+    """
+    None
+    """
     AbigarCattleBreed_organism_ = AnimalBreedsCode("131540009")
+    """
+    None
+    """
     AfricangusCattleBreed_organism_ = AnimalBreedsCode("131541008")
+    """
+    None
+    """
     AgeroleseCattleBreed_organism_ = AnimalBreedsCode("131542001")
+    """
+    None
+    """
     AlbeseCattleBreed_organism_ = AnimalBreedsCode("131543006")
+    """
+    None
+    """
     Alb_resCattleBreed_organism_ = AnimalBreedsCode("131555000")
+    """
+    None
+    """
     AlentejanaCattleBreed_organism_ = AnimalBreedsCode("131556004")
+    """
+    None
+    """
     AmericanWhiteParkCattleBreed_organism_ = AnimalBreedsCode("131557008")
+    """
+    None
+    """
     AmerifaxcattleBreed_organism_ = AnimalBreedsCode("131558003")
+    """
+    None
+    """
     AnatolianBlackCattleBreed_organism_ = AnimalBreedsCode("131559006")
+    """
+    None
+    """
     AndalusianBlackCattleBreed_organism_ = AnimalBreedsCode("131560001")
+    """
+    None
+    """
     AndalusianGrayCattleBreed_organism_ = AnimalBreedsCode("131561002")
+    """
+    None
+    """
     Alistana_SanabresaCattleBreed_organism_ = AnimalBreedsCode("133290002")
+    """
+    None
+    """
     AndalusianBlondCattleBreed_organism_ = AnimalBreedsCode("133291003")
+    """
+    None
+    """
     AbondanceCattleBreed_organism_ = AnimalBreedsCode("133551002")
+    """
+    None
+    """
     Ala_TauCattleBreed_organism_ = AnimalBreedsCode("133552009")
+    """
+    None
+    """
     AlbanianIllyrianCattleBreed_organism_ = AnimalBreedsCode("133553004")
+    """
+    None
+    """
     AlbanianDwarfCattleBreed_organism_ = AnimalBreedsCode("133554005")
+    """
+    None
+    """
     AleppoCattleBreed_organism_ = AnimalBreedsCode("133575002")
+    """
+    None
+    """
     AlmanzorenaCattleBreed_organism_ = AnimalBreedsCode("133591004")
+    """
+    None
+    """
     AnkoleCattleBreed_organism_ = AnimalBreedsCode("131427002")
+    """
+    None
+    """
     Ankole_WatusiCattleBreed_organism_ = AnimalBreedsCode("131428007")
+    """
+    None
+    """
     AnkinaCattleBreed_organism_ = AnimalBreedsCode("131443009")
+    """
+    None
+    """
     ApulianPodolianCattleBreed_organism_ = AnimalBreedsCode("131444003")
+    """
+    None
+    """
     AradoCattleBreed_organism_ = AnimalBreedsCode("131445002")
+    """
+    None
+    """
     AweilDinkaCattleBreed_organism_ = AnimalBreedsCode("131446001")
+    """
+    None
+    """
     BahimaCattleBreed_organism_ = AnimalBreedsCode("131447005")
+    """
+    None
+    """
     AngelnCattleBreed_organism_ = AnimalBreedsCode("131562009")
+    """
+    None
+    """
     AsturianMountainCattleBreed_organism_ = AnimalBreedsCode("131563004")
+    """
+    None
+    """
     AsturianValleyCattleBreed_organism_ = AnimalBreedsCode("131564005")
+    """
+    None
+    """
     AubracCattleBreed_organism_ = AnimalBreedsCode("131565006")
+    """
+    None
+    """
     Aulie_AtaCattleBreed_organism_ = AnimalBreedsCode("131566007")
+    """
+    None
+    """
     AustralianLowlineCattleBreed_organism_ = AnimalBreedsCode("131567003")
+    """
+    None
+    """
     AostaBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133292005")
+    """
+    None
+    """
     AostaChestnutCattleBreed_organism_ = AnimalBreedsCode("133293000")
+    """
+    None
+    """
     AostaRedPiedCattleBreed_organism_ = AnimalBreedsCode("133294006")
+    """
+    None
+    """
     AracenaCattleBreed_organism_ = AnimalBreedsCode("133295007")
+    """
+    None
+    """
     ArgentineFriesianCattleBreed_organism_ = AnimalBreedsCode("133296008")
+    """
+    None
+    """
     ArmoricanCattleBreed_organism_ = AnimalBreedsCode("133297004")
+    """
+    None
+    """
     ArouquesaCattleBreed_organism_ = AnimalBreedsCode("133298009")
+    """
+    None
+    """
     AureEtSaint_GironsCattleBreed_organism_ = AnimalBreedsCode("133299001")
+    """
+    None
+    """
     AustralianWhiteCattleBreed_organism_ = AnimalBreedsCode("133300009")
+    """
+    None
+    """
     AustrianSimmentalCattleBreed_organism_ = AnimalBreedsCode("133301008")
+    """
+    None
+    """
     AustrianYellowCattleBreed_organism_ = AnimalBreedsCode("133302001")
+    """
+    None
+    """
     AvetonouCattleBreed_organism_ = AnimalBreedsCode("133303006")
+    """
+    None
+    """
     AvilenaCattleBreed_organism_ = AnimalBreedsCode("133304000")
+    """
+    None
+    """
     Avilena_BlackIberianCattleBreed_organism_ = AnimalBreedsCode("133305004")
+    """
+    None
+    """
     AustralianShorthornCattleBreed_organism_ = AnimalBreedsCode("133472001")
+    """
+    None
+    """
     BaladiCattleBreed_organism_ = AnimalBreedsCode("131429004")
+    """
+    None
+    """
     BelmontRedCattleBreed_organism_ = AnimalBreedsCode("131430009")
+    """
+    None
+    """
     BonsmaraCattleBreed_organism_ = AnimalBreedsCode("131431008")
+    """
+    None
+    """
     BapediCattleBreed_organism_ = AnimalBreedsCode("131448000")
+    """
+    None
+    """
     Baria_Vietnam_Madagascar_CattleBreed_organism_ = AnimalBreedsCode("131449008")
+    """
+    None
+    """
     BarotseCattleBreed_organism_ = AnimalBreedsCode("131450008")
+    """
+    None
+    """
     BarraDoCuanzoCattleBreed_organism_ = AnimalBreedsCode("131451007")
+    """
+    None
+    """
     BashiCattleBreed_organism_ = AnimalBreedsCode("131452000")
+    """
+    None
+    """
     BasutoCattleBreed_organism_ = AnimalBreedsCode("131453005")
+    """
+    None
+    """
     BatangasCattleBreed_organism_ = AnimalBreedsCode("131454004")
+    """
+    None
+    """
     BavendaCattleBreed_organism_ = AnimalBreedsCode("131455003")
+    """
+    None
+    """
     BejaCattleBreed_organism_ = AnimalBreedsCode("131456002")
+    """
+    None
+    """
     Blonde_duCapBonCattleBreed_organism_ = AnimalBreedsCode("131458001")
+    """
+    None
+    """
     BarzonaCattleBreed_organism_ = AnimalBreedsCode("131568008")
+    """
+    None
+    """
     BazadaisCattleBreed_organism_ = AnimalBreedsCode("131569000")
+    """
+    None
+    """
     BeefmakerCattleBreed_organism_ = AnimalBreedsCode("131570004")
+    """
+    None
+    """
     BelarusRedCattleBreed_organism_ = AnimalBreedsCode("131571000")
+    """
+    None
+    """
     BelgianBlueCattleBreed_organism_ = AnimalBreedsCode("131572007")
+    """
+    None
+    """
     BelgianRedCattleBreed_organism_ = AnimalBreedsCode("131573002")
+    """
+    None
+    """
     BelmontAdaptaurCattleBreed_organism_ = AnimalBreedsCode("131574008")
+    """
+    None
+    """
     BerrendasCattleBreed_organism_ = AnimalBreedsCode("131575009")
+    """
+    None
+    """
     BlacksidedTrondheimAndNorlandCattleBreed_organism_ = AnimalBreedsCode("131576005")
+    """
+    None
+    """
     BlancoOrejinegroCattleBreed_organism_ = AnimalBreedsCode("131577001")
+    """
+    None
+    """
     BakosiCattleBreed_organism_ = AnimalBreedsCode("133306003")
+    """
+    None
+    """
     BakwiriCattleBreed_organism_ = AnimalBreedsCode("133307007")
+    """
+    None
+    """
     BalticBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133308002")
+    """
+    None
+    """
     BaouleCattleBreed_organism_ = AnimalBreedsCode("133309005")
+    """
+    None
+    """
     BarrosaCattleBreed_organism_ = AnimalBreedsCode("133310000")
+    """
+    None
+    """
     BarrosoCattleBreed_organism_ = AnimalBreedsCode("133311001")
+    """
+    None
+    """
     BearnaisCattleBreed_organism_ = AnimalBreedsCode("133312008")
+    """
+    None
+    """
     BeefShorthornCattleBreed_organism_ = AnimalBreedsCode("133313003")
+    """
+    None
+    """
     BeefSyntheticCattleBreed_organism_ = AnimalBreedsCode("133314009")
+    """
+    None
+    """
     BeijingBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133315005")
+    """
+    None
+    """
     BeiroaCattleBreed_organism_ = AnimalBreedsCode("133316006")
+    """
+    None
+    """
     BelgianBlackPiedHolsteincattleBreed_organism_ = AnimalBreedsCode("133317002")
+    """
+    None
+    """
     BelgianRedPiedCattleBreed_organism_ = AnimalBreedsCode("133318007")
+    """
+    None
+    """
     BelgianWhiteAndRedCattleBreed_organism_ = AnimalBreedsCode("133319004")
+    """
+    None
+    """
     BeltedWelshCattleBreed_organism_ = AnimalBreedsCode("133320005")
+    """
+    None
+    """
     BestuzhevCattleBreed_organism_ = AnimalBreedsCode("133321009")
+    """
+    None
+    """
     BetizuakCattleBreed_organism_ = AnimalBreedsCode("133322002")
+    """
+    None
+    """
     BlackBaldyCattleBreed_organism_ = AnimalBreedsCode("133323007")
+    """
+    None
+    """
     BlackForestCattleBreed_organism_ = AnimalBreedsCode("133324001")
+    """
+    None
+    """
     BlackIberianCattleBreed_organism_ = AnimalBreedsCode("133325000")
+    """
+    None
+    """
     CalabrianCattleBreed_organism_ = AnimalBreedsCode("131457006")
+    """
+    None
+    """
     Chan_DocCattleBreed_organism_ = AnimalBreedsCode("131459009")
+    """
+    None
+    """
     ChernigovCattleBreed_organism_ = AnimalBreedsCode("131460004")
+    """
+    None
+    """
     BraunviehCattleBreed_organism_ = AnimalBreedsCode("131578006")
+    """
+    None
+    """
     BritishWhiteCattleBreed_organism_ = AnimalBreedsCode("131579003")
+    """
+    None
+    """
     CachenaCattleBreed_organism_ = AnimalBreedsCode("131580000")
+    """
+    None
+    """
     CanaryIslandCattleBreed_organism_ = AnimalBreedsCode("131581001")
+    """
+    None
+    """
     CarinthianBlondCattleBreed_organism_ = AnimalBreedsCode("131582008")
+    """
+    None
+    """
     CaucasianCattleBreed_organism_ = AnimalBreedsCode("131583003")
+    """
+    None
+    """
     CharolaisCattleBreed_organism_ = AnimalBreedsCode("131584009")
+    """
+    None
+    """
     BragadoDoSorraiaCattleBreed_organism_ = AnimalBreedsCode("133327008")
+    """
+    None
+    """
     BragancaCattleBreed_organism_ = AnimalBreedsCode("133328003")
+    """
+    None
+    """
     BrandroodLjsselveeCattleBreed_organism_ = AnimalBreedsCode("133329006")
+    """
+    None
+    """
     BrazilianPolledCattleBreed_organism_ = AnimalBreedsCode("133330001")
+    """
+    None
+    """
     BretonBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133331002")
+    """
+    None
+    """
     BrownAtlasCattleBreed_organism_ = AnimalBreedsCode("133332009")
+    """
+    None
+    """
     BulgarianBrownCattleBreed_organism_ = AnimalBreedsCode("133333004")
+    """
+    None
+    """
     BulgarianRedCattleBreed_organism_ = AnimalBreedsCode("133334005")
+    """
+    None
+    """
     BurlinaCattleBreed_organism_ = AnimalBreedsCode("133335006")
+    """
+    None
+    """
     BurwashCattleBreed_organism_ = AnimalBreedsCode("133336007")
+    """
+    None
+    """
     ByelorussianRedCattleBreed_organism_ = AnimalBreedsCode("133337003")
+    """
+    None
+    """
     ByelorussianSyntheticCattleBreed_organism_ = AnimalBreedsCode("133338008")
+    """
+    None
+    """
     CabanninaCattleBreed_organism_ = AnimalBreedsCode("133339000")
+    """
+    None
+    """
     CaldeanoCattleBreed_organism_ = AnimalBreedsCode("133340003")
+    """
+    None
+    """
     CaldelanaCattleBreed_organism_ = AnimalBreedsCode("133341004")
+    """
+    None
+    """
     CalvanaCattleBreed_organism_ = AnimalBreedsCode("133342006")
+    """
+    None
+    """
     CamargueCattleBreed_organism_ = AnimalBreedsCode("133343001")
+    """
+    None
+    """
     CambodianCattleBreed_organism_ = AnimalBreedsCode("133344007")
+    """
+    None
+    """
     CaracuCattleBreed_organism_ = AnimalBreedsCode("133345008")
+    """
+    None
+    """
     CarpathianBrownCattleBreed_organism_ = AnimalBreedsCode("133346009")
+    """
+    None
+    """
     CasanarenoCattleBreed_organism_ = AnimalBreedsCode("133347000")
+    """
+    None
+    """
     CentralRussianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133348005")
+    """
+    None
+    """
     ChaouiaCattleBreed_organism_ = AnimalBreedsCode("133349002")
+    """
+    None
+    """
     CharollandaisCattleBreed_organism_ = AnimalBreedsCode("133350002")
+    """
+    None
+    """
     Char_swissCattleBreed_organism_ = AnimalBreedsCode("133351003")
+    """
+    None
+    """
     ChesiCattleBreed_organism_ = AnimalBreedsCode("133353000")
+    """
+    None
+    """
     CheurfaCattleBreed_organism_ = AnimalBreedsCode("133354006")
+    """
+    None
+    """
     BusaCattleBreed_organism_ = AnimalBreedsCode("133577005")
+    """
+    None
+    """
     ChiangusCattleBreed_organism_ = AnimalBreedsCode("133578000")
+    """
+    None
+    """
     CalasparrenaCattleBreed_organism_ = AnimalBreedsCode("133593001")
+    """
+    None
+    """
     DamiettaCattleBreed_organism_ = AnimalBreedsCode("131432001")
+    """
+    None
+    """
     ChinoSantandereanoCattleBreed_organism_ = AnimalBreedsCode("131461000")
+    """
+    None
+    """
     CinisaraCattleBreed_organism_ = AnimalBreedsCode("131462007")
+    """
+    None
+    """
     CupremHybridCattleBreed_organism_ = AnimalBreedsCode("131463002")
+    """
+    None
+    """
     DabieshanCattleBreed_organism_ = AnimalBreedsCode("131464008")
+    """
+    None
+    """
     DamaraCattleBreed_organism_ = AnimalBreedsCode("131465009")
+    """
+    None
+    """
     DanakilCattleBreed_organism_ = AnimalBreedsCode("131466005")
+    """
+    None
+    """
     DnieperCattleBreed_organism_ = AnimalBreedsCode("131467001")
+    """
+    None
+    """
     DoayoCattleBreed_organism_ = AnimalBreedsCode("131468006")
+    """
+    None
+    """
     EasternNuerCattleBreed_organism_ = AnimalBreedsCode("131469003")
+    """
+    None
+    """
     EgyptianCattleBreed_organism_ = AnimalBreedsCode("131470002")
+    """
+    None
+    """
     FogeraCattleBreed_organism_ = AnimalBreedsCode("131471003")
+    """
+    None
+    """
     GarfagninaCattleBreed_organism_ = AnimalBreedsCode("131472005")
+    """
+    None
+    """
     GratiCattleBreed_organism_ = AnimalBreedsCode("131473000")
+    """
+    None
+    """
     GaunlingCattleBreed_organism_ = AnimalBreedsCode("131474006")
+    """
+    None
+    """
     DrakensbergerCattleBreed_organism_ = AnimalBreedsCode("131551009")
+    """
+    None
+    """
     ChineseBlack_and_WhiteCattleBreed_organism_ = AnimalBreedsCode("131585005")
+    """
+    None
+    """
     CorrienteCattleBreed_organism_ = AnimalBreedsCode("131586006")
+    """
+    None
+    """
     Coste_oConCuernosCattleBreed_organism_ = AnimalBreedsCode("131587002")
+    """
+    None
+    """
     DamascusCattleBreed_organism_ = AnimalBreedsCode("131588007")
+    """
+    None
+    """
     DanishRedCattleBreed_organism_ = AnimalBreedsCode("131589004")
+    """
+    None
+    """
     DevonCattleBreed_organism_ = AnimalBreedsCode("131590008")
+    """
+    None
+    """
     D_lafeCattleBreed_organism_ = AnimalBreedsCode("131591007")
+    """
+    None
+    """
     DutchBeltedCattleBreed_organism_ = AnimalBreedsCode("131592000")
+    """
+    None
+    """
     DutchFriesianCattleBreed_organism_ = AnimalBreedsCode("131593005")
+    """
+    None
+    """
     EnglishLonghornCattleBreed_organism_ = AnimalBreedsCode("131594004")
+    """
+    None
+    """
     EstonianRedCattleBreed_organism_ = AnimalBreedsCode("131595003")
+    """
+    None
+    """
     Evol_neCattleBreed_organism_ = AnimalBreedsCode("131596002")
+    """
+    None
+    """
     FightingBullCattleBreed_organism_ = AnimalBreedsCode("131597006")
+    """
+    None
+    """
     FjallCattleBreed_organism_ = AnimalBreedsCode("131598001")
+    """
+    None
+    """
     FloridaCracker_PineywoodsCattleBreed_organism_ = AnimalBreedsCode("131599009")
+    """
+    None
+    """
     GalicianBlondCattleBreed_organism_ = AnimalBreedsCode("131600007")
+    """
+    None
+    """
     GasconCattleBreed_organism_ = AnimalBreedsCode("131601006")
+    """
+    None
+    """
     GermanRedPiedCattleBreed_organism_ = AnimalBreedsCode("131602004")
+    """
+    None
+    """
     GlanCattleBreed_organism_ = AnimalBreedsCode("131603009")
+    """
+    None
+    """
     GloucesterCattleBreed_organism_ = AnimalBreedsCode("131604003")
+    """
+    None
+    """
     GroningenWhiteheadedCattleBreed_organism_ = AnimalBreedsCode("131605002")
+    """
+    None
+    """
     ChifordCattleBreed_organism_ = AnimalBreedsCode("133355007")
+    """
+    None
+    """
     ChimaineCattleBreed_organism_ = AnimalBreedsCode("133356008")
+    """
+    None
+    """
     ChinampoCattleBreed_organism_ = AnimalBreedsCode("133357004")
+    """
+    None
+    """
     CildirCattleBreed_organism_ = AnimalBreedsCode("133358009")
+    """
+    None
+    """
     COOPELSO93CattleBreed_organism_ = AnimalBreedsCode("133359001")
+    """
+    None
+    """
     CorsicanCattleBreed_organism_ = AnimalBreedsCode("133361005")
+    """
+    None
+    """
     CretanLowlandCattleBreed_organism_ = AnimalBreedsCode("133362003")
+    """
+    None
+    """
     CretanMountainCattleBreed_organism_ = AnimalBreedsCode("133363008")
+    """
+    None
+    """
     CroatianRedCattleBreed_organism_ = AnimalBreedsCode("133364002")
+    """
+    None
+    """
     CukurovaCattleBreed_organism_ = AnimalBreedsCode("133365001")
+    """
+    None
+    """
     CurraleiroCattleBreed_organism_ = AnimalBreedsCode("133366000")
+    """
+    None
+    """
     CyprusCattleBreed_organism_ = AnimalBreedsCode("133367009")
+    """
+    None
+    """
     CzechPiedCattleBreed_organism_ = AnimalBreedsCode("133368004")
+    """
+    None
+    """
     DagestanMountainCattleBreed_organism_ = AnimalBreedsCode("133369007")
+    """
+    None
+    """
     DairyShorthornCattleBreed_organism_ = AnimalBreedsCode("133370008")
+    """
+    None
+    """
     DairySyntheticCattleBreed_organism_ = AnimalBreedsCode("133371007")
+    """
+    None
+    """
     DanishRedPiedCattleBreed_organism_ = AnimalBreedsCode("133372000")
+    """
+    None
+    """
     DengchuanCattleBreed_organism_ = AnimalBreedsCode("133373005")
+    """
+    None
+    """
     Dexter_KerryCattleBreed_organism_ = AnimalBreedsCode("133374004")
+    """
+    None
+    """
     DoranCattleBreed_organism_ = AnimalBreedsCode("133375003")
+    """
+    None
+    """
     DornaCattleBreed_organism_ = AnimalBreedsCode("133376002")
+    """
+    None
+    """
     DortyolCattleBreed_organism_ = AnimalBreedsCode("133377006")
+    """
+    None
+    """
     EastAnatolianRedCattleBreed_organism_ = AnimalBreedsCode("133378001")
+    """
+    None
+    """
     EastFinnishCattleBreed_organism_ = AnimalBreedsCode("133379009")
+    """
+    None
+    """
     EastMacedonianCattleBreed_organism_ = AnimalBreedsCode("133380007")
+    """
+    None
+    """
     EpirusCattleBreed_organism_ = AnimalBreedsCode("133381006")
+    """
+    None
+    """
     EstonianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133382004")
+    """
+    None
+    """
     FerrandaisCattleBreed_organism_ = AnimalBreedsCode("133383009")
+    """
+    None
+    """
     FinnishAyrshireCattleBreed_organism_ = AnimalBreedsCode("133384003")
+    """
+    None
+    """
     FlemishCattleBreed_organism_ = AnimalBreedsCode("133385002")
+    """
+    None
+    """
     FortCrossCattleBreed_organism_ = AnimalBreedsCode("133387005")
+    """
+    None
+    """
     FratiCattleBreed_organism_ = AnimalBreedsCode("133388000")
+    """
+    None
+    """
     EstonianNativeCattleBreed_organism_ = AnimalBreedsCode("133389008")
+    """
+    None
+    """
     FaeroesCattleBreed_organism_ = AnimalBreedsCode("133390004")
+    """
+    None
+    """
     FrenchBrownCattleBreed_organism_ = AnimalBreedsCode("133391000")
+    """
+    None
+    """
     FrijolilloCattleBreed_organism_ = AnimalBreedsCode("133392007")
+    """
+    None
+    """
     FRSCattleBreed_organism_ = AnimalBreedsCode("133393002")
+    """
+    None
+    """
     GackoCattleBreed_organism_ = AnimalBreedsCode("133394008")
+    """
+    None
+    """
     GadoDaTerraCattleBreed_organism_ = AnimalBreedsCode("133395009")
+    """
+    None
+    """
     GeorgianMountainCattleBreed_organism_ = AnimalBreedsCode("133396005")
+    """
+    None
+    """
     GermanBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133397001")
+    """
+    None
+    """
     GermanBlackPiedDairyCattleBreed_organism_ = AnimalBreedsCode("133398006")
+    """
+    None
+    """
     GermanBrownCattleBreed_organism_ = AnimalBreedsCode("133405000")
+    """
+    None
+    """
     GermanShorthornCattleBreed_organism_ = AnimalBreedsCode("133406004")
+    """
+    None
+    """
     GhanaShorthornCattleBreed_organism_ = AnimalBreedsCode("133407008")
+    """
+    None
+    """
     Glan_DonnersbergCattleBreed_organism_ = AnimalBreedsCode("133408003")
+    """
+    None
+    """
     GoleCattleBreed_organism_ = AnimalBreedsCode("133409006")
+    """
+    None
+    """
     GolpayeganiCattleBreed_organism_ = AnimalBreedsCode("133410001")
+    """
+    None
+    """
     GorbatovRedCattleBreed_organism_ = AnimalBreedsCode("133411002")
+    """
+    None
+    """
     GorynCattleBreed_organism_ = AnimalBreedsCode("133412009")
+    """
+    None
+    """
     GreaterCaucasusCattleBreed_organism_ = AnimalBreedsCode("133413004")
+    """
+    None
+    """
     GreekShorthornCattleBreed_organism_ = AnimalBreedsCode("133420006")
+    """
+    None
+    """
     GreekSteppeCattleBreed_organism_ = AnimalBreedsCode("133421005")
+    """
+    None
+    """
     GrayAlpineCattleBreed_organism_ = AnimalBreedsCode("133422003")
+    """
+    None
+    """
     GuadianaSpottedCattleBreed_organism_ = AnimalBreedsCode("133423008")
+    """
+    None
+    """
     GuelmaCattleBreed_organism_ = AnimalBreedsCode("133424002")
+    """
+    None
+    """
     DanishJerseyCattleBreed_organism_ = AnimalBreedsCode("133580006")
+    """
+    None
+    """
     EnderbyIslandCattleBreed_organism_ = AnimalBreedsCode("133581005")
+    """
+    None
+    """
     GermanAngusCattleBreed_organism_ = AnimalBreedsCode("133582003")
+    """
+    None
+    """
     HorroCattleBreed_organism_ = AnimalBreedsCode("131433006")
+    """
+    None
+    """
     KuriCattleBreed_organism_ = AnimalBreedsCode("131434000")
+    """
+    None
+    """
     NguniCattleBreed_organism_ = AnimalBreedsCode("131435004")
+    """
+    None
+    """
     HalhinGolCattleBreed_organism_ = AnimalBreedsCode("131475007")
+    """
+    None
+    """
     HolmongerCattleBreed_organism_ = AnimalBreedsCode("131476008")
+    """
+    None
+    """
     IlocosCattleBreed_organism_ = AnimalBreedsCode("131477004")
+    """
+    None
+    """
     IloiloCattleBreed_organism_ = AnimalBreedsCode("131478009")
+    """
+    None
+    """
     InkukuCattleBreed_organism_ = AnimalBreedsCode("131479001")
+    """
+    None
+    """
     IskarCattleBreed_organism_ = AnimalBreedsCode("131480003")
+    """
+    None
+    """
     IstrianCattleBreed_organism_ = AnimalBreedsCode("131481004")
+    """
+    None
+    """
     JavaneseOngoleCattleBreed_organism_ = AnimalBreedsCode("131482006")
+    """
+    None
+    """
     JavaneseZebuCattleBreed_organism_ = AnimalBreedsCode("131483001")
+    """
+    None
+    """
     JinnanCattleBreed_organism_ = AnimalBreedsCode("131484007")
+    """
+    None
+    """
     KalmykCattleBreed_organism_ = AnimalBreedsCode("131485008")
+    """
+    None
+    """
     KaokoveldCattleBreed_organism_ = AnimalBreedsCode("131486009")
+    """
+    None
+    """
     KazakhWhiteheadCattleBreed_organism_ = AnimalBreedsCode("131487000")
+    """
+    None
+    """
     Kedah_KelantanCattleBreed_organism_ = AnimalBreedsCode("131488005")
+    """
+    None
+    """
     KigeziCattleBreed_organism_ = AnimalBreedsCode("131489002")
+    """
+    None
+    """
     KisantuCattleBreed_organism_ = AnimalBreedsCode("131490006")
+    """
+    None
+    """
     KolubaraCattleBreed_organism_ = AnimalBreedsCode("131491005")
+    """
+    None
+    """
     KurganCattleBreed_organism_ = AnimalBreedsCode("131492003")
+    """
+    None
+    """
     KyogaCattleBreed_organism_ = AnimalBreedsCode("131493008")
+    """
+    None
+    """
     LucanianCattleBreed_organism_ = AnimalBreedsCode("131494002")
+    """
+    None
+    """
     MaremmanaCattleBreed_organism_ = AnimalBreedsCode("131495001")
+    """
+    None
+    """
     MarianasCattleBreed_organism_ = AnimalBreedsCode("131496000")
+    """
+    None
+    """
     MaryutiCattleBreed_organism_ = AnimalBreedsCode("131497009")
+    """
+    None
+    """
     MauritiusCr_oleCattleBreed_organism_ = AnimalBreedsCode("131498004")
+    """
+    None
+    """
     MenufiCattleBreed_organism_ = AnimalBreedsCode("131499007")
+    """
+    None
+    """
     MezzalinaCattleBreed_organism_ = AnimalBreedsCode("131500003")
+    """
+    None
+    """
     ModicanaCattleBreed_organism_ = AnimalBreedsCode("131501004")
+    """
+    None
+    """
     MoiCattleBreed_organism_ = AnimalBreedsCode("131502006")
+    """
+    None
+    """
     NamaCattleBreed_organism_ = AnimalBreedsCode("131503001")
+    """
+    None
+    """
     NanyangCattleBreed_organism_ = AnimalBreedsCode("131504007")
+    """
+    None
+    """
     N_DamaSangaCattleBreed_organism_ = AnimalBreedsCode("131505008")
+    """
+    None
+    """
     NgandaCattleBreed_organism_ = AnimalBreedsCode("131506009")
+    """
+    None
+    """
     NiloticSangaCattleBreed_organism_ = AnimalBreedsCode("131507000")
+    """
+    None
+    """
     NkoneCattleBreed_organism_ = AnimalBreedsCode("131508005")
+    """
+    None
+    """
     NorthMalawiAngoniCattleBreed_organism_ = AnimalBreedsCode("131509002")
+    """
+    None
+    """
     NuerCattleBreed_organism_ = AnimalBreedsCode("131510007")
+    """
+    None
+    """
     NurasCattleBreed_organism_ = AnimalBreedsCode("131511006")
+    """
+    None
+    """
     NyoroCattleBreed_organism_ = AnimalBreedsCode("131512004")
+    """
+    None
+    """
     OvamboCattleBreed_organism_ = AnimalBreedsCode("131513009")
+    """
+    None
+    """
     ModicanaLowlandCattleBreed_organism_ = AnimalBreedsCode("131552002")
+    """
+    None
+    """
     MengguCattleBreed_organism_ = AnimalBreedsCode("131554001")
+    """
+    None
+    """
     Hart_nCattleBreed_organism_ = AnimalBreedsCode("131606001")
+    """
+    None
+    """
     HerensCattleBreed_organism_ = AnimalBreedsCode("133231000")
+    """
+    None
+    """
     HinterwaldCattleBreed_organism_ = AnimalBreedsCode("133232007")
+    """
+    None
+    """
     HungarianGrayCattleBreed_organism_ = AnimalBreedsCode("133233002")
+    """
+    None
+    """
     IcelandicCattleBreed_organism_ = AnimalBreedsCode("133234008")
+    """
+    None
+    """
     IllawarraCattleBreed_organism_ = AnimalBreedsCode("133235009")
+    """
+    None
+    """
     IrishMoiledCattleBreed_organism_ = AnimalBreedsCode("133236005")
+    """
+    None
+    """
     IsraeliHolsteinCattleBreed_organism_ = AnimalBreedsCode("133237001")
+    """
+    None
+    """
     IstobenCattleBreed_organism_ = AnimalBreedsCode("133238006")
+    """
+    None
+    """
     JaulanCattleBreed_organism_ = AnimalBreedsCode("133239003")
+    """
+    None
+    """
     KazakhCattleBreed_organism_ = AnimalBreedsCode("133240001")
+    """
+    None
+    """
     KerryCattleBreed_organism_ = AnimalBreedsCode("133241002")
+    """
+    None
+    """
     KholmogoryCattleBreed_organism_ = AnimalBreedsCode("133242009")
+    """
+    None
+    """
     LatvianBrownCattleBreed_organism_ = AnimalBreedsCode("133243004")
+    """
+    None
+    """
     LincolnRedShorthornCattleBreed_organism_ = AnimalBreedsCode("133244005")
+    """
+    None
+    """
     LithuanianRedCattleBreed_organism_ = AnimalBreedsCode("133245006")
+    """
+    None
+    """
     MashonaCattleBreed_organism_ = AnimalBreedsCode("133246007")
+    """
+    None
+    """
     MilkingDevonCattleBreed_organism_ = AnimalBreedsCode("133247003")
+    """
+    None
+    """
     MirandesaCattleBreed_organism_ = AnimalBreedsCode("133248008")
+    """
+    None
+    """
     MixedDairyCattleBreed_organism_ = AnimalBreedsCode("133249000")
+    """
+    None
+    """
     MongolianCattleBreed_organism_ = AnimalBreedsCode("133250000")
+    """
+    None
+    """
     MoruchaCattleBreed_organism_ = AnimalBreedsCode("133251001")
+    """
+    None
+    """
     KurdiCattleBreed_organism_ = AnimalBreedsCode("133252008")
+    """
+    None
+    """
     N_damaCattleBreed_organism_ = AnimalBreedsCode("133253003")
+    """
+    None
+    """
     NorwegianRedCattleBreed_organism_ = AnimalBreedsCode("133254009")
+    """
+    None
+    """
     MurbodenCattleBreed_organism_ = AnimalBreedsCode("133268002")
+    """
+    None
+    """
     NorthernBlueCattleBreed_organism_ = AnimalBreedsCode("133326004")
+    """
+    None
+    """
     KoreanBlackCattleBreed_organism_ = AnimalBreedsCode("133352005")
+    """
+    None
+    """
     HarzRedCattleBreed_organism_ = AnimalBreedsCode("133425001")
+    """
+    None
+    """
     HawaiianWildCattleBreed_organism_ = AnimalBreedsCode("133426000")
+    """
+    None
+    """
     HerelandCattleBreed_organism_ = AnimalBreedsCode("133427009")
+    """
+    None
+    """
     HolgusCattleBreed_organism_ = AnimalBreedsCode("133428004")
+    """
+    None
+    """
     HrbineckyCattleBreed_organism_ = AnimalBreedsCode("133429007")
+    """
+    None
+    """
     HuertanaCattleBreed_organism_ = AnimalBreedsCode("133436008")
+    """
+    None
+    """
     HungarianPiedCattleBreed_organism_ = AnimalBreedsCode("133437004")
+    """
+    None
+    """
     HungarofriesCattleBreed_organism_ = AnimalBreedsCode("133438009")
+    """
+    None
+    """
     ImprovedRodopiCattleBreed_organism_ = AnimalBreedsCode("133439001")
+    """
+    None
+    """
     INRA95CattleBreed_organism_ = AnimalBreedsCode("133440004")
+    """
+    None
+    """
     ItalianBrownCattleBreed_organism_ = AnimalBreedsCode("133441000")
+    """
+    None
+    """
     ItalianRedPiedCattleBreed_organism_ = AnimalBreedsCode("133442007")
+    """
+    None
+    """
     JapaneseBlackCattleBreed_organism_ = AnimalBreedsCode("133443002")
+    """
+    None
+    """
     JapaneseBrownCattleBreed_organism_ = AnimalBreedsCode("133444008")
+    """
+    None
+    """
     JapanesePollCattleBreed_organism_ = AnimalBreedsCode("133445009")
+    """
+    None
+    """
     JapaneseShorthornCattleBreed_organism_ = AnimalBreedsCode("133452006")
+    """
+    None
+    """
     JarmelistaCattleBreed_organism_ = AnimalBreedsCode("133453001")
+    """
+    None
+    """
     KabyleCattleBreed_organism_ = AnimalBreedsCode("133454007")
+    """
+    None
+    """
     KapsikiCattleBreed_organism_ = AnimalBreedsCode("133455008")
+    """
+    None
+    """
     KateriniCattleBreed_organism_ = AnimalBreedsCode("133456009")
+    """
+    None
+    """
     KenranCattleBreed_organism_ = AnimalBreedsCode("133457000")
+    """
+    None
+    """
     KhevsurianCattleBreed_organism_ = AnimalBreedsCode("133458005")
+    """
+    None
+    """
     KilisCattleBreed_organism_ = AnimalBreedsCode("133459002")
+    """
+    None
+    """
     KochiCattleBreed_organism_ = AnimalBreedsCode("133460007")
+    """
+    None
+    """
     KoreanNativeCattleBreed_organism_ = AnimalBreedsCode("133461006")
+    """
+    None
+    """
     KostromaCattleBreed_organism_ = AnimalBreedsCode("133468000")
+    """
+    None
+    """
     KravarskyCattleBreed_organism_ = AnimalBreedsCode("133469008")
+    """
+    None
+    """
     KuchinoshimaCattleBreed_organism_ = AnimalBreedsCode("133470009")
+    """
+    None
+    """
     MurrayGrayCattleBreed_organism_ = AnimalBreedsCode("133471008")
+    """
+    None
+    """
     KumamotoCattleBreed_organism_ = AnimalBreedsCode("133473006")
+    """
+    None
+    """
     LaguneCattleBreed_organism_ = AnimalBreedsCode("133474000")
+    """
+    None
+    """
     LakenvelderCattleBreed_organism_ = AnimalBreedsCode("133475004")
+    """
+    None
+    """
     LatvianBlueRoanCattleBreed_organism_ = AnimalBreedsCode("133476003")
+    """
+    None
+    """
     LaVelasquezCattleBreed_organism_ = AnimalBreedsCode("133477007")
+    """
+    None
+    """
     LebaneseCattleBreed_organism_ = AnimalBreedsCode("133484004")
+    """
+    None
+    """
     LebedinCattleBreed_organism_ = AnimalBreedsCode("133485003")
+    """
+    None
+    """
     LesserCaucasusCattleBreed_organism_ = AnimalBreedsCode("133486002")
+    """
+    None
+    """
     LiberianDwarfCattleBreed_organism_ = AnimalBreedsCode("133487006")
+    """
+    None
+    """
     LibyanCattleBreed_organism_ = AnimalBreedsCode("133488001")
+    """
+    None
+    """
     LimCattleBreed_organism_ = AnimalBreedsCode("133489009")
+    """
+    None
+    """
     LimianaCattleBreed_organism_ = AnimalBreedsCode("133490000")
+    """
+    None
+    """
     LimpurgerCattleBreed_organism_ = AnimalBreedsCode("133491001")
+    """
+    None
+    """
     LobiCattleBreed_organism_ = AnimalBreedsCode("133492008")
+    """
+    None
+    """
     LourdaisCattleBreed_organism_ = AnimalBreedsCode("133493003")
+    """
+    None
+    """
     LucernaCattleBreed_organism_ = AnimalBreedsCode("133500008")
+    """
+    None
+    """
     LuxiCattleBreed_organism_ = AnimalBreedsCode("133501007")
+    """
+    None
+    """
     MacedonianBusaCattleBreed_organism_ = AnimalBreedsCode("133502000")
+    """
+    None
+    """
     MakaweliCattleBreed_organism_ = AnimalBreedsCode("133503005")
+    """
+    None
+    """
     MarinhoaCattleBreed_organism_ = AnimalBreedsCode("133504004")
+    """
+    None
+    """
     MaronesaCattleBreed_organism_ = AnimalBreedsCode("133505003")
+    """
+    None
+    """
     MazuryCattleBreed_organism_ = AnimalBreedsCode("133506002")
+    """
+    None
+    """
     MessaoriaCattleBreed_organism_ = AnimalBreedsCode("133507006")
+    """
+    None
+    """
     MetohijaRedCattleBreed_organism_ = AnimalBreedsCode("133508001")
+    """
+    None
+    """
     MingrelianRedCattleBreed_organism_ = AnimalBreedsCode("133509009")
+    """
+    None
+    """
     MinhotaCattleBreed_organism_ = AnimalBreedsCode("133516005")
+    """
+    None
+    """
     MinorcanCattleBreed_organism_ = AnimalBreedsCode("133517001")
+    """
+    None
+    """
     MishimaCattleBreed_organism_ = AnimalBreedsCode("133518006")
+    """
+    None
+    """
     ModeneseCattleBreed_organism_ = AnimalBreedsCode("133519003")
+    """
+    None
+    """
     MonchinaCattleBreed_organism_ = AnimalBreedsCode("133520009")
+    """
+    None
+    """
     MontafonCattleBreed_organism_ = AnimalBreedsCode("133521008")
+    """
+    None
+    """
     MontbeliardCattleBreed_organism_ = AnimalBreedsCode("133522001")
+    """
+    None
+    """
     MorenasDelNoroesteCattleBreed_organism_ = AnimalBreedsCode("133523006")
+    """
+    None
+    """
     MurcianCattleBreed_organism_ = AnimalBreedsCode("133524000")
+    """
+    None
+    """
     Murnau_WerdenfelsCattleBreed_organism_ = AnimalBreedsCode("133525004")
+    """
+    None
+    """
     NantaisCattleBreed_organism_ = AnimalBreedsCode("133532008")
+    """
+    None
+    """
     NejdiCattleBreed_organism_ = AnimalBreedsCode("133533003")
+    """
+    None
+    """
     N_GabouCattleBreed_organism_ = AnimalBreedsCode("133534009")
+    """
+    None
+    """
     NorthFinncattleCattleBreed_organism_ = AnimalBreedsCode("133535005")
+    """
+    None
+    """
     OropaCattleBreed_organism_ = AnimalBreedsCode("133536006")
+    """
+    None
+    """
     OulmesBlondCattleBreed_organism_ = AnimalBreedsCode("133537002")
+    """
+    None
+    """
     PajunaCattleBreed_organism_ = AnimalBreedsCode("133538007")
+    """
+    None
+    """
     PalmeraCattleBreed_organism_ = AnimalBreedsCode("133539004")
+    """
+    None
+    """
     HallingdalCattleBreed_organism_ = AnimalBreedsCode("133579008")
+    """
+    None
+    """
     IsraeliRedCattleBreed_organism_ = AnimalBreedsCode("133583008")
+    """
+    None
+    """
     LinebackCattleBreed_organism_ = AnimalBreedsCode("133584002")
+    """
+    None
+    """
     MertolengaCattleBreed_organism_ = AnimalBreedsCode("133585001")
+    """
+    None
+    """
     MontanaraCattleBreed_organism_ = AnimalBreedsCode("133590003")
+    """
+    None
+    """
     LorquinaCattleBreed_organism_ = AnimalBreedsCode("133592006")
+    """
+    None
+    """
     MixedBreedCattle_organism_ = AnimalBreedsCode("409906003")
+    """
+    None
+    """
     MasaiCattleBreed_organism_ = AnimalBreedsCode("409908002")
+    """
+    None
+    """
     HerefordCattleSuperbreed_organism_ = AnimalBreedsCode("125074003")
+    """
+    None
+    """
     PhilippineNativeCattleBreed_organism_ = AnimalBreedsCode("131436003")
+    """
+    None
+    """
     RomagnolaCattleBreed_organism_ = AnimalBreedsCode("131437007")
+    """
+    None
+    """
     SanheCattleBreed_organism_ = AnimalBreedsCode("131438002")
+    """
+    None
+    """
     TswanaCattleBreed_organism_ = AnimalBreedsCode("131439005")
+    """
+    None
+    """
     TuliCattleBreed_organism_ = AnimalBreedsCode("131440007")
+    """
+    None
+    """
     PantelleriaCattleBreed_organism_ = AnimalBreedsCode("131514003")
+    """
+    None
+    """
     PinzhouCattleBreed_organism_ = AnimalBreedsCode("131515002")
+    """
+    None
+    """
     PortoAmboimCattleBreed_organism_ = AnimalBreedsCode("131516001")
+    """
+    None
+    """
     PosavinaCattleBreed_organism_ = AnimalBreedsCode("131517005")
+    """
+    None
+    """
     RomanianSteppeCattleBreed_organism_ = AnimalBreedsCode("131518000")
+    """
+    None
+    """
     SaidiCattleBreed_organism_ = AnimalBreedsCode("131519008")
+    """
+    None
+    """
     Sardo_ModicanaCattleBreed_organism_ = AnimalBreedsCode("131520002")
+    """
+    None
+    """
     SengologaCattleBreed_organism_ = AnimalBreedsCode("131521003")
+    """
+    None
+    """
     SerereCattleBreed_organism_ = AnimalBreedsCode("131522005")
+    """
+    None
+    """
     SeshagaCattleBreed_organism_ = AnimalBreedsCode("131523000")
+    """
+    None
+    """
     SiberianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("131524006")
+    """
+    None
+    """
     SocotraCattleBreed_organism_ = AnimalBreedsCode("131525007")
+    """
+    None
+    """
     SouthernTswanaCattleBreed_organism_ = AnimalBreedsCode("131526008")
+    """
+    None
+    """
     SprecaCattleBreed_organism_ = AnimalBreedsCode("131527004")
+    """
+    None
+    """
     SunkumaCattleBreed_organism_ = AnimalBreedsCode("131528009")
+    """
+    None
+    """
     TaiwanZebuCattleBreed_organism_ = AnimalBreedsCode("131529001")
+    """
+    None
+    """
     ThaiCattleBreed_organism_ = AnimalBreedsCode("131530006")
+    """
+    None
+    """
     ThailandFightingZebuCattleBreed_organism_ = AnimalBreedsCode("131531005")
+    """
+    None
+    """
     Thanh_HoaCattleBreed_organism_ = AnimalBreedsCode("131532003")
+    """
+    None
+    """
     TibetanCattleBreed_organism_ = AnimalBreedsCode("131533008")
+    """
+    None
+    """
     TongaCattleBreed_organism_ = AnimalBreedsCode("131534002")
+    """
+    None
+    """
     ToroCattleBreed_organism_ = AnimalBreedsCode("131535001")
+    """
+    None
+    """
     TuniCattleBreed_organism_ = AnimalBreedsCode("131536000")
+    """
+    None
+    """
     TurkishGraySteppeCattleBreed_organism_ = AnimalBreedsCode("131537009")
+    """
+    None
+    """
     Tuy_HoaCattleBreed_organism_ = AnimalBreedsCode("131538004")
+    """
+    None
+    """
     UjumqinCattleBreed_organism_ = AnimalBreedsCode("131539007")
+    """
+    None
+    """
     UkrainianGrayCattleBreed_organism_ = AnimalBreedsCode("131544000")
+    """
+    None
+    """
     VietnameseYellowCattleBreed_organism_ = AnimalBreedsCode("131545004")
+    """
+    None
+    """
     Watusi_UnitedStatesOfAmerica_CattleBreed_organism_ = AnimalBreedsCode("131546003")
+    """
+    None
+    """
     WenshanCattleBreed_organism_ = AnimalBreedsCode("131547007")
+    """
+    None
+    """
     YakutCattleBreed_organism_ = AnimalBreedsCode("131548002")
+    """
+    None
+    """
     TaiwanYellowCattleBreed_organism_ = AnimalBreedsCode("131553007")
+    """
+    None
+    """
     VolynskCattleBreed_organism_ = AnimalBreedsCode("132780000")
+    """
+    None
+    """
     SenepolCattleBreed_organism_ = AnimalBreedsCode("132781001")
+    """
+    None
+    """
     ShillukCattleBreed_organism_ = AnimalBreedsCode("132782008")
+    """
+    None
+    """
     ParthenaisCattleBreed_organism_ = AnimalBreedsCode("133255005")
+    """
+    None
+    """
     PolishRedCattleBreed_organism_ = AnimalBreedsCode("133256006")
+    """
+    None
+    """
     R_tienGrayCattleBreed_organism_ = AnimalBreedsCode("133257002")
+    """
+    None
+    """
     RedAndWhiteCattleBreed_organism_ = AnimalBreedsCode("133258007")
+    """
+    None
+    """
     RedPolled_stlandCattleBreed_organism_ = AnimalBreedsCode("133260009")
+    """
+    None
+    """
     RedSteppeCattleBreed_organism_ = AnimalBreedsCode("133261008")
+    """
+    None
+    """
     ReggianaCattleBreed_organism_ = AnimalBreedsCode("133262001")
+    """
+    None
+    """
     RetintaCattleBreed_organism_ = AnimalBreedsCode("133263006")
+    """
+    None
+    """
     RomosinuanoCattleBreed_organism_ = AnimalBreedsCode("133264000")
+    """
+    None
+    """
     RussianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133265004")
+    """
+    None
+    """
     RX3CattleBreed_organism_ = AnimalBreedsCode("133266003")
+    """
+    None
+    """
     SalornCattleBreed_organism_ = AnimalBreedsCode("133267007")
+    """
+    None
+    """
     SanMartineroCattleBreed_organism_ = AnimalBreedsCode("133269005")
+    """
+    None
+    """
     SarabiCattleBreed_organism_ = AnimalBreedsCode("133270006")
+    """
+    None
+    """
     SharabiCattleBreed_organism_ = AnimalBreedsCode("133271005")
+    """
+    None
+    """
     ShetlandCattleBreed_organism_ = AnimalBreedsCode("133272003")
+    """
+    None
+    """
     SimbrahCattleBreed_organism_ = AnimalBreedsCode("133273008")
+    """
+    None
+    """
     SouthDevonCattleBreed_organism_ = AnimalBreedsCode("133274002")
+    """
+    None
+    """
     SuffolkCattleBreed_organism_ = AnimalBreedsCode("133275001")
+    """
+    None
+    """
     SussexCattleBreed_organism_ = AnimalBreedsCode("133276000")
+    """
+    None
+    """
     SwedishRedPolledCattleBreed_organism_ = AnimalBreedsCode("133277009")
+    """
+    None
+    """
     TelemarkCattleBreed_organism_ = AnimalBreedsCode("133278004")
+    """
+    None
+    """
     TexasLonghornCattleBreed_organism_ = AnimalBreedsCode("133279007")
+    """
+    None
+    """
     TexonCattleBreed_organism_ = AnimalBreedsCode("133280005")
+    """
+    None
+    """
     VestlandFjordCattleBreed_organism_ = AnimalBreedsCode("133281009")
+    """
+    None
+    """
     VestlandRedPolledCattleBreed_organism_ = AnimalBreedsCode("133282002")
+    """
+    None
+    """
     WagyuCattleBreed_organism_ = AnimalBreedsCode("133283007")
+    """
+    None
+    """
     WhiteC_ceresCattleBreed_organism_ = AnimalBreedsCode("133284001")
+    """
+    None
+    """
     XinjiangBrownCattleBreed_organism_ = AnimalBreedsCode("133285000")
+    """
+    None
+    """
     ThraceCattleBreed_organism_ = AnimalBreedsCode("133360006")
+    """
+    None
+    """
     RedFlemishCattleBreed_organism_ = AnimalBreedsCode("133386001")
+    """
+    None
+    """
     PechoraCattleBreed_organism_ = AnimalBreedsCode("133399003")
+    """
+    None
+    """
     PeeWeeCattleBreed_organism_ = AnimalBreedsCode("133400005")
+    """
+    None
+    """
     PeloponnesusCattleBreed_organism_ = AnimalBreedsCode("133401009")
+    """
+    None
+    """
     PesterCattleBreed_organism_ = AnimalBreedsCode("133402002")
+    """
+    None
+    """
     PieRougeDeL_EstCattleBreed_organism_ = AnimalBreedsCode("133403007")
+    """
+    None
+    """
     PisanaCattleBreed_organism_ = AnimalBreedsCode("133404001")
+    """
+    None
+    """
     PolishBlackAndWhiteLowlandCattleBreed_organism_ = AnimalBreedsCode("133414005")
+    """
+    None
+    """
     PolishSimmentalCattleBreed_organism_ = AnimalBreedsCode("133415006")
+    """
+    None
+    """
     PolledJerseyCattleBreed_organism_ = AnimalBreedsCode("133416007")
+    """
+    None
+    """
     PolledLincolnRedCattleBreed_organism_ = AnimalBreedsCode("133417003")
+    """
+    None
+    """
     PolledShorthorn_UnitedStatesOfAmerica_CattleBreed_organism_ = AnimalBreedsCode(
         "133418008"
     )
+    """
+    None
+    """
     PolledSimmentalCattleBreed_organism_ = AnimalBreedsCode("133419000")
+    """
+    None
+    """
     PolledSussexCattleBreed_organism_ = AnimalBreedsCode("133430002")
+    """
+    None
+    """
     PolledWelshBlackCattleBreed_organism_ = AnimalBreedsCode("133431003")
+    """
+    None
+    """
     PontremoleseCattleBreed_organism_ = AnimalBreedsCode("133432005")
+    """
+    None
+    """
     PretaCattleBreed_organism_ = AnimalBreedsCode("133433000")
+    """
+    None
+    """
     PuertoRicanCriolloCattleBreed_organism_ = AnimalBreedsCode("133434006")
+    """
+    None
+    """
     PyreneanCattleBreed_organism_ = AnimalBreedsCode("133435007")
+    """
+    None
+    """
     QinchuanCattleBreed_organism_ = AnimalBreedsCode("133446005")
+    """
+    None
+    """
     RamoGrandeCattleBreed_organism_ = AnimalBreedsCode("133447001")
+    """
+    None
+    """
     RandallLinebackCattleBreed_organism_ = AnimalBreedsCode("133448006")
+    """
+    None
+    """
     RedGallowayCattleBreed_organism_ = AnimalBreedsCode("133449003")
+    """
+    None
+    """
     RegusCattleBreed_organism_ = AnimalBreedsCode("133450003")
+    """
+    None
+    """
     RendenaCattleBreed_organism_ = AnimalBreedsCode("133451004")
+    """
+    None
+    """
     RhaetianGrayCattleBreed_organism_ = AnimalBreedsCode("133462004")
+    """
+    None
+    """
     RioLimonDairyCriolloCattleBreed_organism_ = AnimalBreedsCode("133463009")
+    """
+    None
+    """
     RodopiCattleBreed_organism_ = AnimalBreedsCode("133464003")
+    """
+    None
+    """
     RomanianRedCattleBreed_organism_ = AnimalBreedsCode("133465002")
+    """
+    None
+    """
     RomanianBrownCattleBreed_organism_ = AnimalBreedsCode("133466001")
+    """
+    None
+    """
     RussianBrownCattleBreed_organism_ = AnimalBreedsCode("133467005")
+    """
+    None
+    """
     SardinianCattleBreed_organism_ = AnimalBreedsCode("133478002")
+    """
+    None
+    """
     SardinianBrownCattleBreed_organism_ = AnimalBreedsCode("133479005")
+    """
+    None
+    """
     SavinjaGrayCattleBreed_organism_ = AnimalBreedsCode("133480008")
+    """
+    None
+    """
     SayaguesaCattleBreed_organism_ = AnimalBreedsCode("133481007")
+    """
+    None
+    """
     SeferihisarCattleBreed_organism_ = AnimalBreedsCode("133482000")
+    """
+    None
+    """
     ShkodraRedCattleBreed_organism_ = AnimalBreedsCode("133483005")
+    """
+    None
+    """
     SlovakianPiedCattleBreed_organism_ = AnimalBreedsCode("133494009")
+    """
+    None
+    """
     SlovakianPinzgauCattleBreed_organism_ = AnimalBreedsCode("133495005")
+    """
+    None
+    """
     SlovenianBrownCattleBreed_organism_ = AnimalBreedsCode("133496006")
+    """
+    None
+    """
     SombaCattleBreed_organism_ = AnimalBreedsCode("133497002")
+    """
+    None
+    """
     SouthAfricanBrownSwissCattleBreed_organism_ = AnimalBreedsCode("133498007")
+    """
+    None
+    """
     SouthAnatolianRedCattleBreed_organism_ = AnimalBreedsCode("133499004")
+    """
+    None
+    """
     SouthernUkrainianCattleBreed_organism_ = AnimalBreedsCode("133510004")
+    """
+    None
+    """
     SpanishBrownAlpineCattleBreed_organism_ = AnimalBreedsCode("133511000")
+    """
+    None
+    """
     SuksunCattleBreed_organism_ = AnimalBreedsCode("133512007")
+    """
+    None
+    """
     SwissBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133513002")
+    """
+    None
+    """
     SychevkaCattleBreed_organism_ = AnimalBreedsCode("133514008")
+    """
+    None
+    """
     SykiaCattleBreed_organism_ = AnimalBreedsCode("133515009")
+    """
+    None
+    """
     TagilCattleBreed_organism_ = AnimalBreedsCode("133526003")
+    """
+    None
+    """
     TajmaCattleBreed_organism_ = AnimalBreedsCode("133527007")
+    """
+    None
+    """
     TambovRedCattleBreed_organism_ = AnimalBreedsCode("133528002")
+    """
+    None
+    """
     TarinaCattleBreed_organism_ = AnimalBreedsCode("133529005")
+    """
+    None
+    """
     ThessalyCattleBreed_organism_ = AnimalBreedsCode("133530000")
+    """
+    None
+    """
     TinimaCattleBreed_organism_ = AnimalBreedsCode("133531001")
+    """
+    None
+    """
     PankotaRedCattleBreed_organism_ = AnimalBreedsCode("133540002")
+    """
+    None
+    """
     PaphosCattleBreed_organism_ = AnimalBreedsCode("133541003")
+    """
+    None
+    """
     TinosCattleBreed_organism_ = AnimalBreedsCode("133542005")
+    """
+    None
+    """
     TransylvanianPinzgauCattleBreed_organism_ = AnimalBreedsCode("133543000")
+    """
+    None
+    """
     TropicalDairyCattleCattleBreed_organism_ = AnimalBreedsCode("133544006")
+    """
+    None
+    """
     TropicanaCattleBreed_organism_ = AnimalBreedsCode("133545007")
+    """
+    None
+    """
     TudancaCattleBreed_organism_ = AnimalBreedsCode("133546008")
+    """
+    None
+    """
     TurinoCattleBreed_organism_ = AnimalBreedsCode("133547004")
+    """
+    None
+    """
     TurkishBrownCattleBreed_organism_ = AnimalBreedsCode("133548009")
+    """
+    None
+    """
     Tux_ZillertalCattleBreed_organism_ = AnimalBreedsCode("133549001")
+    """
+    None
+    """
     TyrolGrayCattleBreed_organism_ = AnimalBreedsCode("133550001")
+    """
+    None
+    """
     UkrainianWhiteheadedCattleBreed_organism_ = AnimalBreedsCode("133555006")
+    """
+    None
+    """
     UralBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133556007")
+    """
+    None
+    """
     ValdresCattleBreed_organism_ = AnimalBreedsCode("133557003")
+    """
+    None
+    """
     VaynolCattleBreed_organism_ = AnimalBreedsCode("133558008")
+    """
+    None
+    """
     VerinesaCattleBreed_organism_ = AnimalBreedsCode("133559000")
+    """
+    None
+    """
     VianesaCattleBreed_organism_ = AnimalBreedsCode("133560005")
+    """
+    None
+    """
     Villard_de_LansCattleBreed_organism_ = AnimalBreedsCode("133561009")
+    """
+    None
+    """
     VogelsbergCattleBreed_organism_ = AnimalBreedsCode("133562002")
+    """
+    None
+    """
     PieRougeDesPlainesCattleBreed_organism_ = AnimalBreedsCode("133563007")
+    """
+    None
+    """
     VorderwaldCattleBreed_organism_ = AnimalBreedsCode("133564001")
+    """
+    None
+    """
     WestAfricanDwarfShorthornCattleBreed_organism_ = AnimalBreedsCode("133565000")
+    """
+    None
+    """
     WestFinnishCattleBreed_organism_ = AnimalBreedsCode("133566004")
+    """
+    None
+    """
     WestMacedonianCattleBreed_organism_ = AnimalBreedsCode("133567008")
+    """
+    None
+    """
     WhitebredShorthornCattleBreed_organism_ = AnimalBreedsCode("133568003")
+    """
+    None
+    """
     WhiteGallowayCattleBreed_organism_ = AnimalBreedsCode("133569006")
+    """
+    None
+    """
     WhiteWelshCattleBreed_organism_ = AnimalBreedsCode("133570007")
+    """
+    None
+    """
     WitrikCattleBreed_organism_ = AnimalBreedsCode("133571006")
+    """
+    None
+    """
     YacumentoCattleBreed_organism_ = AnimalBreedsCode("133572004")
+    """
+    None
+    """
     SchwyzCattleBreed_organism_ = AnimalBreedsCode("133576001")
+    """
+    None
+    """
     RedFriesianCattleBreed_organism_ = AnimalBreedsCode("133586000")
+    """
+    None
+    """
     SenegusCattleBreed_organism_ = AnimalBreedsCode("133587009")
+    """
+    None
+    """
     SouthernCriouloCattleBreed_organism_ = AnimalBreedsCode("133588004")
+    """
+    None
+    """
     VosgesCattleBreed_organism_ = AnimalBreedsCode("133589007")
+    """
+    None
+    """
     PantaneiroCattleBreed_organism_ = AnimalBreedsCode("133673003")
+    """
+    None
+    """
     YunnanZebuCattleBreed_organism_ = AnimalBreedsCode("131549005")
+    """
+    None
+    """
     ZambiaAngoniCattleBreed_organism_ = AnimalBreedsCode("131550005")
+    """
+    None
+    """
     YanbianCattleBreed_organism_ = AnimalBreedsCode("133286004")
+    """
+    None
+    """
     ZaobeiCattleBreed_organism_ = AnimalBreedsCode("133287008")
+    """
+    None
+    """
     ZavotCattleBreed_organism_ = AnimalBreedsCode("133288003")
+    """
+    None
+    """
     ZnamenskCattleBreed_organism_ = AnimalBreedsCode("133289006")
+    """
+    None
+    """
     YaroslavlCattleBreed_organism_ = AnimalBreedsCode("133573009")
+    """
+    None
+    """
     YurinoCattleBreed_organism_ = AnimalBreedsCode("133574003")
+    """
+    None
+    """
     CommercialWhiteEggLayerTypeChicken_organism_ = AnimalBreedsCode("22330003")
+    """
+    None
+    """
     BraekelChickenBreed_organism_ = AnimalBreedsCode("132004000")
+    """
+    None
+    """
     Cochin_StandardChickenBreed_organism_ = AnimalBreedsCode("132005004")
+    """
+    None
+    """
     GotlandChickenBreed_organism_ = AnimalBreedsCode("132007007")
+    """
+    None
+    """
     GroningerMeeuwenChickenBreed_organism_ = AnimalBreedsCode("132008002")
+    """
+    None
+    """
     ChocolateTurkeyBreed_organism_ = AnimalBreedsCode("132691001")
+    """
+    None
+    """
     LilacTurkeyBreed_organism_ = AnimalBreedsCode("132692008")
+    """
+    None
+    """
     SilverAuburnTurkeyBreed_organism_ = AnimalBreedsCode("132693003")
+    """
+    None
+    """
     WildCrossTurkey_organism_ = AnimalBreedsCode("132695005")
+    """
+    None
+    """
     MatrouhChickenBreed_organism_ = AnimalBreedsCode("132696006")
+    """
+    None
+    """
     GrayChickenBreed_organism_ = AnimalBreedsCode("132713009")
+    """
+    None
+    """
     HamburgsChickenBreed_organism_ = AnimalBreedsCode("132714003")
+    """
+    None
+    """
     GimmizahChickenBreed_organism_ = AnimalBreedsCode("132715002")
+    """
+    None
+    """
     SilverMontazahChickenBreed_organism_ = AnimalBreedsCode("132726008")
+    """
+    None
+    """
     SwissHenChickenBreed_organism_ = AnimalBreedsCode("132727004")
+    """
+    None
+    """
     StyrianChickenBreed_organism_ = AnimalBreedsCode("132728009")
+    """
+    None
+    """
     OldEnglishGameChickenBreed_organism_ = AnimalBreedsCode("132729001")
+    """
+    None
+    """
     AppenzellBeardedHenChickenBreed_organism_ = AnimalBreedsCode("132730006")
+    """
+    None
+    """
     SulmtalerChickenBreed_organism_ = AnimalBreedsCode("132752002")
+    """
+    None
+    """
     SvartH_naChickenBreed_organism_ = AnimalBreedsCode("132753007")
+    """
+    None
+    """
     VorwerksChickenBreed_organism_ = AnimalBreedsCode("132754001")
+    """
+    None
+    """
     WestfalischeTotlegerChickenBreed_organism_ = AnimalBreedsCode("132755000")
+    """
+    None
+    """
     YamatoGunkeiChickenBreed_organism_ = AnimalBreedsCode("132756004")
+    """
+    None
+    """
     FrieslandsChickenBreed_organism_ = AnimalBreedsCode("132816005")
+    """
+    None
+    """
     AmeraucanaChickenBreed_organism_ = AnimalBreedsCode("132817001")
+    """
+    None
+    """
     _sbosChickenBreed_organism_ = AnimalBreedsCode("132818006")
+    """
+    None
+    """
     AugsburgerChickenBreed_organism_ = AnimalBreedsCode("132819003")
+    """
+    None
+    """
     BielefelderChickenBreed_organism_ = AnimalBreedsCode("132820009")
+    """
+    None
+    """
     NorfolkGrayChickenBreed_organism_ = AnimalBreedsCode("132821008")
+    """
+    None
+    """
     HedemoraChickenBreed_organism_ = AnimalBreedsCode("132822001")
+    """
+    None
+    """
     HungarianYellowChickenBreed_organism_ = AnimalBreedsCode("132823006")
+    """
+    None
+    """
     IowaBlueChickenBreed_organism_ = AnimalBreedsCode("132824000")
+    """
+    None
+    """
     RedJungleFowlTypeChicken_organism_ = AnimalBreedsCode("132825004")
+    """
+    None
+    """
     KraienkoppeChickenBreed_organism_ = AnimalBreedsCode("132827007")
+    """
+    None
+    """
     LincolnshireBuffChickenBreed_organism_ = AnimalBreedsCode("132828002")
+    """
+    None
+    """
     TomaruChickenBreed_organism_ = AnimalBreedsCode("132829005")
+    """
+    None
+    """
     OnagadoriChickenBreed_organism_ = AnimalBreedsCode("132830000")
+    """
+    None
+    """
     ManxRumpiesChickenBreed_organism_ = AnimalBreedsCode("132831001")
+    """
+    None
+    """
     MalineChickenBreed_organism_ = AnimalBreedsCode("132832008")
+    """
+    None
+    """
     NankinChickenBreed_organism_ = AnimalBreedsCode("132833003")
+    """
+    None
+    """
     _landChickenBreed_organism_ = AnimalBreedsCode("132834009")
+    """
+    None
+    """
     OrustChickenBreed_organism_ = AnimalBreedsCode("132836006")
+    """
+    None
+    """
     PenedesencaChickenBreed_organism_ = AnimalBreedsCode("132837002")
+    """
+    None
+    """
     RhodeIslandWhiteChickenBreed_organism_ = AnimalBreedsCode("132838007")
+    """
+    None
+    """
     SablepootChickenBreed_organism_ = AnimalBreedsCode("132840002")
+    """
+    None
+    """
     SaipanJungleFowlChickenBreed_organism_ = AnimalBreedsCode("132841003")
+    """
+    None
+    """
     ScotsDumpyChickenBreed_organism_ = AnimalBreedsCode("132842005")
+    """
+    None
+    """
     GreenChickenBreed_organism_ = AnimalBreedsCode("132847004")
+    """
+    None
+    """
     GallusInaurisChickenBreed_organism_ = AnimalBreedsCode("132848009")
+    """
+    None
+    """
     ShamoChickenBreed_organism_ = AnimalBreedsCode("132862002")
+    """
+    None
+    """
     DomesticFowl_organism_ = AnimalBreedsCode("359839008")
+    """
+    None
+    """
     MixedBreedChicken_organism_ = AnimalBreedsCode("406723001")
+    """
+    None
+    """
     GallusGallus_organism_ = AnimalBreedsCode("47290002")
+    """
+    None
+    """
     MeleagrisGallopavo_organism_ = AnimalBreedsCode("20657003")
+    """
+    None
+    """
     WhiteTurkey_organism_ = AnimalBreedsCode("2034000")
+    """
+    None
+    """
     MaransChicken_organism_ = AnimalBreedsCode("2253004")
+    """
+    None
+    """
     JapaneseChicken_organism_ = AnimalBreedsCode("2333000")
+    """
+    None
+    """
     BeltsvilleWhiteTurkey_organism_ = AnimalBreedsCode("3872000")
+    """
+    None
+    """
     FayoumiChicken_organism_ = AnimalBreedsCode("5114005")
+    """
+    None
+    """
     RhodeIslandRedChicken_organism_ = AnimalBreedsCode("5350006")
+    """
+    None
+    """
     WyandotteChicken_organism_ = AnimalBreedsCode("7598004")
+    """
+    None
+    """
     NebraskanSpottedTurkey_organism_ = AnimalBreedsCode("7700003")
+    """
+    None
+    """
     LamonaChicken_organism_ = AnimalBreedsCode("7767003")
+    """
+    None
+    """
     ArucanaChicken_organism_ = AnimalBreedsCode("10643004")
+    """
+    None
+    """
     DelawareChicken_organism_ = AnimalBreedsCode("11830008")
+    """
+    None
+    """
     RedcapChicken_organism_ = AnimalBreedsCode("12419001")
+    """
+    None
+    """
     CrevecoeurChicken_organism_ = AnimalBreedsCode("12874007")
+    """
+    None
+    """
     SpanishChicken_organism_ = AnimalBreedsCode("13156006")
+    """
+    None
+    """
     OrpingtonChicken_organism_ = AnimalBreedsCode("18299006")
+    """
+    None
+    """
     Black_wingedBronzeTurkey_organism_ = AnimalBreedsCode("23992007")
+    """
+    None
+    """
     PennaPalmTurkey_organism_ = AnimalBreedsCode("24886005")
+    """
+    None
+    """
     SmallWhiteTurkey_organism_ = AnimalBreedsCode("25854005")
+    """
+    None
+    """
     SlateTurkey_organism_ = AnimalBreedsCode("28138009")
+    """
+    None
+    """
     FaverolleChicken_organism_ = AnimalBreedsCode("29546006")
+    """
+    None
+    """
     LaFlecheChicken_organism_ = AnimalBreedsCode("29615001")
+    """
+    None
+    """
     BroadBreastedBronzeTurkey_organism_ = AnimalBreedsCode("30432005")
+    """
+    None
+    """
     BlackTurkey_organism_ = AnimalBreedsCode("32509001")
+    """
+    None
+    """
     CommercialMeatTypeChicken_organism_ = AnimalBreedsCode("32540008")
+    """
+    None
+    """
     PhoenixChicken_organism_ = AnimalBreedsCode("33224000")
+    """
+    None
+    """
     ButtercupChicken_organism_ = AnimalBreedsCode("33607002")
+    """
+    None
+    """
     LeghornChicken_organism_ = AnimalBreedsCode("35839008")
+    """
+    None
+    """
     BroadBreastedWhiteTurkey_organism_ = AnimalBreedsCode("37812004")
+    """
+    None
+    """
     BuckeyeChicken_organism_ = AnimalBreedsCode("39571003")
+    """
+    None
+    """
     PlymouthRockChicken_organism_ = AnimalBreedsCode("41290008")
+    """
+    None
+    """
     JungleFowlChicken_organism_ = AnimalBreedsCode("41437006")
+    """
+    None
+    """
     MinorcaChicken_organism_ = AnimalBreedsCode("42602001")
+    """
+    None
+    """
     JerseyGiantChicken_organism_ = AnimalBreedsCode("42840001")
+    """
+    None
+    """
     YokohamaChicken_organism_ = AnimalBreedsCode("43223009")
+    """
+    None
+    """
     RouenDuckBreed_organism_ = AnimalBreedsCode("43869002")
+    """
+    None
+    """
     MidgetWhiteTurkey_organism_ = AnimalBreedsCode("46830002")
+    """
+    None
+    """
     DarkBrownTurkey_organism_ = AnimalBreedsCode("47314009")
+    """
+    None
+    """
     JavaChicken_organism_ = AnimalBreedsCode("47745005")
+    """
+    None
+    """
     SilkieChicken_organism_ = AnimalBreedsCode("48255007")
+    """
+    None
+    """
     LankenvelderChicken_organism_ = AnimalBreedsCode("49407004")
+    """
+    None
+    """
     BlueSlateTurkey_organism_ = AnimalBreedsCode("50710008")
+    """
+    None
+    """
     DominiqueChicken_organism_ = AnimalBreedsCode("52882006")
+    """
+    None
+    """
     NewHampshireChicken_organism_ = AnimalBreedsCode("54218009")
+    """
+    None
+    """
     AustralorpChicken_organism_ = AnimalBreedsCode("54251000")
+    """
+    None
+    """
     GrayTurkey_organism_ = AnimalBreedsCode("54604007")
+    """
+    None
+    """
     JerseyBuffTurkey_organism_ = AnimalBreedsCode("55074002")
+    """
+    None
+    """
     HollandChicken_organism_ = AnimalBreedsCode("56764001")
+    """
+    None
+    """
     BrahmaChicken_organism_ = AnimalBreedsCode("57364006")
+    """
+    None
+    """
     SpitzhaubenChicken_organism_ = AnimalBreedsCode("57950004")
+    """
+    None
+    """
     WelsummerChicken_organism_ = AnimalBreedsCode("87530001")
+    """
+    None
+    """
     SumatraChicken_organism_ = AnimalBreedsCode("87833007")
+    """
+    None
+    """
     BrabanterChickenBreed_organism_ = AnimalBreedsCode("132003006")
+    """
+    None
+    """
     KoShamoChickenBreed_organism_ = AnimalBreedsCode("132826003")
+    """
+    None
+    """
     GoldenMontazahChickenBreed_organism_ = AnimalBreedsCode("132850001")
+    """
+    None
+    """
     Bantam_organism_ = AnimalBreedsCode("409910000")
+    """
+    None
+    """
     BelgianBeardedChicken_organism_ = AnimalBreedsCode("30221007")
+    """
+    None
+    """
     LilacBuffTurkey_organism_ = AnimalBreedsCode("60786005")
+    """
+    None
+    """
     DorkingChicken_organism_ = AnimalBreedsCode("61204004")
+    """
+    None
+    """
     CornishChicken_organism_ = AnimalBreedsCode("61839006")
+    """
+    None
+    """
     PolishChicken_organism_ = AnimalBreedsCode("61843005")
+    """
+    None
+    """
     RoyalPalmTurkey_organism_ = AnimalBreedsCode("62124009")
+    """
+    None
+    """
     ChanteclerChicken_organism_ = AnimalBreedsCode("63257005")
+    """
+    None
+    """
     LightBrownTurkey_organism_ = AnimalBreedsCode("65136005")
+    """
+    None
+    """
     BarnevelderChicken_organism_ = AnimalBreedsCode("65873005")
+    """
+    None
+    """
     SebrightChicken_organism_ = AnimalBreedsCode("67021006")
+    """
+    None
+    """
     TurkenChicken_organism_ = AnimalBreedsCode("67209003")
+    """
+    None
+    """
     SultanChicken_organism_ = AnimalBreedsCode("68412000")
+    """
+    None
+    """
     AnconaChicken_organism_ = AnimalBreedsCode("69575001")
+    """
+    None
+    """
     OrloffChicken_organism_ = AnimalBreedsCode("70210006")
+    """
+    None
+    """
     LangshanChicken_organism_ = AnimalBreedsCode("70308007")
+    """
+    None
+    """
     CubalayaChicken_organism_ = AnimalBreedsCode("70326005")
+    """
+    None
+    """
     GameChicken_organism_ = AnimalBreedsCode("70429002")
+    """
+    None
+    """
     CommercialBrownEggLayerTypeChicken_organism_ = AnimalBreedsCode("71238008")
+    """
+    None
+    """
     PennaWhiteTurkey_organism_ = AnimalBreedsCode("73012007")
+    """
+    None
+    """
     CampineChicken_organism_ = AnimalBreedsCode("76268003")
+    """
+    None
+    """
     ThuringerChicken_organism_ = AnimalBreedsCode("77839002")
+    """
+    None
+    """
     MalayChicken_organism_ = AnimalBreedsCode("78154009")
+    """
+    None
+    """
     AndalusianChicken_organism_ = AnimalBreedsCode("78375007")
+    """
+    None
+    """
     HungarianChicken_organism_ = AnimalBreedsCode("80204002")
+    """
+    None
+    """
     NarragansettTurkey_organism_ = AnimalBreedsCode("80610007")
+    """
+    None
+    """
     RosecombChicken_organism_ = AnimalBreedsCode("80886008")
+    """
+    None
+    """
     SussexChicken_organism_ = AnimalBreedsCode("80993008")
+    """
+    None
+    """
     CaliforniaChicken_organism_ = AnimalBreedsCode("82249009")
+    """
+    None
+    """
     HoudanChicken_organism_ = AnimalBreedsCode("82848009")
+    """
+    None
+    """
     BlackSpanishTurkey_organism_ = AnimalBreedsCode("91401000")
+    """
+    None
+    """
     FrizzleChicken_organism_ = AnimalBreedsCode("91427000")
+    """
+    None
+    """
     RumplessChicken_organism_ = AnimalBreedsCode("112495005")
+    """
+    None
+    """
     BronzeTurkeyBreed_organism_ = AnimalBreedsCode("131857000")
+    """
+    None
+    """
     AuburnTurkeyBreed_organism_ = AnimalBreedsCode("131858005")
+    """
+    None
+    """
     BourbonRedTurkeyBreed_organism_ = AnimalBreedsCode("131859002")
+    """
+    None
+    """
     BuffTurkeyBreed_organism_ = AnimalBreedsCode("131860007")
+    """
+    None
+    """
     BaheijChickenBreed_organism_ = AnimalBreedsCode("131995009")
+    """
+    None
+    """
     AseelChickenBreed_organism_ = AnimalBreedsCode("131996005")
+    """
+    None
+    """
     BandaraChickenBreed_organism_ = AnimalBreedsCode("131997001")
+    """
+    None
+    """
     CatalanaChickenBreed_organism_ = AnimalBreedsCode("131998006")
+    """
+    None
+    """
     AustralianGamefowlChickenBreed_organism_ = AnimalBreedsCode("131999003")
+    """
+    None
+    """
     AyamCemaniChickenBreed_organism_ = AnimalBreedsCode("132000009")
+    """
+    None
+    """
     SwedishSpottedHenChickenBreed_organism_ = AnimalBreedsCode("132001008")
+    """
+    None
+    """
     BelgianBootedBantamChickenBreed_organism_ = AnimalBreedsCode("132002001")
+    """
+    None
+    """
     OldEnglishBantamGameChickenBreed_organism_ = AnimalBreedsCode("132006003")
+    """
+    None
+    """
     DutchBantamChickenBreed_organism_ = AnimalBreedsCode("132725007")
+    """
+    None
+    """
     _lanskBantamChickenBreed_organism_ = AnimalBreedsCode("132835005")
+    """
+    None
+    """
     RosecombBantamChickenBreed_organism_ = AnimalBreedsCode("132839004")
+    """
+    None
+    """
     AntwerpBeardedBantam_organism_ = AnimalBreedsCode("409909005")
+    """
+    None
+    """
     MukotaPigBreed_organism_ = AnimalBreedsCode("132247006")
+    """
+    None
+    """
     MinzhuPigBreed_organism_ = AnimalBreedsCode("132248001")
+    """
+    None
+    """
     NeijiangPigBreed_organism_ = AnimalBreedsCode("132249009")
+    """
+    None
+    """
     MulefootPigBreed_organism_ = AnimalBreedsCode("132250009")
+    """
+    None
+    """
     NormandPigBreed_organism_ = AnimalBreedsCode("132251008")
+    """
+    None
+    """
     AngelnSaddlebackPigBreed_organism_ = AnimalBreedsCode("132252001")
+    """
+    None
+    """
     GreekLocalPigBreed_organism_ = AnimalBreedsCode("132253006")
+    """
+    None
+    """
     IcelandicPigBreed_organism_ = AnimalBreedsCode("132254000")
+    """
+    None
+    """
     CasertanaPigBreed_organism_ = AnimalBreedsCode("132255004")
+    """
+    None
+    """
     Madonie_SicilianPigBreed_organism_ = AnimalBreedsCode("132256003")
+    """
+    None
+    """
     SardinianPigBreed_organism_ = AnimalBreedsCode("132257007")
+    """
+    None
+    """
     SicilianPigBreed_organism_ = AnimalBreedsCode("132258002")
+    """
+    None
+    """
     ZlotnikiSpottedPigBreed_organism_ = AnimalBreedsCode("132259005")
+    """
+    None
+    """
     ZlotnikiWhitePigBreed_organism_ = AnimalBreedsCode("132260000")
+    """
+    None
+    """
     SumadijaPigBreed_organism_ = AnimalBreedsCode("132262008")
+    """
+    None
+    """
     FroxfieldPygmyPigBreed_organism_ = AnimalBreedsCode("132263003")
+    """
+    None
+    """
     DanishLargeWhitePigBreed_organism_ = AnimalBreedsCode("132264009")
+    """
+    None
+    """
     DanishDurocPigBreed_organism_ = AnimalBreedsCode("132265005")
+    """
+    None
+    """
     DanishHampshirePigBreed_organism_ = AnimalBreedsCode("132266006")
+    """
+    None
+    """
     PigghamPigBreed_organism_ = AnimalBreedsCode("132267002")
+    """
+    None
+    """
     NewYorkRedPigBreed_organism_ = AnimalBreedsCode("132268007")
+    """
+    None
+    """
     FinnishYorkshirePigBreed_organism_ = AnimalBreedsCode("132269004")
+    """
+    None
+    """
     DutchYorkshirePigBreed_organism_ = AnimalBreedsCode("132270003")
+    """
+    None
+    """
     PulawyPigBreed_organism_ = AnimalBreedsCode("132271004")
+    """
+    None
+    """
     PomeranianPigBreed_organism_ = AnimalBreedsCode("132272006")
+    """
+    None
+    """
     PolishLandracePigBreed_organism_ = AnimalBreedsCode("132273001")
+    """
+    None
+    """
     EstonianBaconPigBreed_organism_ = AnimalBreedsCode("132274007")
+    """
+    None
+    """
     LatvianWhitePigBreed_organism_ = AnimalBreedsCode("132275008")
+    """
+    None
+    """
     LithuanianWhitePigBreed_organism_ = AnimalBreedsCode("132276009")
+    """
+    None
+    """
     SusScrofa_organism_ = AnimalBreedsCode("78678003")
+    """
+    None
+    """
     CosentinaPigBreed_organism_ = AnimalBreedsCode("132180009")
+    """
+    None
+    """
     CuinoPigBreed_organism_ = AnimalBreedsCode("132181008")
+    """
+    None
+    """
     FriuliBlackPigBreed_organism_ = AnimalBreedsCode("132182001")
+    """
+    None
+    """
     FumatiPigBreed_organism_ = AnimalBreedsCode("132183006")
+    """
+    None
+    """
     GalicianPigBreed_organism_ = AnimalBreedsCode("132184000")
+    """
+    None
+    """
     GermanBerkshirePigBreed_organism_ = AnimalBreedsCode("132185004")
+    """
+    None
+    """
     GhoriPigBreed_organism_ = AnimalBreedsCode("132186003")
+    """
+    None
+    """
     JianliPigBreed_organism_ = AnimalBreedsCode("132187007")
+    """
+    None
+    """
     LucanianPigBreed_organism_ = AnimalBreedsCode("132188002")
+    """
+    None
+    """
     MaremmanaPigBreed_organism_ = AnimalBreedsCode("132189005")
+    """
+    None
+    """
     MiamiPigBreed_organism_ = AnimalBreedsCode("132190001")
+    """
+    None
+    """
     MontmorillonPigBreed_organism_ = AnimalBreedsCode("132191002")
+    """
+    None
+    """
     OldSwedishSpottedPigBreed_organism_ = AnimalBreedsCode("132192009")
+    """
+    None
+    """
     OliventinaPigBreed_organism_ = AnimalBreedsCode("132193004")
+    """
+    None
+    """
     ParmensePigBreed_organism_ = AnimalBreedsCode("132194005")
+    """
+    None
+    """
     RomagnolaPigBreed_organism_ = AnimalBreedsCode("132195006")
+    """
+    None
+    """
     SiberianPigBreed_organism_ = AnimalBreedsCode("132196007")
+    """
+    None
+    """
     SmallWhitePigBreed_organism_ = AnimalBreedsCode("132197003")
+    """
+    None
+    """
     BaltaretPigBreed_organism_ = AnimalBreedsCode("132198008")
+    """
+    None
+    """
     TunchangPigBreed_organism_ = AnimalBreedsCode("132199000")
+    """
+    None
+    """
     SterlingPigBreed_organism_ = AnimalBreedsCode("132200002")
+    """
+    None
+    """
     VichPigBreed_organism_ = AnimalBreedsCode("132201003")
+    """
+    None
+    """
     VietnamesePigBreed_organism_ = AnimalBreedsCode("132202005")
+    """
+    None
+    """
     VitoriaPigBreed_organism_ = AnimalBreedsCode("132203000")
+    """
+    None
+    """
     WaiChowPigBreed_organism_ = AnimalBreedsCode("132204006")
+    """
+    None
+    """
     YorkshireBlueAndWhitePigBreed_organism_ = AnimalBreedsCode("132205007")
+    """
+    None
+    """
     Dalland020PigBreed_organism_ = AnimalBreedsCode("132206008")
+    """
+    None
+    """
     WiltshirePigBreed_organism_ = AnimalBreedsCode("132207004")
+    """
+    None
+    """
     HamrocPigBreed_organism_ = AnimalBreedsCode("132208009")
+    """
+    None
+    """
     DRU_TM_TerminalsPigBreed_organism_ = AnimalBreedsCode("132209001")
+    """
+    None
+    """
     Camborough22PigBreed_organism_ = AnimalBreedsCode("132210006")
+    """
+    None
+    """
     Camborough15PigBreed_organism_ = AnimalBreedsCode("132211005")
+    """
+    None
+    """
     PR1050PigBreed_organism_ = AnimalBreedsCode("132212003")
+    """
+    None
+    """
     PR1075PigBreed_organism_ = AnimalBreedsCode("132213008")
+    """
+    None
+    """
     ChryakPICPigBreed_organism_ = AnimalBreedsCode("132214002")
+    """
+    None
+    """
     CanadianRoyalBluePigBreed_organism_ = AnimalBreedsCode("132215001")
+    """
+    None
+    """
     Line500DurocPigBreed_organism_ = AnimalBreedsCode("132216000")
+    """
+    None
+    """
     Bodmin950PigBreed_organism_ = AnimalBreedsCode("132217009")
+    """
+    None
+    """
     CanadianDurocPigBreed_organism_ = AnimalBreedsCode("132218004")
+    """
+    None
+    """
     CanadianHampshirePigBreed_organism_ = AnimalBreedsCode("132219007")
+    """
+    None
+    """
     BaXuyenPigBreed_organism_ = AnimalBreedsCode("132220001")
+    """
+    None
+    """
     ArapawaIslandPigBreed_organism_ = AnimalBreedsCode("132221002")
+    """
+    None
+    """
     WuzhishanPigBreed_organism_ = AnimalBreedsCode("132222009")
+    """
+    None
+    """
     PhilippineNativePigBreed_organism_ = AnimalBreedsCode("132223004")
+    """
+    None
+    """
     SinclairMiniaturePigBreed_organism_ = AnimalBreedsCode("132224005")
+    """
+    None
+    """
     SaddlebackPigBreed_organism_ = AnimalBreedsCode("132225006")
+    """
+    None
+    """
     YucatanMiniaturePigBreed_organism_ = AnimalBreedsCode("132226007")
+    """
+    None
+    """
     BantuPigBreed_organism_ = AnimalBreedsCode("132227003")
+    """
+    None
+    """
     TibetanPigBreed_organism_ = AnimalBreedsCode("132228008")
+    """
+    None
+    """
     TuropoljePigBreed_organism_ = AnimalBreedsCode("132229000")
+    """
+    None
+    """
     VietnamesePot_BelliedPigPigBreed_organism_ = AnimalBreedsCode("132230005")
+    """
+    None
+    """
     AmericanLandracePigBreed_organism_ = AnimalBreedsCode("132231009")
+    """
+    None
+    """
     SwallowBeliedMangalitzaPigBreed_organism_ = AnimalBreedsCode("132232002")
+    """
+    None
+    """
     FengjingPigBreed_organism_ = AnimalBreedsCode("132233007")
+    """
+    None
+    """
     FinnishLandracePigBreed_organism_ = AnimalBreedsCode("132234001")
+    """
+    None
+    """
     GuineaHogPigBreed_organism_ = AnimalBreedsCode("132235000")
+    """
+    None
+    """
     HezuoPigBreed_organism_ = AnimalBreedsCode("132236004")
+    """
+    None
+    """
     OssabawIslandPigBreed_organism_ = AnimalBreedsCode("132237008")
+    """
+    None
+    """
     KelePigBreed_organism_ = AnimalBreedsCode("132238003")
+    """
+    None
+    """
     KrskopoljePigBreed_organism_ = AnimalBreedsCode("132239006")
+    """
+    None
+    """
     KunekunePigBreed_organism_ = AnimalBreedsCode("132240008")
+    """
+    None
+    """
     LargeBlack_WhitePigBreed_organism_ = AnimalBreedsCode("132241007")
+    """
+    None
+    """
     LithuanianNativePigBreed_organism_ = AnimalBreedsCode("132242000")
+    """
+    None
+    """
     MeishanPigBreed_organism_ = AnimalBreedsCode("132243005")
+    """
+    None
+    """
     JinhuaPigBreed_organism_ = AnimalBreedsCode("132244004")
+    """
+    None
+    """
     NingxiangPigBreed_organism_ = AnimalBreedsCode("132245003")
+    """
+    None
+    """
     MoraRomagnolaPigBreed_organism_ = AnimalBreedsCode("132246002")
+    """
+    None
+    """
     SiskaPigBreed_organism_ = AnimalBreedsCode("132261001")
+    """
+    None
+    """
     BKB_1PigBreed_organism_ = AnimalBreedsCode("132277000")
+    """
+    None
+    """
     BelorusBlackPiedPigBreed_organism_ = AnimalBreedsCode("132278005")
+    """
+    None
+    """
     MirgorodPigBreed_organism_ = AnimalBreedsCode("132279002")
+    """
+    None
+    """
     LiangGuangSmallSpotted_LuchuanPigBreed_organism_ = AnimalBreedsCode("132280004")
+    """
+    None
+    """
     FujianSmallPigBreed_organism_ = AnimalBreedsCode("132281000")
+    """
+    None
+    """
     NorthFujianBlack_and_WhitePigBreed_organism_ = AnimalBreedsCode("132282007")
+    """
+    None
+    """
     FuanSpottedPigBreed_organism_ = AnimalBreedsCode("132283002")
+    """
+    None
+    """
     PutianPigBreed_organism_ = AnimalBreedsCode("132284008")
+    """
+    None
+    """
     FuzhouBlackPigBreed_organism_ = AnimalBreedsCode("132285009")
+    """
+    None
+    """
     MinbeiSpottedPigBreed_organism_ = AnimalBreedsCode("132286005")
+    """
+    None
+    """
     LantangPigBreed_organism_ = AnimalBreedsCode("132287001")
+    """
+    None
+    """
     LiangGuangSmallSpotted_GuangdongSmallEarPigBreed_organism_ = AnimalBreedsCode(
         "132288006"
     )
+    """
+    None
+    """
     LonglinPigBreed_organism_ = AnimalBreedsCode("132289003")
+    """
+    None
+    """
     YuedongBlackPigBreed_organism_ = AnimalBreedsCode("132290007")
+    """
+    None
+    """
     XiangPigBreed_organism_ = AnimalBreedsCode("132291006")
+    """
+    None
+    """
     CantonesePigBreed_organism_ = AnimalBreedsCode("132292004")
+    """
+    None
+    """
     Jinhua_DongyangPigBreed_organism_ = AnimalBreedsCode("132293009")
+    """
+    None
+    """
     Jinhua_YongkangPigBreed_organism_ = AnimalBreedsCode("132294003")
+    """
+    None
+    """
     DaweiziPigBreed_organism_ = AnimalBreedsCode("132295002")
+    """
+    None
+    """
     HuazhongTwo_EndBlackPigBreed_organism_ = AnimalBreedsCode("132296001")
+    """
+    None
+    """
     HuazhongTwo_EndBlack_JianliPigBreed_organism_ = AnimalBreedsCode("132297005")
+    """
+    None
+    """
     HuazhongTwo_EndBlack_TongchengPigBreed_organism_ = AnimalBreedsCode("132298000")
+    """
+    None
+    """
     HuazhongTwo_EndBlack_SatzelingPigBreed_organism_ = AnimalBreedsCode("132299008")
+    """
+    None
+    """
     GanzhongnanSpottedPigBreed_organism_ = AnimalBreedsCode("132300000")
+    """
+    None
+    """
     HangPigBreed_organism_ = AnimalBreedsCode("132301001")
+    """
+    None
+    """
     LepingPigBreed_organism_ = AnimalBreedsCode("132302008")
+    """
+    None
+    """
     LongyouBlackPigBreed_organism_ = AnimalBreedsCode("132303003")
+    """
+    None
+    """
     WuyiBlackPigBreed_organism_ = AnimalBreedsCode("132304009")
+    """
+    None
+    """
     Lee_SungPigBreed_organism_ = AnimalBreedsCode("132305005")
+    """
+    None
+    """
     Lan_YuPigBreed_organism_ = AnimalBreedsCode("132306006")
+    """
+    None
+    """
     VietnameseYorkshirePigBreed_organism_ = AnimalBreedsCode("132307002")
+    """
+    None
+    """
     YujiangPigBreed_organism_ = AnimalBreedsCode("132308007")
+    """
+    None
+    """
     WanzheSpottedPigBreed_organism_ = AnimalBreedsCode("132309004")
+    """
+    None
+    """
     WanzheSpotted_ChunanSpottedPigBreed_organism_ = AnimalBreedsCode("132310009")
+    """
+    None
+    """
     WanzheSpotted_WannanSpottedPigBreed_organism_ = AnimalBreedsCode("132311008")
+    """
+    None
+    """
     ShengxianSpottedPigBreed_organism_ = AnimalBreedsCode("132312001")
+    """
+    None
+    """
     ChinPigBreed_organism_ = AnimalBreedsCode("133167003")
+    """
+    None
+    """
     SiamesePigBreed_organism_ = AnimalBreedsCode("133168008")
+    """
+    None
+    """
     HailumPigBreed_organism_ = AnimalBreedsCode("133169000")
+    """
+    None
+    """
     KwaiPigBreed_organism_ = AnimalBreedsCode("133170004")
+    """
+    None
+    """
     RaadPigBreed_organism_ = AnimalBreedsCode("133171000")
+    """
+    None
+    """
     AkhaPigBreed_organism_ = AnimalBreedsCode("133172007")
+    """
+    None
+    """
     SouthChinaPigBreed_organism_ = AnimalBreedsCode("133173002")
+    """
+    None
+    """
     SouthChinaBlackPigBreed_organism_ = AnimalBreedsCode("133174008")
+    """
+    None
+    """
     BalinesePigBreed_organism_ = AnimalBreedsCode("133175009")
+    """
+    None
+    """
     DianiPigBreed_organism_ = AnimalBreedsCode("133176005")
+    """
+    None
+    """
     KamanPigBreed_organism_ = AnimalBreedsCode("133177001")
+    """
+    None
+    """
     AshantiDwarfPigBreed_organism_ = AnimalBreedsCode("133178006")
+    """
+    None
+    """
     KoronadalPigBreed_organism_ = AnimalBreedsCode("133179003")
+    """
+    None
+    """
     OhminiPigBreed_organism_ = AnimalBreedsCode("133180000")
+    """
+    None
+    """
     ClawnPigBreed_organism_ = AnimalBreedsCode("133181001")
+    """
+    None
+    """
     SusScrofaDomesticPigXJapaneseWildBoarIntragenusHybrid_organism_ = AnimalBreedsCode(
         "133182008"
     )
+    """
+    None
+    """
     KangarooIslandPigBreed_organism_ = AnimalBreedsCode("133183003")
+    """
+    None
+    """
     CaptainCookerPigBreed_organism_ = AnimalBreedsCode("133184009")
+    """
+    None
+    """
     WestAfricanPigBreed_organism_ = AnimalBreedsCode("133185005")
+    """
+    None
+    """
     NigerianPigBreed_organism_ = AnimalBreedsCode("133186006")
+    """
+    None
+    """
     BakosiPigBreed_organism_ = AnimalBreedsCode("133187002")
+    """
+    None
+    """
     WindsnyerPigBreed_organism_ = AnimalBreedsCode("133188007")
+    """
+    None
+    """
     KolbroekPigBreed_organism_ = AnimalBreedsCode("133189004")
+    """
+    None
+    """
     SouthAfricanLandracePigBreed_organism_ = AnimalBreedsCode("133190008")
+    """
+    None
+    """
     BulgarianWhitePigBreed_organism_ = AnimalBreedsCode("133191007")
+    """
+    None
+    """
     BulgarianLandracePigBreed_organism_ = AnimalBreedsCode("133192000")
+    """
+    None
+    """
     DanubeWhitePigBreed_organism_ = AnimalBreedsCode("133193005")
+    """
+    None
+    """
     DermantsiPiedPigBreed_organism_ = AnimalBreedsCode("133194004")
+    """
+    None
+    """
     RomanianNative_StocliPigBreed_organism_ = AnimalBreedsCode("133195003")
+    """
+    None
+    """
     RomanianNative_BaltaretPigBreed_organism_ = AnimalBreedsCode("133196002")
+    """
+    None
+    """
     BanatWhitePigBreed_organism_ = AnimalBreedsCode("133197006")
+    """
+    None
+    """
     BaznaPigBreed_organism_ = AnimalBreedsCode("133198001")
+    """
+    None
+    """
     DobrogeaBlackPigBreed_organism_ = AnimalBreedsCode("133199009")
+    """
+    None
+    """
     StreiPigBreed_organism_ = AnimalBreedsCode("133200007")
+    """
+    None
+    """
     Slovhyb_1PigBreed_organism_ = AnimalBreedsCode("133218005")
+    """
+    None
+    """
     NitraHybridPigBreed_organism_ = AnimalBreedsCode("133219002")
+    """
+    None
+    """
     SyntheticSL98PigBreed_organism_ = AnimalBreedsCode("133220008")
+    """
+    None
+    """
     SL96PigBreed_organism_ = AnimalBreedsCode("133221007")
+    """
+    None
+    """
     HighConformationWhitePigBreed_organism_ = AnimalBreedsCode("132021009")
+    """
+    None
+    """
     Line32PigBreed_organism_ = AnimalBreedsCode("132022002")
+    """
+    None
+    """
     Line21PigBreed_organism_ = AnimalBreedsCode("132023007")
+    """
+    None
+    """
     MeatlinePigBreed_organism_ = AnimalBreedsCode("132024001")
+    """
+    None
+    """
     HamplinePigBreed_organism_ = AnimalBreedsCode("132025000")
+    """
+    None
+    """
     EurolinePigBreed_organism_ = AnimalBreedsCode("132026004")
+    """
+    None
+    """
     NorlinePigBreed_organism_ = AnimalBreedsCode("132027008")
+    """
+    None
+    """
     PremierPigBreed_organism_ = AnimalBreedsCode("132028003")
+    """
+    None
+    """
     TribredPigBreed_organism_ = AnimalBreedsCode("132029006")
+    """
+    None
+    """
     AmericanEssexPigBreed_organism_ = AnimalBreedsCode("132030001")
+    """
+    None
+    """
     Sino_GasconyPigBreed_organism_ = AnimalBreedsCode("132031002")
+    """
+    None
+    """
     GuadeloupeCr_olePigBreed_organism_ = AnimalBreedsCode("132032009")
+    """
+    None
+    """
     ManagraPigBreed_organism_ = AnimalBreedsCode("132033004")
+    """
+    None
+    """
     CanadianLandracePigBreed_organism_ = AnimalBreedsCode("132034005")
+    """
+    None
+    """
     CanadianYorkshirePigBreed_organism_ = AnimalBreedsCode("132035006")
+    """
+    None
+    """
     PineywoodsPigBreed_organism_ = AnimalBreedsCode("132037003")
+    """
+    None
+    """
     CatalinaIslandPigBreed_organism_ = AnimalBreedsCode("132038008")
+    """
+    None
+    """
     Ras_n_LansaPigBreed_organism_ = AnimalBreedsCode("132039000")
+    """
+    None
+    """
     Pitman_MooreMiniaturePigBreed_organism_ = AnimalBreedsCode("132040003")
+    """
+    None
+    """
     VitaVetLabMinipigPigBreed_organism_ = AnimalBreedsCode("132041004")
+    """
+    None
+    """
     BlackHampshirePigBreed_organism_ = AnimalBreedsCode("132043001")
+    """
+    None
+    """
     RedHampracePigBreed_organism_ = AnimalBreedsCode("132044007")
+    """
+    None
+    """
     AmericanYorkshirePigBreed_organism_ = AnimalBreedsCode("132045008")
+    """
+    None
+    """
     AmericanBerkshirePigBreed_organism_ = AnimalBreedsCode("132046009")
+    """
+    None
+    """
     CamboroughBluePigBreed_organism_ = AnimalBreedsCode("132047000")
+    """
+    None
+    """
     Camborough12PigBreed_organism_ = AnimalBreedsCode("132048005")
+    """
+    None
+    """
     Canastr_o_JunqueiraPigBreed_organism_ = AnimalBreedsCode("132059001")
+    """
+    None
+    """
     Canastr_o_Capit_oChicoPigBreed_organism_ = AnimalBreedsCode("132060006")
+    """
+    None
+    """
     Canastr_o_ZabumbaPigBreed_organism_ = AnimalBreedsCode("132061005")
+    """
+    None
+    """
     Canastr_o_CabanoPigBreed_organism_ = AnimalBreedsCode("132062003")
+    """
+    None
+    """
     Canastr_o_VermelhoPigBreed_organism_ = AnimalBreedsCode("132063008")
+    """
+    None
+    """
     Piau_CarunchoPiauPigBreed_organism_ = AnimalBreedsCode("132064002")
+    """
+    None
+    """
     CanastrinhoPigBreed_organism_ = AnimalBreedsCode("132065001")
+    """
+    None
+    """
     HondurasSwitch_TailPigBreed_organism_ = AnimalBreedsCode("132066000")
+    """
+    None
+    """
     MastergiltPigBreed_organism_ = AnimalBreedsCode("132067009")
+    """
+    None
+    """
     SovereignPigBreed_organism_ = AnimalBreedsCode("132068004")
+    """
+    None
+    """
     PoltavaPigBreed_organism_ = AnimalBreedsCode("132069007")
+    """
+    None
+    """
     LipetskPigBreed_organism_ = AnimalBreedsCode("132070008")
+    """
+    None
+    """
     SovietMeatPigBreed_organism_ = AnimalBreedsCode("132071007")
+    """
+    None
+    """
     ChianinaPigBreed_organism_ = AnimalBreedsCode("132179006")
+    """
+    None
+    """
     QingpingPigBreed_organism_ = AnimalBreedsCode("132313006")
+    """
+    None
+    """
     XiangxiBlackPigBreed_organism_ = AnimalBreedsCode("132314000")
+    """
+    None
+    """
     BamaxiangPigBreed_organism_ = AnimalBreedsCode("132315004")
+    """
+    None
+    """
     TaihuPigBreed_organism_ = AnimalBreedsCode("132316003")
+    """
+    None
+    """
     ErhulianPigBreed_organism_ = AnimalBreedsCode("132317007")
+    """
+    None
+    """
     JiaxingBlackPigBreed_organism_ = AnimalBreedsCode("132318002")
+    """
+    None
+    """
     MiPigBreed_organism_ = AnimalBreedsCode("132319005")
+    """
+    None
+    """
     ShahutouPigBreed_organism_ = AnimalBreedsCode("132320004")
+    """
+    None
+    """
     JiaoxiPigBreed_organism_ = AnimalBreedsCode("132321000")
+    """
+    None
+    """
     ShanghaiWhitePigBreed_organism_ = AnimalBreedsCode("132322007")
+    """
+    None
+    """
     HubeiWhitePigBreed_organism_ = AnimalBreedsCode("132323002")
+    """
+    None
+    """
     XinjinPigBreed_organism_ = AnimalBreedsCode("132324008")
+    """
+    None
+    """
     Xinjin_JilinBlackPigBreed_organism_ = AnimalBreedsCode("132325009")
+    """
+    None
+    """
     Xinjin_Ning_anPigBreed_organism_ = AnimalBreedsCode("132326005")
+    """
+    None
+    """
     _PigBreed_organism_ = AnimalBreedsCode("132327001")
+    """
+    None
+    """
     DBIPigBreed_organism_ = AnimalBreedsCode("132328006")
+    """
+    None
+    """
     Xinjin_XinjinPigBreed_organism_ = AnimalBreedsCode("132329003")
+    """
+    None
+    """
     MeixinPigBreed_organism_ = AnimalBreedsCode("132330008")
+    """
+    None
+    """
     NorthEastChinaSpottedPigBreed_organism_ = AnimalBreedsCode("132331007")
+    """
+    None
+    """
     FannongSpottedPigBreed_organism_ = AnimalBreedsCode("132332000")
+    """
+    None
+    """
     LaoshanPigBreed_organism_ = AnimalBreedsCode("132333005")
+    """
+    None
+    """
     NanjingBlackPigBreed_organism_ = AnimalBreedsCode("132334004")
+    """
+    None
+    """
     ShanxiBlackPigBreed_organism_ = AnimalBreedsCode("132335003")
+    """
+    None
+    """
     GanzhouWhitePigBreed_organism_ = AnimalBreedsCode("132336002")
+    """
+    None
+    """
     GuangxiWhitePigBreed_organism_ = AnimalBreedsCode("132337006")
+    """
+    None
+    """
     HanzhongWhitePigBreed_organism_ = AnimalBreedsCode("132338001")
+    """
+    None
+    """
     LutaiWhitePigBreed_organism_ = AnimalBreedsCode("132339009")
+    """
+    None
+    """
     YiliWhitePigBreed_organism_ = AnimalBreedsCode("132340006")
+    """
+    None
+    """
     XinjiangWhitePigBreed_organism_ = AnimalBreedsCode("132341005")
+    """
+    None
+    """
     BSIPigBreed_organism_ = AnimalBreedsCode("132342003")
+    """
+    None
+    """
     MongCaiPigBreed_organism_ = AnimalBreedsCode("132343008")
+    """
+    None
+    """
     LangHongPigBreed_organism_ = AnimalBreedsCode("132344002")
+    """
+    None
+    """
     MuongKhuongPigBreed_organism_ = AnimalBreedsCode("132345001")
+    """
+    None
+    """
     MeoPigBreed_organism_ = AnimalBreedsCode("132346000")
+    """
+    None
+    """
     TongConPigBreed_organism_ = AnimalBreedsCode("132347009")
+    """
+    None
+    """
     HaBacPigBreed_organism_ = AnimalBreedsCode("132348004")
+    """
+    None
+    """
     ThaiBinhPigBreed_organism_ = AnimalBreedsCode("132349007")
+    """
+    None
+    """
     CoPigBreed_organism_ = AnimalBreedsCode("132350007")
+    """
+    None
+    """
     SwissImprovedLandracePigBreed_organism_ = AnimalBreedsCode("132351006")
+    """
+    None
+    """
     GermanLandraceBPigBreed_organism_ = AnimalBreedsCode("132352004")
+    """
+    None
+    """
     EdelschweinPigBreed_organism_ = AnimalBreedsCode("132353009")
+    """
+    None
+    """
     Swabian_HallPigBreed_organism_ = AnimalBreedsCode("132354003")
+    """
+    None
+    """
     BentheimBlackPiedPigBreed_organism_ = AnimalBreedsCode("132355002")
+    """
+    None
+    """
     BaldingerSpottedPigBreed_organism_ = AnimalBreedsCode("132356001")
+    """
+    None
+    """
     GermanRedPiedPigBreed_organism_ = AnimalBreedsCode("132357005")
+    """
+    None
+    """
     GermanCornwallPigBreed_organism_ = AnimalBreedsCode("132358000")
+    """
+    None
+    """
     G_ttingenMiniaturePigBreed_organism_ = AnimalBreedsCode("132359008")
+    """
+    None
+    """
     MunichMiniaturePigBreed_organism_ = AnimalBreedsCode("132360003")
+    """
+    None
+    """
     LeicomaPigBreed_organism_ = AnimalBreedsCode("132361004")
+    """
+    None
+    """
     SchwerfurtMeatPigBreed_organism_ = AnimalBreedsCode("132362006")
+    """
+    None
+    """
     HungarianWhitePigBreed_organism_ = AnimalBreedsCode("132363001")
+    """
+    None
+    """
     HungahybPigBreed_organism_ = AnimalBreedsCode("132364007")
+    """
+    None
+    """
     BulgarianNativePigBreed_organism_ = AnimalBreedsCode("132365008")
+    """
+    None
+    """
     EastBalkanPigBreed_organism_ = AnimalBreedsCode("132366009")
+    """
+    None
+    """
     KulaPigBreed_organism_ = AnimalBreedsCode("132367000")
+    """
+    None
+    """
     NghiaBinhPigBreed_organism_ = AnimalBreedsCode("132368005")
+    """
+    None
+    """
     KakhetianPigBreed_organism_ = AnimalBreedsCode("132768008")
+    """
+    None
+    """
     WestFrenchWhitePigBreed_organism_ = AnimalBreedsCode("132769000")
+    """
+    None
+    """
     MubanPigBreed_organism_ = AnimalBreedsCode("132843000")
+    """
+    None
+    """
     IbanPigBreed_organism_ = AnimalBreedsCode("132844006")
+    """
+    None
+    """
     TuyHoaHairlessPigBreed_organism_ = AnimalBreedsCode("133161002")
+    """
+    None
+    """
     HainanPigBreed_organism_ = AnimalBreedsCode("133162009")
+    """
+    None
+    """
     Sino_VietnamesePigBreed_organism_ = AnimalBreedsCode("133163004")
+    """
+    None
+    """
     BoXuPigBreed_organism_ = AnimalBreedsCode("133164005")
+    """
+    None
+    """
     ThuocNhieuPigBreed_organism_ = AnimalBreedsCode("133165006")
+    """
+    None
+    """
     BurmesePigBreed_organism_ = AnimalBreedsCode("133166007")
+    """
+    None
+    """
     RomanianLargeWhitePigBreed_organism_ = AnimalBreedsCode("133201006")
+    """
+    None
+    """
     RomanianMeatPigPigBreed_organism_ = AnimalBreedsCode("133202004")
+    """
+    None
+    """
     GurktalPigBreed_organism_ = AnimalBreedsCode("133203009")
+    """
+    None
+    """
     BlackSlavonianPigBreed_organism_ = AnimalBreedsCode("133204003")
+    """
+    None
+    """
     ResavaPigBreed_organism_ = AnimalBreedsCode("133205002")
+    """
+    None
+    """
     MoravaPigBreed_organism_ = AnimalBreedsCode("133206001")
+    """
+    None
+    """
     DzumaliaPigBreed_organism_ = AnimalBreedsCode("133207005")
+    """
+    None
+    """
     MacedonianPigBreed_organism_ = AnimalBreedsCode("133208000")
+    """
+    None
+    """
     AlbanianNativePigBreed_organism_ = AnimalBreedsCode("133209008")
+    """
+    None
+    """
     ShkodraPigBreed_organism_ = AnimalBreedsCode("133210003")
+    """
+    None
+    """
     SlovenianWhitePigBreed_organism_ = AnimalBreedsCode("133211004")
+    """
+    None
+    """
     SuboticaWhitePigBreed_organism_ = AnimalBreedsCode("133212006")
+    """
+    None
+    """
     PresticePigBreed_organism_ = AnimalBreedsCode("133213001")
+    """
+    None
+    """
     SlovakianBlackPiedPigBreed_organism_ = AnimalBreedsCode("133214007")
+    """
+    None
+    """
     CzechImprovedWhitePigBreed_organism_ = AnimalBreedsCode("133215008")
+    """
+    None
+    """
     MoravianLargeYorkshirePigBreed_organism_ = AnimalBreedsCode("133216009")
+    """
+    None
+    """
     SlovakianWhitePigBreed_organism_ = AnimalBreedsCode("133217000")
+    """
+    None
+    """
     CzechMeatPigBreed_organism_ = AnimalBreedsCode("133222000")
+    """
+    None
+    """
     CzechMiniaturePigBreed_organism_ = AnimalBreedsCode("133223005")
+    """
+    None
+    """
     SmallPolishPrick_EaredPigBreed_organism_ = AnimalBreedsCode("133224004")
+    """
+    None
+    """
     PolesianPigBreed_organism_ = AnimalBreedsCode("133225003")
+    """
+    None
+    """
     NadbuzanskaPigBreed_organism_ = AnimalBreedsCode("133226002")
+    """
+    None
+    """
     SarnyPigBreed_organism_ = AnimalBreedsCode("133227006")
+    """
+    None
+    """
     KrolevetsPigBreed_organism_ = AnimalBreedsCode("133228001")
+    """
+    None
+    """
     PolishMarshPigBreed_organism_ = AnimalBreedsCode("133229009")
+    """
+    None
+    """
     LargePolishLong_EaredPigBreed_organism_ = AnimalBreedsCode("133230004")
+    """
+    None
+    """
     UkrainianSteppeWhitePig_organism_ = AnimalBreedsCode("406663005")
+    """
+    None
+    """
     MixedBreedPig_organism_ = AnimalBreedsCode("417012009")
+    """
+    None
+    """
     DurocPig_organism_ = AnimalBreedsCode("3260001")
+    """
+    None
+    """
     OxfordSandyBlockPig_organism_ = AnimalBreedsCode("5227002")
+    """
+    None
+    """
     OICPig_organism_ = AnimalBreedsCode("9135003")
+    """
+    None
+    """
     YucaPig_organism_ = AnimalBreedsCode("15443006")
+    """
+    None
+    """
     BritishSaddlebackPig_organism_ = AnimalBreedsCode("15961007")
+    """
+    None
+    """
     HerefordPig_organism_ = AnimalBreedsCode("19770007")
+    """
+    None
+    """
     PietrainPig_organism_ = AnimalBreedsCode("20044005")
+    """
+    None
+    """
     HampshirePig_organism_ = AnimalBreedsCode("20280002")
+    """
+    None
+    """
     LargeBlackPig_organism_ = AnimalBreedsCode("21021000")
+    """
+    None
+    """
     BritishLopPig_organism_ = AnimalBreedsCode("22506004")
+    """
+    None
+    """
     ConnorPrairiePig_organism_ = AnimalBreedsCode("29881002")
+    """
+    None
+    """
     LacombePig_organism_ = AnimalBreedsCode("30448006")
+    """
+    None
+    """
     TamworthPig_organism_ = AnimalBreedsCode("30634003")
+    """
+    None
+    """
     SpottedPig_organism_ = AnimalBreedsCode("36187006")
+    """
+    None
+    """
     PalousePig_organism_ = AnimalBreedsCode("49240006")
+    """
+    None
+    """
     WelshPig_organism_ = AnimalBreedsCode("54232006")
+    """
+    None
+    """
     ChesterWhitePig_organism_ = AnimalBreedsCode("69461005")
+    """
+    None
+    """
     WessexSaddlebackPig_organism_ = AnimalBreedsCode("73648005")
+    """
+    None
+    """
     RedWattlePig_organism_ = AnimalBreedsCode("74568001")
+    """
+    None
+    """
     LargeWhitePig_organism_ = AnimalBreedsCode("77236002")
+    """
+    None
+    """
     PolandChinaPig_organism_ = AnimalBreedsCode("79814001")
+    """
+    None
+    """
     LuciePig_organism_ = AnimalBreedsCode("80084005")
+    """
+    None
+    """
     SanPierrePig_organism_ = AnimalBreedsCode("80979001")
+    """
+    None
+    """
     MiddleWhitePig_organism_ = AnimalBreedsCode("82909008")
+    """
+    None
+    """
     YorkshirePig_organism_ = AnimalBreedsCode("85315007")
+    """
+    None
+    """
     HormelMiniaturePig_organism_ = AnimalBreedsCode("86694007")
+    """
+    None
+    """
     GloucesterOldSpotPig_organism_ = AnimalBreedsCode("90885005")
+    """
+    None
+    """
     HaitiCr_olePigBreed_organism_ = AnimalBreedsCode("132009005")
+    """
+    None
+    """
     ManorHybridPigBreed_organism_ = AnimalBreedsCode("132010000")
+    """
+    None
+    """
     HamlinePigBreed_organism_ = AnimalBreedsCode("132011001")
+    """
+    None
+    """
     ManorRangerPigBreed_organism_ = AnimalBreedsCode("132012008")
+    """
+    None
+    """
     ManorMeishanPigBreed_organism_ = AnimalBreedsCode("132013003")
+    """
+    None
+    """
     CotswoldGoldPigBreed_organism_ = AnimalBreedsCode("132014009")
+    """
+    None
+    """
     CotswoldPlatinumPigBreed_organism_ = AnimalBreedsCode("132015005")
+    """
+    None
+    """
     Cotswold16PigBreed_organism_ = AnimalBreedsCode("132016006")
+    """
+    None
+    """
     Cotswold29PigBreed_organism_ = AnimalBreedsCode("132017002")
+    """
+    None
+    """
     Cotswold90PigBreed_organism_ = AnimalBreedsCode("132018007")
+    """
+    None
+    """
     HampenPigBreed_organism_ = AnimalBreedsCode("132019004")
+    """
+    None
+    """
     SPMPigBreed_organism_ = AnimalBreedsCode("132020005")
+    """
+    None
+    """
     HanfordMiniaturePigBreed_organism_ = AnimalBreedsCode("132042006")
+    """
+    None
+    """
     WestrainPigBreed_organism_ = AnimalBreedsCode("132049002")
+    """
+    None
+    """
     Dalland030PigBreed_organism_ = AnimalBreedsCode("132050002")
+    """
+    None
+    """
     Razor_BackPigBreed_organism_ = AnimalBreedsCode("132051003")
+    """
+    None
+    """
     MacauPigBreed_organism_ = AnimalBreedsCode("132052005")
+    """
+    None
+    """
     MouraPigBreed_organism_ = AnimalBreedsCode("132053000")
+    """
+    None
+    """
     CanastraPigBreed_organism_ = AnimalBreedsCode("132054006")
+    """
+    None
+    """
     PirapetingaPigBreed_organism_ = AnimalBreedsCode("132055007")
+    """
+    None
+    """
     PiauPigBreed_organism_ = AnimalBreedsCode("132056008")
+    """
+    None
+    """
     Nilo_CanastraPigBreed_organism_ = AnimalBreedsCode("132057004")
+    """
+    None
+    """
     Canastr_oPigBreed_organism_ = AnimalBreedsCode("132058009")
+    """
+    None
+    """
     CentralRussianPigBreed_organism_ = AnimalBreedsCode("132072000")
+    """
+    None
+    """
     SteppeMeatPigBreed_organism_ = AnimalBreedsCode("132073005")
+    """
+    None
+    """
     GasconyPigBreed_organism_ = AnimalBreedsCode("132125002")
+    """
+    None
+    """
     LimousinPigBreed_organism_ = AnimalBreedsCode("132126001")
+    """
+    None
+    """
     HarbinWhitePigBreed_organism_ = AnimalBreedsCode("132127005")
+    """
+    None
+    """
     HeilongjiangSpottedPigBreed_organism_ = AnimalBreedsCode("132128000")
+    """
+    None
+    """
     LiaoningBlackPigBreed_organism_ = AnimalBreedsCode("132129008")
+    """
+    None
+    """
     Huang_Huai_HaiBlack_ShenxianPigBreed_organism_ = AnimalBreedsCode("132130003")
+    """
+    None
+    """
     Huang_Huai_HaiBlackPigBreed_organism_ = AnimalBreedsCode("132131004")
+    """
+    None
+    """
     BameiPigBreed_organism_ = AnimalBreedsCode("132132006")
+    """
+    None
+    """
     HanjiangBlackPigBreed_organism_ = AnimalBreedsCode("132133001")
+    """
+    None
+    """
     DingPigBreed_organism_ = AnimalBreedsCode("132134007")
+    """
+    None
+    """
     HuaiPigBreed_organism_ = AnimalBreedsCode("132135008")
+    """
+    None
+    """
     NewHuaiPigBreed_organism_ = AnimalBreedsCode("132136009")
+    """
+    None
+    """
     MashenPigBreed_organism_ = AnimalBreedsCode("132137000")
+    """
+    None
+    """
     YimengBlackPigBreed_organism_ = AnimalBreedsCode("132138005")
+    """
+    None
+    """
     HetaoLop_EarPigBreed_organism_ = AnimalBreedsCode("132139002")
+    """
+    None
+    """
     KoreanNativePigBreed_organism_ = AnimalBreedsCode("132140000")
+    """
+    None
+    """
     KoreanImprovedPigBreed_organism_ = AnimalBreedsCode("132141001")
+    """
+    None
+    """
     PenbukPigBreed_organism_ = AnimalBreedsCode("132142008")
+    """
+    None
+    """
     BeijingBlackPigBreed_organism_ = AnimalBreedsCode("132143003")
+    """
+    None
+    """
     ChenghuaPigBreed_organism_ = AnimalBreedsCode("132144009")
+    """
+    None
+    """
     TaoyuanPigBreed_organism_ = AnimalBreedsCode("132145005")
+    """
+    None
+    """
     TaiwanSmallBlackPigBreed_organism_ = AnimalBreedsCode("132146006")
+    """
+    None
+    """
     TaiwanSmallRedPigBreed_organism_ = AnimalBreedsCode("132147002")
+    """
+    None
+    """
     GuanlingPigBreed_organism_ = AnimalBreedsCode("132148007")
+    """
+    None
+    """
     HuchuanMountainPigBreed_organism_ = AnimalBreedsCode("132149004")
+    """
+    None
+    """
     RongchangPigBreed_organism_ = AnimalBreedsCode("132150004")
+    """
+    None
+    """
     WujinPigBreed_organism_ = AnimalBreedsCode("132151000")
+    """
+    None
+    """
     DahePigBreed_organism_ = AnimalBreedsCode("132152007")
+    """
+    None
+    """
     YananPigBreed_organism_ = AnimalBreedsCode("132153002")
+    """
+    None
+    """
     SouthYunnanShort_EaredPigBreed_organism_ = AnimalBreedsCode("132154008")
+    """
+    None
+    """
     Hainan_LingaoPigBreed_organism_ = AnimalBreedsCode("132155009")
+    """
+    None
+    """
     Hainan_TunchangPigBreed_organism_ = AnimalBreedsCode("132156005")
+    """
+    None
+    """
     Hainan_WenchangPigBreed_organism_ = AnimalBreedsCode("132157001")
+    """
+    None
+    """
     LiangGuangSmallSpottedPigBreed_organism_ = AnimalBreedsCode("132158006")
+    """
+    None
+    """
     GermanPasturePigBreed_organism_ = AnimalBreedsCode("132159003")
+    """
+    None
+    """
     Piau_SorocabaPigBreed_organism_ = AnimalBreedsCode("132160008")
+    """
+    None
+    """
     NiloPigBreed_organism_ = AnimalBreedsCode("132161007")
+    """
+    None
+    """
     BahiaPigBreed_organism_ = AnimalBreedsCode("132162000")
+    """
+    None
+    """
     Perna_CurtaPigBreed_organism_ = AnimalBreedsCode("132163005")
+    """
+    None
+    """
     CarunchinhoPigBreed_organism_ = AnimalBreedsCode("132164004")
+    """
+    None
+    """
     MandiPigBreed_organism_ = AnimalBreedsCode("132165003")
+    """
+    None
+    """
     OrehlaDeColherPigBreed_organism_ = AnimalBreedsCode("132166002")
+    """
+    None
+    """
     VenezuelanBlackPigBreed_organism_ = AnimalBreedsCode("132167006")
+    """
+    None
+    """
     BolivianPigBreed_organism_ = AnimalBreedsCode("132168001")
+    """
+    None
+    """
     MexicanWattledPigBreed_organism_ = AnimalBreedsCode("132170005")
+    """
+    None
+    """
     Dalland080PigBreed_organism_ = AnimalBreedsCode("132171009")
+    """
+    None
+    """
     MonarchPigBreed_organism_ = AnimalBreedsCode("132173007")
+    """
+    None
+    """
     BisaroPigBreed_organism_ = AnimalBreedsCode("132174001")
+    """
+    None
+    """
     BlackHairlessPigBreed_organism_ = AnimalBreedsCode("132175000")
+    """
+    None
+    """
     BlackMangalitsaPigBreed_organism_ = AnimalBreedsCode("132176004")
+    """
+    None
+    """
     DekalbHybridPigLine_organism_ = AnimalBreedsCode("74921000")
+    """
+    None
+    """
     LandracePig_organism_ = AnimalBreedsCode("80131009")
+    """
+    None
+    """
     FHCPig_organism_ = AnimalBreedsCode("89928000")
+    """
+    None
+    """
     PicPig_organism_ = AnimalBreedsCode("75709004")
+    """
+    None
+    """
     BoarPowerPig_organism_ = AnimalBreedsCode("74899005")
+    """
+    None
+    """
     BerkshirePig_organism_ = AnimalBreedsCode("112489009")
+    """
+    None
+    """
     KleenLeenPig_organism_ = AnimalBreedsCode("69602006")
+    """
+    None
+    """
     MinnesotaPig_organism_ = AnimalBreedsCode("61083001")
+    """
+    None
+    """
     DekalbHybridPigLine33_organism_ = AnimalBreedsCode("6053007")
+    """
+    None
+    """
     DekalbHybridPigLine51_organism_ = AnimalBreedsCode("8516002")
+    """
+    None
+    """
     GermanLandracePig_organism_ = AnimalBreedsCode("8763002")
+    """
+    None
+    """
     FrenchLandracePig_organism_ = AnimalBreedsCode("8970009")
+    """
+    None
+    """
     BelgiumLandracePig_organism_ = AnimalBreedsCode("10261003")
+    """
+    None
+    """
     DekalbHybridPigLine77_organism_ = AnimalBreedsCode("11161001")
+    """
+    None
+    """
     SwedishLandracePig_organism_ = AnimalBreedsCode("12407009")
+    """
+    None
+    """
     FHCElitePig9_organism_ = AnimalBreedsCode("14063001")
+    """
+    None
+    """
     PicCambourghPig_organism_ = AnimalBreedsCode("17717005")
+    """
+    None
+    """
     BoarPowerPig72_organism_ = AnimalBreedsCode("18212001")
+    """
+    None
+    """
     FHCElitePig3_organism_ = AnimalBreedsCode("24111007")
+    """
+    None
+    """
     BoarPowerPig414_organism_ = AnimalBreedsCode("24319000")
+    """
+    None
+    """
     BoarPowerPig929_organism_ = AnimalBreedsCode("25856007")
+    """
+    None
+    """
     BoarPowerPig565_organism_ = AnimalBreedsCode("29223008")
+    """
+    None
+    """
     PicLinePig26_organism_ = AnimalBreedsCode("29235007")
+    """
+    None
+    """
     BoarPowerPig84_organism_ = AnimalBreedsCode("30720007")
+    """
+    None
+    """
     BoarPowerPig48_organism_ = AnimalBreedsCode("32297006")
+    """
+    None
+    """
     FHCElitePig7_organism_ = AnimalBreedsCode("32683006")
+    """
+    None
+    """
     BoarPowerPig616_organism_ = AnimalBreedsCode("33212007")
+    """
+    None
+    """
     KentuckyRedBerkshirePig_organism_ = AnimalBreedsCode("33551003")
+    """
+    None
+    """
     BoarPowerPig828_organism_ = AnimalBreedsCode("34595003")
+    """
+    None
+    """
     KleenLeenBlackPig_organism_ = AnimalBreedsCode("36111002")
+    """
+    None
+    """
     DekalbHybridPigLine31_organism_ = AnimalBreedsCode("36570001")
+    """
+    None
+    """
     DekalbHybridPigLine30_organism_ = AnimalBreedsCode("41561001")
+    """
+    None
+    """
     NorwegianLandracePig_organism_ = AnimalBreedsCode("42948007")
+    """
+    None
+    """
     BoarPowerPig454_organism_ = AnimalBreedsCode("43500007")
+    """
+    None
+    """
     FHCElitePig1_organism_ = AnimalBreedsCode("45635003")
+    """
+    None
+    """
     FHCElitePig4_organism_ = AnimalBreedsCode("47795006")
+    """
+    None
+    """
     BoarPowerPig656_organism_ = AnimalBreedsCode("48470006")
+    """
+    None
+    """
     FHCElitePig6_organism_ = AnimalBreedsCode("49462008")
+    """
+    None
+    """
     BoarPowerPig59_organism_ = AnimalBreedsCode("53431006")
+    """
+    None
+    """
     BoarPowerPig292_organism_ = AnimalBreedsCode("56084008")
+    """
+    None
+    """
     KleenLeenWhitePig_organism_ = AnimalBreedsCode("57613003")
+    """
+    None
+    """
     DekalbHybridPigLine61_organism_ = AnimalBreedsCode("61973002")
+    """
+    None
+    """
     FHCElitePig5_organism_ = AnimalBreedsCode("67720004")
+    """
+    None
+    """
     BoarPowerPig141_organism_ = AnimalBreedsCode("68512002")
+    """
+    None
+    """
     ItalianLandracePig_organism_ = AnimalBreedsCode("71923001")
+    """
+    None
+    """
     FHCElitePig8_organism_ = AnimalBreedsCode("73005003")
+    """
+    None
+    """
     MinnesotaPig_1_organism_ = AnimalBreedsCode("73944009")
+    """
+    None
+    """
     BoarPowerPig161_organism_ = AnimalBreedsCode("74970001")
+    """
+    None
+    """
     BoarPowerPig27_organism_ = AnimalBreedsCode("76364003")
+    """
+    None
+    """
     BritishLandracePig_organism_ = AnimalBreedsCode("78994007")
+    """
+    None
+    """
     BoarPowerPig747_organism_ = AnimalBreedsCode("84081007")
+    """
+    None
+    """
     KleenLeenRedPig_organism_ = AnimalBreedsCode("84232003")
+    """
+    None
+    """
     BoarPowerPig474_organism_ = AnimalBreedsCode("84315000")
+    """
+    None
+    """
     DanishLandracePig_organism_ = AnimalBreedsCode("84528008")
+    """
+    None
+    """
     PicLinePig24_organism_ = AnimalBreedsCode("86440008")
+    """
+    None
+    """
     BoarPowerPig282_organism_ = AnimalBreedsCode("87061000")
+    """
+    None
+    """
     KharkovPigBreed_organism_ = AnimalBreedsCode("132074004")
+    """
+    None
+    """
     DnepropetrovskPigBreed_organism_ = AnimalBreedsCode("132075003")
+    """
+    None
+    """
     RussianLargeWhitePigBreed_organism_ = AnimalBreedsCode("132076002")
+    """
+    None
+    """
     ForestMountainPigBreed_organism_ = AnimalBreedsCode("132077006")
+    """
+    None
+    """
     DnieperPigBreed_organism_ = AnimalBreedsCode("132078001")
+    """
+    None
+    """
     IberianPigBreed_organism_ = AnimalBreedsCode("132079009")
+    """
+    None
+    """
     Iberian_ExtremaduraRedPigBreed_organism_ = AnimalBreedsCode("132080007")
+    """
+    None
+    """
     Iberian_JabugoSpottedPigBreed_organism_ = AnimalBreedsCode("132081006")
+    """
+    None
+    """
     Iberian_BlackIberianPigBreed_organism_ = AnimalBreedsCode("132082004")
+    """
+    None
+    """
     PhilippineNative_IlocosPigBreed_organism_ = AnimalBreedsCode("132083009")
+    """
+    None
+    """
     PhilippineNative_JalajalaPigBreed_organism_ = AnimalBreedsCode("132084003")
+    """
+    None
+    """
     MangaliztaPigBreed_organism_ = AnimalBreedsCode("132085002")
+    """
+    None
+    """
     AlentejanaPigBreed_organism_ = AnimalBreedsCode("132086001")
+    """
+    None
+    """
     BelgianLandrace_BNPigBreed_organism_ = AnimalBreedsCode("132087005")
+    """
+    None
+    """
     FrenchLargeWhitePigBreed_organism_ = AnimalBreedsCode("132088000")
+    """
+    None
+    """
     HyperLargeWhitePigBreed_organism_ = AnimalBreedsCode("132089008")
+    """
+    None
+    """
     TiaMeslanPigBreed_organism_ = AnimalBreedsCode("132090004")
+    """
+    None
+    """
     PenArLan77PigBreed_organism_ = AnimalBreedsCode("132091000")
+    """
+    None
+    """
     PenshirePigBreed_organism_ = AnimalBreedsCode("132092007")
+    """
+    None
+    """
     LaconiePigBreed_organism_ = AnimalBreedsCode("132093002")
+    """
+    None
+    """
     MurcianPigBreed_organism_ = AnimalBreedsCode("132094008")
+    """
+    None
+    """
     CavallinoPigBreed_organism_ = AnimalBreedsCode("132095009")
+    """
+    None
+    """
     CalabrianPigBreed_organism_ = AnimalBreedsCode("132096005")
+    """
+    None
+    """
     ApulianPigBreed_organism_ = AnimalBreedsCode("132097001")
+    """
+    None
+    """
     SienaBeltedPigBreed_organism_ = AnimalBreedsCode("132098006")
+    """
+    None
+    """
     CalascibettaPigBreed_organism_ = AnimalBreedsCode("132099003")
+    """
+    None
+    """
     G_ssingForestPigPigBreed_organism_ = AnimalBreedsCode("132100006")
+    """
+    None
+    """
     SwissEdelschweinPigBreed_organism_ = AnimalBreedsCode("132101005")
+    """
+    None
+    """
     NorthCaucasusPigBreed_organism_ = AnimalBreedsCode("132102003")
+    """
+    None
+    """
     DonPigBreed_organism_ = AnimalBreedsCode("132103008")
+    """
+    None
+    """
     RostovPigBreed_organism_ = AnimalBreedsCode("132104002")
+    """
+    None
+    """
     RussianLong_EaredWhitePigBreed_organism_ = AnimalBreedsCode("132105001")
+    """
+    None
+    """
     RussianShort_EaredWhitePigBreed_organism_ = AnimalBreedsCode("132106000")
+    """
+    None
+    """
     PrisheksninskPigBreed_organism_ = AnimalBreedsCode("132107009")
+    """
+    None
+    """
     BreitovPigBreed_organism_ = AnimalBreedsCode("132108004")
+    """
+    None
+    """
     LivnyPigBreed_organism_ = AnimalBreedsCode("132109007")
+    """
+    None
+    """
     TsivilskPigBreed_organism_ = AnimalBreedsCode("132110002")
+    """
+    None
+    """
     UrzhumPigBreed_organism_ = AnimalBreedsCode("132111003")
+    """
+    None
+    """
     MinisibPigBreed_organism_ = AnimalBreedsCode("132112005")
+    """
+    None
+    """
     SakhalinWhitePigBreed_organism_ = AnimalBreedsCode("132113000")
+    """
+    None
+    """
     NorthSiberianPigBreed_organism_ = AnimalBreedsCode("132114006")
+    """
+    None
+    """
     SiberianBlackPiedPigBreed_organism_ = AnimalBreedsCode("132115007")
+    """
+    None
+    """
     KemerovoPigBreed_organism_ = AnimalBreedsCode("132116008")
+    """
+    None
+    """
     KM_1PigBreed_organism_ = AnimalBreedsCode("132117004")
+    """
+    None
+    """
     Aksa_BlackPiedPigBreed_organism_ = AnimalBreedsCode("132118009")
+    """
+    None
+    """
     SemirechenskPigBreed_organism_ = AnimalBreedsCode("132119001")
+    """
+    None
+    """
     MinPigBreed_organism_ = AnimalBreedsCode("132120007")
+    """
+    None
+    """
     SanjiangWhitePigBreed_organism_ = AnimalBreedsCode("132121006")
+    """
+    None
+    """
     BasqueBlackPiedPigBreed_organism_ = AnimalBreedsCode("132122004")
+    """
+    None
+    """
     CorsicanPigBreed_organism_ = AnimalBreedsCode("132123009")
+    """
+    None
+    """
     Cr_olePigBreed_organism_ = AnimalBreedsCode("132124003")
+    """
+    None
+    """
     Pel_nPigBreed_organism_ = AnimalBreedsCode("132169009")
+    """
+    None
+    """
     BorghigianaPigBreed_organism_ = AnimalBreedsCode("132178003")
+    """
+    None
+    """
     DutchLandracePig_organism_ = AnimalBreedsCode("58311005")
+    """
+    None
+    """
     FHCElitePig2_organism_ = AnimalBreedsCode("59667000")
+    """
+    None
+    """
     BoarPowerPig545_organism_ = AnimalBreedsCode("61036003")
+    """
+    None
+    """
     DekalbHybridPigLine63_organism_ = AnimalBreedsCode("112490000")
+    """
+    None
+    """
     BosTaurus_organism_ = AnimalBreedsCode("34618005")
+    """
+    None
+    """
     RedAngusCattleBreed_organism_ = AnimalBreedsCode("133259004")
+    """
+    None
+    """
     BlackAngusCattleBreed_organism_ = AnimalBreedsCode("409905004")
+    """
+    None
+    """
     MilkingShorthornCattleBreed_organism_ = AnimalBreedsCode("78541007")
+    """
+    None
+    """
     DexterCattleBreed_organism_ = AnimalBreedsCode("53031002")
+    """
+    None
+    """
     BlondeD_Aquitaine_organism_ = AnimalBreedsCode("62153005")
+    """
+    None
+    """
     MarchigianaCattleBreed_organism_ = AnimalBreedsCode("65344003")
+    """
+    None
+    """
     LonghornCattleBreed_organism_ = AnimalBreedsCode("66314009")
+    """
+    None
+    """
     GallowayCattleBreed_organism_ = AnimalBreedsCode("66911005")
+    """
+    None
+    """
     GermanFleck_ViehCattleBreed_organism_ = AnimalBreedsCode("67448000")
+    """
+    None
+    """
     GelbveihCattleBreed_organism_ = AnimalBreedsCode("76497003")
+    """
+    None
+    """
     NormandieCattleBreed_organism_ = AnimalBreedsCode("81267004")
+    """
+    None
+    """
     ShorthornCattleBreed_organism_ = AnimalBreedsCode("80835003")
+    """
+    None
+    """
     PinzgauerCattleBreed_organism_ = AnimalBreedsCode("400003")
+    """
+    None
+    """
     BrownWelshCattleBreed_organism_ = AnimalBreedsCode("944009")
+    """
+    None
+    """
     LincolnRedCattleBreed_organism_ = AnimalBreedsCode("3216001")
+    """
+    None
+    """
     Meusse_Rhine_IjsselCattleBreed_organism_ = AnimalBreedsCode("6112002")
+    """
+    None
+    """
     AyrshireCattleBreed_organism_ = AnimalBreedsCode("8989009")
+    """
+    None
+    """
     BeltedGallowayCattleBreed_organism_ = AnimalBreedsCode("13544004")
+    """
+    None
+    """
     LuingCattleBreed_organism_ = AnimalBreedsCode("21553004")
+    """
+    None
+    """
     CanadianCattleBreed_organism_ = AnimalBreedsCode("21921002")
+    """
+    None
+    """
     HaysConverterCattleBreed_organism_ = AnimalBreedsCode("23629009")
+    """
+    None
+    """
     Holstein_FriesianCattleBreed_organism_ = AnimalBreedsCode("26105007")
+    """
+    None
+    """
     WhiteParkCattleBreed_organism_ = AnimalBreedsCode("26525003")
+    """
+    None
+    """
     SimmentalCattleBreed_organism_ = AnimalBreedsCode("28483003")
+    """
+    None
+    """
     BlackWelshCattleBreed_organism_ = AnimalBreedsCode("28744004")
+    """
+    None
+    """
     ChianinaCattleBreed_organism_ = AnimalBreedsCode("35229007")
+    """
+    None
+    """
     BrownSwissCattleBreed_organism_ = AnimalBreedsCode("44230005")
+    """
+    None
+    """
     MaineAnjouCattleBreed_organism_ = AnimalBreedsCode("45284002")
+    """
+    None
+    """
     LimousinCattleBreed_organism_ = AnimalBreedsCode("48702000")
+    """
+    None
+    """
     TarentaiseCattleBreed_organism_ = AnimalBreedsCode("50959000")
+    """
+    None
+    """
     JerseyCattleBreed_organism_ = AnimalBreedsCode("51937006")
+    """
+    None
+    """
     ScottishHighlandCattleBreed_organism_ = AnimalBreedsCode("83173002")
+    """
+    None
+    """
     GuernseyCattleBreed_organism_ = AnimalBreedsCode("84839000")
+    """
+    None
+    """
     RedPollCattleBreed_organism_ = AnimalBreedsCode("88807001")
+    """
+    None
+    """
     SalersCattleBreed_organism_ = AnimalBreedsCode("90612002")
+    """
+    None
+    """
     GujaratiCattleBreed_organism_ = AnimalBreedsCode("112485003")
+    """
+    None
+    """
     AberdeenAngusCattleBreed_organism_ = AnimalBreedsCode("84923006")
+    """
+    None
+    """
     BrahmaCattleBreed_organism_ = AnimalBreedsCode("30384003")
+    """
+    None
+    """
     GirCattleBreed_organism_ = AnimalBreedsCode("32938007")
+    """
+    None
+    """
     Jem_JemZebuCattleBreed_organism_ = AnimalBreedsCode("132771000")
+    """
+    None
+    """
     AmritmahalCattleBreed_organism_ = AnimalBreedsCode("133594007")
+    """
+    None
+    """
     BachaurCattleBreed_organism_ = AnimalBreedsCode("133595008")
+    """
+    None
+    """
     BarkaCattleBreed_organism_ = AnimalBreedsCode("133596009")
+    """
+    None
+    """
     BengaliCattleBreed_organism_ = AnimalBreedsCode("133597000")
+    """
+    None
+    """
     BhagnariCattleBreed_organism_ = AnimalBreedsCode("133598005")
+    """
+    None
+    """
     BoranCattleBreed_organism_ = AnimalBreedsCode("133599002")
+    """
+    None
+    """
     ChanniCattleBreed_organism_ = AnimalBreedsCode("133600004")
+    """
+    None
+    """
     CholistaniCattleBreed_organism_ = AnimalBreedsCode("133601000")
+    """
+    None
+    """
     DajalCattleBreed_organism_ = AnimalBreedsCode("133602007")
+    """
+    None
+    """
     DangiCattleBreed_organism_ = AnimalBreedsCode("133603002")
+    """
+    None
+    """
     DeoniCattleBreed_organism_ = AnimalBreedsCode("133604008")
+    """
+    None
+    """
     DhanniCattleBreed_organism_ = AnimalBreedsCode("133605009")
+    """
+    None
+    """
     GaolaoCattleBreed_organism_ = AnimalBreedsCode("133606005")
+    """
+    None
+    """
     HallikarCattleBreed_organism_ = AnimalBreedsCode("133607001")
+    """
+    None
+    """
     HarianaCattleBreed_organism_ = AnimalBreedsCode("133608006")
+    """
+    None
+    """
     Indo_BrazilianCattleBreed_organism_ = AnimalBreedsCode("133609003")
+    """
+    None
+    """
     KangayamCattleBreed_organism_ = AnimalBreedsCode("133610008")
+    """
+    None
+    """
     KankrejCattleBreed_organism_ = AnimalBreedsCode("133611007")
+    """
+    None
+    """
     KenkathaCattleBreed_organism_ = AnimalBreedsCode("133612000")
+    """
+    None
+    """
     ArsiCattleBreed_organism_ = AnimalBreedsCode("133631006")
+    """
+    None
+    """
     AtpadiMahalCattleBreed_organism_ = AnimalBreedsCode("133632004")
+    """
+    None
+    """
     AzaouakCattleBreed_organism_ = AnimalBreedsCode("133633009")
+    """
+    None
+    """
     AzerbaijanZebuCattleBreed_organism_ = AnimalBreedsCode("133634003")
+    """
+    None
+    """
     BaggaraCattleBreed_organism_ = AnimalBreedsCode("133635002")
+    """
+    None
+    """
     BambawaCattleBreed_organism_ = AnimalBreedsCode("133636001")
+    """
+    None
+    """
     BamiCattleBreed_organism_ = AnimalBreedsCode("133637005")
+    """
+    None
+    """
     BanyoCattleBreed_organism_ = AnimalBreedsCode("133638000")
+    """
+    None
+    """
     BargurCattleBreed_organism_ = AnimalBreedsCode("133639008")
+    """
+    None
+    """
     BariCattleBreed_organism_ = AnimalBreedsCode("133640005")
+    """
+    None
+    """
     BimalCattleBreed_organism_ = AnimalBreedsCode("133641009")
+    """
+    None
+    """
     BorneoZebuCattleBreed_organism_ = AnimalBreedsCode("133642002")
+    """
+    None
+    """
     ButanaCattleBreed_organism_ = AnimalBreedsCode("133643007")
+    """
+    None
+    """
     ChittagongRedCattleBreed_organism_ = AnimalBreedsCode("133644001")
+    """
+    None
+    """
     CutchiCattleBreed_organism_ = AnimalBreedsCode("133645000")
+    """
+    None
+    """
     DairyZebuOfUberabaCattleBreed_organism_ = AnimalBreedsCode("133646004")
+    """
+    None
+    """
     DashtiariCattleBreed_organism_ = AnimalBreedsCode("133647008")
+    """
+    None
+    """
     DialiCattleBreed_organism_ = AnimalBreedsCode("133648003")
+    """
+    None
+    """
     DidingaCattleBreed_organism_ = AnimalBreedsCode("133649006")
+    """
+    None
+    """
     DongolaCattleBreed_organism_ = AnimalBreedsCode("133650006")
+    """
+    None
+    """
     FellataCattleBreed_organism_ = AnimalBreedsCode("133651005")
+    """
+    None
+    """
     AbyssinianHighlandZebuCattleBreed_organism_ = AnimalBreedsCode("133653008")
+    """
+    None
+    """
     AbyssinianShorthornedZebuCattleBreed_organism_ = AnimalBreedsCode("133654002")
+    """
+    None
+    """
     AcehCattleBreed_organism_ = AnimalBreedsCode("133655001")
+    """
+    None
+    """
     AchhamCattleBreed_organism_ = AnimalBreedsCode("133656000")
+    """
+    None
+    """
     GarreCattleBreed_organism_ = AnimalBreedsCode("133657009")
+    """
+    None
+    """
     GasaraCattleBreed_organism_ = AnimalBreedsCode("133658004")
+    """
+    None
+    """
     GobraCattleBreed_organism_ = AnimalBreedsCode("133659007")
+    """
+    None
+    """
     GoomsurCattleBreed_organism_ = AnimalBreedsCode("133660002")
+    """
+    None
+    """
     GujamavuCattleBreed_organism_ = AnimalBreedsCode("133661003")
+    """
+    None
+    """
     HissarCattleBreed_organism_ = AnimalBreedsCode("133663000")
+    """
+    None
+    """
     IngessanaCattleBreed_organism_ = AnimalBreedsCode("133664006")
+    """
+    None
+    """
     JamaicaBrahmanCattleBreed_organism_ = AnimalBreedsCode("133665007")
+    """
+    None
+    """
     JellicutCattleBreed_organism_ = AnimalBreedsCode("133666008")
+    """
+    None
+    """
     AdamawaCattleBreed_organism_ = AnimalBreedsCode("133667004")
+    """
+    None
+    """
     AdenZebuCattleBreed_organism_ = AnimalBreedsCode("133668009")
+    """
+    None
+    """
     AfghanCattleBreed_organism_ = AnimalBreedsCode("133669001")
+    """
+    None
+    """
     AlambadiCattleBreed_organism_ = AnimalBreedsCode("133670000")
+    """
+    None
+    """
     JenubiCattleBreed_organism_ = AnimalBreedsCode("133674009")
+    """
+    None
+    """
     JidduCattleBreed_organism_ = AnimalBreedsCode("133675005")
+    """
+    None
+    """
     JijjigaZebuCattleBreed_organism_ = AnimalBreedsCode("133676006")
+    """
+    None
+    """
     KabotaCattleBreed_organism_ = AnimalBreedsCode("133677002")
+    """
+    None
+    """
     KachchaSiriCattleBreed_organism_ = AnimalBreedsCode("133678007")
+    """
+    None
+    """
     KalakheriCattleBreed_organism_ = AnimalBreedsCode("133679004")
+    """
+    None
+    """
     KamdhinoCattleBreed_organism_ = AnimalBreedsCode("133680001")
+    """
+    None
+    """
     KandahariCattleBreed_organism_ = AnimalBreedsCode("133681002")
+    """
+    None
+    """
     KaninganCattleBreed_organism_ = AnimalBreedsCode("133682009")
+    """
+    None
+    """
     IranianZebuCattleBreed_organism_ = AnimalBreedsCode("133686007")
+    """
+    None
+    """
     KappiliyanCattleBreed_organism_ = AnimalBreedsCode("133689000")
+    """
+    None
+    """
     KaramajongCattleBreed_organism_ = AnimalBreedsCode("133690009")
+    """
+    None
+    """
     KenanaCattleBreed_organism_ = AnimalBreedsCode("133691008")
+    """
+    None
+    """
     GuzeratCattleBreed_organism_ = AnimalBreedsCode("133699005")
+    """
+    None
+    """
     DeogirCattleBreed_organism_ = AnimalBreedsCode("133701005")
+    """
+    None
+    """
     NelloreCattleBreed_organism_ = AnimalBreedsCode("76604009")
+    """
+    None
+    """
     KherigarhCattleBreed_organism_ = AnimalBreedsCode("133613005")
+    """
+    None
+    """
     KhillariCattleBreed_organism_ = AnimalBreedsCode("133614004")
+    """
+    None
+    """
     KrishnaValleyCattleBreed_organism_ = AnimalBreedsCode("133615003")
+    """
+    None
+    """
     LohaniCattleBreed_organism_ = AnimalBreedsCode("133616002")
+    """
+    None
+    """
     MalviCattleBreed_organism_ = AnimalBreedsCode("133617006")
+    """
+    None
+    """
     MewatiCattleBreed_organism_ = AnimalBreedsCode("133618001")
+    """
+    None
+    """
     NagoriCattleBreed_organism_ = AnimalBreedsCode("133619009")
+    """
+    None
+    """
     NeloreCattleBreed_organism_ = AnimalBreedsCode("133620003")
+    """
+    None
+    """
     NimariCattleBreed_organism_ = AnimalBreedsCode("133621004")
+    """
+    None
+    """
     PonwarCattleBreed_organism_ = AnimalBreedsCode("133622006")
+    """
+    None
+    """
     RathCattleBreed_organism_ = AnimalBreedsCode("133623001")
+    """
+    None
+    """
     RathiCattleBreed_organism_ = AnimalBreedsCode("133624007")
+    """
+    None
+    """
     RedSindhiCattleBreed_organism_ = AnimalBreedsCode("133625008")
+    """
+    None
+    """
     RojhanCattleBreed_organism_ = AnimalBreedsCode("133626009")
+    """
+    None
+    """
     SahiwalCattleBreed_organism_ = AnimalBreedsCode("133627000")
+    """
+    None
+    """
     SiriZebuCattleBreed_organism_ = AnimalBreedsCode("133628005")
+    """
+    None
+    """
     TharparkarCattleBreed_organism_ = AnimalBreedsCode("133629002")
+    """
+    None
+    """
     ZanzibarZebuCattleBreed_organism_ = AnimalBreedsCode("133630007")
+    """
+    None
+    """
     TurkmenZebuCattleBreed_organism_ = AnimalBreedsCode("133652003")
+    """
+    None
+    """
     LeiqiongCattleBreed_organism_ = AnimalBreedsCode("133662005")
+    """
+    None
+    """
     UmblacheryCattleBreed_organism_ = AnimalBreedsCode("133671001")
+    """
+    None
+    """
     VenezuelanZebuCattleBreed_organism_ = AnimalBreedsCode("133672008")
+    """
+    None
+    """
     WakwaCattleBreed_organism_ = AnimalBreedsCode("133683004")
+    """
+    None
+    """
     WhiteFulaniCattleBreed_organism_ = AnimalBreedsCode("133684005")
+    """
+    None
+    """
     YemeniZebuCattleBreed_organism_ = AnimalBreedsCode("133685006")
+    """
+    None
+    """
     KhorsanCattleBreed_organism_ = AnimalBreedsCode("133687003")
+    """
+    None
+    """
     PolledGirCattleBreed_organism_ = AnimalBreedsCode("133688008")
+    """
+    None
+    """
     KenyaBoranCattleBreed_organism_ = AnimalBreedsCode("133692001")
+    """
+    None
+    """
     KenyaZebuCattleBreed_organism_ = AnimalBreedsCode("133693006")
+    """
+    None
+    """
     KhamalaCattleBreed_organism_ = AnimalBreedsCode("133694000")
+    """
+    None
+    """
     KhurasaniZebuCattleBreed_organism_ = AnimalBreedsCode("133695004")
+    """
+    None
+    """
     KilaraCattleBreed_organism_ = AnimalBreedsCode("133696003")
+    """
+    None
+    """
     KinniyaCattleBreed_organism_ = AnimalBreedsCode("133697007")
+    """
+    None
+    """
     KonariCattleBreed_organism_ = AnimalBreedsCode("133698002")
+    """
+    None
+    """
     TadzhikZebuCattleBreed_organism_ = AnimalBreedsCode("133700006")
+    """
+    None
+    """
     KrishnagariCattleBreed_organism_ = AnimalBreedsCode("133705001")
+    """
+    None
+    """
     KumauniCattleBreed_organism_ = AnimalBreedsCode("133706000")
+    """
+    None
+    """
     LadakhiCattleBreed_organism_ = AnimalBreedsCode("133707009")
+    """
+    None
+    """
     LatukaCattleBreed_organism_ = AnimalBreedsCode("133708004")
+    """
+    None
+    """
     LugwareCattleBreed_organism_ = AnimalBreedsCode("133709007")
+    """
+    None
+    """
     MadagascarZebuCattleBreed_organism_ = AnimalBreedsCode("133710002")
+    """
+    None
+    """
     MadaripurCattleBreed_organism_ = AnimalBreedsCode("133711003")
+    """
+    None
+    """
     MagalCattleBreed_organism_ = AnimalBreedsCode("133712005")
+    """
+    None
+    """
     MalawiZebuCattleBreed_organism_ = AnimalBreedsCode("133713000")
+    """
+    None
+    """
     MalnadGiddaCattleBreed_organism_ = AnimalBreedsCode("133714006")
+    """
+    None
+    """
     MampatiCattleBreed_organism_ = AnimalBreedsCode("133721006")
+    """
+    None
+    """
     ManapariCattleBreed_organism_ = AnimalBreedsCode("133722004")
+    """
+    None
+    """
     MaureCattleBreed_organism_ = AnimalBreedsCode("133723009")
+    """
+    None
+    """
     MazandaraniCattleBreed_organism_ = AnimalBreedsCode("133724003")
+    """
+    None
+    """
     MeraukeCattleBreed_organism_ = AnimalBreedsCode("133725002")
+    """
+    None
+    """
     MhaswadCattleBreed_organism_ = AnimalBreedsCode("133727005")
+    """
+    None
+    """
     MiniatureZebuCattleBreed_organism_ = AnimalBreedsCode("133728000")
+    """
+    None
+    """
     MongallaCattleBreed_organism_ = AnimalBreedsCode("133729008")
+    """
+    None
+    """
     MorangCattleBreed_organism_ = AnimalBreedsCode("133730003")
+    """
+    None
+    """
     MozambiqueAngoniCattleBreed_organism_ = AnimalBreedsCode("133737000")
+    """
+    None
+    """
     MpwapwaCattleBreed_organism_ = AnimalBreedsCode("133738005")
+    """
+    None
+    """
     MurleCattleBreed_organism_ = AnimalBreedsCode("133739002")
+    """
+    None
+    """
     NakaliCattleBreed_organism_ = AnimalBreedsCode("133740000")
+    """
+    None
+    """
     NepaleseHillZebuCattleBreed_organism_ = AnimalBreedsCode("133741001")
+    """
+    None
+    """
     N_GaoundereCattleBreed_organism_ = AnimalBreedsCode("133742008")
+    """
+    None
+    """
     NkediCattleBreed_organism_ = AnimalBreedsCode("133743003")
+    """
+    None
+    """
     NorthBangladeshGrayCattleBreed_organism_ = AnimalBreedsCode("133744009")
+    """
+    None
+    """
     NorthSomaliZebuCattleBreed_organism_ = AnimalBreedsCode("133745005")
+    """
+    None
+    """
     PolledGuzeratCattleBreed_organism_ = AnimalBreedsCode("133746006")
+    """
+    None
+    """
     PolledNeloreCattleBreed_organism_ = AnimalBreedsCode("133753002")
+    """
+    None
+    """
     PrewakwaCattleBreed_organism_ = AnimalBreedsCode("133754008")
+    """
+    None
+    """
     Pul_M_borCattleBreed_organism_ = AnimalBreedsCode("133755009")
+    """
+    None
+    """
     PunganurCattleBreed_organism_ = AnimalBreedsCode("133756005")
+    """
+    None
+    """
     RamgarhiCattleBreed_organism_ = AnimalBreedsCode("133757001")
+    """
+    None
+    """
     RedBororoCattleBreed_organism_ = AnimalBreedsCode("133758006")
+    """
+    None
+    """
     RedDesertCattleBreed_organism_ = AnimalBreedsCode("133759003")
+    """
+    None
+    """
     RedKandhariCattleBreed_organism_ = AnimalBreedsCode("133760008")
+    """
+    None
+    """
     ShakhansurriCattleBreed_organism_ = AnimalBreedsCode("133761007")
+    """
+    None
+    """
     ShekoCattleBreed_organism_ = AnimalBreedsCode("133762000")
+    """
+    None
+    """
     ShendiCattleBreed_organism_ = AnimalBreedsCode("133769009")
+    """
+    None
+    """
     ShuwaCattleBreed_organism_ = AnimalBreedsCode("133770005")
+    """
+    None
+    """
     SinhalaCattleBreed_organism_ = AnimalBreedsCode("133771009")
+    """
+    None
+    """
     SistaniCattleBreed_organism_ = AnimalBreedsCode("133772002")
+    """
+    None
+    """
     SmallEastAfricanZebuCattleBreed_organism_ = AnimalBreedsCode("133773007")
+    """
+    None
+    """
     SokotoGudaliCattleBreed_organism_ = AnimalBreedsCode("133774001")
+    """
+    None
+    """
     SomaliCattleBreed_organism_ = AnimalBreedsCode("133775000")
+    """
+    None
+    """
     SonkheriCattleBreed_organism_ = AnimalBreedsCode("133776004")
+    """
+    None
+    """
     SonValleyCattleBreed_organism_ = AnimalBreedsCode("133777008")
+    """
+    None
+    """
     SouthChinaZebuCattleBreed_organism_ = AnimalBreedsCode("133778003")
+    """
+    None
+    """
     SouthMalawiZebuCattleBreed_organism_ = AnimalBreedsCode("133785004")
+    """
+    None
+    """
     SudaneseFulaniCattleBreed_organism_ = AnimalBreedsCode("133786003")
+    """
+    None
+    """
     TabapuaCattleBreed_organism_ = AnimalBreedsCode("133787007")
+    """
+    None
+    """
     TamankaduwaCattleBreed_organism_ = AnimalBreedsCode("133788002")
+    """
+    None
+    """
     TanzanianZebuCattleBreed_organism_ = AnimalBreedsCode("133789005")
+    """
+    None
+    """
     TaraiCattleBreed_organism_ = AnimalBreedsCode("133790001")
+    """
+    None
+    """
     ThillariCattleBreed_organism_ = AnimalBreedsCode("133791002")
+    """
+    None
+    """
     ToposaCattleBreed_organism_ = AnimalBreedsCode("133792009")
+    """
+    None
+    """
     ToronkeCattleBreed_organism_ = AnimalBreedsCode("133793004")
+    """
+    None
+    """
     ToupouriCattleBreed_organism_ = AnimalBreedsCode("133794005")
+    """
+    None
+    """
     PolledDorsetSheepBreed_organism_ = AnimalBreedsCode("440034003")
+    """
+    None
+    """
     AnasPlatyrhynchos_organism_ = AnimalBreedsCode("125102002")
+    """
+    None
+    """
     AnserAnserAnser_organism_ = AnimalBreedsCode("70881005")
+    """
+    None
+    """
     AnserAnser_organism_ = AnimalBreedsCode("125104001")
+    """
+    None
+    """
     MagpieBreedDuck_organism_ = AnimalBreedsCode("131828004")
+    """
+    None
+    """
     ToulouseGooseBreed_organism_ = AnimalBreedsCode("131846005")
+    """
+    None
+    """
     BisonBisonXBosTaurusHybrid_organism_ = AnimalBreedsCode("425181009")
+    """
+    None
+    """
     CriolloCattleBreed_organism_ = AnimalBreedsCode("83996001")
+    """
+    None
+    """
     MontanaPig_organism_ = AnimalBreedsCode("74517004")
+    """
+    None
+    """
     MarylandPig_organism_ = AnimalBreedsCode("60958006")
+    """
+    None
+    """
     CPFPig_organism_ = AnimalBreedsCode("24840008")
+    """
+    None
+    """
     BeltsvillePig_organism_ = AnimalBreedsCode("48394005")
+    """
+    None
+    """
     EquusAsinus_organism_ = AnimalBreedsCode("85626006")
+    """
+    None
+    """
     TarpanHorseBreed_organism_ = AnimalBreedsCode("445729005")
+    """
+    None
+    """
     WarmbloodHorseBreed_organism_ = AnimalBreedsCode("407402001")
+    """
+    None
+    """
     RhinelanderHorseBreed_organism_ = AnimalBreedsCode("441714000")

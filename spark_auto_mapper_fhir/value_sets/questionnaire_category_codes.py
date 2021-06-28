@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class QuestionnaireCategoryCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class QuestionnaireCategoryCodesCodeValues:
+    """
+    None
+    """
+
     MentalStatusQuestionnaire = QuestionnaireCategoryCodesCode("273601006")
+    """
+    None
+    """
     SocialSupportQuestionnaire = QuestionnaireCategoryCodesCode("273820006")
+    """
+    None
+    """
     GeneralHealthQuestionnaire = QuestionnaireCategoryCodesCode("273479001")
+    """
+    None
+    """
     ConsumerSatisfactionQuestionnaire = QuestionnaireCategoryCodesCode("273384008")
+    """
+    None
+    """
     AdministrativeForm = QuestionnaireCategoryCodesCode("304784009")

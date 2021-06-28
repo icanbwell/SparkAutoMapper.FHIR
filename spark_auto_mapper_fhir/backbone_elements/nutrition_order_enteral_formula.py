@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # baseFormulaType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for baseFormulaType
     # Import for CodeableConcept for baseFormulaType
     from spark_auto_mapper_fhir.value_sets.enteral_formula_type_codes import (
         EnteralFormulaTypeCodesCode,
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # additiveType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for additiveType
     # Import for CodeableConcept for additiveType
     from spark_auto_mapper_fhir.value_sets.enteral_formula_additive_type_code import (
         EnteralFormulaAdditiveTypeCodeCode,
@@ -37,6 +39,7 @@ if TYPE_CHECKING:
     # routeofAdministration (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for routeofAdministration
     # Import for CodeableConcept for routeofAdministration
     from spark_auto_mapper_fhir.value_sets.enteral_route_codes import (
         EnteralRouteCodesCode,

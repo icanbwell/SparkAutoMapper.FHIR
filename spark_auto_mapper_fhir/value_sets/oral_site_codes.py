@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,46 +16,175 @@ class OralSiteCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/tooth
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/tooth"
+
 
 class OralSiteCodesCodeValues:
+    """
+    Oral cavity.
+    """
+
     OralCavity = OralSiteCodesCode("0")
+    """
+    Permanent teeth Maxillary right.
+    """
     _1 = OralSiteCodesCode("1")
+    """
+    Permanent teeth Maxillary left.
+    """
     _2 = OralSiteCodesCode("2")
+    """
+    Permanent teeth Mandibular right.
+    """
     _3 = OralSiteCodesCode("3")
+    """
+    Permanent teeth Mandibular left.
+    """
     _4 = OralSiteCodesCode("4")
+    """
+    Deciduous teeth Maxillary right.
+    """
     _5 = OralSiteCodesCode("5")
+    """
+    Deciduous teeth Maxillary left.
+    """
     _6 = OralSiteCodesCode("6")
+    """
+    Deciduous teeth Mandibular right.
+    """
     _7 = OralSiteCodesCode("7")
+    """
+    Deciduous teeth Mandibular left.
+    """
     _8 = OralSiteCodesCode("8")
+    """
+    Upper Right Tooth 1 from the central axis, permanent dentition.
+    """
     _11 = OralSiteCodesCode("11")
+    """
+    Upper Right Tooth 2 from the central axis, permanent dentition.
+    """
     _12 = OralSiteCodesCode("12")
+    """
+    Upper Right Tooth 3 from the central axis, permanent dentition.
+    """
     _13 = OralSiteCodesCode("13")
+    """
+    Upper Right Tooth 4 from the central axis, permanent dentition.
+    """
     _14 = OralSiteCodesCode("14")
+    """
+    Upper Right Tooth 5 from the central axis, permanent dentition.
+    """
     _15 = OralSiteCodesCode("15")
+    """
+    Upper Right Tooth 6 from the central axis, permanent dentition.
+    """
     _16 = OralSiteCodesCode("16")
+    """
+    Upper Right Tooth 7 from the central axis, permanent dentition.
+    """
     _17 = OralSiteCodesCode("17")
+    """
+    Upper Right Tooth 8 from the central axis, permanent dentition.
+    """
     _18 = OralSiteCodesCode("18")
+    """
+    Upper Left Tooth 1 from the central axis, permanent dentition.
+    """
     _21 = OralSiteCodesCode("21")
+    """
+    Upper Left Tooth 2 from the central axis, permanent dentition.
+    """
     _22 = OralSiteCodesCode("22")
+    """
+    Upper Left Tooth 3 from the central axis, permanent dentition.
+    """
     _23 = OralSiteCodesCode("23")
+    """
+    Upper Left Tooth 4 from the central axis, permanent dentition.
+    """
     _24 = OralSiteCodesCode("24")
+    """
+    Upper Left Tooth 5 from the central axis, permanent dentition.
+    """
     _25 = OralSiteCodesCode("25")
+    """
+    Upper Left Tooth 6 from the central axis, permanent dentition.
+    """
     _26 = OralSiteCodesCode("26")
+    """
+    Upper Left Tooth 7 from the central axis, permanent dentition.
+    """
     _27 = OralSiteCodesCode("27")
+    """
+    Upper Left Tooth 8 from the central axis, permanent dentition.
+    """
     _28 = OralSiteCodesCode("28")
+    """
+    Lower Left Tooth 1 from the central axis, permanent dentition.
+    """
     _31 = OralSiteCodesCode("31")
+    """
+    Lower Left Tooth 2 from the central axis, permanent dentition.
+    """
     _32 = OralSiteCodesCode("32")
+    """
+    Lower Left Tooth 3 from the central axis, permanent dentition.
+    """
     _33 = OralSiteCodesCode("33")
+    """
+    Lower Left Tooth 4 from the central axis, permanent dentition.
+    """
     _34 = OralSiteCodesCode("34")
+    """
+    Lower Left Tooth 5 from the central axis, permanent dentition.
+    """
     _35 = OralSiteCodesCode("35")
+    """
+    Lower Left Tooth 6 from the central axis, permanent dentition.
+    """
     _36 = OralSiteCodesCode("36")
+    """
+    Lower Left Tooth 7 from the central axis, permanent dentition.
+    """
     _37 = OralSiteCodesCode("37")
+    """
+    Lower Left Tooth 8 from the central axis, permanent dentition.
+    """
     _38 = OralSiteCodesCode("38")
+    """
+    Lower Right Tooth 1 from the central axis, permanent dentition.
+    """
     _41 = OralSiteCodesCode("41")
+    """
+    Lower Right Tooth 2 from the central axis, permanent dentition.
+    """
     _42 = OralSiteCodesCode("42")
+    """
+    Lower Right Tooth 3 from the central axis, permanent dentition.
+    """
     _43 = OralSiteCodesCode("43")
+    """
+    Lower Right Tooth 4 from the central axis, permanent dentition.
+    """
     _44 = OralSiteCodesCode("44")
+    """
+    Lower Right Tooth 5 from the central axis, permanent dentition.
+    """
     _45 = OralSiteCodesCode("45")
+    """
+    Lower Right Tooth 6 from the central axis, permanent dentition.
+    """
     _46 = OralSiteCodesCode("46")
+    """
+    Lower Right Tooth 7 from the central axis, permanent dentition.
+    """
     _47 = OralSiteCodesCode("47")
+    """
+    Lower Right Tooth 8 from the central axis, permanent dentition.
+    """
     _48 = OralSiteCodesCode("48")

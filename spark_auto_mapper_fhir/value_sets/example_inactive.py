@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class Example_inactiveCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class Example_inactiveCodeValues:
+    """
+    These are moods describing activities as they progress in the business cycle, from defined, through planned and ordered to completed.
+    """
+
     Actmoodcompletiontrack = Example_inactiveCode("_ActMoodCompletionTrack")
+    """
+    Definition: An act that expresses condition statements for other acts.
+    """
     Actmoodpredicate = Example_inactiveCode("_ActMoodPredicate")

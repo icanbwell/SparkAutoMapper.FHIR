@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class ContainerCapCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/container-cap
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/container-cap"
+
 
 class ContainerCapCodeValues:
+    """
+    red cap.
+    """
+
     RedCap = ContainerCapCode("red")
+    """
+    yellow cap.
+    """
     YellowCap = ContainerCapCode("yellow")
+    """
+    dark yellow cap.
+    """
     DarkYellowCap = ContainerCapCode("dark-yellow")
+    """
+    grey cap.
+    """
     GreyCap = ContainerCapCode("grey")
+    """
+    light blue cap.
+    """
     LightBlueCap = ContainerCapCode("light-blue")
+    """
+    black cap.
+    """
     BlackCap = ContainerCapCode("black")
+    """
+    green cap.
+    """
     GreenCap = ContainerCapCode("green")
+    """
+    light green cap.
+    """
     LightGreenCap = ContainerCapCode("light-green")
+    """
+    lavender cap.
+    """
     LavenderCap = ContainerCapCode("lavender")
+    """
+    brown cap.
+    """
     BrownCap = ContainerCapCode("brown")
+    """
+    white cap.
+    """
     WhiteCap = ContainerCapCode("white")
+    """
+    pink cap.
+    """
     PinkCap = ContainerCapCode("pink")

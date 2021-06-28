@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class SecurityRoleTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class SecurityRoleTypeCodeValues:
+    """
+    An entity providing authorization services to enable the electronic sharing of health-related information based on resource owner's preapproved permissions. For example, an UMA Authorization Server[UMA]
+    """
+
     AuthorizationServer = SecurityRoleTypeCode("authserver")
+    """
+    An entity that collects information over which the data subject may have certain rights under policy or law to control that information's management and distribution by data collectors, including the right to access, retrieve, distribute, or delete that information. 
+    """
     DataCollector = SecurityRoleTypeCode("datacollector")
+    """
+    An entity that processes collected information over which the data subject may have certain rights under policy or law to control that information's management and distribution by data processors, including the right to access, retrieve, distribute, or delete that information.
+    """
     DataProcessor = SecurityRoleTypeCode("dataprocessor")
+    """
+    A person whose personal information is collected or processed, and who may have certain rights under policy or law to control that information's management and distribution by data collectors or processors, including the right to access, retrieve, distribute, or delete that information.
+    """
     DataSubject = SecurityRoleTypeCode("datasubject")
+    """
+    The human user that has participated.
+    """
     HumanUser = SecurityRoleTypeCode("humanuser")

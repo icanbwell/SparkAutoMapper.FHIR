@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,28 +16,97 @@ class MedicationDispenseStatusReasonCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medicationdispense-status-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationdispense-status-reason"
+
 
 class MedicationDispenseStatusReasonCodesCodeValues:
+    """
+    The order has been stopped by the prescriber but this fact has not necessarily captured electronically. Example: A verbal stop, a fax, etc.
+    """
+
     OrderStopped = MedicationDispenseStatusReasonCodesCode("frr01")
+    """
+    Order has not been fulfilled within a reasonable amount of time, and might not be current.
+    """
     Stale_datedOrder = MedicationDispenseStatusReasonCodesCode("frr02")
+    """
+    Data needed to safely act on the order which was expected to become available independent of the order is not yet available. Example: Lab results, diagnostic imaging, etc.
+    """
     IncompleteData = MedicationDispenseStatusReasonCodesCode("frr03")
+    """
+    Product not available or manufactured. Cannot supply.
+    """
     ProductUnavailable = MedicationDispenseStatusReasonCodesCode("frr04")
+    """
+    The dispenser has ethical, religious or moral objections to fulfilling the order/dispensing the product.
+    """
     Ethical_religious = MedicationDispenseStatusReasonCodesCode("frr05")
+    """
+    Fulfiller not able to provide appropriate care associated with fulfilling the order. Example: Therapy requires ongoing monitoring by fulfiller and fulfiller will be ending practice, leaving town, unable to schedule necessary time, etc.
+    """
     UnableToProvideCare = MedicationDispenseStatusReasonCodesCode("frr06")
+    """
+    This therapy has been ordered as a backup to a preferred therapy. This order will be released when and if the preferred therapy is unsuccessful.
+    """
     TryAnotherTreatmentFirst = MedicationDispenseStatusReasonCodesCode("altchoice")
+    """
+    Clarification is required before the order can be acted upon.
+    """
     Prescription_RequestRequiresClarification = MedicationDispenseStatusReasonCodesCode(
         "clarif"
     )
+    """
+    The current level of the medication in the patient's system is too high. The medication is suspended to allow the level to subside to a safer level.
+    """
     DrugLevelTooHigh = MedicationDispenseStatusReasonCodesCode("drughigh")
+    """
+    The patient has been admitted to a care facility and their community medications are suspended until hospital discharge.
+    """
     AdmissionToHospital = MedicationDispenseStatusReasonCodesCode("hospadm")
+    """
+    The therapy would interfere with a planned lab test and the therapy is being withdrawn until the test is completed.
+    """
     LabInterferenceIssues = MedicationDispenseStatusReasonCodesCode("labint")
+    """
+    Patient not available for a period of time due to a scheduled therapy, leave of absence or other reason.
+    """
     PatientNotAvailable = MedicationDispenseStatusReasonCodesCode("non-avail")
+    """
+    The patient is pregnant or breast feeding. The therapy will be resumed when the pregnancy is complete and the patient is no longer breastfeeding.
+    """
     PatientIsPregnantOrBreastfeeding = MedicationDispenseStatusReasonCodesCode("preg")
+    """
+    The patient is believed to be allergic to a substance that is part of the therapy and the therapy is being temporarily withdrawn to confirm.
+    """
     Allergy = MedicationDispenseStatusReasonCodesCode("saig")
+    """
+    The drug interacts with a short-term treatment that is more urgently required. This order will be resumed when the short-term treatment is complete.
+    """
     DrugInteractsWithAnotherDrug = MedicationDispenseStatusReasonCodesCode("sddi")
+    """
+    Another short-term co-occurring therapy fulfills the same purpose as this therapy. This therapy will be resumed when the co-occuring therapy is complete.
+    """
     DuplicateTherapy = MedicationDispenseStatusReasonCodesCode("sdupther")
+    """
+    The patient is believed to have an intolerance to a substance that is part of the therapy and the therapy is being temporarily withdrawn to confirm.
+    """
     SuspectedIntolerance = MedicationDispenseStatusReasonCodesCode("sintol")
+    """
+    The drug is contraindicated for patients receiving surgery and the patient is scheduled to be admitted for surgery in the near future. The drug will be resumed when the patient has sufficiently recovered from the surgery.
+    """
     PatientScheduledForSurgery = MedicationDispenseStatusReasonCodesCode("surg")
+    """
+    The patient was previously receiving a medication contraindicated with the current medication. The current medication will remain on hold until the prior medication has been cleansed from their system.
+    """
     Washout = MedicationDispenseStatusReasonCodesCode("washout")
+    """
+    Drug out of stock. Cannot supply.
+    """
     DrugNotAvailable_OutOfStock = MedicationDispenseStatusReasonCodesCode("outofstock")
+    """
+    Drug no longer marketed Cannot supply.
+    """
     DrugNotAvailable_OffMarket = MedicationDispenseStatusReasonCodesCode("offmarket")

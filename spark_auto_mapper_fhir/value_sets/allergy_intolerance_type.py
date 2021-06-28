@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class AllergyIntoleranceTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/allergy-intolerance-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/allergy-intolerance-type"
+
 
 class AllergyIntoleranceTypeCodeValues:
+    """
+    A propensity for hypersensitive reaction(s) to a substance.  These reactions are most typically type I hypersensitivity, plus other "allergy-like" reactions, including pseudoallergy.
+    """
+
     Allergy = AllergyIntoleranceTypeCode("allergy")
+    """
+    A propensity for adverse reactions to a substance that is not judged to be allergic or "allergy-like".  These reactions are typically (but not necessarily) non-immune.  They are to some degree idiosyncratic and/or patient-specific (i.e. are not a reaction that is expected to occur with most or all patients given similar circumstances).
+    """
     Intolerance = AllergyIntoleranceTypeCode("intolerance")

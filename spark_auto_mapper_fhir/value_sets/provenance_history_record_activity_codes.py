@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,20 +16,71 @@ class ProvenanceHistoryRecordActivityCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ProvenanceHistoryRecordActivityCodesCodeValues:
+    """
+    Description:Act on an object or objects.
+    """
+
     Operate = ProvenanceHistoryRecordActivityCodesCode("OPERATE")
+    """
+    None
+    """
     Created = ProvenanceHistoryRecordActivityCodesCode("CREATE")
+    """
+    None
+    """
     Updated = ProvenanceHistoryRecordActivityCodesCode("UPDATE")
+    """
+    None
+    """
     Deleted = ProvenanceHistoryRecordActivityCodesCode("DELETE")
+    """
+    None
+    """
     Stopped_Ended_Aborted = ProvenanceHistoryRecordActivityCodesCode("ABORT")
+    """
+    None
+    """
     Held = ProvenanceHistoryRecordActivityCodesCode("HOLD")
+    """
+    None
+    """
     Released = ProvenanceHistoryRecordActivityCodesCode("RELEASE")
+    """
+    None
+    """
     Cancelled = ProvenanceHistoryRecordActivityCodesCode("CANCEL")
+    """
+    None
+    """
     Activated = ProvenanceHistoryRecordActivityCodesCode("ACTIVATE")
+    """
+    None
+    """
     Suspended = ProvenanceHistoryRecordActivityCodesCode("SUSPEND")
+    """
+    None
+    """
     RESUME = ProvenanceHistoryRecordActivityCodesCode("RESUME")
+    """
+    None
+    """
     Completed = ProvenanceHistoryRecordActivityCodesCode("COMPLETE")
+    """
+    None
+    """
     MarkEntered_in_error = ProvenanceHistoryRecordActivityCodesCode("NULLIFY")
+    """
+    None
+    """
     Replaced = ProvenanceHistoryRecordActivityCodesCode("OBSOLETE")
+    """
+    None
+    """
     Reactivated = ProvenanceHistoryRecordActivityCodesCode("REACTIVATE")

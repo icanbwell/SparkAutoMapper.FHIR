@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class PerformerRoleCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/consent-performer
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/consent-performer"
+
 
 class PerformerRoleCodesCodeValues:
+    """
+    An entity or an entity's delegatee who is the grantee in an agreement such as a consent for services, advanced directive, or a privacy consent directive in accordance with jurisdictional, organizational, or patient policy.
+    """
+
     Consenter = PerformerRoleCodesCode("consenter")
+    """
+    An entity which accepts certain rights or authority from a grantor.
+    """
     Grantee = PerformerRoleCodesCode("grantee")
+    """
+    An entity which agrees to confer certain rights or authority to a grantee.
+    """
     Grantor = PerformerRoleCodesCode("grantor")
+    """
+    A party to whom some right or authority is granted by a delegator.
+    """
     Delegatee = PerformerRoleCodesCode("delegatee")
+    """
+    A party that grants all or some portion its right or authority to another party.
+    """
     Delegator = PerformerRoleCodesCode("delegator")

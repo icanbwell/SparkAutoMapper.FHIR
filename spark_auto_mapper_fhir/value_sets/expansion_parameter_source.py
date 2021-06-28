@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ExpansionParameterSourceCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/expansion-parameter-source
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/expansion-parameter-source"
+
 
 class ExpansionParameterSourceCodeValues:
+    """
+    The parameter was supplied by the client in the $expand request.
+    """
+
     ClientInput = ExpansionParameterSourceCode("input")
+    """
+    The parameter was added by the expansion engine on the server.
+    """
     ServerEngine = ExpansionParameterSourceCode("server")
+    """
+    The parameter was added from one the code systems used in the $expand operation.
+    """
     CodeSystem = ExpansionParameterSourceCode("codesystem")

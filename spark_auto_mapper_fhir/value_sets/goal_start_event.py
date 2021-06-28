@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class GoalStartEventCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class GoalStartEventCodeValues:
+    """
+    None
+    """
+
     AdmissionToHospital = GoalStartEventCode("32485007")
+    """
+    None
+    """
     DischargeFromHospital = GoalStartEventCode("308283009")
+    """
+    None
+    """
     CompletionTimeOfProcedure = GoalStartEventCode("442137000")
+    """
+    None
+    """
     Childbirth = GoalStartEventCode("386216000")

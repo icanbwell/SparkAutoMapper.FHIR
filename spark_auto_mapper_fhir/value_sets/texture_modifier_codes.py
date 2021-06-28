@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,19 +16,67 @@ class TextureModifierCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class TextureModifierCodesCodeValues:
+    """
+    None
+    """
+
     Cut_upFood = TextureModifierCodesCode("228053002")
+    """
+    None
+    """
     EasyToChewFood = TextureModifierCodesCode("439091000124107")
+    """
+    None
+    """
     ChoppedFood = TextureModifierCodesCode("228049004")
+    """
+    None
+    """
     GroundFood = TextureModifierCodesCode("441881000124103")
+    """
+    None
+    """
     MincedFood = TextureModifierCodesCode("441761000124103")
+    """
+    None
+    """
     MashedFood = TextureModifierCodesCode("441751000124100")
+    """
+    None
+    """
     SoftFood = TextureModifierCodesCode("228059003")
+    """
+    None
+    """
     StrainedFood = TextureModifierCodesCode("441791000124106")
+    """
+    None
+    """
     LiquidizedFood = TextureModifierCodesCode("228055009")
+    """
+    None
+    """
     LumpyFood = TextureModifierCodesCode("228056005")
+    """
+    None
+    """
     MoistFood = TextureModifierCodesCode("441771000124105")
+    """
+    None
+    """
     Semi_solidFood = TextureModifierCodesCode("228057001")
+    """
+    None
+    """
     SingleTextureFood = TextureModifierCodesCode("228058006")
+    """
+    None
+    """
     SolidFood = TextureModifierCodesCode("228060008")

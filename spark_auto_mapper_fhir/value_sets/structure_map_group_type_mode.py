@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class StructureMapGroupTypeModeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/map-group-type-mode
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/map-group-type-mode"
+
 
 class StructureMapGroupTypeModeCodeValues:
+    """
+    This group is not a default group for the types.
+    """
+
     NotADefault = StructureMapGroupTypeModeCode("none")
+    """
+    This group is a default mapping group for the specified types and for the primary source type.
+    """
     DefaultForTypeCombination = StructureMapGroupTypeModeCode("types")
+    """
+    This group is a default mapping group for the specified types.
+    """
     DefaultForType_Combination = StructureMapGroupTypeModeCode("type-and-types")

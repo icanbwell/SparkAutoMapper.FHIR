@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class RiskProbabilityCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/risk-probability
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/risk-probability"
+
 
 class RiskProbabilityCodeValues:
+    """
+    The specified outcome is exceptionally unlikely.
+    """
+
     NegligibleLikelihood = RiskProbabilityCode("negligible")
+    """
+    The specified outcome is possible but unlikely.
+    """
     LowLikelihood = RiskProbabilityCode("low")
+    """
+    The specified outcome has a reasonable likelihood of occurrence.
+    """
     ModerateLikelihood = RiskProbabilityCode("moderate")
+    """
+    The specified outcome is more likely to occur than not.
+    """
     HighLikelihood = RiskProbabilityCode("high")
+    """
+    The specified outcome is effectively guaranteed.
+    """
     Certain = RiskProbabilityCode("certain")

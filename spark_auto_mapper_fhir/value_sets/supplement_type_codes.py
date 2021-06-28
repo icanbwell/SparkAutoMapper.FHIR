@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,58 +16,199 @@ class SupplementTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class SupplementTypeCodesCodeValues:
+    """
+    None
+    """
+
     AdultClearLiquidSupplement = SupplementTypeCodesCode("442901000124106")
+    """
+    None
+    """
     AdultCriticalCareFormula = SupplementTypeCodesCode("443031000124106")
+    """
+    None
+    """
     AdultDiabetesSpecialtyFormula = SupplementTypeCodesCode("443051000124104")
+    """
+    None
+    """
     AdultElementalFormula = SupplementTypeCodesCode("442911000124109")
+    """
+    None
+    """
     AdultHepaticSpecialtyFormula = SupplementTypeCodesCode("443021000124108")
+    """
+    None
+    """
     AdultHighEnergyFormula = SupplementTypeCodesCode("442971000124100")
+    """
+    None
+    """
     AdultHydrolyzedProteinFormula = SupplementTypeCodesCode("442981000124102")
+    """
+    None
+    """
     AdultHighProteinFormula = SupplementTypeCodesCode("442991000124104")
+    """
+    None
+    """
     AdultHighProteinHighFiberFormula = SupplementTypeCodesCode("443011000124100")
+    """
+    None
+    """
     AdultLowCarbohydrateFormula = SupplementTypeCodesCode("442961000124107")
+    """
+    None
+    """
     AdultPulmonarySpecialtyFormula = SupplementTypeCodesCode("442951000124105")
+    """
+    None
+    """
     AdultRenalSpecialtyFormula = SupplementTypeCodesCode("442941000124108")
+    """
+    None
+    """
     AdultStandardFormula = SupplementTypeCodesCode("442921000124101")
+    """
+    None
+    """
     AdultSoyProteinIsolateFormula = SupplementTypeCodesCode("442931000124103")
+    """
+    None
+    """
     DiabeticMealReplacementBar = SupplementTypeCodesCode("444331000124106")
+    """
+    None
+    """
     PediatricFormula = SupplementTypeCodesCode("443361000124100")
+    """
+    None
+    """
     PediatricClearLiquidSupplement = SupplementTypeCodesCode("443391000124108")
+    """
+    None
+    """
     PediatricElementalFormula = SupplementTypeCodesCode("443401000124105")
+    """
+    None
+    """
     PediatricHighEnergyFormula = SupplementTypeCodesCode("443491000124103")
+    """
+    None
+    """
     PediatricHighEnergyFormulaWithIncreasedFiber = SupplementTypeCodesCode(
         "443501000124106"
     )
+    """
+    None
+    """
     PediatricHydrolyzedProteinFormula = SupplementTypeCodesCode("443421000124100")
+    """
+    None
+    """
     PediatricIncreasedFiberFormula = SupplementTypeCodesCode("443471000124104")
+    """
+    None
+    """
     PediatricReducedEnergyFormula = SupplementTypeCodesCode("444431000124104")
+    """
+    None
+    """
     PediatricStandardFormula = SupplementTypeCodesCode("443451000124109")
+    """
+    None
+    """
     StandardPuddingOralSupplement = SupplementTypeCodesCode("444321000124108")
+    """
+    None
+    """
     StandardEnteralFormulaWithFiber = SupplementTypeCodesCode("441561000124106")
+    """
+    None
+    """
     StandardFormula = SupplementTypeCodesCode("443461000124106")
+    """
+    None
+    """
     StandardEnteralFormula = SupplementTypeCodesCode("441531000124102")
+    """
+    None
+    """
     SoyBasedFormula = SupplementTypeCodesCode("443561000124107")
+    """
+    None
+    """
     RenalFormula = SupplementTypeCodesCode("443481000124101")
+    """
+    None
+    """
     HighEnergyEnteralFormulaWithFiber = SupplementTypeCodesCode("441571000124104")
+    """
+    None
+    """
     DiabeticEnteralFormulaWithFiber = SupplementTypeCodesCode("441591000124103")
+    """
+    None
+    """
     DiabeticHighCalorieHighProteinEnteralFormulaWithFiber = SupplementTypeCodesCode(
         "441601000124106"
     )
+    """
+    None
+    """
     IncreasedFiberFormula = SupplementTypeCodesCode("443351000124102")
+    """
+    None
+    """
     HydrolyzedProteinFormula = SupplementTypeCodesCode("443771000124106")
+    """
+    None
+    """
     HydrolyzedPeptide_basedHighProteinEnteralFormula = SupplementTypeCodesCode(
         "441671000124100"
     )
+    """
+    None
+    """
     HighProteinFormula = SupplementTypeCodesCode("443111000124101")
+    """
+    None
+    """
     HighEnergyFormula = SupplementTypeCodesCode("443431000124102")
+    """
+    None
+    """
     ElementalFormula = SupplementTypeCodesCode("443411000124108")
+    """
+    None
+    """
     ElectrolyteReplacementSupplement = SupplementTypeCodesCode("444361000124102")
+    """
+    None
+    """
     FrozenElectrolyteReplacementSupplement = SupplementTypeCodesCode("444401000124107")
+    """
+    None
+    """
     LiquidElectrolyteReplacementSupplement = SupplementTypeCodesCode("444381000124107")
+    """
+    None
+    """
     PowderedElectrolyteReplacementSupplement = SupplementTypeCodesCode(
         "444371000124109"
     )
+    """
+    None
+    """
     ClearLiquidSupplement = SupplementTypeCodesCode("443441000124107")
+    """
+    None
+    """
     AdultFormula = SupplementTypeCodesCode("442651000124102")

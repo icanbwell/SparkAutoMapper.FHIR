@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,4125 +16,13599 @@ class DICOMControlledTerminologyDefinitionsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/dicom-dcim
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/dicom-dcim"
+
 
 class DICOMControlledTerminologyDefinitionsCodeValues:
+    """
+    Archive device
+    """
+
     Archive = DICOMControlledTerminologyDefinitionsCode("ARCHIVE")
+    """
+    Autorefraction device
+    """
     Autorefraction = DICOMControlledTerminologyDefinitionsCode("AR")
+    """
+    Angioscopy device
+    """
     Angioscopy = DICOMControlledTerminologyDefinitionsCode("AS")
+    """
+    Audio object
+    """
     Audio = DICOMControlledTerminologyDefinitionsCode("AU")
+    """
+    Ultrasound Bone Densitometry (modality)
+    """
     UltrasoundBoneDensitometry = DICOMControlledTerminologyDefinitionsCode("BDUS")
+    """
+    Biomagnetic imaging device
+    """
     BiomagneticImaging = DICOMControlledTerminologyDefinitionsCode("BI")
+    """
+    Bone Mineral Densitometry by X-Ray (modality), including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA)
+    """
     BoneMineralDensitometry = DICOMControlledTerminologyDefinitionsCode("BMD")
+    """
+    Computer Assisted Detection/Diagnosis device
+    """
     ComputerAssistedDetection_Diagnosis = DICOMControlledTerminologyDefinitionsCode(
         "CAD"
     )
+    """
+    Image Capture Device, includes video capture
+    """
     ImageCapture = DICOMControlledTerminologyDefinitionsCode("CAPTURE")
+    """
+    Color flow Doppler
+    """
     ColorFlowDoppler = DICOMControlledTerminologyDefinitionsCode("CD")
+    """
+    Cinefluorography
+    """
     Cinefluorography = DICOMControlledTerminologyDefinitionsCode("CF")
+    """
+    Computation Server; includes radiotherapy planning
+    """
     ComputationServer = DICOMControlledTerminologyDefinitionsCode("COMP")
+    """
+    Culposcopy
+    """
     Culposcopy = DICOMControlledTerminologyDefinitionsCode("CP")
+    """
+    Computed Radiography device
+    """
     ComputedRadiography = DICOMControlledTerminologyDefinitionsCode("CR")
+    """
+    Cystoscopy
+    """
     Cystoscopy = DICOMControlledTerminologyDefinitionsCode("CS")
+    """
+    Computed Tomography device
+    """
     ComputedTomography = DICOMControlledTerminologyDefinitionsCode("CT")
+    """
+    Duplex Doppler
+    """
     DuplexDoppler = DICOMControlledTerminologyDefinitionsCode("DD")
+    """
+    Digital fluoroscopy
+    """
     DigitalFluoroscopy = DICOMControlledTerminologyDefinitionsCode("DF")
+    """
+    Diaphanography device
+    """
     Diaphanography = DICOMControlledTerminologyDefinitionsCode("DG")
+    """
+    Digital microscopy
+    """
     DigitalMicroscopy = DICOMControlledTerminologyDefinitionsCode("DM")
+    """
+    Equipment that digitized hardcopy documents and imported them
+    """
     DocumentDigitizerEquipment = DICOMControlledTerminologyDefinitionsCode("DOCD")
+    """
+    Digital Subtraction Angiography
+    """
     DigitalSubtractionAngiography = DICOMControlledTerminologyDefinitionsCode("DS")
+    """
+    Department System Scheduler, workflow manager; includes RIS
+    """
     DepartmentSystemScheduler = DICOMControlledTerminologyDefinitionsCode("DSS")
+    """
+    Digital Radiography device
+    """
     DigitalRadiography = DICOMControlledTerminologyDefinitionsCode("DX")
+    """
+    Echocardiography
+    """
     Echocardiography = DICOMControlledTerminologyDefinitionsCode("EC")
+    """
+    Electrocardiography device
+    """
     Electrocardiography = DICOMControlledTerminologyDefinitionsCode("ECG")
+    """
+    Cardiac Electrophysiology device
+    """
     CardiacElectrophysiology = DICOMControlledTerminologyDefinitionsCode("EPS")
+    """
+    Endoscopy device
+    """
     Endoscopy = DICOMControlledTerminologyDefinitionsCode("ES")
+    """
+    Female sex
+    """
     Female = DICOMControlledTerminologyDefinitionsCode("F")
+    """
+    Fluorescein angiography
+    """
     FluoresceinAngiography = DICOMControlledTerminologyDefinitionsCode("FA")
+    """
+    Female sex changed to Male sex
+    """
     FemaleChangedToMale = DICOMControlledTerminologyDefinitionsCode("FC")
+    """
+    Film Digitizer
+    """
     FilmDigitizer = DICOMControlledTerminologyDefinitionsCode("FILMD")
+    """
+    Female Pseudohermaphrodite
+    """
     FemalePseudohermaphrodite = DICOMControlledTerminologyDefinitionsCode("FP")
+    """
+    Fundoscopy
+    """
     Fundoscopy = DICOMControlledTerminologyDefinitionsCode("FS")
+    """
+    General Microscopy device
+    """
     GeneralMicroscopy = DICOMControlledTerminologyDefinitionsCode("GM")
+    """
+    Hermaphrodite
+    """
     Hermaphrodite = DICOMControlledTerminologyDefinitionsCode("H")
+    """
+    Hard Copy
+    """
     HardCopy = DICOMControlledTerminologyDefinitionsCode("HC")
+    """
+    Hemodynamic Waveform acquisition device
+    """
     HemodynamicWaveform = DICOMControlledTerminologyDefinitionsCode("HD")
+    """
+    Intra-oral Radiography device
+    """
     Intra_oralRadiography = DICOMControlledTerminologyDefinitionsCode("IO")
+    """
+    An acquisition device, process or method that performs intravascular optical coherence tomography
+    """
     IntravascularOpticalCoherenceTomography = DICOMControlledTerminologyDefinitionsCode(
         "IVOCT"
     )
+    """
+    Intravascular Ultrasound device
+    """
     IntravascularUltrasound = DICOMControlledTerminologyDefinitionsCode("IVUS")
+    """
+    Keratometry device
+    """
     Keratometry = DICOMControlledTerminologyDefinitionsCode("KER")
+    """
+    Key Object Selection object
+    """
     KeyObjectSelection = DICOMControlledTerminologyDefinitionsCode("KO")
+    """
+    Lensometry device
+    """
     Lensometry = DICOMControlledTerminologyDefinitionsCode("LEN")
+    """
+    Procedure Logging device; includes cath lab logging
+    """
     ProcedureLogging = DICOMControlledTerminologyDefinitionsCode("LOG")
+    """
+    Laparoscopy
+    """
     Laparoscopy = DICOMControlledTerminologyDefinitionsCode("LP")
+    """
+    Laser surface scan device
+    """
     LaserSurfaceScan = DICOMControlledTerminologyDefinitionsCode("LS")
+    """
+    Male sex
+    """
     Male = DICOMControlledTerminologyDefinitionsCode("M")
+    """
+    Magnetic resonance angiography
+    """
     MagneticResonanceAngiography = DICOMControlledTerminologyDefinitionsCode("MA")
+    """
+    Male sex changed to Female sex
+    """
     MaleChangedToFemale = DICOMControlledTerminologyDefinitionsCode("MC")
+    """
+    A device that creates DICOM PS3.10 interchange media; e.g. a CD creator that is managed by the Media Creation Management Service Class
+    """
     MediaCreationDevice = DICOMControlledTerminologyDefinitionsCode("MCD")
+    """
+    Equipment that retrieved and imported objects from interchange Media
+    """
     PortableMediaImporterEquipment = DICOMControlledTerminologyDefinitionsCode("MEDIM")
+    """
+    Mammography device
+    """
     Mammography = DICOMControlledTerminologyDefinitionsCode("MG")
+    """
+    Male Pseudohermaphrodite
+    """
     MalePseudohermaphrodite = DICOMControlledTerminologyDefinitionsCode("MP")
+    """
+    Magnetic Resonance device
+    """
     MagneticResonance = DICOMControlledTerminologyDefinitionsCode("MR")
+    """
+    Magnetic resonance spectroscopy
+    """
     MagneticResonanceSpectroscopy = DICOMControlledTerminologyDefinitionsCode("MS")
+    """
+    Instances need to be retrieved from relatively slow media such as optical disk or tape
+    """
     Nearline = DICOMControlledTerminologyDefinitionsCode("NEARLINE")
+    """
+    Nuclear Medicine device
+    """
     NuclearMedicine = DICOMControlledTerminologyDefinitionsCode("NM")
+    """
+    Measurements of the axial length of the eye, which are done by various devices
+    """
     OphthalmicAxialMeasurements = DICOMControlledTerminologyDefinitionsCode("OAM")
+    """
+    Modality device that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies
+    """
     OpticalCoherenceTomography = DICOMControlledTerminologyDefinitionsCode("OCT")
+    """
+    Instances need to be retrieved by manual intervention
+    """
     Offline = DICOMControlledTerminologyDefinitionsCode("OFFLINE")
+    """
+    Instances are immediately available
+    """
     Online = DICOMControlledTerminologyDefinitionsCode("ONLINE")
+    """
+    Ophthalmic photography modality
+    """
     OphthalmicPhotography = DICOMControlledTerminologyDefinitionsCode("OP")
+    """
+    Modality device that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps
+    """
     OphthalmicMapping = DICOMControlledTerminologyDefinitionsCode("OPM")
+    """
+    Modality device that measures the refractive characteristics of the eye
+    """
     OphthalmicRefraction = DICOMControlledTerminologyDefinitionsCode("OPR")
+    """
+    Tomography of the eye acquired by a modality that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded
+    """
     OphthalmicTomography = DICOMControlledTerminologyDefinitionsCode("OPT")
+    """
+    Modality device that measures visual fields and perform visual perimetry
+    """
     OphthalmicVisualField = DICOMControlledTerminologyDefinitionsCode("OPV")
+    """
+    An acquisition device, process or method that performs optical surface scanning
+    """
     OpticalSurvaceScanner = DICOMControlledTerminologyDefinitionsCode("OSS")
+    """
+    Other Modality device
+    """
     OtherModality = DICOMControlledTerminologyDefinitionsCode("OT")
+    """
+    Presentation State object
+    """
     PresentationState = DICOMControlledTerminologyDefinitionsCode("PR")
+    """
+    Hard Copy Print Server; includes printers with embedded DICOM print server
+    """
     HardCopyPrintServer = DICOMControlledTerminologyDefinitionsCode("PRINT")
+    """
+    Positron emission tomography (PET) device
+    """
     PositronEmissionTomography = DICOMControlledTerminologyDefinitionsCode("PT")
+    """
+    Panoramic X-Ray device
+    """
     PanoramicX_Ray = DICOMControlledTerminologyDefinitionsCode("PX")
+    """
+    Registration
+    """
     Registration = DICOMControlledTerminologyDefinitionsCode("REG")
+    """
+    Radiofluoroscopy device
+    """
     Radiofluoroscopy = DICOMControlledTerminologyDefinitionsCode("RF")
+    """
+    Radiographic imaging (conventional film/screen)
+    """
     RadiographicImaging = DICOMControlledTerminologyDefinitionsCode("RG")
+    """
+    Radiation Therapy Device; includes linear accelerator, proton therapy
+    """
     RadiationTherapyDevice = DICOMControlledTerminologyDefinitionsCode("RT")
+    """
+    Radiotherapy Dose
+    """
     RadiotherapyDose = DICOMControlledTerminologyDefinitionsCode("RTDOSE")
+    """
+    Radiotherapy Imaging device; includes portal imaging
+    """
     RadiotherapyImage = DICOMControlledTerminologyDefinitionsCode("RTIMAGE")
+    """
+    Radiotherapy Plan
+    """
     RadiotherapyPlan = DICOMControlledTerminologyDefinitionsCode("RTPLAN")
+    """
+    Radiotherapy Treatment Record
+    """
     RadiotherapyTreatmentRecord = DICOMControlledTerminologyDefinitionsCode("RTRECORD")
+    """
+    Radiotherapy Structure Set
+    """
     RadiotherapyStructureSet = DICOMControlledTerminologyDefinitionsCode("RTSTRUCT")
+    """
+    Segmentation
+    """
     Segmentation = DICOMControlledTerminologyDefinitionsCode("SEG")
+    """
+    Slide Microscopy
+    """
     SlideMicroscopy = DICOMControlledTerminologyDefinitionsCode("SM")
+    """
+    Stereometric image pairing modality
+    """
     StereometricRelationship = DICOMControlledTerminologyDefinitionsCode("SMR")
+    """
+    Structured Report Document
+    """
     StructuredReportDocument = DICOMControlledTerminologyDefinitionsCode("SR")
+    """
+    Subjective Refraction device
+    """
     SubjectiveRefraction = DICOMControlledTerminologyDefinitionsCode("SRF")
+    """
+    Single-photon emission computed tomography (SPECT) device
+    """
     Single_photonEmissionComputedTomography = DICOMControlledTerminologyDefinitionsCode(
         "ST"
     )
+    """
+    Thermography device
+    """
     Thermography = DICOMControlledTerminologyDefinitionsCode("TG")
+    """
+    Unknown Sex
+    """
     UnknownSex = DICOMControlledTerminologyDefinitionsCode("U")
+    """
+    Instances cannot be retrieved
+    """
     Unavailable = DICOMControlledTerminologyDefinitionsCode("UNAVAILABLE")
+    """
+    Ultrasound device
+    """
     Ultrasound = DICOMControlledTerminologyDefinitionsCode("US")
+    """
+    Visual Acuity device
+    """
     VisualAcuity = DICOMControlledTerminologyDefinitionsCode("VA")
+    """
+    Videofluorography
+    """
     Videofluorography = DICOMControlledTerminologyDefinitionsCode("VF")
+    """
+    Equipment that digitizes video tape and imports it
+    """
     VideoTapeDigitizerEquipment = DICOMControlledTerminologyDefinitionsCode("VIDD")
+    """
+    Workstation
+    """
     Workstation = DICOMControlledTerminologyDefinitionsCode("WSD")
+    """
+    X-Ray Angiography device
+    """
     X_RayAngiography = DICOMControlledTerminologyDefinitionsCode("XA")
+    """
+    External-camera Photography device
+    """
     External_cameraPhotography = DICOMControlledTerminologyDefinitionsCode("XC")
+    """
+    A signal transmitted for the purpose of interchange of the current time, not specific to any source or methodology
+    """
     DigitalTimecode_NOS_ = DICOMControlledTerminologyDefinitionsCode("109001")
+    """
+    A signal that is generated for each detection of a heart beat
+    """
     ECG_basedGatingSignal_Processed = DICOMControlledTerminologyDefinitionsCode(
         "109002"
     )
+    """
+    A signal transmitted by the Inter-Range Instrumentation Group for the purpose of synchronizing time clocks
+    """
     IRIG_BTimecode = DICOMControlledTerminologyDefinitionsCode("109003")
+    """
+    A signal that indicated that X-Ray source has been activated for fluoroscopy use
+    """
     X_RayFluoroscopyOnSignal = DICOMControlledTerminologyDefinitionsCode("109004")
+    """
+    A signal that indicated that the X-Ray source has been activated for image recording
+    """
     X_RayOnTrigger = DICOMControlledTerminologyDefinitionsCode("109005")
+    """
+    An electrical signal derived from two electrodes
+    """
     DifferentialSignal = DICOMControlledTerminologyDefinitionsCode("109006")
+    """
+    An electrophysiological recording from the HIS nerve bundle
+    """
     HisBundleElectrogram = DICOMControlledTerminologyDefinitionsCode("109007")
+    """
+    An electrical signal from one electrode relative to an indifferent potential
+    """
     MonopoleSignal = DICOMControlledTerminologyDefinitionsCode("109008")
+    """
+    The voltage stimulus during cardiac pacing
+    """
     Pacing_electrical_Stimulus_Voltage = DICOMControlledTerminologyDefinitionsCode(
         "109009"
     )
+    """
+    The power injected during RF ablation procedure
+    """
     RadioFrequencyAblation_Power = DICOMControlledTerminologyDefinitionsCode("109010")
+    """
+    Electrophysiological signals acquired using a multi-splined catheter each equipped with multiple electrodes
+    """
     VoltageMeasurementByBasketCatheter = DICOMControlledTerminologyDefinitionsCode(
         "109011"
     )
+    """
+    Electrophysiological signals acquired using a steerable catheter
+    """
     VoltageMeasurementByMappingCatheter = DICOMControlledTerminologyDefinitionsCode(
         "109012"
     )
+    """
+    A voltage measurement not otherwise specified
+    """
     VoltageMeasurement_NOS = DICOMControlledTerminologyDefinitionsCode("109013")
+    """
+    A signal point that is 35% of the peak thermal cardiac output signal
+    """
     _35_OfThermalCO = DICOMControlledTerminologyDefinitionsCode("109014")
+    """
+    A signal point that is 70% of the peak thermal cardiac output signal
+    """
     _70_OfThermalCO = DICOMControlledTerminologyDefinitionsCode("109015")
+    """
+    The peak pressure of each heart beat in the atrium caused by the atrial contraction
+    """
     AWavePeakPressure = DICOMControlledTerminologyDefinitionsCode("109016")
+    """
+    The average of several A wave pressure measurements
+    """
     AWavePressure_Average = DICOMControlledTerminologyDefinitionsCode("109017")
+    """
+    An identified cardiac beat used in the determination of a measurement
+    """
     BeatDetected_accepted_ = DICOMControlledTerminologyDefinitionsCode("109018")
+    """
+    An identified cardiac beat not used in the determination of a measurement
+    """
     BeatDetected_rejected_ = DICOMControlledTerminologyDefinitionsCode("109019")
+    """
+    The average of several diastolic pressure measurements
+    """
     DiastolicPressure_Average = DICOMControlledTerminologyDefinitionsCode("109020")
+    """
+    The lowest pressure value excluding any undershoot artifact
+    """
     DiastolicPressureNadir = DICOMControlledTerminologyDefinitionsCode("109021")
+    """
+    The moment at the end of the diastolic phase of the cardiac cycle
+    """
     EndDiastole = DICOMControlledTerminologyDefinitionsCode("109022")
+    """
+    The moment at the end of respiratory expiration
+    """
     EndOfExpiration = DICOMControlledTerminologyDefinitionsCode("109023")
+    """
+    The moment at the end of respiratory inspiration
+    """
     EndOfInspiration = DICOMControlledTerminologyDefinitionsCode("109024")
+    """
+    The maximum positive rate of change of pressure
+    """
     MaxDp_dt = DICOMControlledTerminologyDefinitionsCode("109025")
+    """
+    The maximum negative rate of change of pressure
+    """
     MaxNegDp_dt = DICOMControlledTerminologyDefinitionsCode("109026")
+    """
+    The average blood pressure value, generally over 2 or more seconds
+    """
     MeanBloodPressure = DICOMControlledTerminologyDefinitionsCode("109027")
+    """
+    The peak change in blood temperature during a thermal cardiac output measurement
+    """
     PeakOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode(
         "109028"
     )
+    """
+    The moment respiratory expiration begins
+    """
     StartOfExpiration = DICOMControlledTerminologyDefinitionsCode("109029")
+    """
+    The moment of respiratory inspiration begins
+    """
     StartOfInspiration = DICOMControlledTerminologyDefinitionsCode("109030")
+    """
+    The first discernible blood temperature change following the injectate during a thermal cardiac output measurement
+    """
     StartOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode(
         "109031"
     )
+    """
+    The average of several systolic blood pressure measurements
+    """
     SystolicPressure_Average = DICOMControlledTerminologyDefinitionsCode("109032")
+    """
+    The highest systolic blood pressure value excluding any overshoot artifact
+    """
     SystolicPeakPressure = DICOMControlledTerminologyDefinitionsCode("109033")
+    """
+    The peak pressure of each heart beat in the atrium caused by the filling of the atrium
+    """
     VWavePeakPressure = DICOMControlledTerminologyDefinitionsCode("109034")
+    """
+    The average of several V wave pressure measurements
+    """
     VWavePressure_Average = DICOMControlledTerminologyDefinitionsCode("109035")
+    """
+    The moment at which a heart valve closes
+    """
     ValveClose = DICOMControlledTerminologyDefinitionsCode("109036")
+    """
+    The moment at which a heart valve opens
+    """
     ValveOpen = DICOMControlledTerminologyDefinitionsCode("109037")
+    """
+    The moment when RF ablation current is turned off
+    """
     AblationOff = DICOMControlledTerminologyDefinitionsCode("109038")
+    """
+    The moment when RF ablation current is turned on
+    """
     AblationOn = DICOMControlledTerminologyDefinitionsCode("109039")
+    """
+    The moment in the cardiac cycle when the HIS bundle nerves depolarize
+    """
     HISBundleWave = DICOMControlledTerminologyDefinitionsCode("109040")
+    """
+    The surface electrocardiogram of the atrial contraction
+    """
     PWave = DICOMControlledTerminologyDefinitionsCode("109041")
+    """
+    The first negative deflection of the electrocardiogram caused by ventricular depolarization
+    """
     QWave = DICOMControlledTerminologyDefinitionsCode("109042")
+    """
+    The first positive deflection the electrocardiogram caused by ventricular depolarization
+    """
     RWave = DICOMControlledTerminologyDefinitionsCode("109043")
+    """
+    The first negative deflection after the R wave
+    """
     SWave = DICOMControlledTerminologyDefinitionsCode("109044")
+    """
+    The beginning of the atrial contraction
+    """
     StartOfAtrialContraction = DICOMControlledTerminologyDefinitionsCode("109045")
+    """
+    The beginning of the second atrial contraction of two consecutive beats
+    """
     StartOfAtrialContraction_subsequent_ = DICOMControlledTerminologyDefinitionsCode(
         "109046"
     )
+    """
+    The stimulation interval during cardiac stimulation first used in a pacing train
+    """
     StimulationAtRate1Interval = DICOMControlledTerminologyDefinitionsCode("109047")
+    """
+    The stimulation interval different from the first stimulation interval used in a pacing train
+    """
     StimulationAtRate2Interval = DICOMControlledTerminologyDefinitionsCode("109048")
+    """
+    A stimulation interval different from and subsequent to the second interval in a pacing train
+    """
     StimulationAtRate3Interval = DICOMControlledTerminologyDefinitionsCode("109049")
+    """
+    Describes a stimulation interval different from and subsequent to the third interval in a pacing train
+    """
     StimulationAtRate4Interval = DICOMControlledTerminologyDefinitionsCode("109050")
+    """
+    The electrocardiogram deflection caused by ventricular repolarization
+    """
     TWave = DICOMControlledTerminologyDefinitionsCode("109051")
+    """
+    The peak pressure of each heart beat monitored in the atrium caused by the filling of the atrium
+    """
     VWave = DICOMControlledTerminologyDefinitionsCode("109052")
+    """
+    The second V wave measurement of two consecutive beats
+    """
     VWaveOfNextBeat = DICOMControlledTerminologyDefinitionsCode("109053")
+    """
+    A description of the physiological condition of the patient
+    """
     PatientState = DICOMControlledTerminologyDefinitionsCode("109054")
+    """
+    The exercise level during a progressive cardiac stress test
+    """
     ProtocolStage = DICOMControlledTerminologyDefinitionsCode("109055")
+    """
+    A series of physiological challenges designed to progressively increase the work of the heart
+    """
     StressProtocol = DICOMControlledTerminologyDefinitionsCode("109056")
+    """
+    A subpart of a cardiac catheterization procedure
+    """
     CatheterizationProcedurePhase = DICOMControlledTerminologyDefinitionsCode("109057")
+    """
+    The subpart of a cardiac catheterization procedure in which a radio-opaque contrast medium is injected into the patient
+    """
     ContrastPhase = DICOMControlledTerminologyDefinitionsCode("109058")
+    """
+    Physical changes administered to a patient in order to elicit an physiological response
+    """
     PhysiologicalChallenges = DICOMControlledTerminologyDefinitionsCode("109059")
+    """
+    Enumeration of a subpart of a catheterization procedure
+    """
     ProcedureStepNumber = DICOMControlledTerminologyDefinitionsCode("109060")
+    """
+    A subpart of an electrophysiological procedure
+    """
     EPProcedurePhase = DICOMControlledTerminologyDefinitionsCode("109061")
+    """
+    A means of defining a series of cardiac stimulation pulses
+    """
     PulseTrainDefinition = DICOMControlledTerminologyDefinitionsCode("109063")
+    """
+    End of the contraction phase of the cardiac cycle
+    """
     EndOfSystole = DICOMControlledTerminologyDefinitionsCode("109070")
+    """
+    Time for a median particle to travel from point of injection to point of detection
+    """
     IndicatorMeanTransitTime = DICOMControlledTerminologyDefinitionsCode("109071")
+    """
+    The time constant of isovolumic pressure fall
+    """
     Tau = DICOMControlledTerminologyDefinitionsCode("109072")
+    """
+    Maximum velocity of myocardial contractility
+    """
     VMaxMyocardial = DICOMControlledTerminologyDefinitionsCode("109073")
+    """
+    Total time for the acquisition is shorter than cardiac cycle, no gating is applied; see Cardiac Synchronization Technique (0018,9037)
+    """
     RealTimeAcquisition = DICOMControlledTerminologyDefinitionsCode("109080")
+    """
+    Certain thresholds have been set for a gating window that defines the acceptance of measurement data during the acquisition; see Cardiac Synchronization Technique (0018,9037)
+    """
     ProspectiveGating = DICOMControlledTerminologyDefinitionsCode("109081")
+    """
+    Certain thresholds have been set for a gating window that defines the acceptance of measurement data after the acquisition; see Cardiac Synchronization Technique (0018,9037)
+    """
     RetrospectiveGating = DICOMControlledTerminologyDefinitionsCode("109082")
+    """
+    There is a constant RR interval, which makes thresholding not required; see Cardiac Synchronization Technique (0018,9037); e.g. Pacemaker
+    """
     Paced = DICOMControlledTerminologyDefinitionsCode("109083")
+    """
+    Imaging after injection of tracer during increased cardiac workload or increased myocardial blood flow, achieved by either exercise or pharmacologic means
+    """
     CardiacStressState = DICOMControlledTerminologyDefinitionsCode("109091")
+    """
+    Imaging after injection of additional tracer under resting conditions
+    """
     ReinjectionState = DICOMControlledTerminologyDefinitionsCode("109092")
+    """
+    Imaging after allowing a moderate amount of time for tracer to move from its initial sites of uptake. Example: For Thallium imaging this would correspond to imaging 2-6 hours after injection
+    """
     RedistributionState = DICOMControlledTerminologyDefinitionsCode("109093")
+    """
+    Imaging after allowing an extended amount of time for tracer to move from its initial sites of uptake. Example: For Thallium imaging this would correspond to imaging more than 6 hours after injection
+    """
     DelayedRedistributionState = DICOMControlledTerminologyDefinitionsCode("109094")
+    """
+    Peak cardiac stress state
+    """
     PeakStressState = DICOMControlledTerminologyDefinitionsCode("109095")
+    """
+    Recovery from cardiac stress
+    """
     RecoveryState = DICOMControlledTerminologyDefinitionsCode("109096")
+    """
+    Equipment that originally acquired the data stored within composite instances; e.g. a CT, MR or Ultrasound modality
+    """
     AcquisitionEquipment = DICOMControlledTerminologyDefinitionsCode("109101")
+    """
+    Equipment that has processed composite instances to create new composite instances; e.g. a 3D Workstation
+    """
     ProcessingEquipment = DICOMControlledTerminologyDefinitionsCode("109102")
+    """
+    Equipment that has modified existing composite instances (without creating new composite instances); e.g. a QA Station or Archive
+    """
     ModifyingEquipment = DICOMControlledTerminologyDefinitionsCode("109103")
+    """
+    Equipment that has modified an existing composite instance to remove patient identifying information
+    """
     De_identifyingEquipment = DICOMControlledTerminologyDefinitionsCode("109104")
+    """
+    Equipment that has processed composite instances to create new composite instances by extracting selected frames from the original instance
+    """
     FrameExtractingEquipment = DICOMControlledTerminologyDefinitionsCode("109105")
+    """
+    Equipment that has processed composite instances to create new composite instances by converting classic single frame images to enhanced multi-frame image, or vice versa and updating other instances to maintain referential integrity
+    """
     EnhancedMulti_frameConversionEquipment = DICOMControlledTerminologyDefinitionsCode(
         "109106"
     )
+    """
+    The sound of a human's speech, recorded during a procedure
+    """
     Voice = DICOMControlledTerminologyDefinitionsCode("109110")
+    """
+    The voice of a device operator, recorded during a procedure
+    """
     Operator_sNarrative = DICOMControlledTerminologyDefinitionsCode("109111")
+    """
+    The ambient sound recorded during a procedure, which may or may not include voice and other types of sound
+    """
     AmbientRoomEnvironment = DICOMControlledTerminologyDefinitionsCode("109112")
+    """
+    The Doppler waveform recorded as an audible signal
+    """
     DopplerAudio = DICOMControlledTerminologyDefinitionsCode("109113")
+    """
+    The sound of the human heart beating
+    """
     Phonocardiogram = DICOMControlledTerminologyDefinitionsCode("109114")
+    """
+    Any sound made by the human body
+    """
     PhysiologicalAudioSignal = DICOMControlledTerminologyDefinitionsCode("109115")
+    """
+    A digitized signal from the patient arterial system collected through pulse oximetry or other means
+    """
     ArterialPulseWaveform = DICOMControlledTerminologyDefinitionsCode("109116")
+    """
+    A digitized signal from the patient respiratory system representing respiration
+    """
     RespirationWaveform = DICOMControlledTerminologyDefinitionsCode("109117")
+    """
+    The occasion on which a procedure was performed on admission to a specialist unit; e.g. intensive care
+    """
     OnAdmissionToUnit = DICOMControlledTerminologyDefinitionsCode("109120")
+    """
+    The occasion on which a procedure was performed on discharge from hospital as an in-patient
+    """
     OnDischarge = DICOMControlledTerminologyDefinitionsCode("109121")
+    """
+    The occasion on which a procedure was performed on discharge from a specialist unit; e.g. intensive care
+    """
     OnDischargeFromUnit = DICOMControlledTerminologyDefinitionsCode("109122")
+    """
+    The occasion on which a procedure was performed immediately prior to non-surgical intervention; e.g, percutaneous angioplasty, biopsy
+    """
     Pre_intervention = DICOMControlledTerminologyDefinitionsCode("109123")
+    """
+    The occasion on which a procedure was performed immediately after to non-surgical intervention; e.g, percutaneous angioplasty, biopsy
+    """
     Post_intervention = DICOMControlledTerminologyDefinitionsCode("109124")
+    """
+    The occasion on which a procedure was performed at the most recent outpatient visit
+    """
     AtLastAppointment = DICOMControlledTerminologyDefinitionsCode("109125")
+    """
+    The active or passive joint positioning during acquisition
+    """
     JointPositionMethod = DICOMControlledTerminologyDefinitionsCode("109132")
+    """
+    A physical force applied during acquisition
+    """
     PhysicalForce = DICOMControlledTerminologyDefinitionsCode("109133")
+    """
+    Prior to voiding
+    """
     PriorToVoiding = DICOMControlledTerminologyDefinitionsCode("109134")
+    """
+    Post voiding
+    """
     PostVoiding = DICOMControlledTerminologyDefinitionsCode("109135")
+    """
+    Neutral musculoskeletal position
+    """
     NeutralMusculoskeletalPosition = DICOMControlledTerminologyDefinitionsCode("109136")
+    """
+    America Kennel Club
+    """
     AmericaKennelClub = DICOMControlledTerminologyDefinitionsCode("109200")
+    """
+    America's Pet Registry Inc
+    """
     America_sPetRegistryInc_ = DICOMControlledTerminologyDefinitionsCode("109201")
+    """
+    American Canine Association
+    """
     AmericanCanineAssociation = DICOMControlledTerminologyDefinitionsCode("109202")
+    """
+    American Purebred Registry
+    """
     AmericanPurebredRegistry = DICOMControlledTerminologyDefinitionsCode("109203")
+    """
+    American Rare Breed Association
+    """
     AmericanRareBreedAssociation = DICOMControlledTerminologyDefinitionsCode("109204")
+    """
+    Animal Registry Unlimited
+    """
     AnimalRegistryUnlimited = DICOMControlledTerminologyDefinitionsCode("109205")
+    """
+    Animal Research Foundation
+    """
     AnimalResearchFoundation = DICOMControlledTerminologyDefinitionsCode("109206")
+    """
+    Canadian Border Collie Association
+    """
     CanadianBorderCollieAssociation = DICOMControlledTerminologyDefinitionsCode(
         "109207"
     )
+    """
+    Canadian Kennel Club
+    """
     CanadianKennelClub = DICOMControlledTerminologyDefinitionsCode("109208")
+    """
+    Canadian Livestock Records Association
+    """
     CanadianLivestockRecordsAssociation = DICOMControlledTerminologyDefinitionsCode(
         "109209"
     )
+    """
+    Canine Federation of Canada
+    """
     CanineFederationOfCanada = DICOMControlledTerminologyDefinitionsCode("109210")
+    """
+    Continental Kennel Club
+    """
     ContinentalKennelClub = DICOMControlledTerminologyDefinitionsCode("109211")
+    """
+    Dog Registry of America
+    """
     DogRegistryOfAmerica = DICOMControlledTerminologyDefinitionsCode("109212")
+    """
+    Federation of International Canines
+    """
     FederationOfInternationalCanines = DICOMControlledTerminologyDefinitionsCode(
         "109213"
     )
+    """
+    International Progressive Dog Breeders' Alliance
+    """
     InternationalProgressiveDogBreeders_Alliance = (
         DICOMControlledTerminologyDefinitionsCode("109214")
     )
+    """
+    National Kennel Club
+    """
     NationalKennelClub = DICOMControlledTerminologyDefinitionsCode("109215")
+    """
+    North American Purebred Dog Registry
+    """
     NorthAmericanPurebredDogRegistry = DICOMControlledTerminologyDefinitionsCode(
         "109216"
     )
+    """
+    United All Breed Registry
+    """
     UnitedAllBreedRegistry = DICOMControlledTerminologyDefinitionsCode("109217")
+    """
+    United Kennel Club
+    """
     UnitedKennelClub = DICOMControlledTerminologyDefinitionsCode("109218")
+    """
+    Universal Kennel Club International
+    """
     UniversalKennelClubInternational = DICOMControlledTerminologyDefinitionsCode(
         "109219"
     )
+    """
+    Working Canine Association of Canada
+    """
     WorkingCanineAssociationOfCanada = DICOMControlledTerminologyDefinitionsCode(
         "109220"
     )
+    """
+    World Kennel Club
+    """
     WorldKennelClub = DICOMControlledTerminologyDefinitionsCode("109221")
+    """
+    World Wide Kennel Club
+    """
     WorldWideKennelClub = DICOMControlledTerminologyDefinitionsCode("109222")
+    """
+    Evaluation of overall image quality as described in section 7.3.2 of [IEC 62563-1]
+    """
     OverallImageQualityEvaluation = DICOMControlledTerminologyDefinitionsCode("109701")
+    """
+    Visual verification of sufficient grayscale resolution based on 8 and 10-bit markers as described in section 7.3.3 of [IEC 62563-1]
+    """
     GrayscaleResolutionEvaluation = DICOMControlledTerminologyDefinitionsCode("109702")
+    """
+    Visual evaluation of luminance response using the TG18-CT test pattern as described in section 7.3.4 of [IEC 62563-1]
+    """
     LuminanceResponseEvaluation = DICOMControlledTerminologyDefinitionsCode("109703")
+    """
+    Visual detection of luminance non-uniformities as described in section 7.3.5 of [IEC 62563-1]
+    """
     LuminanceUniformityEvaluation = DICOMControlledTerminologyDefinitionsCode("109704")
+    """
+    Visual verification of color uniformity as described in section 7.3.6 of [IEC 62563-1]
+    """
     ChromaticityEvaluation = DICOMControlledTerminologyDefinitionsCode("109705")
+    """
+    Visual detection of defective pixels on dark (TG18-UN80) and bright (TG18-UN10) images as described in section 7.3.7 of [IEC 62563-1]
+    """
     PixelFaultsEvaluation = DICOMControlledTerminologyDefinitionsCode("109706")
+    """
+    Visual evaluation of veiling glare by looking at low contrast objects on 2 test patterns as described in section 7.3.8 of [IEC 62563-1]
+    """
     VeilingGlareEvaluation = DICOMControlledTerminologyDefinitionsCode("109707")
+    """
+    Visual evaluation of geometry, phase/clock correction and clipping as described in section 7.3.9 of [IEC 62563-1]
+    """
     GeometricalImageEvaluation = DICOMControlledTerminologyDefinitionsCode("109708")
+    """
+    Visual evaluation of viewing angle as described in section 7.3.10 of [IEC 62563-1]
+    """
     AngularViewingEvaluation = DICOMControlledTerminologyDefinitionsCode("109709")
+    """
+    Visual evaluation of the appearance of clinical images as described in section 7.3.11 of [IEC 62563-1]
+    """
     ClinicalEvaluation = DICOMControlledTerminologyDefinitionsCode("109710")
+    """
+    AAPM TG18-QC Pattern used for evaluation of resolution, luminance, distortion, artifacts. See [AAPM OR 03]
+    """
     TG18_QCPattern = DICOMControlledTerminologyDefinitionsCode("109801")
+    """
+    AAPM TG18-BR Pattern used for the evaluation of the display of low-contrast, fine-detail image structures See [AAPM OR 03]
+    """
     TG18_BRPattern = DICOMControlledTerminologyDefinitionsCode("109802")
+    """
+    AAPM TG18-PQC Pattern used for evaluation of resolution, luminance, contrast transfer for prints. See [AAPM OR 03]
+    """
     TG18_PQCPattern = DICOMControlledTerminologyDefinitionsCode("109803")
+    """
+    AAPM TG18-CT Pattern used for evaluation of luminance response. See [AAPM OR 03]
+    """
     TG18_CTPattern = DICOMControlledTerminologyDefinitionsCode("109804")
+    """
+    The 1st image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_01Pattern = DICOMControlledTerminologyDefinitionsCode("109805")
+    """
+    The 2nd image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_02Pattern = DICOMControlledTerminologyDefinitionsCode("109806")
+    """
+    The 3rd image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_03Pattern = DICOMControlledTerminologyDefinitionsCode("109807")
+    """
+    The 4th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_04Pattern = DICOMControlledTerminologyDefinitionsCode("109808")
+    """
+    The 5th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_05Pattern = DICOMControlledTerminologyDefinitionsCode("109809")
+    """
+    The 6th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_06Pattern = DICOMControlledTerminologyDefinitionsCode("109810")
+    """
+    The 7th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_07Pattern = DICOMControlledTerminologyDefinitionsCode("109811")
+    """
+    The 8th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_08Pattern = DICOMControlledTerminologyDefinitionsCode("109812")
+    """
+    The 9th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_09Pattern = DICOMControlledTerminologyDefinitionsCode("109813")
+    """
+    The 10th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration series. See [AAPM OR 03]
+    """
     TG18_LN8_10Pattern = DICOMControlledTerminologyDefinitionsCode("109814")
+    """
+    The 11th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_11Pattern = DICOMControlledTerminologyDefinitionsCode("109815")
+    """
+    The 12th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_12Pattern = DICOMControlledTerminologyDefinitionsCode("109816")
+    """
+    The 13th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_13Pattern = DICOMControlledTerminologyDefinitionsCode("109817")
+    """
+    The 14th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_14Pattern = DICOMControlledTerminologyDefinitionsCode("109818")
+    """
+    The 15th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_15Pattern = DICOMControlledTerminologyDefinitionsCode("109819")
+    """
+    The 16th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_16Pattern = DICOMControlledTerminologyDefinitionsCode("109820")
+    """
+    The 17th image in the AAPM TG18-LN8 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_17Pattern = DICOMControlledTerminologyDefinitionsCode("109821")
+    """
+    The 18th image in the AAPM TG18-LN8- set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN8_18Pattern = DICOMControlledTerminologyDefinitionsCode("109822")
+    """
+    The 1st image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_01Pattern = DICOMControlledTerminologyDefinitionsCode("109823")
+    """
+    The 2 nd image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_02Pattern = DICOMControlledTerminologyDefinitionsCode("109824")
+    """
+    The 3rd image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_03Pattern = DICOMControlledTerminologyDefinitionsCode("109825")
+    """
+    The 4th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_04Pattern = DICOMControlledTerminologyDefinitionsCode("109826")
+    """
+    The 5th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_05Pattern = DICOMControlledTerminologyDefinitionsCode("109827")
+    """
+    The 6th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_06Pattern = DICOMControlledTerminologyDefinitionsCode("109828")
+    """
+    The 7th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_07Pattern = DICOMControlledTerminologyDefinitionsCode("109829")
+    """
+    The 8th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_08Pattern = DICOMControlledTerminologyDefinitionsCode("109830")
+    """
+    The 9th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_09Pattern = DICOMControlledTerminologyDefinitionsCode("109831")
+    """
+    The 10th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_10Pattern = DICOMControlledTerminologyDefinitionsCode("109832")
+    """
+    The 11th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_11Pattern = DICOMControlledTerminologyDefinitionsCode("109833")
+    """
+    The 12th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_12Pattern = DICOMControlledTerminologyDefinitionsCode("109834")
+    """
+    The 13th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_13Pattern = DICOMControlledTerminologyDefinitionsCode("109835")
+    """
+    The 14th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_14Pattern = DICOMControlledTerminologyDefinitionsCode("109836")
+    """
+    The 15th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_15Pattern = DICOMControlledTerminologyDefinitionsCode("109837")
+    """
+    The 16th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_16Pattern = DICOMControlledTerminologyDefinitionsCode("109838")
+    """
+    The 17th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_17Pattern = DICOMControlledTerminologyDefinitionsCode("109839")
+    """
+    The 18th image in the AAPM TG18-LN12 set used for DICOM grayscale calibration. See [AAPM OR 03]
+    """
     TG18_LN12_18Pattern = DICOMControlledTerminologyDefinitionsCode("109840")
+    """
+    The AAPM TG18-UN10 Pattern used for evaluation of luminance and color uniformity, and angular response. See [AAPM OR 03]
+    """
     TG18_UN10Pattern = DICOMControlledTerminologyDefinitionsCode("109841")
+    """
+    The AAPM TG18-UN80 Pattern used for evaluation of luminance and color uniformity, and angular response. See [AAPM OR 03]
+    """
     TG18_UN80Pattern = DICOMControlledTerminologyDefinitionsCode("109842")
+    """
+    The AAPM TG18-UNL10 Pattern is the AAPM TG-18 UN10 Pattern with added defining lines. See [AAPM OR 03]
+    """
     TG18_UNL10Pattern = DICOMControlledTerminologyDefinitionsCode("109843")
+    """
+    The AAPM TG18-UNL80 Pattern is the AAPM TG-18 UN80 Pattern with added defining lines. See [AAPM OR 03]
+    """
     TG18_UNL80Pattern = DICOMControlledTerminologyDefinitionsCode("109844")
+    """
+    The AAPM TG18-AD Pattern used for visual evaluation of the reflection of ambient light from the display. See [AAPM OR 03]
+    """
     TG18_ADPattern = DICOMControlledTerminologyDefinitionsCode("109845")
+    """
+    The AAPM TG18-MP Pattern used for evaluation of Luminance response (bit-depth resolution). See [AAPM OR 03]
+    """
     TG18_MPPattern = DICOMControlledTerminologyDefinitionsCode("109846")
+    """
+    The AAPM TG18-RH10 Pattern used for LSF-line spectra function-(1k and 2k) evaluation by 5 horizontal lines at 10% luminance level. See [AAPM OR 03]
+    """
     TG18_RH10Pattern = DICOMControlledTerminologyDefinitionsCode("109847")
+    """
+    The AAPM TG18-RH50 Pattern used for LSF-line spectra function-(1k and 2k) evaluation by 5 horizontal lines at 50% luminance level. See [AAPM OR 03]
+    """
     TG18_RH50Pattern = DICOMControlledTerminologyDefinitionsCode("109848")
+    """
+    The AAPM TG18-RH89 Pattern used for LSF-line spectra function-(1k and 2k) evaluation by 5 horizontal lines at 89% luminance level. See [AAPM OR 03]
+    """
     TG18_RH89Pattern = DICOMControlledTerminologyDefinitionsCode("109849")
+    """
+    The AAPM TG18-RV10 Pattern used for LSF-line spectra function-(1k and 2k) evaluation by 5 vertical lines at 10% luminance level. See [AAPM OR 03]
+    """
     TG18_RV10Pattern = DICOMControlledTerminologyDefinitionsCode("109850")
+    """
+    The AAPM TG18-RV50 Pattern used for LSF-line spectra function-(1k and 2k) evaluation by 5 vertical lines at 50% luminance level. See [AAPM OR 03]
+    """
     TG18_RV50Pattern = DICOMControlledTerminologyDefinitionsCode("109851")
+    """
+    The AAPM TG18-RV89 Pattern used for LSF-line spectra function-(1k and 2k) evaluation by 5 vertical lines at 89% luminance level. See [AAPM OR 03]
+    """
     TG18_RV89Pattern = DICOMControlledTerminologyDefinitionsCode("109852")
+    """
+    The AAPM TG18-PX Pattern used for the assessment of display resolution. See [AAPM OR 03]
+    """
     TG18_PXPattern = DICOMControlledTerminologyDefinitionsCode("109853")
+    """
+    The AAPM TG18-CX Pattern used to assess display resolution and resolution uniformity. See [AAPM OR 03]
+    """
     TG18_CXPattern = DICOMControlledTerminologyDefinitionsCode("109854")
+    """
+    The AAPM TG18-LPH10 Pattern used to assess display resolution. This pattern has horizontal bars consisting of alternating single-pixel-wide lines across the faceplate of display. The lines have a 12% positive contrast against 10% background level of the maximum pixel value. See [AAPM OR 03]
+    """
     TG18_LPH10Pattern = DICOMControlledTerminologyDefinitionsCode("109855")
+    """
+    The AAPM TG18-LPH50 Pattern used to assess display resolution. This pattern has horizontal bars consisting of alternating single-pixel-wide lines across the faceplate of display. The lines have a 50% positive contrast against 10% background level of the maximum pixel value. See [AAPM OR 03]
+    """
     TG18_LPH50Pattern = DICOMControlledTerminologyDefinitionsCode("109856")
+    """
+    The AAPM TG18-LPH89 Pattern used to assess display resolution. This pattern has horizontal bars consisting of alternating single-pixel-wide lines across the faceplate of display. The lines have a 12% positive contrast against 89% background level of the maximum pixel value. See [AAPM OR 03]
+    """
     TG18_LPH89Pattern = DICOMControlledTerminologyDefinitionsCode("109857")
+    """
+    The AAPM TG18-LPV10 Pattern used to assess display resolution. This pattern has vertical bars consisting of alternating single-pixel-wide lines across the faceplate of display. The lines have a 12% positive contrast against 10% background level of the maximum pixel value. See [AAPM OR 03]
+    """
     TG18_LPV10Pattern = DICOMControlledTerminologyDefinitionsCode("109858")
+    """
+    The AAPM TG18-LPV50 Pattern used to assess display resolution. This pattern has vertical bars consisting of alternating single-pixel-wide lines across the faceplate of display. The lines have a 12% positive contrast against 50% background level of the maximum pixel value. See [AAPM OR 03]
+    """
     TG18_LPV50Pattern = DICOMControlledTerminologyDefinitionsCode("109859")
+    """
+    The AAPM TG18-LPV89 Pattern used to assess display resolution. This pattern has vertical bars consisting of alternating single-pixel-wide lines across the faceplate of display. The lines have a 12% positive contrast against 89% background level of the maximum pixel value. See [AAPM OR 03]
+    """
     TG18_LPV89Pattern = DICOMControlledTerminologyDefinitionsCode("109860")
+    """
+    The AAPM TG18-AFC Pattern used to assess display noise. See [AAPM OR 03]
+    """
     TG18_AFCPattern = DICOMControlledTerminologyDefinitionsCode("109861")
+    """
+    The AAPM TG18-NS10 Pattern is AAPM TG18-RV10/RH10 with only difference being the absence of the single line at the center of the measurement area. See [AAPM OR 03]
+    """
     TG18_NS10Pattern = DICOMControlledTerminologyDefinitionsCode("109862")
+    """
+    The AAPM TG18-NS50 Pattern is AAPM TG18-RV50/RH50 with only difference being the absence of the single line at the center of the measurement area. See [AAPM OR 03]
+    """
     TG18_NS50Pattern = DICOMControlledTerminologyDefinitionsCode("109863")
+    """
+    The AAPM TG18-NS89 Pattern is AAPM TG18-RV89/RH89 with only difference being the absence of the single line at the center of the measurement area. See [AAPM OR 03]
+    """
     TG18_NS89Pattern = DICOMControlledTerminologyDefinitionsCode("109864")
+    """
+    The TG18-GV Pattern used to assess display veiling. See [AAPM OR 03]
+    """
     TG18_GVPattern = DICOMControlledTerminologyDefinitionsCode("109865")
+    """
+    The TG18-GVN Pattern used to assess display veiling. This pattern is identical to AAPM TG18-GV Pattern except that the large-diameter white circle is replaced with a black circle, creating a completely black pattern except for the presence of low-contrast targets. See [AAPM OR 03]
+    """
     TG18_GVNPattern = DICOMControlledTerminologyDefinitionsCode("109866")
+    """
+    The TG18-GQ Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GV except that is lacks the central low-contrast objects. See [AAPM OR 03]
+    """
     TG18_GQPattern = DICOMControlledTerminologyDefinitionsCode("109867")
+    """
+    TG18-GQN Pattern used for the quantitative assessment of veiling glare. This pattern is identical to AAPM TG18-GQ Pattern except that the large-diameter white circle is replaced with a black circle, creating a completely black pattern except for the presence of low-contrast targets. See [AAPM OR 03]
+    """
     TG18_GQNPattern = DICOMControlledTerminologyDefinitionsCode("109868")
+    """
+    The TG18-GQB Pattern used for the quantitative assessment of veiling glare. This pattern is identical to AAPM TG18-GQ Pattern except eliminating the central black circle. See [AAPM OR 03]
+    """
     TG18_GQBPattern = DICOMControlledTerminologyDefinitionsCode("109869")
+    """
+    The TG18-GA03 Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 3. See [AAPM OR 03]
+    """
     TG18_GA03Pattern = DICOMControlledTerminologyDefinitionsCode("109870")
+    """
+    The TG18-GA05 Pattern This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 5. See [AAPM OR 03]
+    """
     TG18_GA05Pattern = DICOMControlledTerminologyDefinitionsCode("109871")
+    """
+    The TG18-GA08 Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 8. See [AAPM OR 03]
+    """
     TG18_GA08Pattern = DICOMControlledTerminologyDefinitionsCode("109872")
+    """
+    The TG18-GA10 Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 10. See [AAPM OR 03]
+    """
     TG18_GA10Pattern = DICOMControlledTerminologyDefinitionsCode("109873")
+    """
+    The TG18-GA15 Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 15
+    """
     TG18_GA15Pattern = DICOMControlledTerminologyDefinitionsCode("109874")
+    """
+    The TG18-GA20 Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 20. See [AAPM OR 03]
+    """
     TG18_GA20Pattern = DICOMControlledTerminologyDefinitionsCode("109875")
+    """
+    The TG18-GA25 Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 25. See [AAPM OR 03]
+    """
     TG18_GA25Pattern = DICOMControlledTerminologyDefinitionsCode("109876")
+    """
+    The TG18-GA30 Pattern used for quantitative assessment of veiling glare. This pattern is identical to TG18-GQ except that the radius of the central black circle is varied as r = 30. See [AAPM OR 03]
+    """
     TG18_GA30Pattern = DICOMControlledTerminologyDefinitionsCode("109877")
+    """
+    The AAPM TG18-CH Image is a reference anatomical PA chest image. See [AAPM OR 03]
+    """
     TG18_CHImage = DICOMControlledTerminologyDefinitionsCode("109878")
+    """
+    The AAPM TG18-KN Image is a reference anatomical knee image. See [AAPM OR 03]
+    """
     TG18_KNImage = DICOMControlledTerminologyDefinitionsCode("109879")
+    """
+    The AAPM TG18-MM1 Image is a reference anatomical mammogram image. See [AAPM OR 03]
+    """
     TG18_MM1Image = DICOMControlledTerminologyDefinitionsCode("109880")
+    """
+    The AAPM TG18-MM2 Image is a reference anatomical mammogram image. See [AAPM OR 03]
+    """
     TG18_MM2Image = DICOMControlledTerminologyDefinitionsCode("109881")
+    """
+    The IEC OIQ Pattern is used as an alternative to the TG18-QC Pattern. See [IEC 62563-1]
+    """
     OIQPattern = DICOMControlledTerminologyDefinitionsCode("109901")
+    """
+    The IEC ANG Pattern used for angular viewing evaluation. See [IEC 62563-1]
+    """
     ANGPattern = DICOMControlledTerminologyDefinitionsCode("109902")
+    """
+    The IEC GD Pattern used for geometrical image evaluation. See [IEC 62563-1]
+    """
     GDPattern = DICOMControlledTerminologyDefinitionsCode("109903")
+    """
+    The IEC BN01 Pattern is used as analternative to the TG18-LN-01 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN01Pattern = DICOMControlledTerminologyDefinitionsCode("109904")
+    """
+    The IEC BN02 Pattern is used as analternative to the TG18-LN-02 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN02Pattern = DICOMControlledTerminologyDefinitionsCode("109905")
+    """
+    The IEC BN03 Pattern is used as analternative to the TG18-LN-03 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN03Pattern = DICOMControlledTerminologyDefinitionsCode("109906")
+    """
+    The IEC BN04 Pattern is used as analternative to the TG18-LN-04 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN04Pattern = DICOMControlledTerminologyDefinitionsCode("109907")
+    """
+    The IEC BN05 Pattern is used as analternative to the TG18-LN-05 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN05Pattern = DICOMControlledTerminologyDefinitionsCode("109908")
+    """
+    The IEC BN06 Pattern is used as analternative to the TG18-LN-06 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN06Pattern = DICOMControlledTerminologyDefinitionsCode("109909")
+    """
+    The IEC BN07 Pattern is used as analternative to the TG18-LN-07 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN07Pattern = DICOMControlledTerminologyDefinitionsCode("109910")
+    """
+    The IEC BN08 Pattern is used as analternative to the TG18-LN-08 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN08Pattern = DICOMControlledTerminologyDefinitionsCode("109911")
+    """
+    The IEC BN09 Pattern is used as analternative to the TG18-LN-09 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN09Pattern = DICOMControlledTerminologyDefinitionsCode("109912")
+    """
+    The IEC BN10 Pattern is used as analternative to the TG18-LN-10 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN10Pattern = DICOMControlledTerminologyDefinitionsCode("109913")
+    """
+    The IEC BN11 Pattern is used as analternative to the TG18-LN-11 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN11Pattern = DICOMControlledTerminologyDefinitionsCode("109914")
+    """
+    The IEC BN12 Pattern is used as analternative to the TG18-LN-12 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN12Pattern = DICOMControlledTerminologyDefinitionsCode("109915")
+    """
+    The IEC BN13 Pattern is used as analternative to the TG18-LN-13 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN13Pattern = DICOMControlledTerminologyDefinitionsCode("109916")
+    """
+    The IEC BN14 Pattern is used as analternative to the TG18-LN-14 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN14Pattern = DICOMControlledTerminologyDefinitionsCode("109917")
+    """
+    The IEC BN15 Pattern is used as analternative to the TG18-LN-15 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN15Pattern = DICOMControlledTerminologyDefinitionsCode("109918")
+    """
+    The IEC BN16 Pattern is used as analternative to the TG18-LN-16 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN16Pattern = DICOMControlledTerminologyDefinitionsCode("109919")
+    """
+    The IEC BN17 Pattern is used as analternative to the TG18-LN-17 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN17Pattern = DICOMControlledTerminologyDefinitionsCode("109920")
+    """
+    The IEC BN18 Pattern is used as analternative to the TG18-LN-18 Pattern, to avoid the use of a cone or baffle with LCDs. See [IEC 62563-1]
+    """
     BN18Pattern = DICOMControlledTerminologyDefinitionsCode("109921")
+    """
+    Test image "Bild 2" for the gray-scale reproduction of imaging devices. See [DIN 6868-57]
+    """
     DINGrayscalePattern = DICOMControlledTerminologyDefinitionsCode("109931")
+    """
+    Test image "Bild 3" for the geometrical imaging properties of imaging devices. See [DIN 6868-57]
+    """
     DINGeometryPattern = DICOMControlledTerminologyDefinitionsCode("109932")
+    """
+    Test image "Bild 5" for displaying the spatial and contrast resolution as well as the line structure of imaging devices. See [DIN 6868-57]
+    """
     DINResolutionPattern = DICOMControlledTerminologyDefinitionsCode("109933")
+    """
+    An alternative to AAPM TG18-UN80, specified at 100% of maximum pixel value
+    """
     WhitePattern = DICOMControlledTerminologyDefinitionsCode("109941")
+    """
+    A standard display test pattern. See [SMPTE RP133]. A pattern is available at http://www.dclunie.com/images/smpte.512.512.8.gif
+    """
     SMPTEPattern = DICOMControlledTerminologyDefinitionsCode("109943")
+    """
+    A Display Device that displays images on a Cathode Ray Tube
+    """
     CRTDisplay = DICOMControlledTerminologyDefinitionsCode("109991")
+    """
+    A Display Device that displays images on a Liquid Crystal Display
+    """
     LiquidCrystalDisplay = DICOMControlledTerminologyDefinitionsCode("109992")
+    """
+    A Display Device that displays images on a Plasma Display
+    """
     PlasmaDisplay = DICOMControlledTerminologyDefinitionsCode("109993")
+    """
+    A Display Device that displays images on an Organic Light Emitting Diode based display
+    """
     OLED = DICOMControlledTerminologyDefinitionsCode("109994")
+    """
+    A Display Device that projects images on a surface from behind using a Digital Light Processing Projector
+    """
     DLPRearProjectionSystem = DICOMControlledTerminologyDefinitionsCode("109995")
+    """
+    A Display Device that projects images on a surface from in front using a Digital Light Processing Projector
+    """
     DLPFrontProjectionSystem = DICOMControlledTerminologyDefinitionsCode("109996")
+    """
+    A Display Device that projects images on a surface from behind using a Cathode Ray Tube
+    """
     CRTRearProjectionSystem = DICOMControlledTerminologyDefinitionsCode("109997")
+    """
+    A Display Device that projects images on a surface from in front using a Cathode Ray Tube
+    """
     CRTFrontProjectionSystem = DICOMControlledTerminologyDefinitionsCode("109998")
+    """
+    A Display Device that projects images on a surface from an unspecified direction using an unspecified means
+    """
     OtherProjectionSystem = DICOMControlledTerminologyDefinitionsCode("109999")
+    """
+    Image processing work item
+    """
     ImageProcessing = DICOMControlledTerminologyDefinitionsCode("110001")
+    """
+    Quality control work item
+    """
     QualityControl = DICOMControlledTerminologyDefinitionsCode("110002")
+    """
+    Computer aided diagnosis work item
+    """
     ComputerAidedDiagnosis = DICOMControlledTerminologyDefinitionsCode("110003")
+    """
+    Computer aided detection work item
+    """
     ComputerAidedDetection = DICOMControlledTerminologyDefinitionsCode("110004")
+    """
+    Interpretation work item
+    """
     Interpretation = DICOMControlledTerminologyDefinitionsCode("110005")
+    """
+    Transcription work item
+    """
     Transcription = DICOMControlledTerminologyDefinitionsCode("110006")
+    """
+    Report verification work item
+    """
     ReportVerification = DICOMControlledTerminologyDefinitionsCode("110007")
+    """
+    Print work item
+    """
     Print = DICOMControlledTerminologyDefinitionsCode("110008")
+    """
+    There will be no more work items scheduled
+    """
     NoSubsequentWorkitems = DICOMControlledTerminologyDefinitionsCode("110009")
+    """
+    Film type of output
+    """
     Film = DICOMControlledTerminologyDefinitionsCode("110010")
+    """
+    Dictation type of output
+    """
     Dictation = DICOMControlledTerminologyDefinitionsCode("110011")
+    """
+    Transcription type of output
+    """
     Transcription = DICOMControlledTerminologyDefinitionsCode("110012")
+    """
+    The procedure to read DICOM instances from DICOM interchange media, coerce identifying attributes into the local namespace if necessary, and make the instances available
+    """
     MediaImport = DICOMControlledTerminologyDefinitionsCode("110013")
+    """
+    Digitization of Sheet Film
+    """
     SheetFilmDigitized = DICOMControlledTerminologyDefinitionsCode("110020")
+    """
+    Digitization of Cine Film
+    """
     CineFilmDigitized = DICOMControlledTerminologyDefinitionsCode("110021")
+    """
+    Digitization of Video Tape
+    """
     VideoTapeDigitized = DICOMControlledTerminologyDefinitionsCode("110022")
+    """
+    Digitization of pages of a paper document (Units may be specified as Pages, Documents)
+    """
     PaperDigitized = DICOMControlledTerminologyDefinitionsCode("110023")
+    """
+    Importation of CD
+    """
     CDImported = DICOMControlledTerminologyDefinitionsCode("110024")
+    """
+    Importation of DVD
+    """
     DVDImported = DICOMControlledTerminologyDefinitionsCode("110025")
+    """
+    Importation of MOD
+    """
     MODImported = DICOMControlledTerminologyDefinitionsCode("110026")
+    """
+    Importation of DICOM Studies
+    """
     StudiesImported = DICOMControlledTerminologyDefinitionsCode("110027")
+    """
+    Importation of DICOM Composite Instances
+    """
     InstancesImported = DICOMControlledTerminologyDefinitionsCode("110028")
+    """
+    A device that connects using the USB hard drive interface. These may be USB-Sticks, portable hard drives, and other technologies
+    """
     USBDiskEmulation = DICOMControlledTerminologyDefinitionsCode("110030")
+    """
+    Email and email attachments used as a media for data transport
+    """
     Email = DICOMControlledTerminologyDefinitionsCode("110031")
+    """
+    CD-R, CD-ROM, and CD-RW media used for data transport
+    """
     CD = DICOMControlledTerminologyDefinitionsCode("110032")
+    """
+    DVD, DVD-RAM, and other DVD formatted media used for data transport
+    """
     DVD = DICOMControlledTerminologyDefinitionsCode("110033")
+    """
+    Media that comply with the Compact Flash standard
+    """
     CompactFlash = DICOMControlledTerminologyDefinitionsCode("110034")
+    """
+    Media that comply with the Multi-media Card standard
+    """
     Multi_mediaCard = DICOMControlledTerminologyDefinitionsCode("110035")
+    """
+    Media that comply with the Secure Digital Card standard
+    """
     SecureDigitalCard = DICOMControlledTerminologyDefinitionsCode("110036")
+    """
+    URI Identifier for network or other resource, see RFC 3968
+    """
     URI = DICOMControlledTerminologyDefinitionsCode("110037")
+    """
+    Any paper or similar document
+    """
     PaperDocument = DICOMControlledTerminologyDefinitionsCode("110038")
+    """
+    Audit event: Application Activity has taken place
+    """
     ApplicationActivity = DICOMControlledTerminologyDefinitionsCode("110100")
+    """
+    Audit event: Audit Log has been used
+    """
     AuditLogUsed = DICOMControlledTerminologyDefinitionsCode("110101")
+    """
+    Audit event: Storage of DICOM Instances has begun
+    """
     BeginTransferringDICOMInstances = DICOMControlledTerminologyDefinitionsCode(
         "110102"
     )
+    """
+    Audit event: DICOM Instances have been created, read, updated, or deleted
+    """
     DICOMInstancesAccessed = DICOMControlledTerminologyDefinitionsCode("110103")
+    """
+    Audit event: Storage of DICOM Instances has been completed
+    """
     DICOMInstancesTransferred = DICOMControlledTerminologyDefinitionsCode("110104")
+    """
+    Audit event: Entire Study has been deleted
+    """
     DICOMStudyDeleted = DICOMControlledTerminologyDefinitionsCode("110105")
+    """
+    Audit event: Data has been exported out of the system
+    """
     Export = DICOMControlledTerminologyDefinitionsCode("110106")
+    """
+    Audit event: Data has been imported into the system
+    """
     Import = DICOMControlledTerminologyDefinitionsCode("110107")
+    """
+    Audit event: System has joined or left network
+    """
     NetworkEntry = DICOMControlledTerminologyDefinitionsCode("110108")
+    """
+    Audit event: Order has been created, read, updated or deleted
+    """
     OrderRecord = DICOMControlledTerminologyDefinitionsCode("110109")
+    """
+    Audit event: Patient Record has been created, read, updated, or deleted
+    """
     PatientRecord = DICOMControlledTerminologyDefinitionsCode("110110")
+    """
+    Audit event: Procedure Record has been created, read, updated, or deleted
+    """
     ProcedureRecord = DICOMControlledTerminologyDefinitionsCode("110111")
+    """
+    Audit event: Query has been made
+    """
     Query = DICOMControlledTerminologyDefinitionsCode("110112")
+    """
+    Audit event: Security Alert has been raised
+    """
     SecurityAlert = DICOMControlledTerminologyDefinitionsCode("110113")
+    """
+    Audit event: User Authentication has been attempted
+    """
     UserAuthentication = DICOMControlledTerminologyDefinitionsCode("110114")
+    """
+    Audit event: Application Entity has started
+    """
     ApplicationStart = DICOMControlledTerminologyDefinitionsCode("110120")
+    """
+    Audit event: Application Entity has stopped
+    """
     ApplicationStop = DICOMControlledTerminologyDefinitionsCode("110121")
+    """
+    Audit event: User login has been attempted
+    """
     Login = DICOMControlledTerminologyDefinitionsCode("110122")
+    """
+    Audit event: User logout has been attempted
+    """
     Logout = DICOMControlledTerminologyDefinitionsCode("110123")
+    """
+    Audit event: Node has been attached
+    """
     Attach = DICOMControlledTerminologyDefinitionsCode("110124")
+    """
+    Audit event: Node has been detached
+    """
     Detach = DICOMControlledTerminologyDefinitionsCode("110125")
+    """
+    Audit event: Node Authentication has been attempted
+    """
     NodeAuthentication = DICOMControlledTerminologyDefinitionsCode("110126")
+    """
+    Audit event: Emergency Override has started
+    """
     EmergencyOverrideStarted = DICOMControlledTerminologyDefinitionsCode("110127")
+    """
+    Audit event: Network configuration has been changed
+    """
     NetworkConfiguration = DICOMControlledTerminologyDefinitionsCode("110128")
+    """
+    Audit event: Security configuration has been changed
+    """
     SecurityConfiguration = DICOMControlledTerminologyDefinitionsCode("110129")
+    """
+    Audit event: Hardware configuration has been changed
+    """
     HardwareConfiguration = DICOMControlledTerminologyDefinitionsCode("110130")
+    """
+    Audit event: Software configuration has been changed
+    """
     SoftwareConfiguration = DICOMControlledTerminologyDefinitionsCode("110131")
+    """
+    Audit event: A use of a restricted function has been attempted
+    """
     UseOfRestrictedFunction = DICOMControlledTerminologyDefinitionsCode("110132")
+    """
+    Audit event: Audit recording has been stopped
+    """
     AuditRecordingStopped = DICOMControlledTerminologyDefinitionsCode("110133")
+    """
+    Audit event: Audit recording has been started
+    """
     AuditRecordingStarted = DICOMControlledTerminologyDefinitionsCode("110134")
+    """
+    Audit event: Security attributes of an object have been changed
+    """
     ObjectSecurityAttributesChanged = DICOMControlledTerminologyDefinitionsCode(
         "110135"
     )
+    """
+    Audit event: Security roles have been changed
+    """
     SecurityRolesChanged = DICOMControlledTerminologyDefinitionsCode("110136")
+    """
+    Audit event: Security attributes of a user have been changed
+    """
     UserSecurityAttributesChanged = DICOMControlledTerminologyDefinitionsCode("110137")
+    """
+    Audit event: Emergency Override has Stopped
+    """
     EmergencyOverrideStopped = DICOMControlledTerminologyDefinitionsCode("110138")
+    """
+    Audit event: Remote Service Operation has Begun
+    """
     RemoteServiceOperationStarted = DICOMControlledTerminologyDefinitionsCode("110139")
+    """
+    Audit event: Remote Service Operation has Stopped
+    """
     RemoteServiceOperationStopped = DICOMControlledTerminologyDefinitionsCode("110140")
+    """
+    Audit event: Local Service Operation has Begun
+    """
     LocalServiceOperationStarted = DICOMControlledTerminologyDefinitionsCode("110141")
+    """
+    Audit event: Local Service Operation Stopped
+    """
     LocalServiceOperationStopped = DICOMControlledTerminologyDefinitionsCode("110142")
+    """
+    Audit participant role ID of software application
+    """
     Application = DICOMControlledTerminologyDefinitionsCode("110150")
+    """
+    Audit participant role ID of software application launcher, i.e., the entity that started or stopped an application
+    """
     ApplicationLauncher = DICOMControlledTerminologyDefinitionsCode("110151")
+    """
+    Audit participant role ID of the receiver of data
+    """
     DestinationRoleID = DICOMControlledTerminologyDefinitionsCode("110152")
+    """
+    Audit participant role ID of the sender of data
+    """
     SourceRoleID = DICOMControlledTerminologyDefinitionsCode("110153")
+    """
+    Audit participant role ID of media receiving data during an export
+    """
     DestinationMedia = DICOMControlledTerminologyDefinitionsCode("110154")
+    """
+    Audit participant role ID of media providing data during an import
+    """
     SourceMedia = DICOMControlledTerminologyDefinitionsCode("110155")
+    """
+    ParticipantObjectID type: Study Instance UID
+    """
     StudyInstanceUID = DICOMControlledTerminologyDefinitionsCode("110180")
+    """
+    ParticipantObjectID type: SOP Class UID
+    """
     SOPClassUID = DICOMControlledTerminologyDefinitionsCode("110181")
+    """
+    ID of a node that is a participant object of an audit message
+    """
     NodeID = DICOMControlledTerminologyDefinitionsCode("110182")
+    """
+    System, organization, agency, or department that has assigned an instance identifier (such as placer or filler number, patient or provider identifier, etc.)
+    """
     IssuerOfIdentifier = DICOMControlledTerminologyDefinitionsCode("110190")
+    """
+    Procedure order canceled by requesting physician or other authorized physician
+    """
     DoctorCanceledProcedure = DICOMControlledTerminologyDefinitionsCode("110500")
+    """
+    Equipment failure prevented completion of procedure
+    """
     EquipmentFailure = DICOMControlledTerminologyDefinitionsCode("110501")
+    """
+    Procedure discontinued due to incorrect procedure being ordered
+    """
     IncorrectProcedureOrdered = DICOMControlledTerminologyDefinitionsCode("110502")
+    """
+    Procedure discontinued due to patient allergy to media/contrast (reported or reaction)
+    """
     PatientAllergicToMedia_contrast = DICOMControlledTerminologyDefinitionsCode(
         "110503"
     )
+    """
+    Procedure discontinued due to death of Patient
+    """
     PatientDied = DICOMControlledTerminologyDefinitionsCode("110504")
+    """
+    Procedure discontinued due to patient refusal to continue procedure
+    """
     PatientRefusedToContinueProcedure = DICOMControlledTerminologyDefinitionsCode(
         "110505"
     )
+    """
+    Procedure discontinued due to patient being taken for treatment or surgery
+    """
     PatientTakenForTreatmentOrSurgery = DICOMControlledTerminologyDefinitionsCode(
         "110506"
     )
+    """
+    Patient did not arrive for procedure
+    """
     PatientDidNotArrive = DICOMControlledTerminologyDefinitionsCode("110507")
+    """
+    Procedure discontinued due to patient pregnancy (reported or determined)
+    """
     PatientPregnant = DICOMControlledTerminologyDefinitionsCode("110508")
+    """
+    Procedure discontinued to restart with new procedure code for correct charging
+    """
     ChangeOfProcedureForCorrectCharging = DICOMControlledTerminologyDefinitionsCode(
         "110509"
     )
+    """
+    Procedure discontinued due to duplicate orders received for same procedure
+    """
     DuplicateOrder = DICOMControlledTerminologyDefinitionsCode("110510")
+    """
+    Procedure order canceled by nursing unit
+    """
     NursingUnitCancel = DICOMControlledTerminologyDefinitionsCode("110511")
+    """
+    Procedure discontinued due to incorrect side (laterality) being ordered
+    """
     IncorrectSideOrdered = DICOMControlledTerminologyDefinitionsCode("110512")
+    """
+    Procedure discontinued for unspecified reason
+    """
     DiscontinuedForUnspecifiedReason = DICOMControlledTerminologyDefinitionsCode(
         "110513"
     )
+    """
+    Procedure discontinued due to incorrect patient or procedure step selected from modality worklist
+    """
     IncorrectWorklistEntrySelected = DICOMControlledTerminologyDefinitionsCode("110514")
+    """
+    Patient condition prevented continuation of procedure
+    """
     PatientConditionPreventedContinuing = DICOMControlledTerminologyDefinitionsCode(
         "110515"
     )
+    """
+    Procedure step is discontinued to change to other equipment or modality
+    """
     EquipmentChange = DICOMControlledTerminologyDefinitionsCode("110516")
+    """
+    A movement of the patient affecting test quality
+    """
     PatientMovement = DICOMControlledTerminologyDefinitionsCode("110518")
+    """
+    An error of the operator affecting test quality
+    """
     OperatorError = DICOMControlledTerminologyDefinitionsCode("110519")
+    """
+    One or more of the objects is malformed
+    """
     ObjectsIncorrectlyFormatted = DICOMControlledTerminologyDefinitionsCode("110521")
+    """
+    Receiving System is unable to accept the object type
+    """
     ObjectTypesNotSupported = DICOMControlledTerminologyDefinitionsCode("110522")
+    """
+    One or more objects associated with the object set is missing
+    """
     ObjectSetIncomplete = DICOMControlledTerminologyDefinitionsCode("110523")
+    """
+    The contents of the Media could not be accessed properly
+    """
     MediaFailure = DICOMControlledTerminologyDefinitionsCode("110524")
+    """
+    Procedure discontinued due to necessary equipment, staff or other resource becoming (temporarily) unavailable to the procedure
+    """
     ResourcePre_empted = DICOMControlledTerminologyDefinitionsCode("110526")
+    """
+    Procedure discontinued due to necessary equipment, staff or other resource being inadequate to complete the procedure
+    """
     ResourceInadequate = DICOMControlledTerminologyDefinitionsCode("110527")
+    """
+    A new Procedure Step has been scheduled to replace the Discontinued Procedure Step
+    """
     DiscontinuedProcedureStepRescheduled = DICOMControlledTerminologyDefinitionsCode(
         "110528"
     )
+    """
+    It is recommended that a new Procedure Step be scheduled to replace the Discontinued Procedure Step
+    """
     DiscontinuedProcedureStepReschedulingRecommended = (
         DICOMControlledTerminologyDefinitionsCode("110529")
     )
+    """
+    Ventral structures of the diencephalon that cannot readily be distinguished on MR imaging, including the hypothalamus, mammillary body, subthalamic nuclei, substantia nigra, red nucleus, lateral geniculate nucleus, medial geniculate nucleus, zona incerta, cerebral peduncle, lenticular fasciculus, medial lemniscus, and optic tract. See http://neuromorphometrics.org:8080/Seg/html/segmentation/ventral%20diencephalon.html
+    """
     VentralDiencephalon = DICOMControlledTerminologyDefinitionsCode("110700")
+    """
+    Area(s) of reduced intensity on T1 weighted images relative to the surrounding white matter. These may be indicative of age-related or neurodegenerative white matter lesions, and may be co-located with areas of white matter T2 hyperintensity, but the concept is specifically confined to the MR appearance on T1 weighted images
+    """
     WhiteMatterT1Hypointensity = DICOMControlledTerminologyDefinitionsCode("110701")
+    """
+    Area(s) of increased intensity on T2 weighted images relative to the surrounding white matter. These may be indicative of age-related or neurodegenerative white matter lesions, and may be co-located with areas of white matter T1 hypointensity, but the concept is specifically confined to the MR appearance on T2 weighted images
+    """
     WhiteMatterT2Hyperintensity = DICOMControlledTerminologyDefinitionsCode("110702")
+    """
+    The dorsal component of the SLF originating from the medial and dorsal parietal cortex and ending in the dorsal and medial part of the frontal lobe. See Makris N, et al. "Segmentation of Subcomponents within the Superior Longitudinal Fascicle in Humans: A Quantitative, In Vivo, DT-MRI Study." Cerebral Cortex 15, no. 6 (June 1, 2005): 854-69. doi:10.1093/cercor/bhh186
+    """
     SuperiorLongitudinalFasciculusI = DICOMControlledTerminologyDefinitionsCode(
         "110703"
     )
+    """
+    The major component of the SLF, derived from the caudal-inferior parietal region corresponding to the angular gyrus in the human and terminating within the dorsolateral frontal region. See Makris N, et al. "Segmentation of Subcomponents within the Superior Longitudinal Fascicle in Humans: A Quantitative, In Vivo, DT-MRI Study." Cerebral Cortex 15, no. 6 (June 1, 2005): 854-69. doi:10.1093/cercor/bhh186
+    """
     SuperiorLongitudinalFasciculusII = DICOMControlledTerminologyDefinitionsCode(
         "110704"
     )
+    """
+    The ventral component of the SLF, originating from the supramarginal gyrus and terminating predominantly in the ventral premotor and prefrontal areas. See Makris N, et al. "Segmentation of Subcomponents within the Superior Longitudinal Fascicle in Humans: A Quantitative, In Vivo, DT-MRI Study." Cerebral Cortex 15, no. 6 (June 1, 2005): 854-69. doi:10.1093/cercor/bhh186
+    """
     SuperiorLongitudinalFasciculusIII = DICOMControlledTerminologyDefinitionsCode(
         "110705"
     )
+    """
+    White matter that surrounds a lesion of interest; e.g. to identify the otherwise unclassified white matter that surrounds a tumor to be surgically resected
+    """
     PerilesionalWhiteMatter = DICOMControlledTerminologyDefinitionsCode("110706")
+    """
+    Signal intensity of a Spin tagging Perfusion MR image. Spin tagging is a technique for the measurement of blood perfusion, based on magnetically labeled arterial blood water as an endogenous tracer
+    """
     SpinTaggingPerfusionMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
         "110800"
     )
+    """
+    Signal intensity of a Contrast Agent Angio MR image
+    """
     ContrastAgentAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
         "110801"
     )
+    """
+    Signal intensity of a Time-of-flight (TOF) MR image. Time-of-flight (TOF) is based on the phenomenon of flow-related enhancement of spins entering into an imaging slice. As a result of being unsaturated, these spins give more signal that surrounding stationary spins
+    """
     TimeOfFlightAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
         "110802"
     )
+    """
+    Signal intensity of a Proton Density Weighted MR image. All MR images have intensity proportional to proton density. Images with very little T1 or T2 weighting are called 'PD-weighted'
+    """
     ProtonDensityWeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
         "110803"
     )
+    """
+    Signal intensity of T1 Weighted MR image. A T1 Weighted MR image is created typically by using short TE and TR times
+    """
     T1WeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110804")
+    """
+    Signal intensity of a T2 Weighted MR image. T2 Weighted image contrast state is approached by imaging with a TR long compared to tissue T1 (to reduce T1 contribution to image contrast) and a TE between the longest and shortest tissue T2s of interest
+    """
     T2WeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110805")
+    """
+    Signal intensity of a T2* Weighted MR image. The T2* phenomenon results from molecular interactions (spin spin relaxation) and local magnetic field non-uniformities, which cause the protons to precess at slightly different frequencies
+    """
     T2_WeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110806")
+    """
+    Signal intensity of a Field Map MR image. A Field Map MR image provides a direct measure of the B 0 inhomogeneity at each point in the image
+    """
     FieldMapMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110807")
+    """
+    Coefficient reflecting the fractional anisotropy of the tissues, derived from a diffusion weighted MR image. Fractional anisotropy is proportional to the square root of the variance of the Eigen values divided by the square root of the sum of the squares of the Eigen values
+    """
     FractionalAnisotropy = DICOMControlledTerminologyDefinitionsCode("110808")
+    """
+    Coefficient reflecting the relative anisotropy of the tissues, derived from a diffusion weighted MR image
+    """
     RelativeAnisotropy = DICOMControlledTerminologyDefinitionsCode("110809")
+    """
+    Dxx Component of the diffusion tensor, quantifying the molecular mobility along the X axis
+    """
     VolumetricDiffusionDxxComponent = DICOMControlledTerminologyDefinitionsCode(
         "110810"
     )
+    """
+    Dxy Component of the diffusion tensor, quantifying the correlation of molecular displacements in the X and Y directions
+    """
     VolumetricDiffusionDxyComponent = DICOMControlledTerminologyDefinitionsCode(
         "110811"
     )
+    """
+    Dxz Component of the diffusion tensor, quantifying the correlation of molecular displacements in the X and Z directions
+    """
     VolumetricDiffusionDxzComponent = DICOMControlledTerminologyDefinitionsCode(
         "110812"
     )
+    """
+    Dyy Component of the diffusion tensor, quantifying the molecular mobility along the Y axis
+    """
     VolumetricDiffusionDyyComponent = DICOMControlledTerminologyDefinitionsCode(
         "110813"
     )
+    """
+    Dyz Component of the diffusion tensor, quantifying the correlation of molecular displacements in the Y and Z directions
+    """
     VolumetricDiffusionDyzComponent = DICOMControlledTerminologyDefinitionsCode(
         "110814"
     )
+    """
+    Dzz Component of the diffusion tensor, quantifying the molecular mobility along the Z axis
+    """
     VolumetricDiffusionDzzComponent = DICOMControlledTerminologyDefinitionsCode(
         "110815"
     )
+    """
+    Signal intensity of a T1 Weighted Dynamic Contrast Enhanced MR image. A T1 Weighted Dynamic Contrast Enhanced MR image reflects the dynamics of diffusion of the exogenous contrast media from the blood pool into the extra vascular extracellular space (EES) of the brain at a rate determined by the blood flow to the tissue, the permeability of the Brain Blood Barrier (BBB), and the surface area of the perfusing vessels
+    """
     T1WeightedDynamicContrastEnhancedMRSignalIntensity = (
         DICOMControlledTerminologyDefinitionsCode("110816")
     )
+    """
+    Signal intensity of a T2 Weighted Dynamic Contrast Enhanced MR image. A T2 Weighted Dynamic Contrast Enhanced MR image reflects the T2 of tissue decrease as the Gd contrast agent bolus passes through the brain
+    """
     T2WeightedDynamicContrastEnhancedMRSignalIntensity = (
         DICOMControlledTerminologyDefinitionsCode("110817")
     )
+    """
+    Signal intensity of a T2* Weighted Dynamic Contrast Enhanced MR image. A T2* Weighted Dynamic Contrast Enhanced MR image reflects the T2* of tissue decrease as the Gd contrast agent bolus passes through the brain
+    """
     T2_WeightedDynamicContrastEnhancedMRSignalIntensity = (
         DICOMControlledTerminologyDefinitionsCode("110818")
     )
+    """
+    Signal intensity of a Blood Oxygenation Level image. BOLD imaging is sensitive to blood oxygenation (but also to cerebral blood flow and volume). This modality is essentially used for detecting brain activation (functional MR)
+    """
     BloodOxygenationLevel = DICOMControlledTerminologyDefinitionsCode("110819")
+    """
+    Accumulated decay event counts in a nuclear medicine projection image
+    """
     NuclearMedicineProjectionActivity = DICOMControlledTerminologyDefinitionsCode(
         "110820"
     )
+    """
+    Accumulated decay event counts in a Nuclear Medicine Tomographic image (including PET)
+    """
     NuclearMedicineTomographicActivity = DICOMControlledTerminologyDefinitionsCode(
         "110821"
     )
+    """
+    Spatial Displacement along axis X of a non-linear deformable spatial registration image. The X axis is defined in reference to the patient's orientation, and is increasing to the left hand side of the patient
+    """
     SpatialDisplacementXComponent = DICOMControlledTerminologyDefinitionsCode("110822")
+    """
+    Spatial Displacement along axis Y of a non-linear deformable spatial registration image. The Y axis is defined in reference to the patient's orientation, and is increasing to the posterior side of the patient
+    """
     SpatialDisplacementYComponent = DICOMControlledTerminologyDefinitionsCode("110823")
+    """
+    Spatial Displacement along axis Z of a non-linear deformable spatial registration image. The Z axis is defined in reference to the patient's orientation, and is increasing toward the head of the patient
+    """
     SpatialDisplacementZComponent = DICOMControlledTerminologyDefinitionsCode("110824")
+    """
+    Measured resistance to the flow of blood; e.g. through the vasculature or through a heart value
+    """
     HemodynamicResistance = DICOMControlledTerminologyDefinitionsCode("110825")
+    """
+    Measured resistance to the flow of blood; e.g. through the vasculature or through a heart value, normalized to a particular indexed scale
+    """
     IndexedHemodynamicResistance = DICOMControlledTerminologyDefinitionsCode("110826")
+    """
+    Velocity of tissue based on Doppler measurements
+    """
     TissueVelocity = DICOMControlledTerminologyDefinitionsCode("110827")
+    """
+    Velocity of blood flow based on Doppler measurements
+    """
     FlowVelocity = DICOMControlledTerminologyDefinitionsCode("110828")
+    """
+    Statistical variance of blood velocity relative to mean
+    """
     FlowVariance = DICOMControlledTerminologyDefinitionsCode("110829")
+    """
+    Scalar value related to the elastic properties of the tissue
+    """
     Elasticity = DICOMControlledTerminologyDefinitionsCode("110830")
+    """
+    Scalar value related to the volume of blood perfusing into tissue
+    """
     Perfusion = DICOMControlledTerminologyDefinitionsCode("110831")
+    """
+    Speed of sound in tissue
+    """
     SpeedOfSound = DICOMControlledTerminologyDefinitionsCode("110832")
+    """
+    Reduction in strength of ultrasound signal as the wave
+    """
     UltrasoundAttenuation = DICOMControlledTerminologyDefinitionsCode("110833")
+    """
+    Red component of a true color image (RGB)
+    """
     RGBRComponent = DICOMControlledTerminologyDefinitionsCode("110834")
+    """
+    Green component of a true color image (RGB)
+    """
     RGBGComponent = DICOMControlledTerminologyDefinitionsCode("110835")
+    """
+    Blue component of a true color image (RGB)
+    """
     RGBBComponent = DICOMControlledTerminologyDefinitionsCode("110836")
+    """
+    Y (Luminance) component of a YBR FULL image, as defined in JPEG 2000
+    """
     YBRFULLYComponent = DICOMControlledTerminologyDefinitionsCode("110837")
+    """
+    CB (Blue chrominance) component of a YBR FULL image, as defined in JPEG 2000
+    """
     YBRFULLCBComponent = DICOMControlledTerminologyDefinitionsCode("110838")
+    """
+    CR (Red chrominance) component of a YBR FULL image, as defined in JPEG 2000
+    """
     YBRFULLCRComponent = DICOMControlledTerminologyDefinitionsCode("110839")
+    """
+    Y (Luminance) component of a YBR PARTIAL image, as defined in JPEG 2000
+    """
     YBRPARTIALYComponent = DICOMControlledTerminologyDefinitionsCode("110840")
+    """
+    CB (Blue chrominance) component of a YBR PARTIAL image, as defined in JPEG 2000
+    """
     YBRPARTIALCBComponent = DICOMControlledTerminologyDefinitionsCode("110841")
+    """
+    CR (Red chrominance) component of a YBR PARTIAL image, as defined in JPEG 2000
+    """
     YBRPARTIALCRComponent = DICOMControlledTerminologyDefinitionsCode("110842")
+    """
+    Y (Luminance) component of a YBR ICT image (Irreversible Color Transform), as defined in JPEG 2000
+    """
     YBRICTYComponent = DICOMControlledTerminologyDefinitionsCode("110843")
+    """
+    CB (Blue chrominance) component of a YBR ICT image (Irreversible Color Transform), as defined in JPEG 2000
+    """
     YBRICTCBComponent = DICOMControlledTerminologyDefinitionsCode("110844")
+    """
+    CR (Red chrominance) component of a YBR ICT image (Irreversible Color Transform), as defined in JPEG 2000
+    """
     YBRICTCRComponent = DICOMControlledTerminologyDefinitionsCode("110845")
+    """
+    Y (Luminance) component of a YBR RCT image (Reversible Color Transform), as defined in JPEG 2000
+    """
     YBRRCTYComponent = DICOMControlledTerminologyDefinitionsCode("110846")
+    """
+    CB (Blue chrominance) component of a YBR RCT image (Reversible Color Transform), as defined in JPEG 2000
+    """
     YBRRCTCBComponent = DICOMControlledTerminologyDefinitionsCode("110847")
+    """
+    CR (Red chrominance) component of a YBR RCT image (Reversible Color Transform), as defined in JPEG 2000
+    """
     YBRRCTCRComponent = DICOMControlledTerminologyDefinitionsCode("110848")
+    """
+    The ability of a material to create an ultrasound return echo
+    """
     Echogenicity = DICOMControlledTerminologyDefinitionsCode("110849")
+    """
+    Decrease in the number of photons in an X-Ray beam due to interactions with the atoms of a material substance. Attenuation is due primarily to two processes, absorption and scattering
+    """
     X_RayAttenuation = DICOMControlledTerminologyDefinitionsCode("110850")
+    """
+    Coefficient that describes the fraction of a beam of X-Rays or gamma rays that is absorbed or scattered per unit thickness of the absorber. This value basically accounts for the number of atoms in a cubic cm volume of material and the probability of a photon being scattered or absorbed from the nucleus or an electron of one of these atoms
+    """
     X_RayAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("110851")
+    """
+    Signal intensity of an MR image, not otherwise specified
+    """
     MRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110852")
+    """
+    Binary value denoting that the segmented property is present
+    """
     BinarySegmentation = DICOMControlledTerminologyDefinitionsCode("110853")
+    """
+    Probability, defined as a percentage, that the segmented property occupies the spatial area defined by the voxel
+    """
     FractionalProbabilisticSegmentation = DICOMControlledTerminologyDefinitionsCode(
         "110854"
     )
+    """
+    Percentage of the voxel area occupied by the segmented property
+    """
     FractionalOccupancySegmentation = DICOMControlledTerminologyDefinitionsCode(
         "110855"
     )
+    """
+    Spatial dimension, denoting a linear displacement
+    """
     LinearDisplacement = DICOMControlledTerminologyDefinitionsCode("110856")
+    """
+    Dimension denoting the energy (frequency or wavelength) of photons
+    """
     PhotonEnergy = DICOMControlledTerminologyDefinitionsCode("110857")
+    """
+    Dimension used to sequence events, to compare the duration of events and the intervals between events
+    """
     Time = DICOMControlledTerminologyDefinitionsCode("110858")
+    """
+    Spatial dimension, denoting an angle
+    """
     Angle = DICOMControlledTerminologyDefinitionsCode("110859")
+    """
+    A spatial dimension axis running along a line between the patient's left and right side
+    """
     Left_RightAxis = DICOMControlledTerminologyDefinitionsCode("110860")
+    """
+    A spatial dimension axis running along a line between the patient's head and foot
+    """
     Head_FootAxis = DICOMControlledTerminologyDefinitionsCode("110861")
+    """
+    A spatial dimension axis running along a line between the patient's anterior and posterior sides
+    """
     Anterior_PosteriorAxis = DICOMControlledTerminologyDefinitionsCode("110862")
+    """
+    A spatial dimension axis running along a line between the apex and base of an organ, object, or chamber
+    """
     Apex_BaseAxis = DICOMControlledTerminologyDefinitionsCode("110863")
+    """
+    A spatial dimension axis running along a line between the anterior and inferior sides of an organ, object, or chamber
+    """
     Anterior_InferiorAxis = DICOMControlledTerminologyDefinitionsCode("110864")
+    """
+    A spatial dimension axis running along a line between the septum and wall of a chamber
+    """
     Septum_WallAxis = DICOMControlledTerminologyDefinitionsCode("110865")
+    """
+    Orientation of a spatial dimension where increasing values run from the right to the left side of the patient
+    """
     RightToLeft = DICOMControlledTerminologyDefinitionsCode("110866")
+    """
+    Orientation of a spatial dimension where increasing values run from the left to the right side of the patient
+    """
     LeftToRight = DICOMControlledTerminologyDefinitionsCode("110867")
+    """
+    Orientation of a spatial dimension where increasing values run from the head to the foot of the patient
+    """
     HeadToFoot = DICOMControlledTerminologyDefinitionsCode("110868")
+    """
+    Orientation of a spatial dimension where increasing values run from the foot to the head of the patient
+    """
     FootToHead = DICOMControlledTerminologyDefinitionsCode("110869")
+    """
+    Orientation of a spatial dimension where increasing values run from the anterior to the posterior side of the patient
+    """
     AnteriorToPosterior = DICOMControlledTerminologyDefinitionsCode("110870")
+    """
+    Orientation of a spatial dimension where increasing values run from the posterior to the anterior side of the patient
+    """
     PosteriorToAnterior = DICOMControlledTerminologyDefinitionsCode("110871")
+    """
+    Orientation of a spatial dimension where increasing values run from the apex to the base
+    """
     ApexToBase = DICOMControlledTerminologyDefinitionsCode("110872")
+    """
+    Orientation of a spatial dimension where increasing values run from the base to the apex
+    """
     BaseToApex = DICOMControlledTerminologyDefinitionsCode("110873")
+    """
+    Orientation of a spatial dimension where increasing values run from the anterior to the inferior
+    """
     AnteriorToInferior = DICOMControlledTerminologyDefinitionsCode("110874")
+    """
+    Orientation of a spatial dimension where increasing values run from the inferior to the anterior
+    """
     InferiorToAnterior = DICOMControlledTerminologyDefinitionsCode("110875")
+    """
+    Orientation of a spatial dimension where increasing values run from the septum of a chamber to the opposite wall
+    """
     SeptumToWall = DICOMControlledTerminologyDefinitionsCode("110876")
+    """
+    Orientation of a spatial dimension where increasing values run from the opposite wall to the septum of a chamber
+    """
     WallToSeptum = DICOMControlledTerminologyDefinitionsCode("110877")
+    """
+    The x coordinate of the upper left hand corner (center of the first voxel transmitted) of the image, with respect to the patient-based coordinate system
+    """
     ImagePosition_Patient_X = DICOMControlledTerminologyDefinitionsCode("110901")
+    """
+    The y coordinate of the upper left hand corner (center of the first voxel transmitted) of the image, with respect to the patient-based coordinate system
+    """
     ImagePosition_Patient_Y = DICOMControlledTerminologyDefinitionsCode("110902")
+    """
+    The z coordinate of the upper left hand corner (center of the first voxel transmitted) of the image, with respect to the patient-based coordinate system
+    """
     ImagePosition_Patient_Z = DICOMControlledTerminologyDefinitionsCode("110903")
+    """
+    The x value of the first row direction cosine with respect to the patient, with respect to the patient-based coordinate system
+    """
     ImageOrientation_Patient_RowX = DICOMControlledTerminologyDefinitionsCode("110904")
+    """
+    The y value of the first row direction cosine with respect to the patient, with respect to the patient-based coordinate system
+    """
     ImageOrientation_Patient_RowY = DICOMControlledTerminologyDefinitionsCode("110905")
+    """
+    The z value of the first row direction cosine with respect to the patient, with respect to the patient-based coordinate system
+    """
     ImageOrientation_Patient_RowZ = DICOMControlledTerminologyDefinitionsCode("110906")
+    """
+    The x value of the first column direction cosine with respect to the patient, with respect to the patient-based coordinate system
+    """
     ImageOrientation_Patient_ColumnX = DICOMControlledTerminologyDefinitionsCode(
         "110907"
     )
+    """
+    The y value of the first column direction cosine with respect to the patient, with respect to the patient-based coordinate system
+    """
     ImageOrientation_Patient_ColumnY = DICOMControlledTerminologyDefinitionsCode(
         "110908"
     )
+    """
+    The z value of the first column direction cosine with respect to the patient, with respect to the patient-based coordinate system
+    """
     ImageOrientation_Patient_ColumnZ = DICOMControlledTerminologyDefinitionsCode(
         "110909"
     )
+    """
+    Number of rows in the pixel data of the image
+    """
     PixelDataRows = DICOMControlledTerminologyDefinitionsCode("110910")
+    """
+    Number of columns in the pixel data of the image
+    """
     PixelDataColumns = DICOMControlledTerminologyDefinitionsCode("110911")
+    """
+    The name assigned by a manufacturer to a specific software algorithm
+    """
     AlgorithmName = DICOMControlledTerminologyDefinitionsCode("111001")
+    """
+    The input parameters used by a manufacturer to configure the behavior of a specific software algorithm
+    """
     AlgorithmParameters = DICOMControlledTerminologyDefinitionsCode("111002")
+    """
+    The software version identifier assigned by a manufacturer to a specific software algorithm
+    """
     AlgorithmVersion = DICOMControlledTerminologyDefinitionsCode("111003")
+    """
+    The type of correlation applied to detection results; e.g. temporal, spatial
+    """
     AnalysisPerformed = DICOMControlledTerminologyDefinitionsCode("111004")
+    """
+    Assignment of intermediate or overall interpretation results to a general category
+    """
     AssessmentCategory = DICOMControlledTerminologyDefinitionsCode("111005")
+    """
+    Assessment of annotating tissues in breast; generally including fatty, mixed or dense
+    """
     BreastComposition = DICOMControlledTerminologyDefinitionsCode("111006")
+    """
+    Purpose of reference for an SCOORD content item that is an outline of the breast that includes the pectoral muscle tissue
+    """
     BreastOutlineIncludingPectoralMuscleTissue = (
         DICOMControlledTerminologyDefinitionsCode("111007")
     )
+    """
+    The type of distribution associated with detected calcifications
+    """
     CalcificationDistribution = DICOMControlledTerminologyDefinitionsCode("111008")
+    """
+    Identification of the morphology of detected calcifications
+    """
     CalcificationType = DICOMControlledTerminologyDefinitionsCode("111009")
+    """
+    Purpose of reference for an SCOORD content item that identifies the central point of a finding or feature
+    """
     Center = DICOMControlledTerminologyDefinitionsCode("111010")
+    """
+    The likelihood that the feature analyzed is in fact the type of feature identified
+    """
     CertaintyOfFeature = DICOMControlledTerminologyDefinitionsCode("111011")
+    """
+    The likelihood that the finding detected is in fact the type of finding identified
+    """
     CertaintyOfFinding = DICOMControlledTerminologyDefinitionsCode("111012")
+    """
+    The certainty that a device places on an impression, where 0 equals no certainty and 100 equals certainty
+    """
     CertaintyOfImpression = DICOMControlledTerminologyDefinitionsCode("111013")
+    """
+    A location identifier based on clock-face numbering or anatomic sub-region
+    """
     ClockfaceOrRegion = DICOMControlledTerminologyDefinitionsCode("111014")
+    """
+    An item that is an inferred correlation relating two or more individual findings or features
+    """
     CompositeFeature = DICOMControlledTerminologyDefinitionsCode("111015")
+    """
+    The inferred relationship between the findings or features making up a composite feature
+    """
     CompositeType = DICOMControlledTerminologyDefinitionsCode("111016")
+    """
+    General assessment of whether or not CAD processing was successful, and whether any findings resulted
+    """
     CADProcessingAndFindingsSummary = DICOMControlledTerminologyDefinitionsCode(
         "111017"
     )
+    """
+    The date the data creation started
+    """
     ContentDate = DICOMControlledTerminologyDefinitionsCode("111018")
+    """
+    The time the data creation started
+    """
     ContentTime = DICOMControlledTerminologyDefinitionsCode("111019")
+    """
+    A location identifier based on a feature's inferred distance from the surface of the associated anatomy
+    """
     Depth = DICOMControlledTerminologyDefinitionsCode("111020")
+    """
+    A textual description of the change that occurred over time in a qualitative characteristic of a feature
+    """
     DescriptionOfChange = DICOMControlledTerminologyDefinitionsCode("111021")
+    """
+    The type of finding sought after by a specific algorithm applied to one image
+    """
     DetectionPerformed = DICOMControlledTerminologyDefinitionsCode("111022")
+    """
+    A general change that occurred within an imaged area between a prior imaging procedure and the current imaging procedure
+    """
     DifferentialDiagnosis_Impression = DICOMControlledTerminologyDefinitionsCode(
         "111023"
     )
+    """
+    A group of analysis algorithms that were attempted, but failed
+    """
     FailedAnalyses = DICOMControlledTerminologyDefinitionsCode("111024")
+    """
+    A group of detection algorithms that were attempted, but failed
+    """
     FailedDetections = DICOMControlledTerminologyDefinitionsCode("111025")
+    """
+    For projection radiography, the horizontal physical distance measured at the front plane of an Image Receptor housing between the center of each pixel. For tomographic images, the horizontal physical distance in the patient between the center of each pixel
+    """
     HorizontalPixelSpacing = DICOMControlledTerminologyDefinitionsCode("111026")
+    """
+    Laterality of (possibly paired) body part contained in an image
+    """
     ImageLaterality = DICOMControlledTerminologyDefinitionsCode("111027")
+    """
+    A container that references all image data used as evidence to produce a report
+    """
     ImageLibrary = DICOMControlledTerminologyDefinitionsCode("111028")
+    """
+    A numeric value in the range 0 to 100, inclusive, where 0 is worst quality and 100 is best quality
+    """
     ImageQualityRating = DICOMControlledTerminologyDefinitionsCode("111029")
+    """
+    Purpose of reference for an SCOORD content item that identifies a specific region of interest within an image
+    """
     ImageRegion = DICOMControlledTerminologyDefinitionsCode("111030")
+    """
+    The projection of the anatomic region of interest on an image receptor
+    """
     ImageView = DICOMControlledTerminologyDefinitionsCode("111031")
+    """
+    Modifier for Image View
+    """
     ImageViewModifier = DICOMControlledTerminologyDefinitionsCode("111032")
+    """
+    Free-form text describing the overall or an individual impression
+    """
     ImpressionDescription = DICOMControlledTerminologyDefinitionsCode("111033")
+    """
+    A container for a group of related results from interpretation of one or more images and associated clinical information
+    """
     IndividualImpression_Recommendation = DICOMControlledTerminologyDefinitionsCode(
         "111034"
     )
+    """
+    The X-Ray attenuation of a lesion relative to the expected attenuation of an equal volume of fibroglandular breast tissue
+    """
     LesionDensity = DICOMControlledTerminologyDefinitionsCode("111035")
+    """
+    A structured report containing the results of computer-aided detection or diagnosis applied to breast imaging and associated clinical information
+    """
     MammographyCADReport = DICOMControlledTerminologyDefinitionsCode("111036")
+    """
+    The characteristic of the boundary, edges or border of a detected lesion
+    """
     Margins = DICOMControlledTerminologyDefinitionsCode("111037")
+    """
+    The quantity of calcifications detected within an identified group or cluster
+    """
     NumberOfCalcifications = DICOMControlledTerminologyDefinitionsCode("111038")
+    """
+    A non-lesion object identified within one or more images
+    """
     ObjectType = DICOMControlledTerminologyDefinitionsCode("111039")
+    """
+    Purpose of reference for a COMPOSITE content item that identifies it as the original source of evidence for another content item in the report
+    """
     OriginalSource = DICOMControlledTerminologyDefinitionsCode("111040")
+    """
+    Purpose of reference for an SCOORD content item that identifies the outline or bounding region of a finding or feature
+    """
     Outline = DICOMControlledTerminologyDefinitionsCode("111041")
+    """
+    The inferred type of disease associated with an identified feature
+    """
     Pathology = DICOMControlledTerminologyDefinitionsCode("111042")
+    """
+    The patient orientation relative to the image plane, specified by a value that designates the anatomical direction of the positive column axis (top to bottom)
+    """
     PatientOrientationColumn = DICOMControlledTerminologyDefinitionsCode("111043")
+    """
+    The patient orientation relative to the image plane, specified by a value that designates the anatomical direction of the positive row axis (left to right)
+    """
     PatientOrientationRow = DICOMControlledTerminologyDefinitionsCode("111044")
+    """
+    Purpose of reference for an SCOORD content item that is an outline of the pectoral muscle tissue only
+    """
     PectoralMuscleOutline = DICOMControlledTerminologyDefinitionsCode("111045")
+    """
+    Percent of breast area that is mammographically dense, excluding pectoralis muscle
+    """
     PercentFibroglandularTissue = DICOMControlledTerminologyDefinitionsCode("111046")
+    """
+    The likelihood that an identified finding or feature is cancerous
+    """
     ProbabilityOfCancer = DICOMControlledTerminologyDefinitionsCode("111047")
+    """
+    A location identifier based on the division of an area into four regions
+    """
     QuadrantLocation = DICOMControlledTerminologyDefinitionsCode("111048")
+    """
+    A qualitative characteristic of a feature that has changed over time
+    """
     QualitativeDifference = DICOMControlledTerminologyDefinitionsCode("111049")
+    """
+    The effect of the quality of an image on its usability
+    """
     QualityAssessment = DICOMControlledTerminologyDefinitionsCode("111050")
+    """
+    The quality control standard used to make a quality assessment
+    """
     QualityControlStandard = DICOMControlledTerminologyDefinitionsCode("111051")
+    """
+    A specific quality related deficiency detected within an image
+    """
     QualityFinding = DICOMControlledTerminologyDefinitionsCode("111052")
+    """
+    Recommended type of follow-up to an imaging procedure, based on interpreted results
+    """
     RecommendedFollow_up = DICOMControlledTerminologyDefinitionsCode("111053")
+    """
+    Recommended follow-up date to an imaging procedure, based on interpreted results
+    """
     RecommendedFollow_upDate = DICOMControlledTerminologyDefinitionsCode("111054")
+    """
+    Recommended follow-up interval to an imaging procedure, based on interpreted results
+    """
     RecommendedFollow_upInterval = DICOMControlledTerminologyDefinitionsCode("111055")
+    """
+    The recommendation of the producer of a content item regarding presentation of the content item by recipients of the report
+    """
     RenderingIntent = DICOMControlledTerminologyDefinitionsCode("111056")
+    """
+    An indication of how widespread the detection of a feature is within the analyzed image data set
+    """
     ScopeOfFeature = DICOMControlledTerminologyDefinitionsCode("111057")
+    """
+    A textual description of the contents of a selected region identified within an image
+    """
     SelectedRegionDescription = DICOMControlledTerminologyDefinitionsCode("111058")
+    """
+    An item that was detected on one image
+    """
     SingleImageFinding = DICOMControlledTerminologyDefinitionsCode("111059")
+    """
+    Date on which the acquisition of the study information was started
+    """
     StudyDate = DICOMControlledTerminologyDefinitionsCode("111060")
+    """
+    Time at which the acquisition of the study information was started
+    """
     StudyTime = DICOMControlledTerminologyDefinitionsCode("111061")
+    """
+    A group of analysis algorithms that were attempted and completed successfully
+    """
     SuccessfulAnalyses = DICOMControlledTerminologyDefinitionsCode("111062")
+    """
+    A group of detection algorithms that were attempted and completed successfully
+    """
     SuccessfulDetections = DICOMControlledTerminologyDefinitionsCode("111063")
+    """
+    An overall indication of whether the CAD detection algorithms applied were completed successfully
+    """
     SummaryOfDetections = DICOMControlledTerminologyDefinitionsCode("111064")
+    """
+    An overall indication of whether the CAD analysis algorithms applied were completed successfully
+    """
     SummaryOfAnalyses = DICOMControlledTerminologyDefinitionsCode("111065")
+    """
+    For projection radiography, the vertical physical distance measured at the front plane of an Image Receptor housing between the center of each pixel. For tomographic images, the vertical physical distance in the patient between the center of each pixel
+    """
     VerticalPixelSpacing = DICOMControlledTerminologyDefinitionsCode("111066")
+    """
+    A radiographic projection that has been with the patient lying on a table with the X-Ray source on one side of the table and the detector on the other; e.g. may describe a cross-table cervical spine, chest or pelvis X-Ray image
+    """
     Crosstable = DICOMControlledTerminologyDefinitionsCode("111069")
+    """
+    One of a number of discrete points on the Receiver-Operator Characteristics (ROC) curve that reflects the expected sensitivity and specificity of a CAD algorithm, where zero indicates the highest specificity, lowest sensitivity operating point. The value should not exceed the Maximum CAD Operating Point
+    """
     CADOperatingPoint = DICOMControlledTerminologyDefinitionsCode("111071")
+    """
+    The maximum value of CAD Operating Point for the specific CAD algorithm used
+    """
     MaximumCADOperatingPoint = DICOMControlledTerminologyDefinitionsCode("111072")
+    """
+    The intended interpretation of a CAD Operating Point
+    """
     CADOperatingPointDescription = DICOMControlledTerminologyDefinitionsCode("111081")
+    """
+    The number of false CAD markers per image. Correlates to inverse of Image Specificity
+    """
     FalseMarkersPerImage = DICOMControlledTerminologyDefinitionsCode("111086")
+    """
+    The number of false markers per collection of images that are CAD processed as a group. Correlates to inverse of Case Specificity
+    """
     FalseMarkersPerCase = DICOMControlledTerminologyDefinitionsCode("111087")
+    """
+    The percentage of cancers that should be detected by a CAD algorithm where CAD marks the cancers in at least one view
+    """
     CaseSensitivity = DICOMControlledTerminologyDefinitionsCode("111088")
+    """
+    The percentage of cancers that should be detected by a CAD algorithm where CAD marks the cancers in each view
+    """
     LesionSensitivity = DICOMControlledTerminologyDefinitionsCode("111089")
+    """
+    The percentage of cases (collections of images CAD processed as a group) without cancer that have no CAD findings whatsoever. Correlates to inverse of False Markers per Case
+    """
     CaseSpecificity = DICOMControlledTerminologyDefinitionsCode("111090")
+    """
+    The percentage of images without cancer that have no CAD findings whatsoever. Correlates to inverse of False Markers per Image
+    """
     ImageSpecificity = DICOMControlledTerminologyDefinitionsCode("111091")
+    """
+    The CAD operating point that is recommended for initial display by the creator of the structured report
+    """
     RecommendedCADOperatingPoint = DICOMControlledTerminologyDefinitionsCode("111092")
+    """
+    A list of CAD operating points including their corresponding characteristics
+    """
     CADOperatingPointTable = DICOMControlledTerminologyDefinitionsCode("111093")
+    """
+    A specific area of interest noted within an image
+    """
     SelectedRegion = DICOMControlledTerminologyDefinitionsCode("111099")
+    """
+    The surface shape of all or a portion of breast related anatomy
+    """
     BreastGeometry = DICOMControlledTerminologyDefinitionsCode("111100")
+    """
+    Image quality incorporates the following clinical image evaluation parameters: assessment of positioning, compression, artifacts, exposure, contrast, sharpness, and labeling
+    """
     ImageQuality = DICOMControlledTerminologyDefinitionsCode("111101")
+    """
+    A finding or feature that is identified as a non-anatomic foreign object
+    """
     Non_lesion = DICOMControlledTerminologyDefinitionsCode("111102")
+    """
+    A space-occupying lesion identified in a single image or projection
+    """
     Density = DICOMControlledTerminologyDefinitionsCode("111103")
+    """
+    A single identified calcification
+    """
     IndividualCalcification = DICOMControlledTerminologyDefinitionsCode("111104")
+    """
+    Multiple calcifications identified as occupying a small area of tissue (less than 2 cc)
+    """
     CalcificationCluster = DICOMControlledTerminologyDefinitionsCode("111105")
+    """
+    Straightening or thickening of Cooper's ligaments
+    """
     Cooper_sLigamentChanges = DICOMControlledTerminologyDefinitionsCode("111111")
+    """
+    An abnormality noted at imaging within the dermis of the breast
+    """
     MassInTheSkin = DICOMControlledTerminologyDefinitionsCode("111112")
+    """
+    An abnormality noted at imaging on the epidermis of the breast
+    """
     MassOnTheSkin = DICOMControlledTerminologyDefinitionsCode("111113")
+    """
+    An assessment category to indicate that images have been acquired to assess marker placement following a breast interventional procedure
+    """
     PostProcedureMammogramsForMarkerPlacement = (
         DICOMControlledTerminologyDefinitionsCode("111120")
     )
+    """
+    An indication that the patient should seek post procedural follow-up directives from a clinical health care provider
+    """
     Follow_upPostBiopsyAsDirectedByClinician = (
         DICOMControlledTerminologyDefinitionsCode("111121")
     )
+    """
+    A recommendation on a patient with known cancer to take steps appropriate to the diagnosis
+    """
     KnownBiopsyProvenMalignancy_TakeAppropriateAction = (
         DICOMControlledTerminologyDefinitionsCode("111122")
     )
+    """
+    Positioning of a radiopaque marker
+    """
     MarkerPlacement = DICOMControlledTerminologyDefinitionsCode("111123")
+    """
+    Patient has previous diagnosis of breast cancer resulting in mastectomy
+    """
     PersonalHistoryOfBreastCancerWithMastectomy = (
         DICOMControlledTerminologyDefinitionsCode("111124")
     )
+    """
+    Patient has had biopsy containing proven malignancy
+    """
     KnownBiopsyProvenMalignancy = DICOMControlledTerminologyDefinitionsCode("111125")
+    """
+    Patient has a finding of mass reported on a prior imaging exam
+    """
     ImageDetectedMass = DICOMControlledTerminologyDefinitionsCode("111126")
+    """
+    A breast imaging procedure performed on a specific area of the breast
+    """
     Targeted = DICOMControlledTerminologyDefinitionsCode("111127")
+    """
+    A breast imaging procedure performed on the entire breast
+    """
     Survey = DICOMControlledTerminologyDefinitionsCode("111128")
+    """
+    A cluster of tiny anechoic foci each smaller than 2-3 mm in diameter with thin (less than 0.5 mm) intervening septations and no discrete solid components
+    """
     ClusteredMicrocysts = DICOMControlledTerminologyDefinitionsCode("111129")
+    """
+    A fluid filled mass most commonly characterized by homogeneous low-level internal echoes on ultrasound
+    """
     ComplicatedCyst = DICOMControlledTerminologyDefinitionsCode("111130")
+    """
+    Views not inclusive of MLO and CC (BI-RADS®)
+    """
     AdditionalProjections = DICOMControlledTerminologyDefinitionsCode("111135")
+    """
+    A spot or coned down compression of the breast providing a reduction in the thickness and a magnification of the localized area of interest and improved separation of breast tissue
+    """
     SpotMagnificationView_s_ = DICOMControlledTerminologyDefinitionsCode("111136")
+    """
+    Use of sound waves to visualize muscles, tendons, and many internal organs, to capture their size, structure and any pathological lesions with real time tomographic images.
+    """
     Ultrasound = DICOMControlledTerminologyDefinitionsCode("111137")
+    """
+    Obtain previous mammography studies to compare to present study
+    """
     OldFilmsForComparison = DICOMControlledTerminologyDefinitionsCode("111138")
+    """
+    A medical procedure used for the sampling of mammary duct tissue
+    """
     Ductography = DICOMControlledTerminologyDefinitionsCode("111139")
+    """
+    Follow up study at 12 months for women 40 years of age having a prior negative study and no mitigating risk factors for breast cancer
+    """
     NormalIntervalFollow_up = DICOMControlledTerminologyDefinitionsCode("111140")
+    """
+    Any decision to perform tissue acquisition should be based on clinical assessment
+    """
     AnyDecisionToBiopsyShouldBeBasedOnClinicalAssessment = (
         DICOMControlledTerminologyDefinitionsCode("111141")
     )
+    """
+    Follow-up at short interval (1-11 months)
+    """
     Follow_upAtShortInterval_1_11Months_ = DICOMControlledTerminologyDefinitionsCode(
         "111142"
     )
+    """
+    Tissue acquisition should be considered
+    """
     BiopsyShouldBeConsidered = DICOMControlledTerminologyDefinitionsCode("111143")
+    """
+    Breast tissue acquisition following the identification of an area of concern with the placement of a needle or needle-wire assembly
+    """
     NeedleLocalizationAndBiopsy = DICOMControlledTerminologyDefinitionsCode("111144")
+    """
+    Pathologic analysis of breast tissue and lesions using core tissue samples
+    """
     HistologyUsingCoreBiopsy = DICOMControlledTerminologyDefinitionsCode("111145")
+    """
+    Lesions that do not have the characteristic morphologies of breast cancer but have a definite probability of being malignant. There is a sufficient concern to urge a biopsy
+    """
     SuggestiveOfMalignancy_TakeAppropriateAction = (
         DICOMControlledTerminologyDefinitionsCode("111146")
     )
+    """
+    Cellular analysis of specimen
+    """
     CytologicAnalysis = DICOMControlledTerminologyDefinitionsCode("111147")
+    """
+    Tissue acquisition should be strongly considered
+    """
     BiopsyShouldBeStronglyConsidered = DICOMControlledTerminologyDefinitionsCode(
         "111148"
     )
+    """
+    Lesions have a high probability of being cancer, which require additional action
+    """
     HighlySuggestiveOfMalignancy_TakeAppropriateAction = (
         DICOMControlledTerminologyDefinitionsCode("111149")
     )
+    """
+    The producer of a report intends for a recipient of the report to present or display the associated content item
+    """
     PresentationRequired_RenderingDeviceIsExpectedToPresent = (
         DICOMControlledTerminologyDefinitionsCode("111150")
     )
+    """
+    The producer of a report considers the presentation or display of the associated content item by a recipient to be optional
+    """
     PresentationOptional_RenderingDeviceMayPresent = (
         DICOMControlledTerminologyDefinitionsCode("111151")
     )
+    """
+    The producer of a report intends for a recipient of the report NOT to present or display the associated content item
+    """
     NotForPresentation_RenderingDeviceExpectedNotToPresent = (
         DICOMControlledTerminologyDefinitionsCode("111152")
     )
+    """
+    The associated content items are identified as being the same finding or feature at different points in time
+    """
     TargetContentItemsAreRelatedTemporally = DICOMControlledTerminologyDefinitionsCode(
         "111153"
     )
+    """
+    The associated content items are identified as being the same finding or feature on different projections taken at the same point in time
+    """
     TargetContentItemsAreRelatedSpatially = DICOMControlledTerminologyDefinitionsCode(
         "111154"
     )
+    """
+    The associated content items are identified as being related side-to-side
+    """
     TargetContentItemsAreRelatedContra_laterally = (
         DICOMControlledTerminologyDefinitionsCode("111155")
     )
+    """
+    There is one image in the interpreted data set
+    """
     FeatureDetectedOnTheOnlyImage = DICOMControlledTerminologyDefinitionsCode("111156")
+    """
+    There is more than one image of the same modality in the interpreted data set
+    """
     FeatureDetectedOnOnlyOneOfTheImages = DICOMControlledTerminologyDefinitionsCode(
         "111157"
     )
+    """
+    There is more than one image of the same modality in the interpreted data set
+    """
     FeatureDetectedOnMultipleImages = DICOMControlledTerminologyDefinitionsCode(
         "111158"
     )
+    """
+    The interpreted data set contains images from multiple modalities
+    """
     FeatureDetectedOnImagesFromMultipleModalities = (
         DICOMControlledTerminologyDefinitionsCode("111159")
     )
+    """
+    The fibrous tissue replacing normal tissues destroyed by disease or injury
+    """
     ScarTissue = DICOMControlledTerminologyDefinitionsCode("111168")
+    """
+    A medical appliance used for localization of non palpable breast lesions to insure that the proper area is removed in a surgical biopsy
+    """
     JWire = DICOMControlledTerminologyDefinitionsCode("111170")
+    """
+    A medical appliance used for regulating cardiac rhythms
+    """
     Pacemaker = DICOMControlledTerminologyDefinitionsCode("111171")
+    """
+    A compression device used for obtaining mammographic images
+    """
     Paddle = DICOMControlledTerminologyDefinitionsCode("111172")
+    """
+    A device used for restricting an X-Ray beam
+    """
     Collimator = DICOMControlledTerminologyDefinitionsCode("111173")
+    """
+    An area designated on a radiographic film for facility and patient ID information
+    """
     IDPlate = DICOMControlledTerminologyDefinitionsCode("111174")
+    """
+    Site specific markers
+    """
     OtherMarker = DICOMControlledTerminologyDefinitionsCode("111175")
+    """
+    The value of the concept is not specified
+    """
     Unspecified = DICOMControlledTerminologyDefinitionsCode("111176")
+    """
+    Image quality deficiency according to MQSA
+    """
     ViewAndLateralityMarkerIsMissing = DICOMControlledTerminologyDefinitionsCode(
         "111177"
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     ViewAndLateralityMarkerDoesNotHaveBothViewAndLaterality = (
         DICOMControlledTerminologyDefinitionsCode("111178")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     ViewAndLateralityMarkerDoesNotHaveApprovedCodes = (
         DICOMControlledTerminologyDefinitionsCode("111179")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     ViewAndLateralityMarkerIsNotNearTheAxilla = (
         DICOMControlledTerminologyDefinitionsCode("111180")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     ViewAndLateralityMarkerOverlapsBreastTissue = (
         DICOMControlledTerminologyDefinitionsCode("111181")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     ViewAndLateralityMarkerIsPartiallyObscured = (
         DICOMControlledTerminologyDefinitionsCode("111182")
     )
+    """
+    Image quality deficiency
+    """
     ViewAndLateralityMarkerIsIncorrect = DICOMControlledTerminologyDefinitionsCode(
         "111183"
     )
+    """
+    Image quality deficiency
+    """
     ViewAndLateralityMarkerIsOffImage = DICOMControlledTerminologyDefinitionsCode(
         "111184"
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     FlashIsNotNearEdgeOfFilm = DICOMControlledTerminologyDefinitionsCode("111185")
+    """
+    Image quality deficiency according to MQSA
+    """
     FlashIsIlligible_DoesNotFit_OrIsLopsided = (
         DICOMControlledTerminologyDefinitionsCode("111186")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     FlashDoesn_tIncludePatientNameAndAdditionalPatientId = (
         DICOMControlledTerminologyDefinitionsCode("111187")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     FlashDoesn_tIncludeDateOfExamination = DICOMControlledTerminologyDefinitionsCode(
         "111188"
     )
+    """
+    Image quality deficiency according to MQSA
+    """
     FlashDoesn_tIncludeFacilityNameAndLocation = (
         DICOMControlledTerminologyDefinitionsCode("111189")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     FlashDoesn_tIncludeTechnologistIdentification = (
         DICOMControlledTerminologyDefinitionsCode("111190")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     FlashDoesn_tIncludeCassette_screen_detectorIdentification = (
         DICOMControlledTerminologyDefinitionsCode("111191")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     FlashDoesn_tIncludeMammographyUnitIdentification = (
         DICOMControlledTerminologyDefinitionsCode("111192")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     DateStickerIsMissing = DICOMControlledTerminologyDefinitionsCode("111193")
+    """
+    Image quality deficiency according to MQCM
+    """
     TechnicalFactorsMissing = DICOMControlledTerminologyDefinitionsCode("111194")
+    """
+    Image quality deficiency according to MQCM
+    """
     CollimationTooCloseToBreast = DICOMControlledTerminologyDefinitionsCode("111195")
+    """
+    Image quality deficiency according to MQCM
+    """
     InadequateCompression = DICOMControlledTerminologyDefinitionsCode("111196")
+    """
+    Image quality deficiency according to MQCM
+    """
     MLOInsufficientPectoralMuscle = DICOMControlledTerminologyDefinitionsCode("111197")
+    """
+    Image quality deficiency according to MQCM
+    """
     MLONoFatIsVisualizedPosteriorToFibroglandularTissues = (
         DICOMControlledTerminologyDefinitionsCode("111198")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     MLOPoorSeparationOfDeepAndSuperficialBreastTissues = (
         DICOMControlledTerminologyDefinitionsCode("111199")
     )
+    """
+    Image quality deficiency according to MQCM
+    """
     MLOEvidenceOfMotionBlur = DICOMControlledTerminologyDefinitionsCode("111200")
+    """
+    Image quality deficiency according to MQCM
+    """
     MLOInframammaryFoldIsNotOpen = DICOMControlledTerminologyDefinitionsCode("111201")
+    """
+    Image quality deficiency according to MQCM
+    """
     CCNotAllMedialTissueVisualized = DICOMControlledTerminologyDefinitionsCode("111202")
+    """
+    Image quality deficiency according to MQCM
+    """
     CCNippleNotCenteredOnImage = DICOMControlledTerminologyDefinitionsCode("111203")
+    """
+    Image quality deficiency according to MQCM
+    """
     CCPosteriorNippleLineDoesNotMeasureWithin1CmOfMLO = (
         DICOMControlledTerminologyDefinitionsCode("111204")
     )
+    """
+    Image quality deficiency
+    """
     NippleNotInProfile = DICOMControlledTerminologyDefinitionsCode("111205")
+    """
+    Image quality deficiency according to MQCM
+    """
     InsufficientImplantDisplacementIncorrect = (
         DICOMControlledTerminologyDefinitionsCode("111206")
     )
+    """
+    Signals that do not faithfully reproduce actual anatomic structures because of distortion or of addition or deletion of information
+    """
     ImageArtifact_s_ = DICOMControlledTerminologyDefinitionsCode("111207")
+    """
+    Feature(s) arising from the acquisition unit's anti-scatter grid mechanism. For two-dimensional systems, such features include those of mechanically damaged or incorrectly positioned grids. For moving or Bucky grids, artifacts may result from intentional grid motion that is inadequate in duration or velocity uniformity
+    """
     GridArtifact_s_ = DICOMControlledTerminologyDefinitionsCode("111208")
+    """
+    Inadequate arrangement of the anatomy of interest with respect to the X-Ray field and image detector sensitive area. Examples: 1) positioning is "cutoff" when the projection of anatomy of interest falls outside the sensitive area of the detector; 2) "cone cut", in which the X-Ray field does not adequately cover the anatomy of interest; 3) detector's sensitive surface is too small to cover the projection of the anatomy of interest; 4) improper angular orientation or "rotation" of anatomy of interest with respect to the X-Ray source, or detector; 5) projection of other anatomy or clothing over the anatomy of interest in the image
+    """
     Positioning = DICOMControlledTerminologyDefinitionsCode("111209")
+    """
+    Unacceptable image blur resulting from motion of the anatomy of interest during exposure or the inadequately compensated motion of X-Ray source with respect to the image detector during exposure
+    """
     MotionBlur = DICOMControlledTerminologyDefinitionsCode("111210")
+    """
+    Inadequate number of quanta reached the detector during exposure. Reasons for under exposed images include low kVp, low mAs product, excess Source Image Distance. Under exposed images have inadequate signal and higher noise in the areas of interest
+    """
     UnderExposed = DICOMControlledTerminologyDefinitionsCode("111211")
+    """
+    An excess number of quanta reached the detector during exposure. Reasons for over exposed images include high kVp, high mAs product, short Source Image Distance. Over exposed images have high signal and lower noise in the areas of interest. Over exposed area may demonstrate lack of contrast from over saturation of the detector
+    """
     OverExposed = DICOMControlledTerminologyDefinitionsCode("111212")
+    """
+    No evidence of a patient exposure
+    """
     NoImage = DICOMControlledTerminologyDefinitionsCode("111213")
+    """
+    Superposed features or flaws of the detector
+    """
     DetectorArtifact_s_ = DICOMControlledTerminologyDefinitionsCode("111214")
+    """
+    Features or discontinuities arising from causes other than the anti-scatter grid and image detector
+    """
     Artifact_s_OtherThanGridOrDetectorArtifact = (
         DICOMControlledTerminologyDefinitionsCode("111215")
     )
+    """
+    Failure of the device to operate according to mechanical design specifications
+    """
     MechanicalFailure = DICOMControlledTerminologyDefinitionsCode("111216")
+    """
+    Failure of a device to operate according to electrical design specifications
+    """
     ElectricalFailure = DICOMControlledTerminologyDefinitionsCode("111217")
+    """
+    Attributable to software used in generation or handling of image
+    """
     SoftwareFailure = DICOMControlledTerminologyDefinitionsCode("111218")
+    """
+    Images processed inappropriately, not following appropriate protocol
+    """
     InappropriateImageProcessing = DICOMControlledTerminologyDefinitionsCode("111219")
+    """
+    Failure that is not mechanical or electrical or otherwise described
+    """
     OtherFailure = DICOMControlledTerminologyDefinitionsCode("111220")
+    """
+    Unidentified or unknown cause of failure
+    """
     UnknownFailure = DICOMControlledTerminologyDefinitionsCode("111221")
+    """
+    The attempted process was completely successful
+    """
     Succeeded = DICOMControlledTerminologyDefinitionsCode("111222")
+    """
+    The attempted process succeeded in some ways, but failed in others
+    """
     PartiallySucceeded = DICOMControlledTerminologyDefinitionsCode("111223")
+    """
+    The attempted process completely failed
+    """
     Failed = DICOMControlledTerminologyDefinitionsCode("111224")
+    """
+    No process was performed
+    """
     NotAttempted = DICOMControlledTerminologyDefinitionsCode("111225")
+    """
+    Analysis of a related group of findings or features detected during image data inspection, to produce a summary impression and/or recommendation
+    """
     IndividualImpression_RecommendationAnalysis = (
         DICOMControlledTerminologyDefinitionsCode("111233")
     )
+    """
+    Analysis of all groups of findings or features, to produce a single impression and/or recommendation
+    """
     OverallImpression_RecommendationAnalysis = (
         DICOMControlledTerminologyDefinitionsCode("111234")
     )
+    """
+    The usability of an image for diagnostic interpretation or CAD, based on a quality control standard
+    """
     Unusable_QualityRendersImageUnusable = DICOMControlledTerminologyDefinitionsCode(
         "111235"
     )
+    """
+    The usability of an image for diagnostic interpretation or CAD, based on a quality control standard
+    """
     Usable_DoesNotMeetTheQualityControlStandard = (
         DICOMControlledTerminologyDefinitionsCode("111236")
     )
+    """
+    The usability of an image for diagnostic interpretation or CAD, based on a quality control standard
+    """
     Usable_MeetsTheQualityControlStandard = DICOMControlledTerminologyDefinitionsCode(
         "111237"
     )
+    """
+    An image quality control standard specified by the American College of Radiology
+    """
     MammographyQualityControlManual1999_ACR = DICOMControlledTerminologyDefinitionsCode(
         "111238"
     )
+    """
+    An image quality control standard in the US Code of Federal Regulations
+    """
     Title21CFRSection900_SubpartB = DICOMControlledTerminologyDefinitionsCode("111239")
+    """
+    An image quality control standard specified or adopted by the institution responsible for the document
+    """
     InstitutionallyDefinedQualityControlStandard = (
         DICOMControlledTerminologyDefinitionsCode("111240")
     )
+    """
+    No findings resulted upon successful completion of all attempted computer-aided detection and/or analysis
+    """
     AllAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode(
         "111241"
     )
+    """
+    One or more findings resulted upon successful completion of all attempted computer-aided detection and/or analysis
+    """
     AllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode(
         "111242"
     )
+    """
+    No findings resulted from the attempted computer-aided detection and/or analysis, but one or more failures occurred in the process
+    """
     NotAllAlgorithmsSucceeded_WithoutFindings = (
         DICOMControlledTerminologyDefinitionsCode("111243")
     )
+    """
+    One or more findings resulted from the attempted computer-aided detection and/or analysis, but one or more failures occurred in the process
+    """
     NotAllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode(
         "111244"
     )
+    """
+    All of the attempted computer-aided detection and/or analysis failed, so there could be no findings
+    """
     NoAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode(
         "111245"
     )
+    """
+    A benign tumor having glandular characteristics but composed of fat, with the presence of normal mammary ducts
+    """
     Adenolipoma = DICOMControlledTerminologyDefinitionsCode("111248")
+    """
+    Hyperplasia is also known as epithelial hyperplasia or proliferative breast disease. It's an overgrowth of the cells that line the ducts or the lobules. Based on how the cells look under a microscope, the hyperplasia is called either ductal hyperplasia (also called duct epithelial hyperplasia) or lobular hyperplasia. Based on the pattern of the cells, hyperplasia may be called usual or atypical. In usual hyperplasia, the pattern of cells is very close to normal. Atypical hyperplasia (or hyperplasia with atypia) is a term used when the cells are more distorted. FROM: http://www.cancer.org/healthy/findcancerearly/womenshealth/non-cancerousbreastconditions/non-cancerous-breast-conditions-hyperplasia
+    """
     DuctalHyperplasia = DICOMControlledTerminologyDefinitionsCode("111249")
+    """
+    Neoplasms composed of myoepithelial cells
+    """
     Adenomyoepithelioma = DICOMControlledTerminologyDefinitionsCode("111250")
+    """
+    Axillary node that is normal in appearance with no associated pathology
+    """
     NormalAxillaryNode = DICOMControlledTerminologyDefinitionsCode("111251")
+    """
+    Axillary node containing calcifications
+    """
     AxillaryNodeWithCalcifications = DICOMControlledTerminologyDefinitionsCode("111252")
+    """
+    Excessive proliferation of normal tissue arrangement of the axillary node
+    """
     AxillaryNodeHyperplasia = DICOMControlledTerminologyDefinitionsCode("111253")
+    """
+    None
+    """
     AsynchronousInvolution = DICOMControlledTerminologyDefinitionsCode("111254")
+    """
+    Cyst with benign morphology containing blood
+    """
     BenignCystWithBlood = DICOMControlledTerminologyDefinitionsCode("111255")
+    """
+    Calcifications having typically benign morphology. They are not of intermediate or high probability of concern for malignancy
+    """
     BenignCalcifications = DICOMControlledTerminologyDefinitionsCode("111256")
+    """
+    Growing within a cystic adenoma, filling the cavity with a mass of branching epithelial processes
+    """
     IntracysticPapilloma = DICOMControlledTerminologyDefinitionsCode("111257")
+    """
+    Adenoma located in mammary duct, present as discrete sclerotic nodules, solitary or multiple
+    """
     DuctalAdenoma = DICOMControlledTerminologyDefinitionsCode("111258")
+    """
+    The occurrence of fibrous tumor-forming stromal proliferation in patients with diabetes mellitus
+    """
     DiabeticFibrousMastopathy = DICOMControlledTerminologyDefinitionsCode("111259")
+    """
+    A deep seated firm tumor frequently occurring on the chest consisting of collagenous tissue that infiltrates surround muscle; frequently recurs but does not metastasize
+    """
     ExtraAbdominalDesmoid = DICOMControlledTerminologyDefinitionsCode("111260")
+    """
+    A cyst formed of a mass of epithelial cells, as a result of trauma has been pushed beneath the epidermis. The cyst is lined with squamous epithelium and contains concentric layers or keratin
+    """
     EpidermalInclusionCyst = DICOMControlledTerminologyDefinitionsCode("111262")
+    """
+    Excessive proliferation of fibroadenoma tissue
+    """
     FibroadenomatoidHyperplasia = DICOMControlledTerminologyDefinitionsCode("111263")
+    """
+    A lipoma with an abundant stroma of fibrous tissue
+    """
     Fibroadenolipoma = DICOMControlledTerminologyDefinitionsCode("111264")
+    """
+    None
+    """
     ForeignBody_reaction_ = DICOMControlledTerminologyDefinitionsCode("111265")
+    """
+    Retention cyst caused by occlusion of a lactiferous duct
+    """
     Galactocele = DICOMControlledTerminologyDefinitionsCode("111269")
+    """
+    A congenital anomaly that leads to a proliferation of blood vessels leading to a mass that resembles a neoplasm, not located in parenchymal areas but subcutaneous
+    """
     Hemangioma_Nonparenchymal_Subcutaneous = DICOMControlledTerminologyDefinitionsCode(
         "111271"
     )
+    """
+    Hyperplasia is also known as epithelial hyperplasia or proliferative breast disease. It's an overgrowth of the cells that line the ducts or the lobules. Based on how the cells look under a microscope, the hyperplasia is called either ductal hyperplasia (also called duct epithelial hyperplasia) or lobular hyperplasia. FROM: http://www.cancer.org/healthy/findcancerearly/womenshealth/non-cancerousbreastconditions/non-cancerous-breast-conditions-hyperplasia
+    """
     Hyperplasia_Usual = DICOMControlledTerminologyDefinitionsCode("111273")
+    """
+    A form of fibrocystic disease in young woman with florid and sclerosing adenosis that microscopically may suggest carcinoma
+    """
     JuvenilePapillomatosis = DICOMControlledTerminologyDefinitionsCode("111277")
+    """
+    Enlarging masses during lactation. A circumscribed benign tumor composed primarily of glandular structures with scanty stroma, with prominent secretory changes in the duct
+    """
     LactatingAdenoma = DICOMControlledTerminologyDefinitionsCode("111278")
+    """
+    Changes related to the process of lactation
+    """
     LactationalChange = DICOMControlledTerminologyDefinitionsCode("111279")
+    """
+    A papilloma pertaining to large mammary duct
+    """
     LargeDuctPapilloma = DICOMControlledTerminologyDefinitionsCode("111281")
+    """
+    Solitary or multiple tumors of muscles and fibrous tissues, or tumors composed of myofibroblasts
+    """
     Myofibroblastoma = DICOMControlledTerminologyDefinitionsCode("111283")
+    """
+    Irregular clusters of small tubules are present in adipose or fibrous tissue, resembling tubular carcinoma but lacking stromal fibroblastic proliferation
+    """
     MicroglandularAdenosis = DICOMControlledTerminologyDefinitionsCode("111284")
+    """
+    Papilloma typically involving an aggregate of adjacent ducts in the periphery of the breast, likely representing involvement of several foci of one or two duct systems
+    """
     MultipleIntraductalPapillomas = DICOMControlledTerminologyDefinitionsCode("111285")
+    """
+    No abnormality
+    """
     NoAbnormality = DICOMControlledTerminologyDefinitionsCode("111286")
+    """
+    Normal breast tissue
+    """
     NormalBreastTissue = DICOMControlledTerminologyDefinitionsCode("111287")
+    """
+    Condition in which there are tumors of various sizes on peripheral nerves. They may be neuromas or fibromas
+    """
     Neurofibromatosis = DICOMControlledTerminologyDefinitionsCode("111288")
+    """
+    A cyst resulting from the loss of the epithelial lining of a sebaceous dermoid or lacteal cyst
+    """
     OilCyst_fatNecrosisCyst_ = DICOMControlledTerminologyDefinitionsCode("111290")
+    """
+    Breast tissue with characteristics of a benign nature, following breast reduction surgery
+    """
     PostReductionMammoplasty = DICOMControlledTerminologyDefinitionsCode("111291")
+    """
+    A benign stromal lesion composed of intermixed stromal and epithelial elements. The lobular and duct structures of the breast parenchyma are separated by an increased amount of stroma, non specific proliferative epithelial changes include hyperplasia of duct and lobular epithelium often with accentuation of myoepithelial cells and aprocine metaplasia with or without cyst formation
+    """
     PseudoangiomatousStromalHyperplasia = DICOMControlledTerminologyDefinitionsCode(
         "111292"
     )
+    """
+    An nonencapsulated stellate lesion consisting of a fibroelastic core and radiating bands of fibrous connective tissue containing lobules manifesting adenosis and ducts with papillary or diffuse intraductal hyperplasia
+    """
     RadialScar = DICOMControlledTerminologyDefinitionsCode("111293")
+    """
+    Prominent interductal fibrosis of the terminal ductules
+    """
     SclerosingAdenosis = DICOMControlledTerminologyDefinitionsCode("111294")
+    """
+    Nodular inflammatory lesions due to the presence of silicone in the breast tissue
+    """
     SiliconeGranuloma = DICOMControlledTerminologyDefinitionsCode("111296")
+    """
+    The morphologic status of the nipple
+    """
     NippleCharacteristic = DICOMControlledTerminologyDefinitionsCode("111297")
+    """
+    Spontaneous excessive proliferation of breast tissue, usually found in younger women
+    """
     VirginalHyperplasia = DICOMControlledTerminologyDefinitionsCode("111298")
+    """
+    Papilloma(s) pertaining the peripheral ducts
+    """
     PeripheralDuctPapillomas = DICOMControlledTerminologyDefinitionsCode("111299")
+    """
+    Axillary node with lymphoid tissue neoplasm
+    """
     AxillaryNodeWithLymphoma = DICOMControlledTerminologyDefinitionsCode("111300")
+    """
+    Metastatic disease to the axillary node
+    """
     AxillaryNodalMetastases = DICOMControlledTerminologyDefinitionsCode("111301")
+    """
+    A malignant neoplasm occurring most often in breast and skin, believed to originate from endothelial cells of blood vessels, microscopically composed of closely packed round or spindle shaped cells, some of which line small spaces resembling vascular clefts
+    """
     Angiosarcoma = DICOMControlledTerminologyDefinitionsCode("111302")
+    """
+    Histological changes to the vascular system related to an invasive process
+    """
     BloodVessel_vascular_Invasion = DICOMControlledTerminologyDefinitionsCode("111303")
+    """
+    Carcinoma of the breast found in patients less than 20 years of age
+    """
     CarcinomaInChildren = DICOMControlledTerminologyDefinitionsCode("111304")
+    """
+    A carcinoma found in supernumerary breasts and aberrant breast tissue
+    """
     CarcinomaInEctopicBreast = DICOMControlledTerminologyDefinitionsCode("111305")
+    """
+    A carcinoma that synthesizes substances, including hormones, not considered to be normal products of the breast
+    """
     CarcinomaWithEndocrineDifferentiation = DICOMControlledTerminologyDefinitionsCode(
         "111306"
     )
+    """
+    A basal cell carcinoma that arises in the nipple of the breast
+    """
     BasalCellCarcinomaOfNipple = DICOMControlledTerminologyDefinitionsCode("111307")
+    """
+    Metaplastic carcinoma is cancer that begins in cells that have changed into another cell type (for example, a squamous cell of the esophagus changing to resemble a cell of the stomach). In some cases, metaplastic changes alone may mean there is an increased chance of cancer developing at the site. Metaplastic carcinoma is a relatively uncommon type of cancer with treatment generally similar to that of invasive ductal carcinoma of no special type.[1] FROM: https://en.wikipedia.org/wiki/Metaplastic_carcinoma
+    """
     CarcinomaWithMetaplasia = DICOMControlledTerminologyDefinitionsCode("111308")
+    """
+    Tissue changes to bones and cartilage
+    """
     CartilaginousAndOsseousChange = DICOMControlledTerminologyDefinitionsCode("111309")
+    """
+    Carcinoma of the breast presenting during pregnancy or lactation
+    """
     CarcinomaInPregnancyAndLactation = DICOMControlledTerminologyDefinitionsCode(
         "111310"
     )
+    """
+    A malignant neoplasm that contains elements of carcinoma and sarcoma, so extensively intermixed as to indicate neoplasia of epithelial and mesenchymal tissue
+    """
     Carcinosarcoma = DICOMControlledTerminologyDefinitionsCode("111311")
+    """
+    Comedocarcinoma of a duct with areas of necrotic tissue
+    """
     IntraductalComedocarcinomaWithNecrosis = DICOMControlledTerminologyDefinitionsCode(
         "111312"
     )
+    """
+    A non-invasive carcinoma restricted to the glandular lumen characterized by less aggressive malignant cytologic features and behavior
+    """
     IntraductalCarcinoma_LowGrade = DICOMControlledTerminologyDefinitionsCode("111313")
+    """
+    Papillary and micropapillary Ductal Carcinoma In Situ (DCIS): the cancer cells arrange themselves in a fern-like pattern within the affected breast ducts; micropapillary DCIS cells are smaller than papillary DCIS cells. FROM: http://www.imaginis.com/breast-cancer-diagnosis/ductal-carcinoma-in-situ-dcis-3
+    """
     IntraductalCarcinomaMicro_papillary = DICOMControlledTerminologyDefinitionsCode(
         "111314"
     )
+    """
+    A malignant neoplasm characterized by the formation of numerous, irregular, finger-like projections of fibrous stroma that is covered with a surface layer of neoplastic epithelial cells found in a cyst
+    """
     IntracysticPapillaryCarcinoma = DICOMControlledTerminologyDefinitionsCode("111315")
+    """
+    Carcinoma with both characteristics of localized and spreading disease
+    """
     InvasiveAndIn_situCarcinoma = DICOMControlledTerminologyDefinitionsCode("111316")
+    """
+    Invasive lobular carcinoma is a type of breast cancer that begins in the milk-producing glands (lobules) of the breast. Invasive cancer means the cancer cells have broken out of the lobule where they began and have the potential to spread to the lymph nodes and other areas of the body. Invasive lobular carcinoma typically doesn't form a lump, which is common in breast cancer. Instead, there is a change in the breast that feels like a thickening or fullness in one part of the breast and is different from the surrounding breast tissue. FROM: http://www.mayoclinic.org/diseases-conditions/invasive-lobular-carcinoma/basics/definition/con-20033968
+    """
     InvasiveLobularCarcinoma = DICOMControlledTerminologyDefinitionsCode("111317")
+    """
+    Mammary infiltrates as a secondary manifestation in patients with established leukemia
+    """
     LeukemicInfiltration = DICOMControlledTerminologyDefinitionsCode("111318")
+    """
+    Histological changes to the lymphatic system related to an invasive process
+    """
     LympathicVesselInvasion = DICOMControlledTerminologyDefinitionsCode("111320")
+    """
+    A heterogeneous group of neoplasms arising in the reticuloendoethelial and lymphatic systems
+    """
     Lymphoma = DICOMControlledTerminologyDefinitionsCode("111321")
+    """
+    A small carcinoma, either asymptomatic or giving rise to metastases without symptoms due to the primary carcinoma presenting with metastatic disease in the axillary lymph nodes
+    """
     OccultCarcinomaPresentingWithAxillaryLymphNodeMetastases = (
         DICOMControlledTerminologyDefinitionsCode("111322")
     )
+    """
+    A malignant lesion in the breast with morphologic patterns not typical of breast carcinoma arising from a non-mammary malignant neoplasm
+    """
     MetastaticCancerToTheBreast = DICOMControlledTerminologyDefinitionsCode("111323")
+    """
+    A malignant lesion in the breast with morphologic patterns not typical of breast carcinoma arising from a neoplasm in the colon
+    """
     MetastaticCancerToTheBreastFromTheColon = DICOMControlledTerminologyDefinitionsCode(
         "111324"
     )
+    """
+    A malignant lesion in the breast with morphologic patterns not typical of breast carcinoma arising from a neoplasm in the lung
+    """
     MetastaticCancerToTheBreastFromTheLung = DICOMControlledTerminologyDefinitionsCode(
         "111325"
     )
+    """
+    A malignant lesion in the breast with morphologic patterns not typical of breast carcinoma arising from a melanoma
+    """
     MetastaticMelanomaToTheBreast = DICOMControlledTerminologyDefinitionsCode("111326")
+    """
+    A malignant lesion in the breast with morphologic patterns not typical of breast carcinoma arising from a neoplasm in the ovary
+    """
     MetastaticCancerToTheBreastFromTheOvary = DICOMControlledTerminologyDefinitionsCode(
         "111327"
     )
+    """
+    A malignant lesion in the breast with morphologic patterns not typical of breast carcinoma arising from a sarcoma
+    """
     MetastaticSarcomaToTheBreast = DICOMControlledTerminologyDefinitionsCode("111328")
+    """
+    Multiple foci of non-invasive carcinoma restricted to the glandular lumen
+    """
     MultifocalIntraductalCarcinoma = DICOMControlledTerminologyDefinitionsCode("111329")
+    """
+    A malignant lesion in an axillary node arising from a non-axillary neoplasm
+    """
     MetastaticDiseaseToAxillaryNode = DICOMControlledTerminologyDefinitionsCode(
         "111330"
     )
+    """
+    Pleomorphic undifferentiated sarcoma (abbreviated PUS), also undifferentiated pleomorphic sarcoma and previously malignant fibrous histiocytoma (abbreviated MFH), is a type of soft tissue sarcoma. FROM: https://en.wikipedia.org/wiki/Pleomorphic_undifferentiated_sarcoma
+    """
     MalignantFibrousHistiocytoma = DICOMControlledTerminologyDefinitionsCode("111331")
+    """
+    Multiple sites of ductal carcinoma
+    """
     MultifocalInvasiveDuctalCarcinoma = DICOMControlledTerminologyDefinitionsCode(
         "111332"
     )
+    """
+    A malignant lesion in a intramammary lymph node arising from a non-intramammary lymph node neoplasm
+    """
     MetastasisToAnIntramammaryLymphNode = DICOMControlledTerminologyDefinitionsCode(
         "111333"
     )
+    """
+    A malignant melanoma of the skin that arises in the nipple of the breast
+    """
     MalignantMelanomaOfNipple = DICOMControlledTerminologyDefinitionsCode("111334")
+    """
+    None
+    """
     NeoplasmOfTheMammarySkin = DICOMControlledTerminologyDefinitionsCode("111335")
+    """
+    Papillary and micropapillary Ductal Carcinoma In Situ (DCIS): the cancer cells arrange themselves in a fern-like pattern within the affected breast ducts; micropapillary DCIS cells are smaller than papillary DCIS cells. FROM: http://www.imaginis.com/breast-cancer-diagnosis/ductal-carcinoma-in-situ-dcis-3
+    """
     PapillaryCarcinomaIn_situ = DICOMControlledTerminologyDefinitionsCode("111336")
+    """
+    Recurrent malignancy
+    """
     RecurrentMalignancy = DICOMControlledTerminologyDefinitionsCode("111338")
+    """
+    Squamous cell carcinoma to the terminal portion of the alveolar
+    """
     SquamousCellCarcinomaOfTheNipple = DICOMControlledTerminologyDefinitionsCode(
         "111340"
     )
+    """
+    A non-invasive carcinoma restricted to the glandular lumen characterized by more aggressive malignant cytologic features and behavior
+    """
     IntraductalCarcinoma_HighGrade = DICOMControlledTerminologyDefinitionsCode("111341")
+    """
+    Invasive tumor with cribriform pattern similar to cribriform DCIS. Low grade, cribriform appearance (well defined spaces formed by arches of cells) similar to cribriform DCIS but with larger cells, more cytoplasm and more vesicular nuclei: Tumor cells are small, often have apical snouts, mild/moderate nuclear pleomorphism; Also stromal invasion by islands of cells, often angulated; May have predominantly solid appearance; Associated with cribriform DCIS; Often mixed with tubular carcinoma. FROM: http://www.pathologyoutlines.com/topic/breastmalignantcribriform.html
+    """
     InvasiveCribriformCarcinoma = DICOMControlledTerminologyDefinitionsCode("111342")
+    """
+    An indication that some or all of the margin of a lesion has sharp corners, often forming acute angles
+    """
     AngularMargins = DICOMControlledTerminologyDefinitionsCode("111343")
+    """
+    Calcifications that vary in sizes and shapes and are usually smaller than0.5 mm in diameter
+    """
     FinePleomorphicCalcification = DICOMControlledTerminologyDefinitionsCode("111344")
+    """
+    Coarse calcifications that are 0.5 mm or greater in size
+    """
     Macrocalcifications = DICOMControlledTerminologyDefinitionsCode("111345")
+    """
+    An indicator that calcifications are imbedded within a mass
+    """
     CalcificationsWithinAMass = DICOMControlledTerminologyDefinitionsCode("111346")
+    """
+    An indicator that calcifications are imaged outside of a mass finding
+    """
     CalcificationsOutsideOfAMass = DICOMControlledTerminologyDefinitionsCode("111347")
+    """
+    Tissue composition of the breast noted on sonography
+    """
     BreastBackgroundEchotexture = DICOMControlledTerminologyDefinitionsCode("111350")
+    """
+    Fat lobules and uniformly echogenic bands of supporting structures comprise the bulk of breast tissue
+    """
     HomogeneousFatEchotexture = DICOMControlledTerminologyDefinitionsCode("111351")
+    """
+    A uniformly echogenic layer of fibroglandular tissue is seen beneath a thin layer of subcutaneous fat
+    """
     HomogeneousFibroglandularEchotexture = DICOMControlledTerminologyDefinitionsCode(
         "111352"
     )
+    """
+    The breast texture is characterized by multiple small areas of increased and decreased echogenicity
+    """
     HeterogeneousEchotexture = DICOMControlledTerminologyDefinitionsCode("111353")
+    """
+    Referential relationship of the finding to the imaging device as noted on sonography
+    """
     Orientation = DICOMControlledTerminologyDefinitionsCode("111354")
+    """
+    The long axis of a lesion parallels the skin line ("wider-than-tall" or in a horizontal orientation)
+    """
     Parallel = DICOMControlledTerminologyDefinitionsCode("111355")
+    """
+    The anterior-posterior or vertical dimension is greater than the transverse or horizontal dimension
+    """
     NotParallel = DICOMControlledTerminologyDefinitionsCode("111356")
+    """
+    The lesion boundary describes the transition zone between themas and the surrounding tissue
+    """
     LesionBoundary = DICOMControlledTerminologyDefinitionsCode("111357")
+    """
+    The sharp demarcation between the lesion and surrounding tissue can be imperceptible or a distinct well-defined echogenic rim of any thickness
+    """
     AbruptInterface = DICOMControlledTerminologyDefinitionsCode("111358")
+    """
+    There is no sharp demarcation between the mass and the surrounding tissue, which is bridged by an echogenic transition zone
+    """
     EchogenicHalo = DICOMControlledTerminologyDefinitionsCode("111359")
+    """
+    An imaging characteristic of resonance noted during sonography
+    """
     EchoPattern = DICOMControlledTerminologyDefinitionsCode("111360")
+    """
+    Without internal echoes
+    """
     Anechoic = DICOMControlledTerminologyDefinitionsCode("111361")
+    """
+    Having increased echogenicity relative to fat or equal to fibroglandular tissue
+    """
     Hyperechoic = DICOMControlledTerminologyDefinitionsCode("111362")
+    """
+    Mass contains both anechoic and echogenic components
+    """
     Complex = DICOMControlledTerminologyDefinitionsCode("111363")
+    """
+    Defined relative to fat; masses are characterized by low-level echoes throughout; e.g. appearance of a complicated cyst or fibroadenoma
+    """
     Hypoechoic = DICOMControlledTerminologyDefinitionsCode("111364")
+    """
+    Having the same echogenicity as fat (a complicated cyst or fibroadenoma may be isoechoic or hypoechoic)
+    """
     Isoechoic = DICOMControlledTerminologyDefinitionsCode("111365")
+    """
+    The attenuation characteristics of a mass with respect to its acoustic transmission
+    """
     PosteriorAcousticFeatures = DICOMControlledTerminologyDefinitionsCode("111366")
+    """
+    No posterior shadowing or enhancement
+    """
     NoPosteriorAcousticFeatures = DICOMControlledTerminologyDefinitionsCode("111367")
+    """
+    Increased posterior echoes
+    """
     PosteriorEnhancement = DICOMControlledTerminologyDefinitionsCode("111368")
+    """
+    Decreased posterior echoes; edge shadows are excluded
+    """
     PosteriorShadowing = DICOMControlledTerminologyDefinitionsCode("111369")
+    """
+    More than one pattern of posterior attenuation, both shadowing and enhancement
+    """
     CombinedPosteriorEnhancementAndShadowing = (
         DICOMControlledTerminologyDefinitionsCode("111370")
     )
+    """
+    Sonographic appearance of adjacent structures relative to a mass finding
+    """
     IdentifiableEffectOnSurroundingTissues = DICOMControlledTerminologyDefinitionsCode(
         "111371"
     )
+    """
+    Characterization of vascularization in region of interest
+    """
     Vascularity = DICOMControlledTerminologyDefinitionsCode("111372")
+    """
+    Vascularity not evident, such as on ultrasound
+    """
     VascularityNotPresent = DICOMControlledTerminologyDefinitionsCode("111373")
+    """
+    Vascularity not evaluated
+    """
     VascularityNotAssessed = DICOMControlledTerminologyDefinitionsCode("111374")
+    """
+    Vascularity on imaging is seen within a lesion
+    """
     VascularityPresentInLesion = DICOMControlledTerminologyDefinitionsCode("111375")
+    """
+    Vascularity on imaging is seen immediately adjacent to a lesion
+    """
     VascularityPresentImmediatelyAdjacentToLesion = (
         DICOMControlledTerminologyDefinitionsCode("111376")
     )
+    """
+    Vascularity on imaging is considered diffusely elevated within the surrounding breast tissue
+    """
     DiffuselyIncreasedVascularityInSurroundingTissue = (
         DICOMControlledTerminologyDefinitionsCode("111377")
     )
+    """
+    Relationship of the new anomaly to other clinical or imaging anomalies
+    """
     CorrelationToOtherFindings = DICOMControlledTerminologyDefinitionsCode("111380")
+    """
+    An indication that the current imaging finding relates to a finding from a clinical breast exam
+    """
     CorrelatesToPhysicalExamFindings = DICOMControlledTerminologyDefinitionsCode(
         "111381"
     )
+    """
+    An indication that the current imaging finding relates to a finding from a mammography exam
+    """
     CorrelatesToMammographyFindings = DICOMControlledTerminologyDefinitionsCode(
         "111382"
     )
+    """
+    An indication that the current imaging finding relates to a finding from a breast MRI exam
+    """
     CorrelatesToMRIFindings = DICOMControlledTerminologyDefinitionsCode("111383")
+    """
+    An indication that the current imaging finding relates to a finding from a breast ultrasound exam
+    """
     CorrelatesToUltrasoundFindings = DICOMControlledTerminologyDefinitionsCode("111384")
+    """
+    An indication that the current imaging finding relates to a finding from an imaging exam
+    """
     CorrelatesToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode(
         "111385"
     )
+    """
+    An indication that the current imaging finding has no relation to findings from any other imaging exam
+    """
     NoCorrelationToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode(
         "111386"
     )
+    """
+    An indication that the current imaging finding has no relation to any other clinical findings
+    """
     NoCorrelationToClinicalFindings = DICOMControlledTerminologyDefinitionsCode(
         "111387"
     )
+    """
+    Classification of the cancer as invasive, DCIS, or other
+    """
     MalignancyType = DICOMControlledTerminologyDefinitionsCode("111388")
+    """
+    A malignancy that has spread beyond an area of focus
+    """
     InvasiveBreastCarcinoma = DICOMControlledTerminologyDefinitionsCode("111389")
+    """
+    A breast cancer with malignant pathology findings that are not classified as invasive or in situ
+    """
     OtherMalignancyType = DICOMControlledTerminologyDefinitionsCode("111390")
+    """
+    A specific timeframe during menses
+    """
     MenstrualCyclePhase = DICOMControlledTerminologyDefinitionsCode("111391")
+    """
+    In the first week of the menstrual cycle phase, that is, one week following menses
+    """
     _1stWeek = DICOMControlledTerminologyDefinitionsCode("111392")
+    """
+    In the second week of the menstrual cycle phase, that is, two weeks following menses
+    """
     _2ndWeek = DICOMControlledTerminologyDefinitionsCode("111393")
+    """
+    In the third week of the menstrual cycle phase, that is, three weeks following menses
+    """
     _3rdWeek = DICOMControlledTerminologyDefinitionsCode("111394")
+    """
+    An estimated period of time
+    """
     EstimatedTimeframe = DICOMControlledTerminologyDefinitionsCode("111395")
+    """
+    An event occurred less than 3 months ago
+    """
     _3MonthsAgo = DICOMControlledTerminologyDefinitionsCode("111396")
+    """
+    An event occurred between 4 months and 1 year ago
+    """
     _4MonthsTo1YearAgo = DICOMControlledTerminologyDefinitionsCode("111397")
+    """
+    An event occurred longer than 1 year ago
+    """
     _1YearAgo = DICOMControlledTerminologyDefinitionsCode("111398")
+    """
+    The timing of an event is not recalled
+    """
     TimeframeUncertain = DICOMControlledTerminologyDefinitionsCode("111399")
+    """
+    Report title for the diagnostic report for one or more breast imaging or intervention procedures
+    """
     BreastImagingReport = DICOMControlledTerminologyDefinitionsCode("111400")
+    """
+    Concept name for the description of why a procedure has been performed
+    """
     ReasonForProcedure = DICOMControlledTerminologyDefinitionsCode("111401")
+    """
+    A finding during clinical examination (i.e., history and physical examination) such as pain, palpable mass or discharge
+    """
     ClinicalFinding = DICOMControlledTerminologyDefinitionsCode("111402")
+    """
+    First screening mammogram taken for patient that is used as a comparison baseline for further examinations
+    """
     BaselineScreeningMammogram = DICOMControlledTerminologyDefinitionsCode("111403")
+    """
+    First mammogram taken for a patient without regard to whether it was for screening or a diagnostic procedure
+    """
     FirstMammogramEver = DICOMControlledTerminologyDefinitionsCode("111404")
+    """
+    Concept name for the material of which a breast prosthetic device is constructed
+    """
     ImplantType = DICOMControlledTerminologyDefinitionsCode("111405")
+    """
+    A numeric count of findings classified as similar in nature
+    """
     NumberOfSimilarFindings = DICOMControlledTerminologyDefinitionsCode("111406")
+    """
+    Concept name for the status of a breast prosthetic device as noted by imaging
+    """
     ImplantFinding = DICOMControlledTerminologyDefinitionsCode("111407")
+    """
+    Mammogram using traditional X-Ray film
+    """
     FilmScreenMammography = DICOMControlledTerminologyDefinitionsCode("111408")
+    """
+    Mammogram using a digital image acquisition system
+    """
     DigitalMammography = DICOMControlledTerminologyDefinitionsCode("111409")
+    """
+    Referred for evaluation by a surgeon
+    """
     SurgicalConsult = DICOMControlledTerminologyDefinitionsCode("111410")
+    """
+    Computer aided detection and/or computer aided diagnosis for mammography
+    """
     MammographyCAD = DICOMControlledTerminologyDefinitionsCode("111411")
+    """
+    Concept name for a text-based section of a report
+    """
     NarrativeSummary = DICOMControlledTerminologyDefinitionsCode("111412")
+    """
+    A title for a report section that summarizes all interpretation results for a report with one overriding assessment; e.g. benign or negative
+    """
     OverallAssessment = DICOMControlledTerminologyDefinitionsCode("111413")
+    """
+    Concept name for a collection of supporting evidence for a report
+    """
     SupplementaryData = DICOMControlledTerminologyDefinitionsCode("111414")
+    """
+    Prior study indicates that additional imaging be performed to further evaluate a suspicious or questionable anatomic region
+    """
     AdditionalEvaluationRequestedFromPriorStudy = (
         DICOMControlledTerminologyDefinitionsCode("111415")
     )
+    """
+    The prior study recommended a follow-up breast imaging exam in 1 to 11 months (generally in 6 months)
+    """
     Follow_upAtShortIntervalFromPriorStudy = DICOMControlledTerminologyDefinitionsCode(
         "111416"
     )
+    """
+    Prior breast augmentation (breast enlargement) and is not presenting with any symptoms
+    """
     HistoryOfBreastAugmentation_Asymptomatic = (
         DICOMControlledTerminologyDefinitionsCode("111417")
     )
+    """
+    Review or second opinion made on an image performed outside of the facility
+    """
     ReviewOfAnOutsideStudy = DICOMControlledTerminologyDefinitionsCode("111418")
+    """
+    Additional breast imaging performed at the time of the patient's screening mammogram
+    """
     AdditionalEvaluationRequestedFromAbnormalScreeningExam = (
         DICOMControlledTerminologyDefinitionsCode("111419")
     )
+    """
+    Patient has had previous benign breast biopsies
+    """
     HistoryOfBenignBreastBiopsy = DICOMControlledTerminologyDefinitionsCode("111420")
+    """
+    Patient has had a prior surgery such as a lumpectomy or quadrantectomy to remove malignant breast tissue, but breast tissue remains
+    """
     PersonalHistoryOfBreastCancerWithBreastConservationTherapy = (
         DICOMControlledTerminologyDefinitionsCode("111421")
     )
+    """
+    The results of a physical examination performed on the patient, possibly including the results of inspection, palpation, auscultation, or percussion
+    """
     PhysicalExaminationResults = DICOMControlledTerminologyDefinitionsCode("111423")
+    """
+    The result of assessing the current imaging exam in comparison to previous imaging exams
+    """
     ComparisonToPreviousFindings = DICOMControlledTerminologyDefinitionsCode("111424")
+    """
+    An abnormality observed during ductography where the ductal system within the breast fills in an abnormal pattern. Ductography is an imaging exam in which a radio opaque contrast media is introduced into the ductal system of the breast through the nipple and images of the ductal system are obtained
+    """
     IntraluminalFillingDefect = DICOMControlledTerminologyDefinitionsCode("111425")
+    """
+    During ductography an observation of more than one filling abnormality within the breast ductal system
+    """
     MultipleFillingDefect = DICOMControlledTerminologyDefinitionsCode("111426")
+    """
+    An abnormality observed during ductography where the ductal system within the breast terminates in an unusual fashion
+    """
     AbruptDuctTermination = DICOMControlledTerminologyDefinitionsCode("111427")
+    """
+    Abnormal flowage of contrast media within the breast noted on ductography
+    """
     Extravasation = DICOMControlledTerminologyDefinitionsCode("111428")
+    """
+    An abnormality observed during ductography where the ductal system within the breast appears narrow
+    """
     DuctNarrowing = DICOMControlledTerminologyDefinitionsCode("111429")
+    """
+    During ductography an observation of the contrast media filling a cyst within the breast
+    """
     CystFill = DICOMControlledTerminologyDefinitionsCode("111430")
+    """
+    The area and line within the anatomy through which a needle or instrument passes during an interventional procedure
+    """
     InstrumentApproach = DICOMControlledTerminologyDefinitionsCode("111431")
+    """
+    The line within the anatomy from the lower outer to the upper inner aspect; e.g. through which a needle or instrument passes in an interventional procedure
+    """
     InferolateralToSuperomedial = DICOMControlledTerminologyDefinitionsCode("111432")
+    """
+    The line within the anatomy from the lower inner to the upper outer aspect; e.g. through which a needle or instrument passes in an interventional procedure
+    """
     InferomedialToSuperolateral = DICOMControlledTerminologyDefinitionsCode("111433")
+    """
+    The line within the anatomy from the upper outer to the lower inner aspect; e.g. through which a needle or instrument passes in an interventional procedure
+    """
     SuperolateralToInferomedial = DICOMControlledTerminologyDefinitionsCode("111434")
+    """
+    The line within the anatomy from the upper inner to the lower outer aspect; e.g. through which a needle or instrument passes in an interventional procedure
+    """
     SuperomedialToInferolateral = DICOMControlledTerminologyDefinitionsCode("111435")
+    """
+    The number of times a biopsy instrument is passed through an area of interest
+    """
     NumberOfPasses = DICOMControlledTerminologyDefinitionsCode("111436")
+    """
+    The number of biopsy specimens obtained from an interventional procedure
+    """
     NumberOfSpecimens = DICOMControlledTerminologyDefinitionsCode("111437")
+    """
+    An indicator of whether or not a biopsy or localizing needle in an interventional procedure is seen to be in the area of interest
+    """
     NeedleInTarget = DICOMControlledTerminologyDefinitionsCode("111438")
+    """
+    The number of localizing needles placed around the area of interest in an interventional procedure
+    """
     NumberOfNeedlesAroundTarget = DICOMControlledTerminologyDefinitionsCode("111439")
+    """
+    An indicator of whether or not an incision was made in the anatomy during an interventional procedure
+    """
     IncisionMade = DICOMControlledTerminologyDefinitionsCode("111440")
+    """
+    An indicator of whether or not a radio opaque microclip was placed in the anatomy during an interventional procedure
+    """
     MicroclipPlaced = DICOMControlledTerminologyDefinitionsCode("111441")
+    """
+    An indicator of the degree of success of an interventional procedure
+    """
     ConfirmationOfTarget = DICOMControlledTerminologyDefinitionsCode("111442")
+    """
+    An indicator that during an interventional procedure the area of interest was fully excised and is noted in the resultant biopsy specimen
+    """
     TargetCompletelyContainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode(
         "111443"
     )
+    """
+    An indicator that during an interventional procedure the area of interest was partially excised and is noted in the resultant biopsy specimen
+    """
     TargetPartiallyObtainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode(
         "111444"
     )
+    """
+    An indicator that following an interventional procedure the area of interest is not seen in the resultant biopsy specimen
+    """
     TargetNotInTheSpecimen = DICOMControlledTerminologyDefinitionsCode("111445")
+    """
+    An indicator that following an interventional procedure the targeted calcifications are noted in the resultant biopsy specimen
+    """
     CalcificationsSeenInTheCore = DICOMControlledTerminologyDefinitionsCode("111446")
+    """
+    An indicator that during an interventional procedure the area of interest was fully excised and is noted in the resultant biopsy specimen
+    """
     LesionCompletelyRemoved = DICOMControlledTerminologyDefinitionsCode("111447")
+    """
+    An indicator that during an interventional procedure the area of interest was partially excised and is noted in the resultant biopsy specimen
+    """
     LesionPartiallyRemoved = DICOMControlledTerminologyDefinitionsCode("111448")
+    """
+    An indicator that during an interventional procedure fluid was successfully aspirated
+    """
     FluidObtained = DICOMControlledTerminologyDefinitionsCode("111449")
+    """
+    Color that is a light shade of brown
+    """
     LightBrownColor = DICOMControlledTerminologyDefinitionsCode("111450")
+    """
+    Color that is a dark shade of red
+    """
     DarkRedColor = DICOMControlledTerminologyDefinitionsCode("111451")
+    """
+    Color that is a dark shade of brown
+    """
     DarkBrownColor = DICOMControlledTerminologyDefinitionsCode("111452")
+    """
+    Color that is a bright shade of red
+    """
     BrightRedColor = DICOMControlledTerminologyDefinitionsCode("111453")
+    """
+    Color that is tinged with the color of blood
+    """
     BloodTingedColor = DICOMControlledTerminologyDefinitionsCode("111454")
+    """
+    An indicator of whether or not the fluid obtained during an interventional procedure contains red blood cells
+    """
     OccultBloodTestResult = DICOMControlledTerminologyDefinitionsCode("111455")
+    """
+    An indicator of whether or not fluid during an interventional procedure was sent for cytological analysis or simply discarded
+    """
     ActionOnFluid = DICOMControlledTerminologyDefinitionsCode("111456")
+    """
+    An indicator that fluid obtained during an interventional procedure was sent to a laboratory for analysis
+    """
     SentForAnalysis = DICOMControlledTerminologyDefinitionsCode("111457")
+    """
+    An indicator that fluid obtained during an interventional procedure was discarded
+    """
     Discarded = DICOMControlledTerminologyDefinitionsCode("111458")
+    """
+    A radiopaque density noted during diagnostic imaging that has associated calcific densities
+    """
     MassWithCalcifications = DICOMControlledTerminologyDefinitionsCode("111459")
+    """
+    A fluid-filled sac with greater than normal characteristics
+    """
     ComplexCyst = DICOMControlledTerminologyDefinitionsCode("111460")
+    """
+    A tumor within a cyst
+    """
     IntracysticLesion = DICOMControlledTerminologyDefinitionsCode("111461")
+    """
+    A tumor or lesion
+    """
     SolidMass = DICOMControlledTerminologyDefinitionsCode("111462")
+    """
+    Supporting evidence for interpretation results of an interventional procedure
+    """
     SupplementaryDataForIntervention = DICOMControlledTerminologyDefinitionsCode(
         "111463"
     )
+    """
+    A descriptor that further qualifies or characterizes a type of procedure
+    """
     ProcedureModifier = DICOMControlledTerminologyDefinitionsCode("111464")
+    """
+    Needle size (diameter) characterization; e.g. of a biopsy needle
+    """
     NeedleGauge = DICOMControlledTerminologyDefinitionsCode("111465")
+    """
+    An indicator of the gravity of a problem experienced by a patient, related to a procedure that was performed
+    """
     SeverityOfComplication = DICOMControlledTerminologyDefinitionsCode("111466")
+    """
+    Distance from the hub or bushing to the tip of the needle
+    """
     NeedleLength = DICOMControlledTerminologyDefinitionsCode("111467")
+    """
+    The collection of observations and findings from pathologic analysis
+    """
     PathologyResults = DICOMControlledTerminologyDefinitionsCode("111468")
+    """
+    The date and time that the sample was collected from the patient
+    """
     SamplingDateTime = DICOMControlledTerminologyDefinitionsCode("111469")
+    """
+    Indicates that the margin of the biopsy specimen was not involved with the tumor
+    """
     Uninvolved = DICOMControlledTerminologyDefinitionsCode("111470")
+    """
+    Indicates that the margin of the biopsy specimen was involved with the tumor
+    """
     Involved = DICOMControlledTerminologyDefinitionsCode("111471")
+    """
+    Indicates whether the nipple was involved in an interventional procedure or pathologic analysis
+    """
     NippleInvolved = DICOMControlledTerminologyDefinitionsCode("111472")
+    """
+    Indicates the number of lymph nodes removed
+    """
     NumberOfNodesRemoved = DICOMControlledTerminologyDefinitionsCode("111473")
+    """
+    Indicates the number of lymph nodes removed that contain cancer cells
+    """
     NumberOfNodesPositive = DICOMControlledTerminologyDefinitionsCode("111474")
+    """
+    The result of a test for the presence of a protein that binds with estrogen
+    """
     EstrogenReceptor = DICOMControlledTerminologyDefinitionsCode("111475")
+    """
+    The result of a test for the presence of a protein that binds with progesterone
+    """
     ProgesteroneReceptor = DICOMControlledTerminologyDefinitionsCode("111476")
+    """
+    Indicates the percentage of cells in S phase. Cell division is defined by phases; the S phase is the stage during which DNA replicates
+    """
     SPhase = DICOMControlledTerminologyDefinitionsCode("111477")
+    """
+    The visible emission of non-bloody fluid from the nipple
+    """
     Non_bloodyDischarge_fromNipple_ = DICOMControlledTerminologyDefinitionsCode(
         "111478"
     )
+    """
+    The inability to discern normal versus abnormal breast tissue during palpation
+    """
     DifficultPhysical_clinicalExamination = DICOMControlledTerminologyDefinitionsCode(
         "111479"
     )
+    """
+    An indication that a patient has or had a malignant occurrence in an area of the body other than the breast
+    """
     CancerElsewhere = DICOMControlledTerminologyDefinitionsCode("111480")
+    """
+    A salt water filled prosthetic device implanted in the breast
+    """
     SalineImplant = DICOMControlledTerminologyDefinitionsCode("111481")
+    """
+    A polymer based (plastic) prosthetic device implanted in the breast
+    """
     PolyurethaneImplant = DICOMControlledTerminologyDefinitionsCode("111482")
+    """
+    The introduction of polymeric organic silicon based material through the skin, as for breast augmentation or reconstruction
+    """
     PercutaneousSiliconeInjection = DICOMControlledTerminologyDefinitionsCode("111483")
+    """
+    A prosthetic device that contains more than one material implanted in the breast
+    """
     CombinationImplant = DICOMControlledTerminologyDefinitionsCode("111484")
+    """
+    A breast implant placed in front of the pectoralis major muscle
+    """
     Pre_pectoralImplant = DICOMControlledTerminologyDefinitionsCode("111485")
+    """
+    A breast implant placed behind the pectoralis major muscle
+    """
     Retro_pectoralImplant = DICOMControlledTerminologyDefinitionsCode("111486")
+    """
+    Using X-Ray technique and a superimposed set of crossed lines for detection or placement
+    """
     Mammographic_crosshair_ = DICOMControlledTerminologyDefinitionsCode("111487")
+    """
+    Using X-Ray technique and a superimposed aperture for detection or placement
+    """
     Mammographic_grid_ = DICOMControlledTerminologyDefinitionsCode("111488")
+    """
+    Using physical touch for detection or placement
+    """
     PalpationGuided = DICOMControlledTerminologyDefinitionsCode("111489")
+    """
+    The performance of a biopsy procedure using a vacuum device attached to the biopsy needle
+    """
     VacuumAssisted = DICOMControlledTerminologyDefinitionsCode("111490")
+    """
+    Unusual or unexpected emission of fluid
+    """
     AbnormalDischarge = DICOMControlledTerminologyDefinitionsCode("111491")
+    """
+    Having experienced no adverse medical conditions related to or resulting from an interventional procedure
+    """
     NoComplications = DICOMControlledTerminologyDefinitionsCode("111492")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is Tis, regional lymph node is N0, and distant metastasis is M0
+    """
     Stage0 = DICOMControlledTerminologyDefinitionsCode("111494")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is T1, regional lymph node is N0, and distant metastasis is M0
+    """
     StageI = DICOMControlledTerminologyDefinitionsCode("111495")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is T0 or T1, with regional lymph node N1 and distant metastasis is M0, or T2 with N0 and M0
+    """
     StageIIA = DICOMControlledTerminologyDefinitionsCode("111496")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is T2, with regional lymph node N1 and distant metastasis is M0, or T3 with N0 and M0
+    """
     StageIIB = DICOMControlledTerminologyDefinitionsCode("111497")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is T0, T1 or T2, with regional lymph node N2 and distant metastasis is M0, or T3 with N1 or N2 and M0
+    """
     StageIIIA = DICOMControlledTerminologyDefinitionsCode("111498")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is T4, regional lymph node is N0, N1 or N2, and distant metastasis is M0
+    """
     StageIIIB = DICOMControlledTerminologyDefinitionsCode("111499")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is any T value, regional lymph node is N3, and distant metastasis is M0
+    """
     StageIIIC = DICOMControlledTerminologyDefinitionsCode("111500")
+    """
+    TNM grouping of tumor stage, from AJCC, where primary tumor is any T value, regional lymph node is any N value, and distant metastasis is M1
+    """
     StageIV = DICOMControlledTerminologyDefinitionsCode("111501")
+    """
+    Histologic tumor grade (sometimes called Scarff-Bloom-Richardson grade) is based on the arrangement of the cells in relation to each other -- whether they form tubules, how closely they resemble normal breast cells (nuclear grade) and how many of the cancer cells are in the process of dividing (mitotic count)
+    """
     Bloom_RichardsonGrade = DICOMControlledTerminologyDefinitionsCode("111502")
+    """
+    Breast prosthetic devices are intact, not leaking, and are in a normal shape and form
+    """
     NormalImplants = DICOMControlledTerminologyDefinitionsCode("111503")
+    """
+    Breast prosthetic devices are not symmetric, equal, corresponding in form, or are in one breast (unilateral)
+    """
     AsymmetricImplants = DICOMControlledTerminologyDefinitionsCode("111504")
+    """
+    Fibrous or calcific contracture of the tissue capsule that forms around a breast prosthetic device
+    """
     CalcifiedImplant = DICOMControlledTerminologyDefinitionsCode("111505")
+    """
+    Breast prosthetic device is twisted out of normal shape or form
+    """
     DistortedImplant = DICOMControlledTerminologyDefinitionsCode("111506")
+    """
+    Silicone from breast prosthetic device found in lymphatic tissue
+    """
     Silicone_ladenLymphNodes = DICOMControlledTerminologyDefinitionsCode("111507")
+    """
+    Silicone found in breast tissue outside of the prosthetic capsule or implant membrane
+    """
     FreeSilicone = DICOMControlledTerminologyDefinitionsCode("111508")
+    """
+    Protrusion of part of the structure normally encapsulating the content of the breast prosthetic device
+    """
     HerniatedImplant = DICOMControlledTerminologyDefinitionsCode("111509")
+    """
+    Evidence of removal of a breast prosthetic device
+    """
     Explantation = DICOMControlledTerminologyDefinitionsCode("111510")
+    """
+    Historical patient health information of interest to the breast health clinician
+    """
     RelevantPatientInformationForBreastImaging = (
         DICOMControlledTerminologyDefinitionsCode("111511")
     )
+    """
+    Information regarding usage by the patient of certain medications, such as hormones
+    """
     MedicationHistory = DICOMControlledTerminologyDefinitionsCode("111512")
+    """
+    Interventional or non-interventional procedures previously performed on the patient, such as breast biopsies
+    """
     RelevantPreviousProcedures = DICOMControlledTerminologyDefinitionsCode("111513")
+    """
+    Abnormal conditions experienced by the patient that serve as the reason for performing a procedure, such as a breast exam
+    """
     RelevantIndicatedProblems = DICOMControlledTerminologyDefinitionsCode("111514")
+    """
+    Personal, familial, and other health factors that may indicate an increase in the patient's chances of developing a health condition or disease, such as breast cancer
+    """
     RelevantRiskFactors = DICOMControlledTerminologyDefinitionsCode("111515")
+    """
+    A classification of a medicinal substance, such as hormonal contraceptive or antibiotic
+    """
     MedicationType = DICOMControlledTerminologyDefinitionsCode("111516")
+    """
+    Historical patient health information for general purpose use
+    """
     RelevantPatientInformation = DICOMControlledTerminologyDefinitionsCode("111517")
+    """
+    The age of the patient at the first occurrence of menses
+    """
     AgeWhenFirstMenstrualPeriodOccurred = DICOMControlledTerminologyDefinitionsCode(
         "111518"
     )
+    """
+    The age of the patient at the time of her first full term pregnancy
+    """
     AgeAtFirstFullTermPregnancy = DICOMControlledTerminologyDefinitionsCode("111519")
+    """
+    The age of the patient at the cessation of menses
+    """
     AgeAtMenopause = DICOMControlledTerminologyDefinitionsCode("111520")
+    """
+    The age of the patient at the time her uterus was removed
+    """
     AgeWhenHysterectomyPerformed = DICOMControlledTerminologyDefinitionsCode("111521")
+    """
+    The age of the patient at the time she had her left ovary removed
+    """
     AgeWhenLeftOvaryRemoved = DICOMControlledTerminologyDefinitionsCode("111522")
+    """
+    The age of the patient at the time she had her right ovary removed
+    """
     AgeWhenRightOvaryRemoved = DICOMControlledTerminologyDefinitionsCode("111523")
+    """
+    The age of a patient on the first occurrence of an event, such as the first use of a medication
+    """
     AgeStarted = DICOMControlledTerminologyDefinitionsCode("111524")
+    """
+    The age of a patient on the last occurrence of an event, such as the last use of a medication
+    """
     AgeEnded = DICOMControlledTerminologyDefinitionsCode("111525")
+    """
+    The date and time of the first occurrence of an event, such as the first use of a medication
+    """
     DateTimeStarted = DICOMControlledTerminologyDefinitionsCode("111526")
+    """
+    The date and time of the last occurrence of an event, such as the last use of a medication
+    """
     DateTimeEnded = DICOMControlledTerminologyDefinitionsCode("111527")
+    """
+    An indicator of whether an event is still in progress, such as the use of a medication or substance, or environmental exposure
+    """
     Ongoing = DICOMControlledTerminologyDefinitionsCode("111528")
+    """
+    Product name of a device or substance, such as medication, to identify it as the product of a single firm or manufacturer
+    """
     BrandName = DICOMControlledTerminologyDefinitionsCode("111529")
+    """
+    A descriptor that further qualifies or characterizes a risk factor
+    """
     RiskFactorModifier = DICOMControlledTerminologyDefinitionsCode("111530")
+    """
+    A prior non-interventional exam or interventional procedure performed on a patient
+    """
     PreviousProcedure = DICOMControlledTerminologyDefinitionsCode("111531")
+    """
+    Describes the pregnancy state of a referenced subject
+    """
     PregnancyStatus = DICOMControlledTerminologyDefinitionsCode("111532")
+    """
+    A symptom experienced by a patient that is used as the reason for performing an exam or procedure
+    """
     IndicatedProblem = DICOMControlledTerminologyDefinitionsCode("111533")
+    """
+    The function of the individual who is reporting information on a patient, which could be a specific health care related profession, the patient him/herself, or a relative or friend
+    """
     RoleOfPersonReporting = DICOMControlledTerminologyDefinitionsCode("111534")
+    """
+    The date and time that a symptom was noted
+    """
     DateTimeProblemObserved = DICOMControlledTerminologyDefinitionsCode("111535")
+    """
+    The date and time of the most recent evaluation of an indicated problem
+    """
     DateTimeOfLastEvaluation = DICOMControlledTerminologyDefinitionsCode("111536")
+    """
+    A patient's biological relative who exhibits a health factor that may indicate an increase in the patient's chances of developing a particular disease or medical problem
+    """
     FamilyMemberWithRiskFactor = DICOMControlledTerminologyDefinitionsCode("111537")
+    """
+    The age at which an individual experienced a specific event, such as breast cancer
+    """
     AgeAtOccurrence = DICOMControlledTerminologyDefinitionsCode("111538")
+    """
+    The current stage of an individual in her gynecological development
+    """
     MenopausalPhase = DICOMControlledTerminologyDefinitionsCode("111539")
+    """
+    An indicator of paternal or maternal relationship
+    """
     SideOfFamily = DICOMControlledTerminologyDefinitionsCode("111540")
+    """
+    Relating to biological female parentage
+    """
     Maternal = DICOMControlledTerminologyDefinitionsCode("111541")
+    """
+    A gynecological hormone for which the specific type is not specified; e.g. contraceptive, estrogen, Tamoxifen
+    """
     UnspecifiedGynecologicalHormone = DICOMControlledTerminologyDefinitionsCode(
         "111542"
     )
+    """
+    An indicator of whether or not a patient ever provided breast milk to her offspring
+    """
     BreastFeedingHistory = DICOMControlledTerminologyDefinitionsCode("111543")
+    """
+    The average length of time that a patient provided breast milk to her offspring
+    """
     AverageBreastFeedingPeriod = DICOMControlledTerminologyDefinitionsCode("111544")
+    """
+    Information regarding usage by the patient of certain legal or illicit substances
+    """
     SubstanceUseHistory = DICOMControlledTerminologyDefinitionsCode("111545")
+    """
+    A classification of a substance, such as alcohol or a legal or illicit drug
+    """
     UsedSubstanceType = DICOMControlledTerminologyDefinitionsCode("111546")
+    """
+    Information regarding exposure of the patient to potentially harmful environmental factors
+    """
     EnvironmentalExposureHistory = DICOMControlledTerminologyDefinitionsCode("111547")
+    """
+    A classification of a potentially harmful substance or gas in a subject's environment, such as asbestos, lead, or carcinogens
+    """
     EnvironmentalFactor = DICOMControlledTerminologyDefinitionsCode("111548")
+    """
+    Previous Structured Reports that could have relevant information for a current imaging service request
+    """
     PreviousReports = DICOMControlledTerminologyDefinitionsCode("111549")
+    """
+    An indication that a patient has had a previous malignancy of the breast
+    """
     PersonalBreastCancerHistory = DICOMControlledTerminologyDefinitionsCode("111550")
+    """
+    Indicates a previous occurrence of cancer of the lining of the uterus
+    """
     HistoryOfEndometrialCancer = DICOMControlledTerminologyDefinitionsCode("111551")
+    """
+    Indicates a previous occurrence of cancer of the lining of the ovary
+    """
     HistoryOfOvarianCancer = DICOMControlledTerminologyDefinitionsCode("111552")
+    """
+    Indicates a prior diagnosis of pre-cancerous cells or tissue removed for pathologic evaluation
+    """
     HistoryOfHighRiskLesionOnPreviousBiopsy = DICOMControlledTerminologyDefinitionsCode(
         "111553"
     )
+    """
+    A female patient whose menstrual periods have ceased
+    """
     PostMenopausalPatient = DICOMControlledTerminologyDefinitionsCode("111554")
+    """
+    A female patient whose first child was born after the patient was 30 years old
+    """
     LateChildBearing_after30_ = DICOMControlledTerminologyDefinitionsCode("111555")
+    """
+    The first level genetic marker indicating risk for breast cancer
+    """
     BRCA1BreastCancerGene = DICOMControlledTerminologyDefinitionsCode("111556")
+    """
+    The second level genetic marker indicating risk for breast cancer
+    """
     BRCA2BreastCancerGene = DICOMControlledTerminologyDefinitionsCode("111557")
+    """
+    The third level genetic marker indicating risk for breast cancer
+    """
     BRCA3BreastCancerGene = DICOMControlledTerminologyDefinitionsCode("111558")
+    """
+    A patient's biological aunt, grandmother, or female cousin was diagnosed with breast cancer. Definition from BI-RADS®
+    """
     WeakFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
         "111559"
     )
+    """
+    A patient's biological mother or sister was diagnosed with breast cancer after they had gone through menopause. Definition from BI-RADS®
+    """
     IntermediateFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
         "111560"
     )
+    """
+    A patient's biological mother or sister was diagnosed with breast cancer before they had gone through menopause, or more than one of the patient's first-degree relatives (biological mother or sister) were diagnosed with breast cancer after they had gone through menopause. Definition from BI-RADS®
+    """
     VeryStrongFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
         "111561"
     )
+    """
+    Previous diagnosis of a malignancy of the prostate gland in a biological relative
+    """
     FamilyHistoryOfProstateCancer = DICOMControlledTerminologyDefinitionsCode("111562")
+    """
+    The health record of a patient's biological relatives is not known
+    """
     FamilyHistoryUnknown = DICOMControlledTerminologyDefinitionsCode("111563")
+    """
+    The study of cells obtained from fluid emitted from the breast
+    """
     NippleDischargeCytology = DICOMControlledTerminologyDefinitionsCode("111564")
+    """
+    A developmental abnormality resulting in an abnormal shape of the uterus
+    """
     UterineMalformations = DICOMControlledTerminologyDefinitionsCode("111565")
+    """
+    A naturally occurring premature expulsion from the uterus of the products of conception - the embryo or a nonviable fetus
+    """
     SpontaneousAbortion = DICOMControlledTerminologyDefinitionsCode("111566")
+    """
+    An ailment/abnormality or state of the female reproductive tract
+    """
     GynecologicCondition = DICOMControlledTerminologyDefinitionsCode("111567")
+    """
+    A surgical operation performed on any portion of the female reproductive tract
+    """
     GynecologicSurgery = DICOMControlledTerminologyDefinitionsCode("111568")
+    """
+    Prior pregnancy with a low birth weight baby or a fetus with Intrauterine Growth Restriction or Retardation
+    """
     PreviousLBWOrIUGRBirth = DICOMControlledTerminologyDefinitionsCode("111569")
+    """
+    History of at least one prior pregnancy with fetal anatomic abnormality(s)
+    """
     PreviousFetalMalformation_syndrome = DICOMControlledTerminologyDefinitionsCode(
         "111570"
     )
+    """
+    History of delivering a Rhesis Isoimmunization affected child(ren) or a child(ren) with another blood disorder
+    """
     PreviousRHNegativeOrBloodDyscrasiaAtBirth = (
         DICOMControlledTerminologyDefinitionsCode("111571")
     )
+    """
+    History of at least one pregnancy that contained more than one fetus; e.g. twins, triplets, etc.
+    """
     HistoryOfMultipleFetuses = DICOMControlledTerminologyDefinitionsCode("111572")
+    """
+    At least one fetus of this pregnancy has an anatomic abnormality(s) that is known to exist, or a "marker" is present that suggests the abnormality(s) may be present
+    """
     CurrentPregnancy_KnownOrSuspectedMalformations_syndromes = (
         DICOMControlledTerminologyDefinitionsCode("111573")
     )
+    """
+    Biological relatives have previously conceived a fetus with an anatomic abnormality(s)
+    """
     FamilyHistory_FetalMalformation_syndrome = (
         DICOMControlledTerminologyDefinitionsCode("111574")
     )
+    """
+    A subjective descriptor for an elevated amount of exposure, use, or dosage, incurring high risk of adverse effects
+    """
     High = DICOMControlledTerminologyDefinitionsCode("111575")
+    """
+    A subjective descriptor for a moderate amount of exposure, use, or dosage, incurring medium risk of adverse effects
+    """
     Medium = DICOMControlledTerminologyDefinitionsCode("111576")
+    """
+    A subjective descriptor for a limited amount of exposure, use, or dosage, incurring low risk of adverse effects
+    """
     Low = DICOMControlledTerminologyDefinitionsCode("111577")
+    """
+    A measurement of the rate of occurrence of which a patient takes a certain medication
+    """
     DoseFrequency = DICOMControlledTerminologyDefinitionsCode("111578")
+    """
+    The quantity per unit of time that a patient was or is being exposed to an environmental irritant
+    """
     RateOfExposure = DICOMControlledTerminologyDefinitionsCode("111579")
+    """
+    The quantity per unit of time that a medication or substance was or is being used
+    """
     VolumeOfUse = DICOMControlledTerminologyDefinitionsCode("111580")
+    """
+    A qualitative descriptor for the amount of a medication that was or is being taken
+    """
     RelativeDoseAmount = DICOMControlledTerminologyDefinitionsCode("111581")
+    """
+    A qualitative descriptor for the amount of present or past exposure to an environmental irritant
+    """
     RelativeAmountOfExposure = DICOMControlledTerminologyDefinitionsCode("111582")
+    """
+    A qualitative descriptor for the amount of a medication or substance that was or is being used
+    """
     RelativeAmountOfUse = DICOMControlledTerminologyDefinitionsCode("111583")
+    """
+    A qualitative descriptor for the frequency with which a medication was or is being taken
+    """
     RelativeDoseFrequency = DICOMControlledTerminologyDefinitionsCode("111584")
+    """
+    A qualitative descriptor for the frequency of present or past exposure to an environmental irritant
+    """
     RelativeFrequencyOfExposure = DICOMControlledTerminologyDefinitionsCode("111585")
+    """
+    A qualitative descriptor for the frequency with which a medication or substance was or is being used
+    """
     RelativeFrequencyOfUse = DICOMControlledTerminologyDefinitionsCode("111586")
+    """
+    Patient is not known to have been exposed to or used the substance or medication
+    """
     NoKnownExposure = DICOMControlledTerminologyDefinitionsCode("111587")
+    """
+    Patient returns for additional images to improve the quality of the most recent exam
+    """
     RecallForTechnicalReasons = DICOMControlledTerminologyDefinitionsCode("111590")
+    """
+    Patient returns for additional images to clarify findings from the most recent exam
+    """
     RecallForImagingFindings = DICOMControlledTerminologyDefinitionsCode("111591")
+    """
+    Patient returns for additional images to clarify symptoms or signs reported by the patient or a healthcare professional at the time of the most recent exam
+    """
     RecallForPatientSymptoms_ClinicalFindings = (
         DICOMControlledTerminologyDefinitionsCode("111592")
     )
+    """
+    Number of births with low birth weight or intrauterine growth restriction
+    """
     LBWOrIUGR = DICOMControlledTerminologyDefinitionsCode("111593")
+    """
+    Filter that transmits green light while blocking the other colors, typically centered at 510-540 nm
+    """
     GreenFilter = DICOMControlledTerminologyDefinitionsCode("111601")
+    """
+    Filter that transmits red light while blocking the other colors, typically centered at 630-680 nm
+    """
     RedFilter = DICOMControlledTerminologyDefinitionsCode("111602")
+    """
+    Filter that transmits blue while blocking the other colors, typically centered at 460-480 nm
+    """
     BlueFilter = DICOMControlledTerminologyDefinitionsCode("111603")
+    """
+    A filter of 560nm that is used for retinal imaging and can provide good contrast and good visibility of the retinal vasculature
+    """
     Yellow_greenFilter = DICOMControlledTerminologyDefinitionsCode("111604")
+    """
+    A filter of 490nm that is used for retinal imaging because of excessive scattering of some retinal structures at very short wavelengths
+    """
     Blue_greenFilter = DICOMControlledTerminologyDefinitionsCode("111605")
+    """
+    Filter that transmits the infrared spectrum, which is light that lies outside of the visible spectrum, with wavelengths longer than those of red light, while blocking visible light
+    """
     InfraredFilter = DICOMControlledTerminologyDefinitionsCode("111606")
+    """
+    A filter that reduces reflections from non-metallic surfaces such as glass or water by blocking light waves that are vibrating at selected angles to the filter
+    """
     PolarizingFilter = DICOMControlledTerminologyDefinitionsCode("111607")
+    """
+    No filter used
+    """
     NoFilter = DICOMControlledTerminologyDefinitionsCode("111609")
+    """
+    Joslin NM-1 is a 45 degree field focused centrally between the temporal margin of optic disc and the center of the macula: Center the camera on the papillomacular bundle midway between the temporal margin of the optic disc and the center of the macula. The horizontal centerline of the image should pass directly through the center of the disc
+    """
     Field1ForJoslin3Field = DICOMControlledTerminologyDefinitionsCode("111621")
+    """
+    Joslin NM-2 is a 45 degree field focused superior temporal to the optic disc: Center the camera laterally approximately one-half disc diameter temporal to the center of the macula. The lower edge of the field is tangent to a horizontal line passing through the upper edge of the optic disc. The image is taken temporal to the macula but includes more retinal nasal and superior to the macula than standard field 2
+    """
     Field2ForJoslin3Field = DICOMControlledTerminologyDefinitionsCode("111622")
+    """
+    Joslin NM-3 is a 45 degree field focused nasal to the optic disc: This field is nasal to the optic disc and may include part of the optic disc. The horizontal centerline of the image should pass tangent to the lower edge of the optic disc
+    """
     Field3ForJoslin3Field = DICOMControlledTerminologyDefinitionsCode("111623")
+    """
+    A broad or "soft" light supplied from a single source
+    """
     DiffuseDirectIllumination = DICOMControlledTerminologyDefinitionsCode("111625")
+    """
+    A slit reflected light microscope, which has the ability to form an image of the back scattered light from the eye in a sagittal plane. Scheimpflug cameras are able to achieve a wide depth of focus by employing the "Sheimpflug principle" where the lens and image planes are not parallel with each other. Rotating Sheimplug cameras are able to generate three-dimensional images and calculate measurements of the anterior chamber of the eye
+    """
     ScheimpflugCamera = DICOMControlledTerminologyDefinitionsCode("111626")
+    """
+    Lighting condition approximately 0.04 lux
+    """
     ScotopicLight = DICOMControlledTerminologyDefinitionsCode("111627")
+    """
+    Lighting condition approximately 4 lux
+    """
     MesopicLight = DICOMControlledTerminologyDefinitionsCode("111628")
+    """
+    Lighting condition approximately 40 lux
+    """
     PhotopicLight = DICOMControlledTerminologyDefinitionsCode("111629")
+    """
+    Acquisition preceded by intense light
+    """
     DynamicLight = DICOMControlledTerminologyDefinitionsCode("111630")
+    """
+    Calculated from values of entrance exposure in air, the X-Ray beam quality (half-value layer), and compressed breast thickness, is the energy deposited per unit mass of glandular tissue averaged over all the glandular tissue in the breast
+    """
     AverageGlandularDose = DICOMControlledTerminologyDefinitionsCode("111631")
+    """
+    The primary material in the anode of an X-Ray source
+    """
     AnodeTargetMaterial = DICOMControlledTerminologyDefinitionsCode("111632")
+    """
+    The average thickness of the body part examined when compressed, if compression has been applied during X-Ray exposure
+    """
     CompressionThickness = DICOMControlledTerminologyDefinitionsCode("111633")
+    """
+    Thickness of Aluminum required to reduce the X-Ray output at the patient entrance surface by a factor of two
+    """
     HalfValueLayer = DICOMControlledTerminologyDefinitionsCode("111634")
+    """
+    An anti-scatter device based on radiation absorbing strips above the detector; e.g. in the patient support
+    """
     X_RayGrid = DICOMControlledTerminologyDefinitionsCode("111635")
+    """
+    Exposure measurement in air at the reference point that does not include back scatter, according to MQCM 1999
+    """
     EntranceExposureAtRP = DICOMControlledTerminologyDefinitionsCode("111636")
+    """
+    Average Glandular Dose to a single breast accumulated over multiple images
+    """
     AccumulatedAverageGlandularDose = DICOMControlledTerminologyDefinitionsCode(
         "111637"
     )
+    """
+    Value of the control variable used to parametrize the Automatic Exposure Control (AEC) closed loop; e.g. "Water Value"
+    """
     PatientEquivalentThickness = DICOMControlledTerminologyDefinitionsCode("111638")
+    """
+    An X-Ray Grid that does not move during exposure
+    """
     FixedGrid = DICOMControlledTerminologyDefinitionsCode("111641")
+    """
+    An X-Ray Grid with radiation absorbing strips that are focused toward the focal spot, to eliminate grid cutoff
+    """
     FocusedGrid = DICOMControlledTerminologyDefinitionsCode("111642")
+    """
+    An X-Ray Grid that is designed to move during exposure, to eliminate the appearance of grid lines on the image
+    """
     ReciprocatingGrid = DICOMControlledTerminologyDefinitionsCode("111643")
+    """
+    An X-Ray Grid with radiation absorbing strips that are parallel to each other and that is used only with long source to image distances
+    """
     ParallelGrid = DICOMControlledTerminologyDefinitionsCode("111644")
+    """
+    An X-Ray Grid with crossed radiation absorbing strips used for more complete cleanup of scatter radiation
+    """
     CrossedGrid = DICOMControlledTerminologyDefinitionsCode("111645")
+    """
+    No X-Ray Grid was used due to low scatter conditions
+    """
     NoGrid = DICOMControlledTerminologyDefinitionsCode("111646")
+    """
+    The spectacle prescription for a patient
+    """
     SpectaclePrescriptionReport = DICOMControlledTerminologyDefinitionsCode("111671")
+    """
+    Refractive measurements of the eye to correct for inability to focus at near while wearing the distance prescription
+    """
     AddNear = DICOMControlledTerminologyDefinitionsCode("111672")
+    """
+    Refractive measurements of the eye to correct for inability to focus at intermediate distance while wearing the distance prescription
+    """
     AddIntermediate = DICOMControlledTerminologyDefinitionsCode("111673")
+    """
+    Refractive measurements of the eye to correct for inability to focus at the specified distance while wearing the distance prescription
+    """
     AddOther = DICOMControlledTerminologyDefinitionsCode("111674")
+    """
+    The power of a prism to bend light in the horizontal direction, in prism diopters
+    """
     HorizontalPrismPower = DICOMControlledTerminologyDefinitionsCode("111675")
+    """
+    Direction of the base of a horizontal prism -- either in (toward the nose), or out (away from the nose)
+    """
     HorizontalPrismBase = DICOMControlledTerminologyDefinitionsCode("111676")
+    """
+    The power of a prism to bend light in the vertical direction, in prism diopters
+    """
     VerticalPrismPower = DICOMControlledTerminologyDefinitionsCode("111677")
+    """
+    Direction of the base of a vertical prism -- either up, or down
+    """
     VerticalPrismBase = DICOMControlledTerminologyDefinitionsCode("111678")
+    """
+    Distance in mm between the pupils when the patient's object of regard is in the distance
+    """
     DistancePupillaryDistance = DICOMControlledTerminologyDefinitionsCode("111679")
+    """
+    Distance in mm between the pupils when the patient's object of regard is at near
+    """
     NearPupillaryDistance = DICOMControlledTerminologyDefinitionsCode("111680")
+    """
+    A patient's vision with the correction measured by an autorefractor in place
+    """
     AutorefractionVisualAcuity = DICOMControlledTerminologyDefinitionsCode("111685")
+    """
+    A patient's vision with whichever vision correction the patient customarily wears
+    """
     HabitualVisualAcuity = DICOMControlledTerminologyDefinitionsCode("111686")
+    """
+    A patient's vision with the final spectacle prescription in place
+    """
     PrescriptionVisualAcuity = DICOMControlledTerminologyDefinitionsCode("111687")
+    """
+    The spectacle prescription for the right eye
+    """
     RightEyeRx = DICOMControlledTerminologyDefinitionsCode("111688")
+    """
+    The spectacle prescription for the left eye
+    """
     LeftEyeRx = DICOMControlledTerminologyDefinitionsCode("111689")
+    """
+    A macular grid thickness and volume report for a patient. The macular grid is an analytic tool described in PS3.1
+    """
     MacularGridThicknessAndVolumeReport = DICOMControlledTerminologyDefinitionsCode(
         "111690"
     )
+    """
+    Number of images used for the macular grid measurement
+    """
     NumberOfImagesUsedForMacularMeasurements = (
         DICOMControlledTerminologyDefinitionsCode("111691")
     )
+    """
+    Number of samples used per Image for analysis
+    """
     NumberOfSamplesUsedPerImage = DICOMControlledTerminologyDefinitionsCode("111692")
+    """
+    A numeric rating of the quality of the entire analysis with respect to grading and diagnostic purposes. Higher numbers indicate greater quality
+    """
     AnalysisQualityRating = DICOMControlledTerminologyDefinitionsCode("111693")
+    """
+    A numeric rating of the quality of an entire image set with respect to grading and diagnostic purposes. Higher numbers indicate greater quality
+    """
     ImageSetQualityRating = DICOMControlledTerminologyDefinitionsCode("111694")
+    """
+    Tear film or drops affecting test quality
+    """
     InterferingTearsOrDrops = DICOMControlledTerminologyDefinitionsCode("111695")
+    """
+    The assessment of the centricity and persistence of the visual fixation (direction of gaze) during the acquisition
+    """
     VisualFixationQualityDuringAcquisition = DICOMControlledTerminologyDefinitionsCode(
         "111696"
     )
+    """
+    The reason why the patient's visual fixation was not steady or was indeterminate
+    """
     VisualFixationQualityProblem = DICOMControlledTerminologyDefinitionsCode("111697")
+    """
+    The reason why the macular grid measurements may be questionable
+    """
     OphthalmicMacularGridProblem = DICOMControlledTerminologyDefinitionsCode("111698")
+    """
+    Identifier of container (box, block, microscope slide, etc.) for the specimen under observation
+    """
     SpecimenContainerIdentifier = DICOMControlledTerminologyDefinitionsCode("111700")
+    """
+    Type of processing that tissue specimen underwent
+    """
     ProcessingType = DICOMControlledTerminologyDefinitionsCode("111701")
+    """
+    Date and time of processing step
+    """
     DateTimeOfProcessing = DICOMControlledTerminologyDefinitionsCode("111702")
+    """
+    Description of the individual step in the tissue processing sequence
+    """
     ProcessingStepDescription = DICOMControlledTerminologyDefinitionsCode("111703")
+    """
+    Method of sampling used to derive specimen from its parent
+    """
     SamplingMethod = DICOMControlledTerminologyDefinitionsCode("111704")
+    """
+    Identifier of the parent specimen that gave rise to the current specimen
+    """
     ParentSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode("111705")
+    """
+    Assigning authority for parent specimen's identifier
+    """
     IssuerOfParentSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode(
         "111706"
     )
+    """
+    Parent specimen type that gave rise to current specimen
+    """
     ParentSpecimenType = DICOMControlledTerminologyDefinitionsCode("111707")
+    """
+    Description of coordinate system and origin reference point on parent specimen, or parent specimen container, or image used for localizing the sampling site or location within container or image
+    """
     PositionFrameOfReference = DICOMControlledTerminologyDefinitionsCode("111708")
+    """
+    Reference to image of parent specimen localizing the sampling site; may include referenced Presentation State object
+    """
     LocationOfSamplingSite = DICOMControlledTerminologyDefinitionsCode("111709")
+    """
+    Location of sampling site of specimen (nominal center) relative to the Position Frame of Reference in the X dimension
+    """
     LocationOfSamplingSiteXOffset = DICOMControlledTerminologyDefinitionsCode("111710")
+    """
+    Location of sampling site of specimen (nominal center) relative to the Position Frame of Reference in the Y dimension
+    """
     LocationOfSamplingSiteYOffset = DICOMControlledTerminologyDefinitionsCode("111711")
+    """
+    Location of sampling site of specimen (nominal center) relative to the Position Frame of Reference in the Z dimension
+    """
     LocationOfSamplingSiteZOffset = DICOMControlledTerminologyDefinitionsCode("111712")
+    """
+    Description of specimen location, either in absolute terms or relative to the Position Frame of Reference
+    """
     LocationOfSpecimen = DICOMControlledTerminologyDefinitionsCode("111718")
+    """
+    Location of specimen (nominal center) relative to the Position Frame of Reference in the X dimension
+    """
     LocationOfSpecimenXOffset = DICOMControlledTerminologyDefinitionsCode("111719")
+    """
+    Location of specimen (nominal center) relative to the Position Frame of Reference in the Y dimension
+    """
     LocationOfSpecimenYOffset = DICOMControlledTerminologyDefinitionsCode("111720")
+    """
+    Location of specimen (nominal center) relative to the Position Frame of Reference in the Z dimension
+    """
     LocationOfSpecimenZOffset = DICOMControlledTerminologyDefinitionsCode("111721")
+    """
+    Description of visual distinguishing identifiers; e.g. ink, or a particular shape of the specimen
+    """
     VisualMarkingOfSpecimen = DICOMControlledTerminologyDefinitionsCode("111723")
+    """
+    Assigning authority for specimen identifier
+    """
     IssuerOfSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode("111724")
+    """
+    Dissection of specimen with submission of all its sections for further processing or examination
+    """
     DissectionWithEntireSpecimenSubmission = DICOMControlledTerminologyDefinitionsCode(
         "111726"
     )
+    """
+    Dissection of specimen with submission of representative sections for further processing or examination
+    """
     DissectionWithRepresentativeSectionsSubmission = (
         DICOMControlledTerminologyDefinitionsCode("111727")
     )
+    """
+    A workflow step, during which tissue specimens are stored in a climate-controlled environment
+    """
     SpecimenStorage = DICOMControlledTerminologyDefinitionsCode("111729")
+    """
+    Transmission illumination method for specimen microscopy
+    """
     TransmissionIllumination = DICOMControlledTerminologyDefinitionsCode("111741")
+    """
+    Reflection illumination method for specimen microscopy
+    """
     ReflectionIllumination = DICOMControlledTerminologyDefinitionsCode("111742")
+    """
+    Epifluorescence illumination method for specimen microscopy
+    """
     EpifluorescenceIllumination = DICOMControlledTerminologyDefinitionsCode("111743")
+    """
+    Brightfield illumination method for specimen microscopy
+    """
     BrightfieldIllumination = DICOMControlledTerminologyDefinitionsCode("111744")
+    """
+    Darkfield illumination method for specimen microscopy
+    """
     DarkfieldIllumination = DICOMControlledTerminologyDefinitionsCode("111745")
+    """
+    Oblique illumination method for specimen microscopy
+    """
     ObliqueIllumination = DICOMControlledTerminologyDefinitionsCode("111746")
+    """
+    Phase contrast illumination method for specimen microscopy
+    """
     PhaseContrastIllumination = DICOMControlledTerminologyDefinitionsCode("111747")
+    """
+    Differential interference contrast method for specimen microscopy
+    """
     DifferentialInterferenceContrast = DICOMControlledTerminologyDefinitionsCode(
         "111748"
     )
+    """
+    Total internal reflection fluorescence method for specimen microscopy
+    """
     TotalInternalReflectionFluorescence = DICOMControlledTerminologyDefinitionsCode(
         "111749"
     )
+    """
+    A method of obtaining ophthalmic axial measurements that uses ultrasound, and that requires applanation of the cornea
+    """
     UltrasoundContact = DICOMControlledTerminologyDefinitionsCode("111750")
+    """
+    A method of obtaining ophthalmic axial measurements that uses ultrasound, and that requires immersion of the patient's eye in fluid as he lies in a supine position
+    """
     UltrasoundImmersion = DICOMControlledTerminologyDefinitionsCode("111751")
+    """
+    A method of obtaining ophthalmic axial measurements that uses light
+    """
     Optical = DICOMControlledTerminologyDefinitionsCode("111752")
+    """
+    Measurements taken of the corneal curvature using a manual keratometer
+    """
     ManualKeratometry = DICOMControlledTerminologyDefinitionsCode("111753")
+    """
+    Measurements taken of the corneal curvature using an automated keratometer
+    """
     AutoKeratometry = DICOMControlledTerminologyDefinitionsCode("111754")
+    """
+    Simulated Keratometry measurements derived from corneal topography
+    """
     SimulatedKeratometry = DICOMControlledTerminologyDefinitionsCode("111755")
+    """
+    Corneal power measurements using Scheimpflug camera
+    """
     EquivalentK_reading = DICOMControlledTerminologyDefinitionsCode("111756")
+    """
+    The Haigis IOL calculation formula. Haigis W, Lege B, Miller N, Schneider B. Comparison of immersion ultrasound biometry and partial coherence interferometry for intraocular lens calculation according to Haigis. Graefes Arch Clin Exp Ophthalmol 2000;238:765-73
+    """
     Haigis = DICOMControlledTerminologyDefinitionsCode("111760")
+    """
+    The Haigis-L IOL calculation formula. Haigis W. Intraocular lens calculation after refractive surgery for myopia: Haigis-L formula. J Cataract Refract Surg. 2008 Oct;34(10):1658-63
+    """
     Haigis_L = DICOMControlledTerminologyDefinitionsCode("111761")
+    """
+    The Holladay 1 IOL calculation formula. Holladay JT, Prager TC, Chandler TY, Musgrove KH, Lewis JW, Ruiz RS. A three-part system for refining intraocular lens power calculations. J Cataract Refract Surg. 1988; 14:17-24
+    """
     Holladay1 = DICOMControlledTerminologyDefinitionsCode("111762")
+    """
+    The Holladay 2 IOL calculation formula
+    """
     Holladay2 = DICOMControlledTerminologyDefinitionsCode("111763")
+    """
+    The Hoffer Q IOL calculation formula. Hoffer KJ. The Hoffer Q formula: a comparison of theoretic and regression formulas. J Cataract Refract Surg 1993;19:700-12. Errata. J Cataract Refract Surg 1994;20:677 and 2007;33:2-3
+    """
     HofferQ = DICOMControlledTerminologyDefinitionsCode("111764")
+    """
+    The Olsen IOL calculation formula. Olsen T. Calculation of intraocular lens power: a review. Acta Ophthalmol. Scand. 2007: 85: 472-485
+    """
     Olsen = DICOMControlledTerminologyDefinitionsCode("111765")
+    """
+    The SRKII IOL calculation formula. Sanders DR, Retzlaff J, Kraff MC. Comparison of the SRK II formula and other second generation formulas. J Cataract Refract Surg. 1988 Mar;14(2):136-41
+    """
     SRKII = DICOMControlledTerminologyDefinitionsCode("111766")
+    """
+    The SRK-T IOL calculation formula. Retzlaff JA, Sanders DR, Kraff MC. Development of the SRK/T intraocular lens implant power calculation formula. J Cataract Refract Surg 1990;16:333-40. Erratum 1990;16:528
+    """
     SRK_T = DICOMControlledTerminologyDefinitionsCode("111767")
+    """
+    The "ACD Constant" used in IOL calculation
+    """
     ACDConstant = DICOMControlledTerminologyDefinitionsCode("111768")
+    """
+    The "Haigis a0" constant used in IOL calculation
+    """
     HaigisA0 = DICOMControlledTerminologyDefinitionsCode("111769")
+    """
+    The "Haigis a1" constant used in IOL calculation
+    """
     HaigisA1 = DICOMControlledTerminologyDefinitionsCode("111770")
+    """
+    The "Haigis a2" constant used in IOL calculation
+    """
     HaigisA2 = DICOMControlledTerminologyDefinitionsCode("111771")
+    """
+    The "Hoffer pACD Constant" used in IOL calculation
+    """
     HofferPACDConstant = DICOMControlledTerminologyDefinitionsCode("111772")
+    """
+    The "Surgeon Factor" constant used in IOL calculation
+    """
     SurgeonFactor = DICOMControlledTerminologyDefinitionsCode("111773")
+    """
+    Anterior chamber depth defined as the front of the cornea to the front of the lens
+    """
     FrontOfCorneaToFrontOfLens = DICOMControlledTerminologyDefinitionsCode("111776")
+    """
+    Anterior chamber depth defined as the back of the cornea to the front of the lens
+    """
     BackOfCorneaToFrontOfLens = DICOMControlledTerminologyDefinitionsCode("111777")
+    """
+    Refers to the anterior lens when there are two lenses in the eye. The distance, in mm, from the anterior surface of the lens to the posterior surface of the lens
+    """
     SingleOrAnteriorLens = DICOMControlledTerminologyDefinitionsCode("111778")
+    """
+    Refers to the posterior lens when there are two lenses in the eye. The distance, in mm, from the anterior surface of the lens to the posterior surface of the lens
+    """
     PosteriorLens = DICOMControlledTerminologyDefinitionsCode("111779")
+    """
+    Value obtained from measurements taken by the device creating this SOP Instance
+    """
     MeasurementFromThisDevice = DICOMControlledTerminologyDefinitionsCode("111780")
+    """
+    Value obtained by data transfer from an external source - not from measurements taken by the device providing the value
+    """
     ExternalDataSource = DICOMControlledTerminologyDefinitionsCode("111781")
+    """
+    Axial Measurements DICOM SOP Instance
+    """
     AxialMeasurementsSOPInstance = DICOMControlledTerminologyDefinitionsCode("111782")
+    """
+    Refractive Measurements DICOM SOP Instance
+    """
     RefractiveMeasurementsSOPInstance = DICOMControlledTerminologyDefinitionsCode(
         "111783"
     )
+    """
+    Standard Deviation is a simple measure of the variability of a data set
+    """
     StandardDeviationOfMeasurementsUsed = DICOMControlledTerminologyDefinitionsCode(
         "111786"
     )
+    """
+    Signal to Noise Ratio of the data samples taken to create a measurement
+    """
     SignalToNoiseRatio = DICOMControlledTerminologyDefinitionsCode("111787")
+    """
+    Projection from 2D image pixels to 3D Cartesian coordinates based on a spherical mathematical model
+    """
     SphericalProjection = DICOMControlledTerminologyDefinitionsCode("111791")
+    """
+    Mapping from 2D image pixels to 3D Cartesian coordinates based on measurements of the retinal surface; e.g. of the retina, derived via a measurement technology such as Optical Coherence Tomography, Ultrasound etc.
+    """
     SurfaceContourMapping = DICOMControlledTerminologyDefinitionsCode("111792")
+    """
+    Test pattern, nominally covering an area within 24° of fixation. Consists of 54 test points a minimum of 3° from each meridian and placed 6° apart. The "-2" distinguishes this from another 24° pattern (no longer supported)
+    """
     VisualField24_2TestPattern = DICOMControlledTerminologyDefinitionsCode("111800")
+    """
+    Test pattern, nominally covering an area within 10° of fixation. Consists of 68 test points a minimum of 1° from each meridian and placed 2° apart. The "-2" in this case indicates its point layout to be similar to the 30-2 and 24-2
+    """
     VisualField10_2TestPattern = DICOMControlledTerminologyDefinitionsCode("111801")
+    """
+    Test pattern consisting of test point locations within 30° of fixation. Consists of 76 test points a minimum of 3° from each meridian and placed 6° apart. The "-2" distinguishes this from another 30° pattern (no longer supported)
+    """
     VisualField30_2TestPattern = DICOMControlledTerminologyDefinitionsCode("111802")
+    """
+    Test pattern consisting of 60 test point locations between 30° and 60° of fixation a minimum of 6° from each meridian and placed 12° apart. The "-4" distinguishes this from a similar 60° pattern having 4 additional points
+    """
     VisualField60_4TestPattern = DICOMControlledTerminologyDefinitionsCode("111803")
+    """
+    Test pattern consisting of 16 test point locations within 10° of fixation a minimum of 1° from each meridian and placed 2° apart
+    """
     VisualFieldMaculaTestPattern = DICOMControlledTerminologyDefinitionsCode("111804")
+    """
+    Test pattern consisting of 40 test point locations within 30° of fixation that spread out radially from fixation
+    """
     VisualFieldCentral40PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
         "111805"
     )
+    """
+    Test pattern consisting of 76 test point locations within 30° of fixation a minimum of 3° from each meridian and placed 6° apart
+    """
     VisualFieldCentral76PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
         "111806"
     )
+    """
+    Test pattern consisting of 60 test point locations between 30° and 60° of fixation a minimum of 6° from each meridian and placed 12° apart
+    """
     VisualFieldPeripheral60PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
         "111807"
     )
+    """
+    Test pattern consisting of 81 test point locations within 60° of fixation that spread out radially from fixation
+    """
     VisualFieldFullField81PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
         "111808"
     )
+    """
+    Test pattern consisting of 120 test point locations within 60° of fixation that spread out radially from fixation, concentrated in the nasal hemisphere
+    """
     VisualFieldFullField120PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
         "111809"
     )
+    """
+    Test pattern for Glaucoma and general visual field assessment with 59 test locations of which 16 test locations are in the macular area (up to 10° eccentricity) and where the density of test location is reduced with eccentricity. The test can be extended with the inclusion of 14 test locations between 30° and 60° eccentricity, 6 of which are located at the nasal step
+    """
     VisualFieldGTestPattern = DICOMControlledTerminologyDefinitionsCode("111810")
+    """
+    Test pattern for the macular area. Orthogonal test pattern with 0.7° spacing within the central 4° of eccentricity and reduced density of test locations between 4 and 10, 5° of eccentricity. 81 test locations over all. The test can be extended to include the test locations of the Visual Field G Test Pattern between 10, 5° and 60°
+    """
     VisualFieldMTestPattern = DICOMControlledTerminologyDefinitionsCode("111811")
+    """
+    Full field test pattern with 48 test locations from 0-30° and 82 test locations from 30-70°. Reduced test point density with increased eccentricity. Can be combined with screening and threshold strategies
+    """
     VisualField07TestPattern = DICOMControlledTerminologyDefinitionsCode("111812")
+    """
+    Low Vision Central. Orthogonal off-center test pattern with 6° spacing. 75 test locations within the central 30°. Corresponds with the 32/30-2 excluding the 2 locations at the blind spot, including a macular test location. The LVC is linked with a staircase threshold strategy starting at 0 dB intensity and applies stimulus area V
+    """
     VisualFieldLVCTestPattern = DICOMControlledTerminologyDefinitionsCode("111813")
+    """
+    General test corresponding to the 30-2 but excluding the 2 test locations in the blind spot area, hence with 74 instead of 76 test locations
+    """
     VisualFieldCentralTestPattern = DICOMControlledTerminologyDefinitionsCode("111814")
+    """
+    Swedish Interactive Thresholding Algorithm (SITA). Strategy gains testing efficiency through use of visual field and information theory models. In: Bengtsson B, Olsson J, Heijl A, Rootzen H. A new generation of algorithms for computerized threshold perimetry, SITA. Acta Ophthalmologica Scandinavica, 1997, 75: 368-375
+    """
     VisualFieldSITA_StandardTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111815"
     )
+    """
+    Adaptation of SITA testing methods to Blue-Yellow testing
+    """
     VisualFieldSITA_SWAPTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111816"
     )
+    """
+    Similar to SITA-Standard but with less strict criteria for closing test points. Intended for patients who must be tested in the shortest possible time. In: Bengtsson B, Hejl A. SITA Fast, a new rapid perimetric threshold test. Description of methods and evaluation in patients with manifest and suspect glaucoma. Acta Ophthalmologica Scandinavica, 1998, 76: 431-437
+    """
     VisualFieldSITA_FastTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111817"
     )
+    """
+    Threshold test algorithm that determines a patient's sensitivity at each test point in the threshold test pattern by adjusting intensity by 4 dB steps until the patient changes their response, and then adjusts the intensity in the opposite direction by 2 dB steps until the patient changes their response again. The last stimulus seen by the patient is recognized as the threshold for that point. The starting values are determined by first thresholding a "primary" point in each quadrant then using the results of each primary point to determine the starting values for neighboring points
+    """
     VisualFieldFullThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111818"
     )
+    """
+    Similar to the Full Threshold algorithm except that it steps by 3 dB and only crosses the threshold only once. In: Flanagan JG, Wild JM, Trope GE. Evaluation of FASTPAC, a new strategy for threshold estimation with the Humphrey Field Analyzer, in a glaucomatous population. Ophthalmology, 1993, 100: 949-954
+    """
     VisualFieldFastPacTestStrategy = DICOMControlledTerminologyDefinitionsCode("111819")
+    """
+    Identical to Full Threshold except that starting values are determined by the results of a previous test performed using the same test pattern and the Full Threshold test strategy
+    """
     VisualFieldFullFromPriorTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111820"
     )
+    """
+    Similar to FastPac except that the steps are pseudo-dynamic (differ based on the intensity of the last presentation)
+    """
     VisualFieldOptimaTestStrategy = DICOMControlledTerminologyDefinitionsCode("111821")
+    """
+    Suprathreshold testing strategy, in which each point is initially tested using stimulus that is 6 dB brighter than the expected hill of vision. If the patient does not respond, the stimulus is presented a second time at the same brightness. If the patient sees either presentation, the point is marked as "seen"; otherwise it is marked as "not seen"
+    """
     VisualFieldTwo_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111822"
     )
+    """
+    An extension of the two-zone strategy in which test points where the second stimulus is not seen are presented with a third stimulus at maximum brightness
+    """
     VisualFieldThree_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111823"
     )
+    """
+    An extension of the two-zone strategy, in which test points where the second stimulus is not seen receive threshold testing to quantify the depth of any detected scotomas
+    """
     VisualFieldQuantify_DefectsTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111824"
     )
+    """
+    Tendency Oriented Perimetry. Fast thresholding algorithm. Test strategy makes use of the interaction between neighboring test locations to reduce the test time compared to normal full threshold strategy by 60-80%. In: Morales J, Weitzman ML, Gonzalez de la Rosa M. Comparison between Tendency-Oriented Perimetry (TOP) and octopus threshold perimetry. Ophthalmology, 2000, 107: 134-142
+    """
     VisualFieldTOPTestStrategy = DICOMControlledTerminologyDefinitionsCode("111825")
+    """
+    Dynamic strategy is a fast thresholding strategy reducing test duration by adapting the dB step sizes according to the frequency-of-seeing curve of the threshold. Reduction of test time compared to normal full threshold strategy 30-50%
+    """
     VisualFieldDynamicTestStrategy = DICOMControlledTerminologyDefinitionsCode("111826")
+    """
+    Traditional full threshold staircase strategy. Initial intensities are presented, based on anchor point sensitivities in each quadrant and based on already known neighboring sensitivities. In a first run, thresholds are changed in 4dB steps until the first response reversal. Then the threshold is changed in 2 dB steps until the second response reversal. The threshold is calculated as the average between the last seen and last not-seen stimulus, supposed to correspond with the 50% point in the frequency-of-seeing curve
+    """
     VisualFieldNormalTestStrategy = DICOMControlledTerminologyDefinitionsCode("111827")
+    """
+    One level screening test: Each test location is tested with a single intensity. The result is shown as seen or not-seen. The intensity can either be a 0 dB stimulus or a predefined intensity
+    """
     VisualField1_LTTestStrategy = DICOMControlledTerminologyDefinitionsCode("111828")
+    """
+    Two level screening test: Each test location is initially tested 6 dB brighter than the age corrected normal value
+    """
     VisualField2_LTTestStrategy = DICOMControlledTerminologyDefinitionsCode("111829")
+    """
+    Low Vision Strategy is a full threshold normal strategy with the exception that it starts at 0 dB intensity and applies stimulus area V
+    """
     VisualFieldLVSTestStrategy = DICOMControlledTerminologyDefinitionsCode("111830")
+    """
+    German Adaptive Threshold Estimation is a fast strategy based on a modified 4-2 staircase algorithm, using prior visual fields to calculate the starting intensity. In: Chiefer U, Pascual JP, Edmunds B, Feudner E, Hoffmann EM, Johnson CA, Lagreze WA, Pfeiffer N, Sample PA, Staubach F, Weleber RG, Vonthein R, Krapp E, Paetzold J. Comparison of the new perimetric GATE strategy with conventional full-threshold and SITA standard strategies. Investigative Ophthalmology and Visual Science, 2009, 51: 488-494
+    """
     VisualFieldGATETestStrategy = DICOMControlledTerminologyDefinitionsCode("111831")
+    """
+    Similar to GATE. The i stands for initial. If there was no prior visual field test to calculate the starting values, an anchor point method is used to define the local start values
+    """
     VisualFieldGATEiTestStrategy = DICOMControlledTerminologyDefinitionsCode("111832")
+    """
+    A test started as two level screening test. In the course of the test, the threshold of relative defects and/or normal test locations has been quantified using the dynamic threshold strategy
+    """
     VisualField2LT_DynamicTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111833"
     )
+    """
+    A test started as two level screening test. In the course of the test, the threshold of relative defects and/or normal test locations has been quantified using the normal full threshold strategy
+    """
     VisualField2LT_NormalTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111834"
     )
+    """
+    Takes neighborhood test point results into account and offers stimuli with an adapted value to save time
+    """
     VisualFieldFastThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode(
         "111835"
     )
+    """
+    Continuous Luminance Incremental Perimetry, which measures at first the individual reaction time of the patient and threshold values in every quadrant. The starting value for the main test is slightly below in individual threshold
+    """
     VisualFieldCLIPTestStrategy = DICOMControlledTerminologyDefinitionsCode("111836")
+    """
+    A supra threshold screening strategy. The starting stimuli intensities depend on the classification of the patient's visual hill by measuring the central (fovea) or peripheral (15° meridian) threshold. The result of each dot slightly underestimates the sensitivity value (within 5 dB)
+    """
     VisualFieldCLASSStrategy = DICOMControlledTerminologyDefinitionsCode("111837")
+    """
+    Mode for determining the starting luminance for screening test points - the starting luminance s is chosen based on the age of the patient
+    """
     AgeCorrected = DICOMControlledTerminologyDefinitionsCode("111838")
+    """
+    Mode for determining the starting luminance for screening test points - the starting luminance is chosen based on the results of thresholding a set of "primary" test points (one in each quadrant)
+    """
     ThresholdRelated = DICOMControlledTerminologyDefinitionsCode("111839")
+    """
+    Mode for determining the starting luminance for screening test points - in this case, all starting luminance is set to the same value
+    """
     SingleLuminance = DICOMControlledTerminologyDefinitionsCode("111840")
+    """
+    Mode for determining the starting luminance for screening test points - the starting luminance is chosen based on the result of the foveal threshold value
+    """
     FovealSensitivityRelated = DICOMControlledTerminologyDefinitionsCode("111841")
+    """
+    Mode for determining the starting luminance for screening test points - the starting luminance is chosen based on the result of four threshold values measured near the 15° meridian (one in each quadrant)
+    """
     RelatedToNonMacularSensitivity = DICOMControlledTerminologyDefinitionsCode("111842")
+    """
+    Real time evaluation of the camera image to recognize blinks and fixation losses with influence on the test procedure. Blinks that interfere with stimuli presentation cause the automated repetition of such stimulus presentations. Fixation losses can be used to delay the stimulus presentation until correct fixation is regained
+    """
     AutomatedOptical = DICOMControlledTerminologyDefinitionsCode("111843")
+    """
+    A method of monitoring the patient's fixation by periodically presenting stimulus in a location on the background surface that corresponds to the patient's blind spot
+    """
     BlindSpotMonitoring = DICOMControlledTerminologyDefinitionsCode("111844")
+    """
+    A method of monitoring the patient's fixation by presenting the stimulus to the patient's macula
+    """
     MacularFixationTesting = DICOMControlledTerminologyDefinitionsCode("111845")
+    """
+    A method of monitoring the patient's fixation by observation from the examiner of the patient
+    """
     ObservationByExaminer = DICOMControlledTerminologyDefinitionsCode("111846")
+    """
+    Analysis Results are outside normal limits
+    """
     OutsideNormalLimits = DICOMControlledTerminologyDefinitionsCode("111847")
+    """
+    Analysis Results are borderline
+    """
     Borderline = DICOMControlledTerminologyDefinitionsCode("111848")
+    """
+    Analysis Results identify abnormally high sensitivity
+    """
     AbnormallyHighSensitivity = DICOMControlledTerminologyDefinitionsCode("111849")
+    """
+    Analysis Results identify general reduction in sensitivity
+    """
     GeneralReductionInSensitivity = DICOMControlledTerminologyDefinitionsCode("111850")
+    """
+    Analysis Results identify Borderline and general reduction in sensitivity
+    """
     BorderlineAndGeneralReductionInSensitivity = (
         DICOMControlledTerminologyDefinitionsCode("111851")
     )
+    """
+    Index of a patient's remaining visual field normalized for both age and generalized defect
+    """
     VisualFieldIndex = DICOMControlledTerminologyDefinitionsCode("111852")
+    """
+    Estimate of the portion of a patient's visual field loss that is diffuse (i.e., spread evenly across all portions of the visual field)
+    """
     VisualFieldLossDueToDiffuseDefect = DICOMControlledTerminologyDefinitionsCode(
         "111853"
     )
+    """
+    Estimate of the portion of a patient's visual field loss that is local (i.e., not spread evenly across all portions of the visual field)
+    """
     VisualFieldLossDueToLocalDefect = DICOMControlledTerminologyDefinitionsCode(
         "111854"
     )
+    """
+    An analysis of asymmetry between zones of the superior and inferior visual field. It is designed to be specific for defects due to glaucoma
+    """
     GlaucomaHemifieldTestAnalysis = DICOMControlledTerminologyDefinitionsCode("111855")
+    """
+    The data output of an optical fixation monitoring process, consisting of a list of positive and negative numbers indicating the quality of patient fixation over the course of a visual field test. The value 0 represents the initial fixation. Negative numbers indicate a measuring error (i.e., the patient blinked). Positive numbers quantify the degree of eccentricity from initial fixation
+    """
     OpticalFixationMeasurements = DICOMControlledTerminologyDefinitionsCode("111856")
+    """
+    An image of at least 15° angular subtend that is centered on the macula; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     MaculaCentered = DICOMControlledTerminologyDefinitionsCode("111900")
+    """
+    An image of at least 15° angular subtend that is centered on the optic disc; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     DiscCentered = DICOMControlledTerminologyDefinitionsCode("111901")
+    """
+    An image of any angular subtend that is centered on a lesion located in any region of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     LesionCentered = DICOMControlledTerminologyDefinitionsCode("111902")
+    """
+    An image of at least 15° angular subtend centered midway between the disc and macula and containing at least a portion of the disc and both the disc and the macula; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Disc_maculaCentered = DICOMControlledTerminologyDefinitionsCode("111903")
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator, and spanning both the superior-temporal and superior-nasal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_superior = DICOMControlledTerminologyDefinitionsCode("111904")
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator in the superior-temporal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_superiorTemporal = DICOMControlledTerminologyDefinitionsCode(
         "111905"
     )
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator, and spanning both the superior-temporal and inferior-temporal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_temporal = DICOMControlledTerminologyDefinitionsCode("111906")
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator in the inferior-temporal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_inferiorTemporal = DICOMControlledTerminologyDefinitionsCode(
         "111907"
     )
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator, and spanning both the inferior-temporal and inferior-nasal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_inferior = DICOMControlledTerminologyDefinitionsCode("111908")
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator in the inferior-nasal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_inferiorNasal = DICOMControlledTerminologyDefinitionsCode("111909")
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator, and spanning both the superior-nasal and inferior-nasal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_nasal = DICOMControlledTerminologyDefinitionsCode("111910")
+    """
+    An image of at least 15° angular subtend positioned between the central zone and the equator in the superior-nasal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Mid_peripheral_superiorNasal = DICOMControlledTerminologyDefinitionsCode("111911")
+    """
+    An image of at least 15° angular subtend positioned between the equator and the ora serrata, and spanning both the superior temporal and superior nasal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_superior = DICOMControlledTerminologyDefinitionsCode("111912")
+    """
+    An image of at least 15° angular subtend positioned between the equator and ora serrata in the superior-temporal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_superiorTemporal = DICOMControlledTerminologyDefinitionsCode("111913")
+    """
+    An image of at least 15° angular subtend positioned between the equator and ora serrata, and spanning both the superior-temporal and inferior-temporal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_temporal = DICOMControlledTerminologyDefinitionsCode("111914")
+    """
+    An image of at least 15° angular subtend positioned between the equator and ora serrata in the inferior-temporal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_inferiorTemporal = DICOMControlledTerminologyDefinitionsCode("111915")
+    """
+    An image of at least 15° angular subtend positioned between the equator and ora serrata, and spanning both the inferior-temporal and inferior-nasal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_inferior = DICOMControlledTerminologyDefinitionsCode("111916")
+    """
+    An image of at least 15° angular subtend positioned between the equator and ora serrata in the inferior-nasal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_inferiorNasal = DICOMControlledTerminologyDefinitionsCode("111917")
+    """
+    An image of at least 15° angular subtend positioned between the equator and ora serrata, and spanning both the superior-nasal and inferior-nasal quadrants of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_nasal = DICOMControlledTerminologyDefinitionsCode("111918")
+    """
+    An image of at least 15° angular subtend positioned between the equator and ora serrata in the superior-nasal quadrant of the fundus; see Section U.1.8 "Relative Image Position Definitions" in PS3.17
+    """
     Peripheral_superiorNasal = DICOMControlledTerminologyDefinitionsCode("111919")
+    """
+    Identifies the use of physical signals with respect to time to capture information
+    """
     TimeDomain = DICOMControlledTerminologyDefinitionsCode("111920")
+    """
+    Identifies the use of physical signals with respect to multiple frequencies to capture information
+    """
     SpectralDomain = DICOMControlledTerminologyDefinitionsCode("111921")
+    """
+    No compensation algorithm for corneal birefringence
+    """
     NoCornealCompensation = DICOMControlledTerminologyDefinitionsCode("111922")
+    """
+    Algorithm to compensate for variability in corneal birefringence
+    """
     CornealBirefringenceCompensation = DICOMControlledTerminologyDefinitionsCode(
         "111923"
     )
+    """
+    Measurement of the retinal surface contour relative to an assigned datum plane
+    """
     RetinalTopography = DICOMControlledTerminologyDefinitionsCode("111924")
+    """
+    Measurement approximating the distance related to the structure between the internal limiting membrane (ILM) and the outer boarder of the retinal nerve fiber layer (RNFL); see Section III.6 "Retinal Thickness Definition" in PS3.17
+    """
     RetinalNerveFiberLayerThickness = DICOMControlledTerminologyDefinitionsCode(
         "111925"
     )
+    """
+    Measurement approximating the distance related to the structure between the ILM and the outer border of the inner plexiform layer (IPL), called the ganglion cell complex (GCC); see Section III.6 "Retinal Thickness Definition" in PS3.17
+    """
     GanglionCellComplexThickness = DICOMControlledTerminologyDefinitionsCode("111926")
+    """
+    Measurement approximating the distance related to the structure between the ILM and the inner-outer segment junction (IS-OS); see Section III.6 "Retinal Thickness Definition" in PS3.17
+    """
     TotalRetinalThickness_ILMToIS_OS_ = DICOMControlledTerminologyDefinitionsCode(
         "111927"
     )
+    """
+    Measurement approximating the distance related to the structure between the ILM and the retinal pigment epithelium (RPE); see Section III.6 "Retinal Thickness Definition" in PS3.17
+    """
     TotalRetinalThickness_ILMToRPE_ = DICOMControlledTerminologyDefinitionsCode(
         "111928"
     )
+    """
+    Measurement approximating the distance related to the structure between the ILM and the Bruch's membrane (BM); see Section III.6 "Retinal Thickness Definition" in PS3.17
+    """
     TotalRetinalThickness_ILMToBM_ = DICOMControlledTerminologyDefinitionsCode("111929")
+    """
+    Thickness of a component of the posterior segment of the eye; e.g. thickness of retina, choroid, etc.
+    """
     AbsoluteOphthalmicThickness = DICOMControlledTerminologyDefinitionsCode("111930")
+    """
+    Ophthalmic Thickness map based upon statistical significance category (such as percentile) from a normative data set
+    """
     ThicknessDeviationCategoryFromNormativeData = (
         DICOMControlledTerminologyDefinitionsCode("111931")
     )
+    """
+    Ophthalmic Thickness map based upon deviation (such as microns) from a normative data set
+    """
     ThicknessDeviationFromNormativeData = DICOMControlledTerminologyDefinitionsCode(
         "111932"
     )
+    """
+    Ophthalmic Thickness Map related to another Ophthalmic Thickness Map or another SOP Instance
+    """
     RelatedOphthalmicThicknessMap = DICOMControlledTerminologyDefinitionsCode("111933")
+    """
+    An anatomic point centered midway between the disc and fovea centralis
+    """
     Disc_Fovea = DICOMControlledTerminologyDefinitionsCode("111934")
+    """
+    Assuming the null hypothesis is true, the conditional percent probability of observing this result is not statistically significant
+    """
     P_5_ = DICOMControlledTerminologyDefinitionsCode("111935")
+    """
+    Assuming the null hypothesis is true, the conditional percent probability of observing this result is statistically significant, 95% unlikely to happen by chance
+    """
     P_5_ = DICOMControlledTerminologyDefinitionsCode("111936")
+    """
+    Assuming the null hypothesis is true, the conditional percent probability of observing this result is statistically significant, 98% unlikely to happen by chance
+    """
     P_2_ = DICOMControlledTerminologyDefinitionsCode("111937")
+    """
+    Assuming the null hypothesis is true, the conditional percent probability of observing this result is statistically significant, 99% unlikely to happen by chance
+    """
     P_1_ = DICOMControlledTerminologyDefinitionsCode("111938")
+    """
+    Assuming the null hypothesis is true, the conditional percent probability of observing this result is statistically significant, 99.5% unlikely to happen by chance
+    """
     P_0_5_ = DICOMControlledTerminologyDefinitionsCode("111939")
+    """
+    A two dimensional representation of the axial curvature of the cornea. Axial curvature is calculated from the reciprocal of the distance from a point on a meridian normal at the point to the corneal topographer axis. Also known as sagittal curvature
+    """
     CornealAxialPowerMap = DICOMControlledTerminologyDefinitionsCode("111940")
+    """
+    A two dimensional representation of the instantaneous curvature of the cornea. Instantaneous curvature is calculated from the reciprocal of the distance from a point on a meridian normal at the point to the center of curvature of that point. Also called tangential curvature
+    """
     CornealInstantaneousPowerMap = DICOMControlledTerminologyDefinitionsCode("111941")
+    """
+    A two dimensional representation of the refractive power of the cornea. Corneal refractive power is calculated using Snell's Law
+    """
     CornealRefractivePowerMap = DICOMControlledTerminologyDefinitionsCode("111942")
+    """
+    A two dimensional representation of the elevation of the cornea. Elevation is calculated as the distance from a point on the corneal surface to a point on a reference surface along a line parallel to the corneal topographer axis. For the purpose of visualization the reference surface is usually a sphere or an ellipse
+    """
     CornealElevationMap = DICOMControlledTerminologyDefinitionsCode("111943")
+    """
+    A two dimensional representation of a wavefront aberration surface of the cornea. Wavefront aberration surface is calculated from the corneal elevation data fit with either the Zernike polynomial series or the Fourier Series. Maps generally display total aberrations and selectable higher order aberrations
+    """
     CornealWavefrontMap = DICOMControlledTerminologyDefinitionsCode("111944")
+    """
+    A device that measures corneal anterior surface shape using elevation-based methods (stereographic and light slit-based). Rasterstereography images a grid pattern illuminating the fluorescein dyed tear film with 2 cameras to produce 3D. Slit-based devices scan the cornea, usually by rotation about the instrument axis centered on the cornea vertex
+    """
     Elevation_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode(
         "111945"
     )
+    """
+    A reflection-based device that projects a pattern of light onto the cornea and an image of the reflection of that pattern from the tear film is recorded in one video frame. Light patterns include the circular mire pattern (Placido disc) and spot matrix patterns. Sequential scanning of light spots reflected from the corneal surface is also used requiring multiple video frames for recording
+    """
     Reflection_basedCornealTopographer = DICOMControlledTerminologyDefinitionsCode(
         "111946"
     )
+    """
+    An Interference-based device that projects a beam of light onto and through the cornea. Light reflected from within the cornea is combined with a reference beam giving rise to an interference pattern. Appropriately scanned, this imaging is used to construct 3-dimensional images of the cornea from anterior to posterior surfaces; e.g. swept source OCT
+    """
     Interferometry_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode(
         "111947"
     )
+    """
+    A structured report containing the results of computer-aided detection or diagnosis applied to chest imaging and associated clinical information
+    """
     ChestCADReport = DICOMControlledTerminologyDefinitionsCode("112000")
+    """
+    The shadow of an absorber that attenuates the X-Ray beam more effectively than do surrounding absorbers. In a radiograph, any circumscribed area that appears more nearly white (of lesser photometric density) than its surround [Fraser and Pare]
+    """
     Opacity = DICOMControlledTerminologyDefinitionsCode("112001")
+    """
+    A unique identifier for a series of DICOM SOP instances
+    """
     SeriesInstanceUID = DICOMControlledTerminologyDefinitionsCode("112002")
+    """
+    A named anatomic region within the chest cavity
+    """
     AssociatedChestComponent = DICOMControlledTerminologyDefinitionsCode("112003")
+    """
+    A collection of opacities detected within the continuum of loose connective tissue throughout the lung, that is not expected in a diagnostically normal radiograph
+    """
     AbnormalInterstitialPattern = DICOMControlledTerminologyDefinitionsCode("112004")
+    """
+    A type of anatomy that is expected to be detectable on a radiographic (X-Ray based) image
+    """
     RadiographicAnatomy = DICOMControlledTerminologyDefinitionsCode("112005")
+    """
+    Characteristic of the extent of spreading of a finding or feature
+    """
     DistributionDescriptor = DICOMControlledTerminologyDefinitionsCode("112006")
+    """
+    Characteristic of the clarity of the boundary or edges of a finding or feature
+    """
     BorderDefinition = DICOMControlledTerminologyDefinitionsCode("112007")
+    """
+    The part(s) of the anatomy affected or encompassed by a finding or feature
+    """
     SiteInvolvement = DICOMControlledTerminologyDefinitionsCode("112008")
+    """
+    Characteristic of the matter or substance within a finding or feature
+    """
     TypeOfContent = DICOMControlledTerminologyDefinitionsCode("112009")
+    """
+    Characteristic of the surface or consistency of a finding or feature
+    """
     TextureDescriptor = DICOMControlledTerminologyDefinitionsCode("112010")
+    """
+    Position of the X-Ray beam about the patient from the RAO to LAO direction where movement from RAO to vertical is positive
+    """
     PositionerPrimaryAngle = DICOMControlledTerminologyDefinitionsCode("112011")
+    """
+    Position of the X-Ray beam about the patient from the caudal to cranial direction where movement from caudal to vertical is positive
+    """
     PositionerSecondaryAngle = DICOMControlledTerminologyDefinitionsCode("112012")
+    """
+    The zone, lobe or segment within the chest cavity in which a finding or feature is situated
+    """
     LocationInChest = DICOMControlledTerminologyDefinitionsCode("112013")
+    """
+    Vertical refers to orientation parallel to the superior-inferior (cephalad-caudad) axis of the body, with horizontal being perpendicular to this, and an oblique orientation having projections in both the horizontal and vertical
+    """
     OrientationDescriptor = DICOMControlledTerminologyDefinitionsCode("112014")
+    """
+    Characteristic of the shape formed by the boundary or edges of a finding or feature
+    """
     BorderShape = DICOMControlledTerminologyDefinitionsCode("112015")
+    """
+    Indicates whether a finding was considered a target lesion, non-target lesion, or non-lesion during evaluation of a baseline series, according to a method such as RECIST
+    """
     BaselineCategory = DICOMControlledTerminologyDefinitionsCode("112016")
+    """
+    The extent of a detected cavity, represented as the percent of the surrounding volume that it occupies
+    """
     CavityExtentAsPercentOfVolume = DICOMControlledTerminologyDefinitionsCode("112017")
+    """
+    The extent of a detected calcification, represented as the percent of the surrounding surface that it occupies
+    """
     CalcificationExtentAsPercentOfSurface = DICOMControlledTerminologyDefinitionsCode(
         "112018"
     )
+    """
+    The extent of a detected calcification, represented as the percent of the surrounding volume that it occupies
+    """
     CalcificationExtentAsPercentOfVolume = DICOMControlledTerminologyDefinitionsCode(
         "112019"
     )
+    """
+    A heading for the reporting of response evaluation for treatment of solid tumors
+    """
     ResponseEvaluation = DICOMControlledTerminologyDefinitionsCode("112020")
+    """
+    The system applied in the reporting of response evaluation for treatment of solid tumors
+    """
     ResponseEvaluationMethod = DICOMControlledTerminologyDefinitionsCode("112021")
+    """
+    Response Evaluation Criteria In Solid Tumors; see Normative References
+    """
     RECIST = DICOMControlledTerminologyDefinitionsCode("112022")
+    """
+    A term that further specifies the name of an item that is an inferred correlation relating two or more individual findings or features
+    """
     CompositeFeatureModifier = DICOMControlledTerminologyDefinitionsCode("112023")
+    """
+    A term that further specifies the name of an item that was detected on one image
+    """
     SingleImageFindingModifier = DICOMControlledTerminologyDefinitionsCode("112024")
+    """
+    A qualitative descriptor for the extent of a finding or feature
+    """
     SizeDescriptor = DICOMControlledTerminologyDefinitionsCode("112025")
+    """
+    A qualitative descriptor for the thickness of tubular structures, such as blood vessels
+    """
     WidthDescriptor = DICOMControlledTerminologyDefinitionsCode("112026")
+    """
+    A characteristic that further describes the nature of an opacity
+    """
     OpacityDescriptor = DICOMControlledTerminologyDefinitionsCode("112027")
+    """
+    The type of adverse affect that a finding or feature is having on the surrounding anatomy
+    """
     AbnormalDistributionOfAnatomicStructure = DICOMControlledTerminologyDefinitionsCode(
         "112028"
     )
+    """
+    Response evaluation method as defined in chapter 5, "Reporting of Response" of the WHO Handbook for Reporting Results for Cancer Treatment; see Normative References
+    """
     WHO = DICOMControlledTerminologyDefinitionsCode("112029")
+    """
+    Identification of the morphology of detected calcifications
+    """
     CalcificationDescriptor = DICOMControlledTerminologyDefinitionsCode("112030")
+    """
+    A quantitative numerical statement of the relative attenuation of the X-Ray beam at a specified point. Coefficient that describes the fraction of a beam of X-Rays or gamma rays that is absorbed or scattered per unit thickness of the absorber. This value basically accounts for the number of atoms in a cubic cm volume of material and the probability of a photon being scattered or absorbed from the nucleus or an electron of one of these atoms. Usually expressed in Hounsfield units [referred to as CT Number in Fraser and Pare]
+    """
     AttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112031")
+    """
+    An X-Ray attenuation coefficient that is used as a threshold; e.g. in calcium scoring
+    """
     ThresholdAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode(
         "112032"
     )
+    """
+    An opacity that is not expected in a diagnostically normal radiograph
+    """
     AbnormalOpacity = DICOMControlledTerminologyDefinitionsCode("112033")
+    """
+    A textual description of the mathematical method of calculation that resulted in a calculated value
+    """
     CalculationDescription = DICOMControlledTerminologyDefinitionsCode("112034")
+    """
+    American College of Radiology. ACR Standard for the Performance of Pediatric and Adult Chest Radiography. In: Standards. Reston, Va: 2001:95-98
+    """
     PerformanceOfPediatricAndAdultChestRadiography_ACR = (
         DICOMControlledTerminologyDefinitionsCode("112035")
     )
+    """
+    American College of Radiology. ACR Position Statement for Quality Control and Improvement, Safety, Infection Control, and Patient Concerns. In: Practice Guidelines and Technical Standards. Reston, Va: 2001:iv
+    """
     ACRPositionStatement = DICOMControlledTerminologyDefinitionsCode("112036")
+    """
+    A descriptor for a non-lesion object finding or feature, used to indicate whether the object was detected as being internal or external to the patient's body
+    """
     Non_lesionModifier = DICOMControlledTerminologyDefinitionsCode("112037")
+    """
+    A concept modifier for an Osseous Anatomy, or bone related, finding
+    """
     OsseousModifier = DICOMControlledTerminologyDefinitionsCode("112038")
+    """
+    A text label used for tracking a finding or feature, potentially across multiple reporting objects, over time. This label shall be unique within the domain in which it is used
+    """
     TrackingIdentifier = DICOMControlledTerminologyDefinitionsCode("112039")
+    """
+    A unique identifier used for tracking a finding or feature, potentially across multiple reporting objects, over time
+    """
     TrackingUniqueIdentifier = DICOMControlledTerminologyDefinitionsCode("112040")
+    """
+    Disappearance of all target lesions
+    """
     TargetLesionCompleteResponse = DICOMControlledTerminologyDefinitionsCode("112041")
+    """
+    At least a 30% decrease in the sum of the Longest Diameter of target lesions, taking as reference the baseline sum Longest Diameter
+    """
     TargetLesionPartialResponse = DICOMControlledTerminologyDefinitionsCode("112042")
+    """
+    At least a 20% increase in the sum of the Longest Diameter of target lesions, taking as reference the smallest sum Longest Diameter recorded since the treatment started, or the appearance of one or more new lesions
+    """
     TargetLesionProgressiveDisease = DICOMControlledTerminologyDefinitionsCode("112043")
+    """
+    Neither sufficient shrinkage to qualify for Partial Response nor sufficient increase to qualify for Progressive Disease, taking as reference the smallest sum Longest Diameter since the treatment started
+    """
     TargetLesionStableDisease = DICOMControlledTerminologyDefinitionsCode("112044")
+    """
+    Disappearance of all non-target lesions and normalization of tumor marker level
+    """
     Non_TargetLesionCompleteResponse = DICOMControlledTerminologyDefinitionsCode(
         "112045"
     )
+    """
+    Persistence of one or more non-target lesions and/or maintenance of tumor marker level above the normal limits
+    """
     Non_TargetLesionIncompleteResponseOrStableDisease = (
         DICOMControlledTerminologyDefinitionsCode("112046")
     )
+    """
+    Appearance of one or more new lesions and/or unequivocal progression of existing non-target lesions
+    """
     Non_TargetLesionProgressiveDisease = DICOMControlledTerminologyDefinitionsCode(
         "112047"
     )
+    """
+    The current response evaluation for treatment of solid tumors, according to a method such as RECIST
+    """
     CurrentResponse = DICOMControlledTerminologyDefinitionsCode("112048")
+    """
+    Best response recorded from the start of the treatment until disease progression/recurrence, taking as reference for Progressive Disease the smallest measurements recorded since the treatment started, according to a method such as RECIST
+    """
     BestOverallResponse = DICOMControlledTerminologyDefinitionsCode("112049")
+    """
+    A text identifier of an anatomic feature when a multiplicity of features of that type may be present, such as "Rib 1", "Rib 2" or thoracic vertebrae "T1" or "T2"
+    """
     AnatomicIdentifier = DICOMControlledTerminologyDefinitionsCode("112050")
+    """
+    A measured or calculated evaluation of response; e.g. according to a method such as RECIST, the value would be the calculated sum of the lengths of the longest axes of a set of target lesions
+    """
     MeasurementOfResponse = DICOMControlledTerminologyDefinitionsCode("112051")
+    """
+    Of or relating to a bronchial (lung) specific channel for the conveyance of a body fluid
+    """
     Bronchovascular = DICOMControlledTerminologyDefinitionsCode("112052")
+    """
+    Of, relating to, or composed of bone
+    """
     Osseous = DICOMControlledTerminologyDefinitionsCode("112053")
+    """
+    The smallest unit of lung surrounded by connective tissue septa; the unit of lung subtended by any bronchiole that gives off three to five terminal bronchioles [Fraser and Pare]
+    """
     SecondaryPulmonaryLobule = DICOMControlledTerminologyDefinitionsCode("112054")
+    """
+    A method of calculating an overall calcium score, reflecting the calcification of coronary arteries, based on the maximum X-Ray attenuation coefficient and the area of calcium deposits
+    """
     AgatstonScoringMethod = DICOMControlledTerminologyDefinitionsCode("112055")
+    """
+    A method of calculating an overall calcium score, reflecting the calcification of coronary arteries, based on the volume of each calcification, typically expressed in mm3
+    """
     VolumeScoringMethod = DICOMControlledTerminologyDefinitionsCode("112056")
+    """
+    A method of calculating an overall calcium score, reflecting the calcification of coronary arteries, based on the total mass of calcification, typically expressed in mg
+    """
     MassScoringMethod = DICOMControlledTerminologyDefinitionsCode("112057")
+    """
+    A measure often arrived at through calculation of findings from CT examination, which is a common predictor of significant stenosis of the coronary arteries
+    """
     CalciumScore = DICOMControlledTerminologyDefinitionsCode("112058")
+    """
+    The combination of a focus of pneumonia due to a primary infection with granulomas in the draining hilar or mediastinal lymph nodes [Fraser and Pare]
+    """
     PrimaryComplex = DICOMControlledTerminologyDefinitionsCode("112059")
+    """
+    General or local decrease in the apparent width of visible pulmonary vessels, suggesting less than normal blood flow (reduced blood flow) [Fraser and Pare]
+    """
     Oligemia = DICOMControlledTerminologyDefinitionsCode("112060")
+    """
+    Linear opacity of very fine width, i.e., a nearly one dimensional opacity
+    """
     AbnormalLines_1D_ = DICOMControlledTerminologyDefinitionsCode("112061")
+    """
+    Area of abnormal very low X-Ray attenuation, typically lower than aerated lung when occurring in or projecting over lung, or lower than soft tissue when occurring in or projecting over soft tissue
+    """
     AbnormalLucency = DICOMControlledTerminologyDefinitionsCode("112062")
+    """
+    A calcific opacity within the lung that may be organized, but does not display the trabecular organization of true bone [Fraser and Pare]
+    """
     AbnormalCalcifications = DICOMControlledTerminologyDefinitionsCode("112063")
+    """
+    Relatively homogeneous, extended, pattern of abnormal opacity in the lung, typically low in contrast
+    """
     AbnormalTexture = DICOMControlledTerminologyDefinitionsCode("112064")
+    """
+    A collection of innumerable small, linear, and nodular opacities that together produce a composite appearance resembling a net with small superimposed nodules. The reticular and nodular elements are dimensionally of similar magnitude [Fraser and Pare]
+    """
     ReticulonodularPattern = DICOMControlledTerminologyDefinitionsCode("112065")
+    """
+    Irregular septal thickening that suggests the appearance of a row of beads; usually a sign of lymphangitic carcinomatosis, but may also occur rarely in sarcoidosis [Fraser and Pare]
+    """
     BeadedSeptumSign = DICOMControlledTerminologyDefinitionsCode("112066")
+    """
+    A collection of innumerable, small discrete opacities ranging in diameter from 2-10 mm, generally uniform in size and widespread in distribution, and without marginal spiculation [Fraser and Pare]
+    """
     NodularPattern = DICOMControlledTerminologyDefinitionsCode("112067")
+    """
+    An irregular band of peripheral pulmonary opacity adjacent to visceral pleura that simulates the appearance of a pleural plaque and is formed by coalescence of small nodules [Fraser and Pare] 
+    """
     Pseudoplaque = DICOMControlledTerminologyDefinitionsCode("112068")
+    """
+    A ring of opacities (usually representing a dilated, thick-walled bronchus) in association with a smaller, round, soft tissue opacity (the adjacent pulmonary artery) suggesting a "signet ring" [Fraser and Pare]
+    """
     Signet_ringSign = DICOMControlledTerminologyDefinitionsCode("112069")
+    """
+    Equivalent of air bronchogram, but in airways assumed to be bronchioles because of peripheral location and diameter [Fraser and Pare]
+    """
     AirBronchiologram = DICOMControlledTerminologyDefinitionsCode("112070")
+    """
+    Radiographic shadow of an air-containing bronchus; presumed to represent an air-containing segment of the bronchial tree (identity often inferred) [Fraser and Pare]
+    """
     AirBronchogram = DICOMControlledTerminologyDefinitionsCode("112071")
+    """
+    Air in a crescentic shape in a nodule or mass, in which the air separates the outer wall of the lesion from an inner sequestrum, which most commonly is a fungus ball of Aspergillusspecies [Fraser and Pare]
+    """
     AirCrescent = DICOMControlledTerminologyDefinitionsCode("112072")
+    """
+    Ground-glass opacity surrounding the circumference of a nodule or mass. May be a sign of invasive aspergillosis or hemorrhage of various causes [Fraser and Pare]
+    """
     HaloSign = DICOMControlledTerminologyDefinitionsCode("112073")
+    """
+    Flag denoting that this lesion was identified, at baseline, as a target lesion intended for tracking over time [RECIST]
+    """
     TargetLesionAtBaseline = DICOMControlledTerminologyDefinitionsCode("112074")
+    """
+    Flag denoting that this lesion was not identified, at baseline, as a target lesion, and was not intended for tracking over time [RECIST]
+    """
     Non_TargetLesionAtBaseline = DICOMControlledTerminologyDefinitionsCode("112075")
+    """
+    Flag denoting that this finding was identified, at baseline, as a category other than a lesion, and was not intended for tracking over time [RECIST]
+    """
     Non_LesionAtBaseline = DICOMControlledTerminologyDefinitionsCode("112076")
+    """
+    Local or general reduction in the caliber of visible pulmonary vessels, presumed to result from decreased flow occasioned by contraction of muscular pulmonary arteries [Fraser and Pare]
+    """
     Vasoconstriction = DICOMControlledTerminologyDefinitionsCode("112077")
+    """
+    Local or general increase in the width of visible pulmonary vessels resulting from increased pulmonary blood flow [Fraser and Pare]
+    """
     Vasodilation = DICOMControlledTerminologyDefinitionsCode("112078")
+    """
+    A manifestation of lung disease in which bronchi, pulmonary vessels, a fissure or fissures, or septa of secondary pulmonary lobules are abnormally displaced [Fraser and Pare]
+    """
     ArchitecturalDistortion = DICOMControlledTerminologyDefinitionsCode("112079")
+    """
+    A patchwork of regions of varied attenuation, interpreted as secondary to regional differences in perfusion [Fraser and Pare]
+    """
     MosaicPerfusion = DICOMControlledTerminologyDefinitionsCode("112080")
+    """
+    Increased blood flow to the lungs or a portion thereof, manifested by a general or local increase in the width of visible pulmonary vessels [Fraser and Pare]
+    """
     Pleonemia = DICOMControlledTerminologyDefinitionsCode("112081")
+    """
+    The common boundary between the shadows of two juxtaposed structures or tissues of different texture or opacity (edge, border) [Fraser and Pare]
+    """
     Interface = DICOMControlledTerminologyDefinitionsCode("112082")
+    """
+    A longitudinal opacity no greater than 2 mm in width [Fraser and Pare]
+    """
     Line = DICOMControlledTerminologyDefinitionsCode("112083")
+    """
+    The shadow of an absorber that attenuates the primary X-Ray beam less effectively than do surrounding absorbers. In a radiograph, any circumscribed area that appears more nearly black (of greater photometric density) than its surround [Fraser and Pare]
+    """
     Lucency = DICOMControlledTerminologyDefinitionsCode("112084")
+    """
+    A midlung region, characterized by the absence of large blood vessels and by a paucity of small blood vessels, that corresponds to the minor fissure and adjacent peripheral lung [Fraser and Pare]
+    """
     MidlungWindow = DICOMControlledTerminologyDefinitionsCode("112085")
+    """
+    The angle formed by the right and left main bronchi at the tracheal bifurcation [Fraser and Pare]
+    """
     CarinaAngle = DICOMControlledTerminologyDefinitionsCode("112086")
+    """
+    The pulmonary artery and its immediate branches in a secondary lobule; HRCT depicts these vessels in certain cases; a.k.a. core structures or lobular core structures [Fraser and Pare]
+    """
     CentrilobularStructures = DICOMControlledTerminologyDefinitionsCode("112087")
+    """
+    A vertically oriented linear or curvilinear opacity approximately 1-2 mm wide, commonly projected on the tracheal air shadow [Fraser and Pare]
+    """
     AnteriorJunctionLine = DICOMControlledTerminologyDefinitionsCode("112088")
+    """
+    A vertically oriented, linear or curvilinear opacity approximately 2 mm wide, commonly projected on the tracheal air shadow, and usually slightly concave to the right [Fraser and Pare]
+    """
     PosteriorJunctionLine = DICOMControlledTerminologyDefinitionsCode("112089")
+    """
+    A space in the right side of the mediastinum into which the medial edge of the right lower lobe extends [Fraser and Pare]
+    """
     AzygoesophagealRecessInterface = DICOMControlledTerminologyDefinitionsCode("112090")
+    """
+    A vertically oriented interface usually seen in a frontal chest radiograph to the left of the thoracic vertebral column [Fraser and Pare]
+    """
     ParaspinalLine = DICOMControlledTerminologyDefinitionsCode("112091")
+    """
+    A vertically oriented linear opacity ranging in width from 2-5 mm, extending from the thoracic inlet to the bifurcation of the trachea, and visible only on lateral radiographs of the chest [Fraser and Pare]
+    """
     PosteriorTrachealStripe = DICOMControlledTerminologyDefinitionsCode("112092")
+    """
+    A vertically oriented linear opacity approximately 2-3 mm wide extending from the thoracic inlet to the right tracheobronchial angle [Fraser and Pare]
+    """
     RightTrachealStripe = DICOMControlledTerminologyDefinitionsCode("112093")
+    """
+    A longitudinal composite opacity measuring 2-5 mm in width; acceptable when limited to anatomic structures within the mediastinum [Fraser and Pare]
+    """
     Stripe = DICOMControlledTerminologyDefinitionsCode("112094")
+    """
+    A gap or passage through an anatomical part or organ; especially : a gap through which another part or organ passes
+    """
     Hiatus = DICOMControlledTerminologyDefinitionsCode("112095")
+    """
+    A small rounded elevation or eminence on the first rib for the attachment of the scalenus anterior
+    """
     RibScaleneTubercle = DICOMControlledTerminologyDefinitionsCode("112096")
+    """
+    A groove that serves for the transmission of the vertebral artery
+    """
     VertebralIntervertebralNotch = DICOMControlledTerminologyDefinitionsCode("112097")
+    """
+    The concave depression of the anterior surface of the scapula
+    """
     SubscapularFossa = DICOMControlledTerminologyDefinitionsCode("112098")
+    """
+    A sloping ridge dividing the dorsal surface of the scapula into the supraspinatous fossa (above), and the infraspinatous fossa (below)
+    """
     ScapularSpine = DICOMControlledTerminologyDefinitionsCode("112099")
+    """
+    The portion of the dorsal surface of the scapula above the scapular spine
+    """
     ScapularSupraspinatusFossa = DICOMControlledTerminologyDefinitionsCode("112100")
+    """
+    The portion of the dorsal surface of the scapula below the scapular spine
+    """
     ScapularInfraspinatusFossa = DICOMControlledTerminologyDefinitionsCode("112101")
+    """
+    The portion of the aortic arch that defines the transition between its ascending and descending limbs
+    """
     AorticKnob = DICOMControlledTerminologyDefinitionsCode("112102")
+    """
+    Section of Azygos vein near the fourth thoracic vertebra, where it arches forward over the root of the right lung, and ends in the superior vena cava, just before that vessel pierces the pericardium
+    """
     ArchOfTheAzygosVein = DICOMControlledTerminologyDefinitionsCode("112103")
+    """
+    A local collection of gas and liquid that, when traversed by a horizontal X-Ray beam, creates a shadow characterized by a sharp horizontal interface between gas density above and liquid density below [Fraser and Pare]
+    """
     Air_fluidLevel = DICOMControlledTerminologyDefinitionsCode("112104")
+    """
+    A circumferential pattern of fine linear spicules, approximately 5 mm long, extending outward from the margin of a solitary pulmonary nodule through a zone of relative lucency [Fraser and Pare]
+    """
     CoronaRadiata = DICOMControlledTerminologyDefinitionsCode("112105")
+    """
+    A number of closely approximated ring shadows representing air spaces 5-10 mm in diameter with walls 2-3 mm thick that resemble a true honeycomb; implies "end-stage" lung [Fraser and Pare]
+    """
     HoneycombPattern = DICOMControlledTerminologyDefinitionsCode("112106")
+    """
+    A straight, curved, or irregular linear opacity that is visible in multiple projections; usually situated in the lower half of the lung; vary markedly in length and width [Fraser and Pare]
+    """
     Fleischner_sLine_s_ = DICOMControlledTerminologyDefinitionsCode("112107")
+    """
+    Fine linear opacities present in a lobule when the intralobular interstitium is thickened. When numerous, they may appear as a fine reticular pattern [Fraser and Pare]
+    """
     IntralobularLines = DICOMControlledTerminologyDefinitionsCode("112108")
+    """
+    Essentially straight linear opacity 2-6 cm in length and 1-3 mm in width, usually in an upper lung zone [Fraser and Pare]
+    """
     KerleyALine = DICOMControlledTerminologyDefinitionsCode("112109")
+    """
+    A straight linear opacity 1.5-2 cm in length and 1-2 mm in width, usually at the lung base [Fraser and Pare]
+    """
     KerleyBLine = DICOMControlledTerminologyDefinitionsCode("112110")
+    """
+    A group of branching, linear opacities producing the appearing of a fine net, at the lung base [Fraser and Pare]
+    """
     KerleyCLines = DICOMControlledTerminologyDefinitionsCode("112111")
+    """
+    Elongated opacity, usually several millimeters wide and up to about 5 cm long, often extending to the pleura, which may be thickened and retracted at the site of contact [Fraser and Pare]
+    """
     ParenchymalBand = DICOMControlledTerminologyDefinitionsCode("112112")
+    """
+    A collection of innumerable small linear opacities that together produce an appearance resembling a net [Fraser and Pare]
+    """
     ReticularPattern = DICOMControlledTerminologyDefinitionsCode("112113")
+    """
+    Usually used in the plural, a generic term for linear opacities of varied distribution produced when the interstitium between pulmonary lobules is thickened [Fraser and Pare]
+    """
     SeptalLine_s_ = DICOMControlledTerminologyDefinitionsCode("112114")
+    """
+    A thin curvilinear opacity, a few millimeters or less in thickness, usually less than 1 cm from the pleural surface and paralleling the pleura [Fraser and Pare]
+    """
     SubpleuralLine = DICOMControlledTerminologyDefinitionsCode("112115")
+    """
+    Parallel or slightly convergent linear opacities that suggest the planar projection of tubular structures and that correspond in location and orientation to elements of the bronchial tree [Fraser and Pare]
+    """
     TramlineShadow = DICOMControlledTerminologyDefinitionsCode("112116")
+    """
+    Paired, parallel, or slightly convergent linear opacities presumed to represent the walls of a tubular structure seen en face; used if the anatomic nature of a shadow is obscure [Fraser and Pare]
+    """
     TubularShadow = DICOMControlledTerminologyDefinitionsCode("112117")
+    """
+    The opacity of a radiographic shadow to visible light; film blackening; the term should never be used to mean an "opacity" or "radiopacity" [Fraser and Pare]
+    """
     Density = DICOMControlledTerminologyDefinitionsCode("112118")
+    """
+    Subpleural increased attenuation in dependent lung. The increased attenuation disappears when the region of lung is nondependent; a.k.a. dependent increased attenuation [Fraser and Pare]
+    """
     DependentOpacity = DICOMControlledTerminologyDefinitionsCode("112119")
+    """
+    Hazy increased attenuation of lung, but with preservation of bronchial and vascular margins; caused by partial filling of air spaces, interstitial thickening, partial collapse of alveoli, normal expiration, or increased capillary blood volume [Fraser and Pare]
+    """
     GroundGlassOpacity = DICOMControlledTerminologyDefinitionsCode("112120")
+    """
+    Any ill-defined opacity in the lung [Fraser and Pare]
+    """
     Infiltrate = DICOMControlledTerminologyDefinitionsCode("112121")
+    """
+    Discrete, small, round, focal opacity of at least soft tissue attenuation and with a diameter no greater than 7 mm [Fraser and Pare]
+    """
     Micronodule = DICOMControlledTerminologyDefinitionsCode("112122")
+    """
+    A shadow produced by a local collection of fluid in one of the interlobar fissures, usually elliptic in one radiographic projection and rounded in the other, resembling a tumor [Fraser and Pare]
+    """
     PhantomTumor_pseudotumor_ = DICOMControlledTerminologyDefinitionsCode("112123")
+    """
+    Any perceptible discontinuity in film blackening attributed to the attenuation of the X-Ray beam by a specific anatomic absorber or lesion on or within the body of the patient; to be employed only when more specific identification is not possible [Fraser and Pare]
+    """
     Shadow = DICOMControlledTerminologyDefinitionsCode("112124")
+    """
+    Term used to define a reticular pattern specific to pneumoconioses [Fraser and Pare]
+    """
     SmallIrregularOpacities = DICOMControlledTerminologyDefinitionsCode("112125")
+    """
+    Term used to define a nodular pattern specific to pneumoconioses [Fraser and Pare]
+    """
     SmallRoundedOpacities = DICOMControlledTerminologyDefinitionsCode("112126")
+    """
+    Nodular dilation of centrilobular branching structures that resembles a budding tree and represents exudative bronchiolar dilation [Fraser and Pare]
+    """
     Tree_in_budSign = DICOMControlledTerminologyDefinitionsCode("112127")
+    """
+    Any extended, finely granular pattern of pulmonary opacity within which normal anatomic details are partly obscured [Fraser and Pare]
+    """
     GranularPattern = DICOMControlledTerminologyDefinitionsCode("112128")
+    """
+    A collection of tiny discrete opacities in the lungs, each measuring 2 mm or less in diameter, generally uniform in size and widespread in distribution [Fraser and Pare]
+    """
     MiliaryPattern = DICOMControlledTerminologyDefinitionsCode("112129")
+    """
+    Generalized pattern of relatively well defined areas in the lung having different X-Ray attenuations due to a longstanding underlying pulmonary disease
+    """
     MosaicPattern = DICOMControlledTerminologyDefinitionsCode("112130")
+    """
+    A qualitative descriptor of a size that is dramatically less than typical
+    """
     ExtremelySmall = DICOMControlledTerminologyDefinitionsCode("112131")
+    """
+    A qualitative descriptor of a size that is considerably less than typical
+    """
     VerySmall = DICOMControlledTerminologyDefinitionsCode("112132")
+    """
+    A qualitative descriptor of a size that is so small as to be abnormal versus expected size
+    """
     TooSmall = DICOMControlledTerminologyDefinitionsCode("112133")
+    """
+    Shaped like an ellipse (oval)
+    """
     Elliptic = DICOMControlledTerminologyDefinitionsCode("112134")
+    """
+    A border shape that is made up of, provided with, or divided into lobules (small lobes, curved or rounded projections or divisions)
+    """
     Lobulated = DICOMControlledTerminologyDefinitionsCode("112135")
+    """
+    Radially orientated border shape
+    """
     Spiculated = DICOMControlledTerminologyDefinitionsCode("112136")
+    """
+    The border of a shadow (opacity) is sharply defined [Fraser and Pare]
+    """
     SharplyDefined = DICOMControlledTerminologyDefinitionsCode("112137")
+    """
+    The border of a shadow (opacity) is distinctly defined [Fraser and Pare]
+    """
     DistinctlyDefined = DICOMControlledTerminologyDefinitionsCode("112138")
+    """
+    The border of a shadow (opacity) is well distinct from adjacent structures [Fraser and Pare]
+    """
     WellDemarcated = DICOMControlledTerminologyDefinitionsCode("112139")
+    """
+    The border of a shadow (opacity) is sharply distinct from adjacent structures [Fraser and Pare]
+    """
     SharplyDemarcated = DICOMControlledTerminologyDefinitionsCode("112140")
+    """
+    The border of a shadow (opacity) is poorly distinct from adjacent structures [Fraser and Pare]
+    """
     PoorlyDemarcated = DICOMControlledTerminologyDefinitionsCode("112141")
+    """
+    A shadow (opacity) possessing a complete or nearly complete visible border [Fraser and Pare]
+    """
     Circumscribed = DICOMControlledTerminologyDefinitionsCode("112142")
+    """
+    Inspired atmospheric gas. The word is sometimes used to describe gas within the body regardless of its composition or site [Fraser and Pare]
+    """
     Air = DICOMControlledTerminologyDefinitionsCode("112143")
+    """
+    Material having X-Ray attenuation properties similar to muscle
+    """
     SoftTissue = DICOMControlledTerminologyDefinitionsCode("112144")
+    """
+    Material having X-Ray attenuation properties similar to calcium, a silver-white bivalent metallic element occurring in plants and animals
+    """
     Calcium = DICOMControlledTerminologyDefinitionsCode("112145")
+    """
+    A pulmonary opacity 4-8 mm in diameter, presumed to represent anatomic acinus, or a collection of opacities in the lung, each measuring 4-8 mm in diameter, and together producing an extended, homogeneous shadow [Fraser and Pare]
+    """
     Acinar = DICOMControlledTerminologyDefinitionsCode("112146")
+    """
+    The gas-containing portion of the lung parenchyma, including the acini and excluding the interstitium [Fraser and Pare]
+    """
     AirSpace = DICOMControlledTerminologyDefinitionsCode("112147")
+    """
+    Sharply defined, approximately circular opacities occurring singly or in clusters, usually in the upper lobes [Fraser and Pare]
+    """
     Fibronodular = DICOMControlledTerminologyDefinitionsCode("112148")
+    """
+    A shadow (opacity) that is ill-defined, lacking clear-cut margins [Fraser and Pare]
+    """
     Fluffy = DICOMControlledTerminologyDefinitionsCode("112149")
+    """
+    A shadow resembling a line; any elongated opacity of approximately uniform width [Fraser and Pare]
+    """
     Linear = DICOMControlledTerminologyDefinitionsCode("112150")
+    """
+    The number of small opacities per unit area or zone of lung. In the International Labor Organization (ILO) classification of radiographs of the pneumoconioses, the qualifiers 0 through 3 subdivide the profusion into 4 categories. The profusion categories may be further subdivided by employing a 12-point scale [Fraser and Pare]
+    """
     Profusion = DICOMControlledTerminologyDefinitionsCode("112151")
+    """
+    The effacement of an anatomic soft tissue border by either a normal anatomic structure or a pathologic state such as airlessness of adjacent lung or accumulation of fluid in the contiguous pleural space; useful in detecting and localizing an opacity along the axis of the X-Ray beam [Fraser and Pare]
+    """
     SilhouetteSign = DICOMControlledTerminologyDefinitionsCode("112152")
+    """
+    Situated or occurring between the pleura and the body wall
+    """
     Subpleural = DICOMControlledTerminologyDefinitionsCode("112153")
+    """
+    Spatial arrangement of opacities that bears vague resemblance to the shape of a bat in flight; bilaterally symmetric [Fraser and Pare]
+    """
     Bat_sWingDistribution = DICOMControlledTerminologyDefinitionsCode("112154")
+    """
+    Spatial arrangement of opacities that bears vague resemblance to the shape of a butterfly in flight; bilaterally symmetric [Fraser and Pare]
+    """
     ButterflyDistribution = DICOMControlledTerminologyDefinitionsCode("112155")
+    """
+    Referring to the region of the bronchioloarteriolar core of a secondary pulmonary lobule [Fraser and Pare]
+    """
     Centrilobular = DICOMControlledTerminologyDefinitionsCode("112156")
+    """
+    The joining together of a number of opacities into a single opacity [Fraser and Pare]
+    """
     Coalescent = DICOMControlledTerminologyDefinitionsCode("112157")
+    """
+    Of or relating to a lobe (a curved or rounded projection or division); e.g. involving an entire lobe of the lung
+    """
     Lobar = DICOMControlledTerminologyDefinitionsCode("112158")
+    """
+    Extremely or excessively acute, as a qualitative measure of severity
+    """
     Hyper_acute = DICOMControlledTerminologyDefinitionsCode("112159")
+    """
+    Of uniform opacity or texture throughout [Fraser and Pare]
+    """
     Homogeneous_uniformOpacity_ = DICOMControlledTerminologyDefinitionsCode("112160")
+    """
+    Lack of homogeneity in opacity or texture
+    """
     Inhomogeneous = DICOMControlledTerminologyDefinitionsCode("112161")
+    """
+    Discrete opacity centrally within a larger opacity, as a calcification descriptor
+    """
     Target = DICOMControlledTerminologyDefinitionsCode("112162")
+    """
+    Pertaining to sharply defined, linear, and/or nodular opacities containing calcification(s) [Fraser and Pare]
+    """
     Fibrocalcific = DICOMControlledTerminologyDefinitionsCode("112163")
+    """
+    Calcifications made up of loosely aggregated particles, resembling wool
+    """
     Flocculent = DICOMControlledTerminologyDefinitionsCode("112164")
+    """
+    A change in the shape formed by the boundary or edges of a finding or feature
+    """
     DifferenceInBorderShape = DICOMControlledTerminologyDefinitionsCode("112165")
+    """
+    A change in the clarity of the boundary or edges of a finding or feature
+    """
     DifferenceInBorderDefinition = DICOMControlledTerminologyDefinitionsCode("112166")
+    """
+    A change in the extent of spreading of a finding or feature
+    """
     DifferenceInDistribution = DICOMControlledTerminologyDefinitionsCode("112167")
+    """
+    A change in the part(s) of the anatomy affected or encompassed by a finding or feature
+    """
     DifferenceInSiteInvolvement = DICOMControlledTerminologyDefinitionsCode("112168")
+    """
+    A change in the matter or substance within a finding or feature
+    """
     DifferenceInTypeOfContent = DICOMControlledTerminologyDefinitionsCode("112169")
+    """
+    A change in the surface or consistency of a finding or feature
+    """
     DifferenceInTexture = DICOMControlledTerminologyDefinitionsCode("112170")
+    """
+    A location in image space, which may or may not correspond to an anatomical reference, which is often used for registering data sets
+    """
     FiducialMark = DICOMControlledTerminologyDefinitionsCode("112171")
+    """
+    Connected to an injection chamber placed under the skin in the upper part of the chest. When it is necessary to inject some drug, a specific needle is put in the chamber through the skin and a silicon membrane. The advantage of a portacath is that it may be left in place several months contrarily of "classical" catheters
+    """
     Portacath = DICOMControlledTerminologyDefinitionsCode("112172")
+    """
+    A tube inserted into the chest wall from outside the body, for drainage. Sometimes used for collapsed lung. Usually connected to a receptor placed lower than the insertion site
+    """
     ChestTube = DICOMControlledTerminologyDefinitionsCode("112173")
+    """
+    A tube placed into the subclavian vein to deliver medication directly into the venous system
+    """
     CentralLine = DICOMControlledTerminologyDefinitionsCode("112174")
+    """
+    A stent is a tube inserted into another tube. Kidney stent is a tube that is inserted into the kidney, ureter, and bladder, to help drain urine. Usually inserted through a scoping device presented through the urethra
+    """
     KidneyStent = DICOMControlledTerminologyDefinitionsCode("112175")
+    """
+    A stent is a tube inserted into another tube. Pancreatic stent is inserted through the common bile duct to the pancreatic duct, to drain bile
+    """
     PancreaticStent = DICOMControlledTerminologyDefinitionsCode("112176")
+    """
+    A non-lesion object that appears to be a circular band, attached to the body via pierced nipple
+    """
     NippleRing = DICOMControlledTerminologyDefinitionsCode("112177")
+    """
+    A non-lesion object that appears to be a flat round piece of metal
+    """
     Coin = DICOMControlledTerminologyDefinitionsCode("112178")
+    """
+    The least quantity assignable, admissible, or possible; the least of a set of X-Ray attenuation coefficients
+    """
     MinimumAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112179")
+    """
+    The greatest quantity or value attainable or attained; the largest of a set of X-Ray attenuation coefficients
+    """
     MaximumAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112180")
+    """
+    The value that is computed by dividing the sum of a set of X-Ray attenuation coefficients by the number of values 
+    """
     MeanAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112181")
+    """
+    The value in an ordered set of X-Ray attenuation coefficients, below and above which there is an equal number of values
+    """
     MedianAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112182")
+    """
+    For a set of X-Ray attenuation coefficients: 1) a measure of the dispersion of a frequency distribution that is the square root of the arithmetic mean of the squares of the deviation of each of the class frequencies from the arithmetic mean of the frequency distribution; 2) a parameter that indicates the way in which a probability function or a probability density function is centered around its mean and that is equal to the square root of the moment in which the deviation from the mean is squared
+    """
     StandardDeviationOfAttenuationCoefficient = (
         DICOMControlledTerminologyDefinitionsCode("112183")
     )
+    """
+    American College of Radiology. ACR Standard for the Performance of Pediatric and Adult Thoracic Computed Tomography (CT). In: Standards. Reston, Va: 2001:103-107
+    """
     PerformanceOfPediatricAndAdultThoracicCT = (
         DICOMControlledTerminologyDefinitionsCode("112184")
     )
+    """
+    American College of Radiology. ACR Standard for the Performance of Computed Tomography for the Detection of Pulmonary Embolism in Adults. In: Standards. Reston, Va: 2001:109-113
+    """
     PerformanceOfCTForDetectionOfPulmonaryEmbolismInAdults = (
         DICOMControlledTerminologyDefinitionsCode("112185")
     )
+    """
+    American College of Radiology. ACR Standard for the Performance of High-Resolution Computed Tomography (HRCT) of the Lungs in Adults. In: Standards. Reston, Va: 2001:115-118
+    """
     PerformanceOfHigh_ResolutionCTOfTheLungsInAdults = (
         DICOMControlledTerminologyDefinitionsCode("112186")
     )
+    """
+    The method of calculation of a measurement or other type of numeric value is not specified
+    """
     UnspecifiedMethodOfCalculation = DICOMControlledTerminologyDefinitionsCode("112187")
+    """
+    The calculation method was performed in two-dimensional space
+    """
     Two_dimensionalMethod = DICOMControlledTerminologyDefinitionsCode("112188")
+    """
+    The calculation method was performed in three-dimensional space
+    """
     Three_dimensionalMethod = DICOMControlledTerminologyDefinitionsCode("112189")
+    """
+    The relative density of parenchymal tissue as a proportion of breast volume
+    """
     BreastTissueDensity = DICOMControlledTerminologyDefinitionsCode("112191")
+    """
+    The volume of parenchymal tissue
+    """
     VolumeOfParenchymalTissue = DICOMControlledTerminologyDefinitionsCode("112192")
+    """
+    The volume of the breast
+    """
     VolumeOfBreast = DICOMControlledTerminologyDefinitionsCode("112193")
+    """
+    The mass of parenchymal tissue
+    """
     MassOfParenchymalTissue = DICOMControlledTerminologyDefinitionsCode("112194")
+    """
+    The mass of the breast
+    """
     MassOfBreast = DICOMControlledTerminologyDefinitionsCode("112195")
+    """
+    A measured or calculated area of vascular calcification
+    """
     AreaOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112196")
+    """
+    A measured or calculated volume of vascular calcification
+    """
     VolumeOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112197")
+    """
+    A measured or calculated percentage of vascular calcification
+    """
     PercentageOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode(
         "112198"
     )
+    """
+    A measured or calculated mass of vascular calcification
+    """
     MassOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112199")
+    """
+    The average nearest neighbor distance of all individual microcalcifications in a cluster
+    """
     AverageCalcificationDistanceInACalcificationCluster = (
         DICOMControlledTerminologyDefinitionsCode("112200")
     )
+    """
+    The standard deviation of nearest neighbor distance of all individual microcalcifications in a cluster
+    """
     StandardDeviationDistanceOfCalcificationsInACluster = (
         DICOMControlledTerminologyDefinitionsCode("112201")
     )
+    """
+    A structured report containing the results of computer-aided detection or diagnosis applied to colon imaging and associated clinical information
+    """
     ColonCADReport = DICOMControlledTerminologyDefinitionsCode("112220")
+    """
+    Overall interpretation of the colon using C-RADS categorization system
+    """
     ColonOverallAssessment = DICOMControlledTerminologyDefinitionsCode("112222")
+    """
+    Characteristics of a set of images
+    """
     ImageSetProperties = DICOMControlledTerminologyDefinitionsCode("112224")
+    """
+    Nominal slice thickness, in mm
+    """
     SliceThickness = DICOMControlledTerminologyDefinitionsCode("112225")
+    """
+    Distance between contiguous images, measured from the center-to-center of each image
+    """
     SpacingBetweenSlices = DICOMControlledTerminologyDefinitionsCode("112226")
+    """
+    Uniquely identifies groups of composite instances that have the same coordinate system that conveys spatial and/or temporal information
+    """
     FrameOfReferenceUID = DICOMControlledTerminologyDefinitionsCode("112227")
+    """
+    Patient orientation with respect to downward direction (gravity)
+    """
     RecumbentPatientPositionWithRespectToGravity = (
         DICOMControlledTerminologyDefinitionsCode("112228")
     )
+    """
+    Distinguishes a part of a segmentation
+    """
     IdentifyingSegment = DICOMControlledTerminologyDefinitionsCode("112229")
+    """
+    The diameter of a polyp stalk measured perpendicular to the axis of the stalk
+    """
     PolypStalkWidth = DICOMControlledTerminologyDefinitionsCode("112232")
+    """
+    The length of the path following the centerline of the colon from the anus to the area of interest
+    """
     DistanceFromAnus = DICOMControlledTerminologyDefinitionsCode("112233")
+    """
+    A location in the body that is outside the colon
+    """
     AnatomicNon_colon = DICOMControlledTerminologyDefinitionsCode("112238")
+    """
+    An inadequate study or a study that is awaiting prior comparisons. The study may have inadequate preparation and cannot exclude lesions greater than or equal to ten millimeters owing to presence of fluid or feces. The study may have inadequate insufflation where one or more colonic segments collapsed on both views. Based on "CT Colonography Reporting and Data System: A Consensus Proposal", Radiology, July 2005; 236:3-9
+    """
     C0_InadequateStudy_AwaitingPriorComparisons = (
         DICOMControlledTerminologyDefinitionsCode("112240")
     )
+    """
+    The study has a normal colon or benign lesion, with the recommendation to continue routine screening. The study has no visible abnormalities of the colon. The study has no polyps greater than six millimeters. The study may have lipoma, inverted diverticulum, or nonneoplastic findings, such as colonic diverticula. Based on "CT Colonography Reporting and Data System: A Consensus Proposal", Radiology, July 2005; 236:3-9
+    """
     C1_NormalColonOrBenignLesion = DICOMControlledTerminologyDefinitionsCode("112241")
+    """
+    The study has an intermediate polyp or indeterminate finding and surveillance or colonoscopy is recommended. There may be intermediate polyps between six and nine millimeters and there are less than three in number. The study may have an intermediate finding and cannot exclude a polyp that is greater than or equal to six millimeters in a technically adequate exam. Based on "CT Colonography Reporting and Data System: A Consensus Proposal", Radiology, July 2005; 236:3-9
+    """
     C2_IntermediatePolypOrIndeterminateFinding = (
         DICOMControlledTerminologyDefinitionsCode("112242")
     )
+    """
+    The study has a polyp, possibly advanced adenoma, and a follow-up colonoscopy is recommended. The study has a polyp greater than or equal to ten millimeters or the study has three or more polyps that are each between six to nine millimeters. Based on "CT Colonography Reporting and Data System: A Consensus Proposal", Radiology, July 2005; 236:3-9
+    """
     C3_Polyp_PossiblyAdvancedAdenoma = DICOMControlledTerminologyDefinitionsCode(
         "112243"
     )
+    """
+    The study has a colonic mass, likely malignant, and surgical consultation is recommended. The lesion compromises bowel lumen and demonstrates extracolonic invasion. Based on "CT Colonography Reporting and Data System: A Consensus Proposal", Radiology, July 2005; 236:3-9
+    """
     C4_ColonicMass_LikelyMalignant = DICOMControlledTerminologyDefinitionsCode("112244")
+    """
+    American College of Radiology Practice Guideline for the Performance of Computed Tomography (CT) Colonography in Adults. In: Practice Guidelines and Technical Standards.Reston, Va: American College of Radiology;2006:371-376
+    """
     ACRGuideline_PerformanceOfAdultCTColonography = (
         DICOMControlledTerminologyDefinitionsCode("112248")
     )
+    """
+    American College of Radiology Technical Standard for Diagnostic Medical Physics Performance Monitoring of Computed Tomography (CT) Equipment. In: Practice Guidelines and Technical Standards.Reston, Va: American College of Radiology;2006:945-948
+    """
     ACRStandard_CTMedicalPhysicsPerformanceMonitoring = (
         DICOMControlledTerminologyDefinitionsCode("112249")
     )
+    """
+    View Orientation Modifier indicates that the view orientation of the imaging plane is rotated +45° along the cranial-caudal axis
+    """
     AP_45 = DICOMControlledTerminologyDefinitionsCode("112300")
+    """
+    View Orientation Modifier indicates that the view orientation of the imaging plane is rotated -45° along the cranial-caudal axis
+    """
     AP_45 = DICOMControlledTerminologyDefinitionsCode("112301")
+    """
+    The axis following the shaft of the femur
+    """
     AnatomicalAxisOfFemur = DICOMControlledTerminologyDefinitionsCode("112302")
+    """
+    Center of Rotation of the natural Acetabulum
+    """
     AcetabularCenterOfRotation = DICOMControlledTerminologyDefinitionsCode("112303")
+    """
+    Center of Rotation of the natural femur head
+    """
     FemurHeadCenterOfRotation = DICOMControlledTerminologyDefinitionsCode("112304")
+    """
+    Prosthetic component implanted into the acetabulum. Provides hold for the insert that is mounted inside the cup
+    """
     AcetabularCupShell = DICOMControlledTerminologyDefinitionsCode("112305")
+    """
+    Prosthetic pelvic joint component. Inserted into the cup, takes in the femoral head replacement
+    """
     AcetabularCupInsert = DICOMControlledTerminologyDefinitionsCode("112306")
+    """
+    Prosthetic pelvic joint cup including insert
+    """
     AcetabularCupMonoblock = DICOMControlledTerminologyDefinitionsCode("112307")
+    """
+    Component for Femoral Head Prosthesis where the conic intake for the stem neck can be exchanged. Combined with a Femoral Head Cone Taper Component
+    """
     FemoralHeadBallComponent = DICOMControlledTerminologyDefinitionsCode("112308")
+    """
+    Exchangeable neck intake for composite femoral head prosthesis. Combined with a Femoral Head Ball Component
+    """
     FemoralHeadConeTaperComponent = DICOMControlledTerminologyDefinitionsCode("112309")
+    """
+    Prosthesis Implanted into the femoral bone to provide force transmission between joint replacement and bone. On the proximal end a conic neck holds the femoral head replacement
+    """
     FemoralStem = DICOMControlledTerminologyDefinitionsCode("112310")
+    """
+    Distal half of a modular stem prosthesis system. Combined with a Stem Proximal Component
+    """
     FemoralStemDistalComponent = DICOMControlledTerminologyDefinitionsCode("112311")
+    """
+    Proximal half of a modular stem prosthesis system. Combined with a Stem Distal Component
+    """
     FemoralStemProximalComponent = DICOMControlledTerminologyDefinitionsCode("112312")
+    """
+    Stem prosthetic component with a modular insert for an exchangeable neck component. Combined with a Neck Component
+    """
     FemoralStemComponent = DICOMControlledTerminologyDefinitionsCode("112313")
+    """
+    Prosthetic Neck to be combined with a Stem Component
+    """
     NeckComponent = DICOMControlledTerminologyDefinitionsCode("112314")
+    """
+    Prosthetic Stem and Femoral Head in one piece
+    """
     MonoblockStem = DICOMControlledTerminologyDefinitionsCode("112315")
+    """
+    A proximal attachment to the shaft used to compensate for bone deficiencies or bone loss
+    """
     ProstheticShaftAugment = DICOMControlledTerminologyDefinitionsCode("112316")
+    """
+    Artificial femur head surface needed for the partial replacement of the femoral head where only the surface is replaced
+    """
     FemoralHeadResurfacingComponent = DICOMControlledTerminologyDefinitionsCode(
         "112317"
     )
+    """
+    Fixation using a pin
+    """
     Pinning = DICOMControlledTerminologyDefinitionsCode("112318")
+    """
+    Fixation sewing several objects together
+    """
     Sewing = DICOMControlledTerminologyDefinitionsCode("112319")
+    """
+    Fixation using a bolt
+    """
     Bolting = DICOMControlledTerminologyDefinitionsCode("112320")
+    """
+    Fixation due to forcing an object into a narrow space
+    """
     Wedging = DICOMControlledTerminologyDefinitionsCode("112321")
+    """
+    Attachment to the distal end of a cemented stem assuring that the stem is in a central position inside the drilled femoral canal before cementation
+    """
     DistalCentralizer = DICOMControlledTerminologyDefinitionsCode("112325")
+    """
+    Planning by an unspecified 2D method
+    """
     Generic2DPlanning = DICOMControlledTerminologyDefinitionsCode("112340")
+    """
+    Planning by an unspecified 3D method
+    """
     Generic3DPlanning = DICOMControlledTerminologyDefinitionsCode("112341")
+    """
+    Planning of a Hip Replacement, by an unspecified method
+    """
     GenericPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode(
         "112342"
     )
+    """
+    Planning of Knee Replacement, by an unspecified method
+    """
     GenericPlanningForKneeReplacement = DICOMControlledTerminologyDefinitionsCode(
         "112343"
     )
+    """
+    Planning of Hip Replacement according to the procedure of M. E. Müller [Eggli et. al.1998]
+    """
     M_llerMethodPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode(
         "112344"
     )
+    """
+    A Report containing the results of an Implantation Planning Activity
+    """
     ImplantationPlan = DICOMControlledTerminologyDefinitionsCode("112345")
+    """
+    A selection of one Implant Component
+    """
     SelectedImplantComponent = DICOMControlledTerminologyDefinitionsCode("112346")
+    """
+    Identification ID of an Implant Component
+    """
     ComponentID = DICOMControlledTerminologyDefinitionsCode("112347")
+    """
+    An implant template describing the properties (2D/3D geometry and other data) of one Implant Component
+    """
     ImplantTemplate = DICOMControlledTerminologyDefinitionsCode("112348")
+    """
+    A connection of two Connected Implantation Plan Components
+    """
     ComponentConnection = DICOMControlledTerminologyDefinitionsCode("112350")
+    """
+    ID of a Mating Feature Set in an Implant Component
+    """
     MatingFeatureSetID = DICOMControlledTerminologyDefinitionsCode("112351")
+    """
+    ID of the Mating Feature in a Mating Feature Set in an Implant Component
+    """
     MatingFeatureID = DICOMControlledTerminologyDefinitionsCode("112352")
+    """
+    The Spatial Registration of one or more Implant Components
+    """
     SpatialRegistration = DICOMControlledTerminologyDefinitionsCode("112353")
+    """
+    Patient Images used for an implantation planning activity
+    """
     PatientImage = DICOMControlledTerminologyDefinitionsCode("112354")
+    """
+    A collection of Component Connections of Implant Components
+    """
     Assembly = DICOMControlledTerminologyDefinitionsCode("112355")
+    """
+    Fiducials that are selected by the user and may or may not belong to anatomical landmarks
+    """
     UserSelectedFiducial = DICOMControlledTerminologyDefinitionsCode("112356")
+    """
+    Fiducials that represent geometric characteristics, such as center of rotation, and are derived from other fiducials
+    """
     DerivedFiducial = DICOMControlledTerminologyDefinitionsCode("112357")
+    """
+    All parameters and data that were used for the planning activity
+    """
     InformationUsedForPlanning = DICOMControlledTerminologyDefinitionsCode("112358")
+    """
+    A description of the plan as encapsulated PDF SOP Instance
+    """
     SupportingInformation = DICOMControlledTerminologyDefinitionsCode("112359")
+    """
+    A list of all Implant Components selected for an implantation
+    """
     ImplantComponentList = DICOMControlledTerminologyDefinitionsCode("112360")
+    """
+    Reference to objects containing patient data that is used for planning
+    """
     PatientDataUsedDuringPlanning = DICOMControlledTerminologyDefinitionsCode("112361")
+    """
+    A specification of the values from one or more Degrees of Freedom
+    """
     DegreesOfFreedomSpecification = DICOMControlledTerminologyDefinitionsCode("112362")
+    """
+    ID of one Degree of Freedom
+    """
     DegreeOfFreedomID = DICOMControlledTerminologyDefinitionsCode("112363")
+    """
+    Reference to objects containing patient data that were not used for planning but are somehow related
+    """
     RelatedPatientDataNotUsedDuringPlanning = DICOMControlledTerminologyDefinitionsCode(
         "112364"
     )
+    """
+    Implantation Reports that are somehow related; e.g. contemporaneous implantations that are independent
+    """
     RelatedImplantationReports = DICOMControlledTerminologyDefinitionsCode("112365")
+    """
+    Implant Assembly Template
+    """
     ImplantAssemblyTemplate = DICOMControlledTerminologyDefinitionsCode("112366")
+    """
+    Information that is intended to be used intra-operatively
+    """
     PlanningInformationForIntraoperativeUsage = (
         DICOMControlledTerminologyDefinitionsCode("112367")
     )
+    """
+    Position of the patient on the operating room table
+    """
     ImplantationPatientPositioning = DICOMControlledTerminologyDefinitionsCode("112368")
+    """
+    Intended use of the fiducial
+    """
     FiducialIntent = DICOMControlledTerminologyDefinitionsCode("112369")
+    """
+    Type of an Implant Component
+    """
     ComponentType = DICOMControlledTerminologyDefinitionsCode("112370")
+    """
+    Implant Template released by the Manufacturer
+    """
     ManufacturerImplantTemplate = DICOMControlledTerminologyDefinitionsCode("112371")
+    """
+    Images that are created by a planning application
+    """
     DerivedPlanningImages = DICOMControlledTerminologyDefinitionsCode("112372")
+    """
+    Data that is created by a planning application
+    """
     OtherDerivedPlanningData = DICOMControlledTerminologyDefinitionsCode("112373")
+    """
+    One Implant Component that is connected to another Implant Component
+    """
     ConnectedImplantationPlanComponent = DICOMControlledTerminologyDefinitionsCode(
         "112374"
     )
+    """
+    The method used for planning
+    """
     PlanningMethod = DICOMControlledTerminologyDefinitionsCode("112375")
+    """
+    Defines the exact value that was planned for translation
+    """
     DegreeOfFreedomExactTranslationalValue = DICOMControlledTerminologyDefinitionsCode(
         "112376"
     )
+    """
+    Defines the minimum value that was planned for translation
+    """
     DegreeOfFreedomMinimumTranslationalValue = (
         DICOMControlledTerminologyDefinitionsCode("112377")
     )
+    """
+    Defines the maximum value that was planned for translation
+    """
     DegreeOfFreedomMaximumTranslationalValue = (
         DICOMControlledTerminologyDefinitionsCode("112378")
     )
+    """
+    Defines the exact value that was planned for rotation
+    """
     DegreeOfFreedomExactRotationalTranslationValue = (
         DICOMControlledTerminologyDefinitionsCode("112379")
     )
+    """
+    Defines the minimum value that was planned for rotation
+    """
     DegreeOfFreedomMinimumRotationalValue = DICOMControlledTerminologyDefinitionsCode(
         "112380"
     )
+    """
+    Defines the maximum value that was planned for rotation
+    """
     DegreeOfFreedomMaximumRotationalValue = DICOMControlledTerminologyDefinitionsCode(
         "112381"
     )
+    """
+    Procedure step protocol for photographic imaging of surgical procedures, including photography of specimens collected
+    """
     Peri_operativePhotographicImaging = DICOMControlledTerminologyDefinitionsCode(
         "112700"
     )
+    """
+    Procedure step protocol for imaging gross specimens, typically with a photographic camera (modality XC), and planning further dissection
+    """
     GrossSpecimenImaging = DICOMControlledTerminologyDefinitionsCode("112701")
+    """
+    Procedure step protocol for imaging slide specimens
+    """
     SlideMicroscopy = DICOMControlledTerminologyDefinitionsCode("112702")
+    """
+    Procedure step protocol for imaging slide specimens using a whole slide scanner
+    """
     WholeSlideImaging = DICOMControlledTerminologyDefinitionsCode("112703")
+    """
+    Procedure step protocol for imaging slide specimens using a whole slide scanner with a 20X nominal objective lens, in full color, with a single imaging focal plane across the image
+    """
     WSI20XRGB = DICOMControlledTerminologyDefinitionsCode("112704")
+    """
+    Procedure step protocol for imaging slide specimens using a whole slide scanner with a 40X nominal objective lens, in full color, with a single imaging focal plane across the image
+    """
     WSI40XRGB = DICOMControlledTerminologyDefinitionsCode("112705")
+    """
+    Technique of illuminating specimen
+    """
     IlluminationMethod = DICOMControlledTerminologyDefinitionsCode("112706")
+    """
+    Number of focal planes for a microscopy image acquisition
+    """
     NumberOfFocalPlanes = DICOMControlledTerminologyDefinitionsCode("112707")
+    """
+    Nominal distance above a reference plane (typically a slide glass substrate top surface) of the focal plane
+    """
     FocalPlaneZOffset = DICOMControlledTerminologyDefinitionsCode("112708")
+    """
+    Microscope magnification based on nominal objective lens power
+    """
     MagnificationSelection = DICOMControlledTerminologyDefinitionsCode("112709")
+    """
+    Nominal center wavelength for an imaging spectral band
+    """
     IlluminationWavelength = DICOMControlledTerminologyDefinitionsCode("112710")
+    """
+    Name (coded) for an imaging spectral band
+    """
     IlluminationSpectralBand = DICOMControlledTerminologyDefinitionsCode("112711")
+    """
+    Type of filter inserted into the optical imaging path
+    """
     OpticalFilterType = DICOMControlledTerminologyDefinitionsCode("112712")
+    """
+    Technique for identifying tissue to be imaged versus area of slide not to be imaged
+    """
     TissueSelectionMethod = DICOMControlledTerminologyDefinitionsCode("112713")
+    """
+    Imaging performed at multiple imaging (focal) planes
+    """
     MultiplePlanes = DICOMControlledTerminologyDefinitionsCode("112714")
+    """
+    Nominal 5 power objective lens, resulting in a digital image at approximately 2 um/pixel spacing
+    """
     _5X = DICOMControlledTerminologyDefinitionsCode("112715")
+    """
+    Nominal 10 power objective lens, resulting in a digital image at approximately 1 um/pixel spacing
+    """
     _10X = DICOMControlledTerminologyDefinitionsCode("112716")
+    """
+    Nominal 20 power microscope objective lens, resulting in a digital image at approximately 0.5 um/pixel spacing
+    """
     _20X = DICOMControlledTerminologyDefinitionsCode("112717")
+    """
+    Nominal 40 power microscope objective lens, with a combined condenser and objective lens numerical aperture of approximately 1.3, resulting in a digital image at approximately 0.25 um/pixel spacing
+    """
     _40X = DICOMControlledTerminologyDefinitionsCode("112718")
+    """
+    Equipment-specific nominal or default method for identifying tiles without tissue imaged for suppression from inclusion in image object
+    """
     NominalEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode("112719")
+    """
+    Equipment-specific high threshold method for identifying tiles without tissue imaged for suppression from inclusion in image object
+    """
     HighThresholdEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode(
         "112720"
     )
+    """
+    Tiles without tissue imaged are not suppressed from inclusion in image object
+    """
     NoEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode("112721")
+    """
+    Of Interest
+    """
     OfInterest = DICOMControlledTerminologyDefinitionsCode("113000")
+    """
+    Rejected for Quality Reasons
+    """
     RejectedForQualityReasons = DICOMControlledTerminologyDefinitionsCode("113001")
+    """
+    For Referring Provider
+    """
     ForReferringProvider = DICOMControlledTerminologyDefinitionsCode("113002")
+    """
+    For Surgery
+    """
     ForSurgery = DICOMControlledTerminologyDefinitionsCode("113003")
+    """
+    For Teaching
+    """
     ForTeaching = DICOMControlledTerminologyDefinitionsCode("113004")
+    """
+    For Conference
+    """
     ForConference = DICOMControlledTerminologyDefinitionsCode("113005")
+    """
+    For Therapy
+    """
     ForTherapy = DICOMControlledTerminologyDefinitionsCode("113006")
+    """
+    For Patient
+    """
     ForPatient = DICOMControlledTerminologyDefinitionsCode("113007")
+    """
+    For Peer Review
+    """
     ForPeerReview = DICOMControlledTerminologyDefinitionsCode("113008")
+    """
+    For Research
+    """
     ForResearch = DICOMControlledTerminologyDefinitionsCode("113009")
+    """
+    Quality Issue
+    """
     QualityIssue = DICOMControlledTerminologyDefinitionsCode("113010")
+    """
+    Document Title Modifier
+    """
     DocumentTitleModifier = DICOMControlledTerminologyDefinitionsCode("113011")
+    """
+    Key Object Description
+    """
     KeyObjectDescription = DICOMControlledTerminologyDefinitionsCode("113012")
+    """
+    A selection that represents the "best" chosen from a larger set of items; e.g. the best images within a Study or Series. The criteria against which "best" is measured is not defined. Contrast this with the more specific term "Best illustration of finding"
+    """
     BestInSet = DICOMControlledTerminologyDefinitionsCode("113013")
+    """
+    A study is a collection of one or more series of medical images, presentation states, and/or SR documents that are logically related for the purpose of diagnosing a patient. A study may include composite instances that are created by a single modality, multiple modalities or by multiple devices of the same modality. [From Section A.1.2.2 "Study IE" in PS3.3 ]
+    """
     Study = DICOMControlledTerminologyDefinitionsCode("113014")
+    """
+    A distinct logical set used to group composite instances. All instances within a Series are of the same modality, in the same Frame of Reference (if any), and created by the same equipment. [See Section A.1.2.3 "Series IE" in PS3.3 ]
+    """
     Series = DICOMControlledTerminologyDefinitionsCode("113015")
+    """
+    An arbitrarily defined unit of service that has actually been performed (not just scheduled). [From Section 7.3.1.9 "Modality Performed Procedure Step" in PS3.3 ]
+    """
     PerformedProcedureStep = DICOMControlledTerminologyDefinitionsCode("113016")
+    """
+    An image or set of images illustrating a specific stage (phase in a stress echo exam protocol) and view (combination of the transducer position and orientation at the time of image acquisition)
+    """
     Stage_View = DICOMControlledTerminologyDefinitionsCode("113017")
+    """
+    For Printing
+    """
     ForPrinting = DICOMControlledTerminologyDefinitionsCode("113018")
+    """
+    Selection of information objects for attachment to the clinical report of the Current Requested Procedure
+    """
     ForReportAttachment = DICOMControlledTerminologyDefinitionsCode("113020")
+    """
+    List of objects that are related to litigation and should be specially handled; e.g. may apply if a complaint has been received regarding a patient, or a specific set of images has been the subject of a subpoena, and needs to be sequestered or excluded from automatic purging according to retention policy
+    """
     ForLitigation = DICOMControlledTerminologyDefinitionsCode("113021")
+    """
+    Double exposure
+    """
     DoubleExposure = DICOMControlledTerminologyDefinitionsCode("113026")
+    """
+    A list of objects that have been exported out of one organizational domain into another domain. Typically, the first domain has no direct control over what the second domain will do with the objects
+    """
     Manifest = DICOMControlledTerminologyDefinitionsCode("113030")
+    """
+    A signed list of objects that have been exported out of one organizational domain into another domain, referenced securely with either Digital Signatures or MACs. Typically, the first domain has no direct control over what the second domain will do with the objects
+    """
     SignedManifest = DICOMControlledTerminologyDefinitionsCode("113031")
+    """
+    The list of objects that constitute a study at the time that the list was created
+    """
     CompleteStudyContent = DICOMControlledTerminologyDefinitionsCode("113032")
+    """
+    The signed list of objects that constitute a study at the time that the list was created, referenced securely with either Digital Signatures or MACs
+    """
     SignedCompleteStudyContent = DICOMControlledTerminologyDefinitionsCode("113033")
+    """
+    The list of objects that were generated in a single procedure step
+    """
     CompleteAcquisitionContent = DICOMControlledTerminologyDefinitionsCode("113034")
+    """
+    The signed list of objects that were generated in a single procedure step, referenced securely with either Digital Signatures or MACs
+    """
     SignedCompleteAcquisitionContent = DICOMControlledTerminologyDefinitionsCode(
         "113035"
     )
+    """
+    A list of frames or single-frame or entire multi-frame instances that together constitute a set for some purpose, such as might be displayed together in the same viewport, as distinct from another set that might be displayed in a separate viewport
+    """
     GroupOfFramesForDisplay = DICOMControlledTerminologyDefinitionsCode("113036")
+    """
+    List of objects whose use is potentially harmful to the patient; e.g. an improperly labeled image could lead to dangerous surgical decisions
+    """
     RejectedForPatientSafetyReasons = DICOMControlledTerminologyDefinitionsCode(
         "113037"
     )
+    """
+    List of objects that were acquired using an incorrect modality worklist entry, and that should not be used, since they may be incorrectly identified
+    """
     IncorrectModalityWorklistEntry = DICOMControlledTerminologyDefinitionsCode("113038")
+    """
+    List of objects that have expired according to a defined data retention policy
+    """
     DataRetentionPolicyExpired = DICOMControlledTerminologyDefinitionsCode("113039")
+    """
+    Lossy compression has been applied to an image
+    """
     LossyCompression = DICOMControlledTerminologyDefinitionsCode("113040")
+    """
+    Values are derived by calculation of the apparent diffusion coefficient
+    """
     ApparentDiffusionCoefficient = DICOMControlledTerminologyDefinitionsCode("113041")
+    """
+    Values are derived by the pixel by pixel addition of two images
+    """
     PixelByPixelAddition = DICOMControlledTerminologyDefinitionsCode("113042")
+    """
+    Values are derived by calculation of the diffusion weighting
+    """
     DiffusionWeighted = DICOMControlledTerminologyDefinitionsCode("113043")
+    """
+    Values are derived by calculation of the diffusion anisotropy
+    """
     DiffusionAnisotropy = DICOMControlledTerminologyDefinitionsCode("113044")
+    """
+    Values are derived by calculation of the diffusion attenuation
+    """
     DiffusionAttenuated = DICOMControlledTerminologyDefinitionsCode("113045")
+    """
+    Values are derived by the pixel by pixel division of two images
+    """
     PixelByPixelDivision = DICOMControlledTerminologyDefinitionsCode("113046")
+    """
+    Values are derived by the pixel by pixel masking of one image by another
+    """
     PixelByPixelMask = DICOMControlledTerminologyDefinitionsCode("113047")
+    """
+    Values are derived by calculating the pixel by pixel maximum of two or more images
+    """
     PixelByPixelMaximum = DICOMControlledTerminologyDefinitionsCode("113048")
+    """
+    Values are derived by calculating the pixel by pixel mean of two or more images
+    """
     PixelByPixelMean = DICOMControlledTerminologyDefinitionsCode("113049")
+    """
+    Values are derived by calculating from spectroscopy data pixel values localized in two dimensional space based on the concentration of specific metabolites (i.e, at specific frequencies)
+    """
     MetaboliteMapsFromSpectroscopyData = DICOMControlledTerminologyDefinitionsCode(
         "113050"
     )
+    """
+    Values are derived by calculating the pixel by pixel minimum of two or more images
+    """
     PixelByPixelMinimum = DICOMControlledTerminologyDefinitionsCode("113051")
+    """
+    The time required for blood to pass through a region of tissue
+    """
     MeanTransitTime = DICOMControlledTerminologyDefinitionsCode("113052")
+    """
+    Values are derived by the pixel by pixel multiplication of two images
+    """
     PixelByPixelMultiplication = DICOMControlledTerminologyDefinitionsCode("113053")
+    """
+    Values are derived by calculating negative enhancement integral values
+    """
     NegativeEnhancementIntegral = DICOMControlledTerminologyDefinitionsCode("113054")
+    """
+    The flow rate of blood perfusing a region of the brain as volume per mass per unit of time
+    """
     RegionalCerebralBloodFlow = DICOMControlledTerminologyDefinitionsCode("113055")
+    """
+    The volume of blood perfusing a region of brain as volume per mass
+    """
     RegionalCerebralBloodVolume = DICOMControlledTerminologyDefinitionsCode("113056")
+    """
+    Correlation Coefficient, r
+    """
     R_Coefficient = DICOMControlledTerminologyDefinitionsCode("113057")
+    """
+    Values are derived by calculating proton density values
+    """
     ProtonDensity = DICOMControlledTerminologyDefinitionsCode("113058")
+    """
+    Values are derived by calculating signal change values
+    """
     SignalChange = DICOMControlledTerminologyDefinitionsCode("113059")
+    """
+    Values are derived by calculating the signal to noise ratio
+    """
     SignalToNoise = DICOMControlledTerminologyDefinitionsCode("113060")
+    """
+    Values are derived by calculating the standard deviation of two or more images
+    """
     StandardDeviation = DICOMControlledTerminologyDefinitionsCode("113061")
+    """
+    Values are derived by the pixel by pixel subtraction of two images
+    """
     PixelByPixelSubtraction = DICOMControlledTerminologyDefinitionsCode("113062")
+    """
+    Values are derived by calculating T1 values
+    """
     T1 = DICOMControlledTerminologyDefinitionsCode("113063")
+    """
+    Values are derived by calculating T2* values
+    """
     T2_ = DICOMControlledTerminologyDefinitionsCode("113064")
+    """
+    Values are derived by calculating T2 values
+    """
     T2 = DICOMControlledTerminologyDefinitionsCode("113065")
+    """
+    Values are derived by calculating values based on the time course of signal
+    """
     TimeCourseOfSignal = DICOMControlledTerminologyDefinitionsCode("113066")
+    """
+    Values are derived by calculating values based on temperature encoding
+    """
     TemperatureEncoded = DICOMControlledTerminologyDefinitionsCode("113067")
+    """
+    Values are derived by calculating the value of the Student's T-Test statistic from multiple image samples
+    """
     Student_sT_Test = DICOMControlledTerminologyDefinitionsCode("113068")
+    """
+    The time from the start of the contrast agent injection to the maximum enhancement value
+    """
     TimeToPeak = DICOMControlledTerminologyDefinitionsCode("113069")
+    """
+    Values are derived by calculating values based on velocity encoded; e.g. phase contrast
+    """
     VelocityEncoded = DICOMControlledTerminologyDefinitionsCode("113070")
+    """
+    Values are derived by calculating the value of the Z-Score statistic from multiple image samples
+    """
     Z_Score = DICOMControlledTerminologyDefinitionsCode("113071")
+    """
+    Values are derived by reformatting in a flat plane other than that originally acquired
+    """
     MultiplanarReformatting = DICOMControlledTerminologyDefinitionsCode("113072")
+    """
+    Values are derived by reformatting in a curve plane other than that originally acquired
+    """
     CurvedMultiplanarReformatting = DICOMControlledTerminologyDefinitionsCode("113073")
+    """
+    Values are derived by volume rendering of acquired data
+    """
     VolumeRendering = DICOMControlledTerminologyDefinitionsCode("113074")
+    """
+    Values are derived by surface rendering of acquired data
+    """
     SurfaceRendering = DICOMControlledTerminologyDefinitionsCode("113075")
+    """
+    Values are derived by segmentation (classification into tissue types) of acquired data
+    """
     Segmentation = DICOMControlledTerminologyDefinitionsCode("113076")
+    """
+    Values are derived by selectively editing acquired data (removing values from the volume), such as in order to remove obscuring structures or noise
+    """
     VolumeEditing = DICOMControlledTerminologyDefinitionsCode("113077")
+    """
+    Values are derived by maximum intensity projection of acquired data
+    """
     MaximumIntensityProjection = DICOMControlledTerminologyDefinitionsCode("113078")
+    """
+    Values are derived by minimum intensity projection of acquired data
+    """
     MinimumIntensityProjection = DICOMControlledTerminologyDefinitionsCode("113079")
+    """
+    For single-proton MR spectroscopy, the resonance peak corresponding to glutamate and glutamine
+    """
     GlutamateAndGlutamine = DICOMControlledTerminologyDefinitionsCode("113080")
+    """
+    For single-proton MR spectroscopy, the ratio between the Choline and Creatine resonance peaks
+    """
     Choline_CreatineRatio = DICOMControlledTerminologyDefinitionsCode("113081")
+    """
+    For single-proton MR spectroscopy, the ratio between the N-acetylaspartate and Creatine resonance peaks
+    """
     N_acetylaspartate_CreatineRatio = DICOMControlledTerminologyDefinitionsCode(
         "113082"
     )
+    """
+    For single-proton MR spectroscopy, the ratio between the N-acetylaspartate and Choline resonance peaks
+    """
     N_acetylaspartate_CholineRatio = DICOMControlledTerminologyDefinitionsCode("113083")
+    """
+    Values are derived by spatial resampling of acquired data
+    """
     SpatialResampling = DICOMControlledTerminologyDefinitionsCode("113085")
+    """
+    Values are derived by edge enhancement
+    """
     EdgeEnhancement = DICOMControlledTerminologyDefinitionsCode("113086")
+    """
+    Values are derived by smoothing
+    """
     Smoothing = DICOMControlledTerminologyDefinitionsCode("113087")
+    """
+    Values are derived by Gaussian blurring
+    """
     GaussianBlur = DICOMControlledTerminologyDefinitionsCode("113088")
+    """
+    Values are derived by unsharp masking
+    """
     UnsharpMask = DICOMControlledTerminologyDefinitionsCode("113089")
+    """
+    Values are derived by stitching two or more images together
+    """
     ImageStitching = DICOMControlledTerminologyDefinitionsCode("113090")
+    """
+    Spatially-related frames in this image are representative frames from the referenced 3D volume data set
+    """
     Spatially_relatedFramesExtractedFromTheVolume = (
         DICOMControlledTerminologyDefinitionsCode("113091")
     )
+    """
+    Temporally-related frames in this image are representative frames from the referenced 3D volume data set
+    """
     Temporally_relatedFramesExtractedFromTheSetOfVolumes = (
         DICOMControlledTerminologyDefinitionsCode("113092")
     )
+    """
+    Conversion of a polar coordinate image to rectangular (Cartesian) coordinate image
+    """
     PolarToRectangularScanConversion = DICOMControlledTerminologyDefinitionsCode(
         "113093"
     )
+    """
+    For single-proton MR spectroscopy, the resonance peak corresponding to creatine and choline
+    """
     CreatineAndCholine = DICOMControlledTerminologyDefinitionsCode("113094")
+    """
+    For single-proton MR spectroscopy, the resonance peak corresponding to lipid and lactate
+    """
     LipidAndLactate = DICOMControlledTerminologyDefinitionsCode("113095")
+    """
+    For single-proton MR spectroscopy, the ratio between the Choline and Creatine resonance peak and the Citrate resonance peak
+    """
     Creatine_Choline_CitrateRatio = DICOMControlledTerminologyDefinitionsCode("113096")
+    """
+    Image pixels created through proportional weighting of multiple acquisitions at distinct X-Ray energies
+    """
     Multi_energyProportionalWeighting = DICOMControlledTerminologyDefinitionsCode(
         "113097"
     )
+    """
+    De-identification using a profile defined in PS3.15 that requires removing all information related to the identity and demographic characteristics of the patient, any responsible parties or family members, any personnel involved in the procedure, the organizations involved in ordering or performing the procedure, additional information that could be used to match instances if given access to the originals, such as UIDs, dates and times, and private attributes, when that information is present in the non-Pixel Data Attributes, including graphics or overlays
+    """
     BasicApplicationConfidentialityProfile = DICOMControlledTerminologyDefinitionsCode(
         "113100"
     )
+    """
+    Additional de-identification according to an option defined in PS3.15 that requires any information burned in to the Pixel Data corresponding to the Attribute information specified to be removed by the Profile and any other Options specified also be removed
+    """
     CleanPixelDataOption = DICOMControlledTerminologyDefinitionsCode("113101")
+    """
+    Additional de-identification according to an option defined in PS3.15 that requires that sufficient removal or distortion of the Pixel Data shall be applied to prevent recognition of an individual from the instances themselves or a reconstruction of a set of instances
+    """
     CleanRecognizableVisualFeaturesOption = DICOMControlledTerminologyDefinitionsCode(
         "113102"
     )
+    """
+    Additional de-identification according to an option defined in PS3.15 that requires that any information encoded in graphics, text annotations or overlays corresponding to the Attribute information specified to be removed by the Profile and any other Options specified also be removed
+    """
     CleanGraphicsOption = DICOMControlledTerminologyDefinitionsCode("113103")
+    """
+    Additional de-identification according to an option defined in PS3.15 that requires that any information encoded in SR Content Items or Acquisition Context Sequence Items corresponding to the Attribute information specified to be removed by the Profile and any other Options specified also be removed
+    """
     CleanStructuredContentOption = DICOMControlledTerminologyDefinitionsCode("113104")
+    """
+    Additional de-identification according to an option defined in PS3.15 that requires that any information that is embedded in text or string Attributes corresponding to the Attribute information specified to be removed by the Profile and any other Options specified also be removed
+    """
     CleanDescriptorsOption = DICOMControlledTerminologyDefinitionsCode("113105")
+    """
+    Retention of information that would otherwise be removed during de-identification according to an option defined in PS3.15 that requires that any dates and times be retained,
+    """
     RetainLongitudinalTemporalInformationFullDatesOption = (
         DICOMControlledTerminologyDefinitionsCode("113106")
     )
+    """
+    Retention of information that would otherwise be removed during de-identification according to an option defined in PS3.15 that requires that any dates and times be modified in a manner that preserves temporal relationships; e.g. Study Date and Time
+    """
     RetainLongitudinalTemporalInformationModifiedDatesOption = (
         DICOMControlledTerminologyDefinitionsCode("113107")
     )
+    """
+    Retention of information that would otherwise be removed during de-identification according to an option defined in PS3.15 that requires that any physical characteristics of the patient, which are descriptive rather than identifying information per se, be retained; e.g. Patient's Age, Sex, Size (height) and Weight
+    """
     RetainPatientCharacteristicsOption = DICOMControlledTerminologyDefinitionsCode(
         "113108"
     )
+    """
+    Retention of information that would otherwise be removed during de-identification according to an option defined in PS3.15 that requires that any information that identifies a device be retained; e.g. Device Serial Number
+    """
     RetainDeviceIdentityOption = DICOMControlledTerminologyDefinitionsCode("113109")
+    """
+    Retention of information that would otherwise be removed during de-identification according to an option defined in PS3.15 that requires that UIDs be retained; e.g. SOP Instance UID
+    """
     RetainUIDsOption = DICOMControlledTerminologyDefinitionsCode("113110")
+    """
+    Retention of information that would otherwise be removed during de-identification according to an option defined in PS3.15 that requires that private attributes that are known not to contain identity information be retained; e.g. private SUV scale factor
+    """
     RetainSafePrivateOption = DICOMControlledTerminologyDefinitionsCode("113111")
+    """
+    The procedure report is a Radiopharmaceutical Radiation Dose report
+    """
     RadiopharmaceuticalRadiationDoseReport = DICOMControlledTerminologyDefinitionsCode(
         "113500"
     )
+    """
+    Information pertaining to the administration of a radiopharmaceutical
+    """
     RadiopharmaceuticalAdministration = DICOMControlledTerminologyDefinitionsCode(
         "113502"
     )
+    """
+    Unique identification of a single radiopharmaceutical administration event
+    """
     RadiopharmaceuticalAdministrationEventUID = (
         DICOMControlledTerminologyDefinitionsCode("113503")
     )
+    """
+    Initial signs or symptoms of extravasation
+    """
     IntravenousExtravasationSymptoms = DICOMControlledTerminologyDefinitionsCode(
         "113505"
     )
+    """
+    The estimated percentage of administered activity lost at the injection site. The estimation includes extravasation, paravenous administration and leakage at the injection site
+    """
     EstimatedExtravasationActivity = DICOMControlledTerminologyDefinitionsCode("113506")
+    """
+    The calculated activity at the Radiopharmaceutical Start Time when the radiopharmaceutical is administered to the patient. The residual activity (i.e. radiopharmaceutical not administered) , if measured, is reflected in the calculated value. The estimated extravasation is not reflected in the calculated value
+    """
     AdministeredActivity = DICOMControlledTerminologyDefinitionsCode("113507")
+    """
+    Radioactivity measurement of radiopharmaceutical before or during the administration
+    """
     Pre_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode(
         "113508"
     )
+    """
+    Radioactivity measurement of radiopharmaceutical after the administration
+    """
     Post_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode(
         "113509"
     )
+    """
+    Registered drug establishment code for product, coding scheme example is NDC or RxNorm
+    """
     DrugProductIdentifier = DICOMControlledTerminologyDefinitionsCode("113510")
+    """
+    The human readable identification of the specific radiopharmaceutical dispensed quantity or dose ("dose" as unit of medication delivery, not radiation dose measure) to be administered to the patient
+    """
     RadiopharmaceuticalDispenseUnitIdentifier = (
         DICOMControlledTerminologyDefinitionsCode("113511")
     )
+    """
+    Identifies the vial, batch or lot number from which the individual dispense radiopharmaceutical quantity (dose) is produced. The Radiopharmaceutical Dispense Unit Identifier records the identification for each individual dose
+    """
     RadiopharmaceuticalLotIdentifier = DICOMControlledTerminologyDefinitionsCode(
         "113512"
     )
+    """
+    Identifies the lot or unit serial number for the reagent component for the radiopharmaceutical
+    """
     ReagentVialIdentifier = DICOMControlledTerminologyDefinitionsCode("113513")
+    """
+    Identifies the lot or unit serial number for the radionuclide component for the radiopharmaceutical
+    """
     RadionuclideVialIdentifier = DICOMControlledTerminologyDefinitionsCode("113514")
+    """
+    Administered Product's Prescription Number
+    """
     PrescriptionIdentifier = DICOMControlledTerminologyDefinitionsCode("113516")
+    """
+    Information pertaining to the estimated absorbed radiation dose to an organ
+    """
     OrganDoseInformation = DICOMControlledTerminologyDefinitionsCode("113517")
+    """
+    The absorbed radiation dose to organ
+    """
     OrganDose = DICOMControlledTerminologyDefinitionsCode("113518")
+    """
+    Reference authority MIRD Pamphlet No.1 (rev) ,Society of Nuclear Medicine, 1976
+    """
     MIRDPamphlet1 = DICOMControlledTerminologyDefinitionsCode("113520")
+    """
+    Reference authority ICRP, 1988. Radiation Dose to Patients from Radiopharmaceuticals. ICRP Publication 53. Ann. ICRP 18 (1-4)
+    """
     ICRPPublication53 = DICOMControlledTerminologyDefinitionsCode("113521")
+    """
+    Reference authority ICRP, 1998. Radiation Dose to Patients from Radiopharmaceuticals (Addendum to ICRP Publication 53). ICRP Publication 80. Ann. ICRP 28 (3)
+    """
     ICRPPublication80 = DICOMControlledTerminologyDefinitionsCode("113522")
+    """
+    Reference authority ICRP, 2008. Radiation Dose to Patients from Radiopharmaceuticals - Addendum 3 to ICRP Publication 53. ICRP Publication 106. Ann. ICRP 38 (1-2)
+    """
     ICRPPublication106 = DICOMControlledTerminologyDefinitionsCode("113523")
+    """
+    Reference authority Stabin MG, Sparks RB, Crowe E (1994) MIRDOSE: personal computer software for internal dose assessment in nuclear medicine [Computer program]
+    """
     MIRDOSE = DICOMControlledTerminologyDefinitionsCode("113526")
+    """
+    Reference authority Stabin MG, Sparks RB, Crowe E (2005) OLINDA/EXM: The Second-Generation Personal Computer Software for Internal Dose Assessment in Nuclear Medicine [Computer program]
+    """
     OLINDA_EXM = DICOMControlledTerminologyDefinitionsCode("113527")
+    """
+    Reference authority The reported organ dose is based on radiopharmaceutical's package insert
+    """
     PackageInsert = DICOMControlledTerminologyDefinitionsCode("113528")
+    """
+    Reference authority The reported organ dose is based on Institutionally approved estimates from the Radioactive Drug Research Committee (RDRC) of the institution itself
+    """
     InstitutionallyApprovedEstimates = DICOMControlledTerminologyDefinitionsCode(
         "113529"
     )
+    """
+    Reference authority The reported organ dose is based on an Investigation new drug
+    """
     InvestigationalNewDrug = DICOMControlledTerminologyDefinitionsCode("113530")
+    """
+    The type of device that performed the activity measurement
+    """
     ActivityMeasurementDevice = DICOMControlledTerminologyDefinitionsCode("113540")
+    """
+    The device that measures the radiation activity of the radiopharmaceutical
+    """
     DoseCalibrator = DICOMControlledTerminologyDefinitionsCode("113541")
+    """
+    Radiopharmaceutical Infusion System
+    """
     InfusionSystem = DICOMControlledTerminologyDefinitionsCode("113542")
+    """
+    Radioisotope Generator
+    """
     Generator = DICOMControlledTerminologyDefinitionsCode("113543")
+    """
+    The number hours the patient has gone without food
+    """
     FastingDuration = DICOMControlledTerminologyDefinitionsCode("113550")
+    """
+    The amount of fluids the patient has consumed before the procedure
+    """
     HydrationVolume = DICOMControlledTerminologyDefinitionsCode("113551")
+    """
+    A description of physical activity the patient performed before the start of the procedure, such as that which may affect imaging agent biodistribution
+    """
     RecentPhysicalActivity = DICOMControlledTerminologyDefinitionsCode("113552")
+    """
+    Blockage in one of the tubes (ureters) that drain urine from the kidneys
+    """
     AcuteUnilateralRenalBlockage = DICOMControlledTerminologyDefinitionsCode("113560")
+    """
+    5% or less Thyroid Uptake of Iodine
+    """
     LowThyroidUptake = DICOMControlledTerminologyDefinitionsCode("113561")
+    """
+    25% or higher Thyroid Uptake of Iodine
+    """
     HighThyroidUptake = DICOMControlledTerminologyDefinitionsCode("113562")
+    """
+    The patient exhibits symptoms severe of jaundice and/or has a Bilirubin >10 mg/dL
+    """
     SeverelyJaundiced = DICOMControlledTerminologyDefinitionsCode("113563")
+    """
+    Extravasation or paravenous administration of the product is visible in the images
+    """
     ExtravasationVisibleInImage = DICOMControlledTerminologyDefinitionsCode("113568")
+    """
+    The measurement method of the Glomerular Filtration Rate is Cockroft-Gault Formula
+    """
     Cockroft_GaultFormulaEstimationOfGFR = DICOMControlledTerminologyDefinitionsCode(
         "113570"
     )
+    """
+    The measurement method of the Glomerular Filtration Rate is CKD-EPI Formula
+    """
     CKD_EPIFormulaEstimationOfGFR = DICOMControlledTerminologyDefinitionsCode("113571")
+    """
+    The measurement method of the Glomerular Filtration Rate is MDRD
+    """
     GlomerularFiltrationRate_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113572")
+    """
+    The measurement method of the Glomerular Filtration Rate is non-black MDRD
+    """
     GlomerularFiltrationRateNon_black_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
         "113573"
     )
+    """
+    The measurement method of the Glomerular Filtration Rate is black (MDRD)
+    """
     GlomerularFiltrationRateBlack_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
         "113574"
     )
+    """
+    The measurement method of the Glomerular Filtration Rate is female (MDRD)
+    """
     GlomerularFiltrationRateFemale_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
         "113575"
     )
+    """
+    The measurement method of the Glomerular Filtration Rate is Cystatin-based formula
+    """
     GlomerularFiltrationRateCystatin_basedFormula = (
         DICOMControlledTerminologyDefinitionsCode("113576")
     )
+    """
+    The measurement method of the Glomerular Filtration Rate is Creatinine-based formula (Schwartz)
+    """
     GlomerularFiltrationRateCreatinine_basedFormula_Schwartz_ = (
         DICOMControlledTerminologyDefinitionsCode("113577")
     )
+    """
+    Small body thickness for calcium scoring adjustment. Lateral thickness is measured from skin-to-skin, at the level of the proximal ascending aorta, from an A/P localizer image
+    """
     Small_32_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode("113601")
+    """
+    Medium body thickness for calcium scoring adjustment. Lateral thickness is measured from skin-to-skin, at the level of the proximal ascending aorta, from an A/P localizer image
+    """
     Medium_32_0_38_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode(
         "113602"
     )
+    """
+    Large body thickness for calcium scoring adjustment. Lateral thickness is measured from skin-to-skin, at the level of the proximal ascending aorta, from an A/P localizer image
+    """
     Large_38_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode("113603")
+    """
+    A human-readable label identifying an irradiation event
+    """
     IrradiationEventLabel = DICOMControlledTerminologyDefinitionsCode("113605")
+    """
+    The type of a human-readable label
+    """
     LabelType = DICOMControlledTerminologyDefinitionsCode("113606")
+    """
+    A number that identifies a Series. Corresponds to (0020,0011) in PS3.3
+    """
     SeriesNumber = DICOMControlledTerminologyDefinitionsCode("113607")
+    """
+    A number that identifies an Acquisition. Corresponds to (0020,0012) in PS3.3
+    """
     AcquisitionNumber = DICOMControlledTerminologyDefinitionsCode("113608")
+    """
+    A number that identifies an Instance. Corresponds to (0020,0013) in PS3.3
+    """
     InstanceNumber = DICOMControlledTerminologyDefinitionsCode("113609")
+    """
+    Acquisition where the X-Ray source does not move in relation to the patient
+    """
     StationaryAcquisition = DICOMControlledTerminologyDefinitionsCode("113611")
+    """
+    Acquisition where the X-Ray source moves laterally in relation to the patient
+    """
     SteppingAcquisition = DICOMControlledTerminologyDefinitionsCode("113612")
+    """
+    Acquisition where the X-Ray source moves angularly in relation to the patient
+    """
     RotationalAcquisition = DICOMControlledTerminologyDefinitionsCode("113613")
+    """
+    Primary plane of a Biplane acquisition equipment
+    """
     PlaneA = DICOMControlledTerminologyDefinitionsCode("113620")
+    """
+    Secondary plane of a Biplane acquisition equipment
+    """
     PlaneB = DICOMControlledTerminologyDefinitionsCode("113621")
+    """
+    Single plane acquisition equipment
+    """
     SinglePlane = DICOMControlledTerminologyDefinitionsCode("113622")
+    """
+    Continuous X-Ray radiation is applied during an irradiation event
+    """
     Continuous = DICOMControlledTerminologyDefinitionsCode("113630")
+    """
+    Pulsed X-Ray radiation is applied during an irradiation event
+    """
     Pulsed = DICOMControlledTerminologyDefinitionsCode("113631")
+    """
+    Filter with uniform thickness
+    """
     StripFilter = DICOMControlledTerminologyDefinitionsCode("113650")
+    """
+    Filter with variation in thickness from one edge to the opposite edge
+    """
     WedgeFilter = DICOMControlledTerminologyDefinitionsCode("113651")
+    """
+    Filter with two triangular sections
+    """
     ButterflyFilter = DICOMControlledTerminologyDefinitionsCode("113652")
+    """
+    Filter with uniform thickness that is for spectral filtering only; e.g. filter out low energy portion of the X-Ray that would only contribute to skin dose, but not to image
+    """
     FlatFilter = DICOMControlledTerminologyDefinitionsCode("113653")
+    """
+    A polyline defining the outline of a lobulated finding
+    """
     OutlineOfLobulations = DICOMControlledTerminologyDefinitionsCode("113661")
+    """
+    A polyline defining the inner limits of a finding with fuzzy margin
+    """
     InnerLimitsOfFuzzyMargin = DICOMControlledTerminologyDefinitionsCode("113662")
+    """
+    A polyline defining the outer limits of a finding with fuzzy margin
+    """
     OuterLimitsOfFuzzyMargin = DICOMControlledTerminologyDefinitionsCode("113663")
+    """
+    A polyline defining the outline of the spiculations of a finding
+    """
     OutlineOfSpiculations = DICOMControlledTerminologyDefinitionsCode("113664")
+    """
+    A polyline segment graphically indicating the location and direction of a spiculation of a finding
+    """
     LinearSpiculation = DICOMControlledTerminologyDefinitionsCode("113665")
+    """
+    A collection of points indicating the pixel locations of the spiculations of a finding
+    """
     PixelatedSpiculations = DICOMControlledTerminologyDefinitionsCode("113666")
+    """
+    Connected line segments indicating the center of location of a finding on an orthogonal view
+    """
     OrthogonalLocationArc = DICOMControlledTerminologyDefinitionsCode("113669")
+    """
+    Connected line segments indicating the inner margin of the location of a finding on an orthogonal view
+    """
     OrthogonalLocationArcInnerMargin = DICOMControlledTerminologyDefinitionsCode(
         "113670"
     )
+    """
+    Connected line segments indicating the outer location of a finding on an orthogonal view
+    """
     OrthogonalLocationArcOuterMargin = DICOMControlledTerminologyDefinitionsCode(
         "113671"
     )
+    """
+    This procedure is intended to gather data that is used for calibration or other quality control purposes
+    """
     QualityControlIntent = DICOMControlledTerminologyDefinitionsCode("113680")
+    """
+    An artificial subject of an imaging study
+    """
     Phantom = DICOMControlledTerminologyDefinitionsCode("113681")
+    """
+    A phantom acceptable for the ACR Computed Tomography Accreditation program
+    """
     ACRAccreditationPhantom_CT = DICOMControlledTerminologyDefinitionsCode("113682")
+    """
+    A phantom acceptable for the ACR Magnetic Resonance Imaging Accreditation program
+    """
     ACRAccreditationPhantom_MR = DICOMControlledTerminologyDefinitionsCode("113683")
+    """
+    A phantom acceptable for the ACR Mammography Accreditation program
+    """
     ACRAccreditationPhantom_Mammography = DICOMControlledTerminologyDefinitionsCode(
         "113684"
     )
+    """
+    A phantom acceptable for the ACR Stereotactic Breast Biopsy Accreditation program
+    """
     ACRAccreditationPhantom_StereotacticBreastBiopsy = (
         DICOMControlledTerminologyDefinitionsCode("113685")
     )
+    """
+    A phantom acceptable for the ACR SPECT Accreditation program (but not for PET)
+    """
     ACRAccreditationPhantom_ECT = DICOMControlledTerminologyDefinitionsCode("113686")
+    """
+    A phantom acceptable for the ACR PET Accreditation program (but not for SPECT)
+    """
     ACRAccreditationPhantom_PET = DICOMControlledTerminologyDefinitionsCode("113687")
+    """
+    A SPECT phantom with a PET faceplate acceptable for both the ACR SPECT and PET Accreditation programs
+    """
     ACRAccreditationPhantom_ECT_PET = DICOMControlledTerminologyDefinitionsCode(
         "113688"
     )
+    """
+    A PET faceplate (made to fit an existing flangeless or flanged ECT phantom) acceptable for the ACR PET Accreditation program
+    """
     ACRAccreditationPhantom_PETFaceplate = DICOMControlledTerminologyDefinitionsCode(
         "113689"
     )
+    """
+    A phantom used for CTDI measurement in head modes according to IEC 60601-2-44, Ed.2.1 (Head 16 cm diameter Polymethyl methacrylate PMMA)
+    """
     IECHeadDosimetryPhantom = DICOMControlledTerminologyDefinitionsCode("113690")
+    """
+    A phantom used for CTDI measurement in body modes according to IEC 60601-2-44, Ed.2.1 (Body 32cm diameter Polymethyl methacrylate PMMA)
+    """
     IECBodyDosimetryPhantom = DICOMControlledTerminologyDefinitionsCode("113691")
+    """
+    A phantom in accordance with NEMA standard XR-21-2000
+    """
     NEMAXR21_2000Phantom = DICOMControlledTerminologyDefinitionsCode("113692")
+    """
+    X-Ray Radiation Dose Report
+    """
     X_RayRadiationDoseReport = DICOMControlledTerminologyDefinitionsCode("113701")
+    """
+    X-Ray dose data accumulated over multiple irradiation events; e.g. for a study or a performed procedure step
+    """
     AccumulatedX_RayDoseData = DICOMControlledTerminologyDefinitionsCode("113702")
+    """
+    Imaging using a point X-Ray source with a diverging beam projected onto a 2 dimensional detector
+    """
     ProjectionX_Ray = DICOMControlledTerminologyDefinitionsCode("113704")
+    """
+    Entity over which dose accumulation values are integrated
+    """
     ScopeOfAccumulation = DICOMControlledTerminologyDefinitionsCode("113705")
+    """
+    X-Ray dose data for a single Irradiation Event
+    """
     IrradiationEventX_RayData = DICOMControlledTerminologyDefinitionsCode("113706")
+    """
+    Material containing Niobium or a Niobium compound
+    """
     NiobiumOrNiobiumCompound = DICOMControlledTerminologyDefinitionsCode("113710")
+    """
+    Material containing Europium or a Europium compound
+    """
     EuropiumOrEuropiumCompound = DICOMControlledTerminologyDefinitionsCode("113711")
+    """
+    Describes the method used to derive the calibration factor
+    """
     CalibrationProtocol = DICOMControlledTerminologyDefinitionsCode("113720")
+    """
+    Denotes the type of irradiation event recorded
+    """
     IrradiationEventType = DICOMControlledTerminologyDefinitionsCode("113721")
+    """
+    Total calculated Dose Area Product (in the scope of the including report)
+    """
     DoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode("113722")
+    """
+    Last calibration Date for the integrated dose meter or dose calculation
+    """
     CalibrationDate = DICOMControlledTerminologyDefinitionsCode("113723")
+    """
+    Individual or organization responsible for calibration
+    """
     CalibrationResponsibleParty = DICOMControlledTerminologyDefinitionsCode("113724")
+    """
+    Total Dose related to Reference Point (RP). (in the scope of the including report)
+    """
     Dose_RP_Total = DICOMControlledTerminologyDefinitionsCode("113725")
+    """
+    Total calculated Dose Area Product applied in Fluoroscopy Modes (in the scope of the including report)
+    """
     FluoroDoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode("113726")
+    """
+    Total calculated Dose Area Product applied in Acquisition Modes (in the scope of the including report)
+    """
     AcquisitionDoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode(
         "113727"
     )
+    """
+    Dose applied in Fluoroscopy Modes, related to Reference Point (RP). (in the scope of the including report)
+    """
     FluoroDose_RP_Total = DICOMControlledTerminologyDefinitionsCode("113728")
+    """
+    Dose applied in Acquisition Modes, related to Reference Point (RP). (in the scope of the including report)
+    """
     AcquisitionDose_RP_Total = DICOMControlledTerminologyDefinitionsCode("113729")
+    """
+    Total accumulated clock time of Fluoroscopy in the scope of the including report (i.e., the sum of the Irradiation Duration values for accumulated fluoroscopy irradiation events)
+    """
     TotalFluoroTime = DICOMControlledTerminologyDefinitionsCode("113730")
+    """
+    Accumulated Count of exposure pulses (single or multi-frame encoded) created from irradiation events performed with high dose (acquisition)
+    """
     TotalNumberOfRadiographicFrames = DICOMControlledTerminologyDefinitionsCode(
         "113731"
     )
+    """
+    Mode of application of X-Rays during Fluoroscopy
+    """
     FluoroMode = DICOMControlledTerminologyDefinitionsCode("113732")
+    """
+    Applied X-Ray Tube voltage at peak of X-Ray generation, in kilovolts; Mean value if measured over multiple peaks (pulses)
+    """
     KVP = DICOMControlledTerminologyDefinitionsCode("113733")
+    """
+    Mean value of applied Tube Current
+    """
     X_RayTubeCurrent = DICOMControlledTerminologyDefinitionsCode("113734")
+    """
+    Cumulative time the patient has received X-Ray exposure during the irradiation event
+    """
     ExposureTime = DICOMControlledTerminologyDefinitionsCode("113735")
+    """
+    Mean value of X-Ray Current Time product
+    """
     Exposure = DICOMControlledTerminologyDefinitionsCode("113736")
+    """
+    Distance to the Reference Point (RP) defined according to IEC 60601-2-43 or equipment defined
+    """
     DistanceSourceToReferencePoint = DICOMControlledTerminologyDefinitionsCode("113737")
+    """
+    Dose applied at the Reference Point (RP)
+    """
     Dose_RP_ = DICOMControlledTerminologyDefinitionsCode("113738")
+    """
+    Positioner Primary Angle at the end of an irradiation event. For further definition see (112011, DCM, "Positioner Primary Angle") 
+    """
     PositionerPrimaryEndAngle = DICOMControlledTerminologyDefinitionsCode("113739")
+    """
+    Positioner Secondary Angle at the end of an irradiation event. For further definition see (112012, DCM, "Positioner Secondary Angle") 
+    """
     PositionerSecondaryEndAngle = DICOMControlledTerminologyDefinitionsCode("113740")
+    """
+    Clock time from the start of loading time of the first pulse until the loading time trailing edge of the final pulse in the same irradiation event. Note Loading time is defined in IEC 60601-1-3:2008, 3.37, and described in IEC 60601-2-54:2009, 203.4.101.3
+    """
     IrradiationDuration = DICOMControlledTerminologyDefinitionsCode("113742")
+    """
+    Orientation of the Patient with respect to Gravity
+    """
     PatientOrientation = DICOMControlledTerminologyDefinitionsCode("113743")
+    """
+    Enhances or modifies the Patient orientation specified in Patient Orientation
+    """
     PatientOrientationModifier = DICOMControlledTerminologyDefinitionsCode("113744")
+    """
+    Orientation of the Patient with respect to the Head of the Table
+    """
     PatientTableRelationship = DICOMControlledTerminologyDefinitionsCode("113745")
+    """
+    Distance from the X-Ray Source to the Equipment C-Arm Isocenter.(Center of Rotation)
+    """
     DistanceSourceToIsocenter = DICOMControlledTerminologyDefinitionsCode("113748")
+    """
+    Measured or calculated distance from the X-Ray source to the detector plane in the center of the beam
+    """
     DistanceSourceToDetector = DICOMControlledTerminologyDefinitionsCode("113750")
+    """
+    Table Longitudinal Position with respect to an arbitrary chosen reference by the equipment. Table motion towards LAO is positive assuming that the patient is positioned supine and its head is in normal position
+    """
     TableLongitudinalPosition = DICOMControlledTerminologyDefinitionsCode("113751")
+    """
+    Table Lateral Position with respect to an arbitrary chosen reference by the equipment. Table motion towards CRA is positive assuming that the patient is positioned supine and its head is in normal position
+    """
     TableLateralPosition = DICOMControlledTerminologyDefinitionsCode("113752")
+    """
+    Table Height Position with respect to an arbitrary chosen reference by the equipment in (mm). Table motion downwards is positive
+    """
     TableHeightPosition = DICOMControlledTerminologyDefinitionsCode("113753")
+    """
+    Angle of the head-feet axis of the table in degrees relative to the horizontal plane. Positive values indicate that the head of the table is upwards
+    """
     TableHeadTiltAngle = DICOMControlledTerminologyDefinitionsCode("113754")
+    """
+    Rotation of the table in the horizontal plane (clockwise when looking from above the table)
+    """
     TableHorizontalRotationAngle = DICOMControlledTerminologyDefinitionsCode("113755")
+    """
+    Angle of the left-right axis of the table in degrees relative to the horizontal plane. Positive values indicate that the left of the table is upwards
+    """
     TableCradleTiltAngle = DICOMControlledTerminologyDefinitionsCode("113756")
+    """
+    X-Ray absorbing material used in the filter
+    """
     X_RayFilterMaterial = DICOMControlledTerminologyDefinitionsCode("113757")
+    """
+    The minimum thickness of the X-Ray absorbing material used in the filters
+    """
     X_RayFilterThicknessMinimum = DICOMControlledTerminologyDefinitionsCode("113758")
+    """
+    Table Longitudinal Position at the end of an irradiation event; see (113751, DCM, "Table Longitudinal Position") 
+    """
     TableLongitudinalEndPosition = DICOMControlledTerminologyDefinitionsCode("113759")
+    """
+    Table Lateral Position at the end of an irradiation event; see (113752, DCM, "Table Lateral Position") 
+    """
     TableLateralEndPosition = DICOMControlledTerminologyDefinitionsCode("113760")
+    """
+    Table Height Position at the end of an irradiation event; see (113753, DCM, "Table Height Position") 
+    """
     TableHeightEndPosition = DICOMControlledTerminologyDefinitionsCode("113761")
+    """
+    Uncertainty of the 'actual' value
+    """
     CalibrationUncertainty = DICOMControlledTerminologyDefinitionsCode("113763")
+    """
+    Identification of Acquisition Plane with Biplane systems
+    """
     AcquisitionPlane = DICOMControlledTerminologyDefinitionsCode("113764")
+    """
+    Nominal Size of Focal Spot of X-Ray Tube
+    """
     FocalSpotSize = DICOMControlledTerminologyDefinitionsCode("113766")
+    """
+    Average X-Ray Tube Current averaged over time for pulse or for continuous Fluoroscopy
+    """
     AverageX_RayTubeCurrent = DICOMControlledTerminologyDefinitionsCode("113767")
+    """
+    Number of pulses applied by X-Ray systems during an irradiation event (acquisition run or pulsed fluoro)
+    """
     NumberOfPulses = DICOMControlledTerminologyDefinitionsCode("113768")
+    """
+    Unique identification of a single irradiation event
+    """
     IrradiationEventUID = DICOMControlledTerminologyDefinitionsCode("113769")
+    """
+    Angle of the X-Ray beam in degree relative to an orthogonal axis to the detector plane
+    """
     ColumnAngulation = DICOMControlledTerminologyDefinitionsCode("113770")
+    """
+    Devices used to modify the energy or energy distribution of X-Rays
+    """
     X_RayFilters = DICOMControlledTerminologyDefinitionsCode("113771")
+    """
+    Type of filter(s) inserted into the X-Ray beam; e.g. wedges
+    """
     X_RayFilterType = DICOMControlledTerminologyDefinitionsCode("113772")
+    """
+    The maximum thickness of the X-Ray absorbing material used in the filters
+    """
     X_RayFilterThicknessMaximum = DICOMControlledTerminologyDefinitionsCode("113773")
+    """
+    System provided definition of the Reference Point used for Dose calculations
+    """
     ReferencePointDefinition = DICOMControlledTerminologyDefinitionsCode("113780")
+    """
+    Distance between the collimator blades in pixel column direction as projected at the detector plane
+    """
     CollimatedFieldHeight = DICOMControlledTerminologyDefinitionsCode("113788")
+    """
+    Distance between the collimator blades in pixel row direction as projected at the detector plane
+    """
     CollimatedFieldWidth = DICOMControlledTerminologyDefinitionsCode("113789")
+    """
+    Collimated field area at image receptor. Area for compatibility with IEC 60601-2-43
+    """
     CollimatedFieldArea = DICOMControlledTerminologyDefinitionsCode("113790")
+    """
+    Pulse rate applied by equipment during Fluoroscopy
+    """
     PulseRate = DICOMControlledTerminologyDefinitionsCode("113791")
+    """
+    Measured or calculated distance from the X-Ray source to the table plane in the center of the beam
+    """
     DistanceSourceToTablePlane = DICOMControlledTerminologyDefinitionsCode("113792")
+    """
+    (Average) X-Ray pulse width
+    """
     PulseWidth = DICOMControlledTerminologyDefinitionsCode("113793")
+    """
+    Calibrated device to perform dose measurements
+    """
     DoseMeasurementDevice = DICOMControlledTerminologyDefinitionsCode("113794")
+    """
+    Image acquired during a specified event
+    """
     AcquiredImage = DICOMControlledTerminologyDefinitionsCode("113795")
+    """
+    Effective Dose evaluation from the product of Dose Length Product (DLP) and the Effective Dose Conversion Factor (E/DLP in units of mSv/mGy-cm), where the ratio is derived by means of Monte Carlo computations
+    """
     DLPToEConversionViaMCComputation = DICOMControlledTerminologyDefinitionsCode(
         "113800"
     )
+    """
+    Effective Dose evaluation from the product of the Mean CTDIfreeair and the ratio E/CTDIfreeair (mSv/mGy), where the ratio is derived by means of Monte Carlo computations
+    """
     CTDIfreeairToEConversionViaMCComputation = (
         DICOMControlledTerminologyDefinitionsCode("113801")
     )
+    """
+    Effective Dose evaluation from the product of Dose Length Product (DLP) and the Effective Dose Conversion Factor (E/DLP in units of mSv/mGy-cm), where the ratio is derived by means of dosimetric measurements with an anthropomorphic phantom
+    """
     DLPToEConversionViaMeasurement = DICOMControlledTerminologyDefinitionsCode("113802")
+    """
+    Effective Dose evaluation from the product of the Mean CTDIfreeair and the ratio E/CTDIfreeair (mSv/mGy), where the ratio is derived by means of dosimetric measurements with an anthropomorphic phantom
+    """
     CTDIfreeairToEConversionViaMeasurement = DICOMControlledTerminologyDefinitionsCode(
         "113803"
     )
+    """
+    The CT acquisition was performed by acquiring single or multi detector data while rotating the source about the gantry while the table is not moving. Additional slices are acquired by incrementing the table position and again rotating the source about the gantry while the table is not moving
+    """
     SequencedAcquisition = DICOMControlledTerminologyDefinitionsCode("113804")
+    """
+    The CT acquisition was performed by holding the source at a constant angle and moving the table to obtain a projection image; e.g. localizer
+    """
     ConstantAngleAcquisition = DICOMControlledTerminologyDefinitionsCode("113805")
+    """
+    The CT acquisition was performed by holding the table at a constant position and acquiring multiple slices over time at the same location
+    """
     StationaryAcquisition = DICOMControlledTerminologyDefinitionsCode("113806")
+    """
+    The CT acquisition was performed while rotating the source about the gantry while the table movement is under direct control of a human operator or under the control of an analysis application; e.g. fluoro
+    """
     FreeAcquisition = DICOMControlledTerminologyDefinitionsCode("113807")
+    """
+    Reference authority 1990 Recommendations of the International Commission on Radiological Protection (ICRP Publication 60, published as the Annals of the ICRP Vol. 21, No. 1-3, Pergamon Press,1991)
+    """
     ICRPPub60 = DICOMControlledTerminologyDefinitionsCode("113808")
+    """
+    Start, DateTime of the first X-Ray Irradiation Event of the accumulation within a Study
+    """
     StartOfX_RayIrradiation = DICOMControlledTerminologyDefinitionsCode("113809")
+    """
+    End, DateTime of the last X-Ray Irradiation Event of the accumulation within a Study
+    """
     EndOfX_RayIrradiation = DICOMControlledTerminologyDefinitionsCode("113810")
+    """
+    X-Ray dose accumulated over multiple CT irradiation events; e.g. for a study or a performed procedure step
+    """
     CTAccumulatedDoseData = DICOMControlledTerminologyDefinitionsCode("113811")
+    """
+    Total number of events during the defined scope of accumulation
+    """
     TotalNumberOfIrradiationEvents = DICOMControlledTerminologyDefinitionsCode("113812")
+    """
+    The total dose length product defined scope of accumulation
+    """
     CTDoseLengthProductTotal = DICOMControlledTerminologyDefinitionsCode("113813")
+    """
+    The total Effective Dose at the defined scope of accumulation
+    """
     CTEffectiveDoseTotal = DICOMControlledTerminologyDefinitionsCode("113814")
+    """
+    Identification of the reference-patient model used when Effective Dose is evaluated via Monte Carlo calculations or from a Dose Length Product conversion factor based on Monte Carlo calculations
+    """
     PatientModel = DICOMControlledTerminologyDefinitionsCode("113815")
+    """
+    References the physical phantom and the type of dosimeter used when measurements are done to establish Effective Dose Conversion Factors (E/DLP) or ratios E/CTDIfreeair
+    """
     ConditionEffectiveDoseMeasured = DICOMControlledTerminologyDefinitionsCode("113816")
+    """
+    Type of Effective Dose phantom used
+    """
     EffectiveDosePhantomType = DICOMControlledTerminologyDefinitionsCode("113817")
+    """
+    Type of dosimeter used
+    """
     DosimeterType = DICOMControlledTerminologyDefinitionsCode("113818")
+    """
+    General description of the CT Irradiation event
+    """
     CTAcquisition = DICOMControlledTerminologyDefinitionsCode("113819")
+    """
+    Method of the CT acquisition
+    """
     CTAcquisitionType = DICOMControlledTerminologyDefinitionsCode("113820")
+    """
+    Thickness of an equivalent filter in mm in Aluminum
+    """
     X_RayFilterAluminumEquivalent = DICOMControlledTerminologyDefinitionsCode("113821")
+    """
+    General description of the acquisition parameters
+    """
     CTAcquisitionParameters = DICOMControlledTerminologyDefinitionsCode("113822")
+    """
+    Number of X-Ray sources
+    """
     NumberOfX_RaySources = DICOMControlledTerminologyDefinitionsCode("113823")
+    """
+    Total time the patient has received X-Ray exposure during the irradiation event
+    """
     ExposureTime = DICOMControlledTerminologyDefinitionsCode("113824")
+    """
+    Length of the table travel during the entire tube loading, according to IEC 60601-2-44 Note Scanning Length might be longer than the programmed acquisition length (Length of Reconstructable Volume)
+    """
     ScanningLength = DICOMControlledTerminologyDefinitionsCode("113825")
+    """
+    The value of the nominal width referenced to the location of the isocenter along the z axis of a single row of acquired data in mm
+    """
     NominalSingleCollimationWidth = DICOMControlledTerminologyDefinitionsCode("113826")
+    """
+    The value of the nominal width referenced to the location of the isocenter along the z axis of the total collimation in mm over the area of active X-Ray detection
+    """
     NominalTotalCollimationWidth = DICOMControlledTerminologyDefinitionsCode("113827")
+    """
+    For Spiral scanning: Pitch Factor = (Table Feed per Rotation (mm)) /(Nominal Total Collimation Width (mm)) For Sequenced scanning: Pitch Factor = (Table Feed per single Sequenced scan (mm)) /(Nominal Total Collimation Width (mm))
+    """
     PitchFactor = DICOMControlledTerminologyDefinitionsCode("113828")
+    """
+    General description of CT dose values
+    """
     CTDose = DICOMControlledTerminologyDefinitionsCode("113829")
+    """
+    "Mean CTDIvol" refers to the average value of the CTDIvol associated with this acquisition
+    """
     MeanCTDIvol = DICOMControlledTerminologyDefinitionsCode("113830")
+    """
+    Identification, tube-potential, tube-current, and exposure-time parameters associated with an X-Ray source during an acquisition
+    """
     CTX_RaySourceParameters = DICOMControlledTerminologyDefinitionsCode("113831")
+    """
+    Identifies the particular X-Ray source (in a multi-source CT system) for which the set of X-Ray source parameter values is reported
+    """
     IdentificationOfTheX_RaySource = DICOMControlledTerminologyDefinitionsCode("113832")
+    """
+    Maximum X-Ray tube current
+    """
     MaximumX_RayTubeCurrent = DICOMControlledTerminologyDefinitionsCode("113833")
+    """
+    The exposure time for one rotation of the source around the object in s
+    """
     ExposureTimePerRotation = DICOMControlledTerminologyDefinitionsCode("113834")
+    """
+    A label describing the type of phantom used for CTDIW measurement according to IEC 60601-2-44 (Head 16 cm diameter PMMA, Body 32 cm diameter PMMA)
+    """
     CTDIwPhantomType = DICOMControlledTerminologyDefinitionsCode("113835")
+    """
+    The CTDIfreeair Calculation Factor is the CTDIfreeair per mAs, expressed in units of mGy/mAs. The CTDIfreeair Calculation Factor may be used in one method calculating Dose
+    """
     CTDIfreeairCalculationFactor = DICOMControlledTerminologyDefinitionsCode("113836")
+    """
+    The average value of the free-in-air CTDI associated with this acquisition
+    """
     MeanCTDIfreeair = DICOMControlledTerminologyDefinitionsCode("113837")
+    """
+    Dose Length Product (DLP), expressed in mGy-cm, is an index characterizing the product of the CTDIvol and the length scanned. For Spiral scanning, DLP = CTDIvol x Scanning Length. For Sequenced scanning, DLP = CTDIvol x Nominal Total Collimation Width x Cumulative Exposure Time / Exposure Time per Rotation. For Stationary and Free scanning, DLP = CTDIvol x Nominal Total Collimation Width
+    """
     DLP = DICOMControlledTerminologyDefinitionsCode("113838")
+    """
+    Effective dose in mSv
+    """
     EffectiveDose = DICOMControlledTerminologyDefinitionsCode("113839")
+    """
+    Effective Dose per DLP, reference value for Effective Dose calculation, expressed in mSv/mGY.cm
+    """
     EffectiveDoseConversionFactor = DICOMControlledTerminologyDefinitionsCode("113840")
+    """
+    Effective Dose Reference authority 2007 Recommendations of the International Commission on Radiological Protection (ICRP Publication 103, published as the Annals of the ICRP Vol. 37, No. 2-4, Elsevier, 2007)
+    """
     ICRPPub103 = DICOMControlledTerminologyDefinitionsCode("113841")
+    """
+    The type of exposure modulation used for the purpose of limiting the dose
+    """
     X_RayModulationType = DICOMControlledTerminologyDefinitionsCode("113842")
+    """
+    Measure of the detector response to radiation in the relevant image region of an image acquired with a digital X-Ray imaging system as defined in IEC 62494-1; see PS3.3 definition of Exposure Index Macro
+    """
     ExposureIndex = DICOMControlledTerminologyDefinitionsCode("113845")
+    """
+    The target value used to calculate the Deviation Index as defined in IEC 62494-1; see PS3.3 definition of Exposure Index Macro
+    """
     TargetExposureIndex = DICOMControlledTerminologyDefinitionsCode("113846")
+    """
+    A scaled representation of the accuracy of the Exposure Index compared to the Target Exposure Index as defined in IEC 62494-1; see PS3.3 definition of Exposure Index Macro
+    """
     DeviationIndex = DICOMControlledTerminologyDefinitionsCode("113847")
+    """
+    The clinician responsible for determining that the irradiating procedure was appropriate for the indications
+    """
     IrradiationAuthorizing = DICOMControlledTerminologyDefinitionsCode("113850")
+    """
+    The person responsible for the administration of radiation
+    """
     IrradiationAdministering = DICOMControlledTerminologyDefinitionsCode("113851")
+    """
+    An irradiation event is the loading of X-Ray equipment caused by a single continuous actuation of the equipment's irradiation switch, from the start of the loading time of the first pulse until the loading time trailing edge of the final pulse. Any automatic on-off switching of the irradiation source during the event is not treated as separate events, rather the event includes the time between start and stop of irradiation as triggered by the user; e.g. a pulsed fluoro X-Ray acquisition shall be treated as a single irradiation event
+    """
     IrradiationEvent = DICOMControlledTerminologyDefinitionsCode("113852")
+    """
+    Unique Identifier of an Irradiation Event
+    """
     IrradiationEventUID = DICOMControlledTerminologyDefinitionsCode("113853")
+    """
+    Method by which dose-related details of an Irradiation Event were obtained
+    """
     SourceOfDoseInformation = DICOMControlledTerminologyDefinitionsCode("113854")
+    """
+    Total accumulated acquisition clock time in the scope of the including report (i.e., the sum of the Irradiation Duration values for accumulated acquisition irradiation events)
+    """
     TotalAcquisitionTime = DICOMControlledTerminologyDefinitionsCode("113855")
+    """
+    Direct recording of data by a relevant system
+    """
     AutomatedDataCollection = DICOMControlledTerminologyDefinitionsCode("113856")
+    """
+    Recording of data by a human operator, including manual transcription of electronic data
+    """
     ManualEntry = DICOMControlledTerminologyDefinitionsCode("113857")
+    """
+    The data is taken from an MPPS SOP Instance
+    """
     MPPSContent = DICOMControlledTerminologyDefinitionsCode("113858")
+    """
+    A device exposing a patient to ionizing radiation
+    """
     IrradiatingDevice = DICOMControlledTerminologyDefinitionsCode("113859")
+    """
+    15cm from the isocenter towards the X-Ray source; See IEC 60601-2-43
+    """
     _15cmFromIsocenterTowardSource = DICOMControlledTerminologyDefinitionsCode("113860")
+    """
+    30cm in front (towards the tube) of the input surface of the image receptor; See FDA Federal Performance Standard for Diagnostic X-Ray Systems §1020.32(d) (7)
+    """
     _30cmInFrontOfImageInputSurface = DICOMControlledTerminologyDefinitionsCode(
         "113861"
     )
+    """
+    1cm above the patient tabletop or cradle; See FDA Federal Performance Standard for Diagnostic X-Ray Systems §1020.32(d) (7)
+    """
     _1cmAboveTabletop = DICOMControlledTerminologyDefinitionsCode("113862")
+    """
+    30cm above the patient tabletop of cradle; See FDA Federal Performance Standard for Diagnostic X-Ray Systems §1020.32(d) (7)
+    """
     _30cmAboveTabletop = DICOMControlledTerminologyDefinitionsCode("113863")
+    """
+    15cm from the centerline of the X-Ray table and in the direction of the X-Ray source; See FDA Federal Performance Standard for Diagnostic X-Ray Systems §1020.32(d) (7)
+    """
     _15cmFromTableCenterline = DICOMControlledTerminologyDefinitionsCode("113864")
+    """
+    Standard breast means a 4.2 centimeter (cm) thick compressed breast consisting of 50 percent glandular and 50 percent adipose tissue. See Department of Health and Human Services, Food and Drug Administration. Mammography quality standards; final rule. Federal Register. Oct. 28, 1997; 68(208):55852-55994; see 900.2(uu)
+    """
     EntranceExposureToA4_2CmBreastThickness = DICOMControlledTerminologyDefinitionsCode(
         "113865"
     )
+    """
+    The data is copied from information present in the image attributes; e.g. dose attributes such as CTDIvol (0018,9345)
+    """
     CopiedFromImageAttributes = DICOMControlledTerminologyDefinitionsCode("113866")
+    """
+    The data is computed from information present in the image attributes; e.g. by using dosimetry information for the specific irradiating device make and model, applied to technique information such as KVP and mAs
+    """
     ComputedFromImageAttributes = DICOMControlledTerminologyDefinitionsCode("113867")
+    """
+    The data is derived from human-readable reports; e.g. by natural language parsing of text reports, or optical character recognition from reports saved as images by the irradiating device
+    """
     DerivedFromHuman_ReadableReports = DICOMControlledTerminologyDefinitionsCode(
         "113868"
     )
+    """
+    The name of a specific person
+    """
     PersonName = DICOMControlledTerminologyDefinitionsCode("113870")
+    """
+    An identification number or code for a specific person
+    """
     PersonID = DICOMControlledTerminologyDefinitionsCode("113871")
+    """
+    The organization that issued a Person ID
+    """
     PersonIDIssuer = DICOMControlledTerminologyDefinitionsCode("113872")
+    """
+    The name of an organization
+    """
     OrganizationName = DICOMControlledTerminologyDefinitionsCode("113873")
+    """
+    The role played by a person in an organization
+    """
     PersonRoleInOrganization = DICOMControlledTerminologyDefinitionsCode("113874")
+    """
+    The role played by a person in a procedure
+    """
     PersonRoleInProcedure = DICOMControlledTerminologyDefinitionsCode("113875")
+    """
+    The role played by a device in a procedure
+    """
     DeviceRoleInProcedure = DICOMControlledTerminologyDefinitionsCode("113876")
+    """
+    The name used to refer to a device; usually locally unique
+    """
     DeviceName = DICOMControlledTerminologyDefinitionsCode("113877")
+    """
+    Manufacturer of a device
+    """
     DeviceManufacturer = DICOMControlledTerminologyDefinitionsCode("113878")
+    """
+    Model Name of a device
+    """
     DeviceModelName = DICOMControlledTerminologyDefinitionsCode("113879")
+    """
+    Serial Number of a device
+    """
     DeviceSerialNumber = DICOMControlledTerminologyDefinitionsCode("113880")
+    """
+    All planes of a multi-plane acquisition equipment
+    """
     AllPlanes = DICOMControlledTerminologyDefinitionsCode("113890")
+    """
+    The length from which images may be reconstructed (i.e., excluding any overranging performed in a spiral acquisition that is required for data interpolation). Value is distinct from (1113825, DCM, "Scanning Length"), which is the actual length of the table travel during the entire tube loading, according to IEC 60601-2-44, and includes overranging. Also distinct from any actual Reconstructed Volume, which may depend on the slice thickness chosen for a particular reconstruction
+    """
     LengthOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode("113893")
+    """
+    The Z location that is the top (highest Z value) of the Reconstructable Volume. Specified as the Z component within the Patient Coordinate System defined by a specified Frame of Reference
+    """
     TopZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode(
         "113895"
     )
+    """
+    The Z location that is the bottom (lowest Z value) of the Reconstructable Volume. Specified as the Z component within the Patient Coordinate System defined by a specified Frame of Reference
+    """
     BottomZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode(
         "113896"
     )
+    """
+    The Z location that is the top (highest Z value) of the scanning length. Specified as the Z component within the Patient Coordinate System defined by a specified Frame of Reference
+    """
     TopZLocationOfScanningLength = DICOMControlledTerminologyDefinitionsCode("113897")
+    """
+    The Z location that is the bottom (lowest Z value) of the scanning length. Specified as the Z component within the Patient Coordinate System defined by a specified Frame of Reference
+    """
     BottomZLocationOfScanningLength = DICOMControlledTerminologyDefinitionsCode(
         "113898"
     )
+    """
+    The range along the z axis of the total volume irradiated, per IEC 60601-2-44, Ed. 3, 203.115(b). The start and stop of loading corresponding to the outer edge of the full width half maximum of the free-in-air dose profile for the beam collimation used
+    """
     ExposedRange = DICOMControlledTerminologyDefinitionsCode("113899")
+    """
+    Report section about cumulative dose alerts during an examination
+    """
     DoseCheckAlertDetails = DICOMControlledTerminologyDefinitionsCode("113900")
+    """
+    Flag denoting whether a DLP Alert Value was configured
+    """
     DLPAlertValueConfigured = DICOMControlledTerminologyDefinitionsCode("113901")
+    """
+    Flag denoting whether a CTDIvol Alert Value was configured
+    """
     CTDIvolAlertValueConfigured = DICOMControlledTerminologyDefinitionsCode("113902")
+    """
+    Cumulative Dose Length Product value configured to trigger an alert; see NEMA XR 25-2010 Dose Check Standard
+    """
     DLPAlertValue = DICOMControlledTerminologyDefinitionsCode("113903")
+    """
+    Cumulative CTDIvol value configured to trigger an alert; see NEMA XR 25-2010 Dose Check Standard
+    """
     CTDIvolAlertValue = DICOMControlledTerminologyDefinitionsCode("113904")
+    """
+    A forward estimate of the accumulated DLP plus the estimated DLP for the next Protocol Element Group; see NEMA XR 25-2010 Dose Check Standard
+    """
     AccumulatedDLPForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113905")
+    """
+    A forward estimate at a given location of the accumulated CTDIvol plus the estimated CTDIvol for the next Protocol Element Group; see NEMA XR 25-2010 Dose Check Standard
+    """
     AccumulatedCTDIvolForwardEstimate = DICOMControlledTerminologyDefinitionsCode(
         "113906"
     )
+    """
+    Reason provided for proceeding with a procedure that is projected to exceed a configured dose value
+    """
     ReasonForProceeding = DICOMControlledTerminologyDefinitionsCode("113907")
+    """
+    Report section about dose notifications during a protocol element
+    """
     DoseCheckNotificationDetails = DICOMControlledTerminologyDefinitionsCode("113908")
+    """
+    Flag denoting whether a DLP Notification Value was configured
+    """
     DLPNotificationValueConfigured = DICOMControlledTerminologyDefinitionsCode("113909")
+    """
+    Flag denoting whether a CTDIvol Notification Value was configured
+    """
     CTDIvolNotificationValueConfigured = DICOMControlledTerminologyDefinitionsCode(
         "113910"
     )
+    """
+    Dose Length Product value configured to trigger a notification for a given protocol element
+    """
     DLPNotificationValue = DICOMControlledTerminologyDefinitionsCode("113911")
+    """
+    CTDIvol value configured to trigger a notification for a given protocol element
+    """
     CTDIvolNotificationValue = DICOMControlledTerminologyDefinitionsCode("113912")
+    """
+    A forward estimate of the DLP for the next Protocol Element Group; see NEMA XR 25-2010 Dose Check Standard
+    """
     DLPForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113913")
+    """
+    A forward estimate of the CTDIvol for the next Protocol Element Group; see NEMA XR 25-2010 Dose Check Standard
+    """
     CTDIvolForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113914")
+    """
+    The amount of ionizing radiation to which the patient was exposed
+    """
     RadiationExposure = DICOMControlledTerminologyDefinitionsCode("113921")
+    """
+    Type, amount and route of radioactive substance administered
+    """
     RadioactiveSubstanceAdministered = DICOMControlledTerminologyDefinitionsCode(
         "113922"
     )
+    """
+    Exposure to ionizing radiation and associated preventive measures used to reduce the exposure of parts of the body like lead apron or eye, thyroid gland or gonad protection
+    """
     RadiationExposureAndProtectionInformation = (
         DICOMControlledTerminologyDefinitionsCode("113923")
     )
+    """
+    The Size-Specific Dose Estimate is a patient dose estimate that takes into account the size of the patient, such as described in AAPM Report 204 by using linear dimensions measured on the patient or patient images or estimated from patient age
+    """
     SizeSpecificDoseEstimation = DICOMControlledTerminologyDefinitionsCode("113930")
+    """
+    The side-to-side (left to right) dimension of the body part being scanned (per AAPM Report 204)
+    """
     MeasuredLateralDimension = DICOMControlledTerminologyDefinitionsCode("113931")
+    """
+    The thickness of the body part being scanned, in the antero-posterior dimension (per AAPM Report 204)
+    """
     MeasuredAPDimension = DICOMControlledTerminologyDefinitionsCode("113932")
+    """
+    The diameter of the patient at a given location along the Z-axis of the patient, assuming that the patient has a circular cross-section (per AAPM Report 204)
+    """
     DerivedEffectiveDiameter = DICOMControlledTerminologyDefinitionsCode("113933")
+    """
+    The Size Specific Dose Estimation is computed using Table 1B (32cm phantom) or Table 2B (16cm phantom) of AAPM Report 204
+    """
     AAPM204LateralDimension = DICOMControlledTerminologyDefinitionsCode("113934")
+    """
+    The Size Specific Dose Estimation is computed using Table 1C (32cm phantom) or Table 2C (16cm phantom) of AAPM Report 204
+    """
     AAPM204APDimension = DICOMControlledTerminologyDefinitionsCode("113935")
+    """
+    The Size Specific Dose Estimation is computed using Table 1A (32cm phantom) or Table 2A (16cm phantom) of AAPM Report 204
+    """
     AAPM204SumOfLateralAndAPDimension = DICOMControlledTerminologyDefinitionsCode(
         "113936"
     )
+    """
+    The Size Specific Dose Estimation is computed using Table 1D (32cm phantom) or Table 2D (16cm phantom) using an effective diameter estimated from the patient's age using Table 3 of AAPM Report 204
+    """
     AAPM204EffectiveDiameterEstimatedFromPatientAge = (
         DICOMControlledTerminologyDefinitionsCode("113937")
     )
+    """
+    Values calculated from other existing parameters
+    """
     SystemCalculated = DICOMControlledTerminologyDefinitionsCode("113940")
+    """
+    A segmented region of the detector surface within the irradiated area (but might not be near the center of the detector)
+    """
     InDetectorPlane = DICOMControlledTerminologyDefinitionsCode("113941")
+    """
+    A device that creates digital images from X-Ray detectors (Direct, Indirect or Storage)
+    """
     X_RayReadingDevice = DICOMControlledTerminologyDefinitionsCode("113942")
+    """
+    Parameters related to the X-Ray source (generator, tube, etc.) are available to the recording application
+    """
     X_RaySourceDataAvailable = DICOMControlledTerminologyDefinitionsCode("113943")
+    """
+    Parameters related to the X-Ray Mechanical System (Stand, Table) are available to the recording application
+    """
     X_RayMechanicalDataAvailable = DICOMControlledTerminologyDefinitionsCode("113944")
+    """
+    Parameters related to the X-Ray Detector are available to the recording application
+    """
     X_RayDetectorDataAvailable = DICOMControlledTerminologyDefinitionsCode("113945")
+    """
+    Describes the radiographic method of patient, tube and detector positioning to achieve a well described projection or view
+    """
     ProjectionEponymousName = DICOMControlledTerminologyDefinitionsCode("113946")
+    """
+    Type of Detector used to acquire data; e.g. Images
+    """
     DetectorType = DICOMControlledTerminologyDefinitionsCode("113947")
+    """
+    Detector that directly transforms the input signal to pixel values
+    """
     DirectDetector = DICOMControlledTerminologyDefinitionsCode("113948")
+    """
+    Detector that transforms an intermediate signal into pixel values; e.g. a scintillator-based detector
+    """
     IndirectDetector = DICOMControlledTerminologyDefinitionsCode("113949")
+    """
+    Storage detector that stores a signal that is later transformed by a reader into pixel values; e.g. a phosphor-based detector
+    """
     StorageDetector = DICOMControlledTerminologyDefinitionsCode("113950")
+    """
+    Film that is scanned to create pixel values
+    """
     Film = DICOMControlledTerminologyDefinitionsCode("113951")
+    """
+    The cassette/detector is mounted in the patient table
+    """
     TableMount = DICOMControlledTerminologyDefinitionsCode("113952")
+    """
+    The cassette/detector is not mounted.; e.g. a cassette placed underneath the patient
+    """
     UnmountedDetector = DICOMControlledTerminologyDefinitionsCode("113953")
+    """
+    The cassette/detector is mounted in an upright stand
+    """
     UprightStandMount = DICOMControlledTerminologyDefinitionsCode("113954")
+    """
+    The cassette/detector is mounted on a c-arm
+    """
     C_ArmMount = DICOMControlledTerminologyDefinitionsCode("113955")
+    """
+    Method of mounting or positioning a CR/DR cassette or detector
+    """
     CR_DRMechanicalConfiguration = DICOMControlledTerminologyDefinitionsCode("113956")
+    """
+    An integrated projection radiography system capable of fluoroscopy
+    """
     Fluoroscopy_GuidedProjectionRadiographySystem = (
         DICOMControlledTerminologyDefinitionsCode("113957")
     )
+    """
+    A projection radiography system where the X-Ray detector, X-Ray Source and gantry components are integrated and the managing system is able to access details of each component
+    """
     IntegratedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode(
         "113958"
     )
+    """
+    A projection radiography system where the X-Ray detector, X-Ray Source and gantry components are not integrated; e.g. cassette-based CR and DR systems
+    """
     Cassette_basedProjectionRadiographySystem = (
         DICOMControlledTerminologyDefinitionsCode("113959")
     )
+    """
+    Description of the algorithm used when reconstructing the image from the data acquired during the acquisition process
+    """
     ReconstructionAlgorithm = DICOMControlledTerminologyDefinitionsCode("113961")
+    """
+    An algorithm for reconstructing an image from multiple projections by back-projecting the measured values along the line of the projection and filtering the result to reduce blurring
+    """
     FilteredBackProjection = DICOMControlledTerminologyDefinitionsCode("113962")
+    """
+    An algorithm for reconstructing an image from multiple projections by starting with an assumed reconstructed image, computing projections from the image, comparing the original projection data and updating the reconstructed image based upon the difference between the calculated and the actual projections
+    """
     IterativeReconstruction = DICOMControlledTerminologyDefinitionsCode("113963")
+    """
+    The period of time from the start of a Procedure Step until the time point established by the context of the reference
+    """
     ProcedureStepToThisPoint = DICOMControlledTerminologyDefinitionsCode("113970")
+    """
+    Measurement not available: Not a number (per IEEE 754)
+    """
     NotANumber = DICOMControlledTerminologyDefinitionsCode("114000")
+    """
+    Measurement not available: Negative Infinity (per IEEE 754)
+    """
     NegativeInfinity = DICOMControlledTerminologyDefinitionsCode("114001")
+    """
+    Measurement not available: Positive Infinity (per IEEE 754)
+    """
     PositiveInfinity = DICOMControlledTerminologyDefinitionsCode("114002")
+    """
+    Measurement not available: Divide by zero (per IEEE 754)
+    """
     DivideByZero = DICOMControlledTerminologyDefinitionsCode("114003")
+    """
+    Measurement not available: Underflow (per IEEE 754)
+    """
     Underflow = DICOMControlledTerminologyDefinitionsCode("114004")
+    """
+    Measurement not available: Overflow (per IEEE 754)
+    """
     Overflow = DICOMControlledTerminologyDefinitionsCode("114005")
+    """
+    Measurement not available: Measurement failure
+    """
     MeasurementFailure = DICOMControlledTerminologyDefinitionsCode("114006")
+    """
+    Measurement not available: Measurement not attempted
+    """
     MeasurementNotAttempted = DICOMControlledTerminologyDefinitionsCode("114007")
+    """
+    Measurement not available: Calculation failure
+    """
     CalculationFailure = DICOMControlledTerminologyDefinitionsCode("114008")
+    """
+    Measurement not available: Value out of range
+    """
     ValueOutOfRange = DICOMControlledTerminologyDefinitionsCode("114009")
+    """
+    Measurement not available: Value unknown
+    """
     ValueUnknown = DICOMControlledTerminologyDefinitionsCode("114010")
+    """
+    Measurement not available: Value indeterminate
+    """
     ValueIndeterminate = DICOMControlledTerminologyDefinitionsCode("114011")
+    """
+    Measures the time-of-flight of a light signal between the camera and the subject for each point of the image
+    """
     TimeOfFlight = DICOMControlledTerminologyDefinitionsCode("114201")
+    """
+    Interferometry is a family of techniques in which waves are superimposed in order to extract depth information about the scanned object
+    """
     Interferometry = DICOMControlledTerminologyDefinitionsCode("114202")
+    """
+    Laser scanning describes the general method to sample or scan a surface using laser technology
+    """
     LaserScanning = DICOMControlledTerminologyDefinitionsCode("114203")
+    """
+    Projecting a narrow band of light onto a three-dimensionally shaped surface produces a line of illumination that appears distorted from other perspectives than that of the projector. It can be used for an exact geometric reconstruction of the surface shape
+    """
     PatternProjection = DICOMControlledTerminologyDefinitionsCode("114204")
+    """
+    A technique for estimating the surface normal of an object by observing that object under different lighting conditions
+    """
     ShapeFromShading = DICOMControlledTerminologyDefinitionsCode("114205")
+    """
+    A technique for estimating the surface normal of an object by observing that object under different motions
+    """
     ShapeFromMotion = DICOMControlledTerminologyDefinitionsCode("114206")
+    """
+    An optical imaging technique used to increase optical resolution and contrast of a micrograph by using point illumination and a spatial pinhole to eliminate out-of-focus light in specimens that are thicker than the focal plane. It enables the reconstruction of 3D structures from the obtained images
+    """
     ConfocalImaging = DICOMControlledTerminologyDefinitionsCode("114207")
+    """
+    Point cloud that was calculated by an algorithm
+    """
     PointCloudAlgorithmic = DICOMControlledTerminologyDefinitionsCode("114208")
+    """
+    Scanning the object from different views by placing it on a rotating table
+    """
     TurntableScanMethod = DICOMControlledTerminologyDefinitionsCode("114209")
+    """
+    Higher resolution with a longer acquisition time
+    """
     HighResolution = DICOMControlledTerminologyDefinitionsCode("114210")
+    """
+    Lower resolution with a shorter acquisition time
+    """
     FastMode = DICOMControlledTerminologyDefinitionsCode("114211")
+    """
+    An algorithm employed to minimize the difference between two clouds of points. It iteratively revises the transformation (translation, rotation) needed to minimize the distance between the points of two point clouds
+    """
     IterativeClosestPoint = DICOMControlledTerminologyDefinitionsCode("114213")
+    """
+    Human controlled minimization of the distance between the points of two point clouds
+    """
     Freehand = DICOMControlledTerminologyDefinitionsCode("114215")
+    """
+    Scanning the object from different views by placing it in front of a checkerboard pattern
+    """
     Checkerboard = DICOMControlledTerminologyDefinitionsCode("114216")
+    """
+    Type of source for observations quoted from an external source
+    """
     QuotationMode = DICOMControlledTerminologyDefinitionsCode("121001")
+    """
+    Reference to external source of quoted observations
+    """
     QuotedSource = DICOMControlledTerminologyDefinitionsCode("121002")
+    """
+    Documentary source of quoted observations
+    """
     Document = DICOMControlledTerminologyDefinitionsCode("121003")
+    """
+    Verbal source of quoted observations
+    """
     Verbal = DICOMControlledTerminologyDefinitionsCode("121004")
+    """
+    Type of observer that created the observations
+    """
     ObserverType = DICOMControlledTerminologyDefinitionsCode("121005")
+    """
+    Human observer created the observations
+    """
     Person = DICOMControlledTerminologyDefinitionsCode("121006")
+    """
+    Automated device created the observations
+    """
     Device = DICOMControlledTerminologyDefinitionsCode("121007")
+    """
+    Name of human observer that created the observations
+    """
     PersonObserverName = DICOMControlledTerminologyDefinitionsCode("121008")
+    """
+    Organization or institution with which the human observer is affiliated for the context of the current observation
+    """
     PersonObserver_sOrganizationName = DICOMControlledTerminologyDefinitionsCode(
         "121009"
     )
+    """
+    Organizational role of human observer for the context of the current observation
+    """
     PersonObserver_sRoleInTheOrganization = DICOMControlledTerminologyDefinitionsCode(
         "121010"
     )
+    """
+    Procedural role of human observer for the context of the current observation
+    """
     PersonObserver_sRoleInThisProcedure = DICOMControlledTerminologyDefinitionsCode(
         "121011"
     )
+    """
+    Unique identifier of automated device that created the observations
+    """
     DeviceObserverUID = DICOMControlledTerminologyDefinitionsCode("121012")
+    """
+    Institution-provided identifier of automated device that created the observations
+    """
     DeviceObserverName = DICOMControlledTerminologyDefinitionsCode("121013")
+    """
+    Manufacturer of automated device that created the observations
+    """
     DeviceObserverManufacturer = DICOMControlledTerminologyDefinitionsCode("121014")
+    """
+    Manufacturer-provided model name of automated device that created the observations
+    """
     DeviceObserverModelName = DICOMControlledTerminologyDefinitionsCode("121015")
+    """
+    Manufacturer-provided serial number of automated device that created the observations
+    """
     DeviceObserverSerialNumber = DICOMControlledTerminologyDefinitionsCode("121016")
+    """
+    Location of automated device that created the observations whilst the observations were being made
+    """
     DeviceObserverPhysicalLocationDuringObservation = (
         DICOMControlledTerminologyDefinitionsCode("121017")
     )
+    """
+    Unique identifier for the Study or Requested Procedure
+    """
     ProcedureStudyInstanceUID = DICOMControlledTerminologyDefinitionsCode("121018")
+    """
+    Unique identifier for the Performed Procedure Step
+    """
     ProcedureStudyComponentUID = DICOMControlledTerminologyDefinitionsCode("121019")
+    """
+    Identifier for the Order (or Service Request) assigned by the order placer system
+    """
     PlacerNumber = DICOMControlledTerminologyDefinitionsCode("121020")
+    """
+    Identifier for the Order (or Service Request) assigned by the order filler system
+    """
     FillerNumber = DICOMControlledTerminologyDefinitionsCode("121021")
+    """
+    Identifier for the Order (or Service Request) assigned by the department information system
+    """
     AccessionNumber = DICOMControlledTerminologyDefinitionsCode("121022")
+    """
+    Type of procedure scheduled or performed
+    """
     ProcedureCode = DICOMControlledTerminologyDefinitionsCode("121023")
+    """
+    Type of observation subject
+    """
     SubjectClass = DICOMControlledTerminologyDefinitionsCode("121024")
+    """
+    A patient is the subject of observations
+    """
     Patient = DICOMControlledTerminologyDefinitionsCode("121025")
+    """
+    Fetus of patient is the subject of observations
+    """
     Fetus = DICOMControlledTerminologyDefinitionsCode("121026")
+    """
+    Specimen is the subject of observations
+    """
     Specimen = DICOMControlledTerminologyDefinitionsCode("121027")
+    """
+    Unique Identifier of patient or fetus who is the subject of observations
+    """
     SubjectUID = DICOMControlledTerminologyDefinitionsCode("121028")
+    """
+    Name of patient who is the subject of observations
+    """
     SubjectName = DICOMControlledTerminologyDefinitionsCode("121029")
+    """
+    Identifier of patient or fetus who is the subject of observations
+    """
     SubjectID = DICOMControlledTerminologyDefinitionsCode("121030")
+    """
+    Birth Date of patient who is the subject of observations
+    """
     SubjectBirthDate = DICOMControlledTerminologyDefinitionsCode("121031")
+    """
+    Sex of patient who is the subject of observations
+    """
     SubjectSex = DICOMControlledTerminologyDefinitionsCode("121032")
+    """
+    Age of patient who is the subject of observations
+    """
     SubjectAge = DICOMControlledTerminologyDefinitionsCode("121033")
+    """
+    Species of patient who is the subject of observations
+    """
     SubjectSpecies = DICOMControlledTerminologyDefinitionsCode("121034")
+    """
+    The breed of the subject
+    """
     SubjectBreed = DICOMControlledTerminologyDefinitionsCode("121035")
+    """
+    Name of mother of fetus that is the subject of observations
+    """
     MotherOfFetus = DICOMControlledTerminologyDefinitionsCode("121036")
+    """
+    None
+    """
     FetusNumber = DICOMControlledTerminologyDefinitionsCode("121037")
+    """
+    None
+    """
     NumberOfFetuses = DICOMControlledTerminologyDefinitionsCode("121038")
+    """
+    Unique Identifier of specimen that is the subject of observations
+    """
     SpecimenUID = DICOMControlledTerminologyDefinitionsCode("121039")
+    """
+    Accession Number of specimen that is the subject of observations
+    """
     SpecimenAccessionNumber = DICOMControlledTerminologyDefinitionsCode("121040")
+    """
+    Identifier of specimen that is the subject of observations
+    """
     SpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode("121041")
+    """
+    Coded category of specimen that is the subject of observations
+    """
     SpecimenType = DICOMControlledTerminologyDefinitionsCode("121042")
+    """
+    Identifier of specimen microscope slide that is the subject of observations
+    """
     SlideIdentifier = DICOMControlledTerminologyDefinitionsCode("121043")
+    """
+    Unique Identifier of specimen microscope slide that is the subject of observations
+    """
     SlideUID = DICOMControlledTerminologyDefinitionsCode("121044")
+    """
+    The language of the content, being a language that is primarily used for human communication; e.g. English, French
+    """
     Language = DICOMControlledTerminologyDefinitionsCode("121045")
+    """
+    The country-specific variant of language; e.g. Canada for Candadian French
+    """
     CountryOfLanguage = DICOMControlledTerminologyDefinitionsCode("121046")
+    """
+    The language of the value component of a name-value pair
+    """
     LanguageOfValue = DICOMControlledTerminologyDefinitionsCode("121047")
+    """
+    The language of both the name component and the value component of a name-value pair
+    """
     LanguageOfNameAndValue = DICOMControlledTerminologyDefinitionsCode("121048")
+    """
+    The language of the current content item (node in a tree of content) and all its descendants
+    """
     LanguageOfContentItemAndDescendants = DICOMControlledTerminologyDefinitionsCode(
         "121049"
     )
+    """
+    The human readable meaning of the name component of a name-value pair that is equivalent to the post-coordinated meaning conveyed by the coded name and its concept modifier children
+    """
     EquivalentMeaningOfConceptName = DICOMControlledTerminologyDefinitionsCode("121050")
+    """
+    The human readable meaning of the value component of a name-value pair that is equivalent to the post-coordinated meaning conveyed by the coded value and its concept modifier children
+    """
     EquivalentMeaningOfValue = DICOMControlledTerminologyDefinitionsCode("121051")
+    """
+    Whether or not the property concept being modified is present or absent
+    """
     PresenceOfProperty = DICOMControlledTerminologyDefinitionsCode("121052")
+    """
+    None
+    """
     Present = DICOMControlledTerminologyDefinitionsCode("121053")
+    """
+    None
+    """
     Absent = DICOMControlledTerminologyDefinitionsCode("121054")
+    """
+    A set of points on an image, that when connected by line segments, provide a polyline from which a linear measurement was inferred
+    """
     Path = DICOMControlledTerminologyDefinitionsCode("121055")
+    """
+    A set of points on an image, that when connected by line segments, provide a closed polyline that is the border of a defined region from which an area, or two-dimensional measurement, was inferred
+    """
     AreaOutline = DICOMControlledTerminologyDefinitionsCode("121056")
+    """
+    A set of points on an image, that when connected by line segments, provide a closed polyline that is a two-dimensional border of a three-dimensional region's intersection with, or projection into the image
+    """
     PerimeterOutline = DICOMControlledTerminologyDefinitionsCode("121057")
+    """
+    The imaging procedure whose results are reported
+    """
     ProcedureReported = DICOMControlledTerminologyDefinitionsCode("121058")
+    """
+    Presence or absence of a property is undetermined
+    """
     PresenceUndetermined = DICOMControlledTerminologyDefinitionsCode("121059")
+    """
+    None
+    """
     History = DICOMControlledTerminologyDefinitionsCode("121060")
+    """
+    None
+    """
     Request = DICOMControlledTerminologyDefinitionsCode("121062")
+    """
+    None
+    """
     CurrentProcedureDescriptions = DICOMControlledTerminologyDefinitionsCode("121064")
+    """
+    A description of the imaging procedure
+    """
     ProcedureDescription = DICOMControlledTerminologyDefinitionsCode("121065")
+    """
+    None
+    """
     PriorProcedureDescriptions = DICOMControlledTerminologyDefinitionsCode("121066")
+    """
+    None
+    """
     PreviousFindings = DICOMControlledTerminologyDefinitionsCode("121068")
+    """
+    An observation found on a prior imaging study
+    """
     PreviousFinding = DICOMControlledTerminologyDefinitionsCode("121069")
+    """
+    None
+    """
     Findings = DICOMControlledTerminologyDefinitionsCode("121070")
+    """
+    An observation found on an imaging study
+    """
     Finding = DICOMControlledTerminologyDefinitionsCode("121071")
+    """
+    None
+    """
     Impressions = DICOMControlledTerminologyDefinitionsCode("121072")
+    """
+    An interpretation in the clinical context of the finding(s) on an imaging study
+    """
     Impression = DICOMControlledTerminologyDefinitionsCode("121073")
+    """
+    None
+    """
     Recommendations = DICOMControlledTerminologyDefinitionsCode("121074")
+    """
+    A recommendation for management or investigation based on the findings and impressions of an imaging study
+    """
     Recommendation = DICOMControlledTerminologyDefinitionsCode("121075")
+    """
+    None
+    """
     Conclusions = DICOMControlledTerminologyDefinitionsCode("121076")
+    """
+    An interpretation in the clinical context of the finding(s) on an imaging study
+    """
     Conclusion = DICOMControlledTerminologyDefinitionsCode("121077")
+    """
+    None
+    """
     Addendum = DICOMControlledTerminologyDefinitionsCode("121078")
+    """
+    Initial images used to esyablish a beginning condition that is used for comparison over time to look for changes. [Paraphrases NCI-PT (C1442488, UMLS, "Baseline"), which is defined as "An initial measurement that is taken at an early time point to represent a beginning condition, and is used for comparison over time to look for changes. For example, the size of a tumor will be measured before treatment (baseline) and then afterwards to see if the treatment had an effect. A starting point to which things may be compared."]
+    """
     Baseline = DICOMControlledTerminologyDefinitionsCode("121079")
+    """
+    A selection of composite instances that best illustrates a particular finding; e.g. an image slice at the location of the largest extent of a tumor
+    """
     BestIllustrationOfFinding = DICOMControlledTerminologyDefinitionsCode("121080")
+    """
+    None
+    """
     Physician = DICOMControlledTerminologyDefinitionsCode("121081")
+    """
+    None
+    """
     Nurse = DICOMControlledTerminologyDefinitionsCode("121082")
+    """
+    None
+    """
     Technologist = DICOMControlledTerminologyDefinitionsCode("121083")
+    """
+    None
+    """
     Radiographer = DICOMControlledTerminologyDefinitionsCode("121084")
+    """
+    None
+    """
     Intern = DICOMControlledTerminologyDefinitionsCode("121085")
+    """
+    None
+    """
     Resident = DICOMControlledTerminologyDefinitionsCode("121086")
+    """
+    None
+    """
     Registrar = DICOMControlledTerminologyDefinitionsCode("121087")
+    """
+    A medical practitioner undergoing sub-specialty training; e.g. during the period after specialty training (residency)
+    """
     Fellow = DICOMControlledTerminologyDefinitionsCode("121088")
+    """
+    None
+    """
     Attending_Consultant_ = DICOMControlledTerminologyDefinitionsCode("121089")
+    """
+    None
+    """
     ScrubNurse = DICOMControlledTerminologyDefinitionsCode("121090")
+    """
+    None
+    """
     Surgeon = DICOMControlledTerminologyDefinitionsCode("121091")
+    """
+    A medical practitioner with sub-specialty training in Ultrasound
+    """
     Sonologist = DICOMControlledTerminologyDefinitionsCode("121092")
+    """
+    None
+    """
     Sonographer = DICOMControlledTerminologyDefinitionsCode("121093")
+    """
+    The person responsible for performing the procedure
+    """
     Performing = DICOMControlledTerminologyDefinitionsCode("121094")
+    """
+    The person responsible for referring the patient for the procedure
+    """
     Referring = DICOMControlledTerminologyDefinitionsCode("121095")
+    """
+    The person responsible for requesting the procedure
+    """
     Requesting = DICOMControlledTerminologyDefinitionsCode("121096")
+    """
+    The person responsible for recording the procedure or observation
+    """
     Recording = DICOMControlledTerminologyDefinitionsCode("121097")
+    """
+    The person responsible for verifying the recorded procedure or observation
+    """
     Verifying = DICOMControlledTerminologyDefinitionsCode("121098")
+    """
+    The person responsible for assisting with the procedure
+    """
     Assisting = DICOMControlledTerminologyDefinitionsCode("121099")
+    """
+    The person responsible for making preparations for and monitoring the procedure
+    """
     Circulating = DICOMControlledTerminologyDefinitionsCode("121100")
+    """
+    The person responsible for standing by to assist with the precedure if required
+    """
     Standby = DICOMControlledTerminologyDefinitionsCode("121101")
+    """
+    Other sex
+    """
     OtherSex = DICOMControlledTerminologyDefinitionsCode("121102")
+    """
+    Sex of subject undetermined at time of encoding
+    """
     UndeterminedSex = DICOMControlledTerminologyDefinitionsCode("121103")
+    """
+    Ambiguous sex
+    """
     AmbiguousSex = DICOMControlledTerminologyDefinitionsCode("121104")
+    """
+    Radiation Physicist
+    """
     RadiationPhysicist = DICOMControlledTerminologyDefinitionsCode("121105")
+    """
+    Comment
+    """
     Comment = DICOMControlledTerminologyDefinitionsCode("121106")
+    """
+    Indications for Procedure
+    """
     IndicationsForProcedure = DICOMControlledTerminologyDefinitionsCode("121109")
+    """
+    Patient condition at the beginning of a healthcare encounter
+    """
     PatientPresentation = DICOMControlledTerminologyDefinitionsCode("121110")
+    """
+    Summary of a procedure, including most significant findings
+    """
     Summary = DICOMControlledTerminologyDefinitionsCode("121111")
+    """
+    Image or waveform used as source for measurement
+    """
     SourceOfMeasurement = DICOMControlledTerminologyDefinitionsCode("121112")
+    """
+    Complications from a procedure
+    """
     Complications = DICOMControlledTerminologyDefinitionsCode("121113")
+    """
+    Physician who performed a procedure
+    """
     PerformingPhysician = DICOMControlledTerminologyDefinitionsCode("121114")
+    """
+    Summary of patient condition upon Discharge from a healthcare facility
+    """
     DischargeSummary = DICOMControlledTerminologyDefinitionsCode("121115")
+    """
+    Proximal Anatomic Location for a differential measurement; may be considered subtype of term (G-C0E3, SRT, "Finding Site"); e.g. distance or pressure gradient
+    """
     ProximalFindingSite = DICOMControlledTerminologyDefinitionsCode("121116")
+    """
+    Distal Anatomic Location for a differential measurement; may be considered subtype of term (G-C0E3, SRT, "Finding Site"); e.g. distance or pressure gradient
+    """
     DistalFindingSite = DICOMControlledTerminologyDefinitionsCode("121117")
+    """
+    Patient Characteristics (findings)
+    """
     PatientCharacteristics = DICOMControlledTerminologyDefinitionsCode("121118")
+    """
+    Time-stamped record of events that occur during a catheterization procedure
+    """
     CathLabProcedureLog = DICOMControlledTerminologyDefinitionsCode("121120")
+    """
+    Room identification
+    """
     RoomIdentification = DICOMControlledTerminologyDefinitionsCode("121121")
+    """
+    Equipment identification
+    """
     EquipmentIdentification = DICOMControlledTerminologyDefinitionsCode("121122")
+    """
+    A recorded Patient Status or an event involving a patient
+    """
     PatientStatusOrEvent = DICOMControlledTerminologyDefinitionsCode("121123")
+    """
+    Identification of a step, action, or phase of a procedure
+    """
     ProcedureActionItemID = DICOMControlledTerminologyDefinitionsCode("121124")
+    """
+    DateTime of Recording of an Entry in an Event Log
+    """
     DateTimeOfRecordingOfLogEntry = DICOMControlledTerminologyDefinitionsCode("121125")
+    """
+    SOP Instance UID of a Performed Procedure Step
+    """
     PerformedProcedureStepSOPInstanceUID = DICOMControlledTerminologyDefinitionsCode(
         "121126"
     )
+    """
+    SOP Class UID of a Performed Procedure Step
+    """
     PerformedProcedureStepSOPClassUID = DICOMControlledTerminologyDefinitionsCode(
         "121127"
     )
+    """
+    Duration of a step, action, or phase of a procedure
+    """
     ProcedureActionDuration = DICOMControlledTerminologyDefinitionsCode("121128")
+    """
+    Beginning of a step, action, or phase of a procedure
+    """
     StartProcedureActionItem = DICOMControlledTerminologyDefinitionsCode("121130")
+    """
+    End of a step, action, or phase of a procedure
+    """
     EndProcedureActionItem = DICOMControlledTerminologyDefinitionsCode("121131")
+    """
+    Suspension of a step, action, or phase of a procedure
+    """
     SuspendProcedureActionItem = DICOMControlledTerminologyDefinitionsCode("121132")
+    """
+    Resumption of a step, action, or phase of a procedure
+    """
     ResumeProcedureActionItem = DICOMControlledTerminologyDefinitionsCode("121133")
+    """
+    Concept modifier for the DateTime of Recording of an Entry in an Event Log
+    """
     ObservationDateTimeQualifier = DICOMControlledTerminologyDefinitionsCode("121135")
+    """
+    Recorded DateTime had its source in a system clock not synchronized to other recorded DateTimes
+    """
     DateTimeUnsynchronized = DICOMControlledTerminologyDefinitionsCode("121136")
+    """
+    Recorded DateTime is estimated
+    """
     DateTimeEstimated = DICOMControlledTerminologyDefinitionsCode("121137")
+    """
+    Event of the acquisition of an image
+    """
     ImageAcquired = DICOMControlledTerminologyDefinitionsCode("121138")
+    """
+    Type of data acquisition device
+    """
     Modality = DICOMControlledTerminologyDefinitionsCode("121139")
+    """
+    Number of Frames in a multi-frame image
+    """
     NumberOfFrames = DICOMControlledTerminologyDefinitionsCode("121140")
+    """
+    Descriptor of an Image
+    """
     ImageType = DICOMControlledTerminologyDefinitionsCode("121141")
+    """
+    Duration of the acquisition of an image or a waveform
+    """
     AcquisitionDuration = DICOMControlledTerminologyDefinitionsCode("121142")
+    """
+    Event of the acquisition of an image
+    """
     WaveformAcquired = DICOMControlledTerminologyDefinitionsCode("121143")
+    """
+    Document Title
+    """
     DocumentTitle = DICOMControlledTerminologyDefinitionsCode("121144")
+    """
+    Description of Material used in a procedure
+    """
     DescriptionOfMaterial = DICOMControlledTerminologyDefinitionsCode("121145")
+    """
+    Quantity of Material used in a procedure
+    """
     QuantityOfMaterial = DICOMControlledTerminologyDefinitionsCode("121146")
+    """
+    Billing Code for materials used in a procedure
+    """
     BillingCode = DICOMControlledTerminologyDefinitionsCode("121147")
+    """
+    Unit or Device Serial Identifier
+    """
     UnitSerialIdentifier = DICOMControlledTerminologyDefinitionsCode("121148")
+    """
+    Lot Identifier
+    """
     LotIdentifier = DICOMControlledTerminologyDefinitionsCode("121149")
+    """
+    Vendor or local coded value identifying a device
+    """
     DeviceCode = DICOMControlledTerminologyDefinitionsCode("121150")
+    """
+    Identification of a Lesion observed during an imaging procedure
+    """
     LesionIdentifier = DICOMControlledTerminologyDefinitionsCode("121151")
+    """
+    Person administering drug/contrast
+    """
     PersonAdministeringDrug_contrast = DICOMControlledTerminologyDefinitionsCode(
         "121152"
     )
+    """
+    Assessment of the risk a coronary lesion presents to the health of a patient
+    """
     LesionRisk = DICOMControlledTerminologyDefinitionsCode("121153")
+    """
+    Identifier for an attempted Intervention
+    """
     InterventionAttemptIdentifier = DICOMControlledTerminologyDefinitionsCode("121154")
+    """
+    Use of a device to deploy another device
+    """
     Deployment = DICOMControlledTerminologyDefinitionsCode("121155")
+    """
+    Action of a clinical professional at the site of percutaneous access to a patient's cardiovascular system
+    """
     PercutaneousEntryAction = DICOMControlledTerminologyDefinitionsCode("121156")
+    """
+    The action or event of beginning circulatory support for a patient
+    """
     BeginCirculatorySupport = DICOMControlledTerminologyDefinitionsCode("121157")
+    """
+    The action or event of ending circulatory support for a patient
+    """
     EndCirculatorySupport = DICOMControlledTerminologyDefinitionsCode("121158")
+    """
+    Rate of Oxygen Administration
+    """
     OxygenAdministrationRate = DICOMControlledTerminologyDefinitionsCode("121160")
+    """
+    The action or event of beginning administration of oxygen to a patient
+    """
     BeginOxygenAdministration = DICOMControlledTerminologyDefinitionsCode("121161")
+    """
+    The action or event of ending administration of oxygen to a patient
+    """
     EndOxygenAdministration = DICOMControlledTerminologyDefinitionsCode("121162")
+    """
+    Method of administration of oxygen to a patient by ventilator
+    """
     ByVentilator = DICOMControlledTerminologyDefinitionsCode("121163")
+    """
+    The action or event of assessing the clinical status of a patient
+    """
     PatientAssessmentPerformed = DICOMControlledTerminologyDefinitionsCode("121165")
+    """
+    The action or event of beginning pacing support for a patient
+    """
     BeginPacing = DICOMControlledTerminologyDefinitionsCode("121166")
+    """
+    The action or event of ending pacing support for a patient
+    """
     EndPacing = DICOMControlledTerminologyDefinitionsCode("121167")
+    """
+    The action or event of beginning ventilation support for a patient
+    """
     BeginVentilation = DICOMControlledTerminologyDefinitionsCode("121168")
+    """
+    The action or event of ending ventilation support for a patient
+    """
     EndVentilation = DICOMControlledTerminologyDefinitionsCode("121169")
+    """
+    Procedural note originated by a technologist
+    """
     TechNote = DICOMControlledTerminologyDefinitionsCode("121171")
+    """
+    Procedural note originated by a nurse
+    """
     NursingNote = DICOMControlledTerminologyDefinitionsCode("121172")
+    """
+    Procedural note originated by a Physician
+    """
     PhysicianNote = DICOMControlledTerminologyDefinitionsCode("121173")
+    """
+    General procedural note
+    """
     ProcedureNote = DICOMControlledTerminologyDefinitionsCode("121174")
+    """
+    List of references to images considered significant
+    """
     KeyImages = DICOMControlledTerminologyDefinitionsCode("121180")
+    """
+    List of references to DICOM SOP Instances
+    """
     DICOMObjectCatalog = DICOMControlledTerminologyDefinitionsCode("121181")
+    """
+    Individual frames selected as a subset of a multi-frame image
+    """
     ReferencedFrames = DICOMControlledTerminologyDefinitionsCode("121190")
+    """
+    Segment selected as a subset of a segmentation image, specifically the pixels/voxels identified as belonging to the classification of the identified segment
+    """
     ReferencedSegment = DICOMControlledTerminologyDefinitionsCode("121191")
+    """
+    A device is the subject of observations
+    """
     DeviceSubject = DICOMControlledTerminologyDefinitionsCode("121192")
+    """
+    Name or other identifier of a device that is the subject of observations
+    """
     DeviceSubjectName = DICOMControlledTerminologyDefinitionsCode("121193")
+    """
+    Manufacturer of a device that is the subject of observations
+    """
     DeviceSubjectManufacturer = DICOMControlledTerminologyDefinitionsCode("121194")
+    """
+    Model Name of a device that is the subject of observations
+    """
     DeviceSubjectModelName = DICOMControlledTerminologyDefinitionsCode("121195")
+    """
+    Serial Number of a device that is the subject of observations
+    """
     DeviceSubjectSerialNumber = DICOMControlledTerminologyDefinitionsCode("121196")
+    """
+    Physical Location of a device that is the subject of observations during those observations
+    """
     DeviceSubjectPhysicalLocationDuringObservation = (
         DICOMControlledTerminologyDefinitionsCode("121197")
     )
+    """
+    Unique Identifier of a device that is the subject of observations
+    """
     DeviceSubjectUID = DICOMControlledTerminologyDefinitionsCode("121198")
+    """
+    Illustration of a region of interest
+    """
     IllustrationOfROI = DICOMControlledTerminologyDefinitionsCode("121200")
+    """
+    None
+    """
     AreaOutline = DICOMControlledTerminologyDefinitionsCode("121201")
+    """
+    None
+    """
     AreaOfDefinedRegion = DICOMControlledTerminologyDefinitionsCode("121202")
+    """
+    A one dimensional, or linear, numeric measurement
+    """
     Distance = DICOMControlledTerminologyDefinitionsCode("121206")
+    """
+    Vertical measurement value
+    """
     Height = DICOMControlledTerminologyDefinitionsCode("121207")
+    """
+    Distance between marks on a device of calibrated size; e.g. a ruler
+    """
     Inter_MarkerDistance = DICOMControlledTerminologyDefinitionsCode("121208")
+    """
+    None
+    """
     Path = DICOMControlledTerminologyDefinitionsCode("121210")
+    """
+    A one dimensional, or linear, numeric measurement along a polyline
+    """
     PathLength = DICOMControlledTerminologyDefinitionsCode("121211")
+    """
+    None
+    """
     PerimeterOutline = DICOMControlledTerminologyDefinitionsCode("121213")
+    """
+    Frame selected from a segmentation image, specifically the pixels/voxels identified as belonging to the classification of the segment encompassing the identified frame
+    """
     ReferencedSegmentationFrame = DICOMControlledTerminologyDefinitionsCode("121214")
+    """
+    A three-dimensional numeric measurement that is approximate, based on a two-dimensional region in a single image
+    """
     VolumeEstimatedFromSingle2DRegion = DICOMControlledTerminologyDefinitionsCode(
         "121216"
     )
+    """
+    A three-dimensional numeric measurement that is approximate, based on three or more non-coplanar two-dimensional image regions
+    """
     VolumeEstimatedFromThreeOrMoreNon_coplanar2DRegions = (
         DICOMControlledTerminologyDefinitionsCode("121217")
     )
+    """
+    A three-dimensional numeric measurement that is approximate, based on two non-coplanar two-dimensional image regions
+    """
     VolumeEstimatedFromTwoNon_coplanar2DRegions = (
         DICOMControlledTerminologyDefinitionsCode("121218")
     )
+    """
+    A three-dimensional numeric measurement of the bounding region of a three-dimensional region of interest in an image set
+    """
     VolumeOfBoundingThreeDimensionalRegion = DICOMControlledTerminologyDefinitionsCode(
         "121219"
     )
+    """
+    A three-dimensional numeric measurement of the bounding sphere of a three-dimensional region of interest in an image set
+    """
     VolumeOfCircumscribedSphere = DICOMControlledTerminologyDefinitionsCode("121220")
+    """
+    A three-dimensional numeric measurement of an ellipsoid shaped three-dimensional region of interest in an image set
+    """
     VolumeOfEllipsoid = DICOMControlledTerminologyDefinitionsCode("121221")
+    """
+    A three-dimensional numeric measurement of a sphere shaped three-dimensional region of interest in an image set
+    """
     VolumeOfSphere = DICOMControlledTerminologyDefinitionsCode("121222")
+    """
+    Coordinates of a point on a defined path
+    """
     PathVertex = DICOMControlledTerminologyDefinitionsCode("121230")
+    """
+    Surface of an identified or measured volume
+    """
     VolumeSurface = DICOMControlledTerminologyDefinitionsCode("121231")
+    """
+    Series of image instances used as source data for a segmentation
+    """
     SourceSeriesForSegmentation = DICOMControlledTerminologyDefinitionsCode("121232")
+    """
+    Image instances used as source data for a segmentation
+    """
     SourceImageForSegmentation = DICOMControlledTerminologyDefinitionsCode("121233")
+    """
+    Indicates the location of the area of interest as measured from the nipple of the breast
+    """
     DistanceFromNipple = DICOMControlledTerminologyDefinitionsCode("121242")
+    """
+    Indicates the location of the area of interest as measured from the most direct skin point of the breast
+    """
     DistanceFromSkin = DICOMControlledTerminologyDefinitionsCode("121243")
+    """
+    Indicates the location of the area of interest as measured from the chest wall
+    """
     DistanceFromChestWall = DICOMControlledTerminologyDefinitionsCode("121244")
+    """
+    Patient exposure to ionizing radiation (procedure)
+    """
     PatientExposureToIonizingRadiation = DICOMControlledTerminologyDefinitionsCode(
         "121290"
     )
+    """
+    The act of communicating actionable findings to a responsible receiver
+    """
     ResultsCommunicated = DICOMControlledTerminologyDefinitionsCode("121291")
+    """
+    Reference is to a Doppler waveform acquired simultaneously with an image
+    """
     SimultaneousDoppler = DICOMControlledTerminologyDefinitionsCode("121301")
+    """
+    Reference is to a Hemodynamic waveform acquired simultaneously with an image
+    """
     SimultaneousHemodynamic = DICOMControlledTerminologyDefinitionsCode("121302")
+    """
+    Reference is to a ECG waveform acquired simultaneously with an image
+    """
     SimultaneousECG = DICOMControlledTerminologyDefinitionsCode("121303")
+    """
+    Reference is to a voice narrative recording acquired simultaneously with an image
+    """
     SimultaneousVoiceNarrative = DICOMControlledTerminologyDefinitionsCode("121304")
+    """
+    A waveform representing chest expansion and contraction due to respiratory activity, measured simultaneously with the acquisition of this Image
+    """
     SimultaneousRespiratoryWaveform = DICOMControlledTerminologyDefinitionsCode(
         "121305"
     )
+    """
+    Arterial pulse waveform obtained simultaneously with acquisition of a referencing image
+    """
     SimultaneousArterialPulseWaveform = DICOMControlledTerminologyDefinitionsCode(
         "121306"
     )
+    """
+    Phonocardiographic waveform obtained simultaneously with acquisition of a referencing image
+    """
     SimultaneousPhonocardiographicWaveform = DICOMControlledTerminologyDefinitionsCode(
         "121307"
     )
+    """
+    Image providing an anatomical reference on the patient under examination, for the purpose of defining the location of the ensuing imaging
+    """
     Localizer = DICOMControlledTerminologyDefinitionsCode("121311")
+    """
+    Image providing an anatomical reference on the patient under examination, for the purpose of planning or documenting a biopsy
+    """
     BiopsyLocalizer = DICOMControlledTerminologyDefinitionsCode("121312")
+    """
+    Image providing a partial view of the target anatomy, when the target anatomy is too large for a single image
+    """
     OtherPartialViews = DICOMControlledTerminologyDefinitionsCode("121313")
+    """
+    Image providing a view of the target anatomy in a different imaging plane, typically from a near perpendicular angle
+    """
     OtherImageOfBiplanePair = DICOMControlledTerminologyDefinitionsCode("121314")
+    """
+    Image providing a view of the target anatomy in a different imaging plane, typically with a small angular difference
+    """
     OtherImageOfStereoscopicPair = DICOMControlledTerminologyDefinitionsCode("121315")
+    """
+    Image related to a non-image information object
+    """
     ImagesRelatedToStandaloneObject = DICOMControlledTerminologyDefinitionsCode(
         "121316"
     )
+    """
+    Image where signals are identified and separated according to their frequencies; e.g. to identify individual chemicals, or individual nuclei in a chemical compound
+    """
     Spectroscopy = DICOMControlledTerminologyDefinitionsCode("121317")
+    """
+    MR spectroscopy data acquired to correct the phase of the diagnostic data for the phase signal of the Water
+    """
     SpectroscopyDataForWaterPhaseCorrection = DICOMControlledTerminologyDefinitionsCode(
         "121318"
     )
+    """
+    An image that has not already been lossy compressed that is used as the source for creation of a lossy compressed image
+    """
     UncompressedPredecessor = DICOMControlledTerminologyDefinitionsCode("121320")
+    """
+    Image used as the mask for an image processing operation, such as subtraction
+    """
     MaskImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
         "121321"
     )
+    """
+    Image used as the source for an image processing operation
+    """
     SourceImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
         "121322"
     )
+    """
+    Series used as the source for an image processing operation
+    """
     SourceSeriesForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
         "121323"
     )
+    """
+    Image used as the source for a derived or compressed image
+    """
     SourceImage = DICOMControlledTerminologyDefinitionsCode("121324")
+    """
+    Image encoded with a lossy compression transfer syntax
+    """
     LossyCompressedImage = DICOMControlledTerminologyDefinitionsCode("121325")
+    """
+    SOP Instance encoded with a different SOP Class but otherwise equivalent data
+    """
     AlternateSOPClassInstance = DICOMControlledTerminologyDefinitionsCode("121326")
+    """
+    Full fidelity image, uncompressed or lossless compressed
+    """
     FullFidelityImage = DICOMControlledTerminologyDefinitionsCode("121327")
+    """
+    Image encoded with a different photometric interpretation
+    """
     AlternatePhotometricInterpretationImage = DICOMControlledTerminologyDefinitionsCode(
         "121328"
     )
+    """
+    Image used as a source for a montage (stitched) image
+    """
     SourceImageForMontage = DICOMControlledTerminologyDefinitionsCode("121329")
+    """
+    An image that has previously been lossy compressed that is used as the source for creation of another lossy compressed image
+    """
     LossyCompressedPredecessor = DICOMControlledTerminologyDefinitionsCode("121330")
+    """
+    HL7 Document Architecture (CDA) Document that contains clinical content equivalent to the referencing Instance
+    """
     EquivalentCDADocument = DICOMControlledTerminologyDefinitionsCode("121331")
+    """
+    Instance that contains a displayable complete rendering of the referencing Instance
+    """
     CompleteRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
         "121332"
     )
+    """
+    Instance that contains a displayable partial rendering of the referencing Instance
+    """
     PartialRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
         "121333"
     )
+    """
+    Instance that contains a displayable complete rendering of the referencing Instance, plus additional content such as inline rendering of referenced images
+    """
     ExtendedRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
         "121334"
     )
+    """
+    Document whose content has been wholly or partially transformed to create the referencing document
+    """
     SourceDocument = DICOMControlledTerminologyDefinitionsCode("121335")
+    """
+    Image showing structural anatomic features
+    """
     AnatomicImage = DICOMControlledTerminologyDefinitionsCode("121338")
+    """
+    Image showing physical or chemical activity
+    """
     FunctionalImage = DICOMControlledTerminologyDefinitionsCode("121339")
+    """
+    Image providing the same view of the target anatomy acquired using only a specific imaging wavelength, frequency or energy
+    """
     SpectralFilteredImage = DICOMControlledTerminologyDefinitionsCode("121340")
+    """
+    Image providing an anatomical reference on the patient under examination, for the purpose of documenting the location of device such as a diagnostic or therapeutic catheter
+    """
     DeviceLocalizer = DICOMControlledTerminologyDefinitionsCode("121341")
+    """
+    Image providing a graphic view of the distribution of radiation dose
+    """
     DoseImage = DICOMControlledTerminologyDefinitionsCode("121342")
+    """
+    The referenced image is the source of spatially-related frames from which the referencing 3D volume data set was derived
+    """
     AcquisitionFramesCorrespondingToVolume = DICOMControlledTerminologyDefinitionsCode(
         "121346"
     )
+    """
+    3D Volume containing the spatially-related frames in the referencing instance
+    """
     VolumeCorrespondingToSpatially_relatedAcquisitionFrames = (
         DICOMControlledTerminologyDefinitionsCode("121347")
     )
+    """
+    Instance acquired prior to the referencing instance in a set of consecutively acquired instances
+    """
     TemporalPredecessor = DICOMControlledTerminologyDefinitionsCode("121348")
+    """
+    Instance acquired subsequent to the referencing instance in a set of consecutively acquired instances
+    """
     TemporalSuccessor = DICOMControlledTerminologyDefinitionsCode("121349")
+    """
+    Image of the same target area at lower resolution acquired in the same acquisition process
+    """
     SameAcquisitionAtLowerResolution = DICOMControlledTerminologyDefinitionsCode(
         "121350"
     )
+    """
+    Image of the same target area at higher resolution acquired in the same acquisition process
+    """
     SameAcquisitionAtHigherResolution = DICOMControlledTerminologyDefinitionsCode(
         "121351"
     )
+    """
+    Image of the same target area at different focal depth (Z-plane) acquired in the same acquisition process
+    """
     SameAcquisitionAtDifferentFocalDepth = DICOMControlledTerminologyDefinitionsCode(
         "121352"
     )
+    """
+    Image of the same target area at different spectral band acquired in the same acquisition process
+    """
     SameAcquisitionAtDifferentSpectralBand = DICOMControlledTerminologyDefinitionsCode(
         "121353"
     )
+    """
+    Image specifically targeting the container label
+    """
     ImagedContainerLabel = DICOMControlledTerminologyDefinitionsCode("121354")
+    """
+    Source image from which FOR PRESENTATION images were created
+    """
     ForProcessingPredecessor = DICOMControlledTerminologyDefinitionsCode("121358")
+    """
+    The reference is to a predecessor report that has been replaced by the current report
+    """
     ReplacedReport = DICOMControlledTerminologyDefinitionsCode("121360")
+    """
+    The reference is to a predecessor report to which the current report provides and addendum
+    """
     AddendedReport = DICOMControlledTerminologyDefinitionsCode("121361")
+    """
+    A report that precedes the final report and may contain only limited information; it may be time sensitive, and it is not expected to contain all the reportable findings
+    """
     PreliminaryReport = DICOMControlledTerminologyDefinitionsCode("121362")
+    """
+    A report that is not complete
+    """
     PartialReport = DICOMControlledTerminologyDefinitionsCode("121363")
+    """
+    The dose object created was calculated by summation of existing, previously calculated, RT Dose instances
+    """
     ComposedFromPriorDoses = DICOMControlledTerminologyDefinitionsCode("121370")
+    """
+    The dose object created was calculated by summation of existing, previously calculated, RT Dose instances and dose newly calculated by the application. The newly calculated dose may or may not exist as an independent object
+    """
     ComposedFromPriorDosesAndCurrentPlan = DICOMControlledTerminologyDefinitionsCode(
         "121371"
     )
+    """
+    RT Dose Instances used as source for calculated dose
+    """
     SourceDoseForComposingCurrentDose = DICOMControlledTerminologyDefinitionsCode(
         "121372"
     )
+    """
+    Concentration of the chemically or physically interesting (active) ingredient of a drug or contrast agent as delivered in product form from the manufacturer, typically in mg/ml
+    """
     ActiveIngredientUndilutedConcentration = DICOMControlledTerminologyDefinitionsCode(
         "121380"
     )
+    """
+    X-Ray absorption of the active ingredient of a contrast agent ingredient is greater than the absorption of water (tissue)
+    """
     Contrast_BolusIngredientOpaque = DICOMControlledTerminologyDefinitionsCode("121381")
+    """
+    Number of units of substance administered to a patient; e.g. tablets
+    """
     QuantityAdministered = DICOMControlledTerminologyDefinitionsCode("121382")
+    """
+    Mass of substance administered to a patient
+    """
     MassAdministered = DICOMControlledTerminologyDefinitionsCode("121383")
+    """
+    Method of deriving or calculating a measured value; e.g. mean, or maximum of set
+    """
     Derivation = DICOMControlledTerminologyDefinitionsCode("121401")
+    """
+    Assessment of a measurement relative to a normal range of values; may be considered subtype of term (G-C0F2, SRT, "has interpretation")
+    """
     Normality = DICOMControlledTerminologyDefinitionsCode("121402")
+    """
+    Significance of a measurement
+    """
     LevelOfSignificance = DICOMControlledTerminologyDefinitionsCode("121403")
+    """
+    Status of selection of a measurement for further processing or use
+    """
     SelectionStatus = DICOMControlledTerminologyDefinitionsCode("121404")
+    """
+    Description of a population of measurements
+    """
     PopulationDescription = DICOMControlledTerminologyDefinitionsCode("121405")
+    """
+    Bibliographic or clinical reference for a Description of a population of measurements
+    """
     ReferenceAuthority = DICOMControlledTerminologyDefinitionsCode("121406")
+    """
+    Description of a normal range of values for a measurement concept
+    """
     NormalRangeDescription = DICOMControlledTerminologyDefinitionsCode("121407")
+    """
+    Bibliographic or clinical reference for a Description of a normal range of values
+    """
     NormalRangeAuthority = DICOMControlledTerminologyDefinitionsCode("121408")
+    """
+    Observation value selected by user for further processing or use, or as most representative
+    """
     UserChosenValue = DICOMControlledTerminologyDefinitionsCode("121410")
+    """
+    Observation value is the recently obtained, and has been selected for further processing or use
+    """
     MostRecentValueChosen = DICOMControlledTerminologyDefinitionsCode("121411")
+    """
+    Observation value is the mean of several measurements, and has been selected for further processing or use
+    """
     MeanValueChosen = DICOMControlledTerminologyDefinitionsCode("121412")
+    """
+    Standard deviation of a measurement in a reference population
+    """
     StandardDeviationOfPopulation = DICOMControlledTerminologyDefinitionsCode("121414")
+    """
+    Percentile Ranking of an observation value with respect a reference population
+    """
     PercentileRankingOfMeasurement = DICOMControlledTerminologyDefinitionsCode("121415")
+    """
+    Z-score of an observation value with respect a reference population, expressed as the dimensionless quantity (x-m) /s, where (x-m) is the deviation of the observation value (x) from the population mean (m), and s is the standard deviation of the population
+    """
     Z_ScoreOfMeasurement = DICOMControlledTerminologyDefinitionsCode("121416")
+    """
+    2 Sigma deviation of a measurement in a reference population
+    """
     _2SigmaDeviationOfPopulation = DICOMControlledTerminologyDefinitionsCode("121417")
+    """
+    Formula used to compute a derived measurement
+    """
     Equation = DICOMControlledTerminologyDefinitionsCode("121420")
+    """
+    Bibliographic reference to a formula used to compute a derived measurement; reference may be to a specific equation in a journal article
+    """
     EquationCitation = DICOMControlledTerminologyDefinitionsCode("121421")
+    """
+    Bibliographic reference to a Table of Values used to look up a derived measurement
+    """
     TableOfValuesCitation = DICOMControlledTerminologyDefinitionsCode("121422")
+    """
+    Bibliographic reference to a method used to compute a derived measurement
+    """
     MethodCitation = DICOMControlledTerminologyDefinitionsCode("121423")
+    """
+    A Table of Values used to look up a derived measurement
+    """
     TableOfValues = DICOMControlledTerminologyDefinitionsCode("121424")
+    """
+    Factor (divisor or multiplicand) for normalizing a measurement; e.g. body surface area used for normalizing hemodynamic measurements
+    """
     Index = DICOMControlledTerminologyDefinitionsCode("121425")
+    """
+    Measurement obtained by observer estimation, rather than with a measurement tool or by calculation
+    """
     Estimated = DICOMControlledTerminologyDefinitionsCode("121427")
+    """
+    Measurement obtained by calculation
+    """
     Calculated = DICOMControlledTerminologyDefinitionsCode("121428")
+    """
+    Identified issue about a state or process that has the potential to require intervention or management
+    """
     Concern = DICOMControlledTerminologyDefinitionsCode("121430")
+    """
+    DateTime concern noted (noted by whom is determined by context of use)
+    """
     DateTimeConcernNoted = DICOMControlledTerminologyDefinitionsCode("121431")
+    """
+    DateTime the concern was resolved
+    """
     DateTimeConcernResolved = DICOMControlledTerminologyDefinitionsCode("121432")
+    """
+    DateTime the problem was resolved
+    """
     DateTimeProblemResolved = DICOMControlledTerminologyDefinitionsCode("121433")
+    """
+    Place at which healthcare services may be provided
+    """
     ServiceDeliveryLocation = DICOMControlledTerminologyDefinitionsCode("121434")
+    """
+    Identification of a healthcare provider who performed a healthcare service; may be either a person or an organization
+    """
     ServicePerformer = DICOMControlledTerminologyDefinitionsCode("121435")
+    """
+    Type or identifier of a medical device used on, in, or by a patient
+    """
     MedicalDeviceUsed = DICOMControlledTerminologyDefinitionsCode("121436")
+    """
+    Cardiac stress test using pharmacologic and exercise stressors
+    """
     PharmacologicAndExerciseStressTest = DICOMControlledTerminologyDefinitionsCode(
         "121437"
     )
+    """
+    Cardiac stress test using an implanted or external cardiac pacing device
+    """
     PacedStressTest = DICOMControlledTerminologyDefinitionsCode("121438")
+    """
+    Procedure for correction of congenital cardiovascular deformity
+    """
     CorrectionOfCongenitalCardiovascularDeformity = (
         DICOMControlledTerminologyDefinitionsCode("121439")
     )
+    """
+    Process of placing patient in the anticipated treatment position, including specification and location of positioning aids, and other treatment delivery accessories
+    """
     RTPatientSetup = DICOMControlledTerminologyDefinitionsCode("121701")
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using single-plane megavoltage imaging
+    """
     RTPatientPositionAcquisition_SinglePlaneMV = (
         DICOMControlledTerminologyDefinitionsCode("121702")
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using dual-plane megavoltage imaging
+    """
     RTPatientPositionAcquisition_DualPlaneMV = (
         DICOMControlledTerminologyDefinitionsCode("121703")
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using single-plane kilovoltage imaging
+    """
     RTPatientPositionAcquisition_SinglePlaneKV = (
         DICOMControlledTerminologyDefinitionsCode("121704")
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using dual-plane kilovoltage imaging
+    """
     RTPatientPositionAcquisition_DualPlaneKV = (
         DICOMControlledTerminologyDefinitionsCode("121705")
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using dual-plane combination kilovoltage and megavoltage imaging
+    """
     RTPatientPositionAcquisition_DualPlaneKV_MV = (
         DICOMControlledTerminologyDefinitionsCode("121706")
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using kilovoltage CT imaging
+    """
     RTPatientPositionAcquisition_CTKV = DICOMControlledTerminologyDefinitionsCode(
         "121707"
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using megavoltage CT imaging
+    """
     RTPatientPositionAcquisition_CTMV = DICOMControlledTerminologyDefinitionsCode(
         "121708"
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using optical imaging
+    """
     RTPatientPositionAcquisition_Optical = DICOMControlledTerminologyDefinitionsCode(
         "121709"
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using ultrasound imaging
+    """
     RTPatientPositionAcquisition_Ultrasound = DICOMControlledTerminologyDefinitionsCode(
         "121710"
     )
+    """
+    Acquisition of patient positioning information prior to treatment delivery, using spatial fiducials
+    """
     RTPatientPositionAcquisition_SpatialFiducials = (
         DICOMControlledTerminologyDefinitionsCode("121711")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using single-plane images
+    """
     RTPatientPositionRegistration_SinglePlane = (
         DICOMControlledTerminologyDefinitionsCode("121712")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using dual-plane images
+    """
     RTPatientPositionRegistration_DualPlane = DICOMControlledTerminologyDefinitionsCode(
         "121713"
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using 3D CT images and an unspecified registration approach
+    """
     RTPatientPositionRegistration_3DCTGeneral = (
         DICOMControlledTerminologyDefinitionsCode("121714")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using 3D CT images and a marker-based registration approach
+    """
     RTPatientPositionRegistration_3DCTMarker_based = (
         DICOMControlledTerminologyDefinitionsCode("121715")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using 3D CT images and a volume-based registration approach
+    """
     RTPatientPositionRegistration_3DCTVolume_based = (
         DICOMControlledTerminologyDefinitionsCode("121716")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using 3D verification images and 2D reference images
+    """
     RTPatientPositionRegistration_3DOn2DReference = (
         DICOMControlledTerminologyDefinitionsCode("121717")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using 2D verification images and 3D reference images
+    """
     RTPatientPositionRegistration_2DOn3DReference = (
         DICOMControlledTerminologyDefinitionsCode("121718")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using optical images
+    """
     RTPatientPositionRegistration_Optical = DICOMControlledTerminologyDefinitionsCode(
         "121719"
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using ultrasound images
+    """
     RTPatientPositionRegistration_Ultrasound = (
         DICOMControlledTerminologyDefinitionsCode("121720")
     )
+    """
+    Registration of intended and actual patient position prior to treatment delivery, using spatial fiducials
+    """
     RTPatientPositionRegistration_SpatialFiducials = (
         DICOMControlledTerminologyDefinitionsCode("121721")
     )
+    """
+    Adjustment of patient position such that the patient is correctly positioned for treatment
+    """
     RTPatientPositionAdjustment = DICOMControlledTerminologyDefinitionsCode("121722")
+    """
+    Review of patient positioning information in the process of delivering a treatment session
+    """
     RTPatientPositionIn_treatment_sessionReview = (
         DICOMControlledTerminologyDefinitionsCode("121723")
     )
+    """
+    Simulated radiotherapy treatment delivery using verification integral to the Treatment Delivery System
+    """
     RTTreatmentSimulationWithInternalVerification = (
         DICOMControlledTerminologyDefinitionsCode("121724")
     )
+    """
+    Simulated radiotherapy treatment delivery using verification by a external Machine Parameter Verifier
+    """
     RTTreatmentSimulationWithExternalVerification = (
         DICOMControlledTerminologyDefinitionsCode("121725")
     )
+    """
+    Radiotherapy treatment delivery using verification integral to the Treatment Delivery System
+    """
     RTTreatmentWithInternalVerification = DICOMControlledTerminologyDefinitionsCode(
         "121726"
     )
+    """
+    Radiotherapy treatment delivery using verification by an external Machine Parameter Verifier
+    """
     RTTreatmentWithExternalVerification = DICOMControlledTerminologyDefinitionsCode(
         "121727"
     )
+    """
+    Quality assurance of a radiotherapy treatment delivery using verification integral to the Treatment Delivery System
+    """
     RTTreatmentQAWithInternalVerification = DICOMControlledTerminologyDefinitionsCode(
         "121728"
     )
+    """
+    Quality assurance of a radiotherapy treatment delivery using verification by an external Machine Parameter Verifier
+    """
     RTTreatmentQAWithExternalVerification = DICOMControlledTerminologyDefinitionsCode(
         "121729"
     )
+    """
+    Quality assurance of a Treatment Delivery Device
+    """
     RTMachineQA = DICOMControlledTerminologyDefinitionsCode("121730")
+    """
+    Perform Quality Assurance on an RT Plan by evaluating dosimetric content of the current RT Plan
+    """
     RTTreatmentQAByRTPlanDoseCheck = DICOMControlledTerminologyDefinitionsCode("121731")
+    """
+    Perform Quality Assurance on an RT Plan by comparing the content of previously quality-assessed RT Plans with the current RT Plan
+    """
     RTTreatmentQAByRTPlanDifferenceCheck = DICOMControlledTerminologyDefinitionsCode(
         "121732"
     )
+    """
+    Perform Quality Assurance on an RT Ion Plan by evaluating dosimetric content of the current RT Ion Plan
+    """
     RTTreatmentQAByRTIonPlanDoseCheck = DICOMControlledTerminologyDefinitionsCode(
         "121733"
     )
+    """
+    Perform Quality Assurance on an RT Ion Plan by comparing the content of previously quality-assessed RT Ion Plans with the current RT Ion Plan
+    """
     RTTreatmentQAWithRTIonPlanDifferenceCheck = (
         DICOMControlledTerminologyDefinitionsCode("121734")
     )
+    """
+    Indicates whether the treatment to be delivered is a complete fraction or a continuation of previous incompletely treated fraction
+    """
     TreatmentDeliveryType = DICOMControlledTerminologyDefinitionsCode("121740")
+    """
+    Patient called to procedure room
+    """
     PatientCalledToProcedureRoom = DICOMControlledTerminologyDefinitionsCode("122001")
+    """
+    Patient admitted to procedure room
+    """
     PatientAdmittedToProcedureRoom = DICOMControlledTerminologyDefinitionsCode("122002")
+    """
+    Patient given pre-procedure instruction
+    """
     PatientGivenPre_procedureInstruction = DICOMControlledTerminologyDefinitionsCode(
         "122003"
     )
+    """
+    Patient informed consent given
+    """
     PatientInformedConsentGiven = DICOMControlledTerminologyDefinitionsCode("122004")
+    """
+    Patient advance directive given
+    """
     PatientAdvanceDirectiveGiven = DICOMControlledTerminologyDefinitionsCode("122005")
+    """
+    Nil Per Os (NPO) status confirmed
+    """
     NilPerOs_NPO_StatusConfirmed = DICOMControlledTerminologyDefinitionsCode("122006")
+    """
+    Patient assisted to table
+    """
     PatientAssistedToTable = DICOMControlledTerminologyDefinitionsCode("122007")
+    """
+    Patient prepped and draped
+    """
     PatientPreppedAndDraped = DICOMControlledTerminologyDefinitionsCode("122008")
+    """
+    Patient connected to continuous monitoring
+    """
     PatientConnectedToContinuousMonitoring = DICOMControlledTerminologyDefinitionsCode(
         "122009"
     )
+    """
+    Patient transferred to holding area
+    """
     PatientTransferredToHoldingArea = DICOMControlledTerminologyDefinitionsCode(
         "122010"
     )
+    """
+    Patient transferred to surgery
+    """
     PatientTransferredToSurgery = DICOMControlledTerminologyDefinitionsCode("122011")
+    """
+    Patient transferred to CCU
+    """
     PatientTransferredToCCU = DICOMControlledTerminologyDefinitionsCode("122012")
+    """
+    Patient disoriented
+    """
     PatientDisoriented = DICOMControlledTerminologyDefinitionsCode("122020")
+    """
+    Patient reports nausea
+    """
     PatientReportsNausea = DICOMControlledTerminologyDefinitionsCode("122021")
+    """
+    Patient reports discomfort
+    """
     PatientReportsDiscomfort = DICOMControlledTerminologyDefinitionsCode("122022")
+    """
+    Patient reports chest pain
+    """
     PatientReportsChestPain = DICOMControlledTerminologyDefinitionsCode("122023")
+    """
+    Patient reports no pain
+    """
     PatientReportsNoPain = DICOMControlledTerminologyDefinitionsCode("122024")
+    """
+    Patient alert
+    """
     PatientAlert = DICOMControlledTerminologyDefinitionsCode("122025")
+    """
+    Patient restless
+    """
     PatientRestless = DICOMControlledTerminologyDefinitionsCode("122026")
+    """
+    Patient sedated
+    """
     PatientSedated = DICOMControlledTerminologyDefinitionsCode("122027")
+    """
+    Patient asleep
+    """
     PatientAsleep = DICOMControlledTerminologyDefinitionsCode("122028")
+    """
+    Patient unresponsive
+    """
     PatientUnresponsive = DICOMControlledTerminologyDefinitionsCode("122029")
+    """
+    Patient has respiratory difficulty
+    """
     PatientHasRespiratoryDifficulty = DICOMControlledTerminologyDefinitionsCode(
         "122030"
     )
+    """
+    Patient coughed
+    """
     PatientCoughed = DICOMControlledTerminologyDefinitionsCode("122031")
+    """
+    Patient disconnected from continuous monitoring
+    """
     PatientDisconnectedFromContinuousMonitoring = (
         DICOMControlledTerminologyDefinitionsCode("122032")
     )
+    """
+    Hemostasis achieved
+    """
     HemostasisAchieved = DICOMControlledTerminologyDefinitionsCode("122033")
+    """
+    Hemostasis not achieved - oozing
+    """
     HemostasisNotAchieved_Oozing = DICOMControlledTerminologyDefinitionsCode("122034")
+    """
+    Hemostasis not achieved - actively bleeding
+    """
     HemostasisNotAchieved_ActivelyBleeding = DICOMControlledTerminologyDefinitionsCode(
         "122035"
     )
+    """
+    Patient given post-procedure instruction
+    """
     PatientGivenPost_procedureInstruction = DICOMControlledTerminologyDefinitionsCode(
         "122036"
     )
+    """
+    Patient discharged from department or laboratory
+    """
     PatientDischargedFromDepartment = DICOMControlledTerminologyDefinitionsCode(
         "122037"
     )
+    """
+    Patient pronounced dead
+    """
     PatientPronouncedDead = DICOMControlledTerminologyDefinitionsCode("122038")
+    """
+    Patient transferred to morgue
+    """
     PatientTransferredToMorgue = DICOMControlledTerminologyDefinitionsCode("122039")
+    """
+    Identified personnel or staff arrived in procedure room
+    """
     PersonnelArrived = DICOMControlledTerminologyDefinitionsCode("122041")
+    """
+    Identified personnel or staff departed procedure room
+    """
     PersonnelDeparted = DICOMControlledTerminologyDefinitionsCode("122042")
+    """
+    Page sent to identified personnel or staff
+    """
     PageSentTo = DICOMControlledTerminologyDefinitionsCode("122043")
+    """
+    Consultation with identified personnel or staff
+    """
     ConsultationWith = DICOMControlledTerminologyDefinitionsCode("122044")
+    """
+    Office of identified personnel or staff was called
+    """
     OfficeCalled = DICOMControlledTerminologyDefinitionsCode("122045")
+    """
+    Equipment failure
+    """
     EquipmentFailure = DICOMControlledTerminologyDefinitionsCode("122046")
+    """
+    Equipment brought to procedure room
+    """
     EquipmentBroughtToProcedureRoom = DICOMControlledTerminologyDefinitionsCode(
         "122047"
     )
+    """
+    Equipment ready for procedure
+    """
     EquipmentReady = DICOMControlledTerminologyDefinitionsCode("122048")
+    """
+    Equipment removed from procedure room
+    """
     EquipmentRemoved = DICOMControlledTerminologyDefinitionsCode("122049")
+    """
+    Device for obtaining biopsy sample
+    """
     Bioptome = DICOMControlledTerminologyDefinitionsCode("122052")
+    """
+    Valvular Intervention
+    """
     ValvularIntervention = DICOMControlledTerminologyDefinitionsCode("122053")
+    """
+    Aortic Intervention
+    """
     AorticIntervention = DICOMControlledTerminologyDefinitionsCode("122054")
+    """
+    Septal Defect Intervention
+    """
     SeptalDefectIntervention = DICOMControlledTerminologyDefinitionsCode("122055")
+    """
+    Vascular Intervention
+    """
     VascularIntervention = DICOMControlledTerminologyDefinitionsCode("122056")
+    """
+    Myocardial biopsy
+    """
     MyocardialBiopsy = DICOMControlledTerminologyDefinitionsCode("122057")
+    """
+    Arterial conduit angiography
+    """
     ArterialConduitAngiography = DICOMControlledTerminologyDefinitionsCode("122058")
+    """
+    Single plane Angiography
+    """
     SinglePlaneAngiography = DICOMControlledTerminologyDefinitionsCode("122059")
+    """
+    Bi-plane Angiography
+    """
     Bi_planeAngiography = DICOMControlledTerminologyDefinitionsCode("122060")
+    """
+    Percutaneous Coronary Intervention
+    """
     PercutaneousCoronaryIntervention = DICOMControlledTerminologyDefinitionsCode(
         "122061"
     )
+    """
+    15-Lead electrocardiography
+    """
     _15_LeadECG = DICOMControlledTerminologyDefinitionsCode("122062")
+    """
+    Log of events occurring prior to the current procedure
+    """
     Pre_procedureLog = DICOMControlledTerminologyDefinitionsCode("122072")
+    """
+    Analysis or measurements for current procedure (purpose of reference to evidence document)
+    """
     CurrentProcedureEvidence = DICOMControlledTerminologyDefinitionsCode("122073")
+    """
+    Prior report for current patient
+    """
     PriorReportForCurrentPatient = DICOMControlledTerminologyDefinitionsCode("122075")
+    """
+    Identifier of Consumable taken from inventory
+    """
     ConsumableTakenFromInventory = DICOMControlledTerminologyDefinitionsCode("122076")
+    """
+    Identifier of Consumable returned to inventory
+    """
     ConsumableReturnedToInventory = DICOMControlledTerminologyDefinitionsCode("122077")
+    """
+    Identifier of consumable whose remaining content has been disposed
+    """
     RemainingConsumableDisposed = DICOMControlledTerminologyDefinitionsCode("122078")
+    """
+    Identifier of Consumable determined to be unusable
+    """
     ConsumableUnusable = DICOMControlledTerminologyDefinitionsCode("122079")
+    """
+    Identifier of Drug whose administration has started
+    """
     DrugStart = DICOMControlledTerminologyDefinitionsCode("122081")
+    """
+    Identifier of Drug whose administration has ended
+    """
     DrugEnd = DICOMControlledTerminologyDefinitionsCode("122082")
+    """
+    Identifier of Drug administered as part of procedure
+    """
     DrugAdministered = DICOMControlledTerminologyDefinitionsCode("122083")
+    """
+    Identifier of Contrast agent whose administration has started
+    """
     ContrastStart = DICOMControlledTerminologyDefinitionsCode("122084")
+    """
+    Identifier of Contrast agent whose administration has ended
+    """
     ContrastEnd = DICOMControlledTerminologyDefinitionsCode("122085")
+    """
+    Identifier of Contrast agent administered
+    """
     ContrastAdministered = DICOMControlledTerminologyDefinitionsCode("122086")
+    """
+    Identifier of Infusate whose administration has started
+    """
     InfusateStart = DICOMControlledTerminologyDefinitionsCode("122087")
+    """
+    Identifier of Infusate whose administration has ended
+    """
     InfusateEnd = DICOMControlledTerminologyDefinitionsCode("122088")
+    """
+    Action of a device traversing a vascular lesion
+    """
     DeviceCrossedLesion = DICOMControlledTerminologyDefinitionsCode("122089")
+    """
+    Action of a clinical professional performed on a patient for therapeutic purpose
+    """
     InterventionAction = DICOMControlledTerminologyDefinitionsCode("122090")
+    """
+    Volume of Drug, Contrast agent, or Infusate administered
+    """
     VolumeAdministered = DICOMControlledTerminologyDefinitionsCode("122091")
+    """
+    Undiluted dose of Drug, Contrast agent, or Infusate administered
+    """
     UndilutedDoseAdministered = DICOMControlledTerminologyDefinitionsCode("122092")
+    """
+    Concentration of Drug, Contrast agent, or Infusate administered
+    """
     Concentration = DICOMControlledTerminologyDefinitionsCode("122093")
+    """
+    Rate of Drug, Contrast agent, or Infusate administration
+    """
     RateOfAdministration = DICOMControlledTerminologyDefinitionsCode("122094")
+    """
+    Duration of Drug, Contrast agent, or Infusate administration
+    """
     DurationOfAdministration = DICOMControlledTerminologyDefinitionsCode("122095")
+    """
+    Volume of Drug, Contrast agent, or Infusate unadministered or discarded
+    """
     VolumeUnadministeredOrDiscarded = DICOMControlledTerminologyDefinitionsCode(
         "122096"
     )
+    """
+    Numeric parameter of Curvature of Catheter
+    """
     CatheterCurve = DICOMControlledTerminologyDefinitionsCode("122097")
+    """
+    Transmit Frequency
+    """
     TransmitFrequency = DICOMControlledTerminologyDefinitionsCode("122098")
+    """
+    Measured change of patient electrocardiographic ST level relative to baseline measurement
+    """
     STChangeFromBaseline = DICOMControlledTerminologyDefinitionsCode("122099")
+    """
+    Anatomic term modifier indicating aneurysm on cited vessel is the subject of the finding
+    """
     AneurysmOnCitedVessel = DICOMControlledTerminologyDefinitionsCode("122101")
+    """
+    Anatomic term modifier indicating proximal section of graft to cited vessel is the subject of the finding
+    """
     GraftToCitedSegment_ProximalSection = DICOMControlledTerminologyDefinitionsCode(
         "122102"
     )
+    """
+    Anatomic term modifier indicating mid section of graft to cited vessel is the subject of the finding
+    """
     GraftToCitedSegment_MidSection = DICOMControlledTerminologyDefinitionsCode("122103")
+    """
+    Anatomic term modifier indicating distal section of graft to cited vessel is the subject of the finding
+    """
     GraftToCitedSegment_DistalSection = DICOMControlledTerminologyDefinitionsCode(
         "122104"
     )
+    """
+    DateTime of Intervention
+    """
     DateTimeOfIntervention = DICOMControlledTerminologyDefinitionsCode("122105")
+    """
+    Duration of Intervention
+    """
     DurationOfIntervention = DICOMControlledTerminologyDefinitionsCode("122106")
+    """
+    Lesion stenosis measured prior to any interventional procedure
+    """
     BaselineStenosisMeasurement = DICOMControlledTerminologyDefinitionsCode("122107")
+    """
+    Lesion stenosis measured after an interventional procedure
+    """
     Post_InterventionStenosisMeasurement = DICOMControlledTerminologyDefinitionsCode(
         "122108"
     )
+    """
+    Assessment of perfusion across a coronary lesion measured prior to any interventional procedure
+    """
     BaselineTIMIFlow = DICOMControlledTerminologyDefinitionsCode("122109")
+    """
+    Assessment of perfusion across a coronary lesion measured after an interventional procedure
+    """
     Post_InterventionTIMIFlow = DICOMControlledTerminologyDefinitionsCode("122110")
+    """
+    Indication that device is the primary (first and/or most significant) device used for interventional therapy of a particular pathology; e.g. lesion
+    """
     PrimaryInterventionDevice = DICOMControlledTerminologyDefinitionsCode("122111")
+    """
+    Normal Myocardium
+    """
     NormalMyocardium = DICOMControlledTerminologyDefinitionsCode("122112")
+    """
+    Sacrred Myocardial
+    """
     SacrredMyocardial = DICOMControlledTerminologyDefinitionsCode("122113")
+    """
+    Thinning Myocardium
+    """
     ThinningMyocardium = DICOMControlledTerminologyDefinitionsCode("122114")
+    """
+    Hemodynamics Report
+    """
     HemodynamicsReport = DICOMControlledTerminologyDefinitionsCode("122120")
+    """
+    Atrial pressure measurements, report section
+    """
     AtrialPressureMeasurements = DICOMControlledTerminologyDefinitionsCode("122121")
+    """
+    Ventricular pressure measurements, report section
+    """
     VentricularPressureMeasurements = DICOMControlledTerminologyDefinitionsCode(
         "122122"
     )
+    """
+    Gradient assessment, report section
+    """
     GradientAssessment = DICOMControlledTerminologyDefinitionsCode("122123")
+    """
+    Blood velocity measurements, report section
+    """
     BloodVelocityMeasurements = DICOMControlledTerminologyDefinitionsCode("122124")
+    """
+    Blood lab measurements, report section
+    """
     BloodLabMeasurements = DICOMControlledTerminologyDefinitionsCode("122125")
+    """
+    Derived Hemodynamic Measurements, report section
+    """
     DerivedHemodynamicMeasurements = DICOMControlledTerminologyDefinitionsCode("122126")
+    """
+    Clinical Context, report section
+    """
     ClinicalContext = DICOMControlledTerminologyDefinitionsCode("122127")
+    """
+    Location from which the patient was transferred
+    """
     PatientTransferredFrom = DICOMControlledTerminologyDefinitionsCode("122128")
+    """
+    Indication that the procedure includes a percutaneous coronary intervention
+    """
     PCIDuringThisProcedure = DICOMControlledTerminologyDefinitionsCode("122129")
+    """
+    Radiation dose times area of exposure
+    """
     DoseAreaProduct = DICOMControlledTerminologyDefinitionsCode("122130")
+    """
+    Finding of probability and/or severity of thrombus
+    """
     DegreeOfThrombus = DICOMControlledTerminologyDefinitionsCode("122131")
+    """
+    Severity of Calcification, property of lesion
+    """
     SeverityOfCalcification = DICOMControlledTerminologyDefinitionsCode("122132")
+    """
+    Lesion Morphology; form and/or structural properties of lesion
+    """
     LesionMorphology = DICOMControlledTerminologyDefinitionsCode("122133")
+    """
+    Vessel Morphology; form and/or structural properties of vessel
+    """
     VesselMorphology = DICOMControlledTerminologyDefinitionsCode("122134")
+    """
+    Technique (device or procedure) of support for patient circulatory system; hemodynamic support
+    """
     CirculatorySupport = DICOMControlledTerminologyDefinitionsCode("122138")
+    """
+    Reason for Exam
+    """
     ReasonForExam = DICOMControlledTerminologyDefinitionsCode("122139")
+    """
+    Indication that the current exam data has been compared with prior exam data
+    """
     ComparisonWithPriorExamDone = DICOMControlledTerminologyDefinitionsCode("122140")
+    """
+    Electrocardiographic electrode placement technique
+    """
     ElectrodePlacement = DICOMControlledTerminologyDefinitionsCode("122141")
+    """
+    Acquisition Device Type
+    """
     AcquisitionDeviceType = DICOMControlledTerminologyDefinitionsCode("122142")
+    """
+    Acquisition Device ID
+    """
     AcquisitionDeviceID = DICOMControlledTerminologyDefinitionsCode("122143")
+    """
+    Quantitative Analysis, report section
+    """
     QuantitativeAnalysis = DICOMControlledTerminologyDefinitionsCode("122144")
+    """
+    Qualitative Analysis, report section
+    """
     QualitativeAnalysis = DICOMControlledTerminologyDefinitionsCode("122145")
+    """
+    The date and time on which a procedure was performed on a patient
+    """
     ProcedureDateTime = DICOMControlledTerminologyDefinitionsCode("122146")
+    """
+    Clinical Interpretation, report section
+    """
     ClinicalInterpretation = DICOMControlledTerminologyDefinitionsCode("122147")
+    """
+    ECG Lead Identifier
+    """
     LeadID = DICOMControlledTerminologyDefinitionsCode("122148")
+    """
+    Beat Number; ordinal of cardiac cycle within an acquisition
+    """
     BeatNumber = DICOMControlledTerminologyDefinitionsCode("122149")
+    """
+    Complex coded semantic unit, consisting of several coded components
+    """
     CompoundStatement = DICOMControlledTerminologyDefinitionsCode("122150")
+    """
+    Trend (temporal progression) of a clinical condition, finding, or disease
+    """
     Trend = DICOMControlledTerminologyDefinitionsCode("122151")
+    """
+    Coded semantic unit
+    """
     Statement = DICOMControlledTerminologyDefinitionsCode("122152")
+    """
+    Coded modifier for a semantic unit
+    """
     StatementModifier = DICOMControlledTerminologyDefinitionsCode("122153")
+    """
+    Conjunctive term between semantic units
+    """
     ConjunctiveTerm = DICOMControlledTerminologyDefinitionsCode("122154")
+    """
+    Probability
+    """
     Probability = DICOMControlledTerminologyDefinitionsCode("122157")
+    """
+    ECG Global Measurements, report section
+    """
     ECGGlobalMeasurements = DICOMControlledTerminologyDefinitionsCode("122158")
+    """
+    ECG Lead Measurements, report section
+    """
     ECGLeadMeasurements = DICOMControlledTerminologyDefinitionsCode("122159")
+    """
+    Derived cross-sectional area of a vessel or anatomic feature, other than a cardiac valve
+    """
     DerivedArea_Non_Valve = DICOMControlledTerminologyDefinitionsCode("122160")
+    """
+    Rate of blood flow through Pulmonary artery
+    """
     PulmonaryFlow = DICOMControlledTerminologyDefinitionsCode("122161")
+    """
+    Rate of blood flow through the aorta
+    """
     SystemicFlow = DICOMControlledTerminologyDefinitionsCode("122162")
+    """
+    DateTime of patient discharge from hospital admission
+    """
     DischargeDateTime = DICOMControlledTerminologyDefinitionsCode("122163")
+    """
+    Indication that a Coronary Artery Bypass operation was performed during the current hospital admission
+    """
     CoronaryArteryBypassDuringThisAdmission = DICOMControlledTerminologyDefinitionsCode(
         "122164"
     )
+    """
+    Date of Death
+    """
     DateOfDeath = DICOMControlledTerminologyDefinitionsCode("122165")
+    """
+    Indication that the patient died during the current hospital admission
+    """
     DeathDuringThisAdmission = DICOMControlledTerminologyDefinitionsCode("122166")
+    """
+    Indication that the patient died during the current Catheterization procedure
+    """
     DeathDuringCatheterization = DICOMControlledTerminologyDefinitionsCode("122167")
+    """
+    Finding of type of Myocardial Infarction
+    """
     TypeOfMyocardialInfarction = DICOMControlledTerminologyDefinitionsCode("122170")
+    """
+    Finding of Coronary lesion with greater than 50% stenosis
+    """
     CoronaryLesion_50_Stenosis = DICOMControlledTerminologyDefinitionsCode("122171")
+    """
+    Finding of Acute Myocardial Infarction Presence as indication for interventional procedure
+    """
     AcuteMIPresent = DICOMControlledTerminologyDefinitionsCode("122172")
+    """
+    DateTime of first determination of elevated ECG ST segment, as indication of Myocardial Infarction
+    """
     STElevationOnsetDateTime = DICOMControlledTerminologyDefinitionsCode("122173")
+    """
+    Number of lesion interventions attempted during current procedure
+    """
     NumberOfLesionInterventionsAttempted = DICOMControlledTerminologyDefinitionsCode(
         "122175"
     )
+    """
+    Number of lesion interventions successful during current procedure, where the residual post intervention stenosis is less than or equal to 50% of the arterial luminal diameter, TIMI Flow is 3 and the minimal decrease in stenosis was 20%
+    """
     NumberOfLesionInterventionsSuccessful = DICOMControlledTerminologyDefinitionsCode(
         "122176"
     )
+    """
+    Overall success of interventional procedure
+    """
     ProcedureResult = DICOMControlledTerminologyDefinitionsCode("122177")
+    """
+    Lesion Intervention Information, report section
+    """
     LesionInterventionInformation = DICOMControlledTerminologyDefinitionsCode("122178")
+    """
+    Indication that Myocardial Infarction occurred during current procedure
+    """
     Peri_proceduralMIOccurred = DICOMControlledTerminologyDefinitionsCode("122179")
+    """
+    Creatine Kinase-MB value at baseline (start of procedure)
+    """
     CK_MBBaseline = DICOMControlledTerminologyDefinitionsCode("122180")
+    """
+    Creatine Kinase-MB highest value measured during procedure
+    """
     CK_MBPeak = DICOMControlledTerminologyDefinitionsCode("122181")
+    """
+    Time interval between ECG R-wave peaks in subsequent cardiac cycles
+    """
     R_RInterval = DICOMControlledTerminologyDefinitionsCode("122182")
+    """
+    Blood temperature
+    """
     BloodTemperature = DICOMControlledTerminologyDefinitionsCode("122183")
+    """
+    Blood Oxygen content
+    """
     BloodOxygenContent = DICOMControlledTerminologyDefinitionsCode("122185")
+    """
+    Blood Carbon dioxide saturation
+    """
     BloodCarbonDioxideSaturation = DICOMControlledTerminologyDefinitionsCode("122187")
+    """
+    Pulmonary Arterial Content (FCpa)
+    """
     PulmonaryArterialContent_FCpa_ = DICOMControlledTerminologyDefinitionsCode("122188")
+    """
+    Pulmonary Venous Content (FCpv)
+    """
     PulmonaryVenousContent_FCpv_ = DICOMControlledTerminologyDefinitionsCode("122189")
+    """
+    Max dp/dt/P
+    """
     MaxDp_dt_P = DICOMControlledTerminologyDefinitionsCode("122190")
+    """
+    Ventricular End Diastolic pressure
+    """
     VentricularEndDiastolicPressure = DICOMControlledTerminologyDefinitionsCode(
         "122191"
     )
+    """
+    Elapsed time from injection of an indicator bolus until it is observed at another location
+    """
     IndicatorAppearanceTime = DICOMControlledTerminologyDefinitionsCode("122192")
+    """
+    Maximum pressure acceleration
+    """
     MaximumPressureAcceleration = DICOMControlledTerminologyDefinitionsCode("122193")
+    """
+    Ventricular Systolic blood pressure
+    """
     VentricularSystolicBloodPressure = DICOMControlledTerminologyDefinitionsCode(
         "122194"
     )
+    """
+    Pulse Strength; palpable strength of systolic flow
+    """
     PulseStrength = DICOMControlledTerminologyDefinitionsCode("122195")
+    """
+    The secondary peak pressure in the atrium during atrial contraction
+    """
     CWavePressure = DICOMControlledTerminologyDefinitionsCode("122196")
+    """
+    Gradient pressure, average
+    """
     GradientPressure_Average = DICOMControlledTerminologyDefinitionsCode("122197")
+    """
+    Gradient pressure, peak
+    """
     GradientPressure_Peak = DICOMControlledTerminologyDefinitionsCode("122198")
+    """
+    Pressure at dp/dt max
+    """
     PressureAtDp_dtMax = DICOMControlledTerminologyDefinitionsCode("122199")
+    """
+    Diastolic blood velocity, mean
+    """
     DiastolicBloodVelocity_Mean = DICOMControlledTerminologyDefinitionsCode("122201")
+    """
+    Diastolic blood velocity, peak
+    """
     DiastolicBloodVelocity_Peak = DICOMControlledTerminologyDefinitionsCode("122202")
+    """
+    Systolic blood velocity, mean
+    """
     SystolicBloodVelocity_Mean = DICOMControlledTerminologyDefinitionsCode("122203")
+    """
+    Systolic blood velocity, peak
+    """
     SystolicBloodVelocity_Peak = DICOMControlledTerminologyDefinitionsCode("122204")
+    """
+    Blood velocity, mean
+    """
     BloodVelocity_Mean = DICOMControlledTerminologyDefinitionsCode("122205")
+    """
+    Blood velocity, minimum
+    """
     BloodVelocity_Minimum = DICOMControlledTerminologyDefinitionsCode("122206")
+    """
+    Blood velocity, peak
+    """
     BloodVelocity_Peak = DICOMControlledTerminologyDefinitionsCode("122207")
+    """
+    Venous or atrial pressure minimum during ventricular systole, after A-wave
+    """
     X_descentPressure = DICOMControlledTerminologyDefinitionsCode("122208")
+    """
+    Venous or atrial pressure minimum when tricuspid valve opens during diastole, after V-wave
+    """
     Y_descentPressure = DICOMControlledTerminologyDefinitionsCode("122209")
+    """
+    Atrial pressure upon closure of tricuspid and mitral valves
+    """
     Z_pointPressure = DICOMControlledTerminologyDefinitionsCode("122210")
+    """
+    Left Ventricular ejection time
+    """
     LeftVentricularEjectionTime = DICOMControlledTerminologyDefinitionsCode("122211")
+    """
+    Left Ventricular filling time
+    """
     LeftVentricularFillingTime = DICOMControlledTerminologyDefinitionsCode("122212")
+    """
+    Right Ventricular ejection time
+    """
     RightVentricularEjectionTime = DICOMControlledTerminologyDefinitionsCode("122213")
+    """
+    Right Ventricular filling time
+    """
     RightVentricularFillingTime = DICOMControlledTerminologyDefinitionsCode("122214")
+    """
+    Total Pulmonary Resistance
+    """
     TotalPulmonaryResistance = DICOMControlledTerminologyDefinitionsCode("122215")
+    """
+    Total Vascular Resistance
+    """
     TotalVascularResistance = DICOMControlledTerminologyDefinitionsCode("122216")
+    """
+    Coronary Flow reserve
+    """
     CoronaryFlowReserve = DICOMControlledTerminologyDefinitionsCode("122217")
+    """
+    Diastolic/Systolic velocity ratio
+    """
     Diastolic_SystolicVelocityRatio = DICOMControlledTerminologyDefinitionsCode(
         "122218"
     )
+    """
+    Hyperemic ratio
+    """
     HyperemicRatio = DICOMControlledTerminologyDefinitionsCode("122219")
+    """
+    Hemodynamic Resistance Index
+    """
     HemodynamicResistanceIndex = DICOMControlledTerminologyDefinitionsCode("122220")
+    """
+    Thorax diameter, sagittal
+    """
     ThoraxDiameter_Sagittal = DICOMControlledTerminologyDefinitionsCode("122221")
+    """
+    Environmental characteristics in the procedure room
+    """
     ProcedureEnvironmentalCharacteristics = DICOMControlledTerminologyDefinitionsCode(
         "122222"
     )
+    """
+    Oxygen concentration in the procedure room
+    """
     RoomOxygenConcentration = DICOMControlledTerminologyDefinitionsCode("122223")
+    """
+    Temperature in the procedure room
+    """
     RoomTemperature = DICOMControlledTerminologyDefinitionsCode("122224")
+    """
+    Barometric pressure in the procedure room
+    """
     RoomBarometricPressure = DICOMControlledTerminologyDefinitionsCode("122225")
+    """
+    Left to Right Flow
+    """
     LeftToRightFlow = DICOMControlledTerminologyDefinitionsCode("122227")
+    """
+    Right to Left Flow
+    """
     RightToLeftFlow = DICOMControlledTerminologyDefinitionsCode("122228")
+    """
+    Arteriovenous oxygen content difference
+    """
     ArteriovenousDifference = DICOMControlledTerminologyDefinitionsCode("122229")
+    """
+    Framingham Study 10 Year CHD Risk
+    """
     _10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode("122230")
+    """
+    Framingham Study Comparative Average10 Year CHD Risk
+    """
     ComparativeAverage10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode(
         "122231"
     )
+    """
+    Framingham Study Comparative Low10 Year CHD Risk
+    """
     ComparativeLow10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode("122232")
+    """
+    Framingham Study LDL Cholesterol Score Sheet for Men
+    """
     LDLCholesterolScoreSheetForMen = DICOMControlledTerminologyDefinitionsCode("122233")
+    """
+    Framingham Study LDL Cholesterol Score Sheet for Women
+    """
     LDLCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode(
         "122234"
     )
+    """
+    Framingham Study Total Cholesterol Score Sheet for Men
+    """
     TotalCholesterolScoreSheetForMen = DICOMControlledTerminologyDefinitionsCode(
         "122235"
     )
+    """
+    Framingham Study Total Cholesterol Score Sheet for Women
+    """
     TotalCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode(
         "122236"
     )
+    """
+    Corrected Sinus Node Recovery Time
+    """
     CorrectedSinusNodeRecoveryTime = DICOMControlledTerminologyDefinitionsCode("122237")
+    """
+    Max volume normalized to 50mmHg pulse pressure
+    """
     MaxVolumeNormalizedTo50mmHgPulsePressure = (
         DICOMControlledTerminologyDefinitionsCode("122238")
     )
+    """
+    Oxygen Consumption
+    """
     OxygenConsumption = DICOMControlledTerminologyDefinitionsCode("122239")
+    """
+    Body Surface Area computed from patient height and weight: BSA = 3.207*WT[g]^(0.7285-0.0188 log (WT[g])) *HT[cm] ^ 0.3 [Boyd E, The growth of the surface area of the human body. Minneapolis: University of Minnesota Press, 1935, eq. (36) ]
+    """
     BSA_3_207_WT_0_7285_0_0188Log_WT_HT_0_3 = DICOMControlledTerminologyDefinitionsCode(
         "122240"
     )
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.007184* WT[kg] ^ 0.425*HT[cm] ^ 0.725 [Dubois and Dubois, Arch Int Med 1916 17:863-71]
+    """
     BSA_0_007184_WT_0_425_HT_0_725 = DICOMControlledTerminologyDefinitionsCode("122241")
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.0235* WT[kg] ^0.51456*HT[cm]^ 0.42246 [Gehan EA, George SL, 'Estimation of human body surface area from height and weight', Cancer Chemother Rep 1970 54:225-35]
+    """
     BSA_0_0235_WT_0_51456_HT_0_42246 = DICOMControlledTerminologyDefinitionsCode(
         "122242"
     )
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.024265 * WT[kg] ^ 0.5378 * HT[cm] ^ 0.3964 [Haycock G.B., Schwartz G.J., Wisotsky D.H. 'Geometric method for measuring body surface area: A height weight formula validated in infants, children and adults.' The Journal of Pediatrics 1978 93:1:62-66]
+    """
     BSA_0_024265_WT_0_5378_HT_0_3964 = DICOMControlledTerminologyDefinitionsCode(
         "122243"
     )
+    """
+    Body Surface Area computed from patient height and weight: BSA = (HT[m] * WT[kg] / 36) ^ 0.5 [Mosteller, R.D. 'Simplified Calculation of Body Surface Area.' N Engl J Med 1987 Oct 22;317(17):1098]
+    """
     BSA_HT_WT_36_0_5 = DICOMControlledTerminologyDefinitionsCode("122244")
+    """
+    Body Surface Area computed from patient weight:BSA = 1321 + 0.3433 * WT[kg] (for pediatrics 3-30 kg) [Current, J.D. 'A Linear Equation For Estimating The Body Surface Area In Infants And Children', The Internet Journal of Anesthesiology. 1998. 2:2]
+    """
     BSA_1321_0_3433_WT = DICOMControlledTerminologyDefinitionsCode("122245")
+    """
+    BSA = 0.0004688 * (1000 * WT) ^ (0.8168 - 0.0154 * log(1000 * WT)) Where (WT is weight in kilogram) Units = m2 Boyd, Edith. The Growth of the Surface Area of the Human Body(originally published in 1935 by the University of Minnesota Press), Greenwood Press, Westport, Connecticut, 1975, p. 102.Equation (35)
+    """
     BSA_0_0004688_WT_0_8168_0_0154_Log_WT_ = DICOMControlledTerminologyDefinitionsCode(
         "122246"
     )
+    """
+    Equation for estimated oxygen consumption: VO2male = BSA (138.1 - 11.49 * loge(age) + 0.378 * HRf)
+    """
     VO2male_BSA_138_1_11_49_Loge_age_0_378_HRf_ = (
         DICOMControlledTerminologyDefinitionsCode("122247")
     )
+    """
+    Equation for estimated oxygen consumption: VO2female = BSA (138.1 - 17.04 * loge(age) + 0.378 * HRf)
+    """
     VO2female_BSA_138_1_17_04_Loge_age_0_378_HRf_ = (
         DICOMControlledTerminologyDefinitionsCode("122248")
     )
+    """
+    Equation for estimated oxygen consumption: VO2 = VeSTPD * 10 * (FIO2 - FE02)
+    """
     VO2_VeSTPD_10_FIO2_FE02_ = DICOMControlledTerminologyDefinitionsCode("122249")
+    """
+    Equation for estimated oxygen consumption: VO2 = 152 * BSA
+    """
     VO2_152_BSA = DICOMControlledTerminologyDefinitionsCode("122250")
+    """
+    Equation for estimated oxygen consumption: VO2 = 175 * BSA
+    """
     VO2_175_BSA = DICOMControlledTerminologyDefinitionsCode("122251")
+    """
+    Equation for estimated oxygen consumption: VO2 = 176 * BSA
+    """
     VO2_176_BSA = DICOMControlledTerminologyDefinitionsCode("122252")
+    """
+    Robertson & Reid Table for estimated oxygen consumption
+    """
     Robertson_ReidTable = DICOMControlledTerminologyDefinitionsCode("122253")
+    """
+    Fleisch table for estimated oxygen consumption
+    """
     FleischTable = DICOMControlledTerminologyDefinitionsCode("122254")
+    """
+    Boothby table for estimated oxygen consumption
+    """
     BoothbyTable = DICOMControlledTerminologyDefinitionsCode("122255")
+    """
+    Estimate of Oxygen partial pressure at 50% saturation for premature infants less than 3 days old: P50 = 19.9
+    """
     If_premAge_3days_P50_19_9 = DICOMControlledTerminologyDefinitionsCode("122256")
+    """
+    Estimate of Oxygen partial pressure at 50% saturation for infants less than 1 day old: P50 = 21.6
+    """
     If_age_1day_P50_21_6 = DICOMControlledTerminologyDefinitionsCode("122257")
+    """
+    Estimate of Oxygen partial pressure at 50% saturation for infants less than 30 days old: P50 = 24.6
+    """
     If_age_30day_P50_24_6 = DICOMControlledTerminologyDefinitionsCode("122258")
+    """
+    Estimate of Oxygen partial pressure at 50% saturation for patients less than 18 years old: P50 = 27.2
+    """
     If_age_18y_P50_27_2 = DICOMControlledTerminologyDefinitionsCode("122259")
+    """
+    Estimate of Oxygen partial pressure at 50% saturation for patients less than 40 years old: P50 = 27.4
+    """
     If_age_40y_P50_27_4 = DICOMControlledTerminologyDefinitionsCode("122260")
+    """
+    Estimate of Oxygen partial pressure at 50% saturation for patients more than 60 years old: P50 = 29.3
+    """
     If_age_60y_P50_29_3 = DICOMControlledTerminologyDefinitionsCode("122261")
+    """
+    Cardiac valve area computed from flow and pressure gradient: Area = Flow / 44.5 * sqrt(Gradient[mmHg]) [Gorlin and Gorlin, Am Heart J, 1951]
+    """
     Area_Flow_44_5_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode(
         "122262"
     )
+    """
+    Mitral valve area computed from flow and pressure gradient: Mitral valve Area = Flow / 38.0 * sqrt(Gradient[mmHg]) [Gorlin and Gorlin, Am Heart J, 1951]
+    """
     MVA_Flow_38_0_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode(
         "122263"
     )
+    """
+    Body Mass Index computed from weight and height: BMI = Wt/Ht^2
+    """
     BMI_Wt_Ht_2 = DICOMControlledTerminologyDefinitionsCode("122265")
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.007358 * WT[kg] ^ 0.425 * HT[cm] ^ 0.725 (for East Asian adult, aged 15+ years) [Kanai Izumi, Masamitsu Kanai, 'Clinical examination method summary']
+    """
     BSA_0_007358_WT_0_425_HT_0_725 = DICOMControlledTerminologyDefinitionsCode("122266")
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.010265 * WT[kg] ^ 0.423 * HT[cm] ^ 0.651 (For East Asian child aged 12-14 years)
+    """
     BSA_0_010265_WT_0_423_HT_0_651 = DICOMControlledTerminologyDefinitionsCode("122267")
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.008883* WT[kg] ^ 0.444 * HT[cm] ^ 0.663 (For East Asian child aged 6-11 years)
+    """
     BSA_0_008883_WT_0_444_HT_0_663 = DICOMControlledTerminologyDefinitionsCode("122268")
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.038189 * WT[kg] ^ 0.423 * HT[cm] ^ 0.362 (For East Asian child aged 1-5 years)
+    """
     BSA_0_038189_WT_0_423_HT_0_362 = DICOMControlledTerminologyDefinitionsCode("122269")
+    """
+    Body Surface Area computed from patient height and weight: BSA = 0.009568* WT[kg] ^ 0.473 * HT[cm] ^ 0.655 (For East Asian child aged 0-12 months)
+    """
     BSA_0_009568_WT_0_473_HT_0_655 = DICOMControlledTerminologyDefinitionsCode("122270")
+    """
+    Skin Condition Warm
+    """
     SkinConditionWarm = DICOMControlledTerminologyDefinitionsCode("122271")
+    """
+    Skin Condition Cool
+    """
     SkinConditionCool = DICOMControlledTerminologyDefinitionsCode("122272")
+    """
+    Skin Condition Cold
+    """
     SkinConditionCold = DICOMControlledTerminologyDefinitionsCode("122273")
+    """
+    Skin Condition Dry
+    """
     SkinConditionDry = DICOMControlledTerminologyDefinitionsCode("122274")
+    """
+    Skin Condition Clammy
+    """
     SkinConditionClammy = DICOMControlledTerminologyDefinitionsCode("122275")
+    """
+    Skin Condition Diaphoretic
+    """
     SkinConditionDiaphoretic = DICOMControlledTerminologyDefinitionsCode("122276")
+    """
+    Skin Condition Flush
+    """
     SkinConditionFlush = DICOMControlledTerminologyDefinitionsCode("122277")
+    """
+    Skin Condition Mottled
+    """
     SkinConditionMottled = DICOMControlledTerminologyDefinitionsCode("122278")
+    """
+    Skin Condition Pale
+    """
     SkinConditionPale = DICOMControlledTerminologyDefinitionsCode("122279")
+    """
+    Airway unobstructed
+    """
     AirwayUnobstructed = DICOMControlledTerminologyDefinitionsCode("122281")
+    """
+    Airway partially obstructed
+    """
     AirwayPartiallyObstructed = DICOMControlledTerminologyDefinitionsCode("122282")
+    """
+    Airway severely obstructed
+    """
     AirwaySeverelyObstructed = DICOMControlledTerminologyDefinitionsCode("122283")
+    """
+    Anatomy could not be visualized for the purpose of evaluation
+    """
     NotVisualized = DICOMControlledTerminologyDefinitionsCode("122288")
+    """
+    Quantitative Arteriography Report
+    """
     QuantitativeArteriographyReport = DICOMControlledTerminologyDefinitionsCode(
         "122291"
     )
+    """
+    Quantitative Ventriculography Report
+    """
     QuantitativeVentriculographyReport = DICOMControlledTerminologyDefinitionsCode(
         "122292"
     )
+    """
+    Guidewire crossing lesion unsuccessful
+    """
     GuidewireCrossingLesionUnsuccessful = DICOMControlledTerminologyDefinitionsCode(
         "122301"
     )
+    """
+    Guidewire crossing lesion successful
+    """
     GuidewireCrossingLesionSuccessful = DICOMControlledTerminologyDefinitionsCode(
         "122302"
     )
+    """
+    Angioplasty balloon inflated
+    """
     AngioplastyBalloonInflated = DICOMControlledTerminologyDefinitionsCode("122303")
+    """
+    Angioplasty balloon deflated
+    """
     AngioplastyBalloonDeflated = DICOMControlledTerminologyDefinitionsCode("122304")
+    """
+    Device deployed
+    """
     DeviceDeployed = DICOMControlledTerminologyDefinitionsCode("122305")
+    """
+    Stent re-expanded
+    """
     StentRe_expanded = DICOMControlledTerminologyDefinitionsCode("122306")
+    """
+    Object removed
+    """
     ObjectRemoved = DICOMControlledTerminologyDefinitionsCode("122307")
+    """
+    Radiation applied
+    """
     RadiationApplied = DICOMControlledTerminologyDefinitionsCode("122308")
+    """
+    Radiation removed
+    """
     RadiationRemoved = DICOMControlledTerminologyDefinitionsCode("122309")
+    """
+    Interventional device placement unsuccessful
+    """
     InterventionalDevicePlacementUnsuccessful = (
         DICOMControlledTerminologyDefinitionsCode("122310")
     )
+    """
+    Interventional device placed
+    """
     InterventionalDevicePlaced = DICOMControlledTerminologyDefinitionsCode("122311")
+    """
+    Intervention performed
+    """
     InterventionPerformed = DICOMControlledTerminologyDefinitionsCode("122312")
+    """
+    Interventional device withdrawn
+    """
     InterventionalDeviceWithdrawn = DICOMControlledTerminologyDefinitionsCode("122313")
+    """
+    Catheter Size
+    """
     CatheterSize = DICOMControlledTerminologyDefinitionsCode("122319")
+    """
+    Injectate Temperature
+    """
     InjectateTemperature = DICOMControlledTerminologyDefinitionsCode("122320")
+    """
+    Injectate Volume
+    """
     InjectateVolume = DICOMControlledTerminologyDefinitionsCode("122321")
+    """
+    Factor by which a measured or calculated value is multiplied to obtain the estimated real-world value
+    """
     CalibrationFactor = DICOMControlledTerminologyDefinitionsCode("122322")
+    """
+    Intravascular Ultrasound Report
+    """
     IVUSReport = DICOMControlledTerminologyDefinitionsCode("122325")
+    """
+    External Elastic Membrane (EEM) diameter measured through the center point of the vessel. Center point of the vessel is defined as the center of gravity of the EEM area. The EEM is a discrete interface at the border between the media and the adventitia
+    """
     EEMDiameter = DICOMControlledTerminologyDefinitionsCode("122330")
+    """
+    The distance from intimal leading edge to the external elastic membrane along any line passing through the luminal center, which is defined as the center of gravity of the lumen area
+    """
     PlaquePlusMediaThickness = DICOMControlledTerminologyDefinitionsCode("122331")
+    """
+    Planimetered perimeter of the lumen
+    """
     LumenPerimeter = DICOMControlledTerminologyDefinitionsCode("122332")
+    """
+    Vessel area measured at the External Elastic Membrane (EEM), a discrete interface at the border between the media and the adventitia
+    """
     EEMCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode("122333")
+    """
+    Area within the EEM occupied by atheroma, regardless of lumen compromise. Plaque plus Media Area = EEM cross-sectional area - vessel lumen cross-sectional area
+    """
     PlaquePlusMediaCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode(
         "122334"
     )
+    """
+    Measurement of in-stent restenosis. In-Stent Intimal Area = Stent cross-sectional area - vessel lumen cross-sectional area
+    """
     In_StentNeointimalCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode(
         "122335"
     )
+    """
+    Longitudinal extent of the Vascular Volume Measurement. This is the distance from the distal edge to the proximal edge of the Volume measurement
+    """
     VascularVolumeMeasurementLength = DICOMControlledTerminologyDefinitionsCode(
         "122336"
     )
+    """
+    Longitudinal distance from the closest edge of a fiducial feature or reference location to the start of the vascular measurement. This value will be a positive if the measurement is distal to the fiducial feature or reference location, or negative if the measurement is proximal to the fiducial feature or reference location
+    """
     RelativePosition = DICOMControlledTerminologyDefinitionsCode("122337")
+    """
+    In-Stent Neointimal Volume / Stent Volume
+    """
     StentVolumeObstruction = DICOMControlledTerminologyDefinitionsCode("122339")
+    """
+    Reference, normally anatomical, which is used for locating the position of a measurement
+    """
     FiducialFeature = DICOMControlledTerminologyDefinitionsCode("122340")
+    """
+    Longitudinal calcium length measurement
+    """
     CalciumLength = DICOMControlledTerminologyDefinitionsCode("122341")
+    """
+    Measurement of vessel lumen eccentricity. Lumen Eccentricity Index = (maximum vessel lumen diameter - minimum vessel lumen diameter) / maximum vessel lumen diameter. Lumen diameters are measured through the center point of the lumen, which is defined as the center of gravity of the lumen area
+    """
     LumenEccentricityIndex = DICOMControlledTerminologyDefinitionsCode("122343")
+    """
+    Plaque plus Media Eccentricity Index = (maximum Plaque plus media thickness - minimum Plaque plus media thickness) / maximum Plaque plus media thickness
+    """
     PlaquePlusMediaEccentricityIndex = DICOMControlledTerminologyDefinitionsCode(
         "122344"
     )
+    """
+    Measurement of increase or decrease in EEM area that occurs during the development of atherosclerosis. Remodeling Index = Lesion EEM area / reference EEM area
+    """
     RemodelingIndex = DICOMControlledTerminologyDefinitionsCode("122345")
+    """
+    Measurement of stent circularity. Stent Symmetry Index = (maximum stent diameter - minimum stent diameter) / maximum stent diameter
+    """
     StentSymmetryIndex = DICOMControlledTerminologyDefinitionsCode("122346")
+    """
+    Measurement of stent area relative to the reference lumen area. Stent Expansion Index = Minimum stent area / reference vessel lumen cross-sectional area
+    """
     StentExpansionIndex = DICOMControlledTerminologyDefinitionsCode("122347")
+    """
+    Measurement of vessel lumen eccentricity. Lumen Shape Index = (2p * sqrt(Vessel lumen cross-sectional area / p) / Lumen Perimeter) 2 Reference: Tobis & Yock, "Intravascular Ultrasound Imaging", Chapter 7
+    """
     LumenShapeIndex = DICOMControlledTerminologyDefinitionsCode("122348")
+    """
+    Lumen diameter ratio = minimum vessel lumen diameter / maximum vessel lumen diameter, measured at the same cross section in the vessel. Lumen diameters are measured through the center point of the lumen, which is defined as the center of gravity of the lumen area
+    """
     LumenDiameterRatio = DICOMControlledTerminologyDefinitionsCode("122350")
+    """
+    Stent diameter ratio = Minimum stent diameter / Maximum stent diameter, measured at the same cross section in the vessel. Stent diameters are measured through the center point of the stent, which is defined as the center of gravity of the stent area
+    """
     StentDiameterRatio = DICOMControlledTerminologyDefinitionsCode("122351")
+    """
+    EEM diameter ratio = minimum EEM diameter / maximum EEM diameter. Measured at the same cross section in the vessel
+    """
     EEMDiameterRatio = DICOMControlledTerminologyDefinitionsCode("122352")
+    """
+    Fractional area within the External Elastic Membrane (EEM) occupied by atheroma. Plaque Burden = (EEM area - vessel lumen cross-sectional area) / EEM area
+    """
     PlaqueBurden = DICOMControlledTerminologyDefinitionsCode("122354")
+    """
+    Angular measurement of a Calcium deposit with the apex located at the center of the lumen, which is defined as the center of gravity of the lumen area
+    """
     ArcOfCalcium = DICOMControlledTerminologyDefinitionsCode("122355")
+    """
+    Plaque characterized by low density or echogenicity
+    """
     SoftPlaque = DICOMControlledTerminologyDefinitionsCode("122356")
+    """
+    Abnormal thickening of the intima within the stented segment
+    """
     In_StentNeointima = DICOMControlledTerminologyDefinitionsCode("122357")
+    """
+    Lumen surrounded by all three layers of the vessel-intima, media, and adventitia
+    """
     TrueLumen = DICOMControlledTerminologyDefinitionsCode("122360")
+    """
+    A channel, usually parallel to the true lumen, which does not communicate with the true lumen over a portion of its length
+    """
     FalseLumen = DICOMControlledTerminologyDefinitionsCode("122361")
+    """
+    Plaque ulceration with a tear detected in a fibrous cap
+    """
     PlaqueRupture = DICOMControlledTerminologyDefinitionsCode("122363")
+    """
+    Length of gap between two consecutive stents
+    """
     StentGap = DICOMControlledTerminologyDefinitionsCode("122364")
+    """
+    Worst stenosis - the stenosis with the smallest lumen size within a vessel segment
+    """
     T_1Worst = DICOMControlledTerminologyDefinitionsCode("122367")
+    """
+    2nd most severe stenosis within a vessel segment
+    """
     T_2Secondary = DICOMControlledTerminologyDefinitionsCode("122368")
+    """
+    3rd most severe stenosis within a vessel segment
+    """
     T_3Secondary = DICOMControlledTerminologyDefinitionsCode("122369")
+    """
+    4th most severe stenosis within a vessel segment
+    """
     T_4Secondary = DICOMControlledTerminologyDefinitionsCode("122370")
+    """
+    External Elastic Membrane (EEM) volume measured within a specified region. The EEM is a discrete interface at the border between the media and the Adventitia
+    """
     EEMVolume = DICOMControlledTerminologyDefinitionsCode("122371")
+    """
+    Lumen volume measured within a specified region
+    """
     LumenVolume = DICOMControlledTerminologyDefinitionsCode("122372")
+    """
+    The amount of plaque between the lumen and stent, within the stent region; In-stent restenosis. In-Stent Neointimal Volume = Stent Volume - Lumen Volume
+    """
     In_StentNeointimalVolume = DICOMControlledTerminologyDefinitionsCode("122374")
+    """
+    The amount of plaque between the stent and the EEM, within the stent region. Native Plaque Volume = EEM Volume - Stent Volume
+    """
     NativePlaqueVolume = DICOMControlledTerminologyDefinitionsCode("122375")
+    """
+    Total amount of plaque between the EEM and the Lumen, over the entire region that is measured. Total Plaque Volume = EEM Volume - Lumen Volume
+    """
     TotalPlaqueVolume = DICOMControlledTerminologyDefinitionsCode("122376")
+    """
+    Proximal reference segment measurement site. Typically the site with the largest lumen proximal to a stenosis but within the same segment (usually within 10 mm of the stenosis with no major intervening branches)
+    """
     ProximalReference = DICOMControlledTerminologyDefinitionsCode("122380")
+    """
+    Distal reference segment measurement site. Typically the site with the largest lumen distal to a stenosis but within the same segment (usually within 10 mm of the stenosis with no major intervening branches)
+    """
     DistalReference = DICOMControlledTerminologyDefinitionsCode("122381")
+    """
+    Site of the smallest lumen in a vessel; e.g. due to a stenotic lesion
+    """
     SiteOfLumenMinimum = DICOMControlledTerminologyDefinitionsCode("122382")
+    """
+    Measurement region that encompasses the entire vessel imaged in a single pullback acquisition
+    """
     EntirePullback = DICOMControlledTerminologyDefinitionsCode("122383")
+    """
+    Measurement region occupied by the stent
+    """
     StentedRegion = DICOMControlledTerminologyDefinitionsCode("122384")
+    """
+    Region starting at the proximal edge of the Stent and extending several millimeters (usually 5 mm) proximal to the Stent edge
+    """
     ProximalStentMargin = DICOMControlledTerminologyDefinitionsCode("122385")
+    """
+    Region starting at the distal edge of the Stent and extending several millimeters (usually 5 mm) distal to the Stent edge
+    """
     DistalStentMargin = DICOMControlledTerminologyDefinitionsCode("122386")
+    """
+    Classification of dissections in a vessel
+    """
     DissectionClassification = DICOMControlledTerminologyDefinitionsCode("122387")
+    """
+    Separation of neointimal hyperplasia from stent struts, usually seen only after treatment of in-stent restenosis
+    """
     Intra_stentDissection = DICOMControlledTerminologyDefinitionsCode("122388")
+    """
+    Plaque with a thin cap fibrous atheroma that is at increased risk of rupture and thrombosis (or re-thrombosis) and rapid stenosis progression
+    """
     VulnerablePlaque = DICOMControlledTerminologyDefinitionsCode("122389")
+    """
+    Plaque erosions with no structural defect (beyond endothelial injury) or gap in the plaque
+    """
     ErodedPlaque = DICOMControlledTerminologyDefinitionsCode("122390")
+    """
+    Stenosis severity classifications of multiple lesions in a vessel
+    """
     RelativeStenosisSeverity = DICOMControlledTerminologyDefinitionsCode("122391")
+    """
+    A finding of a previously treated lesion in which stenosis has reoccurred
+    """
     RestenoticLesion = DICOMControlledTerminologyDefinitionsCode("122393")
+    """
+    Loosely packed bundles of collagen fibers with regions of lipid deposition present. Region is cellular and no cholesterol clefts or necrosis are present. Some macrophage infiltration. Increase in extra cellular matrix
+    """
     Fibro_LipidicPlaque = DICOMControlledTerminologyDefinitionsCode("122394")
+    """
+    Area within the plaque with very low echogenicity separated from the lumen and surrounded by more echogenic structures (fibrous cap). Highly lipidic necrotic region with remnants of foam cells and dead lymphocytes present. No collagen fibers are visible and mechanical integrity is poor. Cholesterol clefts and micro calcifications are visible
+    """
     Necrotic_LipidicPlaque = DICOMControlledTerminologyDefinitionsCode("122395")
+    """
+    Dissection limited to the intima or atheroma, and not extending to the media
+    """
     IntimalDissection = DICOMControlledTerminologyDefinitionsCode("122398")
+    """
+    Dissection in the arterial Media, extending into the media
+    """
     MedialDissection = DICOMControlledTerminologyDefinitionsCode("122399")
+    """
+    The referenced information was acquired simultaneously with the information in the object in which the reference occurs
+    """
     SimultaneouslyAcquired = DICOMControlledTerminologyDefinitionsCode("122400")
+    """
+    Information acquired for the same anatomic region
+    """
     SameAnatomy = DICOMControlledTerminologyDefinitionsCode("122401")
+    """
+    Information acquired for the same indication; e.g. to elucidate the same diagnostic question
+    """
     SameIndication = DICOMControlledTerminologyDefinitionsCode("122402")
+    """
+    The referenced information was used to correct the data for differential attenuation through different anatomic tissue
+    """
     ForAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122403")
+    """
+    Value estimated for a vessel in the absence of a stenosis
+    """
     Reconstructed = DICOMControlledTerminologyDefinitionsCode("122404")
+    """
+    Manufacturer of application used
+    """
     AlgorithmManufacturer = DICOMControlledTerminologyDefinitionsCode("122405")
+    """
+    Left Atrial Ejection Fraction by Angiography
+    """
     LeftAtrialEjectionFractionByAngiography = DICOMControlledTerminologyDefinitionsCode(
         "122406"
     )
+    """
+    Left Atrial End Diastolic Volume
+    """
     LeftAtrialEDVolume = DICOMControlledTerminologyDefinitionsCode("122407")
+    """
+    Left Atrial End Systolic Volume
+    """
     LeftAtrialESVolume = DICOMControlledTerminologyDefinitionsCode("122408")
+    """
+    Contour repositioning of End Diastolic relative to End Systolic contour
+    """
     ContourRealignment = DICOMControlledTerminologyDefinitionsCode("122410")
+    """
+    The minimum standard deviation to define the hypokinesis and hyperkinesis
+    """
     ThresholdValue = DICOMControlledTerminologyDefinitionsCode("122411")
+    """
+    Report of differentiation of wall motion compared to normal
+    """
     RegionalAbnormalWallMotion = DICOMControlledTerminologyDefinitionsCode("122417")
+    """
+    Object used for Calibration
+    """
     CalibrationObject = DICOMControlledTerminologyDefinitionsCode("122421")
+    """
+    Method used for Calibration
+    """
     CalibrationMethod = DICOMControlledTerminologyDefinitionsCode("122422")
+    """
+    Size of calibration object
+    """
     CalibrationObjectSize = DICOMControlledTerminologyDefinitionsCode("122423")
+    """
+    Method how long axis is positioned
+    """
     AreaLengthMethod = DICOMControlledTerminologyDefinitionsCode("122428")
+    """
+    Model for cardiac chamber volume calculation
+    """
     VolumeMethod = DICOMControlledTerminologyDefinitionsCode("122429")
+    """
+    Method to define original diameter of the artery
+    """
     ReferenceMethod = DICOMControlledTerminologyDefinitionsCode("122430")
+    """
+    Relation between calculated End Diastolic volume and ventricular End Diastolic volume. The specific meaning is dependent on volume method used
+    """
     RegressionSlopeED = DICOMControlledTerminologyDefinitionsCode("122431")
+    """
+    Correction factor for the calculated End Diastolic volume and ventricular End Diastolic volume. The specific meaning is dependent on volume method used
+    """
     RegressionOffsetED = DICOMControlledTerminologyDefinitionsCode("122432")
+    """
+    Relation between calculated End Systolic volume and ventricular End Systolic volume. The specific meaning is dependent on volume method used
+    """
     RegressionSlopeES = DICOMControlledTerminologyDefinitionsCode("122433")
+    """
+    Correction factor for the calculated End Systolic volume and ventricular End Systolic volume. The specific meaning is dependent on volume method used
+    """
     RegressionOffsetES = DICOMControlledTerminologyDefinitionsCode("122434")
+    """
+    Exponent of volume in regression formula
+    """
     RegressionVolumeExponent = DICOMControlledTerminologyDefinitionsCode("122435")
+    """
+    Container for spatial locations or coordinates used for calculation
+    """
     ReferencePoints = DICOMControlledTerminologyDefinitionsCode("122438")
+    """
+    Average thickness of the chamber wall in the current view
+    """
     WallThickness = DICOMControlledTerminologyDefinitionsCode("122445")
+    """
+    Volume of the chamber wall estimated from the current view
+    """
     WallVolume = DICOMControlledTerminologyDefinitionsCode("122446")
+    """
+    Mass of the chamber wall (myocardium)
+    """
     WallMass = DICOMControlledTerminologyDefinitionsCode("122447")
+    """
+    Peak systolic stress of chamber wall
+    """
     WallStress = DICOMControlledTerminologyDefinitionsCode("122448")
+    """
+    Method to calculate wall motion [example: Sheehan, 1986]
+    """
     CenterlineWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode("122449")
+    """
+    The length between End Diastolic and End Systolic contour perpendicular on the centerline normalized by a method dependent ventricular perimeter length. The centerline is the line equidistant between the End Diastolic and End Systolic contour [example: Sheehan, 1986]
+    """
     NormalizedChordLength = DICOMControlledTerminologyDefinitionsCode("122450")
+    """
+    The report of the boundaries of the abnormal (hyperkinetic, hypokinetic, a-kinetic) regions associated with the territory of the artery [example: Sheehan, 1986]
+    """
     AbnormalRegion = DICOMControlledTerminologyDefinitionsCode("122451")
+    """
+    The chord number specifying the begin of abnormal region [example: Sheehan, 1986]
+    """
     FirstChordOfAbnormalRegion = DICOMControlledTerminologyDefinitionsCode("122452")
+    """
+    The chord number specifying the end of abnormal region [example: Sheehan, 1986]
+    """
     LastChordOfAbnormalRegion = DICOMControlledTerminologyDefinitionsCode("122453")
+    """
+    Severity at the regional abnormality extent [example: Sheehan, 1986]
+    """
     TerritoryRegionSeverity = DICOMControlledTerminologyDefinitionsCode("122459")
+    """
+    Severity at the opposite regional abnormality extent [example: Sheehan, 1986]
+    """
     OppositeRegionSeverity = DICOMControlledTerminologyDefinitionsCode("122461")
+    """
+    Based on a total number of chords of 100 and RAO project the range of chords belonging to this circumferential extent lies between 5 - 85. [Sheehan, 1986]
+    """
     LADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122464")
+    """
+    Based on a total number of chords of 100 and RAO project the range of chords belonging to this circumferential extent lies between 25 - 85. [Sheehan, 1986]
+    """
     RCARegionInROAProjection = DICOMControlledTerminologyDefinitionsCode("122465")
+    """
+    Based on a total number of chords of 100 and RAO projection the range of chords belonging to this regional extent lies between 10 - 66 (hypokinetic) and 67 - 80 (hyperkinetic). [Sheehan, 1986]
+    """
     SingleLADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122466")
+    """
+    Based on a total number of chords of 100 and RAO projection the range of chords belonging to this regional extent lies between 51 - 80 (hypokinetic) and 10 - 50 (hyperkinetic). [Sheehan, 1986]
+    """
     SingleRCARegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122467")
+    """
+    Based on a total number of chords of 100 and RAO projection the range of chords belonging to this regional extent lies between 10 - 58 (hypokinetic) and 59 -80 (hyperkinetic). [Sheehan, 1986]
+    """
     MultipleLADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode(
         "122468"
     )
+    """
+    Based on a total number of chords of 100 and RAO projection the range of chords belonging to this regional extent lies between 59 - 80 (hypokinetic) and 10 - 58 (hyperkinetic). [Sheehan, 1986]
+    """
     MultipleRCARegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode(
         "122469"
     )
+    """
+    Based on a total number of chords of 100 and LAO projection the range of chords belonging to this regional extent lies between 50 -100 (hypokinetic) and 20 - 49 (hyperkinetic). [Sheehan, 1986]
+    """
     LADRegionInLAOProjection = DICOMControlledTerminologyDefinitionsCode("122470")
+    """
+    Based on a total number of chords of 100 and LAO projection the range of chords belonging to this regional extent lies between 19 - 67 (hypokinetic) and 68 - 100 (hyperkinetic). [Sheehan, 1986]
+    """
     RCARegionInLAOProjection = DICOMControlledTerminologyDefinitionsCode("122471")
+    """
+    Based on a total number of chords of 100 and LAO projection the range of chords belonging to this regional extent lies between 38 -74 (hypokinetic) and 75 - 100 (hyperkinetic). [Sheehan, 1986]
+    """
     CFXRegionInLAOProjection = DICOMControlledTerminologyDefinitionsCode("122472")
+    """
+    Method based on assumption that the image object is circular
+    """
     CircularMethod = DICOMControlledTerminologyDefinitionsCode("122473")
+    """
+    Method based on the gray value distribution of the image
+    """
     DensitometricMethod = DICOMControlledTerminologyDefinitionsCode("122474")
+    """
+    End Systolic contour realigned to End Diastolic contour based on the center of gravity
+    """
     CenterOfGravity = DICOMControlledTerminologyDefinitionsCode("122475")
+    """
+    End Systolic contour realigned to End Diastolic contour based on the mid point of the long axis. The long axis end-points are defined as the posterior and apex
+    """
     LongAxisBased = DICOMControlledTerminologyDefinitionsCode("122476")
+    """
+    No Contour Realignment applied
+    """
     NoRealignment = DICOMControlledTerminologyDefinitionsCode("122477")
+    """
+    Calculated Vessel Lumen Cross-Sectional Area based on the referenced method
+    """
     VesselLumenCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode("122480")
+    """
+    Location of the beginning of a contour
+    """
     ContourStart = DICOMControlledTerminologyDefinitionsCode("122481")
+    """
+    Location of the end of a contour
+    """
     ContourEnd = DICOMControlledTerminologyDefinitionsCode("122482")
+    """
+    Sphere is used as calibration object
+    """
     Sphere = DICOMControlledTerminologyDefinitionsCode("122485")
+    """
+    Object of interest in isocenter of image and pixel separation is calculated from geometric data
+    """
     GeometricIsocenter = DICOMControlledTerminologyDefinitionsCode("122486")
+    """
+    Object of interest not in isocenter of image and pixel separation is calculated from geometric data and out of isocenter distances
+    """
     GeometricNon_Isocenter = DICOMControlledTerminologyDefinitionsCode("122487")
+    """
+    Object used for calibration; e.g. sphere
+    """
     CalibrationObjectUsed = DICOMControlledTerminologyDefinitionsCode("122488")
+    """
+    Application dependent method to calculate the reference diameter based on the multiple diameter values
+    """
     CurveFittedReference = DICOMControlledTerminologyDefinitionsCode("122489")
+    """
+    Application dependent method to calculate reference by interpolation, based on the diameter of two or more user defined reference positions
+    """
     InterpolatedLocalReference = DICOMControlledTerminologyDefinitionsCode("122490")
+    """
+    Application dependent method to calculate by averaging the reference, based on the diameter of one or more user defined reference positions
+    """
     MeanLocalReference = DICOMControlledTerminologyDefinitionsCode("122491")
+    """
+    Method to calculate wall motion based on the lengths of the radials in the predefined regions [Ingels]
+    """
     RadialBasedWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode("122493")
+    """
+    Contribution of Region to global Ejection factor based on radial or landmark based wall motion method
+    """
     RegionalContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode(
         "122495"
     )
+    """
+    The reduction of area between End Systolic and End Diastolic based on radial wall motion analysis
+    """
     RadialShortening = DICOMControlledTerminologyDefinitionsCode("122496")
+    """
+    Method to calculate wall motion based on the move of landmarks on the wall [Slager]
+    """
     LandmarkBasedWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode(
         "122497"
     )
+    """
+    Contribution to the ejection fraction of a specific slice region [Slager]
+    """
     SliceContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode(
         "122498"
     )
+    """
+    Method to calculate volumes of heart chambers for every image in a range
+    """
     FrameToFrameAnalysis = DICOMControlledTerminologyDefinitionsCode("122499")
+    """
+    The area is derived by considering a set of coordinates as a closed irregular polygon, accounting for inner angles. The exact method, such as by decomposition into triangles or quadrilaterals, is not specified, since it does not affect the numeric result, apart from the effect of numeric precision during computation of intermediate results
+    """
     AreaOfClosedIrregularPolygon = DICOMControlledTerminologyDefinitionsCode("122501")
+    """
+    The area is derived by using a set of coordinates as control points for a Non Uniform Rational B-Spline (NURBS)
+    """
     AreaOfAClosedNURBS = DICOMControlledTerminologyDefinitionsCode("122502")
+    """
+    The volume derived by integrating the sum of the areas on adjacent slices across the slice interval; each area is defined by a regular planar shape or by considering a set of coordinates as a closed irregular polygon, accounting for inner angles
+    """
     IntegrationOfSumOfClosedAreasOnContiguousSlices = (
         DICOMControlledTerminologyDefinitionsCode("122503")
     )
+    """
+    Procedure used to calibrate measurements or measurement devices
+    """
     Calibration = DICOMControlledTerminologyDefinitionsCode("122505")
+    """
+    Left contour of lumen (direction proximal to distal)
+    """
     LeftContour = DICOMControlledTerminologyDefinitionsCode("122507")
+    """
+    Right contour of lumen (direction proximal to distal)
+    """
     RightContour = DICOMControlledTerminologyDefinitionsCode("122508")
+    """
+    Ordered set of diameters values derived from contours (direction proximal to distal)
+    """
     DiameterGraph = DICOMControlledTerminologyDefinitionsCode("122509")
+    """
+    Length Luminal Segment
+    """
     LengthLuminalSegment = DICOMControlledTerminologyDefinitionsCode("122510")
+    """
+    Increment value along X-axis in Diameter Graph
+    """
     GraphIncrement = DICOMControlledTerminologyDefinitionsCode("122511")
+    """
+    Location of the maximum lumen area in a lesion or vessel
+    """
     SiteOfMaximumLuminal = DICOMControlledTerminologyDefinitionsCode("122516")
+    """
+    Ordered set of cross-sectional Vessel Lumen Cross-Sectional Area values derived from contours (direction proximal to distal) based on densitometric method
+    """
     DensitometricLuminalCross_sectionalAreaGraph = (
         DICOMControlledTerminologyDefinitionsCode("122517")
     )
+    """
+    Position of proximal border of segment relative to the contour start (proximal end of analysis area)
+    """
     PositionOfProximalBorder = DICOMControlledTerminologyDefinitionsCode("122528")
+    """
+    Position of distal border of segment relative to the contour start (proximal end of analysis area)
+    """
     PositionOfDistalBorder = DICOMControlledTerminologyDefinitionsCode("122529")
+    """
+    Longitudinal cross sectional area of plaque
+    """
     PlaqueArea = DICOMControlledTerminologyDefinitionsCode("122542")
+    """
+    Symmetry of stenosis (0 = complete asymmetry, 1 = complete symmetry); see Section T.2 "Definition of Diameter Symmetry with Arterial Plaques" in PS3.17
+    """
     DiameterSymmetry = DICOMControlledTerminologyDefinitionsCode("122544")
+    """
+    Symmetry of plaque (0 = complete asymmetry, 1 = complete symmetry); see Section T.2 "Definition of Diameter Symmetry with Arterial Plaques" in PS3.17
+    """
     AreaSymmetry = DICOMControlledTerminologyDefinitionsCode("122545")
+    """
+    The average slope of the diameter function between the position of the minimum luminal diameter and the position of the proximal border of the segment
+    """
     InflowAngle = DICOMControlledTerminologyDefinitionsCode("122546")
+    """
+    The average slope of the diameter function between the position of the minimum luminal diameter and the position of the distal border of the segment
+    """
     OutflowAngle = DICOMControlledTerminologyDefinitionsCode("122547")
+    """
+    The relation between coronary pressure and coronary flow
+    """
     StenoticFlowReserve = DICOMControlledTerminologyDefinitionsCode("122548")
+    """
+    Poiseuille Resistance at the location of the stenosis
+    """
     PoiseuilleResistance = DICOMControlledTerminologyDefinitionsCode("122549")
+    """
+    Turbulence Resistance at the location of the stenosis
+    """
     TurbulenceResistance = DICOMControlledTerminologyDefinitionsCode("122550")
+    """
+    Pressure drop over the stenosis at maximum heart output
+    """
     PressureDropAtSFR = DICOMControlledTerminologyDefinitionsCode("122551")
+    """
+    Method for selection of vessel sub-segments
+    """
     SegmentationMethod = DICOMControlledTerminologyDefinitionsCode("122554")
+    """
+    Estimate of the volume of blood flow in the absence of stenosis
+    """
     EstimatedNormalFlow = DICOMControlledTerminologyDefinitionsCode("122555")
+    """
+    Area Length method defined by Kennedy [Kennedy, 1970]
+    """
     AreaLengthKennedy = DICOMControlledTerminologyDefinitionsCode("122558")
+    """
+    Area Length method defined by Dodge [Dodge, 1960]
+    """
     AreaLengthDodge = DICOMControlledTerminologyDefinitionsCode("122559")
+    """
+    Area Length method defined by Wynne [Wynne]
+    """
     AreaLengthWynne = DICOMControlledTerminologyDefinitionsCode("122560")
+    """
+    Volume method based on multiple slice
+    """
     MultipleSlices = DICOMControlledTerminologyDefinitionsCode("122562")
+    """
+    Volume method defined by Boak [Boak]
+    """
     Boak = DICOMControlledTerminologyDefinitionsCode("122563")
+    """
+    Volume method defined by Ferlinz [Ferlinz]
+    """
     TSPyramid = DICOMControlledTerminologyDefinitionsCode("122564")
+    """
+    Volume method defined by Graham [Graham]
+    """
     TwoChamber = DICOMControlledTerminologyDefinitionsCode("122565")
+    """
+    Volume method defined by Arcilla [Arcilla]
+    """
     Parallelepiped = DICOMControlledTerminologyDefinitionsCode("122566")
+    """
+    Corrected Body Surface area for indexing the hemodynamic measurements for a pediatric patient
+    """
     BSA_1_219 = DICOMControlledTerminologyDefinitionsCode("122572")
+    """
+    Method for selecting sub-segments that are all of the same length
+    """
     EquidistantMethod = DICOMControlledTerminologyDefinitionsCode("122574")
+    """
+    Manually selected start and end of sub-segment
+    """
     UserSelectedMethod = DICOMControlledTerminologyDefinitionsCode("122575")
+    """
+    Left ventricular posterobasal segment
+    """
     LeftVentricularPosterobasalSegment = DICOMControlledTerminologyDefinitionsCode(
         "122582"
     )
+    """
+    Report of a Cardiovascular Analysis, typically from a CT or MR study
+    """
     CardiovascularAnalysisReport = DICOMControlledTerminologyDefinitionsCode("122600")
+    """
+    Ventricular Analysis
+    """
     VentricularAnalysis = DICOMControlledTerminologyDefinitionsCode("122601")
+    """
+    Myocardial Perfusion Analysis
+    """
     MyocardialPerfusionAnalysis = DICOMControlledTerminologyDefinitionsCode("122602")
+    """
+    Calcium Scoring Analysis
+    """
     CalciumScoringAnalysis = DICOMControlledTerminologyDefinitionsCode("122603")
+    """
+    Flow Quantification Analysis
+    """
     FlowQuantification = DICOMControlledTerminologyDefinitionsCode("122604")
+    """
+    Vascular Morphological Analysis
+    """
     VascularMorphologicalAnalysis = DICOMControlledTerminologyDefinitionsCode("122605")
+    """
+    Vascular Functional Analysis
+    """
     VascularFunctionalAnalysis = DICOMControlledTerminologyDefinitionsCode("122606")
+    """
+    Analysis of myocardial wall thickening
+    """
     ThickeningAnalysis = DICOMControlledTerminologyDefinitionsCode("122607")
+    """
+    Section Heading for absolute values of ventricular measurements
+    """
     AbsoluteValuesOfVentricularMeasurements = DICOMControlledTerminologyDefinitionsCode(
         "122608"
     )
+    """
+    Results of normalizing ventricular measurements
+    """
     NormalizedValuesOfVentricularMeasurements = (
         DICOMControlledTerminologyDefinitionsCode("122609")
     )
+    """
+    Reference Point of a measurement
+    """
     ReferencePoint = DICOMControlledTerminologyDefinitionsCode("122611")
+    """
+    Central breathing position between inspiration and expiration
+    """
     CentralBreathingPosition = DICOMControlledTerminologyDefinitionsCode("122612")
+    """
+    Peak of the ventricular ejection rate
+    """
     PeakEjectionRate = DICOMControlledTerminologyDefinitionsCode("122616")
+    """
+    Time of the peak of ventricular ejection
+    """
     PeakEjectionTime = DICOMControlledTerminologyDefinitionsCode("122617")
+    """
+    Peak of the fluid filling rate
+    """
     PeakFillingRate = DICOMControlledTerminologyDefinitionsCode("122618")
+    """
+    Time interval until time of peak filling from a given reference point; e.g. end systole
+    """
     PeakFillingTime = DICOMControlledTerminologyDefinitionsCode("122619")
+    """
+    Papillary muscle was excluded from the measurement
+    """
     PapillaryMuscleExcluded = DICOMControlledTerminologyDefinitionsCode("122620")
+    """
+    Papillary muscle was included in the measurement
+    """
     PapillaryMuscleIncluded = DICOMControlledTerminologyDefinitionsCode("122621")
+    """
+    The ratio of the end-systolic wall thickness compared to the end-diastolic wall thickness
+    """
     WallThicknessRatioEnd_systolicToEnd_diastolic = (
         DICOMControlledTerminologyDefinitionsCode("122624")
     )
+    """
+    The method to smooth a ventricular volume as a function of time
+    """
     CurveFitMethod = DICOMControlledTerminologyDefinitionsCode("122627")
+    """
+    Baseline correction used in the calculation of the results
+    """
     BaselineResultCorrection = DICOMControlledTerminologyDefinitionsCode("122628")
+    """
+    The time in a dynamic set of images at which the first peak of the signal is observed for the analyzed myocardial wall segments
+    """
     SignalEarliestPeakTime = DICOMControlledTerminologyDefinitionsCode("122631")
+    """
+    This is the time at which the signal begins to increase
+    """
     SignalIncreaseStartTime = DICOMControlledTerminologyDefinitionsCode("122633")
+    """
+    Time interval between the beginning of the signal increase to the time at which the signal intensity reaches its first maximum in a dynamic set of images
+    """
     SignalTimeToPeak = DICOMControlledTerminologyDefinitionsCode("122634")
+    """
+    Peak of the MR perfusion signal
+    """
     MRPerfusionPeak = DICOMControlledTerminologyDefinitionsCode("122635")
+    """
+    Signal intensity as a function of time. It is the change in the signal intensity divided by the change in the time
+    """
     MRPerfusionSlope = DICOMControlledTerminologyDefinitionsCode("122636")
+    """
+    MR perfusion time integral from baseline (foot time) to earliest peak
+    """
     MRPerfusionTimeIntegral = DICOMControlledTerminologyDefinitionsCode("122637")
+    """
+    First time point in a dynamic set of images used in the calculation of the baseline signal intensity for each myocardial wall segment
+    """
     SignalBaselineStart = DICOMControlledTerminologyDefinitionsCode("122638")
+    """
+    Last time point in a dynamic set of images used in the calculation of the baseline signal intensity for each myocardial wall segment
+    """
     SignalBaselineEnd = DICOMControlledTerminologyDefinitionsCode("122639")
+    """
+    The time delta between images in a dynamic set of images
+    """
     ImageInterval = DICOMControlledTerminologyDefinitionsCode("122640")
+    """
+    The minimum velocity encoded by the phase encoding gradient
+    """
     VelocityEncodingMinimumValue = DICOMControlledTerminologyDefinitionsCode("122642")
+    """
+    The maximum velocity encoded by the phase encoding gradient
+    """
     VelocityEncodingMaximumValue = DICOMControlledTerminologyDefinitionsCode("122643")
+    """
+    Forward volume-reverse volume
+    """
     NetForwardVolume = DICOMControlledTerminologyDefinitionsCode("122645")
+    """
+    Area Based Method for estimating volume or area
+    """
     AreaBasedMethod = DICOMControlledTerminologyDefinitionsCode("122650")
+    """
+    Diameter Based Method for estimating volume, area or diameter
+    """
     DiameterBasedMethod = DICOMControlledTerminologyDefinitionsCode("122651")
+    """
+    Volume Based Method for estimating volume
+    """
     VolumeBasedMethod = DICOMControlledTerminologyDefinitionsCode("122652")
+    """
+    A method of diameter measurements according to NASCET (North American Symptomatic Carotid Endarterectomy Trial)
+    """
     NASCET = DICOMControlledTerminologyDefinitionsCode("122655")
+    """
+    A method of diameter measurements according to ECST (European Carotid Surgery Trial)
+    """
     ECST = DICOMControlledTerminologyDefinitionsCode("122656")
+    """
+    Agatston Score Threshold
+    """
     AgatstonScoreThreshold = DICOMControlledTerminologyDefinitionsCode("122657")
+    """
+    Calcium Mass Threshold
+    """
     CalciumMassThreshold = DICOMControlledTerminologyDefinitionsCode("122658")
+    """
+    Calcium Scoring Calibration
+    """
     CalciumScoringCalibration = DICOMControlledTerminologyDefinitionsCode("122659")
+    """
+    Calcium Volume
+    """
     CalciumVolume = DICOMControlledTerminologyDefinitionsCode("122660")
+    """
+    Calcium Mass
+    """
     CalciumMass = DICOMControlledTerminologyDefinitionsCode("122661")
+    """
+    Delayed hyperenhancement of a tissue observed in an image acquired after injection of contrast media
+    """
     LateContrastEnhancement = DICOMControlledTerminologyDefinitionsCode("122664")
+    """
+    Time interval since injection of contrast media
+    """
     TimeIntervalSinceInjectionOfContrastMedia = (
         DICOMControlledTerminologyDefinitionsCode("122665")
     )
+    """
+    Time relative to R-wave peak
+    """
     TimeRelativeToR_wavePeak = DICOMControlledTerminologyDefinitionsCode("122666")
+    """
+    Relationship between blood velocity and time relative to R-wave peak
+    """
     BloodVelocityVs_TimeOfCardiacCycle = DICOMControlledTerminologyDefinitionsCode(
         "122667"
     )
+    """
+    Time interval since detection of contrast bolus
+    """
     TimeIntervalSinceDetectionOfContrastBolus = (
         DICOMControlledTerminologyDefinitionsCode("122668")
     )
+    """
+    Indicates if the papillary muscle was included or excluded in the measurement
+    """
     PapillaryMuscleIncluded_Excluded = DICOMControlledTerminologyDefinitionsCode(
         "122670"
     )
+    """
+    Anterior to Posterior direction
+    """
     Anterior_Posterior = DICOMControlledTerminologyDefinitionsCode("122675")
+    """
+    Persistent flow of blood into the stent-grafting
+    """
     Endoleak = DICOMControlledTerminologyDefinitionsCode("122680")
+    """
+    Fracture of a stent
+    """
     StentFracture = DICOMControlledTerminologyDefinitionsCode("122683")
+    """
+    Disintegration of a stent
+    """
     StentDisintegration = DICOMControlledTerminologyDefinitionsCode("122684")
+    """
+    Material that a stent consists of
+    """
     StentComposition = DICOMControlledTerminologyDefinitionsCode("122685")
+    """
+    Finding about the characteristics of the parent vessel of a vessel
+    """
     ParentVesselFinding = DICOMControlledTerminologyDefinitionsCode("122686")
+    """
+    Site of Maximal lumen diameter of a vessel
+    """
     SiteOfLumenMaximum = DICOMControlledTerminologyDefinitionsCode("122687")
+    """
+    The physical domain (time, space, etc.) to the horizontal axis of the graphical presentation
+    """
     X_Concept = DICOMControlledTerminologyDefinitionsCode("122698")
+    """
+    The physical domain (time, space, etc.) to the vertical axis of the graphical presentation
+    """
     Y_Concept = DICOMControlledTerminologyDefinitionsCode("122699")
+    """
+    Indications for Pharmacological Stress
+    """
     IndicationsForPharmacologicalStress = DICOMControlledTerminologyDefinitionsCode(
         "122700"
     )
+    """
+    Reference time for measurement of elapsed time in a procedure
+    """
     ProcedureTimeBase = DICOMControlledTerminologyDefinitionsCode("122701")
+    """
+    Treadmill speed
+    """
     TreadmillSpeed = DICOMControlledTerminologyDefinitionsCode("122702")
+    """
+    Treadmill gradient
+    """
     TreadmillGradient = DICOMControlledTerminologyDefinitionsCode("122703")
+    """
+    Ergometer power
+    """
     ErgometerPower = DICOMControlledTerminologyDefinitionsCode("122704")
+    """
+    Pharmacological Stress Agent Dose Rate
+    """
     PharmacologicalStressAgentDoseRate = DICOMControlledTerminologyDefinitionsCode(
         "122705"
     )
+    """
+    Rating of Perceived Exertion
+    """
     RatingOfPerceivedExertion = DICOMControlledTerminologyDefinitionsCode("122706")
+    """
+    Number of ectopic beats during a period of collection
+    """
     NumberOfEctopicBeats = DICOMControlledTerminologyDefinitionsCode("122707")
+    """
+    Heart rate times systolic blood pressure
+    """
     DoubleProduct = DICOMControlledTerminologyDefinitionsCode("122708")
+    """
+    Physical activity workload (intensity) measurement
+    """
     ActivityWorkload = DICOMControlledTerminologyDefinitionsCode("122709")
+    """
+    Elapsed time at stage
+    """
     TimeSinceStartOfStage = DICOMControlledTerminologyDefinitionsCode("122710")
+    """
+    Exercise duration after stress agent injection
+    """
     ExerciseDurationAfterStressAgentInjection = (
         DICOMControlledTerminologyDefinitionsCode("122711")
     )
+    """
+    Imaging Start Time
+    """
     ImagingStartTime = DICOMControlledTerminologyDefinitionsCode("122712")
+    """
+    Attenuation correction method
+    """
     AttenuationCorrectionMethod = DICOMControlledTerminologyDefinitionsCode("122713")
+    """
+    Pharmacological Stress Agent Dose
+    """
     PharmacologicalStressAgentDose = DICOMControlledTerminologyDefinitionsCode("122715")
+    """
+    Maximum power output achieved during course of procedure
+    """
     MaximumPowerOutputAchieved = DICOMControlledTerminologyDefinitionsCode("122716")
+    """
+    Peak physical activity intensity measurement during course of procedure
+    """
     PeakActivityWorkload = DICOMControlledTerminologyDefinitionsCode("122717")
+    """
+    Peak Double Product measurement during course of procedure
+    """
     PeakDoubleProduct = DICOMControlledTerminologyDefinitionsCode("122718")
+    """
+    Ordered subsets expectation maximization reconstruction algorithm
+    """
     OSEMAlgorithm = DICOMControlledTerminologyDefinitionsCode("122720")
+    """
+    Chang attenuation correction method
+    """
     ChangMethod = DICOMControlledTerminologyDefinitionsCode("122721")
+    """
+    Attenuation correction not based on image-based attenuation maps
+    """
     AlgorithmicAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode(
         "122726"
     )
+    """
+    NM transmission attenuation correction
+    """
     NMTransmissionAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode(
         "122727"
     )
+    """
+    CT-based attenuation correction
+    """
     CT_basedAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122728")
+    """
+    No attenuation correction
+    """
     NoAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122729")
+    """
+    Bazett QT Correction Algorithm; QT/(RR ^ 0.5); Bazett HC. "An analysis of the time-relations of electrocardiograms" Heart7:353-370 (1920)
+    """
     BazettQTcAlgorithm = DICOMControlledTerminologyDefinitionsCode("122730")
+    """
+    Hodges QT Correction Algorithm; QT + 1.75 (heart rate-60); Hodges M, Salerno Q, Erlien D. "Bazett's QT correction reviewed. Evidence that a linear QT correction for heart rate is better." J Am Coll Cardiol1:694 (1983)
+    """
     HodgesQTcAlgorithm = DICOMControlledTerminologyDefinitionsCode("122731")
+    """
+    Fridericia QT Correction Algorithm; QT/(RR ^ 0.333); Fridericia LS. "The duration of systole in the electrocardiogram of normal subjects and of patients with heart disease" Acta Med Scand53:469-486 (1920)
+    """
     FridericiaQTcAlgorithm = DICOMControlledTerminologyDefinitionsCode("122732")
+    """
+    Framingham QT Correction Algorithm; QT + 0.154 (1- RR); Sagie A, Larson MG, Goldberg RJ, et al. "An improved method for adjusting the QT interval for heart rate (the Framingham Heart Study)." Am J Cardiol70:797-801(1992)
+    """
     FraminghamQTcAlgorithm = DICOMControlledTerminologyDefinitionsCode("122733")
+    """
+    Borg Rating of Perceived Exertion Scale, range 6:20
+    """
     BorgRPEScale = DICOMControlledTerminologyDefinitionsCode("122734")
+    """
+    Borg category ratio scale, open ended range with nominal range 0:10
+    """
     BorgCR10Scale = DICOMControlledTerminologyDefinitionsCode("122735")
+    """
+    Overall study quality
+    """
     OverallStudyQuality = DICOMControlledTerminologyDefinitionsCode("122739")
+    """
+    Excellent image quality
+    """
     ExcellentImageQuality = DICOMControlledTerminologyDefinitionsCode("122740")
+    """
+    Good image quality
+    """
     GoodImageQuality = DICOMControlledTerminologyDefinitionsCode("122741")
+    """
+    Poor image quality
+    """
     PoorImageQuality = DICOMControlledTerminologyDefinitionsCode("122742")
+    """
+    Image attenuation due to body physique (overweight)
+    """
     BodyHabitusAttenuation = DICOMControlledTerminologyDefinitionsCode("122743")
+    """
+    Image attenuation due to breast tissue
+    """
     BreastAttenuation = DICOMControlledTerminologyDefinitionsCode("122744")
+    """
+    Image attenuation due to diaphragm
+    """
     DiaphragmaticAttenuation = DICOMControlledTerminologyDefinitionsCode("122745")
+    """
+    Finding of a defect is incorrect; e.g. from automated analysis
+    """
     FalsePositiveDefectFinding = DICOMControlledTerminologyDefinitionsCode("122748")
+    """
+    ECG is non-diagnostic due to low heart rate
+    """
     Non_diagnostic_LowHeartRate = DICOMControlledTerminologyDefinitionsCode("122750")
+    """
+    ECG is non-diagnostic due to resting ST abnormalities
+    """
     Non_diagnostic_RestingSTAbnormalities = DICOMControlledTerminologyDefinitionsCode(
         "122751"
     )
+    """
+    ECG is non-diagnostic due to ventricular pacing or Left Bundle Branch Block
+    """
     Non_diagnostic_VentricularPacingOrLBBB = DICOMControlledTerminologyDefinitionsCode(
         "122752"
     )
+    """
+    ECG is non-diagnostic for presence of acute coronary syndrome
+    """
     Non_diagnosticECG = DICOMControlledTerminologyDefinitionsCode("122753")
+    """
+    Strongly positive finding
+    """
     StronglyPositive = DICOMControlledTerminologyDefinitionsCode("122755")
+    """
+    Strongly positive finding - ST elevation
+    """
     StronglyPositive_STElevation = DICOMControlledTerminologyDefinitionsCode("122756")
+    """
+    Finding of ST segment depression with no slope
+    """
     STDepression_Horizontal = DICOMControlledTerminologyDefinitionsCode("122757")
+    """
+    Finding of ST segment depression with upslope
+    """
     STDepression_Upsloping = DICOMControlledTerminologyDefinitionsCode("122758")
+    """
+    Finding of ST segment depression with downslope
+    """
     STDepression_Downsloping = DICOMControlledTerminologyDefinitionsCode("122759")
+    """
+    Stress test score
+    """
     StressTestScore = DICOMControlledTerminologyDefinitionsCode("122760")
+    """
+    Number of diseased vessel territories
+    """
     NumberOfDiseasedVesselTerritories = DICOMControlledTerminologyDefinitionsCode(
         "122762"
     )
+    """
+    Patient weight exceeds equipment limit
+    """
     WeightExceedsEquipmentLimit = DICOMControlledTerminologyDefinitionsCode("122764")
+    """
+    Difference in Ejection Fraction
+    """
     DifferenceInEjectionFraction = DICOMControlledTerminologyDefinitionsCode("122768")
+    """
+    Difference in End Diastolic Left Ventricular Volume
+    """
     DifferenceInEDLVVolume = DICOMControlledTerminologyDefinitionsCode("122769")
+    """
+    Ratio of achieved to predicted maximal oxygen consumption
+    """
     RatioOfAchievedToPredictedMaximalOxygenConsumption = (
         DICOMControlledTerminologyDefinitionsCode("122770")
     )
+    """
+    Ratio of achieved to predicted functional capacity
+    """
     RatioOfAchievedToPredictedFunctionalCapacity = (
         DICOMControlledTerminologyDefinitionsCode("122771")
     )
+    """
+    Workload (Watts) at target heart rate divided by body weight
+    """
     AerobicIndex = DICOMControlledTerminologyDefinitionsCode("122772")
+    """
+    ST depression at peak exercise divided by the exercise-induced increase in heart rate [Kligfield P, Ameisen O, Okin PM. "Heart rate adjustment of ST segment depression for improved detection of coronary artery disease." Circulation 1989;79:245-55.]
+    """
     ST_HRIndex = DICOMControlledTerminologyDefinitionsCode("122773")
+    """
+    Agreement with prior findings
+    """
     AgreementWithPriorFindings = DICOMControlledTerminologyDefinitionsCode("122775")
+    """
+    Disagreement with prior findings
+    """
     DisagreementWithPriorFindings = DICOMControlledTerminologyDefinitionsCode("122776")
+    """
+    Nuclear Medicine Rest thallium/stress technetium procedure
+    """
     RestThallium_stressTechnetiumProcedure = DICOMControlledTerminologyDefinitionsCode(
         "122781"
     )
+    """
+    Nuclear Medicine Rest technetium/stress technetium 1 day procedure
+    """
     RestTechnetium_stressTechnetium1DayProcedure = (
         DICOMControlledTerminologyDefinitionsCode("122782")
     )
+    """
+    Nuclear Medicine Rest technetium/stress technetium 2 day procedure
+    """
     RestTechnetium_stressTechnetium2DayProcedure = (
         DICOMControlledTerminologyDefinitionsCode("122783")
     )
+    """
+    Nuclear Medicine Stress technetium/rest technetium 1 day procedure
+    """
     StressTechnetium_restTechnetium1DayProcedure = (
         DICOMControlledTerminologyDefinitionsCode("122784")
     )
+    """
+    Nuclear Medicine Myocardial Viability procedure
+    """
     NMMyocardialViabilityProcedure = DICOMControlledTerminologyDefinitionsCode("122785")
+    """
+    Positron Emission Tomography Perfusion Imaging procedure, rest only
+    """
     PETMyocardialPerfusion_RestOnly = DICOMControlledTerminologyDefinitionsCode(
         "122791"
     )
+    """
+    Positron Emission Tomography Perfusion Imaging procedure, stress only
+    """
     PETMyocardialPerfusion_StressOnly = DICOMControlledTerminologyDefinitionsCode(
         "122792"
     )
+    """
+    Positron Emission Tomography Perfusion Imaging procedure, rest and stress
+    """
     PETMyocardialPerfusion_RestAndStress = DICOMControlledTerminologyDefinitionsCode(
         "122793"
     )
+    """
+    Positron Emission Tomography Myocardial Viability procedure, rest only
+    """
     PETMyocardialViability_RestOnly = DICOMControlledTerminologyDefinitionsCode(
         "122795"
     )
+    """
+    Positron Emission Tomography Myocardial Viability procedure, stress only
+    """
     PETMyocardialViability_StressOnly = DICOMControlledTerminologyDefinitionsCode(
         "122796"
     )
+    """
+    Positron Emission Tomography Myocardial Viability procedure, rest and stress
+    """
     PETMyocardialViability_RestAndStress = DICOMControlledTerminologyDefinitionsCode(
         "122797"
     )
+    """
+    Group of symptoms heralding angina pectoris that does not include chest pain (dyspnea, diaphoresis, profuse vomiting in a diabetic patient, or arm or jaw pain)
+    """
     AnginalEquivalent = DICOMControlledTerminologyDefinitionsCode("122799")
+    """
+    Active ingredient (molecular) used for radioactive tracing
+    """
     Radiopharmaceutical = DICOMControlledTerminologyDefinitionsCode("123001")
+    """
+    Time of radiopharmaceutical administration to the patient for imaging purposes
+    """
     RadiopharmaceuticalStartTime = DICOMControlledTerminologyDefinitionsCode("123003")
+    """
+    Ending time of radiopharmaceutical administration to the patient for imaging purposes
+    """
     RadiopharmaceuticalStopTime = DICOMControlledTerminologyDefinitionsCode("123004")
+    """
+    Volume of radiopharmaceutical administered to the patient
+    """
     RadiopharmaceuticalVolume = DICOMControlledTerminologyDefinitionsCode("123005")
+    """
+    Total amount of radionuclide administered to the patient at Radiopharmaceutical Start Time
+    """
     RadionuclideTotalDose = DICOMControlledTerminologyDefinitionsCode("123006")
+    """
+    Activity per unit mass of the radiopharmaceutical at Radiopharmaceutical Start Time
+    """
     RadiopharmaceuticalSpecificActivity = DICOMControlledTerminologyDefinitionsCode(
         "123007"
     )
+    """
+    Pre-injection syringe acquisition count rate
+    """
     RadionuclideSyringeCounts = DICOMControlledTerminologyDefinitionsCode("123009")
+    """
+    Syringe acquisition count rate following patient injection
+    """
     RadionuclideResidualSyringeCounts = DICOMControlledTerminologyDefinitionsCode(
         "123010"
     )
+    """
+    Contrast or bolus agent
+    """
     Contrast_BolusAgent = DICOMControlledTerminologyDefinitionsCode("123011")
+    """
+    Medication to be administered at the beginning of the Scheduled Procedure Step
+    """
     Pre_Medication = DICOMControlledTerminologyDefinitionsCode("123012")
+    """
+    Anatomic Region to be imaged
+    """
     TargetRegion = DICOMControlledTerminologyDefinitionsCode("123014")
+    """
+    Direction of imaging (includes view, transducer orientation, patient orientation, and/or projection)
+    """
     ImagingDirection = DICOMControlledTerminologyDefinitionsCode("123015")
+    """
+    Imaging condition for refinement of protocol (includes secondary posture, instruction, X-Ray / electron beam energy or nuclide, and ultrasound modes), as used in JJ1017 v3.0
+    """
     ImagingConditions = DICOMControlledTerminologyDefinitionsCode("123016")
+    """
+    Caudal 10 degree distal-cranioproximal oblique radiographic projection, defined per Smallwood et al
+    """
     Caudal10DegreeDistal_cranioproximalOblique = (
         DICOMControlledTerminologyDefinitionsCode("123019")
     )
+    """
+    Surface processing utilizing predefined weighting factors (i.e., kernels) applied to different data values depending on their location relative to other data values within the data domain. Includes Low Pass, High Pass, Gaussian, Laplacian, etc.
+    """
     NeighborhoodAnalysis = DICOMControlledTerminologyDefinitionsCode("123101")
+    """
+    Surface processing applied non-uniformly utilizing a priori knowledge of the system and/or relative locations of the data values within the data domain. Example: Neighborhood analysis where weighting factors are modified continuously based on predefined criteria
+    """
     AdaptiveFiltering = DICOMControlledTerminologyDefinitionsCode("123102")
+    """
+    Surface processing through the exploitation of discontinuities in the data values within their domain. Includes Gradient filters
+    """
     EdgeDetection = DICOMControlledTerminologyDefinitionsCode("123103")
+    """
+    Surface processing based on the connectivity of values based on the shape or structure of the data values within their domain. Includes erode, dilate, etc.
+    """
     MorphologicalOperations = DICOMControlledTerminologyDefinitionsCode("123104")
+    """
+    Surface processing applied to the distribution of the data values. Includes thresholding, Bayesian Classification, etc.
+    """
     HistogramAnalysis = DICOMControlledTerminologyDefinitionsCode("123105")
+    """
+    Surface processing accomplished through varying the data domain size. Include deformable models
+    """
     Multi_Scale_ResolutionFiltering = DICOMControlledTerminologyDefinitionsCode(
         "123106"
     )
+    """
+    Surface processing accomplished by combining data values based on their relative location within their domain or value distribution. Includes K- and C-means, Fuzzy Analysis, Watershed, Seed Growing, etc.
+    """
     ClusterAnalysis = DICOMControlledTerminologyDefinitionsCode("123107")
+    """
+    Surface processing accomplished through the weighted combination of multiple data sets. Includes Principle Component Analysis, linear and non-linear weighed combinations, etc.
+    """
     MultispectralProcessing = DICOMControlledTerminologyDefinitionsCode("123108")
+    """
+    Surface processing accomplished through human interaction. Region drawing
+    """
     ManualProcessing = DICOMControlledTerminologyDefinitionsCode("123109")
+    """
+    Surface processing using Artificial Intelligence techniques, such as Machine Learning, Neural Networks, etc.
+    """
     ArtificialIntelligence = DICOMControlledTerminologyDefinitionsCode("123110")
+    """
+    Surface processing using Deformable Model techniques, such as Point Distribution Models, Level Sets, Simplex Meshes, etc.
+    """
     DeformableModels = DICOMControlledTerminologyDefinitionsCode("123111")
+    """
+    Document Title of OB-GYN procedure report
+    """
     OB_GYNUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode(
         "125000"
     )
+    """
+    Report section for assessment of fetal growth using ratios and indexes
+    """
     FetalBiometryRatios = DICOMControlledTerminologyDefinitionsCode("125001")
+    """
+    Report section for assessment of fetal growth
+    """
     FetalBiometry = DICOMControlledTerminologyDefinitionsCode("125002")
+    """
+    Report section for assessment of fetal growth by long bone measurements
+    """
     FetalLongBones = DICOMControlledTerminologyDefinitionsCode("125003")
+    """
+    Report section for assessment of fetal cranium growth
+    """
     FetalCranium = DICOMControlledTerminologyDefinitionsCode("125004")
+    """
+    Biometric assessment of
+    """
     BiometryGroup = DICOMControlledTerminologyDefinitionsCode("125005")
+    """
+    Report section for assessment of biophysical observations that evaluate fetal well-being according to Manning, Antepartum Fetal Evaluation: Development of a Fetal Biophysical Profile Score, Am. J Obstet Gynecol, 1980;136:787
+    """
     BiophysicalProfile = DICOMControlledTerminologyDefinitionsCode("125006")
+    """
+    A grouping of related measurements and calculations that share a common context
+    """
     MeasurementGroup = DICOMControlledTerminologyDefinitionsCode("125007")
+    """
+    Report section for fetus specific procedure summary observations
+    """
     FetusSummary = DICOMControlledTerminologyDefinitionsCode("125008")
+    """
+    Report section for assessment of early gestation fetus
+    """
     EarlyGestation = DICOMControlledTerminologyDefinitionsCode("125009")
+    """
+    A name to differentiate between multiple instances of some item
+    """
     Identifier = DICOMControlledTerminologyDefinitionsCode("125010")
+    """
+    Report section for assessment of pelvis and uterus
+    """
     PelvisAndUterus = DICOMControlledTerminologyDefinitionsCode("125011")
+    """
+    The rank of a measured growth indicator relative to a normal distribution expressed as a percentage
+    """
     GrowthPercentileRank = DICOMControlledTerminologyDefinitionsCode("125012")
+    """
+    The rank of a measured growth indicator relative to a normal distribution expressed as the dimensionless quantity z = (x-m) /s where (x-m) is the deviation of the value x, from the distribution mean, m, and s is the standard deviation of the distribution
+    """
     GrowthZ_score = DICOMControlledTerminologyDefinitionsCode("125013")
+    """
+    Fetus characteristics (findings section title)
+    """
     FetusCharacteristics = DICOMControlledTerminologyDefinitionsCode("125015")
+    """
+    Fetal Measurements (findings section title)
+    """
     FetalMeasurements = DICOMControlledTerminologyDefinitionsCode("125016")
+    """
+    There is a defined equivalence between the Frame of Reference of the Registration SOP instance and the Frame of Reference of the referenced images
+    """
     FrameOfReferenceIdentity = DICOMControlledTerminologyDefinitionsCode("125021")
+    """
+    The registration is based on fiducials that represent patient or specimen features identified in each data set
+    """
     FiducialAlignment = DICOMControlledTerminologyDefinitionsCode("125022")
+    """
+    Registration based on a-priori knowledge of the acquisition geometry. This is not an object registration as in fiducial registration. Rather, it specifies a known spatial relationship
+    """
     AcquisitionEquipmentAlignment = DICOMControlledTerminologyDefinitionsCode("125023")
+    """
+    Computed registration based on global image information
+    """
     ImageContent_basedAlignment = DICOMControlledTerminologyDefinitionsCode("125024")
+    """
+    Registration by visually guided manipulation
+    """
     VisualAlignment = DICOMControlledTerminologyDefinitionsCode("125025")
+    """
+    A plane fiducial that specifies the location of the plane separating the two hemispheres of the brain
+    """
     Inter_HemisphericPlane = DICOMControlledTerminologyDefinitionsCode("125030")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the anterior limit of the right brain hemisphere
+    """
     RightHemisphereMostAnterior = DICOMControlledTerminologyDefinitionsCode("125031")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the posterior limit of the right brain hemisphere
+    """
     RightHemisphereMostPosterior = DICOMControlledTerminologyDefinitionsCode("125032")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the superior limit of the right brain hemisphere
+    """
     RightHemisphereMostSuperior = DICOMControlledTerminologyDefinitionsCode("125033")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the inferior limit of the Right brain hemisphere
+    """
     RightHemisphereMostInferior = DICOMControlledTerminologyDefinitionsCode("125034")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the anterior limit of the left brain hemisphere
+    """
     LeftHemisphereMostAnterior = DICOMControlledTerminologyDefinitionsCode("125035")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the posterior limit of the left brain hemisphere
+    """
     LeftHemisphereMostPosterior = DICOMControlledTerminologyDefinitionsCode("125036")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the superior limit of the left brain hemisphere
+    """
     LeftHemisphereMostSuperior = DICOMControlledTerminologyDefinitionsCode("125037")
+    """
+    A point fiducial that specifies the location in the plane perpendicular to the Anterior- Posterior-Commissure axis and tangential to the inferior limit of the left brain hemisphere
+    """
     LeftHemisphereMostInferior = DICOMControlledTerminologyDefinitionsCode("125038")
+    """
+    That which is not part of an object
+    """
     Background = DICOMControlledTerminologyDefinitionsCode("125040")
+    """
+    A segment for use as an input to an image registration process; e.g. to specify the bounding region for determining a Frame of Reference Transformation Matrix
+    """
     RegistrationInput = DICOMControlledTerminologyDefinitionsCode("125041")
+    """
+    Root Document Title for ultrasound vascular evidence reports (worksheets)
+    """
     VascularUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode(
         "125100"
     )
+    """
+    The particular vessel branch, such as the inferior, medial or lateral
+    """
     VesselBranch = DICOMControlledTerminologyDefinitionsCode("125101")
+    """
+    A descriptor or elaboration of the type of graft
+    """
     GraftType = DICOMControlledTerminologyDefinitionsCode("125102")
+    """
+    A modifier to a 2D distance measurement to describe its orientation; e.g. a vascular distance measurement for a vessel plague could have a modifier Transverse or Longitudinal
+    """
     MeasurementOrientation = DICOMControlledTerminologyDefinitionsCode("125105")
+    """
+    The angle formed between the Doppler beam line and the direction of blood flow within a region of interest in the body defined by the sample volume
+    """
     DopplerAngle = DICOMControlledTerminologyDefinitionsCode("125106")
+    """
+    The depth of the center of the Doppler sample volume measured from skin line along the Doppler line
+    """
     SampleVolumeDepth = DICOMControlledTerminologyDefinitionsCode("125107")
+    """
+    Pediatric Cardiac Ultrasound Report (document title)
+    """
     PediatricCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode(
         "125195"
     )
+    """
+    Fetal Cardiac Ultrasound Report (document title)
+    """
     FetalCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode("125196")
+    """
+    Adult Congenital Cardiac Ultrasound Report (document title)
+    """
     AdultCongenitalCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode(
         "125197"
     )
+    """
+    Document title of adult echocardiography procedure (evidence) report
+    """
     AdultEchocardiographyProcedureReport = DICOMControlledTerminologyDefinitionsCode(
         "125200"
     )
+    """
+    An image that is a pictorial representation of findings. The concept is typically used as a purpose of reference to an image, such as a depiction of myocardium segments depicting wall motion function
+    """
     IllustrationOfFinding = DICOMControlledTerminologyDefinitionsCode("125201")
+    """
+    The average of all scored (non-zero) Left Ventricle segment wall motion scores
+    """
     LVWallMotionScoreIndex = DICOMControlledTerminologyDefinitionsCode("125202")
+    """
+    A type of clinical acquisition protocol for creating images or image-derived measurements. Acquisition protocols may be specific to a manufacturer's product
+    """
     AcquisitionProtocol = DICOMControlledTerminologyDefinitionsCode("125203")
+    """
+    Method for calculating left ventricular volume from two orthogonal views containing the true long axis (usually the apical 4 and 2 chamber views). Volume = [pL1 / 6] * [(4A1) ÷ (pL1) ] * [(4A2) ÷ (pL2) ]
+    """
     Area_lengthBiplane = DICOMControlledTerminologyDefinitionsCode("125204")
+    """
+    Method for calculating left ventricular volume from a view containing the true long axis (usually the apical 4-chamber view). Volume = [8(A)2]÷[3pL]
+    """
     Area_LengthSinglePlane = DICOMControlledTerminologyDefinitionsCode("125205")
+    """
+    Method (formula) for calculating left ventricle volumes and function derivatives (EF, SV, SI, etc.) that estimates the volume as the cube of diameter
+    """
     Cube = DICOMControlledTerminologyDefinitionsCode("125206")
+    """
+    Method of calculating volume based on the summation of disk volumes. The disk axis is parallel to the left ventricular long axis and using a disk diameter averaged from the two chamber and four chamber views
+    """
     MethodOfDisks_Biplane = DICOMControlledTerminologyDefinitionsCode("125207")
+    """
+    Method of calculating volume based on the summation of disk volumes. The disk axis is parallel to the left ventricular long axis with disk diameter taken from the four-chamber view
+    """
     MethodOfDisks_SinglePlane = DICOMControlledTerminologyDefinitionsCode("125208")
+    """
+    Method (formula) for calculating left ventricle volumes and function derivatives (EF, SV, SI, etc.) Volume = [7.0/(2.4+D) ]*D3
+    """
     Teichholz = DICOMControlledTerminologyDefinitionsCode("125209")
+    """
+    Mitral valve area (cm2) by Pressure Half-time = 220 (cm2.ms) / PHT (ms)
+    """
     AreaByPressureHalf_Time = DICOMControlledTerminologyDefinitionsCode("125210")
+    """
+    Area = P/4 X d1 X d2 d1 = anterior/posterior axis d2 = medial/lateral axis Hagen-Ansert, Sandra L., Textbook of Diagnostic Ultrasound, ed. 3, The C.V.Mosby Co., 1989, p. 73. 
+    """
     BiplaneEllipse = DICOMControlledTerminologyDefinitionsCode("125211")
+    """
+    For conduits in series ("in continuity"), volume flow is equal: A1*V1 = A2*V2. where V is the velocity
+    """
     ContinuityEquation = DICOMControlledTerminologyDefinitionsCode("125212")
+    """
+    For conduits in series ("in continuity"), volume flow is equal: A1*V1 = A2*V2. where V is the mean velocity
+    """
     ContinuityEquationByMeanVelocity = DICOMControlledTerminologyDefinitionsCode(
         "125213"
     )
+    """
+    For conduits in series ("in continuity"), volume flow is equal: A1*V1 = A2*V2. where V is the peak velocity
+    """
     ContinuityEquationByPeakVelocity = DICOMControlledTerminologyDefinitionsCode(
         "125214"
     )
+    """
+    For conduits in series ("in continuity"), volume flow is equal: A1*V1 = A2*V2. where V is the velocity time integral
+    """
     ContinuityEquationByVelocityTimeIntegral = (
         DICOMControlledTerminologyDefinitionsCode("125215")
     )
+    """
+    Utilizes aliasing velocity (by color Doppler) of flow into an orifice (often regurgitant or stenotic) to measure instantaneous flow rate, orifice area, and flow volume. The instantaneous flow rate = (2πr2vav ) * (α / π) where vav is the constant velocity known as aliasing velocity at radius r, vp is the peak velocity at the orifice, and α is the angle in radians of the constant velocity surface. Estimated Orifice area = Flow rate / vp , where vp is the peak velocity at the orifice and the flow rate is the PISA peak flow rate. The volume flow is then the product of the orifice area and Velocity Time Integral
+    """
     ProximalIsovelocitySurfaceArea = DICOMControlledTerminologyDefinitionsCode("125216")
+    """
+    ΔP = 4*(V12 - V22)
+    """
     FullBernoulli = DICOMControlledTerminologyDefinitionsCode("125217")
+    """
+    ΔP = 4*V2
+    """
     SimplifiedBernoulli = DICOMControlledTerminologyDefinitionsCode("125218")
+    """
+    Volume flow = Conduit CSA * (Velocity Time Integral)
+    """
     DopplerVolumeFlow = DICOMControlledTerminologyDefinitionsCode("125219")
+    """
+    Direct measurement of an area by tracing an irregular perimeter
+    """
     Planimetry = DICOMControlledTerminologyDefinitionsCode("125220")
+    """
+    Mass = 1.04 * [(ST+LVID+PWT)3 - LVID3] * 0.8+ 0.6. Mass unit is grams and length in cm
+    """
     LeftVentricleMassByM_mode = DICOMControlledTerminologyDefinitionsCode("125221")
+    """
+    Mass = 1.05P ((b + t)2 X (2/3 (a + t) + d - d3 /3(a + t)2) - b2 (2/3a + d - d3 /3a2)) a = Semi-major axis from widest minor axis radius to apex. b = Short axis radius calculated from short axis cavity area t = Myocardial thickness calculated from short axis epicardial and cavity areas d = Truncated semi-major axis from widest short axis diameter to plane of mitral annulus. Mass unit is grams and length in cm. Schiller NB et al: Recommendations for quantification of the left ventricle by two-dimensional echocardiography, American Society of Echocardiography 2:364, 1989. 
+    """
     LeftVentricleMassByTruncatedEllipse = DICOMControlledTerminologyDefinitionsCode(
         "125222"
     )
+    """
+    A four point, echocardiographic numeric scoring scheme of myocardium segments based on evaluation of wall motion and ventricle morphology. Recommendations for Quantitation of the Left Ventricle by Two-Dimensional Echocardiography, Journal of the American Society of Echocardiography, 2:358-367, 1989
+    """
     _4PointSegmentFindingScale = DICOMControlledTerminologyDefinitionsCode("125223")
+    """
+    A five point, echocardiographic numeric scoring scheme of myocardium segments based on evaluation of wall motion and ventricle morphology. Recommendations for Quantitation of the Left Ventricle by Two-Dimensional Echocardiography, Journal of the American Society of Echocardiography, 2:358-367, 1989
+    """
     _5PointSegmentFindingScale = DICOMControlledTerminologyDefinitionsCode("125224")
+    """
+    A five point, echocardiographic numeric scoring scheme of myocardium segments based on evaluation of wall motion and ventricle morphology, with severity of hypokinesis graded. Recommendations for Quantitation of the Left Ventricle by Two-Dimensional Echocardiography, Journal of the American Society of Echocardiography, 2:358-367, 1989
+    """
     _5PointSegmentFindingScaleWithGradedHypokinesis = (
         DICOMControlledTerminologyDefinitionsCode("125225")
     )
+    """
+    Method of estimating volume from a planar ellipse. Equivalent to Biplane Ellipse with an assumption that the ellipse in the orthogonal plane has identical major and minor diameters
+    """
     SinglePlaneEllipse = DICOMControlledTerminologyDefinitionsCode("125226")
+    """
+    Modified Simpson's Method of estimating ventricular volume, based on the method of disks with paired apical views. Schiller NB, et al. "Recommendations for quantitation of the left ventricle by two-dimensional echocardiography. American Society of Echocardiography Committee on Standards, Subcommittee on Quantitation of Two-Dimensional Echocardiograms". J Am Soc Echocardiogr.1989 2(5):358-367. Sep-Oct
+    """
     ModifiedSimpson = DICOMControlledTerminologyDefinitionsCode("125227")
+    """
+    Bullet method of estimating ventricular volume. Volume = 5/6 * L * S L: Left ventricle long axis length S: Left ventricle area, SAX view at level of Mitral Valve
+    """
     BulletMethod = DICOMControlledTerminologyDefinitionsCode("125228")
+    """
+    Color coded ultrasound images of blood flow, which depict the amplitude, or power, of Doppler signals
+    """
     PowerDoppler = DICOMControlledTerminologyDefinitionsCode("125230")
+    """
+    Volumetric ultrasound imaging
+    """
     _3DMode = DICOMControlledTerminologyDefinitionsCode("125231")
+    """
+    Onset of administration of dose of a drug
+    """
     StartOfDrugDoseAdministration = DICOMControlledTerminologyDefinitionsCode("125233")
+    """
+    Onset of contrast agent administration
+    """
     StartOfContrastAgentAdministration = DICOMControlledTerminologyDefinitionsCode(
         "125234"
     )
+    """
+    Destruction of ultrasonic contrast microbubbles by a high-energy ultrasound pulse
+    """
     DestructionOfMicrobubbles = DICOMControlledTerminologyDefinitionsCode("125235")
+    """
+    Instant at which exercise begins
+    """
     OnsetOfExercise = DICOMControlledTerminologyDefinitionsCode("125236")
+    """
+    Instant at which exercise ends
+    """
     CessationOfExercise = DICOMControlledTerminologyDefinitionsCode("125237")
+    """
+    Instant at which stimulation begins
+    """
     OnsetOfStimulation = DICOMControlledTerminologyDefinitionsCode("125238")
+    """
+    Instant at which stimulation ends
+    """
     CessationOfStimulation = DICOMControlledTerminologyDefinitionsCode("125239")
+    """
+    Ultrasound transducer scan pattern in which information is gathered along a line
+    """
     LineScanPattern = DICOMControlledTerminologyDefinitionsCode("125240")
+    """
+    Ultrasound transducer scan pattern in which information is gathered within a plane
+    """
     PlaneScanPattern = DICOMControlledTerminologyDefinitionsCode("125241")
+    """
+    Ultrasound transducer scan pattern in which information is gathered within a volume
+    """
     VolumeScanPattern = DICOMControlledTerminologyDefinitionsCode("125242")
+    """
+    Ultrasound transducer geometry characterized by a single scan line used for PW or CW Doppler scanning
+    """
     Non_imagingDopplerUltrasoundTransducerGeometry = (
         DICOMControlledTerminologyDefinitionsCode("125251")
     )
+    """
+    Ultrasonic transducer geometry characterized by parallel lines
+    """
     LinearUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
         "125252"
     )
+    """
+    Ultrasonic transducer geometry characterized by radial lines normal to the outside of a curved surface
+    """
     CurvedLinearUltrasoundTransducerGeometry = (
         DICOMControlledTerminologyDefinitionsCode("125253")
     )
+    """
+    Ultrasonic transducer geometry characterized by lines originating from a common apex
+    """
     SectorUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
         "125254"
     )
+    """
+    Ultrasonic transducer geometry characterized by lines emanating radially from a single point
+    """
     RadialUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
         "125255"
     )
+    """
+    Ultrasonic transducer geometry characterized by a circular ring of transducer elements
+    """
     RingUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
         "125256"
     )
+    """
+    Ultrasonic steering technique consisting of a single beam normal to the transducer face steered by the orientation of the probe
+    """
     FixedBeamDirection = DICOMControlledTerminologyDefinitionsCode("125257")
+    """
+    Ultrasonic steering technique consisting of mechanically directing the beam
+    """
     MechanicalBeamSteering = DICOMControlledTerminologyDefinitionsCode("125258")
+    """
+    Ultrasonic steering technique consisting of electronically-steered beams
+    """
     PhasedBeamSteering = DICOMControlledTerminologyDefinitionsCode("125259")
+    """
+    Transducer is designed to be placed onto the surface of the subject
+    """
     ExternalTransducer = DICOMControlledTerminologyDefinitionsCode("125261")
+    """
+    Transducer is designed for insertion into the esophagus
+    """
     TransesophagealTransducer = DICOMControlledTerminologyDefinitionsCode("125262")
+    """
+    Transducer is designed for insertion into the vagina
+    """
     EndovaginalTransducer = DICOMControlledTerminologyDefinitionsCode("125263")
+    """
+    Transducer is designed for insertion into the rectum
+    """
     EndorectalTransducer = DICOMControlledTerminologyDefinitionsCode("125264")
+    """
+    Transducer is designed for insertion via a catheter
+    """
     IntravascularTransducer = DICOMControlledTerminologyDefinitionsCode("125265")
+    """
+    method to measure the mass of the Left Ventricle via the ASE area-length method at end diastole. LV Mass = 1.05*(5/6*(A1*(L+t)) - 5/6*(A2*L)) A1 = Left Ventricle epicardial SAX area at the level of the papillary muscle tips at end diastole. A2 = Left Ventricle endocardial SAX area cavity area at the level of the papillary muscle tips at end diastole. L = Left Ventricle apical view long axis length at end diastole. t = Myocardial thickness can be computed as: t = sqrt (A1/3.14) - sqrt (A2/3.14) Reference: 1) Schiller, N.B., et al. "Recommendations for Quantification of the LV by Two-dimensional Echocardiography." J Am Soc Echo, Vol. 2, No. 5: 358-367, Sep-Oct 1989. 2) Reichek, N., et al. "Anatomic Validation of Left Ventricular Mass Estimates from Clinical Two-dimensional Echocardiography: Initial Results." Circulation, Vol. 67, No. 2: 348-52, February 1983
+    """
     LeftVentricleMassByAreaLength = DICOMControlledTerminologyDefinitionsCode("125270")
+    """
+    Equation = Left Ventricle Mass by M-mode (in gram) / (Height (in meter)) ^2.7 Reference: Giovanni De Simone, et al. "Effect of Growth on Variability of Left Ventricular Mass: Assessment of Allometric Signals in Adults and Children and Their Capacity to Predict Cardiovascular Risk". New York, New York and Cincinnati, Ohio
+    """
     LeftVentricleMassByM_mode_AdjustedByHeight = (
         DICOMControlledTerminologyDefinitionsCode("125271")
     )
+    """
+    Equation = Left Ventricle Mass by Truncated Ellipse / Height^2.7 Reference: Giovanni De Simone, et al. "Effect of Growth on Variability of Left Ventricular Mass: Assessment of Allometric Signals in Adults and Children and Their Capacity to Predict Cardiovascular Risk". New York, New York and Cincinnati, Ohio
+    """
     LeftVentricleMassByTruncatedEllipse_AdjustedByHeight = (
         DICOMControlledTerminologyDefinitionsCode("125272")
     )
+    """
+    Equation = Left Ventricle Mass by Area Length / Height^2.7 Reference: Giovanni De Simone, et al. "Effect of Growth on Variability of Left Ventricular Mass: Assessment of Allometric Signals in Adults and Children and Their Capacity to Predict Cardiovascular Risk". New York, New York and Cincinnati, Ohio
+    """
     LeftVentricleMassByAreaLength_AdjustedByHeight = (
         DICOMControlledTerminologyDefinitionsCode("125273")
     )
+    """
+    CARDIOsphere ultrasonic contrast agent produced by POINT Biomedical
+    """
     CARDIOsphere = DICOMControlledTerminologyDefinitionsCode("125901")
+    """
+    Echovist® ultrasonic contrast agent produced by Schering AG
+    """
     Echovist = DICOMControlledTerminologyDefinitionsCode("125902")
+    """
+    Imagify ultrasonic contrast agent produced by Accusphere Inc
+    """
     Imagify = DICOMControlledTerminologyDefinitionsCode("125903")
+    """
+    Levovist® ultrasonic contrast agent produced by Schering AG
+    """
     Levovist = DICOMControlledTerminologyDefinitionsCode("125904")
+    """
+    Sonazoid ultrasonic contrast agent produced by Daiichi Pharmaceutical / General Electric
+    """
     Sonazoid = DICOMControlledTerminologyDefinitionsCode("125905")
+    """
+    SonoVue ultrasonic contrast agent produced by Bracco Diagnostics
+    """
     SonoVue = DICOMControlledTerminologyDefinitionsCode("125906")
+    """
+    Targestar-B ultrasonic contrast agent produced by Targeson LLC
+    """
     Targestar_B = DICOMControlledTerminologyDefinitionsCode("125907")
+    """
+    Targestar-P ultrasonic contrast agent produced by Targeson LLC
+    """
     Targestar_P = DICOMControlledTerminologyDefinitionsCode("125908")
+    """
+    A structured report containing the quantitative results of human or machine analysis of images
+    """
     ImagingMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126000")
+    """
+    A structured report containing the quantitative results of human or machine analysis of images for oncology evaluation
+    """
     OncologyMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126001")
+    """
+    A structured report containing the quantitative results of human or machine analysis of DCE-MR
+    """
     DynamicContrastMRMeasurementReport = DICOMControlledTerminologyDefinitionsCode(
         "126002"
     )
+    """
+    A structured report containing the quantitative results of human or machine analysis of PET images
+    """
     PETMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126003")
+    """
+    Measurements made on images
+    """
     ImagingMeasurements = DICOMControlledTerminologyDefinitionsCode("126010")
+    """
+    Measurements derived from measurements made on images
+    """
     DerivedImagingMeasurements = DICOMControlledTerminologyDefinitionsCode("126011")
+    """
+    An MRI procedure in which multiple parameters including diffusion, dynamic contrast and T2 are measured
+    """
     MultiparametricMRI = DICOMControlledTerminologyDefinitionsCode("126020")
+    """
+    An MRI procedure of the prostate in which multiple parameters including diffusion, dynamic contrast and T2 are measured
+    """
     MultiparametricMRIOfProstate = DICOMControlledTerminologyDefinitionsCode("126021")
+    """
+    An MRI procedure of the whole body in which multiple parameters including diffusion, dynamic contrast and T2 are measured
+    """
     MultiparametricMRIOfWholeBody = DICOMControlledTerminologyDefinitionsCode("126022")
+    """
+    The volume derived by summing the volumes of all the voxels (and partial voxels if the segment contains partially occupied voxels) included in the segment
+    """
     SumOfSegmentedVoxelVolumes = DICOMControlledTerminologyDefinitionsCode("126030")
+    """
+    Maximum average gray value that is calculated from a 1 cubic centimeter sphere placed within the region of interest. Reference Wahl et al PERCIST article
+    """
     PeakValueWithinROI = DICOMControlledTerminologyDefinitionsCode("126031")
+    """
+    The volume of a lesion (e.g. a tumor) ascertained through information about its metabolic activity (e.g. SUV on PET). Abbreviated "MV". Synonymous with Metabolic Tumor Volume (MTV)
+    """
     MetabolicVolume = DICOMControlledTerminologyDefinitionsCode("126032")
+    """
+    The total activity of a lesion obtained as the product of its volume and its glycolytic activity (on FDG-PET). The volume may be defined on the same modality (e.g. the MV on FDG-PET by some thresholding or other technique) or on another spatially registered modality (e.g. the lesion outline segmented on CT or MR). Does not apply to other radiopharmaceuticals than those involved in glucose metabolism. Abbreviated TLG. Synonymnous with "Tumor Lesion Glycolysis"
+    """
     TotalLesionGlycolysis = DICOMControlledTerminologyDefinitionsCode("126033")
+    """
+    The amount glycolytic activity summed across all voxels in a defined region or within a defined range of SUV (on FDG-PET)
+    """
     Glycolysis = DICOMControlledTerminologyDefinitionsCode("126034")
+    """
+    The total activity of a lesion obtained as the product of its volume and its proliferative activity (on FLT-PET). The volume may be defined on the same modality (e.g. the MV on FDG-PET by some thresholding or other technique) or on another spatially registered modality (e.g. the lesion outline segmented on CT or MR). Does not apply to other radiopharmaceuticals than those involved in cellular proliferation. Abbreviated TLP. Synonymnous with "Tumor Lesion Proliferation"
+    """
     TotalLesionProliferation = DICOMControlledTerminologyDefinitionsCode("126035")
+    """
+    The amount proliferative activity summed across all voxels in a defined region or within a defined range of SUV (on FLT-PET)
+    """
     ProliferativeActivity = DICOMControlledTerminologyDefinitionsCode("126036")
+    """
+    A background-corrected, partial volume independent version of TLG. SAM is calculated by drawing a volume of interest (VOI1) around the tumour and a larger VOI (VOI2) around VOI1. Subtracting the background activity in VOI2-VOI1 from VOI1 yields SAM. See Mertens et al. "Standardized added metabolic activity (SAM): a partial volume independent marker of total lesion glycolysis in liver metastases". Eur J Nucl Med Mol Imaging (2012) 39:1441-1448
+    """
     StandardizedAddedMetabolicActivity_SAM_ = DICOMControlledTerminologyDefinitionsCode(
         "126037"
     )
+    """
+    The background value (VOI2-VOI1) used to calculate Standardized Added Metabolic Activity (SAM). SAM is calculated by drawing a volume of interest (VOI1) around the tumour and a larger VOI (VOI2) around VOI1. Subtracting the background activity in VOI2-VOI1 from VOI1 yields SAM. See Mertens et al. "Standardized added metabolic activity (SAM): a partial volume independent marker of total lesion glycolysis in liver metastases". Eur J Nucl Med Mol Imaging (2012) 39:1441-1448
+    """
     StandardizedAddedMetabolicActivity_SAM_Background = (
         DICOMControlledTerminologyDefinitionsCode("126038")
     )
+    """
+    The ratio of the SUV within a tumor to the SUV of a pre-defined background region. Need reference(s). A more general concept than Tumor to Background Ratio (TBR)
+    """
     LesionToBackgroundSUVRatio = DICOMControlledTerminologyDefinitionsCode("126039")
+    """
+    The SUV of a pre-defined background region used to compute Lesion to Background SUV Ratio. Need reference(s)
+    """
     BackgroundForLesionToBackgroundSUVRatio = DICOMControlledTerminologyDefinitionsCode(
         "126040"
     )
+    """
+    A statistical index of complexity comparing how detail in a fractal pattern changes with the scale at which it is measured; a ratio of the change in detail to the change in scale
+    """
     FractalDimension = DICOMControlledTerminologyDefinitionsCode("126050")
+    """
+    Measure of the asymmetry of the probability distribution of a real-valued random variable about its mean
+    """
     Skewness = DICOMControlledTerminologyDefinitionsCode("126051")
+    """
+    Measure of the peakedness of the probability distribution of a real-valued random variable
+    """
     Kurtosis = DICOMControlledTerminologyDefinitionsCode("126052")
+    """
+    The zero order entropy of a Gray Level Co-occurrence Matrix (GLCM). A measure of disorder. See http://www.fp.ucalgary.ca/mhallbey/equations.htm
+    """
     EntropyOfGLCM = DICOMControlledTerminologyDefinitionsCode("126060")
+    """
+    The energy (uniformity) (square root of the Angular Second Moment (ASM)) of a Gray Level Co-occurrence Matrix (GLCM). A measure of orderliness. See http://www.fp.ucalgary.ca/mhallbey/equations.htm
+    """
     EnergyOfGLCM = DICOMControlledTerminologyDefinitionsCode("126061")
+    """
+    The Inverse Difference Moment of a Gray Level Co-occurrence Matrix (GLCM). See http://www.fp.ucalgary.ca/mhallbey/equations.htm
+    """
     HomogeneityOfGLCM = DICOMControlledTerminologyDefinitionsCode("126062")
+    """
+    The sum of squares variance of a Gray Level Co-occurrence Matrix (GLCM). See http://www.fp.ucalgary.ca/mhallbey/equations.htm
+    """
     ContrastOfGLCM = DICOMControlledTerminologyDefinitionsCode("126063")
+    """
+    The dissimilarity of a Gray Level Co-occurrence Matrix (GLCM). See http://www.fp.ucalgary.ca/mhallbey/equations.htm
+    """
     DissimilarityOfGLCM = DICOMControlledTerminologyDefinitionsCode("126064")
+    """
+    The Angular Second Moment of a Gray Level Co-occurrence Matrix (GLCM). See http://www.fp.ucalgary.ca/mhallbey/equations.htm
+    """
     ASMOfGLCM = DICOMControlledTerminologyDefinitionsCode("126065")
+    """
+    A measure of the linear dependency of grey levels on those of neighbouring pixels of a Gray Level Co-occurrence Matrix (GLCM). See http://www.fp.ucalgary.ca/mhallbey/equations.htm
+    """
     CorrelationOfGLCM = DICOMControlledTerminologyDefinitionsCode("126066")
+    """
+    A tabulation of how often different combinations of pixel values (grey levels) occur in an image. See http://www.fp.ucalgary.ca/mhallbey/the_glcm.htm
+    """
     GrayLevelCo_occurrenceMatrix_GLCM_ = DICOMControlledTerminologyDefinitionsCode(
         "126067"
     )
+    """
+    An identifier of a specific time point in a continuum, which is unique within an appropriate local context (such as an entire organization, system or treatment protocol), which identifies the time point for a specific patient
+    """
     SubjectTimePointIdentifier = DICOMControlledTerminologyDefinitionsCode("126070")
+    """
+    An identifier of a specific time point in a continuum, which is unique within an appropriate local context (such as an entire organization, system or treatment protocol), which identifies the time point "slot" within a treatment protocol using the same value for all patients in the protocol
+    """
     ProtocolTimePointIdentifier = DICOMControlledTerminologyDefinitionsCode("126071")
+    """
+    A pre-defined type of a specific time point in a continuum
+    """
     TimePointType = DICOMControlledTerminologyDefinitionsCode("126072")
+    """
+    A number indicating the order of a time point relative to other time points in the same continuum
+    """
     TimePointOrder = DICOMControlledTerminologyDefinitionsCode("126073")
+    """
+    The time after the treatment of interest
+    """
     Posttreatment = DICOMControlledTerminologyDefinitionsCode("126074")
+    """
+    For the purpose of determining eligibility for a protocol
+    """
     Eligibility = DICOMControlledTerminologyDefinitionsCode("126075")
+    """
+    Response Evaluation Criteria in Solid Tumors version 1.0. See [RECIST] in Normative References
+    """
     RECIST1_0 = DICOMControlledTerminologyDefinitionsCode("126080")
+    """
+    Response Evaluation Criteria in Solid Tumors Version 1.1. See Eisenhauer et al. "New Response Evaluation Criteria in Solid Tumours: Revised RECIST Guideline (version 1.1)." European Journal of Cancer 45, no. 2 (n.d.): 228-47. doi:10.1016/j.ejca.2008.10.026.
+    """
     RECIST1_1 = DICOMControlledTerminologyDefinitionsCode("126081")
+    """
+    A reference to the Real World Value Map applied to the stored image pixel values before their use for a measurement
+    """
     RealWorldValueMapUsedForMeasurement = DICOMControlledTerminologyDefinitionsCode(
         "126100"
     )
+    """
+    A container that groups common information about a set of images used as evidence to produce a report
+    """
     ImageLibraryGroup = DICOMControlledTerminologyDefinitionsCode("126200")
+    """
+    The date the acquisition of data started
+    """
     AcquisitionDate = DICOMControlledTerminologyDefinitionsCode("126201")
+    """
+    The time the acquisition of data started
+    """
     AcquisitionTime = DICOMControlledTerminologyDefinitionsCode("126202")
+    """
+    The time between the start of injection of the PET radionuclide and the start of acquisition of the PET data
+    """
     PETRadionuclideIncubationTime = DICOMControlledTerminologyDefinitionsCode("126203")
+    """
+    Coefficient of determination, R2. An indication of goodness of fit
+    """
     R2_Coefficient = DICOMControlledTerminologyDefinitionsCode("126220")
+    """
+    Perfusion analysis by Stable Xenon CT technique
+    """
     PerfusionAnalysisByStableXenonCTTechnique = (
         DICOMControlledTerminologyDefinitionsCode("126300")
     )
+    """
+    Perfusion analysis by IV Iodinated Contrast CT technique
+    """
     PerfusionAnalysisByIVIodinatedContrastCTTechnique = (
         DICOMControlledTerminologyDefinitionsCode("126301")
     )
+    """
+    Perfusion analysis by Arterial Spin Labeling (ASL) MR technique
+    """
     PerfusionAnalysisByArterialSpinLabelingMRTechnique = (
         DICOMControlledTerminologyDefinitionsCode("126302")
     )
+    """
+    Perfusion analysis by Susceptibility (T2*) MR technique
+    """
     PerfusionAnalysisBySusceptibilityMRTechnique = (
         DICOMControlledTerminologyDefinitionsCode("126303")
     )
+    """
+    Least Mean Square (LMS) deconvolution
+    """
     LeastMeanSquare_LMS_Deconvolution = DICOMControlledTerminologyDefinitionsCode(
         "126310"
     )
+    """
+    Singular Value Decomposition (SVD) deconvolution
+    """
     SingularValueDecomposition_SVD_Deconvolution = (
         DICOMControlledTerminologyDefinitionsCode("126311")
     )
+    """
+    Ktrans, the volume transfer constant of a tracer diffusion kinetic model, specifically the volume transfer constant between blood plasma and extravascular extracellular space (EES) See Tofts et al, "Estimating Kinetic Parameters From Dynamic Contrast-Enhanced T1-Weighted MRI of a Diffusable Tracer: Standardized Quantities and Symbols", Journal of Magnetic Resonance Imaging, vol. 10, pp. 223-232, 1999
+    """
     Ktrans = DICOMControlledTerminologyDefinitionsCode("126312")
+    """
+    kep, the rate constant between extravascular extracellular space (EES) and blood plasma See Tofts et al, "Estimating Kinetic Parameters From Dynamic Contrast-Enhanced T1-Weighted MRI of a Diffusable Tracer: Standardized Quantities and Symbols", Journal of Magnetic Resonance Imaging, vol. 10, pp. 223-232, 1999
+    """
     Kep = DICOMControlledTerminologyDefinitionsCode("126313")
+    """
+    ve, the fractional (not absolute) volume of extravascular extracellular space (EES) per unit volume of tissue See Tofts et al, "Estimating Kinetic Parameters From Dynamic Contrast-Enhanced T1-Weighted MRI of a Diffusable Tracer: Standardized Quantities and Symbols", Journal of Magnetic Resonance Imaging, vol. 10, pp. 223-232, 1999
+    """
     Ve = DICOMControlledTerminologyDefinitionsCode("126314")
+    """
+    The intial area under the contrast agent concentration-time curve
+    """
     IAUC = DICOMControlledTerminologyDefinitionsCode("126320")
+    """
+    The intial area under the contrast agent concentration-time curve at 60 seconds after the onset time
+    """
     IAUC60 = DICOMControlledTerminologyDefinitionsCode("126321")
+    """
+    The intial area under the contrast agent concentration-time curve at 90 seconds after the onset time
+    """
     IAUC90 = DICOMControlledTerminologyDefinitionsCode("126322")
+    """
+    τm. The mean intracellular water lifetime (τi). Used in the Shutter-Speed Model (SSM) of tracer kinetics
+    """
     Tau_m = DICOMControlledTerminologyDefinitionsCode("126330")
+    """
+    vp. The fractional (not absolute) blood plasma volume per unit volume of tissue. See Tofts et al, "Estimating Kinetic Parameters From Dynamic Contrast-Enhanced T1-Weighted MRI of a Diffusable Tracer: Standardized Quantities and Symbols", Journal of Magnetic Resonance Imaging, vol. 10, pp. 223-232, 1999
+    """
     Vp = DICOMControlledTerminologyDefinitionsCode("126331")
+    """
+    A tracer diffusion kinetic model in which the permeability is assumed to be isodirectional. See P. Tofts, "Modeling tracer kinetics in dynamic Gd-DTPA MR imaging", Journal of Magnetic Resonance Imaging, vol. 7, pp. 91-101, 1997
+    """
     StandardToftsModel = DICOMControlledTerminologyDefinitionsCode("126340")
+    """
+    A tracer diffusion kinetic model in which the permeability is not assumed to be isodirectional, and which includes the contribution of tracer in the blood plasma to the total tissue concentration. See P. Tofts, "Modeling tracer kinetics in dynamic Gd-DTPA MR imaging", Journal of Magnetic Resonance Imaging, vol. 7, pp. 91-101, 1997
+    """
     ExtendedToftsModel = DICOMControlledTerminologyDefinitionsCode("126341")
+    """
+    A semiquantitative analysis of the contrast-enhancement concentration versus time curve that avoids the use of a pharmacokinetic model; e.g. integration to compute the initial area under the curve
+    """
     Model_freeConcentration_timeQuantitification = (
         DICOMControlledTerminologyDefinitionsCode("126342")
     )
+    """
+    A tracer diffusion kinetic model that accounts for the tumor leakage profile during the first pass of contrast. See Li, Ka-Loh, Xiao Ping Zhu, John Waterton, and Alan Jackson. "Improved 3D Quantitative Mapping of Blood Volume and Endothelial Permeability in Brain Tumors." Journal of Magnetic Resonance Imaging 12, no. 2 (2000): 347-357. doi:10.1002/1522-2586(200008)12:2<347::AID-JMRI19>3.0.CO;2-7
+    """
     FirstPassLeakageProfile_FPLP_ = DICOMControlledTerminologyDefinitionsCode("126343")
+    """
+    A tracer diffusion kinetic model that does not assume that intercompartmental water molecule exchange is infinitely fast. See Li, Xin, Wei Huang, Thomas E. Yankeelov, Alina Tudorica, William D. Rooney, and Charles S. Springer. "Shutter-Speed Analysis of Contrast Reagent Bolus-Tracking Data: Preliminary Observations in Benign and Malignant Breast Disease." Magnetic Resonance in Medicine 53, no. 3 (2005): 724-29. doi:10.1002/mrm.20405
+    """
     Shutter_SpeedModel_SSM_ = DICOMControlledTerminologyDefinitionsCode("126344")
+    """
+    T1 measurement by Multiple Flip Angles (MFA) (variable saturation) method
+    """
     T1ByMultipleFlipAngles = DICOMControlledTerminologyDefinitionsCode("126350")
+    """
+    T1 measurement by Inversion Recovery (IR) method
+    """
     T1ByInversionRecovery = DICOMControlledTerminologyDefinitionsCode("126351")
+    """
+    Calculation was performed using a fixed value of T1 rather than a measured value. The value could be encoded as the value of (126353, DCM, "T1 Used For Calculation")
+    """
     T1ByFixedValue = DICOMControlledTerminologyDefinitionsCode("126352")
+    """
+    The fixed value of T1 used for a calculation
+    """
     T1UsedForCalculation = DICOMControlledTerminologyDefinitionsCode("126353")
+    """
+    No Arterial Input Function was used
+    """
     AIFIgnored = DICOMControlledTerminologyDefinitionsCode("126360")
+    """
+    A population-averaged Arterial Input Function
+    """
     PopulationAveragedAIF = DICOMControlledTerminologyDefinitionsCode("126361")
+    """
+    An Arterial Input Function computed from a user-defined Region of Interest
+    """
     User_definedAIFROI = DICOMControlledTerminologyDefinitionsCode("126362")
+    """
+    An Arterial Input Function computed from an automatically detected Region of Interest
+    """
     AutomaticallyDetectedAIFROI = DICOMControlledTerminologyDefinitionsCode("126363")
+    """
+    A data-driven blind source separation (BSS) algorithm that estimates AIF from individuals without any presumed AIF model and initialization. See Lin, Yu-Chun, Tsung-Han Chan, Chong-Yung Chi, Shu-Hang Ng, Hao-Li Liu, Kuo-Chen Wei, Yau-Yau Wai, Chun-Chieh Wang, and Jiun-Jie Wang. "Blind Estimation of the Arterial Input Function in Dynamic Contrast-Enhanced MRI Using Purity Maximization." Magnetic Resonance in Medicine 68, no. 5 (November 1, 2012): 1439-49. doi:10.1002/mrm.24144
+    """
     BlindEstimationOfAIF = DICOMControlledTerminologyDefinitionsCode("126364")
+    """
+    The time at which the concentration-time curve achieves its peak for the first time. Used as a concept name for a value or as a method; e.g. used as a method of calculation for BAT. See Shpilfoygel Med Phys 2008. doi: 10.1118/1.1288669
+    """
     TimeOfPeakConcentration = DICOMControlledTerminologyDefinitionsCode("126370")
+    """
+    The nominal time at which arrival of a contrast bolus is detected, which is used as a reference point for subsequent calculations. Used as a concept name for a value or as a method. No specific computational method is implied by this general definition. Abbreviated BAT
+    """
     BolusArrivalTime = DICOMControlledTerminologyDefinitionsCode("126371")
+    """
+    The time at which the concentration-time curve achieves half of its peak density for the first time. Used as a concept name for a value or as a method; e.g. used as a method of calculation for BAT. See Shpilfoygel Med Phys 2008. doi: 10.1118/1.1288669
+    """
     TimeOfLeadingHalf_PeakConcentration = DICOMControlledTerminologyDefinitionsCode(
         "126372"
     )
+    """
+    A method of determining BAT that involves computing the temporal derivative of the concentration-time curve and selecting the time when the temporal derivative exceeds a specified threshold. See Shpilfoygel Med Phys 2008. doi: 10.1118/1.1288669
+    """
     TemporalDerivativeExceedsThreshold = DICOMControlledTerminologyDefinitionsCode(
         "126373"
     )
+    """
+    A threshold applied to the temporal derivative of the concentration-time curve; e.g. used to establish BAT. See Shpilfoygel Med Phys 2008. doi: 10.1118/1.1288669
+    """
     TemporalDerivativeThreshold = DICOMControlledTerminologyDefinitionsCode("126374")
+    """
+    The maximum rate of signal intensity change within a measured region of a time-activity curve. See Boonsirikamchai, Piyaporn, Harmeet Kaur, Deborah A. Kuban, Edward Jackson, Ping Hou, and Haesun Choi. "Use of Maximum Slope Images Generated From Dynamic Contrast-Enhanced MRI to Detect Locally Recurrent Prostate Carcinoma After Prostatectomy: A Practical Approach." American Journal of Roentgenology 198, no. 3 (March 1, 2012): W228-W236. doi:10.2214/AJR.10.6387
+    """
     MaximumSlope = DICOMControlledTerminologyDefinitionsCode("126375")
+    """
+    The maximum degree of signal intensity change within a measured region of a time-activity curve. See Boonsirikamchai, Piyaporn, Harmeet Kaur, Deborah A. Kuban, Edward Jackson, Ping Hou, and Haesun Choi. "Use of Maximum Slope Images Generated From Dynamic Contrast-Enhanced MRI to Detect Locally Recurrent Prostate Carcinoma After Prostatectomy: A Practical Approach." American Journal of Roentgenology 198, no. 3 (March 1, 2012): W228-W236. doi:10.2214/AJR.10.6387
+    """
     MaximumDifference = DICOMControlledTerminologyDefinitionsCode("126376")
+    """
+    Tracer concentration in tissue; e.g. in a DCE-MR experiment, the concentration of contrast agent in mmol/l
+    """
     TracerConcentration = DICOMControlledTerminologyDefinitionsCode("126377")
+    """
+    The degree to which a paramagnetic contrast agent can enhance the proton longitudinal relaxation rate constant (R1, 1/T1), normalized to the concentration of the contrast agent. Also referred to as r1. Typically expressed in units of l/mmol/s
+    """
     ContrastLongitudinalRelaxivity = DICOMControlledTerminologyDefinitionsCode("126380")
+    """
+    The flow rate of blood perfusing a region as volume per mass per unit of time
+    """
     RegionalBloodFlow = DICOMControlledTerminologyDefinitionsCode("126390")
+    """
+    The volume of blood perfusing a region as volume per mass
+    """
     RegionalBloodVolume = DICOMControlledTerminologyDefinitionsCode("126391")
+    """
+    The percent of the oxygen removed from the blood by tissue during its passage through the capillary network. For example, as measured by blood oxygenation level dependent (BOLD) MR. See He, Xiang, and Dmitriy A. Yablonskiy. "Quantitative BOLD: Mapping of Human Cerebral Deoxygenated Blood Volume and Oxygen Extraction Fraction: Default State." Magnetic Resonance in Medicine 57, no. 1 (2007): 115-26
+    """
     OxygenExtractionFraction = DICOMControlledTerminologyDefinitionsCode("126392")
+    """
+    The longitiudinal relaxation rate constant. The inverse of longitudinal relaxation time, i.e., R1 = 1/T1
+    """
     R1 = DICOMControlledTerminologyDefinitionsCode("126393")
+    """
+    The transverse relaxation rate constant. The inverse of transverse relaxation time, i.e., R2 = 1/T2
+    """
     R2 = DICOMControlledTerminologyDefinitionsCode("126394")
+    """
+    A ratio of locally measured radioactivity concentration versus the injected radioactivity distributed evenly throughout the whole body. This general concept encompasses all specific methods of calculating the whole body volume of distribution, such as using body weight, lean body mass, body surface area, etc.
+    """
     StandardizedUptakeValue = DICOMControlledTerminologyDefinitionsCode("126400")
+    """
+    Standardized Uptake Value calculated using body weight. The patient size correction factor for males and females is body weight. Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVbw = DICOMControlledTerminologyDefinitionsCode("126401")
+    """
+    Standardized Uptake Value calculated using lean body mass. The patient size correction factor for males is 1.10 * weight - 120 * (weight/height) ^2, and for females is 1.07 * weight - 148 * (weight/height) ^2. Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVlbm = DICOMControlledTerminologyDefinitionsCode("126402")
+    """
+    Standardized Uptake Value calculated using body surface area. The patient size correction factor for males and females is weight^ 0.425 * height^0.725 * 0.007184. Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVbsa = DICOMControlledTerminologyDefinitionsCode("126403")
+    """
+    Standardized Uptake Value calculated using ideal body weight. The patient size correction factor for males is 48.0 + 1.06 * (height - 152) and for females is 45.5 + 0.91 * (height - 152). Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVibw = DICOMControlledTerminologyDefinitionsCode("126404")
+    """
+    Method of calculating Standardized Uptake Value using body weight. The patient size correction factor for males and females is body weight. Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVBodyWeightCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126410")
+    """
+    Method of calculating Standardized Uptake Value using lean body mass. The patient size correction factor for males is 1.10 * weight - 120 * (weight/height) ^2, and for females is 1.07 * weight - 148 * (weight/height) ^2. Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVLeanBodyMassCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
         "126411"
     )
+    """
+    Method of calculating Standardized Uptake Value using body surface area. The patient size correction factor for males and females is weight^ 0.425 * height^0.725 * 0.007184. Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVBodySurfaceAreaCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
         "126412"
     )
+    """
+    Method of calculating Standardized Uptake Value using ideal body weight. The patient size correction factor for males is 48.0 + 1.06 * (height - 152) and for females is 45.5 + 0.91 * (height - 152). Defined in Sugawara et al. Reevaluation of the Standardized Uptake Value for FDG: Variations with Body Weight and Methods for Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
+    """
     SUVIdealBodyWeightCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
         "126413"
     )
+    """
+    A beta-amyloid PET radiotracer that is an analog of thioflavin T
+    """
     PittsburghCompoundBC_11_ = DICOMControlledTerminologyDefinitionsCode("126500")
+    """
+    A beta-amyloid PET radiotracer
+    """
     FlorbetabenF_18_ = DICOMControlledTerminologyDefinitionsCode("126501")
+    """
+    A PHF-tau PET radiotracer
+    """
     T807F_18_ = DICOMControlledTerminologyDefinitionsCode("126502")
+    """
+    A nicotinic α4β2 receptor (nAChR) PET radiotracer
+    """
     FlubatineF_18_ = DICOMControlledTerminologyDefinitionsCode("126503")
+    """
+    A Cu 64 Monoclonal Antibody (mAb) PET Radiotracer
+    """
     MonoclonalAntibody_mAb_64_Cu = DICOMControlledTerminologyDefinitionsCode("126510")
+    """
+    A Zr 89 Monoclonal Antibody (mAb) PET Radiotracer
+    """
     MonoclonalAntibody_mAb_89_Zr = DICOMControlledTerminologyDefinitionsCode("126511")
+    """
+    A Zr 89 Trastuzumab PET Radiotracer
+    """
     Trastuzumab_89_Zr = DICOMControlledTerminologyDefinitionsCode("126512")
+    """
+    A Zr 89 Cetuximab PET Radiotracer
+    """
     Cetuximab_89_Zr = DICOMControlledTerminologyDefinitionsCode("126513")
+    """
+    A Zr 89 J591 PET Radiotracer
+    """
     J591_89_Zr = DICOMControlledTerminologyDefinitionsCode("126514")
+    """
+    A Zr 89 cU36 PET Radiotracer
+    """
     CU36_89_Zr = DICOMControlledTerminologyDefinitionsCode("126515")
+    """
+    A Zr 89 Bevacizumab PET Radiotracer
+    """
     Bevacizumab_89_Zr = DICOMControlledTerminologyDefinitionsCode("126516")
+    """
+    A Zr 89 cG250-F(ab')(2) PET Radiotracer
+    """
     CG250_F_ab_2_89_Zr = DICOMControlledTerminologyDefinitionsCode("126517")
+    """
+    A Zr 89 R1507 PET Radiotracer
+    """
     R1507_89_Zr = DICOMControlledTerminologyDefinitionsCode("126518")
+    """
+    A Zr 89 E4G10 PET Radiotracer
+    """
     E4G10_89_Zr = DICOMControlledTerminologyDefinitionsCode("126519")
+    """
+    A Zr 89 Df-CD45 PET Radiotracer
+    """
     Df_CD45_89_Zr = DICOMControlledTerminologyDefinitionsCode("126520")
+    """
+    ^44^Scandium
+    """
     _44_Scandium = DICOMControlledTerminologyDefinitionsCode("126600")
+    """
+    ^51^Manganese
+    """
     _51_Manganese = DICOMControlledTerminologyDefinitionsCode("126601")
+    """
+    ^70^Arsenic
+    """
     _70_Arsenic = DICOMControlledTerminologyDefinitionsCode("126602")
+    """
+    ^90^Niobium
+    """
     _90_Niobium = DICOMControlledTerminologyDefinitionsCode("126603")
+    """
+    ^191m^Iridium
+    """
     _191m_Iridium = DICOMControlledTerminologyDefinitionsCode("126604")
+    """
+    ^43^Scandium
+    """
     _43_Scandium = DICOMControlledTerminologyDefinitionsCode("126605")
+    """
+    ^152^Terbium
+    """
     _152_Terbium = DICOMControlledTerminologyDefinitionsCode("126606")
+    """
+    A Cu 60 ATSM PET radiotracer
+    """
     ATSMCu_60_ = DICOMControlledTerminologyDefinitionsCode("126700")
+    """
+    A Cu 61 ATSM PET radiotracer
+    """
     ATSMCu_61_ = DICOMControlledTerminologyDefinitionsCode("126701")
+    """
+    A Cu 62 ATSM PET radiotracer
+    """
     ATSMCu_62_ = DICOMControlledTerminologyDefinitionsCode("126702")
+    """
+    A C 11 Choline PET radiotracer
+    """
     CholineC_11_ = DICOMControlledTerminologyDefinitionsCode("126703")
+    """
+    A C 11 Fallypride PET radiotracer
+    """
     FallyprideC_11_ = DICOMControlledTerminologyDefinitionsCode("126704")
+    """
+    An F 18 Fallypride PET radiotracer
+    """
     FallyprideF_18_ = DICOMControlledTerminologyDefinitionsCode("126705")
+    """
+    A C 11 FLB 457 PET radiotracer
+    """
     FLB457C_11_ = DICOMControlledTerminologyDefinitionsCode("126706")
+    """
+    An F 18 Fluorotriopride PET radiotracer
+    """
     FluorotrioprideF_18_ = DICOMControlledTerminologyDefinitionsCode("126707")
+    """
+    An F 18 Fluoromisonidazole PET radiotracer
+    """
     Fluoromisonidazole_FMISO_F_18_ = DICOMControlledTerminologyDefinitionsCode("126708")
+    """
+    A C 11 Glutamine PET radiotracer
+    """
     GlutamineC_11_ = DICOMControlledTerminologyDefinitionsCode("126709")
+    """
+    A C 14 Glutamine PET radiotracer
+    """
     GlutamineC_14_ = DICOMControlledTerminologyDefinitionsCode("126710")
+    """
+    An F 18 Glutamine PET radiotracer
+    """
     GlutamineF_18_ = DICOMControlledTerminologyDefinitionsCode("126711")
+    """
+    An F 18 Flubatine PET radiotracer
+    """
     FlubatineF_18_ = DICOMControlledTerminologyDefinitionsCode("126712")
+    """
+    An F 18 2FA PET radiotracer
+    """
     _2FAF_18_ = DICOMControlledTerminologyDefinitionsCode("126713")
+    """
+    An F 18 Nifene PET radiotracer
+    """
     NifeneF_18_ = DICOMControlledTerminologyDefinitionsCode("126714")
+    """
+    An I 124 cancer targeted phospholipid ether PET radiotracer
+    """
     CLR1404I_124_ = DICOMControlledTerminologyDefinitionsCode("126715")
+    """
+    An I 131 cancer targeted phospholipid ether PET radiotracer
+    """
     CLR1404I_131_ = DICOMControlledTerminologyDefinitionsCode("126716")
+    """
+    Patient Support Continuous Angle in IEC PATIENT SUPPORT Coordinate System [IEC 61217]
+    """
     IEC6127PatientSupportContinuousAngle = DICOMControlledTerminologyDefinitionsCode(
         "126801"
     )
+    """
+    Table Top Continuous Pitch Angle in the direction of the IEC TABLE TOP Coordinate System [IEC 61217]
+    """
     IEC6127TableTopContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode(
         "126802"
     )
+    """
+    Table Top Continuous Roll Angle in the direction of the IEC TABLE TOP Coordinate System [IEC 61217]
+    """
     IEC6127TableTopContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode(
         "126803"
     )
+    """
+    Table Top Eccentric Axis Distance [IEC 61217]
+    """
     IEC6127TableTopEccentricAxisDistance = DICOMControlledTerminologyDefinitionsCode(
         "126804"
     )
+    """
+    Table Top Continuous Eccentric Angle in the direction of the IEC TABLE TOP ECCENTRIC Coordinate System [IEC 61217]
+    """
     IEC6127TableTopContinuousEccentricAngle = DICOMControlledTerminologyDefinitionsCode(
         "126805"
     )
+    """
+    Table Top Lateral Position IEC TABLE TOP Coordinate System [IEC 61217]
+    """
     IEC6127TableTopLateralPosition = DICOMControlledTerminologyDefinitionsCode("126806")
+    """
+    Table Top Longitudinal Position IEC TABLE TOP Coordinate System [IEC 61217]
+    """
     IEC6127TableTopLongitudinalPosition = DICOMControlledTerminologyDefinitionsCode(
         "126807"
     )
+    """
+    Table Top Vertical Position in IEC TABLE TOP Coordinate System [IEC 61217]
+    """
     IEC6127TableTopVerticalPosition = DICOMControlledTerminologyDefinitionsCode(
         "126808"
     )
+    """
+    Gantry Continuous Roll Angle in degrees of the radiation source, i.e., the rotation about the Y-axis of the IEC GANTRY coordinate system [IEC 61217]
+    """
     IEC6127GantryContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode(
         "126809"
     )
+    """
+    Gantry Pitch Continuous Angle in degrees of the radiation source, i.e., the rotation about the X-axis of the IEC GANTRY coordinate system [IEC 61217]
+    """
     IEC6127GantryContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode(
         "126810"
     )
+    """
+    Gantry Yaw Continuous Angle in degrees of the radiation source, i.e., about the Z-axis of the IEC GANTRY coordinate system [IEC 61217]
+    """
     IEC6127GantryContinuousYawAngle = DICOMControlledTerminologyDefinitionsCode(
         "126811"
     )

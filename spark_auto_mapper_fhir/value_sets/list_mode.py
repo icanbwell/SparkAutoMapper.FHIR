@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ListModeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/list-mode
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/list-mode"
+
 
 class ListModeCodeValues:
+    """
+    This list is the master list, maintained in an ongoing fashion with regular updates as the real world list it is tracking changes.
+    """
+
     WorkingList = ListModeCode("working")
+    """
+    This list was prepared as a snapshot. It should not be assumed to be current.
+    """
     SnapshotList = ListModeCode("snapshot")
+    """
+    A point-in-time list that shows what changes have been made or recommended.  E.g. a discharge medication list showing what was added and removed during an encounter.
+    """
     ChangeList = ListModeCode("changes")

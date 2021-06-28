@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class DocumentReferenceStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/document-reference-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/document-reference-status"
+
 
 class DocumentReferenceStatusCodeValues:
+    """
+    This is the current reference for this document.
+    """
+
     Current = DocumentReferenceStatusCode("current")
+    """
+    This reference has been superseded by another reference.
+    """
     Superseded = DocumentReferenceStatusCode("superseded")
+    """
+    This reference was created in error.
+    """
     EnteredInError = DocumentReferenceStatusCode("entered-in-error")

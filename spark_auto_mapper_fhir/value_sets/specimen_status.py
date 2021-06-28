@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class SpecimenStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/specimen-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/specimen-status"
+
 
 class SpecimenStatusCodeValues:
+    """
+    The physical specimen is present and in good condition.
+    """
+
     Available = SpecimenStatusCode("available")
+    """
+    There is no physical specimen because it is either lost, destroyed or consumed.
+    """
     Unavailable = SpecimenStatusCode("unavailable")
+    """
+    The specimen cannot be used because of a quality issue such as a broken container, contamination, or too old.
+    """
     Unsatisfactory = SpecimenStatusCode("unsatisfactory")
+    """
+    The specimen was entered in error and therefore nullified.
+    """
     EnteredInError = SpecimenStatusCode("entered-in-error")

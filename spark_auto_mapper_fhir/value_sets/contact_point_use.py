@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class ContactPointUseCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/contact-point-use
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/contact-point-use"
+
 
 class ContactPointUseCodeValues:
+    """
+    A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.
+    """
+
     Home = ContactPointUseCode("home")
+    """
+    An office contact point. First choice for business related contacts during business hours.
+    """
     Work = ContactPointUseCode("work")
+    """
+    A temporary contact point. The period can provide more detailed information.
+    """
     Temp = ContactPointUseCode("temp")
+    """
+    This contact point is no longer in use (or was never correct, but retained for records).
+    """
     Old = ContactPointUseCode("old")
+    """
+    A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.
+    """
     Mobile = ContactPointUseCode("mobile")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ExplanationOfBenefitStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/explanationofbenefit-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/explanationofbenefit-status"
+
 
 class ExplanationOfBenefitStatusCodeValues:
+    """
+    The resource instance is currently in-force.
+    """
+
     Active = ExplanationOfBenefitStatusCode("active")
+    """
+    The resource instance is withdrawn, rescinded or reversed.
+    """
     Cancelled = ExplanationOfBenefitStatusCode("cancelled")
+    """
+    A new resource instance the contents of which is not complete.
+    """
     Draft = ExplanationOfBenefitStatusCode("draft")
+    """
+    The resource instance was entered in error.
+    """
     EnteredInError = ExplanationOfBenefitStatusCode("entered-in-error")

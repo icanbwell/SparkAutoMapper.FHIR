@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # material (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for material
     # Import for CodeableConcept for material
     from spark_auto_mapper_fhir.value_sets.container_materials import (
         ContainerMaterialsCode,
@@ -23,6 +24,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.specimen_container_type import (
         SpecimenContainerTypeCode,
@@ -32,6 +34,7 @@ if TYPE_CHECKING:
     # cap (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for cap
     # Import for CodeableConcept for cap
     from spark_auto_mapper_fhir.value_sets.container_cap import ContainerCapCode
 

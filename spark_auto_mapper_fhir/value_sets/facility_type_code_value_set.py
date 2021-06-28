@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,94 +16,337 @@ class FacilityTypeCodeValueSetCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class FacilityTypeCodeValueSetCodeValues:
+    """
+    None
+    """
+
     Hospital_children_s = FacilityTypeCodeValueSetCode("82242000")
+    """
+    None
+    """
     Hospital_community = FacilityTypeCodeValueSetCode("225732001")
+    """
+    None
+    """
     Hospital_government = FacilityTypeCodeValueSetCode("79993009")
+    """
+    None
+    """
     Hospital_longTermCare = FacilityTypeCodeValueSetCode("32074000")
+    """
+    None
+    """
     Hospital_militaryField = FacilityTypeCodeValueSetCode("4322002")
+    """
+    None
+    """
     Hospital_prison = FacilityTypeCodeValueSetCode("224687002")
+    """
+    None
+    """
     Hospital_psychiatric = FacilityTypeCodeValueSetCode("62480006")
+    """
+    None
+    """
     Hospital_rehabilitation = FacilityTypeCodeValueSetCode("80522000")
+    """
+    None
+    """
     Hospital_traumaCenter = FacilityTypeCodeValueSetCode("36125001")
+    """
+    None
+    """
     Hospital_Veterans_Administration = FacilityTypeCodeValueSetCode("48311003")
+    """
+    None
+    """
     HospiceFacility = FacilityTypeCodeValueSetCode("284546000")
+    """
+    None
+    """
     NursingHome = FacilityTypeCodeValueSetCode("42665001")
+    """
+    None
+    """
     SkilledNursingFacility = FacilityTypeCodeValueSetCode("45618002")
+    """
+    None
+    """
     DialysisUnit_hospital = FacilityTypeCodeValueSetCode("418518002")
+    """
+    None
+    """
     EmergencyDepartment_hospital = FacilityTypeCodeValueSetCode("73770003")
+    """
+    None
+    """
     HospitalAmbulatorySurgeryFacility = FacilityTypeCodeValueSetCode("69362002")
+    """
+    None
+    """
     HospitalBirthingCenter = FacilityTypeCodeValueSetCode("52668009")
+    """
+    None
+    """
     HospitalOutpatientAllergyClinic = FacilityTypeCodeValueSetCode("360957003")
+    """
+    None
+    """
     HospitalOutpatientDentalClinic = FacilityTypeCodeValueSetCode("10206005")
+    """
+    None
+    """
     HospitalOutpatientDermatologyClinic = FacilityTypeCodeValueSetCode("37550003")
+    """
+    None
+    """
     HospitalOutpatientEndocrinologyClinic = FacilityTypeCodeValueSetCode("73644007")
+    """
+    None
+    """
     HospitalOutpatientFamilyMedicineClinic = FacilityTypeCodeValueSetCode("31628002")
+    """
+    None
+    """
     HospitalOutpatientGastroenterologyClinic = FacilityTypeCodeValueSetCode("58482006")
+    """
+    None
+    """
     HospitalOutpatientGeneralSurgeryClinic = FacilityTypeCodeValueSetCode("90484001")
+    """
+    None
+    """
     HospitalOutpatientGeriatricHealthCenter = FacilityTypeCodeValueSetCode("1814000")
+    """
+    None
+    """
     HospitalOutpatientGynecologyClinic = FacilityTypeCodeValueSetCode("22549003")
+    """
+    None
+    """
     HospitalOutpatientHematologyClinic = FacilityTypeCodeValueSetCode("56293002")
+    """
+    None
+    """
     HospitalOutpatientImmunologyClinic = FacilityTypeCodeValueSetCode("360966004")
+    """
+    None
+    """
     HospitalOutpatientInfectiousDiseaseClinic = FacilityTypeCodeValueSetCode("2849009")
+    """
+    None
+    """
     HospitalOutpatientMentalHealthCenter = FacilityTypeCodeValueSetCode("14866005")
+    """
+    None
+    """
     HospitalOutpatientNeurologyClinic = FacilityTypeCodeValueSetCode("38238005")
+    """
+    None
+    """
     HospitalOutpatientObstetricalClinic = FacilityTypeCodeValueSetCode("56189001")
+    """
+    None
+    """
     HospitalOutpatientOncologyClinic = FacilityTypeCodeValueSetCode("89972002")
+    """
+    None
+    """
     HospitalOutpatientOphthalmologyClinic = FacilityTypeCodeValueSetCode("78088001")
+    """
+    None
+    """
     HospitalOutpatientOrthopedicsClinic = FacilityTypeCodeValueSetCode("78001009")
+    """
+    None
+    """
     HospitalOutpatientOtorhinolaryngologyClinic = FacilityTypeCodeValueSetCode(
         "23392004"
     )
+    """
+    None
+    """
     HospitalOutpatientPainClinic = FacilityTypeCodeValueSetCode("36293008")
+    """
+    None
+    """
     HospitalOutpatientPediatricClinic = FacilityTypeCodeValueSetCode("3729002")
+    """
+    None
+    """
     HospitalOutpatientPeripheralVascularClinic = FacilityTypeCodeValueSetCode("5584006")
+    """
+    None
+    """
     HospitalOutpatientRehabilitationClinic = FacilityTypeCodeValueSetCode("37546005")
+    """
+    None
+    """
     HospitalOutpatientRespiratoryDiseaseClinic = FacilityTypeCodeValueSetCode(
         "57159002"
     )
+    """
+    None
+    """
     HospitalOutpatientRheumatologyClinic = FacilityTypeCodeValueSetCode("331006")
+    """
+    None
+    """
     HospitalOutpatientUrologyClinic = FacilityTypeCodeValueSetCode("50569004")
+    """
+    None
+    """
     HospitalRadiologyFacility = FacilityTypeCodeValueSetCode("79491001")
+    """
+    None
+    """
     Hospital_basedOutpatientClinicOrDepartment_OTHER_NOTLISTED = (
         FacilityTypeCodeValueSetCode("33022008")
     )
+    """
+    None
+    """
     Fee_for_servicePrivatePhysicians_GroupOffice = FacilityTypeCodeValueSetCode(
         "19602009"
     )
+    """
+    None
+    """
     PrivatePhysicians_GroupOffice = FacilityTypeCodeValueSetCode("39350007")
+    """
+    None
+    """
     SoloPracticePrivateOffice = FacilityTypeCodeValueSetCode("83891005")
+    """
+    None
+    """
     IndependentAmbulatoryCareProviderSite_OTHER_NOTLISTED = (
         FacilityTypeCodeValueSetCode("394759007")
     )
+    """
+    None
+    """
     AmbulatorySurgeryCenter = FacilityTypeCodeValueSetCode("405607001")
+    """
+    None
+    """
     CareOfTheElderlyDayHospital = FacilityTypeCodeValueSetCode("309900005")
+    """
+    None
+    """
     ElderlyAssessmentClinic = FacilityTypeCodeValueSetCode("275576008")
+    """
+    None
+    """
     Free_standingAmbulatorySurgeryFacility = FacilityTypeCodeValueSetCode("10531005")
+    """
+    None
+    """
     Free_standingBirthingCenter = FacilityTypeCodeValueSetCode("91154008")
+    """
+    None
+    """
     Free_standingGeriatricHealthCenter = FacilityTypeCodeValueSetCode("41844007")
+    """
+    None
+    """
     Free_standingLaboratoryFacility = FacilityTypeCodeValueSetCode("45899008")
+    """
+    None
+    """
     Free_standingMentalHealthCenter = FacilityTypeCodeValueSetCode("51563005")
+    """
+    None
+    """
     Free_standingRadiologyFacility = FacilityTypeCodeValueSetCode("1773006")
+    """
+    None
+    """
     HealthMaintenanceOrganization = FacilityTypeCodeValueSetCode("72311000")
+    """
+    None
+    """
     LocalCommunityHealthCenter = FacilityTypeCodeValueSetCode("6827000")
+    """
+    None
+    """
     PsychogeriatricDayHospital = FacilityTypeCodeValueSetCode("309898008")
+    """
+    None
+    """
     ResidentialSchoolInfirmary = FacilityTypeCodeValueSetCode("39913001")
+    """
+    None
+    """
     RuralHealthCenter = FacilityTypeCodeValueSetCode("77931003")
+    """
+    None
+    """
     SexuallyTransmittedDiseaseHealthCenter = FacilityTypeCodeValueSetCode("25681007")
+    """
+    None
+    """
     SubstanceAbuseTreatmentCenter = FacilityTypeCodeValueSetCode("20078004")
+    """
+    None
+    """
     VaccinationClinic = FacilityTypeCodeValueSetCode("46224007")
+    """
+    None
+    """
     Walk_inClinic = FacilityTypeCodeValueSetCode("81234003")
+    """
+    None
+    """
     AmbulatoryCareSite_OTHER_NOTLISTED = FacilityTypeCodeValueSetCode("35971002")
+    """
+    None
+    """
     Ambulance_basedCare = FacilityTypeCodeValueSetCode("11424001")
+    """
+    None
+    """
     ContainedCasualtySetting = FacilityTypeCodeValueSetCode("409519008")
+    """
+    None
+    """
     Helicopter_basedCare = FacilityTypeCodeValueSetCode("901005")
+    """
+    None
+    """
     HospitalShip = FacilityTypeCodeValueSetCode("2081004")
+    """
+    None
+    """
     Traveler_sAidClinic = FacilityTypeCodeValueSetCode("59374000")
+    """
+    None
+    """
     AdultDayCareCenter = FacilityTypeCodeValueSetCode("413456002")
+    """
+    None
+    """
     ChildDayCareCenter = FacilityTypeCodeValueSetCode("413817003")
+    """
+    None
+    """
     PrivateResidentialHome = FacilityTypeCodeValueSetCode("310205006")
+    """
+    None
+    """
     ResidentialInstitution = FacilityTypeCodeValueSetCode("419955002")
+    """
+    None
+    """
     SportsFacility = FacilityTypeCodeValueSetCode("272501009")
+    """
+    None
+    """
     HealthEncounterSite_NOTLISTED = FacilityTypeCodeValueSetCode("394777002")

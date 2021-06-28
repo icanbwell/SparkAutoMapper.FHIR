@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,27 +16,99 @@ class FHIRVersionCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/FHIR-version
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/FHIR-version"
+
 
 class FHIRVersionCodeValues:
+    """
+    Oldest archived version of FHIR.
+    """
+
     _0_01 = FHIRVersionCode("0.01")
+    """
+    1st Draft for Comment (Sept 2012 Ballot).
+    """
     _0_05 = FHIRVersionCode("0.05")
+    """
+    2nd Draft for Comment (January 2013 Ballot).
+    """
     _0_06 = FHIRVersionCode("0.06")
+    """
+    DSTU 1 Ballot version.
+    """
     _0_11 = FHIRVersionCode("0.11")
+    """
+    DSTU 1 Official version.
+    """
     _0_0_80 = FHIRVersionCode("0.0.80")
+    """
+    DSTU 1 Official version Technical Errata #1.
+    """
     _0_0_81 = FHIRVersionCode("0.0.81")
+    """
+    DSTU 1 Official version Technical Errata #2.
+    """
     _0_0_82 = FHIRVersionCode("0.0.82")
+    """
+    Draft For Comment (January 2015 Ballot).
+    """
     _0_4_0 = FHIRVersionCode("0.4.0")
+    """
+    DSTU 2 Ballot version (May 2015 Ballot).
+    """
     _0_5_0 = FHIRVersionCode("0.5.0")
+    """
+    DSTU 2 QA Preview + CQIF Ballot (Sep 2015).
+    """
     _1_0_0 = FHIRVersionCode("1.0.0")
+    """
+    DSTU 2 (Official version).
+    """
     _1_0_1 = FHIRVersionCode("1.0.1")
+    """
+    DSTU 2 (Official version) with 1 technical errata.
+    """
     _1_0_2 = FHIRVersionCode("1.0.2")
+    """
+    GAO Ballot + draft changes to main FHIR standard.
+    """
     _1_1_0 = FHIRVersionCode("1.1.0")
+    """
+    CQF on FHIR Ballot + Connectathon 12 (Montreal).
+    """
     _1_4_0 = FHIRVersionCode("1.4.0")
+    """
+    FHIR STU3 Ballot + Connectathon 13 (Baltimore).
+    """
     _1_6_0 = FHIRVersionCode("1.6.0")
+    """
+    FHIR STU3 Candidate + Connectathon 14 (San Antonio).
+    """
     _1_8_0 = FHIRVersionCode("1.8.0")
+    """
+    FHIR Release 3 (STU).
+    """
     _3_0_0 = FHIRVersionCode("3.0.0")
+    """
+    FHIR Release 3 (STU) with 1 technical errata.
+    """
     _3_0_1 = FHIRVersionCode("3.0.1")
+    """
+    R4 Ballot #1.
+    """
     _3_3_0 = FHIRVersionCode("3.3.0")
+    """
+    R4 Ballot #2.
+    """
     _3_5_0 = FHIRVersionCode("3.5.0")
+    """
+    FHIR Release 4 (Normative + STU).
+    """
     _4_0_0 = FHIRVersionCode("4.0.0")
+    """
+    FHIR Release 4 Technical Correction.
+    """
     _4_0_1 = FHIRVersionCode("4.0.1")

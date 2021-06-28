@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ResponseTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/response-code
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/response-code"
+
 
 class ResponseTypeCodeValues:
+    """
+    The message was accepted and processed without error.
+    """
+
     OK = ResponseTypeCode("ok")
+    """
+    Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.
+    """
     TransientError = ResponseTypeCode("transient-error")
+    """
+    The message was rejected because of a problem with the content. There is no point in re-sending without change. The response narrative SHALL describe the issue.
+    """
     FatalError = ResponseTypeCode("fatal-error")

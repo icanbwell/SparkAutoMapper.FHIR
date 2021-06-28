@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class BenefitTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/benefit-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/benefit-type"
+
 
 class BenefitTypeCodesCodeValues:
+    """
+    Maximum benefit allowable.
+    """
+
     Benefit = BenefitTypeCodesCode("benefit")
+    """
+    Cost to be incurred before benefits are applied
+    """
     Deductible = BenefitTypeCodesCode("deductible")
+    """
+    Service visit
+    """
     Visit = BenefitTypeCodesCode("visit")
+    """
+    Type of room
+    """
     Room = BenefitTypeCodesCode("room")
+    """
+    Copayment per service
+    """
     CopaymentPerService = BenefitTypeCodesCode("copay")
+    """
+    Copayment percentage per service
+    """
     CopaymentPercentPerService = BenefitTypeCodesCode("copay-percent")
+    """
+    Copayment maximum per service
+    """
     CopaymentMaximumPerService = BenefitTypeCodesCode("copay-maximum")
+    """
+    Vision Exam
+    """
     VisionExam = BenefitTypeCodesCode("vision-exam")
+    """
+    Frames and lenses
+    """
     VisionGlasses = BenefitTypeCodesCode("vision-glasses")
+    """
+    Contact Lenses
+    """
     VisionContactsCoverage = BenefitTypeCodesCode("vision-contacts")
+    """
+    Medical Primary Health Coverage
+    """
     MedicalPrimaryHealthCoverage = BenefitTypeCodesCode("medical-primarycare")
+    """
+    Pharmacy Dispense Coverage
+    """
     PharmacyDispenseCoverage = BenefitTypeCodesCode("pharmacy-dispense")

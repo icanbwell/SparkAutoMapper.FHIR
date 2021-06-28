@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class PropertyRepresentationCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/property-representation
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/property-representation"
+
 
 class PropertyRepresentationCodeValues:
+    """
+    In XML, this property is represented as an attribute not an element.
+    """
+
     XMLAttribute = PropertyRepresentationCode("xmlAttr")
+    """
+    This element is represented using the XML text attribute (primitives only).
+    """
     XMLText = PropertyRepresentationCode("xmlText")
+    """
+    The type of this element is indicated using xsi:type.
+    """
     TypeAttribute = PropertyRepresentationCode("typeAttr")
+    """
+    Use CDA narrative instead of XHTML.
+    """
     CDATextFormat = PropertyRepresentationCode("cdaText")
+    """
+    The property is represented using XHTML.
+    """
     XHTML = PropertyRepresentationCode("xhtml")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class MediaModalityCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class MediaModalityCodeValues:
+    """
+    A diagram. Often used in diagnostic reports
+    """
+
     Diagram = MediaModalityCode("diagram")
+    """
+    A digital record of a fax document
+    """
     Fax = MediaModalityCode("fax")
+    """
+    A digital scan of a document. This is reserved for when there is not enough metadata to create a document reference
+    """
     ScannedDocument = MediaModalityCode("scan")
+    """
+    A retinal image used for identification purposes
+    """
     RetinaScan = MediaModalityCode("retina")
+    """
+    A finger print scan used for identification purposes
+    """
     Fingerprint = MediaModalityCode("fingerprint")
+    """
+    An iris scan used for identification purposes
+    """
     IrisScan = MediaModalityCode("iris")
+    """
+    A palm scan used for identification purposes
+    """
     PalmScan = MediaModalityCode("palm")
+    """
+    A face scan used for identification purposes
+    """
     FaceScan = MediaModalityCode("face")

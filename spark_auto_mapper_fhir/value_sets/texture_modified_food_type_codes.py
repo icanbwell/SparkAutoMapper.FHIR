@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,19 +16,67 @@ class TextureModifiedFoodTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class TextureModifiedFoodTypeCodesCodeValues:
+    """
+    None
+    """
+
     Foods = TextureModifiedFoodTypeCodesCode("255620007")
+    """
+    None
+    """
     Meat = TextureModifiedFoodTypeCodesCode("28647000")
+    """
+    None
+    """
     Vegetables = TextureModifiedFoodTypeCodesCode("22836000")
+    """
+    None
+    """
     Fruit = TextureModifiedFoodTypeCodesCode("72511004")
+    """
+    None
+    """
     DairyFoods = TextureModifiedFoodTypeCodesCode("226760005")
+    """
+    None
+    """
     DietaryFatsAndOils = TextureModifiedFoodTypeCodesCode("226887002")
+    """
+    None
+    """
     Eggs = TextureModifiedFoodTypeCodesCode("102263004")
+    """
+    None
+    """
     FoodStarch = TextureModifiedFoodTypeCodesCode("74242007")
+    """
+    None
+    """
     FruitNutsAndSeeds = TextureModifiedFoodTypeCodesCode("227415002")
+    """
+    None
+    """
     Grain = TextureModifiedFoodTypeCodesCode("264331002")
+    """
+    None
+    """
     SauceSeasoningsAndSoups = TextureModifiedFoodTypeCodesCode("227518002")
+    """
+    None
+    """
     Seafood = TextureModifiedFoodTypeCodesCode("44027008")
+    """
+    None
+    """
     StarchyFood = TextureModifiedFoodTypeCodesCode("226529007")
+    """
+    None
+    """
     VegetablesPlusHerbsAndSpices = TextureModifiedFoodTypeCodesCode("227210005")

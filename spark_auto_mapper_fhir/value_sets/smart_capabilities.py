@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,25 +16,73 @@ class SmartCapabilitiesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/smart-capabilities
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/smart-capabilities"
+
 
 class SmartCapabilitiesCodeValues:
+    """
+    support for SMART’s EHR Launch mode.
+    """
+
     EHRLaunchMode = SmartCapabilitiesCode("launch-ehr")
+    """
+    support for SMART’s Standalone Launch mode.
+    """
     StandaloneLaunchMode = SmartCapabilitiesCode("launch-standalone")
+    """
+    support for SMART’s public client profile (no client authentication).
+    """
     PublicClientProfile = SmartCapabilitiesCode("client-public")
+    """
+    support for SMART’s confidential client profile (symmetric client secret authentication).
+    """
     ConfidentialClientProfile = SmartCapabilitiesCode("client-confidential-symmetric")
+    """
+    support for SMART’s OpenID Connect profile.
+    """
     SupportsOpenIDConnect = SmartCapabilitiesCode("sso-openid-connect")
+    """
+    support for “need patient banner” launch context (conveyed via need_patient_banner token parameter).
+    """
     Allows_NeedPatientBanner_ = SmartCapabilitiesCode("context-passthrough-banner")
+    """
+    support for “SMART style URL” launch context (conveyed via smart_style_url token parameter).
+    """
     Allows_SmartStyleStyle_ = SmartCapabilitiesCode("context-passthrough-style")
+    """
+    support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter).
+    """
     Allows_PatientLevelLaunchContext_EHR_ = SmartCapabilitiesCode("context-ehr-patient")
+    """
+    support for encounter-level launch context (requested by launch/encounter scope, conveyed via encounter token parameter).
+    """
     Allows_EncounterLevelLaunchContext_EHR_ = SmartCapabilitiesCode(
         "context-ehr-encounter"
     )
+    """
+    support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter).
+    """
     Allows_PatientLevelLaunchContext_STANDALONE_ = SmartCapabilitiesCode(
         "context-standalone-patient"
     )
+    """
+    support for encounter-level launch context (requested by launch/encounter scope, conveyed via encounter token parameter).
+    """
     Allows_EncounterLevelLaunchContext_STANDALONE_ = SmartCapabilitiesCode(
         "context-standalone-encounter"
     )
+    """
+    support for refresh tokens (requested by offline_access scope).
+    """
     SupportsRefreshToken = SmartCapabilitiesCode("permission-offline")
+    """
+    support for patient-level scopes (e.g. patient/Observation.read).
+    """
     SupportsPatientLevelScopes = SmartCapabilitiesCode("permission-patient")
+    """
+    support for user-level scopes (e.g. user/Appointment.read).
+    """
     SupportsUserLevelScopes = SmartCapabilitiesCode("permission-user")

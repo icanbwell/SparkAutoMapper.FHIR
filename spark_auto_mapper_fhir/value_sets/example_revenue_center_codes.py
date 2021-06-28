@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class ExampleRevenueCenterCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/ex-revenue-center
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-revenue-center"
+
 
 class ExampleRevenueCenterCodesCodeValues:
+    """
+    Anaesthesia.
+    """
+
     Anaesthesia = ExampleRevenueCenterCodesCode("0370")
+    """
+    Physical Therapy.
+    """
     PhysicalTherapy = ExampleRevenueCenterCodesCode("0420")
+    """
+    Physical Therapy - visit charge.
+    """
     PhysicalTherapy_ = ExampleRevenueCenterCodesCode("0421")
+    """
+    Speech-Language Pathology.
+    """
     Speech_LanguagePathology = ExampleRevenueCenterCodesCode("0440")
+    """
+    Speech-Language Pathology- visit charge
+    """
     Speech_LanguagePathology_Visit = ExampleRevenueCenterCodesCode("0441")
+    """
+    Emergency Room
+    """
     EmergencyRoom = ExampleRevenueCenterCodesCode("0450")
+    """
+    Emergency Room - EM/EMTALA
+    """
     EmergencyRoom_EM_EMTALA = ExampleRevenueCenterCodesCode("0451")
+    """
+    Emergency Room - beyond EMTALA
+    """
     EmergencyRoom_BeyondEMTALA = ExampleRevenueCenterCodesCode("0452")
+    """
+    Vision Clinic
+    """
     VisionClinic = ExampleRevenueCenterCodesCode("0010")

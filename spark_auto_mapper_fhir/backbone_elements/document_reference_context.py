@@ -21,6 +21,7 @@ if TYPE_CHECKING:
     # event (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for event
     # Import for CodeableConcept for event
     from spark_auto_mapper_fhir.value_sets.act_code import ActCode
 
@@ -31,6 +32,7 @@ if TYPE_CHECKING:
     # facilityType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for facilityType
     # Import for CodeableConcept for facilityType
     from spark_auto_mapper_fhir.value_sets.facility_type_code_value_set import (
         FacilityTypeCodeValueSetCode,
@@ -40,6 +42,7 @@ if TYPE_CHECKING:
     # practiceSetting (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for practiceSetting
     # Import for CodeableConcept for practiceSetting
     from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
         PracticeSettingCodeValueSetCode,

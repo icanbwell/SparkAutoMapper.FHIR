@@ -38,6 +38,7 @@ if TYPE_CHECKING:
     # scoring (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for scoring
     # Import for CodeableConcept for scoring
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,31 +16,115 @@ class CommonLanguages_Written_Code(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class CommonLanguages_Written_CodeValues:
+    """
+    None
+    """
+
     Arabic = CommonLanguages_Written_Code("ar")
+    """
+    None
+    """
     Bengali = CommonLanguages_Written_Code("bn")
+    """
+    None
+    """
     Czech = CommonLanguages_Written_Code("cs")
+    """
+    None
+    """
     Danish = CommonLanguages_Written_Code("da")
+    """
+    None
+    """
     German = CommonLanguages_Written_Code("de")
+    """
+    None
+    """
     Greek = CommonLanguages_Written_Code("el")
+    """
+    None
+    """
     English = CommonLanguages_Written_Code("en")
+    """
+    None
+    """
     Spanish = CommonLanguages_Written_Code("es")
+    """
+    None
+    """
     Finnish = CommonLanguages_Written_Code("fi")
+    """
+    None
+    """
     French = CommonLanguages_Written_Code("fr")
+    """
+    None
+    """
     Frysian = CommonLanguages_Written_Code("fy")
+    """
+    None
+    """
     Hindi = CommonLanguages_Written_Code("hi")
+    """
+    None
+    """
     Croatian = CommonLanguages_Written_Code("hr")
+    """
+    None
+    """
     Italian = CommonLanguages_Written_Code("it")
+    """
+    None
+    """
     Japanese = CommonLanguages_Written_Code("ja")
+    """
+    None
+    """
     Korean = CommonLanguages_Written_Code("ko")
+    """
+    None
+    """
     Dutch = CommonLanguages_Written_Code("nl")
+    """
+    None
+    """
     Norwegian = CommonLanguages_Written_Code("no")
+    """
+    None
+    """
     Punjabi = CommonLanguages_Written_Code("pa")
+    """
+    None
+    """
     Polish = CommonLanguages_Written_Code("pl")
+    """
+    None
+    """
     Portuguese = CommonLanguages_Written_Code("pt")
+    """
+    None
+    """
     Russian = CommonLanguages_Written_Code("ru")
+    """
+    None
+    """
     Serbian = CommonLanguages_Written_Code("sr")
+    """
+    None
+    """
     Swedish = CommonLanguages_Written_Code("sv")
+    """
+    None
+    """
     Telegu = CommonLanguages_Written_Code("te")
+    """
+    None
+    """
     Chinese = CommonLanguages_Written_Code("zh")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class ConsentProvisionTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/consent-provision-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/consent-provision-type"
+
 
 class ConsentProvisionTypeCodeValues:
+    """
+    Consent is denied for actions meeting these rules.
+    """
+
     OptOut = ConsentProvisionTypeCode("deny")
+    """
+    Consent is provided for actions meeting these rules.
+    """
     OptIn = ConsentProvisionTypeCode("permit")

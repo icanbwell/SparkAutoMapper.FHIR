@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.document_section_codes import (
         DocumentSectionCodesCode,
@@ -49,6 +50,7 @@ if TYPE_CHECKING:
     # orderedBy (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for orderedBy
     # Import for CodeableConcept for orderedBy
     from spark_auto_mapper_fhir.value_sets.list_order_codes import ListOrderCodesCode
 
@@ -62,6 +64,7 @@ if TYPE_CHECKING:
     # emptyReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for emptyReason
     # Import for CodeableConcept for emptyReason
     from spark_auto_mapper_fhir.value_sets.list_empty_reasons import (
         ListEmptyReasonsCode,

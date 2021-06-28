@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class SubscriberRelationshipCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/subscriber-relationship
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/subscriber-relationship"
+
 
 class SubscriberRelationshipCodesCodeValues:
+    """
+    The Beneficiary is a child of the Subscriber
+    """
+
     Child = SubscriberRelationshipCodesCode("child")
+    """
+    The Beneficiary is a parent of the Subscriber
+    """
     Parent = SubscriberRelationshipCodesCode("parent")
+    """
+    The Beneficiary is a spouse or equivalent of the Subscriber
+    """
     Spouse = SubscriberRelationshipCodesCode("spouse")
+    """
+    The Beneficiary is a common law spouse or equivalent of the Subscriber
+    """
     CommonLawSpouse = SubscriberRelationshipCodesCode("common")
+    """
+    The Beneficiary has some other relationship the Subscriber
+    """
     Other = SubscriberRelationshipCodesCode("other")
+    """
+    The Beneficiary is the Subscriber
+    """
     Self = SubscriberRelationshipCodesCode("self")
+    """
+    The Beneficiary is covered under insurance of the subscriber due to an injury.
+    """
     InjuredParty = SubscriberRelationshipCodesCode("injured")

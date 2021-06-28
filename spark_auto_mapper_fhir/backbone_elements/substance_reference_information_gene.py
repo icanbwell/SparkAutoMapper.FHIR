@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # geneSequenceOrigin (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for geneSequenceOrigin
     # Import for CodeableConcept for geneSequenceOrigin
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -20,6 +21,7 @@ if TYPE_CHECKING:
     # gene (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for gene
     # Import for CodeableConcept for gene
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

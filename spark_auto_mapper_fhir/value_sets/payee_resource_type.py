@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class PayeeResourceTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/resource-type-link
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/resource-type-link"
+
 
 class PayeeResourceTypeCodeValues:
+    """
+    Organization resource.
+    """
+
     Organization = PayeeResourceTypeCode("organization")
+    """
+    Patient resource.
+    """
     Patient = PayeeResourceTypeCode("patient")
+    """
+    Practitioner resource.
+    """
     Practitioner = PayeeResourceTypeCode("practitioner")
+    """
+    RelatedPerson resource.
+    """
     RelatedPerson = PayeeResourceTypeCode("relatedperson")

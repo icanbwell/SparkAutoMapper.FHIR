@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.participation_role_type import (
         ParticipationRoleTypeCode,
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for role
     # Import for CodeableConcept for role
     from spark_auto_mapper_fhir.value_sets.security_role_type import (
         SecurityRoleTypeCode,
@@ -56,6 +58,7 @@ if TYPE_CHECKING:
     # media (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for media
     # Import for CodeableConcept for media
     from spark_auto_mapper_fhir.value_sets.media_type_code import MediaTypeCodeCode
 
@@ -68,6 +71,7 @@ if TYPE_CHECKING:
     # purposeOfUse (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for purposeOfUse
     # Import for CodeableConcept for purposeOfUse
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
 

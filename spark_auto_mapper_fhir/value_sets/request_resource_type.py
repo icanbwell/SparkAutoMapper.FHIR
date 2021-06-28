@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,20 +16,71 @@ class RequestResourceTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/request-resource-types
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/request-resource-types"
+
 
 class RequestResourceTypeCodeValues:
+    """
+    A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
+    """
+
     Appointment = RequestResourceTypeCode("Appointment")
+    """
+    A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
+    """
     AppointmentResponse = RequestResourceTypeCode("AppointmentResponse")
+    """
+    Healthcare plan for patient or group.
+    """
     CarePlan = RequestResourceTypeCode("CarePlan")
+    """
+    Claim, Pre-determination or Pre-authorization.
+    """
     Claim = RequestResourceTypeCode("Claim")
+    """
+    A request for information to be sent to a receiver.
+    """
     CommunicationRequest = RequestResourceTypeCode("CommunicationRequest")
+    """
+    Legal Agreement.
+    """
     Contract = RequestResourceTypeCode("Contract")
+    """
+    Medical device request.
+    """
     DeviceRequest = RequestResourceTypeCode("DeviceRequest")
+    """
+    Enrollment request.
+    """
     EnrollmentRequest = RequestResourceTypeCode("EnrollmentRequest")
+    """
+    Guidance or advice relating to an immunization.
+    """
     ImmunizationRecommendation = RequestResourceTypeCode("ImmunizationRecommendation")
+    """
+    Ordering of medication for patient or group.
+    """
     MedicationRequest = RequestResourceTypeCode("MedicationRequest")
+    """
+    Diet, formula or nutritional supplement request.
+    """
     NutritionOrder = RequestResourceTypeCode("NutritionOrder")
+    """
+    A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
+    """
     ServiceRequest = RequestResourceTypeCode("ServiceRequest")
+    """
+    Request for a medication, substance or device.
+    """
     SupplyRequest = RequestResourceTypeCode("SupplyRequest")
+    """
+    A task to be performed.
+    """
     Task = RequestResourceTypeCode("Task")
+    """
+    Prescription for vision correction products for a patient.
+    """
     VisionPrescription = RequestResourceTypeCode("VisionPrescription")

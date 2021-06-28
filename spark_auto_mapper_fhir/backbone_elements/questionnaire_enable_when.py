@@ -37,6 +37,7 @@ if TYPE_CHECKING:
     # answerCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for answerCoding
     # Import for CodeableConcept for answerCoding
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class AllergyIntoleranceCriticalityCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"
+
 
 class AllergyIntoleranceCriticalityCodeValues:
+    """
+    Worst case result of a future exposure is not assessed to be life-threatening or having high potential for organ system failure.
+    """
+
     LowRisk = AllergyIntoleranceCriticalityCode("low")
+    """
+    Worst case result of a future exposure is assessed to be life-threatening or having high potential for organ system failure.
+    """
     HighRisk = AllergyIntoleranceCriticalityCode("high")
+    """
+    Unable to assess the worst case result of a future exposure.
+    """
     UnableToAssessRisk = AllergyIntoleranceCriticalityCode("unable-to-assess")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,18 +16,63 @@ class MaritalStatusCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class MaritalStatusCodesCodeValues:
+    """
+    Marriage contract has been declared null and to not have existed
+    """
+
     Annulled = MaritalStatusCodesCode("A")
+    """
+    Marriage contract has been declared dissolved and inactive
+    """
     Divorced = MaritalStatusCodesCode("D")
+    """
+    Subject to an Interlocutory Decree.
+    """
     Interlocutory = MaritalStatusCodesCode("I")
+    """
+    Legally Separated
+    """
     LegallySeparated = MaritalStatusCodesCode("L")
+    """
+    A current marriage contract is active
+    """
     Married = MaritalStatusCodesCode("M")
+    """
+    More than 1 current spouse
+    """
     Polygamous = MaritalStatusCodesCode("P")
+    """
+    No marriage contract has ever been entered
+    """
     NeverMarried = MaritalStatusCodesCode("S")
+    """
+    Person declares that a domestic partner relationship exists.
+    """
     DomesticPartner = MaritalStatusCodesCode("T")
+    """
+    Currently not in a marriage contract.
+    """
     Unmarried = MaritalStatusCodesCode("U")
+    """
+    The spouse has died
+    """
     Widowed = MaritalStatusCodesCode("W")
+    """
+    Description:The value is exceptional (missing, omitted, incomplete, improper). No information as to the reason for being an exceptional value is provided. This is the most general exceptional value. It is also the default exceptional value.
+    """
     Noinformation = MaritalStatusCodesCode("NI")
+    """
+    Value is not present in a message.  This is only defined in messages, never in application data!  All values not present in the message must be replaced by the applicable default, or no-information (NI) as the default of all defaults.
+    """
     NotPresent = MaritalStatusCodesCode("NP")
+    """
+    None
+    """
     UNK = MaritalStatusCodesCode("UNK")

@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     # chromosome (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for chromosome
     # Import for CodeableConcept for chromosome
     from spark_auto_mapper_fhir.value_sets.chromosome_human import Chromosome_humanCode
 
@@ -26,6 +27,7 @@ if TYPE_CHECKING:
     # referenceSeqId (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for referenceSeqId
     # Import for CodeableConcept for referenceSeqId
     from spark_auto_mapper_fhir.value_sets.ensembl import ENSEMBLCode
 

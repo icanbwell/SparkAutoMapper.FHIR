@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class TestReportStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/report-status-codes
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/report-status-codes"
+
 
 class TestReportStatusCodeValues:
+    """
+    All test operations have completed.
+    """
+
     Completed = TestReportStatusCode("completed")
+    """
+    A test operations is currently executing.
+    """
     InProgress = TestReportStatusCode("in-progress")
+    """
+    A test operation is waiting for an external client request.
+    """
     Waiting = TestReportStatusCode("waiting")
+    """
+    The test script execution was manually stopped.
+    """
     Stopped = TestReportStatusCode("stopped")
+    """
+    This test report was entered or created in error.
+    """
     EnteredInError = TestReportStatusCode("entered-in-error")

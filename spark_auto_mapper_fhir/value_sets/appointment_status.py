@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,52 @@ class AppointmentStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/appointmentstatus
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/appointmentstatus"
+
 
 class AppointmentStatusCodeValues:
+    """
+    None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.
+    """
+
     Proposed = AppointmentStatusCode("proposed")
+    """
+    Some or all of the participant(s) have not finalized their acceptance of the appointment request.
+    """
     Pending = AppointmentStatusCode("pending")
+    """
+    All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.
+    """
     Booked = AppointmentStatusCode("booked")
+    """
+    The patient/patients has/have arrived and is/are waiting to be seen.
+    """
     Arrived = AppointmentStatusCode("arrived")
+    """
+    The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.
+    """
     Fulfilled = AppointmentStatusCode("fulfilled")
+    """
+    The appointment has been cancelled.
+    """
     Cancelled = AppointmentStatusCode("cancelled")
+    """
+    Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).
+    """
     NoShow = AppointmentStatusCode("noshow")
+    """
+    This instance should not have been part of this patient's medical record.
+    """
     EnteredInError = AppointmentStatusCode("entered-in-error")
+    """
+    When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).
+    """
     CheckedIn = AppointmentStatusCode("checked-in")
+    """
+    The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.
+A specific time might or might not be pre-allocated.
+    """
     Waitlisted = AppointmentStatusCode("waitlist")

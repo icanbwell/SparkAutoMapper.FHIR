@@ -26,6 +26,7 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.procedure_codes_snomedct_ import (
         ProcedureCodes_SNOMEDCT_Code,
@@ -35,6 +36,7 @@ if TYPE_CHECKING:
     # reasonCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for reasonCode
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
         SNOMEDCTClinicalFindingsCode,
@@ -64,6 +66,7 @@ if TYPE_CHECKING:
     # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for statusReason
     # Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -105,6 +108,7 @@ if TYPE_CHECKING:
     # productCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for productCodeableConcept
     # Import for CodeableConcept for productCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

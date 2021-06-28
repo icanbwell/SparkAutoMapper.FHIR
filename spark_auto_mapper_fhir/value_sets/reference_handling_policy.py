@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class ReferenceHandlingPolicyCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/reference-handling-policy
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/reference-handling-policy"
+
 
 class ReferenceHandlingPolicyCodeValues:
+    """
+    The server supports and populates Literal references (i.e. using Reference.reference) where they are known (this code does not guarantee that all references are literal; see 'enforced').
+    """
+
     LiteralReferences = ReferenceHandlingPolicyCode("literal")
+    """
+    The server allows logical references (i.e. using Reference.identifier).
+    """
     LogicalReferences = ReferenceHandlingPolicyCode("logical")
+    """
+    The server will attempt to resolve logical references to literal references - i.e. converting Reference.identifier to Reference.reference (if resolution fails, the server may still accept resources; see logical).
+    """
     ResolvesReferences = ReferenceHandlingPolicyCode("resolves")
+    """
+    The server enforces that references have integrity - e.g. it ensures that references can always be resolved. This is typically the case for clinical record systems, but often not the case for middleware/proxy systems.
+    """
     ReferenceIntegrityEnforced = ReferenceHandlingPolicyCode("enforced")
+    """
+    The server does not support references that point to other servers.
+    """
     LocalReferencesOnly = ReferenceHandlingPolicyCode("local")

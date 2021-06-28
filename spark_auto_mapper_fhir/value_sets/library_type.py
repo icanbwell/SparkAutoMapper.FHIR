@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class LibraryTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/library-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/library-type"
+
 
 class LibraryTypeCodeValues:
+    """
+    The resource is a shareable library of formalized knowledge.
+    """
+
     LogicLibrary = LibraryTypeCode("logic-library")
+    """
+    The resource is a definition of an information model.
+    """
     ModelDefinition = LibraryTypeCode("model-definition")
+    """
+    The resource is a collection of knowledge assets.
+    """
     AssetCollection = LibraryTypeCode("asset-collection")
+    """
+    The resource defines the dependencies, parameters, and data requirements for a particular module or evaluation context.
+    """
     ModuleDefinition = LibraryTypeCode("module-definition")

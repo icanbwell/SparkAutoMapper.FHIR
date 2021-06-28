@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ConsentScopeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/consent-scope
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/consent-scope"
+
 
 class ConsentScopeCodesCodeValues:
+    """
+    Actions to be taken if they are no longer able to make decisions for themselves
+    """
+
     AdvancedCareDirective = ConsentScopeCodesCode("adr")
+    """
+    Consent to participate in research protocol and information sharing required
+    """
     Research = ConsentScopeCodesCode("research")
+    """
+    Agreement to collect, access, use or disclose (share) information
+    """
     PrivacyConsent = ConsentScopeCodesCode("patient-privacy")
+    """
+    Consent to undergo a specific treatment
+    """
     Treatment = ConsentScopeCodesCode("treatment")

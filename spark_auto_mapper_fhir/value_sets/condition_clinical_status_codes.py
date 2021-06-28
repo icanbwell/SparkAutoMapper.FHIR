@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class ConditionClinicalStatusCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/condition-clinical
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-clinical"
+
 
 class ConditionClinicalStatusCodesCodeValues:
+    """
+    The subject is currently experiencing the symptoms of the condition or there is evidence of the condition.
+    """
+
     Active = ConditionClinicalStatusCodesCode("active")
+    """
+    The subject is no longer experiencing the symptoms of the condition or there is no longer evidence of the condition.
+    """
     Inactive = ConditionClinicalStatusCodesCode("inactive")

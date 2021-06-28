@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # substanceCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for substanceCodeableConcept
     # Import for CodeableConcept for substanceCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

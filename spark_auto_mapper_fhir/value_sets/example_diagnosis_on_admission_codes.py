@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ExampleDiagnosisOnAdmissionCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission"
+
 
 class ExampleDiagnosisOnAdmissionCodesCodeValues:
+    """
+    Diagnosis was present at time of inpatient admission.
+    """
+
     Yes = ExampleDiagnosisOnAdmissionCodesCode("y")
+    """
+    Diagnosis was not present at time of inpatient admission.
+    """
     No = ExampleDiagnosisOnAdmissionCodesCode("n")
+    """
+    Documentation insufficient to determine if condition was present at the time of inpatient admission.
+    """
     Unknown = ExampleDiagnosisOnAdmissionCodesCode("u")
+    """
+    Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of inpatient admission.
+    """
     Undetermined = ExampleDiagnosisOnAdmissionCodesCode("w")

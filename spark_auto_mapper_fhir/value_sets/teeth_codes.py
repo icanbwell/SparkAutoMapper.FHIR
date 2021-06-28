@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,37 +16,139 @@ class TeethCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/teeth
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/teeth"
+
 
 class TeethCodesCodeValues:
+    """
+    Upper Right Tooth 1 from the central axis, permanent dentition.
+    """
+
     _11 = TeethCodesCode("11")
+    """
+    Upper Right Tooth 2 from the central axis, permanent dentition.
+    """
     _12 = TeethCodesCode("12")
+    """
+    Upper Right Tooth 3 from the central axis, permanent dentition.
+    """
     _13 = TeethCodesCode("13")
+    """
+    Upper Right Tooth 4 from the central axis, permanent dentition.
+    """
     _14 = TeethCodesCode("14")
+    """
+    Upper Right Tooth 5 from the central axis, permanent dentition.
+    """
     _15 = TeethCodesCode("15")
+    """
+    Upper Right Tooth 6 from the central axis, permanent dentition.
+    """
     _16 = TeethCodesCode("16")
+    """
+    Upper Right Tooth 7 from the central axis, permanent dentition.
+    """
     _17 = TeethCodesCode("17")
+    """
+    Upper Right Tooth 8 from the central axis, permanent dentition.
+    """
     _18 = TeethCodesCode("18")
+    """
+    Upper Left Tooth 1 from the central axis, permanent dentition.
+    """
     _21 = TeethCodesCode("21")
+    """
+    Upper Left Tooth 2 from the central axis, permanent dentition.
+    """
     _22 = TeethCodesCode("22")
+    """
+    Upper Left Tooth 3 from the central axis, permanent dentition.
+    """
     _23 = TeethCodesCode("23")
+    """
+    Upper Left Tooth 4 from the central axis, permanent dentition.
+    """
     _24 = TeethCodesCode("24")
+    """
+    Upper Left Tooth 5 from the central axis, permanent dentition.
+    """
     _25 = TeethCodesCode("25")
+    """
+    Upper Left Tooth 6 from the central axis, permanent dentition.
+    """
     _26 = TeethCodesCode("26")
+    """
+    Upper Left Tooth 7 from the central axis, permanent dentition.
+    """
     _27 = TeethCodesCode("27")
+    """
+    Upper Left Tooth 8 from the central axis, permanent dentition.
+    """
     _28 = TeethCodesCode("28")
+    """
+    Lower Left Tooth 1 from the central axis, permanent dentition.
+    """
     _31 = TeethCodesCode("31")
+    """
+    Lower Left Tooth 2 from the central axis, permanent dentition.
+    """
     _32 = TeethCodesCode("32")
+    """
+    Lower Left Tooth 3 from the central axis, permanent dentition.
+    """
     _33 = TeethCodesCode("33")
+    """
+    Lower Left Tooth 4 from the central axis, permanent dentition.
+    """
     _34 = TeethCodesCode("34")
+    """
+    Lower Left Tooth 5 from the central axis, permanent dentition.
+    """
     _35 = TeethCodesCode("35")
+    """
+    Lower Left Tooth 6 from the central axis, permanent dentition.
+    """
     _36 = TeethCodesCode("36")
+    """
+    Lower Left Tooth 7 from the central axis, permanent dentition.
+    """
     _37 = TeethCodesCode("37")
+    """
+    Lower Left Tooth 8 from the central axis, permanent dentition.
+    """
     _38 = TeethCodesCode("38")
+    """
+    Lower Right Tooth 1 from the central axis, permanent dentition.
+    """
     _41 = TeethCodesCode("41")
+    """
+    Lower Right Tooth 2 from the central axis, permanent dentition.
+    """
     _42 = TeethCodesCode("42")
+    """
+    Lower Right Tooth 3 from the central axis, permanent dentition.
+    """
     _43 = TeethCodesCode("43")
+    """
+    Lower Right Tooth 4 from the central axis, permanent dentition.
+    """
     _44 = TeethCodesCode("44")
+    """
+    Lower Right Tooth 5 from the central axis, permanent dentition.
+    """
     _45 = TeethCodesCode("45")
+    """
+    Lower Right Tooth 6 from the central axis, permanent dentition.
+    """
     _46 = TeethCodesCode("46")
+    """
+    Lower Right Tooth 7 from the central axis, permanent dentition.
+    """
     _47 = TeethCodesCode("47")
+    """
+    Lower Right Tooth 8 from the central axis, permanent dentition.
+    """
     _48 = TeethCodesCode("48")

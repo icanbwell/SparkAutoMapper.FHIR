@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class ImmunizationEvaluationTargetDiseaseCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ImmunizationEvaluationTargetDiseaseCodesCodeValues:
+    """
+    None
+    """
+
     _1857005 = ImmunizationEvaluationTargetDiseaseCodesCode("1857005")
+    """
+    None
+    """
     _397430003 = ImmunizationEvaluationTargetDiseaseCodesCode("397430003")
+    """
+    None
+    """
     _14189004 = ImmunizationEvaluationTargetDiseaseCodesCode("14189004")
+    """
+    None
+    """
     _36989005 = ImmunizationEvaluationTargetDiseaseCodesCode("36989005")
+    """
+    None
+    """
     _36653000 = ImmunizationEvaluationTargetDiseaseCodesCode("36653000")
+    """
+    None
+    """
     _76902006 = ImmunizationEvaluationTargetDiseaseCodesCode("76902006")
+    """
+    None
+    """
     _709410003 = ImmunizationEvaluationTargetDiseaseCodesCode("709410003")
+    """
+    None
+    """
     _27836007 = ImmunizationEvaluationTargetDiseaseCodesCode("27836007")
+    """
+    None
+    """
     _398102009 = ImmunizationEvaluationTargetDiseaseCodesCode("398102009")

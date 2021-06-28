@@ -29,6 +29,7 @@ if TYPE_CHECKING:
     # code (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.loinc_codes import LOINCCodesCode
 
@@ -160,6 +161,7 @@ if TYPE_CHECKING:
     # defaultValueCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for defaultValueCodeableConcept
     # Import for CodeableConcept for defaultValueCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -167,6 +169,7 @@ if TYPE_CHECKING:
     # defaultValueCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for defaultValueCoding
     # Import for CodeableConcept for defaultValueCoding
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -315,6 +318,7 @@ if TYPE_CHECKING:
     # fixedCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for fixedCodeableConcept
     # Import for CodeableConcept for fixedCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -322,6 +326,7 @@ if TYPE_CHECKING:
     # fixedCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for fixedCoding
     # Import for CodeableConcept for fixedCoding
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -470,6 +475,7 @@ if TYPE_CHECKING:
     # patternCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for patternCodeableConcept
     # Import for CodeableConcept for patternCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -477,6 +483,7 @@ if TYPE_CHECKING:
     # patternCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for patternCoding
     # Import for CodeableConcept for patternCoding
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

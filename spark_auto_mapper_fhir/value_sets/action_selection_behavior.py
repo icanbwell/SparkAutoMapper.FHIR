@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class ActionSelectionBehaviorCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/action-selection-behavior
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-selection-behavior"
+
 
 class ActionSelectionBehaviorCodeValues:
+    """
+    Any number of the actions in the group may be chosen, from zero to all.
+    """
+
     Any = ActionSelectionBehaviorCode("any")
+    """
+    All the actions in the group must be selected as a single unit.
+    """
     All = ActionSelectionBehaviorCode("all")
+    """
+    All the actions in the group are meant to be chosen as a single unit: either all must be selected by the end user, or none may be selected.
+    """
     AllOrNone = ActionSelectionBehaviorCode("all-or-none")
+    """
+    The end user must choose one and only one of the selectable actions in the group. The user SHALL NOT choose none of the actions in the group.
+    """
     ExactlyOne = ActionSelectionBehaviorCode("exactly-one")
+    """
+    The end user may choose zero or at most one of the actions in the group.
+    """
     AtMostOne = ActionSelectionBehaviorCode("at-most-one")
+    """
+    The end user must choose a minimum of one, and as many additional as desired.
+    """
     OneOrMore = ActionSelectionBehaviorCode("one-or-more")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class MedicationStatusCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medication-statement-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medication-statement-status"
+
 
 class MedicationStatusCodesCodeValues:
+    """
+    The medication is still being taken.
+    """
+
     Active = MedicationStatusCodesCode("active")
+    """
+    The medication is no longer being taken.
+    """
     Completed = MedicationStatusCodesCode("completed")
+    """
+    Some of the actions that are implied by the medication statement may have occurred.  For example, the patient may have taken some of the medication.  Clinical decision support systems should take this status into account.
+    """
     EnteredInError = MedicationStatusCodesCode("entered-in-error")
+    """
+    The medication may be taken at some time in the future.
+    """
     Intended = MedicationStatusCodesCode("intended")
+    """
+    Actions implied by the statement have been permanently halted, before all of them occurred. This should not be used if the statement was entered in error.
+    """
     Stopped = MedicationStatusCodesCode("stopped")
+    """
+    Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
+    """
     OnHold = MedicationStatusCodesCode("on-hold")
+    """
+    The state of the medication use is not currently known.
+    """
     Unknown = MedicationStatusCodesCode("unknown")
+    """
+    The medication was not consumed by the patient
+    """
     NotTaken = MedicationStatusCodesCode("not-taken")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class ObservationDataTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/permitted-data-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/permitted-data-type"
+
 
 class ObservationDataTypeCodeValues:
+    """
+    A measured amount.
+    """
+
     Quantity = ObservationDataTypeCode("Quantity")
+    """
+    A coded concept from a reference terminology and/or text.
+    """
     CodeableConcept = ObservationDataTypeCode("CodeableConcept")
+    """
+    A sequence of Unicode characters.
+    """
     String = ObservationDataTypeCode("string")
+    """
+    true or false.
+    """
     Boolean = ObservationDataTypeCode("boolean")
+    """
+    A signed integer.
+    """
     Integer = ObservationDataTypeCode("integer")
+    """
+    A set of values bounded by low and high.
+    """
     Range = ObservationDataTypeCode("Range")
+    """
+    A ratio of two Quantity values - a numerator and a denominator.
+    """
     Ratio = ObservationDataTypeCode("Ratio")
+    """
+    A series of measurements taken by a device.
+    """
     SampledData = ObservationDataTypeCode("SampledData")
+    """
+    A time during the day, in the format hh:mm:ss.
+    """
     Time = ObservationDataTypeCode("time")
+    """
+    A date, date-time or partial date (e.g. just year or year + month) as used in human communication.
+    """
     DateTime = ObservationDataTypeCode("dateTime")
+    """
+    A time range defined by start and end date/time.
+    """
     Period = ObservationDataTypeCode("Period")

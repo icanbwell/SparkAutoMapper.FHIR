@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class ActionRelationshipTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/action-relationship-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-relationship-type"
+
 
 class ActionRelationshipTypeCodeValues:
+    """
+    The action must be performed before the start of the related action.
+    """
+
     BeforeStart = ActionRelationshipTypeCode("before-start")
+    """
+    The action must be performed before the related action.
+    """
     Before = ActionRelationshipTypeCode("before")
+    """
+    The action must be performed before the end of the related action.
+    """
     BeforeEnd = ActionRelationshipTypeCode("before-end")
+    """
+    The action must be performed concurrent with the start of the related action.
+    """
     ConcurrentWithStart = ActionRelationshipTypeCode("concurrent-with-start")
+    """
+    The action must be performed concurrent with the related action.
+    """
     Concurrent = ActionRelationshipTypeCode("concurrent")
+    """
+    The action must be performed concurrent with the end of the related action.
+    """
     ConcurrentWithEnd = ActionRelationshipTypeCode("concurrent-with-end")
+    """
+    The action must be performed after the start of the related action.
+    """
     AfterStart = ActionRelationshipTypeCode("after-start")
+    """
+    The action must be performed after the related action.
+    """
     After = ActionRelationshipTypeCode("after")
+    """
+    The action must be performed after the end of the related action.
+    """
     AfterEnd = ActionRelationshipTypeCode("after-end")

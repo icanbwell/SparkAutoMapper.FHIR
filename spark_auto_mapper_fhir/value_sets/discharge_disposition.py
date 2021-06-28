@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class DischargeDispositionCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-discharge-disposition"
+
 
 class DischargeDispositionCodeValues:
+    """
+    The patient was dicharged and has indicated that they are going to return home afterwards.
+    """
+
     Home = DischargeDispositionCode("home")
+    """
+    The patient was discharged and has indicated that they are going to return home afterwards, but not the patient's home - e.g. a family member's home.
+    """
     AlternativeHome = DischargeDispositionCode("alt-home")
+    """
+    The patient was transferred to another healthcare facility.
+    """
     OtherHealthcareFacility = DischargeDispositionCode("other-hcf")
+    """
+    The patient has been discharged into palliative care.
+    """
     Hospice = DischargeDispositionCode("hosp")
+    """
+    The patient has been discharged into long-term care where is likely to be monitored through an ongoing episode-of-care.
+    """
     Long_termCare = DischargeDispositionCode("long")
+    """
+    The patient self discharged against medical advice.
+    """
     LeftAgainstAdvice = DischargeDispositionCode("aadvice")
+    """
+    The patient has deceased during this encounter.
+    """
     Expired = DischargeDispositionCode("exp")
+    """
+    The patient has been transferred to a psychiatric facility.
+    """
     PsychiatricHospital = DischargeDispositionCode("psy")
+    """
+    The patient was discharged and is to receive post acute care rehabilitation services.
+    """
     Rehabilitation = DischargeDispositionCode("rehab")
+    """
+    The patient has been discharged to a skilled nursing facility for the patient to receive additional care.
+    """
     SkilledNursingFacility = DischargeDispositionCode("snf")
+    """
+    The discharge disposition has not otherwise defined.
+    """
     Other = DischargeDispositionCode("oth")

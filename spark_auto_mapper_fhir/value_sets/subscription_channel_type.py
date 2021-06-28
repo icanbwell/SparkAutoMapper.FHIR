@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class SubscriptionChannelTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/subscription-channel-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/subscription-channel-type"
+
 
 class SubscriptionChannelTypeCodeValues:
+    """
+    The channel is executed by making a post to the URI. If a payload is included, the URL is interpreted as the service base, and an update (PUT) is made.
+    """
+
     RestHook = SubscriptionChannelTypeCode("rest-hook")
+    """
+    The channel is executed by sending a packet across a web socket connection maintained by the client. The URL identifies the websocket, and the client binds to this URL.
+    """
     Websocket = SubscriptionChannelTypeCode("websocket")
+    """
+    The channel is executed by sending an email to the email addressed in the URI (which must be a mailto:).
+    """
     Email = SubscriptionChannelTypeCode("email")
+    """
+    The channel is executed by sending an SMS message to the phone number identified in the URL (tel:).
+    """
     SMS = SubscriptionChannelTypeCode("sms")
+    """
+    The channel is executed by sending a message (e.g. a Bundle with a MessageHeader resource etc.) to the application identified in the URI.
+    """
     Message = SubscriptionChannelTypeCode("message")

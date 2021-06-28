@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class CompositionAttestationModeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/composition-attestation-mode
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/composition-attestation-mode"
+
 
 class CompositionAttestationModeCodeValues:
+    """
+    The person authenticated the content in their personal capacity.
+    """
+
     Personal = CompositionAttestationModeCode("personal")
+    """
+    The person authenticated the content in their professional capacity.
+    """
     Professional = CompositionAttestationModeCode("professional")
+    """
+    The person authenticated the content and accepted legal responsibility for its content.
+    """
     Legal = CompositionAttestationModeCode("legal")
+    """
+    The organization authenticated the content as consistent with their policies and procedures.
+    """
     Official = CompositionAttestationModeCode("official")

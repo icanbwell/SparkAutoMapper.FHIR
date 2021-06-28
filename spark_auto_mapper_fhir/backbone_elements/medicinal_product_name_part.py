@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # type_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

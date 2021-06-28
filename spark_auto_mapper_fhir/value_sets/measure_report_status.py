@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class MeasureReportStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/measure-report-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/measure-report-status"
+
 
 class MeasureReportStatusCodeValues:
+    """
+    The report is complete and ready for use.
+    """
+
     Complete = MeasureReportStatusCode("complete")
+    """
+    The report is currently being generated.
+    """
     Pending = MeasureReportStatusCode("pending")
+    """
+    An error occurred attempting to generate the report.
+    """
     Error = MeasureReportStatusCode("error")

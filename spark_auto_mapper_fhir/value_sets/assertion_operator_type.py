@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class AssertionOperatorTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/assert-operator-codes
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/assert-operator-codes"
+
 
 class AssertionOperatorTypeCodeValues:
+    """
+    Default value. Equals comparison.
+    """
+
     Equals = AssertionOperatorTypeCode("equals")
+    """
+    Not equals comparison.
+    """
     NotEquals = AssertionOperatorTypeCode("notEquals")
+    """
+    Compare value within a known set of values.
+    """
     In = AssertionOperatorTypeCode("in")
+    """
+    Compare value not within a known set of values.
+    """
     NotIn = AssertionOperatorTypeCode("notIn")
+    """
+    Compare value to be greater than a known value.
+    """
     GreaterThan = AssertionOperatorTypeCode("greaterThan")
+    """
+    Compare value to be less than a known value.
+    """
     LessThan = AssertionOperatorTypeCode("lessThan")
+    """
+    Compare value is empty.
+    """
     Empty = AssertionOperatorTypeCode("empty")
+    """
+    Compare value is not empty.
+    """
     NotEmpty = AssertionOperatorTypeCode("notEmpty")
+    """
+    Compare value string contains a known value.
+    """
     Contains = AssertionOperatorTypeCode("contains")
+    """
+    Compare value string does not contain a known value.
+    """
     NotContains = AssertionOperatorTypeCode("notContains")
+    """
+    Evaluate the FHIRPath expression as a boolean condition.
+    """
     Evaluate = AssertionOperatorTypeCode("eval")

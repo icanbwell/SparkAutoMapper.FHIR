@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class ExampleCoverageFinancialExceptionCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/coverage-financial-exception
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/coverage-financial-exception"
+
 
 class ExampleCoverageFinancialExceptionCodesCodeValues:
+    """
+    Retired persons have all copays and deductibles reduced.
+    """
+
     Retired = ExampleCoverageFinancialExceptionCodesCode("retired")
+    """
+    Children in the foster care have all copays and deductibles waived.
+    """
     FosterChild = ExampleCoverageFinancialExceptionCodesCode("foster")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,24 +16,75 @@ class DICOMAuditMessageRecordLifecycleEventsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class DICOMAuditMessageRecordLifecycleEventsCodeValues:
+    """
+    None
+    """
+
     Origination_Creation = DICOMAuditMessageRecordLifecycleEventsCode("1")
+    """
+    None
+    """
     Import_Copy = DICOMAuditMessageRecordLifecycleEventsCode("2")
+    """
+    None
+    """
     Amendment = DICOMAuditMessageRecordLifecycleEventsCode("3")
+    """
+    None
+    """
     Verification = DICOMAuditMessageRecordLifecycleEventsCode("4")
+    """
+    None
+    """
     Translation = DICOMAuditMessageRecordLifecycleEventsCode("5")
+    """
+    None
+    """
     Access_Use = DICOMAuditMessageRecordLifecycleEventsCode("6")
+    """
+    None
+    """
     De_identification = DICOMAuditMessageRecordLifecycleEventsCode("7")
+    """
+    None
+    """
     Aggregation_Summarization_Derivation = DICOMAuditMessageRecordLifecycleEventsCode(
         "8"
     )
+    """
+    None
+    """
     Report = DICOMAuditMessageRecordLifecycleEventsCode("9")
+    """
+    None
+    """
     Export = DICOMAuditMessageRecordLifecycleEventsCode("10")
+    """
+    None
+    """
     Disclosure = DICOMAuditMessageRecordLifecycleEventsCode("11")
+    """
+    None
+    """
     ReceiptOfDisclosure = DICOMAuditMessageRecordLifecycleEventsCode("12")
+    """
+    None
+    """
     Archiving = DICOMAuditMessageRecordLifecycleEventsCode("13")
+    """
+    None
+    """
     LogicalDeletion = DICOMAuditMessageRecordLifecycleEventsCode("14")
+    """
+    None
+    """
     PermanentErasure_PhysicalDestruction = DICOMAuditMessageRecordLifecycleEventsCode(
         "15"
     )

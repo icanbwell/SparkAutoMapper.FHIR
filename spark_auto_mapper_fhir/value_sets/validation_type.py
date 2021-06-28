@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class Validation_typeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/verificationresult-validation-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/verificationresult-validation-type"
+
 
 class Validation_typeCodeValues:
+    """
+    None
+    """
+
     Nothing = Validation_typeCode("nothing")
+    """
+    None
+    """
     PrimarySource = Validation_typeCode("primary")
+    """
+    None
+    """
     MultipleSources = Validation_typeCode("multiple")

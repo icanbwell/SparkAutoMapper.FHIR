@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class SearchParamTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/search-param-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/search-param-type"
+
 
 class SearchParamTypeCodeValues:
+    """
+    Search parameter SHALL be a number (a whole number, or a decimal).
+    """
+
     Number = SearchParamTypeCode("number")
+    """
+    Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.
+    """
     Date_DateTime = SearchParamTypeCode("date")
+    """
+    Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.
+    """
     String = SearchParamTypeCode("string")
+    """
+    Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a "|", depending on the modifier used.
+    """
     Token = SearchParamTypeCode("token")
+    """
+    A reference to another resource (Reference or canonical).
+    """
     Reference = SearchParamTypeCode("reference")
+    """
+    A composite search parameter that combines a search on two values together.
+    """
     Composite = SearchParamTypeCode("composite")
+    """
+    A search parameter that searches on a quantity.
+    """
     Quantity = SearchParamTypeCode("quantity")
+    """
+    A search parameter that searches on a URI (RFC 3986).
+    """
     URI = SearchParamTypeCode("uri")
+    """
+    Special logic applies to this parameter per the description of the search parameter.
+    """
     Special = SearchParamTypeCode("special")

@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # interaction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for interaction
     # Import for CodeableConcept for interaction
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -31,6 +33,7 @@ if TYPE_CHECKING:
     # organism (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for organism
     # Import for CodeableConcept for organism
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -38,6 +41,7 @@ if TYPE_CHECKING:
     # organismType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for organismType
     # Import for CodeableConcept for organismType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -45,6 +49,7 @@ if TYPE_CHECKING:
     # amountType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for amountType
     # Import for CodeableConcept for amountType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

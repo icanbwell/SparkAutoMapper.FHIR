@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class CarePlanActivityStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/care-plan-activity-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/care-plan-activity-status"
+
 
 class CarePlanActivityStatusCodeValues:
+    """
+    Care plan activity is planned but no action has yet been taken.
+    """
+
     NotStarted = CarePlanActivityStatusCode("not-started")
+    """
+    Appointment or other booking has occurred but activity has not yet begun.
+    """
     Scheduled = CarePlanActivityStatusCode("scheduled")
+    """
+    Care plan activity has been started but is not yet complete.
+    """
     InProgress = CarePlanActivityStatusCode("in-progress")
+    """
+    Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
+    """
     OnHold = CarePlanActivityStatusCode("on-hold")
+    """
+    Care plan activity has been completed (more or less) as planned.
+    """
     Completed = CarePlanActivityStatusCode("completed")
+    """
+    The planned care plan activity has been withdrawn.
+    """
     Cancelled = CarePlanActivityStatusCode("cancelled")
+    """
+    The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
+    """
     Unknown = CarePlanActivityStatusCode("unknown")
+    """
+    Care plan activity was entered in error and voided.
+    """
     EnteredInError = CarePlanActivityStatusCode("entered-in-error")

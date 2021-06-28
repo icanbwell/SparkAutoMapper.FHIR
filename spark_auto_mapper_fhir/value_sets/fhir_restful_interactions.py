@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class FHIRRestfulInteractionsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/restful-interaction
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/restful-interaction"
+
 
 class FHIRRestfulInteractionsCodeValues:
+    """
+    Read the current state of the resource.
+    """
+
     Read = FHIRRestfulInteractionsCode("read")
+    """
+    Read the state of a specific version of the resource.
+    """
     Vread = FHIRRestfulInteractionsCode("vread")
+    """
+    Update an existing resource by its id (or create it if it is new).
+    """
     Update = FHIRRestfulInteractionsCode("update")
+    """
+    Update an existing resource by posting a set of changes to it.
+    """
     Patch = FHIRRestfulInteractionsCode("patch")
+    """
+    Delete a resource.
+    """
     Delete = FHIRRestfulInteractionsCode("delete")
+    """
+    Retrieve the change history for a particular resource, type of resource, or the entire system.
+    """
     History = FHIRRestfulInteractionsCode("history")
+    """
+    Create a new resource with a server assigned id.
+    """
     Create = FHIRRestfulInteractionsCode("create")
+    """
+    Search a resource type or all resources based on some filter criteria.
+    """
     Search = FHIRRestfulInteractionsCode("search")
+    """
+    Get a Capability Statement for the system.
+    """
     Capabilities = FHIRRestfulInteractionsCode("capabilities")
+    """
+    Update, create or delete a set of resources as a single transaction.
+    """
     Transaction = FHIRRestfulInteractionsCode("transaction")
+    """
+    perform a set of a separate interactions in a single http operation
+    """
     Batch = FHIRRestfulInteractionsCode("batch")
+    """
+    Perform an operation as defined by an OperationDefinition.
+    """
     Operation = FHIRRestfulInteractionsCode("operation")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,22 +16,62 @@ class ResearchStudyStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/research-study-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/research-study-status"
+
 
 class ResearchStudyStatusCodeValues:
+    """
+    Study is opened for accrual.
+    """
+
     Active = ResearchStudyStatusCode("active")
+    """
+    Study is completed prematurely and will not resume; patients are no longer examined nor treated.
+    """
     AdministrativelyCompleted = ResearchStudyStatusCode("administratively-completed")
+    """
+    Protocol is approved by the review board.
+    """
     Approved = ResearchStudyStatusCode("approved")
+    """
+    Study is closed for accrual; patients can be examined and treated.
+    """
     ClosedToAccrual = ResearchStudyStatusCode("closed-to-accrual")
+    """
+    Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment or intervention but are still being followed according to the primary objective of the study.
+    """
     ClosedToAccrualAndIntervention = ResearchStudyStatusCode(
         "closed-to-accrual-and-intervention"
     )
+    """
+    Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment
+or intervention but are still being followed according to the primary objective of the study.
+    """
     Completed = ResearchStudyStatusCode("completed")
+    """
+    Protocol was disapproved by the review board.
+    """
     Disapproved = ResearchStudyStatusCode("disapproved")
+    """
+    Protocol is submitted to the review board for approval.
+    """
     InReview = ResearchStudyStatusCode("in-review")
+    """
+    Study is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and treated.
+    """
     TemporarilyClosedToAccrual = ResearchStudyStatusCode(
         "temporarily-closed-to-accrual"
     )
+    """
+    Study is temporarily closed for accrual and intervention and potentially can be resumed in the future.
+    """
     TemporarilyClosedToAccrualAndIntervention = ResearchStudyStatusCode(
         "temporarily-closed-to-accrual-and-intervention"
     )
+    """
+    Protocol was withdrawn by the lead organization.
+    """
     Withdrawn = ResearchStudyStatusCode("withdrawn")

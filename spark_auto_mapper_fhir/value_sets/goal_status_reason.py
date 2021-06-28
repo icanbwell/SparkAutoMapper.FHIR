@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class GoalStatusReasonCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/goal-status-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/goal-status-reason"
+
 
 class GoalStatusReasonCodeValues:
+    """
+    Goal suspended or ended because of a surgical procedure.
+    """
+
     Surgery = GoalStatusReasonCode("surgery")
+    """
+    Goal suspended or ended because of a significant life event (marital change, bereavement, etc.).
+    """
     LifeEvent = GoalStatusReasonCode("life-event")
+    """
+    Goal has been superseded by a new goal.
+    """
     Replaced = GoalStatusReasonCode("replaced")
+    """
+    Patient wishes the goal to be set aside, at least temporarily.
+    """
     PatientRequest = GoalStatusReasonCode("patient-request")
+    """
+    Goal cannot be reached temporarily.
+    """
     GoalNotAttainableTemporarily = GoalStatusReasonCode("temp-not-attainable")
+    """
+    Goal cannot be reached permanently.
+    """
     GoalNotAttainablePermanently = GoalStatusReasonCode("permanent-not-attainable")
+    """
+    Goal cannot be reached due to financial barrier or reason.
+    """
     FinancialReason = GoalStatusReasonCode("financial-barrier")
+    """
+    Goal cannot be reached due to a lack of transportation.
+    """
     LackOfTransportation = GoalStatusReasonCode("lack-of-transportation")
+    """
+    Goal cannot be reached due to a lack of social support.
+    """
     LackOfSocialSupport = GoalStatusReasonCode("lack-of-social-support")

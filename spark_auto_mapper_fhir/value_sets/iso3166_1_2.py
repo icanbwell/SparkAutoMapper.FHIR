@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,254 +16,1007 @@ class Iso3166_1_2Code(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class Iso3166_1_2CodeValues:
+    """
+    None
+    """
+
     Andorra = Iso3166_1_2Code("AD")
+    """
+    None
+    """
     UnitedArabEmirates = Iso3166_1_2Code("AE")
+    """
+    None
+    """
     Afghanistan = Iso3166_1_2Code("AF")
+    """
+    None
+    """
     AntiguaAndBarbuda = Iso3166_1_2Code("AG")
+    """
+    None
+    """
     Anguilla = Iso3166_1_2Code("AI")
+    """
+    None
+    """
     Albania = Iso3166_1_2Code("AL")
+    """
+    None
+    """
     Armenia = Iso3166_1_2Code("AM")
+    """
+    None
+    """
     Angola = Iso3166_1_2Code("AO")
+    """
+    None
+    """
     Antarctica = Iso3166_1_2Code("AQ")
+    """
+    None
+    """
     Argentina = Iso3166_1_2Code("AR")
+    """
+    None
+    """
     AmericanSamoa = Iso3166_1_2Code("AS")
+    """
+    None
+    """
     Austria = Iso3166_1_2Code("AT")
+    """
+    None
+    """
     Australia = Iso3166_1_2Code("AU")
+    """
+    None
+    """
     Aruba = Iso3166_1_2Code("AW")
+    """
+    None
+    """
     _landIslands = Iso3166_1_2Code("AX")
+    """
+    None
+    """
     Azerbaijan = Iso3166_1_2Code("AZ")
+    """
+    None
+    """
     BosniaAndHerzegovina = Iso3166_1_2Code("BA")
+    """
+    None
+    """
     Barbados = Iso3166_1_2Code("BB")
+    """
+    None
+    """
     Bangladesh = Iso3166_1_2Code("BD")
+    """
+    None
+    """
     Belgium = Iso3166_1_2Code("BE")
+    """
+    None
+    """
     BurkinaFaso = Iso3166_1_2Code("BF")
+    """
+    None
+    """
     Bulgaria = Iso3166_1_2Code("BG")
+    """
+    None
+    """
     Bahrain = Iso3166_1_2Code("BH")
+    """
+    None
+    """
     Burundi = Iso3166_1_2Code("BI")
+    """
+    None
+    """
     Benin = Iso3166_1_2Code("BJ")
+    """
+    None
+    """
     SaintBarth_lemy = Iso3166_1_2Code("BL")
+    """
+    None
+    """
     Bermuda = Iso3166_1_2Code("BM")
+    """
+    None
+    """
     BruneiDarussalam = Iso3166_1_2Code("BN")
+    """
+    None
+    """
     Bolivia_PlurinationalStateOf = Iso3166_1_2Code("BO")
+    """
+    None
+    """
     Bonaire_SintEustatiusAndSaba = Iso3166_1_2Code("BQ")
+    """
+    None
+    """
     Brazil = Iso3166_1_2Code("BR")
+    """
+    None
+    """
     Bahamas = Iso3166_1_2Code("BS")
+    """
+    None
+    """
     Bhutan = Iso3166_1_2Code("BT")
+    """
+    None
+    """
     BouvetIsland = Iso3166_1_2Code("BV")
+    """
+    None
+    """
     Botswana = Iso3166_1_2Code("BW")
+    """
+    None
+    """
     Belarus = Iso3166_1_2Code("BY")
+    """
+    None
+    """
     Belize = Iso3166_1_2Code("BZ")
+    """
+    None
+    """
     Canada = Iso3166_1_2Code("CA")
+    """
+    None
+    """
     Cocos_Keeling_Islands = Iso3166_1_2Code("CC")
+    """
+    None
+    """
     Congo_TheDemocraticRepublicOfThe = Iso3166_1_2Code("CD")
+    """
+    None
+    """
     CentralAfricanRepublic = Iso3166_1_2Code("CF")
+    """
+    None
+    """
     Congo = Iso3166_1_2Code("CG")
+    """
+    None
+    """
     Switzerland = Iso3166_1_2Code("CH")
+    """
+    None
+    """
     C_teD_Ivoire = Iso3166_1_2Code("CI")
+    """
+    None
+    """
     CookIslands = Iso3166_1_2Code("CK")
+    """
+    None
+    """
     Chile = Iso3166_1_2Code("CL")
+    """
+    None
+    """
     Cameroon = Iso3166_1_2Code("CM")
+    """
+    None
+    """
     China = Iso3166_1_2Code("CN")
+    """
+    None
+    """
     Colombia = Iso3166_1_2Code("CO")
+    """
+    None
+    """
     CostaRica = Iso3166_1_2Code("CR")
+    """
+    None
+    """
     Cuba = Iso3166_1_2Code("CU")
+    """
+    None
+    """
     CaboVerde = Iso3166_1_2Code("CV")
+    """
+    None
+    """
     Cura_ao = Iso3166_1_2Code("CW")
+    """
+    None
+    """
     ChristmasIsland = Iso3166_1_2Code("CX")
+    """
+    None
+    """
     Cyprus = Iso3166_1_2Code("CY")
+    """
+    None
+    """
     Czechia = Iso3166_1_2Code("CZ")
+    """
+    None
+    """
     Germany = Iso3166_1_2Code("DE")
+    """
+    None
+    """
     Djibouti = Iso3166_1_2Code("DJ")
+    """
+    None
+    """
     Denmark = Iso3166_1_2Code("DK")
+    """
+    None
+    """
     Dominica = Iso3166_1_2Code("DM")
+    """
+    None
+    """
     DominicanRepublic = Iso3166_1_2Code("DO")
+    """
+    None
+    """
     Algeria = Iso3166_1_2Code("DZ")
+    """
+    None
+    """
     Ecuador = Iso3166_1_2Code("EC")
+    """
+    None
+    """
     Estonia = Iso3166_1_2Code("EE")
+    """
+    None
+    """
     Egypt = Iso3166_1_2Code("EG")
+    """
+    None
+    """
     WesternSahara = Iso3166_1_2Code("EH")
+    """
+    None
+    """
     Eritrea = Iso3166_1_2Code("ER")
+    """
+    None
+    """
     Spain = Iso3166_1_2Code("ES")
+    """
+    None
+    """
     Ethiopia = Iso3166_1_2Code("ET")
+    """
+    None
+    """
     Finland = Iso3166_1_2Code("FI")
+    """
+    None
+    """
     Fiji = Iso3166_1_2Code("FJ")
+    """
+    None
+    """
     FalklandIslands_Malvinas_ = Iso3166_1_2Code("FK")
+    """
+    None
+    """
     Micronesia_FederatedStatesOf = Iso3166_1_2Code("FM")
+    """
+    None
+    """
     FaroeIslands = Iso3166_1_2Code("FO")
+    """
+    None
+    """
     France = Iso3166_1_2Code("FR")
+    """
+    None
+    """
     Gabon = Iso3166_1_2Code("GA")
+    """
+    None
+    """
     UnitedKingdomOfGreatBritainAndNorthernIreland = Iso3166_1_2Code("GB")
+    """
+    None
+    """
     Grenada = Iso3166_1_2Code("GD")
+    """
+    None
+    """
     Georgia = Iso3166_1_2Code("GE")
+    """
+    None
+    """
     FrenchGuiana = Iso3166_1_2Code("GF")
+    """
+    None
+    """
     Guernsey = Iso3166_1_2Code("GG")
+    """
+    None
+    """
     Ghana = Iso3166_1_2Code("GH")
+    """
+    None
+    """
     Gibraltar = Iso3166_1_2Code("GI")
+    """
+    None
+    """
     Greenland = Iso3166_1_2Code("GL")
+    """
+    None
+    """
     Gambia = Iso3166_1_2Code("GM")
+    """
+    None
+    """
     Guinea = Iso3166_1_2Code("GN")
+    """
+    None
+    """
     Guadeloupe = Iso3166_1_2Code("GP")
+    """
+    None
+    """
     EquatorialGuinea = Iso3166_1_2Code("GQ")
+    """
+    None
+    """
     Greece = Iso3166_1_2Code("GR")
+    """
+    None
+    """
     SouthGeorgiaAndTheSouthSandwichIslands = Iso3166_1_2Code("GS")
+    """
+    None
+    """
     Guatemala = Iso3166_1_2Code("GT")
+    """
+    None
+    """
     Guam = Iso3166_1_2Code("GU")
+    """
+    None
+    """
     Guinea_Bissau = Iso3166_1_2Code("GW")
+    """
+    None
+    """
     Guyana = Iso3166_1_2Code("GY")
+    """
+    None
+    """
     HongKong = Iso3166_1_2Code("HK")
+    """
+    None
+    """
     HeardIslandAndMcDonaldIslands = Iso3166_1_2Code("HM")
+    """
+    None
+    """
     Honduras = Iso3166_1_2Code("HN")
+    """
+    None
+    """
     Croatia = Iso3166_1_2Code("HR")
+    """
+    None
+    """
     Haiti = Iso3166_1_2Code("HT")
+    """
+    None
+    """
     Hungary = Iso3166_1_2Code("HU")
+    """
+    None
+    """
     Indonesia = Iso3166_1_2Code("ID")
+    """
+    None
+    """
     Ireland = Iso3166_1_2Code("IE")
+    """
+    None
+    """
     Israel = Iso3166_1_2Code("IL")
+    """
+    None
+    """
     IsleOfMan = Iso3166_1_2Code("IM")
+    """
+    None
+    """
     India = Iso3166_1_2Code("IN")
+    """
+    None
+    """
     BritishIndianOceanTerritory = Iso3166_1_2Code("IO")
+    """
+    None
+    """
     Iraq = Iso3166_1_2Code("IQ")
+    """
+    None
+    """
     Iran_IslamicRepublicOf = Iso3166_1_2Code("IR")
+    """
+    None
+    """
     Iceland = Iso3166_1_2Code("IS")
+    """
+    None
+    """
     Italy = Iso3166_1_2Code("IT")
+    """
+    None
+    """
     Jersey = Iso3166_1_2Code("JE")
+    """
+    None
+    """
     Jamaica = Iso3166_1_2Code("JM")
+    """
+    None
+    """
     Jordan = Iso3166_1_2Code("JO")
+    """
+    None
+    """
     Japan = Iso3166_1_2Code("JP")
+    """
+    None
+    """
     Kenya = Iso3166_1_2Code("KE")
+    """
+    None
+    """
     Kyrgyzstan = Iso3166_1_2Code("KG")
+    """
+    None
+    """
     Cambodia = Iso3166_1_2Code("KH")
+    """
+    None
+    """
     Kiribati = Iso3166_1_2Code("KI")
+    """
+    None
+    """
     Comoros = Iso3166_1_2Code("KM")
+    """
+    None
+    """
     SaintKittsAndNevis = Iso3166_1_2Code("KN")
+    """
+    None
+    """
     Korea_DemocraticPeople_sRepublicOf = Iso3166_1_2Code("KP")
+    """
+    None
+    """
     Korea_RepublicOf = Iso3166_1_2Code("KR")
+    """
+    None
+    """
     Kuwait = Iso3166_1_2Code("KW")
+    """
+    None
+    """
     CaymanIslands = Iso3166_1_2Code("KY")
+    """
+    None
+    """
     Kazakhstan = Iso3166_1_2Code("KZ")
+    """
+    None
+    """
     LaoPeople_sDemocraticRepublic = Iso3166_1_2Code("LA")
+    """
+    None
+    """
     Lebanon = Iso3166_1_2Code("LB")
+    """
+    None
+    """
     SaintLucia = Iso3166_1_2Code("LC")
+    """
+    None
+    """
     Liechtenstein = Iso3166_1_2Code("LI")
+    """
+    None
+    """
     SriLanka = Iso3166_1_2Code("LK")
+    """
+    None
+    """
     Liberia = Iso3166_1_2Code("LR")
+    """
+    None
+    """
     Lesotho = Iso3166_1_2Code("LS")
+    """
+    None
+    """
     Lithuania = Iso3166_1_2Code("LT")
+    """
+    None
+    """
     Luxembourg = Iso3166_1_2Code("LU")
+    """
+    None
+    """
     Latvia = Iso3166_1_2Code("LV")
+    """
+    None
+    """
     Libya = Iso3166_1_2Code("LY")
+    """
+    None
+    """
     Morocco = Iso3166_1_2Code("MA")
+    """
+    None
+    """
     Monaco = Iso3166_1_2Code("MC")
+    """
+    None
+    """
     Moldova_RepublicOf = Iso3166_1_2Code("MD")
+    """
+    None
+    """
     Montenegro = Iso3166_1_2Code("ME")
+    """
+    None
+    """
     SaintMartin_FrenchPart_ = Iso3166_1_2Code("MF")
+    """
+    None
+    """
     Madagascar = Iso3166_1_2Code("MG")
+    """
+    None
+    """
     MarshallIslands = Iso3166_1_2Code("MH")
+    """
+    None
+    """
     Macedonia_TheFormerYugoslavRepublicOf = Iso3166_1_2Code("MK")
+    """
+    None
+    """
     Mali = Iso3166_1_2Code("ML")
+    """
+    None
+    """
     Myanmar = Iso3166_1_2Code("MM")
+    """
+    None
+    """
     Mongolia = Iso3166_1_2Code("MN")
+    """
+    None
+    """
     Macao = Iso3166_1_2Code("MO")
+    """
+    None
+    """
     NorthernMarianaIslands = Iso3166_1_2Code("MP")
+    """
+    None
+    """
     Martinique = Iso3166_1_2Code("MQ")
+    """
+    None
+    """
     Mauritania = Iso3166_1_2Code("MR")
+    """
+    None
+    """
     Montserrat = Iso3166_1_2Code("MS")
+    """
+    None
+    """
     Malta = Iso3166_1_2Code("MT")
+    """
+    None
+    """
     Mauritius = Iso3166_1_2Code("MU")
+    """
+    None
+    """
     Maldives = Iso3166_1_2Code("MV")
+    """
+    None
+    """
     Malawi = Iso3166_1_2Code("MW")
+    """
+    None
+    """
     Mexico = Iso3166_1_2Code("MX")
+    """
+    None
+    """
     Malaysia = Iso3166_1_2Code("MY")
+    """
+    None
+    """
     Mozambique = Iso3166_1_2Code("MZ")
+    """
+    None
+    """
     Namibia = Iso3166_1_2Code("NA")
+    """
+    None
+    """
     NewCaledonia = Iso3166_1_2Code("NC")
+    """
+    None
+    """
     Niger = Iso3166_1_2Code("NE")
+    """
+    None
+    """
     NorfolkIsland = Iso3166_1_2Code("NF")
+    """
+    None
+    """
     Nigeria = Iso3166_1_2Code("NG")
+    """
+    None
+    """
     Nicaragua = Iso3166_1_2Code("NI")
+    """
+    None
+    """
     Netherlands = Iso3166_1_2Code("NL")
+    """
+    None
+    """
     Norway = Iso3166_1_2Code("NO")
+    """
+    None
+    """
     Nepal = Iso3166_1_2Code("NP")
+    """
+    None
+    """
     Nauru = Iso3166_1_2Code("NR")
+    """
+    None
+    """
     Niue = Iso3166_1_2Code("NU")
+    """
+    None
+    """
     NewZealand = Iso3166_1_2Code("NZ")
+    """
+    None
+    """
     Oman = Iso3166_1_2Code("OM")
+    """
+    None
+    """
     Panama = Iso3166_1_2Code("PA")
+    """
+    None
+    """
     Peru = Iso3166_1_2Code("PE")
+    """
+    None
+    """
     FrenchPolynesia = Iso3166_1_2Code("PF")
+    """
+    None
+    """
     PapuaNewGuinea = Iso3166_1_2Code("PG")
+    """
+    None
+    """
     Philippines = Iso3166_1_2Code("PH")
+    """
+    None
+    """
     Pakistan = Iso3166_1_2Code("PK")
+    """
+    None
+    """
     Poland = Iso3166_1_2Code("PL")
+    """
+    None
+    """
     SaintPierreAndMiquelon = Iso3166_1_2Code("PM")
+    """
+    None
+    """
     Pitcairn = Iso3166_1_2Code("PN")
+    """
+    None
+    """
     PuertoRico = Iso3166_1_2Code("PR")
+    """
+    None
+    """
     Palestine_StateOf = Iso3166_1_2Code("PS")
+    """
+    None
+    """
     Portugal = Iso3166_1_2Code("PT")
+    """
+    None
+    """
     Palau = Iso3166_1_2Code("PW")
+    """
+    None
+    """
     Paraguay = Iso3166_1_2Code("PY")
+    """
+    None
+    """
     Qatar = Iso3166_1_2Code("QA")
+    """
+    None
+    """
     R_union = Iso3166_1_2Code("RE")
+    """
+    None
+    """
     Romania = Iso3166_1_2Code("RO")
+    """
+    None
+    """
     Serbia = Iso3166_1_2Code("RS")
+    """
+    None
+    """
     RussianFederation = Iso3166_1_2Code("RU")
+    """
+    None
+    """
     Rwanda = Iso3166_1_2Code("RW")
+    """
+    None
+    """
     SaudiArabia = Iso3166_1_2Code("SA")
+    """
+    None
+    """
     SolomonIslands = Iso3166_1_2Code("SB")
+    """
+    None
+    """
     Seychelles = Iso3166_1_2Code("SC")
+    """
+    None
+    """
     Sudan = Iso3166_1_2Code("SD")
+    """
+    None
+    """
     Sweden = Iso3166_1_2Code("SE")
+    """
+    None
+    """
     Singapore = Iso3166_1_2Code("SG")
+    """
+    None
+    """
     SaintHelena_AscensionAndTristanDaCunha = Iso3166_1_2Code("SH")
+    """
+    None
+    """
     Slovenia = Iso3166_1_2Code("SI")
+    """
+    None
+    """
     SvalbardAndJanMayen = Iso3166_1_2Code("SJ")
+    """
+    None
+    """
     Slovakia = Iso3166_1_2Code("SK")
+    """
+    None
+    """
     SierraLeone = Iso3166_1_2Code("SL")
+    """
+    None
+    """
     SanMarino = Iso3166_1_2Code("SM")
+    """
+    None
+    """
     Senegal = Iso3166_1_2Code("SN")
+    """
+    None
+    """
     Somalia = Iso3166_1_2Code("SO")
+    """
+    None
+    """
     Suriname = Iso3166_1_2Code("SR")
+    """
+    None
+    """
     SouthSudan = Iso3166_1_2Code("SS")
+    """
+    None
+    """
     SaoTomeAndPrincipe = Iso3166_1_2Code("ST")
+    """
+    None
+    """
     ElSalvador = Iso3166_1_2Code("SV")
+    """
+    None
+    """
     SintMaarten_DutchPart_ = Iso3166_1_2Code("SX")
+    """
+    None
+    """
     SyrianArabRepublic = Iso3166_1_2Code("SY")
+    """
+    None
+    """
     Swaziland = Iso3166_1_2Code("SZ")
+    """
+    None
+    """
     TurksAndCaicosIslands = Iso3166_1_2Code("TC")
+    """
+    None
+    """
     Chad = Iso3166_1_2Code("TD")
+    """
+    None
+    """
     FrenchSouthernTerritories = Iso3166_1_2Code("TF")
+    """
+    None
+    """
     Togo = Iso3166_1_2Code("TG")
+    """
+    None
+    """
     Thailand = Iso3166_1_2Code("TH")
+    """
+    None
+    """
     Tajikistan = Iso3166_1_2Code("TJ")
+    """
+    None
+    """
     Tokelau = Iso3166_1_2Code("TK")
+    """
+    None
+    """
     Timor_Leste = Iso3166_1_2Code("TL")
+    """
+    None
+    """
     Turkmenistan = Iso3166_1_2Code("TM")
+    """
+    None
+    """
     Tunisia = Iso3166_1_2Code("TN")
+    """
+    None
+    """
     Tonga = Iso3166_1_2Code("TO")
+    """
+    None
+    """
     Turkey = Iso3166_1_2Code("TR")
+    """
+    None
+    """
     TrinidadAndTobago = Iso3166_1_2Code("TT")
+    """
+    None
+    """
     Tuvalu = Iso3166_1_2Code("TV")
+    """
+    None
+    """
     Taiwan_ProvinceOfChina = Iso3166_1_2Code("TW")
+    """
+    None
+    """
     Tanzania_UnitedRepublicOf = Iso3166_1_2Code("TZ")
+    """
+    None
+    """
     Ukraine = Iso3166_1_2Code("UA")
+    """
+    None
+    """
     Uganda = Iso3166_1_2Code("UG")
+    """
+    None
+    """
     UnitedStatesMinorOutlyingIslands = Iso3166_1_2Code("UM")
+    """
+    None
+    """
     UnitedStatesOfAmerica = Iso3166_1_2Code("US")
+    """
+    None
+    """
     Uruguay = Iso3166_1_2Code("UY")
+    """
+    None
+    """
     Uzbekistan = Iso3166_1_2Code("UZ")
+    """
+    None
+    """
     HolySee = Iso3166_1_2Code("VA")
+    """
+    None
+    """
     SaintVincentAndTheGrenadines = Iso3166_1_2Code("VC")
+    """
+    None
+    """
     Venezuela_BolivarianRepublicOf = Iso3166_1_2Code("VE")
+    """
+    None
+    """
     VirginIslands_British = Iso3166_1_2Code("VG")
+    """
+    None
+    """
     VirginIslands_ = Iso3166_1_2Code("VI")
+    """
+    None
+    """
     VietNam = Iso3166_1_2Code("VN")
+    """
+    None
+    """
     Vanuatu = Iso3166_1_2Code("VU")
+    """
+    None
+    """
     WallisAndFutuna = Iso3166_1_2Code("WF")
+    """
+    None
+    """
     Samoa = Iso3166_1_2Code("WS")
+    """
+    None
+    """
     Yemen = Iso3166_1_2Code("YE")
+    """
+    None
+    """
     Mayotte = Iso3166_1_2Code("YT")
+    """
+    None
+    """
     SouthAfrica = Iso3166_1_2Code("ZA")
+    """
+    None
+    """
     Zambia = Iso3166_1_2Code("ZM")
+    """
+    None
+    """
     Zimbabwe = Iso3166_1_2Code("ZW")

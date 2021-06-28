@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,95 +16,251 @@ class OperationOutcomeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class OperationOutcomeCodesCodeValues:
+    """
+    None
+    """
+
     Error_MultipleMatchesExistForTheConditionalDelete = OperationOutcomeCodesCode(
         "DELETE_MULTIPLE_MATCHES"
     )
+    """
+    None
+    """
     YouMustAuthenticateBeforeYouCanUseThisService = OperationOutcomeCodesCode(
         "MSG_AUTH_REQUIRED"
     )
+    """
+    None
+    """
     BadSyntax_s_MustBeA_s_ = OperationOutcomeCodesCode("MSG_BAD_FORMAT")
+    """
+    None
+    """
     BadSyntaxIn_s = OperationOutcomeCodesCode("MSG_BAD_SYNTAX")
+    """
+    None
+    """
     UnableToParseFeed_entryContentType_s_ = OperationOutcomeCodesCode(
         "MSG_CANT_PARSE_CONTENT"
     )
+    """
+    None
+    """
     UnableToParseFeed_rootElementName_s_ = OperationOutcomeCodesCode(
         "MSG_CANT_PARSE_ROOT"
     )
+    """
+    None
+    """
     NewResourceCreated = OperationOutcomeCodesCode("MSG_CREATED")
+    """
+    None
+    """
     TheDateValue_sIsNotInTheCorrectFormat_XmlDateFormatRequired_ = (
         OperationOutcomeCodesCode("MSG_DATE_FORMAT")
     )
+    """
+    None
+    """
     ThisResourceHasBeenDeleted = OperationOutcomeCodesCode("MSG_DELETED")
+    """
+    None
+    """
     ResourceDeleted = OperationOutcomeCodesCode("MSG_DELETED_DONE")
+    """
+    None
+    """
     TheResource_s_HasBeenDeleted = OperationOutcomeCodesCode("MSG_DELETED_ID")
+    """
+    None
+    """
     DuplicateId_sForResourceType_s = OperationOutcomeCodesCode("MSG_DUPLICATE_ID")
+    """
+    None
+    """
     ErrorParsingResourceXml_s_ = OperationOutcomeCodesCode("MSG_ERROR_PARSING")
+    """
+    None
+    """
     Id_s_HasAnInvalidCharacter_s_ = OperationOutcomeCodesCode("MSG_ID_INVALID")
+    """
+    None
+    """
     Id_s_TooLong_lengthLimit36_ = OperationOutcomeCodesCode("MSG_ID_TOO_LONG")
+    """
+    None
+    """
     IdNotAccepted = OperationOutcomeCodesCode("MSG_INVALID_ID")
+    """
+    None
+    """
     JsonSourceForAResourceShouldStartWithAnObject = OperationOutcomeCodesCode(
         "MSG_JSON_OBJECT"
     )
+    """
+    None
+    """
     UnableToResolveLocalReferenceToResource_s = OperationOutcomeCodesCode(
         "MSG_LOCAL_FAIL"
     )
+    """
+    None
+    """
     ResourceId_s_DoesNotExist = OperationOutcomeCodesCode("MSG_NO_EXIST")
+    """
+    None
+    """
     NoResourceFoundMatchingTheQuery_s_ = OperationOutcomeCodesCode("MSG_NO_MATCH")
+    """
+    None
+    """
     NoModuleCouldBeFoundToHandleTheRequest_s_ = OperationOutcomeCodesCode(
         "MSG_NO_MODULE"
     )
+    """
+    None
+    """
     NoSummaryForThisResource = OperationOutcomeCodesCode("MSG_NO_SUMMARY")
+    """
+    None
+    """
     Operation_sNotAllowedForResource_s_dueToLocalConfiguration_ = (
         OperationOutcomeCodesCode("MSG_OP_NOT_ALLOWED")
     )
+    """
+    None
+    """
     UnknownChainedParameterName_s_ = OperationOutcomeCodesCode("MSG_PARAM_CHAINED")
+    """
+    None
+    """
     Parameter_s_ContentIsInvalid = OperationOutcomeCodesCode("MSG_PARAM_INVALID")
+    """
+    None
+    """
     Parameter_s_ModifierIsInvalid = OperationOutcomeCodesCode(
         "MSG_PARAM_MODIFIER_INVALID"
     )
+    """
+    None
+    """
     Parameter_s_IsNotAllowedToRepeat = OperationOutcomeCodesCode("MSG_PARAM_NO_REPEAT")
+    """
+    None
+    """
     Parameter_s_NotUnderstood = OperationOutcomeCodesCode("MSG_PARAM_UNKNOWN")
+    """
+    None
+    """
     ResourcesWithIdentity_example_CannotBeDeleted_forTesting_trainingPurposes_ = (
         OperationOutcomeCodesCode("MSG_RESOURCE_EXAMPLE_PROTECTED")
     )
+    """
+    None
+    """
     UnableToAllocateResourceId = OperationOutcomeCodesCode("MSG_RESOURCE_ID_FAIL")
+    """
+    None
+    """
     ResourceIdMismatch = OperationOutcomeCodesCode("MSG_RESOURCE_ID_MISMATCH")
+    """
+    None
+    """
     ResourceIdMissing = OperationOutcomeCodesCode("MSG_RESOURCE_ID_MISSING")
+    """
+    None
+    """
     NotAllowedToSubmitAResourceForThisOperation = OperationOutcomeCodesCode(
         "MSG_RESOURCE_NOT_ALLOWED"
     )
+    """
+    None
+    """
     AResourceIsRequired = OperationOutcomeCodesCode("MSG_RESOURCE_REQUIRED")
+    """
+    None
+    """
     ResourceTypeMismatch = OperationOutcomeCodesCode("MSG_RESOURCE_TYPE_MISMATCH")
+    """
+    None
+    """
     UnknownSortParameterName_s_ = OperationOutcomeCodesCode("MSG_SORT_UNKNOWN")
+    """
+    None
+    """
     DuplicateIdentifierInTransaction_s = OperationOutcomeCodesCode(
         "MSG_TRANSACTION_DUPLICATE_ID"
     )
+    """
+    None
+    """
     MissingIdentifierInTransaction_AnEntry_idMustBeProvided = OperationOutcomeCodesCode(
         "MSG_TRANSACTION_MISSING_ID"
     )
+    """
+    None
+    """
     UnhandledXmlNodeType_s_ = OperationOutcomeCodesCode("MSG_UNHANDLED_NODE_TYPE")
+    """
+    None
+    """
     UnknownContent_s_At_s = OperationOutcomeCodesCode("MSG_UNKNOWN_CONTENT")
+    """
+    None
+    """
     UnknownFHIRHttpOperation = OperationOutcomeCodesCode("MSG_UNKNOWN_OPERATION")
+    """
+    None
+    """
     ResourceType_s_NotRecognised = OperationOutcomeCodesCode("MSG_UNKNOWN_TYPE")
+    """
+    None
+    """
     ExistingResourceUpdated = OperationOutcomeCodesCode("MSG_UPDATED")
+    """
+    None
+    """
     VersionAwareUpdatesAreRequiredForThisResource = OperationOutcomeCodesCode(
         "MSG_VERSION_AWARE"
     )
+    """
+    None
+    """
     UpdateConflict_serverCurrentVersion_s_ClientVersionReferenced_s_ = (
         OperationOutcomeCodesCode("MSG_VERSION_AWARE_CONFLICT")
     )
+    """
+    None
+    """
     VersionSpecificURLNotRecognised = OperationOutcomeCodesCode("MSG_VERSION_AWARE_URL")
+    """
+    None
+    """
     ThisDoesNotAppearToBeAFHIRElementOrResource_wrongNamespace_s_ = (
         OperationOutcomeCodesCode("MSG_WRONG_NS")
     )
+    """
+    None
+    """
     Error_MultipleMatchesExistFor_sSearchParameters_s_ = OperationOutcomeCodesCode(
         "SEARCH_MULTIPLE"
     )
+    """
+    None
+    """
     Error_NoProcessableSearchFoundFor_sSearchParameters_s_ = OperationOutcomeCodesCode(
         "SEARCH_NONE"
     )
+    """
+    None
+    """
     Error_MultipleMatchesExistForTheConditionalUpdate = OperationOutcomeCodesCode(
         "UPDATE_MULTIPLE_MATCHES"
     )

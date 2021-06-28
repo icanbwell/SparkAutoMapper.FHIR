@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # family (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for family
     # Import for CodeableConcept for family
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -21,6 +22,7 @@ if TYPE_CHECKING:
     # genus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for genus
     # Import for CodeableConcept for genus
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -28,6 +30,7 @@ if TYPE_CHECKING:
     # species (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for species
     # Import for CodeableConcept for species
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -35,6 +38,7 @@ if TYPE_CHECKING:
     # intraspecificType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for intraspecificType
     # Import for CodeableConcept for intraspecificType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

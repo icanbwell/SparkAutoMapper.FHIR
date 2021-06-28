@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,43 @@ class FHIRDeviceStatusReasonCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/device-status-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/device-status-reason"
+
 
 class FHIRDeviceStatusReasonCodeValues:
+    """
+    The device is off.
+    """
+
     Online = FHIRDeviceStatusReasonCode("online")
+    """
+    The device is paused.
+    """
     Paused = FHIRDeviceStatusReasonCode("paused")
+    """
+    The device is ready but not actively operating.
+    """
     Standby = FHIRDeviceStatusReasonCode("standby")
+    """
+    The device is offline.
+    """
     Offline = FHIRDeviceStatusReasonCode("offline")
+    """
+    The device is not ready.
+    """
     NotReady = FHIRDeviceStatusReasonCode("not-ready")
+    """
+    The device transducer is disconnected.
+    """
     TransducerDisconnected = FHIRDeviceStatusReasonCode("transduc-discon")
+    """
+    The device hardware is disconnected.
+    """
     HardwareDisconnected = FHIRDeviceStatusReasonCode("hw-discon")
+    """
+    The device is off.
+    """
     Off = FHIRDeviceStatusReasonCode("off")

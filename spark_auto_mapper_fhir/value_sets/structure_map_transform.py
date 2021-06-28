@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,22 +16,79 @@ class StructureMapTransformCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/map-transform
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/map-transform"
+
 
 class StructureMapTransformCodeValues:
+    """
+    create(type : string) - type is passed through to the application on the standard API, and must be known by it.
+    """
+
     Create = StructureMapTransformCode("create")
+    """
+    copy(source).
+    """
     Copy = StructureMapTransformCode("copy")
+    """
+    truncate(source, length) - source must be stringy type.
+    """
     Truncate = StructureMapTransformCode("truncate")
+    """
+    escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain, java, xml, json). note that this is for when the string itself is escaped.
+    """
     Escape = StructureMapTransformCode("escape")
+    """
+    cast(source, type?) - case source from one type to another. target type can be left as implicit if there is one and only one target type known.
+    """
     Cast = StructureMapTransformCode("cast")
+    """
+    append(source...) - source is element or string.
+    """
     Append = StructureMapTransformCode("append")
+    """
+    translate(source, uri_of_map) - use the translate operation.
+    """
     Translate = StructureMapTransformCode("translate")
+    """
+    reference(source : object) - return a string that references the provided tree properly.
+    """
     Reference = StructureMapTransformCode("reference")
+    """
+    Perform a date operation. *Parameters to be documented*.
+    """
     DateOp = StructureMapTransformCode("dateOp")
+    """
+    Generate a random UUID (in lowercase). No Parameters.
+    """
     Uuid = StructureMapTransformCode("uuid")
+    """
+    Return the appropriate string to put in a reference that refers to the resource provided as a parameter.
+    """
     Pointer = StructureMapTransformCode("pointer")
+    """
+    Execute the supplied FHIRPath expression and use the value returned by that.
+    """
     Evaluate = StructureMapTransformCode("evaluate")
+    """
+    Create a CodeableConcept. Parameters = (text) or (system. Code[, display]).
+    """
     Cc = StructureMapTransformCode("cc")
+    """
+    Create a Coding. Parameters = (system. Code[, display]).
+    """
     C = StructureMapTransformCode("c")
+    """
+    Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the natural representation e.g. [comparator]value[space]unit.
+    """
     Qty = StructureMapTransformCode("qty")
+    """
+    Create an identifier. Parameters = (system, value[, type]) where type is a code from the identifier type value set.
+    """
     Id = StructureMapTransformCode("id")
+    """
+    Create a contact details. Parameters = (value) or (system, value). If no system is provided, the system should be inferred from the content of the value.
+    """
     Cp = StructureMapTransformCode("cp")

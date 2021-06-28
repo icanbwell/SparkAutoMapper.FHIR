@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class LDLCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class LDLCodesCodeValues:
+    """
+    None
+    """
+
     LDLCholesterol_Assay_ = LDLCodesCode("18262-6")
+    """
+    None
+    """
     CholesterolInLDL_Mass_volume_InSerumOrPlasmaByCalculation = LDLCodesCode("13457-7")

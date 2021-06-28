@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class ExampleVisionPrescriptionProductCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/vision-product
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/vision-product"
+
 
 class ExampleVisionPrescriptionProductCodesCodeValues:
+    """
+    A lens to be fitted to a frame to comprise a pair of glasses.
+    """
+
     Lens = ExampleVisionPrescriptionProductCodesCode("lens")
+    """
+    A lens to be fitted for wearing directly on an eye.
+    """
     ContactLens = ExampleVisionPrescriptionProductCodesCode("contact")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class CommunicationNotDoneReasonCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/communication-not-done-reason
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/communication-not-done-reason"
+
 
 class CommunicationNotDoneReasonCodeValues:
+    """
+    The communication was not done due to an unknown reason.
+    """
+
     Unknown = CommunicationNotDoneReasonCode("unknown")
+    """
+    The communication was not done due to a system error.
+    """
     SystemError = CommunicationNotDoneReasonCode("system-error")
+    """
+    The communication was not done due to an invalid phone number.
+    """
     InvalidPhoneNumber = CommunicationNotDoneReasonCode("invalid-phone-number")
+    """
+    The communication was not done due to the recipient being unavailable.
+    """
     RecipientUnavailable = CommunicationNotDoneReasonCode("recipient-unavailable")
+    """
+    The communication was not done due to a family objection.
+    """
     FamilyObjection = CommunicationNotDoneReasonCode("family-objection")
+    """
+    The communication was not done due to a patient objection.
+    """
     PatientObjection = CommunicationNotDoneReasonCode("patient-objection")

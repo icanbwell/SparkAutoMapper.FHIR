@@ -20,6 +20,7 @@ if TYPE_CHECKING:
     # unitOfMeasure (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for unitOfMeasure
     # Import for CodeableConcept for unitOfMeasure
     from spark_auto_mapper_fhir.value_sets.ucum_codes import UCUMCodesCode
 
@@ -41,6 +42,7 @@ if TYPE_CHECKING:
     # definitionCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for definitionCodeableConcept
     # Import for CodeableConcept for definitionCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

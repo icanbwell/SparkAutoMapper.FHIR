@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # summary (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for summary
     # Import for CodeableConcept for summary
     from spark_auto_mapper_fhir.value_sets.condition_stage import ConditionStageCode
 
@@ -28,6 +29,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.condition_stage_type import (
         ConditionStageTypeCode,

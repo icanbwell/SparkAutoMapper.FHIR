@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class GuidanceResponseStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/guidance-response-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/guidance-response-status"
+
 
 class GuidanceResponseStatusCodeValues:
+    """
+    The request was processed successfully.
+    """
+
     Success = GuidanceResponseStatusCode("success")
+    """
+    The request was processed successfully, but more data may result in a more complete evaluation.
+    """
     DataRequested = GuidanceResponseStatusCode("data-requested")
+    """
+    The request was processed, but more data is required to complete the evaluation.
+    """
     DataRequired = GuidanceResponseStatusCode("data-required")
+    """
+    The request is currently being processed.
+    """
     InProgress = GuidanceResponseStatusCode("in-progress")
+    """
+    The request was not processed successfully.
+    """
     Failure = GuidanceResponseStatusCode("failure")
+    """
+    The response was entered in error.
+    """
     EnteredInError = GuidanceResponseStatusCode("entered-in-error")

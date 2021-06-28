@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # protocol (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for protocol
     # Import for CodeableConcept for protocol
     from spark_auto_mapper_fhir.value_sets.message_transport import MessageTransportCode
 

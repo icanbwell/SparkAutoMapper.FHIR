@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class AllergyIntoleranceCertaintyCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/reaction-event-certainty
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/reaction-event-certainty"
+
 
 class AllergyIntoleranceCertaintyCodeValues:
+    """
+    There is a low level of clinical certainty that the reaction was caused by the identified substance.
+    """
+
     Unlikely = AllergyIntoleranceCertaintyCode("unlikely")
+    """
+    There is a high level of clinical certainty that the reaction was caused by the identified substance.
+    """
     Likely = AllergyIntoleranceCertaintyCode("likely")
+    """
+    There is a very high level of clinical certainty that the reaction was due to the identified substance, which may include clinical evidence by testing or rechallenge.
+    """
     Confirmed = AllergyIntoleranceCertaintyCode("confirmed")
+    """
+    The clinical certainty that the reaction was caused by the identified substance is unknown.  It is an explicit assertion that certainty is not known.
+    """
     Unknown = AllergyIntoleranceCertaintyCode("unknown")

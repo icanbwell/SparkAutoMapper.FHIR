@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class SubscriptionTagCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/subscription-tag
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/subscription-tag"
+
 
 class SubscriptionTagCodeValues:
+    """
+    The message has been queued for processing on a destination systems.
+    """
+
     Queued = SubscriptionTagCode("queued")
+    """
+    The message has been delivered to its intended recipient.
+    """
     Delivered = SubscriptionTagCode("delivered")

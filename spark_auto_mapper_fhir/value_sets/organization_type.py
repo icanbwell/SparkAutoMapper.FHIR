@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class OrganizationTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/organization-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/organization-type"
+
 
 class OrganizationTypeCodeValues:
+    """
+    An organization that provides healthcare services.
+    """
+
     HealthcareProvider = OrganizationTypeCode("prov")
+    """
+    A department or ward within a hospital (Generally is not applicable to top level organizations)
+    """
     HospitalDepartment = OrganizationTypeCode("dept")
+    """
+    An organizational team is usually a grouping of practitioners that perform a specific function within an organization (which could be a top level organization, or a department).
+    """
     OrganizationalTeam = OrganizationTypeCode("team")
+    """
+    A political body, often used when including organization records for government bodies such as a Federal Government, State or Local Government.
+    """
     Government = OrganizationTypeCode("govt")
+    """
+    A company that provides insurance to its subscribers that may include healthcare related policies.
+    """
     InsuranceCompany = OrganizationTypeCode("ins")
+    """
+    A company, charity, or governmental organization, which processes claims and/or issues payments to providers on behalf of patients or groups of patients.
+    """
     Payer = OrganizationTypeCode("pay")
+    """
+    An educational institution that provides education or research facilities.
+    """
     EducationalInstitute = OrganizationTypeCode("edu")
+    """
+    An organization that is identified as a part of a religious institution.
+    """
     ReligiousInstitution = OrganizationTypeCode("reli")
+    """
+    An organization that is identified as a Pharmaceutical/Clinical Research Sponsor.
+    """
     ClinicalResearchSponsor = OrganizationTypeCode("crs")
+    """
+    An un-incorporated community group.
+    """
     CommunityGroup = OrganizationTypeCode("cg")
+    """
+    An organization that is a registered business or corporation but not identified by other types.
+    """
     Non_HealthcareBusinessOrCorporation = OrganizationTypeCode("bus")
+    """
+    Other type of organization not already specified.
+    """
     Other = OrganizationTypeCode("other")

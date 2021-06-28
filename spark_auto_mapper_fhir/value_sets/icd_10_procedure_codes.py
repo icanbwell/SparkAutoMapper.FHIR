@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ICD_10ProcedureCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/icd-10-procedures
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/icd-10-procedures"
+
 
 class ICD_10ProcedureCodesCodeValues:
+    """
+    Procedure 1
+    """
+
     PROC_1 = ICD_10ProcedureCodesCode("123001")
+    """
+    Procedure 2
+    """
     PROC_2 = ICD_10ProcedureCodesCode("123002")
+    """
+    Procedure 3
+    """
     PROC_3 = ICD_10ProcedureCodesCode("123003")

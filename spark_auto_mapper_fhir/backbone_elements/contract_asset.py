@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     # scope (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for scope
     # Import for CodeableConcept for scope
     from spark_auto_mapper_fhir.value_sets.contract_resource_asset_scope_codes import (
         ContractResourceAssetScopeCodesCode,
@@ -24,6 +25,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.contract_resource_asset_type_codes import (
         ContractResourceAssetTypeCodesCode,
@@ -39,6 +41,7 @@ if TYPE_CHECKING:
     # subtype (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for subtype
     # Import for CodeableConcept for subtype
     from spark_auto_mapper_fhir.value_sets.contract_resource_asset_sub__type_codes import (
         ContractResourceAssetSub_TypeCodesCode,
@@ -48,6 +51,7 @@ if TYPE_CHECKING:
     # relationship (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for relationship
     # Import for CodeableConcept for relationship
     from spark_auto_mapper_fhir.value_sets.consent_content_class import (
         ConsentContentClassCode,
@@ -63,6 +67,7 @@ if TYPE_CHECKING:
     # periodType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for periodType
     # Import for CodeableConcept for periodType
     from spark_auto_mapper_fhir.value_sets.contract_resource_asset_availiability_codes import (
         ContractResourceAssetAvailiabilityCodesCode,

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class ProvenanceEventHistoryAgentRoleCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ProvenanceEventHistoryAgentRoleCodesCodeValues:
+    """
+    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    """
+
     Participation = ProvenanceEventHistoryAgentRoleCodesCode("PART")
+    """
+    None
+    """
     Author = ProvenanceEventHistoryAgentRoleCodesCode("AUT")
+    """
+    None
+    """
     Informant = ProvenanceEventHistoryAgentRoleCodesCode("INF")
+    """
+    None
+    """
     Verifier = ProvenanceEventHistoryAgentRoleCodesCode("VRF")
+    """
+    None
+    """
     DataEnterer = ProvenanceEventHistoryAgentRoleCodesCode("ENT")

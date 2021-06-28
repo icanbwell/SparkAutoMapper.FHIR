@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,27 +16,99 @@ class MedicationKnowledgePackageTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medicationknowledge-package-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationknowledge-package-type"
+
 
 class MedicationKnowledgePackageTypeCodesCodeValues:
+    """
+    None
+    """
+
     Ampule = MedicationKnowledgePackageTypeCodesCode("amp")
+    """
+    None
+    """
     Bag = MedicationKnowledgePackageTypeCodesCode("bag")
+    """
+    None
+    """
     BlisterPack = MedicationKnowledgePackageTypeCodesCode("blstrpk")
+    """
+    None
+    """
     Bottle = MedicationKnowledgePackageTypeCodesCode("bot")
+    """
+    None
+    """
     Box = MedicationKnowledgePackageTypeCodesCode("box")
+    """
+    None
+    """
     Can = MedicationKnowledgePackageTypeCodesCode("can")
+    """
+    None
+    """
     Cartridge = MedicationKnowledgePackageTypeCodesCode("cart")
+    """
+    None
+    """
     Disk = MedicationKnowledgePackageTypeCodesCode("disk")
+    """
+    None
+    """
     Dosette = MedicationKnowledgePackageTypeCodesCode("doset")
+    """
+    None
+    """
     Jar = MedicationKnowledgePackageTypeCodesCode("jar")
+    """
+    None
+    """
     Jug = MedicationKnowledgePackageTypeCodesCode("jug")
+    """
+    None
+    """
     Minim = MedicationKnowledgePackageTypeCodesCode("minim")
+    """
+    None
+    """
     NebuleAmp = MedicationKnowledgePackageTypeCodesCode("nebamp")
+    """
+    None
+    """
     Ovule = MedicationKnowledgePackageTypeCodesCode("ovul")
+    """
+    None
+    """
     Pouch = MedicationKnowledgePackageTypeCodesCode("pch")
+    """
+    None
+    """
     Packet = MedicationKnowledgePackageTypeCodesCode("pkt")
+    """
+    None
+    """
     Sashet = MedicationKnowledgePackageTypeCodesCode("sash")
+    """
+    None
+    """
     Strip = MedicationKnowledgePackageTypeCodesCode("strip")
+    """
+    None
+    """
     Tin = MedicationKnowledgePackageTypeCodesCode("tin")
+    """
+    None
+    """
     Tub = MedicationKnowledgePackageTypeCodesCode("tub")
+    """
+    None
+    """
     Tube = MedicationKnowledgePackageTypeCodesCode("tube")
+    """
+    None
+    """
     Vial = MedicationKnowledgePackageTypeCodesCode("vial")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class TaskStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/task-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/task-status"
+
 
 class TaskStatusCodeValues:
+    """
+    The task is not yet ready to be acted upon.
+    """
+
     Draft = TaskStatusCode("draft")
+    """
+    The task is ready to be acted upon and action is sought.
+    """
     Requested = TaskStatusCode("requested")
+    """
+    A potential performer has claimed ownership of the task and is evaluating whether to perform it.
+    """
     Received = TaskStatusCode("received")
+    """
+    The potential performer has agreed to execute the task but has not yet started work.
+    """
     Accepted = TaskStatusCode("accepted")
+    """
+    The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.
+    """
     Rejected = TaskStatusCode("rejected")
+    """
+    The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.
+    """
     Ready = TaskStatusCode("ready")
+    """
+    The task was not completed.
+    """
     Cancelled = TaskStatusCode("cancelled")
+    """
+    The task has been started but is not yet complete.
+    """
     InProgress = TaskStatusCode("in-progress")
+    """
+    The task has been started but work has been paused.
+    """
     OnHold = TaskStatusCode("on-hold")
+    """
+    The task was attempted but could not be completed due to some error.
+    """
     Failed = TaskStatusCode("failed")
+    """
+    The task has been completed.
+    """
     Completed = TaskStatusCode("completed")
+    """
+    The task should never have existed and is retained only because of the possibility it may have used.
+    """
     EnteredInError = TaskStatusCode("entered-in-error")

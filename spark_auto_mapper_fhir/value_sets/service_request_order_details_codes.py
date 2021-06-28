@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,20 +16,41 @@ class ServiceRequestOrderDetailsCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ServiceRequestOrderDetailsCodesCodeValues:
+    """
+    None
+    """
+
     ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_ = (
         ServiceRequestOrderDetailsCodesCode("47545007")
     )
+    """
+    None
+    """
     PressureControlledVentilation_procedure_ = ServiceRequestOrderDetailsCodesCode(
         "286812008"
     )
+    """
+    None
+    """
     PatientTriggeredInspiratoryAssistance_procedure_ = (
         ServiceRequestOrderDetailsCodesCode("243144002")
     )
+    """
+    None
+    """
     AssistedControlledMandatoryVentilation_procedure_ = (
         ServiceRequestOrderDetailsCodesCode("243150007")
     )
+    """
+    None
+    """
     SynchronizedIntermittentMandatoryVentilation_procedure_ = (
         ServiceRequestOrderDetailsCodesCode("59427005")
     )

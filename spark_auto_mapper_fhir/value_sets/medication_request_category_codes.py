@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class MedicationRequestCategoryCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/medicationrequest-category
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationrequest-category"
+
 
 class MedicationRequestCategoryCodesCodeValues:
+    """
+    Includes requests for medications to be administered or consumed in an inpatient or acute care setting
+    """
+
     Inpatient = MedicationRequestCategoryCodesCode("inpatient")
+    """
+    Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+    """
     Outpatient = MedicationRequestCategoryCodesCode("outpatient")
+    """
+    Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+    """
     Community = MedicationRequestCategoryCodesCode("community")
+    """
+    Includes requests for medications created when the patient is being released from a facility
+    """
     Discharge = MedicationRequestCategoryCodesCode("discharge")

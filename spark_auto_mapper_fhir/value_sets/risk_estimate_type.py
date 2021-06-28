@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class RiskEstimateTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/risk-estimate-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/risk-estimate-type"
+
 
 class RiskEstimateTypeCodeValues:
+    """
+    dichotomous measure (present or absent) reported as a ratio compared to the denominator of 1 (A percentage is a proportion with denominator of 100).
+    """
+
     Proportion = RiskEstimateTypeCode("proportion")
+    """
+    A special use case where the proportion is derived from a formula rather than derived from summary evidence.
+    """
     DerivedProportion = RiskEstimateTypeCode("derivedProportion")
+    """
+    continuous numerical measure reported as an average.
+    """
     Mean = RiskEstimateTypeCode("mean")
+    """
+    continuous numerical measure reported as the middle of the range.
+    """
     Median = RiskEstimateTypeCode("median")
+    """
+    descriptive measure reported as total number of items.
+    """
     Count = RiskEstimateTypeCode("count")
+    """
+    descriptive measure reported as narrative.
+    """
     Descriptive = RiskEstimateTypeCode("descriptive")

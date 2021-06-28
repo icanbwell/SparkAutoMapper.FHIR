@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class DietCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/encounter-diet
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-diet"
+
 
 class DietCodeValues:
+    """
+    Food without meat, poultry or seafood.
+    """
+
     Vegetarian = DietCode("vegetarian")
+    """
+    Excludes dairy products.
+    """
     DairyFree = DietCode("dairy-free")
+    """
+    Excludes ingredients containing nuts.
+    """
     NutFree = DietCode("nut-free")
+    """
+    Excludes ingredients containing gluten.
+    """
     GlutenFree = DietCode("gluten-free")
+    """
+    Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
+    """
     Vegan = DietCode("vegan")
+    """
+    Foods that conform to Islamic law.
+    """
     Halal = DietCode("halal")
+    """
+    Foods that conform to Jewish dietary law.
+    """
     Kosher = DietCode("kosher")

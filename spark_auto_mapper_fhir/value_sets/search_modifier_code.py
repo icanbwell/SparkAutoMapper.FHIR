@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,17 +16,59 @@ class SearchModifierCodeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/search-modifier-code
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/search-modifier-code"
+
 
 class SearchModifierCodeCodeValues:
+    """
+    The search parameter returns resources that have a value or not.
+    """
+
     Missing = SearchModifierCodeCode("missing")
+    """
+    The search parameter returns resources that have a value that exactly matches the supplied parameter (the whole string, including casing and accents).
+    """
     Exact = SearchModifierCodeCode("exact")
+    """
+    The search parameter returns resources that include the supplied parameter value anywhere within the field being searched.
+    """
     Contains = SearchModifierCodeCode("contains")
+    """
+    The search parameter returns resources that do not contain a match.
+    """
     Not = SearchModifierCodeCode("not")
+    """
+    The search parameter is processed as a string that searches text associated with the code/value - either CodeableConcept.text, Coding.display, or Identifier.type.text.
+    """
     Text = SearchModifierCodeCode("text")
+    """
+    The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is in the specified value set.
+    """
     In = SearchModifierCodeCode("in")
+    """
+    The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is not in the specified value set.
+    """
     NotIn = SearchModifierCodeCode("not-in")
+    """
+    The search parameter tests whether the value in a resource is subsumed by the specified value (is-a, or hierarchical relationships).
+    """
     Below = SearchModifierCodeCode("below")
+    """
+    The search parameter tests whether the value in a resource subsumes the specified value (is-a, or hierarchical relationships).
+    """
     Above = SearchModifierCodeCode("above")
+    """
+    The search parameter only applies to the Resource Type specified as a modifier (e.g. the modifier is not actually :type, but :Patient etc.).
+    """
     Type = SearchModifierCodeCode("type")
+    """
+    The search parameter applies to the identifier on the resource, not the reference.
+    """
     Identifier = SearchModifierCodeCode("identifier")
+    """
+    The search parameter has the format system|code|value, where the system and code refer to an Identifier.type.coding.system and .code, and match if any of the type codes match. All 3 parts must be present.
+    """
     OfType = SearchModifierCodeCode("ofType")

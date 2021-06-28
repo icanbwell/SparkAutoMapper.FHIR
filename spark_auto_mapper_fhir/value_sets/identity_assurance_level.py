@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class IdentityAssuranceLevelCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/identity-assuranceLevel
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/identity-assuranceLevel"
+
 
 class IdentityAssuranceLevelCodeValues:
+    """
+    Little or no confidence in the asserted identity's accuracy.
+    """
+
     Level1 = IdentityAssuranceLevelCode("level1")
+    """
+    Some confidence in the asserted identity's accuracy.
+    """
     Level2 = IdentityAssuranceLevelCode("level2")
+    """
+    High confidence in the asserted identity's accuracy.
+    """
     Level3 = IdentityAssuranceLevelCode("level3")
+    """
+    Very high confidence in the asserted identity's accuracy.
+    """
     Level4 = IdentityAssuranceLevelCode("level4")

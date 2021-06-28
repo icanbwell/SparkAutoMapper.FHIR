@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class PropertyTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/concept-property-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/concept-property-type"
+
 
 class PropertyTypeCodeValues:
+    """
+    The property value is a code that identifies a concept defined in the code system.
+    """
+
     Code_internalReference_ = PropertyTypeCode("code")
+    """
+    The property  value is a code defined in an external code system. This may be used for translations, but is not the intent.
+    """
     Coding_externalReference_ = PropertyTypeCode("Coding")
+    """
+    The property value is a string.
+    """
     String = PropertyTypeCode("string")
+    """
+    The property value is a string (often used to assign ranking values to concepts for supporting score assessments).
+    """
     Integer = PropertyTypeCode("integer")
+    """
+    The property value is a boolean true | false.
+    """
     Boolean = PropertyTypeCode("boolean")
+    """
+    The property is a date or a date + time.
+    """
     DateTime = PropertyTypeCode("dateTime")
+    """
+    The property value is a decimal number.
+    """
     Decimal = PropertyTypeCode("decimal")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class NameRepresentationUseCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class NameRepresentationUseCodeValues:
+    """
+    Identifies the different representations of a name.  The representation may affect how the name is used.  (E.g. use of Ideographic for formal communications.)
+    """
+
     Namerepresentationuse = NameRepresentationUseCode("_NameRepresentationUse")
+    """
+    A name assigned to a person. Reasons some organizations assign alternate names may include not knowing the person's name, or to maintain anonymity. Some, but not necessarily all, of the name types that people call "alias" may fit into this category.
+    """
     Assigned = NameRepresentationUseCode("ASGN")
+    """
+    As recorded on a license, record, certificate, etc. (only if different from legal name)
+    """
     License = NameRepresentationUseCode("C")
+    """
+    e.g. Chief Red Cloud
+    """
     Indigenoustribal = NameRepresentationUseCode("I")
+    """
+    Known as/conventional/the one you use
+    """
     Legal = NameRepresentationUseCode("L")
+    """
+    A self asserted name that the person is using or has used.
+    """
     Pseudonym = NameRepresentationUseCode("P")
+    """
+    e.g. Sister Mary Francis, Brother John
+    """
     Religious = NameRepresentationUseCode("R")
+    """
+    A name intended for use in searching or matching.
+    """
     Search = NameRepresentationUseCode("SRCH")
+    """
+    None
+    """
     ABC = NameRepresentationUseCode("ABC")
+    """
+    None
+    """
     IDE = NameRepresentationUseCode("IDE")
+    """
+    None
+    """
     SYL = NameRepresentationUseCode("SYL")

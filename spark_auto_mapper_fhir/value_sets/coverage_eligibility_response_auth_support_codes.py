@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,19 +16,51 @@ class CoverageEligibilityResponseAuthSupportCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/coverageeligibilityresponse-ex-auth-support
+    """
+    codeset: FhirUri = (
+        "http://hl7.org/fhir/ValueSet/coverageeligibilityresponse-ex-auth-support"
+    )
+
 
 class CoverageEligibilityResponseAuthSupportCodesCodeValues:
+    """
+    A request or authorization for laboratory diagnostic tests.
+    """
+
     LabOrder = CoverageEligibilityResponseAuthSupportCodesCode("laborder")
+    """
+    A report on laboratory diagnostic test(s).
+    """
     LabReport = CoverageEligibilityResponseAuthSupportCodesCode("labreport")
+    """
+    A request or authorization for diagnostic imaging.
+    """
     DiagnosticImageOrder = CoverageEligibilityResponseAuthSupportCodesCode(
         "diagnosticimageorder"
     )
+    """
+    A report on diagnostic image(s).
+    """
     DiagnosticImageReport = CoverageEligibilityResponseAuthSupportCodesCode(
         "diagnosticimagereport"
     )
+    """
+    A report from a licensed professional regarding the siutation, condition or proposed treatment.
+    """
     ProfessionalReport = CoverageEligibilityResponseAuthSupportCodesCode(
         "professionalreport"
     )
+    """
+    A formal accident report as would be filed with police or a simlar official body.
+    """
     AccidentReport = CoverageEligibilityResponseAuthSupportCodesCode("accidentreport")
+    """
+    A physical model of the affected area.
+    """
     Model = CoverageEligibilityResponseAuthSupportCodesCode("model")
+    """
+    A photograph of the affected area.
+    """
     Picture = CoverageEligibilityResponseAuthSupportCodesCode("picture")

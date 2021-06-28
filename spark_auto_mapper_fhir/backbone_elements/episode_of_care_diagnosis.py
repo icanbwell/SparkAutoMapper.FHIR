@@ -19,6 +19,7 @@ if TYPE_CHECKING:
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for role
     # Import for CodeableConcept for role
     from spark_auto_mapper_fhir.value_sets.diagnosis_role import DiagnosisRoleCode
 

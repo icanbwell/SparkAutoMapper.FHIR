@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ExtensionContextTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/extension-context-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/extension-context-type"
+
 
 class ExtensionContextTypeCodeValues:
+    """
+    The context is all elements that match the FHIRPath query found in the expression.
+    """
+
     FHIRPath = ExtensionContextTypeCode("fhirpath")
+    """
+    The context is any element that has an ElementDefinition.id that matches that found in the expression. This includes ElementDefinition Ids that have slicing identifiers. The full path for the element is [url]#[elementid]. If there is no #, the Element id is one defined in the base specification.
+    """
     ElementID = ExtensionContextTypeCode("element")
+    """
+    The context is a particular extension from a particular StructureDefinition, and the expression is just a uri that identifies the extension.
+    """
     ExtensionURL = ExtensionContextTypeCode("extension")

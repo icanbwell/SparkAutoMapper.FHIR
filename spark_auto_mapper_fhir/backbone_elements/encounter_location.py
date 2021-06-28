@@ -24,6 +24,7 @@ if TYPE_CHECKING:
     # physicalType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for physicalType
     # Import for CodeableConcept for physicalType
     from spark_auto_mapper_fhir.value_sets.location_type import LocationTypeCode
 

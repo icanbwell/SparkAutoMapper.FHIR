@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,43 +16,163 @@ class ServiceCategoryCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/service-category
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/service-category"
+
 
 class ServiceCategoryCodeValues:
+    """
+    Adoption
+    """
+
     Adoption = ServiceCategoryCode("1")
+    """
+    Aged Care
+    """
     AgedCare = ServiceCategoryCode("2")
+    """
+    Allied Health
+    """
     AlliedHealth = ServiceCategoryCode("34")
+    """
+    Alternative & Complementary Therapies
+    """
     Alternative_ComplementaryTherapies = ServiceCategoryCode("3")
+    """
+    Child Care and/or Kindergarten
+    """
     ChildCare_Kindergarten = ServiceCategoryCode("4")
+    """
+    Child Development
+    """
     ChildDevelopment = ServiceCategoryCode("5")
+    """
+    Child Protection & Family Services
+    """
     ChildProtection_FamilyServices = ServiceCategoryCode("6")
+    """
+    Community Health Care
+    """
     CommunityHealthCare = ServiceCategoryCode("7")
+    """
+    Counselling
+    """
     Counselling = ServiceCategoryCode("8")
+    """
+    Crisis Line (GPAH use only)
+    """
     CrisisLine_GPAHUseOnly_ = ServiceCategoryCode("36")
+    """
+    Death Services
+    """
     DeathServices = ServiceCategoryCode("9")
+    """
+    Dental
+    """
     Dental = ServiceCategoryCode("10")
+    """
+    Disability Support
+    """
     DisabilitySupport = ServiceCategoryCode("11")
+    """
+    Drug/Alcohol
+    """
     Drug_Alcohol = ServiceCategoryCode("12")
+    """
+    Education & Learning
+    """
     Education_Learning = ServiceCategoryCode("13")
+    """
+    Emergency Department
+    """
     EmergencyDepartment = ServiceCategoryCode("14")
+    """
+    Employment
+    """
     Employment = ServiceCategoryCode("15")
+    """
+    Financial & Material aid
+    """
     Financial_MaterialAid = ServiceCategoryCode("16")
+    """
+    General Practice/GP (doctor)
+    """
     GeneralPractice = ServiceCategoryCode("17")
+    """
+    Hospital
+    """
     Hospital = ServiceCategoryCode("35")
+    """
+    Housing/Homelessness
+    """
     Housing_Homelessness = ServiceCategoryCode("18")
+    """
+    Interpreting
+    """
     Interpreting = ServiceCategoryCode("19")
+    """
+    Justice
+    """
     Justice = ServiceCategoryCode("20")
+    """
+    Legal
+    """
     Legal = ServiceCategoryCode("21")
+    """
+    Mental Health
+    """
     MentalHealth = ServiceCategoryCode("22")
+    """
+    NDIA
+    """
     NDIA = ServiceCategoryCode("38")
+    """
+    Physical Activity & Recreation
+    """
     PhysicalActivity_Recreation = ServiceCategoryCode("23")
+    """
+    Regulation
+    """
     Regulation = ServiceCategoryCode("24")
+    """
+    Respite/Carer Support
+    """
     Respite_CarerSupport = ServiceCategoryCode("25")
+    """
+    Specialist Clinical Pathology - requires referral
+    """
     SpecialistClinicalPathology = ServiceCategoryCode("26")
+    """
+    Specialist Medical - requires referral
+    """
     SpecialistMedical = ServiceCategoryCode("27")
+    """
+    Specialist Obstetrics & Gynecology - requires referral
+    """
     SpecialistObstetrics_Gynecology = ServiceCategoryCode("28")
+    """
+    Specialist Paediatric - requires referral
+    """
     SpecialistPaediatric = ServiceCategoryCode("29")
+    """
+    Specialist Radiology/Imaging - requires referral
+    """
     SpecialistRadiology_Imaging = ServiceCategoryCode("30")
+    """
+    Specialist Surgical - requires referral
+    """
     SpecialistSurgical = ServiceCategoryCode("31")
+    """
+    Support group/s
+    """
     SupportGroup_s = ServiceCategoryCode("32")
+    """
+    Test Message (HSD admin use only)
+    """
     TestMessage_HSDAdmin_ = ServiceCategoryCode("37")
+    """
+    Transport
+    """
     Transport = ServiceCategoryCode("33")

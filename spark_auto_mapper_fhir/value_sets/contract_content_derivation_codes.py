@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ContractContentDerivationCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/contract-content-derivative
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/contract-content-derivative"
+
 
 class ContractContentDerivationCodesCodeValues:
+    """
+    Content derivative that conveys sufficient information needed to register the source basal content from which it is derived.  This derivative content may be used to register the basal content as it changes status in its lifecycle.  For example, content registration may occur when the basal content is created, updated, inactive, or deleted.
+    """
+
     ContentRegistration = ContractContentDerivationCodesCode("registration")
+    """
+    A content derivative that conveys sufficient information to locate and retrieve the content.
+    """
     ContentRetrieval = ContractContentDerivationCodesCode("retrieval")
+    """
+    Content derivative that has less than full fidelity to the basal information source from which it was 'transcribed'. It provides recipients with the full content representation they may require for compliance purposes, and typically include a reference to or an attached unstructured representation for recipients needing an exact copy of the legal agreement.
+    """
     ContentStatement = ContractContentDerivationCodesCode("statement")
+    """
+    A Content Derivative that conveys sufficient information to determine the authorized entities with which the content may be shared.
+    """
     ShareableContent = ContractContentDerivationCodesCode("shareable")

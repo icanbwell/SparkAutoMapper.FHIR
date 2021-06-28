@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class AuditEventAgentNetworkTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/network-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/network-type"
+
 
 class AuditEventAgentNetworkTypeCodeValues:
+    """
+    The machine name, including DNS name.
+    """
+
     MachineName = AuditEventAgentNetworkTypeCode("1")
+    """
+    The assigned Internet Protocol (IP) address.
+    """
     IPAddress = AuditEventAgentNetworkTypeCode("2")
+    """
+    The assigned telephone number.
+    """
     TelephoneNumber = AuditEventAgentNetworkTypeCode("3")
+    """
+    The assigned email address.
+    """
     EmailAddress = AuditEventAgentNetworkTypeCode("4")
+    """
+    URI (User directory, HTTP-PUT, ftp, etc.).
+    """
     URI = AuditEventAgentNetworkTypeCode("5")

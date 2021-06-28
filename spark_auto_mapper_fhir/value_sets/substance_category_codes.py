@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class SubstanceCategoryCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/substance-category
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/substance-category"
+
 
 class SubstanceCategoryCodesCodeValues:
+    """
+    A substance that causes an allergic reaction.
+    """
+
     Allergen = SubstanceCategoryCodesCode("allergen")
+    """
+    A substance that is produced by or extracted from a biological source.
+    """
     BiologicalSubstance = SubstanceCategoryCodesCode("biological")
+    """
+    A substance that comes directly from a human or an animal (e.g. blood, urine, feces, tears, etc.).
+    """
     BodySubstance = SubstanceCategoryCodesCode("body")
+    """
+    Any organic or inorganic substance of a particular molecular identity, including -- (i) any combination of such substances occurring in whole or in part as a result of a chemical reaction or occurring in nature and (ii) any element or uncombined radical (http://www.epa.gov/opptintr/import-export/pubs/importguide.pdf).
+    """
     Chemical = SubstanceCategoryCodesCode("chemical")
+    """
+    A food, dietary ingredient, or dietary supplement for human or animal.
+    """
     DietarySubstance = SubstanceCategoryCodesCode("food")
+    """
+    A substance intended for use in the diagnosis, cure, mitigation, treatment, or prevention of disease in man or other animals (Federal Food Drug and Cosmetic Act).
+    """
     DrugOrMedicament = SubstanceCategoryCodesCode("drug")
+    """
+    A finished product which is not normally ingested, absorbed or injected (e.g. steel, iron, wood, plastic and paper).
+    """
     Material = SubstanceCategoryCodesCode("material")

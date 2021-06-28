@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # outcome (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for outcome
     # Import for CodeableConcept for outcome
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -21,6 +22,7 @@ if TYPE_CHECKING:
     # qualitativeRisk (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for qualitativeRisk
     # Import for CodeableConcept for qualitativeRisk
     from spark_auto_mapper_fhir.value_sets.risk_probability import RiskProbabilityCode
 

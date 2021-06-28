@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,51 @@ class FHIRSpecimenCollectionMethodCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class FHIRSpecimenCollectionMethodCodeValues:
+    """
+    None
+    """
+
     Aspiration_Action = FHIRSpecimenCollectionMethodCode("129316008")
+    """
+    None
+    """
     Biopsy_Action = FHIRSpecimenCollectionMethodCode("129314006")
+    """
+    None
+    """
     Puncture_Action = FHIRSpecimenCollectionMethodCode("129300006")
+    """
+    None
+    """
     Excision_Action = FHIRSpecimenCollectionMethodCode("129304002")
+    """
+    None
+    """
     Scraping_Action = FHIRSpecimenCollectionMethodCode("129323009")
+    """
+    None
+    """
     UrineSpecimenCollection_CleanCatch = FHIRSpecimenCollectionMethodCode("73416001")
+    """
+    None
+    """
     TimedUrineCollection = FHIRSpecimenCollectionMethodCode("225113003")
+    """
+    None
+    """
     UrineSpecimenCollection_Catheterized = FHIRSpecimenCollectionMethodCode("70777001")
+    """
+    None
+    """
     CollectionOfCoughedSputum = FHIRSpecimenCollectionMethodCode("386089008")
+    """
+    None
+    """
     Finger_prickSampling = FHIRSpecimenCollectionMethodCode("278450005")

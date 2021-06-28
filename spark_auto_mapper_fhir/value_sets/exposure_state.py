@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,7 +16,19 @@ class ExposureStateCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/exposure-state
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/exposure-state"
+
 
 class ExposureStateCodeValues:
+    """
+    used when the results by exposure is describing the results for the primary exposure of interest.
+    """
+
     Exposure = ExposureStateCode("exposure")
+    """
+    used when the results by exposure is describing the results for the alternative exposure state, control state or comparator state.
+    """
     ExposureAlternative = ExposureStateCode("exposure-alternative")

@@ -21,6 +21,7 @@ if TYPE_CHECKING:
     # type_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.audit_event_entity_type import (
         AuditEventEntityTypeCode,
@@ -30,6 +31,7 @@ if TYPE_CHECKING:
     # role (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for role
     # Import for CodeableConcept for role
     from spark_auto_mapper_fhir.value_sets.audit_event_entity_role import (
         AuditEventEntityRoleCode,
@@ -39,6 +41,7 @@ if TYPE_CHECKING:
     # lifecycle (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for lifecycle
     # Import for CodeableConcept for lifecycle
     from spark_auto_mapper_fhir.value_sets.object_lifecycle_events import (
         ObjectLifecycleEventsCode,
@@ -48,6 +51,7 @@ if TYPE_CHECKING:
     # securityLabel (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
+    # End Import for References for securityLabel
     # Import for CodeableConcept for securityLabel
     from spark_auto_mapper_fhir.value_sets.all_security_labels import (
         AllSecurityLabelsCode,

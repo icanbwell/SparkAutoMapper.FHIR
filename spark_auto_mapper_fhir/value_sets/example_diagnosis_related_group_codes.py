@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ExampleDiagnosisRelatedGroupCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/ex-diagnosisrelatedgroup
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-diagnosisrelatedgroup"
+
 
 class ExampleDiagnosisRelatedGroupCodesCodeValues:
+    """
+    Normal Vaginal Delivery.
+    """
+
     NormalVaginalDelivery = ExampleDiagnosisRelatedGroupCodesCode("100")
+    """
+    Appendectomy without rupture or other complications.
+    """
     Appendectomy_Uncomplicated = ExampleDiagnosisRelatedGroupCodesCode("101")
+    """
+    Emergency department treatment of a tooth abscess.
+    """
     ToothAbscess = ExampleDiagnosisRelatedGroupCodesCode("300")
+    """
+    Head trauma - concussion.
+    """
     HeadTrauma_Concussion = ExampleDiagnosisRelatedGroupCodesCode("400")

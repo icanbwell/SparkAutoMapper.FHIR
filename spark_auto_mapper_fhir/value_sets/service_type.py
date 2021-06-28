@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,601 +16,2395 @@ class ServiceTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/service-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/service-type"
+
 
 class ServiceTypeCodeValues:
+    """
+    Adoption & permanent care information/support
+    """
+
     Adoption_PermanentCareInfo_Support = ServiceTypeCode("1")
+    """
+    Aged care assessment
+    """
     AgedCareAssessment = ServiceTypeCode("2")
+    """
+    Aged Care information/referral
+    """
     AgedCareInformation_Referral = ServiceTypeCode("3")
+    """
+    Aged Residential Care
+    """
     AgedResidentialCare = ServiceTypeCode("4")
+    """
+    Case management for older persons
+    """
     CaseManagementForOlderPersons = ServiceTypeCode("5")
+    """
+    Delivered meals (meals on wheels)
+    """
     DeliveredMeals_MealsOnWheels_ = ServiceTypeCode("6")
+    """
+    Friendly visiting
+    """
     FriendlyVisiting = ServiceTypeCode("7")
+    """
+    Home care/housekeeping assistance
+    """
     HomeCare_HousekeepingAssistance = ServiceTypeCode("8")
+    """
+    Home maintenance and repair
+    """
     HomeMaintenanceAndRepair = ServiceTypeCode("9")
+    """
+    Personal alarms/alerts
+    """
     PersonalAlarms_Alerts = ServiceTypeCode("10")
+    """
+    Personal care for older persons
+    """
     PersonalCareForOlderPersons = ServiceTypeCode("11")
+    """
+    Planned activity groups
+    """
     PlannedActivityGroups = ServiceTypeCode("12")
+    """
+    Acupuncture
+    """
     Acupuncture = ServiceTypeCode("13")
+    """
+    Alexander technique therapy
+    """
     AlexanderTechniqueTherapy = ServiceTypeCode("14")
+    """
+    Aromatherapy
+    """
     Aromatherapy = ServiceTypeCode("15")
+    """
+    Biorhythm services
+    """
     BiorhythmServices = ServiceTypeCode("16")
+    """
+    Bowen therapy
+    """
     BowenTherapy = ServiceTypeCode("17")
+    """
+    Chinese herbal medicine
+    """
     ChineseHerbalMedicine = ServiceTypeCode("18")
+    """
+    Feldenkrais
+    """
     Feldenkrais = ServiceTypeCode("19")
+    """
+    Homoeopathy
+    """
     Homoeopathy = ServiceTypeCode("20")
+    """
+    Hydrotherapy
+    """
     Hydrotherapy = ServiceTypeCode("21")
+    """
+    Hypnotherapy
+    """
     Hypnotherapy = ServiceTypeCode("22")
+    """
+    Kinesiology
+    """
     Kinesiology = ServiceTypeCode("23")
+    """
+    Magnetic therapy
+    """
     MagneticTherapy = ServiceTypeCode("24")
+    """
+    Massage therapy
+    """
     MassageTherapy = ServiceTypeCode("25")
+    """
+    Meditation
+    """
     Meditation = ServiceTypeCode("26")
+    """
+    Myotherapy
+    """
     Myotherapy = ServiceTypeCode("27")
+    """
+    Naturopathy
+    """
     Naturopathy = ServiceTypeCode("28")
+    """
+    Reflexology
+    """
     Reflexology = ServiceTypeCode("29")
+    """
+    Reiki
+    """
     Reiki = ServiceTypeCode("30")
+    """
+    Relaxation therapy
+    """
     RelaxationTherapy = ServiceTypeCode("31")
+    """
+    Shiatsu
+    """
     Shiatsu = ServiceTypeCode("32")
+    """
+    Western herbal medicine
+    """
     WesternHerbalMedicine = ServiceTypeCode("33")
+    """
+    Family day care
+    """
     FamilyDayCare = ServiceTypeCode("34")
+    """
+    Holiday programs
+    """
     HolidayPrograms = ServiceTypeCode("35")
+    """
+    Kindergarten inclusion support for children with a disability
+    """
     KindergartenInclusionSupport = ServiceTypeCode("36")
+    """
+    Kindergarten/preschool
+    """
     Kindergarten_Preschool = ServiceTypeCode("37")
+    """
+    Long day child care
+    """
     LongDayChildCare = ServiceTypeCode("38")
+    """
+    Occasional child care
+    """
     OccasionalChildCare = ServiceTypeCode("39")
+    """
+    Outside school hours care
+    """
     OutsideSchoolHoursCare = ServiceTypeCode("40")
+    """
+    Children's play programs
+    """
     Children_sPlayPrograms = ServiceTypeCode("41")
+    """
+    Parenting & family management support/education
+    """
     Parenting_FamilySupport_Education = ServiceTypeCode("42")
+    """
+    Playgroup
+    """
     Playgroup = ServiceTypeCode("43")
+    """
+    School nursing
+    """
     SchoolNursing = ServiceTypeCode("44")
+    """
+    Toy library
+    """
     ToyLibrary = ServiceTypeCode("45")
+    """
+    Child protection/child abuse report
+    """
     ChildProtection_ChildAbuseReport = ServiceTypeCode("46")
+    """
+    Foster care
+    """
     FosterCare = ServiceTypeCode("47")
+    """
+    Residential/ out of home care
+    """
     Residential_Out_of_HomeCare = ServiceTypeCode("48")
+    """
+    Support for young people leaving care
+    """
     Support_YoungPeopleLeavingCare = ServiceTypeCode("49")
+    """
+    Audiology
+    """
     Audiology = ServiceTypeCode("50")
+    """
+    Blood donation
+    """
     BloodDonation = ServiceTypeCode("51")
+    """
+    Chiropractic
+    """
     Chiropractic = ServiceTypeCode("52")
+    """
+    Dietetics
+    """
     Dietetics = ServiceTypeCode("53")
+    """
+    Family planning
+    """
     FamilyPlanning = ServiceTypeCode("54")
+    """
+    Health advocacy/Liaison service
+    """
     HealthAdvocacy_LiaisonService = ServiceTypeCode("55")
+    """
+    Health information/referral
+    """
     HealthInformation_Referral = ServiceTypeCode("56")
+    """
+    Immunization
+    """
     Immunization = ServiceTypeCode("57")
+    """
+    Maternal & child health
+    """
     Maternal_ChildHealth = ServiceTypeCode("58")
+    """
+    Nursing
+    """
     Nursing = ServiceTypeCode("59")
+    """
+    Nutrition
+    """
     Nutrition = ServiceTypeCode("60")
+    """
+    Occupational therapy
+    """
     OccupationalTherapy = ServiceTypeCode("61")
+    """
+    Optometry
+    """
     Optometry = ServiceTypeCode("62")
+    """
+    Osteopathy
+    """
     Osteopathy = ServiceTypeCode("63")
+    """
+    Pharmacy
+    """
     Pharmacy = ServiceTypeCode("64")
+    """
+    Physiotherapy
+    """
     Physiotherapy = ServiceTypeCode("65")
+    """
+    Podiatry
+    """
     Podiatry = ServiceTypeCode("66")
+    """
+    Sexual health
+    """
     SexualHealth = ServiceTypeCode("67")
+    """
+    Speech pathology/therapy
+    """
     SpeechPathology_Therapy = ServiceTypeCode("68")
+    """
+    Bereavement counselling
+    """
     BereavementCounselling = ServiceTypeCode("69")
+    """
+    Crisis counselling
+    """
     CrisisCounselling = ServiceTypeCode("70")
+    """
+    Family counselling and/or family therapy
+    """
     FamilyCounselling_Therapy = ServiceTypeCode("71")
+    """
+    Family violence counselling
+    """
     FamilyViolenceCounselling = ServiceTypeCode("72")
+    """
+    Financial counselling
+    """
     FinancialCounselling = ServiceTypeCode("73")
+    """
+    Generalist counselling
+    """
     GeneralistCounselling = ServiceTypeCode("74")
+    """
+    Genetic counselling
+    """
     GeneticCounselling = ServiceTypeCode("75")
+    """
+    Health counselling
+    """
     HealthCounselling = ServiceTypeCode("76")
+    """
+    Mediation
+    """
     Mediation = ServiceTypeCode("77")
+    """
+    Problem gambling counselling
+    """
     ProblemGamblingCounselling = ServiceTypeCode("78")
+    """
+    Relationship counselling
+    """
     RelationshipCounselling = ServiceTypeCode("79")
+    """
+    Sexual assault counselling
+    """
     SexualAssaultCounselling = ServiceTypeCode("80")
+    """
+    Trauma counselling
+    """
     TraumaCounselling = ServiceTypeCode("81")
+    """
+    Victims of crime counselling
+    """
     VictimsOfCrimeCounselling = ServiceTypeCode("82")
+    """
+    Cemetery operation
+    """
     CemeteryOperation = ServiceTypeCode("83")
+    """
+    Cremation
+    """
     Cremation = ServiceTypeCode("84")
+    """
+    Death service information
+    """
     DeathServiceInformation = ServiceTypeCode("85")
+    """
+    Funeral services
+    """
     FuneralServices = ServiceTypeCode("86")
+    """
+    Endodontic
+    """
     Endodontic = ServiceTypeCode("87")
+    """
+    General dental
+    """
     GeneralDental = ServiceTypeCode("88")
+    """
+    Oral medicine
+    """
     OralMedicine = ServiceTypeCode("89")
+    """
+    Oral surgery
+    """
     OralSurgery = ServiceTypeCode("90")
+    """
+    Orthodontic
+    """
     Orthodontic = ServiceTypeCode("91")
+    """
+    Paediatric Dentistry
+    """
     PaediatricDentistry = ServiceTypeCode("92")
+    """
+    Periodontic
+    """
     Periodontic = ServiceTypeCode("93")
+    """
+    Prosthodontic
+    """
     Prosthodontic = ServiceTypeCode("94")
+    """
+    Acquired brain injury information/referral
+    """
     AcquiredBrainInjuryInfo_Referral = ServiceTypeCode("95")
+    """
+    Disability advocacy
+    """
     DisabilityAdvocacy = ServiceTypeCode("96")
+    """
+    Disability aids & equipment
+    """
     DisabilityAids_Equipment = ServiceTypeCode("97")
+    """
+    Disability case management
+    """
     DisabilityCaseManagement = ServiceTypeCode("98")
+    """
+    Disability day programs & activities
+    """
     DisabilityDayPrograms_Activities = ServiceTypeCode("99")
+    """
+    Disability information/referral
+    """
     DisabilityInformation_Referral = ServiceTypeCode("100")
+    """
+    Disability support packages
+    """
     DisabilitySupportPackages = ServiceTypeCode("101")
+    """
+    Disability supported accommodation
+    """
     DisabilitySupportedAccommodation = ServiceTypeCode("102")
+    """
+    Early childhood intervention
+    """
     EarlyChildhoodIntervention = ServiceTypeCode("103")
+    """
+    Hearing aids & equipment
+    """
     HearingAids_Equipment = ServiceTypeCode("104")
+    """
+    Drug and/or alcohol counselling
+    """
     DrugAnd_orAlcoholCounselling = ServiceTypeCode("105")
+    """
+    Drug and/or alcohol information/referral
+    """
     Drug_AlcoholInformation_Referral = ServiceTypeCode("106")
+    """
+    Needle & Syringe exchange
+    """
     Needle_SyringeExchange = ServiceTypeCode("107")
+    """
+    Non-residential alcohol and/or drug dependence treatment
+    """
     Non_resid_Alcohol_DrugTreatment = ServiceTypeCode("108")
+    """
+    Pharmacotherapy (eg. methadone) program
+    """
     Pharmacotherapy = ServiceTypeCode("109")
+    """
+    Quit program
+    """
     QuitProgram = ServiceTypeCode("110")
+    """
+    Residential alcohol and/or drug dependence treatment
+    """
     ResidentialAlcohol_DrugTreatment = ServiceTypeCode("111")
+    """
+    Adult/community education
+    """
     Adult_CommunityEducation = ServiceTypeCode("112")
+    """
+    Higher education
+    """
     HigherEducation = ServiceTypeCode("113")
+    """
+    Primary education
+    """
     PrimaryEducation = ServiceTypeCode("114")
+    """
+    Secondary education
+    """
     SecondaryEducation = ServiceTypeCode("115")
+    """
+    Training & vocational education
+    """
     Training_VocationalEducation = ServiceTypeCode("116")
+    """
+    Emergency medical
+    """
     EmergencyMedical = ServiceTypeCode("117")
+    """
+    Employment placement and/or support
+    """
     EmploymentPlacementAnd_orSupport = ServiceTypeCode("118")
+    """
+    Vocational Rehabilitation
+    """
     VocationalRehabilitation = ServiceTypeCode("119")
+    """
+    Workplace safety and/or accident prevention
+    """
     WorkSafety_AccidentPrevention = ServiceTypeCode("120")
+    """
+    Financial assistance
+    """
     FinancialAssistance = ServiceTypeCode("121")
+    """
+    Financial information/advice
+    """
     FinancialInformation_Advice = ServiceTypeCode("122")
+    """
+    Material aid
+    """
     MaterialAid = ServiceTypeCode("123")
+    """
+    General Practice/GP (doctor)
+    """
     GeneralPractice = ServiceTypeCode("124")
+    """
+    Accommodation placement and/or support
+    """
     AccommodationPlacement_Support = ServiceTypeCode("125")
+    """
+    Crisis/emergency accommodation
+    """
     Crisis_EmergencyAccommodation = ServiceTypeCode("126")
+    """
+    Homelessness support
+    """
     HomelessnessSupport = ServiceTypeCode("127")
+    """
+    Housing information/referral
+    """
     HousingInformation_Referral = ServiceTypeCode("128")
+    """
+    Public rental housing
+    """
     PublicRentalHousing = ServiceTypeCode("129")
+    """
+    Interpreting/Multilingual/Language service
+    """
     Interpreting_MultilingualService = ServiceTypeCode("130")
+    """
+    Juvenile Justice
+    """
     JuvenileJustice = ServiceTypeCode("131")
+    """
+    Legal advocacy
+    """
     LegalAdvocacy = ServiceTypeCode("132")
+    """
+    Legal information/advice/referral
+    """
     LegalInformation_Advice_Referral = ServiceTypeCode("133")
+    """
+    Mental health advocacy
+    """
     MentalHealthAdvocacy = ServiceTypeCode("134")
+    """
+    Mental health assessment/triage/crisis response
+    """
     MentalHealthAssess_Triage_CrisisResponse = ServiceTypeCode("135")
+    """
+    Mental health case management/continuing care
+    """
     MentalHealthCaseManagement = ServiceTypeCode("136")
+    """
+    Mental health information/referral
+    """
     MentalHealthInformation_Referral = ServiceTypeCode("137")
+    """
+    Mental health inpatient services (hospital psychiatric unit) - requires referral
+    """
     MentalHealthInpatientServices = ServiceTypeCode("138")
+    """
+    Mental health non-residential rehabilitation
+    """
     MentalHealthNon_residentialRehab = ServiceTypeCode("139")
+    """
+    Mental health residential rehabilitation/community care unit
+    """
     MentalHealthResidentialRehab_CCU = ServiceTypeCode("140")
+    """
+    Psychiatry (requires referral)
+    """
     Psychiatry_RequiresReferral_ = ServiceTypeCode("141")
+    """
+    Psychology
+    """
     Psychology = ServiceTypeCode("142")
+    """
+    Martial arts
+    """
     MartialArts = ServiceTypeCode("143")
+    """
+    Personal fitness training
+    """
     PersonalFitnessTraining = ServiceTypeCode("144")
+    """
+    Physical activity group
+    """
     PhysicalActivityGroup = ServiceTypeCode("145")
+    """
+    Physical activity programs
+    """
     PhysicalActivityPrograms = ServiceTypeCode("146")
+    """
+    Physical fitness testing
+    """
     PhysicalFitnessTesting = ServiceTypeCode("147")
+    """
+    Pilates
+    """
     Pilates = ServiceTypeCode("148")
+    """
+    Self defence
+    """
     Self_Defence = ServiceTypeCode("149")
+    """
+    Sporting club
+    """
     SportingClub = ServiceTypeCode("150")
+    """
+    Yoga
+    """
     Yoga = ServiceTypeCode("151")
+    """
+    Food safety
+    """
     FoodSafety = ServiceTypeCode("152")
+    """
+    Health regulatory, inspection and/or certification
+    """
     HealthRegulatory_Inspection_Cert_ = ServiceTypeCode("153")
+    """
+    Workplace health and/or safety inspection and/or certification
+    """
     WorkHealth_SafetyInspection_Cert_ = ServiceTypeCode("154")
+    """
+    Carer support
+    """
     CarerSupport = ServiceTypeCode("155")
+    """
+    Respite care
+    """
     RespiteCare = ServiceTypeCode("156")
+    """
+    Anatomical Pathology (including Cytopathology & Forensic Pathology)
+    """
     AnatomicalPathology = ServiceTypeCode("157")
+    """
+    Pathology - Clinical Chemistry
+    """
     Pathology_ClinicalChemistry = ServiceTypeCode("158")
+    """
+    Pathology - General
+    """
     Pathology_General = ServiceTypeCode("159")
+    """
+    Pathology - Genetics
+    """
     Pathology_Genetics = ServiceTypeCode("160")
+    """
+    Pathology - Haematology
+    """
     Pathology_Haematology = ServiceTypeCode("161")
+    """
+    Pathology - Immunology
+    """
     Pathology_Immunology = ServiceTypeCode("162")
+    """
+    Pathology - Microbiology
+    """
     Pathology_Microbiology = ServiceTypeCode("163")
+    """
+    Anaesthesiology - Pain Medicine
+    """
     Anaesthesiology_PainMedicine = ServiceTypeCode("164")
+    """
+    Cardiology
+    """
     Cardiology = ServiceTypeCode("165")
+    """
+    Clinical Genetics
+    """
     ClinicalGenetics = ServiceTypeCode("166")
+    """
+    Clinical Pharmacology
+    """
     ClinicalPharmacology = ServiceTypeCode("167")
+    """
+    Dermatology
+    """
     Dermatology = ServiceTypeCode("168")
+    """
+    Endocrinology
+    """
     Endocrinology = ServiceTypeCode("169")
+    """
+    Gastroenterology & Hepatology
+    """
     Gastroenterology_Hepatology = ServiceTypeCode("170")
+    """
+    Geriatric medicine
+    """
     GeriatricMedicine = ServiceTypeCode("171")
+    """
+    Immunology & Allergy
+    """
     Immunology_Allergy = ServiceTypeCode("172")
+    """
+    Infectious diseases
+    """
     InfectiousDiseases = ServiceTypeCode("173")
+    """
+    Intensive care medicine
+    """
     IntensiveCareMedicine = ServiceTypeCode("174")
+    """
+    Medical Oncology
+    """
     MedicalOncology = ServiceTypeCode("175")
+    """
+    Nephrology
+    """
     Nephrology = ServiceTypeCode("176")
+    """
+    Neurology
+    """
     Neurology = ServiceTypeCode("177")
+    """
+    Occupational Medicine
+    """
     OccupationalMedicine = ServiceTypeCode("178")
+    """
+    Palliative Medicine
+    """
     PalliativeMedicine = ServiceTypeCode("179")
+    """
+    Public Health Medicine
+    """
     PublicHealthMedicine = ServiceTypeCode("180")
+    """
+    Rehabilitation Medicine
+    """
     RehabilitationMedicine = ServiceTypeCode("181")
+    """
+    Rheumatology
+    """
     Rheumatology = ServiceTypeCode("182")
+    """
+    Sleep Medicine
+    """
     SleepMedicine = ServiceTypeCode("183")
+    """
+    Thoracic medicine
+    """
     ThoracicMedicine = ServiceTypeCode("184")
+    """
+    Gynaecological Oncology
+    """
     GynaecologicalOncology = ServiceTypeCode("185")
+    """
+    Obstetrics & Gynaecology
+    """
     Obstetrics_Gynaecology = ServiceTypeCode("186")
+    """
+    Reproductive Endocrinology & Infertility
+    """
     ReproductiveEndocrinology_Infertility = ServiceTypeCode("187")
+    """
+    Urogynaecology
+    """
     Urogynaecology = ServiceTypeCode("188")
+    """
+    Neonatology & Perinatology
+    """
     Neonatology_Perinatology = ServiceTypeCode("189")
+    """
+    Paediatric Cardiology
+    """
     PaediatricCardiology = ServiceTypeCode("190")
+    """
+    Paediatric Clinical Genetics
+    """
     PaediatricClinicalGenetics = ServiceTypeCode("191")
+    """
+    Paediatric Clinical Pharmacology
+    """
     PaediatricClinicalPharmacology = ServiceTypeCode("192")
+    """
+    Paediatric Endocrinology
+    """
     PaediatricEndocrinology = ServiceTypeCode("193")
+    """
+    Paediatric Gastroenterology & Hepatology
+    """
     Paed_Gastroenterology_Hepatology = ServiceTypeCode("194")
+    """
+    Paediatric Haematology
+    """
     PaediatricHaematology = ServiceTypeCode("195")
+    """
+    Paediatric Immunology & Allergy
+    """
     PaediatricImmunology_Allergy = ServiceTypeCode("196")
+    """
+    Paediatric Infectious diseases
+    """
     PaediatricInfectiousDiseases = ServiceTypeCode("197")
+    """
+    Paediatric intensive care medicine
+    """
     PaediatricIntensiveCareMedicine = ServiceTypeCode("198")
+    """
+    Paediatric Medical Oncology
+    """
     PaediatricMedicalOncology = ServiceTypeCode("199")
+    """
+    Paediatric Medicine
+    """
     PaediatricMedicine = ServiceTypeCode("200")
+    """
+    Paediatric Nephrology
+    """
     PaediatricNephrology = ServiceTypeCode("201")
+    """
+    Paediatric Neurology
+    """
     PaediatricNeurology = ServiceTypeCode("202")
+    """
+    Paediatric Nuclear Medicine
+    """
     PaediatricNuclearMedicine = ServiceTypeCode("203")
+    """
+    Paediatric Rehabilitation Medicine
+    """
     PaediatricRehabilitationMedicine = ServiceTypeCode("204")
+    """
+    Paediatric Rheumatology
+    """
     PaediatricRheumatology = ServiceTypeCode("205")
+    """
+    Paediatric Sleep Medicine
+    """
     PaediatricSleepMedicine = ServiceTypeCode("206")
+    """
+    Paediatric Surgery
+    """
     PaediatricSurgery = ServiceTypeCode("207")
+    """
+    Paediatric Thoracic Medicine
+    """
     PaediatricThoracicMedicine = ServiceTypeCode("208")
+    """
+    Diagnostic Radiology/Xray/CT/Fluoroscopy
+    """
     Diag_Radiology_Xray_CT_Fluoroscopy = ServiceTypeCode("209")
+    """
+    Diagnostic Ultrasound
+    """
     DiagnosticUltrasound = ServiceTypeCode("210")
+    """
+    Magnetic Resonance Imaging (MRI)
+    """
     MagneticResonanceImaging_MRI_ = ServiceTypeCode("211")
+    """
+    Nuclear Medicine
+    """
     NuclearMedicine = ServiceTypeCode("212")
+    """
+    Obstetric & Gynaecological Ultrasound
+    """
     Obstetric_GynaecologicalUltrasound = ServiceTypeCode("213")
+    """
+    Radiation oncology
+    """
     RadiationOncology = ServiceTypeCode("214")
+    """
+    Cardiothoracic surgery
+    """
     CardiothoracicSurgery = ServiceTypeCode("215")
+    """
+    Neurosurgery
+    """
     Neurosurgery = ServiceTypeCode("216")
+    """
+    Ophthalmology
+    """
     Ophthalmology = ServiceTypeCode("217")
+    """
+    Orthopaedic surgery
+    """
     OrthopaedicSurgery = ServiceTypeCode("218")
+    """
+    Otolaryngology - Head & Neck Surgery
+    """
     Otolaryngology_Head_NeckSurgery = ServiceTypeCode("219")
+    """
+    Plastic & Reconstructive Surgery
+    """
     Plastic_ReconstructiveSurgery = ServiceTypeCode("220")
+    """
+    Surgery - General
+    """
     Surgery_General = ServiceTypeCode("221")
+    """
+    Urology
+    """
     Urology = ServiceTypeCode("222")
+    """
+    Vascular surgery
+    """
     VascularSurgery = ServiceTypeCode("223")
+    """
+    Support groups
+    """
     SupportGroups = ServiceTypeCode("224")
+    """
+    Air ambulance
+    """
     AirAmbulance = ServiceTypeCode("225")
+    """
+    Ambulance
+    """
     Ambulance = ServiceTypeCode("226")
+    """
+    Blood transport
+    """
     BloodTransport = ServiceTypeCode("227")
+    """
+    Community bus
+    """
     CommunityBus = ServiceTypeCode("228")
+    """
+    Flying doctor service
+    """
     FlyingDoctorService = ServiceTypeCode("229")
+    """
+    Patient transport
+    """
     PatientTransport = ServiceTypeCode("230")
+    """
+    A&E
+    """
     A_E = ServiceTypeCode("231")
+    """
+    A&EP
+    """
     A_EP = ServiceTypeCode("232")
+    """
+    Abuse
+    """
     Abuse = ServiceTypeCode("233")
+    """
+    ACAS
+    """
     ACAS = ServiceTypeCode("234")
+    """
+    Access
+    """
     Access = ServiceTypeCode("235")
+    """
+    Accident
+    """
     Accident = ServiceTypeCode("236")
+    """
+    Acute Inpatient Service's
+    """
     AcuteInpatientServ = ServiceTypeCode("237")
+    """
+    Adult Day Programs
+    """
     AdultDayPrograms = ServiceTypeCode("238")
+    """
+    Adult Mental Health Services
+    """
     AdultMentalHealthServices = ServiceTypeCode("239")
+    """
+    Advice
+    """
     Advice = ServiceTypeCode("240")
+    """
+    Advocacy
+    """
     Advocacy = ServiceTypeCode("241")
+    """
+    Aged Persons Mental Health Residential Units
+    """
     AgedPersonsMental = ServiceTypeCode("242")
+    """
+    Aged Persons Mental Health Services
+    """
     AgedPersonsMental = ServiceTypeCode("243")
+    """
+    Aged Persons Mental Health Teams
+    """
     AgedPersonsMental = ServiceTypeCode("244")
+    """
+    Aids
+    """
     Aids = ServiceTypeCode("245")
+    """
+    Al-Anon
+    """
     Al_Anon = ServiceTypeCode("246")
+    """
+    Alcohol
+    """
     Alcohol = ServiceTypeCode("247")
+    """
+    Al-Teen
+    """
     Al_Teen = ServiceTypeCode("248")
+    """
+    Antenatal
+    """
     Antenatal = ServiceTypeCode("249")
+    """
+    Anxiety
+    """
     Anxiety = ServiceTypeCode("250")
+    """
+    Arthritis
+    """
     Arthritis = ServiceTypeCode("251")
+    """
+    Assessment
+    """
     Assessment = ServiceTypeCode("252")
+    """
+    Assistance
+    """
     Assistance = ServiceTypeCode("253")
+    """
+    Asthma
+    """
     Asthma = ServiceTypeCode("254")
+    """
+    ATSS
+    """
     ATSS = ServiceTypeCode("255")
+    """
+    Attendant Care
+    """
     AttendantCare = ServiceTypeCode("256")
+    """
+    Babies
+    """
     Babies = ServiceTypeCode("257")
+    """
+    Bathroom Modification
+    """
     BathroomModificatio = ServiceTypeCode("258")
+    """
+    Behavior
+    """
     Behavior = ServiceTypeCode("259")
+    """
+    Behavior Intervention
+    """
     BehaviorInterventi = ServiceTypeCode("260")
+    """
+    Bereavement
+    """
     Bereavement = ServiceTypeCode("261")
+    """
+    Bipolar
+    """
     Bipolar = ServiceTypeCode("262")
+    """
+    Birth
+    """
     Birth = ServiceTypeCode("263")
+    """
+    Birth Control
+    """
     BirthControl = ServiceTypeCode("264")
+    """
+    Birthing Options
+    """
     BirthingOptions = ServiceTypeCode("265")
+    """
+    BIST
+    """
     BIST = ServiceTypeCode("266")
+    """
+    Blood
+    """
     Blood = ServiceTypeCode("267")
+    """
+    Bone
+    """
     Bone = ServiceTypeCode("268")
+    """
+    Bowel
+    """
     Bowel = ServiceTypeCode("269")
+    """
+    Brain
+    """
     Brain = ServiceTypeCode("270")
+    """
+    Breast Feeding
+    """
     BreastFeeding = ServiceTypeCode("271")
+    """
+    Breast Screen
+    """
     BreastScreen = ServiceTypeCode("272")
+    """
+    Brokerage
+    """
     Brokerage = ServiceTypeCode("273")
+    """
+    Cancer
+    """
     Cancer = ServiceTypeCode("274")
+    """
+    Cancer Support
+    """
     CancerSupport = ServiceTypeCode("275")
+    """
+    Cardiovascular Disease
+    """
     CardiovascularDisea = ServiceTypeCode("276")
+    """
+    Care Packages
+    """
     CarePackages = ServiceTypeCode("277")
+    """
+    Carer
+    """
     Carer = ServiceTypeCode("278")
+    """
+    Case Management
+    """
     CaseManagement = ServiceTypeCode("279")
+    """
+    Casualty
+    """
     Casualty = ServiceTypeCode("280")
+    """
+    Centrelink
+    """
     Centrelink = ServiceTypeCode("281")
+    """
+    Chemists
+    """
     Chemists = ServiceTypeCode("282")
+    """
+    Child And Adolescent Mental Health Services
+    """
     ChildAndAdolescent = ServiceTypeCode("283")
+    """
+    Child Care
+    """
     ChildCare = ServiceTypeCode("284")
+    """
+    Child Services
+    """
     ChildServices = ServiceTypeCode("285")
+    """
+    Children
+    """
     Children = ServiceTypeCode("286")
+    """
+    Children's Services
+    """
     Children_sServices = ServiceTypeCode("287")
+    """
+    Cholesterol
+    """
     Cholesterol = ServiceTypeCode("288")
+    """
+    Clothing
+    """
     Clothing = ServiceTypeCode("289")
+    """
+    Community Based Accommodation
+    """
     CommunityBasedAcco = ServiceTypeCode("290")
+    """
+    Community Care Unit
+    """
     CommunityCareUnit = ServiceTypeCode("291")
+    """
+    Community Child And Adolescent Mental Health Services
+    """
     CommunityChildAnd = ServiceTypeCode("292")
+    """
+    Community Health
+    """
     CommunityHealth = ServiceTypeCode("293")
+    """
+    Community Residential Unit
+    """
     CommunityResidentia = ServiceTypeCode("294")
+    """
+    Community Transport
+    """
     CommunityTransport = ServiceTypeCode("295")
+    """
+    Companion Visiting
+    """
     CompanionVisiting = ServiceTypeCode("296")
+    """
+    Companionship
+    """
     Companionship = ServiceTypeCode("297")
+    """
+    Consumer Advice
+    """
     ConsumerAdvice = ServiceTypeCode("298")
+    """
+    Consumer Issues
+    """
     ConsumerIssues = ServiceTypeCode("299")
+    """
+    Continuing Care Services
+    """
     ContinuingCareServ = ServiceTypeCode("300")
+    """
+    Contraception Information
+    """
     ContraceptionInform = ServiceTypeCode("301")
+    """
+    Coordinating Bodies
+    """
     CoordinatingBodies = ServiceTypeCode("302")
+    """
+    Correctional Services
+    """
     CorrectionalService = ServiceTypeCode("303")
+    """
+    Council Environmental Health
+    """
     CouncilEnvironmenta = ServiceTypeCode("304")
+    """
+    Counselling
+    """
     Counselling = ServiceTypeCode("305")
+    """
+    Criminal
+    """
     Criminal = ServiceTypeCode("306")
+    """
+    Crises
+    """
     Crises = ServiceTypeCode("307")
+    """
+    Crisis Assessment And Treatment Services (Cats)
+    """
     CrisisAssessmentAn = ServiceTypeCode("308")
+    """
+    Crisis Assistance
+    """
     CrisisAssistance = ServiceTypeCode("309")
+    """
+    Crisis Refuge
+    """
     CrisisRefuge = ServiceTypeCode("310")
+    """
+    Day Program
+    """
     DayProgram = ServiceTypeCode("311")
+    """
+    Deaf
+    """
     Deaf = ServiceTypeCode("312")
+    """
+    Dental Hygiene
+    """
     DentalHygiene = ServiceTypeCode("313")
+    """
+    Dentistry
+    """
     Dentistry = ServiceTypeCode("314")
+    """
+    Dentures
+    """
     Dentures = ServiceTypeCode("315")
+    """
+    Depression
+    """
     Depression = ServiceTypeCode("316")
+    """
+    Detoxification
+    """
     Detoxification = ServiceTypeCode("317")
+    """
+    Diabetes
+    """
     Diabetes = ServiceTypeCode("318")
+    """
+    Diaphragm Fitting
+    """
     DiaphragmFitting = ServiceTypeCode("319")
+    """
+    Dieticians
+    """
     Dieticians = ServiceTypeCode("320")
+    """
+    Disabled Parking
+    """
     DisabledParking = ServiceTypeCode("321")
+    """
+    District Nursing
+    """
     DistrictNursing = ServiceTypeCode("322")
+    """
+    Divorce
+    """
     Divorce = ServiceTypeCode("323")
+    """
+    Doctors
+    """
     Doctors = ServiceTypeCode("324")
+    """
+    Drink-Drive
+    """
     Drink_Drive = ServiceTypeCode("325")
+    """
+    Dual Diagnosis Services
+    """
     DualDiagnosisServi = ServiceTypeCode("326")
+    """
+    Early Choice
+    """
     EarlyChoice = ServiceTypeCode("327")
+    """
+    Eating Disorder
+    """
     EatingDisorder = ServiceTypeCode("328")
+    """
+    Emergency Relief
+    """
     EmergencyRelief = ServiceTypeCode("330")
+    """
+    Employment And Training
+    """
     EmploymentAndTrain = ServiceTypeCode("331")
+    """
+    Environment
+    """
     Environment = ServiceTypeCode("332")
+    """
+    Equipment
+    """
     Equipment = ServiceTypeCode("333")
+    """
+    Exercise
+    """
     Exercise = ServiceTypeCode("334")
+    """
+    Facility
+    """
     Facility = ServiceTypeCode("335")
+    """
+    Family Choice
+    """
     FamilyChoice = ServiceTypeCode("336")
+    """
+    Family Law
+    """
     FamilyLaw = ServiceTypeCode("337")
+    """
+    Family Options
+    """
     FamilyOptions = ServiceTypeCode("338")
+    """
+    Family Services
+    """
     FamilyServices = ServiceTypeCode("339")
+    """
+    FFYA
+    """
     FFYA = ServiceTypeCode("340")
+    """
+    Financial Aid
+    """
     FinancialAid = ServiceTypeCode("341")
+    """
+    Fitness
+    """
     Fitness = ServiceTypeCode("342")
+    """
+    Flexible Care Packages
+    """
     FlexibleCarePackag = ServiceTypeCode("343")
+    """
+    Food
+    """
     Food = ServiceTypeCode("344")
+    """
+    Food Vouchers
+    """
     FoodVouchers = ServiceTypeCode("345")
+    """
+    Forensic Mental Health Services
+    """
     ForensicMentalHeal = ServiceTypeCode("346")
+    """
+    Futures
+    """
     Futures = ServiceTypeCode("347")
+    """
+    Futures For Young Adults
+    """
     FuturesForYoungAd = ServiceTypeCode("348")
+    """
+    General Practitioners
+    """
     GeneralPractitioner = ServiceTypeCode("349")
+    """
+    Grants
+    """
     Grants = ServiceTypeCode("350")
+    """
+    Grief
+    """
     Grief = ServiceTypeCode("351")
+    """
+    Grief Counselling
+    """
     GriefCounselling = ServiceTypeCode("352")
+    """
+    HACC
+    """
     HACC = ServiceTypeCode("353")
+    """
+    Heart Disease
+    """
     HeartDisease = ServiceTypeCode("354")
+    """
+    Help
+    """
     Help = ServiceTypeCode("355")
+    """
+    High Blood Pressure
+    """
     HighBloodPressure = ServiceTypeCode("356")
+    """
+    Home Help
+    """
     HomeHelp = ServiceTypeCode("357")
+    """
+    Home Nursing
+    """
     HomeNursing = ServiceTypeCode("358")
+    """
+    Homefirst
+    """
     Homefirst = ServiceTypeCode("359")
+    """
+    Hospice Care
+    """
     HospiceCare = ServiceTypeCode("360")
+    """
+    Hospital Services
+    """
     HospitalServices = ServiceTypeCode("361")
+    """
+    Hospital To Home
+    """
     HospitalToHome = ServiceTypeCode("362")
+    """
+    Hostel
+    """
     Hostel = ServiceTypeCode("364")
+    """
+    Hostel Accommodation
+    """
     HostelAccommodation = ServiceTypeCode("365")
+    """
+    Household Items
+    """
     HouseholdItems = ServiceTypeCode("366")
+    """
+    Hypertension
+    """
     Hypertension = ServiceTypeCode("367")
+    """
+    Illness
+    """
     Illness = ServiceTypeCode("368")
+    """
+    Independent Living
+    """
     IndependentLiving = ServiceTypeCode("369")
+    """
+    Information
+    """
     Information = ServiceTypeCode("370")
+    """
+    Injury
+    """
     Injury = ServiceTypeCode("371")
+    """
+    Intake
+    """
     Intake = ServiceTypeCode("372")
+    """
+    Intensive Mobile Youth Outreach Services (Imyos)
+    """
     IntensiveMobileYou = ServiceTypeCode("373")
+    """
+    Intervention
+    """
     Intervention = ServiceTypeCode("374")
+    """
+    Job Searching
+    """
     JobSearching = ServiceTypeCode("375")
+    """
+    Justice
+    """
     Justice = ServiceTypeCode("376")
+    """
+    Leisure
+    """
     Leisure = ServiceTypeCode("377")
+    """
+    Loans
+    """
     Loans = ServiceTypeCode("378")
+    """
+    Low Income Earners
+    """
     LowIncomeEarners = ServiceTypeCode("379")
+    """
+    Lung
+    """
     Lung = ServiceTypeCode("380")
+    """
+    Making A Difference
+    """
     MakingADifference = ServiceTypeCode("381")
+    """
+    Medical Services
+    """
     MedicalServices = ServiceTypeCode("382")
+    """
+    Medical Specialists
+    """
     MedicalSpecialists = ServiceTypeCode("383")
+    """
+    Medication Administration
+    """
     MedicationAdministr = ServiceTypeCode("384")
+    """
+    Menstrual Information
+    """
     MenstrualInformatio = ServiceTypeCode("385")
+    """
+    Methadone
+    """
     Methadone = ServiceTypeCode("386")
+    """
+    Mobile Support And Treatment Services (MSTS)
+    """
     MobileSupportAndT = ServiceTypeCode("387")
+    """
+    Motor Neurone
+    """
     MotorNeurone = ServiceTypeCode("388")
+    """
+    Multiple Sclerosis
+    """
     MultipleSclerosis = ServiceTypeCode("389")
+    """
+    Neighbourhood House
+    """
     NeighbourhoodHouse = ServiceTypeCode("390")
+    """
+    Nursing Home
+    """
     NursingHome = ServiceTypeCode("391")
+    """
+    Nursing Mothers
+    """
     NursingMothers = ServiceTypeCode("392")
+    """
+    Obesity
+    """
     Obesity = ServiceTypeCode("393")
+    """
+    Occupational Health & Safety
+    """
     OccupationalHealth = ServiceTypeCode("394")
+    """
+    Optometrist
+    """
     Optometrist = ServiceTypeCode("395")
+    """
+    Oral Hygiene
+    """
     OralHygiene = ServiceTypeCode("396")
+    """
+    Outpatients
+    """
     Outpatients = ServiceTypeCode("397")
+    """
+    Outreach Service
+    """
     OutreachService = ServiceTypeCode("398")
+    """
+    PADP
+    """
     PADP = ServiceTypeCode("399")
+    """
+    Pain
+    """
     Pain = ServiceTypeCode("400")
+    """
+    Pap Smear
+    """
     PapSmear = ServiceTypeCode("401")
+    """
+    Parenting
+    """
     Parenting = ServiceTypeCode("402")
+    """
+    Peak Organizations
+    """
     PeakOrganizations = ServiceTypeCode("403")
+    """
+    Personal Care
+    """
     PersonalCare = ServiceTypeCode("404")
+    """
+    Pharmacies
+    """
     Pharmacies = ServiceTypeCode("405")
+    """
+    Phobias
+    """
     Phobias = ServiceTypeCode("406")
+    """
+    Physical
+    """
     Physical = ServiceTypeCode("407")
+    """
+    Physical Activity
+    """
     PhysicalActivity = ServiceTypeCode("408")
+    """
+    Postnatal
+    """
     Postnatal = ServiceTypeCode("409")
+    """
+    Pregnancy
+    """
     Pregnancy = ServiceTypeCode("410")
+    """
+    Pregnancy Tests
+    """
     PregnancyTests = ServiceTypeCode("411")
+    """
+    Preschool
+    """
     Preschool = ServiceTypeCode("412")
+    """
+    Prescriptions
+    """
     Prescriptions = ServiceTypeCode("413")
+    """
+    Primary Mental Health And Early Intervention Teams
+    """
     PrimaryMentalHealt = ServiceTypeCode("414")
+    """
+    Property Maintenance
+    """
     PropertyMaintenance = ServiceTypeCode("415")
+    """
+    Prostate
+    """
     Prostate = ServiceTypeCode("416")
+    """
+    Psychiatric
+    """
     Psychiatric = ServiceTypeCode("417")
+    """
+    Psychiatric Disability Support Services - Home-Based Outreach
+    """
     PsychiatricDisabili = ServiceTypeCode("418")
+    """
+    Psychiatric Disability Support Services - Planned Respite
+    """
     PsychiatricDisabili = ServiceTypeCode("419")
+    """
+    Psychiatric Disability Support Services - Residential Rehabilitation
+    """
     PsychiatricDisabili = ServiceTypeCode("420")
+    """
+    Psychiatric Disability Support Services Home-Based Outreach
+    """
     PsychiatricDisabili = ServiceTypeCode("421")
+    """
+    Psychiatric Disability Support Services Mutual Support And Self Help
+    """
     PsychiatricDisabili = ServiceTypeCode("422")
+    """
+    Psychiatric Support
+    """
     PsychiatricSupport = ServiceTypeCode("423")
+    """
+    Recreation
+    """
     Recreation = ServiceTypeCode("424")
+    """
+    Referral
+    """
     Referral = ServiceTypeCode("425")
+    """
+    Refuge
+    """
     Refuge = ServiceTypeCode("426")
+    """
+    Rent Assistance
+    """
     RentAssistance = ServiceTypeCode("427")
+    """
+    Residential Facilities
+    """
     ResidentialFaciliti = ServiceTypeCode("428")
+    """
+    Residential Respite
+    """
     ResidentialRespite = ServiceTypeCode("429")
+    """
+    Respiratory
+    """
     Respiratory = ServiceTypeCode("430")
+    """
+    Response
+    """
     Response = ServiceTypeCode("431")
+    """
+    Rooming Houses
+    """
     RoomingHouses = ServiceTypeCode("432")
+    """
+    Safe Sex
+    """
     SafeSex = ServiceTypeCode("433")
+    """
+    Secure Extended Care Inpatient Services
+    """
     SecureExtendedCare = ServiceTypeCode("434")
+    """
+    Self Help
+    """
     SelfHelp = ServiceTypeCode("435")
+    """
+    Separation
+    """
     Separation = ServiceTypeCode("436")
+    """
+    Services
+    """
     Services = ServiceTypeCode("437")
+    """
+    Sex Education
+    """
     SexEducation = ServiceTypeCode("438")
+    """
+    Sexual Abuse
+    """
     SexualAbuse = ServiceTypeCode("439")
+    """
+    Sexual Issues
+    """
     SexualIssues = ServiceTypeCode("440")
+    """
+    Sexually Transmitted Diseases
+    """
     SexuallyTransmitted = ServiceTypeCode("441")
+    """
+    SIDS
+    """
     SIDS = ServiceTypeCode("442")
+    """
+    Social Support
+    """
     SocialSupport = ServiceTypeCode("443")
+    """
+    Socialisation
+    """
     Socialisation = ServiceTypeCode("444")
+    """
+    Special Needs
+    """
     SpecialNeeds = ServiceTypeCode("445")
+    """
+    Speech Therapist
+    """
     SpeechTherapist = ServiceTypeCode("446")
+    """
+    Splinting
+    """
     Splinting = ServiceTypeCode("447")
+    """
+    Sport
+    """
     Sport = ServiceTypeCode("448")
+    """
+    Statewide And Specialist Services
+    """
     StatewideAndSpecia = ServiceTypeCode("449")
+    """
+    STD
+    """
     STD = ServiceTypeCode("450")
+    """
+    STI
+    """
     STI = ServiceTypeCode("451")
+    """
+    Stillbirth
+    """
     Stillbirth = ServiceTypeCode("452")
+    """
+    Stomal Care
+    """
     StomalCare = ServiceTypeCode("453")
+    """
+    Stroke
+    """
     Stroke = ServiceTypeCode("454")
+    """
+    Substance Abuse
+    """
     SubstanceAbuse = ServiceTypeCode("455")
+    """
+    Support
+    """
     Support = ServiceTypeCode("456")
+    """
+    Syringes
+    """
     Syringes = ServiceTypeCode("457")
+    """
+    Teeth
+    """
     Teeth = ServiceTypeCode("458")
+    """
+    Tenancy Advice
+    """
     TenancyAdvice = ServiceTypeCode("459")
+    """
+    Terminal Illness
+    """
     TerminalIllness = ServiceTypeCode("460")
+    """
+    Therapy
+    """
     Therapy = ServiceTypeCode("461")
+    """
+    Transcription
+    """
     Transcription = ServiceTypeCode("462")
+    """
+    Translating Services
+    """
     TranslatingServices = ServiceTypeCode("463")
+    """
+    Translator
+    """
     Translator = ServiceTypeCode("464")
+    """
+    Transport
+    """
     Transport = ServiceTypeCode("465")
+    """
+    Vertebrae
+    """
     Vertebrae = ServiceTypeCode("466")
+    """
+    Violence
+    """
     Violence = ServiceTypeCode("467")
+    """
+    Vocational Guidance
+    """
     VocationalGuidance = ServiceTypeCode("468")
+    """
+    Weight
+    """
     Weight = ServiceTypeCode("469")
+    """
+    Welfare Assistance
+    """
     WelfareAssistance = ServiceTypeCode("470")
+    """
+    Welfare Counselling
+    """
     WelfareCounselling = ServiceTypeCode("471")
+    """
+    Wheelchairs
+    """
     Wheelchairs = ServiceTypeCode("472")
+    """
+    Wound Management
+    """
     WoundManagement = ServiceTypeCode("473")
+    """
+    Young People At Risk
+    """
     YoungPeopleAtRisk = ServiceTypeCode("474")
+    """
+    Further Description - Community Health Care
+    """
     FurtherDesc_CommunityHealthCare = ServiceTypeCode("475")
+    """
+    Library
+    """
     Library = ServiceTypeCode("476")
+    """
+    Community Hours
+    """
     CommunityHours = ServiceTypeCode("477")
+    """
+    Further Description - Specialist Medical
+    """
     FurtherDesc_SpecialistMedical = ServiceTypeCode("478")
+    """
+    Hepatology
+    """
     Hepatology = ServiceTypeCode("479")
+    """
+    Gastroenterology
+    """
     Gastroenterology = ServiceTypeCode("480")
+    """
+    Gynaecology
+    """
     Gynaecology = ServiceTypeCode("481")
+    """
+    Obstetrics
+    """
     Obstetrics = ServiceTypeCode("482")
+    """
+    Further Description - Specialist Surgical
+    """
     FurtherDesc_SpecialistSurgical = ServiceTypeCode("483")
+    """
+    Placement Protection
+    """
     PlacementProtection = ServiceTypeCode("484")
+    """
+    Family Violence
+    """
     FamilyViolence = ServiceTypeCode("485")
+    """
+    Integrated Family Services
+    """
     IntegratedFamilyServices = ServiceTypeCode("486")
+    """
+    Diabetes Educator
+    """
     DiabetesEducator = ServiceTypeCode("488")
+    """
+    Kinship Care
+    """
     KinshipCare = ServiceTypeCode("489")
+    """
+    General Mental Health Services
+    """
     GeneralMentalHealthServices = ServiceTypeCode("490")
+    """
+    Exercise Physiology
+    """
     ExercisePhysiology = ServiceTypeCode("491")
+    """
+    Medical Research
+    """
     MedicalResearch = ServiceTypeCode("492")
+    """
+    Youth
+    """
     Youth = ServiceTypeCode("493")
+    """
+    Youth Services
+    """
     YouthServices = ServiceTypeCode("494")
+    """
+    Youth Health
+    """
     YouthHealth = ServiceTypeCode("495")
+    """
+    Child and Family Services
+    """
     ChildAndFamilySer = ServiceTypeCode("496")
+    """
+    Home Visits
+    """
     HomeVisits = ServiceTypeCode("497")
+    """
+    Mobile Services
+    """
     MobileServices = ServiceTypeCode("498")
+    """
+    Before and/or After School Care
+    """
     BeforeAnd_orAfter = ServiceTypeCode("500")
+    """
+    Cancer Services
+    """
     CancerServices = ServiceTypeCode("501")
+    """
+    Integrated Cancer Services
+    """
     IntegratedCancerSe = ServiceTypeCode("502")
+    """
+    Multidisciplinary Services
+    """
     MultidisciplinarySe = ServiceTypeCode("503")
+    """
+    Multidisciplinary Cancer Services
+    """
     MultidisciplinaryCa = ServiceTypeCode("504")
+    """
+    Meetings
+    """
     Meetings = ServiceTypeCode("505")
+    """
+    Blood pressure monitoring
+    """
     BloodPressureMonit = ServiceTypeCode("506")
+    """
+    Dose administration aid
+    """
     DoseAdministration = ServiceTypeCode("507")
+    """
+    Medical Equipment Hire
+    """
     MedicalEquipmentHi = ServiceTypeCode("508")
+    """
+    Parenting & family support/education
+    """
     Parenting_FamilySupport_Education = ServiceTypeCode("509")
+    """
+    Deputising Service
+    """
     DeputisingService = ServiceTypeCode("510")
+    """
+    Cancer Support Groups
+    """
     CancerSupportGroups = ServiceTypeCode("513")
+    """
+    Community Cancer Services
+    """
     CommunityCancerServices = ServiceTypeCode("514")
+    """
+    Disability Care Transport
+    """
     DisabilityCareTransport = ServiceTypeCode("530")
+    """
+    Aged Care Transport
+    """
     AgedCareTransport = ServiceTypeCode("531")
+    """
+    Diabetes Education service
+    """
     DiabetesEducationS = ServiceTypeCode("532")
+    """
+    Cardiac Rehabilitation Service 
+    """
     CardiacRehabilitati = ServiceTypeCode("533")
+    """
+    Young Adult Diabetes services (YADS)
+    """
     YoungAdultDiabetes = ServiceTypeCode("534")
+    """
+    Pulmonary Rehabilitation Service
+    """
     PulmonaryRehabilita = ServiceTypeCode("535")
+    """
+    Art therapy
+    """
     ArtTherapy = ServiceTypeCode("536")
+    """
+    Medication Reviews
+    """
     MedicationReviews = ServiceTypeCode("537")
+    """
+    Telephone Counselling
+    """
     TelephoneCounselling = ServiceTypeCode("538")
+    """
+    Telephone Help Line
+    """
     TelephoneHelpLine = ServiceTypeCode("539")
+    """
+    Online Service
+    """
     OnlineService = ServiceTypeCode("540")
+    """
+    Crisis - Mental Health
+    """
     Crisis_MentalHealth = ServiceTypeCode("541")
+    """
+    Youth Crisis
+    """
     YouthCrisis = ServiceTypeCode("542")
+    """
+    Sexual Assault
+    """
     SexualAssault = ServiceTypeCode("543")
+    """
+    GPAH Other
+    """
     GPAHOther = ServiceTypeCode("544")
+    """
+    Paediatric Dermatology
+    """
     PaediatricDermatology = ServiceTypeCode("545")
+    """
+    Veterans Services
+    """
     VeteransServices = ServiceTypeCode("546")
+    """
+    Veterans
+    """
     Veterans = ServiceTypeCode("547")
+    """
+    Food Relief/food/meals
+    """
     FoodRelief_Food_Meals = ServiceTypeCode("548")
+    """
+    Dementia Care
+    """
     DementiaCare = ServiceTypeCode("550")
+    """
+    Alzheimer
+    """
     Alzheimer = ServiceTypeCode("551")
+    """
+    Drug and/or alcohol support groups
+    """
     DrugAnd_orAlcoholSupportGroups = ServiceTypeCode("552")
+    """
+    One on One Support/Mentoring/Coaching
+    """
     _1_on_1Support_Mentoring_Coaching = ServiceTypeCode("553")
+    """
+    Chronic Disease Management
+    """
     ChronicDiseaseManagement = ServiceTypeCode("554")
+    """
+    Liaison Services
+    """
     LiaisonServices = ServiceTypeCode("555")
+    """
+    Walk in Centre / non emergency
+    """
     Walk_inCentre_Non_Emergency = ServiceTypeCode("556")
+    """
+    Inpatients
+    """
     Inpatients = ServiceTypeCode("557")
+    """
+    Spiritual Counselling
+    """
     SpiritualCounselling = ServiceTypeCode("558")
+    """
+    Women's Health
+    """
     Women_sHealth = ServiceTypeCode("559")
+    """
+    Men's Health
+    """
     Men_sHealth = ServiceTypeCode("560")
+    """
+    Health education/Health awareness program
+    """
     HealthEducation_AwarenessProgram = ServiceTypeCode("561")
+    """
+    Test Message
+    """
     TestMessage = ServiceTypeCode("562")
+    """
+    Remedial Massage
+    """
     RemedialMassage = ServiceTypeCode("563")
+    """
+    Adolescent Mental Health Services
+    """
     AdolescentMentalHealthServices = ServiceTypeCode("564")
+    """
+    Youth drop in/assistance/support
+    """
     YouthDropIn_Assistance_Support = ServiceTypeCode("565")
+    """
+    Aboriginal Health Worker
+    """
     AboriginalHealthWorker = ServiceTypeCode("566")
+    """
+    Women's Health Clinic
+    """
     Women_sHealthClinic = ServiceTypeCode("567")
+    """
+    Men's Health Clinic 
+    """
     Men_sHealthClinic = ServiceTypeCode("568")
+    """
+    Migrant Health Clinic
+    """
     MigrantHealthClinic = ServiceTypeCode("569")
+    """
+    Refugee Health Clinic
+    """
     RefugeeHealthClinic = ServiceTypeCode("570")
+    """
+    Aboriginal Health Clinic
+    """
     AboriginalHealthClinic = ServiceTypeCode("571")
+    """
+    Nurse Practitioner lead Clinic/s
+    """
     NursePractitionerLeadClinic_s = ServiceTypeCode("572")
+    """
+    Nurse lead Clinic/s
+    """
     NurseLeadClinic_s = ServiceTypeCode("573")
+    """
+    Culturally tailored support groups
+    """
     CulturallyTailoredSupportGroups = ServiceTypeCode("574")
+    """
+    Culturally tailored health promotion
+    """
     CulturallyTailoredHealthPromotion = ServiceTypeCode("575")
+    """
+    Rehabilitation
+    """
     Rehabilitation = ServiceTypeCode("576")
+    """
+    Education information/referral
+    """
     EducationInformation_Referral = ServiceTypeCode("577")
+    """
+    Social Work
+    """
     SocialWork = ServiceTypeCode("580")
+    """
+    Haematology
+    """
     Haematology = ServiceTypeCode("581")
+    """
+    Maternity Shared Care
+    """
     MaternitySharedCar = ServiceTypeCode("582")
+    """
+    Rehabilitation Service
+    """
     RehabilitationServi = ServiceTypeCode("583")
+    """
+    Cranio-Sacral Therapy
+    """
     Cranio_sacralTherapy = ServiceTypeCode("584")
+    """
+    Prosthetics & Orthotics
+    """
     Prosthetics_Orthotics = ServiceTypeCode("585")
+    """
+    Home Medicine Review
+    """
     HomeMedicineReview = ServiceTypeCode("589")
+    """
+    GPAH - Medical
+    """
     GPAH_Medical = ServiceTypeCode("590")
+    """
+    Music Therapy
+    """
     MusicTherapy = ServiceTypeCode("591")
+    """
+    Falls Prevention
+    """
     FallsPrevention = ServiceTypeCode("593")
+    """
+    Accommodation/Tenancy
+    """
     Accommodation_Tenancy = ServiceTypeCode("599")
+    """
+    Assess-Skill, Ability, Needs
+    """
     Assess_Skill_Ability_Needs = ServiceTypeCode("600")
+    """
+    Assist Access/Maintain Employ
+    """
     AssistAccess_MaintainEmploy = ServiceTypeCode("601")
+    """
+    Assist Prod-Pers Care/Safety
+    """
     AssistProd_PersCare_Safety = ServiceTypeCode("602")
+    """
+    Assist-Integrate School/Ed
+    """
     Assist_IntegrateSchool_Ed = ServiceTypeCode("603")
+    """
+    Assist-Life Stage, Transition
+    """
     Assist_LifeStage_Transition = ServiceTypeCode("604")
+    """
+    Assist-Personal Activities
+    """
     Assist_PersonalActivities = ServiceTypeCode("605")
+    """
+    Assist-Travel/Transport
+    """
     Assist_Travel_Transport = ServiceTypeCode("606")
+    """
+    Assistive Equip-General Tasks
+    """
     AssistiveEquip_GeneralTasks = ServiceTypeCode("607")
+    """
+    Assistive Equip-Recreation
+    """
     AssistiveEquip_Recreation = ServiceTypeCode("608")
+    """
+    Assistive Prod-Household Task
+    """
     AssistiveProd_HouseholdTask = ServiceTypeCode("609")
+    """
+    Behavior Support
+    """
     BehaviorSupport = ServiceTypeCode("610")
+    """
+    Comms & Info Equipment
+    """
     Comms_InfoEquipment = ServiceTypeCode("611")
+    """
+    Community Nursing Care
+    """
     CommunityNursingCare = ServiceTypeCode("612")
+    """
+    Daily Tasks/Shared Living
+    """
     DailyTasks_SharedLiving = ServiceTypeCode("613")
+    """
+    Development-Life Skills
+    """
     Development_LifeSkills = ServiceTypeCode("614")
+    """
+    Early Childhood Supports
+    """
     EarlyChildhoodSupports = ServiceTypeCode("615")
+    """
+    Equipment Special Assess Setup
+    """
     EquipmentSpecialAssessSetup = ServiceTypeCode("616")
+    """
+    Hearing Equipment
+    """
     HearingEquipment = ServiceTypeCode("617")
+    """
+    Home Modification
+    """
     HomeModification = ServiceTypeCode("618")
+    """
+    Household Tasks
+    """
     HouseholdTasks = ServiceTypeCode("619")
+    """
+    Interpret/Translate
+    """
     Interpret_Translate = ServiceTypeCode("620")
+    """
+    Other Innovative Supports
+    """
     OtherInnovativeSupports = ServiceTypeCode("621")
+    """
+    Participate Community
+    """
     ParticipateCommunity = ServiceTypeCode("622")
+    """
+    Personal Mobility Equipment
+    """
     PersonalMobilityEquipment = ServiceTypeCode("623")
+    """
+    Physical Wellbeing
+    """
     PhysicalWellbeing = ServiceTypeCode("624")
+    """
+    Plan Management
+    """
     PlanManagement = ServiceTypeCode("625")
+    """
+    Therapeutic Supports
+    """
     TherapeuticSupports = ServiceTypeCode("626")
+    """
+    Training-Travel Independence
+    """
     Training_TravelIndependence = ServiceTypeCode("627")
+    """
+    Vehicle modifications
+    """
     VehicleModifications = ServiceTypeCode("628")
+    """
+    Vision Equipment
+    """
     VisionEquipment = ServiceTypeCode("629")

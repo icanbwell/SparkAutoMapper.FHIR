@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -26,6 +27,7 @@ if TYPE_CHECKING:
     # material (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for material
     # Import for CodeableConcept for material
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -33,6 +35,7 @@ if TYPE_CHECKING:
     # alternateMaterial (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for alternateMaterial
     # Import for CodeableConcept for alternateMaterial
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -59,6 +62,7 @@ if TYPE_CHECKING:
     # otherCharacteristics (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for otherCharacteristics
     # Import for CodeableConcept for otherCharacteristics
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

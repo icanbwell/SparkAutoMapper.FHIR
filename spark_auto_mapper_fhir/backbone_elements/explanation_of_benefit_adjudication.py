@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for category
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.adjudication_value_codes import (
         AdjudicationValueCodesCode,
@@ -22,6 +23,7 @@ if TYPE_CHECKING:
     # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for reason
     # Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.value_sets.adjudication_reason_codes import (
         AdjudicationReasonCodesCode,

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,11 +16,35 @@ class DefinitionUseCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/definition-use
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/definition-use"
+
 
 class DefinitionUseCodesCodeValues:
+    """
+    This structure is defined as part of the base FHIR Specification
+    """
+
     FHIRStructure = DefinitionUseCodesCode("fhir-structure")
+    """
+    This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
+    """
     CustomResource = DefinitionUseCodesCode("custom-resource")
+    """
+    This structure captures an analysis of a domain
+    """
     DomainAnalysisModel = DefinitionUseCodesCode("dam")
+    """
+    This structure represents and existing structure (e.g. CDA, HL7 v2)
+    """
     WireFormat = DefinitionUseCodesCode("wire-format")
+    """
+    This structure captures an analysis of a domain
+    """
     DomainAnalysisModel = DefinitionUseCodesCode("archetype")
+    """
+    This structure is a template (n.b: 'template' has many meanings)
+    """
     Template = DefinitionUseCodesCode("template")

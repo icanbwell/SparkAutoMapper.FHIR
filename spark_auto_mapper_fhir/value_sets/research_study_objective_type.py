@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ResearchStudyObjectiveTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/research-study-objective-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/research-study-objective-type"
+
 
 class ResearchStudyObjectiveTypeCodeValues:
+    """
+    The main question to be answered, and the one that drives any statistical planning for the study—e.g., calculation of the sample size to provide the appropriate power for statistical testing.
+    """
+
     Primary = ResearchStudyObjectiveTypeCode("primary")
+    """
+    Question to be answered in the study that is of lesser importance than the primary objective.
+    """
     Secondary = ResearchStudyObjectiveTypeCode("secondary")
+    """
+    Exploratory questions to be answered in the study.
+    """
     Exploratory = ResearchStudyObjectiveTypeCode("exploratory")

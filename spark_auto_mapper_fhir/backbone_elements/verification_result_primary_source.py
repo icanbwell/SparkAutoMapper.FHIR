@@ -22,6 +22,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.primary_source_type import (
         Primary_source_typeCode,
@@ -31,6 +32,7 @@ if TYPE_CHECKING:
     # communicationMethod (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for communicationMethod
     # Import for CodeableConcept for communicationMethod
     from spark_auto_mapper_fhir.value_sets.verificationresult_communication_method import (
         Verificationresult_communication_methodCode,
@@ -40,6 +42,7 @@ if TYPE_CHECKING:
     # validationStatus (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for validationStatus
     # Import for CodeableConcept for validationStatus
     from spark_auto_mapper_fhir.value_sets.validation_status import (
         Validation_statusCode,
@@ -50,6 +53,7 @@ if TYPE_CHECKING:
     # canPushUpdates (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for canPushUpdates
     # Import for CodeableConcept for canPushUpdates
     from spark_auto_mapper_fhir.value_sets.can_push_updates import Can_push_updatesCode
 
@@ -57,6 +61,7 @@ if TYPE_CHECKING:
     # pushTypeAvailable (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for pushTypeAvailable
     # Import for CodeableConcept for pushTypeAvailable
     from spark_auto_mapper_fhir.value_sets.push_type_available import (
         Push_type_availableCode,

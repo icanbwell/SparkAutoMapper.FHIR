@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,51 @@ class FlagCategoryCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/flag-category
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/flag-category"
+
 
 class FlagCategoryCodeValues:
+    """
+    Flags related to the subject's dietary needs.
+    """
+
     Diet = FlagCategoryCode("diet")
+    """
+    Flags related to the subject's medications.
+    """
     Drug = FlagCategoryCode("drug")
+    """
+    Flags related to performing laboratory tests and related processes (e.g. phlebotomy).
+    """
     Lab = FlagCategoryCode("lab")
+    """
+    Flags related to administrative and financial processes.
+    """
     Administrative = FlagCategoryCode("admin")
+    """
+    Flags related to coming into contact with the patient.
+    """
     SubjectContact = FlagCategoryCode("contact")
+    """
+    Flags related to the subject's clinical data.
+    """
     Clinical = FlagCategoryCode("clinical")
+    """
+    Flags related to behavior.
+    """
     Behavioral = FlagCategoryCode("behavioral")
+    """
+    Flags related to research.
+    """
     Research = FlagCategoryCode("research")
+    """
+    Flags related to subject's advance directives.
+    """
     AdvanceDirective = FlagCategoryCode("advance-directive")
+    """
+    Flags related to safety precautions.
+    """
     Safety = FlagCategoryCode("safety")

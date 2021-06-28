@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # stereochemistry (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for stereochemistry
     # Import for CodeableConcept for stereochemistry
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -21,6 +22,7 @@ if TYPE_CHECKING:
     # opticalActivity (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for opticalActivity
     # Import for CodeableConcept for opticalActivity
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class IdentifierUseCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/identifier-use
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/identifier-use"
+
 
 class IdentifierUseCodeValues:
+    """
+    The identifier recommended for display and use in real-world interactions.
+    """
+
     Usual = IdentifierUseCode("usual")
+    """
+    The identifier considered to be most trusted for the identification of this item. Sometimes also known as "primary" and "main". The determination of "official" is subjective and implementation guides often provide additional guidelines for use.
+    """
     Official = IdentifierUseCode("official")
+    """
+    A temporary identifier.
+    """
     Temp = IdentifierUseCode("temp")
+    """
+    An identifier that was assigned in secondary use - it serves to identify the object in a relative context, but cannot be consistently assigned to the same object again in a different context.
+    """
     Secondary = IdentifierUseCode("secondary")
+    """
+    The identifier id no longer considered valid, but may be relevant for search purposes.  E.g. Changes to identifier schemes, account merges, etc.
+    """
     Old = IdentifierUseCode("old")

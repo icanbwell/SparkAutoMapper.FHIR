@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,51 @@ class AdmitSourceCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/encounter-admit-source
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-admit-source"
+
 
 class AdmitSourceCodeValues:
+    """
+    The Patient has been transferred from another hospital for this encounter.
+    """
+
     TransferredFromOtherHospital = AdmitSourceCode("hosp-trans")
+    """
+    The patient has been transferred from the emergency department within the hospital. This is typically used in the transition to an inpatient encounter
+    """
     FromAccident_emergencyDepartment = AdmitSourceCode("emd")
+    """
+    The patient has been transferred from an outpatient department within the hospital.
+    """
     FromOutpatientDepartment = AdmitSourceCode("outp")
+    """
+    The patient is a newborn and the encounter will track the baby related activities (as opposed to the Mothers encounter - that may be associated using the newborn encounters partof property)
+    """
     BornInHospital = AdmitSourceCode("born")
+    """
+    The patient has been admitted due to a referred from a General Practitioner.
+    """
     GeneralPractitionerReferral = AdmitSourceCode("gp")
+    """
+    The patient has been admitted due to a referred from a Specialist (as opposed to a General Practitioner).
+    """
     MedicalPractitioner_physicianReferral = AdmitSourceCode("mp")
+    """
+    The patient has been transferred from a nursing home.
+    """
     FromNursingHome = AdmitSourceCode("nursing")
+    """
+    The patient has been transferred from a psychiatric facility.
+    """
     FromPsychiatricHospital = AdmitSourceCode("psych")
+    """
+    The patient has been transferred from a rehabilitation facility or clinic.
+    """
     FromRehabilitationFacility = AdmitSourceCode("rehab")
+    """
+    The patient has been admitted from a source otherwise not specified here.
+    """
     Other = AdmitSourceCode("other")

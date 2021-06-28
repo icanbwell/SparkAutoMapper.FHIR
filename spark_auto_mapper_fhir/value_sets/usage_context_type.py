@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class UsageContextTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/usage-context-type
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/usage-context-type"
+
 
 class UsageContextTypeCodeValues:
+    """
+    The gender of the patient. For this context type, appropriate values can be found in the http://hl7.org/fhir/ValueSet/administrative-gender value set.
+    """
+
     Gender = UsageContextTypeCode("gender")
+    """
+    The age of the patient. For this context type, the value could be a range that specifies the applicable ages or a code from an appropriate value set such as the MeSH value set http://terminology.hl7.org/ValueSet/v3-AgeGroupObservationValue.
+    """
     AgeRange = UsageContextTypeCode("age")
+    """
+    The clinical concept(s) addressed by the artifact. For example, disease, diagnostic test interpretation, medication ordering as in http://hl7.org/fhir/ValueSet/condition-code.
+    """
     ClinicalFocus = UsageContextTypeCode("focus")
+    """
+    The clinical specialty of the context in which the patient is being treated - For example, PCP, Patient, Cardiologist, Behavioral Professional, Oral Health Professional, Prescriber, etc... taken from a specialty value set such as the NUCC Health Care provider taxonomy value set http://hl7.org/fhir/ValueSet/provider-taxonomy.
+    """
     UserType = UsageContextTypeCode("user")
+    """
+    The settings in which the artifact is intended for use. For example, admission, pre-op, etc. For example, the ActEncounterCode value set http://terminology.hl7.org/ValueSet/v3-ActEncounterCode.
+    """
     WorkflowSetting = UsageContextTypeCode("workflow")
+    """
+    The context for the clinical task(s) represented by this artifact. For example, this could be any task context represented by the HL7 ActTaskCode value set http://terminology.hl7.org/ValueSet/v3-ActTaskCode. General categories include: order entry, patient documentation and patient information review.
+    """
     WorkflowTask = UsageContextTypeCode("task")
+    """
+    The venue in which an artifact could be used. For example, Outpatient, Inpatient, Home, Nursing home. The code value may originate from the HL7 ServiceDeliveryLocationRoleType value set (http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType).
+    """
     ClinicalVenue = UsageContextTypeCode("venue")
+    """
+    The species to which an artifact applies. For example, SNOMED - 387961004 | Kingdom Animalia (organism).
+    """
     Species = UsageContextTypeCode("species")
+    """
+    A program/project of work for which this artifact is applicable.
+    """
     Program = UsageContextTypeCode("program")

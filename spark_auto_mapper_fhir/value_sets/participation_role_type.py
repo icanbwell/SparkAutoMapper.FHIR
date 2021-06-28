@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,185 +16,729 @@ class ParticipationRoleTypeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class ParticipationRoleTypeCodeValues:
+    """
+    None
+    """
+
     AMENDER = ParticipationRoleTypeCode("AMENDER")
+    """
+    None
+    """
     COAUTH = ParticipationRoleTypeCode("COAUTH")
+    """
+    None
+    """
     CONT = ParticipationRoleTypeCode("CONT")
+    """
+    None
+    """
     EVTWIT = ParticipationRoleTypeCode("EVTWIT")
+    """
+    None
+    """
     PRIMAUTH = ParticipationRoleTypeCode("PRIMAUTH")
+    """
+    None
+    """
     REVIEWER = ParticipationRoleTypeCode("REVIEWER")
+    """
+    None
+    """
     SOURCE = ParticipationRoleTypeCode("SOURCE")
+    """
+    None
+    """
     TRANS = ParticipationRoleTypeCode("TRANS")
+    """
+    None
+    """
     VALID = ParticipationRoleTypeCode("VALID")
+    """
+    None
+    """
     VERF = ParticipationRoleTypeCode("VERF")
+    """
+    Corresponds to the Role class
+    """
     Role = ParticipationRoleTypeCode("ROL")
+    """
+    The player of the role is a child of the scoping entity, in a generic sense.
+    """
     Child = ParticipationRoleTypeCode("CHILD")
+    """
+    A role played by an entity that receives credentials from the scoping entity.
+    """
     CredentialedEntity = ParticipationRoleTypeCode("CRED")
+    """
+    nurse practitioner
+    """
     NursePractitioner = ParticipationRoleTypeCode("NURPRAC")
+    """
+    nurse
+    """
     Nurse = ParticipationRoleTypeCode("NURS")
+    """
+    physician assistant
+    """
     PhysicianAssistant = ParticipationRoleTypeCode("PA")
+    """
+    physician
+    """
     Physician = ParticipationRoleTypeCode("PHYS")
+    """
+    None
+    """
     AFFL = ParticipationRoleTypeCode("AFFL")
+    """
+    None
+    """
     AGNT = ParticipationRoleTypeCode("AGNT")
+    """
+    None
+    """
     ASSIGNED = ParticipationRoleTypeCode("ASSIGNED")
+    """
+    None
+    """
     CLAIM = ParticipationRoleTypeCode("CLAIM")
+    """
+    None
+    """
     COVPTY = ParticipationRoleTypeCode("COVPTY")
+    """
+    None
+    """
     DEPEN = ParticipationRoleTypeCode("DEPEN")
+    """
+    None
+    """
     ECON = ParticipationRoleTypeCode("ECON")
+    """
+    None
+    """
     EMP = ParticipationRoleTypeCode("EMP")
+    """
+    None
+    """
     GUARD = ParticipationRoleTypeCode("GUARD")
+    """
+    None
+    """
     INVSBJ = ParticipationRoleTypeCode("INVSBJ")
+    """
+    None
+    """
     NAMED = ParticipationRoleTypeCode("NAMED")
+    """
+    None
+    """
     NOK = ParticipationRoleTypeCode("NOK")
+    """
+    None
+    """
     PAT = ParticipationRoleTypeCode("PAT")
+    """
+    None
+    """
     PROV = ParticipationRoleTypeCode("PROV")
+    """
+    None
+    """
     NOT = ParticipationRoleTypeCode("NOT")
+    """
+    Concepts characterizing the type of association formed by player and scoper when there is a recognized Affiliate role by which the two parties are related.
+
+                        
+                           Examples: Business Partner, Business Associate, Colleague
+    """
     Affiliationroletype = ParticipationRoleTypeCode("_AffiliationRoleType")
+    """
+    AssignedRoleType
+    """
     Assignedroletype = ParticipationRoleTypeCode("_AssignedRoleType")
+    """
+    Defines types of certifications for all entities
+    """
     Certifiedentitytype = ParticipationRoleTypeCode("_CertifiedEntityType")
+    """
+    A role type used to qualify a person's legal status within a country or nation.
+    """
     Citizenroletype = ParticipationRoleTypeCode("_CitizenRoleType")
+    """
+    Types of contact for Role code "CON"
+    """
     Contactroletype = ParticipationRoleTypeCode("_ContactRoleType")
+    """
+    Definition: A code representing the type of identifier that has been assigned to the identified entity (IDENT).
+
+                        
+                           Examples: Example values include Social Insurance Number, Product Catalog ID, Product Model Number.
+    """
     Identifiedentitytype = ParticipationRoleTypeCode("_IdentifiedEntityType")
+    """
+    Code indicating the primary use for which a living subject is bred or grown
+    """
     Livingsubjectproductionclass = ParticipationRoleTypeCode(
         "_LivingSubjectProductionClass"
     )
+    """
+    Identifies the specific hierarchical relationship between the playing and scoping medications. 
+
+                        
+                           Examples: Generic, Generic Formulation, Therapeutic Class, etc.
+    """
     Medicationgeneralizationroletype = ParticipationRoleTypeCode(
         "_MedicationGeneralizationRoleType"
     )
+    """
+    Types of membership for Role code "MBR"
+    """
     Memberroletype = ParticipationRoleTypeCode("_MemberRoleType")
+    """
+    PersonalRelationshipRoleType
+    """
     Personalrelationshiproletype = ParticipationRoleTypeCode(
         "_PersonalRelationshipRoleType"
     )
+    """
+    Description: A role recognized through the eligibility of an identified party for benefits covered under an insurance policy or a program based on meeting eligibility criteria.
+
+                        Eligibility as a covered party may be conditioned on the party meeting criteria to qualify for coverage under a policy or program, which may be mandated by law.  These criteria may be: 
+
+                        
+                           
+                              The sole basis for coverage, e.g., being differently abled may qualify a person for disability coverage
+
+                           
+                           
+                              May more fully qualify a covered party role e.g, being differently abled may qualify an adult child as a dependent
+
+                           
+                           
+                              May impact the level of coverage for a covered party under a policy or program, e.g., being differently abled may qualify a program eligible for additional benefits.
+
+                           
+                        
+                        
+                           Discussion:  The Abstract Value Set "CoverageRoleType", which was developed for use in the Canadian realm "pre-coordinate" coverage roles with other roles that a covered party must play in order to be eligible for coverage, e.g., "handicapped dependent".   These role.codes may only be used with COVPTY to avoid overlapping concepts that would result from using them to specify the specializations of COVPTY, e.g., the role.class DEPEN should not be used with the role.code family dependent because that relationship has overlapping concepts due to the role.code precoodination and is conveyed in FICO with the personal relationship role that has a PART role link to the covered party role.  For the same reasons, the role.class DEPEN should not be used with the role.code HANDIC (handicapped dependent); the role.code DIFFABLE (differently abled) should be used instead.
+
+                        In summary, the coded concepts in the Abstract Value Set "CoveredPartyRoleType" can be "post-coordinated" with the "RoleClassCoveredParty" Abstract Value Set.  Decoupling these concepts is intended to support an expansive range of covered party concepts and their semantic comparability.
+    """
     Policyorprogramcoverageroletype = ParticipationRoleTypeCode(
         "_PolicyOrProgramCoverageRoleType"
     )
+    """
+    Specifies the administrative functionality within a formal experimental design for which the ResearchSubject role was established.  Examples: screening - role is used for pre-enrollment evaluation portion of the design; enrolled - role is used for subjects admitted to the active treatment portion of the design.
+    """
     Researchsubjectrolebasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
+    """
+    A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
+    """
     Servicedeliverylocationroletype = ParticipationRoleTypeCode(
         "_ServiceDeliveryLocationRoleType"
     )
+    """
+    SpecimenRoleType
+    """
     Specimenroletype = ParticipationRoleTypeCode("_SpecimenRoleType")
+    """
+    A party that makes a claim for coverage under a policy.
+    """
     Claimant = ParticipationRoleTypeCode("CLAIM")
+    """
+    Community Laboratory
+    """
     CommunityLaboratory = ParticipationRoleTypeCode("communityLaboratory")
+    """
+    An individual or organization that makes or gives a promise, assurance, pledge to pay or has paid the healthcare service provider.
+    """
     Guarantor = ParticipationRoleTypeCode("GT")
+    """
+    Home Health
+    """
     HomeHealth = ParticipationRoleTypeCode("homeHealth")
+    """
+    Laboratory
+    """
     Laboratory = ParticipationRoleTypeCode("laboratory")
+    """
+    Pathologist
+    """
     Pathologist = ParticipationRoleTypeCode("pathologist")
+    """
+    Policy holder for the insurance policy.
+    """
     PolicyHolder = ParticipationRoleTypeCode("PH")
+    """
+    Phlebotomist
+    """
     Phlebotomist = ParticipationRoleTypeCode("phlebotomist")
+    """
+    A party that meets the eligibility criteria for coverage under a program.
+    """
     ProgramEligible = ParticipationRoleTypeCode("PROG")
+    """
+    The recipient for the service(s) and/or product(s) when they are not the covered party.
+    """
     Patient = ParticipationRoleTypeCode("PT")
+    """
+    Self
+    """
     Self = ParticipationRoleTypeCode("subject")
+    """
+    Third Party
+    """
     ThirdParty = ParticipationRoleTypeCode("thirdParty")
+    """
+    None
+    """
     Dep = ParticipationRoleTypeCode("DEP")
+    """
+    A party covered under a policy based on association with a subscriber.
+    """
     Dependent = ParticipationRoleTypeCode("DEPEN")
+    """
+    A member of the covered party's family. This could be the spouse, a parent, a grand parent, a sibling, etc.
+    """
     FamilyMember = ParticipationRoleTypeCode("FM")
+    """
+    A party covered under a policy as the policyholder.
+    """
     Individual = ParticipationRoleTypeCode("INDIV")
+    """
+    A party to an insurance policy to whom the insurer agrees to indemnify for losses, provides benefits for, or renders services.
+    """
     NamedInsured = ParticipationRoleTypeCode("NAMED")
+    """
+    None
+    """
     Psychcf = ParticipationRoleTypeCode("PSYCHCF")
+    """
+    A party covered under a policy based on association with a sponsor who is the policy holder, and whose association may provide for the eligibility of dependents for coverage
+    """
     Subscriber = ParticipationRoleTypeCode("SUBSCR")
+    """
+    None
+    """
     CLASSIFIER = ParticipationRoleTypeCode("CLASSIFIER")
+    """
+    None
+    """
     CONSENTER = ParticipationRoleTypeCode("CONSENTER")
+    """
+    None
+    """
     CONSWIT = ParticipationRoleTypeCode("CONSWIT")
+    """
+    None
+    """
     COPART = ParticipationRoleTypeCode("COPART")
+    """
+    None
+    """
     DECLASSIFIER = ParticipationRoleTypeCode("DECLASSIFIER")
+    """
+    None
+    """
     DELEGATEE = ParticipationRoleTypeCode("DELEGATEE")
+    """
+    None
+    """
     DELEGATOR = ParticipationRoleTypeCode("DELEGATOR")
+    """
+    None
+    """
     DOWNGRDER = ParticipationRoleTypeCode("DOWNGRDER")
+    """
+    None
+    """
     DPOWATT = ParticipationRoleTypeCode("DPOWATT")
+    """
+    None
+    """
     EXCEST = ParticipationRoleTypeCode("EXCEST")
+    """
+    None
+    """
     GRANTEE = ParticipationRoleTypeCode("GRANTEE")
+    """
+    None
+    """
     GRANTOR = ParticipationRoleTypeCode("GRANTOR")
+    """
+    None
+    """
     GT = ParticipationRoleTypeCode("GT")
+    """
+    None
+    """
     GUADLTM = ParticipationRoleTypeCode("GUADLTM")
+    """
+    None
+    """
     HPOWATT = ParticipationRoleTypeCode("HPOWATT")
+    """
+    None
+    """
     INTPRTER = ParticipationRoleTypeCode("INTPRTER")
+    """
+    None
+    """
     POWATT = ParticipationRoleTypeCode("POWATT")
+    """
+    None
+    """
     RESPRSN = ParticipationRoleTypeCode("RESPRSN")
+    """
+    None
+    """
     SPOWATT = ParticipationRoleTypeCode("SPOWATT")
+    """
+    Concepts characterizing the type of association formed by player and scoper when there is a recognized Affiliate role by which the two parties are related.
+
+                        
+                           Examples: Business Partner, Business Associate, Colleague
+    """
     Affiliationroletype = ParticipationRoleTypeCode("_AffiliationRoleType")
+    """
+    AssignedRoleType
+    """
     Assignedroletype = ParticipationRoleTypeCode("_AssignedRoleType")
+    """
+    Defines types of certifications for all entities
+    """
     Certifiedentitytype = ParticipationRoleTypeCode("_CertifiedEntityType")
+    """
+    A role type used to qualify a person's legal status within a country or nation.
+    """
     Citizenroletype = ParticipationRoleTypeCode("_CitizenRoleType")
+    """
+    Types of contact for Role code "CON"
+    """
     Contactroletype = ParticipationRoleTypeCode("_ContactRoleType")
+    """
+    Definition: A code representing the type of identifier that has been assigned to the identified entity (IDENT).
+
+                        
+                           Examples: Example values include Social Insurance Number, Product Catalog ID, Product Model Number.
+    """
     Identifiedentitytype = ParticipationRoleTypeCode("_IdentifiedEntityType")
+    """
+    Code indicating the primary use for which a living subject is bred or grown
+    """
     Livingsubjectproductionclass = ParticipationRoleTypeCode(
         "_LivingSubjectProductionClass"
     )
+    """
+    Identifies the specific hierarchical relationship between the playing and scoping medications. 
+
+                        
+                           Examples: Generic, Generic Formulation, Therapeutic Class, etc.
+    """
     Medicationgeneralizationroletype = ParticipationRoleTypeCode(
         "_MedicationGeneralizationRoleType"
     )
+    """
+    Types of membership for Role code "MBR"
+    """
     Memberroletype = ParticipationRoleTypeCode("_MemberRoleType")
+    """
+    PersonalRelationshipRoleType
+    """
     Personalrelationshiproletype = ParticipationRoleTypeCode(
         "_PersonalRelationshipRoleType"
     )
+    """
+    Description: A role recognized through the eligibility of an identified party for benefits covered under an insurance policy or a program based on meeting eligibility criteria.
+
+                        Eligibility as a covered party may be conditioned on the party meeting criteria to qualify for coverage under a policy or program, which may be mandated by law.  These criteria may be: 
+
+                        
+                           
+                              The sole basis for coverage, e.g., being differently abled may qualify a person for disability coverage
+
+                           
+                           
+                              May more fully qualify a covered party role e.g, being differently abled may qualify an adult child as a dependent
+
+                           
+                           
+                              May impact the level of coverage for a covered party under a policy or program, e.g., being differently abled may qualify a program eligible for additional benefits.
+
+                           
+                        
+                        
+                           Discussion:  The Abstract Value Set "CoverageRoleType", which was developed for use in the Canadian realm "pre-coordinate" coverage roles with other roles that a covered party must play in order to be eligible for coverage, e.g., "handicapped dependent".   These role.codes may only be used with COVPTY to avoid overlapping concepts that would result from using them to specify the specializations of COVPTY, e.g., the role.class DEPEN should not be used with the role.code family dependent because that relationship has overlapping concepts due to the role.code precoodination and is conveyed in FICO with the personal relationship role that has a PART role link to the covered party role.  For the same reasons, the role.class DEPEN should not be used with the role.code HANDIC (handicapped dependent); the role.code DIFFABLE (differently abled) should be used instead.
+
+                        In summary, the coded concepts in the Abstract Value Set "CoveredPartyRoleType" can be "post-coordinated" with the "RoleClassCoveredParty" Abstract Value Set.  Decoupling these concepts is intended to support an expansive range of covered party concepts and their semantic comparability.
+    """
     Policyorprogramcoverageroletype = ParticipationRoleTypeCode(
         "_PolicyOrProgramCoverageRoleType"
     )
+    """
+    Specifies the administrative functionality within a formal experimental design for which the ResearchSubject role was established.  Examples: screening - role is used for pre-enrollment evaluation portion of the design; enrolled - role is used for subjects admitted to the active treatment portion of the design.
+    """
     Researchsubjectrolebasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
+    """
+    A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
+    """
     Servicedeliverylocationroletype = ParticipationRoleTypeCode(
         "_ServiceDeliveryLocationRoleType"
     )
+    """
+    SpecimenRoleType
+    """
     Specimenroletype = ParticipationRoleTypeCode("_SpecimenRoleType")
+    """
+    A party that makes a claim for coverage under a policy.
+    """
     Claimant = ParticipationRoleTypeCode("CLAIM")
+    """
+    Community Laboratory
+    """
     CommunityLaboratory = ParticipationRoleTypeCode("communityLaboratory")
+    """
+    An individual or organization that makes or gives a promise, assurance, pledge to pay or has paid the healthcare service provider.
+    """
     Guarantor = ParticipationRoleTypeCode("GT")
+    """
+    Home Health
+    """
     HomeHealth = ParticipationRoleTypeCode("homeHealth")
+    """
+    Laboratory
+    """
     Laboratory = ParticipationRoleTypeCode("laboratory")
+    """
+    Pathologist
+    """
     Pathologist = ParticipationRoleTypeCode("pathologist")
+    """
+    Policy holder for the insurance policy.
+    """
     PolicyHolder = ParticipationRoleTypeCode("PH")
+    """
+    Phlebotomist
+    """
     Phlebotomist = ParticipationRoleTypeCode("phlebotomist")
+    """
+    A party that meets the eligibility criteria for coverage under a program.
+    """
     ProgramEligible = ParticipationRoleTypeCode("PROG")
+    """
+    The recipient for the service(s) and/or product(s) when they are not the covered party.
+    """
     Patient = ParticipationRoleTypeCode("PT")
+    """
+    Self
+    """
     Self = ParticipationRoleTypeCode("subject")
+    """
+    Third Party
+    """
     ThirdParty = ParticipationRoleTypeCode("thirdParty")
+    """
+    None
+    """
     Dep = ParticipationRoleTypeCode("DEP")
+    """
+    A party covered under a policy based on association with a subscriber.
+    """
     Dependent = ParticipationRoleTypeCode("DEPEN")
+    """
+    A member of the covered party's family. This could be the spouse, a parent, a grand parent, a sibling, etc.
+    """
     FamilyMember = ParticipationRoleTypeCode("FM")
+    """
+    A party covered under a policy as the policyholder.
+    """
     Individual = ParticipationRoleTypeCode("INDIV")
+    """
+    A party to an insurance policy to whom the insurer agrees to indemnify for losses, provides benefits for, or renders services.
+    """
     NamedInsured = ParticipationRoleTypeCode("NAMED")
+    """
+    None
+    """
     Psychcf = ParticipationRoleTypeCode("PSYCHCF")
+    """
+    A party covered under a policy based on association with a sponsor who is the policy holder, and whose association may provide for the eligibility of dependents for coverage
+    """
     Subscriber = ParticipationRoleTypeCode("SUBSCR")
+    """
+    This code is used to specify the exact function an actor is authorized to have in a service in all necessary detail.
+    """
     Authorizedparticipationfunction = ParticipationRoleTypeCode(
         "_AuthorizedParticipationFunction"
     )
+    """
+    Definition: Set of codes indicating the manner in which sponsors, underwriters, and payers participate in a policy or program.
+    """
     Coverageparticipationfunction = ParticipationRoleTypeCode(
         "_CoverageParticipationFunction"
     )
+    """
+    A physician who admitted a patient to a hospital or other care unit that is the context of this service.
+    """
     AdmittingPhysician = ParticipationRoleTypeCode("ADMPHYS")
+    """
+    In a typical anesthesia setting an anesthesiologist or anesthesia resident in charge of the anesthesia and life support, but only a witness to the surgical procedure itself.  To clarify responsibilities anesthesia should always be represented as a separate service related to the surgery.
+    """
     Anesthesist = ParticipationRoleTypeCode("ANEST")
+    """
+    In a typical anesthesia setting the nurse principally assisting the anesthesiologist during the critical periods.
+    """
     AnesthesiaNurse = ParticipationRoleTypeCode("ANRS")
+    """
+    A device that operates independently of an author on custodian's algorithms for data extraction of existing information for purpose of generating a new artifact.
+                           UsageConstraint: ASSEMBLER ParticipationFunction should be used with DEV (device) ParticipationType.
+    """
     AssemblySoftware = ParticipationRoleTypeCode("ASSEMBLER")
+    """
+    A physician who is primarily responsible for a patient during the hospitalization, which is the context of the service.
+    """
     AttendingPhysician = ParticipationRoleTypeCode("ATTPHYS")
+    """
+    A device used by an author to record new information, which may also be used by the author to select existing information for aggregation with newly recorded information for the purpose of generating a new artifact.
+                           UsageConstraint: COMPOSER ParticipationFunction should be used with DEV (device) ParticipationType.
+
+                        
+                           Usage Note: This code will enable implementers to more specifically represent the manner in which a Device participated in and facilitated the generation of a CDA Clinical Document or a CDA Entry by the responsible Author, which is comprised of the Author's newly entered content, and may include the pre-existing content selected by the Author, for the purpose of establishing the provenance and accountability for these acts.
+    """
     ComposerSoftware = ParticipationRoleTypeCode("COMPOSER")
+    """
+    A physician who discharged a patient from a hospital or other care unit that is the context of this service.
+    """
     DischargingPhysician = ParticipationRoleTypeCode("DISPHYS")
+    """
+    In a typical surgery setting the assistant facing the primary surgeon.  The first assistant performs parts of the operation and assists in others (e.g., incision, approach, electrocoutering, ligatures, sutures).
+    """
     FirstAssistantSurgeon = ParticipationRoleTypeCode("FASST")
+    """
+    A person (usually female) helping a woman deliver a baby. Responsibilities vary locally, ranging from a mere optional assistant to a full required participant, responsible for (normal) births and pre- and post-natal care for both mother and baby.
+    """
     Midwife = ParticipationRoleTypeCode("MDWF")
+    """
+    In a typical surgery setting the non-sterile nurse handles material supply from the stock, forwards specimen to pathology, and helps with other non-sterile tasks (e.g., phone calls, etc.).
+    """
     NurseAssistant = ParticipationRoleTypeCode("NASST")
+    """
+    The healthcare provider that holds primary responsibility for the overall care of a patient.
+    """
     PrimaryCarePhysician = ParticipationRoleTypeCode("PCP")
+    """
+    In a typical surgery setting the primary performing surgeon.
+    """
     PrimarySurgeon = ParticipationRoleTypeCode("PRISURG")
+    """
+    A verifier who is accountable for reviewing and asserting that the verification of an Act complies with jurisdictional or organizational policy.
+
+                        
+                           UsageConstraint: UsageConstraint:  Specifies the exact function that an actor is authorized to have as a verifier of an Act.  Connotes that a specialized verifier asserts compliance for veracity of the review per jurisdictional or organizational policy.  E.g., The Provider who takes responsibility for authenticity of a record submitted to a payer.
+
+                        REVIEW ParticipationFunction should be used with VFR (verifier)
+    """
     Reviewer = ParticipationRoleTypeCode("REVIEWER")
+    """
+    A physician who made rounds on a patient in a hospital or other care center.
+    """
     RoundingPhysician = ParticipationRoleTypeCode("RNDPHYS")
+    """
+    In a typical surgery setting the assistant who primarily holds the hooks.
+    """
     SecondAssistantSurgeon = ParticipationRoleTypeCode("SASST")
+    """
+    In a typical surgery setting the nurse in charge of the instrumentation.
+    """
     ScrubNurse = ParticipationRoleTypeCode("SNRS")
+    """
+    In a typical surgery setting there is rarely a third assistant (e.g., in some Hip operations the third assistant postures the affected leg).
+    """
     ThirdAssistant = ParticipationRoleTypeCode("TASST")
+    """
+    None
+    """
     AUCG = ParticipationRoleTypeCode("AUCG")
+    """
+    None
+    """
     AULR = ParticipationRoleTypeCode("AULR")
+    """
+    None
+    """
     AUTM = ParticipationRoleTypeCode("AUTM")
+    """
+    None
+    """
     AUWA = ParticipationRoleTypeCode("AUWA")
+    """
+    None
+    """
     PROMSK = ParticipationRoleTypeCode("PROMSK")
+    """
+    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    """
     Participation = ParticipationRoleTypeCode("PART")
+    """
+    None
+    """
     AUT = ParticipationRoleTypeCode("AUT")
+    """
+    None
+    """
     CST = ParticipationRoleTypeCode("CST")
+    """
+    None
+    """
     INF = ParticipationRoleTypeCode("INF")
+    """
+    None
+    """
     IRCP = ParticipationRoleTypeCode("IRCP")
+    """
+    None
+    """
     LA = ParticipationRoleTypeCode("LA")
+    """
+    None
+    """
     IRCP = ParticipationRoleTypeCode("IRCP")
+    """
+    None
+    """
     TRC = ParticipationRoleTypeCode("TRC")
+    """
+    None
+    """
     WIT = ParticipationRoleTypeCode("WIT")
+    """
+    None
+    """
     _110150 = ParticipationRoleTypeCode("110150")
+    """
+    None
+    """
     _110151 = ParticipationRoleTypeCode("110151")
+    """
+    None
+    """
     _110152 = ParticipationRoleTypeCode("110152")
+    """
+    None
+    """
     _110153 = ParticipationRoleTypeCode("110153")
+    """
+    None
+    """
     _110154 = ParticipationRoleTypeCode("110154")
+    """
+    None
+    """
     _110155 = ParticipationRoleTypeCode("110155")

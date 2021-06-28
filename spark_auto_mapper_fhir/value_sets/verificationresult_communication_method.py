@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,29 @@ class Verificationresult_communication_methodCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/verificationresult-communication-method
+    """
+    codeset: FhirUri = (
+        "http://hl7.org/fhir/ValueSet/verificationresult-communication-method"
+    )
+
 
 class Verificationresult_communication_methodCodeValues:
+    """
+    The information is submitted/retrieved manually (e.g. by phone, fax, paper-based)
+    """
+
     Manual = Verificationresult_communication_methodCode("manual")
+    """
+    The information is submitted/retrieved via a portal
+    """
     Portal = Verificationresult_communication_methodCode("portal")
+    """
+    The information is retrieved (i.e. pulled) from a source (e.g. over an API)
+    """
     Pull = Verificationresult_communication_methodCode("pull")
+    """
+    The information is sent (i.e. pushed) from a source (e.g. over an API, asynchronously, secure messaging)
+    """
     Push = Verificationresult_communication_methodCode("push")

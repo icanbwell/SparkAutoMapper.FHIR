@@ -23,6 +23,7 @@ if TYPE_CHECKING:
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -30,6 +31,7 @@ if TYPE_CHECKING:
     # reason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for reason
     # Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -69,6 +71,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.action_type import ActionTypeCode
 
@@ -109,6 +112,7 @@ if TYPE_CHECKING:
     # subjectCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for subjectCodeableConcept
     # Import for CodeableConcept for subjectCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

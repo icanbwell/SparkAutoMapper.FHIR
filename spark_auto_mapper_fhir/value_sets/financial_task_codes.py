@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class FinancialTaskCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/financial-taskcode
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/financial-taskcode"
+
 
 class FinancialTaskCodesCodeValues:
+    """
+    Cancel or reverse a resource, such as a claim or preauthorization, which is in-process or complete.
+    """
+
     Cancel = FinancialTaskCodesCode("cancel")
+    """
+    Retrieve selected or all queued resources or messages.
+    """
     Poll = FinancialTaskCodesCode("poll")
+    """
+    Release any reserved funds or material obligations associated with a resource. For example, any unused but reserved funds or treatment allowance associated with a preauthorization once treatment is complete.
+    """
     Release = FinancialTaskCodesCode("release")
+    """
+    Indication that the processing of a resource, such as a claim, for some or all of the required work is now being requested.
+    """
     Reprocess = FinancialTaskCodesCode("reprocess")
+    """
+    Check on the processing status of a resource such as the adjudication of a claim.
+    """
     StatusCheck = FinancialTaskCodesCode("status")

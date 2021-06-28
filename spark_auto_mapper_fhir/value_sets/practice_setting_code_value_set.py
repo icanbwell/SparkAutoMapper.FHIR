@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,140 +16,497 @@ class PracticeSettingCodeValueSetCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class PracticeSettingCodeValueSetCodeValues:
+    """
+    None
+    """
+
     AdultMentalIllness = PracticeSettingCodeValueSetCode("408467006")
+    """
+    None
+    """
     Anesthetics = PracticeSettingCodeValueSetCode("394577000")
+    """
+    None
+    """
     AudiologicalMedicine = PracticeSettingCodeValueSetCode("394578005")
+    """
+    None
+    """
     BloodBankingAndTransfusionMedicine = PracticeSettingCodeValueSetCode("421661004")
+    """
+    None
+    """
     BurnsCare = PracticeSettingCodeValueSetCode("408462000")
+    """
+    None
+    """
     Cardiology = PracticeSettingCodeValueSetCode("394579002")
+    """
+    None
+    """
     ClinicalCytogeneticsAndMolecularGenetics = PracticeSettingCodeValueSetCode(
         "394804000"
     )
+    """
+    None
+    """
     ClinicalGenetics = PracticeSettingCodeValueSetCode("394580004")
+    """
+    None
+    """
     ClinicalHematology = PracticeSettingCodeValueSetCode("394803006")
+    """
+    None
+    """
     ClinicalImmunology = PracticeSettingCodeValueSetCode("408480009")
+    """
+    None
+    """
     ClinicalMicrobiology = PracticeSettingCodeValueSetCode("408454008")
+    """
+    None
+    """
     ClinicalNeuro_physiology = PracticeSettingCodeValueSetCode("394809005")
+    """
+    None
+    """
     ClinicalOncology = PracticeSettingCodeValueSetCode("394592004")
+    """
+    None
+    """
     ClinicalPharmacology = PracticeSettingCodeValueSetCode("394600006")
+    """
+    None
+    """
     ClinicalPhysiology = PracticeSettingCodeValueSetCode("394601005")
+    """
+    None
+    """
     CommunityMedicine = PracticeSettingCodeValueSetCode("394581000")
+    """
+    None
+    """
     CriticalCareMedicine = PracticeSettingCodeValueSetCode("408478003")
+    """
+    None
+    """
     DentalMedicineSpecialties = PracticeSettingCodeValueSetCode("394812008")
+    """
+    None
+    """
     Dental_GeneralDentalPractice = PracticeSettingCodeValueSetCode("408444009")
+    """
+    None
+    """
     Dermatology = PracticeSettingCodeValueSetCode("394582007")
+    """
+    None
+    """
     DiabeticMedicine = PracticeSettingCodeValueSetCode("408475000")
+    """
+    None
+    """
     DiveMedicine = PracticeSettingCodeValueSetCode("410005002")
+    """
+    None
+    """
     Endocrinology = PracticeSettingCodeValueSetCode("394583002")
+    """
+    None
+    """
     FamilyPractice = PracticeSettingCodeValueSetCode("419772000")
+    """
+    None
+    """
     Gastroenterology = PracticeSettingCodeValueSetCode("394584008")
+    """
+    None
+    """
     GeneralMedicalPractice = PracticeSettingCodeValueSetCode("408443003")
+    """
+    None
+    """
     GeneralMedicine = PracticeSettingCodeValueSetCode("394802001")
+    """
+    None
+    """
     GeneralPathology = PracticeSettingCodeValueSetCode("394915009")
+    """
+    None
+    """
     GeneralPractice = PracticeSettingCodeValueSetCode("394814009")
+    """
+    None
+    """
     Genito_urinaryMedicine = PracticeSettingCodeValueSetCode("394808002")
+    """
+    None
+    """
     GeriatricMedicine = PracticeSettingCodeValueSetCode("394811001")
+    """
+    None
+    """
     GynecologicalOncology = PracticeSettingCodeValueSetCode("408446006")
+    """
+    None
+    """
     Gynecology = PracticeSettingCodeValueSetCode("394586005")
+    """
+    None
+    """
     Hematopathology = PracticeSettingCodeValueSetCode("394916005")
+    """
+    None
+    """
     Hepatology = PracticeSettingCodeValueSetCode("408472002")
+    """
+    None
+    """
     Histopathology = PracticeSettingCodeValueSetCode("394597005")
+    """
+    None
+    """
     Immunopathology = PracticeSettingCodeValueSetCode("394598000")
+    """
+    None
+    """
     InfectiousDiseases = PracticeSettingCodeValueSetCode("394807007")
+    """
+    None
+    """
     InternalMedicine = PracticeSettingCodeValueSetCode("419192003")
+    """
+    None
+    """
     LearningDisability = PracticeSettingCodeValueSetCode("408468001")
+    """
+    None
+    """
     MedicalOncology = PracticeSettingCodeValueSetCode("394593009")
+    """
+    None
+    """
     MedicalOphthalmology = PracticeSettingCodeValueSetCode("394813003")
+    """
+    None
+    """
     MilitaryMedicine = PracticeSettingCodeValueSetCode("410001006")
+    """
+    None
+    """
     Nephrology = PracticeSettingCodeValueSetCode("394589003")
+    """
+    None
+    """
     Neurology = PracticeSettingCodeValueSetCode("394591006")
+    """
+    None
+    """
     Neuropathology = PracticeSettingCodeValueSetCode("394599008")
+    """
+    None
+    """
     NuclearMedicine = PracticeSettingCodeValueSetCode("394649004")
+    """
+    None
+    """
     Obstetrics = PracticeSettingCodeValueSetCode("408470005")
+    """
+    None
+    """
     ObstetricsAndGynecology = PracticeSettingCodeValueSetCode("394585009")
+    """
+    None
+    """
     OccupationalMedicine = PracticeSettingCodeValueSetCode("394821009")
+    """
+    None
+    """
     OphthalmicSurgery = PracticeSettingCodeValueSetCode("422191005")
+    """
+    None
+    """
     Ophthalmology = PracticeSettingCodeValueSetCode("394594003")
+    """
+    None
+    """
     OsteopathicManipulativeMedicine = PracticeSettingCodeValueSetCode("416304004")
+    """
+    None
+    """
     Otolaryngology = PracticeSettingCodeValueSetCode("418960008")
+    """
+    None
+    """
     PainManagement = PracticeSettingCodeValueSetCode("394882004")
+    """
+    None
+    """
     PalliativeMedicine = PracticeSettingCodeValueSetCode("394806003")
+    """
+    None
+    """
     Pediatric_ChildAndAdolescent_Psychiatry = PracticeSettingCodeValueSetCode(
         "394588006"
     )
+    """
+    None
+    """
     PediatricCardiology = PracticeSettingCodeValueSetCode("408459003")
+    """
+    None
+    """
     PediatricDentistry = PracticeSettingCodeValueSetCode("394607009")
+    """
+    None
+    """
     PediatricEndocrinology = PracticeSettingCodeValueSetCode("419610006")
+    """
+    None
+    """
     PediatricGastroenterology = PracticeSettingCodeValueSetCode("418058008")
+    """
+    None
+    """
     PediatricGenetics = PracticeSettingCodeValueSetCode("420208008")
+    """
+    None
+    """
     PediatricHematology = PracticeSettingCodeValueSetCode("418652005")
+    """
+    None
+    """
     PediatricImmunology = PracticeSettingCodeValueSetCode("418535003")
+    """
+    None
+    """
     PediatricInfectiousDiseases = PracticeSettingCodeValueSetCode("418862001")
+    """
+    None
+    """
     PediatricNephrology = PracticeSettingCodeValueSetCode("419365004")
+    """
+    None
+    """
     PediatricOncology = PracticeSettingCodeValueSetCode("418002000")
+    """
+    None
+    """
     PediatricOphthalmology = PracticeSettingCodeValueSetCode("419983000")
+    """
+    None
+    """
     PediatricPulmonology = PracticeSettingCodeValueSetCode("419170002")
+    """
+    None
+    """
     PediatricRheumatology = PracticeSettingCodeValueSetCode("419472004")
+    """
+    None
+    """
     PediatricSurgery = PracticeSettingCodeValueSetCode("394539006")
+    """
+    None
+    """
     PediatricSurgery_boneMarrowTransplantation = PracticeSettingCodeValueSetCode(
         "420112009"
     )
+    """
+    None
+    """
     PreventiveMedicine = PracticeSettingCodeValueSetCode("409968004")
+    """
+    None
+    """
     Psychiatry = PracticeSettingCodeValueSetCode("394587001")
+    """
+    None
+    """
     Psychotherapy = PracticeSettingCodeValueSetCode("394913002")
+    """
+    None
+    """
     PublicHealthMedicine = PracticeSettingCodeValueSetCode("408440000")
+    """
+    None
+    """
     PulmonaryMedicine = PracticeSettingCodeValueSetCode("418112009")
+    """
+    None
+    """
     RadiationOncology = PracticeSettingCodeValueSetCode("419815003")
+    """
+    None
+    """
     Radiology = PracticeSettingCodeValueSetCode("394914008")
+    """
+    None
+    """
     Radiology_InterventionalRadiology = PracticeSettingCodeValueSetCode("408455009")
+    """
+    None
+    """
     Rehabilitation = PracticeSettingCodeValueSetCode("394602003")
+    """
+    None
+    """
     RespiteCare = PracticeSettingCodeValueSetCode("408447002")
+    """
+    None
+    """
     Rheumatology = PracticeSettingCodeValueSetCode("394810000")
+    """
+    None
+    """
     SleepStudies = PracticeSettingCodeValueSetCode("408450004")
+    """
+    None
+    """
     Surgery_BoneAndMarrowTransplantation = PracticeSettingCodeValueSetCode("408476004")
+    """
+    None
+    """
     Surgery_BreastSurgery = PracticeSettingCodeValueSetCode("408469009")
+    """
+    None
+    """
     Surgery_CardiacSurgery = PracticeSettingCodeValueSetCode("408466002")
+    """
+    None
+    """
     Surgery_CardiothoracicTransplantation = PracticeSettingCodeValueSetCode("408471009")
+    """
+    None
+    """
     Surgery_ColorectalSurgery = PracticeSettingCodeValueSetCode("408464004")
+    """
+    None
+    """
     Surgery_Dental_Endodontics = PracticeSettingCodeValueSetCode("408441001")
+    """
+    None
+    """
     Surgery_Dental_OralAndMaxillofacialSurgery = PracticeSettingCodeValueSetCode(
         "408465003"
     )
+    """
+    None
+    """
     Surgery_Dental_OralSurgery = PracticeSettingCodeValueSetCode("394605001")
+    """
+    None
+    """
     Surgery_Dental_Orthodontics = PracticeSettingCodeValueSetCode("394608004")
+    """
+    None
+    """
     Surgery_Dental_PeriodontalSurgery = PracticeSettingCodeValueSetCode("408461007")
+    """
+    None
+    """
     Surgery_Dental_ProstheticDentistry_Prosthodontics_ = (
         PracticeSettingCodeValueSetCode("408460008")
     )
+    """
+    None
+    """
     Surgery_Dental_surgical_Prosthodontics = PracticeSettingCodeValueSetCode(
         "408460008"
     )
+    """
+    None
+    """
     Surgery_Dentistry_RestorativeDentistry = PracticeSettingCodeValueSetCode(
         "394606000"
     )
+    """
+    None
+    """
     Surgery_Dentistry_surgical = PracticeSettingCodeValueSetCode("408449004")
+    """
+    None
+    """
     Surgery_Dentistry_surgical_Orthodontics = PracticeSettingCodeValueSetCode(
         "394608004"
     )
+    """
+    None
+    """
     Surgery_DermatologicSurgery = PracticeSettingCodeValueSetCode("418018006")
+    """
+    None
+    """
     Surgery_Ear_NoseAndThroatSurgery = PracticeSettingCodeValueSetCode("394604002")
+    """
+    None
+    """
     Surgery_general = PracticeSettingCodeValueSetCode("394609007")
+    """
+    None
+    """
     Surgery_HepatobiliaryAndPancreaticSurgery = PracticeSettingCodeValueSetCode(
         "408474001"
     )
+    """
+    None
+    """
     Surgery_Neurosurgery = PracticeSettingCodeValueSetCode("394610002")
+    """
+    None
+    """
     Surgery_PlasticSurgery = PracticeSettingCodeValueSetCode("394611003")
+    """
+    None
+    """
     Surgery_TransplantationSurgery = PracticeSettingCodeValueSetCode("408477008")
+    """
+    None
+    """
     Surgery_TraumaAndOrthopedics = PracticeSettingCodeValueSetCode("394801008")
+    """
+    None
+    """
     Surgery_Vascular = PracticeSettingCodeValueSetCode("408463005")
+    """
+    None
+    """
     SurgicalOncology = PracticeSettingCodeValueSetCode("419321007")
+    """
+    None
+    """
     Surgical_Accident_Emergency = PracticeSettingCodeValueSetCode("394576009")
+    """
+    None
+    """
     ThoracicMedicine = PracticeSettingCodeValueSetCode("394590007")
+    """
+    None
+    """
     Toxicology = PracticeSettingCodeValueSetCode("409967009")
+    """
+    None
+    """
     TropicalMedicine = PracticeSettingCodeValueSetCode("408448007")
+    """
+    None
+    """
     UrologicalOncology = PracticeSettingCodeValueSetCode("419043006")
+    """
+    None
+    """
     Urology = PracticeSettingCodeValueSetCode("394612005")
+    """
+    None
+    """
     MedicalSpecialty_OTHER_NOTLISTED = PracticeSettingCodeValueSetCode("394733009")
+    """
+    None
+    """
     SurgicalSpecialty_OTHER_NOTLISTED = PracticeSettingCodeValueSetCode("394732004")

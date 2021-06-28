@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     # purpose (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for purpose
     # Import for CodeableConcept for purpose
     from spark_auto_mapper_fhir.value_sets.contact_entity_type import (
         ContactEntityTypeCode,

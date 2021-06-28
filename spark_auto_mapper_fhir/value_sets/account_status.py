@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class AccountStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/account-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/account-status"
+
 
 class AccountStatusCodeValues:
+    """
+    This account is active and may be used.
+    """
+
     Active = AccountStatusCode("active")
+    """
+    This account is inactive and should not be used to track financial information.
+    """
     Inactive = AccountStatusCode("inactive")
+    """
+    This instance should not have been part of this patient's medical record.
+    """
     EnteredInError = AccountStatusCode("entered-in-error")
+    """
+    This account is on hold.
+    """
     OnHold = AccountStatusCode("on-hold")
+    """
+    The account status is unknown.
+    """
     Unknown = AccountStatusCode("unknown")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class DeviceMetricOperationalStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/metric-operational-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/metric-operational-status"
+
 
 class DeviceMetricOperationalStatusCodeValues:
+    """
+    The DeviceMetric is operating and will generate DeviceObservations.
+    """
+
     On = DeviceMetricOperationalStatusCode("on")
+    """
+    The DeviceMetric is not operating.
+    """
     Off = DeviceMetricOperationalStatusCode("off")
+    """
+    The DeviceMetric is operating, but will not generate any DeviceObservations.
+    """
     Standby = DeviceMetricOperationalStatusCode("standby")
+    """
+    The DeviceMetric was entered in error.
+    """
     EnteredInError = DeviceMetricOperationalStatusCode("entered-in-error")

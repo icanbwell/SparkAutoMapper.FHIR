@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class StructureMapModelModeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/map-model-mode
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/map-model-mode"
+
 
 class StructureMapModelModeCodeValues:
+    """
+    This structure describes an instance passed to the mapping engine that is used a source of data.
+    """
+
     SourceStructureDefinition = StructureMapModelModeCode("source")
+    """
+    This structure describes an instance that the mapping engine may ask for that is used a source of data.
+    """
     QueriedStructureDefinition = StructureMapModelModeCode("queried")
+    """
+    This structure describes an instance passed to the mapping engine that is used a target of data.
+    """
     TargetStructureDefinition = StructureMapModelModeCode("target")
+    """
+    This structure describes an instance that the mapping engine may ask to create that is used a target of data.
+    """
     ProducedStructureDefinition = StructureMapModelModeCode("produced")

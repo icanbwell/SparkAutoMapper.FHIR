@@ -23,6 +23,7 @@ if TYPE_CHECKING:
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.contract_term_type_codes import (
         ContractTermTypeCodesCode,
@@ -32,6 +33,7 @@ if TYPE_CHECKING:
     # subType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for subType
     # Import for CodeableConcept for subType
     from spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes import (
         ContractTermSubtypeCodesCode,
@@ -56,6 +58,7 @@ if TYPE_CHECKING:
     # topicCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for topicCodeableConcept
     # Import for CodeableConcept for topicCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

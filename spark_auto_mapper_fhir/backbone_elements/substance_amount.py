@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     # amountType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
+    # End Import for References for amountType
     # Import for CodeableConcept for amountType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,15 +16,39 @@ class AdverseEventCausalityAssessmentCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/adverse-event-causality-assess
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/adverse-event-causality-assess"
+
 
 class AdverseEventCausalityAssessmentCodeValues:
+    """
+    i) Event or laboratory test abnormality, with plausible time relationship to drug intake; ii) Cannot be explained by disease or other drugs; iii) Response to withdrawal plausible (pharmacologically, pathologically); iv) Event definitive pharmacologically or phenomenologically (i.e. an objective and specific medical disorder or a recognized pharmacological phenomenon); or v) Re-challenge satisfactory, if necessary.
+    """
+
     Certain = AdverseEventCausalityAssessmentCode("Certain")
+    """
+    i) Event or laboratory test abnormality, with reasonable time relationship to drug intake; ii) Unlikely to be attributed to disease or other drugs; iii) Response to withdrawal clinically reasonable; or iv) Re-challenge not required.
+    """
     Probably_Likely = AdverseEventCausalityAssessmentCode("Probably-Likely")
+    """
+    i) Event or laboratory test abnormality, with reasonable time relationship to drug intake; ii) Could also be explained by disease or other drugs; or iii) Information on drug withdrawal may be lacking or unclear.
+    """
     Possible = AdverseEventCausalityAssessmentCode("Possible")
+    """
+    i) Event or laboratory test abnormality, with a time to drug intake that makes a relationship improbable (but not impossible); or ii) Disease or other drugs provide plausible explanations.
+    """
     Unlikely = AdverseEventCausalityAssessmentCode("Unlikely")
+    """
+    i) Event or laboratory test abnormality; ii) More data for proper assessment needed; or iii) Additional data under examination.
+    """
     Conditional_Classified = AdverseEventCausalityAssessmentCode(
         "Conditional-Classified"
     )
+    """
+    i) Report suggesting an adverse reaction; ii) Cannot be judged because information is insufficient or contradictory; or iii) Data cannot be supplemented or verified.
+    """
     Unassessable_Unclassifiable = AdverseEventCausalityAssessmentCode(
         "Unassessable-Unclassifiable"
     )

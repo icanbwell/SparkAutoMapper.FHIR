@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,23 +16,83 @@ class IdentifierTypeCodesCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class IdentifierTypeCodesCodeValues:
+    """
+    None
+    """
+
     DL = IdentifierTypeCodesCode("DL")
+    """
+    None
+    """
     PPN = IdentifierTypeCodesCode("PPN")
+    """
+    None
+    """
     BRN = IdentifierTypeCodesCode("BRN")
+    """
+    None
+    """
     MR = IdentifierTypeCodesCode("MR")
+    """
+    None
+    """
     MCN = IdentifierTypeCodesCode("MCN")
+    """
+    None
+    """
     EN = IdentifierTypeCodesCode("EN")
+    """
+    None
+    """
     TAX = IdentifierTypeCodesCode("TAX")
+    """
+    None
+    """
     NIIP = IdentifierTypeCodesCode("NIIP")
+    """
+    None
+    """
     PRN = IdentifierTypeCodesCode("PRN")
+    """
+    None
+    """
     MD = IdentifierTypeCodesCode("MD")
+    """
+    None
+    """
     DR = IdentifierTypeCodesCode("DR")
+    """
+    None
+    """
     ACSN = IdentifierTypeCodesCode("ACSN")
+    """
+    None
+    """
     UDI = IdentifierTypeCodesCode("UDI")
+    """
+    None
+    """
     SNO = IdentifierTypeCodesCode("SNO")
+    """
+    None
+    """
     SB = IdentifierTypeCodesCode("SB")
+    """
+    None
+    """
     PLAC = IdentifierTypeCodesCode("PLAC")
+    """
+    None
+    """
     FILL = IdentifierTypeCodesCode("FILL")
+    """
+    None
+    """
     JHN = IdentifierTypeCodesCode("JHN")

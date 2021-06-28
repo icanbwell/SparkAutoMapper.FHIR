@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ResourceVersionPolicyCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/versioning-policy
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/versioning-policy"
+
 
 class ResourceVersionPolicyCodeValues:
+    """
+    VersionId meta-property is not supported (server) or used (client).
+    """
+
     NoVersionIdSupport = ResourceVersionPolicyCode("no-version")
+    """
+    VersionId meta-property is supported (server) or used (client).
+    """
     Versioned = ResourceVersionPolicyCode("versioned")
+    """
+    VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client).
+    """
     VersionIdTrackedFully = ResourceVersionPolicyCode("versioned-update")

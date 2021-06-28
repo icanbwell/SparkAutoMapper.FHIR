@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class SearchEntryModeCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/search-entry-mode
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/search-entry-mode"
+
 
 class SearchEntryModeCodeValues:
+    """
+    This resource matched the search specification.
+    """
+
     Match = SearchEntryModeCode("match")
+    """
+    This resource is returned because it is referred to from another resource in the search set.
+    """
     Include = SearchEntryModeCode("include")
+    """
+    An OperationOutcome that provides additional information about the processing of a search.
+    """
     Outcome = SearchEntryModeCode("outcome")

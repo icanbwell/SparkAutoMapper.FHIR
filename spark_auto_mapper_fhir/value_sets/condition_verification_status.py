@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class ConditionVerificationStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/condition-ver-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-ver-status"
+
 
 class ConditionVerificationStatusCodeValues:
+    """
+    There is not sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
+    """
+
     Unconfirmed = ConditionVerificationStatusCode("unconfirmed")
+    """
+    There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
+    """
     Confirmed = ConditionVerificationStatusCode("confirmed")
+    """
+    This condition has been ruled out by diagnostic and clinical evidence.
+    """
     Refuted = ConditionVerificationStatusCode("refuted")
+    """
+    The statement was entered in error and is not valid.
+    """
     EnteredInError = ConditionVerificationStatusCode("entered-in-error")

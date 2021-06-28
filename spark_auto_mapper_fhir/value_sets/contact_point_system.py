@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,12 +16,39 @@ class ContactPointSystemCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/contact-point-system
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/contact-point-system"
+
 
 class ContactPointSystemCodeValues:
+    """
+    The value is a telephone number used for voice calls. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.
+    """
+
     Phone = ContactPointSystemCode("phone")
+    """
+    The value is a fax machine. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.
+    """
     Fax = ContactPointSystemCode("fax")
+    """
+    The value is an email address.
+    """
     Email = ContactPointSystemCode("email")
+    """
+    The value is a pager number. These may be local pager numbers that are only usable on a particular pager system.
+    """
     Pager = ContactPointSystemCode("pager")
+    """
+    A contact that is not a phone, fax, pager or email address and is expressed as a URL.  This is intended for various institutional or personal contacts including web sites, blogs, Skype, Twitter, Facebook, etc. Do not use for email addresses.
+    """
     URL = ContactPointSystemCode("url")
+    """
+    A contact that can be used for sending an sms message (e.g. mobile phones, some landlines).
+    """
     SMS = ContactPointSystemCode("sms")
+    """
+    A contact that is not a phone, fax, page or email address and is not expressible as a URL.  E.g. Internal mail address.  This SHOULD NOT be used for contacts that are expressible as a URL (e.g. Skype, Twitter, Facebook, etc.)  Extensions may be used to distinguish "other" contact types.
+    """
     Other = ContactPointSystemCode("other")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,29 +16,107 @@ class HL7WorkgroupCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/hl7-work-group
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/hl7-work-group"
+
 
 class HL7WorkgroupCodeValues:
+    """
+    Community Based Collaborative Care (http://www.hl7.org/Special/committees/cbcc/index.cfm).
+    """
+
     CommunityBasedCollaborativeCare = HL7WorkgroupCode("cbcc")
+    """
+    Clinical Decision Support (http://www.hl7.org/Special/committees/dss/index.cfm).
+    """
     ClinicalDecisionSupport = HL7WorkgroupCode("cds")
+    """
+    Clinical Quality Information (http://www.hl7.org/Special/committees/cqi/index.cfm).
+    """
     ClinicalQualityInformation = HL7WorkgroupCode("cqi")
+    """
+    Clinical Genomics (http://www.hl7.org/Special/committees/clingenomics/index.cfm).
+    """
     ClinicalGenomics = HL7WorkgroupCode("cg")
+    """
+    Health Care Devices (http://www.hl7.org/Special/committees/healthcaredevices/index.cfm).
+    """
     HealthCareDevices = HL7WorkgroupCode("dev")
+    """
+    Electronic Health Records (http://www.hl7.org/special/committees/ehr/index.cfm).
+    """
     ElectronicHealthRecords = HL7WorkgroupCode("ehr")
+    """
+    FHIR Infrastructure (http://www.hl7.org/Special/committees/fiwg/index.cfm).
+    """
     FHIRInfrastructure = HL7WorkgroupCode("fhir")
+    """
+    Financial Management (http://www.hl7.org/Special/committees/fm/index.cfm).
+    """
     FinancialManagement = HL7WorkgroupCode("fm")
+    """
+    Health Standards Integration (http://www.hl7.org/Special/committees/hsi/index.cfm).
+    """
     HealthStandardsIntegration = HL7WorkgroupCode("hsi")
+    """
+    Imaging Integration (http://www.hl7.org/Special/committees/imagemgt/index.cfm).
+    """
     ImagingIntegration = HL7WorkgroupCode("ii")
+    """
+    Infrastructure And Messaging (http://www.hl7.org/special/committees/inm/index.cfm).
+    """
     InfrastructureAndMessaging = HL7WorkgroupCode("inm")
+    """
+    Implementable Technology Specifications (http://www.hl7.org/special/committees/xml/index.cfm).
+    """
     ImplementableTechnologySpecifications = HL7WorkgroupCode("its")
+    """
+    Modeling and Methodology (http://www.hl7.org/Special/committees/mnm/index.cfm).
+    """
     ModelingAndMethodology = HL7WorkgroupCode("mnm")
+    """
+    Orders and Observations (http://www.hl7.org/Special/committees/orders/index.cfm).
+    """
     OrdersAndObservations = HL7WorkgroupCode("oo")
+    """
+    Patient Administration (http://www.hl7.org/Special/committees/pafm/index.cfm).
+    """
     PatientAdministration = HL7WorkgroupCode("pa")
+    """
+    Patient Care (http://www.hl7.org/Special/committees/patientcare/index.cfm).
+    """
     PatientCare = HL7WorkgroupCode("pc")
+    """
+    Public Health and Emergency Response (http://www.hl7.org/Special/committees/pher/index.cfm).
+    """
     PublicHealthAndEmergencyResponse = HL7WorkgroupCode("pher")
+    """
+    Pharmacy (http://www.hl7.org/Special/committees/medication/index.cfm).
+    """
     Pharmacy = HL7WorkgroupCode("phx")
+    """
+    Biomedical Research and Regulation (http://www.hl7.org/Special/committees/rcrim/index.cfm).
+    """
     BiomedicalResearchAndRegulation = HL7WorkgroupCode("brr")
+    """
+    Structured Documents (http://www.hl7.org/Special/committees/structure/index.cfm).
+    """
     StructuredDocuments = HL7WorkgroupCode("sd")
+    """
+    Security (http://www.hl7.org/Special/committees/secure/index.cfm).
+    """
     Security = HL7WorkgroupCode("sec")
+    """
+    US Realm Taskforce (http://www.hl7.org/Special/committees/usrealm/index.cfm).
+    """
     USRealmTaskforce = HL7WorkgroupCode("us")
+    """
+    Vocabulary (http://www.hl7.org/Special/committees/Vocab/index.cfm).
+    """
     Vocabulary = HL7WorkgroupCode("vocab")
+    """
+    Application Implementation and Design (http://www.hl7.org/Special/committees/java/index.cfm).
+    """
     ApplicationImplementationAndDesign = HL7WorkgroupCode("aid")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class PostalAddressUseCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class PostalAddressUseCodeValues:
+    """
+    Description: Address uses that can apply to both postal and telecommunication addresses.
+    """
+
     _generaladdressuse = PostalAddressUseCode("_GeneralAddressUse")
+    """
+    Description: Address uses that only apply to postal addresses, not telecommunication addresses.
+    """
     _postaladdressuse = PostalAddressUseCode("_PostalAddressUse")
+    """
+    Description: Address uses that only apply to telecommunication addresses, not postal addresses.
+    """
     _telecommunicationaddressuse = PostalAddressUseCode("_TelecommunicationAddressUse")
+    """
+    None
+    """
     BadAddress = PostalAddressUseCode("BAD")
+    """
+    None
+    """
     ConfidentialAddress = PostalAddressUseCode("CONF")
+    """
+    None
+    """
     PrimaryHome = PostalAddressUseCode("HP")
+    """
+    None
+    """
     VacationHome = PostalAddressUseCode("HV")
+    """
+    None
+    """
     Direct = PostalAddressUseCode("DIR")
+    """
+    None
+    """
     Public = PostalAddressUseCode("PUB")
+    """
+    None
+    """
     PhysicalVisitAddress = PostalAddressUseCode("PHYS")
+    """
+    None
+    """
     PostalAddress = PostalAddressUseCode("PST")

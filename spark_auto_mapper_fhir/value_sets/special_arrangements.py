@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,10 +16,31 @@ class SpecialArrangementsCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/encounter-special-arrangements
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-special-arrangements"
+
 
 class SpecialArrangementsCodeValues:
+    """
+    The patient requires a wheelchair to be made available for the encounter.
+    """
+
     Wheelchair = SpecialArrangementsCode("wheel")
+    """
+    An additional bed made available for a person accompanying the patient, for example a parent accompanying a child.
+    """
     AdditionalBedding = SpecialArrangementsCode("add-bed")
+    """
+    The patient is not fluent in the local language and requires an interpreter to be available. Refer to the Patient.Language property for the type of interpreter required.
+    """
     Interpreter = SpecialArrangementsCode("int")
+    """
+    A person who accompanies a patient to provide assistive services necessary for the patient's care during the encounter.
+    """
     Attendant = SpecialArrangementsCode("att")
+    """
+    The patient has a guide dog and the location used for the encounter should be able to support the presence of the service animal.
+    """
     GuideDog = SpecialArrangementsCode("dog")

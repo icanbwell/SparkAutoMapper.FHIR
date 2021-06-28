@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,8 +16,23 @@ class ParticipantRequiredCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/participantrequired
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/participantrequired"
+
 
 class ParticipantRequiredCodeValues:
+    """
+    The participant is required to attend the appointment.
+    """
+
     Required = ParticipantRequiredCode("required")
+    """
+    The participant may optionally attend the appointment.
+    """
     Optional = ParticipantRequiredCode("optional")
+    """
+    The participant is excluded from the appointment, and might not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
+    """
     InformationOnly = ParticipantRequiredCode("information-only")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class EncounterStatusCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/encounter-status
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-status"
+
 
 class EncounterStatusCodeValues:
+    """
+    The Encounter has not yet started.
+    """
+
     Planned = EncounterStatusCode("planned")
+    """
+    The Patient is present for the encounter, however is not currently meeting with a practitioner.
+    """
     Arrived = EncounterStatusCode("arrived")
+    """
+    The patient has been assessed for the priority of their treatment based on the severity of their condition.
+    """
     Triaged = EncounterStatusCode("triaged")
+    """
+    The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
+    """
     InProgress = EncounterStatusCode("in-progress")
+    """
+    The Encounter has begun, but the patient is temporarily on leave.
+    """
     OnLeave = EncounterStatusCode("onleave")
+    """
+    The Encounter has ended.
+    """
     Finished = EncounterStatusCode("finished")
+    """
+    The Encounter has ended before it has begun.
+    """
     Cancelled = EncounterStatusCode("cancelled")
+    """
+    This instance should not have been part of this patient's medical record.
+    """
     EnteredInError = EncounterStatusCode("entered-in-error")
+    """
+    The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
+    """
     Unknown = EncounterStatusCode("unknown")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,14 +16,47 @@ class TypeRestfulInteractionCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    None
+    """
+    codeset: FhirUri = "None"
+
 
 class TypeRestfulInteractionCodeValues:
+    """
+    None
+    """
+
     Read = TypeRestfulInteractionCode("read")
+    """
+    None
+    """
     Vread = TypeRestfulInteractionCode("vread")
+    """
+    None
+    """
     Update = TypeRestfulInteractionCode("update")
+    """
+    None
+    """
     Patch = TypeRestfulInteractionCode("patch")
+    """
+    None
+    """
     Delete = TypeRestfulInteractionCode("delete")
+    """
+    None
+    """
     History_instance = TypeRestfulInteractionCode("history-instance")
+    """
+    None
+    """
     History_type = TypeRestfulInteractionCode("history-type")
+    """
+    None
+    """
     Create = TypeRestfulInteractionCode("create")
+    """
+    None
+    """
     Search_type = TypeRestfulInteractionCode("search-type")

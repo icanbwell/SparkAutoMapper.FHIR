@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,16 +16,55 @@ class CertaintySubcomponentRatingCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/certainty-subcomponent-rating
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/certainty-subcomponent-rating"
+
 
 class CertaintySubcomponentRatingCodeValues:
+    """
+    no change to quality rating.
+    """
+
     NoChangeToRating = CertaintySubcomponentRatingCode("no-change")
+    """
+    reduce quality rating by 1.
+    """
     ReduceRating_1 = CertaintySubcomponentRatingCode("downcode1")
+    """
+    reduce quality rating by 2.
+    """
     ReduceRating_2 = CertaintySubcomponentRatingCode("downcode2")
+    """
+    reduce quality rating by 3.
+    """
     ReduceRating_3 = CertaintySubcomponentRatingCode("downcode3")
+    """
+    increase quality rating by 1.
+    """
     IncreaseRating_1 = CertaintySubcomponentRatingCode("upcode1")
+    """
+    increase quality rating by 2.
+    """
     IncreaseRating_2 = CertaintySubcomponentRatingCode("upcode2")
+    """
+    no serious concern.
+    """
     NoSeriousConcern = CertaintySubcomponentRatingCode("no-concern")
+    """
+    serious concern.
+    """
     SeriousConcern = CertaintySubcomponentRatingCode("serious-concern")
+    """
+    critical concern.
+    """
     CriticalConcern = CertaintySubcomponentRatingCode("critical-concern")
+    """
+    possible reason for increasing quality rating was checked and found to bepresent.
+    """
     Present = CertaintySubcomponentRatingCode("present")
+    """
+    possible reason for increasing quality rating was checked and found to be absent.
+    """
     Absent = CertaintySubcomponentRatingCode("absent")

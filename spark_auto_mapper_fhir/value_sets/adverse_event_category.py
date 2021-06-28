@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,13 +16,37 @@ class AdverseEventCategoryCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/adverse-event-category
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/adverse-event-category"
+
 
 class AdverseEventCategoryCodeValues:
+    """
+    The adverse event pertains to a product problem.
+    """
+
     ProductProblem = AdverseEventCategoryCode("product-problem")
+    """
+    The adverse event pertains to product quality.
+    """
     ProductQuality = AdverseEventCategoryCode("product-quality")
+    """
+    The adverse event pertains to a product use error.
+    """
     ProductUseError = AdverseEventCategoryCode("product-use-error")
+    """
+    The adverse event pertains to a medical device use error.
+    """
     MedicalDeviceUseError = AdverseEventCategoryCode("medical-device-use-error")
+    """
+    The adverse event pertains to a problem with a different manufacturer of the same medication.
+    """
     ProblemWithDifferentManufacturerOfSameMedicine = AdverseEventCategoryCode(
         "problem-different-manufacturer"
     )
+    """
+    The adverse event pertains to an unsafe physical environment.
+    """
     UnsafePhysicalEnvironment = AdverseEventCategoryCode("unsafe-physical-environment")

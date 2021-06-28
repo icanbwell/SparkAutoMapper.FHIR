@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -15,9 +16,27 @@ class DeviceMetricCalibrationStateCode(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    """
+    http://hl7.org/fhir/ValueSet/metric-calibration-state
+    """
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/metric-calibration-state"
+
 
 class DeviceMetricCalibrationStateCodeValues:
+    """
+    The metric has not been calibrated.
+    """
+
     NotCalibrated = DeviceMetricCalibrationStateCode("not-calibrated")
+    """
+    The metric needs to be calibrated.
+    """
     CalibrationRequired = DeviceMetricCalibrationStateCode("calibration-required")
+    """
+    The metric has been calibrated.
+    """
     Calibrated = DeviceMetricCalibrationStateCode("calibrated")
+    """
+    The state of calibration of this metric is unspecified.
+    """
     Unspecified = DeviceMetricCalibrationStateCode("unspecified")
