@@ -27,8 +27,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -53,7 +53,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
     # code (CompartmentType)
-    from spark_auto_mapper_fhir.complex_types.compartment_type import CompartmentType
+    from spark_auto_mapper_fhir.value_sets.compartment_type import CompartmentTypeCode
 
     # search (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -81,7 +81,7 @@ class CompartmentDefinition(FhirResourceBase):
         url: uri,
         version: Optional[FhirString] = None,
         name: FhirString,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -89,7 +89,7 @@ class CompartmentDefinition(FhirResourceBase):
         description: Optional[markdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         purpose: Optional[markdown] = None,
-        code: CompartmentType,
+        code: CompartmentTypeCode,
         search: FhirBoolean,
         resource: Optional[FhirList[CompartmentDefinitionResource]] = None,
     ) -> None:

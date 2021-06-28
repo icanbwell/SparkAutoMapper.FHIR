@@ -21,8 +21,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FinancialResourceStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
-        FinancialResourceStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.financial_resource_status_codes import (
+        FinancialResourceStatusCodesCode,
     )
 
     # period (Period)
@@ -51,9 +51,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
 
-    # outcome (RemittanceOutcome)
-    from spark_auto_mapper_fhir.complex_types.remittance_outcome import (
-        RemittanceOutcome,
+    # outcome (ClaimProcessingCodes)
+    from spark_auto_mapper_fhir.value_sets.claim_processing_codes import (
+        ClaimProcessingCodesCode,
     )
 
     # disposition (string)
@@ -101,7 +101,7 @@ class PaymentReconciliation(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: FinancialResourceStatusCodes,
+        status: FinancialResourceStatusCodesCode,
         period: Optional[Period] = None,
         created: FhirDateTime,
         paymentIssuer: Optional[Reference[Union[Organization]]] = None,
@@ -109,7 +109,7 @@ class PaymentReconciliation(FhirResourceBase):
         requestor: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
-        outcome: Optional[RemittanceOutcome] = None,
+        outcome: Optional[ClaimProcessingCodesCode] = None,
         disposition: Optional[FhirString] = None,
         paymentDate: FhirDate,
         paymentAmount: Money,

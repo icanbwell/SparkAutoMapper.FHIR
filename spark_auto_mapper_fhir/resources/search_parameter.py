@@ -28,8 +28,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -65,11 +65,11 @@ if TYPE_CHECKING:
     # code (code)
     from spark_auto_mapper_fhir.complex_types.code import code
 
-    # base (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # base (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # type_ (SearchParamType)
-    from spark_auto_mapper_fhir.complex_types.search_param_type import SearchParamType
+    from spark_auto_mapper_fhir.value_sets.search_param_type import SearchParamTypeCode
 
     # expression (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -78,10 +78,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # xpathUsage (XPathUsageType)
-    from spark_auto_mapper_fhir.complex_types.x_path_usage_type import XPathUsageType
+    from spark_auto_mapper_fhir.value_sets.x_path_usage_type import XPathUsageTypeCode
 
-    # target (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # target (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # multipleOr (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -90,11 +90,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
 
     # comparator (SearchComparator)
-    from spark_auto_mapper_fhir.complex_types.search_comparator import SearchComparator
+    from spark_auto_mapper_fhir.value_sets.search_comparator import SearchComparatorCode
 
     # modifier (SearchModifierCode)
-    from spark_auto_mapper_fhir.complex_types.search_modifier_code import (
-        SearchModifierCode,
+    from spark_auto_mapper_fhir.value_sets.search_modifier_code import (
+        SearchModifierCodeCode,
     )
 
     # chain (string)
@@ -124,7 +124,7 @@ class SearchParameter(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: FhirString,
         derivedFrom: Optional[canonical] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -136,16 +136,16 @@ class SearchParameter(FhirResourceBase):
         ] = None,
         purpose: Optional[markdown] = None,
         code: code,
-        base: FhirList[code],
-        type_: SearchParamType,
+        base: FhirList[ResourceTypeCode],
+        type_: SearchParamTypeCode,
         expression: Optional[FhirString] = None,
         xpath: Optional[FhirString] = None,
-        xpathUsage: Optional[XPathUsageType] = None,
-        target: Optional[FhirList[code]] = None,
+        xpathUsage: Optional[XPathUsageTypeCode] = None,
+        target: Optional[FhirList[ResourceTypeCode]] = None,
         multipleOr: Optional[FhirBoolean] = None,
         multipleAnd: Optional[FhirBoolean] = None,
-        comparator: Optional[FhirList[SearchComparator]] = None,
-        modifier: Optional[FhirList[SearchModifierCode]] = None,
+        comparator: Optional[FhirList[SearchComparatorCode]] = None,
+        modifier: Optional[FhirList[SearchModifierCodeCode]] = None,
         chain: Optional[FhirList[FhirString]] = None,
         component: Optional[FhirList[SearchParameterComponent]] = None,
     ) -> None:

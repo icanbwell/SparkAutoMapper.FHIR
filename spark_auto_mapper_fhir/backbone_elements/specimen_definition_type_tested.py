@@ -22,8 +22,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # preference (SpecimenContainedPreference)
-    from spark_auto_mapper_fhir.complex_types.specimen_contained_preference import (
-        SpecimenContainedPreference,
+    from spark_auto_mapper_fhir.value_sets.specimen_contained_preference import (
+        SpecimenContainedPreferenceCode,
     )
 
     # container (SpecimenDefinition.Container)
@@ -65,7 +65,7 @@ class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         isDerived: Optional[FhirBoolean] = None,
         type_: Optional[CodeableConcept[V2_0487]] = None,
-        preference: SpecimenContainedPreference,
+        preference: SpecimenContainedPreferenceCode,
         container: Optional[SpecimenDefinitionContainer] = None,
         requirement: Optional[FhirString] = None,
         retentionTime: Optional[Duration] = None,

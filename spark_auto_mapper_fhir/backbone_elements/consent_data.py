@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # meaning (ConsentDataMeaning)
-    from spark_auto_mapper_fhir.complex_types.consent_data_meaning import (
-        ConsentDataMeaning,
+    from spark_auto_mapper_fhir.value_sets.consent_data_meaning import (
+        ConsentDataMeaningCode,
     )
 
     # reference (Reference)
@@ -36,7 +36,7 @@ class ConsentData(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        meaning: ConsentDataMeaning,
+        meaning: ConsentDataMeaningCode,
         reference: Reference[Union[Resource]],
     ) -> None:
         """

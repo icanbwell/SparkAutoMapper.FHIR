@@ -37,8 +37,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.organization import Organization
-    from spark_auto_mapper_fhir.complex_types.code import code
-    from spark_auto_mapper_fhir.complex_types.code import code
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
 
 
@@ -80,8 +80,8 @@ class Signature(FhirComplexTypeBase):
                 ]
             ]
         ] = None,
-        targetFormat: Optional[code] = None,
-        sigFormat: Optional[code] = None,
+        targetFormat: Optional[MimeTypesCode] = None,
+        sigFormat: Optional[MimeTypesCode] = None,
         data: Optional[base64Binary] = None,
     ) -> None:
         """

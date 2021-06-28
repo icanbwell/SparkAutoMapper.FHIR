@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # strength (BindingStrength)
-    from spark_auto_mapper_fhir.complex_types.binding_strength import BindingStrength
+    from spark_auto_mapper_fhir.value_sets.binding_strength import BindingStrengthCode
 
     # description (string)
     # valueSet (canonical)
@@ -32,7 +32,7 @@ class ElementDefinitionBinding(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        strength: BindingStrength,
+        strength: BindingStrengthCode,
         description: Optional[FhirString] = None,
         valueSet: Optional[canonical] = None,
     ) -> None:

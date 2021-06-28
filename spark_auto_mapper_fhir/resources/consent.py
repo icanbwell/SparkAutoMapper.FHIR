@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ConsentState)
-    from spark_auto_mapper_fhir.complex_types.consent_state import ConsentState
+    from spark_auto_mapper_fhir.value_sets.consent_state import ConsentStateCode
 
     # scope (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -113,7 +113,7 @@ class Consent(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ConsentState,
+        status: ConsentStateCode,
         scope: CodeableConcept[ConsentScopeCodesCode],
         category: FhirList[CodeableConcept[ConsentCategoryCodesCode]],
         patient: Optional[Reference[Union[Patient]]] = None,

@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # strength (BindingStrength)
-    from spark_auto_mapper_fhir.complex_types.binding_strength import BindingStrength
+    from spark_auto_mapper_fhir.value_sets.binding_strength import BindingStrengthCode
 
     # valueSet (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
@@ -30,7 +30,7 @@ class OperationDefinitionBinding(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        strength: BindingStrength,
+        strength: BindingStrengthCode,
         valueSet: canonical,
     ) -> None:
         """

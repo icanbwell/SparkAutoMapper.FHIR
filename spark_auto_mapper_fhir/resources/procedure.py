@@ -40,7 +40,7 @@ if TYPE_CHECKING:
     )
 
     # status (EventStatus)
-    from spark_auto_mapper_fhir.complex_types.event_status import EventStatus
+    from spark_auto_mapper_fhir.value_sets.event_status import EventStatusCode
 
     # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -239,7 +239,7 @@ class Procedure(FhirResourceBase):
         partOf: Optional[
             FhirList[Reference[Union[Procedure, Observation, MedicationAdministration]]]
         ] = None,
-        status: EventStatus,
+        status: EventStatusCode,
         statusReason: Optional[
             CodeableConcept[ProcedureNotPerformedReason_SNOMED_CT_Code]
         ] = None,

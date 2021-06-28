@@ -36,18 +36,18 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for verificationStatus
     # type_ (AllergyIntoleranceType)
-    from spark_auto_mapper_fhir.complex_types.allergy_intolerance_type import (
-        AllergyIntoleranceType,
+    from spark_auto_mapper_fhir.value_sets.allergy_intolerance_type import (
+        AllergyIntoleranceTypeCode,
     )
 
     # category (AllergyIntoleranceCategory)
-    from spark_auto_mapper_fhir.complex_types.allergy_intolerance_category import (
-        AllergyIntoleranceCategory,
+    from spark_auto_mapper_fhir.value_sets.allergy_intolerance_category import (
+        AllergyIntoleranceCategoryCode,
     )
 
     # criticality (AllergyIntoleranceCriticality)
-    from spark_auto_mapper_fhir.complex_types.allergy_intolerance_criticality import (
-        AllergyIntoleranceCriticality,
+    from spark_auto_mapper_fhir.value_sets.allergy_intolerance_criticality import (
+        AllergyIntoleranceCriticalityCode,
     )
 
     # code (CodeableConcept)
@@ -140,9 +140,9 @@ class AllergyIntolerance(FhirResourceBase):
         verificationStatus: Optional[
             CodeableConcept[AllergyIntoleranceVerificationStatusCodesCode]
         ] = None,
-        type_: Optional[AllergyIntoleranceType] = None,
-        category: Optional[FhirList[AllergyIntoleranceCategory]] = None,
-        criticality: Optional[AllergyIntoleranceCriticality] = None,
+        type_: Optional[AllergyIntoleranceTypeCode] = None,
+        category: Optional[FhirList[AllergyIntoleranceCategoryCode]] = None,
+        criticality: Optional[AllergyIntoleranceCriticalityCode] = None,
         code: Optional[
             CodeableConcept[
                 AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode

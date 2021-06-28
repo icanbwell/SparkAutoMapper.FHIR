@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (SupplyRequestStatus)
-    from spark_auto_mapper_fhir.complex_types.supply_request_status import (
-        SupplyRequestStatus,
+    from spark_auto_mapper_fhir.value_sets.supply_request_status import (
+        SupplyRequestStatusCode,
     )
 
     # category (CodeableConcept)
@@ -29,7 +29,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
@@ -133,9 +133,9 @@ class SupplyRequest(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[SupplyRequestStatus] = None,
+        status: Optional[SupplyRequestStatusCode] = None,
         category: Optional[CodeableConcept[SupplyTypeCode]] = None,
-        priority: Optional[RequestPriority] = None,
+        priority: Optional[RequestPriorityCode] = None,
         quantity: Quantity,
         parameter: Optional[FhirList[SupplyRequestParameter]] = None,
         authoredOn: Optional[FhirDateTime] = None,

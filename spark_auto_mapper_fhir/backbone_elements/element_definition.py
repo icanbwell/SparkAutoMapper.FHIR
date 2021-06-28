@@ -19,8 +19,8 @@ if TYPE_CHECKING:
     # path (string)
     pass
     # representation (PropertyRepresentation)
-    from spark_auto_mapper_fhir.complex_types.property_representation import (
-        PropertyRepresentation,
+    from spark_auto_mapper_fhir.value_sets.property_representation import (
+        PropertyRepresentationCode,
     )
 
     # sliceName (string)
@@ -620,7 +620,7 @@ class ElementDefinition(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: FhirString,
-        representation: Optional[FhirList[PropertyRepresentation]] = None,
+        representation: Optional[FhirList[PropertyRepresentationCode]] = None,
         sliceName: Optional[FhirString] = None,
         sliceIsConstraining: Optional[FhirBoolean] = None,
         label: Optional[FhirString] = None,

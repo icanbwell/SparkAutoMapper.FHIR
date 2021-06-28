@@ -18,7 +18,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (InvoiceStatus)
-    from spark_auto_mapper_fhir.complex_types.invoice_status import InvoiceStatus
+    from spark_auto_mapper_fhir.value_sets.invoice_status import InvoiceStatusCode
 
     # cancelledReason (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
@@ -103,7 +103,7 @@ class Invoice(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: InvoiceStatus,
+        status: InvoiceStatusCode,
         cancelledReason: Optional[FhirString] = None,
         type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,

@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.name_use import NameUse
+    from spark_auto_mapper_fhir.value_sets.name_use import NameUseCode
     from spark_auto_mapper_fhir.complex_types.period import Period
 
 
@@ -29,7 +29,7 @@ class HumanName(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        use: Optional[NameUse] = None,
+        use: Optional[NameUseCode] = None,
         text: Optional[FhirString] = None,
         family: Optional[FhirString] = None,
         given: Optional[FhirList[FhirString]] = None,

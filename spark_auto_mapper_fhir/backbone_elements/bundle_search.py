@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # mode (SearchEntryMode)
-    from spark_auto_mapper_fhir.complex_types.search_entry_mode import SearchEntryMode
+    from spark_auto_mapper_fhir.value_sets.search_entry_mode import SearchEntryModeCode
 
     # score (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
@@ -30,7 +30,7 @@ class BundleSearch(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        mode: Optional[SearchEntryMode] = None,
+        mode: Optional[SearchEntryModeCode] = None,
         score: Optional[decimal] = None,
     ) -> None:
         """

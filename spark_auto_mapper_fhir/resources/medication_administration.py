@@ -27,8 +27,10 @@ if TYPE_CHECKING:
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.procedure import Procedure
 
-    # status (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # status (MedicationAdministration Status Codes)
+    from spark_auto_mapper_fhir.value_sets.medication_administration_status_codes import (
+        MedicationAdministrationStatusCodesCode,
+    )
 
     # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -155,7 +157,7 @@ class MedicationAdministration(FhirResourceBase):
         partOf: Optional[
             FhirList[Reference[Union[MedicationAdministration, Procedure]]]
         ] = None,
-        status: code,
+        status: MedicationAdministrationStatusCodesCode,
         statusReason: Optional[
             FhirList[CodeableConcept[SNOMEDCTReasonMedicationNotGivenCodesCode]]
         ] = None,

@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # code (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # code (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # param (string)
     # documentation (string)
@@ -31,7 +31,7 @@ class CompartmentDefinitionResource(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: code,
+        code: ResourceTypeCode,
         param: Optional[FhirList[FhirString]] = None,
         documentation: Optional[FhirString] = None,
     ) -> None:

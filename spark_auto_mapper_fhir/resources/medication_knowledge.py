@@ -24,8 +24,10 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for code
-    # status (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # status (MedicationKnowledge Status Codes)
+    from spark_auto_mapper_fhir.value_sets.medication_knowledge_status_codes import (
+        MedicationKnowledgeStatusCodesCode,
+    )
 
     # manufacturer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -150,7 +152,7 @@ class MedicationKnowledge(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[CodeableConcept[SNOMEDCTMedicationCodesCode]] = None,
-        status: Optional[code] = None,
+        status: Optional[MedicationKnowledgeStatusCodesCode] = None,
         manufacturer: Optional[Reference[Union[Organization]]] = None,
         doseForm: Optional[CodeableConcept[SNOMEDCTFormCodesCode]] = None,
         amount: Optional[Quantity] = None,

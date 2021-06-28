@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # type_ (SearchParamType)
-    from spark_auto_mapper_fhir.complex_types.search_param_type import SearchParamType
+    from spark_auto_mapper_fhir.value_sets.search_param_type import SearchParamTypeCode
 
     # documentation (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
@@ -38,7 +38,7 @@ class CapabilityStatementSearchParam(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: FhirString,
         definition: Optional[canonical] = None,
-        type_: SearchParamType,
+        type_: SearchParamTypeCode,
         documentation: Optional[markdown] = None,
     ) -> None:
         """

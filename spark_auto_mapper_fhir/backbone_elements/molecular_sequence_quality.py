@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (qualityType)
-    from spark_auto_mapper_fhir.complex_types.quality_type import qualityType
+    from spark_auto_mapper_fhir.value_sets.quality_type import QualityTypeCode
 
     # standardSequence (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -78,7 +78,7 @@ class MolecularSequenceQuality(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: qualityType,
+        type_: QualityTypeCode,
         standardSequence: Optional[CodeableConcept[FDA_StandardSequenceCode]] = None,
         start: Optional[FhirInteger] = None,
         end: Optional[FhirInteger] = None,

@@ -21,8 +21,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (DocumentReferenceStatus)
-    from spark_auto_mapper_fhir.complex_types.document_reference_status import (
-        DocumentReferenceStatus,
+    from spark_auto_mapper_fhir.value_sets.document_reference_status import (
+        DocumentReferenceStatusCode,
     )
 
     # type_ (CodeableConcept)
@@ -99,7 +99,7 @@ class DocumentManifest(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         masterIdentifier: Optional[Identifier] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: DocumentReferenceStatus,
+        status: DocumentReferenceStatusCode,
         type_: Optional[CodeableConcept[ActCode]] = None,
         subject: Optional[
             Reference[Union[Patient, Practitioner, Group, Device]]

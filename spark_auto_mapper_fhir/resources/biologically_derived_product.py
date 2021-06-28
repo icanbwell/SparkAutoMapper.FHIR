@@ -19,8 +19,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # productCategory (BiologicallyDerivedProductCategory)
-    from spark_auto_mapper_fhir.complex_types.biologically_derived_product_category import (
-        BiologicallyDerivedProductCategory,
+    from spark_auto_mapper_fhir.value_sets.biologically_derived_product_category import (
+        BiologicallyDerivedProductCategoryCode,
     )
 
     # productCode (CodeableConcept)
@@ -31,8 +31,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for productCode
     # status (BiologicallyDerivedProductStatus)
-    from spark_auto_mapper_fhir.complex_types.biologically_derived_product_status import (
-        BiologicallyDerivedProductStatus,
+    from spark_auto_mapper_fhir.value_sets.biologically_derived_product_status import (
+        BiologicallyDerivedProductStatusCode,
     )
 
     # request (Reference)
@@ -84,9 +84,9 @@ class BiologicallyDerivedProduct(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        productCategory: Optional[BiologicallyDerivedProductCategory] = None,
+        productCategory: Optional[BiologicallyDerivedProductCategoryCode] = None,
         productCode: Optional[CodeableConcept[GenericTypeCode]] = None,
-        status: Optional[BiologicallyDerivedProductStatus] = None,
+        status: Optional[BiologicallyDerivedProductStatusCode] = None,
         request: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
         quantity: Optional[FhirInteger] = None,
         parent: Optional[FhirList[Reference[Union[BiologicallyDerivedProduct]]]] = None,

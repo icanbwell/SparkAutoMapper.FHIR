@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (ActionParticipantType)
-    from spark_auto_mapper_fhir.complex_types.action_participant_type import (
-        ActionParticipantType,
+    from spark_auto_mapper_fhir.value_sets.action_participant_type import (
+        ActionParticipantTypeCode,
     )
 
     # role (CodeableConcept)
@@ -39,7 +39,7 @@ class ActivityDefinitionParticipant(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: ActionParticipantType,
+        type_: ActionParticipantTypeCode,
         role: Optional[CodeableConcept[ActionParticipantRoleCode]] = None,
     ) -> None:
         """

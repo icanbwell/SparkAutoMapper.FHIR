@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # typeMode (StructureMapGroupTypeMode)
-    from spark_auto_mapper_fhir.complex_types.structure_map_group_type_mode import (
-        StructureMapGroupTypeMode,
+    from spark_auto_mapper_fhir.value_sets.structure_map_group_type_mode import (
+        StructureMapGroupTypeModeCode,
     )
 
     # documentation (string)
@@ -49,7 +49,7 @@ class StructureMapGroup(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: id,
         extends: Optional[id] = None,
-        typeMode: StructureMapGroupTypeMode,
+        typeMode: StructureMapGroupTypeModeCode,
         documentation: Optional[FhirString] = None,
         input: FhirList[StructureMapInput],
         rule: FhirList[StructureMapRule],

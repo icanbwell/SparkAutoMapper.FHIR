@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (EndpointStatus)
-    from spark_auto_mapper_fhir.complex_types.endpoint_status import EndpointStatus
+    from spark_auto_mapper_fhir.value_sets.endpoint_status import EndpointStatusCode
 
     # connectionType (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
@@ -52,8 +52,8 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for payloadType
-    # payloadMimeType (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # payloadMimeType (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # address (url)
     from spark_auto_mapper_fhir.complex_types.url import url
@@ -77,14 +77,14 @@ class Endpoint(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: EndpointStatus,
+        status: EndpointStatusCode,
         connectionType: Coding[EndpointConnectionTypeCode],
         name: Optional[FhirString] = None,
         managingOrganization: Optional[Reference[Union[Organization]]] = None,
         contact: Optional[FhirList[ContactPoint]] = None,
         period: Optional[Period] = None,
         payloadType: FhirList[CodeableConcept[EndpointPayloadTypeCode]],
-        payloadMimeType: Optional[FhirList[code]] = None,
+        payloadMimeType: Optional[FhirList[MimeTypesCode]] = None,
         address: url,
         header: Optional[FhirList[FhirString]] = None,
     ) -> None:

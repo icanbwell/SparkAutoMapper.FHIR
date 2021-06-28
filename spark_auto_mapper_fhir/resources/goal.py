@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # lifecycleStatus (GoalLifecycleStatus)
-    from spark_auto_mapper_fhir.complex_types.goal_lifecycle_status import (
-        GoalLifecycleStatus,
+    from spark_auto_mapper_fhir.value_sets.goal_lifecycle_status import (
+        GoalLifecycleStatusCode,
     )
 
     # achievementStatus (CodeableConcept)
@@ -138,7 +138,7 @@ class Goal(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        lifecycleStatus: GoalLifecycleStatus,
+        lifecycleStatus: GoalLifecycleStatusCode,
         achievementStatus: Optional[CodeableConcept[GoalAchievementStatusCode]] = None,
         category: Optional[FhirList[CodeableConcept[GoalCategoryCode]]] = None,
         priority: Optional[CodeableConcept[GoalPriorityCode]] = None,

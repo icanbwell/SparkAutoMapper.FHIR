@@ -38,6 +38,7 @@ class FhirCodeableType:
     codeable_type: str
     path: str
     codeable_type_url: str
+    is_codeable_concept: bool = False
 
 
 @dataclasses.dataclass
@@ -61,6 +62,7 @@ class FhirProperty:
     is_back_bone_element: bool
     is_basic_type: bool
     codeable_type: Optional[SmartName]
+    is_code: bool = False
 
 
 @dataclasses.dataclass
@@ -309,11 +311,17 @@ class FhirXmlSchemaParser:
                     ]
                     if value_set_matching:
                         value_set = value_set_matching[0]
-                        fhir_property.codeable_type = SmartName(
-                            name=value_set.name,
-                            cleaned_name=value_set.cleaned_name,
-                            snake_case_name=value_set.name_snake_case,
-                        )
+                        if codeable_type.is_codeable_concept:
+                            fhir_property.codeable_type = SmartName(
+                                name=value_set.name,
+                                cleaned_name=value_set.cleaned_name,
+                                snake_case_name=value_set.name_snake_case,
+                            )
+                        else:
+                            fhir_property.type_ = value_set.name
+                            fhir_property.type_snake_case = value_set.name_snake_case
+                            fhir_property.cleaned_type = value_set.cleaned_name
+                            fhir_property.is_code = True
 
         # set generic type for everything else
         for fhir_entity in fhir_entities:
@@ -640,6 +648,67 @@ class FhirXmlSchemaParser:
         return result
 
     @staticmethod
+    def get_all_property_types() -> List[FhirProperty]:
+        data_dir: Path = Path(__file__).parent.joinpath("./")
+
+        # first read fhir-all.xsd to get a list of resources
+        de_xml_file: Path = (
+            data_dir.joinpath("xsd")
+            .joinpath("definitions.xml")
+            .joinpath("dataelements.xml")
+        )
+
+        with open(de_xml_file, "r") as file:
+            contents = file.read()
+            result: OrderedDict[str, Any] = parse(contents)
+            entries: List[OrderedDict[str, Any]] = result["Bundle"]["entry"]
+
+            fhir_properties: List[FhirProperty] = []
+            entry: OrderedDict[str, Any]
+            for entry in entries:
+                structure_definition: OrderedDict[str, Any] = entry["resource"][
+                    "StructureDefinition"
+                ]
+                name: str = structure_definition["name"]["@value"]
+                documentation: List[str] = structure_definition["description"]["@value"]
+                # if isinstance(documentation, OrderedDict):
+                #     documentation = [documentation]
+                snapshot_element: OrderedDict[str, Any] = structure_definition[
+                    "snapshot"
+                ]["element"]
+                types: List[OrderedDict[str, Any]] = snapshot_element["type"]
+                if isinstance(types, OrderedDict):
+                    types = [types]
+
+                # There are 3 main cases:
+                # 1. A simple scalar type
+                # 2. A complex type
+                # 3. A reference
+                # 4. A codeable type
+                # 5. A value set
+                type_ = types[0]["code"]["@value"] if types else ""
+
+                fhir_properties.append(
+                    FhirProperty(
+                        name=name,
+                        type_=type_,
+                        cleaned_type=type_,
+                        type_snake_case=type_,
+                        documentation=documentation,
+                        is_back_bone_element=False,
+                        codeable_type=None,
+                        fhir_type=type_,
+                        is_basic_type=False,
+                        is_list=False,
+                        optional=False,
+                        reference_target_resources_names=[],
+                        reference_target_resources=[],
+                    )
+                )
+
+            return fhir_properties
+
+    @staticmethod
     def get_types_for_references() -> List[FhirReferenceType]:
         data_dir: Path = Path(__file__).parent.joinpath("./")
 
@@ -720,7 +789,7 @@ class FhirXmlSchemaParser:
                 structure_definition: OrderedDict[str, Any] = entry["resource"][
                     "StructureDefinition"
                 ]
-                # name: str = structure_definition["name"]["@value"]
+                name: str = structure_definition["name"]["@value"]
                 snapshot_element: OrderedDict[str, Any] = structure_definition[
                     "snapshot"
                 ]["element"]
@@ -731,7 +800,11 @@ class FhirXmlSchemaParser:
                     type_: OrderedDict[str, Any]
                     if types:
                         type_ = types[0]
-                        if type_["code"]["@value"] in ["Coding", "CodeableConcept"]:
+                        if type_["code"]["@value"] in [
+                            "Coding",
+                            "CodeableConcept",
+                            "code",
+                        ]:
                             bindings: List[OrderedDict[str, Any]] = snapshot_element[
                                 "binding"
                             ]
@@ -766,6 +839,8 @@ class FhirXmlSchemaParser:
                                             path=snapshot_element["path"]["@value"],
                                             codeable_type=codeable_type,
                                             codeable_type_url=value_set_url,
+                                            is_codeable_concept=type_["code"]["@value"]
+                                            in ["Coding", "CodeableConcept"],
                                         )
                                     )
             return fhir_codeable_types

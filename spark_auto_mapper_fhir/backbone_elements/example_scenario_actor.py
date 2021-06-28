@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     # actorId (string)
     pass
     # type_ (ExampleScenarioActorType)
-    from spark_auto_mapper_fhir.complex_types.example_scenario_actor_type import (
-        ExampleScenarioActorType,
+    from spark_auto_mapper_fhir.value_sets.example_scenario_actor_type import (
+        ExampleScenarioActorTypeCode,
     )
 
     # name (string)
@@ -37,7 +37,7 @@ class ExampleScenarioActor(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         actorId: FhirString,
-        type_: ExampleScenarioActorType,
+        type_: ExampleScenarioActorTypeCode,
         name: Optional[FhirString] = None,
         description: Optional[markdown] = None,
     ) -> None:

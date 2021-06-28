@@ -38,13 +38,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (RequestStatus)
-    from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
+    from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
 
     # intent (RequestIntent)
-    from spark_auto_mapper_fhir.complex_types.request_intent import RequestIntent
+    from spark_auto_mapper_fhir.value_sets.request_intent import RequestIntentCode
 
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # parameter (DeviceRequest.Parameter)
     from spark_auto_mapper_fhir.backbone_elements.device_request_parameter import (
@@ -181,9 +181,9 @@ class DeviceRequest(FhirResourceBase):
         basedOn: Optional[FhirList[Reference[Union[Resource]]]] = None,
         priorRequest: Optional[FhirList[Reference[Union[Resource]]]] = None,
         groupIdentifier: Optional[Identifier] = None,
-        status: Optional[RequestStatus] = None,
-        intent: RequestIntent,
-        priority: Optional[RequestPriority] = None,
+        status: Optional[RequestStatusCode] = None,
+        intent: RequestIntentCode,
+        priority: Optional[RequestPriorityCode] = None,
         parameter: Optional[FhirList[DeviceRequestParameter]] = None,
         subject: Reference[Union[Patient, Group, Location, Device]],
         encounter: Optional[Reference[Union[Encounter]]] = None,

@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ObservationStatus)
-    from spark_auto_mapper_fhir.complex_types.observation_status import (
-        ObservationStatus,
+    from spark_auto_mapper_fhir.value_sets.observation_status import (
+        ObservationStatusCode,
     )
 
     # code (CodeableConcept)
@@ -32,8 +32,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # severity (DetectedIssueSeverity)
-    from spark_auto_mapper_fhir.complex_types.detected_issue_severity import (
-        DetectedIssueSeverity,
+    from spark_auto_mapper_fhir.value_sets.detected_issue_severity import (
+        DetectedIssueSeverityCode,
     )
 
     # patient (Reference)
@@ -94,9 +94,9 @@ class DetectedIssue(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ObservationStatus,
+        status: ObservationStatusCode,
         code: Optional[CodeableConcept[DetectedIssueCategoryCode]] = None,
-        severity: Optional[DetectedIssueSeverity] = None,
+        severity: Optional[DetectedIssueSeverityCode] = None,
         patient: Optional[Reference[Union[Patient]]] = None,
         author: Optional[
             Reference[Union[Practitioner, PractitionerRole, Device]]

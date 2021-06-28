@@ -29,8 +29,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.address import Address
 
     # gender (AdministrativeGender)
-    from spark_auto_mapper_fhir.complex_types.administrative_gender import (
-        AdministrativeGender,
+    from spark_auto_mapper_fhir.value_sets.administrative_gender import (
+        AdministrativeGenderCode,
     )
 
     # organization (Reference)
@@ -62,7 +62,7 @@ class PatientContact(FhirBackboneElementBase):
         name: Optional[HumanName] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[Address] = None,
-        gender: Optional[AdministrativeGender] = None,
+        gender: Optional[AdministrativeGenderCode] = None,
         organization: Optional[Reference[Union[Organization]]] = None,
         period: Optional[Period] = None,
     ) -> None:

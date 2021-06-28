@@ -20,8 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.person import Person
 
     # assurance (IdentityAssuranceLevel)
-    from spark_auto_mapper_fhir.complex_types.identity_assurance_level import (
-        IdentityAssuranceLevel,
+    from spark_auto_mapper_fhir.value_sets.identity_assurance_level import (
+        IdentityAssuranceLevelCode,
     )
 
 
@@ -39,7 +39,7 @@ class PersonLink(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         target: Reference[Union[Patient, Practitioner, RelatedPerson, Person]],
-        assurance: Optional[IdentityAssuranceLevel] = None,
+        assurance: Optional[IdentityAssuranceLevelCode] = None,
     ) -> None:
         """
 

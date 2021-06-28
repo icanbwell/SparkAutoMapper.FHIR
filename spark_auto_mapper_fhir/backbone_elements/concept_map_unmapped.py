@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # mode (ConceptMapGroupUnmappedMode)
-    from spark_auto_mapper_fhir.complex_types.concept_map_group_unmapped_mode import (
-        ConceptMapGroupUnmappedMode,
+    from spark_auto_mapper_fhir.value_sets.concept_map_group_unmapped_mode import (
+        ConceptMapGroupUnmappedModeCode,
     )
 
     # code (code)
@@ -37,7 +37,7 @@ class ConceptMapUnmapped(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        mode: ConceptMapGroupUnmappedMode,
+        mode: ConceptMapGroupUnmappedModeCode,
         code: Optional[code] = None,
         display: Optional[FhirString] = None,
         url: Optional[canonical] = None,

@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # kind (CarePlanActivityKind)
-    from spark_auto_mapper_fhir.complex_types.care_plan_activity_kind import (
-        CarePlanActivityKind,
+    from spark_auto_mapper_fhir.value_sets.care_plan_activity_kind import (
+        CarePlanActivityKindCode,
     )
 
     # instantiatesCanonical (canonical)
@@ -57,8 +57,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.goal import Goal
 
     # status (CarePlanActivityStatus)
-    from spark_auto_mapper_fhir.complex_types.care_plan_activity_status import (
-        CarePlanActivityStatus,
+    from spark_auto_mapper_fhir.value_sets.care_plan_activity_status import (
+        CarePlanActivityStatusCode,
     )
 
     # statusReason (CodeableConcept)
@@ -130,7 +130,7 @@ class CarePlanDetail(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        kind: Optional[CarePlanActivityKind] = None,
+        kind: Optional[CarePlanActivityKindCode] = None,
         instantiatesCanonical: Optional[FhirList[canonical]] = None,
         instantiatesUri: Optional[FhirList[uri]] = None,
         code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_Code]] = None,
@@ -145,7 +145,7 @@ class CarePlanDetail(FhirBackboneElementBase):
             ]
         ] = None,
         goal: Optional[FhirList[Reference[Union[Goal]]]] = None,
-        status: CarePlanActivityStatus,
+        status: CarePlanActivityStatusCode,
         statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         location: Optional[Reference[Union[Location]]] = None,

@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FinancialResourceStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
-        FinancialResourceStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.financial_resource_status_codes import (
+        FinancialResourceStatusCodesCode,
     )
 
     # request (Reference)
@@ -28,9 +28,9 @@ if TYPE_CHECKING:
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.enrollment_request import EnrollmentRequest
 
-    # outcome (RemittanceOutcome)
-    from spark_auto_mapper_fhir.complex_types.remittance_outcome import (
-        RemittanceOutcome,
+    # outcome (ClaimProcessingCodes)
+    from spark_auto_mapper_fhir.value_sets.claim_processing_codes import (
+        ClaimProcessingCodesCode,
     )
 
     # disposition (string)
@@ -69,9 +69,9 @@ class EnrollmentResponse(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[FinancialResourceStatusCodes] = None,
+        status: Optional[FinancialResourceStatusCodesCode] = None,
         request: Optional[Reference[Union[EnrollmentRequest]]] = None,
-        outcome: Optional[RemittanceOutcome] = None,
+        outcome: Optional[ClaimProcessingCodesCode] = None,
         disposition: Optional[FhirString] = None,
         created: Optional[FhirDateTime] = None,
         organization: Optional[Reference[Union[Organization]]] = None,

@@ -30,8 +30,8 @@ if TYPE_CHECKING:
 
     # Imports for References for partOf
     # status (ResearchStudyStatus)
-    from spark_auto_mapper_fhir.complex_types.research_study_status import (
-        ResearchStudyStatus,
+    from spark_auto_mapper_fhir.value_sets.research_study_status import (
+        ResearchStudyStatusCode,
     )
 
     # primaryPurposeType (CodeableConcept)
@@ -169,7 +169,7 @@ class ResearchStudy(FhirResourceBase):
         title: Optional[FhirString] = None,
         protocol: Optional[FhirList[Reference[Union[PlanDefinition]]]] = None,
         partOf: Optional[FhirList[Reference[Union[ResearchStudy]]]] = None,
-        status: ResearchStudyStatus,
+        status: ResearchStudyStatusCode,
         primaryPurposeType: Optional[
             CodeableConcept[ResearchStudyPrimaryPurposeTypeCode]
         ] = None,

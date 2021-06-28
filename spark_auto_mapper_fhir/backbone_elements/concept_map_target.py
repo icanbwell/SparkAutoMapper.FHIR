@@ -16,8 +16,8 @@ if TYPE_CHECKING:
 
     # display (string)
     # equivalence (ConceptMapEquivalence)
-    from spark_auto_mapper_fhir.complex_types.concept_map_equivalence import (
-        ConceptMapEquivalence,
+    from spark_auto_mapper_fhir.value_sets.concept_map_equivalence import (
+        ConceptMapEquivalenceCode,
     )
 
     # comment (string)
@@ -47,7 +47,7 @@ class ConceptMapTarget(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Optional[code] = None,
         display: Optional[FhirString] = None,
-        equivalence: ConceptMapEquivalence,
+        equivalence: ConceptMapEquivalenceCode,
         comment: Optional[FhirString] = None,
         dependsOn: Optional[FhirList[ConceptMapDependsOn]] = None,
         product: Optional[FhirList[ConceptMapDependsOn]] = None,

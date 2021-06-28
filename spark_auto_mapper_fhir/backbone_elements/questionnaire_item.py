@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     # prefix (string)
     # text (string)
     # type_ (QuestionnaireItemType)
-    from spark_auto_mapper_fhir.complex_types.questionnaire_item_type import (
-        QuestionnaireItemType,
+    from spark_auto_mapper_fhir.value_sets.questionnaire_item_type import (
+        QuestionnaireItemTypeCode,
     )
 
     # enableWhen (Questionnaire.EnableWhen)
@@ -40,8 +40,8 @@ if TYPE_CHECKING:
     )
 
     # enableBehavior (EnableWhenBehavior)
-    from spark_auto_mapper_fhir.complex_types.enable_when_behavior import (
-        EnableWhenBehavior,
+    from spark_auto_mapper_fhir.value_sets.enable_when_behavior import (
+        EnableWhenBehaviorCode,
     )
 
     # required (boolean)
@@ -80,9 +80,9 @@ class QuestionnaireItem(FhirBackboneElementBase):
         code: Optional[FhirList[Coding[QuestionnaireQuestionCodesCode]]] = None,
         prefix: Optional[FhirString] = None,
         text: Optional[FhirString] = None,
-        type_: QuestionnaireItemType,
+        type_: QuestionnaireItemTypeCode,
         enableWhen: Optional[FhirList[QuestionnaireEnableWhen]] = None,
-        enableBehavior: Optional[EnableWhenBehavior] = None,
+        enableBehavior: Optional[EnableWhenBehaviorCode] = None,
         required: Optional[FhirBoolean] = None,
         repeats: Optional[FhirBoolean] = None,
         readOnly: Optional[FhirBoolean] = None,

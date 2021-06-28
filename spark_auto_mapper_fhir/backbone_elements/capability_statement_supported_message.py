@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # mode (EventCapabilityMode)
-    from spark_auto_mapper_fhir.complex_types.event_capability_mode import (
-        EventCapabilityMode,
+    from spark_auto_mapper_fhir.value_sets.event_capability_mode import (
+        EventCapabilityModeCode,
     )
 
     # definition (canonical)
@@ -32,7 +32,7 @@ class CapabilityStatementSupportedMessage(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        mode: EventCapabilityMode,
+        mode: EventCapabilityModeCode,
         definition: canonical,
     ) -> None:
         """

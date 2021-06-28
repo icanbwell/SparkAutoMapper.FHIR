@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (CareTeamStatus)
-    from spark_auto_mapper_fhir.complex_types.care_team_status import CareTeamStatus
+    from spark_auto_mapper_fhir.value_sets.care_team_status import CareTeamStatusCode
 
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -95,7 +95,7 @@ class CareTeam(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[CareTeamStatus] = None,
+        status: Optional[CareTeamStatusCode] = None,
         category: Optional[FhirList[CodeableConcept[CareTeamCategoryCode]]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,

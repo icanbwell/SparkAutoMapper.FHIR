@@ -23,7 +23,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # durationUnit (UnitsOfTime)
-    from spark_auto_mapper_fhir.complex_types.units_of_time import UnitsOfTime
+    from spark_auto_mapper_fhir.value_sets.units_of_time import UnitsOfTimeCode
 
     # frequency (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
@@ -38,16 +38,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # periodUnit (UnitsOfTime)
-    from spark_auto_mapper_fhir.complex_types.units_of_time import UnitsOfTime
+    from spark_auto_mapper_fhir.value_sets.units_of_time import UnitsOfTimeCode
 
-    # dayOfWeek (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # dayOfWeek (DaysOfWeek)
+    from spark_auto_mapper_fhir.value_sets.days_of_week import DaysOfWeekCode
 
     # timeOfDay (time)
     from spark_auto_mapper_fhir.complex_types.time import time
 
     # when (EventTiming)
-    from spark_auto_mapper_fhir.complex_types.event_timing import EventTiming
+    from spark_auto_mapper_fhir.value_sets.event_timing import EventTimingCode
 
     # offset (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
@@ -79,15 +79,15 @@ class TimingRepeat(FhirBackboneElementBase):
         countMax: Optional[positiveInt] = None,
         duration: Optional[decimal] = None,
         durationMax: Optional[decimal] = None,
-        durationUnit: Optional[UnitsOfTime] = None,
+        durationUnit: Optional[UnitsOfTimeCode] = None,
         frequency: Optional[positiveInt] = None,
         frequencyMax: Optional[positiveInt] = None,
         period: Optional[decimal] = None,
         periodMax: Optional[decimal] = None,
-        periodUnit: Optional[UnitsOfTime] = None,
-        dayOfWeek: Optional[FhirList[code]] = None,
+        periodUnit: Optional[UnitsOfTimeCode] = None,
+        dayOfWeek: Optional[FhirList[DaysOfWeekCode]] = None,
         timeOfDay: Optional[FhirList[time]] = None,
-        when: Optional[FhirList[EventTiming]] = None,
+        when: Optional[FhirList[EventTimingCode]] = None,
         offset: Optional[unsignedInt] = None,
         boundsDuration: Optional[Duration] = None,
         boundsRange: Optional[Range] = None,

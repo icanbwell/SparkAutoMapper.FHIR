@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FinancialResourceStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
-        FinancialResourceStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.financial_resource_status_codes import (
+        FinancialResourceStatusCodesCode,
     )
 
     # created (dateTime)
@@ -66,7 +66,7 @@ class EnrollmentRequest(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[FinancialResourceStatusCodes] = None,
+        status: Optional[FinancialResourceStatusCodesCode] = None,
         created: Optional[FhirDateTime] = None,
         insurer: Optional[Reference[Union[Organization]]] = None,
         provider: Optional[

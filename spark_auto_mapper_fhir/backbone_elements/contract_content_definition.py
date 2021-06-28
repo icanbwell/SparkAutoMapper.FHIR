@@ -39,8 +39,8 @@ if TYPE_CHECKING:
 
     # publicationDate (dateTime)
     # publicationStatus (ContractResourcePublicationStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.contract_resource_publication_status_codes import (
-        ContractResourcePublicationStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_publication_status_codes import (
+        ContractResourcePublicationStatusCodesCode,
     )
 
     # copyright (markdown)
@@ -68,7 +68,7 @@ class ContractContentDefinition(FhirBackboneElementBase):
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
         publicationDate: Optional[FhirDateTime] = None,
-        publicationStatus: ContractResourcePublicationStatusCodes,
+        publicationStatus: ContractResourcePublicationStatusCodesCode,
         copyright: Optional[markdown] = None,
     ) -> None:
         """

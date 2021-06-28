@@ -24,7 +24,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # status (ChargeItemStatus)
-    from spark_auto_mapper_fhir.complex_types.charge_item_status import ChargeItemStatus
+    from spark_auto_mapper_fhir.value_sets.charge_item_status import (
+        ChargeItemStatusCode,
+    )
 
     # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -189,7 +191,7 @@ class ChargeItem(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         definitionUri: Optional[FhirList[uri]] = None,
         definitionCanonical: Optional[FhirList[canonical]] = None,
-        status: ChargeItemStatus,
+        status: ChargeItemStatusCode,
         partOf: Optional[FhirList[Reference[Union[ChargeItem]]]] = None,
         code: CodeableConcept[ChargeItemCodeCode],
         subject: Reference[Union[Patient, Group]],

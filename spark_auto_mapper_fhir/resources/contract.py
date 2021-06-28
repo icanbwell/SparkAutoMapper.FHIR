@@ -24,8 +24,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (ContractResourceStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.contract_resource_status_codes import (
-        ContractResourceStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.contract_resource_status_codes import (
+        ContractResourceStatusCodesCode,
     )
 
     # legalState (CodeableConcept)
@@ -218,7 +218,7 @@ class Contract(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         url: Optional[uri] = None,
         version: Optional[FhirString] = None,
-        status: Optional[ContractResourceStatusCodes] = None,
+        status: Optional[ContractResourceStatusCodesCode] = None,
         legalState: Optional[
             CodeableConcept[ContractResourceLegalStateCodesCode]
         ] = None,

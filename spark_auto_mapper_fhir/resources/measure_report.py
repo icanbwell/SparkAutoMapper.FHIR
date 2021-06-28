@@ -17,13 +17,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (MeasureReportStatus)
-    from spark_auto_mapper_fhir.complex_types.measure_report_status import (
-        MeasureReportStatus,
+    from spark_auto_mapper_fhir.value_sets.measure_report_status import (
+        MeasureReportStatusCode,
     )
 
     # type_ (MeasureReportType)
-    from spark_auto_mapper_fhir.complex_types.measure_report_type import (
-        MeasureReportType,
+    from spark_auto_mapper_fhir.value_sets.measure_report_type import (
+        MeasureReportTypeCode,
     )
 
     # measure (canonical)
@@ -92,8 +92,8 @@ class MeasureReport(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: MeasureReportStatus,
-        type_: MeasureReportType,
+        status: MeasureReportStatusCode,
+        type_: MeasureReportTypeCode,
         measure: canonical,
         subject: Optional[
             Reference[

@@ -33,8 +33,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -80,7 +80,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for keyword
     # fhirVersion (FHIRVersion)
-    from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
+    from spark_auto_mapper_fhir.value_sets.fhir_version import FHIRVersionCode
 
     # mapping (StructureDefinition.Mapping)
     from spark_auto_mapper_fhir.backbone_elements.structure_definition_mapping import (
@@ -88,8 +88,8 @@ if TYPE_CHECKING:
     )
 
     # kind (StructureDefinitionKind)
-    from spark_auto_mapper_fhir.complex_types.structure_definition_kind import (
-        StructureDefinitionKind,
+    from spark_auto_mapper_fhir.value_sets.structure_definition_kind import (
+        StructureDefinitionKindCode,
     )
 
     # abstract (boolean)
@@ -110,8 +110,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # derivation (TypeDerivationRule)
-    from spark_auto_mapper_fhir.complex_types.type_derivation_rule import (
-        TypeDerivationRule,
+    from spark_auto_mapper_fhir.value_sets.type_derivation_rule import (
+        TypeDerivationRuleCode,
     )
 
     # snapshot (StructureDefinition.Snapshot)
@@ -144,7 +144,7 @@ class StructureDefinition(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: FhirString,
         title: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -157,15 +157,15 @@ class StructureDefinition(FhirResourceBase):
         purpose: Optional[markdown] = None,
         copyright: Optional[markdown] = None,
         keyword: Optional[FhirList[Coding[DefinitionUseCodesCode]]] = None,
-        fhirVersion: Optional[FHIRVersion] = None,
+        fhirVersion: Optional[FHIRVersionCode] = None,
         mapping: Optional[FhirList[StructureDefinitionMapping]] = None,
-        kind: StructureDefinitionKind,
+        kind: StructureDefinitionKindCode,
         abstract: FhirBoolean,
         context: Optional[FhirList[StructureDefinitionContext]] = None,
         contextInvariant: Optional[FhirList[FhirString]] = None,
         type_: uri,
         baseDefinition: Optional[canonical] = None,
-        derivation: Optional[TypeDerivationRule] = None,
+        derivation: Optional[TypeDerivationRuleCode] = None,
         snapshot: Optional[StructureDefinitionSnapshot] = None,
         differential: Optional[StructureDefinitionDifferential] = None,
     ) -> None:

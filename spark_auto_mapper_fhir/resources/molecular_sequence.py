@@ -18,7 +18,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # type_ (sequenceType)
-    from spark_auto_mapper_fhir.complex_types.sequence_type import sequenceType
+    from spark_auto_mapper_fhir.value_sets.sequence_type import SequenceTypeCode
 
     # coordinateSystem (integer)
     from spark_auto_mapper_fhir.complex_types.integer import FhirInteger
@@ -101,7 +101,7 @@ class MolecularSequence(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        type_: Optional[sequenceType] = None,
+        type_: Optional[SequenceTypeCode] = None,
         coordinateSystem: FhirInteger,
         patient: Optional[Reference[Union[Patient]]] = None,
         specimen: Optional[Reference[Union[Specimen]]] = None,

@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ClinicalImpressionStatus)
-    from spark_auto_mapper_fhir.complex_types.clinical_impression_status import (
-        ClinicalImpressionStatus,
+    from spark_auto_mapper_fhir.value_sets.clinical_impression_status import (
+        ClinicalImpressionStatusCode,
     )
 
     # statusReason (CodeableConcept)
@@ -135,7 +135,7 @@ class ClinicalImpression(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ClinicalImpressionStatus,
+        status: ClinicalImpressionStatusCode,
         statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,
         description: Optional[FhirString] = None,

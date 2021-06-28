@@ -36,8 +36,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # permittedDataType (ObservationDataType)
-    from spark_auto_mapper_fhir.complex_types.observation_data_type import (
-        ObservationDataType,
+    from spark_auto_mapper_fhir.value_sets.observation_data_type import (
+        ObservationDataTypeCode,
     )
 
     # multipleResultsAllowed (boolean)
@@ -109,7 +109,7 @@ class ObservationDefinition(FhirResourceBase):
         ] = None,
         code: CodeableConcept[LOINCCodesCode],
         identifier: Optional[FhirList[Identifier]] = None,
-        permittedDataType: Optional[FhirList[ObservationDataType]] = None,
+        permittedDataType: Optional[FhirList[ObservationDataTypeCode]] = None,
         multipleResultsAllowed: Optional[FhirBoolean] = None,
         method: Optional[CodeableConcept[ObservationMethodsCode]] = None,
         preferredReportName: Optional[FhirString] = None,

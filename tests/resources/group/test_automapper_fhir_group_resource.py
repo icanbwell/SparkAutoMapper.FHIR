@@ -5,12 +5,12 @@ from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.backbone_elements.group_member_backbone_element import (
-    GroupMemberBackboneElement,
-)
 from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCode
-from spark_auto_mapper_fhir.value_sets.identifier_type import IdentifierTypeCode
+from spark_auto_mapper_fhir.value_sets.identifier_type_codes import (
+    IdentifierTypeCodesCode,
+)
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 
@@ -44,7 +44,7 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
     ).complex(
         Group(
             id_=FhirId(A.column("practitioner_id")),
-            meta=Meta(source="http://medstarhealth.org/provider"),
+            meta=Meta(source=FhirUri("http://medstarhealth.org/provider")),
             identifier=FhirList(
                 [
                     Identifier(
@@ -53,8 +53,8 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
                             coding=FhirList(
                                 [
                                     Coding(
-                                        system=IdentifierTypeCode.codeset,
-                                        code=IdentifierTypeCode(
+                                        system=IdentifierTypeCodesCode.codeset,
+                                        code=IdentifierTypeCodesCode(
                                             A.text("PractitionerAffiliation")
                                         ),
                                     )

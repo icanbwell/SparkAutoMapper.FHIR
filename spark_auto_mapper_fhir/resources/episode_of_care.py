@@ -16,8 +16,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (EpisodeOfCareStatus)
-    from spark_auto_mapper_fhir.complex_types.episode_of_care_status import (
-        EpisodeOfCareStatus,
+    from spark_auto_mapper_fhir.value_sets.episode_of_care_status import (
+        EpisodeOfCareStatusCode,
     )
 
     # statusHistory (EpisodeOfCare.StatusHistory)
@@ -95,7 +95,7 @@ class EpisodeOfCare(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: EpisodeOfCareStatus,
+        status: EpisodeOfCareStatusCode,
         statusHistory: Optional[FhirList[EpisodeOfCareStatusHistory]] = None,
         type_: Optional[FhirList[CodeableConcept[EpisodeOfCareTypeCode]]] = None,
         diagnosis: Optional[FhirList[EpisodeOfCareDiagnosis]] = None,

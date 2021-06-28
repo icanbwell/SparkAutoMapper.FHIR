@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     # title (string)
     pass
     # generation (GuidePageGeneration)
-    from spark_auto_mapper_fhir.complex_types.guide_page_generation import (
-        GuidePageGeneration,
+    from spark_auto_mapper_fhir.value_sets.guide_page_generation import (
+        GuidePageGenerationCode,
     )
 
     # nameUrl (url)
@@ -42,7 +42,7 @@ class ImplementationGuidePage(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         title: FhirString,
-        generation: GuidePageGeneration,
+        generation: GuidePageGenerationCode,
         page: Optional[FhirList[ImplementationGuidePage]] = None,
         nameUrl: Optional[url] = None,
         nameReference: Optional[Reference[Union[Binary]]] = None,

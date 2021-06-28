@@ -37,7 +37,7 @@ if TYPE_CHECKING:
 
     # Imports for References for partOf
     # status (TaskStatus)
-    from spark_auto_mapper_fhir.complex_types.task_status import TaskStatus
+    from spark_auto_mapper_fhir.value_sets.task_status import TaskStatusCode
 
     # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -54,10 +54,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for businessStatus
     # intent (TaskIntent)
-    from spark_auto_mapper_fhir.complex_types.task_intent import TaskIntent
+    from spark_auto_mapper_fhir.value_sets.task_intent import TaskIntentCode
 
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -196,11 +196,11 @@ class Task(FhirResourceBase):
         basedOn: Optional[FhirList[Reference[Union[Resource]]]] = None,
         groupIdentifier: Optional[Identifier] = None,
         partOf: Optional[FhirList[Reference[Union[Task]]]] = None,
-        status: TaskStatus,
+        status: TaskStatusCode,
         statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         businessStatus: Optional[CodeableConcept[GenericTypeCode]] = None,
-        intent: TaskIntent,
-        priority: Optional[RequestPriority] = None,
+        intent: TaskIntentCode,
+        priority: Optional[RequestPriorityCode] = None,
         code: Optional[CodeableConcept[TaskCodeCode]] = None,
         description: Optional[FhirString] = None,
         focus: Optional[Reference[Union[Resource]]] = None,

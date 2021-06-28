@@ -40,8 +40,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -118,12 +118,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # type_ (ResearchElementType)
-    from spark_auto_mapper_fhir.complex_types.research_element_type import (
-        ResearchElementType,
+    from spark_auto_mapper_fhir.value_sets.research_element_type import (
+        ResearchElementTypeCode,
     )
 
-    # variableType (VariableType)
-    from spark_auto_mapper_fhir.complex_types.variable_type import VariableType
+    # variableType (EvidenceVariableType)
+    from spark_auto_mapper_fhir.value_sets.evidence_variable_type import (
+        EvidenceVariableTypeCode,
+    )
 
     # characteristic (ResearchElementDefinition.Characteristic)
     from spark_auto_mapper_fhir.backbone_elements.research_element_definition_characteristic import (
@@ -165,7 +167,7 @@ class ResearchElementDefinition(FhirResourceBase):
         title: Optional[FhirString] = None,
         shortTitle: Optional[FhirString] = None,
         subtitle: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -189,8 +191,8 @@ class ResearchElementDefinition(FhirResourceBase):
         endorser: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
         library: Optional[FhirList[canonical]] = None,
-        type_: ResearchElementType,
-        variableType: Optional[VariableType] = None,
+        type_: ResearchElementTypeCode,
+        variableType: Optional[EvidenceVariableTypeCode] = None,
         characteristic: FhirList[ResearchElementDefinitionCharacteristic],
         subjectCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         subjectReference: Optional[Reference[Union[Group]]] = None,

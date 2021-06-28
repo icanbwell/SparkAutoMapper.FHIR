@@ -35,15 +35,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
 
-    # subjectType (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # subjectType (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
@@ -119,9 +119,9 @@ class Questionnaire(FhirResourceBase):
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         derivedFrom: Optional[FhirList[canonical]] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
-        subjectType: Optional[FhirList[code]] = None,
+        subjectType: Optional[FhirList[ResourceTypeCode]] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,

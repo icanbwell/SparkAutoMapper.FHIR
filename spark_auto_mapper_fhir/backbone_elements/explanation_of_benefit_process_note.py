@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
     # type_ (NoteType)
-    from spark_auto_mapper_fhir.complex_types.note_type import NoteType
+    from spark_auto_mapper_fhir.value_sets.note_type import NoteTypeCode
 
     # text (string)
     # language (CodeableConcept)
@@ -41,7 +41,7 @@ class ExplanationOfBenefitProcessNote(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         number: Optional[positiveInt] = None,
-        type_: Optional[NoteType] = None,
+        type_: Optional[NoteTypeCode] = None,
         text: Optional[FhirString] = None,
         language: Optional[CodeableConcept[CommonLanguagesCode]] = None,
     ) -> None:

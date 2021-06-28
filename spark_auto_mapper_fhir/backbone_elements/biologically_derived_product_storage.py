@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # scale (BiologicallyDerivedProductStorageScale)
-    from spark_auto_mapper_fhir.complex_types.biologically_derived_product_storage_scale import (
-        BiologicallyDerivedProductStorageScale,
+    from spark_auto_mapper_fhir.value_sets.biologically_derived_product_storage_scale import (
+        BiologicallyDerivedProductStorageScaleCode,
     )
 
     # duration (Period)
@@ -40,7 +40,7 @@ class BiologicallyDerivedProductStorage(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         temperature: Optional[decimal] = None,
-        scale: Optional[BiologicallyDerivedProductStorageScale] = None,
+        scale: Optional[BiologicallyDerivedProductStorageScaleCode] = None,
         duration: Optional[Period] = None,
     ) -> None:
         """

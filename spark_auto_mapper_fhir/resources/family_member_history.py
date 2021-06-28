@@ -28,8 +28,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.uri import uri
 
     # status (FamilyHistoryStatus)
-    from spark_auto_mapper_fhir.complex_types.family_history_status import (
-        FamilyHistoryStatus,
+    from spark_auto_mapper_fhir.value_sets.family_history_status import (
+        FamilyHistoryStatusCode,
     )
 
     # dataAbsentReason (CodeableConcept)
@@ -153,7 +153,7 @@ class FamilyMemberHistory(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirList[canonical]] = None,
         instantiatesUri: Optional[FhirList[uri]] = None,
-        status: FamilyHistoryStatus,
+        status: FamilyHistoryStatusCode,
         dataAbsentReason: Optional[
             CodeableConcept[FamilyHistoryAbsentReasonCode]
         ] = None,

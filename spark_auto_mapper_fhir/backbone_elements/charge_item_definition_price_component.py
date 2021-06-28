@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (InvoicePriceComponentType)
-    from spark_auto_mapper_fhir.complex_types.invoice_price_component_type import (
-        InvoicePriceComponentType,
+    from spark_auto_mapper_fhir.value_sets.invoice_price_component_type import (
+        InvoicePriceComponentTypeCode,
     )
 
     # code (CodeableConcept)
@@ -42,7 +42,7 @@ class ChargeItemDefinitionPriceComponent(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: InvoicePriceComponentType,
+        type_: InvoicePriceComponentTypeCode,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,
         factor: Optional[decimal] = None,
         amount: Optional[Money] = None,

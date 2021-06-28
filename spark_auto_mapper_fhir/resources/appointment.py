@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (AppointmentStatus)
-    from spark_auto_mapper_fhir.complex_types.appointment_status import (
-        AppointmentStatus,
+    from spark_auto_mapper_fhir.value_sets.appointment_status import (
+        AppointmentStatusCode,
     )
 
     # cancelationReason (CodeableConcept)
@@ -147,7 +147,7 @@ class Appointment(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: AppointmentStatus,
+        status: AppointmentStatusCode,
         cancelationReason: Optional[
             CodeableConcept[AppointmentCancellationReasonCode]
         ] = None,

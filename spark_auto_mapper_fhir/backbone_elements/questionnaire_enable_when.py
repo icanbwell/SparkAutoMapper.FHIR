@@ -19,8 +19,8 @@ if TYPE_CHECKING:
     # question (string)
     pass
     # operator (QuestionnaireItemOperator)
-    from spark_auto_mapper_fhir.complex_types.questionnaire_item_operator import (
-        QuestionnaireItemOperator,
+    from spark_auto_mapper_fhir.value_sets.questionnaire_item_operator import (
+        QuestionnaireItemOperatorCode,
     )
 
     # answerBoolean (boolean)
@@ -65,7 +65,7 @@ class QuestionnaireEnableWhen(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         question: FhirString,
-        operator: QuestionnaireItemOperator,
+        operator: QuestionnaireItemOperatorCode,
         answerBoolean: Optional[FhirBoolean] = None,
         answerDecimal: Optional[decimal] = None,
         answerInteger: Optional[FhirInteger] = None,

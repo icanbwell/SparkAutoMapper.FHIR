@@ -29,14 +29,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.duration import Duration
 
     # studyEffectiveGroupMeasure (GroupMeasure)
-    from spark_auto_mapper_fhir.complex_types.group_measure import GroupMeasure
+    from spark_auto_mapper_fhir.value_sets.group_measure import GroupMeasureCode
 
     # participantEffectiveDescription (string)
     # participantEffectiveTimeFromStart (Duration)
     from spark_auto_mapper_fhir.complex_types.duration import Duration
 
     # participantEffectiveGroupMeasure (GroupMeasure)
-    from spark_auto_mapper_fhir.complex_types.group_measure import GroupMeasure
+    from spark_auto_mapper_fhir.value_sets.group_measure import GroupMeasureCode
 
     # definitionCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -93,10 +93,10 @@ class ResearchElementDefinitionCharacteristic(FhirBackboneElementBase):
         unitOfMeasure: Optional[CodeableConcept[UCUMCodesCode]] = None,
         studyEffectiveDescription: Optional[FhirString] = None,
         studyEffectiveTimeFromStart: Optional[Duration] = None,
-        studyEffectiveGroupMeasure: Optional[GroupMeasure] = None,
+        studyEffectiveGroupMeasure: Optional[GroupMeasureCode] = None,
         participantEffectiveDescription: Optional[FhirString] = None,
         participantEffectiveTimeFromStart: Optional[Duration] = None,
-        participantEffectiveGroupMeasure: Optional[GroupMeasure] = None,
+        participantEffectiveGroupMeasure: Optional[GroupMeasureCode] = None,
         definitionCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         definitionCanonical: Optional[canonical] = None,
         definitionExpression: Optional[Expression] = None,

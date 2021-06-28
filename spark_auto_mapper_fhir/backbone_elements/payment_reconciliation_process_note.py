@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (NoteType)
-    from spark_auto_mapper_fhir.complex_types.note_type import NoteType
+    from spark_auto_mapper_fhir.value_sets.note_type import NoteTypeCode
 
     # text (string)
 
@@ -30,7 +30,7 @@ class PaymentReconciliationProcessNote(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: Optional[NoteType] = None,
+        type_: Optional[NoteTypeCode] = None,
         text: Optional[FhirString] = None,
     ) -> None:
         """

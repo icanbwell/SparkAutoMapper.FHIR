@@ -16,8 +16,8 @@ if TYPE_CHECKING:
 
     # requirements (string)
     # severity (ConstraintSeverity)
-    from spark_auto_mapper_fhir.complex_types.constraint_severity import (
-        ConstraintSeverity,
+    from spark_auto_mapper_fhir.value_sets.constraint_severity import (
+        ConstraintSeverityCode,
     )
 
     # human (string)
@@ -42,7 +42,7 @@ class ElementDefinitionConstraint(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         key: id,
         requirements: Optional[FhirString] = None,
-        severity: ConstraintSeverity,
+        severity: ConstraintSeverityCode,
         human: FhirString,
         expression: Optional[FhirString] = None,
         xpath: Optional[FhirString] = None,

@@ -23,8 +23,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
     # status (DeviceUseStatementStatus)
-    from spark_auto_mapper_fhir.complex_types.device_use_statement_status import (
-        DeviceUseStatementStatus,
+    from spark_auto_mapper_fhir.value_sets.device_use_statement_status import (
+        DeviceUseStatementStatusCode,
     )
 
     # subject (Reference)
@@ -120,7 +120,7 @@ class DeviceUseStatement(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         basedOn: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
-        status: DeviceUseStatementStatus,
+        status: DeviceUseStatementStatusCode,
         subject: Reference[Union[Patient, Group]],
         derivedFrom: Optional[
             FhirList[

@@ -21,13 +21,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FinancialResourceStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
-        FinancialResourceStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.financial_resource_status_codes import (
+        FinancialResourceStatusCodesCode,
     )
 
     # purpose (EligibilityResponsePurpose)
-    from spark_auto_mapper_fhir.complex_types.eligibility_response_purpose import (
-        EligibilityResponsePurpose,
+    from spark_auto_mapper_fhir.value_sets.eligibility_response_purpose import (
+        EligibilityResponsePurposeCode,
     )
 
     # patient (Reference)
@@ -55,9 +55,9 @@ if TYPE_CHECKING:
         CoverageEligibilityRequest,
     )
 
-    # outcome (RemittanceOutcome)
-    from spark_auto_mapper_fhir.complex_types.remittance_outcome import (
-        RemittanceOutcome,
+    # outcome (ClaimProcessingCodes)
+    from spark_auto_mapper_fhir.value_sets.claim_processing_codes import (
+        ClaimProcessingCodesCode,
     )
 
     # disposition (string)
@@ -111,15 +111,15 @@ class CoverageEligibilityResponse(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: FinancialResourceStatusCodes,
-        purpose: FhirList[EligibilityResponsePurpose],
+        status: FinancialResourceStatusCodesCode,
+        purpose: FhirList[EligibilityResponsePurposeCode],
         patient: Reference[Union[Patient]],
         created: FhirDateTime,
         requestor: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
         request: Reference[Union[CoverageEligibilityRequest]],
-        outcome: RemittanceOutcome,
+        outcome: ClaimProcessingCodesCode,
         disposition: Optional[FhirString] = None,
         insurer: Reference[Union[Organization]],
         insurance: Optional[FhirList[CoverageEligibilityResponseInsurance]] = None,

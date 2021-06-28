@@ -23,7 +23,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.duration import Duration
 
     # groupMeasure (GroupMeasure)
-    from spark_auto_mapper_fhir.complex_types.group_measure import GroupMeasure
+    from spark_auto_mapper_fhir.value_sets.group_measure import GroupMeasureCode
 
     # definitionReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -80,7 +80,7 @@ class EvidenceVariableCharacteristic(FhirBackboneElementBase):
         usageContext: Optional[FhirList[UsageContext]] = None,
         exclude: Optional[FhirBoolean] = None,
         timeFromStart: Optional[Duration] = None,
-        groupMeasure: Optional[GroupMeasure] = None,
+        groupMeasure: Optional[GroupMeasureCode] = None,
         definitionReference: Optional[Reference[Union[Group]]] = None,
         definitionCanonical: Optional[canonical] = None,
         definitionCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,

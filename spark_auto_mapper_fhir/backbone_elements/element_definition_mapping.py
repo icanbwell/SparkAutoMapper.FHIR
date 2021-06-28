@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     # identity (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
-    # language (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # language (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # map (string)
     # comment (string)
@@ -35,7 +35,7 @@ class ElementDefinitionMapping(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identity: id,
-        language: Optional[code] = None,
+        language: Optional[MimeTypesCode] = None,
         map: FhirString,
         comment: Optional[FhirString] = None,
     ) -> None:

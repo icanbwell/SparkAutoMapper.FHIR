@@ -56,8 +56,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for classification
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # validityPeriod (Period)
@@ -123,7 +123,7 @@ class CatalogEntry(FhirResourceBase):
         ],
         additionalIdentifier: Optional[FhirList[Identifier]] = None,
         classification: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        status: Optional[PublicationStatus] = None,
+        status: Optional[PublicationStatusCode] = None,
         validityPeriod: Optional[Period] = None,
         validTo: Optional[FhirDateTime] = None,
         lastUpdated: Optional[FhirDateTime] = None,

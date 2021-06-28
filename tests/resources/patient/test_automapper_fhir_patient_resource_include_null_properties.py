@@ -14,7 +14,7 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.resources.patient import Patient
 from spark_auto_mapper_fhir.value_sets.administrative_gender import (
-    AdministrativeGender,
+    AdministrativeGenderCode,
 )
 from spark_auto_mapper_fhir.value_sets.name_use import NameUseCode
 
@@ -49,7 +49,7 @@ def test_auto_mapper_fhir_patient_resource_include_null_properties(
                 include_null_properties=True,
             ),
             gender=A.if_not_null(
-                A.column("my_gender"), AdministrativeGender(A.column("my_gender"))
+                A.column("my_gender"), AdministrativeGenderCode(A.column("my_gender"))
             ),
         )
     )

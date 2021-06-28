@@ -12,16 +12,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # use (GraphCompartmentUse)
-    from spark_auto_mapper_fhir.complex_types.graph_compartment_use import (
-        GraphCompartmentUse,
+    from spark_auto_mapper_fhir.value_sets.graph_compartment_use import (
+        GraphCompartmentUseCode,
     )
 
     # code (CompartmentType)
-    from spark_auto_mapper_fhir.complex_types.compartment_type import CompartmentType
+    from spark_auto_mapper_fhir.value_sets.compartment_type import CompartmentTypeCode
 
     # rule (GraphCompartmentRule)
-    from spark_auto_mapper_fhir.complex_types.graph_compartment_rule import (
-        GraphCompartmentRule,
+    from spark_auto_mapper_fhir.value_sets.graph_compartment_rule import (
+        GraphCompartmentRuleCode,
     )
 
     # expression (string)
@@ -41,9 +41,9 @@ class GraphDefinitionCompartment(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        use: GraphCompartmentUse,
-        code: CompartmentType,
-        rule: GraphCompartmentRule,
+        use: GraphCompartmentUseCode,
+        code: CompartmentTypeCode,
+        rule: GraphCompartmentRuleCode,
         expression: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
     ) -> None:

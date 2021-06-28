@@ -48,8 +48,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
 
     # status (ObservationStatus)
-    from spark_auto_mapper_fhir.complex_types.observation_status import (
-        ObservationStatus,
+    from spark_auto_mapper_fhir.value_sets.observation_status import (
+        ObservationStatusCode,
     )
 
     # category (CodeableConcept)
@@ -279,7 +279,7 @@ class Observation(FhirResourceBase):
                 ]
             ]
         ] = None,
-        status: ObservationStatus,
+        status: ObservationStatusCode,
         category: Optional[
             FhirList[CodeableConcept[ObservationCategoryCodesCode]]
         ] = None,

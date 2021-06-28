@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FlagStatus)
-    from spark_auto_mapper_fhir.complex_types.flag_status import FlagStatus
+    from spark_auto_mapper_fhir.value_sets.flag_status import FlagStatusCode
 
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -80,7 +80,7 @@ class Flag(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: FlagStatus,
+        status: FlagStatusCode,
         category: Optional[FhirList[CodeableConcept[FlagCategoryCode]]] = None,
         code: CodeableConcept[FlagCodeCode],
         subject: Reference[

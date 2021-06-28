@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (AccountStatus)
-    from spark_auto_mapper_fhir.complex_types.account_status import AccountStatus
+    from spark_auto_mapper_fhir.value_sets.account_status import AccountStatusCode
 
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -84,7 +84,7 @@ class Account(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: AccountStatus,
+        status: AccountStatusCode,
         type_: Optional[CodeableConcept[AccountTypesCode]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[

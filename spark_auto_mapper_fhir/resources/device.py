@@ -29,7 +29,9 @@ if TYPE_CHECKING:
     )
 
     # status (FHIRDeviceStatus)
-    from spark_auto_mapper_fhir.complex_types.fhir_device_status import FHIRDeviceStatus
+    from spark_auto_mapper_fhir.value_sets.fhir_device_status import (
+        FHIRDeviceStatusCode,
+    )
 
     # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -144,7 +146,7 @@ class Device(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         definition: Optional[Reference[Union[DeviceDefinition]]] = None,
         udiCarrier: Optional[FhirList[DeviceUdiCarrier]] = None,
-        status: Optional[FHIRDeviceStatus] = None,
+        status: Optional[FHIRDeviceStatusCode] = None,
         statusReason: Optional[
             FhirList[CodeableConcept[FHIRDeviceStatusReasonCode]]
         ] = None,

@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -68,8 +68,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
     # kind (CapabilityStatementKind)
-    from spark_auto_mapper_fhir.complex_types.capability_statement_kind import (
-        CapabilityStatementKind,
+    from spark_auto_mapper_fhir.value_sets.capability_statement_kind import (
+        CapabilityStatementKindCode,
     )
 
     # software (TerminologyCapabilities.Software)
@@ -96,8 +96,8 @@ if TYPE_CHECKING:
     )
 
     # codeSearch (CodeSearchSupport)
-    from spark_auto_mapper_fhir.complex_types.code_search_support import (
-        CodeSearchSupport,
+    from spark_auto_mapper_fhir.value_sets.code_search_support import (
+        CodeSearchSupportCode,
     )
 
     # validateCode (TerminologyCapabilities.ValidateCode)
@@ -134,7 +134,7 @@ class TerminologyCapabilities(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: FhirDateTime,
         publisher: Optional[FhirString] = None,
@@ -146,13 +146,13 @@ class TerminologyCapabilities(FhirResourceBase):
         ] = None,
         purpose: Optional[markdown] = None,
         copyright: Optional[markdown] = None,
-        kind: CapabilityStatementKind,
+        kind: CapabilityStatementKindCode,
         software: Optional[TerminologyCapabilitiesSoftware] = None,
         implementation: Optional[TerminologyCapabilitiesImplementation] = None,
         lockedDate: Optional[FhirBoolean] = None,
         codeSystem: Optional[FhirList[TerminologyCapabilitiesCodeSystem]] = None,
         expansion: Optional[TerminologyCapabilitiesExpansion] = None,
-        codeSearch: Optional[CodeSearchSupport] = None,
+        codeSearch: Optional[CodeSearchSupportCode] = None,
         validateCode: Optional[TerminologyCapabilitiesValidateCode] = None,
         translation: Optional[TerminologyCapabilitiesTranslation] = None,
         closure: Optional[TerminologyCapabilitiesClosure] = None,

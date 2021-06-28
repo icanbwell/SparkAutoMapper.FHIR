@@ -20,8 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ImmunizationStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.immunization_status_codes import (
-        ImmunizationStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.immunization_status_codes import (
+        ImmunizationStatusCodesCode,
     )
 
     # statusReason (CodeableConcept)
@@ -200,7 +200,7 @@ class Immunization(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ImmunizationStatusCodes,
+        status: ImmunizationStatusCodesCode,
         statusReason: Optional[
             CodeableConcept[ImmunizationStatusReasonCodesCode]
         ] = None,

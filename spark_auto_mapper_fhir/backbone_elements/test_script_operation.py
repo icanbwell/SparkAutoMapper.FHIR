@@ -22,22 +22,22 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
-    # resource (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # resource (FHIRDefinedType)
+    from spark_auto_mapper_fhir.value_sets.fhir_defined_type import FHIRDefinedTypeCode
 
     # label (string)
     # description (string)
-    # accept (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # accept (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
-    # contentType (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # contentType (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # destination (integer)
     # encodeRequestUrl (boolean)
     # method (TestScriptRequestMethodCode)
-    from spark_auto_mapper_fhir.complex_types.test_script_request_method_code import (
-        TestScriptRequestMethodCode,
+    from spark_auto_mapper_fhir.value_sets.test_script_request_method_code import (
+        TestScriptRequestMethodCodeCode,
     )
 
     # origin (integer)
@@ -76,14 +76,14 @@ class TestScriptOperation(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[Coding[TestScriptOperationCodeCode]] = None,
-        resource: Optional[code] = None,
+        resource: Optional[FHIRDefinedTypeCode] = None,
         label: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
-        accept: Optional[code] = None,
-        contentType: Optional[code] = None,
+        accept: Optional[MimeTypesCode] = None,
+        contentType: Optional[MimeTypesCode] = None,
         destination: Optional[FhirInteger] = None,
         encodeRequestUrl: FhirBoolean,
-        method: Optional[TestScriptRequestMethodCode] = None,
+        method: Optional[TestScriptRequestMethodCodeCode] = None,
         origin: Optional[FhirInteger] = None,
         params: Optional[FhirString] = None,
         requestHeader: Optional[FhirList[TestScriptRequestHeader]] = None,

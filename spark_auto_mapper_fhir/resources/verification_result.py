@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for need
     # status (status)
-    from spark_auto_mapper_fhir.complex_types.status import status
+    from spark_auto_mapper_fhir.value_sets.status import StatusCode
 
     # statusDate (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
@@ -102,7 +102,7 @@ class VerificationResult(FhirResourceBase):
         target: Optional[FhirList[Reference[Union[Resource]]]] = None,
         targetLocation: Optional[FhirList[FhirString]] = None,
         need: Optional[CodeableConcept[NeedCode]] = None,
-        status: status,
+        status: StatusCode,
         statusDate: Optional[FhirDateTime] = None,
         validationType: Optional[CodeableConcept[Validation_typeCode]] = None,
         validationProcess: Optional[

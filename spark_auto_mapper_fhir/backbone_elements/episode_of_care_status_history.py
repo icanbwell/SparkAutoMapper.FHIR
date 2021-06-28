@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # status (EpisodeOfCareStatus)
-    from spark_auto_mapper_fhir.complex_types.episode_of_care_status import (
-        EpisodeOfCareStatus,
+    from spark_auto_mapper_fhir.value_sets.episode_of_care_status import (
+        EpisodeOfCareStatusCode,
     )
 
     # period (Period)
@@ -32,7 +32,7 @@ class EpisodeOfCareStatusHistory(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        status: EpisodeOfCareStatus,
+        status: EpisodeOfCareStatusCode,
         period: Period,
     ) -> None:
         """

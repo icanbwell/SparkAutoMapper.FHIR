@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # relationship (ActionRelationshipType)
-    from spark_auto_mapper_fhir.complex_types.action_relationship_type import (
-        ActionRelationshipType,
+    from spark_auto_mapper_fhir.value_sets.action_relationship_type import (
+        ActionRelationshipTypeCode,
     )
 
     # offsetDuration (Duration)
@@ -39,7 +39,7 @@ class RequestGroupRelatedAction(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         actionId: id,
-        relationship: ActionRelationshipType,
+        relationship: ActionRelationshipTypeCode,
         offsetDuration: Optional[Duration] = None,
         offsetRange: Optional[Range] = None,
     ) -> None:

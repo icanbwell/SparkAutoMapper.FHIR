@@ -25,8 +25,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -59,8 +59,8 @@ if TYPE_CHECKING:
     # purpose (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
-    # start (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # start (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # profile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
@@ -88,7 +88,7 @@ class GraphDefinition(FhirResourceBase):
         url: Optional[uri] = None,
         version: Optional[FhirString] = None,
         name: FhirString,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -99,7 +99,7 @@ class GraphDefinition(FhirResourceBase):
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
         purpose: Optional[markdown] = None,
-        start: code,
+        start: ResourceTypeCode,
         profile: Optional[canonical] = None,
         link: Optional[FhirList[GraphDefinitionLink]] = None,
     ) -> None:

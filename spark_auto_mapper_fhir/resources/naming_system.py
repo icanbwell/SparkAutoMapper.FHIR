@@ -18,12 +18,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # kind (NamingSystemType)
-    from spark_auto_mapper_fhir.complex_types.naming_system_type import NamingSystemType
+    from spark_auto_mapper_fhir.value_sets.naming_system_type import (
+        NamingSystemTypeCode,
+    )
 
     # date (dateTime)
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
@@ -85,8 +87,8 @@ class NamingSystem(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: FhirString,
-        status: PublicationStatus,
-        kind: NamingSystemType,
+        status: PublicationStatusCode,
+        kind: NamingSystemTypeCode,
         date: FhirDateTime,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,

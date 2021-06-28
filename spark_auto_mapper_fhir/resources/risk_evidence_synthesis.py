@@ -33,8 +33,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # date (dateTime)
@@ -165,7 +165,7 @@ class RiskEvidenceSynthesis(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,

@@ -39,10 +39,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (RequestStatus)
-    from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
+    from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
 
     # intent (RequestIntent)
-    from spark_auto_mapper_fhir.complex_types.request_intent import RequestIntent
+    from spark_auto_mapper_fhir.value_sets.request_intent import RequestIntentCode
 
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -54,7 +54,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # doNotPerform (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -251,12 +251,12 @@ class ServiceRequest(FhirResourceBase):
         ] = None,
         replaces: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
         requisition: Optional[Identifier] = None,
-        status: RequestStatus,
-        intent: RequestIntent,
+        status: RequestStatusCode,
+        intent: RequestIntentCode,
         category: Optional[
             FhirList[CodeableConcept[ServiceRequestCategoryCodesCode]]
         ] = None,
-        priority: Optional[RequestPriority] = None,
+        priority: Optional[RequestPriorityCode] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_Code]] = None,
         orderDetail: Optional[

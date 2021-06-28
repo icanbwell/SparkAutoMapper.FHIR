@@ -37,8 +37,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # date (dateTime)
@@ -103,8 +103,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
     # type_ (EvidenceVariableType)
-    from spark_auto_mapper_fhir.complex_types.evidence_variable_type import (
-        EvidenceVariableType,
+    from spark_auto_mapper_fhir.value_sets.evidence_variable_type import (
+        EvidenceVariableTypeCode,
     )
 
     # characteristic (EvidenceVariable.Characteristic)
@@ -134,7 +134,7 @@ class EvidenceVariable(FhirResourceBase):
         title: Optional[FhirString] = None,
         shortTitle: Optional[FhirString] = None,
         subtitle: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
@@ -154,7 +154,7 @@ class EvidenceVariable(FhirResourceBase):
         reviewer: Optional[FhirList[ContactDetail]] = None,
         endorser: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
-        type_: Optional[EvidenceVariableType] = None,
+        type_: Optional[EvidenceVariableTypeCode] = None,
         characteristic: FhirList[EvidenceVariableCharacteristic],
     ) -> None:
         """

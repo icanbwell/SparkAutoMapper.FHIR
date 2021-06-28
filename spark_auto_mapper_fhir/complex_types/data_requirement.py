@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.code import code
+    from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
     from spark_auto_mapper_fhir.complex_types.data_requirement_code_filter import (
         DataRequirementCodeFilter,
@@ -49,7 +49,7 @@ class DataRequirement(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: code,
+        type_: FHIRAllTypesCode,
         profile: Optional[FhirList[canonical]] = None,
         mustSupport: Optional[FhirList[FhirString]] = None,
         codeFilter: Optional[FhirList[DataRequirementCodeFilter]] = None,

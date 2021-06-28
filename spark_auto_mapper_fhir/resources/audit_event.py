@@ -30,7 +30,9 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for subtype
     # action (AuditEventAction)
-    from spark_auto_mapper_fhir.complex_types.audit_event_action import AuditEventAction
+    from spark_auto_mapper_fhir.value_sets.audit_event_action import (
+        AuditEventActionCode,
+    )
 
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -39,8 +41,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
     # outcome (AuditEventOutcome)
-    from spark_auto_mapper_fhir.complex_types.audit_event_outcome import (
-        AuditEventOutcome,
+    from spark_auto_mapper_fhir.value_sets.audit_event_outcome import (
+        AuditEventOutcomeCode,
     )
 
     # outcomeDesc (string)
@@ -85,10 +87,10 @@ class AuditEvent(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Coding[AuditEventIDCode],
         subtype: Optional[FhirList[Coding[AuditEventSub_TypeCode]]] = None,
-        action: Optional[AuditEventAction] = None,
+        action: Optional[AuditEventActionCode] = None,
         period: Optional[Period] = None,
         recorded: instant,
-        outcome: Optional[AuditEventOutcome] = None,
+        outcome: Optional[AuditEventOutcomeCode] = None,
         outcomeDesc: Optional[FhirString] = None,
         purposeOfEvent: Optional[FhirList[CodeableConcept[PurposeOfUse]]] = None,
         agent: FhirList[AuditEventAgent],

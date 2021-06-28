@@ -20,8 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (GuidanceResponseStatus)
-    from spark_auto_mapper_fhir.complex_types.guidance_response_status import (
-        GuidanceResponseStatus,
+    from spark_auto_mapper_fhir.value_sets.guidance_response_status import (
+        GuidanceResponseStatusCode,
     )
 
     # subject (Reference)
@@ -118,7 +118,7 @@ class GuidanceResponse(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         requestIdentifier: Optional[Identifier] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: GuidanceResponseStatus,
+        status: GuidanceResponseStatusCode,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
         occurrenceDateTime: Optional[FhirDateTime] = None,

@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # kind (ActionConditionKind)
-    from spark_auto_mapper_fhir.complex_types.action_condition_kind import (
-        ActionConditionKind,
+    from spark_auto_mapper_fhir.value_sets.action_condition_kind import (
+        ActionConditionKindCode,
     )
 
     # expression (Expression)
@@ -32,7 +32,7 @@ class PlanDefinitionCondition(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        kind: ActionConditionKind,
+        kind: ActionConditionKindCode,
         expression: Optional[Expression] = None,
     ) -> None:
         """

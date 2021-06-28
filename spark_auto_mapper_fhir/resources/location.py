@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (LocationStatus)
-    from spark_auto_mapper_fhir.complex_types.location_status import LocationStatus
+    from spark_auto_mapper_fhir.value_sets.location_status import LocationStatusCode
 
     # operationalStatus (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # mode (LocationMode)
-    from spark_auto_mapper_fhir.complex_types.location_mode import LocationMode
+    from spark_auto_mapper_fhir.value_sets.location_mode import LocationModeCode
 
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -105,12 +105,12 @@ class Location(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[LocationStatus] = None,
+        status: Optional[LocationStatusCode] = None,
         operationalStatus: Optional[Coding[V2_0116]] = None,
         name: Optional[FhirString] = None,
         alias: Optional[FhirList[FhirString]] = None,
         description: Optional[FhirString] = None,
-        mode: Optional[LocationMode] = None,
+        mode: Optional[LocationModeCode] = None,
         type_: Optional[
             FhirList[CodeableConcept[ServiceDeliveryLocationRoleType]]
         ] = None,

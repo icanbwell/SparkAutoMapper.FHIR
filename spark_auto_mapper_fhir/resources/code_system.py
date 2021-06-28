@@ -31,8 +31,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -75,8 +75,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # hierarchyMeaning (CodeSystemHierarchyMeaning)
-    from spark_auto_mapper_fhir.complex_types.code_system_hierarchy_meaning import (
-        CodeSystemHierarchyMeaning,
+    from spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning import (
+        CodeSystemHierarchyMeaningCode,
     )
 
     # compositional (boolean)
@@ -86,8 +86,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
 
     # content (CodeSystemContentMode)
-    from spark_auto_mapper_fhir.complex_types.code_system_content_mode import (
-        CodeSystemContentMode,
+    from spark_auto_mapper_fhir.value_sets.code_system_content_mode import (
+        CodeSystemContentModeCode,
     )
 
     # supplements (canonical)
@@ -131,7 +131,7 @@ class CodeSystem(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -145,10 +145,10 @@ class CodeSystem(FhirResourceBase):
         copyright: Optional[markdown] = None,
         caseSensitive: Optional[FhirBoolean] = None,
         valueSet: Optional[canonical] = None,
-        hierarchyMeaning: Optional[CodeSystemHierarchyMeaning] = None,
+        hierarchyMeaning: Optional[CodeSystemHierarchyMeaningCode] = None,
         compositional: Optional[FhirBoolean] = None,
         versionNeeded: Optional[FhirBoolean] = None,
-        content: CodeSystemContentMode,
+        content: CodeSystemContentModeCode,
         supplements: Optional[canonical] = None,
         count: Optional[unsignedInt] = None,
         filter: Optional[FhirList[CodeSystemFilter]] = None,

@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # type_ (BundleType)
-    from spark_auto_mapper_fhir.complex_types.bundle_type import BundleType
+    from spark_auto_mapper_fhir.value_sets.bundle_type import BundleTypeCode
 
     # timestamp (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
@@ -49,7 +49,7 @@ class Bundle(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
-        type_: BundleType,
+        type_: BundleTypeCode,
         timestamp: Optional[instant] = None,
         total: Optional[unsignedInt] = None,
         link: Optional[FhirList[BundleLink]] = None,

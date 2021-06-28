@@ -44,7 +44,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.narrative import Narrative
 
     # mode (ListMode)
-    from spark_auto_mapper_fhir.complex_types.list_mode import ListMode
+    from spark_auto_mapper_fhir.value_sets.list_mode import ListModeCode
 
     # orderedBy (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -101,7 +101,7 @@ class CompositionSection(FhirBackboneElementBase):
         ] = None,
         focus: Optional[Reference[Union[Resource]]] = None,
         text: Optional[Narrative] = None,
-        mode: Optional[ListMode] = None,
+        mode: Optional[ListModeCode] = None,
         orderedBy: Optional[CodeableConcept[ListOrderCodesCode]] = None,
         entry: Optional[FhirList[Reference[Union[Resource]]]] = None,
         emptyReason: Optional[CodeableConcept[ListEmptyReasonsCode]] = None,

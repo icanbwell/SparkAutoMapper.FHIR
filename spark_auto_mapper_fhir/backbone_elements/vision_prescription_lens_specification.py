@@ -22,7 +22,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for product
     # eye (VisionEyes)
-    from spark_auto_mapper_fhir.complex_types.vision_eyes import VisionEyes
+    from spark_auto_mapper_fhir.value_sets.vision_eyes import VisionEyesCode
 
     # sphere (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
@@ -71,7 +71,7 @@ class VisionPrescriptionLensSpecification(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         product: CodeableConcept[ExampleVisionPrescriptionProductCodesCode],
-        eye: VisionEyes,
+        eye: VisionEyesCode,
         sphere: Optional[decimal] = None,
         cylinder: Optional[decimal] = None,
         axis: Optional[FhirInteger] = None,

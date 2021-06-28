@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.related_artifact_type import (
-        RelatedArtifactType,
+    from spark_auto_mapper_fhir.value_sets.related_artifact_type import (
+        RelatedArtifactTypeCode,
     )
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
     from spark_auto_mapper_fhir.complex_types.url import url
@@ -34,7 +34,7 @@ class RelatedArtifact(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: RelatedArtifactType,
+        type_: RelatedArtifactTypeCode,
         label: Optional[FhirString] = None,
         display: Optional[FhirString] = None,
         citation: Optional[markdown] = None,

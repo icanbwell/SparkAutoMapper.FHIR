@@ -44,8 +44,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -163,7 +163,7 @@ class PlanDefinition(FhirResourceBase):
         title: Optional[FhirString] = None,
         subtitle: Optional[FhirString] = None,
         type_: Optional[CodeableConcept[PlanDefinitionTypeCode]] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,

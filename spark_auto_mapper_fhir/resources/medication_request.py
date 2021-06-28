@@ -17,9 +17,9 @@ if TYPE_CHECKING:
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
-    # status (medicationrequestStatus)
-    from spark_auto_mapper_fhir.complex_types.medicationrequest_status import (
-        medicationrequestStatus,
+    # status (medicationrequest Status)
+    from spark_auto_mapper_fhir.value_sets.medicationrequest_status import (
+        MedicationrequestStatusCode,
     )
 
     # statusReason (CodeableConcept)
@@ -31,9 +31,9 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for statusReason
-    # intent (medicationRequestIntent)
-    from spark_auto_mapper_fhir.complex_types.medication_request_intent import (
-        medicationRequestIntent,
+    # intent (medicationRequest Intent)
+    from spark_auto_mapper_fhir.value_sets.medication_request_intent import (
+        MedicationRequestIntentCode,
     )
 
     # category (CodeableConcept)
@@ -46,7 +46,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # doNotPerform (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -237,15 +237,15 @@ class MedicationRequest(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: medicationrequestStatus,
+        status: MedicationrequestStatusCode,
         statusReason: Optional[
             CodeableConcept[MedicationRequestStatusReasonCodesCode]
         ] = None,
-        intent: medicationRequestIntent,
+        intent: MedicationRequestIntentCode,
         category: Optional[
             FhirList[CodeableConcept[MedicationRequestCategoryCodesCode]]
         ] = None,
-        priority: Optional[RequestPriority] = None,
+        priority: Optional[RequestPriorityCode] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         subject: Reference[Union[Patient, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,

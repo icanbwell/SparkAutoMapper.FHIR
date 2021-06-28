@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FinancialResourceStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
-        FinancialResourceStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.financial_resource_status_codes import (
+        FinancialResourceStatusCodesCode,
     )
 
     # created (dateTime)
@@ -67,7 +67,7 @@ class VisionPrescription(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: FinancialResourceStatusCodes,
+        status: FinancialResourceStatusCodesCode,
         created: FhirDateTime,
         patient: Reference[Union[Patient]],
         encounter: Optional[Reference[Union[Encounter]]] = None,

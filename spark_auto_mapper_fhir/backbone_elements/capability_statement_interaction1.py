@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # code (SystemRestfulInteraction)
-    from spark_auto_mapper_fhir.complex_types.system_restful_interaction import (
-        SystemRestfulInteraction,
+    from spark_auto_mapper_fhir.value_sets.system_restful_interaction import (
+        SystemRestfulInteractionCode,
     )
 
     # documentation (markdown)
@@ -32,7 +32,7 @@ class CapabilityStatementInteraction1(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: SystemRestfulInteraction,
+        code: SystemRestfulInteractionCode,
         documentation: Optional[markdown] = None,
     ) -> None:
         """

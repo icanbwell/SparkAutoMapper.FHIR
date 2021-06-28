@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ResearchSubjectStatus)
-    from spark_auto_mapper_fhir.complex_types.research_subject_status import (
-        ResearchSubjectStatus,
+    from spark_auto_mapper_fhir.value_sets.research_subject_status import (
+        ResearchSubjectStatusCode,
     )
 
     # period (Period)
@@ -64,7 +64,7 @@ class ResearchSubject(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ResearchSubjectStatus,
+        status: ResearchSubjectStatusCode,
         period: Optional[Period] = None,
         study: Reference[Union[ResearchStudy]],
         individual: Reference[Union[Patient]],

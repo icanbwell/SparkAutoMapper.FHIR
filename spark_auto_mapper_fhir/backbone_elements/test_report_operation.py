@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # result (TestReportActionResult)
-    from spark_auto_mapper_fhir.complex_types.test_report_action_result import (
-        TestReportActionResult,
+    from spark_auto_mapper_fhir.value_sets.test_report_action_result import (
+        TestReportActionResultCode,
     )
 
     # message (markdown)
@@ -35,7 +35,7 @@ class TestReportOperation(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        result: TestReportActionResult,
+        result: TestReportActionResultCode,
         message: Optional[markdown] = None,
         detail: Optional[uri] = None,
     ) -> None:

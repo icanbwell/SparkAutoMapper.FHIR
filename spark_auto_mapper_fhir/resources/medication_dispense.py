@@ -22,8 +22,10 @@ if TYPE_CHECKING:
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.procedure import Procedure
 
-    # status (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # status (MedicationDispense Status Codes)
+    from spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes import (
+        MedicationDispenseStatusCodesCode,
+    )
 
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -171,7 +173,7 @@ class MedicationDispense(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         partOf: Optional[FhirList[Reference[Union[Procedure]]]] = None,
-        status: code,
+        status: MedicationDispenseStatusCodesCode,
         category: Optional[CodeableConcept[MedicationDispenseCategoryCodesCode]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,

@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.address import Address
 
     # gender (AdministrativeGender)
-    from spark_auto_mapper_fhir.complex_types.administrative_gender import (
-        AdministrativeGender,
+    from spark_auto_mapper_fhir.value_sets.administrative_gender import (
+        AdministrativeGenderCode,
     )
 
     # birthDate (date)
@@ -73,7 +73,7 @@ class Practitioner(FhirResourceBase):
         name: Optional[FhirList[HumanName]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         address: Optional[FhirList[Address]] = None,
-        gender: Optional[AdministrativeGender] = None,
+        gender: Optional[AdministrativeGenderCode] = None,
         birthDate: Optional[FhirDate] = None,
         photo: Optional[FhirList[Attachment]] = None,
         qualification: Optional[FhirList[PractitionerQualification]] = None,

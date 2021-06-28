@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FHIRSubstanceStatus)
-    from spark_auto_mapper_fhir.complex_types.fhir_substance_status import (
-        FHIRSubstanceStatus,
+    from spark_auto_mapper_fhir.value_sets.fhir_substance_status import (
+        FHIRSubstanceStatusCode,
     )
 
     # category (CodeableConcept)
@@ -66,7 +66,7 @@ class Substance(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[FHIRSubstanceStatus] = None,
+        status: Optional[FHIRSubstanceStatusCode] = None,
         category: Optional[
             FhirList[CodeableConcept[SubstanceCategoryCodesCode]]
         ] = None,

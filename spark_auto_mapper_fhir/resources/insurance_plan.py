@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # type_ (CodeableConcept)
@@ -100,7 +100,7 @@ class InsurancePlan(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: Optional[PublicationStatus] = None,
+        status: Optional[PublicationStatusCode] = None,
         type_: Optional[FhirList[CodeableConcept[InsurancePlanTypeCode]]] = None,
         name: Optional[FhirString] = None,
         alias: Optional[FhirList[FhirString]] = None,

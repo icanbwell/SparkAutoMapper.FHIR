@@ -15,8 +15,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # contextType (StructureMapContextType)
-    from spark_auto_mapper_fhir.complex_types.structure_map_context_type import (
-        StructureMapContextType,
+    from spark_auto_mapper_fhir.value_sets.structure_map_context_type import (
+        StructureMapContextTypeCode,
     )
 
     # element (string)
@@ -24,16 +24,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # listMode (StructureMapTargetListMode)
-    from spark_auto_mapper_fhir.complex_types.structure_map_target_list_mode import (
-        StructureMapTargetListMode,
+    from spark_auto_mapper_fhir.value_sets.structure_map_target_list_mode import (
+        StructureMapTargetListModeCode,
     )
 
     # listRuleId (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # transform (StructureMapTransform)
-    from spark_auto_mapper_fhir.complex_types.structure_map_transform import (
-        StructureMapTransform,
+    from spark_auto_mapper_fhir.value_sets.structure_map_transform import (
+        StructureMapTransformCode,
     )
 
     # parameter (StructureMap.Parameter)
@@ -56,12 +56,12 @@ class StructureMapTarget(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         context: Optional[id] = None,
-        contextType: Optional[StructureMapContextType] = None,
+        contextType: Optional[StructureMapContextTypeCode] = None,
         element: Optional[FhirString] = None,
         variable: Optional[id] = None,
-        listMode: Optional[FhirList[StructureMapTargetListMode]] = None,
+        listMode: Optional[FhirList[StructureMapTargetListModeCode]] = None,
         listRuleId: Optional[id] = None,
-        transform: Optional[StructureMapTransform] = None,
+        transform: Optional[StructureMapTransformCode] = None,
         parameter: Optional[FhirList[StructureMapParameter]] = None,
     ) -> None:
         """

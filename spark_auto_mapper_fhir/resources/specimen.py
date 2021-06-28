@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (SpecimenStatus)
-    from spark_auto_mapper_fhir.complex_types.specimen_status import SpecimenStatus
+    from spark_auto_mapper_fhir.value_sets.specimen_status import SpecimenStatusCode
 
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -94,7 +94,7 @@ class Specimen(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         accessionIdentifier: Optional[Identifier] = None,
-        status: Optional[SpecimenStatus] = None,
+        status: Optional[SpecimenStatusCode] = None,
         type_: Optional[CodeableConcept[V2_0487]] = None,
         subject: Optional[
             Reference[Union[Patient, Group, Device, Substance, Location]]

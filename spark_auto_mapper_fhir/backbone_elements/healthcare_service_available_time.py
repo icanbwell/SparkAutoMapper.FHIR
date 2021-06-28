@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # daysOfWeek (DaysOfWeek)
-    from spark_auto_mapper_fhir.complex_types.days_of_week import DaysOfWeek
+    from spark_auto_mapper_fhir.value_sets.days_of_week import DaysOfWeekCode
 
     # allDay (boolean)
     # availableStartTime (time)
@@ -35,7 +35,7 @@ class HealthcareServiceAvailableTime(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        daysOfWeek: Optional[FhirList[DaysOfWeek]] = None,
+        daysOfWeek: Optional[FhirList[DaysOfWeekCode]] = None,
         allDay: Optional[FhirBoolean] = None,
         availableStartTime: Optional[time] = None,
         availableEndTime: Optional[time] = None,

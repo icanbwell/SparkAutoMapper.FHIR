@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # code (ResponseType)
-    from spark_auto_mapper_fhir.complex_types.response_type import ResponseType
+    from spark_auto_mapper_fhir.value_sets.response_type import ResponseTypeCode
 
     # details (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -37,7 +37,7 @@ class MessageHeaderResponse(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: id,
-        code: ResponseType,
+        code: ResponseTypeCode,
         details: Optional[Reference[Union[OperationOutcome]]] = None,
     ) -> None:
         """

@@ -29,8 +29,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.contract import Contract
 
     # status (SupplyDeliveryStatus)
-    from spark_auto_mapper_fhir.complex_types.supply_delivery_status import (
-        SupplyDeliveryStatus,
+    from spark_auto_mapper_fhir.value_sets.supply_delivery_status import (
+        SupplyDeliveryStatusCode,
     )
 
     # patient (Reference)
@@ -99,7 +99,7 @@ class SupplyDelivery(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         basedOn: Optional[FhirList[Reference[Union[SupplyRequest]]]] = None,
         partOf: Optional[FhirList[Reference[Union[SupplyDelivery, Contract]]]] = None,
-        status: Optional[SupplyDeliveryStatus] = None,
+        status: Optional[SupplyDeliveryStatusCode] = None,
         patient: Optional[Reference[Union[Patient]]] = None,
         type_: Optional[CodeableConcept[SupplyItemTypeCode]] = None,
         suppliedItem: Optional[SupplyDeliverySuppliedItem] = None,

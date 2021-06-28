@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # status (EncounterStatus)
-    from spark_auto_mapper_fhir.complex_types.encounter_status import EncounterStatus
+    from spark_auto_mapper_fhir.value_sets.encounter_status import EncounterStatusCode
 
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -30,7 +30,7 @@ class EncounterStatusHistory(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        status: EncounterStatus,
+        status: EncounterStatusCode,
         period: Period,
     ) -> None:
         """

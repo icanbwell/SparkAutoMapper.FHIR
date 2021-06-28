@@ -31,8 +31,8 @@ if TYPE_CHECKING:
     # description (string)
     # onset (dateTime)
     # severity (AllergyIntoleranceSeverity)
-    from spark_auto_mapper_fhir.complex_types.allergy_intolerance_severity import (
-        AllergyIntoleranceSeverity,
+    from spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity import (
+        AllergyIntoleranceSeverityCode,
     )
 
     # exposureRoute (CodeableConcept)
@@ -65,7 +65,7 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
         manifestation: FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode]],
         description: Optional[FhirString] = None,
         onset: Optional[FhirDateTime] = None,
-        severity: Optional[AllergyIntoleranceSeverity] = None,
+        severity: Optional[AllergyIntoleranceSeverityCode] = None,
         exposureRoute: Optional[CodeableConcept[SNOMEDCTRouteCodesCode]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:

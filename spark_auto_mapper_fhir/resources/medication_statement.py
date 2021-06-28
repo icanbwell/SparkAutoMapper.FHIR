@@ -37,9 +37,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.procedure import Procedure
     from spark_auto_mapper_fhir.resources.observation import Observation
 
-    # status (MedicationStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.medication_status_codes import (
-        MedicationStatusCodes,
+    # status (Medication Status Codes)
+    from spark_auto_mapper_fhir.value_sets.medication_status_codes import (
+        MedicationStatusCodesCode,
     )
 
     # statusReason (CodeableConcept)
@@ -167,7 +167,7 @@ class MedicationStatement(FhirResourceBase):
                 ]
             ]
         ] = None,
-        status: MedicationStatusCodes,
+        status: MedicationStatusCodesCode,
         statusReason: Optional[
             FhirList[CodeableConcept[SNOMEDCTDrugTherapyStatusCodesCode]]
         ] = None,

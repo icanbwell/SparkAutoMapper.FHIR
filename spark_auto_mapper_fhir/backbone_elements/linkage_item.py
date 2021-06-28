@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (LinkageType)
-    from spark_auto_mapper_fhir.complex_types.linkage_type import LinkageType
+    from spark_auto_mapper_fhir.value_sets.linkage_type import LinkageTypeCode
 
     # resource (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -34,7 +34,7 @@ class LinkageItem(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: LinkageType,
+        type_: LinkageTypeCode,
         resource: Reference[Union[Resource]],
     ) -> None:
         """

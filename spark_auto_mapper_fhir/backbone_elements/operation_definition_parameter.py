@@ -16,21 +16,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.code import code
 
     # use (OperationParameterUse)
-    from spark_auto_mapper_fhir.complex_types.operation_parameter_use import (
-        OperationParameterUse,
+    from spark_auto_mapper_fhir.value_sets.operation_parameter_use import (
+        OperationParameterUseCode,
     )
 
     # min (integer)
     # max (string)
     # documentation (string)
-    # type_ (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # type_ (FHIRAllTypes)
+    from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
 
     # targetProfile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # searchType (SearchParamType)
-    from spark_auto_mapper_fhir.complex_types.search_param_type import SearchParamType
+    from spark_auto_mapper_fhir.value_sets.search_param_type import SearchParamTypeCode
 
     # binding (OperationDefinition.Binding)
     from spark_auto_mapper_fhir.backbone_elements.operation_definition_binding import (
@@ -57,13 +57,13 @@ class OperationDefinitionParameter(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: code,
-        use: OperationParameterUse,
+        use: OperationParameterUseCode,
         min: FhirInteger,
         max: FhirString,
         documentation: Optional[FhirString] = None,
-        type_: Optional[code] = None,
+        type_: Optional[FHIRAllTypesCode] = None,
         targetProfile: Optional[FhirList[canonical]] = None,
-        searchType: Optional[SearchParamType] = None,
+        searchType: Optional[SearchParamTypeCode] = None,
         binding: Optional[OperationDefinitionBinding] = None,
         referencedFrom: Optional[FhirList[OperationDefinitionReferencedFrom]] = None,
         part: Optional[FhirList[OperationDefinitionParameter]] = None,

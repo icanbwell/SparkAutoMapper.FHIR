@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.contributor_type import ContributorType
+    from spark_auto_mapper_fhir.value_sets.contributor_type import ContributorTypeCode
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
 
@@ -29,7 +29,7 @@ class Contributor(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: ContributorType,
+        type_: ContributorTypeCode,
         name: FhirString,
         contact: Optional[FhirList[ContactDetail]] = None,
     ) -> None:

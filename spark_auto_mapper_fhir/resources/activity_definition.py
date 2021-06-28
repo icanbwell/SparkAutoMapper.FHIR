@@ -35,8 +35,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -110,8 +110,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # kind (RequestResourceType)
-    from spark_auto_mapper_fhir.complex_types.request_resource_type import (
-        RequestResourceType,
+    from spark_auto_mapper_fhir.value_sets.request_resource_type import (
+        RequestResourceTypeCode,
     )
 
     # profile (canonical)
@@ -127,10 +127,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # intent (RequestIntent)
-    from spark_auto_mapper_fhir.complex_types.request_intent import RequestIntent
+    from spark_auto_mapper_fhir.value_sets.request_intent import RequestIntentCode
 
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # doNotPerform (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -258,7 +258,7 @@ class ActivityDefinition(FhirResourceBase):
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         subtitle: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -281,11 +281,11 @@ class ActivityDefinition(FhirResourceBase):
         endorser: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
         library: Optional[FhirList[canonical]] = None,
-        kind: Optional[RequestResourceType] = None,
+        kind: Optional[RequestResourceTypeCode] = None,
         profile: Optional[canonical] = None,
         code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_Code]] = None,
-        intent: Optional[RequestIntent] = None,
-        priority: Optional[RequestPriority] = None,
+        intent: Optional[RequestIntentCode] = None,
+        priority: Optional[RequestPriorityCode] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         location: Optional[Reference[Union[Location]]] = None,
         participant: Optional[FhirList[ActivityDefinitionParticipant]] = None,

@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # code (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # code (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # profile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
@@ -36,7 +36,7 @@ class MessageDefinitionFocus(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: code,
+        code: ResourceTypeCode,
         profile: Optional[canonical] = None,
         min: unsignedInt,
         max: Optional[FhirString] = None,

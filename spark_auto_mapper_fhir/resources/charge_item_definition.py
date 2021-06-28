@@ -40,8 +40,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -130,7 +130,7 @@ class ChargeItemDefinition(FhirResourceBase):
         derivedFromUri: Optional[FhirList[uri]] = None,
         partOf: Optional[FhirList[canonical]] = None,
         replaces: Optional[FhirList[canonical]] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,

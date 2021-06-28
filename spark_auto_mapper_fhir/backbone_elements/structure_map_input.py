@@ -16,8 +16,8 @@ if TYPE_CHECKING:
 
     # type_ (string)
     # mode (StructureMapInputMode)
-    from spark_auto_mapper_fhir.complex_types.structure_map_input_mode import (
-        StructureMapInputMode,
+    from spark_auto_mapper_fhir.value_sets.structure_map_input_mode import (
+        StructureMapInputModeCode,
     )
 
     # documentation (string)
@@ -38,7 +38,7 @@ class StructureMapInput(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: id,
         type_: Optional[FhirString] = None,
-        mode: StructureMapInputMode,
+        mode: StructureMapInputModeCode,
         documentation: Optional[FhirString] = None,
     ) -> None:
         """

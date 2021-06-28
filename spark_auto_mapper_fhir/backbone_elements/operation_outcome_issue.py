@@ -12,10 +12,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # severity (IssueSeverity)
-    from spark_auto_mapper_fhir.complex_types.issue_severity import IssueSeverity
+    from spark_auto_mapper_fhir.value_sets.issue_severity import IssueSeverityCode
 
     # code (IssueType)
-    from spark_auto_mapper_fhir.complex_types.issue_type import IssueType
+    from spark_auto_mapper_fhir.value_sets.issue_type import IssueTypeCode
 
     # details (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -44,8 +44,8 @@ class OperationOutcomeIssue(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        severity: IssueSeverity,
-        code: IssueType,
+        severity: IssueSeverityCode,
+        code: IssueTypeCode,
         details: Optional[CodeableConcept[OperationOutcomeCodesCode]] = None,
         diagnostics: Optional[FhirString] = None,
         location: Optional[FhirList[FhirString]] = None,

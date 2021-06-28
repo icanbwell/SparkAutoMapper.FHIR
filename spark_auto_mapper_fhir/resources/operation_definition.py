@@ -30,12 +30,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # kind (OperationKind)
-    from spark_auto_mapper_fhir.complex_types.operation_kind import OperationKind
+    from spark_auto_mapper_fhir.value_sets.operation_kind import OperationKindCode
 
     # experimental (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -79,8 +79,8 @@ if TYPE_CHECKING:
     # base (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
-    # resource (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # resource (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # system (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -126,8 +126,8 @@ class OperationDefinition(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: FhirString,
         title: Optional[FhirString] = None,
-        status: PublicationStatus,
-        kind: OperationKind,
+        status: PublicationStatusCode,
+        kind: OperationKindCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -142,7 +142,7 @@ class OperationDefinition(FhirResourceBase):
         code: code,
         comment: Optional[markdown] = None,
         base: Optional[canonical] = None,
-        resource: Optional[FhirList[code]] = None,
+        resource: Optional[FhirList[ResourceTypeCode]] = None,
         system: FhirBoolean,
         type_: FhirBoolean,
         instance: FhirBoolean,

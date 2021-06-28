@@ -20,8 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ExplanationOfBenefitStatus)
-    from spark_auto_mapper_fhir.complex_types.explanation_of_benefit_status import (
-        ExplanationOfBenefitStatus,
+    from spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status import (
+        ExplanationOfBenefitStatusCode,
     )
 
     # type_ (CodeableConcept)
@@ -41,7 +41,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for subType
     # use (Use)
-    from spark_auto_mapper_fhir.complex_types.use import Use
+    from spark_auto_mapper_fhir.value_sets.use import UseCode
 
     # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -151,8 +151,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
 
     # outcome (ClaimProcessingCodes)
-    from spark_auto_mapper_fhir.complex_types.claim_processing_codes import (
-        ClaimProcessingCodes,
+    from spark_auto_mapper_fhir.value_sets.claim_processing_codes import (
+        ClaimProcessingCodesCode,
     )
 
     # disposition (string)
@@ -261,10 +261,10 @@ class ExplanationOfBenefit(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ExplanationOfBenefitStatus,
+        status: ExplanationOfBenefitStatusCode,
         type_: CodeableConcept[ClaimTypeCodesCode],
         subType: Optional[CodeableConcept[ExampleClaimSubTypeCodesCode]] = None,
-        use: Use,
+        use: UseCode,
         patient: Reference[Union[Patient]],
         billablePeriod: Optional[Period] = None,
         created: FhirDateTime,
@@ -286,7 +286,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         facility: Optional[Reference[Union[Location]]] = None,
         claim: Optional[Reference[Union[Claim]]] = None,
         claimResponse: Optional[Reference[Union[ClaimResponse]]] = None,
-        outcome: ClaimProcessingCodes,
+        outcome: ClaimProcessingCodesCode,
         disposition: Optional[FhirString] = None,
         preAuthRef: Optional[FhirList[FhirString]] = None,
         preAuthRefPeriod: Optional[FhirList[Period]] = None,

@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ImagingStudyStatus)
-    from spark_auto_mapper_fhir.complex_types.imaging_study_status import (
-        ImagingStudyStatus,
+    from spark_auto_mapper_fhir.value_sets.imaging_study_status import (
+        ImagingStudyStatusCode,
     )
 
     # modality (Coding)
@@ -149,7 +149,7 @@ class ImagingStudy(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ImagingStudyStatus,
+        status: ImagingStudyStatusCode,
         modality: Optional[FhirList[Coding[GenericTypeCode]]] = None,
         subject: Reference[Union[Patient, Device, Group]],
         encounter: Optional[Reference[Union[Encounter]]] = None,

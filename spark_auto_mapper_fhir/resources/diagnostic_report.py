@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
     # status (DiagnosticReportStatus)
-    from spark_auto_mapper_fhir.complex_types.diagnostic_report_status import (
-        DiagnosticReportStatus,
+    from spark_auto_mapper_fhir.value_sets.diagnostic_report_status import (
+        DiagnosticReportStatusCode,
     )
 
     # category (CodeableConcept)
@@ -161,7 +161,7 @@ class DiagnosticReport(FhirResourceBase):
                 ]
             ]
         ] = None,
-        status: DiagnosticReportStatus,
+        status: DiagnosticReportStatusCode,
         category: Optional[
             FhirList[CodeableConcept[DiagnosticServiceSectionCodesCode]]
         ] = None,

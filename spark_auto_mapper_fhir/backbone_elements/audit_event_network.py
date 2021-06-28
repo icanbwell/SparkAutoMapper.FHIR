@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     # address (string)
     pass
     # type_ (AuditEventAgentNetworkType)
-    from spark_auto_mapper_fhir.complex_types.audit_event_agent_network_type import (
-        AuditEventAgentNetworkType,
+    from spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type import (
+        AuditEventAgentNetworkTypeCode,
     )
 
 
@@ -33,7 +33,7 @@ class AuditEventNetwork(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         address: Optional[FhirString] = None,
-        type_: Optional[AuditEventAgentNetworkType] = None,
+        type_: Optional[AuditEventAgentNetworkTypeCode] = None,
     ) -> None:
         """
 

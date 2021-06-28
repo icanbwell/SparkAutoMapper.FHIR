@@ -36,10 +36,10 @@ if TYPE_CHECKING:
 
     # Imports for References for partOf
     # status (RequestStatus)
-    from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
+    from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
 
     # intent (CarePlanIntent)
-    from spark_auto_mapper_fhir.complex_types.care_plan_intent import CarePlanIntent
+    from spark_auto_mapper_fhir.value_sets.care_plan_intent import CarePlanIntentCode
 
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -152,8 +152,8 @@ class CarePlan(FhirResourceBase):
         basedOn: Optional[FhirList[Reference[Union[CarePlan]]]] = None,
         replaces: Optional[FhirList[Reference[Union[CarePlan]]]] = None,
         partOf: Optional[FhirList[Reference[Union[CarePlan]]]] = None,
-        status: RequestStatus,
-        intent: CarePlanIntent,
+        status: RequestStatusCode,
+        intent: CarePlanIntentCode,
         category: Optional[FhirList[CodeableConcept[CarePlanCategoryCode]]] = None,
         title: Optional[FhirString] = None,
         description: Optional[FhirString] = None,

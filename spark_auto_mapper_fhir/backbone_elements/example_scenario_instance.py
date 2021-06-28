@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     # resourceId (string)
     pass
     # resourceType (ResourceType)
-    from spark_auto_mapper_fhir.complex_types.resource_type import ResourceType
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # name (string)
     # description (markdown)
@@ -45,7 +45,7 @@ class ExampleScenarioInstance(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         resourceId: FhirString,
-        resourceType: ResourceType,
+        resourceType: ResourceTypeCode,
         name: Optional[FhirString] = None,
         description: Optional[markdown] = None,
         version: Optional[FhirList[ExampleScenarioVersion]] = None,

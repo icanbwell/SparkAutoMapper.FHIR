@@ -18,8 +18,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (CompositionStatus)
-    from spark_auto_mapper_fhir.complex_types.composition_status import (
-        CompositionStatus,
+    from spark_auto_mapper_fhir.value_sets.composition_status import (
+        CompositionStatusCode,
     )
 
     # type_ (CodeableConcept)
@@ -69,9 +69,9 @@ if TYPE_CHECKING:
     # title (string)
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
-    # confidentiality (vConfidentialityClassification)
-    from spark_auto_mapper_fhir.complex_types.v_confidentiality_classification import (
-        vConfidentialityClassification,
+    # confidentiality (ConfidentialityClassification)
+    from spark_auto_mapper_fhir.value_sets.confidentiality_classification import (
+        ConfidentialityClassification,
     )
 
     # attester (Composition.Attester)
@@ -116,7 +116,7 @@ class Composition(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
-        status: CompositionStatus,
+        status: CompositionStatusCode,
         type_: CodeableConcept[FHIRDocumentTypeCodesCode],
         category: Optional[FhirList[CodeableConcept[DocumentClassValueSetCode]]] = None,
         subject: Optional[Reference[Union[Resource]]] = None,
@@ -135,7 +135,7 @@ class Composition(FhirResourceBase):
             ]
         ],
         title: FhirString,
-        confidentiality: Optional[vConfidentialityClassification] = None,
+        confidentiality: Optional[ConfidentialityClassification] = None,
         attester: Optional[FhirList[CompositionAttester]] = None,
         custodian: Optional[Reference[Union[Organization]]] = None,
         relatesTo: Optional[FhirList[CompositionRelatesTo]] = None,

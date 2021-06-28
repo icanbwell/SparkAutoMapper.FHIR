@@ -12,15 +12,15 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (SubscriptionChannelType)
-    from spark_auto_mapper_fhir.complex_types.subscription_channel_type import (
-        SubscriptionChannelType,
+    from spark_auto_mapper_fhir.value_sets.subscription_channel_type import (
+        SubscriptionChannelTypeCode,
     )
 
     # endpoint (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 
-    # payload (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # payload (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # header (string)
 
@@ -38,9 +38,9 @@ class SubscriptionChannel(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: SubscriptionChannelType,
+        type_: SubscriptionChannelTypeCode,
         endpoint: Optional[url] = None,
-        payload: Optional[code] = None,
+        payload: Optional[MimeTypesCode] = None,
         header: Optional[FhirList[FhirString]] = None,
     ) -> None:
         """

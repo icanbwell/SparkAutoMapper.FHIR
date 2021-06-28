@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.address_use import AddressUse
-    from spark_auto_mapper_fhir.complex_types.address_type import AddressType
+    from spark_auto_mapper_fhir.value_sets.address_use import AddressUseCode
+    from spark_auto_mapper_fhir.value_sets.address_type import AddressTypeCode
     from spark_auto_mapper_fhir.complex_types.period import Period
 
 
@@ -30,8 +30,8 @@ class Address(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        use: Optional[AddressUse] = None,
-        type_: Optional[AddressType] = None,
+        use: Optional[AddressUseCode] = None,
+        type_: Optional[AddressTypeCode] = None,
         text: Optional[FhirString] = None,
         line: Optional[FhirList[FhirString]] = None,
         city: Optional[FhirString] = None,

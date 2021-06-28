@@ -33,7 +33,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (RequestStatus)
-    from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
+    from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
 
     # statusReason (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -52,7 +52,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # doNotPerform (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -172,10 +172,10 @@ class CommunicationRequest(FhirResourceBase):
         basedOn: Optional[FhirList[Reference[Union[Resource]]]] = None,
         replaces: Optional[FhirList[Reference[Union[CommunicationRequest]]]] = None,
         groupIdentifier: Optional[Identifier] = None,
-        status: RequestStatus,
+        status: RequestStatusCode,
         statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         category: Optional[FhirList[CodeableConcept[CommunicationCategoryCode]]] = None,
-        priority: Optional[RequestPriority] = None,
+        priority: Optional[RequestPriorityCode] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         medium: Optional[FhirList[CodeableConcept[ParticipationMode]]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,

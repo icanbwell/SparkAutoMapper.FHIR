@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # type_ (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # type_ (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # params (string)
     # profile (canonical)
@@ -42,7 +42,7 @@ class GraphDefinitionTarget(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: code,
+        type_: ResourceTypeCode,
         params: Optional[FhirString] = None,
         profile: Optional[canonical] = None,
         compartment: Optional[FhirList[GraphDefinitionCompartment]] = None,

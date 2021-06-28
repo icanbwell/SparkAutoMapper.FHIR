@@ -34,8 +34,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -78,8 +78,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # category (MessageSignificanceCategory)
-    from spark_auto_mapper_fhir.complex_types.message_significance_category import (
-        MessageSignificanceCategory,
+    from spark_auto_mapper_fhir.value_sets.message_significance_category import (
+        MessageSignificanceCategoryCode,
     )
 
     # focus (MessageDefinition.Focus)
@@ -87,9 +87,9 @@ if TYPE_CHECKING:
         MessageDefinitionFocus,
     )
 
-    # responseRequired (messageheaderResponseRequest)
-    from spark_auto_mapper_fhir.complex_types.messageheader_response_request import (
-        messageheaderResponseRequest,
+    # responseRequired (messageheader-response-request)
+    from spark_auto_mapper_fhir.value_sets.messageheader_response_request import (
+        Messageheader_response_requestCode,
     )
 
     # allowedResponse (MessageDefinition.AllowedResponse)
@@ -131,7 +131,7 @@ class MessageDefinition(FhirResourceBase):
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         replaces: Optional[FhirList[canonical]] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: FhirDateTime,
         publisher: Optional[FhirString] = None,
@@ -145,9 +145,9 @@ class MessageDefinition(FhirResourceBase):
         copyright: Optional[markdown] = None,
         base: Optional[canonical] = None,
         parent: Optional[FhirList[canonical]] = None,
-        category: Optional[MessageSignificanceCategory] = None,
+        category: Optional[MessageSignificanceCategoryCode] = None,
         focus: Optional[FhirList[MessageDefinitionFocus]] = None,
-        responseRequired: Optional[messageheaderResponseRequest] = None,
+        responseRequired: Optional[Messageheader_response_requestCode] = None,
         allowedResponse: Optional[FhirList[MessageDefinitionAllowedResponse]] = None,
         graph: Optional[FhirList[canonical]] = None,
         eventCoding: Optional[Coding[GenericTypeCode]] = None,

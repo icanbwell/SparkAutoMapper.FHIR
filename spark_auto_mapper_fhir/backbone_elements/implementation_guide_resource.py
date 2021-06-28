@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # fhirVersion (FHIRVersion)
-    from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
+    from spark_auto_mapper_fhir.value_sets.fhir_version import FHIRVersionCode
 
     # name (string)
     # description (string)
@@ -46,7 +46,7 @@ class ImplementationGuideResource(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         reference: Reference[Union[Resource]],
-        fhirVersion: Optional[FhirList[FHIRVersion]] = None,
+        fhirVersion: Optional[FhirList[FHIRVersionCode]] = None,
         name: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
         groupingId: Optional[id] = None,

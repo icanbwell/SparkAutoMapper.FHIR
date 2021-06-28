@@ -46,18 +46,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # operationalStatus (DeviceMetricOperationalStatus)
-    from spark_auto_mapper_fhir.complex_types.device_metric_operational_status import (
-        DeviceMetricOperationalStatus,
+    from spark_auto_mapper_fhir.value_sets.device_metric_operational_status import (
+        DeviceMetricOperationalStatusCode,
     )
 
     # color (DeviceMetricColor)
-    from spark_auto_mapper_fhir.complex_types.device_metric_color import (
-        DeviceMetricColor,
+    from spark_auto_mapper_fhir.value_sets.device_metric_color import (
+        DeviceMetricColorCode,
     )
 
     # category (DeviceMetricCategory)
-    from spark_auto_mapper_fhir.complex_types.device_metric_category import (
-        DeviceMetricCategory,
+    from spark_auto_mapper_fhir.value_sets.device_metric_category import (
+        DeviceMetricCategoryCode,
     )
 
     # measurementPeriod (Timing)
@@ -88,9 +88,9 @@ class DeviceMetric(FhirResourceBase):
         unit: Optional[CodeableConcept[DeviceMetricAndComponentTypesCode]] = None,
         source: Optional[Reference[Union[Device]]] = None,
         parent: Optional[Reference[Union[Device]]] = None,
-        operationalStatus: Optional[DeviceMetricOperationalStatus] = None,
-        color: Optional[DeviceMetricColor] = None,
-        category: DeviceMetricCategory,
+        operationalStatus: Optional[DeviceMetricOperationalStatusCode] = None,
+        color: Optional[DeviceMetricColorCode] = None,
+        category: DeviceMetricCategoryCode,
         measurementPeriod: Optional[Timing] = None,
         calibration: Optional[FhirList[DeviceMetricCalibration]] = None,
     ) -> None:

@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (repositoryType)
-    from spark_auto_mapper_fhir.complex_types.repository_type import repositoryType
+    from spark_auto_mapper_fhir.value_sets.repository_type import RepositoryTypeCode
 
     # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
@@ -36,7 +36,7 @@ class MolecularSequenceRepository(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: repositoryType,
+        type_: RepositoryTypeCode,
         url: Optional[uri] = None,
         name: Optional[FhirString] = None,
         datasetId: Optional[FhirString] = None,

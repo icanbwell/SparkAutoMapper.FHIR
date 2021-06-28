@@ -21,7 +21,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (TestReportStatus)
-    from spark_auto_mapper_fhir.complex_types.test_report_status import TestReportStatus
+    from spark_auto_mapper_fhir.value_sets.test_report_status import (
+        TestReportStatusCode,
+    )
 
     # testScript (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -30,7 +32,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.test_script import TestScript
 
     # result (TestReportResult)
-    from spark_auto_mapper_fhir.complex_types.test_report_result import TestReportResult
+    from spark_auto_mapper_fhir.value_sets.test_report_result import (
+        TestReportResultCode,
+    )
 
     # score (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
@@ -76,9 +80,9 @@ class TestReport(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         name: Optional[FhirString] = None,
-        status: TestReportStatus,
+        status: TestReportStatusCode,
         testScript: Reference[Union[TestScript]],
-        result: TestReportResult,
+        result: TestReportResultCode,
         score: Optional[decimal] = None,
         tester: Optional[FhirString] = None,
         issued: Optional[FhirDateTime] = None,

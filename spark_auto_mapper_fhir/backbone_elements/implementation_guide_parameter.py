@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # code (GuideParameterCode)
-    from spark_auto_mapper_fhir.complex_types.guide_parameter_code import (
-        GuideParameterCode,
+    from spark_auto_mapper_fhir.value_sets.guide_parameter_code import (
+        GuideParameterCodeCode,
     )
 
     # value (string)
@@ -32,7 +32,7 @@ class ImplementationGuideParameter(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: GuideParameterCode,
+        code: GuideParameterCodeCode,
         value: FhirString,
     ) -> None:
         """

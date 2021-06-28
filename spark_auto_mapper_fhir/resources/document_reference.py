@@ -20,13 +20,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (DocumentReferenceStatus)
-    from spark_auto_mapper_fhir.complex_types.document_reference_status import (
-        DocumentReferenceStatus,
+    from spark_auto_mapper_fhir.value_sets.document_reference_status import (
+        DocumentReferenceStatusCode,
     )
 
     # docStatus (CompositionStatus)
-    from spark_auto_mapper_fhir.complex_types.composition_status import (
-        CompositionStatus,
+    from spark_auto_mapper_fhir.value_sets.composition_status import (
+        CompositionStatusCode,
     )
 
     # type_ (CodeableConcept)
@@ -128,8 +128,8 @@ class DocumentReference(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         masterIdentifier: Optional[Identifier] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: DocumentReferenceStatus,
-        docStatus: Optional[CompositionStatus] = None,
+        status: DocumentReferenceStatusCode,
+        docStatus: Optional[CompositionStatusCode] = None,
         type_: Optional[CodeableConcept[DocumentTypeValueSetCode]] = None,
         category: Optional[FhirList[CodeableConcept[DocumentClassValueSetCode]]] = None,
         subject: Optional[

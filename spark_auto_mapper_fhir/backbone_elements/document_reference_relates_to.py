@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # code (DocumentRelationshipType)
-    from spark_auto_mapper_fhir.complex_types.document_relationship_type import (
-        DocumentRelationshipType,
+    from spark_auto_mapper_fhir.value_sets.document_relationship_type import (
+        DocumentRelationshipTypeCode,
     )
 
     # target (Reference)
@@ -35,7 +35,7 @@ class DocumentReferenceRelatesTo(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        code: DocumentRelationshipType,
+        code: DocumentRelationshipTypeCode,
         target: Reference[Union[DocumentReference]],
     ) -> None:
         """

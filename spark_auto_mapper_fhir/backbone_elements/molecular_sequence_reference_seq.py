@@ -21,7 +21,7 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for chromosome
     # genomeBuild (string)
     # orientation (orientationType)
-    from spark_auto_mapper_fhir.complex_types.orientation_type import orientationType
+    from spark_auto_mapper_fhir.value_sets.orientation_type import OrientationTypeCode
 
     # referenceSeqId (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -38,7 +38,7 @@ if TYPE_CHECKING:
 
     # referenceSeqString (string)
     # strand (strandType)
-    from spark_auto_mapper_fhir.complex_types.strand_type import strandType
+    from spark_auto_mapper_fhir.value_sets.strand_type import StrandTypeCode
 
     # windowStart (integer)
     # windowEnd (integer)
@@ -59,11 +59,11 @@ class MolecularSequenceReferenceSeq(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         chromosome: Optional[CodeableConcept[Chromosome_humanCode]] = None,
         genomeBuild: Optional[FhirString] = None,
-        orientation: Optional[orientationType] = None,
+        orientation: Optional[OrientationTypeCode] = None,
         referenceSeqId: Optional[CodeableConcept[ENSEMBLCode]] = None,
         referenceSeqPointer: Optional[Reference[Union[MolecularSequence]]] = None,
         referenceSeqString: Optional[FhirString] = None,
-        strand: Optional[strandType] = None,
+        strand: Optional[StrandTypeCode] = None,
         windowStart: Optional[FhirInteger] = None,
         windowEnd: Optional[FhirInteger] = None,
     ) -> None:

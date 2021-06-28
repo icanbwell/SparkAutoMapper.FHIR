@@ -50,8 +50,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
 
     # participantStatus (ParticipationStatus)
-    from spark_auto_mapper_fhir.complex_types.participation_status import (
-        ParticipationStatus,
+    from spark_auto_mapper_fhir.value_sets.participation_status import (
+        ParticipationStatusCode,
     )
 
     # comment (string)
@@ -92,7 +92,7 @@ class AppointmentResponse(FhirResourceBase):
                 ]
             ]
         ] = None,
-        participantStatus: ParticipationStatus,
+        participantStatus: ParticipationStatusCode,
         comment: Optional[FhirString] = None,
     ) -> None:
         """

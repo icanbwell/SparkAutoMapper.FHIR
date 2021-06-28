@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # type_ (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # type_ (ResourceType)
+    from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # profile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
@@ -30,27 +30,27 @@ if TYPE_CHECKING:
     )
 
     # versioning (ResourceVersionPolicy)
-    from spark_auto_mapper_fhir.complex_types.resource_version_policy import (
-        ResourceVersionPolicy,
+    from spark_auto_mapper_fhir.value_sets.resource_version_policy import (
+        ResourceVersionPolicyCode,
     )
 
     # readHistory (boolean)
     # updateCreate (boolean)
     # conditionalCreate (boolean)
     # conditionalRead (ConditionalReadStatus)
-    from spark_auto_mapper_fhir.complex_types.conditional_read_status import (
-        ConditionalReadStatus,
+    from spark_auto_mapper_fhir.value_sets.conditional_read_status import (
+        ConditionalReadStatusCode,
     )
 
     # conditionalUpdate (boolean)
     # conditionalDelete (ConditionalDeleteStatus)
-    from spark_auto_mapper_fhir.complex_types.conditional_delete_status import (
-        ConditionalDeleteStatus,
+    from spark_auto_mapper_fhir.value_sets.conditional_delete_status import (
+        ConditionalDeleteStatusCode,
     )
 
     # referencePolicy (ReferenceHandlingPolicy)
-    from spark_auto_mapper_fhir.complex_types.reference_handling_policy import (
-        ReferenceHandlingPolicy,
+    from spark_auto_mapper_fhir.value_sets.reference_handling_policy import (
+        ReferenceHandlingPolicyCode,
     )
 
     # searchInclude (string)
@@ -79,19 +79,19 @@ class CapabilityStatementResource(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: code,
+        type_: ResourceTypeCode,
         profile: Optional[canonical] = None,
         supportedProfile: Optional[FhirList[canonical]] = None,
         documentation: Optional[markdown] = None,
         interaction: Optional[FhirList[CapabilityStatementInteraction]] = None,
-        versioning: Optional[ResourceVersionPolicy] = None,
+        versioning: Optional[ResourceVersionPolicyCode] = None,
         readHistory: Optional[FhirBoolean] = None,
         updateCreate: Optional[FhirBoolean] = None,
         conditionalCreate: Optional[FhirBoolean] = None,
-        conditionalRead: Optional[ConditionalReadStatus] = None,
+        conditionalRead: Optional[ConditionalReadStatusCode] = None,
         conditionalUpdate: Optional[FhirBoolean] = None,
-        conditionalDelete: Optional[ConditionalDeleteStatus] = None,
-        referencePolicy: Optional[FhirList[ReferenceHandlingPolicy]] = None,
+        conditionalDelete: Optional[ConditionalDeleteStatusCode] = None,
+        referencePolicy: Optional[FhirList[ReferenceHandlingPolicyCode]] = None,
         searchInclude: Optional[FhirList[FhirString]] = None,
         searchRevInclude: Optional[FhirList[FhirString]] = None,
         searchParam: Optional[FhirList[CapabilityStatementSearchParam]] = None,

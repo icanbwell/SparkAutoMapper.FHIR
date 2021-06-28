@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -68,10 +68,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # license (SPDXLicense)
-    from spark_auto_mapper_fhir.complex_types.spdx_license import SPDXLicense
+    from spark_auto_mapper_fhir.value_sets.spdx_license import SPDXLicenseCode
 
     # fhirVersion (FHIRVersion)
-    from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
+    from spark_auto_mapper_fhir.value_sets.fhir_version import FHIRVersionCode
 
     # dependsOn (ImplementationGuide.DependsOn)
     from spark_auto_mapper_fhir.backbone_elements.implementation_guide_depends_on import (
@@ -112,7 +112,7 @@ class ImplementationGuide(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: FhirString,
         title: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
@@ -124,8 +124,8 @@ class ImplementationGuide(FhirResourceBase):
         ] = None,
         copyright: Optional[markdown] = None,
         packageId: id,
-        license: Optional[SPDXLicense] = None,
-        fhirVersion: FhirList[FHIRVersion],
+        license: Optional[SPDXLicenseCode] = None,
+        fhirVersion: FhirList[FHIRVersionCode],
         dependsOn: Optional[FhirList[ImplementationGuideDependsOn]] = None,
         global_: Optional[FhirList[ImplementationGuideGlobal]] = None,
         definition: Optional[ImplementationGuideDefinition] = None,

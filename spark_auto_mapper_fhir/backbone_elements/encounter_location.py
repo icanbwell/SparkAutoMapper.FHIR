@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
 
     # status (EncounterLocationStatus)
-    from spark_auto_mapper_fhir.complex_types.encounter_location_status import (
-        EncounterLocationStatus,
+    from spark_auto_mapper_fhir.value_sets.encounter_location_status import (
+        EncounterLocationStatusCode,
     )
 
     # physicalType (CodeableConcept)
@@ -46,7 +46,7 @@ class EncounterLocation(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         location: Reference[Union[Location]],
-        status: Optional[EncounterLocationStatus] = None,
+        status: Optional[EncounterLocationStatusCode] = None,
         physicalType: Optional[CodeableConcept[LocationTypeCode]] = None,
         period: Optional[Period] = None,
     ) -> None:

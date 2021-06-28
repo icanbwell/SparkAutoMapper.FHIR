@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # method (HTTPVerb)
-    from spark_auto_mapper_fhir.complex_types.http_verb import HTTPVerb
+    from spark_auto_mapper_fhir.value_sets.http_verb import HTTPVerbCode
 
     # url (uri)
     from spark_auto_mapper_fhir.complex_types.uri import uri
@@ -38,7 +38,7 @@ class BundleRequest(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        method: HTTPVerb,
+        method: HTTPVerbCode,
         url: uri,
         ifNoneMatch: Optional[FhirString] = None,
         ifModifiedSince: Optional[instant] = None,

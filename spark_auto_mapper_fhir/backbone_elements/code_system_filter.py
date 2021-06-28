@@ -16,7 +16,7 @@ if TYPE_CHECKING:
 
     # description (string)
     # operator (FilterOperator)
-    from spark_auto_mapper_fhir.complex_types.filter_operator import FilterOperator
+    from spark_auto_mapper_fhir.value_sets.filter_operator import FilterOperatorCode
 
     # value (string)
 
@@ -36,7 +36,7 @@ class CodeSystemFilter(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: code,
         description: Optional[FhirString] = None,
-        operator: FhirList[FilterOperator],
+        operator: FhirList[FilterOperatorCode],
         value: FhirString,
     ) -> None:
         """

@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
-    from spark_auto_mapper_fhir.complex_types.expression_language import (
-        ExpressionLanguage,
+    from spark_auto_mapper_fhir.value_sets.expression_language import (
+        ExpressionLanguageCode,
     )
     from spark_auto_mapper_fhir.complex_types.uri import uri
 
@@ -34,7 +34,7 @@ class Expression(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
         name: Optional[id] = None,
-        language: ExpressionLanguage,
+        language: ExpressionLanguageCode,
         expression: Optional[FhirString] = None,
         reference: Optional[uri] = None,
     ) -> None:

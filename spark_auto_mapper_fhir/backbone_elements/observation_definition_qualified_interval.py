@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # category (ObservationRangeCategory)
-    from spark_auto_mapper_fhir.complex_types.observation_range_category import (
-        ObservationRangeCategory,
+    from spark_auto_mapper_fhir.value_sets.observation_range_category import (
+        ObservationRangeCategoryCode,
     )
 
     # range (Range)
@@ -38,8 +38,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for appliesTo
     # gender (AdministrativeGender)
-    from spark_auto_mapper_fhir.complex_types.administrative_gender import (
-        AdministrativeGender,
+    from spark_auto_mapper_fhir.value_sets.administrative_gender import (
+        AdministrativeGenderCode,
     )
 
     # age (Range)
@@ -64,7 +64,7 @@ class ObservationDefinitionQualifiedInterval(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        category: Optional[ObservationRangeCategory] = None,
+        category: Optional[ObservationRangeCategoryCode] = None,
         range: Optional[Range] = None,
         context: Optional[
             CodeableConcept[ObservationReferenceRangeMeaningCodesCode]
@@ -72,7 +72,7 @@ class ObservationDefinitionQualifiedInterval(FhirBackboneElementBase):
         appliesTo: Optional[
             FhirList[CodeableConcept[ObservationReferenceRangeAppliesToCodesCode]]
         ] = None,
-        gender: Optional[AdministrativeGender] = None,
+        gender: Optional[AdministrativeGenderCode] = None,
         age: Optional[Range] = None,
         gestationalAge: Optional[Range] = None,
         condition: Optional[FhirString] = None,

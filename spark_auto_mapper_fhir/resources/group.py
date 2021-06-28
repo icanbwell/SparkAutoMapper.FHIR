@@ -21,7 +21,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
 
     # type_ (GroupType)
-    from spark_auto_mapper_fhir.complex_types.group_type import GroupType
+    from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCode
 
     # actual (boolean)
     from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
@@ -73,7 +73,7 @@ class Group(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
-        type_: GroupType,
+        type_: GroupTypeCode,
         actual: FhirBoolean,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,
         name: Optional[FhirString] = None,

@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # status (ObservationStatus)
-    from spark_auto_mapper_fhir.complex_types.observation_status import (
-        ObservationStatus,
+    from spark_auto_mapper_fhir.value_sets.observation_status import (
+        ObservationStatusCode,
     )
 
     # method (CodeableConcept)
@@ -132,7 +132,7 @@ class RiskAssessment(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         basedOn: Optional[Reference[Union[Resource]]] = None,
         parent: Optional[Reference[Union[Resource]]] = None,
-        status: ObservationStatus,
+        status: ObservationStatusCode,
         method: Optional[CodeableConcept[GenericTypeCode]] = None,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,
         subject: Reference[Union[Patient, Group]],

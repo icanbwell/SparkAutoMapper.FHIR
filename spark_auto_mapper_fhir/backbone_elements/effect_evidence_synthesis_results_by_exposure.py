@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     # description (string)
     pass
     # exposureState (ExposureState)
-    from spark_auto_mapper_fhir.complex_types.exposure_state import ExposureState
+    from spark_auto_mapper_fhir.value_sets.exposure_state import ExposureStateCode
 
     # variantState (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -48,7 +48,7 @@ class EffectEvidenceSynthesisResultsByExposure(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: Optional[FhirString] = None,
-        exposureState: Optional[ExposureState] = None,
+        exposureState: Optional[ExposureStateCode] = None,
         variantState: Optional[CodeableConcept[EvidenceVariantStateCode]] = None,
         riskEvidenceSynthesis: Reference[Union[RiskEvidenceSynthesis]],
     ) -> None:

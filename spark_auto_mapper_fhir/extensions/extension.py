@@ -25,7 +25,7 @@ from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
-from spark_auto_mapper_fhir.base_types import FhirValueSetBase
+from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
 
 
 class Extension(ExtensionBase):

@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # relationtype (CatalogEntryRelationType)
-    from spark_auto_mapper_fhir.complex_types.catalog_entry_relation_type import (
-        CatalogEntryRelationType,
+    from spark_auto_mapper_fhir.value_sets.catalog_entry_relation_type import (
+        CatalogEntryRelationTypeCode,
     )
 
     # item (Reference)
@@ -35,7 +35,7 @@ class CatalogEntryRelatedEntry(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        relationtype: CatalogEntryRelationType,
+        relationtype: CatalogEntryRelationTypeCode,
         item: Reference[Union[CatalogEntry]],
     ) -> None:
         """

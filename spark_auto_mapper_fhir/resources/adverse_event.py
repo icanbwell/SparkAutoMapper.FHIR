@@ -17,8 +17,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # actuality (AdverseEventActuality)
-    from spark_auto_mapper_fhir.complex_types.adverse_event_actuality import (
-        AdverseEventActuality,
+    from spark_auto_mapper_fhir.value_sets.adverse_event_actuality import (
+        AdverseEventActualityCode,
     )
 
     # category (CodeableConcept)
@@ -167,7 +167,7 @@ class AdverseEvent(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
-        actuality: AdverseEventActuality,
+        actuality: AdverseEventActualityCode,
         category: Optional[FhirList[CodeableConcept[AdverseEventCategoryCode]]] = None,
         event: Optional[CodeableConcept[SNOMEDCTClinicalFindingsCode]] = None,
         subject: Reference[Union[Patient, Group, Practitioner, RelatedPerson]],

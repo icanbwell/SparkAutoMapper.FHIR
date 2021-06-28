@@ -30,13 +30,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
 
     # required (ParticipantRequired)
-    from spark_auto_mapper_fhir.complex_types.participant_required import (
-        ParticipantRequired,
+    from spark_auto_mapper_fhir.value_sets.participant_required import (
+        ParticipantRequiredCode,
     )
 
     # status (ParticipationStatus)
-    from spark_auto_mapper_fhir.complex_types.participation_status import (
-        ParticipationStatus,
+    from spark_auto_mapper_fhir.value_sets.participation_status import (
+        ParticipationStatusCode,
     )
 
     # period (Period)
@@ -70,8 +70,8 @@ class AppointmentParticipant(FhirBackboneElementBase):
                 ]
             ]
         ] = None,
-        required: Optional[ParticipantRequired] = None,
-        status: ParticipationStatus,
+        required: Optional[ParticipantRequiredCode] = None,
+        status: ParticipationStatusCode,
         period: Optional[Period] = None,
     ) -> None:
         """

@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.code import code
-    from spark_auto_mapper_fhir.complex_types.code import code
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
     from spark_auto_mapper_fhir.complex_types.url import url
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
@@ -34,8 +34,8 @@ class Attachment(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        contentType: Optional[code] = None,
-        language: Optional[code] = None,
+        contentType: Optional[MimeTypesCode] = None,
+        language: Optional[CommonLanguagesCode] = None,
         data: Optional[base64Binary] = None,
         url: Optional[url] = None,
         size: Optional[unsignedInt] = None,

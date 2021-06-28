@@ -13,8 +13,10 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.code import code
-    from spark_auto_mapper_fhir.complex_types.code import code
-    from spark_auto_mapper_fhir.complex_types.code import code
+    from spark_auto_mapper_fhir.value_sets.operation_parameter_use import (
+        OperationParameterUseCode,
+    )
+    from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
 
@@ -33,11 +35,11 @@ class ParameterDefinition(FhirComplexTypeBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: Optional[code] = None,
-        use: code,
+        use: OperationParameterUseCode,
         min: Optional[FhirInteger] = None,
         max: Optional[FhirString] = None,
         documentation: Optional[FhirString] = None,
-        type_: code,
+        type_: FHIRAllTypesCode,
         profile: Optional[canonical] = None,
     ) -> None:
         """

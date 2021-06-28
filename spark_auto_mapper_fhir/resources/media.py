@@ -31,7 +31,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # status (EventStatus)
-    from spark_auto_mapper_fhir.complex_types.event_status import EventStatus
+    from spark_auto_mapper_fhir.value_sets.event_status import EventStatusCode
 
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -160,7 +160,7 @@ class Media(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         basedOn: Optional[FhirList[Reference[Union[ServiceRequest, CarePlan]]]] = None,
         partOf: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        status: EventStatus,
+        status: EventStatusCode,
         type_: Optional[CodeableConcept[MediaTypeCode]] = None,
         modality: Optional[CodeableConcept[MediaModalityCode]] = None,
         view: Optional[CodeableConcept[MediaCollectionView_or_ProjectionCode]] = None,

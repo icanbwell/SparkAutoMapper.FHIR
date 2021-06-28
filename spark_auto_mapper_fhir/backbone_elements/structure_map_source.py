@@ -24,8 +24,8 @@ if TYPE_CHECKING:
     # type_ (string)
     # element (string)
     # listMode (StructureMapSourceListMode)
-    from spark_auto_mapper_fhir.complex_types.structure_map_source_list_mode import (
-        StructureMapSourceListMode,
+    from spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode import (
+        StructureMapSourceListModeCode,
     )
 
     # variable (id)
@@ -208,7 +208,7 @@ class StructureMapSource(FhirBackboneElementBase):
         max: Optional[FhirString] = None,
         type_: Optional[FhirString] = None,
         element: Optional[FhirString] = None,
-        listMode: Optional[StructureMapSourceListMode] = None,
+        listMode: Optional[StructureMapSourceListModeCode] = None,
         variable: Optional[id] = None,
         condition: Optional[FhirString] = None,
         check: Optional[FhirString] = None,

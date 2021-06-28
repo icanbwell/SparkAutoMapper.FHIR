@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (ExtensionContextType)
-    from spark_auto_mapper_fhir.complex_types.extension_context_type import (
-        ExtensionContextType,
+    from spark_auto_mapper_fhir.value_sets.extension_context_type import (
+        ExtensionContextTypeCode,
     )
 
     # expression (string)
@@ -32,7 +32,7 @@ class StructureDefinitionContext(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: ExtensionContextType,
+        type_: ExtensionContextTypeCode,
         expression: FhirString,
     ) -> None:
         """

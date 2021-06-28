@@ -38,13 +38,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (RequestStatus)
-    from spark_auto_mapper_fhir.complex_types.request_status import RequestStatus
+    from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
 
     # intent (RequestIntent)
-    from spark_auto_mapper_fhir.complex_types.request_intent import RequestIntent
+    from spark_auto_mapper_fhir.value_sets.request_intent import RequestIntentCode
 
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -122,9 +122,9 @@ class RequestGroup(FhirResourceBase):
         basedOn: Optional[FhirList[Reference[Union[Resource]]]] = None,
         replaces: Optional[FhirList[Reference[Union[Resource]]]] = None,
         groupIdentifier: Optional[Identifier] = None,
-        status: RequestStatus,
-        intent: RequestIntent,
-        priority: Optional[RequestPriority] = None,
+        status: RequestStatusCode,
+        intent: RequestIntentCode,
+        priority: Optional[RequestPriorityCode] = None,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,

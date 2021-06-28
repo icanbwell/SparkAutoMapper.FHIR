@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # type_ (ConsentProvisionType)
-    from spark_auto_mapper_fhir.complex_types.consent_provision_type import (
-        ConsentProvisionType,
+    from spark_auto_mapper_fhir.value_sets.consent_provision_type import (
+        ConsentProvisionTypeCode,
     )
 
     # period (Period)
@@ -84,7 +84,7 @@ class ConsentProvision(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: Optional[ConsentProvisionType] = None,
+        type_: Optional[ConsentProvisionTypeCode] = None,
         period: Optional[Period] = None,
         actor: Optional[FhirList[ConsentActor]] = None,
         action: Optional[FhirList[CodeableConcept[ConsentActionCodesCode]]] = None,

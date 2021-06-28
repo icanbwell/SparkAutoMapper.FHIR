@@ -14,8 +14,8 @@ from spark_fhir_schemas.r4.resources.subscription import SubscriptionSchema
 
 if TYPE_CHECKING:
     # status (SubscriptionStatus)
-    from spark_auto_mapper_fhir.complex_types.subscription_status import (
-        SubscriptionStatus,
+    from spark_auto_mapper_fhir.value_sets.subscription_status import (
+        SubscriptionStatusCode,
     )
 
     # contact (ContactPoint)
@@ -53,7 +53,7 @@ class Subscription(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        status: SubscriptionStatus,
+        status: SubscriptionStatusCode,
         contact: Optional[FhirList[ContactPoint]] = None,
         end: Optional[instant] = None,
         reason: FhirString,

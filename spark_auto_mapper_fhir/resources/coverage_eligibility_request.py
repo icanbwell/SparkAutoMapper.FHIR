@@ -20,8 +20,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (FinancialResourceStatusCodes)
-    from spark_auto_mapper_fhir.complex_types.financial_resource_status_codes import (
-        FinancialResourceStatusCodes,
+    from spark_auto_mapper_fhir.value_sets.financial_resource_status_codes import (
+        FinancialResourceStatusCodesCode,
     )
 
     # priority (CodeableConcept)
@@ -34,8 +34,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for priority
     # purpose (EligibilityRequestPurpose)
-    from spark_auto_mapper_fhir.complex_types.eligibility_request_purpose import (
-        EligibilityRequestPurpose,
+    from spark_auto_mapper_fhir.value_sets.eligibility_request_purpose import (
+        EligibilityRequestPurposeCode,
     )
 
     # patient (Reference)
@@ -111,9 +111,9 @@ class CoverageEligibilityRequest(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: FinancialResourceStatusCodes,
+        status: FinancialResourceStatusCodesCode,
         priority: Optional[CodeableConcept[ProcessPriorityCodesCode]] = None,
-        purpose: FhirList[EligibilityRequestPurpose],
+        purpose: FhirList[EligibilityRequestPurposeCode],
         patient: Reference[Union[Patient]],
         created: FhirDateTime,
         enterer: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,

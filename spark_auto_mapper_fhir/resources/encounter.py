@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (EncounterStatus)
-    from spark_auto_mapper_fhir.complex_types.encounter_status import EncounterStatus
+    from spark_auto_mapper_fhir.value_sets.encounter_status import EncounterStatusCode
 
     # statusHistory (Encounter.StatusHistory)
     from spark_auto_mapper_fhir.backbone_elements.encounter_status_history import (
@@ -160,7 +160,7 @@ class Encounter(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: EncounterStatus,
+        status: EncounterStatusCode,
         statusHistory: Optional[FhirList[EncounterStatusHistory]] = None,
         class_: Coding[ActEncounterCode],
         classHistory: Optional[FhirList[EncounterClassHistory]] = None,

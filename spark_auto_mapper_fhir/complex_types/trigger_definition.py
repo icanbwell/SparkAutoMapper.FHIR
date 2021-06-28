@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.complex_types.trigger_type import TriggerType
+    from spark_auto_mapper_fhir.value_sets.trigger_type import TriggerTypeCode
     from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
     from spark_auto_mapper_fhir.complex_types.expression import Expression
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
@@ -37,7 +37,7 @@ class TriggerDefinition(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        type_: TriggerType,
+        type_: TriggerTypeCode,
         name: Optional[FhirString] = None,
         data: Optional[FhirList[DataRequirement]] = None,
         condition: Optional[Expression] = None,

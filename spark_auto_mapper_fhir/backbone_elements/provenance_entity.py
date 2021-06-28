@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     # role (ProvenanceEntityRole)
-    from spark_auto_mapper_fhir.complex_types.provenance_entity_role import (
-        ProvenanceEntityRole,
+    from spark_auto_mapper_fhir.value_sets.provenance_entity_role import (
+        ProvenanceEntityRoleCode,
     )
 
     # what (Reference)
@@ -41,7 +41,7 @@ class ProvenanceEntity(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        role: ProvenanceEntityRole,
+        role: ProvenanceEntityRoleCode,
         what: Reference[Union[Resource]],
         agent: Optional[FhirList[ProvenanceAgent]] = None,
     ) -> None:

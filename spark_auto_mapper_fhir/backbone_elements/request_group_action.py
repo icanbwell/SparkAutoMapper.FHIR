@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     # description (string)
     # textEquivalent (string)
     # priority (RequestPriority)
-    from spark_auto_mapper_fhir.complex_types.request_priority import RequestPriority
+    from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -59,28 +59,28 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # groupingBehavior (ActionGroupingBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_grouping_behavior import (
-        ActionGroupingBehavior,
+    from spark_auto_mapper_fhir.value_sets.action_grouping_behavior import (
+        ActionGroupingBehaviorCode,
     )
 
     # selectionBehavior (ActionSelectionBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_selection_behavior import (
-        ActionSelectionBehavior,
+    from spark_auto_mapper_fhir.value_sets.action_selection_behavior import (
+        ActionSelectionBehaviorCode,
     )
 
     # requiredBehavior (ActionRequiredBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_required_behavior import (
-        ActionRequiredBehavior,
+    from spark_auto_mapper_fhir.value_sets.action_required_behavior import (
+        ActionRequiredBehaviorCode,
     )
 
     # precheckBehavior (ActionPrecheckBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_precheck_behavior import (
-        ActionPrecheckBehavior,
+    from spark_auto_mapper_fhir.value_sets.action_precheck_behavior import (
+        ActionPrecheckBehaviorCode,
     )
 
     # cardinalityBehavior (ActionCardinalityBehavior)
-    from spark_auto_mapper_fhir.complex_types.action_cardinality_behavior import (
-        ActionCardinalityBehavior,
+    from spark_auto_mapper_fhir.value_sets.action_cardinality_behavior import (
+        ActionCardinalityBehaviorCode,
     )
 
     # resource (Reference)
@@ -123,7 +123,7 @@ class RequestGroupAction(FhirBackboneElementBase):
         title: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
         textEquivalent: Optional[FhirString] = None,
-        priority: Optional[RequestPriority] = None,
+        priority: Optional[RequestPriorityCode] = None,
         code: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         condition: Optional[FhirList[RequestGroupCondition]] = None,
@@ -138,11 +138,11 @@ class RequestGroupAction(FhirBackboneElementBase):
             ]
         ] = None,
         type_: Optional[CodeableConcept[ActionTypeCode]] = None,
-        groupingBehavior: Optional[ActionGroupingBehavior] = None,
-        selectionBehavior: Optional[ActionSelectionBehavior] = None,
-        requiredBehavior: Optional[ActionRequiredBehavior] = None,
-        precheckBehavior: Optional[ActionPrecheckBehavior] = None,
-        cardinalityBehavior: Optional[ActionCardinalityBehavior] = None,
+        groupingBehavior: Optional[ActionGroupingBehaviorCode] = None,
+        selectionBehavior: Optional[ActionSelectionBehaviorCode] = None,
+        requiredBehavior: Optional[ActionRequiredBehaviorCode] = None,
+        precheckBehavior: Optional[ActionPrecheckBehaviorCode] = None,
+        cardinalityBehavior: Optional[ActionCardinalityBehaviorCode] = None,
         resource: Optional[Reference[Union[Resource]]] = None,
         action: Optional[FhirList[RequestGroupAction]] = None,
         timingDateTime: Optional[FhirDateTime] = None,

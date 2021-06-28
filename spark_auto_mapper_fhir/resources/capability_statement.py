@@ -30,8 +30,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # status (PublicationStatus)
-    from spark_auto_mapper_fhir.complex_types.publication_status import (
-        PublicationStatus,
+    from spark_auto_mapper_fhir.value_sets.publication_status import (
+        PublicationStatusCode,
     )
 
     # experimental (boolean)
@@ -68,8 +68,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
     # kind (CapabilityStatementKind)
-    from spark_auto_mapper_fhir.complex_types.capability_statement_kind import (
-        CapabilityStatementKind,
+    from spark_auto_mapper_fhir.value_sets.capability_statement_kind import (
+        CapabilityStatementKindCode,
     )
 
     # instantiates (canonical)
@@ -89,13 +89,13 @@ if TYPE_CHECKING:
     )
 
     # fhirVersion (FHIRVersion)
-    from spark_auto_mapper_fhir.complex_types.fhir_version import FHIRVersion
+    from spark_auto_mapper_fhir.value_sets.fhir_version import FHIRVersionCode
 
-    # format (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # format (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
-    # patchFormat (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # patchFormat (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # implementationGuide (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
@@ -134,7 +134,7 @@ class CapabilityStatement(FhirResourceBase):
         version: Optional[FhirString] = None,
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
-        status: PublicationStatus,
+        status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: FhirDateTime,
         publisher: Optional[FhirString] = None,
@@ -146,14 +146,14 @@ class CapabilityStatement(FhirResourceBase):
         ] = None,
         purpose: Optional[markdown] = None,
         copyright: Optional[markdown] = None,
-        kind: CapabilityStatementKind,
+        kind: CapabilityStatementKindCode,
         instantiates: Optional[FhirList[canonical]] = None,
         imports: Optional[FhirList[canonical]] = None,
         software: Optional[CapabilityStatementSoftware] = None,
         implementation: Optional[CapabilityStatementImplementation] = None,
-        fhirVersion: FHIRVersion,
-        format: FhirList[code],
-        patchFormat: Optional[FhirList[code]] = None,
+        fhirVersion: FHIRVersionCode,
+        format: FhirList[MimeTypesCode],
+        patchFormat: Optional[FhirList[MimeTypesCode]] = None,
         implementationGuide: Optional[FhirList[canonical]] = None,
         rest: Optional[FhirList[CapabilityStatementRest]] = None,
         messaging: Optional[FhirList[CapabilityStatementMessaging]] = None,

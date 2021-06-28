@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.binary import BinarySchema
 
 if TYPE_CHECKING:
-    # contentType (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # contentType (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # securityContext (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -39,7 +39,7 @@ class Binary(FhirResourceBase):
         id_: FhirId,
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        contentType: code,
+        contentType: MimeTypesCode,
         securityContext: Optional[Reference[Union[Resource]]] = None,
         data: Optional[base64Binary] = None,
     ) -> None:
