@@ -25,7 +25,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.list_mode import ListMode
 
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
 
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -51,7 +50,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
 
     # source (Reference)
 

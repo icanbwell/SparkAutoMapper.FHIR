@@ -794,7 +794,7 @@ class FhirXmlSchemaParser:
                 structure_definition: OrderedDict[str, Any] = entry["resource"][
                     "StructureDefinition"
                 ]
-                name: str = structure_definition["name"]["@value"]
+                # name: str = structure_definition["name"]["@value"]
                 snapshot_element: OrderedDict[str, Any] = structure_definition[
                     "snapshot"
                 ]["element"]
@@ -902,7 +902,7 @@ class FhirXmlSchemaParser:
                 compose_include: OrderedDict[str, Any]
                 for compose_include in compose_includes:
                     is_code_system = "system" in compose_include
-                    is_value_set = "valueSet" in compose_include
+                    # is_value_set = "valueSet" in compose_include
                     if is_code_system:
                         compose_include_code_system: str = compose_include["system"][
                             "@value"
@@ -1020,7 +1020,7 @@ class FhirXmlSchemaParser:
             name: str = value_set["name"]["@value"].replace("v3.", "")
             url = value_set["url"]["@value"]
             fhir_concepts: List[FhirValueSetConcept] = []
-            value_set_url = None  # value_set["valueSet"]
+            # value_set_url = None  # value_set["valueSet"]
             if "concept" in value_set:
                 concepts_list: List[OrderedDict[str, Any]] = value_set["concept"]
                 if isinstance(concepts_list, OrderedDict):
@@ -1106,7 +1106,7 @@ class FhirXmlSchemaParser:
             name: str = value_set["name"]["@value"].replace(".", "_")
             url = value_set["url"]["@value"]
             fhir_concepts: List[FhirValueSetConcept] = []
-            value_set_url = None  # value_set["valueSet"]
+            # value_set_url = None  # value_set["valueSet"]
             if "concept" in value_set:
                 concepts_list: List[OrderedDict[str, Any]] = value_set["concept"]
                 if isinstance(concepts_list, OrderedDict):
