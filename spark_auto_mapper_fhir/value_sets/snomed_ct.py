@@ -17,6 +17,6 @@ class SNOMED_CTCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://snomed.info/sct"

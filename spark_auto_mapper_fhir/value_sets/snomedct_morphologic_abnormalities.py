@@ -17,6 +17,6 @@ class SNOMEDCTMorphologicAbnormalitiesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/bodystructure-code
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/bodystructure-code"

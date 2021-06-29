@@ -17,9 +17,9 @@ class ProcedureDeviceActionCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/device-action
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/device-action"
 
 
 class ProcedureDeviceActionCodesCodeValues:

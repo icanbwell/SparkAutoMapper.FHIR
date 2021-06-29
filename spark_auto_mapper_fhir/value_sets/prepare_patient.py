@@ -17,6 +17,8 @@ class PreparePatientCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/prepare-patient-prior-specimen-collection
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = (
+        "http://hl7.org/fhir/ValueSet/prepare-patient-prior-specimen-collection"
+    )

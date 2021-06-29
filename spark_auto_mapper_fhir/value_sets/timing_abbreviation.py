@@ -17,9 +17,9 @@ class TimingAbbreviationCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/timing-abbreviation
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/timing-abbreviation"
 
 
 class TimingAbbreviationCodeValues:

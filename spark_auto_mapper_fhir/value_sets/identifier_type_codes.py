@@ -17,9 +17,9 @@ class IdentifierTypeCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/identifier-type
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/identifier-type"
 
 
 class IdentifierTypeCodesCodeValues:

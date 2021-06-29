@@ -17,9 +17,9 @@ class LanguagePreferenceTypeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/language-preference-type
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/language-preference-type"
 
 
 class LanguagePreferenceTypeCodeValues:

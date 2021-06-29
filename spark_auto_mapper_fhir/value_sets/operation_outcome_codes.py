@@ -17,9 +17,9 @@ class OperationOutcomeCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://terminology.hl7.org/CodeSystem/operation-outcome
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/operation-outcome"
 
 
 class OperationOutcomeCodesCodeValues:

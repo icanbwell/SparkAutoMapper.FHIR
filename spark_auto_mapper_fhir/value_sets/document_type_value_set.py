@@ -17,9 +17,9 @@ class DocumentTypeValueSetCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/c80-doc-typecodes
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/c80-doc-typecodes"
 
 
 class DocumentTypeValueSetCodeValues:

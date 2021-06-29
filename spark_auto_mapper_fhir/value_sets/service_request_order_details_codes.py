@@ -17,9 +17,9 @@ class ServiceRequestOrderDetailsCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/servicerequest-orderdetail
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail"
 
 
 class ServiceRequestOrderDetailsCodesCodeValues:

@@ -17,9 +17,9 @@ class AuditEventSub_TypeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/audit-event-sub-type
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/audit-event-sub-type"
 
 
 class AuditEventSub_TypeCodeValues:

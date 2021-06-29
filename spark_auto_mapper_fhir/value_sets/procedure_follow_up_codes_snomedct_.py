@@ -17,9 +17,9 @@ class ProcedureFollowUpCodes_SNOMEDCT_Code(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/procedure-followup
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/procedure-followup"
 
 
 class ProcedureFollowUpCodes_SNOMEDCT_CodeValues:

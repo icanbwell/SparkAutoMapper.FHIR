@@ -17,9 +17,9 @@ class SiblingRelationshipCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/sibling-relationship-codes
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/sibling-relationship-codes"
 
 
 class SiblingRelationshipCodesCodeValues:

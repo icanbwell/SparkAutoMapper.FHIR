@@ -17,9 +17,9 @@ class PractitionerRoleCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://terminology.hl7.org/CodeSystem/practitioner-role
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/practitioner-role"
 
 
 class PractitionerRoleCodeValues:

@@ -17,6 +17,6 @@ class SNOMEDCTCodesForSpeciesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/sequence-species
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/sequence-species"

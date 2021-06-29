@@ -17,9 +17,9 @@ class UnitsOfTimeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/units-of-time
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/units-of-time"
 
 
 class UnitsOfTimeCodeValues:

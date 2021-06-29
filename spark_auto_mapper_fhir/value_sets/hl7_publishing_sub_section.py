@@ -17,6 +17,6 @@ class Hl7PublishingSubSection(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection"

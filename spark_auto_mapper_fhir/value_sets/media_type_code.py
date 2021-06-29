@@ -17,9 +17,9 @@ class MediaTypeCodeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/dicm-405-mediatype
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/dicm-405-mediatype"
 
 
 class MediaTypeCodeCodeValues:

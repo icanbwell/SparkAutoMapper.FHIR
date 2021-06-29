@@ -17,9 +17,9 @@ class ImmunizationRecommendationReasonCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/immunization-recommendation-reason
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/immunization-recommendation-reason"
 
 
 class ImmunizationRecommendationReasonCodesCodeValues:

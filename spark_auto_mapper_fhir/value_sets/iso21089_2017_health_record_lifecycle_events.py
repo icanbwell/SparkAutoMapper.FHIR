@@ -17,9 +17,9 @@ class ISO21089_2017HealthRecordLifecycleEventsCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
 
 
 class ISO21089_2017HealthRecordLifecycleEventsCodeValues:

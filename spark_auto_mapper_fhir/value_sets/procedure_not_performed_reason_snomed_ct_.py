@@ -17,6 +17,6 @@ class ProcedureNotPerformedReason_SNOMED_CT_Code(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/procedure-not-performed-reason
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason"

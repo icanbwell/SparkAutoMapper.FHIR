@@ -17,6 +17,6 @@ class QueryResponse(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/ValueSet/v3-QueryResponse
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-QueryResponse"

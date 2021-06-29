@@ -17,9 +17,9 @@ class TemplateStatusCodeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/template-status-code
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/template-status-code"
 
 
 class TemplateStatusCodeCodeValues:

@@ -17,9 +17,9 @@ class LOINCCodesForCholesterolInSerum_or_PlasmaCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/example-extensional
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/example-extensional"
 
 
 class LOINCCodesForCholesterolInSerum_or_PlasmaCodeValues:

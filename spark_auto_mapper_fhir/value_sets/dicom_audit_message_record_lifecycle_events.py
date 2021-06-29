@@ -17,9 +17,9 @@ class DICOMAuditMessageRecordLifecycleEventsCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle"
 
 
 class DICOMAuditMessageRecordLifecycleEventsCodeValues:

@@ -17,6 +17,6 @@ class ActPharmacySupplyType(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType"

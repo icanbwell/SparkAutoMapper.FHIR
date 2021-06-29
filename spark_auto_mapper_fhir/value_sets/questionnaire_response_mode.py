@@ -17,9 +17,9 @@ class QuestionnaireResponseModeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/questionnaireresponse-mode
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaireresponse-mode"
 
 
 class QuestionnaireResponseModeCodeValues:

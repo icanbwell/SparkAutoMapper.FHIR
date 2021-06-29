@@ -17,9 +17,9 @@ class NameRepresentationUseCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/name-v3-representation
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/name-v3-representation"
 
 
 class NameRepresentationUseCodeValues:

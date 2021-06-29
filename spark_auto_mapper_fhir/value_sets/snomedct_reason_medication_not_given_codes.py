@@ -17,9 +17,9 @@ class SNOMEDCTReasonMedicationNotGivenCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/reason-medication-not-given
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/reason-medication-not-given"
 
 
 class SNOMEDCTReasonMedicationNotGivenCodesCodeValues:

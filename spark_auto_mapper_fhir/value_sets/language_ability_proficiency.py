@@ -17,6 +17,8 @@ class LanguageAbilityProficiency(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency"
+    )

@@ -17,9 +17,9 @@ class SupplementTypeCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/supplement-type
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/supplement-type"
 
 
 class SupplementTypeCodesCodeValues:

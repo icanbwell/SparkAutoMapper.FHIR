@@ -17,9 +17,9 @@ class BodyTemperatureUnitsCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/ucum-bodytemp
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ucum-bodytemp"
 
 
 class BodyTemperatureUnitsCodeValues:

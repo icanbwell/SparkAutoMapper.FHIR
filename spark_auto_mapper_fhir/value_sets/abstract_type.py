@@ -17,9 +17,9 @@ class AbstractTypeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/abstract-types
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/abstract-types"
 
 
 class AbstractTypeCodeValues:

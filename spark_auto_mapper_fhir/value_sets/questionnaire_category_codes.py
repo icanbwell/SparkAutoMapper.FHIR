@@ -17,9 +17,9 @@ class QuestionnaireCategoryCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/questionnaire-category
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaire-category"
 
 
 class QuestionnaireCategoryCodesCodeValues:

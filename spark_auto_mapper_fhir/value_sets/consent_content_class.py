@@ -17,9 +17,9 @@ class ConsentContentClassCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/consent-content-class
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/consent-content-class"
 
 
 class ConsentContentClassCodeValues:

@@ -187,7 +187,7 @@ class FhirXmlSchemaParser:
                     is_back_bone_element=False,
                     is_value_set=True,
                     value_set_concepts=c.concepts,
-                    value_set_url=c.value_set_url,
+                    value_set_url=c.value_set_url or c.url,
                 )
                 for c in value_sets
             ]

@@ -17,6 +17,6 @@ class EntityNameUseR2(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/ValueSet/v3-EntityNameUseR2
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityNameUseR2"

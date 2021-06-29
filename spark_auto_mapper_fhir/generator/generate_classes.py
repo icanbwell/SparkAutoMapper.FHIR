@@ -218,50 +218,6 @@ def main() -> int:
     my_copytree(
         value_sets_folder.joinpath("../base_types/value_sets"), value_sets_folder
     )
-    # value_sets custom
-    # value_set_files = [
-    #     f
-    #     for f in listdir(value_sets_folder.joinpath("../base_types/value_sets/custom"))
-    #     if isfile(join(value_sets_folder.joinpath("../base_types/value_sets/custom"), f))
-    # ]
-    # for value_set_file in value_set_files:
-    #     copyfile(
-    #         value_sets_folder.joinpath("../base_types/value_sets/custom").joinpath(
-    #             value_set_file
-    #         ),
-    #         value_sets_folder.joinpath("custom").joinpath(value_set_file),
-    #     )
-    #
-    # # value_sets da_vinci
-    # value_set_files = [
-    #     f
-    #     for f in listdir(value_sets_folder.joinpath("../base_types/value_sets/da_vinci"))
-    #     if isfile(join(value_sets_folder.joinpath("../base_types/value_sets/da_vinci"), f))
-    # ]
-    # for value_set_file in value_set_files:
-    #     copyfile(
-    #         value_sets_folder.joinpath("../base_types/value_sets/da_vinci").joinpath(
-    #             value_set_file
-    #         ),
-    #         value_sets_folder.joinpath("da_vinci").joinpath(value_set_file),
-    #     )
-
-    # value_sets us_core
-    value_set_files = [
-        f
-        for f in listdir(value_sets_folder.joinpath("../base_types/value_sets/us_core"))
-        if isfile(
-            join(value_sets_folder.joinpath("../base_types/value_sets/us_core"), f)
-        )
-    ]
-    for value_set_file in value_set_files:
-        copyfile(
-            value_sets_folder.joinpath("../base_types/value_sets/us_core").joinpath(
-                value_set_file
-            ),
-            value_sets_folder.joinpath("us_core").joinpath(value_set_file),
-        )
-
     # complex types
     complex_types_files = [
         f
@@ -275,6 +231,9 @@ def main() -> int:
             ),
             complex_types_folder.joinpath(complex_type_file),
         )
+
+    # remove duplicate imports
+
     return 0
 
 

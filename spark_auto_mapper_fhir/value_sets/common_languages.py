@@ -17,9 +17,9 @@ class CommonLanguagesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/languages
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/languages"
 
 
 class CommonLanguagesCodeValues:

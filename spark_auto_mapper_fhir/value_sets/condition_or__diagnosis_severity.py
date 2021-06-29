@@ -17,9 +17,9 @@ class Condition_or_DiagnosisSeverityCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/condition-severity
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-severity"
 
 
 class Condition_or_DiagnosisSeverityCodeValues:

@@ -17,9 +17,9 @@ class DeviceDefinitionPropertyCodeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/device-component-property
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/device-component-property"
 
 
 class DeviceDefinitionPropertyCodeCodeValues:

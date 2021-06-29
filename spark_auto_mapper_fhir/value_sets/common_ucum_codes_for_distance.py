@@ -17,9 +17,9 @@ class CommonUCUMCodesForDistanceCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/distance-units
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/distance-units"
 
 
 class CommonUCUMCodesForDistanceCodeValues:

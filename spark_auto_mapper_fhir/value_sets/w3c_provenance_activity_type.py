@@ -17,9 +17,9 @@ class W3cProvenanceActivityTypeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/w3c-provenance-activity-type
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/w3c-provenance-activity-type"
 
 
 class W3cProvenanceActivityTypeCodeValues:

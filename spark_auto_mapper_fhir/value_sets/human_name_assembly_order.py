@@ -17,9 +17,9 @@ class HumanNameAssemblyOrderCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://terminology.hl7.org/CodeSystem/name-assembly-order
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/name-assembly-order"
 
 
 class HumanNameAssemblyOrderCodeValues:

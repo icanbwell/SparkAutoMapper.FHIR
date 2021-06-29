@@ -17,9 +17,9 @@ class TaskIntentCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/task-intent
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/task-intent"
 
 
 class TaskIntentCodeValues:

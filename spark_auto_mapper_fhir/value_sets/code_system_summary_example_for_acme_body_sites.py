@@ -17,6 +17,6 @@ class CodeSystemSummaryExampleForACMEBodySitesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/CodeSystem/summary
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/CodeSystem/summary"

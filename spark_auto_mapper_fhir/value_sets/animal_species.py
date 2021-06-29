@@ -17,9 +17,9 @@ class AnimalSpeciesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/animal-species
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/animal-species"
 
 
 class AnimalSpeciesCodeValues:

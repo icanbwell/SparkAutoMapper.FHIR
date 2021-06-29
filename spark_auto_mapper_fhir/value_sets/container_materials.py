@@ -17,9 +17,9 @@ class ContainerMaterialsCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/container-material
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/container-material"
 
 
 class ContainerMaterialsCodeValues:

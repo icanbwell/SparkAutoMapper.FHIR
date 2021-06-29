@@ -17,9 +17,9 @@ class TextureModifierCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/texture-code
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/texture-code"
 
 
 class TextureModifierCodesCodeValues:

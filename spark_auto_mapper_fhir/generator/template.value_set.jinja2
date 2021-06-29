@@ -45,7 +45,7 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class {{fhir_entity.cleaned_name}}(FhirValueSetBase):
     """
-    {{fhir_entity.fhir_name}}
+    {{ fhir_entity.fhir_name }}
     {% for documentation_item in fhir_entity.documentation %}
         {{ documentation_item }}
     {%  endfor %}
@@ -53,10 +53,12 @@ class {{fhir_entity.cleaned_name}}(FhirValueSetBase):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
+    {%  if fhir_entity.value_set_url %}
     """
-    {{ fhir_entity.value_set_url}}
+    {{ fhir_entity.value_set_url }}
     """
     codeset: FhirUri = "{{ fhir_entity.value_set_url}}"
+    {% endif %}
 
 
 {%  if fhir_entity.value_set_concepts %}

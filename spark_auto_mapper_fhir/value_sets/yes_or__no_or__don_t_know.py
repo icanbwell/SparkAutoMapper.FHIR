@@ -17,9 +17,9 @@ class Yes_or_No_or_Don_tKnowCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/yesnodontknow
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/yesnodontknow"
 
 
 class Yes_or_No_or_Don_tKnowCodeValues:

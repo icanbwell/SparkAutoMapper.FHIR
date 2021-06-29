@@ -13,7 +13,7 @@ repos:
         types: [ python ]
         entry: autoflake
         require_serial: true
-        args: [ '--in-place', '--remove-all-unused-imports', '--ignore-init-module-imports']
+        args: [ '--in-place', '--remove-all-unused-imports', '--remove-unused-variables', '--recursive', '--remove-duplicate-keys']
       - id: pycln
         name: pycln
         language: system

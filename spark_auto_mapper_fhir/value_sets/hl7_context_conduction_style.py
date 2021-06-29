@@ -17,6 +17,8 @@ class HL7ContextConductionStyle(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle"
+    )

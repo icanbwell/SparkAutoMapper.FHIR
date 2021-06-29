@@ -17,9 +17,9 @@ class Condition_or_Problem_or_DiagnosisCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/condition-code
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-code"
 
 
 class Condition_or_Problem_or_DiagnosisCodesCodeValues:

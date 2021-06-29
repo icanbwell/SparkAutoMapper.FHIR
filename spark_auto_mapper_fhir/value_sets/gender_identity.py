@@ -17,9 +17,9 @@ class GenderIdentityCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/gender-identity
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/gender-identity"
 
 
 class GenderIdentityCodeValues:

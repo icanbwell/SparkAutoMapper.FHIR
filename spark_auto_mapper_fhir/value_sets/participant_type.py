@@ -17,9 +17,9 @@ class ParticipantTypeCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://terminology.hl7.org/CodeSystem/participant-type
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/participant-type"
 
 
 class ParticipantTypeCodeValues:

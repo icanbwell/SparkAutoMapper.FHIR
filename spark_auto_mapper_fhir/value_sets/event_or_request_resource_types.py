@@ -17,6 +17,6 @@ class EventOrRequestResourceTypesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/event-or-request-resource-types
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/event-or-request-resource-types"

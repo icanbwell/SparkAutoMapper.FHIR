@@ -17,9 +17,9 @@ class ICD_10CodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://hl7.org/fhir/ValueSet/icd-10
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/icd-10"
 
 
 class ICD_10CodesCodeValues:

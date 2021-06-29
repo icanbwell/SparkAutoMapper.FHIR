@@ -17,9 +17,9 @@ class ImmunizationOriginCodesCode(FhirValueSetBase):
         super().__init__(value=value)
 
     """
-    None
+    http://terminology.hl7.org/CodeSystem/immunization-origin
     """
-    codeset: FhirUri = "None"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/immunization-origin"
 
 
 class ImmunizationOriginCodesCodeValues:
