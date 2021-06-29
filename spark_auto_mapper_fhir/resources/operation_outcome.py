@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.operationoutcome import OperationOutcomeSchema
 
 if TYPE_CHECKING:
+    pass
     # issue (OperationOutcome.Issue)
     from spark_auto_mapper_fhir.backbone_elements.operation_outcome_issue import (
         OperationOutcomeIssue,

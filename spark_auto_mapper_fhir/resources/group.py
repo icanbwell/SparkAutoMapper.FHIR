@@ -14,18 +14,15 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.group import GroupSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # type_ (GroupType)
     from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCode
 
     # actual (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -34,8 +31,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # quantity (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 

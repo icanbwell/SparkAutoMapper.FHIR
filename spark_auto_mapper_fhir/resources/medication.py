@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.medication import MedicationSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -36,8 +37,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # form (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for form
     from spark_auto_mapper_fhir.value_sets.snomedct_form_codes import (
         SNOMEDCTFormCodesCode,

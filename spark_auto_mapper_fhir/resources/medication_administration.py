@@ -16,12 +16,11 @@ from spark_fhir_schemas.r4.resources.medicationadministration import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # instantiates (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # partOf (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -43,8 +42,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for statusReason
     # category (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.medication_administration_category_codes import (
         MedicationAdministrationCategoryCodesCode,
@@ -52,22 +49,16 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # subject (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
 
     # context (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for context
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
 
     # supportingInformation (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supportingInformation
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -77,8 +68,6 @@ if TYPE_CHECKING:
     )
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.reason_medication_given_codes import (
         ReasonMedicationGivenCodesCode,
@@ -86,22 +75,16 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
 
     # request (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
 
     # device (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device import Device
 
@@ -114,27 +97,19 @@ if TYPE_CHECKING:
     )
 
     # eventHistory (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for eventHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
 
     # medicationCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for medicationCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for medicationCodeableConcept
     # medicationReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for medicationReference
     from spark_auto_mapper_fhir.resources.medication import Medication
 
     # effectiveDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

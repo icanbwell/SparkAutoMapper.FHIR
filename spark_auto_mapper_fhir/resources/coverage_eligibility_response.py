@@ -17,6 +17,7 @@ from spark_fhir_schemas.r4.resources.coverageeligibilityresponse import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -37,19 +38,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # requestor (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for requestor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # request (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.coverage_eligibility_request import (
         CoverageEligibilityRequest,
@@ -61,22 +56,14 @@ if TYPE_CHECKING:
     )
 
     # disposition (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # insurer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for insurer
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # insurance (CoverageEligibilityResponse.Insurance)
     from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_insurance import (
         CoverageEligibilityResponseInsurance,
     )
 
     # preAuthRef (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # form (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -90,8 +77,6 @@ if TYPE_CHECKING:
     )
 
     # servicedDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # servicedPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

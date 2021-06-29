@@ -15,12 +15,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.documentmanifest import DocumentManifestSchema
 
 if TYPE_CHECKING:
+    pass
     # masterIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # identifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # status (DocumentReferenceStatus)
     from spark_auto_mapper_fhir.value_sets.document_reference_status import (
         DocumentReferenceStatusCode,
@@ -43,38 +42,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # author (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for author
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
-    from spark_auto_mapper_fhir.resources.device import Device
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
     # recipient (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for recipient
-    from spark_auto_mapper_fhir.resources.patient import Patient
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # source (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # content (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for content
     from spark_auto_mapper_fhir.resources.resource import Resource
 

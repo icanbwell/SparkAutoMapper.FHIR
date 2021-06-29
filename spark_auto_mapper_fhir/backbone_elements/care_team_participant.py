@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # role (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -30,11 +31,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
 
     # onBehalfOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for onBehalfOf
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

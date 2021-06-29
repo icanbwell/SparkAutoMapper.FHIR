@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # code (GuideParameterCode)
     from spark_auto_mapper_fhir.value_sets.guide_parameter_code import (
         GuideParameterCodeCode,

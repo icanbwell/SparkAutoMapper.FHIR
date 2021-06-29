@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.supplyrequest import SupplyRequestSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -40,8 +41,6 @@ if TYPE_CHECKING:
     )
 
     # authoredOn (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # requester (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -54,15 +53,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # supplier (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supplier
-    from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.supply_request_reason import (
         SupplyRequestReasonCode,
@@ -70,8 +64,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
@@ -79,38 +71,22 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
     # deliverFrom (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for deliverFrom
-    from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.location import Location
 
     # deliverTo (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for deliverTo
-    from spark_auto_mapper_fhir.resources.organization import Organization
-    from spark_auto_mapper_fhir.resources.location import Location
-    from spark_auto_mapper_fhir.resources.patient import Patient
-
     # itemCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for itemCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for itemCodeableConcept
     # itemReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for itemReference
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.resources.substance import Substance
-    from spark_auto_mapper_fhir.resources.device import Device
 
     # occurrenceDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # occurrencePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

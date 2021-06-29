@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -25,20 +26,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # material (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for material
     # Import for CodeableConcept for material
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for material
     # alternateMaterial (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for alternateMaterial
     # Import for CodeableConcept for alternateMaterial
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for alternateMaterial
     # device (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -47,8 +40,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device_definition import DeviceDefinition
 
     # manufacturedItem (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for manufacturedItem
     from spark_auto_mapper_fhir.resources.medicinal_product_manufactured import (
         MedicinalProductManufactured,
@@ -60,12 +51,8 @@ if TYPE_CHECKING:
     )
 
     # otherCharacteristics (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for otherCharacteristics
     # Import for CodeableConcept for otherCharacteristics
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for otherCharacteristics
     # shelfLifeStorage (ProductShelfLife)
     from spark_auto_mapper_fhir.backbone_elements.product_shelf_life import (
@@ -73,8 +60,6 @@ if TYPE_CHECKING:
     )
 
     # manufacturer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
 

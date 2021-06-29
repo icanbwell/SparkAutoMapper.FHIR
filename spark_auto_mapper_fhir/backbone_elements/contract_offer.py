@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -22,8 +23,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for topic
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -35,8 +34,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # decision (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for decision
     # Import for CodeableConcept for decision
     from spark_auto_mapper_fhir.value_sets.act_consent_directive import (
@@ -45,8 +42,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for decision
     # decisionMode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for decisionMode
     # Import for CodeableConcept for decisionMode
     from spark_auto_mapper_fhir.value_sets.contract_resource_decision_mode_codes import (

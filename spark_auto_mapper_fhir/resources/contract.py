@@ -15,15 +15,12 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.contract import ContractSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # version (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (ContractResourceStatusCodes)
     from spark_auto_mapper_fhir.value_sets.contract_resource_status_codes import (
         ContractResourceStatusCodesCode,
@@ -43,11 +40,7 @@ if TYPE_CHECKING:
 
     # Imports for References for instantiatesCanonical
     # instantiatesUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # contentDerivative (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for contentDerivative
     from spark_auto_mapper_fhir.value_sets.contract_content_derivation_codes import (
         ContractContentDerivationCodesCode,
@@ -55,14 +48,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for contentDerivative
     # issued (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # applies (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # expirationType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for expirationType
     from spark_auto_mapper_fhir.value_sets.contract_resource_expiration_type_codes import (
         ContractResourceExpirationTypeCodesCode,
@@ -70,53 +59,30 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for expirationType
     # subject (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # authority (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for authority
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # domain (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for domain
     from spark_auto_mapper_fhir.resources.location import Location
 
     # site (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for site
-    from spark_auto_mapper_fhir.resources.location import Location
-
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # subtitle (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # alias (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # author (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.organization import Organization
 
     # scope (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for scope
     from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
         ContractResourceScopeCodesCode,
@@ -124,8 +90,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for scope
     # type_ (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.contract_type_codes import (
         ContractTypeCodesCode,
@@ -133,8 +97,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # subType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for subType
     from spark_auto_mapper_fhir.value_sets.contract_subtype_codes import (
         ContractSubtypeCodesCode,
@@ -150,14 +112,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.contract_term import ContractTerm
 
     # supportingInfo (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supportingInfo
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # relevantHistory (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for relevantHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
 
@@ -176,24 +132,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.contract_rule import ContractRule
 
     # topicCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for topicCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for topicCodeableConcept
     # topicReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for topicReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # legallyBindingAttachment (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
     # legallyBindingReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for legallyBindingReference
     from spark_auto_mapper_fhir.resources.composition import Composition
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference

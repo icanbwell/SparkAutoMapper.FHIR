@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.invoice import InvoiceSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -21,8 +22,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.invoice_status import InvoiceStatusCode
 
     # cancelledReason (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -38,30 +37,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
 
     # recipient (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for recipient
     from spark_auto_mapper_fhir.resources.organization import Organization
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # participant (Invoice.Participant)
     from spark_auto_mapper_fhir.backbone_elements.invoice_participant import (
         InvoiceParticipant,
     )
 
     # issuer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for issuer
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # account (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for account
     from spark_auto_mapper_fhir.resources.account import Account
 
@@ -79,8 +67,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.money import Money
 
     # totalGross (Money)
-    from spark_auto_mapper_fhir.complex_types.money import Money
-
     # paymentTerms (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 

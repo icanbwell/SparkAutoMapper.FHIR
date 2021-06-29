@@ -15,6 +15,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.task import TaskSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -22,8 +23,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # instantiatesUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -31,11 +30,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # groupIdentifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     # status (TaskStatus)
     from spark_auto_mapper_fhir.value_sets.task_status import TaskStatusCode
@@ -48,11 +43,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for statusReason
     # businessStatus (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for businessStatus
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for businessStatus
     # intent (TaskIntent)
     from spark_auto_mapper_fhir.value_sets.task_intent import TaskIntentCode
@@ -61,30 +52,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.request_priority import RequestPriorityCode
 
     # code (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.task_code import TaskCodeCode
 
     # End Import for CodeableConcept for code
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # focus (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for focus
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # for_ (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for for_
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
@@ -92,14 +69,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # authoredOn (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # lastModified (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # requester (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for requester
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.organization import Organization
@@ -109,8 +80,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
     # performerType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for performerType
     from spark_auto_mapper_fhir.value_sets.procedure_performer_role_codes import (
         ProcedurePerformerRoleCodesCode,
@@ -118,40 +87,20 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for performerType
     # owner (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for owner
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
-    from spark_auto_mapper_fhir.resources.patient import Patient
-    from spark_auto_mapper_fhir.resources.device import Device
-    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # insurance (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for insurance
     from spark_auto_mapper_fhir.resources.coverage import Coverage
     from spark_auto_mapper_fhir.resources.claim_response import ClaimResponse
@@ -160,8 +109,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # relevantHistory (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for relevantHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
 

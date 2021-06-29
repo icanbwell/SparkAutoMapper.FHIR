@@ -12,9 +12,6 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
     from spark_auto_mapper_fhir.complex_types.sampled_data_data_type import (
         SampledDataDataType,

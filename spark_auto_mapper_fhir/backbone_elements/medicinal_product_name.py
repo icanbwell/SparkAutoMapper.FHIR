@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # productName (string)
     pass
+    # productName (string)
     # namePart (MedicinalProduct.NamePart)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_name_part import (
         MedicinalProductNamePart,

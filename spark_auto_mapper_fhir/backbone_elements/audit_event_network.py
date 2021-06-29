@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # address (string)
     pass
+    # address (string)
     # type_ (AuditEventAgentNetworkType)
     from spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type import (
         AuditEventAgentNetworkTypeCode,

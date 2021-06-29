@@ -10,36 +10,23 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # count (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
     # countMax (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # duration (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # durationMax (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # durationUnit (UnitsOfTime)
     from spark_auto_mapper_fhir.value_sets.units_of_time import UnitsOfTimeCode
 
     # frequency (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # frequencyMax (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # period (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # periodMax (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # periodUnit (UnitsOfTime)
-    from spark_auto_mapper_fhir.value_sets.units_of_time import UnitsOfTimeCode
-
     # dayOfWeek (DaysOfWeek)
     from spark_auto_mapper_fhir.value_sets.days_of_week import DaysOfWeekCode
 

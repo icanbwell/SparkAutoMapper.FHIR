@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # vaccineCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -23,8 +24,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for vaccineCode
     # targetDisease (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for targetDisease
     # Import for CodeableConcept for targetDisease
     from spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes import (
@@ -33,18 +32,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for targetDisease
     # contraindicatedVaccineCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for contraindicatedVaccineCode
     # Import for CodeableConcept for contraindicatedVaccineCode
-    from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
-        VaccineAdministeredValueSetCode,
-    )
-
     # End Import for CodeableConcept for contraindicatedVaccineCode
     # forecastStatus (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for forecastStatus
     # Import for CodeableConcept for forecastStatus
     from spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes import (
@@ -53,8 +44,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for forecastStatus
     # forecastReason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for forecastReason
     # Import for CodeableConcept for forecastReason
     from spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes import (
@@ -79,18 +68,12 @@ if TYPE_CHECKING:
     )
 
     # supportingPatientInformation (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supportingPatientInformation
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # doseNumberPositiveInt (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
     # doseNumberString (string)
     # seriesDosesPositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # seriesDosesString (string)
 
 

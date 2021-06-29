@@ -13,12 +13,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.specimen import SpecimenSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # accessionIdentifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # status (SpecimenStatus)
     from spark_auto_mapper_fhir.value_sets.specimen_status import SpecimenStatusCode
 
@@ -40,15 +39,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
 
     # receivedTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # parent (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for parent
     # request (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
@@ -68,8 +61,6 @@ if TYPE_CHECKING:
     )
 
     # condition (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for condition
     from spark_auto_mapper_fhir.value_sets.v2_0493 import V2_0493
 

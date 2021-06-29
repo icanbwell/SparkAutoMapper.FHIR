@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.devicemetric import DeviceMetricSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -25,13 +26,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # unit (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for unit
-    from spark_auto_mapper_fhir.value_sets.device_metric_and_component_types import (
-        DeviceMetricAndComponentTypesCode,
-    )
-
     # End Import for CodeableConcept for unit
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -40,11 +35,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # parent (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for parent
-    from spark_auto_mapper_fhir.resources.device import Device
-
     # operationalStatus (DeviceMetricOperationalStatus)
     from spark_auto_mapper_fhir.value_sets.device_metric_operational_status import (
         DeviceMetricOperationalStatusCode,

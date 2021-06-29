@@ -11,12 +11,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # low (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # high (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -28,8 +27,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # appliesTo (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for appliesTo
     # Import for CodeableConcept for appliesTo
     from spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes import (

@@ -15,6 +15,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.clinicalimpression import ClinicalImpressionSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -31,15 +32,9 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for statusReason
     # code (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for code
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -48,28 +43,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # assessor (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for assessor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # previous (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for previous
     # problem (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for problem
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.allergy_intolerance import AllergyIntolerance
@@ -80,19 +65,13 @@ if TYPE_CHECKING:
     )
 
     # protocol (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # summary (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # finding (ClinicalImpression.Finding)
     from spark_auto_mapper_fhir.backbone_elements.clinical_impression_finding import (
         ClinicalImpressionFinding,
     )
 
     # prognosisCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for prognosisCodeableConcept
     from spark_auto_mapper_fhir.value_sets.clinical_impression_prognosis import (
         ClinicalImpressionPrognosisCode,
@@ -100,14 +79,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for prognosisCodeableConcept
     # prognosisReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for prognosisReference
     from spark_auto_mapper_fhir.resources.risk_assessment import RiskAssessment
 
     # supportingInfo (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supportingInfo
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -115,8 +90,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # effectiveDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

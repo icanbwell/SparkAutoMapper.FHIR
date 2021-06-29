@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # name (string)
     pass
+    # name (string)
     # target (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -23,8 +23,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.url import url
 
     # receiver (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for receiver
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole

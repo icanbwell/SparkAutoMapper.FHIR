@@ -46,7 +46,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
@@ -55,16 +54,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
 
     # source (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for source
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.patient import Patient
-    from spark_auto_mapper_fhir.resources.device import Device
 
     # orderedBy (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for orderedBy
     from spark_auto_mapper_fhir.value_sets.list_order_codes import ListOrderCodesCode
@@ -77,7 +72,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.list_entry import ListEntry
 
     # emptyReason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for emptyReason
     from spark_auto_mapper_fhir.value_sets.list_empty_reasons import (

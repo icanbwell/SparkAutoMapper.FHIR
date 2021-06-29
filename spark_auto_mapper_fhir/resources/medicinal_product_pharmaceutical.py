@@ -14,6 +14,7 @@ from spark_fhir_schemas.r4.resources.medicinalproductpharmaceutical import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -25,11 +26,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for administrableDoseForm
     # unitOfPresentation (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for unitOfPresentation
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for unitOfPresentation
     # ingredient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -40,8 +37,6 @@ if TYPE_CHECKING:
     )
 
     # device (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device_definition import DeviceDefinition
 

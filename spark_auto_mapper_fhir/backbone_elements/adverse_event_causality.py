@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # assessment (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # method (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for method
     # Import for CodeableConcept for method
     from spark_auto_mapper_fhir.value_sets.adverse_event_causality_method import (

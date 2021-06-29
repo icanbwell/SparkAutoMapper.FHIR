@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.biologicallyderivedproduct import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -42,11 +43,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
     # quantity (integer)
-    from spark_auto_mapper_fhir.complex_types.integer import FhirInteger
-
     # parent (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for parent
     # collection (BiologicallyDerivedProduct.Collection)
     from spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_collection import (

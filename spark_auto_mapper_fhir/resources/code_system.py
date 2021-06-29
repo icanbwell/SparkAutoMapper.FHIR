@@ -16,35 +16,22 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.codesystem import CodeSystemSchema
 
 if TYPE_CHECKING:
+    pass
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # version (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (PublicationStatus)
     from spark_auto_mapper_fhir.value_sets.publication_status import (
         PublicationStatusCode,
     )
 
     # experimental (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # publisher (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
@@ -64,14 +51,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for jurisdiction
     # purpose (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # copyright (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # caseSensitive (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # valueSet (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
@@ -81,19 +62,13 @@ if TYPE_CHECKING:
     )
 
     # compositional (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # versionNeeded (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # content (CodeSystemContentMode)
     from spark_auto_mapper_fhir.value_sets.code_system_content_mode import (
         CodeSystemContentModeCode,
     )
 
     # supplements (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
-
     # count (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 

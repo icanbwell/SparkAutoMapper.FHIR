@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.subscription import SubscriptionSchema
 
 if TYPE_CHECKING:
+    pass
     # status (SubscriptionStatus)
     from spark_auto_mapper_fhir.value_sets.subscription_status import (
         SubscriptionStatusCode,
@@ -25,14 +26,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
     # reason (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # criteria (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # error (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # channel (Subscription.Channel)
     from spark_auto_mapper_fhir.backbone_elements.subscription_channel import (
         SubscriptionChannel,

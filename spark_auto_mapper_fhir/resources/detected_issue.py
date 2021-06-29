@@ -15,6 +15,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.detectedissue import DetectedIssueSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -44,16 +45,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
 
     # author (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.device import Device
 
     # implicated (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for implicated
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -63,19 +60,13 @@ if TYPE_CHECKING:
     )
 
     # detail (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # reference (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # mitigation (DetectedIssue.Mitigation)
     from spark_auto_mapper_fhir.backbone_elements.detected_issue_mitigation import (
         DetectedIssueMitigation,
     )
 
     # identifiedDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # identifiedPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

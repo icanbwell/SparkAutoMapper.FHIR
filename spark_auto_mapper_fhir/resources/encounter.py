@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.encounter import EncounterSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -43,15 +44,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # serviceType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
 
     # End Import for CodeableConcept for serviceType
     # priority (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.value_sets.act_priority import ActPriority
 
@@ -64,14 +61,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
 
     # episodeOfCare (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for episodeOfCare
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
 
     # basedOn (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
@@ -81,8 +74,6 @@ if TYPE_CHECKING:
     )
 
     # appointment (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for appointment
     from spark_auto_mapper_fhir.resources.appointment import Appointment
 
@@ -93,8 +84,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.duration import Duration
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.encounter_reason_codes import (
         EncounterReasonCodesCode,
@@ -102,8 +91,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.procedure import Procedure
@@ -118,8 +105,6 @@ if TYPE_CHECKING:
     )
 
     # account (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for account
     from spark_auto_mapper_fhir.resources.account import Account
 
@@ -134,14 +119,10 @@ if TYPE_CHECKING:
     )
 
     # serviceProvider (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for serviceProvider
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
 
 

@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # uid (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
@@ -28,8 +29,6 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for modality
     # description (string)
     # numberOfInstances (unsignedInt)
-    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # endpoint (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -37,8 +36,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 
     # bodySite (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for bodySite
     # Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
@@ -47,16 +44,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for bodySite
     # laterality (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for laterality
     # Import for CodeableConcept for laterality
     from spark_auto_mapper_fhir.value_sets.laterality import LateralityCode
 
     # End Import for CodeableConcept for laterality
     # specimen (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for specimen
     from spark_auto_mapper_fhir.resources.specimen import Specimen
 

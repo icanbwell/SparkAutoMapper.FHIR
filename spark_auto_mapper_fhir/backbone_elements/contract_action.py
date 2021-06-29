@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # doNotPerform (boolean)
     pass
+    # doNotPerform (boolean)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -31,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # intent (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for intent
     # Import for CodeableConcept for intent
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
@@ -40,8 +38,6 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for intent
     # linkId (string)
     # status (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for status
     # Import for CodeableConcept for status
     from spark_auto_mapper_fhir.value_sets.contract_resource_action_status_codes import (
@@ -58,8 +54,6 @@ if TYPE_CHECKING:
 
     # contextLinkId (string)
     # requester (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for requester
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
@@ -71,8 +65,6 @@ if TYPE_CHECKING:
 
     # requesterLinkId (string)
     # performerType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for performerType
     # Import for CodeableConcept for performerType
     from spark_auto_mapper_fhir.value_sets.provenance_participant_type import (
@@ -81,8 +73,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for performerType
     # performerRole (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for performerRole
     # Import for CodeableConcept for performerRole
     from spark_auto_mapper_fhir.value_sets.provenance_participant_role import (
@@ -91,31 +81,17 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for performerRole
     # performer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for performer
-    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-    from spark_auto_mapper_fhir.resources.patient import Patient
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
-    from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.substance import Substance
-    from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.location import Location
 
     # performerLinkId (string)
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for reasonCode
     # Import for CodeableConcept for reasonCode
-    from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
-
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation

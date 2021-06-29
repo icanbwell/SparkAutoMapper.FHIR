@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.claim import ClaimSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # subType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for subType
     from spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes import (
         ExampleClaimSubTypeCodesCode,
@@ -50,32 +49,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # enterer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for enterer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # insurer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # provider (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for provider
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # priority (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.value_sets.process_priority_codes import (
         ProcessPriorityCodesCode,
@@ -83,8 +68,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for priority
     # fundsReserve (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for fundsReserve
     from spark_auto_mapper_fhir.value_sets.funds_reservation_codes import (
         FundsReservationCodesCode,
@@ -95,33 +78,21 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.claim_related import ClaimRelated
 
     # prescription (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for prescription
     from spark_auto_mapper_fhir.resources.device_request import DeviceRequest
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
     from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescription
 
     # originalPrescription (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for originalPrescription
-    from spark_auto_mapper_fhir.resources.device_request import DeviceRequest
-    from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
-    from spark_auto_mapper_fhir.resources.vision_prescription import VisionPrescription
-
     # payee (Claim.Payee)
     from spark_auto_mapper_fhir.backbone_elements.claim_payee import ClaimPayee
 
     # referral (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for referral
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
     # facility (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for facility
     from spark_auto_mapper_fhir.resources.location import Location
 

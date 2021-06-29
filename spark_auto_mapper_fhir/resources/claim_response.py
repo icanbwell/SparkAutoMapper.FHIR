@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.claimresponse import ClaimResponseSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # subType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for subType
     from spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes import (
         ExampleClaimSubTypeCodesCode,
@@ -48,25 +47,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # insurer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for insurer
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # requestor (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for requestor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.organization import Organization
 
     # request (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.claim import Claim
 
@@ -76,17 +66,11 @@ if TYPE_CHECKING:
     )
 
     # disposition (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # preAuthRef (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # preAuthPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # payeeType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for payeeType
     from spark_auto_mapper_fhir.value_sets.claim_payee_type_codes import (
         ClaimPayeeTypeCodesCode,
@@ -119,8 +103,6 @@ if TYPE_CHECKING:
     )
 
     # fundsReserve (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for fundsReserve
     from spark_auto_mapper_fhir.value_sets.funds_reservation_codes import (
         FundsReservationCodesCode,
@@ -128,8 +110,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for fundsReserve
     # formCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for formCode
     from spark_auto_mapper_fhir.value_sets.form_codes import FormCodesCode
 
@@ -143,8 +123,6 @@ if TYPE_CHECKING:
     )
 
     # communicationRequest (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for communicationRequest
     from spark_auto_mapper_fhir.resources.communication_request import (
         CommunicationRequest,

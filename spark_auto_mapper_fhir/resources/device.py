@@ -15,6 +15,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.device import DeviceSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -44,37 +45,19 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for statusReason
     # distinctIdentifier (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # manufacturer (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # manufactureDate (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # expirationDate (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # lotNumber (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # serialNumber (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # deviceName (Device.DeviceName)
     from spark_auto_mapper_fhir.backbone_elements.device_device_name import (
         DeviceDeviceName,
     )
 
     # modelNumber (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # partNumber (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # type_ (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.device_type import DeviceTypeCode
 
@@ -91,14 +74,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.device_property import DeviceProperty
 
     # patient (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
 
     # owner (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for owner
     from spark_auto_mapper_fhir.resources.organization import Organization
 
@@ -106,27 +85,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # safety (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for safety
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for safety
     # parent (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for parent
 
 

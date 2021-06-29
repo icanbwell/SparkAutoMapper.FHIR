@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # wasSubstituted (boolean)
     pass
+    # wasSubstituted (boolean)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -24,8 +24,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # reason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for reason
     # Import for CodeableConcept for reason
     from spark_auto_mapper_fhir.value_sets.substance_admin_substitution_reason import (

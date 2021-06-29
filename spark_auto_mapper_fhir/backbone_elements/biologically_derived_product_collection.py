@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # collector (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -19,8 +20,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # source (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for source
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.organization import Organization

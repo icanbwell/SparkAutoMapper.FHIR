@@ -14,9 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.namingsystem import NamingSystemSchema
 
 if TYPE_CHECKING:
+    pass
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (PublicationStatus)
     from spark_auto_mapper_fhir.value_sets.publication_status import (
         PublicationStatusCode,
@@ -28,17 +27,11 @@ if TYPE_CHECKING:
     )
 
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # publisher (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # responsible (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -55,8 +48,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
 
     # jurisdiction (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for jurisdiction
     from spark_auto_mapper_fhir.value_sets.jurisdiction_value_set import (
         JurisdictionValueSetCode,
@@ -64,8 +55,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for jurisdiction
     # usage (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # uniqueId (NamingSystem.UniqueId)
     from spark_auto_mapper_fhir.backbone_elements.naming_system_unique_id import (
         NamingSystemUniqueId,

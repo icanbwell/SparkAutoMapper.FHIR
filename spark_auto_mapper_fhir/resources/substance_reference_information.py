@@ -15,9 +15,8 @@ from spark_fhir_schemas.r4.resources.substancereferenceinformation import (
 )
 
 if TYPE_CHECKING:
+    pass
     # comment (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # gene (SubstanceReferenceInformation.Gene)
     from spark_auto_mapper_fhir.backbone_elements.substance_reference_information_gene import (
         SubstanceReferenceInformationGene,

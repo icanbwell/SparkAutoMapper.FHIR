@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.account import AccountSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -27,8 +28,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -50,22 +49,14 @@ if TYPE_CHECKING:
     )
 
     # owner (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for owner
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # guarantor (Account.Guarantor)
     from spark_auto_mapper_fhir.backbone_elements.account_guarantor import (
         AccountGuarantor,
     )
 
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
 
 

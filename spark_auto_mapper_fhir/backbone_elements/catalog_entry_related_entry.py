@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # relationtype (CatalogEntryRelationType)
     from spark_auto_mapper_fhir.value_sets.catalog_entry_relation_type import (
         CatalogEntryRelationTypeCode,

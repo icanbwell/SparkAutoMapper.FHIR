@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.supplydelivery import SupplyDeliverySchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -23,8 +24,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.supply_request import SupplyRequest
 
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.contract import Contract
 
@@ -34,8 +33,6 @@ if TYPE_CHECKING:
     )
 
     # patient (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
 
@@ -52,29 +49,18 @@ if TYPE_CHECKING:
     )
 
     # supplier (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supplier
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # destination (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for destination
     from spark_auto_mapper_fhir.resources.location import Location
 
     # receiver (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for receiver
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-
     # occurrenceDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # occurrencePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

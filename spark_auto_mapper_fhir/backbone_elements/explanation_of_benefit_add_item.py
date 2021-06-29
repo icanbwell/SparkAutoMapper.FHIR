@@ -11,15 +11,12 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # itemSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
     # detailSequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # subDetailSequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -37,8 +34,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for productOrService
     # modifier (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for modifier
     # Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
@@ -47,8 +42,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for modifier
     # programCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for programCode
     # Import for CodeableConcept for programCode
     from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import (
@@ -66,27 +59,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # net (Money)
-    from spark_auto_mapper_fhir.complex_types.money import Money
-
     # bodySite (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for bodySite
     # Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.value_sets.oral_site_codes import OralSiteCodesCode
 
     # End Import for CodeableConcept for bodySite
     # subSite (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for subSite
     # Import for CodeableConcept for subSite
     from spark_auto_mapper_fhir.value_sets.surface_codes import SurfaceCodesCode
 
     # End Import for CodeableConcept for subSite
     # noteNumber (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # adjudication (ExplanationOfBenefit.Adjudication)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_adjudication import (
         ExplanationOfBenefitAdjudication,
@@ -102,8 +87,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # locationCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for locationCodeableConcept
     # Import for CodeableConcept for locationCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -113,8 +96,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.address import Address
 
     # locationReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for locationReference
     from spark_auto_mapper_fhir.resources.location import Location
 

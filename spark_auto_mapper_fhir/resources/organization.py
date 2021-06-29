@@ -14,12 +14,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.organization import OrganizationSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -28,11 +27,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # alias (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 
@@ -49,8 +44,6 @@ if TYPE_CHECKING:
     )
 
     # endpoint (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 

@@ -14,6 +14,7 @@ from spark_fhir_schemas.r4.resources.medicinalproductindication import (
 )
 
 if TYPE_CHECKING:
+    pass
     # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -29,25 +30,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for diseaseSymptomProcedure
     # diseaseStatus (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for diseaseStatus
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for diseaseStatus
     # comorbidity (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for comorbidity
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for comorbidity
     # intendedEffect (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for intendedEffect
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for intendedEffect
     # duration (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
@@ -58,8 +47,6 @@ if TYPE_CHECKING:
     )
 
     # undesirableEffect (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for undesirableEffect
     from spark_auto_mapper_fhir.resources.medicinal_product_undesirable_effect import (
         MedicinalProductUndesirableEffect,

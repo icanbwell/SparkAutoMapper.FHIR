@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.consent import ConsentSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for scope
     # category (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.consent_category_codes import (
         ConsentCategoryCodesCode,
@@ -44,30 +43,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
 
     # dateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # performer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.organization import Organization
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # organization (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for organization
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # policy (Consent.Policy)
     from spark_auto_mapper_fhir.backbone_elements.consent_policy import ConsentPolicy
 
     # policyRule (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for policyRule
     from spark_auto_mapper_fhir.value_sets.consent_policy_rule_codes import (
         ConsentPolicyRuleCodesCode,
@@ -88,8 +76,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
     # sourceReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for sourceReference
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
     from spark_auto_mapper_fhir.resources.contract import Contract

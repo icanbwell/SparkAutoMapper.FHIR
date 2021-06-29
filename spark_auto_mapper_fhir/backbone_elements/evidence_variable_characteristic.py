@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # description (string)
     pass
+    # description (string)
     # usageContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
 
@@ -58,8 +58,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # participantEffectiveDuration (Duration)
-    from spark_auto_mapper_fhir.complex_types.duration import Duration
-
     # participantEffectiveTiming (Timing)
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
 

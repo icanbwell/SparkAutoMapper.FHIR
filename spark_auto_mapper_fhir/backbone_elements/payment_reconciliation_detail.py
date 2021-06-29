@@ -12,12 +12,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # predecessor (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -32,37 +31,19 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for request
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # submitter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for submitter
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # response (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for response
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # date (date)
     # responsible (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for responsible
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-
     # payee (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for payee
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # amount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
 

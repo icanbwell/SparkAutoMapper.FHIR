@@ -14,12 +14,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.relatedperson import RelatedPersonSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -47,8 +46,6 @@ if TYPE_CHECKING:
     )
 
     # birthDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # address (Address)
     from spark_auto_mapper_fhir.complex_types.address import Address
 

@@ -15,12 +15,11 @@ from spark_fhir_schemas.r4.resources.organizationaffiliation import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -31,17 +30,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # participatingOrganization (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for participatingOrganization
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # network (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for network
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -52,8 +43,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # specialty (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
         PracticeSettingCodeValueSetCode,
@@ -61,14 +50,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for specialty
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # healthcareService (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for healthcareService
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
 
@@ -76,8 +61,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 
     # endpoint (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 

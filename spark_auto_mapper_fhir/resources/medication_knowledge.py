@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.medicationknowledge import (
 )
 
 if TYPE_CHECKING:
+    pass
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -36,8 +37,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # doseForm (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for doseForm
     from spark_auto_mapper_fhir.value_sets.snomedct_form_codes import (
         SNOMEDCTFormCodesCode,
@@ -48,22 +47,16 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # synonym (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # relatedMedicationKnowledge (MedicationKnowledge.RelatedMedicationKnowledge)
     from spark_auto_mapper_fhir.backbone_elements.medication_knowledge_related_medication_knowledge import (
         MedicationKnowledgeRelatedMedicationKnowledge,
     )
 
     # associatedMedication (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for associatedMedication
     from spark_auto_mapper_fhir.resources.medication import Medication
 
     # productType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for productType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
@@ -82,8 +75,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
     # intendedRoute (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for intendedRoute
     from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
         SNOMEDCTRouteCodesCode,
@@ -121,8 +112,6 @@ if TYPE_CHECKING:
     )
 
     # contraindication (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for contraindication
     from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
 

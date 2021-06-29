@@ -14,12 +14,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.practitionerrole import PractitionerRoleSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
@@ -30,8 +29,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 
     # organization (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for organization
     from spark_auto_mapper_fhir.resources.organization import Organization
 
@@ -43,8 +40,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # specialty (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
         PracticeSettingCodeValueSetCode,
@@ -52,14 +47,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for specialty
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # healthcareService (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for healthcareService
     from spark_auto_mapper_fhir.resources.healthcare_service import HealthcareService
 
@@ -77,11 +68,7 @@ if TYPE_CHECKING:
     )
 
     # availabilityExceptions (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # endpoint (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 

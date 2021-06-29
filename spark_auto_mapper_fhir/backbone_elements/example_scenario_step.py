@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # process (ExampleScenario.Process)
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_process import (
         ExampleScenarioProcess,

@@ -14,12 +14,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.practitioner import PractitionerSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # name (HumanName)
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
 
@@ -35,8 +34,6 @@ if TYPE_CHECKING:
     )
 
     # birthDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # photo (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 

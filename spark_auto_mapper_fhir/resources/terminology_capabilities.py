@@ -18,32 +18,19 @@ from spark_fhir_schemas.r4.resources.terminologycapabilities import (
 )
 
 if TYPE_CHECKING:
+    pass
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # version (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (PublicationStatus)
     from spark_auto_mapper_fhir.value_sets.publication_status import (
         PublicationStatusCode,
     )
 
     # experimental (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # publisher (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
@@ -63,11 +50,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for jurisdiction
     # purpose (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # copyright (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # kind (CapabilityStatementKind)
     from spark_auto_mapper_fhir.value_sets.capability_statement_kind import (
         CapabilityStatementKindCode,
@@ -84,8 +67,6 @@ if TYPE_CHECKING:
     )
 
     # lockedDate (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # codeSystem (TerminologyCapabilities.CodeSystem)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_code_system import (
         TerminologyCapabilitiesCodeSystem,

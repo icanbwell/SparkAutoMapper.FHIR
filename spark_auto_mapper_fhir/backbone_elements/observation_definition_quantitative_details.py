@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # customaryUnit (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -20,12 +21,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for customaryUnit
     # unit (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for unit
     # Import for CodeableConcept for unit
-    from spark_auto_mapper_fhir.value_sets.ucum_codes import UCUMCodesCode
-
     # End Import for CodeableConcept for unit
     # conversionFactor (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal

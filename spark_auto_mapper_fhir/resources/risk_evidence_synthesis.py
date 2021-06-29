@@ -18,32 +18,21 @@ from spark_fhir_schemas.r4.resources.riskevidencesynthesis import (
 )
 
 if TYPE_CHECKING:
+    pass
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # version (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (PublicationStatus)
     from spark_auto_mapper_fhir.value_sets.publication_status import (
         PublicationStatusCode,
     )
 
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # publisher (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
@@ -66,49 +55,29 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for jurisdiction
     # copyright (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # approvalDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # lastReviewDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # topic (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopicCode
 
     # End Import for CodeableConcept for topic
     # author (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # editor (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # reviewer (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # endorser (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # relatedArtifact (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
     # synthesisType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for synthesisType
     from spark_auto_mapper_fhir.value_sets.synthesis_type import SynthesisTypeCode
 
     # End Import for CodeableConcept for synthesisType
     # studyType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for studyType
     from spark_auto_mapper_fhir.value_sets.study_type import StudyTypeCode
 
@@ -120,17 +89,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
 
     # exposure (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for exposure
-    from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
-
     # outcome (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for outcome
-    from spark_auto_mapper_fhir.resources.evidence_variable import EvidenceVariable
-
     # sampleSize (RiskEvidenceSynthesis.SampleSize)
     from spark_auto_mapper_fhir.backbone_elements.risk_evidence_synthesis_sample_size import (
         RiskEvidenceSynthesisSampleSize,

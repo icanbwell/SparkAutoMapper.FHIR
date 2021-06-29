@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.measurereport import MeasureReportSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -42,15 +43,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
 
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # reporter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reporter
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # period (Period)
@@ -71,8 +65,6 @@ if TYPE_CHECKING:
     )
 
     # evaluatedResource (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for evaluatedResource
     from spark_auto_mapper_fhir.resources.resource import Resource
 

@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # baseFormulaType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -23,8 +24,6 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for baseFormulaType
     # baseFormulaProductName (string)
     # additiveType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for additiveType
     # Import for CodeableConcept for additiveType
     from spark_auto_mapper_fhir.value_sets.enteral_formula_additive_type_code import (
@@ -37,8 +36,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # routeofAdministration (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for routeofAdministration
     # Import for CodeableConcept for routeofAdministration
     from spark_auto_mapper_fhir.value_sets.enteral_route_codes import (
@@ -52,8 +49,6 @@ if TYPE_CHECKING:
     )
 
     # maxVolumeToDeliver (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # administrationInstruction (string)
 
 

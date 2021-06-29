@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # material (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -22,8 +23,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for material
     # type_ (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.specimen_container_type import (
@@ -32,8 +31,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # cap (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for cap
     # Import for CodeableConcept for cap
     from spark_auto_mapper_fhir.value_sets.container_cap import ContainerCapCode
@@ -50,8 +47,6 @@ if TYPE_CHECKING:
 
     # preparation (string)
     # minimumVolumeQuantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # minimumVolumeString (string)
 
 

@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # outcomeCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -25,14 +26,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for outcomeReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # progress (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # reference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reference
     from spark_auto_mapper_fhir.resources.appointment import Appointment
     from spark_auto_mapper_fhir.resources.communication_request import (

@@ -14,6 +14,7 @@ from spark_fhir_schemas.r4.resources.medicinalproductundesirableeffect import (
 )
 
 if TYPE_CHECKING:
+    pass
     # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -29,18 +30,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for symptomConditionEffect
     # classification (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for classification
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for classification
     # frequencyOfOccurrence (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for frequencyOfOccurrence
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for frequencyOfOccurrence
     # population (Population)
     from spark_auto_mapper_fhir.backbone_elements.population import Population

@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # context (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
@@ -21,16 +22,12 @@ if TYPE_CHECKING:
 
     # element (string)
     # variable (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # listMode (StructureMapTargetListMode)
     from spark_auto_mapper_fhir.value_sets.structure_map_target_list_mode import (
         StructureMapTargetListModeCode,
     )
 
     # listRuleId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # transform (StructureMapTransform)
     from spark_auto_mapper_fhir.value_sets.structure_map_transform import (
         StructureMapTransformCode,

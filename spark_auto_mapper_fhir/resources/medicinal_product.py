@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.medicinalproduct import MedicinalProductSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -27,46 +28,22 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for domain
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for domain
     # combinedPharmaceuticalDoseForm (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for combinedPharmaceuticalDoseForm
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for combinedPharmaceuticalDoseForm
     # legalStatusOfSupply (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for legalStatusOfSupply
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for legalStatusOfSupply
     # additionalMonitoringIndicator (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for additionalMonitoringIndicator
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for additionalMonitoringIndicator
     # specialMeasures (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # paediatricUseIndicator (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for paediatricUseIndicator
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for paediatricUseIndicator
     # productClassification (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for productClassification
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for productClassification
     # marketingStatus (MarketingStatus)
     from spark_auto_mapper_fhir.backbone_elements.marketing_status import (
@@ -82,35 +59,23 @@ if TYPE_CHECKING:
     )
 
     # packagedMedicinalProduct (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for packagedMedicinalProduct
     from spark_auto_mapper_fhir.resources.medicinal_product_packaged import (
         MedicinalProductPackaged,
     )
 
     # attachedDocument (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for attachedDocument
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
     # masterFile (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for masterFile
-    from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
-
     # contact (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for contact
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # clinicalTrial (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for clinicalTrial
     from spark_auto_mapper_fhir.resources.research_study import ResearchStudy
 
@@ -120,8 +85,6 @@ if TYPE_CHECKING:
     )
 
     # crossReference (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # manufacturingBusinessOperation (MedicinalProduct.ManufacturingBusinessOperation)
     from spark_auto_mapper_fhir.backbone_elements.medicinal_product_manufacturing_business_operation import (
         MedicinalProductManufacturingBusinessOperation,

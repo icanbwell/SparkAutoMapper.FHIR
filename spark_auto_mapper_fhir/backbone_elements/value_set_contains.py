@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # system (uri)
     pass
+    # system (uri)
     # abstract (boolean)
     # inactive (boolean)
     # version (string)

@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # path (string)
     pass
+    # path (string)
     # min (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 

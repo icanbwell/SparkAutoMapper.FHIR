@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # result (TestReportActionResult)
     from spark_auto_mapper_fhir.complex_types.test_report_action_result import (
         TestReportActionResult,

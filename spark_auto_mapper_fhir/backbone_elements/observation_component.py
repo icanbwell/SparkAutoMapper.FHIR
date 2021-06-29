@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -23,8 +24,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # dataAbsentReason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for dataAbsentReason
     # Import for CodeableConcept for dataAbsentReason
     from spark_auto_mapper_fhir.value_sets.data_absent_reason import (
@@ -33,8 +32,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for dataAbsentReason
     # interpretation (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for interpretation
     # Import for CodeableConcept for interpretation
     from spark_auto_mapper_fhir.value_sets.observation_interpretation_codes import (
@@ -51,8 +48,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # valueCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for valueCodeableConcept
     # Import for CodeableConcept for valueCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode

@@ -16,6 +16,7 @@ from spark_fhir_schemas.r4.resources.coverageeligibilityrequest import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -45,32 +46,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # enterer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for enterer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # provider (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for provider
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # insurer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for insurer
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # facility (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for facility
     from spark_auto_mapper_fhir.resources.location import Location
 
@@ -90,8 +77,6 @@ if TYPE_CHECKING:
     )
 
     # servicedDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # servicedPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

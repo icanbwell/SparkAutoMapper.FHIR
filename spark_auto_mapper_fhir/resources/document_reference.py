@@ -13,12 +13,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.documentreference import DocumentReferenceSchema
 
 if TYPE_CHECKING:
+    pass
     # masterIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # identifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # status (DocumentReferenceStatus)
     from spark_auto_mapper_fhir.value_sets.document_reference_status import (
         DocumentReferenceStatusCode,
@@ -39,8 +38,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # category (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.document_class_value_set import (
         DocumentClassValueSetCode,
@@ -60,41 +57,22 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
     # author (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for author
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
-    from spark_auto_mapper_fhir.resources.device import Device
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
     # authenticator (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for authenticator
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # custodian (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for custodian
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # relatesTo (DocumentReference.RelatesTo)
     from spark_auto_mapper_fhir.backbone_elements.document_reference_relates_to import (
         DocumentReferenceRelatesTo,
     )
 
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # securityLabel (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for securityLabel
     from spark_auto_mapper_fhir.value_sets.all_security_labels import (
         AllSecurityLabelsCode,

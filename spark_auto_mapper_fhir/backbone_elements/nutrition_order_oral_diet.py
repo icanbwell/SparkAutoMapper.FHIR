@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -33,8 +34,6 @@ if TYPE_CHECKING:
     )
 
     # fluidConsistencyType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for fluidConsistencyType
     # Import for CodeableConcept for fluidConsistencyType
     from spark_auto_mapper_fhir.value_sets.fluid_consistency_type_codes import (

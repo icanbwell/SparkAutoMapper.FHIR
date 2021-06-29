@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.substancepolymer import SubstancePolymerSchema
 
 if TYPE_CHECKING:
+    pass
     # class_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -21,22 +22,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for class_
     # geometry (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for geometry
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for geometry
     # copolymerConnectivity (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for copolymerConnectivity
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for copolymerConnectivity
     # modification (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # monomerSet (SubstancePolymer.MonomerSet)
     from spark_auto_mapper_fhir.backbone_elements.substance_polymer_monomer_set import (
         SubstancePolymerMonomerSet,

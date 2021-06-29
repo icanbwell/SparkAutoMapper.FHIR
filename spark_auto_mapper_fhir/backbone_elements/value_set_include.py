@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # system (uri)
     pass
+    # system (uri)
     # version (string)
     # concept (ValueSet.Concept)
     from spark_auto_mapper_fhir.backbone_elements.value_set_concept import (

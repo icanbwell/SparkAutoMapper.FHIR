@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # method (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -19,12 +20,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for method
     # type_ (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for type_
     # Import for CodeableConcept for type_
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for type_
     # amount (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity

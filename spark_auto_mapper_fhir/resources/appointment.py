@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.appointment import AppointmentSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -32,22 +33,16 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for cancelationReason
     # serviceCategory (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for serviceCategory
     from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategoryCode
 
     # End Import for CodeableConcept for serviceCategory
     # serviceType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for serviceType
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
 
     # End Import for CodeableConcept for serviceType
     # specialty (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for specialty
     from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
         PracticeSettingCodeValueSetCode,
@@ -55,15 +50,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for specialty
     # appointmentType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for appointmentType
     from spark_auto_mapper_fhir.value_sets.v2_0276 import V2_0276
 
     # End Import for CodeableConcept for appointmentType
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.encounter_reason_codes import (
         EncounterReasonCodesCode,
@@ -85,11 +76,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # supportingInformation (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supportingInformation
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -97,29 +84,17 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
     # end (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
-
     # minutesDuration (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
     # slot (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for slot
     from spark_auto_mapper_fhir.resources.slot import Slot
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # comment (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # patientInstruction (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # basedOn (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 

@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.imagingstudy import ImagingStudySchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -38,17 +39,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # started (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # basedOn (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for basedOn
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
@@ -59,22 +54,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.task import Task
 
     # referrer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for referrer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
     # interpreter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for interpreter
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-
     # endpoint (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 
@@ -82,11 +68,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # numberOfInstances (unsignedInt)
-    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # procedureReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for procedureReference
     from spark_auto_mapper_fhir.resources.procedure import Procedure
 
@@ -94,18 +76,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for procedureCode
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for procedureCode
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import (
         ProcedureReasonCodesCode,
@@ -113,8 +89,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
@@ -126,8 +100,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # series (ImagingStudy.Series)
     from spark_auto_mapper_fhir.backbone_elements.imaging_study_series import (
         ImagingStudySeries,

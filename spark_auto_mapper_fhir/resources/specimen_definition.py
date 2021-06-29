@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.specimendefinition import SpecimenDefinitionSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -24,18 +25,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for typeCollected
     # patientPreparation (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for patientPreparation
     from spark_auto_mapper_fhir.value_sets.prepare_patient import PreparePatientCode
 
     # End Import for CodeableConcept for patientPreparation
     # timeAspect (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # collection (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for collection
     from spark_auto_mapper_fhir.value_sets.specimen_collection import (
         SpecimenCollectionCode,

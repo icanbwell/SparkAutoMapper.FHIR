@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.medicationstatement import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -27,8 +28,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.medication_administration import (
         MedicationAdministration,
@@ -52,8 +51,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for statusReason
     # category (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.medication_usage_category_codes import (
         MedicationUsageCategoryCodesCode,
@@ -61,41 +58,28 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # subject (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
 
     # context (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for context
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
 
     # dateAsserted (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # informationSource (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for informationSource
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # derivedFrom (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for derivedFrom
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
         Condition_or_Problem_or_DiagnosisCodesCode,
@@ -103,11 +87,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
-    from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
 
     # note (Annotation)
@@ -117,21 +98,15 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
 
     # medicationCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for medicationCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for medicationCodeableConcept
     # medicationReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for medicationReference
     from spark_auto_mapper_fhir.resources.medication import Medication
 
     # effectiveDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

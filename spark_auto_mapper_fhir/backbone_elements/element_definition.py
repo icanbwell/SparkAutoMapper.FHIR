@@ -17,8 +17,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # path (string)
     pass
+    # path (string)
     # representation (PropertyRepresentation)
     from spark_auto_mapper_fhir.value_sets.property_representation import (
         PropertyRepresentationCode,
@@ -45,11 +45,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
     # comment (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # requirements (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # alias (string)
     # min (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
@@ -67,8 +63,6 @@ if TYPE_CHECKING:
     )
 
     # meaningWhenMissing (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # orderMeaning (string)
     # example (ElementDefinition.Example)
     from spark_auto_mapper_fhir.backbone_elements.element_definition_example import (
@@ -114,15 +108,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # defaultValueId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # defaultValueInstant (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
     # defaultValueInteger (integer)
     # defaultValueMarkdown (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # defaultValueOid (oid)
     from spark_auto_mapper_fhir.complex_types.oid import oid
 
@@ -134,8 +124,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.time import time
 
     # defaultValueUnsignedInt (unsignedInt)
-    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # defaultValueUri (uri)
     # defaultValueUrl (url)
     from spark_auto_mapper_fhir.complex_types.url import url
@@ -164,12 +152,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for defaultValueCodeableConcept
     # defaultValueCoding (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for defaultValueCoding
     # Import for CodeableConcept for defaultValueCoding
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for defaultValueCoding
     # defaultValueContactPoint (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -208,8 +192,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for defaultValueReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # defaultValueSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 
@@ -254,356 +236,137 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.meta import Meta
 
     # fixedBase64Binary (base64Binary)
-    from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
-
     # fixedBoolean (boolean)
     # fixedCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
-
     # fixedCode (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
-
     # fixedDate (date)
     # fixedDateTime (dateTime)
     # fixedDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # fixedId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # fixedInstant (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
-
     # fixedInteger (integer)
     # fixedMarkdown (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # fixedOid (oid)
-    from spark_auto_mapper_fhir.complex_types.oid import oid
-
     # fixedPositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # fixedString (string)
     # fixedTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
-
     # fixedUnsignedInt (unsignedInt)
-    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # fixedUri (uri)
     # fixedUrl (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
-
     # fixedUuid (uuid)
-    from spark_auto_mapper_fhir.complex_types.uuid import uuid
-
     # fixedAddress (Address)
-    from spark_auto_mapper_fhir.complex_types.address import Address
-
     # fixedAge (Age)
-    from spark_auto_mapper_fhir.complex_types.age import Age
-
     # fixedAnnotation (Annotation)
-    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-
     # fixedAttachment (Attachment)
-    from spark_auto_mapper_fhir.complex_types.attachment import Attachment
-
     # fixedCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for fixedCodeableConcept
     # Import for CodeableConcept for fixedCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for fixedCodeableConcept
     # fixedCoding (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for fixedCoding
     # Import for CodeableConcept for fixedCoding
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for fixedCoding
     # fixedContactPoint (ContactPoint)
-    from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
-
     # fixedCount (Count)
-    from spark_auto_mapper_fhir.complex_types.count import Count
-
     # fixedDistance (Distance)
-    from spark_auto_mapper_fhir.complex_types.distance import Distance
-
     # fixedDuration (Duration)
-    from spark_auto_mapper_fhir.complex_types.duration import Duration
-
     # fixedHumanName (HumanName)
-    from spark_auto_mapper_fhir.complex_types.human_name import HumanName
-
     # fixedIdentifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # fixedMoney (Money)
-    from spark_auto_mapper_fhir.complex_types.money import Money
-
     # fixedPeriod (Period)
-    from spark_auto_mapper_fhir.complex_types.period import Period
-
     # fixedQuantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # fixedRange (Range)
-    from spark_auto_mapper_fhir.complex_types.range import Range
-
     # fixedRatio (Ratio)
-    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # fixedReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for fixedReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # fixedSampledData (SampledData)
-    from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
-
     # fixedSignature (Signature)
-    from spark_auto_mapper_fhir.complex_types.signature import Signature
-
     # fixedTiming (Timing)
-    from spark_auto_mapper_fhir.backbone_elements.timing import Timing
-
     # fixedContactDetail (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # fixedContributor (Contributor)
-    from spark_auto_mapper_fhir.complex_types.contributor import Contributor
-
     # fixedDataRequirement (DataRequirement)
-    from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
-
     # fixedExpression (Expression)
-    from spark_auto_mapper_fhir.complex_types.expression import Expression
-
     # fixedParameterDefinition (ParameterDefinition)
-    from spark_auto_mapper_fhir.complex_types.parameter_definition import (
-        ParameterDefinition,
-    )
-
     # fixedRelatedArtifact (RelatedArtifact)
-    from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
-
     # fixedTriggerDefinition (TriggerDefinition)
-    from spark_auto_mapper_fhir.complex_types.trigger_definition import (
-        TriggerDefinition,
-    )
-
     # fixedUsageContext (UsageContext)
-    from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
-
     # fixedDosage (Dosage)
-    from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
-
     # fixedMeta (Meta)
-    from spark_auto_mapper_fhir.complex_types.meta import Meta
-
     # patternBase64Binary (base64Binary)
-    from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
-
     # patternBoolean (boolean)
     # patternCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
-
     # patternCode (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
-
     # patternDate (date)
     # patternDateTime (dateTime)
     # patternDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # patternId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # patternInstant (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
-
     # patternInteger (integer)
     # patternMarkdown (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # patternOid (oid)
-    from spark_auto_mapper_fhir.complex_types.oid import oid
-
     # patternPositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # patternString (string)
     # patternTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
-
     # patternUnsignedInt (unsignedInt)
-    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # patternUri (uri)
     # patternUrl (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
-
     # patternUuid (uuid)
-    from spark_auto_mapper_fhir.complex_types.uuid import uuid
-
     # patternAddress (Address)
-    from spark_auto_mapper_fhir.complex_types.address import Address
-
     # patternAge (Age)
-    from spark_auto_mapper_fhir.complex_types.age import Age
-
     # patternAnnotation (Annotation)
-    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-
     # patternAttachment (Attachment)
-    from spark_auto_mapper_fhir.complex_types.attachment import Attachment
-
     # patternCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for patternCodeableConcept
     # Import for CodeableConcept for patternCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for patternCodeableConcept
     # patternCoding (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for patternCoding
     # Import for CodeableConcept for patternCoding
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for patternCoding
     # patternContactPoint (ContactPoint)
-    from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
-
     # patternCount (Count)
-    from spark_auto_mapper_fhir.complex_types.count import Count
-
     # patternDistance (Distance)
-    from spark_auto_mapper_fhir.complex_types.distance import Distance
-
     # patternDuration (Duration)
-    from spark_auto_mapper_fhir.complex_types.duration import Duration
-
     # patternHumanName (HumanName)
-    from spark_auto_mapper_fhir.complex_types.human_name import HumanName
-
     # patternIdentifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # patternMoney (Money)
-    from spark_auto_mapper_fhir.complex_types.money import Money
-
     # patternPeriod (Period)
-    from spark_auto_mapper_fhir.complex_types.period import Period
-
     # patternQuantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # patternRange (Range)
-    from spark_auto_mapper_fhir.complex_types.range import Range
-
     # patternRatio (Ratio)
-    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # patternReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for patternReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # patternSampledData (SampledData)
-    from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
-
     # patternSignature (Signature)
-    from spark_auto_mapper_fhir.complex_types.signature import Signature
-
     # patternTiming (Timing)
-    from spark_auto_mapper_fhir.backbone_elements.timing import Timing
-
     # patternContactDetail (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # patternContributor (Contributor)
-    from spark_auto_mapper_fhir.complex_types.contributor import Contributor
-
     # patternDataRequirement (DataRequirement)
-    from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
-
     # patternExpression (Expression)
-    from spark_auto_mapper_fhir.complex_types.expression import Expression
-
     # patternParameterDefinition (ParameterDefinition)
-    from spark_auto_mapper_fhir.complex_types.parameter_definition import (
-        ParameterDefinition,
-    )
-
     # patternRelatedArtifact (RelatedArtifact)
-    from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
-
     # patternTriggerDefinition (TriggerDefinition)
-    from spark_auto_mapper_fhir.complex_types.trigger_definition import (
-        TriggerDefinition,
-    )
-
     # patternUsageContext (UsageContext)
-    from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
-
     # patternDosage (Dosage)
-    from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
-
     # patternMeta (Meta)
-    from spark_auto_mapper_fhir.complex_types.meta import Meta
-
     # minValueDate (date)
     # minValueDateTime (dateTime)
     # minValueInstant (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
-
     # minValueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
-
     # minValueDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # minValueInteger (integer)
     # minValuePositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # minValueUnsignedInt (unsignedInt)
-    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # minValueQuantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # maxValueDate (date)
     # maxValueDateTime (dateTime)
     # maxValueInstant (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
-
     # maxValueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
-
     # maxValueDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # maxValueInteger (integer)
     # maxValuePositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # maxValueUnsignedInt (unsignedInt)
-    from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # maxValueQuantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
 
 # This file is auto-generated by generate_classes so do not edit manually

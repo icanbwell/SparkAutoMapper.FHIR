@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (qualityType)
     from spark_auto_mapper_fhir.value_sets.quality_type import QualityTypeCode
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # method (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for method
     # Import for CodeableConcept for method
     from spark_auto_mapper_fhir.value_sets.fda__method import FDA_MethodCode
@@ -41,26 +40,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # queryTP (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # truthFN (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # queryFP (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # gtFP (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # precision (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # recall (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # fScore (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # roc (MolecularSequence.Roc)
     from spark_auto_mapper_fhir.backbone_elements.molecular_sequence_roc import (
         MolecularSequenceRoc,

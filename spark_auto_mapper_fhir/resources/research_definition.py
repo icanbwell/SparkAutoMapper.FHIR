@@ -17,41 +17,24 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.researchdefinition import ResearchDefinitionSchema
 
 if TYPE_CHECKING:
+    pass
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # version (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # shortTitle (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # subtitle (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (PublicationStatus)
     from spark_auto_mapper_fhir.value_sets.publication_status import (
         PublicationStatusCode,
     )
 
     # experimental (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # publisher (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
@@ -59,8 +42,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
     # comment (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
 
@@ -74,42 +55,22 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for jurisdiction
     # purpose (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # usage (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # copyright (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # approvalDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # lastReviewDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # topic (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for topic
     from spark_auto_mapper_fhir.value_sets.definition_topic import DefinitionTopicCode
 
     # End Import for CodeableConcept for topic
     # author (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # editor (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # reviewer (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # endorser (ContactDetail)
-    from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
-
     # relatedArtifact (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
@@ -125,39 +86,17 @@ if TYPE_CHECKING:
     )
 
     # exposure (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for exposure
-    from spark_auto_mapper_fhir.resources.research_element_definition import (
-        ResearchElementDefinition,
-    )
-
     # exposureAlternative (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for exposureAlternative
-    from spark_auto_mapper_fhir.resources.research_element_definition import (
-        ResearchElementDefinition,
-    )
-
     # outcome (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for outcome
-    from spark_auto_mapper_fhir.resources.research_element_definition import (
-        ResearchElementDefinition,
-    )
-
     # subjectCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for subjectCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for subjectCodeableConcept
     # subjectReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subjectReference
     from spark_auto_mapper_fhir.resources.group import Group
 

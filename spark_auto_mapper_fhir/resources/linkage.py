@@ -13,9 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.linkage import LinkageSchema
 
 if TYPE_CHECKING:
+    pass
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 

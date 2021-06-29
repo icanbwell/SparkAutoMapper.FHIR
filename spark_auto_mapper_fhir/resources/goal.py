@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.goal import GoalSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -32,22 +33,16 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for achievementStatus
     # category (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.goal_category import GoalCategoryCode
 
     # End Import for CodeableConcept for category
     # priority (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for priority
     from spark_auto_mapper_fhir.value_sets.goal_priority import GoalPriorityCode
 
     # End Import for CodeableConcept for priority
     # description (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for description
     from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
         SNOMEDCTClinicalFindingsCode,
@@ -66,23 +61,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.goal_target import GoalTarget
 
     # statusDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # statusReason (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # expressedBy (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for expressedBy
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
     # addresses (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for addresses
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
@@ -97,26 +83,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # outcomeCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for outcomeCode
-    from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
-        SNOMEDCTClinicalFindingsCode,
-    )
-
     # End Import for CodeableConcept for outcomeCode
     # outcomeReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for outcomeReference
-    from spark_auto_mapper_fhir.resources.observation import Observation
-
     # startDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # startCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for startCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 

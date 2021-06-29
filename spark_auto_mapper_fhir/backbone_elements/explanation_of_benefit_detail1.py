@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # productOrService (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -19,8 +20,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for productOrService
     # modifier (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for modifier
     # Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
@@ -38,8 +37,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # net (Money)
-    from spark_auto_mapper_fhir.complex_types.money import Money
-
     # noteNumber (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 

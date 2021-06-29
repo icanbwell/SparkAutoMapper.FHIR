@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
@@ -24,8 +25,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for revenue
     # category (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for category
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
@@ -34,16 +33,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # productOrService (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for productOrService
     # Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodesCode
 
     # End Import for CodeableConcept for productOrService
     # modifier (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for modifier
     # Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
@@ -52,8 +47,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for modifier
     # programCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for programCode
     # Import for CodeableConcept for programCode
     from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import (
@@ -71,8 +64,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # net (Money)
-    from spark_auto_mapper_fhir.complex_types.money import Money
-
     # udi (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -80,8 +71,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # noteNumber (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # adjudication (ExplanationOfBenefit.Adjudication)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_adjudication import (
         ExplanationOfBenefitAdjudication,

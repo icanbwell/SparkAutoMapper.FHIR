@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # relationship (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -25,12 +26,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
 
     # amountType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for amountType
     # Import for CodeableConcept for amountType
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for amountType
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -39,20 +36,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
     # substanceReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for substanceReference
     from spark_auto_mapper_fhir.resources.substance_specification import (
         SubstanceSpecification,
     )
 
     # substanceCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for substanceCodeableConcept
     # Import for CodeableConcept for substanceCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for substanceCodeableConcept
     # amountQuantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
@@ -61,8 +52,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.range import Range
 
     # amountRatio (Ratio)
-    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # amountString (string)
 
 

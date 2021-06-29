@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.substanceprotein import SubstanceProteinSchema
 
 if TYPE_CHECKING:
+    pass
     # sequenceType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -22,11 +23,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for sequenceType
     # numberOfSubunits (integer)
-    from spark_auto_mapper_fhir.complex_types.integer import FhirInteger
-
     # disulfideLinkage (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # subunit (SubstanceProtein.Subunit)
     from spark_auto_mapper_fhir.backbone_elements.substance_protein_subunit import (
         SubstanceProteinSubunit,

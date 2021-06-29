@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # event (dateTime)
     pass
+    # event (dateTime)
     # repeat (Timing.Repeat)
     from spark_auto_mapper_fhir.backbone_elements.timing_repeat import TimingRepeat
 

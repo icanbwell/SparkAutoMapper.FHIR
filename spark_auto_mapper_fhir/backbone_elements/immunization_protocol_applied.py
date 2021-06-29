@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # series (string)
     pass
+    # series (string)
     # authority (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -34,8 +34,6 @@ if TYPE_CHECKING:
 
     # doseNumberString (string)
     # seriesDosesPositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # seriesDosesString (string)
 
 

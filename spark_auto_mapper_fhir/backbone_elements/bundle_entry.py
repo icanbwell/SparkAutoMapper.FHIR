@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # link (Bundle.Link)
     from spark_auto_mapper_fhir.backbone_elements.bundle_link import BundleLink
 

@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # product (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # cylinder (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # axis (integer)
     # prism (VisionPrescription.Prism)
     from spark_auto_mapper_fhir.backbone_elements.vision_prescription_prism import (
@@ -38,17 +37,9 @@ if TYPE_CHECKING:
     )
 
     # add (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # power (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # backCurve (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # diameter (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
-
     # duration (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 

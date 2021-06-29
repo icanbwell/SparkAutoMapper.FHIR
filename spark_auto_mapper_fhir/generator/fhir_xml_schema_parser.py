@@ -77,6 +77,7 @@ class FhirEntity:
     is_value_set: bool = False
     value_set_concepts: Optional[List[FhirValueSetConcept]] = None
     value_set_url: Optional[str] = None
+    is_basic_type: bool = False
 
 
 class FhirXmlSchemaParser:
@@ -221,6 +222,7 @@ class FhirXmlSchemaParser:
                 fhir_entity.cleaned_name = FhirXmlSchemaParser.cleaned_type_mapping[
                     fhir_entity.fhir_name
                 ]
+                fhir_entity.is_basic_type = True
 
         # find all codeable concepts that are not mapped
 

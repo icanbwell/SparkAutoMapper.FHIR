@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # preAdmissionIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -29,32 +30,24 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for admitSource
     # reAdmission (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for reAdmission
     # Import for CodeableConcept for reAdmission
     from spark_auto_mapper_fhir.value_sets.v2_0092 import V2_0092
 
     # End Import for CodeableConcept for reAdmission
     # dietPreference (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for dietPreference
     # Import for CodeableConcept for dietPreference
     from spark_auto_mapper_fhir.value_sets.diet import DietCode
 
     # End Import for CodeableConcept for dietPreference
     # specialCourtesy (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for specialCourtesy
     # Import for CodeableConcept for specialCourtesy
     from spark_auto_mapper_fhir.value_sets.special_courtesy import SpecialCourtesyCode
 
     # End Import for CodeableConcept for specialCourtesy
     # specialArrangement (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for specialArrangement
     # Import for CodeableConcept for specialArrangement
     from spark_auto_mapper_fhir.value_sets.special_arrangements import (
@@ -63,15 +56,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for specialArrangement
     # destination (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for destination
-    from spark_auto_mapper_fhir.resources.location import Location
-    from spark_auto_mapper_fhir.resources.organization import Organization
-
     # dischargeDisposition (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for dischargeDisposition
     # Import for CodeableConcept for dischargeDisposition
     from spark_auto_mapper_fhir.value_sets.discharge_disposition import (

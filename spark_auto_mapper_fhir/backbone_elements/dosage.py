@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # sequence (integer)
     pass
+    # sequence (integer)
     # text (string)
     # additionalInstruction (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -31,8 +31,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
 
     # site (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for site
     # Import for CodeableConcept for site
     from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import (
@@ -41,8 +39,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for site
     # route (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for route
     # Import for CodeableConcept for route
     from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
@@ -51,8 +47,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for route
     # method (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for method
     # Import for CodeableConcept for method
     from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import (
@@ -72,12 +66,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # maxDosePerLifetime (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # asNeededBoolean (boolean)
     # asNeededCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for asNeededCodeableConcept
     # Import for CodeableConcept for asNeededCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode

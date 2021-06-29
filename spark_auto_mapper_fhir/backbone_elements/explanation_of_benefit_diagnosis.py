@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
@@ -24,8 +25,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # onAdmission (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for onAdmission
     # Import for CodeableConcept for onAdmission
     from spark_auto_mapper_fhir.value_sets.example_diagnosis_on_admission_codes import (
@@ -34,8 +33,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for onAdmission
     # packageCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for packageCode
     # Import for CodeableConcept for packageCode
     from spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes import (
@@ -44,8 +41,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for packageCode
     # diagnosisCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for diagnosisCodeableConcept
     # Import for CodeableConcept for diagnosisCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode

@@ -14,12 +14,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.testreport import TestReportSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (TestReportStatus)
     from spark_auto_mapper_fhir.value_sets.test_report_status import (
         TestReportStatusCode,
@@ -40,11 +39,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # tester (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # issued (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # participant (TestReport.Participant)
     from spark_auto_mapper_fhir.backbone_elements.test_report_participant import (
         TestReportParticipant,

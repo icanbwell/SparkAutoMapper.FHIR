@@ -14,6 +14,7 @@ from spark_fhir_schemas.r4.resources.medicinalproductcontraindication import (
 )
 
 if TYPE_CHECKING:
+    pass
     # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -29,22 +30,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for disease
     # diseaseStatus (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for diseaseStatus
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for diseaseStatus
     # comorbidity (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for comorbidity
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for comorbidity
     # therapeuticIndication (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for therapeuticIndication
     from spark_auto_mapper_fhir.resources.medicinal_product_indication import (
         MedicinalProductIndication,

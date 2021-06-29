@@ -16,6 +16,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.immunization import ImmunizationSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -34,8 +35,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for statusReason
     # vaccineCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for vaccineCode
     from spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set import (
         VaccineAdministeredValueSetCode,
@@ -49,20 +48,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # recorded (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # primarySource (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # reportOrigin (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reportOrigin
     from spark_auto_mapper_fhir.value_sets.immunization_origin_codes import (
         ImmunizationOriginCodesCode,
@@ -70,26 +61,16 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reportOrigin
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # manufacturer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # lotNumber (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # expirationDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # site (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for site
     from spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration import (
         CodesForImmunizationSiteOfAdministrationCode,
@@ -97,8 +78,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for site
     # route (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for route
     from spark_auto_mapper_fhir.value_sets.immunization_route_codes import (
         ImmunizationRouteCodesCode,
@@ -117,8 +96,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.immunization_reason_codes import (
         ImmunizationReasonCodesCode,
@@ -126,19 +103,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
 
     # isSubpotent (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # subpotentReason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for subpotentReason
     from spark_auto_mapper_fhir.value_sets.immunization_subpotent_reason import (
         ImmunizationSubpotentReasonCode,
@@ -151,8 +122,6 @@ if TYPE_CHECKING:
     )
 
     # programEligibility (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for programEligibility
     from spark_auto_mapper_fhir.value_sets.immunization_program_eligibility import (
         ImmunizationProgramEligibilityCode,
@@ -160,8 +129,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for programEligibility
     # fundingSource (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for fundingSource
     from spark_auto_mapper_fhir.value_sets.immunization_funding_source import (
         ImmunizationFundingSourceCode,
@@ -179,10 +146,7 @@ if TYPE_CHECKING:
     )
 
     # occurrenceDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # occurrenceString (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
 
 
 # This file is auto-generated by generate_classes so do not edit manually

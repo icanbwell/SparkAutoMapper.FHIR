@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.person import PersonSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # birthDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # address (Address)
     from spark_auto_mapper_fhir.complex_types.address import Address
 
@@ -44,8 +43,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # link (Person.Link)
     from spark_auto_mapper_fhir.backbone_elements.person_link import PersonLink
 

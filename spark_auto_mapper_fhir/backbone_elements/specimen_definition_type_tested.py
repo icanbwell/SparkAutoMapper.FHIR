@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # isDerived (boolean)
     pass
+    # isDerived (boolean)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -37,8 +37,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.duration import Duration
 
     # rejectionCriterion (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for rejectionCriterion
     # Import for CodeableConcept for rejectionCriterion
     from spark_auto_mapper_fhir.value_sets.rejection_criterion import (

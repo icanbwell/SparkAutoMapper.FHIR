@@ -14,12 +14,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.guidanceresponse import GuidanceResponseSchema
 
 if TYPE_CHECKING:
+    pass
     # requestIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # identifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # status (GuidanceResponseStatus)
     from spark_auto_mapper_fhir.value_sets.guidance_response_status import (
         GuidanceResponseStatusCode,
@@ -33,17 +32,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # occurrenceDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # performer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.device import Device
 
@@ -55,8 +48,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # reasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for reasonReference
     from spark_auto_mapper_fhir.resources.condition import Condition
     from spark_auto_mapper_fhir.resources.observation import Observation
@@ -67,20 +58,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # evaluationMessage (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for evaluationMessage
     from spark_auto_mapper_fhir.resources.operation_outcome import OperationOutcome
 
     # outputParameters (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for outputParameters
     from spark_auto_mapper_fhir.resources.parameters import Parameters
 
     # result (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for result
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
     from spark_auto_mapper_fhir.resources.request_group import RequestGroup
@@ -89,17 +74,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
 
     # moduleUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # moduleCanonical (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # moduleCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for moduleCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for moduleCodeableConcept
 
 

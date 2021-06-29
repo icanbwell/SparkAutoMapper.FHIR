@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -21,8 +22,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # rating (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for rating
     # Import for CodeableConcept for rating
     from spark_auto_mapper_fhir.value_sets.certainty_subcomponent_rating import (

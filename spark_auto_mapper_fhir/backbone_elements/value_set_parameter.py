@@ -15,8 +15,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # name (string)
     pass
+    # name (string)
     # valueString (string)
     # valueBoolean (boolean)
     # valueInteger (integer)

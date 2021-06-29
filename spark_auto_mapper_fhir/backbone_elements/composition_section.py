@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # title (string)
     pass
+    # title (string)
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -36,11 +36,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # focus (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for focus
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # text (Narrative)
     from spark_auto_mapper_fhir.complex_types.narrative import Narrative
 
@@ -48,22 +44,14 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.list_mode import ListModeCode
 
     # orderedBy (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for orderedBy
     # Import for CodeableConcept for orderedBy
     from spark_auto_mapper_fhir.value_sets.list_order_codes import ListOrderCodesCode
 
     # End Import for CodeableConcept for orderedBy
     # entry (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for entry
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # emptyReason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for emptyReason
     # Import for CodeableConcept for emptyReason
     from spark_auto_mapper_fhir.value_sets.list_empty_reasons import (

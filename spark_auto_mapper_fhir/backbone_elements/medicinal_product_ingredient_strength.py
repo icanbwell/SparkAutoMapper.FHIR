@@ -11,18 +11,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # presentation (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
 
     # presentationLowLimit (Ratio)
-    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # concentration (Ratio)
-    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # concentrationLowLimit (Ratio)
-    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # measurementPoint (string)
     # country (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept

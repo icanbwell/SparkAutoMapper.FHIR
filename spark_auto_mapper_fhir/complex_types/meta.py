@@ -21,8 +21,6 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for security
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # Import for CodeableConcept for tag
     from spark_auto_mapper_fhir.value_sets.common_tags import CommonTagsCode
 

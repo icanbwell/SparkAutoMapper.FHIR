@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -28,8 +29,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
 
     # network (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for network
     from spark_auto_mapper_fhir.resources.organization import Organization
 

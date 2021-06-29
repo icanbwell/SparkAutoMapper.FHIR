@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # number (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
@@ -24,18 +25,10 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for classification
     # category (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for category
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
-        ContractResourceScopeCodesCode,
-    )
-
     # End Import for CodeableConcept for category
     # control (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for control
     # Import for CodeableConcept for control
     from spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes import (

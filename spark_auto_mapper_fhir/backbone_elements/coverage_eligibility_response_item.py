@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -24,16 +25,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # productOrService (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for productOrService
     # Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodesCode
 
     # End Import for CodeableConcept for productOrService
     # modifier (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for modifier
     # Import for CodeableConcept for modifier
     from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
@@ -52,8 +49,6 @@ if TYPE_CHECKING:
     # name (string)
     # description (string)
     # network (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for network
     # Import for CodeableConcept for network
     from spark_auto_mapper_fhir.value_sets.network_type_codes import (
@@ -62,16 +57,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for network
     # unit (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for unit
     # Import for CodeableConcept for unit
     from spark_auto_mapper_fhir.value_sets.unit_type_codes import UnitTypeCodesCode
 
     # End Import for CodeableConcept for unit
     # term (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for term
     # Import for CodeableConcept for term
     from spark_auto_mapper_fhir.value_sets.benefit_term_codes import (
@@ -86,8 +77,6 @@ if TYPE_CHECKING:
 
     # authorizationRequired (boolean)
     # authorizationSupporting (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for authorizationSupporting
     # Import for CodeableConcept for authorizationSupporting
     from spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes import (

@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -22,8 +23,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # valueCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for valueCodeableConcept
     # Import for CodeableConcept for valueCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode

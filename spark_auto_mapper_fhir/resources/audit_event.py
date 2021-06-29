@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.auditevent import AuditEventSchema
 
 if TYPE_CHECKING:
+    pass
     # type_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
@@ -21,8 +22,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # subtype (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # Import for CodeableConcept for subtype
     from spark_auto_mapper_fhir.value_sets.audit_event_sub__type import (
         AuditEventSub_TypeCode,
@@ -46,8 +45,6 @@ if TYPE_CHECKING:
     )
 
     # outcomeDesc (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # purposeOfEvent (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 

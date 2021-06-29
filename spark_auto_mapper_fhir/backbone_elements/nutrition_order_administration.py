@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # schedule (Timing)
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
 
@@ -17,8 +18,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # rateQuantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # rateRatio (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
 

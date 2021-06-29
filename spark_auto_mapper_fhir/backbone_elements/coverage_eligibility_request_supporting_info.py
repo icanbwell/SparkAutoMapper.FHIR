@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
@@ -19,8 +20,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for information
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # appliesToAll (boolean)
 
 

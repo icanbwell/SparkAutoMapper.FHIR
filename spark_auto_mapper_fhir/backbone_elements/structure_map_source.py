@@ -17,6 +17,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # context (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # variable (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # condition (string)
     # check (string)
     # logMessage (string)
@@ -51,8 +50,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # defaultValueId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # defaultValueInstant (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
@@ -105,8 +102,6 @@ if TYPE_CHECKING:
 
     # End Import for References for defaultValueCoding
     # Import for CodeableConcept for defaultValueCoding
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for defaultValueCoding
     # defaultValueContactPoint (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -145,8 +140,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for defaultValueReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # defaultValueSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 

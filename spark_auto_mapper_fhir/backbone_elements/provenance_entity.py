@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # role (ProvenanceEntityRole)
     from spark_auto_mapper_fhir.value_sets.provenance_entity_role import (
         ProvenanceEntityRoleCode,
@@ -20,8 +21,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for what
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # agent (Provenance.Agent)
     from spark_auto_mapper_fhir.backbone_elements.provenance_agent import (
         ProvenanceAgent,

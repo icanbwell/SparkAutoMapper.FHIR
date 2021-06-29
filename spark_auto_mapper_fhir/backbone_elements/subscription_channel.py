@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (SubscriptionChannelType)
     from spark_auto_mapper_fhir.value_sets.subscription_channel_type import (
         SubscriptionChannelTypeCode,

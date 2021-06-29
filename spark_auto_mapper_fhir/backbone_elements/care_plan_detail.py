@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # kind (CarePlanActivityKind)
     from spark_auto_mapper_fhir.value_sets.care_plan_activity_kind import (
         CarePlanActivityKindCode,
@@ -33,8 +34,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for reasonCode
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings import (
@@ -52,8 +51,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
     # goal (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for goal
     from spark_auto_mapper_fhir.resources.goal import Goal
 
@@ -63,8 +60,6 @@ if TYPE_CHECKING:
     )
 
     # statusReason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for statusReason
     # Import for CodeableConcept for statusReason
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -72,14 +67,10 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for statusReason
     # doNotPerform (boolean)
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # performer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -94,8 +85,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # quantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # description (string)
     # scheduledTiming (Timing)
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
@@ -105,16 +94,10 @@ if TYPE_CHECKING:
 
     # scheduledString (string)
     # productCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for productCodeableConcept
     # Import for CodeableConcept for productCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for productCodeableConcept
     # productReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for productReference
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.resources.substance import Substance

@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.questionnaireresponse import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -26,8 +27,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.service_request import ServiceRequest
 
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.observation import Observation
     from spark_auto_mapper_fhir.resources.procedure import Procedure
@@ -41,23 +40,15 @@ if TYPE_CHECKING:
     )
 
     # subject (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # authored (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # author (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -67,14 +58,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # source (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for source
-    from spark_auto_mapper_fhir.resources.patient import Patient
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-
     # item (QuestionnaireResponse.Item)
     from spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item import (
         QuestionnaireResponseItem,

@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # subunit (integer)
     pass
+    # subunit (integer)
     # sequence (string)
     # length (integer)
     # sequenceAttachment (Attachment)
@@ -28,12 +28,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for fivePrime
     # threePrime (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for threePrime
     # Import for CodeableConcept for threePrime
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for threePrime
     # linkage (SubstanceNucleicAcid.Linkage)
     from spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_linkage import (

@@ -18,29 +18,18 @@ from spark_fhir_schemas.r4.resources.compartmentdefinition import (
 )
 
 if TYPE_CHECKING:
+    pass
     # url (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # version (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # status (PublicationStatus)
     from spark_auto_mapper_fhir.value_sets.publication_status import (
         PublicationStatusCode,
     )
 
     # experimental (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # date (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # publisher (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
@@ -51,14 +40,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
 
     # purpose (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # code (CompartmentType)
     from spark_auto_mapper_fhir.value_sets.compartment_type import CompartmentTypeCode
 
     # search (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # resource (CompartmentDefinition.Resource)
     from spark_auto_mapper_fhir.backbone_elements.compartment_definition_resource import (
         CompartmentDefinitionResource,

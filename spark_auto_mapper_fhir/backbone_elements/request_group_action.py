@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # prefix (string)
     pass
+    # prefix (string)
     # title (string)
     # description (string)
     # textEquivalent (string)
@@ -53,8 +53,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # type_ (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.action_type import ActionTypeCode
@@ -86,11 +84,7 @@ if TYPE_CHECKING:
     )
 
     # resource (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for resource
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # timingDateTime (dateTime)
     # timingAge (Age)
     from spark_auto_mapper_fhir.complex_types.age import Age

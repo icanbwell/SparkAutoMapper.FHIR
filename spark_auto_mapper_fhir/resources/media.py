@@ -14,6 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.media import MediaSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -25,8 +26,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.care_plan import CarePlan
 
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -41,15 +40,11 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # modality (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for modality
     from spark_auto_mapper_fhir.value_sets.media_modality import MediaModalityCode
 
     # End Import for CodeableConcept for modality
     # view (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for view
     from spark_auto_mapper_fhir.value_sets.media_collection_view_or__projection import (
         MediaCollectionView_or_ProjectionCode,
@@ -57,8 +52,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for view
     # subject (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -69,8 +62,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.location import Location
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
@@ -78,20 +69,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.instant import instant
 
     # operator (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for operator
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
-    from spark_auto_mapper_fhir.resources.patient import Patient
-    from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
     # reasonCode (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for reasonCode
     from spark_auto_mapper_fhir.value_sets.procedure_reason_codes import (
         ProcedureReasonCodesCode,
@@ -99,8 +82,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for reasonCode
     # bodySite (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for bodySite
     from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
         SNOMEDCTBodyStructuresCode,
@@ -108,25 +89,15 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for bodySite
     # deviceName (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # device (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for device
-    from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.device_metric import DeviceMetric
-    from spark_auto_mapper_fhir.resources.device import Device
 
     # height (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
     # width (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # frames (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # duration (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
@@ -137,8 +108,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
     # createdDateTime (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # createdPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 

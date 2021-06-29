@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -29,11 +30,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # specimenQuantity (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # additiveCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for additiveCodeableConcept
     # Import for CodeableConcept for additiveCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode

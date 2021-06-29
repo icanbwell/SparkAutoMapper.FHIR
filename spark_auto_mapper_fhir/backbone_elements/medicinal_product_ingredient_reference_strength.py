@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # substance (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -23,16 +24,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
 
     # strengthLowLimit (Ratio)
-    from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # measurementPoint (string)
     # country (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for country
     # Import for CodeableConcept for country
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for country
 
 

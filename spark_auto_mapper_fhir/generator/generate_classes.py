@@ -3,7 +3,7 @@ import shutil
 from os import path, listdir
 from pathlib import Path
 from shutil import copyfile
-from typing import Union
+from typing import Union, List
 
 from spark_auto_mapper_fhir.generator.fhir_xml_schema_parser import FhirXmlSchemaParser
 
@@ -25,6 +25,22 @@ def my_copytree(
             shutil.copytree(s, d, symlinks)
         else:
             shutil.copy2(s, d)
+
+
+def clean_duplicate_lines(file_path: Union[Path, str]) -> None:
+    print(f"Removing duplicate lines from {file_path}")
+    with open(file_path, "r") as file:
+        lines: List[str] = file.readlines()
+    new_lines: List[str] = []
+    for line in lines:
+        if not line.strip() or not line.lstrip().startswith("from"):
+            new_lines.append(line)
+        elif line not in new_lines and line.lstrip() not in [
+            c.lstrip() for c in new_lines
+        ]:
+            new_lines.append(line)
+    with open(file_path, "w") as file:
+        file.writelines(new_lines)
 
 
 def main() -> int:
@@ -233,6 +249,33 @@ def main() -> int:
         )
 
     # remove duplicate imports
+    resource_files = [
+        f for f in listdir(resources_folder) if isfile(join(resources_folder, f))
+    ]
+    for resource_file in resource_files:
+        clean_duplicate_lines(resources_folder.joinpath(resource_file))
+
+    backbone_files = [
+        f
+        for f in listdir(backbone_elements_folder)
+        if isfile(join(backbone_elements_folder, f))
+    ]
+    for backbone_file in backbone_files:
+        clean_duplicate_lines(backbone_elements_folder.joinpath(backbone_file))
+
+    complex_types_files = [
+        f
+        for f in listdir(complex_types_folder)
+        if isfile(join(complex_types_folder, f))
+    ]
+    for complex_types_file in complex_types_files:
+        clean_duplicate_lines(complex_types_folder.joinpath(complex_types_file))
+
+    value_sets_files = [
+        f for f in listdir(value_sets_folder) if isfile(join(value_sets_folder, f))
+    ]
+    for value_sets_file in value_sets_files:
+        clean_duplicate_lines(value_sets_folder.joinpath(value_sets_file))
 
     return 0
 

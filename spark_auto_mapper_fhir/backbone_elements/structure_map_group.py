@@ -11,12 +11,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # name (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # extends (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # typeMode (StructureMapGroupTypeMode)
     from spark_auto_mapper_fhir.value_sets.structure_map_group_type_mode import (
         StructureMapGroupTypeModeCode,

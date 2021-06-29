@@ -12,12 +12,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # what (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for what
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # type_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
@@ -29,8 +28,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # role (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for role
     # Import for CodeableConcept for role
     from spark_auto_mapper_fhir.value_sets.audit_event_entity_role import (
@@ -39,8 +36,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for role
     # lifecycle (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for lifecycle
     # Import for CodeableConcept for lifecycle
     from spark_auto_mapper_fhir.value_sets.object_lifecycle_events import (
@@ -49,8 +44,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for lifecycle
     # securityLabel (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for securityLabel
     # Import for CodeableConcept for securityLabel
     from spark_auto_mapper_fhir.value_sets.all_security_labels import (

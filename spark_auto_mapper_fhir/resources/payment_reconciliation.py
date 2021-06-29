@@ -17,6 +17,7 @@ from spark_fhir_schemas.r4.resources.paymentreconciliation import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # paymentIssuer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -38,18 +37,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # request (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for request
     from spark_auto_mapper_fhir.resources.task import Task
 
     # requestor (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for requestor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.organization import Organization
 
     # outcome (ClaimProcessingCodes)
     from spark_auto_mapper_fhir.value_sets.claim_processing_codes import (
@@ -57,17 +51,11 @@ if TYPE_CHECKING:
     )
 
     # disposition (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # paymentDate (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # paymentAmount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
 
     # paymentIdentifier (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # detail (PaymentReconciliation.Detail)
     from spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_detail import (
         PaymentReconciliationDetail,

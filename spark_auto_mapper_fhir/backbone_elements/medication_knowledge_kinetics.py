@@ -10,12 +10,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # areaUnderCurve (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # lethalDose50 (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # halfLifePeriod (Duration)
     from spark_auto_mapper_fhir.complex_types.duration import Duration
 

@@ -15,6 +15,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.verificationresult import VerificationResultSchema
 
 if TYPE_CHECKING:
+    pass
     # target (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -22,8 +23,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # targetLocation (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # need (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -35,18 +34,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.status import StatusCode
 
     # statusDate (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # validationType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for validationType
     from spark_auto_mapper_fhir.value_sets.validation_type import Validation_typeCode
 
     # End Import for CodeableConcept for validationType
     # validationProcess (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for validationProcess
     from spark_auto_mapper_fhir.value_sets.validation_process import (
         Validation_processCode,
@@ -57,14 +50,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
 
     # lastPerformed (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # nextScheduled (date)
-    from spark_auto_mapper_fhir.complex_types.date import FhirDate
-
     # failureAction (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for failureAction
     from spark_auto_mapper_fhir.value_sets.failure_action import Failure_actionCode
 

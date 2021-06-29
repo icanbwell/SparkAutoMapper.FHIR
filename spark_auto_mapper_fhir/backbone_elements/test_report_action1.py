@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # operation (TestReport.Operation)
     from spark_auto_mapper_fhir.backbone_elements.test_report_operation import (
         TestReportOperation,

@@ -15,6 +15,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.careplan import CarePlanSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -22,19 +23,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
     # instantiatesUri (uri)
-    from spark_auto_mapper_fhir.complex_types.uri import FhirUri
-
     # basedOn (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for basedOn
     # replaces (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for replaces
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     # status (RequestStatus)
     from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
@@ -52,21 +47,13 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # title (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # subject (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
 
     # encounter (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
@@ -74,13 +61,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # created (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # author (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for author
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
     from spark_auto_mapper_fhir.resources.device import Device
@@ -89,38 +71,18 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.care_team import CareTeam
 
     # contributor (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for contributor
-    from spark_auto_mapper_fhir.resources.patient import Patient
-    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-    from spark_auto_mapper_fhir.resources.device import Device
-    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-    from spark_auto_mapper_fhir.resources.organization import Organization
-    from spark_auto_mapper_fhir.resources.care_team import CareTeam
-
     # careTeam (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for careTeam
-    from spark_auto_mapper_fhir.resources.care_team import CareTeam
-
     # addresses (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for addresses
     from spark_auto_mapper_fhir.resources.condition import Condition
 
     # supportingInfo (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supportingInfo
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # goal (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for goal
     from spark_auto_mapper_fhir.resources.goal import Goal
 

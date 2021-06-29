@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (ConsentProvisionType)
     from spark_auto_mapper_fhir.value_sets.consent_provision_type import (
         ConsentProvisionTypeCode,
@@ -42,16 +43,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for securityLabel
     # purpose (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for purpose
     # Import for CodeableConcept for purpose
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse
 
     # End Import for CodeableConcept for purpose
     # class_ (Coding)
-    from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for class_
     # Import for CodeableConcept for class_
     from spark_auto_mapper_fhir.value_sets.consent_content_class import (
@@ -60,8 +57,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for class_
     # code (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.consent_content_codes import (
@@ -70,8 +65,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # dataPeriod (Period)
-    from spark_auto_mapper_fhir.complex_types.period import Period
-
     # data (Consent.Data)
     from spark_auto_mapper_fhir.backbone_elements.consent_data import ConsentData
 

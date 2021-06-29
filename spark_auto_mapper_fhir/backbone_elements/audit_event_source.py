@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # site (string)
     pass
+    # site (string)
     # observer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 

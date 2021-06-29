@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
@@ -34,8 +35,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for role
     # qualification (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for qualification
     # Import for CodeableConcept for qualification
     from spark_auto_mapper_fhir.value_sets.example_provider_qualification_codes import (

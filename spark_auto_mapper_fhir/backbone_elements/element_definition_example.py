@@ -17,8 +17,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # label (string)
     pass
+    # label (string)
     # valueBase64Binary (base64Binary)
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
 
@@ -89,8 +89,6 @@ if TYPE_CHECKING:
 
     # End Import for References for valueCoding
     # Import for CodeableConcept for valueCoding
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for valueCoding
     # valueContactPoint (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
@@ -129,8 +127,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for valueReference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # valueSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 

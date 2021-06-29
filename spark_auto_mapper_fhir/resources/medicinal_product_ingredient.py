@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.medicinalproductingredient import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -26,8 +27,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for role
     # allergenicIndicator (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # manufacturer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 

@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # description (string)
     pass
+    # description (string)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -28,8 +28,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
 
     # unitOfMeasure (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for unitOfMeasure
     # Import for CodeableConcept for unitOfMeasure
     from spark_auto_mapper_fhir.value_sets.ucum_codes import UCUMCodesCode

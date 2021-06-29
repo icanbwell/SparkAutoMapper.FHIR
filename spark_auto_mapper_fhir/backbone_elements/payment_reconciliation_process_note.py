@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (NoteType)
     from spark_auto_mapper_fhir.value_sets.note_type import NoteTypeCode
 

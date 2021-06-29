@@ -11,24 +11,15 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # height (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # width (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # depth (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # weight (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # nominalVolume (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # externalDiameter (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # shape (string)
     # color (string)
     # imprint (string)

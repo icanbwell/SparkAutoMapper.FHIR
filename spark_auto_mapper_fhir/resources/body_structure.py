@@ -14,12 +14,11 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.bodystructure import BodyStructureSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # active (boolean)
-    from spark_auto_mapper_fhir.complex_types.boolean import FhirBoolean
-
     # morphology (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -30,8 +29,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for morphology
     # location (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for location
     from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
         SNOMEDCTBodyStructuresCode,
@@ -39,8 +36,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for location
     # locationQualifier (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for locationQualifier
     from spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier import (
         BodystructureLocationQualifierCode,
@@ -48,8 +43,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for locationQualifier
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # image (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 

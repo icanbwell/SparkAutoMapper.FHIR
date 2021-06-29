@@ -13,8 +13,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # prefix (string)
     pass
+    # prefix (string)
     # title (string)
     # description (string)
     # textEquivalent (string)
@@ -30,12 +30,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # reason (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for reason
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for reason
     # documentation (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
@@ -57,8 +53,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
 
     # output (DataRequirement)
-    from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
-
     # relatedAction (PlanDefinition.RelatedAction)
     from spark_auto_mapper_fhir.backbone_elements.plan_definition_related_action import (
         PlanDefinitionRelatedAction,
@@ -70,8 +64,6 @@ if TYPE_CHECKING:
     )
 
     # type_ (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.action_type import ActionTypeCode
@@ -111,12 +103,8 @@ if TYPE_CHECKING:
     )
 
     # subjectCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for subjectCodeableConcept
     # Import for CodeableConcept for subjectCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for subjectCodeableConcept
     # subjectReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -141,8 +129,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
 
     # definitionCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
-
     # definitionUri (uri)
 
 

@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # code (DocumentRelationshipType)
     from spark_auto_mapper_fhir.value_sets.document_relationship_type import (
         DocumentRelationshipTypeCode,

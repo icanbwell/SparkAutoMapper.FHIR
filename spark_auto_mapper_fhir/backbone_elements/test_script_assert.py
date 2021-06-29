@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # label (string)
     pass
+    # label (string)
     # description (string)
     # direction (AssertionDirectionType)
     from spark_auto_mapper_fhir.complex_types.assertion_direction_type import (
@@ -43,8 +43,6 @@ if TYPE_CHECKING:
 
     # requestURL (string)
     # resource (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
-
     # response (AssertionResponseTypes)
     from spark_auto_mapper_fhir.complex_types.assertion_response_types import (
         AssertionResponseTypes,
@@ -55,8 +53,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # validateProfileId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # value (string)
     # warningOnly (boolean)
 

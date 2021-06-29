@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # target (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -23,36 +24,20 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # interaction (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for interaction
     # Import for CodeableConcept for interaction
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for interaction
     # organism (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for organism
     # Import for CodeableConcept for organism
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for organism
     # organismType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for organismType
     # Import for CodeableConcept for organismType
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for organismType
     # amountType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for amountType
     # Import for CodeableConcept for amountType
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for amountType
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference

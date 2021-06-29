@@ -10,12 +10,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # detailSequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
     # noteNumber (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
-
     # adjudication (ClaimResponse.Adjudication)
     from spark_auto_mapper_fhir.backbone_elements.claim_response_adjudication import (
         ClaimResponseAdjudication,

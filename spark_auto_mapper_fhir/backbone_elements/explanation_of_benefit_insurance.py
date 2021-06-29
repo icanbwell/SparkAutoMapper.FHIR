@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # focal (boolean)
     pass
+    # focal (boolean)
     # coverage (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 

@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
 
@@ -32,16 +33,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # procedureCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for procedureCodeableConcept
     # Import for CodeableConcept for procedureCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for procedureCodeableConcept
     # procedureReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for procedureReference
     from spark_auto_mapper_fhir.resources.procedure import Procedure
 

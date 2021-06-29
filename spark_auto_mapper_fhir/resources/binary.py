@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.binary import BinarySchema
 
 if TYPE_CHECKING:
+    pass
     # contentType (Mime Types)
     from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 

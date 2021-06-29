@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # hierarchical (boolean)
     pass
+    # hierarchical (boolean)
     # paging (boolean)
     # incomplete (boolean)
     # parameter (TerminologyCapabilities.Parameter)

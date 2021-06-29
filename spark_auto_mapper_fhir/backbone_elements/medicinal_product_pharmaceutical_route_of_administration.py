@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -22,11 +23,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # maxSingleDose (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # maxDosePerDay (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # maxDosePerTreatmentPeriod (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
 

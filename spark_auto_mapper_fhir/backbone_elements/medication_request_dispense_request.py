@@ -10,6 +10,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # initialFill (MedicationRequest.InitialFill)
     from spark_auto_mapper_fhir.backbone_elements.medication_request_initial_fill import (
         MedicationRequestInitialFill,
@@ -28,8 +29,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # expectedSupplyDuration (Duration)
-    from spark_auto_mapper_fhir.complex_types.duration import Duration
-
     # performer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 

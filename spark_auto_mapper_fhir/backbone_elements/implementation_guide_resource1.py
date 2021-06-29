@@ -12,12 +12,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # reference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for reference
-    from spark_auto_mapper_fhir.resources.resource import Resource
-
     # relativePath (url)
     from spark_auto_mapper_fhir.complex_types.url import url
 

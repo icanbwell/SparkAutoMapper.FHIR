@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.location import LocationSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -27,14 +28,8 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for operationalStatus
     # name (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # alias (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # mode (LocationMode)
     from spark_auto_mapper_fhir.value_sets.location_mode import LocationModeCode
 
@@ -54,8 +49,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.address import Address
 
     # physicalType (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for physicalType
     from spark_auto_mapper_fhir.value_sets.location_type import LocationTypeCode
 
@@ -72,8 +65,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
 
     # partOf (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for partOf
     # hoursOfOperation (Location.HoursOfOperation)
     from spark_auto_mapper_fhir.backbone_elements.location_hours_of_operation import (
@@ -81,11 +72,7 @@ if TYPE_CHECKING:
     )
 
     # availabilityExceptions (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # endpoint (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for endpoint
     from spark_auto_mapper_fhir.resources.endpoint import Endpoint
 

@@ -11,17 +11,13 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # title (string)
     pass
+    # title (string)
     # description (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
 
     # preConditions (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # postConditions (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
-
     # step (ExampleScenario.Step)
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_step import (
         ExampleScenarioStep,

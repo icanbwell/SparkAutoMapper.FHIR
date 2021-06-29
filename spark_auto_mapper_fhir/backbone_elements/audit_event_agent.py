@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -24,8 +25,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # role (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for role
     # Import for CodeableConcept for role
     from spark_auto_mapper_fhir.value_sets.security_role_type import (
@@ -48,8 +47,6 @@ if TYPE_CHECKING:
     # name (string)
     # requestor (boolean)
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
@@ -68,8 +65,6 @@ if TYPE_CHECKING:
     )
 
     # purposeOfUse (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for purposeOfUse
     # Import for CodeableConcept for purposeOfUse
     from spark_auto_mapper_fhir.value_sets.purpose_of_use import PurposeOfUse

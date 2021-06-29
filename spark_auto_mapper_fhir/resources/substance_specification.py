@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.substancespecification import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -26,22 +27,12 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # status (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for status
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for status
     # domain (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for domain
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for domain
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -49,8 +40,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
     # comment (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # moiety (SubstanceSpecification.Moiety)
     from spark_auto_mapper_fhir.backbone_elements.substance_specification_moiety import (
         SubstanceSpecificationMoiety,
@@ -62,8 +51,6 @@ if TYPE_CHECKING:
     )
 
     # referenceInformation (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for referenceInformation
     from spark_auto_mapper_fhir.resources.substance_reference_information import (
         SubstanceReferenceInformation,
@@ -95,28 +82,20 @@ if TYPE_CHECKING:
     )
 
     # nucleicAcid (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for nucleicAcid
     from spark_auto_mapper_fhir.resources.substance_nucleic_acid import (
         SubstanceNucleicAcid,
     )
 
     # polymer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for polymer
     from spark_auto_mapper_fhir.resources.substance_polymer import SubstancePolymer
 
     # protein (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for protein
     from spark_auto_mapper_fhir.resources.substance_protein import SubstanceProtein
 
     # sourceMaterial (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for sourceMaterial
     from spark_auto_mapper_fhir.resources.substance_source_material import (
         SubstanceSourceMaterial,

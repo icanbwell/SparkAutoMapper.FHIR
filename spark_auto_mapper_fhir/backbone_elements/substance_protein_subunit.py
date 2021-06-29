@@ -12,8 +12,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # subunit (integer)
     pass
+    # subunit (integer)
     # sequence (string)
     # length (integer)
     # sequenceAttachment (Attachment)
@@ -24,8 +24,6 @@ if TYPE_CHECKING:
 
     # nTerminalModification (string)
     # cTerminalModificationId (Identifier)
-    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # cTerminalModification (string)
 
 

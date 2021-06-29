@@ -12,6 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # chromosome (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -25,8 +26,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.orientation_type import OrientationTypeCode
 
     # referenceSeqId (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for referenceSeqId
     # Import for CodeableConcept for referenceSeqId
     from spark_auto_mapper_fhir.value_sets.ensembl import ENSEMBLCode

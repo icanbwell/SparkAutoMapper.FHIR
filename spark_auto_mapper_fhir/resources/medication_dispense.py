@@ -13,6 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBas
 from spark_fhir_schemas.r4.resources.medicationdispense import MedicationDispenseSchema
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -37,22 +38,16 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for category
     # subject (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for subject
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.group import Group
 
     # context (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for context
     from spark_auto_mapper_fhir.resources.encounter import Encounter
     from spark_auto_mapper_fhir.resources.episode_of_care import EpisodeOfCare
 
     # supportingInformation (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for supportingInformation
     from spark_auto_mapper_fhir.resources.resource import Resource
 
@@ -62,20 +57,14 @@ if TYPE_CHECKING:
     )
 
     # location (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
 
     # authorizingPrescription (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for authorizingPrescription
     from spark_auto_mapper_fhir.resources.medication_request import MedicationRequest
 
     # type_ (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.act_pharmacy_supply_type import (
         ActPharmacySupplyType,
@@ -86,25 +75,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # daysSupply (Quantity)
-    from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # whenPrepared (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # whenHandedOver (dateTime)
-    from spark_auto_mapper_fhir.complex_types.date_time import FhirDateTime
-
     # destination (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for destination
-    from spark_auto_mapper_fhir.resources.location import Location
-
     # receiver (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for receiver
-    from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
 
     # note (Annotation)
@@ -119,40 +95,24 @@ if TYPE_CHECKING:
     )
 
     # detectedIssue (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for detectedIssue
     from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
 
     # eventHistory (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for eventHistory
     from spark_auto_mapper_fhir.resources.provenance import Provenance
 
     # statusReasonCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for statusReasonCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for statusReasonCodeableConcept
     # statusReasonReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for statusReasonReference
-    from spark_auto_mapper_fhir.resources.detected_issue import DetectedIssue
-
     # medicationCodeableConcept (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for medicationCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for medicationCodeableConcept
     # medicationReference (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for medicationReference
     from spark_auto_mapper_fhir.resources.medication import Medication
 

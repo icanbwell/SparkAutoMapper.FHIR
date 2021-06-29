@@ -11,8 +11,8 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
-    # actorId (string)
     pass
+    # actorId (string)
     # type_ (ExampleScenarioActorType)
     from spark_auto_mapper_fhir.value_sets.example_scenario_actor_type import (
         ExampleScenarioActorTypeCode,

@@ -15,6 +15,7 @@ from spark_fhir_schemas.r4.resources.medicinalproductpackaged import (
 )
 
 if TYPE_CHECKING:
+    pass
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -25,8 +26,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medicinal_product import MedicinalProduct
 
     # description (string)
-    from spark_auto_mapper_fhir.complex_types.string import FhirString
-
     # legalStatusOfSupply (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -40,16 +39,12 @@ if TYPE_CHECKING:
     )
 
     # marketingAuthorization (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for marketingAuthorization
     from spark_auto_mapper_fhir.resources.medicinal_product_authorization import (
         MedicinalProductAuthorization,
     )
 
     # manufacturer (Reference)
-    from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
 

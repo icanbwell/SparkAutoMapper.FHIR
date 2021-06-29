@@ -11,6 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 )
 
 if TYPE_CHECKING:
+    pass
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -20,8 +21,6 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # usage (CodeableConcept)
-    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for usage
     # Import for CodeableConcept for usage
     from spark_auto_mapper_fhir.value_sets.measure_data_usage import (
