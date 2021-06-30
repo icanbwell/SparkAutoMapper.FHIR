@@ -173,9 +173,12 @@ class FhirXmlSchemaParser:
         #             fhir_entity.is_value_set = True
 
         # remove any entities that are already in value_sets
-        # fhir_entities = [
-        #     c for c in fhir_entities if c.fhir_name not in [b.name for b in value_sets]
-        # ]
+        fhir_entities = [
+            c
+            for c in fhir_entities
+            if c.fhir_name not in [b.name for b in value_sets]
+            or c.cleaned_name in ["PractitionerRole", "ElementDefinition"]
+        ]
         fhir_entities.extend(
             [
                 FhirEntity(
@@ -223,6 +226,18 @@ class FhirXmlSchemaParser:
                     fhir_entity.fhir_name
                 ]
                 fhir_entity.is_basic_type = True
+
+        # replace any lists
+        value_set_names: List[str] = [c.name for c in value_sets]
+        for fhir_entity in fhir_entities:
+            for fhir_property in fhir_entity.properties:
+                if not fhir_property.is_code and fhir_property.type_ in value_set_names:
+                    fhir_property.is_code = True
+                    fhir_property.cleaned_type = [
+                        c.cleaned_name
+                        for c in value_sets
+                        if c.name == fhir_property.type_
+                    ][0]
 
         # find all codeable concepts that are not mapped
 

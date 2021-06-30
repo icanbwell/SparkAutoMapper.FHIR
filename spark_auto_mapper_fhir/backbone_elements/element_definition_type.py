@@ -18,11 +18,11 @@ if TYPE_CHECKING:
 
     # targetProfile (canonical)
     # aggregation (AggregationMode)
-    from spark_auto_mapper_fhir.complex_types.aggregation_mode import AggregationMode
+    from spark_auto_mapper_fhir.value_sets.aggregation_mode import AggregationModeCode
 
     # versioning (ReferenceVersionRules)
-    from spark_auto_mapper_fhir.complex_types.reference_version_rules import (
-        ReferenceVersionRules,
+    from spark_auto_mapper_fhir.value_sets.reference_version_rules import (
+        ReferenceVersionRulesCode,
     )
 
 
@@ -42,8 +42,8 @@ class ElementDefinitionType(FhirBackboneElementBase):
         code: FhirUri,
         profile: Optional[FhirList[canonical]] = None,
         targetProfile: Optional[FhirList[canonical]] = None,
-        aggregation: Optional[FhirList[AggregationMode]] = None,
-        versioning: Optional[ReferenceVersionRules] = None,
+        aggregation: Optional[FhirList[AggregationModeCode]] = None,
+        versioning: Optional[ReferenceVersionRulesCode] = None,
     ) -> None:
         """
 

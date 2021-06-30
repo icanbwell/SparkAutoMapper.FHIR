@@ -19,10 +19,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # status (ListStatus)
-    from spark_auto_mapper_fhir.complex_types.list_status import ListStatus
+    from spark_auto_mapper_fhir.value_sets.list_status import ListStatusCode
 
     # mode (ListMode)
-    from spark_auto_mapper_fhir.complex_types.list_mode import ListMode
+    from spark_auto_mapper_fhir.value_sets.list_mode import ListModeCode
 
     # title (string)
 
@@ -94,8 +94,8 @@ class List_(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        status: ListStatus,
-        mode: ListMode,
+        status: ListStatusCode,
+        mode: ListModeCode,
         title: Optional[FhirString] = None,
         code: Optional[CodeableConcept[ExampleUseCodesForListCode]] = None,
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,

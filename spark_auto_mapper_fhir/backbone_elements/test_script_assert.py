@@ -16,8 +16,8 @@ if TYPE_CHECKING:
     # label (string)
     # description (string)
     # direction (AssertionDirectionType)
-    from spark_auto_mapper_fhir.complex_types.assertion_direction_type import (
-        AssertionDirectionType,
+    from spark_auto_mapper_fhir.value_sets.assertion_direction_type import (
+        AssertionDirectionTypeCode,
     )
 
     # compareToSourceId (string)
@@ -31,21 +31,21 @@ if TYPE_CHECKING:
     # minimumId (string)
     # navigationLinks (boolean)
     # operator (AssertionOperatorType)
-    from spark_auto_mapper_fhir.complex_types.assertion_operator_type import (
-        AssertionOperatorType,
+    from spark_auto_mapper_fhir.value_sets.assertion_operator_type import (
+        AssertionOperatorTypeCode,
     )
 
     # path (string)
     # requestMethod (TestScriptRequestMethodCode)
-    from spark_auto_mapper_fhir.complex_types.test_script_request_method_code import (
-        TestScriptRequestMethodCode,
+    from spark_auto_mapper_fhir.value_sets.test_script_request_method_code import (
+        TestScriptRequestMethodCodeCode,
     )
 
     # requestURL (string)
     # resource (code)
     # response (AssertionResponseTypes)
-    from spark_auto_mapper_fhir.complex_types.assertion_response_types import (
-        AssertionResponseTypes,
+    from spark_auto_mapper_fhir.value_sets.assertion_response_types import (
+        AssertionResponseTypesCode,
     )
 
     # responseCode (string)
@@ -72,7 +72,7 @@ class TestScriptAssert(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         label: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
-        direction: Optional[AssertionDirectionType] = None,
+        direction: Optional[AssertionDirectionTypeCode] = None,
         compareToSourceId: Optional[FhirString] = None,
         compareToSourceExpression: Optional[FhirString] = None,
         compareToSourcePath: Optional[FhirString] = None,
@@ -81,12 +81,12 @@ class TestScriptAssert(FhirBackboneElementBase):
         headerField: Optional[FhirString] = None,
         minimumId: Optional[FhirString] = None,
         navigationLinks: Optional[FhirBoolean] = None,
-        operator: Optional[AssertionOperatorType] = None,
+        operator: Optional[AssertionOperatorTypeCode] = None,
         path: Optional[FhirString] = None,
-        requestMethod: Optional[TestScriptRequestMethodCode] = None,
+        requestMethod: Optional[TestScriptRequestMethodCodeCode] = None,
         requestURL: Optional[FhirString] = None,
         resource: Optional[code] = None,
-        response: Optional[AssertionResponseTypes] = None,
+        response: Optional[AssertionResponseTypesCode] = None,
         responseCode: Optional[FhirString] = None,
         sourceId: Optional[id] = None,
         validateProfileId: Optional[id] = None,
