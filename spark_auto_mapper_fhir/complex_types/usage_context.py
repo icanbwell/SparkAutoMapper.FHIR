@@ -3,13 +3,14 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # code (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for code
@@ -18,14 +19,20 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for code
+    # valueCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for valueCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for valueCodeableConcept
+    # valueQuantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # valueRange (Range)
     from spark_auto_mapper_fhir.complex_types.range import Range
+
+    # valueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for valueReference
@@ -50,7 +57,6 @@ class UsageContext(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: Coding[UsageContextTypeCode],
         valueCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
@@ -73,7 +79,6 @@ class UsageContext(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param code: A code that identifies the type of context being specified by this usage
         context.
@@ -84,7 +89,6 @@ class UsageContext(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             code=code,
             valueCodeableConcept=valueCodeableConcept,

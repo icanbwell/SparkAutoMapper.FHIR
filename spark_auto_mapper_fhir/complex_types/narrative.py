@@ -3,13 +3,14 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # status (NarrativeStatus)
     from spark_auto_mapper_fhir.value_sets.narrative_status import NarrativeStatusCode
 
 
@@ -25,14 +26,12 @@ class Narrative(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         status: NarrativeStatusCode,
     ) -> None:
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param status: The status of the narrative - whether it's entirely generated (from just the
         defined data or the extensions too), or whether a human authored it and it may
@@ -40,7 +39,6 @@ class Narrative(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             status=status,
         )

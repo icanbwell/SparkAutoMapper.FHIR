@@ -4,15 +4,27 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # use (AddressUse)
     from spark_auto_mapper_fhir.value_sets.address_use import AddressUseCode
+
+    # type_ (AddressType)
     from spark_auto_mapper_fhir.value_sets.address_type import AddressTypeCode
+
+    # text (string)
+    # line (string)
+    # city (string)
+    # district (string)
+    # state (string)
+    # postalCode (string)
+    # country (string)
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
 
@@ -28,7 +40,6 @@ class Address(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         use: Optional[AddressUseCode] = None,
         type_: Optional[AddressTypeCode] = None,
@@ -44,7 +55,6 @@ class Address(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param use: The purpose of this address.
             :param type_: Distinguishes between physical addresses (those you can visit) and mailing
@@ -66,7 +76,6 @@ class Address(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             use=use,
             type_=type_,

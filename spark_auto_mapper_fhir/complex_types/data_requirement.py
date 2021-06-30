@@ -4,31 +4,46 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # type_ (FHIRAllTypes)
     from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
+
+    # profile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # mustSupport (string)
+    # codeFilter (DataRequirement.CodeFilter)
     from spark_auto_mapper_fhir.complex_types.data_requirement_code_filter import (
         DataRequirementCodeFilter,
     )
+
+    # dateFilter (DataRequirement.DateFilter)
     from spark_auto_mapper_fhir.complex_types.data_requirement_date_filter import (
         DataRequirementDateFilter,
     )
+
+    # limit (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # sort (DataRequirement.Sort)
     from spark_auto_mapper_fhir.complex_types.data_requirement_sort import (
         DataRequirementSort,
     )
+
+    # subjectCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subjectCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for subjectCodeableConcept
+    # subjectReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for subjectReference
@@ -47,7 +62,6 @@ class DataRequirement(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: FHIRAllTypesCode,
         profile: Optional[FhirList[canonical]] = None,
@@ -62,7 +76,6 @@ class DataRequirement(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type_: The type of the required data, specified as the type name of a resource. For
         profiles, this value is set to the type of the base resource of the profile.
@@ -92,7 +105,6 @@ class DataRequirement(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             type_=type_,
             profile=profile,

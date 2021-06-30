@@ -3,14 +3,17 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # value (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # currency (Currencies)
     from spark_auto_mapper_fhir.value_sets.currencies import CurrenciesCode
 
 
@@ -26,7 +29,6 @@ class Money(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         value: Optional[decimal] = None,
         currency: Optional[CurrenciesCode] = None,
@@ -34,14 +36,12 @@ class Money(FhirComplexTypeBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param value: Numerical value (with implicit precision).
         :param currency: ISO 4217 Currency Code.
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             value=value,
             currency=currency,

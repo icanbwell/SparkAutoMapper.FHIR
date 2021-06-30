@@ -4,19 +4,30 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # type_ (RelatedArtifactType)
     from spark_auto_mapper_fhir.value_sets.related_artifact_type import (
         RelatedArtifactTypeCode,
     )
+
+    # label (string)
+    # display (string)
+    # citation (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # url (url)
     from spark_auto_mapper_fhir.complex_types.url import url
+
+    # document (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # resource (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
 
@@ -32,7 +43,6 @@ class RelatedArtifact(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: RelatedArtifactTypeCode,
         label: Optional[FhirString] = None,
@@ -45,7 +55,6 @@ class RelatedArtifact(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type_: The type of relationship to the related artifact.
             :param label: A short label that can be used to reference the citation from elsewhere in the
@@ -62,7 +71,6 @@ class RelatedArtifact(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             type_=type_,
             label=label,

@@ -3,16 +3,26 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # origin (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # period (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # factor (decimal)
+    # lowerLimit (decimal)
+    # upperLimit (decimal)
+    # dimensions (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # data (SampledDataDataType)
     from spark_auto_mapper_fhir.complex_types.sampled_data_data_type import (
         SampledDataDataType,
     )
@@ -30,7 +40,6 @@ class SampledData(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         origin: Quantity,
         period: decimal,
@@ -43,7 +52,6 @@ class SampledData(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param origin: The base quantity that a measured value of zero represents. In addition, this
         provides the units of the entire measurement series.
@@ -63,7 +71,6 @@ class SampledData(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             origin=origin,
             period=period,

@@ -5,14 +5,17 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # use (IdentifierUse)
     from spark_auto_mapper_fhir.value_sets.identifier_use import IdentifierUseCode
+
+    # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for type_
@@ -21,7 +24,12 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # system (uri)
+    # value (string)
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # assigner (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for assigner
@@ -40,7 +48,6 @@ class Identifier(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         use: Optional[IdentifierUseCode] = None,
         type_: Optional[CodeableConcept[IdentifierTypeCodesCode]] = None,
@@ -52,7 +59,6 @@ class Identifier(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param use: The purpose of this identifier.
             :param type_: A coded type for the identifier that can be used to determine which identifier
@@ -66,7 +72,6 @@ class Identifier(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             use=use,
             type_=type_,

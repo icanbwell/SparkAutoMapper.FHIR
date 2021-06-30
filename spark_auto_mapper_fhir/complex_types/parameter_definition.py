@@ -5,18 +5,28 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # name (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # use (OperationParameterUse)
     from spark_auto_mapper_fhir.value_sets.operation_parameter_use import (
         OperationParameterUseCode,
     )
+
+    # min (integer)
+    # max (string)
+    # documentation (string)
+    # type_ (FHIRAllTypes)
     from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
+
+    # profile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
 
 
@@ -32,7 +42,6 @@ class ParameterDefinition(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: Optional[code] = None,
         use: OperationParameterUseCode,
@@ -45,7 +54,6 @@ class ParameterDefinition(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: The name of the parameter used to allow access to the value of the parameter
         in evaluation contexts.
@@ -62,7 +70,6 @@ class ParameterDefinition(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             use=use,

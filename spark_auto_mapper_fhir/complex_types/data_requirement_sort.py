@@ -4,13 +4,15 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # path (string)
+    # direction (SortDirection)
     from spark_auto_mapper_fhir.value_sets.sort_direction import SortDirectionCode
 
 
@@ -26,7 +28,6 @@ class DataRequirementSort(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: FhirString,
         direction: SortDirectionCode,
@@ -34,7 +35,6 @@ class DataRequirementSort(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param path: The attribute of the sort. The specified path must be resolvable from the type
         of the required data. The path is allowed to contain qualifiers (.) to
@@ -44,7 +44,6 @@ class DataRequirementSort(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             path=path,
             direction=direction,

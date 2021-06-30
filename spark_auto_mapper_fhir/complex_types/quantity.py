@@ -5,17 +5,24 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # value (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # comparator (QuantityComparator)
     from spark_auto_mapper_fhir.value_sets.quantity_comparator import (
         QuantityComparatorCode,
     )
+
+    # unit (string)
+    # system (uri)
+    # code (code)
     from spark_auto_mapper_fhir.complex_types.code import code
 
 
@@ -31,7 +38,6 @@ class Quantity(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         value: Optional[decimal] = None,
         comparator: Optional[QuantityComparatorCode] = None,
@@ -42,7 +48,6 @@ class Quantity(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param value: The value of the measured amount. The value includes an implicit precision in
         the presentation of the value.
@@ -55,7 +60,6 @@ class Quantity(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             value=value,
             comparator=comparator,

@@ -4,14 +4,22 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # use (NameUse)
     from spark_auto_mapper_fhir.value_sets.name_use import NameUseCode
+
+    # text (string)
+    # family (string)
+    # given (string)
+    # prefix (string)
+    # suffix (string)
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
 
@@ -27,7 +35,6 @@ class HumanName(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         use: Optional[NameUseCode] = None,
         text: Optional[FhirString] = None,
@@ -40,7 +47,6 @@ class HumanName(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param use: Identifies the purpose for this name.
             :param text: Specifies the entire name as it should be displayed e.g. on an application UI.
@@ -56,7 +62,6 @@ class HumanName(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             use=use,
             text=text,

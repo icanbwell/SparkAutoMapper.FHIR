@@ -4,18 +4,26 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # system (ContactPointSystem)
     from spark_auto_mapper_fhir.value_sets.contact_point_system import (
         ContactPointSystemCode,
     )
+
+    # value (string)
+    # use (ContactPointUse)
     from spark_auto_mapper_fhir.value_sets.contact_point_use import ContactPointUseCode
+
+    # rank (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
 
@@ -31,7 +39,6 @@ class ContactPoint(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         system: Optional[ContactPointSystemCode] = None,
         value: Optional[FhirString] = None,
@@ -42,7 +49,6 @@ class ContactPoint(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param system: Telecommunications form for contact point - what communications system is
         required to make use of the contact.
@@ -55,7 +61,6 @@ class ContactPoint(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             system=system,
             value=value,

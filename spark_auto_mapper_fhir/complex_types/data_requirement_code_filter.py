@@ -4,14 +4,19 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # path (string)
+    # searchParam (string)
+    # valueSet (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # code (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for code
@@ -32,7 +37,6 @@ class DataRequirementCodeFilter(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: Optional[FhirString] = None,
         searchParam: Optional[FhirString] = None,
@@ -42,7 +46,6 @@ class DataRequirementCodeFilter(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param path: The code-valued attribute of the filter. The specified path SHALL be a
         FHIRPath resolveable on the specified type of the DataRequirement, and SHALL
@@ -67,7 +70,6 @@ class DataRequirementCodeFilter(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             path=path,
             searchParam=searchParam,

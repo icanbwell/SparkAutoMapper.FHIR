@@ -16,64 +16,156 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # valueBase64Binary (base64Binary)
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
+
+    # valueBoolean (boolean)
+    # valueCanonical (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # valueCode (code)
     from spark_auto_mapper_fhir.complex_types.code import code
+
+    # valueDate (date)
+    # valueDateTime (dateTime)
+    # valueDecimal (decimal)
     from spark_auto_mapper_fhir.complex_types.decimal import decimal
+
+    # valueId (id)
     from spark_auto_mapper_fhir.complex_types.id import id
+
+    # valueInstant (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # valueInteger (integer)
+    # valueMarkdown (markdown)
     from spark_auto_mapper_fhir.complex_types.markdown import markdown
+
+    # valueOid (oid)
     from spark_auto_mapper_fhir.complex_types.oid import oid
+
+    # valuePositiveInt (positiveInt)
     from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+
+    # valueString (string)
+    # valueTime (time)
     from spark_auto_mapper_fhir.complex_types.time import time
+
+    # valueUnsignedInt (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
+
+    # valueUri (uri)
+    # valueUrl (url)
     from spark_auto_mapper_fhir.complex_types.url import url
+
+    # valueUuid (uuid)
     from spark_auto_mapper_fhir.complex_types.uuid import uuid
+
+    # valueAddress (Address)
     from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # valueAge (Age)
     from spark_auto_mapper_fhir.complex_types.age import Age
+
+    # valueAnnotation (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
+
+    # valueAttachment (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # valueCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for valueCodeableConcept
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
     # End Import for CodeableConcept for valueCodeableConcept
+    # valueCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for valueCoding
     # End Import for CodeableConcept for valueCoding
+    # valueContactPoint (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # valueCount (Count)
     from spark_auto_mapper_fhir.complex_types.count import Count
+
+    # valueDistance (Distance)
     from spark_auto_mapper_fhir.complex_types.distance import Distance
+
+    # valueDuration (Duration)
     from spark_auto_mapper_fhir.complex_types.duration import Duration
+
+    # valueHumanName (HumanName)
     from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # valueIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # valueMoney (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
+
+    # valuePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # valueQuantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
+    # valueRange (Range)
     from spark_auto_mapper_fhir.complex_types.range import Range
+
+    # valueRatio (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
+
+    # valueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for valueReference
     from spark_auto_mapper_fhir.resources.resource import Resource
+
+    # valueSampledData (SampledData)
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
+
+    # valueSignature (Signature)
     from spark_auto_mapper_fhir.complex_types.signature import Signature
+
+    # valueTiming (Timing)
     from spark_auto_mapper_fhir.backbone_elements.timing import Timing
+
+    # valueContactDetail (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
+
+    # valueContributor (Contributor)
     from spark_auto_mapper_fhir.complex_types.contributor import Contributor
+
+    # valueDataRequirement (DataRequirement)
     from spark_auto_mapper_fhir.complex_types.data_requirement import DataRequirement
+
+    # valueExpression (Expression)
     from spark_auto_mapper_fhir.complex_types.expression import Expression
+
+    # valueParameterDefinition (ParameterDefinition)
     from spark_auto_mapper_fhir.complex_types.parameter_definition import (
         ParameterDefinition,
     )
+
+    # valueRelatedArtifact (RelatedArtifact)
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
+
+    # valueTriggerDefinition (TriggerDefinition)
     from spark_auto_mapper_fhir.complex_types.trigger_definition import (
         TriggerDefinition,
     )
+
+    # valueUsageContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
+
+    # valueDosage (Dosage)
     from spark_auto_mapper_fhir.backbone_elements.dosage import Dosage
+
+    # valueMeta (Meta)
 
 
 # This file is auto-generated by generate_classes so do not edit manually
@@ -88,7 +180,6 @@ class Extension(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         valueBase64Binary: Optional[base64Binary] = None,
         valueBoolean: Optional[FhirBoolean] = None,
@@ -144,7 +235,6 @@ class Extension(FhirComplexTypeBase):
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         :param valueBase64Binary: None
         :param valueBoolean: None
@@ -199,7 +289,6 @@ class Extension(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             valueBase64Binary=valueBase64Binary,
             valueBoolean=valueBoolean,

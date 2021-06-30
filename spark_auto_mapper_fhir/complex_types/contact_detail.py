@@ -4,13 +4,15 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # name (string)
+    # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 
 
@@ -26,7 +28,6 @@ class ContactDetail(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: Optional[FhirString] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
@@ -34,7 +35,6 @@ class ContactDetail(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param name: The name of an individual to contact.
             :param telecom: The contact details for the individual (if a name was provided) or the
@@ -42,7 +42,6 @@ class ContactDetail(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             name=name,
             telecom=telecom,

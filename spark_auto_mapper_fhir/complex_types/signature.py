@@ -3,13 +3,14 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # type_ (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for type_
@@ -18,7 +19,10 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
+    # when (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # who (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
     # Imports for References for who
@@ -29,8 +33,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.organization import Organization
 
+    # onBehalfOf (Reference)
     # Imports for References for onBehalfOf
+    # targetFormat (Mime Types)
     from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
+
+    # sigFormat (Mime Types)
+    # data (base64Binary)
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
 
 
@@ -46,7 +55,6 @@ class Signature(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: FhirList[Coding[SignatureTypeCodesCode]],
         when: instant,
@@ -79,7 +87,6 @@ class Signature(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param type_: An indication of the reason that the entity signed this document. This may be
         explicitly included as part of the signature information and can be used when
@@ -99,7 +106,6 @@ class Signature(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             type_=type_,
             when=when,

@@ -10,9 +10,18 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
+    pass
+    # versionId (id)
     from spark_auto_mapper_fhir.complex_types.id import id
+
+    # lastUpdated (instant)
     from spark_auto_mapper_fhir.complex_types.instant import instant
+
+    # source (uri)
+    # profile (canonical)
     from spark_auto_mapper_fhir.complex_types.canonical import canonical
+
+    # security (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for security
@@ -21,6 +30,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for security
+    # tag (Coding)
     # Import for CodeableConcept for tag
     from spark_auto_mapper_fhir.value_sets.common_tags import CommonTagsCode
 
@@ -39,7 +49,6 @@ class Meta(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         versionId: Optional[id] = None,
         lastUpdated: Optional[instant] = None,
@@ -51,7 +60,6 @@ class Meta(FhirComplexTypeBase):
         """
 
             :param id_: id of resource
-            :param meta: Meta
             :param extension: extensions
             :param versionId: The version specific identifier, as it appears in the version portion of the
         URL. This value changes when the resource is created, updated, or deleted.
@@ -71,7 +79,6 @@ class Meta(FhirComplexTypeBase):
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
             versionId=versionId,
             lastUpdated=lastUpdated,

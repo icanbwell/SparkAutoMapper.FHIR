@@ -3,7 +3,6 @@ from typing import Optional
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
@@ -22,17 +21,14 @@ class markdown(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
 
         :param id_: id of resource
-        :param meta: Meta
         :param extension: extensions
         """
         super().__init__(
             id_=id_,
-            meta=meta,
             extension=extension,
         )
