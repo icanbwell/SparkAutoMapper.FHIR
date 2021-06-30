@@ -42,7 +42,7 @@ if TYPE_CHECKING:
 
     # short (string)
     # definition (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # comment (markdown)
     # requirements (markdown)
@@ -97,7 +97,7 @@ if TYPE_CHECKING:
 
     # defaultValueBoolean (boolean)
     # defaultValueCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # defaultValueCode (code)
     from spark_auto_mapper_fhir.complex_types.code import code
@@ -105,11 +105,11 @@ if TYPE_CHECKING:
     # defaultValueDate (date)
     # defaultValueDateTime (dateTime)
     # defaultValueDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # defaultValueId (id)
     # defaultValueInstant (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # defaultValueInteger (integer)
     # defaultValueMarkdown (markdown)
@@ -117,11 +117,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.oid import oid
 
     # defaultValuePositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # defaultValueString (string)
     # defaultValueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # defaultValueUnsignedInt (unsignedInt)
     # defaultValueUri (uri)
@@ -390,16 +390,16 @@ class ElementDefinition(FhirBackboneElementBase):
         code: Optional[FhirList[Coding[LOINCCodesCode]]] = None,
         slicing: Optional[ElementDefinitionSlicing] = None,
         short: Optional[FhirString] = None,
-        definition: Optional[markdown] = None,
-        comment: Optional[markdown] = None,
-        requirements: Optional[markdown] = None,
+        definition: Optional[FhirMarkdown] = None,
+        comment: Optional[FhirMarkdown] = None,
+        requirements: Optional[FhirMarkdown] = None,
         alias: Optional[FhirList[FhirString]] = None,
         min: Optional[unsignedInt] = None,
         max: Optional[FhirString] = None,
         base: Optional[ElementDefinitionBase] = None,
         contentReference: Optional[FhirUri] = None,
         type_: Optional[FhirList[ElementDefinitionType]] = None,
-        meaningWhenMissing: Optional[markdown] = None,
+        meaningWhenMissing: Optional[FhirMarkdown] = None,
         orderMeaning: Optional[FhirString] = None,
         example: Optional[FhirList[ElementDefinitionExample]] = None,
         maxLength: Optional[FhirInteger] = None,
@@ -413,19 +413,19 @@ class ElementDefinition(FhirBackboneElementBase):
         mapping: Optional[FhirList[ElementDefinitionMapping]] = None,
         defaultValueBase64Binary: Optional[base64Binary] = None,
         defaultValueBoolean: Optional[FhirBoolean] = None,
-        defaultValueCanonical: Optional[canonical] = None,
+        defaultValueCanonical: Optional[FhirCanonical] = None,
         defaultValueCode: Optional[code] = None,
         defaultValueDate: Optional[FhirDate] = None,
         defaultValueDateTime: Optional[FhirDateTime] = None,
-        defaultValueDecimal: Optional[decimal] = None,
+        defaultValueDecimal: Optional[FhirDecimal] = None,
         defaultValueId: Optional[id] = None,
-        defaultValueInstant: Optional[instant] = None,
+        defaultValueInstant: Optional[FhirInstant] = None,
         defaultValueInteger: Optional[FhirInteger] = None,
-        defaultValueMarkdown: Optional[markdown] = None,
+        defaultValueMarkdown: Optional[FhirMarkdown] = None,
         defaultValueOid: Optional[oid] = None,
-        defaultValuePositiveInt: Optional[positiveInt] = None,
+        defaultValuePositiveInt: Optional[FhirPositiveInt] = None,
         defaultValueString: Optional[FhirString] = None,
-        defaultValueTime: Optional[time] = None,
+        defaultValueTime: Optional[FhirTime] = None,
         defaultValueUnsignedInt: Optional[unsignedInt] = None,
         defaultValueUri: Optional[FhirUri] = None,
         defaultValueUrl: Optional[url] = None,
@@ -463,19 +463,19 @@ class ElementDefinition(FhirBackboneElementBase):
         defaultValueMeta: Optional[Meta] = None,
         fixedBase64Binary: Optional[base64Binary] = None,
         fixedBoolean: Optional[FhirBoolean] = None,
-        fixedCanonical: Optional[canonical] = None,
+        fixedCanonical: Optional[FhirCanonical] = None,
         fixedCode: Optional[code] = None,
         fixedDate: Optional[FhirDate] = None,
         fixedDateTime: Optional[FhirDateTime] = None,
-        fixedDecimal: Optional[decimal] = None,
+        fixedDecimal: Optional[FhirDecimal] = None,
         fixedId: Optional[id] = None,
-        fixedInstant: Optional[instant] = None,
+        fixedInstant: Optional[FhirInstant] = None,
         fixedInteger: Optional[FhirInteger] = None,
-        fixedMarkdown: Optional[markdown] = None,
+        fixedMarkdown: Optional[FhirMarkdown] = None,
         fixedOid: Optional[oid] = None,
-        fixedPositiveInt: Optional[positiveInt] = None,
+        fixedPositiveInt: Optional[FhirPositiveInt] = None,
         fixedString: Optional[FhirString] = None,
-        fixedTime: Optional[time] = None,
+        fixedTime: Optional[FhirTime] = None,
         fixedUnsignedInt: Optional[unsignedInt] = None,
         fixedUri: Optional[FhirUri] = None,
         fixedUrl: Optional[url] = None,
@@ -513,19 +513,19 @@ class ElementDefinition(FhirBackboneElementBase):
         fixedMeta: Optional[Meta] = None,
         patternBase64Binary: Optional[base64Binary] = None,
         patternBoolean: Optional[FhirBoolean] = None,
-        patternCanonical: Optional[canonical] = None,
+        patternCanonical: Optional[FhirCanonical] = None,
         patternCode: Optional[code] = None,
         patternDate: Optional[FhirDate] = None,
         patternDateTime: Optional[FhirDateTime] = None,
-        patternDecimal: Optional[decimal] = None,
+        patternDecimal: Optional[FhirDecimal] = None,
         patternId: Optional[id] = None,
-        patternInstant: Optional[instant] = None,
+        patternInstant: Optional[FhirInstant] = None,
         patternInteger: Optional[FhirInteger] = None,
-        patternMarkdown: Optional[markdown] = None,
+        patternMarkdown: Optional[FhirMarkdown] = None,
         patternOid: Optional[oid] = None,
-        patternPositiveInt: Optional[positiveInt] = None,
+        patternPositiveInt: Optional[FhirPositiveInt] = None,
         patternString: Optional[FhirString] = None,
-        patternTime: Optional[time] = None,
+        patternTime: Optional[FhirTime] = None,
         patternUnsignedInt: Optional[unsignedInt] = None,
         patternUri: Optional[FhirUri] = None,
         patternUrl: Optional[url] = None,
@@ -563,20 +563,20 @@ class ElementDefinition(FhirBackboneElementBase):
         patternMeta: Optional[Meta] = None,
         minValueDate: Optional[FhirDate] = None,
         minValueDateTime: Optional[FhirDateTime] = None,
-        minValueInstant: Optional[instant] = None,
-        minValueTime: Optional[time] = None,
-        minValueDecimal: Optional[decimal] = None,
+        minValueInstant: Optional[FhirInstant] = None,
+        minValueTime: Optional[FhirTime] = None,
+        minValueDecimal: Optional[FhirDecimal] = None,
         minValueInteger: Optional[FhirInteger] = None,
-        minValuePositiveInt: Optional[positiveInt] = None,
+        minValuePositiveInt: Optional[FhirPositiveInt] = None,
         minValueUnsignedInt: Optional[unsignedInt] = None,
         minValueQuantity: Optional[Quantity] = None,
         maxValueDate: Optional[FhirDate] = None,
         maxValueDateTime: Optional[FhirDateTime] = None,
-        maxValueInstant: Optional[instant] = None,
-        maxValueTime: Optional[time] = None,
-        maxValueDecimal: Optional[decimal] = None,
+        maxValueInstant: Optional[FhirInstant] = None,
+        maxValueTime: Optional[FhirTime] = None,
+        maxValueDecimal: Optional[FhirDecimal] = None,
         maxValueInteger: Optional[FhirInteger] = None,
-        maxValuePositiveInt: Optional[positiveInt] = None,
+        maxValuePositiveInt: Optional[FhirPositiveInt] = None,
         maxValueUnsignedInt: Optional[unsignedInt] = None,
         maxValueQuantity: Optional[Quantity] = None,
     ) -> None:

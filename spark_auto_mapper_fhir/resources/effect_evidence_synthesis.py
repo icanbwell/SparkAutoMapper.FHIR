@@ -37,7 +37,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
@@ -138,13 +138,13 @@ class EffectEvidenceSynthesis(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         note: Optional[FhirList[Annotation]] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        copyright: Optional[markdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,

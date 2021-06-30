@@ -18,7 +18,7 @@ if TYPE_CHECKING:
 
     # name (string)
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # version (ExampleScenario.Version)
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_version import (
@@ -47,7 +47,7 @@ class ExampleScenarioInstance(FhirBackboneElementBase):
         resourceId: FhirString,
         resourceType: ResourceTypeCode,
         name: Optional[FhirString] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         version: Optional[FhirList[ExampleScenarioVersion]] = None,
         containedInstance: Optional[FhirList[ExampleScenarioContainedInstance]] = None,
     ) -> None:

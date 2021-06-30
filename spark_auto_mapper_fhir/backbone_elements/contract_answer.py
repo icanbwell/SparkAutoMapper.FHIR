@@ -20,13 +20,13 @@ if TYPE_CHECKING:
     pass
     # valueBoolean (boolean)
     # valueDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # valueInteger (integer)
     # valueDate (date)
     # valueDateTime (dateTime)
     # valueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # valueString (string)
     # valueUri (uri)
@@ -64,11 +64,11 @@ class ContractAnswer(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         valueBoolean: Optional[FhirBoolean] = None,
-        valueDecimal: Optional[decimal] = None,
+        valueDecimal: Optional[FhirDecimal] = None,
         valueInteger: Optional[FhirInteger] = None,
         valueDate: Optional[FhirDate] = None,
         valueDateTime: Optional[FhirDateTime] = None,
-        valueTime: Optional[time] = None,
+        valueTime: Optional[FhirTime] = None,
         valueString: Optional[FhirString] = None,
         valueUri: Optional[FhirUri] = None,
         valueAttachment: Optional[Attachment] = None,

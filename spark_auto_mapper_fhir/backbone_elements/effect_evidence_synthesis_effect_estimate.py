@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for variantState
     # value (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # unitOfMeasure (CodeableConcept)
     # End Import for References for unitOfMeasure
@@ -62,7 +62,7 @@ class EffectEvidenceSynthesisEffectEstimate(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
         type_: Optional[CodeableConcept[EffectEstimateTypeCode]] = None,
         variantState: Optional[CodeableConcept[EvidenceVariantStateCode]] = None,
-        value: Optional[decimal] = None,
+        value: Optional[FhirDecimal] = None,
         unitOfMeasure: Optional[CodeableConcept[UCUMCodesCode]] = None,
         precisionEstimate: Optional[
             FhirList[EffectEvidenceSynthesisPrecisionEstimate]

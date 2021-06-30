@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 if TYPE_CHECKING:
     pass
     # value (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # comparator (QuantityComparator)
     from spark_auto_mapper_fhir.value_sets.quantity_comparator import (
@@ -39,7 +39,7 @@ class Quantity(FhirComplexTypeBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        value: Optional[decimal] = None,
+        value: Optional[FhirDecimal] = None,
         comparator: Optional[QuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,
         system: Optional[FhirUri] = None,

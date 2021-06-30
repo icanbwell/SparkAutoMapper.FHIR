@@ -81,7 +81,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # issued (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # performer (Reference)
     # Imports for References for performer
@@ -181,7 +181,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 
     # valueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # valueDateTime (dateTime)
     # valuePeriod (Period)
@@ -238,7 +238,7 @@ class Observation(FhirResourceBase):
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         focus: Optional[FhirList[Reference[Union[Resource]]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
-        issued: Optional[instant] = None,
+        issued: Optional[FhirInstant] = None,
         performer: Optional[
             FhirList[
                 Reference[
@@ -286,7 +286,7 @@ class Observation(FhirResourceBase):
         effectiveDateTime: Optional[FhirDateTime] = None,
         effectivePeriod: Optional[Period] = None,
         effectiveTiming: Optional[Timing] = None,
-        effectiveInstant: Optional[instant] = None,
+        effectiveInstant: Optional[FhirInstant] = None,
         valueQuantity: Optional[Quantity] = None,
         valueCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         valueString: Optional[FhirString] = None,
@@ -295,7 +295,7 @@ class Observation(FhirResourceBase):
         valueRange: Optional[Range] = None,
         valueRatio: Optional[Ratio] = None,
         valueSampledData: Optional[SampledData] = None,
-        valueTime: Optional[time] = None,
+        valueTime: Optional[FhirTime] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valuePeriod: Optional[Period] = None,
     ) -> None:

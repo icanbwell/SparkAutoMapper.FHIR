@@ -22,7 +22,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # recorded (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # policy (uri)
     # location (Reference)
@@ -77,7 +77,7 @@ class Provenance(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         target: FhirList[Reference[Union[Resource]]],
-        recorded: instant,
+        recorded: FhirInstant,
         policy: Optional[FhirList[FhirUri]] = None,
         location: Optional[Reference[Union[Location]]] = None,
         reason: Optional[FhirList[CodeableConcept[PurposeOfUse]]] = None,

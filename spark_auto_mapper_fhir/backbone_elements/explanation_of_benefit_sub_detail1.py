@@ -34,11 +34,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.money import Money
 
     # factor (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # net (Money)
     # noteNumber (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # adjudication (ExplanationOfBenefit.Adjudication)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_adjudication import (
@@ -63,9 +63,9 @@ class ExplanationOfBenefitSubDetail1(FhirBackboneElementBase):
         modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode]]] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
-        factor: Optional[decimal] = None,
+        factor: Optional[FhirDecimal] = None,
         net: Optional[Money] = None,
-        noteNumber: Optional[FhirList[positiveInt]] = None,
+        noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: Optional[FhirList[ExplanationOfBenefitAdjudication]] = None,
     ) -> None:
         """

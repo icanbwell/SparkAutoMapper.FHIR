@@ -142,7 +142,7 @@ if TYPE_CHECKING:
     )
 
     # precedence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # insurance (ExplanationOfBenefit.Insurance)
     from spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_insurance import (
@@ -247,7 +247,7 @@ class ExplanationOfBenefit(FhirResourceBase):
         supportingInfo: Optional[FhirList[ExplanationOfBenefitSupportingInfo]] = None,
         diagnosis: Optional[FhirList[ExplanationOfBenefitDiagnosis]] = None,
         procedure: Optional[FhirList[ExplanationOfBenefitProcedure]] = None,
-        precedence: Optional[positiveInt] = None,
+        precedence: Optional[FhirPositiveInt] = None,
         insurance: FhirList[ExplanationOfBenefitInsurance],
         accident: Optional[ExplanationOfBenefitAccident] = None,
         item: Optional[FhirList[ExplanationOfBenefitItem]] = None,

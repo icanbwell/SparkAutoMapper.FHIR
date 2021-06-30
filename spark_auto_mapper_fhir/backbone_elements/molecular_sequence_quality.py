@@ -37,7 +37,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for method
     # truthTP (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # queryTP (decimal)
     # truthFN (decimal)
@@ -71,14 +71,14 @@ class MolecularSequenceQuality(FhirBackboneElementBase):
         end: Optional[FhirInteger] = None,
         score: Optional[Quantity] = None,
         method: Optional[CodeableConcept[FDA_MethodCode]] = None,
-        truthTP: Optional[decimal] = None,
-        queryTP: Optional[decimal] = None,
-        truthFN: Optional[decimal] = None,
-        queryFP: Optional[decimal] = None,
-        gtFP: Optional[decimal] = None,
-        precision: Optional[decimal] = None,
-        recall: Optional[decimal] = None,
-        fScore: Optional[decimal] = None,
+        truthTP: Optional[FhirDecimal] = None,
+        queryTP: Optional[FhirDecimal] = None,
+        truthFN: Optional[FhirDecimal] = None,
+        queryFP: Optional[FhirDecimal] = None,
+        gtFP: Optional[FhirDecimal] = None,
+        precision: Optional[FhirDecimal] = None,
+        recall: Optional[FhirDecimal] = None,
+        fScore: Optional[FhirDecimal] = None,
         roc: Optional[MolecularSequenceRoc] = None,
     ) -> None:
         """

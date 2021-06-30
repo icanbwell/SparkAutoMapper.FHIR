@@ -81,11 +81,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # start (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # end (instant)
     # minutesDuration (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # slot (Reference)
     # Imports for References for slot
@@ -147,9 +147,9 @@ class Appointment(FhirResourceBase):
         priority: Optional[unsignedInt] = None,
         description: Optional[FhirString] = None,
         supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        start: Optional[instant] = None,
-        end: Optional[instant] = None,
-        minutesDuration: Optional[positiveInt] = None,
+        start: Optional[FhirInstant] = None,
+        end: Optional[FhirInstant] = None,
+        minutesDuration: Optional[FhirPositiveInt] = None,
         slot: Optional[FhirList[Reference[Union[Slot]]]] = None,
         created: Optional[FhirDateTime] = None,
         comment: Optional[FhirString] = None,

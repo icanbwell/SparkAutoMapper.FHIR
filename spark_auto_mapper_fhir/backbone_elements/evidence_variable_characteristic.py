@@ -32,7 +32,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
 
     # definitionCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # definitionCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -81,7 +81,7 @@ class EvidenceVariableCharacteristic(FhirBackboneElementBase):
         timeFromStart: Optional[Duration] = None,
         groupMeasure: Optional[GroupMeasureCode] = None,
         definitionReference: Optional[Reference[Union[Group]]] = None,
-        definitionCanonical: Optional[canonical] = None,
+        definitionCanonical: Optional[FhirCanonical] = None,
         definitionCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         definitionExpression: Optional[Expression] = None,
         definitionDataRequirement: Optional[DataRequirement] = None,

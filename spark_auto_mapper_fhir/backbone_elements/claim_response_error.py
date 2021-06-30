@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # itemSequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # detailSequence (positiveInt)
     # subDetailSequence (positiveInt)
@@ -41,9 +41,9 @@ class ClaimResponseError(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        itemSequence: Optional[positiveInt] = None,
-        detailSequence: Optional[positiveInt] = None,
-        subDetailSequence: Optional[positiveInt] = None,
+        itemSequence: Optional[FhirPositiveInt] = None,
+        detailSequence: Optional[FhirPositiveInt] = None,
+        subDetailSequence: Optional[FhirPositiveInt] = None,
         code: CodeableConcept[AdjudicationErrorCodesCode],
     ) -> None:
         """

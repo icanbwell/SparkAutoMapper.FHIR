@@ -22,7 +22,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # level (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # from_ (decimal)
     # to (decimal)
@@ -42,9 +42,9 @@ class EffectEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[CodeableConcept[PrecisionEstimateTypeCode]] = None,
-        level: Optional[decimal] = None,
-        from_: Optional[decimal] = None,
-        to: Optional[decimal] = None,
+        level: Optional[FhirDecimal] = None,
+        from_: Optional[FhirDecimal] = None,
+        to: Optional[FhirDecimal] = None,
     ) -> None:
         """
 

@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -73,7 +73,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
     # library (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # disclaimer (markdown)
     # scoring (CodeableConcept)
@@ -151,14 +151,14 @@ class Measure(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
         usage: Optional[FhirString] = None,
-        copyright: Optional[markdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
@@ -168,20 +168,20 @@ class Measure(FhirResourceBase):
         reviewer: Optional[FhirList[ContactDetail]] = None,
         endorser: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
-        library: Optional[FhirList[canonical]] = None,
-        disclaimer: Optional[markdown] = None,
+        library: Optional[FhirList[FhirCanonical]] = None,
+        disclaimer: Optional[FhirMarkdown] = None,
         scoring: Optional[CodeableConcept[MeasureScoringCode]] = None,
         compositeScoring: Optional[CodeableConcept[CompositeMeasureScoringCode]] = None,
         type_: Optional[FhirList[CodeableConcept[MeasureTypeCode]]] = None,
         riskAdjustment: Optional[FhirString] = None,
         rateAggregation: Optional[FhirString] = None,
-        rationale: Optional[markdown] = None,
-        clinicalRecommendationStatement: Optional[markdown] = None,
+        rationale: Optional[FhirMarkdown] = None,
+        clinicalRecommendationStatement: Optional[FhirMarkdown] = None,
         improvementNotation: Optional[
             CodeableConcept[MeasureImprovementNotationCode]
         ] = None,
-        definition: Optional[FhirList[markdown]] = None,
-        guidance: Optional[markdown] = None,
+        definition: Optional[FhirList[FhirMarkdown]] = None,
+        guidance: Optional[FhirMarkdown] = None,
         group: Optional[FhirList[MeasureGroup]] = None,
         supplementalData: Optional[FhirList[MeasureSupplementalData]] = None,
         subjectCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,

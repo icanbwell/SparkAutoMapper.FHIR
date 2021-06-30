@@ -66,7 +66,7 @@ if TYPE_CHECKING:
     # description (string)
     # series (string)
     # doseNumberPositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # doseNumberString (string)
     # seriesDosesPositiveInt (positiveInt)
@@ -100,9 +100,9 @@ class ImmunizationEvaluation(FhirResourceBase):
         ] = None,
         description: Optional[FhirString] = None,
         series: Optional[FhirString] = None,
-        doseNumberPositiveInt: Optional[positiveInt] = None,
+        doseNumberPositiveInt: Optional[FhirPositiveInt] = None,
         doseNumberString: Optional[FhirString] = None,
-        seriesDosesPositiveInt: Optional[positiveInt] = None,
+        seriesDosesPositiveInt: Optional[FhirPositiveInt] = None,
         seriesDosesString: Optional[FhirString] = None,
     ) -> None:
         """

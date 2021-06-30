@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     # numFP (integer)
     # numFN (integer)
     # precision (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # sensitivity (decimal)
     # fMeasure (decimal)
@@ -40,9 +40,9 @@ class MolecularSequenceRoc(FhirBackboneElementBase):
         numTP: Optional[FhirList[FhirInteger]] = None,
         numFP: Optional[FhirList[FhirInteger]] = None,
         numFN: Optional[FhirList[FhirInteger]] = None,
-        precision: Optional[FhirList[decimal]] = None,
-        sensitivity: Optional[FhirList[decimal]] = None,
-        fMeasure: Optional[FhirList[decimal]] = None,
+        precision: Optional[FhirList[FhirDecimal]] = None,
+        sensitivity: Optional[FhirList[FhirDecimal]] = None,
+        fMeasure: Optional[FhirList[FhirDecimal]] = None,
     ) -> None:
         """
 

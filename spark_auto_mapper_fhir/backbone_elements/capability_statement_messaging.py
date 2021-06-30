@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
 
     # documentation (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # supportedMessage (CapabilityStatement.SupportedMessage)
     from spark_auto_mapper_fhir.backbone_elements.capability_statement_supported_message import (
@@ -43,7 +43,7 @@ class CapabilityStatementMessaging(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         endpoint: Optional[FhirList[CapabilityStatementEndpoint]] = None,
         reliableCache: Optional[unsignedInt] = None,
-        documentation: Optional[markdown] = None,
+        documentation: Optional[FhirMarkdown] = None,
         supportedMessage: Optional[
             FhirList[CapabilityStatementSupportedMessage]
         ] = None,

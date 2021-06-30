@@ -21,7 +21,7 @@ if TYPE_CHECKING:
 
     # definitionUri (uri)
     # definitionCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # status (ChargeItemStatus)
     from spark_auto_mapper_fhir.value_sets.charge_item_status import (
@@ -73,7 +73,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for bodysite
     # factorOverride (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # priceOverride (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
@@ -151,7 +151,7 @@ class ChargeItem(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         definitionUri: Optional[FhirList[FhirUri]] = None,
-        definitionCanonical: Optional[FhirList[canonical]] = None,
+        definitionCanonical: Optional[FhirList[FhirCanonical]] = None,
         status: ChargeItemStatusCode,
         partOf: Optional[FhirList[Reference[Union[ChargeItem]]]] = None,
         code: CodeableConcept[ChargeItemCodeCode],
@@ -165,7 +165,7 @@ class ChargeItem(FhirResourceBase):
         bodysite: Optional[
             FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
         ] = None,
-        factorOverride: Optional[decimal] = None,
+        factorOverride: Optional[FhirDecimal] = None,
         priceOverride: Optional[Money] = None,
         overrideReason: Optional[FhirString] = None,
         enterer: Optional[

@@ -25,13 +25,13 @@ if TYPE_CHECKING:
 
     # answerBoolean (boolean)
     # answerDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # answerInteger (integer)
     # answerDate (date)
     # answerDateTime (dateTime)
     # answerTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # answerString (string)
     # answerCoding (Coding)
@@ -67,11 +67,11 @@ class QuestionnaireEnableWhen(FhirBackboneElementBase):
         question: FhirString,
         operator: QuestionnaireItemOperatorCode,
         answerBoolean: Optional[FhirBoolean] = None,
-        answerDecimal: Optional[decimal] = None,
+        answerDecimal: Optional[FhirDecimal] = None,
         answerInteger: Optional[FhirInteger] = None,
         answerDate: Optional[FhirDate] = None,
         answerDateTime: Optional[FhirDateTime] = None,
-        answerTime: Optional[time] = None,
+        answerTime: Optional[FhirTime] = None,
         answerString: Optional[FhirString] = None,
         answerCoding: Optional[Coding[GenericTypeCode]] = None,
         answerQuantity: Optional[Quantity] = None,

@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # url (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # mode (StructureMapModelMode)
     from spark_auto_mapper_fhir.value_sets.structure_map_model_mode import (
@@ -37,7 +37,7 @@ class StructureMapStructure(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        url: canonical,
+        url: FhirCanonical,
         mode: StructureMapModelModeCode,
         alias: Optional[FhirString] = None,
         documentation: Optional[FhirString] = None,

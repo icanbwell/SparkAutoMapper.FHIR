@@ -29,7 +29,7 @@ if TYPE_CHECKING:
 
     # valueBoolean (boolean)
     # valueCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # valueCode (code)
     from spark_auto_mapper_fhir.complex_types.code import code
@@ -37,27 +37,27 @@ if TYPE_CHECKING:
     # valueDate (date)
     # valueDateTime (dateTime)
     # valueDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # valueId (id)
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # valueInstant (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # valueInteger (integer)
     # valueMarkdown (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # valueOid (oid)
     from spark_auto_mapper_fhir.complex_types.oid import oid
 
     # valuePositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # valueString (string)
     # valueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # valueUnsignedInt (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
@@ -194,19 +194,19 @@ class ParametersParameter(FhirBackboneElementBase):
         part: Optional[FhirList[ParametersParameter]] = None,
         valueBase64Binary: Optional[base64Binary] = None,
         valueBoolean: Optional[FhirBoolean] = None,
-        valueCanonical: Optional[canonical] = None,
+        valueCanonical: Optional[FhirCanonical] = None,
         valueCode: Optional[code] = None,
         valueDate: Optional[FhirDate] = None,
         valueDateTime: Optional[FhirDateTime] = None,
-        valueDecimal: Optional[decimal] = None,
+        valueDecimal: Optional[FhirDecimal] = None,
         valueId: Optional[id] = None,
-        valueInstant: Optional[instant] = None,
+        valueInstant: Optional[FhirInstant] = None,
         valueInteger: Optional[FhirInteger] = None,
-        valueMarkdown: Optional[markdown] = None,
+        valueMarkdown: Optional[FhirMarkdown] = None,
         valueOid: Optional[oid] = None,
-        valuePositiveInt: Optional[positiveInt] = None,
+        valuePositiveInt: Optional[FhirPositiveInt] = None,
         valueString: Optional[FhirString] = None,
-        valueTime: Optional[time] = None,
+        valueTime: Optional[FhirTime] = None,
         valueUnsignedInt: Optional[unsignedInt] = None,
         valueUri: Optional[FhirUri] = None,
         valueUrl: Optional[url] = None,

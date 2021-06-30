@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     pass
     # title (string)
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # step (ExampleScenario.Step)
     from spark_auto_mapper_fhir.backbone_elements.example_scenario_step import (
@@ -36,7 +36,7 @@ class ExampleScenarioAlternative(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         title: FhirString,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         step: Optional[FhirList[ExampleScenarioStep]] = None,
     ) -> None:
         """

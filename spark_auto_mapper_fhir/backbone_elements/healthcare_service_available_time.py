@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
     # allDay (boolean)
     # availableStartTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # availableEndTime (time)
 
@@ -37,8 +37,8 @@ class HealthcareServiceAvailableTime(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         daysOfWeek: Optional[FhirList[DaysOfWeekCode]] = None,
         allDay: Optional[FhirBoolean] = None,
-        availableStartTime: Optional[time] = None,
-        availableEndTime: Optional[time] = None,
+        availableStartTime: Optional[FhirTime] = None,
+        availableEndTime: Optional[FhirTime] = None,
     ) -> None:
         """
 

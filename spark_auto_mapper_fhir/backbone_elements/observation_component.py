@@ -66,7 +66,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.sampled_data import SampledData
 
     # valueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # valueDateTime (dateTime)
     # valuePeriod (Period)
@@ -100,7 +100,7 @@ class ObservationComponent(FhirBackboneElementBase):
         valueRange: Optional[Range] = None,
         valueRatio: Optional[Ratio] = None,
         valueSampledData: Optional[SampledData] = None,
-        valueTime: Optional[time] = None,
+        valueTime: Optional[FhirTime] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valuePeriod: Optional[Period] = None,
     ) -> None:

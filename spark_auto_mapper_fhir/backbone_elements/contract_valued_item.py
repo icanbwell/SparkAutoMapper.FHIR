@@ -25,7 +25,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.money import Money
 
     # factor (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # points (decimal)
     # net (Money)
@@ -76,8 +76,8 @@ class ContractValuedItem(FhirBackboneElementBase):
         effectiveTime: Optional[FhirDateTime] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
-        factor: Optional[decimal] = None,
-        points: Optional[decimal] = None,
+        factor: Optional[FhirDecimal] = None,
+        points: Optional[FhirDecimal] = None,
         net: Optional[Money] = None,
         payment: Optional[FhirString] = None,
         paymentDate: Optional[FhirDateTime] = None,

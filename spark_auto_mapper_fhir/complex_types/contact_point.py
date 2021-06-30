@@ -21,7 +21,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.contact_point_use import ContactPointUseCode
 
     # rank (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -43,7 +43,7 @@ class ContactPoint(FhirComplexTypeBase):
         system: Optional[ContactPointSystemCode] = None,
         value: Optional[FhirString] = None,
         use: Optional[ContactPointUseCode] = None,
-        rank: Optional[positiveInt] = None,
+        rank: Optional[FhirPositiveInt] = None,
         period: Optional[Period] = None,
     ) -> None:
         """

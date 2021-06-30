@@ -72,7 +72,7 @@ if TYPE_CHECKING:
     )
 
     # preparationInstruction (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # intendedRoute (CodeableConcept)
     # Import for CodeableConcept for intendedRoute
@@ -153,7 +153,7 @@ class MedicationKnowledge(FhirResourceBase):
         productType: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         monograph: Optional[FhirList[MedicationKnowledgeMonograph]] = None,
         ingredient: Optional[FhirList[MedicationKnowledgeIngredient]] = None,
-        preparationInstruction: Optional[markdown] = None,
+        preparationInstruction: Optional[FhirMarkdown] = None,
         intendedRoute: Optional[
             FhirList[CodeableConcept[SNOMEDCTRouteCodesCode]]
         ] = None,

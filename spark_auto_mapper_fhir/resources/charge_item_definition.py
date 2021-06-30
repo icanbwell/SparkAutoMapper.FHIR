@@ -28,7 +28,7 @@ if TYPE_CHECKING:
     # title (string)
     # derivedFromUri (uri)
     # partOf (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # replaces (canonical)
     # status (PublicationStatus)
@@ -43,7 +43,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -106,19 +106,19 @@ class ChargeItemDefinition(FhirResourceBase):
         version: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         derivedFromUri: Optional[FhirList[FhirUri]] = None,
-        partOf: Optional[FhirList[canonical]] = None,
-        replaces: Optional[FhirList[canonical]] = None,
+        partOf: Optional[FhirList[FhirCanonical]] = None,
+        replaces: Optional[FhirList[FhirCanonical]] = None,
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        copyright: Optional[markdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,

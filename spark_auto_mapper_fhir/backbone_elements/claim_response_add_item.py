@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # itemSequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # detailSequence (positiveInt)
     # subdetailSequence (positiveInt)
@@ -56,7 +56,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.money import Money
 
     # factor (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # net (Money)
     # bodySite (CodeableConcept)
@@ -113,9 +113,9 @@ class ClaimResponseAddItem(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        itemSequence: Optional[FhirList[positiveInt]] = None,
-        detailSequence: Optional[FhirList[positiveInt]] = None,
-        subdetailSequence: Optional[FhirList[positiveInt]] = None,
+        itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        subdetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
         provider: Optional[
             FhirList[Reference[Union[Practitioner, PractitionerRole, Organization]]]
         ] = None,
@@ -126,11 +126,11 @@ class ClaimResponseAddItem(FhirBackboneElementBase):
         ] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
-        factor: Optional[decimal] = None,
+        factor: Optional[FhirDecimal] = None,
         net: Optional[Money] = None,
         bodySite: Optional[CodeableConcept[OralSiteCodesCode]] = None,
         subSite: Optional[FhirList[CodeableConcept[SurfaceCodesCode]]] = None,
-        noteNumber: Optional[FhirList[positiveInt]] = None,
+        noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: FhirList[ClaimResponseAdjudication],
         detail: Optional[FhirList[ClaimResponseDetail1]] = None,
         servicedDate: Optional[FhirDate] = None,

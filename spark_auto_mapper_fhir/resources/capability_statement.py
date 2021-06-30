@@ -35,7 +35,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -57,7 +57,7 @@ if TYPE_CHECKING:
     )
 
     # instantiates (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # imports (canonical)
     # software (CapabilityStatement.Software)
@@ -117,22 +117,22 @@ class CapabilityStatement(FhirResourceBase):
         date: FhirDateTime,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
-        copyright: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         kind: CapabilityStatementKindCode,
-        instantiates: Optional[FhirList[canonical]] = None,
-        imports: Optional[FhirList[canonical]] = None,
+        instantiates: Optional[FhirList[FhirCanonical]] = None,
+        imports: Optional[FhirList[FhirCanonical]] = None,
         software: Optional[CapabilityStatementSoftware] = None,
         implementation: Optional[CapabilityStatementImplementation] = None,
         fhirVersion: FHIRVersionCode,
         format: FhirList[MimeTypesCode],
         patchFormat: Optional[FhirList[MimeTypesCode]] = None,
-        implementationGuide: Optional[FhirList[canonical]] = None,
+        implementationGuide: Optional[FhirList[FhirCanonical]] = None,
         rest: Optional[FhirList[CapabilityStatementRest]] = None,
         messaging: Optional[FhirList[CapabilityStatementMessaging]] = None,
         document: Optional[FhirList[CapabilityStatementDocument]] = None,

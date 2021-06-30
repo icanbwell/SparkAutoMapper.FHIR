@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # number (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # type_ (NoteType)
     from spark_auto_mapper_fhir.value_sets.note_type import NoteTypeCode
@@ -42,7 +42,7 @@ class ExplanationOfBenefitProcessNote(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        number: Optional[positiveInt] = None,
+        number: Optional[FhirPositiveInt] = None,
         type_: Optional[NoteTypeCode] = None,
         text: Optional[FhirString] = None,
         language: Optional[CodeableConcept[CommonLanguagesCode]] = None,

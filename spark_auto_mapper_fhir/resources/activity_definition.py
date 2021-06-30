@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -73,7 +73,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
     # library (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # kind (RequestResourceType)
     from spark_auto_mapper_fhir.value_sets.request_resource_type import (
@@ -195,14 +195,14 @@ class ActivityDefinition(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
         usage: Optional[FhirString] = None,
-        copyright: Optional[markdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
@@ -212,9 +212,9 @@ class ActivityDefinition(FhirResourceBase):
         reviewer: Optional[FhirList[ContactDetail]] = None,
         endorser: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
-        library: Optional[FhirList[canonical]] = None,
+        library: Optional[FhirList[FhirCanonical]] = None,
         kind: Optional[RequestResourceTypeCode] = None,
-        profile: Optional[canonical] = None,
+        profile: Optional[FhirCanonical] = None,
         code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_Code]] = None,
         intent: Optional[RequestIntentCode] = None,
         priority: Optional[RequestPriorityCode] = None,
@@ -235,7 +235,7 @@ class ActivityDefinition(FhirResourceBase):
         observationResultRequirement: Optional[
             FhirList[Reference[Union[ObservationDefinition]]]
         ] = None,
-        transform: Optional[canonical] = None,
+        transform: Optional[FhirCanonical] = None,
         dynamicValue: Optional[FhirList[ActivityDefinitionDynamicValue]] = None,
         subjectCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         subjectReference: Optional[Reference[Union[Group]]] = None,

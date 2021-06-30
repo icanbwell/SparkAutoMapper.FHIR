@@ -18,7 +18,7 @@ if TYPE_CHECKING:
     )
 
     # message (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # detail (uri)
 
@@ -37,7 +37,7 @@ class TestReportOperation(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         result: TestReportActionResultCode,
-        message: Optional[markdown] = None,
+        message: Optional[FhirMarkdown] = None,
         detail: Optional[FhirUri] = None,
     ) -> None:
         """

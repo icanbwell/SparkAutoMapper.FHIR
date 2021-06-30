@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -59,7 +59,7 @@ if TYPE_CHECKING:
 
     # sourceUri (uri)
     # sourceCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # targetUri (uri)
     # targetCanonical (canonical)
@@ -89,18 +89,18 @@ class ConceptMap(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
-        copyright: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         group: Optional[FhirList[ConceptMapGroup]] = None,
         sourceUri: Optional[FhirUri] = None,
-        sourceCanonical: Optional[canonical] = None,
+        sourceCanonical: Optional[FhirCanonical] = None,
         targetUri: Optional[FhirUri] = None,
-        targetCanonical: Optional[canonical] = None,
+        targetCanonical: Optional[FhirCanonical] = None,
     ) -> None:
         """
 

@@ -28,7 +28,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
 
     # targetProfile (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # searchType (SearchParamType)
     from spark_auto_mapper_fhir.value_sets.search_param_type import SearchParamTypeCode
@@ -63,7 +63,7 @@ class OperationDefinitionParameter(FhirBackboneElementBase):
         max: FhirString,
         documentation: Optional[FhirString] = None,
         type_: Optional[FHIRAllTypesCode] = None,
-        targetProfile: Optional[FhirList[canonical]] = None,
+        targetProfile: Optional[FhirList[FhirCanonical]] = None,
         searchType: Optional[SearchParamTypeCode] = None,
         binding: Optional[OperationDefinitionBinding] = None,
         referencedFrom: Optional[FhirList[OperationDefinitionReferencedFrom]] = None,

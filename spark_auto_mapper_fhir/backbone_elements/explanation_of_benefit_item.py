@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # sequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # careTeamSequence (positiveInt)
     # diagnosisSequence (positiveInt)
@@ -66,7 +66,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.money import Money
 
     # factor (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # net (Money)
     # udi (Reference)
@@ -133,11 +133,11 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: positiveInt,
-        careTeamSequence: Optional[FhirList[positiveInt]] = None,
-        diagnosisSequence: Optional[FhirList[positiveInt]] = None,
-        procedureSequence: Optional[FhirList[positiveInt]] = None,
-        informationSequence: Optional[FhirList[positiveInt]] = None,
+        sequence: FhirPositiveInt,
+        careTeamSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        diagnosisSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        procedureSequence: Optional[FhirList[FhirPositiveInt]] = None,
+        informationSequence: Optional[FhirList[FhirPositiveInt]] = None,
         revenue: Optional[CodeableConcept[ExampleRevenueCenterCodesCode]] = None,
         category: Optional[CodeableConcept[BenefitCategoryCodesCode]] = None,
         productOrService: CodeableConcept[USCLSCodesCode],
@@ -147,13 +147,13 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
         ] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
-        factor: Optional[decimal] = None,
+        factor: Optional[FhirDecimal] = None,
         net: Optional[Money] = None,
         udi: Optional[FhirList[Reference[Union[Device]]]] = None,
         bodySite: Optional[CodeableConcept[OralSiteCodesCode]] = None,
         subSite: Optional[FhirList[CodeableConcept[SurfaceCodesCode]]] = None,
         encounter: Optional[FhirList[Reference[Union[Encounter]]]] = None,
-        noteNumber: Optional[FhirList[positiveInt]] = None,
+        noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: Optional[FhirList[ExplanationOfBenefitAdjudication]] = None,
         detail: Optional[FhirList[ExplanationOfBenefitDetail]] = None,
         servicedDate: Optional[FhirDate] = None,

@@ -52,7 +52,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.slot_status import SlotStatusCode
 
     # start (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # end (instant)
     # overbooked (boolean)
@@ -84,8 +84,8 @@ class Slot(FhirResourceBase):
         appointmentType: Optional[CodeableConcept[V2_0276]] = None,
         schedule: Reference[Union[Schedule]],
         status: SlotStatusCode,
-        start: instant,
-        end: instant,
+        start: FhirInstant,
+        end: FhirInstant,
         overbooked: Optional[FhirBoolean] = None,
         comment: Optional[FhirString] = None,
     ) -> None:

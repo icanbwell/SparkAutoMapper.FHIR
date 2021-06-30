@@ -23,7 +23,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 
     # end (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # reason (string)
     # criteria (string)
@@ -50,7 +50,7 @@ class Subscription(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         status: SubscriptionStatusCode,
         contact: Optional[FhirList[ContactPoint]] = None,
-        end: Optional[instant] = None,
+        end: Optional[FhirInstant] = None,
         reason: FhirString,
         criteria: FhirString,
         error: Optional[FhirString] = None,

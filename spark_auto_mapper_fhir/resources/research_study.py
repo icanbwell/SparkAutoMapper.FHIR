@@ -79,7 +79,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for location
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # enrollment (Reference)
     # Imports for References for enrollment
@@ -154,7 +154,7 @@ class ResearchStudy(FhirResourceBase):
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
         keyword: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         location: Optional[FhirList[CodeableConcept[JurisdictionValueSetCode]]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         enrollment: Optional[FhirList[Reference[Union[Group]]]] = None,
         period: Optional[Period] = None,
         sponsor: Optional[Reference[Union[Organization]]] = None,

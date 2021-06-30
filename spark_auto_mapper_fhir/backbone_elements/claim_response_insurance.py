@@ -14,7 +14,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # sequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # focal (boolean)
     # coverage (Reference)
@@ -42,7 +42,7 @@ class ClaimResponseInsurance(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: positiveInt,
+        sequence: FhirPositiveInt,
         focal: FhirBoolean,
         coverage: Reference[Union[Coverage]],
         businessArrangement: Optional[FhirString] = None,

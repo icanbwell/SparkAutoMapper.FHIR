@@ -11,7 +11,7 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 if TYPE_CHECKING:
     pass
     # value (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # currency (Currencies)
     from spark_auto_mapper_fhir.value_sets.currencies import CurrenciesCode
@@ -30,7 +30,7 @@ class Money(FhirComplexTypeBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        value: Optional[decimal] = None,
+        value: Optional[FhirDecimal] = None,
         currency: Optional[CurrenciesCode] = None,
     ) -> None:
         """

@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # sequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # priceComponent (Invoice.PriceComponent)
     from spark_auto_mapper_fhir.backbone_elements.invoice_price_component import (
@@ -48,7 +48,7 @@ class InvoiceLineItem(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: Optional[positiveInt] = None,
+        sequence: Optional[FhirPositiveInt] = None,
         priceComponent: Optional[FhirList[InvoicePriceComponent]] = None,
         chargeItemReference: Optional[Reference[Union[ChargeItem]]] = None,
         chargeItemCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,

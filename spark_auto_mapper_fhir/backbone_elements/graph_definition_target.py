@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
     # params (string)
     # profile (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # compartment (GraphDefinition.Compartment)
     from spark_auto_mapper_fhir.backbone_elements.graph_definition_compartment import (
@@ -45,7 +45,7 @@ class GraphDefinitionTarget(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: ResourceTypeCode,
         params: Optional[FhirString] = None,
-        profile: Optional[canonical] = None,
+        profile: Optional[FhirCanonical] = None,
         compartment: Optional[FhirList[GraphDefinitionCompartment]] = None,
         link: Optional[FhirList[GraphDefinitionLink]] = None,
     ) -> None:

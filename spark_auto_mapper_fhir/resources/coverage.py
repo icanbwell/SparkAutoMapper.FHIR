@@ -62,7 +62,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.backbone_elements.coverage_class import CoverageClass
 
     # order (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # network (string)
     # costToBeneficiary (Coverage.CostToBeneficiary)
@@ -104,7 +104,7 @@ class Coverage(FhirResourceBase):
         period: Optional[Period] = None,
         payor: FhirList[Reference[Union[Organization, Patient, RelatedPerson]]],
         class_: Optional[FhirList[CoverageClass]] = None,
-        order: Optional[positiveInt] = None,
+        order: Optional[FhirPositiveInt] = None,
         network: Optional[FhirString] = None,
         costToBeneficiary: Optional[FhirList[CoverageCostToBeneficiary]] = None,
         subrogation: Optional[FhirBoolean] = None,

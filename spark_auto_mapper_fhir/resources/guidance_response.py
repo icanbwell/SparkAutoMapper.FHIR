@@ -75,7 +75,7 @@ if TYPE_CHECKING:
 
     # moduleUri (uri)
     # moduleCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # moduleCodeableConcept (CodeableConcept)
     # Import for CodeableConcept for moduleCodeableConcept
@@ -119,7 +119,7 @@ class GuidanceResponse(FhirResourceBase):
         result: Optional[Reference[Union[CarePlan, RequestGroup]]] = None,
         dataRequirement: Optional[FhirList[DataRequirement]] = None,
         moduleUri: Optional[FhirUri] = None,
-        moduleCanonical: Optional[canonical] = None,
+        moduleCanonical: Optional[FhirCanonical] = None,
         moduleCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """

@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
 
     # profile (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # mustSupport (string)
     # codeFilter (DataRequirement.CodeFilter)
@@ -29,7 +29,7 @@ if TYPE_CHECKING:
     )
 
     # limit (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # sort (DataRequirement.Sort)
     from spark_auto_mapper_fhir.complex_types.data_requirement_sort import (
@@ -64,11 +64,11 @@ class DataRequirement(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: FHIRAllTypesCode,
-        profile: Optional[FhirList[canonical]] = None,
+        profile: Optional[FhirList[FhirCanonical]] = None,
         mustSupport: Optional[FhirList[FhirString]] = None,
         codeFilter: Optional[FhirList[DataRequirementCodeFilter]] = None,
         dateFilter: Optional[FhirList[DataRequirementDateFilter]] = None,
-        limit: Optional[positiveInt] = None,
+        limit: Optional[FhirPositiveInt] = None,
         sort: Optional[FhirList[DataRequirementSort]] = None,
         subjectCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         subjectReference: Optional[Reference[Union[Group]]] = None,

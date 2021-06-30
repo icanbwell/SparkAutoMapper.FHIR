@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
     # instantiatesCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # instantiatesUri (uri)
     # basedOn (Reference)
@@ -182,7 +182,7 @@ class Procedure(FhirResourceBase):
         meta: Optional[Meta] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        instantiatesCanonical: Optional[FhirList[canonical]] = None,
+        instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
         basedOn: Optional[FhirList[Reference[Union[CarePlan, ServiceRequest]]]] = None,
         partOf: Optional[

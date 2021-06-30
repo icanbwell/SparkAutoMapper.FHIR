@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     # valueInteger (integer)
     # valueDate (date)
     # valueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # valueString (string)
     # valueCoding (Coding)
@@ -53,7 +53,7 @@ class QuestionnaireAnswerOption(FhirBackboneElementBase):
         initialSelected: Optional[FhirBoolean] = None,
         valueInteger: Optional[FhirInteger] = None,
         valueDate: Optional[FhirDate] = None,
-        valueTime: Optional[time] = None,
+        valueTime: Optional[FhirTime] = None,
         valueString: Optional[FhirString] = None,
         valueCoding: Optional[Coding[GenericTypeCode]] = None,
         valueReference: Optional[Reference[Union[Resource]]] = None,

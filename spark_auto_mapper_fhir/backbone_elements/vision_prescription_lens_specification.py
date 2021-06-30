@@ -27,7 +27,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.vision_eyes import VisionEyesCode
 
     # sphere (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # cylinder (decimal)
     # axis (integer)
@@ -64,14 +64,14 @@ class VisionPrescriptionLensSpecification(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         product: CodeableConcept[ExampleVisionPrescriptionProductCodesCode],
         eye: VisionEyesCode,
-        sphere: Optional[decimal] = None,
-        cylinder: Optional[decimal] = None,
+        sphere: Optional[FhirDecimal] = None,
+        cylinder: Optional[FhirDecimal] = None,
         axis: Optional[FhirInteger] = None,
         prism: Optional[FhirList[VisionPrescriptionPrism]] = None,
-        add: Optional[decimal] = None,
-        power: Optional[decimal] = None,
-        backCurve: Optional[decimal] = None,
-        diameter: Optional[decimal] = None,
+        add: Optional[FhirDecimal] = None,
+        power: Optional[FhirDecimal] = None,
+        backCurve: Optional[FhirDecimal] = None,
+        diameter: Optional[FhirDecimal] = None,
         duration: Optional[Quantity] = None,
         color: Optional[FhirString] = None,
         brand: Optional[FhirString] = None,

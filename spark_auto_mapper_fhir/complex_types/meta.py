@@ -15,11 +15,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.id import id
 
     # lastUpdated (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # source (uri)
     # profile (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # security (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
@@ -51,9 +51,9 @@ class Meta(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         versionId: Optional[id] = None,
-        lastUpdated: Optional[instant] = None,
+        lastUpdated: Optional[FhirInstant] = None,
         source: Optional[FhirUri] = None,
-        profile: Optional[FhirList[canonical]] = None,
+        profile: Optional[FhirList[FhirCanonical]] = None,
         security: Optional[FhirList[Coding[AllSecurityLabelsCode]]] = None,
         tag: Optional[FhirList[Coding[CommonTagsCode]]] = None,
     ) -> None:

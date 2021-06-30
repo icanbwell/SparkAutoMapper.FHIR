@@ -54,7 +54,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # date (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # author (Reference)
     # Imports for References for author
@@ -113,7 +113,7 @@ class DocumentReference(FhirResourceBase):
         subject: Optional[
             Reference[Union[Patient, Practitioner, Group, Device]]
         ] = None,
-        date: Optional[instant] = None,
+        date: Optional[FhirInstant] = None,
         author: Optional[
             FhirList[
                 Reference[

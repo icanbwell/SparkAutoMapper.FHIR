@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # detailSequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # noteNumber (positiveInt)
     # adjudication (ClaimResponse.Adjudication)
@@ -39,8 +39,8 @@ class ClaimResponseDetail(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        detailSequence: positiveInt,
-        noteNumber: Optional[FhirList[positiveInt]] = None,
+        detailSequence: FhirPositiveInt,
+        noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: FhirList[ClaimResponseAdjudication],
         subDetail: Optional[FhirList[ClaimResponseSubDetail]] = None,
     ) -> None:

@@ -42,7 +42,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -83,7 +83,7 @@ class NamingSystem(FhirResourceBase):
         contact: Optional[FhirList[ContactDetail]] = None,
         responsible: Optional[FhirString] = None,
         type_: Optional[CodeableConcept[IdentifierTypeCodesCode]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]

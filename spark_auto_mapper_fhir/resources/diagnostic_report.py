@@ -63,7 +63,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # issued (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # performer (Reference)
     # Imports for References for performer
@@ -142,7 +142,7 @@ class DiagnosticReport(FhirResourceBase):
         code: CodeableConcept[LOINCDiagnosticReportCodesCode],
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
-        issued: Optional[instant] = None,
+        issued: Optional[FhirInstant] = None,
         performer: Optional[
             FhirList[
                 Reference[Union[Practitioner, PractitionerRole, Organization, CareTeam]]

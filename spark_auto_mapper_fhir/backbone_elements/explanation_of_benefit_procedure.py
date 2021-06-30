@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # sequence (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -56,7 +56,7 @@ class ExplanationOfBenefitProcedure(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        sequence: positiveInt,
+        sequence: FhirPositiveInt,
         type_: Optional[
             FhirList[CodeableConcept[ExampleProcedureTypeCodesCode]]
         ] = None,

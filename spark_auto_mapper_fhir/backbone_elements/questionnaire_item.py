@@ -49,7 +49,7 @@ if TYPE_CHECKING:
     # readOnly (boolean)
     # maxLength (integer)
     # answerValueSet (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # answerOption (Questionnaire.AnswerOption)
     from spark_auto_mapper_fhir.backbone_elements.questionnaire_answer_option import (
@@ -87,7 +87,7 @@ class QuestionnaireItem(FhirBackboneElementBase):
         repeats: Optional[FhirBoolean] = None,
         readOnly: Optional[FhirBoolean] = None,
         maxLength: Optional[FhirInteger] = None,
-        answerValueSet: Optional[canonical] = None,
+        answerValueSet: Optional[FhirCanonical] = None,
         answerOption: Optional[FhirList[QuestionnaireAnswerOption]] = None,
         initial: Optional[FhirList[QuestionnaireInitial]] = None,
         item: Optional[FhirList[QuestionnaireItem]] = None,

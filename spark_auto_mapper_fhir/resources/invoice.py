@@ -68,7 +68,7 @@ if TYPE_CHECKING:
 
     # totalGross (Money)
     # paymentTerms (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
@@ -104,7 +104,7 @@ class Invoice(FhirResourceBase):
         totalPriceComponent: Optional[FhirList[InvoicePriceComponent]] = None,
         totalNet: Optional[Money] = None,
         totalGross: Optional[Money] = None,
-        paymentTerms: Optional[markdown] = None,
+        paymentTerms: Optional[FhirMarkdown] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """

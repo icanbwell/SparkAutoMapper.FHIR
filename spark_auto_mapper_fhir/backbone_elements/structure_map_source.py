@@ -39,7 +39,7 @@ if TYPE_CHECKING:
 
     # defaultValueBoolean (boolean)
     # defaultValueCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # defaultValueCode (code)
     from spark_auto_mapper_fhir.complex_types.code import code
@@ -47,25 +47,25 @@ if TYPE_CHECKING:
     # defaultValueDate (date)
     # defaultValueDateTime (dateTime)
     # defaultValueDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # defaultValueId (id)
     # defaultValueInstant (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # defaultValueInteger (integer)
     # defaultValueMarkdown (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # defaultValueOid (oid)
     from spark_auto_mapper_fhir.complex_types.oid import oid
 
     # defaultValuePositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # defaultValueString (string)
     # defaultValueTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # defaultValueUnsignedInt (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
@@ -209,19 +209,19 @@ class StructureMapSource(FhirBackboneElementBase):
         logMessage: Optional[FhirString] = None,
         defaultValueBase64Binary: Optional[base64Binary] = None,
         defaultValueBoolean: Optional[FhirBoolean] = None,
-        defaultValueCanonical: Optional[canonical] = None,
+        defaultValueCanonical: Optional[FhirCanonical] = None,
         defaultValueCode: Optional[code] = None,
         defaultValueDate: Optional[FhirDate] = None,
         defaultValueDateTime: Optional[FhirDateTime] = None,
-        defaultValueDecimal: Optional[decimal] = None,
+        defaultValueDecimal: Optional[FhirDecimal] = None,
         defaultValueId: Optional[id] = None,
-        defaultValueInstant: Optional[instant] = None,
+        defaultValueInstant: Optional[FhirInstant] = None,
         defaultValueInteger: Optional[FhirInteger] = None,
-        defaultValueMarkdown: Optional[markdown] = None,
+        defaultValueMarkdown: Optional[FhirMarkdown] = None,
         defaultValueOid: Optional[oid] = None,
-        defaultValuePositiveInt: Optional[positiveInt] = None,
+        defaultValuePositiveInt: Optional[FhirPositiveInt] = None,
         defaultValueString: Optional[FhirString] = None,
-        defaultValueTime: Optional[time] = None,
+        defaultValueTime: Optional[FhirTime] = None,
         defaultValueUnsignedInt: Optional[unsignedInt] = None,
         defaultValueUri: Optional[FhirUri] = None,
         defaultValueUrl: Optional[url] = None,

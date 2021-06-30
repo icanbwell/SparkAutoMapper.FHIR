@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # longitude (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # latitude (decimal)
     # altitude (decimal)
@@ -31,9 +31,9 @@ class LocationPosition(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        longitude: decimal,
-        latitude: decimal,
-        altitude: Optional[decimal] = None,
+        longitude: FhirDecimal,
+        latitude: FhirDecimal,
+        altitude: Optional[FhirDecimal] = None,
     ) -> None:
         """
 

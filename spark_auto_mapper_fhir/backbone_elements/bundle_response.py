@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     # location (uri)
     # etag (string)
     # lastModified (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # outcome (ResourceContainer)
     from spark_auto_mapper_fhir.complex_types.resource_container import (
@@ -41,7 +41,7 @@ class BundleResponse(FhirBackboneElementBase):
         status: FhirString,
         location: Optional[FhirUri] = None,
         etag: Optional[FhirString] = None,
-        lastModified: Optional[instant] = None,
+        lastModified: Optional[FhirInstant] = None,
         outcome: Optional[ResourceContainer] = None,
     ) -> None:
         """

@@ -99,7 +99,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.observation import Observation
 
     # instantiatesCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # instantiatesUri (uri)
     # basedOn (Reference)
@@ -226,7 +226,7 @@ class MedicationRequest(FhirResourceBase):
         reasonReference: Optional[
             FhirList[Reference[Union[Condition, Observation]]]
         ] = None,
-        instantiatesCanonical: Optional[FhirList[canonical]] = None,
+        instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
         basedOn: Optional[
             FhirList[

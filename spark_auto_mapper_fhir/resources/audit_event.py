@@ -37,7 +37,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.period import Period
 
     # recorded (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # outcome (AuditEventOutcome)
     from spark_auto_mapper_fhir.value_sets.audit_event_outcome import (
@@ -86,7 +86,7 @@ class AuditEvent(FhirResourceBase):
         subtype: Optional[FhirList[Coding[AuditEventSub_TypeCode]]] = None,
         action: Optional[AuditEventActionCode] = None,
         period: Optional[Period] = None,
-        recorded: instant,
+        recorded: FhirInstant,
         outcome: Optional[AuditEventOutcomeCode] = None,
         outcomeDesc: Optional[FhirString] = None,
         purposeOfEvent: Optional[FhirList[CodeableConcept[PurposeOfUse]]] = None,

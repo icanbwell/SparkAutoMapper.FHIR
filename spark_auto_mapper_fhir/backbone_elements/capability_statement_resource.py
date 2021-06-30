@@ -17,11 +17,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # profile (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # supportedProfile (canonical)
     # documentation (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # interaction (CapabilityStatement.Interaction)
     from spark_auto_mapper_fhir.backbone_elements.capability_statement_interaction import (
@@ -79,9 +79,9 @@ class CapabilityStatementResource(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: ResourceTypeCode,
-        profile: Optional[canonical] = None,
-        supportedProfile: Optional[FhirList[canonical]] = None,
-        documentation: Optional[markdown] = None,
+        profile: Optional[FhirCanonical] = None,
+        supportedProfile: Optional[FhirList[FhirCanonical]] = None,
+        documentation: Optional[FhirMarkdown] = None,
         interaction: Optional[FhirList[CapabilityStatementInteraction]] = None,
         versioning: Optional[ResourceVersionPolicyCode] = None,
         readHistory: Optional[FhirBoolean] = None,

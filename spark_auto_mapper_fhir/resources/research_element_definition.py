@@ -41,7 +41,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # comment (string)
     # useContext (UsageContext)
@@ -77,7 +77,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
     # library (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # type_ (ResearchElementType)
     from spark_auto_mapper_fhir.value_sets.research_element_type import (
@@ -132,15 +132,15 @@ class ResearchElementDefinition(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         comment: Optional[FhirList[FhirString]] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
         usage: Optional[FhirString] = None,
-        copyright: Optional[markdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         approvalDate: Optional[FhirDate] = None,
         lastReviewDate: Optional[FhirDate] = None,
         effectivePeriod: Optional[Period] = None,
@@ -150,7 +150,7 @@ class ResearchElementDefinition(FhirResourceBase):
         reviewer: Optional[FhirList[ContactDetail]] = None,
         endorser: Optional[FhirList[ContactDetail]] = None,
         relatedArtifact: Optional[FhirList[RelatedArtifact]] = None,
-        library: Optional[FhirList[canonical]] = None,
+        library: Optional[FhirList[FhirCanonical]] = None,
         type_: ResearchElementTypeCode,
         variableType: Optional[EvidenceVariableTypeCode] = None,
         characteristic: FhirList[ResearchElementDefinitionCharacteristic],

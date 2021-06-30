@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     )
 
     # instantiatesCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # instantiatesUri (uri)
     # code (CodeableConcept)
@@ -117,7 +117,7 @@ class CarePlanDetail(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         kind: Optional[CarePlanActivityKindCode] = None,
-        instantiatesCanonical: Optional[FhirList[canonical]] = None,
+        instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
         code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_Code]] = None,
         reasonCode: Optional[

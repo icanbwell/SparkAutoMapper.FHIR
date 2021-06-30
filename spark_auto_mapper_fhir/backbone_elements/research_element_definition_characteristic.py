@@ -43,7 +43,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for definitionCodeableConcept
     # definitionCanonical (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # definitionExpression (Expression)
     from spark_auto_mapper_fhir.complex_types.expression import Expression
@@ -88,7 +88,7 @@ class ResearchElementDefinitionCharacteristic(FhirBackboneElementBase):
         participantEffectiveTimeFromStart: Optional[Duration] = None,
         participantEffectiveGroupMeasure: Optional[GroupMeasureCode] = None,
         definitionCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
-        definitionCanonical: Optional[canonical] = None,
+        definitionCanonical: Optional[FhirCanonical] = None,
         definitionExpression: Optional[Expression] = None,
         definitionDataRequirement: Optional[DataRequirement] = None,
         studyEffectiveDateTime: Optional[FhirDateTime] = None,

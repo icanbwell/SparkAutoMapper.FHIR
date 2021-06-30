@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     # path (string)
     # searchParam (string)
     # valueSet (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # code (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
@@ -40,7 +40,7 @@ class DataRequirementCodeFilter(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         path: Optional[FhirString] = None,
         searchParam: Optional[FhirString] = None,
-        valueSet: Optional[canonical] = None,
+        valueSet: Optional[FhirCanonical] = None,
         code: Optional[FhirList[Coding[GenericTypeCode]]] = None,
     ) -> None:
         """

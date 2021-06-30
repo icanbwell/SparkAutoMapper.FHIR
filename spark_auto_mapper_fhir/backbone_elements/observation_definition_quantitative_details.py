@@ -25,7 +25,7 @@ if TYPE_CHECKING:
     # Import for CodeableConcept for unit
     # End Import for CodeableConcept for unit
     # conversionFactor (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # decimalPrecision (integer)
 
@@ -45,7 +45,7 @@ class ObservationDefinitionQuantitativeDetails(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         customaryUnit: Optional[CodeableConcept[UCUMCodesCode]] = None,
         unit: Optional[CodeableConcept[UCUMCodesCode]] = None,
-        conversionFactor: Optional[decimal] = None,
+        conversionFactor: Optional[FhirDecimal] = None,
         decimalPrecision: Optional[FhirInteger] = None,
     ) -> None:
         """

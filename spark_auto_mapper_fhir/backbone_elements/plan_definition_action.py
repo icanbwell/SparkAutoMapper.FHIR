@@ -95,7 +95,7 @@ if TYPE_CHECKING:
     )
 
     # transform (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # dynamicValue (PlanDefinition.DynamicValue)
     from spark_auto_mapper_fhir.backbone_elements.plan_definition_dynamic_value import (
@@ -166,7 +166,7 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         requiredBehavior: Optional[ActionRequiredBehaviorCode] = None,
         precheckBehavior: Optional[ActionPrecheckBehaviorCode] = None,
         cardinalityBehavior: Optional[ActionCardinalityBehaviorCode] = None,
-        transform: Optional[canonical] = None,
+        transform: Optional[FhirCanonical] = None,
         dynamicValue: Optional[FhirList[PlanDefinitionDynamicValue]] = None,
         action: Optional[FhirList[PlanDefinitionAction]] = None,
         subjectCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
@@ -177,7 +177,7 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         timingDuration: Optional[Duration] = None,
         timingRange: Optional[Range] = None,
         timingTiming: Optional[Timing] = None,
-        definitionCanonical: Optional[canonical] = None,
+        definitionCanonical: Optional[FhirCanonical] = None,
         definitionUri: Optional[FhirUri] = None,
     ) -> None:
         """

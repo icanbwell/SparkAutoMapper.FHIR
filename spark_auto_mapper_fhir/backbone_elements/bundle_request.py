@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     # url (uri)
     # ifNoneMatch (string)
     # ifModifiedSince (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # ifMatch (string)
     # ifNoneExist (string)
@@ -41,7 +41,7 @@ class BundleRequest(FhirBackboneElementBase):
         method: HTTPVerbCode,
         url: FhirUri,
         ifNoneMatch: Optional[FhirString] = None,
-        ifModifiedSince: Optional[instant] = None,
+        ifModifiedSince: Optional[FhirInstant] = None,
         ifMatch: Optional[FhirString] = None,
         ifNoneExist: Optional[FhirString] = None,
     ) -> None:

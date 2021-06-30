@@ -28,7 +28,7 @@ if TYPE_CHECKING:
     )
 
     # measure (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -86,7 +86,7 @@ class MeasureReport(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: MeasureReportStatusCode,
         type_: MeasureReportTypeCode,
-        measure: canonical,
+        measure: FhirCanonical,
         subject: Optional[
             Reference[
                 Union[

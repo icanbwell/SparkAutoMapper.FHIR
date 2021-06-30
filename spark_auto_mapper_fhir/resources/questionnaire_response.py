@@ -32,7 +32,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.procedure import Procedure
 
     # questionnaire (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # status (QuestionnaireResponseStatus)
     from spark_auto_mapper_fhir.value_sets.questionnaire_response_status import (
@@ -82,7 +82,7 @@ class QuestionnaireResponse(FhirResourceBase):
         identifier: Optional[Identifier] = None,
         basedOn: Optional[FhirList[Reference[Union[CarePlan, ServiceRequest]]]] = None,
         partOf: Optional[FhirList[Reference[Union[Observation, Procedure]]]] = None,
-        questionnaire: Optional[canonical] = None,
+        questionnaire: Optional[FhirCanonical] = None,
         status: QuestionnaireResponseStatusCode,
         subject: Optional[Reference[Union[Resource]]] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,

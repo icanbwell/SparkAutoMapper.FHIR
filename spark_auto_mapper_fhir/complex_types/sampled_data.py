@@ -14,13 +14,13 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
     # period (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # factor (decimal)
     # lowerLimit (decimal)
     # upperLimit (decimal)
     # dimensions (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # data (SampledDataDataType)
     from spark_auto_mapper_fhir.complex_types.sampled_data_data_type import (
@@ -42,11 +42,11 @@ class SampledData(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         origin: Quantity,
-        period: decimal,
-        factor: Optional[decimal] = None,
-        lowerLimit: Optional[decimal] = None,
-        upperLimit: Optional[decimal] = None,
-        dimensions: positiveInt,
+        period: FhirDecimal,
+        factor: Optional[FhirDecimal] = None,
+        lowerLimit: Optional[FhirDecimal] = None,
+        upperLimit: Optional[FhirDecimal] = None,
+        dimensions: FhirPositiveInt,
         data: Optional[SampledDataDataType] = None,
     ) -> None:
         """

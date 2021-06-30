@@ -57,7 +57,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.resource import Resource
 
     # definition (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # eventCoding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
@@ -96,7 +96,7 @@ class MessageHeader(FhirResourceBase):
         reason: Optional[CodeableConcept[ExampleMessageReasonCodesCode]] = None,
         response: Optional[MessageHeaderResponse] = None,
         focus: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        definition: Optional[canonical] = None,
+        definition: Optional[FhirCanonical] = None,
         eventCoding: Optional[Coding[GenericTypeCode]] = None,
         eventUri: Optional[FhirUri] = None,
     ) -> None:

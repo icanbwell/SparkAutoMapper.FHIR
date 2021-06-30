@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     # initiator (string)
     # receiver (string)
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # initiatorActive (boolean)
     # receiverActive (boolean)
@@ -49,7 +49,7 @@ class ExampleScenarioOperation(FhirBackboneElementBase):
         name: Optional[FhirString] = None,
         initiator: Optional[FhirString] = None,
         receiver: Optional[FhirString] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         initiatorActive: Optional[FhirBoolean] = None,
         receiverActive: Optional[FhirBoolean] = None,
         request: Optional[ExampleScenarioContainedInstance] = None,

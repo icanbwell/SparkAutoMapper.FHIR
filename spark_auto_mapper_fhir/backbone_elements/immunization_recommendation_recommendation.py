@@ -70,7 +70,7 @@ if TYPE_CHECKING:
     # supportingPatientInformation (Reference)
     # Imports for References for supportingPatientInformation
     # doseNumberPositiveInt (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # doseNumberString (string)
     # seriesDosesPositiveInt (positiveInt)
@@ -114,9 +114,9 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         supportingPatientInformation: Optional[
             FhirList[Reference[Union[Resource]]]
         ] = None,
-        doseNumberPositiveInt: Optional[positiveInt] = None,
+        doseNumberPositiveInt: Optional[FhirPositiveInt] = None,
         doseNumberString: Optional[FhirString] = None,
-        seriesDosesPositiveInt: Optional[positiveInt] = None,
+        seriesDosesPositiveInt: Optional[FhirPositiveInt] = None,
         seriesDosesString: Optional[FhirString] = None,
     ) -> None:
         """

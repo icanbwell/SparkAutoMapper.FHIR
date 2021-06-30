@@ -21,7 +21,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # groupSize (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # cost (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
@@ -43,7 +43,7 @@ class InsurancePlanGeneralCost(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: Optional[CodeableConcept[GenericTypeCode]] = None,
-        groupSize: Optional[positiveInt] = None,
+        groupSize: Optional[FhirPositiveInt] = None,
         cost: Optional[Money] = None,
         comment: Optional[FhirString] = None,
     ) -> None:

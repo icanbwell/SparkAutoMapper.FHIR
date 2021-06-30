@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     pass
     # property (uri)
     # system (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # value (string)
     # display (string)
@@ -35,7 +35,7 @@ class ConceptMapDependsOn(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         property: FhirUri,
-        system: Optional[canonical] = None,
+        system: Optional[FhirCanonical] = None,
         value: FhirString,
         display: Optional[FhirString] = None,
     ) -> None:

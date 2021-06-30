@@ -66,7 +66,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
     # issued (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # operator (Reference)
     # Imports for References for operator
@@ -94,12 +94,12 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device_metric import DeviceMetric
 
     # height (positiveInt)
-    from spark_auto_mapper_fhir.complex_types.positive_int import positiveInt
+    from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
 
     # width (positiveInt)
     # frames (positiveInt)
     # duration (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # content (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
@@ -147,7 +147,7 @@ class Media(FhirResourceBase):
             ]
         ] = None,
         encounter: Optional[Reference[Union[Encounter]]] = None,
-        issued: Optional[instant] = None,
+        issued: Optional[FhirInstant] = None,
         operator: Optional[
             Reference[
                 Union[
@@ -167,10 +167,10 @@ class Media(FhirResourceBase):
         bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
         deviceName: Optional[FhirString] = None,
         device: Optional[Reference[Union[Device, DeviceMetric, Device]]] = None,
-        height: Optional[positiveInt] = None,
-        width: Optional[positiveInt] = None,
-        frames: Optional[positiveInt] = None,
-        duration: Optional[decimal] = None,
+        height: Optional[FhirPositiveInt] = None,
+        width: Optional[FhirPositiveInt] = None,
+        frames: Optional[FhirPositiveInt] = None,
+        duration: Optional[FhirDecimal] = None,
         content: Attachment,
         note: Optional[FhirList[Annotation]] = None,
         createdDateTime: Optional[FhirDateTime] = None,

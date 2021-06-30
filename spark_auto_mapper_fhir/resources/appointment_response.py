@@ -26,7 +26,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.appointment import Appointment
 
     # start (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # end (instant)
     # participantType (CodeableConcept)
@@ -70,8 +70,8 @@ class AppointmentResponse(FhirResourceBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         appointment: Reference[Union[Appointment]],
-        start: Optional[instant] = None,
-        end: Optional[instant] = None,
+        start: Optional[FhirInstant] = None,
+        end: Optional[FhirInstant] = None,
         participantType: Optional[
             FhirList[CodeableConcept[ParticipantTypeCode]]
         ] = None,

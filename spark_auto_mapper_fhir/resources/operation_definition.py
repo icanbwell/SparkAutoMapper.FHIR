@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -59,7 +59,7 @@ if TYPE_CHECKING:
 
     # comment (markdown)
     # base (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # resource (ResourceType)
     from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
@@ -104,22 +104,22 @@ class OperationDefinition(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
         affectsState: Optional[FhirBoolean] = None,
         code: code,
-        comment: Optional[markdown] = None,
-        base: Optional[canonical] = None,
+        comment: Optional[FhirMarkdown] = None,
+        base: Optional[FhirCanonical] = None,
         resource: Optional[FhirList[ResourceTypeCode]] = None,
         system: FhirBoolean,
         type_: FhirBoolean,
         instance: FhirBoolean,
-        inputProfile: Optional[canonical] = None,
-        outputProfile: Optional[canonical] = None,
+        inputProfile: Optional[FhirCanonical] = None,
+        outputProfile: Optional[FhirCanonical] = None,
         parameter: Optional[FhirList[OperationDefinitionParameter]] = None,
         overload: Optional[FhirList[OperationDefinitionOverload]] = None,
     ) -> None:

@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
     # allDay (boolean)
     # openingTime (time)
-    from spark_auto_mapper_fhir.complex_types.time import time
+    from spark_auto_mapper_fhir.fhir_types.time import FhirTime
 
     # closingTime (time)
 
@@ -37,8 +37,8 @@ class LocationHoursOfOperation(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         daysOfWeek: Optional[FhirList[DaysOfWeekCode]] = None,
         allDay: Optional[FhirBoolean] = None,
-        openingTime: Optional[time] = None,
-        closingTime: Optional[time] = None,
+        openingTime: Optional[FhirTime] = None,
+        closingTime: Optional[FhirTime] = None,
     ) -> None:
         """
 

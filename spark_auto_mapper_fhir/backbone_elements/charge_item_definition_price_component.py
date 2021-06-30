@@ -25,7 +25,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for code
     # factor (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # amount (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
@@ -46,7 +46,7 @@ class ChargeItemDefinitionPriceComponent(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: InvoicePriceComponentTypeCode,
         code: Optional[CodeableConcept[GenericTypeCode]] = None,
-        factor: Optional[decimal] = None,
+        factor: Optional[FhirDecimal] = None,
         amount: Optional[Money] = None,
     ) -> None:
         """

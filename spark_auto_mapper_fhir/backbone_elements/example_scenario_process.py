@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     pass
     # title (string)
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # preConditions (markdown)
     # postConditions (markdown)
@@ -38,9 +38,9 @@ class ExampleScenarioProcess(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         title: FhirString,
-        description: Optional[markdown] = None,
-        preConditions: Optional[markdown] = None,
-        postConditions: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
+        preConditions: Optional[FhirMarkdown] = None,
+        postConditions: Optional[FhirMarkdown] = None,
         step: Optional[FhirList[ExampleScenarioStep]] = None,
     ) -> None:
         """

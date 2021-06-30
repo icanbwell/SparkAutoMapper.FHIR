@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     )
 
     # score (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # tester (string)
     # issued (dateTime)
@@ -78,7 +78,7 @@ class TestReport(FhirResourceBase):
         status: TestReportStatusCode,
         testScript: Reference[Union[TestScript]],
         result: TestReportResultCode,
-        score: Optional[decimal] = None,
+        score: Optional[FhirDecimal] = None,
         tester: Optional[FhirString] = None,
         issued: Optional[FhirDateTime] = None,
         participant: Optional[FhirList[TestReportParticipant]] = None,

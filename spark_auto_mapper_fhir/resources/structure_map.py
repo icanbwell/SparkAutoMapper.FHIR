@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -58,7 +58,7 @@ if TYPE_CHECKING:
     )
 
     # import_ (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # group (StructureMap.Group)
     from spark_auto_mapper_fhir.backbone_elements.structure_map_group import (
@@ -90,15 +90,15 @@ class StructureMap(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
-        copyright: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         structure: Optional[FhirList[StructureMapStructure]] = None,
-        import_: Optional[FhirList[canonical]] = None,
+        import_: Optional[FhirList[FhirCanonical]] = None,
         group: FhirList[StructureMapGroup],
     ) -> None:
         """

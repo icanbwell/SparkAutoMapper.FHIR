@@ -51,7 +51,7 @@ if TYPE_CHECKING:
     # name (string)
     # comment (string)
     # extraDetails (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # photo (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
@@ -135,7 +135,7 @@ class HealthcareService(FhirResourceBase):
         location: Optional[FhirList[Reference[Union[Location]]]] = None,
         name: Optional[FhirString] = None,
         comment: Optional[FhirString] = None,
-        extraDetails: Optional[markdown] = None,
+        extraDetails: Optional[FhirMarkdown] = None,
         photo: Optional[Attachment] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         coverageArea: Optional[FhirList[Reference[Union[Location]]]] = None,

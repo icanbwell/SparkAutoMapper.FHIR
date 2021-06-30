@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # uri (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # version (TerminologyCapabilities.Version)
     from spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_version import (
@@ -36,7 +36,7 @@ class TerminologyCapabilitiesCodeSystem(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        uri: Optional[canonical] = None,
+        uri: Optional[FhirCanonical] = None,
         version: Optional[FhirList[TerminologyCapabilitiesVersion]] = None,
         subsumption: Optional[FhirBoolean] = None,
     ) -> None:

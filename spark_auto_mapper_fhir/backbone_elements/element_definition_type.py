@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     pass
     # code (uri)
     # profile (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # targetProfile (canonical)
     # aggregation (AggregationMode)
@@ -40,8 +40,8 @@ class ElementDefinitionType(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         code: FhirUri,
-        profile: Optional[FhirList[canonical]] = None,
-        targetProfile: Optional[FhirList[canonical]] = None,
+        profile: Optional[FhirList[FhirCanonical]] = None,
+        targetProfile: Optional[FhirList[FhirCanonical]] = None,
         aggregation: Optional[FhirList[AggregationModeCode]] = None,
         versioning: Optional[ReferenceVersionRulesCode] = None,
     ) -> None:

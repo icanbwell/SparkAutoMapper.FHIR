@@ -12,7 +12,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # amount (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # base (VisionBase)
     from spark_auto_mapper_fhir.value_sets.vision_base import VisionBaseCode
@@ -31,7 +31,7 @@ class VisionPrescriptionPrism(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        amount: decimal,
+        amount: FhirDecimal,
         base: VisionBaseCode,
     ) -> None:
         """

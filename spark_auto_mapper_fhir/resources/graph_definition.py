@@ -32,7 +32,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -51,7 +51,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
     # profile (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # link (GraphDefinition.Link)
     from spark_auto_mapper_fhir.backbone_elements.graph_definition_link import (
@@ -81,14 +81,14 @@ class GraphDefinition(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
         start: ResourceTypeCode,
-        profile: Optional[canonical] = None,
+        profile: Optional[FhirCanonical] = None,
         link: Optional[FhirList[GraphDefinitionLink]] = None,
     ) -> None:
         """

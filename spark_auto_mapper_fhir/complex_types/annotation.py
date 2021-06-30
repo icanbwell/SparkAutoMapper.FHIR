@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     pass
     # time (dateTime)
     # text (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # authorReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -42,7 +42,7 @@ class Annotation(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         time: Optional[FhirDateTime] = None,
-        text: markdown,
+        text: FhirMarkdown,
         authorReference: Optional[
             Reference[Union[Practitioner, Patient, RelatedPerson, Organization]]
         ] = None,

@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
 
     # description (markdown)
-    from spark_auto_mapper_fhir.complex_types.markdown import markdown
+    from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # useContext (UsageContext)
     from spark_auto_mapper_fhir.complex_types.usage_context import UsageContext
@@ -85,7 +85,7 @@ if TYPE_CHECKING:
     # contextInvariant (string)
     # type_ (uri)
     # baseDefinition (canonical)
-    from spark_auto_mapper_fhir.complex_types.canonical import canonical
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
     # derivation (TypeDerivationRule)
     from spark_auto_mapper_fhir.value_sets.type_derivation_rule import (
@@ -127,13 +127,13 @@ class StructureDefinition(FhirResourceBase):
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
-        description: Optional[markdown] = None,
+        description: Optional[FhirMarkdown] = None,
         useContext: Optional[FhirList[UsageContext]] = None,
         jurisdiction: Optional[
             FhirList[CodeableConcept[JurisdictionValueSetCode]]
         ] = None,
-        purpose: Optional[markdown] = None,
-        copyright: Optional[markdown] = None,
+        purpose: Optional[FhirMarkdown] = None,
+        copyright: Optional[FhirMarkdown] = None,
         keyword: Optional[FhirList[Coding[DefinitionUseCodesCode]]] = None,
         fhirVersion: Optional[FHIRVersionCode] = None,
         mapping: Optional[FhirList[StructureDefinitionMapping]] = None,
@@ -142,7 +142,7 @@ class StructureDefinition(FhirResourceBase):
         context: Optional[FhirList[StructureDefinitionContext]] = None,
         contextInvariant: Optional[FhirList[FhirString]] = None,
         type_: FhirUri,
-        baseDefinition: Optional[canonical] = None,
+        baseDefinition: Optional[FhirCanonical] = None,
         derivation: Optional[TypeDerivationRuleCode] = None,
         snapshot: Optional[StructureDefinitionSnapshot] = None,
         differential: Optional[StructureDefinitionDifferential] = None,

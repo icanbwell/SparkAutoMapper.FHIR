@@ -20,7 +20,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for type_
     # when (instant)
-    from spark_auto_mapper_fhir.complex_types.instant import instant
+    from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # who (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -57,7 +57,7 @@ class Signature(FhirComplexTypeBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: FhirList[Coding[SignatureTypeCodesCode]],
-        when: instant,
+        when: FhirInstant,
         who: Reference[
             Union[
                 Practitioner,

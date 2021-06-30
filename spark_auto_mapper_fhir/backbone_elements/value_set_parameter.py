@@ -21,7 +21,7 @@ if TYPE_CHECKING:
     # valueBoolean (boolean)
     # valueInteger (integer)
     # valueDecimal (decimal)
-    from spark_auto_mapper_fhir.complex_types.decimal import decimal
+    from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # valueUri (uri)
     # valueCode (code)
@@ -47,7 +47,7 @@ class ValueSetParameter(FhirBackboneElementBase):
         valueString: Optional[FhirString] = None,
         valueBoolean: Optional[FhirBoolean] = None,
         valueInteger: Optional[FhirInteger] = None,
-        valueDecimal: Optional[decimal] = None,
+        valueDecimal: Optional[FhirDecimal] = None,
         valueUri: Optional[FhirUri] = None,
         valueCode: Optional[code] = None,
         valueDateTime: Optional[FhirDateTime] = None,
