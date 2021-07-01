@@ -22,7 +22,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
 
     # url (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # document (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
@@ -48,7 +48,7 @@ class RelatedArtifact(FhirComplexTypeBase):
         label: Optional[FhirString] = None,
         display: Optional[FhirString] = None,
         citation: Optional[FhirMarkdown] = None,
-        url: Optional[url] = None,
+        url: Optional[FhirUrl] = None,
         document: Optional[Attachment] = None,
         resource: Optional[FhirCanonical] = None,
     ) -> None:

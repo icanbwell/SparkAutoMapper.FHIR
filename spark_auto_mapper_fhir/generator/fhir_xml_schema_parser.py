@@ -96,6 +96,7 @@ class FhirXmlSchemaParser:
         "canonical": "FhirCanonical",
         "List": "List_",
         "uri": "FhirUri",
+        "url": "FhirUrl",
     }
 
     @staticmethod

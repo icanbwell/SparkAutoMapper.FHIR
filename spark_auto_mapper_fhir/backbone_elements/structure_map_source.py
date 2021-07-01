@@ -72,7 +72,7 @@ if TYPE_CHECKING:
 
     # defaultValueUri (uri)
     # defaultValueUrl (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # defaultValueUuid (uuid)
     from spark_auto_mapper_fhir.complex_types.uuid import uuid
@@ -224,7 +224,7 @@ class StructureMapSource(FhirBackboneElementBase):
         defaultValueTime: Optional[FhirTime] = None,
         defaultValueUnsignedInt: Optional[unsignedInt] = None,
         defaultValueUri: Optional[FhirUri] = None,
-        defaultValueUrl: Optional[url] = None,
+        defaultValueUrl: Optional[FhirUrl] = None,
         defaultValueUuid: Optional[uuid] = None,
         defaultValueAddress: Optional[Address] = None,
         defaultValueAge: Optional[Age] = None,

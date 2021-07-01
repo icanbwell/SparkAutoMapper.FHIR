@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.device import Device
 
     # endpoint (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # receiver (Reference)
     # Imports for References for receiver
@@ -44,7 +44,7 @@ class MessageHeaderDestination(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         name: Optional[FhirString] = None,
         target: Optional[Reference[Union[Device]]] = None,
-        endpoint: url,
+        endpoint: FhirUrl,
         receiver: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,

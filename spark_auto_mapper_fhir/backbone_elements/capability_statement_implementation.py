@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     pass
     # description (string)
     # url (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # custodian (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -37,7 +37,7 @@ class CapabilityStatementImplementation(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         description: FhirString,
-        url: Optional[url] = None,
+        url: Optional[FhirUrl] = None,
         custodian: Optional[Reference[Union[Organization]]] = None,
     ) -> None:
         """

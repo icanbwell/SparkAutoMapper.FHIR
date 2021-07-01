@@ -18,7 +18,7 @@ if TYPE_CHECKING:
     )
 
     # endpoint (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # payload (Mime Types)
     from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
@@ -40,7 +40,7 @@ class SubscriptionChannel(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         type_: SubscriptionChannelTypeCode,
-        endpoint: Optional[url] = None,
+        endpoint: Optional[FhirUrl] = None,
         payload: Optional[MimeTypesCode] = None,
         header: Optional[FhirList[FhirString]] = None,
     ) -> None:

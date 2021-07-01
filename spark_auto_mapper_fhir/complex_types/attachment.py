@@ -22,7 +22,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
 
     # url (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # size (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
@@ -48,7 +48,7 @@ class Attachment(FhirComplexTypeBase):
         contentType: Optional[MimeTypesCode] = None,
         language: Optional[CommonLanguagesCode] = None,
         data: Optional[base64Binary] = None,
-        url: Optional[url] = None,
+        url: Optional[FhirUrl] = None,
         size: Optional[unsignedInt] = None,
         hash: Optional[base64Binary] = None,
         title: Optional[FhirString] = None,

@@ -126,7 +126,7 @@ if TYPE_CHECKING:
     # defaultValueUnsignedInt (unsignedInt)
     # defaultValueUri (uri)
     # defaultValueUrl (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # defaultValueUuid (uuid)
     from spark_auto_mapper_fhir.complex_types.uuid import uuid
@@ -428,7 +428,7 @@ class ElementDefinition(FhirBackboneElementBase):
         defaultValueTime: Optional[FhirTime] = None,
         defaultValueUnsignedInt: Optional[unsignedInt] = None,
         defaultValueUri: Optional[FhirUri] = None,
-        defaultValueUrl: Optional[url] = None,
+        defaultValueUrl: Optional[FhirUrl] = None,
         defaultValueUuid: Optional[uuid] = None,
         defaultValueAddress: Optional[Address] = None,
         defaultValueAge: Optional[Age] = None,
@@ -478,7 +478,7 @@ class ElementDefinition(FhirBackboneElementBase):
         fixedTime: Optional[FhirTime] = None,
         fixedUnsignedInt: Optional[unsignedInt] = None,
         fixedUri: Optional[FhirUri] = None,
-        fixedUrl: Optional[url] = None,
+        fixedUrl: Optional[FhirUrl] = None,
         fixedUuid: Optional[uuid] = None,
         fixedAddress: Optional[Address] = None,
         fixedAge: Optional[Age] = None,
@@ -528,7 +528,7 @@ class ElementDefinition(FhirBackboneElementBase):
         patternTime: Optional[FhirTime] = None,
         patternUnsignedInt: Optional[unsignedInt] = None,
         patternUri: Optional[FhirUri] = None,
-        patternUrl: Optional[url] = None,
+        patternUrl: Optional[FhirUrl] = None,
         patternUuid: Optional[uuid] = None,
         patternAddress: Optional[Address] = None,
         patternAge: Optional[Age] = None,

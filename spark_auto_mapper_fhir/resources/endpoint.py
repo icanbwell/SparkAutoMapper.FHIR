@@ -55,7 +55,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # address (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # header (string)
 
@@ -83,7 +83,7 @@ class Endpoint(FhirResourceBase):
         period: Optional[Period] = None,
         payloadType: FhirList[CodeableConcept[EndpointPayloadTypeCode]],
         payloadMimeType: Optional[FhirList[MimeTypesCode]] = None,
-        address: url,
+        address: FhirUrl,
         header: Optional[FhirList[FhirString]] = None,
     ) -> None:
         """

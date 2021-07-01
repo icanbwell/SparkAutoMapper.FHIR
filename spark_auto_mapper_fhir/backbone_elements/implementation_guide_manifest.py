@@ -13,7 +13,7 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 if TYPE_CHECKING:
     pass
     # rendering (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # resource (ImplementationGuide.Resource1)
     from spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource1 import (
@@ -42,7 +42,7 @@ class ImplementationGuideManifest(FhirBackboneElementBase):
         *,
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
-        rendering: Optional[url] = None,
+        rendering: Optional[FhirUrl] = None,
         resource: FhirList[ImplementationGuideResource1],
         page: Optional[FhirList[ImplementationGuidePage1]] = None,
         image: Optional[FhirList[FhirString]] = None,

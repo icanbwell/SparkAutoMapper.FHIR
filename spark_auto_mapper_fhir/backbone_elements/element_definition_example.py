@@ -59,7 +59,7 @@ if TYPE_CHECKING:
 
     # valueUri (uri)
     # valueUrl (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # valueUuid (uuid)
     from spark_auto_mapper_fhir.complex_types.uuid import uuid
@@ -202,7 +202,7 @@ class ElementDefinitionExample(FhirBackboneElementBase):
         valueTime: Optional[FhirTime] = None,
         valueUnsignedInt: Optional[unsignedInt] = None,
         valueUri: Optional[FhirUri] = None,
-        valueUrl: Optional[url] = None,
+        valueUrl: Optional[FhirUrl] = None,
         valueUuid: Optional[uuid] = None,
         valueAddress: Optional[Address] = None,
         valueAge: Optional[Age] = None,

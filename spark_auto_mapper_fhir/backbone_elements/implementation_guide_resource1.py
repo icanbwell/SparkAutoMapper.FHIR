@@ -18,7 +18,7 @@ if TYPE_CHECKING:
 
     # Imports for References for reference
     # relativePath (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # exampleBoolean (boolean)
     # exampleCanonical (canonical)
@@ -39,7 +39,7 @@ class ImplementationGuideResource1(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         reference: Reference[Union[Resource]],
-        relativePath: Optional[url] = None,
+        relativePath: Optional[FhirUrl] = None,
         exampleBoolean: Optional[FhirBoolean] = None,
         exampleCanonical: Optional[FhirCanonical] = None,
     ) -> None:

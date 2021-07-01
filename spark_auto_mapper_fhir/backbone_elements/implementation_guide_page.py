@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     )
 
     # nameUrl (url)
-    from spark_auto_mapper_fhir.complex_types.url import url
+    from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 
     # nameReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -44,7 +44,7 @@ class ImplementationGuidePage(FhirBackboneElementBase):
         title: FhirString,
         generation: GuidePageGenerationCode,
         page: Optional[FhirList[ImplementationGuidePage]] = None,
-        nameUrl: Optional[url] = None,
+        nameUrl: Optional[FhirUrl] = None,
         nameReference: Optional[Reference[Union[Binary]]] = None,
     ) -> None:
         """
