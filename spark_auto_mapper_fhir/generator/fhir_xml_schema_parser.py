@@ -998,7 +998,7 @@ class FhirXmlSchemaParser:
                         concepts=fhir_concepts,
                         url=url,
                         value_set_url=value_set_url,
-                        value_set_url_list=value_set_url_list,
+                        value_set_url_list=value_set_url_list or [url],
                         documentation=description,
                         source="valuesets.xml",
                     )
@@ -1237,7 +1237,7 @@ class FhirXmlSchemaParser:
                     concepts=fhir_concepts,
                     url=url,
                     value_set_url="",
-                    value_set_url_list=[],
+                    value_set_url_list=[url],
                     documentation=description,
                     source="v2-tables.xml",
                 )
