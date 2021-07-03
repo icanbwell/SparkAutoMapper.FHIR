@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,79 +10,77 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DICOMAuditMessageRecordLifecycleEventsCode(GenericTypeCode):
     """
     DICOM Audit Message Record Lifecycle Events
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+        Attached is vocabulary for the record lifecycle events, as per DICOM Audit
+    Message,
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle"
-
 
 class DICOMAuditMessageRecordLifecycleEventsCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
 
     Origination_Creation = DICOMAuditMessageRecordLifecycleEventsCode("1")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Import_Copy = DICOMAuditMessageRecordLifecycleEventsCode("2")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Amendment = DICOMAuditMessageRecordLifecycleEventsCode("3")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Verification = DICOMAuditMessageRecordLifecycleEventsCode("4")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Translation = DICOMAuditMessageRecordLifecycleEventsCode("5")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Access_Use = DICOMAuditMessageRecordLifecycleEventsCode("6")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     De_identification = DICOMAuditMessageRecordLifecycleEventsCode("7")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Aggregation_Summarization_Derivation = DICOMAuditMessageRecordLifecycleEventsCode(
         "8"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Report = DICOMAuditMessageRecordLifecycleEventsCode("9")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Export = DICOMAuditMessageRecordLifecycleEventsCode("10")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Disclosure = DICOMAuditMessageRecordLifecycleEventsCode("11")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     ReceiptOfDisclosure = DICOMAuditMessageRecordLifecycleEventsCode("12")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     Archiving = DICOMAuditMessageRecordLifecycleEventsCode("13")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     LogicalDeletion = DICOMAuditMessageRecordLifecycleEventsCode("14")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
     """
     PermanentErasure_PhysicalDestruction = DICOMAuditMessageRecordLifecycleEventsCode(
         "15"

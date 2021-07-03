@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,49 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class FHIRDefinedConceptPropertiesCode(GenericTypeCode):
     """
     FHIR Defined Concept Properties
+    From: http://hl7.org/fhir/concept-properties in valuesets.xml
+        A set of common concept properties for use on coded systems throughout the
+    FHIR eco-system.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/concept-properties
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/concept-properties"
-
 
 class FHIRDefinedConceptPropertiesCodeValues:
     """
-    True if the concept is not considered active - e.g. not a valid concept any more. Property type is boolean, default value is false
+    True if the concept is not considered active - e.g. not a valid concept any
+    more. Property type is boolean, default value is false
+    From: http://hl7.org/fhir/concept-properties in valuesets.xml
     """
 
     Inactive = FHIRDefinedConceptPropertiesCode("inactive")
     """
-    The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged, and they should be expected to be made inactive in a future release. Property type is dateTime
+    The date at which a concept was deprecated. Concepts that are deprecated but
+    not inactive can still be used, but their use is discouraged, and they should
+    be expected to be made inactive in a future release. Property type is dateTime
+    From: http://hl7.org/fhir/concept-properties in valuesets.xml
     """
     Deprecated = FHIRDefinedConceptPropertiesCode("deprecated")
     """
-    The concept is not intended to be chosen by the user - only intended to be used as a selector for other concepts. Note, though, that the interpretation of this is highly contextual; all concepts are selectable in some context. Property type is boolean
+    The concept is not intended to be chosen by the user - only intended to be
+    used as a selector for other concepts. Note, though, that the interpretation
+    of this is highly contextual; all concepts are selectable in some context.
+    Property type is boolean
+    From: http://hl7.org/fhir/concept-properties in valuesets.xml
     """
     NotSelectable = FHIRDefinedConceptPropertiesCode("notSelectable")
     """
-    The concept identified in this property is a parent of the concept on which it is a property. The property type will be 'code'. The meaning of 'parent' is defined by the hierarchyMeaning attribute
+    The concept identified in this property is a parent of the concept on which it
+    is a property. The property type will be 'code'. The meaning of 'parent' is
+    defined by the hierarchyMeaning attribute
+    From: http://hl7.org/fhir/concept-properties in valuesets.xml
     """
     Parent = FHIRDefinedConceptPropertiesCode("parent")
     """
-    The concept identified in this property is a child of the concept on which it is a property. The property type will be 'code'. The meaning of 'child' is defined by the hierarchyMeaning attribute
+    The concept identified in this property is a child of the concept on which it
+    is a property. The property type will be 'code'. The meaning of 'child' is
+    defined by the hierarchyMeaning attribute
+    From: http://hl7.org/fhir/concept-properties in valuesets.xml
     """
     Child = FHIRDefinedConceptPropertiesCode("child")

@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ObservationCategory(GenericTypeCode):
     """
-    ObservationCategory
+    v3.ObservationCategory
+    From: http://terminology.hl7.org/ValueSet/v3-ObservationCategory in v3-codesystems.xml
+         High level observation categories for the general type of observation being
+    made. URL: http://hl7-fhir.github.io/valueset-observation-category.html This
+    is an inline code system http://hl7.org/fhir/observation-category.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

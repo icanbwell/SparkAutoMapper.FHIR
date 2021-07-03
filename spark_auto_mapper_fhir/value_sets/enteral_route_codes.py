@@ -11,60 +11,66 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class EnteralRouteCodesCode(GenericTypeCode):
     """
     EnteralRouteCodes
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+        EnteralRouteOfAdministration: Codes specifying the route of administration of
+    enteral formula.  This value set is composed of HL7 V3 codes and is provided
+    as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/enteral-route
+    http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/enteral-route"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
 
 
 class EnteralRouteCodesCodeValues:
     """
     Route of substance administration classified by administration method.
+    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
 
     Routebymethod = EnteralRouteCodesCode("_RouteByMethod")
     """
     Route of substance administration classified by site.
+    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
     Routebysite = EnteralRouteCodesCode("_RouteBySite")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     PO = EnteralRouteCodesCode("PO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     EFT = EnteralRouteCodesCode("EFT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     ENTINSTL = EnteralRouteCodesCode("ENTINSTL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     GT = EnteralRouteCodesCode("GT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     NGT = EnteralRouteCodesCode("NGT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     OGT = EnteralRouteCodesCode("OGT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     GJT = EnteralRouteCodesCode("GJT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     JJTINSTL = EnteralRouteCodesCode("JJTINSTL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """
     OJJ = EnteralRouteCodesCode("OJJ")

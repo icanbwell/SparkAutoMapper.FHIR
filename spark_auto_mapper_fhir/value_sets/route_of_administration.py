@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RouteOfAdministration(GenericTypeCode):
     """
-    RouteOfAdministration
+    v3.RouteOfAdministration
+    From: http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration in v3-codesystems.xml
+         The path the administered medication takes to get into the body or into
+    contact with the body.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

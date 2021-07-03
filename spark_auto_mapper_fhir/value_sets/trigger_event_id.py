@@ -10,7 +10,18 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class TriggerEventID(GenericTypeCode):
     """
-    triggerEventID
+    v3.triggerEventID
+    From: http://terminology.hl7.org/ValueSet/v3-triggerEventID in v3-codesystems.xml
+          Description:
+    This code system contains all HL7 artifacts of type TE (Trigger Event) that
+    are created by HL7 or its affiliates or their designates using the realm
+    namespacing rules approved by HL7.  Local implementations who create trigger
+    events outside of these namespacing rules, (e.g. using the ZZ realm code) must
+    register their own code system.  The specific list of legal codes can be found
+    by consulting the HL7 publications (editions, ballots, implementation guides,
+    etc.) published by HL7 Inc. and by the various HL7 affiliates and their
+    designates.  Codes shall be expressed in upper case, with separator as shown
+    in HL7 publications with no version id.  E.g. PORX_TE123456UV.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Hl7V3Conformance(GenericTypeCode):
     """
-    hl7V3Conformance
+    v3.hl7V3Conformance
+    From: http://terminology.hl7.org/ValueSet/v3-hl7V3Conformance in v3-codesystems.xml
+          Description:
+    Identifies allowed codes for HL7aTMs v3 conformance property.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

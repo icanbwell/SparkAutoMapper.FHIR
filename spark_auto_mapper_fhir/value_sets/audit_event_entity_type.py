@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,33 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AuditEventEntityTypeCode(GenericTypeCode):
     """
     AuditEventEntityType
+    From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
+        Code for the entity type involved in the audit event.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://terminology.hl7.org/CodeSystem/audit-entity-type
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/audit-entity-type"
-
 
 class AuditEventEntityTypeCodeValues:
     """
     Person
+    From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
     """
 
     Person = AuditEventEntityTypeCode("1")
     """
     System Object
+    From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
     """
     SystemObject = AuditEventEntityTypeCode("2")
     """
     Organization
+    From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
     """
     Organization = AuditEventEntityTypeCode("3")
     """
     Other
+    From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
     """
     Other = AuditEventEntityTypeCode("4")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,40 +10,40 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DeviceSafetyCode(GenericTypeCode):
     """
     DeviceSafety
+    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+        Codes used to identify medical devices safety characteristics. These codes are
+    taken from the [NCI
+    Thesaurus](https://ncit.nci.nih.gov/ncitbrowser/pages/home.jsf) and are
+    provided here as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/device-safety
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/device-safety"
-
 
 class DeviceSafetyCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
     """
 
     MagneticResonanceConditional = DeviceSafetyCode("C106046")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
     """
     MagneticResonanceSafe = DeviceSafetyCode("C106045")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
     """
     MagneticResonanceUnsafe = DeviceSafetyCode("C106047")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
     """
     LabelingDoesNotContainMRISafetyInformation = DeviceSafetyCode("C113844")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
     """
     LabeledAsContainingNaturalRubberLatex = DeviceSafetyCode("C101673")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
     """
     NotMadeWithNaturalRubberLatex = DeviceSafetyCode("C106038")

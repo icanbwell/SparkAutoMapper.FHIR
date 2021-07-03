@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class AddressPartType(GenericTypeCode):
     """
-    AddressPartType
+    v3.AddressPartType
+    From: http://terminology.hl7.org/ValueSet/v3-AddressPartType in v3-codesystems.xml
+          Description:
+    Code that specifies whether an address part names the street, city, country,
+    postal code, post box, etc. Discussion: The hierarchical nature of these
+    concepts shows composition.  E.g. "Street Name" is part of "Street Address
+    Line"
     """
 
     def __init__(self, value: AutoMapperTextInputType):

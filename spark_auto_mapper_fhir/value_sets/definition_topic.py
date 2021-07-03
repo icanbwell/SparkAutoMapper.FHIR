@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DefinitionTopicCode(GenericTypeCode):
     """
     DefinitionTopic
+    From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
+        High-level categorization of the definition, used for searching, sorting, and
+    filtering.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/definition-topic
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/definition-topic"
-
 
 class DefinitionTopicCodeValues:
     """
     The definition is related to treatment of the patient.
+    From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
     """
 
     Treatment = DefinitionTopicCode("treatment")
     """
     The definition is related to education of the patient.
+    From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
     """
     Education = DefinitionTopicCode("education")
     """
     The definition is related to assessment of the patient.
+    From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
     """
     Assessment = DefinitionTopicCode("assessment")

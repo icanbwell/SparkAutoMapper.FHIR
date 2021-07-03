@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,56 +10,53 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MediaTypeCodeCode(GenericTypeCode):
     """
     MediaTypeCode
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+        Media Type Code
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/dicm-405-mediatype
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/dicm-405-mediatype"
-
 
 class MediaTypeCodeCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
 
     _110030 = MediaTypeCodeCode("110030")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110031 = MediaTypeCodeCode("110031")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110032 = MediaTypeCodeCode("110032")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110033 = MediaTypeCodeCode("110033")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110034 = MediaTypeCodeCode("110034")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110035 = MediaTypeCodeCode("110035")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110036 = MediaTypeCodeCode("110036")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110037 = MediaTypeCodeCode("110037")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110010 = MediaTypeCodeCode("110010")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
     """
     _110038 = MediaTypeCodeCode("110038")

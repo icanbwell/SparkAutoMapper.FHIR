@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class GTSAbbreviation(GenericTypeCode):
     """
-    GTSAbbreviation
+    v3.GTSAbbreviation
+    From: http://terminology.hl7.org/ValueSet/v3-GTSAbbreviation in v3-codesystems.xml
+          Open Issue:
+    It appears that the printnames are suboptimal and should be improved for many
+    of the existing codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

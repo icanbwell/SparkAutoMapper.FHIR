@@ -10,7 +10,17 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationMode(GenericTypeCode):
     """
-    ParticipationMode
+    v3.ParticipationMode
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationMode in v3-codesystems.xml
+         A set of codes specifying the modality by which the Entity playing the Role
+    is participating in the Act.  Examples:
+    Physically present, over the telephone, written communication.  Rationale:
+    Particularly for author (originator) participants this is used to specify
+    whether the information represented by the act was initially provided
+    verbally, (hand-)written, or electronically.  Open Issue:
+    There needs to be a reexamination of the hierarchies as there seems to be some
+    muddling between ELECTRONIC and other concepts that involve electronic
+    communication that are in other hierarchies.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

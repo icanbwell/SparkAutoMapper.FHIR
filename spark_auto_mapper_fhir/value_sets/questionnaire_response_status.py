@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,43 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class QuestionnaireResponseStatusCode(GenericTypeCode):
     """
     QuestionnaireResponseStatus
+    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
+        Lifecycle status of the questionnaire response.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/questionnaire-answers-status
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaire-answers-status"
-
 
 class QuestionnaireResponseStatusCodeValues:
     """
-    This QuestionnaireResponse has been partially filled out with answers but changes or additions are still expected to be made to it.
+    This QuestionnaireResponse has been partially filled out with answers but
+    changes or additions are still expected to be made to it.
+    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
     """
 
     InProgress = QuestionnaireResponseStatusCode("in-progress")
     """
-    This QuestionnaireResponse has been filled out with answers and the current content is regarded as definitive.
+    This QuestionnaireResponse has been filled out with answers and the current
+    content is regarded as definitive.
+    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
     """
     Completed = QuestionnaireResponseStatusCode("completed")
     """
-    This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.
+    This QuestionnaireResponse has been filled out with answers, then marked as
+    complete, yet changes or additions have been made to it afterwards.
+    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
     """
     Amended = QuestionnaireResponseStatusCode("amended")
     """
     This QuestionnaireResponse was entered in error and voided.
+    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
     """
     EnteredInError = QuestionnaireResponseStatusCode("entered-in-error")
     """
-    This QuestionnaireResponse has been partially filled out with answers but has been abandoned. It is unknown whether changes or additions are expected to be made to it.
+    This QuestionnaireResponse has been partially filled out with answers but has
+    been abandoned. It is unknown whether changes or additions are expected to be
+    made to it.
+    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
     """
     Stopped = QuestionnaireResponseStatusCode("stopped")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,104 +10,101 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MedicationKnowledgePackageTypeCodesCode(GenericTypeCode):
     """
     medicationKnowledge Package Type Codes
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+        MedicationKnowledge Package Type Codes
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/medicationknowledge-package-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationknowledge-package-type"
-
 
 class MedicationKnowledgePackageTypeCodesCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
 
     Ampule = MedicationKnowledgePackageTypeCodesCode("amp")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Bag = MedicationKnowledgePackageTypeCodesCode("bag")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     BlisterPack = MedicationKnowledgePackageTypeCodesCode("blstrpk")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Bottle = MedicationKnowledgePackageTypeCodesCode("bot")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Box = MedicationKnowledgePackageTypeCodesCode("box")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Can = MedicationKnowledgePackageTypeCodesCode("can")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Cartridge = MedicationKnowledgePackageTypeCodesCode("cart")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Disk = MedicationKnowledgePackageTypeCodesCode("disk")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Dosette = MedicationKnowledgePackageTypeCodesCode("doset")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Jar = MedicationKnowledgePackageTypeCodesCode("jar")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Jug = MedicationKnowledgePackageTypeCodesCode("jug")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Minim = MedicationKnowledgePackageTypeCodesCode("minim")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     NebuleAmp = MedicationKnowledgePackageTypeCodesCode("nebamp")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Ovule = MedicationKnowledgePackageTypeCodesCode("ovul")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Pouch = MedicationKnowledgePackageTypeCodesCode("pch")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Packet = MedicationKnowledgePackageTypeCodesCode("pkt")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Sashet = MedicationKnowledgePackageTypeCodesCode("sash")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Strip = MedicationKnowledgePackageTypeCodesCode("strip")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Tin = MedicationKnowledgePackageTypeCodesCode("tin")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Tub = MedicationKnowledgePackageTypeCodesCode("tub")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Tube = MedicationKnowledgePackageTypeCodesCode("tube")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
     """
     Vial = MedicationKnowledgePackageTypeCodesCode("vial")

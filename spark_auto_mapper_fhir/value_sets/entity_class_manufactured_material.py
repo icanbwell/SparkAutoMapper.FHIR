@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityClassManufacturedMaterial(GenericTypeCode):
     """
-    EntityClassManufacturedMaterial
+    v3.EntityClassManufacturedMaterial
+    From: http://terminology.hl7.org/ValueSet/v3-EntityClassManufacturedMaterial in v3-codesystems.xml
+         Corresponds to the ManufacturedMaterial class
     """
 
     def __init__(self, value: AutoMapperTextInputType):

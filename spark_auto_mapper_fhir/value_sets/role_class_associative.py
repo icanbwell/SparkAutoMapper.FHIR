@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassAssociative(GenericTypeCode):
     """
-    RoleClassAssociative
+    v3.RoleClassAssociative
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassAssociative in v3-codesystems.xml
+         A general association between two entities that is neither partitive nor
+    ontological.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

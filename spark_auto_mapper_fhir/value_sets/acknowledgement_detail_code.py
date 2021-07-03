@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class AcknowledgementDetailCode(GenericTypeCode):
     """
-    AcknowledgementDetailCode
+    v3.AcknowledgementDetailCode
+    From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailCode in v3-codesystems.xml
+          OpenIssue:
+    Missing description.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

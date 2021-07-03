@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class AcknowledgementCondition(GenericTypeCode):
     """
-    AcknowledgementCondition
+    v3.AcknowledgementCondition
+    From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition in v3-codesystems.xml
+         The codes identify the conditions under which accept acknowledgements are
+    required to be returned in response to this message. Note that accept
+    acknowledgement address two different issues at the same time: reliable
+    transport as well as syntactical correctness
     """
 
     def __init__(self, value: AutoMapperTextInputType):

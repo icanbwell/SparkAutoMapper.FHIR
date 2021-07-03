@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationSignature(GenericTypeCode):
     """
-    ParticipationSignature
+    v3.ParticipationSignature
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationSignature in v3-codesystems.xml
+         A set of codes specifying whether and how the participant has attested his
+    participation through a signature and or whether such a signature is needed.
+    Examples:
+    A surgical Procedure act object (representing a procedure report) requires a
+    signature of the performing and responsible surgeon, and possibly other
+    participants. (See also: Participation.signatureText.)
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,38 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CompositeMeasureScoringCode(GenericTypeCode):
     """
     CompositeMeasureScoring
+    From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
+        The composite scoring method of the measure.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/composite-measure-scoring
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/composite-measure-scoring"
-
 
 class CompositeMeasureScoringCodeValues:
     """
-    Opportunity scoring combines the scores from component measures by combining the numerators and denominators for each component.
+    Opportunity scoring combines the scores from component measures by combining
+    the numerators and denominators for each component.
+    From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
     """
 
     Opportunity = CompositeMeasureScoringCode("opportunity")
     """
-    All-or-nothing scoring includes an individual in the numerator of the composite measure if they are in the numerators of all of the component measures in which they are in the denominator.
+    All-or-nothing scoring includes an individual in the numerator of the
+    composite measure if they are in the numerators of all of the component
+    measures in which they are in the denominator.
+    From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
     """
     All_or_nothing = CompositeMeasureScoringCode("all-or-nothing")
     """
-    Linear scoring gives an individual a score based on the number of numerators in which they appear.
+    Linear scoring gives an individual a score based on the number of numerators
+    in which they appear.
+    From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
     """
     Linear = CompositeMeasureScoringCode("linear")
     """
-    Weighted scoring gives an individual a score based on a weighted factor for each component numerator in which they appear.
+    Weighted scoring gives an individual a score based on a weighted factor for
+    each component numerator in which they appear.
+    From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
     """
     Weighted = CompositeMeasureScoringCode("weighted")

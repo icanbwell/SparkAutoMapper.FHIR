@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class AmericanIndianAlaskaNativeLanguages(GenericTypeCode):
     """
-    AmericanIndianAlaskaNativeLanguages
+    v3.AmericanIndianAlaskaNativeLanguages
+    From: http://terminology.hl7.org/ValueSet/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+         American Indian and Alaska Native languages currently being used in the
+    United States.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

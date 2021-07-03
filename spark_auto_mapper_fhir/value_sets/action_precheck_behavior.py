@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ActionPrecheckBehaviorCode(GenericTypeCode):
     """
     ActionPrecheckBehavior
+    From: http://hl7.org/fhir/action-precheck-behavior in valuesets.xml
+        Defines selection frequency behavior for an action or group.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/action-precheck-behavior
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-precheck-behavior"
-
 
 class ActionPrecheckBehaviorCodeValues:
     """
-    An action with this behavior is one of the most frequent action that is, or should be, included by an end user, for the particular context in which the action occurs. The system displaying the action to the end user should consider "pre-checking" such an action as a convenience for the user.
+    An action with this behavior is one of the most frequent action that is, or
+    should be, included by an end user, for the particular context in which the
+    action occurs. The system displaying the action to the end user should
+    consider "pre-checking" such an action as a convenience for the user.
+    From: http://hl7.org/fhir/action-precheck-behavior in valuesets.xml
     """
 
     Yes = ActionPrecheckBehaviorCode("yes")
     """
-    An action with this behavior is one of the less frequent actions included by the end user, for the particular context in which the action occurs. The system displaying the actions to the end user would typically not "pre-check" such an action.
+    An action with this behavior is one of the less frequent actions included by
+    the end user, for the particular context in which the action occurs. The
+    system displaying the actions to the end user would typically not "pre-check"
+    such an action.
+    From: http://hl7.org/fhir/action-precheck-behavior in valuesets.xml
     """
     No = ActionPrecheckBehaviorCode("no")

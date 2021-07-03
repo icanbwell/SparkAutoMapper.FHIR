@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class NullFlavor(GenericTypeCode):
     """
-    NullFlavor
+    v3.NullFlavor
+    From: http://terminology.hl7.org/ValueSet/v3-NullFlavor in v3-codesystems.xml
+         A collection of codes specifying why a valid value is not present.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -11,60 +11,68 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class PostalAddressUseCode(GenericTypeCode):
     """
     PostalAddressUse
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+        Uses of an address not included in Address.use.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/postal-address-use
+    http://terminology.hl7.org/CodeSystem/v3-AddressUse
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/postal-address-use"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-AddressUse"
 
 
 class PostalAddressUseCodeValues:
     """
-    Description: Address uses that can apply to both postal and telecommunication addresses.
+    Description: Address uses that can apply to both postal and telecommunication
+    addresses.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
     """
 
     _generaladdressuse = PostalAddressUseCode("_GeneralAddressUse")
     """
-    Description: Address uses that only apply to postal addresses, not telecommunication addresses.
+    Description: Address uses that only apply to postal addresses, not
+    telecommunication addresses.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
     """
     _postaladdressuse = PostalAddressUseCode("_PostalAddressUse")
     """
-    Description: Address uses that only apply to telecommunication addresses, not postal addresses.
+    Description: Address uses that only apply to telecommunication addresses, not
+    postal addresses.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
     """
     _telecommunicationaddressuse = PostalAddressUseCode("_TelecommunicationAddressUse")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     BadAddress = PostalAddressUseCode("BAD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     ConfidentialAddress = PostalAddressUseCode("CONF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     PrimaryHome = PostalAddressUseCode("HP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     VacationHome = PostalAddressUseCode("HV")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     Direct = PostalAddressUseCode("DIR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     Public = PostalAddressUseCode("PUB")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     PhysicalVisitAddress = PostalAddressUseCode("PHYS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """
     PostalAddress = PostalAddressUseCode("PST")

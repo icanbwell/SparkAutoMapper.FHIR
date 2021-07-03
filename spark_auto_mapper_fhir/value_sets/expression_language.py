@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,28 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ExpressionLanguageCode(GenericTypeCode):
     """
     ExpressionLanguage
+    From: http://hl7.org/fhir/expression-language in valuesets.xml
+        The media type of the expression language.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/expression-language
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/expression-language"
-
 
 class ExpressionLanguageCodeValues:
     """
     Clinical Quality Language.
+    From: http://hl7.org/fhir/expression-language in valuesets.xml
     """
 
     CQL = ExpressionLanguageCode("text/cql")
     """
     FHIRPath.
+    From: http://hl7.org/fhir/expression-language in valuesets.xml
     """
     FHIRPath = ExpressionLanguageCode("text/fhirpath")
     """
     FHIR's RESTful query syntax - typically independent of base URL.
+    From: http://hl7.org/fhir/expression-language in valuesets.xml
     """
     FHIRQuery = ExpressionLanguageCode("application/x-fhir-query")

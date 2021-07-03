@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,33 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SubjectTypeCode(GenericTypeCode):
     """
     SubjectType
+    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
+        Possible types of subjects.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/subject-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/subject-type"
-
 
 class SubjectTypeCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
     """
 
     Patient = SubjectTypeCode("Patient")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
     """
     Practitioner = SubjectTypeCode("Practitioner")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
     """
     Organization = SubjectTypeCode("Organization")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
     """
     Location = SubjectTypeCode("Location")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
     """
     Device = SubjectTypeCode("Device")

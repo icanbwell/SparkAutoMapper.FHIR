@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ReferenceVersionRulesCode(GenericTypeCode):
     """
     ReferenceVersionRules
+    From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
+        Whether a reference needs to be version specific or version independent, or
+    whether either can be used.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/reference-version-rules
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/reference-version-rules"
-
 
 class ReferenceVersionRulesCodeValues:
     """
     The reference may be either version independent or version specific.
+    From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
     """
 
     EitherSpecificOrIndependent = ReferenceVersionRulesCode("either")
     """
     The reference must be version independent.
+    From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
     """
     VersionIndependent = ReferenceVersionRulesCode("independent")
     """
     The reference must be version specific.
+    From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
     """
     VersionSpecific = ReferenceVersionRulesCode("specific")

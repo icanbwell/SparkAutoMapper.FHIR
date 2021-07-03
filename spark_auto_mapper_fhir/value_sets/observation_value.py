@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ObservationValue(GenericTypeCode):
     """
-    ObservationValue
+    v3.ObservationValue
+    From: http://terminology.hl7.org/ValueSet/v3-ObservationValue in v3-codesystems.xml
+         This domain is the root domain to which all HL7-recognized value sets for the
+    Observation.value attribute will be linked when Observation.value has a coded
+    data type.  OpenIssue:
+    Description copied from Concept Domain of same name.  Must be corrected..
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,39 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MedicationUsageCategoryCodesCode(GenericTypeCode):
     """
     Medication usage category codes
+    From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
+        Medication Status Codes
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/medication-statement-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medication-statement-category"
-
 
 class MedicationUsageCategoryCodesCodeValues:
     """
-    Includes orders for medications to be administered or consumed in an inpatient or acute care setting
+    Includes orders for medications to be administered or consumed in an inpatient
+    or acute care setting
+    From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
     """
 
     Inpatient = MedicationUsageCategoryCodesCode("inpatient")
     """
-    Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+    Includes orders for medications to be administered or consumed in an
+    outpatient setting (for example, Emergency Department, Outpatient Clinic,
+    Outpatient Surgery, Doctor's office)
+    From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
     """
     Outpatient = MedicationUsageCategoryCodesCode("outpatient")
     """
-    Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
+    Includes orders for medications to be administered or consumed by the patient
+    in their home (this would include long term care or nursing homes, hospices,
+    etc.).
+    From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
     """
     Community = MedicationUsageCategoryCodesCode("community")
     """
-    Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
+    Includes statements about medication use, including over the counter
+    medication, provided by the patient, agent or another provider
+    From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
     """
     PatientSpecified = MedicationUsageCategoryCodesCode("patientspecified")

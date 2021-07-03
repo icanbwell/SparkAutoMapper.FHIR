@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class SubstanceAdminSubstitutionReason(GenericTypeCode):
     """
-    SubstanceAdminSubstitutionReason
+    v3.SubstanceAdminSubstitutionReason
+    From: http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason in v3-codesystems.xml
+        No Description Provided
     """
 
     def __init__(self, value: AutoMapperTextInputType):

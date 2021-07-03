@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class QuestionnaireItemUIControlCodesCode(GenericTypeCode):
     """
     QuestionnaireItemUIControlCodes
+    From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
+        Starter set of user interface control/display mechanisms that might be used
+    when rendering an item in a questionnaire.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/questionnaire-item-control
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaire-item-control"
-
 
 class QuestionnaireItemUIControlCodesCodeValues:
     """
     UI controls relevant to organizing groups of questions
+    From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
     """
 
     Group = QuestionnaireItemUIControlCodesCode("group")
     """
     UI controls relevant to rendering questionnaire text items
+    From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
     """
     Text = QuestionnaireItemUIControlCodesCode("text")
     """
     UI controls relevant to capturing question data
+    From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
     """
     Question = QuestionnaireItemUIControlCodesCode("question")

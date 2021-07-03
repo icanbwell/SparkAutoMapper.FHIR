@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationInformationTranscriber(GenericTypeCode):
     """
-    ParticipationInformationTranscriber
+    v3.ParticipationInformationTranscriber
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationInformationTranscriber in v3-codesystems.xml
+         An entity entering the data into the originating system. The data entry
+    entity is collected optionally for internal quality control purposes. This
+    includes the transcriptionist for dictated text transcribed into electronic
+    form.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

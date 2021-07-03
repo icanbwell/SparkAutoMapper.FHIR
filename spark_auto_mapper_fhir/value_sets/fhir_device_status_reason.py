@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,48 +10,53 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class FHIRDeviceStatusReasonCode(GenericTypeCode):
     """
     FHIRDeviceStatusReason
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+        The availability status reason of the device.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/device-status-reason
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/device-status-reason"
-
 
 class FHIRDeviceStatusReasonCodeValues:
     """
     The device is off.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
 
     Online = FHIRDeviceStatusReasonCode("online")
     """
     The device is paused.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
     Paused = FHIRDeviceStatusReasonCode("paused")
     """
     The device is ready but not actively operating.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
     Standby = FHIRDeviceStatusReasonCode("standby")
     """
     The device is offline.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
     Offline = FHIRDeviceStatusReasonCode("offline")
     """
     The device is not ready.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
     NotReady = FHIRDeviceStatusReasonCode("not-ready")
     """
     The device transducer is disconnected.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
     TransducerDisconnected = FHIRDeviceStatusReasonCode("transduc-discon")
     """
     The device hardware is disconnected.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
     HardwareDisconnected = FHIRDeviceStatusReasonCode("hw-discon")
     """
     The device is off.
+    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
     """
     Off = FHIRDeviceStatusReasonCode("off")

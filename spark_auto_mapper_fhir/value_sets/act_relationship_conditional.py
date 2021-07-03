@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActRelationshipConditional(GenericTypeCode):
     """
-    ActRelationshipConditional
+    v3.ActRelationshipConditional
+    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipConditional in v3-codesystems.xml
+         Specifies under what circumstances (target Act) the source-Act may, must,
+    must not or has occurred
     """
 
     def __init__(self, value: AutoMapperTextInputType):

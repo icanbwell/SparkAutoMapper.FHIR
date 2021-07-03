@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,1012 +10,1009 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class Iso3166_1_2Code(GenericTypeCode):
     """
     Iso3166-1-2
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+        This value set defines the ISO 3166 Part 1 2-letter codes
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/iso3166-1-2
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/iso3166-1-2"
-
 
 class Iso3166_1_2CodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
 
     Andorra = Iso3166_1_2Code("AD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     UnitedArabEmirates = Iso3166_1_2Code("AE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Afghanistan = Iso3166_1_2Code("AF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     AntiguaAndBarbuda = Iso3166_1_2Code("AG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Anguilla = Iso3166_1_2Code("AI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Albania = Iso3166_1_2Code("AL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Armenia = Iso3166_1_2Code("AM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Angola = Iso3166_1_2Code("AO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Antarctica = Iso3166_1_2Code("AQ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Argentina = Iso3166_1_2Code("AR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     AmericanSamoa = Iso3166_1_2Code("AS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Austria = Iso3166_1_2Code("AT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Australia = Iso3166_1_2Code("AU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Aruba = Iso3166_1_2Code("AW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     _landIslands = Iso3166_1_2Code("AX")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Azerbaijan = Iso3166_1_2Code("AZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     BosniaAndHerzegovina = Iso3166_1_2Code("BA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Barbados = Iso3166_1_2Code("BB")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bangladesh = Iso3166_1_2Code("BD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Belgium = Iso3166_1_2Code("BE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     BurkinaFaso = Iso3166_1_2Code("BF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bulgaria = Iso3166_1_2Code("BG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bahrain = Iso3166_1_2Code("BH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Burundi = Iso3166_1_2Code("BI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Benin = Iso3166_1_2Code("BJ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaintBarth_lemy = Iso3166_1_2Code("BL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bermuda = Iso3166_1_2Code("BM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     BruneiDarussalam = Iso3166_1_2Code("BN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bolivia_PlurinationalStateOf = Iso3166_1_2Code("BO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bonaire_SintEustatiusAndSaba = Iso3166_1_2Code("BQ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Brazil = Iso3166_1_2Code("BR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bahamas = Iso3166_1_2Code("BS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Bhutan = Iso3166_1_2Code("BT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     BouvetIsland = Iso3166_1_2Code("BV")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Botswana = Iso3166_1_2Code("BW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Belarus = Iso3166_1_2Code("BY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Belize = Iso3166_1_2Code("BZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Canada = Iso3166_1_2Code("CA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Cocos_Keeling_Islands = Iso3166_1_2Code("CC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Congo_TheDemocraticRepublicOfThe = Iso3166_1_2Code("CD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     CentralAfricanRepublic = Iso3166_1_2Code("CF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Congo = Iso3166_1_2Code("CG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Switzerland = Iso3166_1_2Code("CH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     C_teD_Ivoire = Iso3166_1_2Code("CI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     CookIslands = Iso3166_1_2Code("CK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Chile = Iso3166_1_2Code("CL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Cameroon = Iso3166_1_2Code("CM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     China = Iso3166_1_2Code("CN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Colombia = Iso3166_1_2Code("CO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     CostaRica = Iso3166_1_2Code("CR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Cuba = Iso3166_1_2Code("CU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     CaboVerde = Iso3166_1_2Code("CV")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Cura_ao = Iso3166_1_2Code("CW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     ChristmasIsland = Iso3166_1_2Code("CX")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Cyprus = Iso3166_1_2Code("CY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Czechia = Iso3166_1_2Code("CZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Germany = Iso3166_1_2Code("DE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Djibouti = Iso3166_1_2Code("DJ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Denmark = Iso3166_1_2Code("DK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Dominica = Iso3166_1_2Code("DM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     DominicanRepublic = Iso3166_1_2Code("DO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Algeria = Iso3166_1_2Code("DZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Ecuador = Iso3166_1_2Code("EC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Estonia = Iso3166_1_2Code("EE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Egypt = Iso3166_1_2Code("EG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     WesternSahara = Iso3166_1_2Code("EH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Eritrea = Iso3166_1_2Code("ER")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Spain = Iso3166_1_2Code("ES")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Ethiopia = Iso3166_1_2Code("ET")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Finland = Iso3166_1_2Code("FI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Fiji = Iso3166_1_2Code("FJ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     FalklandIslands_Malvinas_ = Iso3166_1_2Code("FK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Micronesia_FederatedStatesOf = Iso3166_1_2Code("FM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     FaroeIslands = Iso3166_1_2Code("FO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     France = Iso3166_1_2Code("FR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Gabon = Iso3166_1_2Code("GA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     UnitedKingdomOfGreatBritainAndNorthernIreland = Iso3166_1_2Code("GB")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Grenada = Iso3166_1_2Code("GD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Georgia = Iso3166_1_2Code("GE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     FrenchGuiana = Iso3166_1_2Code("GF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Guernsey = Iso3166_1_2Code("GG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Ghana = Iso3166_1_2Code("GH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Gibraltar = Iso3166_1_2Code("GI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Greenland = Iso3166_1_2Code("GL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Gambia = Iso3166_1_2Code("GM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Guinea = Iso3166_1_2Code("GN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Guadeloupe = Iso3166_1_2Code("GP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     EquatorialGuinea = Iso3166_1_2Code("GQ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Greece = Iso3166_1_2Code("GR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SouthGeorgiaAndTheSouthSandwichIslands = Iso3166_1_2Code("GS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Guatemala = Iso3166_1_2Code("GT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Guam = Iso3166_1_2Code("GU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Guinea_Bissau = Iso3166_1_2Code("GW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Guyana = Iso3166_1_2Code("GY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     HongKong = Iso3166_1_2Code("HK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     HeardIslandAndMcDonaldIslands = Iso3166_1_2Code("HM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Honduras = Iso3166_1_2Code("HN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Croatia = Iso3166_1_2Code("HR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Haiti = Iso3166_1_2Code("HT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Hungary = Iso3166_1_2Code("HU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Indonesia = Iso3166_1_2Code("ID")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Ireland = Iso3166_1_2Code("IE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Israel = Iso3166_1_2Code("IL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     IsleOfMan = Iso3166_1_2Code("IM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     India = Iso3166_1_2Code("IN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     BritishIndianOceanTerritory = Iso3166_1_2Code("IO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Iraq = Iso3166_1_2Code("IQ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Iran_IslamicRepublicOf = Iso3166_1_2Code("IR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Iceland = Iso3166_1_2Code("IS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Italy = Iso3166_1_2Code("IT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Jersey = Iso3166_1_2Code("JE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Jamaica = Iso3166_1_2Code("JM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Jordan = Iso3166_1_2Code("JO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Japan = Iso3166_1_2Code("JP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Kenya = Iso3166_1_2Code("KE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Kyrgyzstan = Iso3166_1_2Code("KG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Cambodia = Iso3166_1_2Code("KH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Kiribati = Iso3166_1_2Code("KI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Comoros = Iso3166_1_2Code("KM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaintKittsAndNevis = Iso3166_1_2Code("KN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Korea_DemocraticPeople_sRepublicOf = Iso3166_1_2Code("KP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Korea_RepublicOf = Iso3166_1_2Code("KR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Kuwait = Iso3166_1_2Code("KW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     CaymanIslands = Iso3166_1_2Code("KY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Kazakhstan = Iso3166_1_2Code("KZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     LaoPeople_sDemocraticRepublic = Iso3166_1_2Code("LA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Lebanon = Iso3166_1_2Code("LB")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaintLucia = Iso3166_1_2Code("LC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Liechtenstein = Iso3166_1_2Code("LI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SriLanka = Iso3166_1_2Code("LK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Liberia = Iso3166_1_2Code("LR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Lesotho = Iso3166_1_2Code("LS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Lithuania = Iso3166_1_2Code("LT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Luxembourg = Iso3166_1_2Code("LU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Latvia = Iso3166_1_2Code("LV")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Libya = Iso3166_1_2Code("LY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Morocco = Iso3166_1_2Code("MA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Monaco = Iso3166_1_2Code("MC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Moldova_RepublicOf = Iso3166_1_2Code("MD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Montenegro = Iso3166_1_2Code("ME")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaintMartin_FrenchPart_ = Iso3166_1_2Code("MF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Madagascar = Iso3166_1_2Code("MG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     MarshallIslands = Iso3166_1_2Code("MH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Macedonia_TheFormerYugoslavRepublicOf = Iso3166_1_2Code("MK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Mali = Iso3166_1_2Code("ML")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Myanmar = Iso3166_1_2Code("MM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Mongolia = Iso3166_1_2Code("MN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Macao = Iso3166_1_2Code("MO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     NorthernMarianaIslands = Iso3166_1_2Code("MP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Martinique = Iso3166_1_2Code("MQ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Mauritania = Iso3166_1_2Code("MR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Montserrat = Iso3166_1_2Code("MS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Malta = Iso3166_1_2Code("MT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Mauritius = Iso3166_1_2Code("MU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Maldives = Iso3166_1_2Code("MV")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Malawi = Iso3166_1_2Code("MW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Mexico = Iso3166_1_2Code("MX")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Malaysia = Iso3166_1_2Code("MY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Mozambique = Iso3166_1_2Code("MZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Namibia = Iso3166_1_2Code("NA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     NewCaledonia = Iso3166_1_2Code("NC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Niger = Iso3166_1_2Code("NE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     NorfolkIsland = Iso3166_1_2Code("NF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Nigeria = Iso3166_1_2Code("NG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Nicaragua = Iso3166_1_2Code("NI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Netherlands = Iso3166_1_2Code("NL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Norway = Iso3166_1_2Code("NO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Nepal = Iso3166_1_2Code("NP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Nauru = Iso3166_1_2Code("NR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Niue = Iso3166_1_2Code("NU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     NewZealand = Iso3166_1_2Code("NZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Oman = Iso3166_1_2Code("OM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Panama = Iso3166_1_2Code("PA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Peru = Iso3166_1_2Code("PE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     FrenchPolynesia = Iso3166_1_2Code("PF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     PapuaNewGuinea = Iso3166_1_2Code("PG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Philippines = Iso3166_1_2Code("PH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Pakistan = Iso3166_1_2Code("PK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Poland = Iso3166_1_2Code("PL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaintPierreAndMiquelon = Iso3166_1_2Code("PM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Pitcairn = Iso3166_1_2Code("PN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     PuertoRico = Iso3166_1_2Code("PR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Palestine_StateOf = Iso3166_1_2Code("PS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Portugal = Iso3166_1_2Code("PT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Palau = Iso3166_1_2Code("PW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Paraguay = Iso3166_1_2Code("PY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Qatar = Iso3166_1_2Code("QA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     R_union = Iso3166_1_2Code("RE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Romania = Iso3166_1_2Code("RO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Serbia = Iso3166_1_2Code("RS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     RussianFederation = Iso3166_1_2Code("RU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Rwanda = Iso3166_1_2Code("RW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaudiArabia = Iso3166_1_2Code("SA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SolomonIslands = Iso3166_1_2Code("SB")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Seychelles = Iso3166_1_2Code("SC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Sudan = Iso3166_1_2Code("SD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Sweden = Iso3166_1_2Code("SE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Singapore = Iso3166_1_2Code("SG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaintHelena_AscensionAndTristanDaCunha = Iso3166_1_2Code("SH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Slovenia = Iso3166_1_2Code("SI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SvalbardAndJanMayen = Iso3166_1_2Code("SJ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Slovakia = Iso3166_1_2Code("SK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SierraLeone = Iso3166_1_2Code("SL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SanMarino = Iso3166_1_2Code("SM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Senegal = Iso3166_1_2Code("SN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Somalia = Iso3166_1_2Code("SO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Suriname = Iso3166_1_2Code("SR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SouthSudan = Iso3166_1_2Code("SS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaoTomeAndPrincipe = Iso3166_1_2Code("ST")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     ElSalvador = Iso3166_1_2Code("SV")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SintMaarten_DutchPart_ = Iso3166_1_2Code("SX")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SyrianArabRepublic = Iso3166_1_2Code("SY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Swaziland = Iso3166_1_2Code("SZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     TurksAndCaicosIslands = Iso3166_1_2Code("TC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Chad = Iso3166_1_2Code("TD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     FrenchSouthernTerritories = Iso3166_1_2Code("TF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Togo = Iso3166_1_2Code("TG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Thailand = Iso3166_1_2Code("TH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Tajikistan = Iso3166_1_2Code("TJ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Tokelau = Iso3166_1_2Code("TK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Timor_Leste = Iso3166_1_2Code("TL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Turkmenistan = Iso3166_1_2Code("TM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Tunisia = Iso3166_1_2Code("TN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Tonga = Iso3166_1_2Code("TO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Turkey = Iso3166_1_2Code("TR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     TrinidadAndTobago = Iso3166_1_2Code("TT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Tuvalu = Iso3166_1_2Code("TV")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Taiwan_ProvinceOfChina = Iso3166_1_2Code("TW")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Tanzania_UnitedRepublicOf = Iso3166_1_2Code("TZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Ukraine = Iso3166_1_2Code("UA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Uganda = Iso3166_1_2Code("UG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     UnitedStatesMinorOutlyingIslands = Iso3166_1_2Code("UM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     UnitedStatesOfAmerica = Iso3166_1_2Code("US")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Uruguay = Iso3166_1_2Code("UY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Uzbekistan = Iso3166_1_2Code("UZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     HolySee = Iso3166_1_2Code("VA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SaintVincentAndTheGrenadines = Iso3166_1_2Code("VC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Venezuela_BolivarianRepublicOf = Iso3166_1_2Code("VE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     VirginIslands_British = Iso3166_1_2Code("VG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     VirginIslands_ = Iso3166_1_2Code("VI")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     VietNam = Iso3166_1_2Code("VN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Vanuatu = Iso3166_1_2Code("VU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     WallisAndFutuna = Iso3166_1_2Code("WF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Samoa = Iso3166_1_2Code("WS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Yemen = Iso3166_1_2Code("YE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Mayotte = Iso3166_1_2Code("YT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     SouthAfrica = Iso3166_1_2Code("ZA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Zambia = Iso3166_1_2Code("ZM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
     """
     Zimbabwe = Iso3166_1_2Code("ZW")

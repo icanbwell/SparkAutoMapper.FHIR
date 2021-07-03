@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class SeverityObservation(GenericTypeCode):
     """
-    SeverityObservation
+    v3.SeverityObservation
+    From: http://terminology.hl7.org/ValueSet/v3-SeverityObservation in v3-codesystems.xml
+         Potential values for observations of severity.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

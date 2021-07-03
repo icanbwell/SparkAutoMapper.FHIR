@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActInvoiceElementModifier(GenericTypeCode):
     """
-    ActInvoiceElementModifier
+    v3.ActInvoiceElementModifier
+    From: http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier in v3-codesystems.xml
+         Processing consideration and clarification codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

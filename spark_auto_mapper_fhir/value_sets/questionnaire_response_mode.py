@@ -11,48 +11,58 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class QuestionnaireResponseModeCode(GenericTypeCode):
     """
     QuestionnaireResponseMode
+    From: http://hl7.org/fhir/ValueSet/questionnaireresponse-mode in valuesets.xml
+        Codes describing how the QuestionnaireResponse was populated
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/questionnaireresponse-mode
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationMode
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaireresponse-mode"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
 
 
 class QuestionnaireResponseModeCodeValues:
     """
     Participation by non-human-languaged based electronic signal
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
     """
 
     ElectronicData = QuestionnaireResponseModeCode("ELECTRONIC")
     """
-    Participation by direct action where subject and actor are in the same location. (The participation involves more than communication.)
+    Participation by direct action where subject and actor are in the same
+    location. (The participation involves more than communication.)
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
     """
     PhysicalPresence = QuestionnaireResponseModeCode("PHYSICAL")
     """
-    Participation by direct action where subject and actor are in separate locations, and the actions of the actor are transmitted by electronic or mechanical means. (The participation involves more than communication.)
+    Participation by direct action where subject and actor are in separate
+    locations, and the actions of the actor are transmitted by electronic or
+    mechanical means. (The participation involves more than communication.)
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
     """
     RemotePresence = QuestionnaireResponseModeCode("REMOTE")
     """
     Participation by voice communication
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
     """
     Verbal = QuestionnaireResponseModeCode("VERBAL")
     """
     Participation by human language recorded on a physical material
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
     """
     Written = QuestionnaireResponseModeCode("WRITTEN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaireresponse-mode in valuesets.xml
     """
     ELECTRONIC = QuestionnaireResponseModeCode("ELECTRONIC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaireresponse-mode in valuesets.xml
     """
     VERBAL = QuestionnaireResponseModeCode("VERBAL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaireresponse-mode in valuesets.xml
     """
     WRITTEN = QuestionnaireResponseModeCode("WRITTEN")

@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class HL7ContextConductionStyle(GenericTypeCode):
     """
-    HL7ContextConductionStyle
+    v3.HL7ContextConductionStyle
+    From: http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle in v3-codesystems.xml
+        The styles of context conduction usable by relationships within a static model
+    derived from tyhe HL7 Reference Information Model.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

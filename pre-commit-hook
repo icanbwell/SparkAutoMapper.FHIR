@@ -2,4 +2,4 @@
 
 GIT_PROJECT_ROOT=$(git rev-parse --show-toplevel)
 cd "$($GIT_PROJECT_ROOT "$0")"
-docker build -f ./pre-commit.Dockerfile -t pre-commit-sam-fhir . && docker run --rm --name pre-commit-sam_fhir-run -v $(pwd)/:/sourcecode pre-commit-sam-fhir
+docker build -f ./pre-commit.Dockerfile -t pre-commit-sam-fhir . && docker run --rm --name pre-commit-sam_fhir-run -v $(pwd)/:/sourcecode:delegated pre-commit-sam-fhir

@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ConfidentialityClassification(GenericTypeCode):
     """
-    ConfidentialityClassification
+    v3.ConfidentialityClassification
+    From: http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification in v3-codesystems.xml
+         Set of codes used to value Act.Confidentiality and Role.Confidentiality
+    attribute in accordance with the definition for concept domain
+    "Confidentiality".
     """
 
     def __init__(self, value: AutoMapperTextInputType):

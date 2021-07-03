@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,34 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CommonUCUMCodesForDistanceCode(GenericTypeCode):
     """
     CommonUCUMCodesForDistance
+    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
+        Unified Code for Units of Measure (UCUM). This value set includes common UCUM
+    codes for units of distance
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/distance-units
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/distance-units"
-
 
 class CommonUCUMCodesForDistanceCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
     """
 
     Nanometers = CommonUCUMCodesForDistanceCode("nm")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
     """
     Micrometers = CommonUCUMCodesForDistanceCode("um")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
     """
     Millimeters = CommonUCUMCodesForDistanceCode("mm")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
     """
     Meters = CommonUCUMCodesForDistanceCode("m")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
     """
     Kilometers = CommonUCUMCodesForDistanceCode("km")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,35 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SupplyDeliveryStatusCode(GenericTypeCode):
     """
     SupplyDeliveryStatus
+    From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
+        Status of the supply delivery.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/supplydelivery-status
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/supplydelivery-status"
-
 
 class SupplyDeliveryStatusCodeValues:
     """
     Supply has been requested, but not delivered.
+    From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
     """
 
     InProgress = SupplyDeliveryStatusCode("in-progress")
     """
     Supply has been delivered ("completed").
+    From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
     """
     Delivered = SupplyDeliveryStatusCode("completed")
     """
     Delivery was not completed.
+    From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
     """
     Abandoned = SupplyDeliveryStatusCode("abandoned")
     """
-    This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "abandoned" rather than "entered-in-error".).
+    This electronic record should never have existed, though it is possible that
+    real-world decisions were based on it. (If real-world activity has occurred,
+    the status should be "abandoned" rather than "entered-in-error".).
+    From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
     """
     EnteredInError = SupplyDeliveryStatusCode("entered-in-error")

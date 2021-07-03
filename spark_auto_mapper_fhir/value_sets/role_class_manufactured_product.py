@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassManufacturedProduct(GenericTypeCode):
     """
-    RoleClassManufacturedProduct
+    v3.RoleClassManufacturedProduct
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassManufacturedProduct in v3-codesystems.xml
+         Scoped by the manufacturer
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Hl7VoteResolution(GenericTypeCode):
     """
-    hl7VoteResolution
+    v3.hl7VoteResolution
+    From: http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution in v3-codesystems.xml
+          Description:
+    Based on concepts for resolutions from HL7 ballot spreadsheet according to
+    HL7's Governance & Operations Manual (GOM).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

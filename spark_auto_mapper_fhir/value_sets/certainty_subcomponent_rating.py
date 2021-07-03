@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,60 +10,70 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CertaintySubcomponentRatingCode(GenericTypeCode):
     """
     CertaintySubcomponentRating
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
+        The quality rating of the subcomponent of a quality of evidence rating.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/certainty-subcomponent-rating
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/certainty-subcomponent-rating"
-
 
 class CertaintySubcomponentRatingCodeValues:
     """
     no change to quality rating.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
 
     NoChangeToRating = CertaintySubcomponentRatingCode("no-change")
     """
     reduce quality rating by 1.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     ReduceRating_1 = CertaintySubcomponentRatingCode("downcode1")
     """
     reduce quality rating by 2.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     ReduceRating_2 = CertaintySubcomponentRatingCode("downcode2")
     """
     reduce quality rating by 3.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     ReduceRating_3 = CertaintySubcomponentRatingCode("downcode3")
     """
     increase quality rating by 1.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     IncreaseRating_1 = CertaintySubcomponentRatingCode("upcode1")
     """
     increase quality rating by 2.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     IncreaseRating_2 = CertaintySubcomponentRatingCode("upcode2")
     """
     no serious concern.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     NoSeriousConcern = CertaintySubcomponentRatingCode("no-concern")
     """
     serious concern.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     SeriousConcern = CertaintySubcomponentRatingCode("serious-concern")
     """
     critical concern.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     CriticalConcern = CertaintySubcomponentRatingCode("critical-concern")
     """
-    possible reason for increasing quality rating was checked and found to bepresent.
+    possible reason for increasing quality rating was checked and found to
+    bepresent.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     Present = CertaintySubcomponentRatingCode("present")
     """
-    possible reason for increasing quality rating was checked and found to be absent.
+    possible reason for increasing quality rating was checked and found to be
+    absent.
+    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
     """
     Absent = CertaintySubcomponentRatingCode("absent")

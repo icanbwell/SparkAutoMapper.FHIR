@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,40 +10,44 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class GroupTypeCode(GenericTypeCode):
     """
     GroupType
+    From: http://hl7.org/fhir/group-type in valuesets.xml
+        Types of resources that are part of group.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/group-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/group-type"
-
 
 class GroupTypeCodeValues:
     """
     Group contains "person" Patient resources.
+    From: http://hl7.org/fhir/group-type in valuesets.xml
     """
 
     Person = GroupTypeCode("person")
     """
     Group contains "animal" Patient resources.
+    From: http://hl7.org/fhir/group-type in valuesets.xml
     """
     Animal = GroupTypeCode("animal")
     """
-    Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
+    Group contains healthcare practitioner resources (Practitioner or
+    PractitionerRole).
+    From: http://hl7.org/fhir/group-type in valuesets.xml
     """
     Practitioner = GroupTypeCode("practitioner")
     """
     Group contains Device resources.
+    From: http://hl7.org/fhir/group-type in valuesets.xml
     """
     Device = GroupTypeCode("device")
     """
     Group contains Medication resources.
+    From: http://hl7.org/fhir/group-type in valuesets.xml
     """
     Medication = GroupTypeCode("medication")
     """
     Group contains Substance resources.
+    From: http://hl7.org/fhir/group-type in valuesets.xml
     """
     Substance = GroupTypeCode("substance")

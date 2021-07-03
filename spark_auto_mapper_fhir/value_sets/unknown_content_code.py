@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,34 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class UnknownContentCodeCode(GenericTypeCode):
     """
     UnknownContentCode
+    From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
+        A code that indicates whether an application accepts unknown elements or
+    extensions when reading resources.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/unknown-content-code
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/unknown-content-code"
-
 
 class UnknownContentCodeCodeValues:
     """
     The application does not accept either unknown elements or extensions.
+    From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
     """
 
     NeitherElementsOrExtensions = UnknownContentCodeCode("no")
     """
     The application accepts unknown extensions, but not unknown elements.
+    From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
     """
     UnknownExtensions = UnknownContentCodeCode("extensions")
     """
     The application accepts unknown elements, but not unknown extensions.
+    From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
     """
     UnknownElements = UnknownContentCodeCode("elements")
     """
     The application accepts unknown elements and extensions.
+    From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
     """
     UnknownElementsAndExtensions = UnknownContentCodeCode("both")

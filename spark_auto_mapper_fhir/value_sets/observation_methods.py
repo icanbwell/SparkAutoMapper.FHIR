@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,12 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ObservationMethodsCode(GenericTypeCode):
     """
     ObservationMethods
+    From: http://hl7.org/fhir/ValueSet/observation-methods in valuesets.xml
+        Observation Method codes from [SNOMED CT](http://snomed.info/sct) where
+    concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action
+    (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
-
-    """
-    http://hl7.org/fhir/ValueSet/observation-methods
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/observation-methods"

@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ObligationPolicy(GenericTypeCode):
     """
-    ObligationPolicy
+    v3.ObligationPolicy
+    From: http://terminology.hl7.org/ValueSet/v3-ObligationPolicy in v3-codesystems.xml
+         Conveys the mandated workflow action that an information custodian, receiver,
+    or user must perform.  Examples:
+      encrypt  Usage Note:
+    Per OASIS XACML, an obligation is an operation specified in a policy or policy
+    that is performed in conjunction with the enforcement of an access control
+    decision.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

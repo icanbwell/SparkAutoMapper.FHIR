@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActMoodIntent(GenericTypeCode):
     """
-    ActMoodIntent
+    v3.ActMoodIntent
+    From: http://terminology.hl7.org/ValueSet/v3-ActMoodIntent in v3-codesystems.xml
+         An intention or plan to perform a service. Historical note: in previous RIM
+    versions, the intent mood was captured as a separate class hierarchy, called
+    Service_intent_or_order.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

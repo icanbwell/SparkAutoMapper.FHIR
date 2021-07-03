@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityClassDevice(GenericTypeCode):
     """
-    EntityClassDevice
+    v3.EntityClassDevice
+    From: http://terminology.hl7.org/ValueSet/v3-EntityClassDevice in v3-codesystems.xml
+         A subtype of ManufacturedMaterial used in an activity, without being
+    substantially changed through that activity.  The kind of device is identified
+    by the code attribute inherited from Entity.  Usage:
+    This includes durable (reusable) medical equipment as well as disposable
+    equipment.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

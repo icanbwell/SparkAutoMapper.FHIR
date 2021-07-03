@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class TransmissionRelationshipTypeCode(GenericTypeCode):
     """
-    TransmissionRelationshipTypeCode
+    v3.TransmissionRelationshipTypeCode
+    From: http://terminology.hl7.org/ValueSet/v3-TransmissionRelationshipTypeCode in v3-codesystems.xml
+          Description:
+    A code specifying the meaning and purpose of every TransmissionRelationship
+    instance. Each of its values implies specific constraints to what kinds of
+    Transmission objects can be related and in which way.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

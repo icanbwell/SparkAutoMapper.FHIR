@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,33 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ClaimPayeeResourceTypeCode(GenericTypeCode):
     """
     ClaimPayeeResourceType
+    From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
+        The type of Claim payee Resource.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/ex-payee-resource-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-payee-resource-type"
-
 
 class ClaimPayeeResourceTypeCodeValues:
     """
     Organization resource.
+    From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
     """
 
     Organization = ClaimPayeeResourceTypeCode("organization")
     """
     Patient resource.
+    From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
     """
     Patient = ClaimPayeeResourceTypeCode("patient")
     """
     Practitioner resource.
+    From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
     """
     Practitioner = ClaimPayeeResourceTypeCode("practitioner")
     """
     RelatedPerson resource.
+    From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
     """
     RelatedPerson = ClaimPayeeResourceTypeCode("relatedperson")

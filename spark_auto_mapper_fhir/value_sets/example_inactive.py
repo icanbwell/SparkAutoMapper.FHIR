@@ -11,24 +11,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class Example_inactiveCode(GenericTypeCode):
     """
     Example-inactive
+    From: http://hl7.org/fhir/ValueSet/inactive in valuesets.xml
+        HL7 v3 ActMood Predicate codes, including inactive codes
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/inactive
+    http://terminology.hl7.org/CodeSystem/v3-ActMood
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/inactive"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
 
 
 class Example_inactiveCodeValues:
     """
-    These are moods describing activities as they progress in the business cycle, from defined, through planned and ordered to completed.
+    These are moods describing activities as they progress in the business cycle,
+    from defined, through planned and ordered to completed.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
     """
 
     Actmoodcompletiontrack = Example_inactiveCode("_ActMoodCompletionTrack")
     """
     Definition: An act that expresses condition statements for other acts.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
     """
     Actmoodpredicate = Example_inactiveCode("_ActMoodPredicate")

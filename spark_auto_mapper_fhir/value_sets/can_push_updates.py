@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,30 +10,25 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class Can_push_updatesCode(GenericTypeCode):
     """
     can-push-updates
+    From: http://terminology.hl7.org/CodeSystem/can-push-updates in valuesets.xml
+        Ability of the primary source to push updates/alerts
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/verificationresult-can-push-updates
-    """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/verificationresult-can-push-updates"
-    )
-
 
 class Can_push_updatesCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/can-push-updates in valuesets.xml
     """
 
     Yes = Can_push_updatesCode("yes")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/can-push-updates in valuesets.xml
     """
     No = Can_push_updatesCode("no")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/can-push-updates in valuesets.xml
     """
     Undetermined = Can_push_updatesCode("undetermined")

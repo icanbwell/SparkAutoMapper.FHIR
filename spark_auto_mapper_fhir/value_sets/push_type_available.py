@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,30 +10,25 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class Push_type_availableCode(GenericTypeCode):
     """
     push-type-available
+    From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
+        Type of alerts/updates the primary source can send
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/verificationresult-push-type-available
-    """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/verificationresult-push-type-available"
-    )
-
 
 class Push_type_availableCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
     """
 
     SpecificRequestedChanges = Push_type_availableCode("specific")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
     """
     AnyChanges = Push_type_availableCode("any")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
     """
     AsDefinedBySource = Push_type_availableCode("source")

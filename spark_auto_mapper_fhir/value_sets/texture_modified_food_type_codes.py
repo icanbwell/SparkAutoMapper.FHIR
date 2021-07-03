@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,72 +10,71 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class TextureModifiedFoodTypeCodesCode(GenericTypeCode):
     """
     TextureModifiedFoodTypeCodes
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
+        TextureModifiedFoodType: Codes for types of foods that are texture-modified.
+    This value set is composed SNOMED CT Concepts from SCTID 255620007 Foods
+    (substance) and is provided as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/modified-foodtype
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/modified-foodtype"
-
 
 class TextureModifiedFoodTypeCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
 
     Foods = TextureModifiedFoodTypeCodesCode("255620007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     Meat = TextureModifiedFoodTypeCodesCode("28647000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     Vegetables = TextureModifiedFoodTypeCodesCode("22836000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     Fruit = TextureModifiedFoodTypeCodesCode("72511004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     DairyFoods = TextureModifiedFoodTypeCodesCode("226760005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     DietaryFatsAndOils = TextureModifiedFoodTypeCodesCode("226887002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     Eggs = TextureModifiedFoodTypeCodesCode("102263004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     FoodStarch = TextureModifiedFoodTypeCodesCode("74242007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     FruitNutsAndSeeds = TextureModifiedFoodTypeCodesCode("227415002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     Grain = TextureModifiedFoodTypeCodesCode("264331002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     SauceSeasoningsAndSoups = TextureModifiedFoodTypeCodesCode("227518002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     Seafood = TextureModifiedFoodTypeCodesCode("44027008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     StarchyFood = TextureModifiedFoodTypeCodesCode("226529007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
     """
     VegetablesPlusHerbsAndSpices = TextureModifiedFoodTypeCodesCode("227210005")

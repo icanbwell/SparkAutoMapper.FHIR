@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,12 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DeviceMetricAndComponentTypesCode(GenericTypeCode):
     """
     DeviceMetricAndComponentTypes
+    From: http://hl7.org/fhir/ValueSet/devicemetric-type in valuesets.xml
+        Codes used to identify health care device metric types and units and component
+    types as part of the ISO/IEEE 11073-10101 Medical Device Communication
+    Nomenclature.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
-
-    """
-    http://hl7.org/fhir/ValueSet/devicemetric-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/devicemetric-type"

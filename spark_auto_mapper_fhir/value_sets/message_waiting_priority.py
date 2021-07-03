@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class MessageWaitingPriority(GenericTypeCode):
     """
-    MessageWaitingPriority
+    v3.MessageWaitingPriority
+    From: http://terminology.hl7.org/ValueSet/v3-MessageWaitingPriority in v3-codesystems.xml
+         Indicates that the receiver has messages for the sender  OpenIssue:
+    Description does not make sense relative to name of coding system.  Must be
+    reviewed and improved.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,26 +10,27 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ImmunizationEvaluationDoseStatusCodesCode(GenericTypeCode):
     """
     ImmunizationEvaluationDoseStatusCodes
+    From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
+        The value set to instantiate this attribute should be drawn from a
+    terminologically robust code system that consists of or contains concepts to
+    support describing the validity of a dose relative to a particular recommended
+    schedule. This value set is provided as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/immunization-evaluation-dose-status
-    """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/immunization-evaluation-dose-status"
-    )
-
 
 class ImmunizationEvaluationDoseStatusCodesCodeValues:
     """
-    The dose counts toward fulfilling a path to immunity for a patient, providing protection against the target disease.
+    The dose counts toward fulfilling a path to immunity for a patient, providing
+    protection against the target disease.
+    From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
     """
 
     Valid = ImmunizationEvaluationDoseStatusCodesCode("valid")
     """
     The dose does not count toward fulfilling a path to immunity for a patient.
+    From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
     """
     NotValid = ImmunizationEvaluationDoseStatusCodesCode("notvalid")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,244 +10,241 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DocumentSectionCodesCode(GenericTypeCode):
     """
     DocumentSectionCodes
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+        Document section codes (LOINC codes used in CCDA sections).
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/doc-section-codes
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/doc-section-codes"
-
 
 class DocumentSectionCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
 
     _10154_3 = DocumentSectionCodesCode("10154-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10157_6 = DocumentSectionCodesCode("10157-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10160_0 = DocumentSectionCodesCode("10160-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10164_2 = DocumentSectionCodesCode("10164-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10183_2 = DocumentSectionCodesCode("10183-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10184_0 = DocumentSectionCodesCode("10184-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10187_3 = DocumentSectionCodesCode("10187-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10210_3 = DocumentSectionCodesCode("10210-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10216_0 = DocumentSectionCodesCode("10216-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10218_6 = DocumentSectionCodesCode("10218-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10218_6 = DocumentSectionCodesCode("10218-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10223_6 = DocumentSectionCodesCode("10223-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _10222_8 = DocumentSectionCodesCode("10222-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _11329_0 = DocumentSectionCodesCode("11329-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _11348_0 = DocumentSectionCodesCode("11348-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _11369_6 = DocumentSectionCodesCode("11369-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _57852_6 = DocumentSectionCodesCode("57852-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _11493_4 = DocumentSectionCodesCode("11493-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _11535_2 = DocumentSectionCodesCode("11535-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _11537_8 = DocumentSectionCodesCode("11537-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _18776_5 = DocumentSectionCodesCode("18776-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _18841_7 = DocumentSectionCodesCode("18841-7")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _29299_5 = DocumentSectionCodesCode("29299-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _29545_1 = DocumentSectionCodesCode("29545-1")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _29549_3 = DocumentSectionCodesCode("29549-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _29554_3 = DocumentSectionCodesCode("29554-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _29762_2 = DocumentSectionCodesCode("29762-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _30954_2 = DocumentSectionCodesCode("30954-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _42344_2 = DocumentSectionCodesCode("42344-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _42346_7 = DocumentSectionCodesCode("42346-7")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _42348_3 = DocumentSectionCodesCode("42348-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _42349_1 = DocumentSectionCodesCode("42349-1")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _46240_8 = DocumentSectionCodesCode("46240-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _46241_6 = DocumentSectionCodesCode("46241-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _46264_8 = DocumentSectionCodesCode("46264-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _47420_5 = DocumentSectionCodesCode("47420-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _47519_4 = DocumentSectionCodesCode("47519-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _48765_2 = DocumentSectionCodesCode("48765-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _48768_6 = DocumentSectionCodesCode("48768-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _51848_0 = DocumentSectionCodesCode("51848-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _55109_3 = DocumentSectionCodesCode("55109-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _55122_6 = DocumentSectionCodesCode("55122-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59768_2 = DocumentSectionCodesCode("59768-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59769_0 = DocumentSectionCodesCode("59769-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59770_8 = DocumentSectionCodesCode("59770-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59771_6 = DocumentSectionCodesCode("59771-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59772_4 = DocumentSectionCodesCode("59772-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59773_2 = DocumentSectionCodesCode("59773-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59775_7 = DocumentSectionCodesCode("59775-7")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _59776_5 = DocumentSectionCodesCode("59776-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _61149_1 = DocumentSectionCodesCode("61149-1")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _61150_9 = DocumentSectionCodesCode("61150-9")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _61150_9 = DocumentSectionCodesCode("61150-9")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _69730_0 = DocumentSectionCodesCode("69730-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _8648_8 = DocumentSectionCodesCode("8648-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _8653_8 = DocumentSectionCodesCode("8653-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
     """
     _8716_3 = DocumentSectionCodesCode("8716-3")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class GoalStartEventCode(GenericTypeCode):
     """
     GoalStartEvent
+    From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
+        Identifies types of events that might trigger the start of a goal.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/goal-start-event
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/goal-start-event"
-
 
 class GoalStartEventCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
     """
 
     AdmissionToHospital = GoalStartEventCode("32485007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
     """
     DischargeFromHospital = GoalStartEventCode("308283009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
     """
     CompletionTimeOfProcedure = GoalStartEventCode("442137000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
     """
     Childbirth = GoalStartEventCode("386216000")

@@ -11,60 +11,76 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class NameRepresentationUseCode(GenericTypeCode):
     """
     NameRepresentationUse
+    From: http://hl7.org/fhir/ValueSet/name-v3-representation in valuesets.xml
+        A set of codes for each different representation of a name.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/name-v3-representation
+    http://terminology.hl7.org/CodeSystem/v3-EntityNameUse
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/name-v3-representation"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"
 
 
 class NameRepresentationUseCodeValues:
     """
-    Identifies the different representations of a name.  The representation may affect how the name is used.  (E.g. use of Ideographic for formal communications.)
+    Identifies the different representations of a name.  The representation may
+    affect how the name is used.  (E.g. use of Ideographic for formal
+    communications.)
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
 
     Namerepresentationuse = NameRepresentationUseCode("_NameRepresentationUse")
     """
-    A name assigned to a person. Reasons some organizations assign alternate names may include not knowing the person's name, or to maintain anonymity. Some, but not necessarily all, of the name types that people call "alias" may fit into this category.
+    A name assigned to a person. Reasons some organizations assign alternate names
+    may include not knowing the person's name, or to maintain anonymity. Some, but
+    not necessarily all, of the name types that people call "alias" may fit into
+    this category.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
     Assigned = NameRepresentationUseCode("ASGN")
     """
-    As recorded on a license, record, certificate, etc. (only if different from legal name)
+    As recorded on a license, record, certificate, etc. (only if different from
+    legal name)
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
     License = NameRepresentationUseCode("C")
     """
     e.g. Chief Red Cloud
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
     Indigenoustribal = NameRepresentationUseCode("I")
     """
     Known as/conventional/the one you use
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
     Legal = NameRepresentationUseCode("L")
     """
     A self asserted name that the person is using or has used.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
     Pseudonym = NameRepresentationUseCode("P")
     """
     e.g. Sister Mary Francis, Brother John
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
     Religious = NameRepresentationUseCode("R")
     """
     A name intended for use in searching or matching.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
     Search = NameRepresentationUseCode("SRCH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-v3-representation in valuesets.xml
     """
     ABC = NameRepresentationUseCode("ABC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-v3-representation in valuesets.xml
     """
     IDE = NameRepresentationUseCode("IDE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-v3-representation in valuesets.xml
     """
     SYL = NameRepresentationUseCode("SYL")

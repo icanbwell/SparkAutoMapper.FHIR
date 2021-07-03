@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class WorkClassificationODH(GenericTypeCode):
     """
-    WorkClassificationODH
+    v3.WorkClassificationODH
+    From: http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH in v3-codesystems.xml
+         Code system of concepts representing a person's job type as defined by
+    compensation and sector (e.g. paid vs. unpaid, self-employed vs. not self-
+    employed, government vs. private, etc.).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

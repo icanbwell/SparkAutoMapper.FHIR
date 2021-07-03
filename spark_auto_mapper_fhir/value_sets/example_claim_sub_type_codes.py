@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,25 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ExampleClaimSubTypeCodesCode(GenericTypeCode):
     """
     ExampleClaimSubTypeCodes
+    From: http://terminology.hl7.org/CodeSystem/ex-claimsubtype in valuesets.xml
+        This value set includes sample Claim SubType codes which are used to
+    distinguish the claim types for example within type institutional there may be
+    subtypes for emergency services, bed stay and transportation.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/claim-subtype
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/claim-subtype"
-
 
 class ExampleClaimSubTypeCodesCodeValues:
     """
     A claim for Orthodontic Services.
+    From: http://terminology.hl7.org/CodeSystem/ex-claimsubtype in valuesets.xml
     """
 
     OrthodonticClaim = ExampleClaimSubTypeCodesCode("ortho")
     """
     A claim for emergency services.
+    From: http://terminology.hl7.org/CodeSystem/ex-claimsubtype in valuesets.xml
     """
     EmergencyClaim = ExampleClaimSubTypeCodesCode("emergency")

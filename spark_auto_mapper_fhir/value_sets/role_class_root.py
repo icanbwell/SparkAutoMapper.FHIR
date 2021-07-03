@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassRoot(GenericTypeCode):
     """
-    RoleClassRoot
+    v3.RoleClassRoot
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassRoot in v3-codesystems.xml
+         Corresponds to the Role class
     """
 
     def __init__(self, value: AutoMapperTextInputType):

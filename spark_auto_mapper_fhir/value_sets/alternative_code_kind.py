@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,42 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AlternativeCodeKindCode(GenericTypeCode):
     """
     AlternativeCodeKind
+    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
+        Indicates the type of use for which the code is defined.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/composition-altcode-kind
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/composition-altcode-kind"
-
 
 class AlternativeCodeKindCodeValues:
     """
-    The code is an alternative code that can be used in any of the circumstances that the primary code can be used.
+    The code is an alternative code that can be used in any of the circumstances
+    that the primary code can be used.
+    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
     """
 
     AlternateCode = AlternativeCodeKindCode("alternate")
     """
     The code should no longer be used, but was used in the past.
+    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
     """
     Deprecated = AlternativeCodeKindCode("deprecated")
     """
-    The code is an alternative to be used when a case insensitive code is required (when the primary codes are case sensitive).
+    The code is an alternative to be used when a case insensitive code is required
+    (when the primary codes are case sensitive).
+    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
     """
     CaseInsensitive = AlternativeCodeKindCode("case-insensitive")
     """
-    The code is an alternative to be used when a case sensitive code is required (when the primary codes are case insensitive).
+    The code is an alternative to be used when a case sensitive code is required
+    (when the primary codes are case insensitive).
+    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
     """
     CaseSensitive = AlternativeCodeKindCode("case-sensitive")
     """
-    The code is an alternative for the primary code that is built using the expression grammar defined by the code system.
+    The code is an alternative for the primary code that is built using the
+    expression grammar defined by the code system.
+    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
     """
     Expression = AlternativeCodeKindCode("expression")

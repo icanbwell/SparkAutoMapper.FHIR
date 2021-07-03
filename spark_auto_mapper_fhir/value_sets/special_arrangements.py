@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,44 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SpecialArrangementsCode(GenericTypeCode):
     """
     SpecialArrangements
+    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
+        This value set defines a set of codes that can be used to indicate the kinds
+    of special arrangements in place for a patients visit.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/encounter-special-arrangements
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-special-arrangements"
-
 
 class SpecialArrangementsCodeValues:
     """
     The patient requires a wheelchair to be made available for the encounter.
+    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
     """
 
     Wheelchair = SpecialArrangementsCode("wheel")
     """
-    An additional bed made available for a person accompanying the patient, for example a parent accompanying a child.
+    An additional bed made available for a person accompanying the patient, for
+    example a parent accompanying a child.
+    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
     """
     AdditionalBedding = SpecialArrangementsCode("add-bed")
     """
-    The patient is not fluent in the local language and requires an interpreter to be available. Refer to the Patient.Language property for the type of interpreter required.
+    The patient is not fluent in the local language and requires an interpreter to
+    be available. Refer to the Patient.Language property for the type of
+    interpreter required.
+    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
     """
     Interpreter = SpecialArrangementsCode("int")
     """
-    A person who accompanies a patient to provide assistive services necessary for the patient's care during the encounter.
+    A person who accompanies a patient to provide assistive services necessary for
+    the patient's care during the encounter.
+    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
     """
     Attendant = SpecialArrangementsCode("att")
     """
-    The patient has a guide dog and the location used for the encounter should be able to support the presence of the service animal.
+    The patient has a guide dog and the location used for the encounter should be
+    able to support the presence of the service animal.
+    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
     """
     GuideDog = SpecialArrangementsCode("dog")

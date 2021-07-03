@@ -11,411 +11,599 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ProvenanceActivityTypeCode(GenericTypeCode):
     """
     ProvenanceActivityType
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
+        This value set contains representative Activity Type codes, which includes
+    codes from the HL7 DocumentCompletion, ActStatus, and DataOperations code
+    system, W3C PROV-DM and PROV-N concepts and display names, several HL7
+    Lifecycle Event codes for which there are agreed upon definitions, and non-
+    duplicated codes from the HL7 Security and Privacy Ontology Operations codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/provenance-activity-type
+    http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/provenance-activity-type"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActCode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-DataOperation
+    """
+    codeset_3: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+    """
+    codeset_4: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 
 
 class ProvenanceActivityTypeCodeValues:
     """
-    A completion status in which a document has been signed manually or electronically by one or more individuals who attest to its accuracy.  No explicit determination is made that the assigned individual has performed the authentication.  While the standard allows multiple instances of authentication, it would be typical to have a single instance of authentication, usually by the assigned individual.
+    A completion status in which a document has been signed manually or
+    electronically by one or more individuals who attest to its accuracy.  No
+    explicit determination is made that the assigned individual has performed the
+    authentication.  While the standard allows multiple instances of
+    authentication, it would be typical to have a single instance of
+    authentication, usually by the assigned individual.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
 
     Authenticated = ProvenanceActivityTypeCode("AU")
     """
-    A completion status in which information has been orally recorded but not yet transcribed.
+    A completion status in which information has been orally recorded but not yet
+    transcribed.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     Dictated = ProvenanceActivityTypeCode("DI")
     """
-    A completion status in which document content, other than dictation, has been received but has not been translated into the final electronic format.  Examples include paper documents, whether hand-written or typewritten, and intermediate electronic forms, such as voice to text.
+    A completion status in which document content, other than dictation, has been
+    received but has not been translated into the final electronic format.
+    Examples include paper documents, whether hand-written or typewritten, and
+    intermediate electronic forms, such as voice to text.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     Documented = ProvenanceActivityTypeCode("DO")
     """
-    A completion status in which information is known to be missing from a transcribed document.
+    A completion status in which information is known to be missing from a
+    transcribed document.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     Incomplete = ProvenanceActivityTypeCode("IN")
     """
-    A workflow status where the material has been assigned to personnel to perform the task of transcription. The document remains in this state until the document is transcribed.
+    A workflow status where the material has been assigned to personnel to perform
+    the task of transcription. The document remains in this state until the
+    document is transcribed.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     InProgress = ProvenanceActivityTypeCode("IP")
     """
-    A completion status in which a document has been signed manually or electronically by the individual who is legally responsible for that document. This is the most mature state in the workflow progression.
+    A completion status in which a document has been signed manually or
+    electronically by the individual who is legally responsible for that document.
+    This is the most mature state in the workflow progression.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     LegallyAuthenticated = ProvenanceActivityTypeCode("LA")
     """
-    A completion status in which a document was created in error or was placed in the wrong chart. The document is no longer available.
+    A completion status in which a document was created in error or was placed in
+    the wrong chart. The document is no longer available.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     NullifiedDocument = ProvenanceActivityTypeCode("NU")
     """
     A completion status in which a document is transcribed but not authenticated.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     Preauthenticated = ProvenanceActivityTypeCode("PA")
     """
-    A completion status where the document is complete and there is no expectation that the document will be signed.
+    A completion status where the document is complete and there is no expectation
+    that the document will be signed.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
     UnsignedCompletedDocument = ProvenanceActivityTypeCode("UC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     LA = ProvenanceActivityTypeCode("LA")
     """
-    An account represents a grouping of financial transactions that are tracked and reported together with a single balance. 	 	Examples of account codes (types) are Patient billing accounts (collection of charges), Cost centers; Cash.
+    An account represents a grouping of financial transactions that are tracked
+    and reported together with a single balance. 	 	Examples of account codes
+    (types) are Patient billing accounts (collection of charges), Cost centers;
+    Cash.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actaccountcode = ProvenanceActivityTypeCode("_ActAccountCode")
     """
-    Includes coded responses that will occur as a result of the adjudication of an electronic invoice at a summary level and provides guidance on interpretation of the referenced adjudication results.
+    Includes coded responses that will occur as a result of the adjudication of an
+    electronic invoice at a summary level and provides guidance on interpretation
+    of the referenced adjudication results.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actadjudicationcode = ProvenanceActivityTypeCode("_ActAdjudicationCode")
     """
-    Actions to be carried out by the recipient of the Adjudication Result information.
+    Actions to be carried out by the recipient of the Adjudication Result
+    information.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actadjudicationresultactioncode = ProvenanceActivityTypeCode(
         "_ActAdjudicationResultActionCode"
     )
     """
-    Definition:An identifying modifier code for healthcare interventions or procedures.
+    Definition:An identifying modifier code for healthcare interventions or
+    procedures.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actbillablemodifiercode = ProvenanceActivityTypeCode("_ActBillableModifierCode")
     """
-    The type of provision(s)  made for reimbursing for the deliver of healthcare services and/or goods provided by a Provider, over a specified period.
+    The type of provision(s)  made for reimbursing for the deliver of healthcare
+    services and/or goods provided by a Provider, over a specified period.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actbillingarrangementcode = ProvenanceActivityTypeCode("_ActBillingArrangementCode")
     """
     Type of bounded ROI.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actboundedroicode = ProvenanceActivityTypeCode("_ActBoundedROICode")
     """
-    Description:The type and scope of responsibility taken-on by the performer of the Act for a specific subject of care.
+    Description:The type and scope of responsibility taken-on by the performer of
+    the Act for a specific subject of care.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     ActCareProvision = ProvenanceActivityTypeCode("_ActCareProvisionCode")
     """
-    Description: Coded types of attachments included to support a healthcare claim.
+    Description: Coded types of attachments included to support a healthcare
+    claim.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actclaimattachmentcategorycode = ProvenanceActivityTypeCode(
         "_ActClaimAttachmentCategoryCode"
     )
     """
-    Definition: The type of consent directive, e.g., to consent or dissent to collect, access, or use in specific ways within an EHRS or for health information exchange; or to disclose  health information  for purposes such as research.
+    Definition: The type of consent directive, e.g., to consent or dissent to
+    collect, access, or use in specific ways within an EHRS or for health
+    information exchange; or to disclose  health information  for purposes such as
+    research.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actconsenttype = ProvenanceActivityTypeCode("_ActConsentType")
     """
     Constrains the ActCode to the domain of Container Registration
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actcontainerregistrationcode = ProvenanceActivityTypeCode(
         "_ActContainerRegistrationCode"
     )
     """
-    An observation form that determines parameters or attributes of an Act. Examples are the settings of a ventilator machine as parameters of a ventilator treatment act; the controls on dillution factors of a chemical analyzer as a parameter of a laboratory observation act; the settings of a physiologic measurement assembly (e.g., time skew) or the position of the body while measuring blood pressure.
-
-                        Control variables are forms of observations because just as with clinical observations, the Observation.code determines the parameter and the Observation.value assigns the value. While control variables sometimes can be observed (by noting the control settings or an actually measured feedback loop) they are not primary observations, in the sense that a control variable without a primary act is of no use (e.g., it makes no sense to record a blood pressure position without recording a blood pressure, whereas it does make sense to record a systolic blood pressure without a diastolic blood pressure).
+    An observation form that determines parameters or attributes of an Act.
+    Examples are the settings of a ventilator machine as parameters of a
+    ventilator treatment act; the controls on dillution factors of a chemical
+    analyzer as a parameter of a laboratory observation act; the settings of a
+    physiologic measurement assembly (e.g., time skew) or the position of the body
+    while measuring blood pressure.
+    
+                            Control variables are forms of observations because
+    just as with clinical observations, the Observation.code determines the
+    parameter and the Observation.value assigns the value. While control variables
+    sometimes can be observed (by noting the control settings or an actually
+    measured feedback loop) they are not primary observations, in the sense that a
+    control variable without a primary act is of no use (e.g., it makes no sense
+    to record a blood pressure position without recording a blood pressure,
+    whereas it does make sense to record a systolic blood pressure without a
+    diastolic blood pressure).
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actcontrolvariable = ProvenanceActivityTypeCode("_ActControlVariable")
     """
     Response to an insurance coverage eligibility query or authorization request.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actcoverageconfirmationcode = ProvenanceActivityTypeCode(
         "_ActCoverageConfirmationCode"
     )
     """
     Criteria that are applicable to the authorized coverage.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actcoveragelimitcode = ProvenanceActivityTypeCode("_ActCoverageLimitCode")
     """
-    Definition: Set of codes indicating the type of insurance policy or program that pays for the cost of benefits provided to covered parties.
+    Definition: Set of codes indicating the type of insurance policy or program
+    that pays for the cost of benefits provided to covered parties.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actcoveragetypecode = ProvenanceActivityTypeCode("_ActCoverageTypeCode")
     """
     Codes dealing with the management of Detected Issue observations
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actdetectedissuemanagementcode = ProvenanceActivityTypeCode(
         "_ActDetectedIssueManagementCode"
     )
     """
-    Concepts that identify the type or nature of exposure interaction.  Examples include "household", "care giver", "intimate partner", "common space", "common substance", etc. to further describe the nature of interaction.
+    Concepts that identify the type or nature of exposure interaction.  Examples
+    include "household", "care giver", "intimate partner", "common space", "common
+    substance", etc. to further describe the nature of interaction.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actexposurecode = ProvenanceActivityTypeCode("_ActExposureCode")
     """
     ActFinancialTransactionCode
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actfinancialtransactioncode = ProvenanceActivityTypeCode(
         "_ActFinancialTransactionCode"
     )
     """
     Set of codes indicating the type of incident or accident.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actincidentcode = ProvenanceActivityTypeCode("_ActIncidentCode")
     """
-    Description: The type of health information to which the subject of the information or the subject's delegate consents or dissents.
+    Description: The type of health information to which the subject of the
+    information or the subject's delegate consents or dissents.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actinformationaccesscode = ProvenanceActivityTypeCode("_ActInformationAccessCode")
     """
-    Concepts conveying the context in which authorization given under jurisdictional law, by organizational policy, or by a patient consent directive permits the collection, access, use or disclosure of specified patient health information.
+    Concepts conveying the context in which authorization given under
+    jurisdictional law, by organizational policy, or by a patient consent
+    directive permits the collection, access, use or disclosure of specified
+    patient health information.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actinformationaccesscontextcode = ProvenanceActivityTypeCode(
         "_ActInformationAccessContextCode"
     )
     """
-    Definition:Indicates the set of information types which may be manipulated or referenced, such as for recommending access restrictions.
+    Definition:Indicates the set of information types which may be manipulated or
+    referenced, such as for recommending access restrictions.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actinformationcategorycode = ProvenanceActivityTypeCode(
         "_ActInformationCategoryCode"
     )
     """
-    Type of invoice element that is used to assist in describing an Invoice that is either submitted for adjudication or for which is returned on adjudication results.
+    Type of invoice element that is used to assist in describing an Invoice that
+    is either submitted for adjudication or for which is returned on adjudication
+    results.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actinvoiceelementcode = ProvenanceActivityTypeCode("_ActInvoiceElementCode")
     """
-    Identifies the different types of summary information that can be reported by queries dealing with Statement of Financial Activity (SOFA).  The summary information is generally used to help resolve balance discrepancies between providers and payors.
+    Identifies the different types of summary information that can be reported by
+    queries dealing with Statement of Financial Activity (SOFA).  The summary
+    information is generally used to help resolve balance discrepancies between
+    providers and payors.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actinvoiceelementsummarycode = ProvenanceActivityTypeCode(
         "_ActInvoiceElementSummaryCode"
     )
     """
-    Includes coded responses that will occur as a result of the adjudication of an electronic invoice at a summary level and provides guidance on interpretation of the referenced adjudication results.
+    Includes coded responses that will occur as a result of the adjudication of an
+    electronic invoice at a summary level and provides guidance on interpretation
+    of the referenced adjudication results.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actinvoiceoverridecode = ProvenanceActivityTypeCode("_ActInvoiceOverrideCode")
     """
     Provides codes associated with ActClass value of LIST (working list)
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actlistcode = ProvenanceActivityTypeCode("_ActListCode")
     """
     Identifies types of monitoring programs
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actmonitoringprotocolcode = ProvenanceActivityTypeCode("_ActMonitoringProtocolCode")
     """
-    Description:Concepts representing indications (reasons for clinical action) other than diagnosis and symptoms.
+    Description:Concepts representing indications (reasons for clinical action)
+    other than diagnosis and symptoms.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actnonobservationindicationcode = ProvenanceActivityTypeCode(
         "_ActNonObservationIndicationCode"
     )
     """
-    Identifies the type of verification investigation being undertaken with respect to the subject of the verification activity.
-
-                        
-                           Examples:
-                        
-
-                        
-                           
-                              Verification of eligibility for coverage under a policy or program - aka enrolled/covered by a policy or program
-
-                           
-                           
-                              Verification of record - e.g., person has record in an immunization registry
-
-                           
-                           
-                              Verification of enumeration - e.g. NPI
-
-                           
-                           
-                              Verification of Board Certification - provider specific
-
-                           
-                           
-                              Verification of Certification - e.g. JAHCO, NCQA, URAC
-
-                           
-                           
-                              Verification of Conformance - e.g. entity use with HIPAA, conformant to the CCHIT EHR system criteria
-
-                           
-                           
-                              Verification of Provider Credentials
-
-                           
-                           
-                              Verification of no adverse findings - e.g. on National Provider Data Bank, Health Integrity Protection Data Base (HIPDB)
+    Identifies the type of verification investigation being undertaken with
+    respect to the subject of the verification activity.
+    
+    
+                               Examples:
+    
+    
+    
+    
+                                  Verification of eligibility for coverage under a
+    policy or program - aka enrolled/covered by a policy or program
+    
+    
+    
+                                  Verification of record - e.g., person has record
+    in an immunization registry
+    
+    
+    
+                                  Verification of enumeration - e.g. NPI
+    
+    
+    
+                                  Verification of Board Certification - provider
+    specific
+    
+    
+    
+                                  Verification of Certification - e.g. JAHCO,
+    NCQA, URAC
+    
+    
+    
+                                  Verification of Conformance - e.g. entity use
+    with HIPAA, conformant to the CCHIT EHR system criteria
+    
+    
+    
+                                  Verification of Provider Credentials
+    
+    
+    
+                                  Verification of no adverse findings - e.g. on
+    National Provider Data Bank, Health Integrity Protection Data Base (HIPDB)
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     ActObservationVerification = ProvenanceActivityTypeCode(
         "_ActObservationVerificationType"
     )
     """
     Code identifying the method or the movement of payment instructions.
-
-                        Codes are drawn from X12 data element 591 (PaymentMethodCode)
+    
+                            Codes are drawn from X12 data element 591
+    (PaymentMethodCode)
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actpaymentcode = ProvenanceActivityTypeCode("_ActPaymentCode")
     """
     Identifies types of dispensing events
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actpharmacysupplytype = ProvenanceActivityTypeCode("_ActPharmacySupplyType")
     """
-    Description:Types of policies that further specify the ActClassPolicy value set.
+    Description:Types of policies that further specify the ActClassPolicy value
+    set.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actpolicytype = ProvenanceActivityTypeCode("_ActPolicyType")
     """
-    The method that a product is obtained for use by the subject of the supply act (e.g. patient).  Product examples are consumable or durable goods.
+    The method that a product is obtained for use by the subject of the supply act
+    (e.g. patient).  Product examples are consumable or durable goods.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actproductacquisitioncode = ProvenanceActivityTypeCode("_ActProductAcquisitionCode")
     """
     Transportation of a specimen.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actspecimentransportcode = ProvenanceActivityTypeCode("_ActSpecimenTransportCode")
     """
     Set of codes related to specimen treatments
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actspecimentreatmentcode = ProvenanceActivityTypeCode("_ActSpecimenTreatmentCode")
     """
-    Description: Describes the type of substance administration being performed.  This should not be used to carry codes for identification of products.  Use an associated role or entity to carry such information.
+    Description: Describes the type of substance administration being performed.
+    This should not be used to carry codes for identification of products.  Use an
+    associated role or entity to carry such information.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actsubstanceadministrationcode = ProvenanceActivityTypeCode(
         "_ActSubstanceAdministrationCode"
     )
     """
-    Description: A task or action that a user may perform in a clinical information system (e.g., medication order entry, laboratory test results review, problem list entry).
+    Description: A task or action that a user may perform in a clinical
+    information system (e.g., medication order entry, laboratory test results
+    review, problem list entry).
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Acttaskcode = ProvenanceActivityTypeCode("_ActTaskCode")
     """
     Characterizes how a transportation act was or will be carried out.
-
-                        
-                           Examples: Via private transport, via public transit, via courier.
+    
+    
+                               Examples: Via private transport, via public
+    transit, via courier.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Acttransportationmodecode = ProvenanceActivityTypeCode("_ActTransportationModeCode")
     """
     Identifies the kinds of observations that can be performed
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Observationtype = ProvenanceActivityTypeCode("_ObservationType")
     """
     Shape of the region on the object being referenced
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Roioverlayshape = ProvenanceActivityTypeCode("_ROIOverlayShape")
     """
     Description:Indicates that result data has been corrected.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Corrected = ProvenanceActivityTypeCode("C")
     """
     Code set to define specialized/allowed diets
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Diet = ProvenanceActivityTypeCode("DIET")
     """
-    Definition: A public or government health program that administers and funds coverage for prescription drugs to assist program eligible who meet financial and health status criteria.
+    Definition: A public or government health program that administers and funds
+    coverage for prescription drugs to assist program eligible who meet financial
+    and health status criteria.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     DrugProgram = ProvenanceActivityTypeCode("DRUGPRG")
     """
-    Description:Indicates that a result is complete.  No further results are to come.  This maps to the 'complete' state in the observation result status code.
+    Description:Indicates that a result is complete.  No further results are to
+    come.  This maps to the 'complete' state in the observation result status
+    code.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Final = ProvenanceActivityTypeCode("F")
     """
-    Description:Indicates that a result is incomplete.  There are further results to come.  This maps to the 'active' state in the observation result status code.
+    Description:Indicates that a result is incomplete.  There are further results
+    to come.  This maps to the 'active' state in the observation result status
+    code.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Preliminary = ProvenanceActivityTypeCode("PRLMN")
     """
-    An observation identifying security metadata about an IT resource (data, information object, service, or system capability), which may be used to make access control decisions.  Security metadata are used to name security labels.  
-
-                        
-                           Rationale: According to ISO/TS 22600-3:2009(E) A.9.1.7 SECURITY LABEL MATCHING, Security label matching compares the initiator's clearance to the target's security label.  All of the following must be true for authorization to be granted:
-
-                        
-                           The security policy identifiers shall be identical
-                           The classification level of the initiator shall be greater than or equal to that of the target (that is, there shall be at least one value in the classification list of the clearance greater than or equal to the classification of the target), and 
-                           For each security category in the target label, there shall be a security category of the same type in the initiator's clearance and the initiator's classification level shall dominate that of the target.
-                        
-                        
-                           Examples: SecurityObservationType  security label fields include:
-
-                        
-                           Confidentiality classification
-                           Compartment category
-                           Sensitivity category
-                           Security mechanisms used to ensure data integrity or to perform authorized data transformation
-                           Indicators of an IT resource completeness, veracity, reliability, trustworthiness, or provenance.
-                        
-                        
-                           Usage Note: SecurityObservationType codes designate security label field types, which are valued with an applicable SecurityObservationValue code as the "security label tag".
+    An observation identifying security metadata about an IT resource (data,
+    information object, service, or system capability), which may be used to make
+    access control decisions.  Security metadata are used to name security labels.
+    
+    
+                               Rationale: According to ISO/TS 22600-3:2009(E)
+    A.9.1.7 SECURITY LABEL MATCHING, Security label matching compares the
+    initiator's clearance to the target's security label.  All of the following
+    must be true for authorization to be granted:
+    
+    
+                               The security policy identifiers shall be identical
+                               The classification level of the initiator shall be
+    greater than or equal to that of the target (that is, there shall be at least
+    one value in the classification list of the clearance greater than or equal to
+    the classification of the target), and
+                               For each security category in the target label,
+    there shall be a security category of the same type in the initiator's
+    clearance and the initiator's classification level shall dominate that of the
+    target.
+    
+    
+                               Examples: SecurityObservationType  security label
+    fields include:
+    
+    
+                               Confidentiality classification
+                               Compartment category
+                               Sensitivity category
+                               Security mechanisms used to ensure data integrity
+    or to perform authorized data transformation
+                               Indicators of an IT resource completeness,
+    veracity, reliability, trustworthiness, or provenance.
+    
+    
+                               Usage Note: SecurityObservationType codes designate
+    security label field types, which are valued with an applicable
+    SecurityObservationValue code as the "security label tag".
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Securityobservationtype = ProvenanceActivityTypeCode("SECOBS")
     """
-    Definition: A government health program that provides coverage on a fee for service basis for health services to persons meeting eligibility criteria such as income, location of residence, access to other coverages, health condition, and age, the cost of which is to some extent subsidized by public funds.
-
-                        
-                           Discussion: The structure and business processes for underwriting and administering a subsidized fee for service program is further specified by the Underwriter and Payer Role.class and Role.code.
+    Definition: A government health program that provides coverage on a fee for
+    service basis for health services to persons meeting eligibility criteria such
+    as income, location of residence, access to other coverages, health condition,
+    and age, the cost of which is to some extent subsidized by public funds.
+    
+    
+                               Discussion: The structure and business processes
+    for underwriting and administering a subsidized fee for service program is
+    further specified by the Underwriter and Payer Role.class and Role.code.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     SubsidizedFeeForServiceProgram = ProvenanceActivityTypeCode("SUBSIDFFS")
     """
-    Definition: Government mandated program providing coverage, disability income, and vocational rehabilitation for injuries sustained in the work place or in the course of employment.  Employers may either self-fund the program, purchase commercial coverage, or pay a premium to a government entity that administers the program.  Employees may be required to pay premiums toward the cost of coverage as well.
+    Definition: Government mandated program providing coverage, disability income,
+    and vocational rehabilitation for injuries sustained in the work place or in
+    the course of employment.  Employers may either self-fund the program,
+    purchase commercial coverage, or pay a premium to a government entity that
+    administers the program.  Employees may be required to pay premiums toward the
+    cost of coverage as well.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     workersCompensationProgram = ProvenanceActivityTypeCode("WRKCOMP")
     """
     An identifying code for healthcare interventions/procedures.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Actprocedurecode = ProvenanceActivityTypeCode("_ActProcedureCode")
     """
-    Domain provides the root for HL7-defined detailed or rich codes for the Act classes.
+    Domain provides the root for HL7-defined detailed or rich codes for the Act
+    classes.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Hl7definedactcodes = ProvenanceActivityTypeCode("_HL7DefinedActCodes")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Copay = ProvenanceActivityTypeCode("COPAY")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Deduct = ProvenanceActivityTypeCode("DEDUCT")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Doseind = ProvenanceActivityTypeCode("DOSEIND")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Pra = ProvenanceActivityTypeCode("PRA")
     """
-    The act of putting something away for safe keeping. The "something" may be physical object such as a specimen, or information, such as observations regarding a specimen.
+    The act of putting something away for safe keeping. The "something" may be
+    physical object such as a specimen, or information, such as observations
+    regarding a specimen.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
     Storage = ProvenanceActivityTypeCode("STORE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     ANONY = ProvenanceActivityTypeCode("ANONY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     DEID = ProvenanceActivityTypeCode("DEID")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     MASK = ProvenanceActivityTypeCode("MASK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     LABEL = ProvenanceActivityTypeCode("LABEL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     PSEUD = ProvenanceActivityTypeCode("PSEUD")
     """
     Description:Act on an object or objects.
+    From: http://terminology.hl7.org/CodeSystem/v3-DataOperation in v3-codesystems.xml
     """
     Operate = ProvenanceActivityTypeCode("OPERATE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     CREATE = ProvenanceActivityTypeCode("CREATE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     DELETE = ProvenanceActivityTypeCode("DELETE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     UPDATE = ProvenanceActivityTypeCode("UPDATE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     APPEND = ProvenanceActivityTypeCode("APPEND")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-activity-type in valuesets.xml
     """
     NULLIFY = ProvenanceActivityTypeCode("NULLIFY")
     """
-    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    Indicates that the target of the participation is involved in some manner in
+    the act, but does not qualify how.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
     """
     Participation = ProvenanceActivityTypeCode("PART")

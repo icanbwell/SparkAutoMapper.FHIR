@@ -47,27 +47,41 @@ if TYPE_CHECKING:
 class {{fhir_entity.cleaned_name}}(GenericTypeCode):
     """
     {{ fhir_entity.fhir_name }}
+    From: {{ fhir_entity.value_set_url }} in {{ fhir_entity.source }}
     {% for documentation_item in fhir_entity.documentation %}
-        {{ documentation_item }}
+        {{ documentation_item | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {%  endfor %}
     """
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    {%  if fhir_entity.value_set_url %}
+    {%  if fhir_entity.value_set_url_list %}
+        {% for value_set_url in fhir_entity.value_set_url_list %}
     """
-    {{ fhir_entity.value_set_url }}
+    {{ value_set_url }}
     """
-    codeset: FhirUri = "{{ fhir_entity.value_set_url}}"
+            {% if loop.index == 1 %}
+    codeset: FhirUri = "{{ value_set_url}}"
+            {% else %}
+    codeset_{{ loop.index }}: FhirUri = "{{ value_set_url}}"
+            {% endif %}
+        {% endfor %}
     {% endif %}
 
 
 {%  if fhir_entity.value_set_concepts %}
 class {{fhir_entity.cleaned_name}}Values:
     {% for value_set_concept in fhir_entity.value_set_concepts %}
+        {% if value_set_concept.definition %}
     """
-    {{ value_set_concept.definition}}
+    {{ value_set_concept.definition | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
+    From: {{ value_set_concept.value_set_url }} in {{ value_set_concept.source }}
     """
+        {% else %}
+    """
+    From: {{ value_set_concept.value_set_url }} in {{ value_set_concept.source }}
+    """
+        {% endif %}
     {{ value_set_concept.cleaned_display }} = {{ fhir_entity.cleaned_name }}("{{ value_set_concept.code }}")
     {%  endfor %}
 {% endif %}

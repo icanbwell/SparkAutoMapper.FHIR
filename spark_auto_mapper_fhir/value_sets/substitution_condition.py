@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class SubstitutionCondition(GenericTypeCode):
     """
-    SubstitutionCondition
+    v3.SubstitutionCondition
+    From: http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition in v3-codesystems.xml
+         Identifies what sort of change is permitted or has occurred between the item
+    that was ordered/requested and the one that was/will be provided.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

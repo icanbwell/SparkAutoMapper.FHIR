@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,36 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class NamingSystemIdentifierTypeCode(GenericTypeCode):
     """
     NamingSystemIdentifierType
+    From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
+        Identifies the style of unique identifier used to identify a namespace.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/namingsystem-identifier-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/namingsystem-identifier-type"
-
 
 class NamingSystemIdentifierTypeCodeValues:
     """
     An ISO object identifier; e.g. 1.2.3.4.5.
+    From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
     """
 
     OID = NamingSystemIdentifierTypeCode("oid")
     """
-    A universally unique identifier of the form a5afddf4-e880-459b-876e-e4591b0acc11.
+    A universally unique identifier of the form
+    a5afddf4-e880-459b-876e-e4591b0acc11.
+    From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
     """
     UUID = NamingSystemIdentifierTypeCode("uuid")
     """
-    A uniform resource identifier (ideally a URL - uniform resource locator); e.g. http://unitsofmeasure.org.
+    A uniform resource identifier (ideally a URL - uniform resource locator); e.g.
+    http://unitsofmeasure.org.
+    From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
     """
     URI = NamingSystemIdentifierTypeCode("uri")
     """
-    Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for LOINC.
+    Some other type of unique identifier; e.g. HL7-assigned reserved string such
+    as LN for LOINC.
+    From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
     """
     Other = NamingSystemIdentifierTypeCode("other")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,29 +10,27 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class IndicatorCode(GenericTypeCode):
     """
     Indicator
+    From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
+        This value set captures the set of indicator codes defined by the CDS Hooks
+    specification.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/cdshooks-indicator
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/cdshooks-indicator"
-
 
 class IndicatorCodeValues:
     """
-    None
+    From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
     """
 
     TheResponseIsInformational = IndicatorCode("info")
     """
-    None
+    From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
     """
     TheResponseIsAWarning = IndicatorCode("warning")
     """
-    None
+    From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
     """
     TheResponseIsCriticalAndIndicatesTheWorkflowShouldNotBeAllowedToProceed = (
         IndicatorCode("critical")

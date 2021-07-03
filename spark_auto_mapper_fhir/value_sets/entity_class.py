@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityClass(GenericTypeCode):
     """
-    EntityClass
+    v3.EntityClass
+    From: http://terminology.hl7.org/ValueSet/v3-EntityClass in v3-codesystems.xml
+         Classifies the Entity class and all of its subclasses.  The terminology is
+    hierarchical.  At the top is this  HL7-defined domain of high-level categories
+    (such as represented by the Entity subclasses). Each of these terms must be
+    harmonized and is specializable. The value sets beneath are drawn from
+    multiple, frequently external, domains that reflect much more fine-grained
+    typing.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

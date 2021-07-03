@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class TableFrame(GenericTypeCode):
     """
-    TableFrame
+    v3.TableFrame
+    From: http://terminology.hl7.org/ValueSet/v3-TableFrame in v3-codesystems.xml
+         These values are defined within the XHTML 4.0 Table Model
     """
 
     def __init__(self, value: AutoMapperTextInputType):

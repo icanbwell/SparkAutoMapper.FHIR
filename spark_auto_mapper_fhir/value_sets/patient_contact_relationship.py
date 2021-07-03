@@ -11,12 +11,66 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class PatientContactRelationshipCode(GenericTypeCode):
     """
     PatientContactRelationship
+    From: http://hl7.org/fhir/ValueSet/patient-contactrelationship in valuesets.xml
+        The nature of the relationship between the patient and the contact person.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/patient-contactrelationship
+    http://terminology.hl7.org/CodeSystem/v2-0131
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/patient-contactrelationship"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0131"
+
+
+class PatientContactRelationshipCodeValues:
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+
+    BillingContactPerson = PatientContactRelationshipCode("BP")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    EmergencyContact = PatientContactRelationshipCode("C")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    ContactPerson = PatientContactRelationshipCode("CP")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Employer = PatientContactRelationshipCode("E")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    EmergencyContactPerson = PatientContactRelationshipCode("EP")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    FederalAgency = PatientContactRelationshipCode("F")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    InsuranceCompany = PatientContactRelationshipCode("I")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Nextofkin = PatientContactRelationshipCode("N")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Other = PatientContactRelationshipCode("O")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    PersonPreparingReferral = PatientContactRelationshipCode("PR")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    StateAgency = PatientContactRelationshipCode("S")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Unknown = PatientContactRelationshipCode("U")

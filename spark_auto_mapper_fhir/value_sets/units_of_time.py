@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,44 +10,41 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class UnitsOfTimeCode(GenericTypeCode):
     """
     UnitsOfTime
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+        A unit of time (units from UCUM).
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/units-of-time
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/units-of-time"
-
 
 class UnitsOfTimeCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
     """
 
     Second = UnitsOfTimeCode("s")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
     """
     Minute = UnitsOfTimeCode("min")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
     """
     Hour = UnitsOfTimeCode("h")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
     """
     Day = UnitsOfTimeCode("d")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
     """
     Week = UnitsOfTimeCode("wk")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
     """
     Month = UnitsOfTimeCode("mo")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
     """
     Year = UnitsOfTimeCode("a")

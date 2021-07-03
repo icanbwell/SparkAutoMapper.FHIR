@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,44 +10,42 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SpecimenCollectionPriorityCode(GenericTypeCode):
     """
     SpecimenCollectionPriority
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+         This example value set defines a set of codes that can be used to indicate
+    the priority of collection of a specimen.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/specimen-collection-priority
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/specimen-collection-priority"
-
 
 class SpecimenCollectionPriorityCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
     """
 
     STAT = SpecimenCollectionPriorityCode("1")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
     """
     ASAP = SpecimenCollectionPriorityCode("2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
     """
     ASAP_ED = SpecimenCollectionPriorityCode("3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
     """
     AM = SpecimenCollectionPriorityCode("4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
     """
     ROUTINE = SpecimenCollectionPriorityCode("5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
     """
     NURSECOLLECT = SpecimenCollectionPriorityCode("6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
     """
     CALLORFAX = SpecimenCollectionPriorityCode("7")

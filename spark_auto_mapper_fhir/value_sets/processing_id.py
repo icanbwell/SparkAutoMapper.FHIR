@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ProcessingID(GenericTypeCode):
     """
-    ProcessingID
+    v3.ProcessingID
+    From: http://terminology.hl7.org/ValueSet/v3-ProcessingID in v3-codesystems.xml
+         Codes used to specify whether a message is part of a production, training, or
+    debugging system.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ResponseLevel(GenericTypeCode):
     """
-    ResponseLevel
+    v3.ResponseLevel
+    From: http://terminology.hl7.org/ValueSet/v3-ResponseLevel in v3-codesystems.xml
+         Specifies whether a response is expected from the addressee of this
+    interaction and what level of detail that response should include
     """
 
     def __init__(self, value: AutoMapperTextInputType):

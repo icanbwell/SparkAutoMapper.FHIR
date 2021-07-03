@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,33 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MeasureScoringCode(GenericTypeCode):
     """
     MeasureScoring
+    From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
+        The scoring type of the measure.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/measure-scoring
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/measure-scoring"
-
 
 class MeasureScoringCodeValues:
     """
     The measure score is defined using a proportion.
+    From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
     """
 
     Proportion = MeasureScoringCode("proportion")
     """
     The measure score is defined using a ratio.
+    From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
     """
     Ratio = MeasureScoringCode("ratio")
     """
     The score is defined by a calculation of some quantity.
+    From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
     """
     ContinuousVariable = MeasureScoringCode("continuous-variable")
     """
     The measure is a cohort definition.
+    From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
     """
     Cohort = MeasureScoringCode("cohort")

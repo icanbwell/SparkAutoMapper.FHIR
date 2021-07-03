@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,36 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AuditEventOutcomeCode(GenericTypeCode):
     """
     AuditEventOutcome
+    From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
+        Indicates whether the event succeeded or failed.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/audit-event-outcome
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/audit-event-outcome"
-
 
 class AuditEventOutcomeCodeValues:
     """
     The operation completed successfully (whether with warnings or not).
+    From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
     """
 
     Success = AuditEventOutcomeCode("0")
     """
-    The action was not successful due to some kind of minor failure (often equivalent to an HTTP 400 response).
+    The action was not successful due to some kind of minor failure (often
+    equivalent to an HTTP 400 response).
+    From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
     """
     MinorFailure = AuditEventOutcomeCode("4")
     """
-    The action was not successful due to some kind of unexpected error (often equivalent to an HTTP 500 response).
+    The action was not successful due to some kind of unexpected error (often
+    equivalent to an HTTP 500 response).
+    From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
     """
     SeriousFailure = AuditEventOutcomeCode("8")
     """
-    An error of such magnitude occurred that the system is no longer available for use (i.e. the system died).
+    An error of such magnitude occurred that the system is no longer available for
+    use (i.e. the system died).
+    From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
     """
     MajorFailure = AuditEventOutcomeCode("12")

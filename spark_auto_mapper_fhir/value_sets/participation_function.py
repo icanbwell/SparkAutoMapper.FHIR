@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationFunction(GenericTypeCode):
     """
-    ParticipationFunction
+    v3.ParticipationFunction
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationFunction in v3-codesystems.xml
+         This code is used to specify the exact function an actor had in a service in
+    all necessary detail. This domain may include local extensions (CWE).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

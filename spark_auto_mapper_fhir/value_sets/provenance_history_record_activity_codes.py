@@ -11,76 +11,80 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ProvenanceHistoryRecordActivityCodesCode(GenericTypeCode):
     """
     ProvenanceHistoryRecordActivityCodes
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+        Codes for Provenance activities that are relevant when capturing event history
+    for resources.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/provenance-history-record-activity
+    http://terminology.hl7.org/CodeSystem/v3-DataOperation
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/provenance-history-record-activity"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
 
 
 class ProvenanceHistoryRecordActivityCodesCodeValues:
     """
     Description:Act on an object or objects.
+    From: http://terminology.hl7.org/CodeSystem/v3-DataOperation in v3-codesystems.xml
     """
 
     Operate = ProvenanceHistoryRecordActivityCodesCode("OPERATE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Created = ProvenanceHistoryRecordActivityCodesCode("CREATE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Updated = ProvenanceHistoryRecordActivityCodesCode("UPDATE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Deleted = ProvenanceHistoryRecordActivityCodesCode("DELETE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Stopped_Ended_Aborted = ProvenanceHistoryRecordActivityCodesCode("ABORT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Held = ProvenanceHistoryRecordActivityCodesCode("HOLD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Released = ProvenanceHistoryRecordActivityCodesCode("RELEASE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Cancelled = ProvenanceHistoryRecordActivityCodesCode("CANCEL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Activated = ProvenanceHistoryRecordActivityCodesCode("ACTIVATE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Suspended = ProvenanceHistoryRecordActivityCodesCode("SUSPEND")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     RESUME = ProvenanceHistoryRecordActivityCodesCode("RESUME")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Completed = ProvenanceHistoryRecordActivityCodesCode("COMPLETE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     MarkEntered_in_error = ProvenanceHistoryRecordActivityCodesCode("NULLIFY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Replaced = ProvenanceHistoryRecordActivityCodesCode("OBSOLETE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
     """
     Reactivated = ProvenanceHistoryRecordActivityCodesCode("REACTIVATE")

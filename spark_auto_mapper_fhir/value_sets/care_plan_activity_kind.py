@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,48 +10,46 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CarePlanActivityKindCode(GenericTypeCode):
     """
     CarePlanActivityKind
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+        Resource types defined as part of FHIR that can be represented as in-line
+    definitions of a care plan activity.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/care-plan-activity-kind
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/care-plan-activity-kind"
-
 
 class CarePlanActivityKindCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
 
     Appointment = CarePlanActivityKindCode("Appointment")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
     CommunicationRequest = CarePlanActivityKindCode("CommunicationRequest")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
     DeviceRequest = CarePlanActivityKindCode("DeviceRequest")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
     MedicationRequest = CarePlanActivityKindCode("MedicationRequest")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
     NutritionOrder = CarePlanActivityKindCode("NutritionOrder")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
     Task = CarePlanActivityKindCode("Task")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
     ServiceRequest = CarePlanActivityKindCode("ServiceRequest")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
     """
     VisionPrescription = CarePlanActivityKindCode("VisionPrescription")

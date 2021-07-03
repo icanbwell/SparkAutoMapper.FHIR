@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class HtmlLinkType(GenericTypeCode):
     """
-    HtmlLinkType
+    v3.HtmlLinkType
+    From: http://terminology.hl7.org/ValueSet/v3-HtmlLinkType in v3-codesystems.xml
+         HtmlLinkType values are drawn from HTML 4.0 and describe the relationship
+    between the current document and the anchor that is the target of the link
     """
 
     def __init__(self, value: AutoMapperTextInputType):

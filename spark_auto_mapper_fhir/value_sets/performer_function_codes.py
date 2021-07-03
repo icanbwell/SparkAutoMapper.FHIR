@@ -11,76 +11,80 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class PerformerFunctionCodesCode(GenericTypeCode):
     """
     Performer Function Codes
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+        The types of involvement of the performer in the Event.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/performer-function
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/performer-function"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 
 
 class PerformerFunctionCodesCodeValues:
     """
-    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    Indicates that the target of the participation is involved in some manner in
+    the act, but does not qualify how.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
     """
 
     Participation = PerformerFunctionCodesCode("PART")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     TRANS = PerformerFunctionCodesCode("TRANS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     PART = PerformerFunctionCodesCode("PART")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     ATND = PerformerFunctionCodesCode("ATND")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     CON = PerformerFunctionCodesCode("CON")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     AUT = PerformerFunctionCodesCode("AUT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     INF = PerformerFunctionCodesCode("INF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     ENT = PerformerFunctionCodesCode("ENT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     WIT = PerformerFunctionCodesCode("WIT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     PPRF = PerformerFunctionCodesCode("PPRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     SPRF = PerformerFunctionCodesCode("SPRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     RESP = PerformerFunctionCodesCode("RESP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     VRF = PerformerFunctionCodesCode("VRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     AUTHEN = PerformerFunctionCodesCode("AUTHEN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
     """
     LA = PerformerFunctionCodesCode("LA")

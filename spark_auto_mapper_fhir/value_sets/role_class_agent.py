@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassAgent(GenericTypeCode):
     """
-    RoleClassAgent
+    v3.RoleClassAgent
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassAgent in v3-codesystems.xml
+         An entity (player) that acts or is authorized to act on behalf of another
+    entity (scoper).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

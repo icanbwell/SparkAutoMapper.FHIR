@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,54 +10,49 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class Primary_source_typeCode(GenericTypeCode):
     """
     primary-source-type
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+        Type of the validation primary source
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/verificationresult-primary-source-type
-    """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/verificationresult-primary-source-type"
-    )
-
 
 class Primary_source_typeCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
 
     LicenseBoard = Primary_source_typeCode("lic-board")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     PrimaryEducation = Primary_source_typeCode("prim")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     ContinuingEducation = Primary_source_typeCode("cont-ed")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     PostalService = Primary_source_typeCode("post-serv")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     RelationshipOwner = Primary_source_typeCode("rel-own")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     RegistrationAuthority = Primary_source_typeCode("reg-auth")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     LegalSource = Primary_source_typeCode("legal")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     IssuingSource = Primary_source_typeCode("issuer")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
     """
     AuthoritativeSource = Primary_source_typeCode("auth-source")

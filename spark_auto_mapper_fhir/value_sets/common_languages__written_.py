@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,120 +10,120 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CommonLanguages_Written_Code(GenericTypeCode):
     """
     Common Languages (Written)
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+        This value set includes common codes from BCP-47
+    (http://tools.ietf.org/html/bcp47) for the purpose of writing; this value set
+    (unlike the common languages value set) doesn't include dialects except where
+    they are relevant for written languages
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/written-language
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/written-language"
-
 
 class CommonLanguages_Written_CodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
 
     Arabic = CommonLanguages_Written_Code("ar")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Bengali = CommonLanguages_Written_Code("bn")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Czech = CommonLanguages_Written_Code("cs")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Danish = CommonLanguages_Written_Code("da")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     German = CommonLanguages_Written_Code("de")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Greek = CommonLanguages_Written_Code("el")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     English = CommonLanguages_Written_Code("en")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Spanish = CommonLanguages_Written_Code("es")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Finnish = CommonLanguages_Written_Code("fi")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     French = CommonLanguages_Written_Code("fr")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Frysian = CommonLanguages_Written_Code("fy")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Hindi = CommonLanguages_Written_Code("hi")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Croatian = CommonLanguages_Written_Code("hr")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Italian = CommonLanguages_Written_Code("it")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Japanese = CommonLanguages_Written_Code("ja")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Korean = CommonLanguages_Written_Code("ko")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Dutch = CommonLanguages_Written_Code("nl")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Norwegian = CommonLanguages_Written_Code("no")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Punjabi = CommonLanguages_Written_Code("pa")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Polish = CommonLanguages_Written_Code("pl")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Portuguese = CommonLanguages_Written_Code("pt")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Russian = CommonLanguages_Written_Code("ru")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Serbian = CommonLanguages_Written_Code("sr")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Swedish = CommonLanguages_Written_Code("sv")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Telegu = CommonLanguages_Written_Code("te")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
     """
     Chinese = CommonLanguages_Written_Code("zh")

@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ObservationInterpretation(GenericTypeCode):
     """
-    ObservationInterpretation
+    v3.ObservationInterpretation
+    From: http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation in v3-codesystems.xml
+        One or more codes providing a rough qualitative interpretation of the
+    observation, such as "normal" / "abnormal", "low" / "high", "better" /
+    "worse", "resistant" /  "susceptible", "expected" / "not expected". The value
+    set is intended to be for ANY use where coded representation of an
+    interpretation is needed.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

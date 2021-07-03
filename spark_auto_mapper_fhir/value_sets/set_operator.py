@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class SetOperator(GenericTypeCode):
     """
-    SetOperator
+    v3.SetOperator
+    From: http://terminology.hl7.org/ValueSet/v3-SetOperator in v3-codesystems.xml
+        **** MISSING DEFINITIONS ****
     """
 
     def __init__(self, value: AutoMapperTextInputType):

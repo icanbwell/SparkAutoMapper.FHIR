@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,255 +10,253 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class OperationOutcomeCodesCode(GenericTypeCode):
     """
     OperationOutcomeCodes
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
+        Operation Outcome codes used by FHIR test servers (see Implementation file
+    translations.xml)
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://terminology.hl7.org/CodeSystem/operation-outcome
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/operation-outcome"
-
 
 class OperationOutcomeCodesCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
 
     Error_MultipleMatchesExistForTheConditionalDelete = OperationOutcomeCodesCode(
         "DELETE_MULTIPLE_MATCHES"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     YouMustAuthenticateBeforeYouCanUseThisService = OperationOutcomeCodesCode(
         "MSG_AUTH_REQUIRED"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     BadSyntax_s_MustBeA_s_ = OperationOutcomeCodesCode("MSG_BAD_FORMAT")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     BadSyntaxIn_s = OperationOutcomeCodesCode("MSG_BAD_SYNTAX")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnableToParseFeed_entryContentType_s_ = OperationOutcomeCodesCode(
         "MSG_CANT_PARSE_CONTENT"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnableToParseFeed_rootElementName_s_ = OperationOutcomeCodesCode(
         "MSG_CANT_PARSE_ROOT"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     NewResourceCreated = OperationOutcomeCodesCode("MSG_CREATED")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     TheDateValue_sIsNotInTheCorrectFormat_XmlDateFormatRequired_ = (
         OperationOutcomeCodesCode("MSG_DATE_FORMAT")
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ThisResourceHasBeenDeleted = OperationOutcomeCodesCode("MSG_DELETED")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ResourceDeleted = OperationOutcomeCodesCode("MSG_DELETED_DONE")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     TheResource_s_HasBeenDeleted = OperationOutcomeCodesCode("MSG_DELETED_ID")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     DuplicateId_sForResourceType_s = OperationOutcomeCodesCode("MSG_DUPLICATE_ID")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ErrorParsingResourceXml_s_ = OperationOutcomeCodesCode("MSG_ERROR_PARSING")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Id_s_HasAnInvalidCharacter_s_ = OperationOutcomeCodesCode("MSG_ID_INVALID")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Id_s_TooLong_lengthLimit36_ = OperationOutcomeCodesCode("MSG_ID_TOO_LONG")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     IdNotAccepted = OperationOutcomeCodesCode("MSG_INVALID_ID")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     JsonSourceForAResourceShouldStartWithAnObject = OperationOutcomeCodesCode(
         "MSG_JSON_OBJECT"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnableToResolveLocalReferenceToResource_s = OperationOutcomeCodesCode(
         "MSG_LOCAL_FAIL"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ResourceId_s_DoesNotExist = OperationOutcomeCodesCode("MSG_NO_EXIST")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     NoResourceFoundMatchingTheQuery_s_ = OperationOutcomeCodesCode("MSG_NO_MATCH")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     NoModuleCouldBeFoundToHandleTheRequest_s_ = OperationOutcomeCodesCode(
         "MSG_NO_MODULE"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     NoSummaryForThisResource = OperationOutcomeCodesCode("MSG_NO_SUMMARY")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Operation_sNotAllowedForResource_s_dueToLocalConfiguration_ = (
         OperationOutcomeCodesCode("MSG_OP_NOT_ALLOWED")
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnknownChainedParameterName_s_ = OperationOutcomeCodesCode("MSG_PARAM_CHAINED")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Parameter_s_ContentIsInvalid = OperationOutcomeCodesCode("MSG_PARAM_INVALID")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Parameter_s_ModifierIsInvalid = OperationOutcomeCodesCode(
         "MSG_PARAM_MODIFIER_INVALID"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Parameter_s_IsNotAllowedToRepeat = OperationOutcomeCodesCode("MSG_PARAM_NO_REPEAT")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Parameter_s_NotUnderstood = OperationOutcomeCodesCode("MSG_PARAM_UNKNOWN")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ResourcesWithIdentity_example_CannotBeDeleted_forTesting_trainingPurposes_ = (
         OperationOutcomeCodesCode("MSG_RESOURCE_EXAMPLE_PROTECTED")
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnableToAllocateResourceId = OperationOutcomeCodesCode("MSG_RESOURCE_ID_FAIL")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ResourceIdMismatch = OperationOutcomeCodesCode("MSG_RESOURCE_ID_MISMATCH")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ResourceIdMissing = OperationOutcomeCodesCode("MSG_RESOURCE_ID_MISSING")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     NotAllowedToSubmitAResourceForThisOperation = OperationOutcomeCodesCode(
         "MSG_RESOURCE_NOT_ALLOWED"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     AResourceIsRequired = OperationOutcomeCodesCode("MSG_RESOURCE_REQUIRED")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ResourceTypeMismatch = OperationOutcomeCodesCode("MSG_RESOURCE_TYPE_MISMATCH")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnknownSortParameterName_s_ = OperationOutcomeCodesCode("MSG_SORT_UNKNOWN")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     DuplicateIdentifierInTransaction_s = OperationOutcomeCodesCode(
         "MSG_TRANSACTION_DUPLICATE_ID"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     MissingIdentifierInTransaction_AnEntry_idMustBeProvided = OperationOutcomeCodesCode(
         "MSG_TRANSACTION_MISSING_ID"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnhandledXmlNodeType_s_ = OperationOutcomeCodesCode("MSG_UNHANDLED_NODE_TYPE")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnknownContent_s_At_s = OperationOutcomeCodesCode("MSG_UNKNOWN_CONTENT")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UnknownFHIRHttpOperation = OperationOutcomeCodesCode("MSG_UNKNOWN_OPERATION")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ResourceType_s_NotRecognised = OperationOutcomeCodesCode("MSG_UNKNOWN_TYPE")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ExistingResourceUpdated = OperationOutcomeCodesCode("MSG_UPDATED")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     VersionAwareUpdatesAreRequiredForThisResource = OperationOutcomeCodesCode(
         "MSG_VERSION_AWARE"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     UpdateConflict_serverCurrentVersion_s_ClientVersionReferenced_s_ = (
         OperationOutcomeCodesCode("MSG_VERSION_AWARE_CONFLICT")
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     VersionSpecificURLNotRecognised = OperationOutcomeCodesCode("MSG_VERSION_AWARE_URL")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     ThisDoesNotAppearToBeAFHIRElementOrResource_wrongNamespace_s_ = (
         OperationOutcomeCodesCode("MSG_WRONG_NS")
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Error_MultipleMatchesExistFor_sSearchParameters_s_ = OperationOutcomeCodesCode(
         "SEARCH_MULTIPLE"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Error_NoProcessableSearchFoundFor_sSearchParameters_s_ = OperationOutcomeCodesCode(
         "SEARCH_NONE"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
     Error_MultipleMatchesExistForTheConditionalUpdate = OperationOutcomeCodesCode(
         "UPDATE_MULTIPLE_MATCHES"

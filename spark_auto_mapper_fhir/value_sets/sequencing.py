@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Sequencing(GenericTypeCode):
     """
-    Sequencing
+    v3.Sequencing
+    From: http://terminology.hl7.org/ValueSet/v3-Sequencing in v3-codesystems.xml
+         Specifies sequence of sort order.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

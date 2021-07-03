@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,28 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class GoalAcceptanceStatusCode(GenericTypeCode):
     """
     GoalAcceptanceStatus
+    From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
+        Codes indicating whether the goal has been accepted by a stakeholder.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/goal-acceptance-status
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/goal-acceptance-status"
-
 
 class GoalAcceptanceStatusCodeValues:
     """
     Stakeholder supports pursuit of the goal.
+    From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
     """
 
     Agree = GoalAcceptanceStatusCode("agree")
     """
     Stakeholder is not in support of the pursuit of the goal.
+    From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
     """
     Disagree = GoalAcceptanceStatusCode("disagree")
     """
     Stakeholder has not yet made a decision on whether they support the goal.
+    From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
     """
     Pending = GoalAcceptanceStatusCode("pending")

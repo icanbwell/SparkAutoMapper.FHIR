@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,23 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SupplyItemTypeCode(GenericTypeCode):
     """
     SupplyItemType
+    From: http://terminology.hl7.org/CodeSystem/supply-item-type in valuesets.xml
+        This value sets refers to a specific supply item.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/supplydelivery-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/supplydelivery-type"
-
 
 class SupplyItemTypeCodeValues:
     """
     Supply is a kind of medication.
+    From: http://terminology.hl7.org/CodeSystem/supply-item-type in valuesets.xml
     """
 
     Medication = SupplyItemTypeCode("medication")
     """
     What is supplied (or requested) is a device.
+    From: http://terminology.hl7.org/CodeSystem/supply-item-type in valuesets.xml
     """
     Device = SupplyItemTypeCode("device")

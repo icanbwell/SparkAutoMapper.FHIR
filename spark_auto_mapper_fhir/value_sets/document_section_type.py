@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class DocumentSectionType(GenericTypeCode):
     """
-    DocumentSectionType
+    v3.DocumentSectionType
+    From: http://terminology.hl7.org/ValueSet/v3-DocumentSectionType in v3-codesystems.xml
+         The type of document section.  Possible values: review of systems, medical
+    history, family history, microscopic findings, etc.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

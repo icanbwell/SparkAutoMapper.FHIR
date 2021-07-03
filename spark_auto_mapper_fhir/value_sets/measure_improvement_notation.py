@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,26 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MeasureImprovementNotationCode(GenericTypeCode):
     """
     MeasureImprovementNotation
+    From: http://terminology.hl7.org/CodeSystem/measure-improvement-notation in valuesets.xml
+        Observation values that indicate what change in a measurement value or score
+    is indicative of an improvement in the measured item or scored issue.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/measure-improvement-notation
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/measure-improvement-notation"
-
 
 class MeasureImprovementNotationCodeValues:
     """
-    Improvement is indicated as an increase in the score or measurement (e.g. Higher score indicates better quality).
+    Improvement is indicated as an increase in the score or measurement (e.g.
+    Higher score indicates better quality).
+    From: http://terminology.hl7.org/CodeSystem/measure-improvement-notation in valuesets.xml
     """
 
     IncreasedScoreIndicatesImprovement = MeasureImprovementNotationCode("increase")
     """
-    Improvement is indicated as a decrease in the score or measurement (e.g. Lower score indicates better quality).
+    Improvement is indicated as a decrease in the score or measurement (e.g. Lower
+    score indicates better quality).
+    From: http://terminology.hl7.org/CodeSystem/measure-improvement-notation in valuesets.xml
     """
     DecreasedScoreIndicatesImprovement = MeasureImprovementNotationCode("decrease")

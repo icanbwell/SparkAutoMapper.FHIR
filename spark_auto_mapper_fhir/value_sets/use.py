@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,30 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class UseCode(GenericTypeCode):
     """
     Use
+    From: http://hl7.org/fhir/claim-use in valuesets.xml
+        The purpose of the Claim: predetermination, preauthorization, claim.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/claim-use
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/claim-use"
-
 
 class UseCodeValues:
     """
     The treatment is complete and this represents a Claim for the services.
+    From: http://hl7.org/fhir/claim-use in valuesets.xml
     """
 
     Claim = UseCode("claim")
     """
-    The treatment is proposed and this represents a Pre-authorization for the services.
+    The treatment is proposed and this represents a Pre-authorization for the
+    services.
+    From: http://hl7.org/fhir/claim-use in valuesets.xml
     """
     Preauthorization = UseCode("preauthorization")
     """
-    The treatment is proposed and this represents a Pre-determination for the services.
+    The treatment is proposed and this represents a Pre-determination for the
+    services.
+    From: http://hl7.org/fhir/claim-use in valuesets.xml
     """
     Predetermination = UseCode("predetermination")

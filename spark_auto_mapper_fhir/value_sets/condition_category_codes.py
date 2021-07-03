@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,25 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ConditionCategoryCodesCode(GenericTypeCode):
     """
     ConditionCategoryCodes
+    From: http://terminology.hl7.org/CodeSystem/condition-category in valuesets.xml
+        Preferred value set for Condition Categories.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/condition-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-category"
-
 
 class ConditionCategoryCodesCodeValues:
     """
-    An item on a problem list that can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person.
+    An item on a problem list that can be managed over time and can be expressed
+    by a practitioner (e.g. physician, nurse), patient, or related person.
+    From: http://terminology.hl7.org/CodeSystem/condition-category in valuesets.xml
     """
 
     ProblemListItem = ConditionCategoryCodesCode("problem-list-item")
     """
-    A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
+    A point in time diagnosis (e.g. from a physician or nurse) in context of an
+    encounter.
+    From: http://terminology.hl7.org/CodeSystem/condition-category in valuesets.xml
     """
     EncounterDiagnosis = ConditionCategoryCodesCode("encounter-diagnosis")

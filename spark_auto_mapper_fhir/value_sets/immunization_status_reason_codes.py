@@ -11,112 +11,152 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ImmunizationStatusReasonCodesCode(GenericTypeCode):
     """
     ImmunizationStatusReasonCodes
+    From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
+        The value set to instantiate this attribute should be drawn from a
+    terminologically robust code system that consists of or contains concepts to
+    support describing the reason why a dose of vaccine was not administered. This
+    value set is provided as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/immunization-status-reason
+    http://terminology.hl7.org/CodeSystem/v3-ActReason
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/immunization-status-reason"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
 
 
 class ImmunizationStatusReasonCodesCodeValues:
     """
     Identifies the reason the patient is assigned to this accommodation type
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
 
     Actaccommodationreason = ImmunizationStatusReasonCodesCode(
         "_ActAccommodationReason"
     )
     """
-    Description:Codes used to specify reasons or criteria relating to coverage provided under a policy or program.  May be used to convey reasons pertaining to coverage contractual provisions, including criteria for eligibility, coverage limitations, coverage maximums, or financial participation required of covered parties.
+    Description:Codes used to specify reasons or criteria relating to coverage
+    provided under a policy or program.  May be used to convey reasons pertaining
+    to coverage contractual provisions, including criteria for eligibility,
+    coverage limitations, coverage maximums, or financial participation required
+    of covered parties.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Actcoveragereason = ImmunizationStatusReasonCodesCode("_ActCoverageReason")
     """
-    Description:The rationale or purpose for an act relating to information management, such as archiving information for the purpose of complying with an enterprise data retention policy.
+    Description:The rationale or purpose for an act relating to information
+    management, such as archiving information for the purpose of complying with an
+    enterprise data retention policy.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Actinformationmanagementreason = ImmunizationStatusReasonCodesCode(
         "_ActInformationManagementReason"
     )
     """
     Description: Types of reasons why a substance is invalid for use.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Actinvalidreason = ImmunizationStatusReasonCodesCode("_ActInvalidReason")
     """
-    Domain specifies the codes used to describe reasons why a Provider is cancelling an Invoice or Invoice Grouping.
+    Domain specifies the codes used to describe reasons why a Provider is
+    cancelling an Invoice or Invoice Grouping.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Actinvoicecancelreason = ImmunizationStatusReasonCodesCode(
         "_ActInvoiceCancelReason"
     )
     """
-    A coded description of the reason for why a patient did not receive a scheduled immunization.
-
-                        (important for public health strategy
+    A coded description of the reason for why a patient did not receive a
+    scheduled immunization.
+    
+                            (important for public health strategy
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Actnoimmunizationreason = ImmunizationStatusReasonCodesCode(
         "_ActNoImmunizationReason"
     )
     """
-    Indicates why a fulfiller refused to fulfill a supply order, and considered it important to notify other providers of their decision.  E.g. "Suspect fraud", "Possible abuse", "Contraindicated".
-
-                        (used when capturing 'refusal to fill' annotations)
+    Indicates why a fulfiller refused to fulfill a supply order, and considered it
+    important to notify other providers of their decision.  E.g. "Suspect fraud",
+    "Possible abuse", "Contraindicated".
+    
+                            (used when capturing 'refusal to fill' annotations)
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Actsupplyfulfillmentrefusalreason = ImmunizationStatusReasonCodesCode(
         "_ActSupplyFulfillmentRefusalReason"
     )
     """
-    Definition:Specifies the reason that an event occurred in a clinical research study.
+    Definition:Specifies the reason that an event occurred in a clinical research
+    study.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Clinicalresearcheventreason = ImmunizationStatusReasonCodesCode(
         "_ClinicalResearchEventReason"
     )
     """
-    Definition:SSpecifies the reason that a test was performed or observation collected in a clinical research study.
-
-                        
-                           Note:This set of codes are not strictly reasons, but are used in the currently Normative standard.  Future revisions of the specification will model these as ActRelationships and thes codes may subsequently be retired.  Thus, these codes should not be used for new specifications.
+    Definition:SSpecifies the reason that a test was performed or observation
+    collected in a clinical research study.
+    
+    
+                               Note:This set of codes are not strictly reasons,
+    but are used in the currently Normative standard.  Future revisions of the
+    specification will model these as ActRelationships and thes codes may
+    subsequently be retired.  Thus, these codes should not be used for new
+    specifications.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Clinicalresearchobservationreason = ImmunizationStatusReasonCodesCode(
         "_ClinicalResearchObservationReason"
     )
     """
     Description:Indicates why the prescription should be suspended.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Combinedpharmacyordersuspendreasoncode = ImmunizationStatusReasonCodesCode(
         "_CombinedPharmacyOrderSuspendReasonCode"
     )
     """
-    Description:Identifies reasons for nullifying (retracting) a particular control act.
+    Description:Identifies reasons for nullifying (retracting) a particular
+    control act.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Controlactnullificationreasoncode = ImmunizationStatusReasonCodesCode(
         "_ControlActNullificationReasonCode"
     )
     """
     Description: Reasons to refuse a transaction to be undone.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Controlactnullificationrefusalreasontype = ImmunizationStatusReasonCodesCode(
         "_ControlActNullificationRefusalReasonType"
     )
     """
     Identifies why a specific query, request, or other trigger event occurred.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Controlactreason = ImmunizationStatusReasonCodesCode("_ControlActReason")
     """
     Description:Identifies why a change is being made to a  record.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Genericupdatereasoncode = ImmunizationStatusReasonCodesCode(
         "_GenericUpdateReasonCode"
     )
     """
-    Definition:A collection of concepts identifying why the patient's profile is being queried.
+    Definition:A collection of concepts identifying why the patient's profile is
+    being queried.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     PatientProfileQueryReason = ImmunizationStatusReasonCodesCode(
         "_PatientProfileQueryReasonCode"
     )
     """
-    Definition:Indicates why the request to transfer a prescription from one dispensing facility to another has been refused.
+    Definition:Indicates why the request to transfer a prescription from one
+    dispensing facility to another has been refused.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Pharmacysupplyrequestfulfillerrevisionrefusalreasoncode = (
         ImmunizationStatusReasonCodesCode(
@@ -124,21 +164,29 @@ class ImmunizationStatusReasonCodesCodeValues:
         )
     )
     """
-    Description: Identifies why a request to add (or activate) a record is being refused.  Examples include the receiving system not able to match the identifier and find that record in the receiving system, having no permission, or a detected issue exists which precludes the requested action.
+    Description: Identifies why a request to add (or activate) a record is being
+    refused.  Examples include the receiving system not able to match the
+    identifier and find that record in the receiving system, having no permission,
+    or a detected issue exists which precludes the requested action.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Refusalreasoncode = ImmunizationStatusReasonCodesCode("_RefusalReasonCode")
     """
     Reasons for cancelling or rescheduling an Appointment
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Schedulingactreason = ImmunizationStatusReasonCodesCode("_SchedulingActReason")
     """
     Indicates why the act revision (status update) is being refused.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Statusrevisionrefusalreasoncode = ImmunizationStatusReasonCodesCode(
         "_StatusRevisionRefusalReasonCode"
     )
     """
-    Definition:Indicates why the requested authorization to prescribe or dispense a medication has been refused.
+    Definition:Indicates why the requested authorization to prescribe or dispense
+    a medication has been refused.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Substanceadministrationpermissionrefusalreasoncode = (
         ImmunizationStatusReasonCodesCode(
@@ -146,104 +194,130 @@ class ImmunizationStatusReasonCodesCodeValues:
         )
     )
     """
-    Reasons why substitution of a substance administration request is not permitted.
+    Reasons why substitution of a substance administration request is not
+    permitted.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Substanceadminsubstitutionnotallowedreason = ImmunizationStatusReasonCodesCode(
         "_SubstanceAdminSubstitutionNotAllowedReason"
     )
     """
     SubstanceAdminSubstitutionReason
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Substanceadminsubstitutionreason = ImmunizationStatusReasonCodesCode(
         "_SubstanceAdminSubstitutionReason"
     )
     """
-    The explanation for why a patient is moved from one location to another within the organization
+    The explanation for why a patient is moved from one location to another within
+    the organization
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Transferactreason = ImmunizationStatusReasonCodesCode("_TransferActReason")
     """
-    Definition: This domain is used to document reasons for providing a billable service; the billable services may include both clinical services and social services.
+    Definition: This domain is used to document reasons for providing a billable
+    service; the billable services may include both clinical services and social
+    services.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Actbillableservicereason = ImmunizationStatusReasonCodesCode(
         "_ActBillableServiceReason"
     )
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Bonus = ImmunizationStatusReasonCodesCode("BONUS")
     """
-    Description:The level of coverage under the policy or program is available only to children
+    Description:The level of coverage under the policy or program is available
+    only to children
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     ChildrenOnly = ImmunizationStatusReasonCodesCode("CHD")
     """
-    Description:The level of coverage under the policy or program is available only to a subscriber's dependents.
+    Description:The level of coverage under the policy or program is available
+    only to a subscriber's dependents.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     DependentsOnly = ImmunizationStatusReasonCodesCode("DEP")
     """
-    Description:The level of coverage under the policy or program is available to an employee and his or her children.
+    Description:The level of coverage under the policy or program is available to
+    an employee and his or her children.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     EmployeeAndChildren = ImmunizationStatusReasonCodesCode("ECH")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Edu = ImmunizationStatusReasonCodesCode("EDU")
     """
-    Description:The level of coverage under the policy or program is available only to an employee.
+    Description:The level of coverage under the policy or program is available
+    only to an employee.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     EmployeeOnly = ImmunizationStatusReasonCodesCode("EMP")
     """
-    Description:The level of coverage under the policy or program is available to an employee and his or her spouse.
+    Description:The level of coverage under the policy or program is available to
+    an employee and his or her spouse.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     EmployeeAndSpouse = ImmunizationStatusReasonCodesCode("ESP")
     """
-    Description:The level of coverage under the policy or program is available to a subscriber's family.
+    Description:The level of coverage under the policy or program is available to
+    a subscriber's family.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Family = ImmunizationStatusReasonCodesCode("FAM")
     """
-    Description:The level of coverage under the policy or program is available to an individual.
+    Description:The level of coverage under the policy or program is available to
+    an individual.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Individual = ImmunizationStatusReasonCodesCode("IND")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Invoice = ImmunizationStatusReasonCodesCode("INVOICE")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Proa = ImmunizationStatusReasonCodesCode("PROA")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Recov = ImmunizationStatusReasonCodesCode("RECOV")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Retro = ImmunizationStatusReasonCodesCode("RETRO")
     """
-    Description:The level of coverage under the policy or program is available to a subscriber's spouse and children
+    Description:The level of coverage under the policy or program is available to
+    a subscriber's spouse and children
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     SpouseAndChildren = ImmunizationStatusReasonCodesCode("SPC")
     """
-    Description:The level of coverage under the policy or program is available only to a subscribers spouse
+    Description:The level of coverage under the policy or program is available
+    only to a subscribers spouse
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     SpouseOnly = ImmunizationStatusReasonCodesCode("SPO")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
     Tran = ImmunizationStatusReasonCodesCode("TRAN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
     """
     IMMUNE = ImmunizationStatusReasonCodesCode("IMMUNE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
     """
     MEDPREC = ImmunizationStatusReasonCodesCode("MEDPREC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
     """
     OSTOCK = ImmunizationStatusReasonCodesCode("OSTOCK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
     """
     PATOBJ = ImmunizationStatusReasonCodesCode("PATOBJ")

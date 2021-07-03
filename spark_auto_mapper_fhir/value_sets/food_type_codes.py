@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,12 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class FoodTypeCodesCode(GenericTypeCode):
     """
     FoodTypeCodes
+    From: http://hl7.org/fhir/ValueSet/food-type in valuesets.xml
+        This value set represents codes for types of foods and is provided as a
+    suggestive example. It include codes from [SNOMED CT](http://snomed.info/sct)
+    where concept is-a 255620007 (Foods (substance)).
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
-
-    """
-    http://hl7.org/fhir/ValueSet/food-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/food-type"

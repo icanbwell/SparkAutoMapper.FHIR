@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class GenderStatusCode(GenericTypeCode):
     """
     GenderStatus
+    From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate the
+    current state of the animal's reproductive organs.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/animal-genderstatus
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/animal-genderstatus"
-
 
 class GenderStatusCodeValues:
     """
     The animal has been sterilized, castrated or otherwise made infertile.
+    From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
     """
 
     Neutered = GenderStatusCode("neutered")
     """
     The animal's reproductive organs are intact.
+    From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
     """
     Intact = GenderStatusCode("intact")
     """
     Unable to determine whether the animal has been neutered.
+    From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
     """
     Unknown = GenderStatusCode("unknown")

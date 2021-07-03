@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassSpecimen(GenericTypeCode):
     """
-    RoleClassSpecimen
+    v3.RoleClassSpecimen
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassSpecimen in v3-codesystems.xml
+         A role played by a material entity that is a specimen for an act. It is
+    scoped by the source of the specimen.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

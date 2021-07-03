@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActClassDocument(GenericTypeCode):
     """
-    ActClassDocument
+    v3.ActClassDocument
+    From: http://terminology.hl7.org/ValueSet/v3-ActClassDocument in v3-codesystems.xml
+         Specialization of Act to add the characteristics unique to document
+    management services.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

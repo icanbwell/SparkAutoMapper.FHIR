@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,33 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class QuestionnaireTextCategoriesCode(GenericTypeCode):
     """
     QuestionnaireTextCategories
+    From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
+        Codes defining the purpose of a Questionnaire item of type 'text'.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/questionnaire-display-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaire-display-category"
-
 
 class QuestionnaireTextCategoriesCodeValues:
     """
-    The text provides guidance on how to populate or use a portion of the questionnaire (or the questionnaire as a whole).
+    The text provides guidance on how to populate or use a portion of the
+    questionnaire (or the questionnaire as a whole).
+    From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
     """
 
     Instructions = QuestionnaireTextCategoriesCode("instructions")
     """
-    The text provides guidance on how the information should be or will be handled from a security/confidentiality/access control perspective when completed
+    The text provides guidance on how the information should be or will be handled
+    from a security/confidentiality/access control perspective when completed
+    From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
     """
     Security = QuestionnaireTextCategoriesCode("security")
     """
-    The text provides additional guidance on populating the containing item.  Help text isn't necessarily expected to be rendered as part of the form, but may instead be made available through fly-over, pop-up button, link to a "help" page, etc.
+    The text provides additional guidance on populating the containing item.  Help
+    text isn't necessarily expected to be rendered as part of the form, but may
+    instead be made available through fly-over, pop-up button, link to a "help"
+    page, etc.
+    From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
     """
     Help = QuestionnaireTextCategoriesCode("help")

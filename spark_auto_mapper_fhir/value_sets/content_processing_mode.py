@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ContentProcessingMode(GenericTypeCode):
     """
-    ContentProcessingMode
+    v3.ContentProcessingMode
+    From: http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode in v3-codesystems.xml
+          Description:
+    Identifies the order in which content should be processed.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,198 +10,202 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DocumentClassValueSetCode(GenericTypeCode):
     """
     DocumentClassValueSet
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+        This is the code specifying the high-level kind of document (e.g.
+    Prescription, Discharge Summary, Report, etc.). Note: Class code for documents
+    comes from LOINC, and is based upon one of the following:The type of service
+    described by the document. It is described at a very high level in Section 7.3
+    of the LOINC Manual. The type study performed. It was determined by
+    identifying modalities for study reports. The section of the chart where the
+    document is placed. It was determined from the SETs created for Claims
+    Attachment requests.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/document-classcodes
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/document-classcodes"
-
 
 class DocumentClassValueSetCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
 
     HistoryOfImmunization = DocumentClassValueSetCode("11369-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     AnesthesiaRecords = DocumentClassValueSetCode("11485-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     ChemotherapyRecords = DocumentClassValueSetCode("11486-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     ConsultNote = DocumentClassValueSetCode("11488-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     Provider_unspecifiedProgressNote = DocumentClassValueSetCode("11506-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     NurseryRecords = DocumentClassValueSetCode("11543-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     LaborAndDeliveryRecords = DocumentClassValueSetCode("15508-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     RadiologyStudies_set_ = DocumentClassValueSetCode("18726-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     Provider_unspecifiedTransferSummary = DocumentClassValueSetCode("18761-7")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     DischargeSummary = DocumentClassValueSetCode("18842-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     LaboratoryStudies_set_ = DocumentClassValueSetCode("26436-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     CardiologyStudies_set_ = DocumentClassValueSetCode("26441-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     ObstetricalStudies_set_ = DocumentClassValueSetCode("26442-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     GastroenterologyEndoscopyStudies_set_ = DocumentClassValueSetCode("27895-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PulmonaryStudies_set_ = DocumentClassValueSetCode("27896-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     NeuromuscularElectrophysiologyStudies_set_ = DocumentClassValueSetCode("27897-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PathologyStudies_set_ = DocumentClassValueSetCode("27898-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     Provider_unspecifiedProcedureNote = DocumentClassValueSetCode("28570-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     Ophthalmology_optometryStudies_set_ = DocumentClassValueSetCode("28619-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     MiscellaneousStudies_set_ = DocumentClassValueSetCode("28634-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     DialysisRecords = DocumentClassValueSetCode("29749-9")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     NeonatalIntensiveCareRecords = DocumentClassValueSetCode("29750-7")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     CriticalCareRecords = DocumentClassValueSetCode("29751-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PerioperativeRecords = DocumentClassValueSetCode("29752-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     EvaluationAndManagementNote = DocumentClassValueSetCode("34109-9")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     Provider_unspecified_HistoryAndPhysicalNote = DocumentClassValueSetCode("34117-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     InterventionalProcedureNote = DocumentClassValueSetCode("34121-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PathologyProcedureNote = DocumentClassValueSetCode("34122-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     SummarizationOfEpisodeNote = DocumentClassValueSetCode("34133-9")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     TransferOfCareReferralNote = DocumentClassValueSetCode("34140-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     TelephoneEncounterNote = DocumentClassValueSetCode("34748-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     GeneralSurgeryPre_operativeEvaluationAndManagementNote = DocumentClassValueSetCode(
         "34775-7"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     InpatientAdmissionHistoryAndPhysicalNote = DocumentClassValueSetCode("47039-3")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     CounselingNote = DocumentClassValueSetCode("47042-7")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     StudyReportDocument = DocumentClassValueSetCode("47045-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     SummaryOfDeath = DocumentClassValueSetCode("47046-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     Non_patientCommunication = DocumentClassValueSetCode("47049-2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PrivacyPolicyOrganizationDocument = DocumentClassValueSetCode("57017-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PrivacyPolicyAcknowledgmentDocument = DocumentClassValueSetCode("57016-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     MedicationSummaryDocument = DocumentClassValueSetCode("56445-0")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PersonalHealthMonitoringReportDocument = DocumentClassValueSetCode("53576-5")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     PlanOfCareNote = DocumentClassValueSetCode("56447-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     DiagnosticImagingStudy = DocumentClassValueSetCode("18748-4")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     SurgicalOperationNote = DocumentClassValueSetCode("11504-8")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
     """
     ReferralNote = DocumentClassValueSetCode("57133-1")

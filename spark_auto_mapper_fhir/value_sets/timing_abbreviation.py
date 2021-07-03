@@ -11,156 +11,177 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class TimingAbbreviationCode(GenericTypeCode):
     """
     TimingAbbreviation
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+        Code for a known / defined timing pattern.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/timing-abbreviation
+    http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/timing-abbreviation"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
 
 
 class TimingAbbreviationCodeValues:
     """
     Every morning at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
 
     Am = TimingAbbreviationCode("AM")
     """
     At bedtime (institution specified time).
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     AtBedtime = TimingAbbreviationCode("BED")
     """
     Two times a day at institution specified time
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Bid = TimingAbbreviationCode("BID")
     """
     Regular business days (Monday to Friday excluding holidays)
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Jb = TimingAbbreviationCode("JB")
     """
     Regular weekends (Saturday and Sunday excluding holidays)
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Je = TimingAbbreviationCode("JE")
     """
     Holidays
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Gtsabbreviationholidays = TimingAbbreviationCode("JH")
     """
     Monthly at institution specified time.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Monthly = TimingAbbreviationCode("MO")
     """
     Every afternoon at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Pm = TimingAbbreviationCode("PM")
     """
     Every hour at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     EveryHour = TimingAbbreviationCode("Q1H")
     """
     Every 2 hours at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Every2Hours = TimingAbbreviationCode("Q2H")
     """
     Every 3 hours at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Every3Hours = TimingAbbreviationCode("Q3H")
     """
     Every 4 hours at institution specified time
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Q4h = TimingAbbreviationCode("Q4H")
     """
     Every 6 hours at institution specified time
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Q6h = TimingAbbreviationCode("Q6H")
     """
     Every 8 hours at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Every8Hours = TimingAbbreviationCode("Q8H")
     """
     Every day at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Qd = TimingAbbreviationCode("QD")
     """
     Four times a day at institution specified time
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Qid = TimingAbbreviationCode("QID")
     """
     Every other day at institution specified times.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Qod = TimingAbbreviationCode("QOD")
     """
     Three times a day at institution specified time
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Tid = TimingAbbreviationCode("TID")
     """
     Weekly at institution specified time.
+    From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
     Weekly = TimingAbbreviationCode("WK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     BID = TimingAbbreviationCode("BID")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     TID = TimingAbbreviationCode("TID")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     QID = TimingAbbreviationCode("QID")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     AM = TimingAbbreviationCode("AM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     PM = TimingAbbreviationCode("PM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     QD = TimingAbbreviationCode("QD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     QOD = TimingAbbreviationCode("QOD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     EveryHour = TimingAbbreviationCode("Q1H")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     Every2Hours = TimingAbbreviationCode("Q2H")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     Every3Hours = TimingAbbreviationCode("Q3H")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     Q4H = TimingAbbreviationCode("Q4H")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     Q6H = TimingAbbreviationCode("Q6H")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     Every8Hours = TimingAbbreviationCode("Q8H")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     AtBedtime = TimingAbbreviationCode("BED")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     Weekly = TimingAbbreviationCode("WK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
     """
     Monthly = TimingAbbreviationCode("MO")

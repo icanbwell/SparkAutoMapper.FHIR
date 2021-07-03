@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityDeterminer(GenericTypeCode):
     """
-    EntityDeterminer
+    v3.EntityDeterminer
+    From: http://terminology.hl7.org/ValueSet/v3-EntityDeterminer in v3-codesystems.xml
+         EntityDeterminer in natural language grammar is the class of words that
+    comprises articles, demonstrative pronouns, and quantifiers. In the RIM,
+    determiner is a structural code in the Entity class to distinguish whether any
+    given Entity object stands for some, any one, or a specific thing.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

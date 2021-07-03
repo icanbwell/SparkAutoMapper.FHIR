@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,25 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ConditionClinicalStatusCodesCode(GenericTypeCode):
     """
     ConditionClinicalStatusCodes
+    From: http://terminology.hl7.org/CodeSystem/condition-clinical in valuesets.xml
+        Preferred value set for Condition Clinical Status.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/condition-clinical
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-clinical"
-
 
 class ConditionClinicalStatusCodesCodeValues:
     """
-    The subject is currently experiencing the symptoms of the condition or there is evidence of the condition.
+    The subject is currently experiencing the symptoms of the condition or there
+    is evidence of the condition.
+    From: http://terminology.hl7.org/CodeSystem/condition-clinical in valuesets.xml
     """
 
     Active = ConditionClinicalStatusCodesCode("active")
     """
-    The subject is no longer experiencing the symptoms of the condition or there is no longer evidence of the condition.
+    The subject is no longer experiencing the symptoms of the condition or there
+    is no longer evidence of the condition.
+    From: http://terminology.hl7.org/CodeSystem/condition-clinical in valuesets.xml
     """
     Inactive = ConditionClinicalStatusCodesCode("inactive")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,68 +10,65 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ExampleHierarchicalValueSetCode(GenericTypeCode):
     """
     Example Hierarchical ValueSet
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
+        Demonstration of extensions that build a hierarchical contains
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/example-hierarchical
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/example-hierarchical"
-
 
 class ExampleHierarchicalValueSetCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
 
     Invalid = ExampleHierarchicalValueSetCode("invalid")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Structure = ExampleHierarchicalValueSetCode("structure")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Required = ExampleHierarchicalValueSetCode("required")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Value = ExampleHierarchicalValueSetCode("value")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Processing = ExampleHierarchicalValueSetCode("processing")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Duplicate = ExampleHierarchicalValueSetCode("duplicate")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Not_found = ExampleHierarchicalValueSetCode("not-found")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Conflict = ExampleHierarchicalValueSetCode("conflict")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Lock = ExampleHierarchicalValueSetCode("lock")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Exception = ExampleHierarchicalValueSetCode("exception")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Tbrottled = ExampleHierarchicalValueSetCode("tbrottled")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Login = ExampleHierarchicalValueSetCode("login")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
     """
     Unknown = ExampleHierarchicalValueSetCode("unknown")

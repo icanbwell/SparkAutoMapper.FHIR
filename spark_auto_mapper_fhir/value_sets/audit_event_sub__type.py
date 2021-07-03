@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,108 +10,106 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AuditEventSub_TypeCode(GenericTypeCode):
     """
     AuditEventSub-Type
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
+        More detailed code concerning the type of the audit event - defined by DICOM
+    with some FHIR specific additions.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/audit-event-sub-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/audit-event-sub-type"
-
 
 class AuditEventSub_TypeCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
 
     _110120 = AuditEventSub_TypeCode("110120")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110121 = AuditEventSub_TypeCode("110121")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110122 = AuditEventSub_TypeCode("110122")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110123 = AuditEventSub_TypeCode("110123")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110124 = AuditEventSub_TypeCode("110124")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110125 = AuditEventSub_TypeCode("110125")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110126 = AuditEventSub_TypeCode("110126")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110127 = AuditEventSub_TypeCode("110127")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110128 = AuditEventSub_TypeCode("110128")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110129 = AuditEventSub_TypeCode("110129")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110130 = AuditEventSub_TypeCode("110130")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110131 = AuditEventSub_TypeCode("110131")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110132 = AuditEventSub_TypeCode("110132")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110133 = AuditEventSub_TypeCode("110133")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110134 = AuditEventSub_TypeCode("110134")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110135 = AuditEventSub_TypeCode("110135")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110136 = AuditEventSub_TypeCode("110136")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110137 = AuditEventSub_TypeCode("110137")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110138 = AuditEventSub_TypeCode("110138")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110139 = AuditEventSub_TypeCode("110139")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110140 = AuditEventSub_TypeCode("110140")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110141 = AuditEventSub_TypeCode("110141")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
     """
     _110142 = AuditEventSub_TypeCode("110142")

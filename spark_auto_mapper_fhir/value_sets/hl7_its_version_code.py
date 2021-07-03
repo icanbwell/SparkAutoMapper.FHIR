@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Hl7ITSVersionCode(GenericTypeCode):
     """
-    hl7ITSVersionCode
+    v3.hl7ITSVersionCode
+    From: http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode in v3-codesystems.xml
+         HL7 implementation technology specification versions. These codes will
+    document the ITS type and version for message encoding. The code will appear
+    in the instances based upon rules expressed in the ITS, and do not appear in
+    the abstract message, either as it is presented to received from the ITS.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

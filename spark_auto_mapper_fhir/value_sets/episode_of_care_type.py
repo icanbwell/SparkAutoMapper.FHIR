@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,34 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class EpisodeOfCareTypeCode(GenericTypeCode):
     """
     EpisodeOfCareType
+    From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
+        This example value set defines a set of codes that can be used to express the
+    usage type of an EpisodeOfCare record.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/episodeofcare-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/episodeofcare-type"
-
 
 class EpisodeOfCareTypeCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
     """
 
     HomeAndCommunityCare = EpisodeOfCareTypeCode("hacc")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
     """
     PostAcuteCare = EpisodeOfCareTypeCode("pac")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
     """
     PostCoordinatedDiabetesProgram = EpisodeOfCareTypeCode("diab")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
     """
     DrugAndAlcoholRehabilitation = EpisodeOfCareTypeCode("da")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
     """
     Community_basedAgedCare = EpisodeOfCareTypeCode("cacp")

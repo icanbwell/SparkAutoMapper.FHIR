@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityClassLivingSubject(GenericTypeCode):
     """
-    EntityClassLivingSubject
+    v3.EntityClassLivingSubject
+    From: http://terminology.hl7.org/ValueSet/v3-EntityClassLivingSubject in v3-codesystems.xml
+         Anything that essentially has the property of life, independent of current
+    state (a dead human corpse is still essentially a living subject.)
     """
 
     def __init__(self, value: AutoMapperTextInputType):

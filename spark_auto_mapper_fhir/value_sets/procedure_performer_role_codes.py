@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,12 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ProcedurePerformerRoleCodesCode(GenericTypeCode):
     """
     ProcedurePerformerRoleCodes
+    From: http://hl7.org/fhir/ValueSet/performer-role in valuesets.xml
+        This example value set defines the set of codes that can be used to indicate a
+    role of a procedure performer.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
-
-    """
-    http://hl7.org/fhir/ValueSet/performer-role
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/performer-role"

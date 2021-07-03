@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class HL7StandardVersionCode(GenericTypeCode):
     """
-    HL7StandardVersionCode
+    v3.HL7StandardVersionCode
+    From: http://terminology.hl7.org/ValueSet/v3-HL7StandardVersionCode in v3-codesystems.xml
+         This code system holds version codes for the Version 3 standards. Values are
+    to be determined by HL7 and added with each new version of the HL7 Standard.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassPassive(GenericTypeCode):
     """
-    RoleClassPassive
+    v3.RoleClassPassive
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassPassive in v3-codesystems.xml
+         An association for a playing Entity that is used, known, treated, handled,
+    built, or destroyed, etc. under the auspices of the scoping Entity. The
+    playing Entity is passive in these roles (even though it may be active in
+    other roles), in the sense that the kinds of things done to it in this role
+    happen without an agreement from the playing Entity.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

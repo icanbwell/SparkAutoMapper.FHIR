@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,30 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class BenefitCostApplicabilityCode(GenericTypeCode):
     """
     BenefitCostApplicability
+    From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
+        Whether the cost applies to in-network or out-of-network providers.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/insuranceplan-applicability
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/insuranceplan-applicability"
-
 
 class BenefitCostApplicabilityCodeValues:
     """
-    Provider is contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
+    Provider is contracted with the health insurance company to provide services
+    to plan members for specific pre-negotiated rates
+    From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
     """
 
     InNetwork = BenefitCostApplicabilityCode("in-network")
     """
-    Provider is  not contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
+    Provider is  not contracted with the health insurance company to provide
+    services to plan members for specific pre-negotiated rates
+    From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
     """
     OutOfNetwork = BenefitCostApplicabilityCode("out-of-network")
     """
     Other applicability
+    From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
     """
     Other = BenefitCostApplicabilityCode("other")

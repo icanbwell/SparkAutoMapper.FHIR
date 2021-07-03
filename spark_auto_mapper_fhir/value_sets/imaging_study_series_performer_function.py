@@ -11,40 +11,44 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ImagingStudySeriesPerformerFunctionCode(GenericTypeCode):
     """
     ImagingStudySeriesPerformerFunction
+    From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
+        Performer function of an agent in an imaging study series
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/series-performer-function
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/series-performer-function"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 
 
 class ImagingStudySeriesPerformerFunctionCodeValues:
     """
-    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    Indicates that the target of the participation is involved in some manner in
+    the act, but does not qualify how.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
     """
 
     Participation = ImagingStudySeriesPerformerFunctionCode("PART")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
     """
     Consultant = ImagingStudySeriesPerformerFunctionCode("CON")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
     """
     Verifier = ImagingStudySeriesPerformerFunctionCode("VRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
     """
     Performer = ImagingStudySeriesPerformerFunctionCode("PRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
     """
     SecondaryPerformer = ImagingStudySeriesPerformerFunctionCode("SPRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
     """
     Referrer = ImagingStudySeriesPerformerFunctionCode("REF")

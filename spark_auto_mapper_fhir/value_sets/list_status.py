@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,28 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ListStatusCode(GenericTypeCode):
     """
     ListStatus
+    From: http://hl7.org/fhir/list-status in valuesets.xml
+        The current state of the list.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/list-status
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/list-status"
-
 
 class ListStatusCodeValues:
     """
     The list is considered to be an active part of the patient's record.
+    From: http://hl7.org/fhir/list-status in valuesets.xml
     """
 
     Current = ListStatusCode("current")
     """
     The list is "old" and should no longer be considered accurate or relevant.
+    From: http://hl7.org/fhir/list-status in valuesets.xml
     """
     Retired = ListStatusCode("retired")
     """
     The list was never accurate.  It is retained for medico-legal purposes only.
+    From: http://hl7.org/fhir/list-status in valuesets.xml
     """
     EnteredInError = ListStatusCode("entered-in-error")

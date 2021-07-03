@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class HumanLanguage(GenericTypeCode):
     """
-    HumanLanguage
+    v3.HumanLanguage
+    From: http://terminology.hl7.org/ValueSet/v3-HumanLanguage in v3-codesystems.xml
+         Codes for the representation of the names of human languages.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

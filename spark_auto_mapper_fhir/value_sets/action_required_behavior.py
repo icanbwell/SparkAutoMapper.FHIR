@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,32 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ActionRequiredBehaviorCode(GenericTypeCode):
     """
     ActionRequiredBehavior
+    From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
+        Defines expectations around whether an action or action group is required.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/action-required-behavior
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-required-behavior"
-
 
 class ActionRequiredBehaviorCodeValues:
     """
-    An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
+    An action with this behavior must be included in the actions processed by the
+    end user; the end user SHALL NOT choose not to include this action.
+    From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
     """
 
     Must = ActionRequiredBehaviorCode("must")
     """
-    An action with this behavior may be included in the set of actions processed by the end user.
+    An action with this behavior may be included in the set of actions processed
+    by the end user.
+    From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
     """
     Could = ActionRequiredBehaviorCode("could")
     """
-    An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included.
+    An action with this behavior must be included in the set of actions processed
+    by the end user, unless the end user provides documentation as to why the
+    action was not included.
+    From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
     """
     MustUnlessDocumented = ActionRequiredBehaviorCode("must-unless-documented")

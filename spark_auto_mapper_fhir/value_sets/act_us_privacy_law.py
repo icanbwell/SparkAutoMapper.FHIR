@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActUSPrivacyLaw(GenericTypeCode):
     """
-    ActUSPrivacyLaw
+    v3.ActUSPrivacyLaw
+    From: http://terminology.hl7.org/ValueSet/v3-ActUSPrivacyLaw in v3-codesystems.xml
+         A jurisdictional mandate in the US relating to privacy.   Deprecation
+    Comment:
+    Content moved to ActCode under _ActPrivacyLaw; use that instead.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

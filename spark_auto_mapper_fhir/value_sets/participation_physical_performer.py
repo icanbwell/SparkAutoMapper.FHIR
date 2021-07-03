@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationPhysicalPerformer(GenericTypeCode):
     """
-    ParticipationPhysicalPerformer
+    v3.ParticipationPhysicalPerformer
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationPhysicalPerformer in v3-codesystems.xml
+         A person  who actually and principally carries out the action.  Need not be
+    the principal responsible actor, e.g. a surgery resident operating under
+    supervision of attending surgeon, and may be the patient in self-care, e.g.
+    fingerstick blood sugar.  The traditional order filler is a performer. This
+    information should accompany every service event.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

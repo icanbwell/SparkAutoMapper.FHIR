@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class QueryStatusCode(GenericTypeCode):
     """
-    QueryStatusCode
+    v3.QueryStatusCode
+    From: http://terminology.hl7.org/ValueSet/v3-QueryStatusCode in v3-codesystems.xml
+         A code specifying the state of the Query.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

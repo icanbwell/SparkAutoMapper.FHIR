@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActEncounterCode(GenericTypeCode):
     """
-    ActEncounterCode
+    v3.ActEncounterCode
+    From: http://terminology.hl7.org/ValueSet/v3-ActEncounterCode in v3-codesystems.xml
+         Domain provides codes that qualify the ActEncounterClass (ENC)
     """
 
     def __init__(self, value: AutoMapperTextInputType):

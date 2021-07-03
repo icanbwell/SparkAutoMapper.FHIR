@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,25 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ParticipantTypeCode(GenericTypeCode):
     """
     ParticipantType
+    From: http://terminology.hl7.org/CodeSystem/participant-type in valuesets.xml
+        This value set defines a set of codes that can be used to indicate how an
+    individual participates in an encounter.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://terminology.hl7.org/CodeSystem/participant-type
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/participant-type"
-
 
 class ParticipantTypeCodeValues:
     """
-    A translator who is facilitating communication with the patient during the encounter.
+    A translator who is facilitating communication with the patient during the
+    encounter.
+    From: http://terminology.hl7.org/CodeSystem/participant-type in valuesets.xml
     """
 
     Translator = ParticipantTypeCode("translator")
     """
     A person to be contacted in case of an emergency during the encounter.
+    From: http://terminology.hl7.org/CodeSystem/participant-type in valuesets.xml
     """
     Emergency = ParticipantTypeCode("emergency")

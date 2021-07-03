@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,31 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SlicingRulesCode(GenericTypeCode):
     """
     SlicingRules
+    From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
+        How slices are interpreted when evaluating an instance.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/resource-slicing-rules
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/resource-slicing-rules"
-
 
 class SlicingRulesCodeValues:
     """
-    No additional content is allowed other than that described by the slices in this profile.
+    No additional content is allowed other than that described by the slices in
+    this profile.
+    From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
     """
 
     Closed = SlicingRulesCode("closed")
     """
     Additional content is allowed anywhere in the list.
+    From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
     """
     Open = SlicingRulesCode("open")
     """
-    Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be ordered, which makes it hard to share uses. This should only be done where absolutely required.
+    Additional content is allowed, but only at the end of the list. Note that
+    using this requires that the slices be ordered, which makes it hard to share
+    uses. This should only be done where absolutely required.
+    From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
     """
     OpenAtEnd = SlicingRulesCode("openAtEnd")

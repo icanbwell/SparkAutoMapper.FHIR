@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,40 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class EnteralFormulaAdditiveTypeCodeCode(GenericTypeCode):
     """
     EnteralFormulaAdditiveTypeCode
+    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
+        EnteralFormulaAdditiveType: Codes for the type of modular component such as
+    protein, carbohydrate or fiber to be provided in addition to or mixed with the
+    base formula. This value set is provided as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/entformula-additive
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/entformula-additive"
-
 
 class EnteralFormulaAdditiveTypeCodeCodeValues:
     """
     Modular lipid enteral formula component
+    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
     """
 
     Lipid = EnteralFormulaAdditiveTypeCodeCode("lipid")
     """
     Modular protein enteral formula component
+    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
     """
     Protein = EnteralFormulaAdditiveTypeCodeCode("protein")
     """
     Modular carbohydrate enteral formula component
+    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
     """
     Carbohydrate = EnteralFormulaAdditiveTypeCodeCode("carbohydrate")
     """
     Modular fiber enteral formula component
+    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
     """
     Fiber = EnteralFormulaAdditiveTypeCodeCode("fiber")
     """
     Added water
+    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
     """
     Water = EnteralFormulaAdditiveTypeCodeCode("water")

@@ -10,7 +10,18 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class PolicyHolderRole(GenericTypeCode):
     """
-    policyHolderRole
+    v3.policyHolderRole
+    From: http://terminology.hl7.org/ValueSet/v3-policyHolderRole in v3-codesystems.xml
+         This vocabulary is defined by Implementation Guide for CDA Release 2 - Level
+    1 - Care Record Summary (US realm). It describes roles recognized through the
+    issuance of an insurance policy to a policyholder who a relationship with the
+    covered party, such as spouse, child, etc.  This vocabulary is essentially an
+    inversion of the role relations of the HL7 CoverageRoleType vocabulary.  It
+    provides more detailed roles with respect to the underwriter (the scoping
+    organization) for those participants in the policyholder role for a patient.
+    Open Issue: The code values for this coding system must be extracted from the
+    CDA documentation and brought forward through Harmonization for instantiation
+    in this repository.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

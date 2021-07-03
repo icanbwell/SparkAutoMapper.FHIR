@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RelationshipConjunction(GenericTypeCode):
     """
-    RelationshipConjunction
+    v3.RelationshipConjunction
+    From: http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction in v3-codesystems.xml
+        **** MISSING DEFINITIONS ****
     """
 
     def __init__(self, value: AutoMapperTextInputType):

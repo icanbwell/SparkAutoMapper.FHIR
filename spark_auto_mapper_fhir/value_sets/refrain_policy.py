@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RefrainPolicy(GenericTypeCode):
     """
-    RefrainPolicy
+    v3.RefrainPolicy
+    From: http://terminology.hl7.org/ValueSet/v3-RefrainPolicy in v3-codesystems.xml
+         Conveys prohibited actions which an information custodian, receiver, or user
+    is not permitted to perform unless otherwise authorized or permitted under
+    specified circumstances.  Examples:
+      prohibit redisclosure without consent directive
     """
 
     def __init__(self, value: AutoMapperTextInputType):

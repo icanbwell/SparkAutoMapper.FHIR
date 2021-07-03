@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,52 +10,65 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ProvenanceParticipantTypeCode(GenericTypeCode):
     """
     ProvenanceParticipantType
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+        The type of participation a provenance participant.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/provenance-agent-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/provenance-agent-type"
-
 
 class ProvenanceParticipantTypeCodeValues:
     """
     A person entering the data into the originating system
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
 
     Enterer = ProvenanceParticipantTypeCode("enterer")
     """
-    A person, animal, organization or device that who actually and principally carries out the activity
+    A person, animal, organization or device that who actually and principally
+    carries out the activity
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Performer = ProvenanceParticipantTypeCode("performer")
     """
-    A party that originates the resource and therefore has responsibility for the information given in the resource and ownership of this resource
+    A party that originates the resource and therefore has responsibility for the
+    information given in the resource and ownership of this resource
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Author = ProvenanceParticipantTypeCode("author")
     """
     A person who verifies the correctness and appropriateness of activity
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Verifier = ProvenanceParticipantTypeCode("verifier")
     """
     A verifier who attests to the accuracy of the resource
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Attester = ProvenanceParticipantTypeCode("attester")
     """
     A person who reported information that contributed to the resource
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Informant = ProvenanceParticipantTypeCode("informant")
     """
-    The entity that is accountable for maintaining a true an accurate copy of the original record
+    The entity that is accountable for maintaining a true an accurate copy of the
+    original record
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Custodian = ProvenanceParticipantTypeCode("custodian")
     """
-    A device that operates independently of an author on custodian's algorithms for data extraction of existing information for purpose of generating a new artifact.
+    A device that operates independently of an author on custodian's algorithms
+    for data extraction of existing information for purpose of generating a new
+    artifact.
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Assembler = ProvenanceParticipantTypeCode("assembler")
     """
-    A device used by an author to record new information, which may also be used by the author to select existing information for aggregation with newly recorded information for the purpose of generating a new artifact.
+    A device used by an author to record new information, which may also be used
+    by the author to select existing information for aggregation with newly
+    recorded information for the purpose of generating a new artifact.
+    From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
     """
     Composer = ProvenanceParticipantTypeCode("composer")

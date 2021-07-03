@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,56 +10,54 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class FHIRSpecimenCollectionMethodCode(GenericTypeCode):
     """
     FHIRSpecimenCollectionMethod
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+         This example value set defines a set of codes that can be used to indicate
+    the method by which a specimen was collected.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/specimen-collection-method
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/specimen-collection-method"
-
 
 class FHIRSpecimenCollectionMethodCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
 
     Aspiration_Action = FHIRSpecimenCollectionMethodCode("129316008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     Biopsy_Action = FHIRSpecimenCollectionMethodCode("129314006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     Puncture_Action = FHIRSpecimenCollectionMethodCode("129300006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     Excision_Action = FHIRSpecimenCollectionMethodCode("129304002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     Scraping_Action = FHIRSpecimenCollectionMethodCode("129323009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     UrineSpecimenCollection_CleanCatch = FHIRSpecimenCollectionMethodCode("73416001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     TimedUrineCollection = FHIRSpecimenCollectionMethodCode("225113003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     UrineSpecimenCollection_Catheterized = FHIRSpecimenCollectionMethodCode("70777001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     CollectionOfCoughedSputum = FHIRSpecimenCollectionMethodCode("386089008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
     """
     Finger_prickSampling = FHIRSpecimenCollectionMethodCode("278450005")

@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class PersonDisabilityType(GenericTypeCode):
     """
-    PersonDisabilityType
+    v3.PersonDisabilityType
+    From: http://terminology.hl7.org/ValueSet/v3-PersonDisabilityType in v3-codesystems.xml
+         A code identifying a person's disability.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

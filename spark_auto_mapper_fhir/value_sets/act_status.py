@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActStatus(GenericTypeCode):
     """
-    ActStatus
+    v3.ActStatus
+    From: http://terminology.hl7.org/ValueSet/v3-ActStatus in v3-codesystems.xml
+         Codes representing the defined possible states of an Act, as defined by the
+    Act class state machine.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

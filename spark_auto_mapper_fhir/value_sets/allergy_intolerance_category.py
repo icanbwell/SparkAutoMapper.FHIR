@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,40 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AllergyIntoleranceCategoryCode(GenericTypeCode):
     """
     AllergyIntoleranceCategory
+    From: http://hl7.org/fhir/allergy-intolerance-category in valuesets.xml
+        Category of an identified substance associated with allergies or intolerances.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/allergy-intolerance-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/allergy-intolerance-category"
-
 
 class AllergyIntoleranceCategoryCodeValues:
     """
     Any substance consumed to provide nutritional support for the body.
+    From: http://hl7.org/fhir/allergy-intolerance-category in valuesets.xml
     """
 
     Food = AllergyIntoleranceCategoryCode("food")
     """
     Substances administered to achieve a physiological effect.
+    From: http://hl7.org/fhir/allergy-intolerance-category in valuesets.xml
     """
     Medication = AllergyIntoleranceCategoryCode("medication")
     """
-    Any substances that are encountered in the environment, including any substance not already classified as food, medication, or biologic.
+    Any substances that are encountered in the environment, including any
+    substance not already classified as food, medication, or biologic.
+    From: http://hl7.org/fhir/allergy-intolerance-category in valuesets.xml
     """
     Environment = AllergyIntoleranceCategoryCode("environment")
     """
-    A preparation that is synthesized from living organisms or their products, especially a human or animal protein, such as a hormone or antitoxin, that is used as a diagnostic, preventive, or therapeutic agent. Examples of biologic medications include: vaccines; allergenic extracts, which are used for both diagnosis and treatment (for example, allergy shots); gene therapies; cellular therapies.  There are other biologic products, such as tissues, which are not typically associated with allergies.
+    A preparation that is synthesized from living organisms or their products,
+    especially a human or animal protein, such as a hormone or antitoxin, that is
+    used as a diagnostic, preventive, or therapeutic agent. Examples of biologic
+    medications include: vaccines; allergenic extracts, which are used for both
+    diagnosis and treatment (for example, allergy shots); gene therapies; cellular
+    therapies.  There are other biologic products, such as tissues, which are not
+    typically associated with allergies.
+    From: http://hl7.org/fhir/allergy-intolerance-category in valuesets.xml
     """
     Biologic = AllergyIntoleranceCategoryCode("biologic")

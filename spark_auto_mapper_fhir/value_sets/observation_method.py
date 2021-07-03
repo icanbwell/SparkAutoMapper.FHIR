@@ -10,7 +10,16 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ObservationMethod(GenericTypeCode):
     """
-    ObservationMethod
+    v3.ObservationMethod
+    From: http://terminology.hl7.org/ValueSet/v3-ObservationMethod in v3-codesystems.xml
+         A code that provides additional detail about the means or technique used to
+    ascertain the observation.  Examples:
+    Blood pressure measurement method: arterial puncture vs. sphygmomanometer
+    (Riva-Rocci), sitting vs. supine position, etc.  OpenIssue:
+    Description copied from Concept Domain of same name.  Must be verified.  Note
+    that the Domain has a full discussion about use of the attribute and
+    constraining that is not appropriate for the code system description.  Needs
+    to be improved.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

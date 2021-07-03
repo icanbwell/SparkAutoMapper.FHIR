@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,40 +10,43 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ExamplePharmacyServiceCodesCode(GenericTypeCode):
     """
     ExamplePharmacyServiceCodes
+    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+        This value set includes a smattering of Pharmacy Service codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/service-pharmacy
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/service-pharmacy"
-
 
 class ExamplePharmacyServiceCodesCodeValues:
     """
     Smoking cessation
+    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
     """
 
     SmokingCessation = ExamplePharmacyServiceCodesCode("smokecess")
     """
     Flu Shot
+    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
     """
     FluShot = ExamplePharmacyServiceCodesCode("flushot")
     """
     The wholesale price of the medication.
+    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
     """
     DrugCost = ExamplePharmacyServiceCodesCode("drugcost")
     """
     The additional cost assessed on the drug.
+    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
     """
     Markup = ExamplePharmacyServiceCodesCode("markup")
     """
     The professional fee charged for dispensing the product or service.
+    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
     """
     DispenseFee = ExamplePharmacyServiceCodesCode("dispensefee")
     """
     The professional fee charged for compounding the medication.
+    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
     """
     CompoundingFee = ExamplePharmacyServiceCodesCode("compoundfee")

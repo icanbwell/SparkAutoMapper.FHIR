@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,28 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CopyNumberEventCode(GenericTypeCode):
     """
     CopyNumberEvent
+    From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
+        Copy Number Event.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/copy-number-event
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/copy-number-event"
-
 
 class CopyNumberEventCodeValues:
     """
     amplification.
+    From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
     """
 
     Amplification = CopyNumberEventCode("amp")
     """
     deletion.
+    From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
     """
     Deletion = CopyNumberEventCode("del")
     """
     loss of function.
+    From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
     """
     LossOfFunction = CopyNumberEventCode("lof")

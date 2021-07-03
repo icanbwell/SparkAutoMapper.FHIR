@@ -10,7 +10,15 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class SecurityControlObservationValue(GenericTypeCode):
     """
-    SecurityControlObservationValue
+    v3.SecurityControlObservationValue
+    From: http://terminology.hl7.org/ValueSet/v3-SecurityControlObservationValue in v3-codesystems.xml
+         Security observation values used to indicate security control metadata.
+    V:SecurityControl is the union of V:SecurityPolicy,V:ObligationPolicy,
+    V:RefrainPolicy, V:PurposeOfUse, and V:GeneralPurpose of Use used to populate
+    the SecurityControlObservationValue attribute in order to convey one or more
+    nonhierarchical security control metadata dictating handling caveats, purpose
+    of use, dissemination controls and other refrain policies, and obligations to
+    which a custodian or receiver is required to comply.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

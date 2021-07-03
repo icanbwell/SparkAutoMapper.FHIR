@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,39 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class RiskProbabilityCode(GenericTypeCode):
     """
     RiskProbability
+    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
+        Codes representing the likelihood of a particular outcome in a risk
+    assessment.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/risk-probability
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/risk-probability"
-
 
 class RiskProbabilityCodeValues:
     """
     The specified outcome is exceptionally unlikely.
+    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
     """
 
     NegligibleLikelihood = RiskProbabilityCode("negligible")
     """
     The specified outcome is possible but unlikely.
+    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
     """
     LowLikelihood = RiskProbabilityCode("low")
     """
     The specified outcome has a reasonable likelihood of occurrence.
+    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
     """
     ModerateLikelihood = RiskProbabilityCode("moderate")
     """
     The specified outcome is more likely to occur than not.
+    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
     """
     HighLikelihood = RiskProbabilityCode("high")
     """
     The specified outcome is effectively guaranteed.
+    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
     """
     Certain = RiskProbabilityCode("certain")

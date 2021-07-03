@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class TableCellScope(GenericTypeCode):
     """
-    TableCellScope
+    v3.TableCellScope
+    From: http://terminology.hl7.org/ValueSet/v3-TableCellScope in v3-codesystems.xml
+         These values are defined within the XHTML 4.0 Table Model
     """
 
     def __init__(self, value: AutoMapperTextInputType):

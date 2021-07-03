@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class LanguageAbilityProficiency(GenericTypeCode):
     """
-    LanguageAbilityProficiency
+    v3.LanguageAbilityProficiency
+    From: http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency in v3-codesystems.xml
+         A value representing the level of proficiency in a language.  Example:
+    Excellent, good, fair, poor.  OpenIssue:
+    Description copied from Concept Domain of same name.  Must be verified.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

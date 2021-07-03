@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActRelationshipSubset(GenericTypeCode):
     """
-    ActRelationshipSubset
+    v3.ActRelationshipSubset
+    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset in v3-codesystems.xml
+         <ns1:p>Used to indicate that the target of the relationship will be a
+    filtered subset of the total related set of targets.</ns1:p><ns1:p>Used when
+    there is a need to limit the number of components to the first, the last, the
+    next, the total, the average or some other filtered or calculated
+    subset.</ns1:p>
     """
 
     def __init__(self, value: AutoMapperTextInputType):

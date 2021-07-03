@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,41 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SlotStatusCode(GenericTypeCode):
     """
     SlotStatus
+    From: http://hl7.org/fhir/slotstatus in valuesets.xml
+        The free/busy status of the slot.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/slotstatus
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/slotstatus"
-
 
 class SlotStatusCodeValues:
     """
-    Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
+    Indicates that the time interval is busy because one  or more events have been
+    scheduled for that interval.
+    From: http://hl7.org/fhir/slotstatus in valuesets.xml
     """
 
     Busy = SlotStatusCode("busy")
     """
     Indicates that the time interval is free for scheduling.
+    From: http://hl7.org/fhir/slotstatus in valuesets.xml
     """
     Free = SlotStatusCode("free")
     """
-    Indicates that the time interval is busy and that the interval cannot be scheduled.
+    Indicates that the time interval is busy and that the interval cannot be
+    scheduled.
+    From: http://hl7.org/fhir/slotstatus in valuesets.xml
     """
     Busy_Unavailable_ = SlotStatusCode("busy-unavailable")
     """
-    Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
+    Indicates that the time interval is busy because one or more events have been
+    tentatively scheduled for that interval.
+    From: http://hl7.org/fhir/slotstatus in valuesets.xml
     """
     Busy_Tentative_ = SlotStatusCode("busy-tentative")
     """
     This instance should not have been part of this patient's medical record.
+    From: http://hl7.org/fhir/slotstatus in valuesets.xml
     """
     EnteredInError = SlotStatusCode("entered-in-error")

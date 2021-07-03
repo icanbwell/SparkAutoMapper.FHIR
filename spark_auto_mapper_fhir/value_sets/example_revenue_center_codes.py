@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,52 +10,58 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ExampleRevenueCenterCodesCode(GenericTypeCode):
     """
     ExampleRevenueCenterCodes
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+        This value set includes sample Revenue Center codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/ex-revenue-center
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ex-revenue-center"
-
 
 class ExampleRevenueCenterCodesCodeValues:
     """
     Anaesthesia.
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
 
     Anaesthesia = ExampleRevenueCenterCodesCode("0370")
     """
     Physical Therapy.
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     PhysicalTherapy = ExampleRevenueCenterCodesCode("0420")
     """
     Physical Therapy - visit charge.
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     PhysicalTherapy_ = ExampleRevenueCenterCodesCode("0421")
     """
     Speech-Language Pathology.
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     Speech_LanguagePathology = ExampleRevenueCenterCodesCode("0440")
     """
     Speech-Language Pathology- visit charge
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     Speech_LanguagePathology_Visit = ExampleRevenueCenterCodesCode("0441")
     """
     Emergency Room
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     EmergencyRoom = ExampleRevenueCenterCodesCode("0450")
     """
     Emergency Room - EM/EMTALA
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     EmergencyRoom_EM_EMTALA = ExampleRevenueCenterCodesCode("0451")
     """
     Emergency Room - beyond EMTALA
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     EmergencyRoom_BeyondEMTALA = ExampleRevenueCenterCodesCode("0452")
     """
     Vision Clinic
+    From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
     """
     VisionClinic = ExampleRevenueCenterCodesCode("0010")

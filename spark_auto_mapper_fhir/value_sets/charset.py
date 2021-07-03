@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Charset(GenericTypeCode):
     """
-    Charset
+    v3.Charset
+    From: http://terminology.hl7.org/ValueSet/v3-Charset in v3-codesystems.xml
+         Internet Assigned Numbers Authority (IANA) Charset Types
     """
 
     def __init__(self, value: AutoMapperTextInputType):

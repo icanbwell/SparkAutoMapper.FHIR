@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,23 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DoseAndRateTypeCode(GenericTypeCode):
     """
     DoseAndRateType
+    From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
+        The kind of dose or rate specified.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/dose-rate-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/dose-rate-type"
-
 
 class DoseAndRateTypeCodeValues:
     """
     The dose specified is calculated by the prescriber or the system.
+    From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
     """
 
     Calculated = DoseAndRateTypeCode("calculated")
     """
     The dose specified is as ordered by the prescriber.
+    From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
     """
     Ordered = DoseAndRateTypeCode("ordered")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,56 +10,53 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SpecimenCollectionCode(GenericTypeCode):
     """
     SpecimenCollection
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+        Actions that can be taken for the collection of specimen from a subject.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/specimen-collection
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/specimen-collection"
-
 
 class SpecimenCollectionCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
 
     Aspiration_Action = SpecimenCollectionCode("129316008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     Biopsy_Action = SpecimenCollectionCode("129314006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     Puncture_Action = SpecimenCollectionCode("129300006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     Excision_Action = SpecimenCollectionCode("129304002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     Scraping_Action = SpecimenCollectionCode("129323009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     UrineSpecimenCollection_CleanCatch = SpecimenCollectionCode("73416001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     TimedUrineCollection = SpecimenCollectionCode("225113003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     UrineSpecimenCollection_Catheterized = SpecimenCollectionCode("70777001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     CollectionOfCoughedSputum = SpecimenCollectionCode("386089008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
     """
     Finger_prickSampling = SpecimenCollectionCode("278450005")

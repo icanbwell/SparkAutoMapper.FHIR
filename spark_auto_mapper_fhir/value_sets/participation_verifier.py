@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationVerifier(GenericTypeCode):
     """
-    ParticipationVerifier
+    v3.ParticipationVerifier
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationVerifier in v3-codesystems.xml
+         A person who verifies the correctness and appropriateness of the service
+    (plan, order, event, etc.) and hence takes on accountability.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

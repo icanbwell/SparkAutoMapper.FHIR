@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActClassROI(GenericTypeCode):
     """
-    ActClassROI
+    v3.ActClassROI
+    From: http://terminology.hl7.org/ValueSet/v3-ActClassROI in v3-codesystems.xml
+         Regions of Interest (ROI) within a subject Act. Primarily used for making
+    secondary observations on a subset of a subject observation. The relationship
+    between a ROI and its referenced Act is specified through an ActRelationship
+    of type "subject" (SUBJ), which must always be present.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

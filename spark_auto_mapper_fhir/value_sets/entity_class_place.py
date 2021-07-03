@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityClassPlace(GenericTypeCode):
     """
-    EntityClassPlace
+    v3.EntityClassPlace
+    From: http://terminology.hl7.org/ValueSet/v3-EntityClassPlace in v3-codesystems.xml
+         A physicial place or site with its containing structure. May be natural or
+    man-made.  The geographic position of a place may or may not be constant.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

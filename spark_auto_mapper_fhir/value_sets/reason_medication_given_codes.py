@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,30 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ReasonMedicationGivenCodesCode(GenericTypeCode):
     """
     ReasonMedicationGivenCodes
+    From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
+        This value set is provided as an example. The value set to instantiate this
+    attribute should be drawn from a robust terminology code system that consists
+    of or contains concepts to support the medication process.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/reason-medication-given-codes
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/reason-medication-given-codes"
-
 
 class ReasonMedicationGivenCodesCodeValues:
     """
     No reason known.
+    From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
     """
 
     None_ = ReasonMedicationGivenCodesCode("a")
     """
     The administration was following an ordered protocol.
+    From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
     """
     GivenAsOrdered = ReasonMedicationGivenCodesCode("b")
     """
     The administration was needed to treat an emergency.
+    From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
     """
     Emergency = ReasonMedicationGivenCodesCode("c")

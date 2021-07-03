@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EmploymentStatusODH(GenericTypeCode):
     """
-    employmentStatusODH
+    v3.employmentStatusODH
+    From: http://terminology.hl7.org/ValueSet/v3-employmentStatusODH in v3-codesystems.xml
+         Concepts representing whether a person does or does not currently have a job
+    or is not currently in the labor pool seeking employment.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

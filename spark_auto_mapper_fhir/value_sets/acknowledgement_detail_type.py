@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class AcknowledgementDetailType(GenericTypeCode):
     """
-    AcknowledgementDetailType
+    v3.AcknowledgementDetailType
+    From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailType in v3-codesystems.xml
+         A code identifying the specific message to be provided.  Discussion:
+    A textual value may be specified as the print name, or for non-coded messages,
+    as the original text.  Examples:
+    'Required attribute xxx is missing', 'System will be unavailable March 19 from
+    0100 to 0300'
     """
 
     def __init__(self, value: AutoMapperTextInputType):

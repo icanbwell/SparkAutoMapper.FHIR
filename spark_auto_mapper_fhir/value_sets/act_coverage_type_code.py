@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActCoverageTypeCode(GenericTypeCode):
     """
-    ActCoverageTypeCode
+    v3.ActCoverageTypeCode
+    From: http://terminology.hl7.org/ValueSet/v3-ActCoverageTypeCode in v3-codesystems.xml
+          Definition:
+    Set of codes indicating the type of insurance policy or program that pays for
+    the cost of benefits provided to covered parties.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

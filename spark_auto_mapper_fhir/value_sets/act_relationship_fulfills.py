@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActRelationshipFulfills(GenericTypeCode):
     """
-    ActRelationshipFulfills
+    v3.ActRelationshipFulfills
+    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills in v3-codesystems.xml
+         The source act fulfills (in whole or in part) the target act. Source act must
+    be in a mood equal or more actual than the target act.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

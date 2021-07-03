@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActConsentType(GenericTypeCode):
     """
-    ActConsentType
+    v3.ActConsentType
+    From: http://terminology.hl7.org/ValueSet/v3-ActConsentType in v3-codesystems.xml
+          Definition:
+    The type of consent directive, e.g., to consent or dissent to collect, access,
+    or use in specific ways within an EHRS or for health information exchange; or
+    to disclose  health information  for purposes such as research.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

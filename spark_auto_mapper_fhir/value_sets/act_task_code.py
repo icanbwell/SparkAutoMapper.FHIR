@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActTaskCode(GenericTypeCode):
     """
-    ActTaskCode
+    v3.ActTaskCode
+    From: http://terminology.hl7.org/ValueSet/v3-ActTaskCode in v3-codesystems.xml
+          Description:
+    A task or action that a user may perform in a clinical information system.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

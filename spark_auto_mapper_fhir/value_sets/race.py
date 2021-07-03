@@ -10,7 +10,23 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Race(GenericTypeCode):
     """
-    Race
+    v3.Race
+    From: http://terminology.hl7.org/ValueSet/v3-Race in v3-codesystems.xml
+         In the United States, federal standards for classifying data on race
+    determine the categories used by federal agencies and exert a strong influence
+    on categorization by state and local agencies and private sector
+    organizations.  The federal standards do not conceptually define race, and
+    they recognize the absence of an anthropological or scientific basis for
+    racial classification.  Instead, the federal standards acknowledge that race
+    is a social-political construct in which an individual's own identification
+    with one more race categories is preferred to observer identification. The
+    standards use a variety of features to define five minimum race categories.
+    Among these features are descent from "the original peoples" of a specified
+    region or nation.  The minimum race categories are American Indian or Alaska
+    Native, Asian, Black or African American, Native Hawaiian or Other Pacific
+    Islander, and White.  The federal standards stipulate that race data need not
+    be limited to the five minimum categories, but any expansion must be
+    collapsible to those categories.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

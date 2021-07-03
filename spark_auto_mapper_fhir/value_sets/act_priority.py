@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActPriority(GenericTypeCode):
     """
-    ActPriority
+    v3.ActPriority
+    From: http://terminology.hl7.org/ValueSet/v3-ActPriority in v3-codesystems.xml
+         A set of codes (e.g., for routine, emergency), specifying the urgency under
+    which the Act happened, can happen, is happening, is intended to happen, or is
+    requested/demanded to happen.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationType(GenericTypeCode):
     """
-    ParticipationType
+    v3.ParticipationType
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationType in v3-codesystems.xml
+        **** MISSING DEFINITIONS ****
     """
 
     def __init__(self, value: AutoMapperTextInputType):

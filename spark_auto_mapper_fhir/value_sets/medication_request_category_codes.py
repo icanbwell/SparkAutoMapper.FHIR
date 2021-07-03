@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,39 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MedicationRequestCategoryCodesCode(GenericTypeCode):
     """
     medicationRequest Category Codes
+    From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
+        MedicationRequest Category Codes
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/medicationrequest-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationrequest-category"
-
 
 class MedicationRequestCategoryCodesCodeValues:
     """
-    Includes requests for medications to be administered or consumed in an inpatient or acute care setting
+    Includes requests for medications to be administered or consumed in an
+    inpatient or acute care setting
+    From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
     """
 
     Inpatient = MedicationRequestCategoryCodesCode("inpatient")
     """
-    Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+    Includes requests for medications to be administered or consumed in an
+    outpatient setting (for example, Emergency Department, Outpatient Clinic,
+    Outpatient Surgery, Doctor's office)
+    From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
     """
     Outpatient = MedicationRequestCategoryCodesCode("outpatient")
     """
-    Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+    Includes requests for medications to be administered or consumed by the
+    patient in their home (this would include long term care or nursing homes,
+    hospices, etc.)
+    From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
     """
     Community = MedicationRequestCategoryCodesCode("community")
     """
-    Includes requests for medications created when the patient is being released from a facility
+    Includes requests for medications created when the patient is being released
+    from a facility
+    From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
     """
     Discharge = MedicationRequestCategoryCodesCode("discharge")

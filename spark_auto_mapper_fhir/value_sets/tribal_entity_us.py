@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class TribalEntityUS(GenericTypeCode):
     """
-    TribalEntityUS
+    v3.TribalEntityUS
+    From: http://terminology.hl7.org/ValueSet/v3-TribalEntityUS in v3-codesystems.xml
+         INDIAN ENTITIES RECOGNIZED AND ELIGIBLE TO RECEIVE SERVICES FROM THE UNITED
+    STATES BUREAU OF INDIAN AFFAIRS
     """
 
     def __init__(self, value: AutoMapperTextInputType):

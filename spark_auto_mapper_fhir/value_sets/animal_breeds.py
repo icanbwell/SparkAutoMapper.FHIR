@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,9506 +10,9504 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AnimalBreedsCode(GenericTypeCode):
     """
     AnimalBreeds
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate
+    breeds of species.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/animal-breeds
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/animal-breeds"
-
 
 class AnimalBreedsCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
 
     PygmyGoat_organism_ = AnimalBreedsCode("684003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RambouilletSheep_organism_ = AnimalBreedsCode("2124007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomneyMarshSheep_organism_ = AnimalBreedsCode("3099004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthdownSheep_organism_ = AnimalBreedsCode("3566006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShropshireSheep_organism_ = AnimalBreedsCode("4574003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PiedmonteseCattleBreed_organism_ = AnimalBreedsCode("4880003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MontdaleSheep_organism_ = AnimalBreedsCode("5164003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SantaGertrudisCattleBreed_organism_ = AnimalBreedsCode("5345000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchAlpineGoat_organism_ = AnimalBreedsCode("5438004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LeicesterSheep_organism_ = AnimalBreedsCode("6431001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HornedHereford_organism_ = AnimalBreedsCode("7843000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CamarronGoat_organism_ = AnimalBreedsCode("9230001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledHereford_organism_ = AnimalBreedsCode("9277006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KerryHillSheep_organism_ = AnimalBreedsCode("11967001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PanamaSheep_organism_ = AnimalBreedsCode("13934009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AngloNubianGoat_organism_ = AnimalBreedsCode("16015002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeefmasterCattleBreed_organism_ = AnimalBreedsCode("16042001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DomesticGoose_organism_ = AnimalBreedsCode("23469003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PekinDuck_organism_ = AnimalBreedsCode("24438005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarbadosSheep_organism_ = AnimalBreedsCode("25660007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrangusCattleBreed_organism_ = AnimalBreedsCode("28336001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwissAlpineGoat_organism_ = AnimalBreedsCode("28360002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToggenburgGoat_organism_ = AnimalBreedsCode("30089001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanovSheep_organism_ = AnimalBreedsCode("32145006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WiltshireHornSheep_organism_ = AnimalBreedsCode("39855006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PerendaleSheep_organism_ = AnimalBreedsCode("41706005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DebouilletSheep_organism_ = AnimalBreedsCode("44835005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MouflonSheep_organism_ = AnimalBreedsCode("45690005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DelaineMerinoSheep_organism_ = AnimalBreedsCode("46392004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ClunForestSheep_organism_ = AnimalBreedsCode("48697009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CheviotSheep_organism_ = AnimalBreedsCode("50717006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OxfordDownSheep_organism_ = AnimalBreedsCode("53360003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LaManchaGoat_organism_ = AnimalBreedsCode("55530007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NavajoSheep_organism_ = AnimalBreedsCode("59210004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AngoraGoat_organism_ = AnimalBreedsCode("64158000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KarakulSheep_organism_ = AnimalBreedsCode("64591001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackFacedHighlandSheep_organism_ = AnimalBreedsCode("65187008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LincolnSheep_organism_ = AnimalBreedsCode("65492002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CotswoldSheep_organism_ = AnimalBreedsCode("67414001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CorriedaleSheep_organism_ = AnimalBreedsCode("67515002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlpineGoat_organism_ = AnimalBreedsCode("70431006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FinnishLandraceSheep_organism_ = AnimalBreedsCode("72329005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuffolkSheep_organism_ = AnimalBreedsCode("72648002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanMerinoSheep_organism_ = AnimalBreedsCode("73191001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RockAlpineGoat_organism_ = AnimalBreedsCode("74745008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomedaleSheep_organism_ = AnimalBreedsCode("79603002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HampshireDownSheep_organism_ = AnimalBreedsCode("82440005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianGoose_organism_ = AnimalBreedsCode("83842004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HornedDorsetSheepBreed_organism_ = AnimalBreedsCode("86920006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthCountyCheviotSheep_organism_ = AnimalBreedsCode("87962009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TargheeSheep_organism_ = AnimalBreedsCode("89665001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChamoiseeGoat_organism_ = AnimalBreedsCode("89708009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChineseGoose_organism_ = AnimalBreedsCode("91460002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     No_tailSheep_organism_ = AnimalBreedsCode("112486002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomneletSheep_organism_ = AnimalBreedsCode("112487006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PilgrimGoose_organism_ = AnimalBreedsCode("112496006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedBreedGoat_organism_ = AnimalBreedsCode("131607005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianGoatBreed_organism_ = AnimalBreedsCode("131608000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArapawaIslandGoatBreed_organism_ = AnimalBreedsCode("131609008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalteseGoatBreed_organism_ = AnimalBreedsCode("131610003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Proven_aleGoatBreed_organism_ = AnimalBreedsCode("131611004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NegraSerranaGoatBreed_organism_ = AnimalBreedsCode("131612006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrobicaGoatBreed_organism_ = AnimalBreedsCode("131613001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Roya_VesubieGoatBreed_organism_ = AnimalBreedsCode("131614007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RetintaExtremenaGoatBreed_organism_ = AnimalBreedsCode("131615008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AppenzellGoatBreed_organism_ = AnimalBreedsCode("131616009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanCashmereGoatBreed_organism_ = AnimalBreedsCode("131617000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AltaiMountainGoatBreed_organism_ = AnimalBreedsCode("131618005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PyreneanGoatBreed_organism_ = AnimalBreedsCode("131619002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BagotGoatBreed_organism_ = AnimalBreedsCode("131620008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianWhiteGoatBreed_organism_ = AnimalBreedsCode("131621007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Moxot_GoatBreed_organism_ = AnimalBreedsCode("131622000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MyotonicGoatBreed_organism_ = AnimalBreedsCode("131623005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NachiGoatBreed_organism_ = AnimalBreedsCode("131624004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NigerianDwarfGoatBreed_organism_ = AnimalBreedsCode("131625003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SardaGoatBreed_organism_ = AnimalBreedsCode("131626002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SerpentinaGoatBreed_organism_ = AnimalBreedsCode("131627006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SerranaGoatBreed_organism_ = AnimalBreedsCode("131628001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VerataGoatBreed_organism_ = AnimalBreedsCode("131629009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VerzascaBlackGoatBreed_organism_ = AnimalBreedsCode("131630004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorwegianGoatBreed_organism_ = AnimalBreedsCode("131631000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OberhasliGoatBreed_organism_ = AnimalBreedsCode("131632007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PeacockGoatBreed_organism_ = AnimalBreedsCode("131633002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PhilippineGoatBreed_organism_ = AnimalBreedsCode("131634008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LoashanGoatBreed_organism_ = AnimalBreedsCode("131635009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SanClementeGoatBreed_organism_ = AnimalBreedsCode("131636005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SomaliGoatBreed_organism_ = AnimalBreedsCode("131637001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpanishGoatBreed_organism_ = AnimalBreedsCode("131638006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RoveGoatBreed_organism_ = AnimalBreedsCode("131639003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SRDGoatBreed_organism_ = AnimalBreedsCode("131640001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishLandraceGoatBreed_organism_ = AnimalBreedsCode("131641002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThuringianGoatBreed_organism_ = AnimalBreedsCode("131642009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UzbekBlackGoatBreed_organism_ = AnimalBreedsCode("131643004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZhongweiGoatBreed_organism_ = AnimalBreedsCode("131644005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarbariGoatBreed_organism_ = AnimalBreedsCode("131645006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PoitouGoatBreed_organism_ = AnimalBreedsCode("131646007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RepartidaGoatBreed_organism_ = AnimalBreedsCode("131647003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BootedGoatBreed_organism_ = AnimalBreedsCode("131648008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CorsicanGoatBreed_organism_ = AnimalBreedsCode("131649000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChaparGoatBreed_organism_ = AnimalBreedsCode("131650000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Canind_GoatBreed_organism_ = AnimalBreedsCode("131651001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanaryIslandGoatBreed_organism_ = AnimalBreedsCode("131652008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DaeraDinPanahGoatBreed_organism_ = AnimalBreedsCode("131653003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishAlpineGoatBreed_organism_ = AnimalBreedsCode("131654009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BhujGoatBreed_organism_ = AnimalBreedsCode("131655005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoerGoatBreed_organism_ = AnimalBreedsCode("131656006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BenadirGoatBreed_organism_ = AnimalBreedsCode("131657002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Cr_oleAntillesGoatBreed_organism_ = AnimalBreedsCode("131658007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeetalGoatBreed_organism_ = AnimalBreedsCode("131659004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GoldenGuernseyGoatBreed_organism_ = AnimalBreedsCode("131660009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishLandraceGoatBreed_organism_ = AnimalBreedsCode("131661008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KaghaniGoatBreed_organism_ = AnimalBreedsCode("131662001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IrishGoatBreed_organism_ = AnimalBreedsCode("131663006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GrisonsStripedGoatBreed_organism_ = AnimalBreedsCode("131664000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JiningGrayGoatBreed_organism_ = AnimalBreedsCode("131665004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FinnishLandraceGoatBreed_organism_ = AnimalBreedsCode("131666003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ErzgebirgGoatBreed_organism_ = AnimalBreedsCode("131667007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KamoriGoatBreed_organism_ = AnimalBreedsCode("131668002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DonGoatBreed_organism_ = AnimalBreedsCode("131669005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KikoGoatBreed_organism_ = AnimalBreedsCode("131670006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KinderGoatBreed_organism_ = AnimalBreedsCode("131671005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PygoraGoatBreed_organism_ = AnimalBreedsCode("131672003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WoodenLegGoatBreed_organism_ = AnimalBreedsCode("131673008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlpineChamoiseeGoatBreed_organism_ = AnimalBreedsCode("131674002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MassifCentralGoatBreed_organism_ = AnimalBreedsCode("131675001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Malague_aGoatBreed_organism_ = AnimalBreedsCode("131676000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlgarviaGoatBreed_organism_ = AnimalBreedsCode("131677009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishSaanenGoatBreed_organism_ = AnimalBreedsCode("131678004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishToggenburgGoatBreed_organism_ = AnimalBreedsCode("131679007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     B_ndnerGoatBreed_organism_ = AnimalBreedsCode("131680005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlancaAndaluzaGoatBreed_organism_ = AnimalBreedsCode("131681009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlancaCeltibericaGoatBreed_organism_ = AnimalBreedsCode("131682002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BraviaGoatBreed_organism_ = AnimalBreedsCode("131683007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackGrisonneGoatBreed_organism_ = AnimalBreedsCode("131684001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChamoisOfTheAlpsGoatBreed_organism_ = AnimalBreedsCode("131685000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CharnequeriaGoatBreed_organism_ = AnimalBreedsCode("131686004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CarpatheGoatBreed_organism_ = AnimalBreedsCode("131687008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ColNoirDuValaisGoatBreed_organism_ = AnimalBreedsCode("131688003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DamaniGoatBreed_organism_ = AnimalBreedsCode("131689006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DesFosses_CommunesDeL_Ouest_GoatBreed_organism_ = AnimalBreedsCode("131690002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EnglishGoatBreed_organism_ = AnimalBreedsCode("131691003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EnglishGuernseyGoatBreed_organism_ = AnimalBreedsCode("131692005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanColoredGoatBreed_organism_ = AnimalBreedsCode("131693000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuadarramaGoatBreed_organism_ = AnimalBreedsCode("131694006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GarganicaGoatBreed_organism_ = AnimalBreedsCode("131695007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GirgentanaGoatBreed_organism_ = AnimalBreedsCode("131696008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JonicaGoatBreed_organism_ = AnimalBreedsCode("131697004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Murciana_GranadinaGoatBreed_organism_ = AnimalBreedsCode("131698009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     B_ndnerOberlandSheepBreed_organism_ = AnimalBreedsCode("131699001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishMilkSheepBreed_organism_ = AnimalBreedsCode("131700000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrillenschafSheepBreed_organism_ = AnimalBreedsCode("131701001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrecknockHillCheviotSheepBreed_organism_ = AnimalBreedsCode("131702008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CholistaniSheepBreed_organism_ = AnimalBreedsCode("131703003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BibrikSheepBreed_organism_ = AnimalBreedsCode("131704009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ColumbiaSheepBreed_organism_ = AnimalBreedsCode("131705005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackWelshMountainSheepBreed_organism_ = AnimalBreedsCode("131706006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackheadPersianSheepBreed_organism_ = AnimalBreedsCode("131707002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BleuDuMaineSheepBreed_organism_ = AnimalBreedsCode("131708007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BluefacedLeicesterSheepBreed_organism_ = AnimalBreedsCode("131709004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BondSheepBreed_organism_ = AnimalBreedsCode("131710009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BorderLeicesterSheepBreed_organism_ = AnimalBreedsCode("131711008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoreraySheepBreed_organism_ = AnimalBreedsCode("131712001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BovskaSheepBreed_organism_ = AnimalBreedsCode("131713006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BraunesBergschafSheepBreed_organism_ = AnimalBreedsCode("131714000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrazilianSomaliSheepBreed_organism_ = AnimalBreedsCode("131715004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeulahSpeckled_FaceSheepBreed_organism_ = AnimalBreedsCode("131716003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DartmoorSheepBreed_organism_ = AnimalBreedsCode("131717007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FabrianeseSheepBreed_organism_ = AnimalBreedsCode("131718002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ExmoorHornSheepBreed_organism_ = AnimalBreedsCode("131719005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ElliottdaleSheepBreed_organism_ = AnimalBreedsCode("131720004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DrysdaleSheepBreed_organism_ = AnimalBreedsCode("131721000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DorsetDownSheepBreed_organism_ = AnimalBreedsCode("131722007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanBlackheadedMuttonSheepBreed_organism_ = AnimalBreedsCode("131723002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KookaSheepBreed_organism_ = AnimalBreedsCode("131724008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FriesianMilkSheepBreed_organism_ = AnimalBreedsCode("131725009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GansuAlpineFine_woolSheepBreed_organism_ = AnimalBreedsCode("131726005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanWhiteheadedMuttonSheepBreed_organism_ = AnimalBreedsCode("131727001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GraueGehoernteHeidschnuckeSheepBreed_organism_ = AnimalBreedsCode("131728006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HanSheepBreed_organism_ = AnimalBreedsCode("131729003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GromarkSheepBreed_organism_ = AnimalBreedsCode("131730008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GulfCoastNativeSheepBreed_organism_ = AnimalBreedsCode("131731007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DorperSheepBreed_organism_ = AnimalBreedsCode("131732000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DevonClosewoolSheepBreed_organism_ = AnimalBreedsCode("131733005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DeutschesBlaukoepfigesFleischschafSheepBreed_organism_ = AnimalBreedsCode(
         "131734004"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DerbyshireGritstoneSheepBreed_organism_ = AnimalBreedsCode("131735003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CoburgerFuchsschafSheepBreed_organism_ = AnimalBreedsCode("131736002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishLandraceSheepBreed_organism_ = AnimalBreedsCode("131737006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuteSheepBreed_organism_ = AnimalBreedsCode("131738001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HampshireSheepBreed_organism_ = AnimalBreedsCode("131739009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GentileDiPugliaSheepBreed_organism_ = AnimalBreedsCode("131740006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanMountainSheepBreed_organism_ = AnimalBreedsCode("131741005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LuzeinSheepBreed_organism_ = AnimalBreedsCode("131742003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KatahdinSheepBreed_organism_ = AnimalBreedsCode("131743008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LeineschafSheepBreed_organism_ = AnimalBreedsCode("131744002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LincolnLongwoolSheepBreed_organism_ = AnimalBreedsCode("131745001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LlanwenogSheepBreed_organism_ = AnimalBreedsCode("131746000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LleynSheepBreed_organism_ = AnimalBreedsCode("131747009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DamaraSheepBreed_organism_ = AnimalBreedsCode("131748004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DamaniSheepBreed_organism_ = AnimalBreedsCode("131749007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DalesbredSheepBreed_organism_ = AnimalBreedsCode("131750007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DalaSheepBreed_organism_ = AnimalBreedsCode("131751006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CriolloSheepBreed_organism_ = AnimalBreedsCode("131752004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CormoSheepBreed_organism_ = AnimalBreedsCode("131753009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LatiSheepBreed_organism_ = AnimalBreedsCode("131754003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LonkSheepBreed_organism_ = AnimalBreedsCode("131755002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LangheSheepBreed_organism_ = AnimalBreedsCode("131756001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManxLoaghtanSheepBreed_organism_ = AnimalBreedsCode("131757005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MasaiSheepBreed_organism_ = AnimalBreedsCode("131758000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MerinolandschafSheepBreed_organism_ = AnimalBreedsCode("131759008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LohiSheepBreed_organism_ = AnimalBreedsCode("131760003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Ile_de_FranceSheepBreed_organism_ = AnimalBreedsCode("131761004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HashtNagriSheepBreed_organism_ = AnimalBreedsCode("131762006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HazaragieSheepBreed_organism_ = AnimalBreedsCode("131763001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CoopworthSheepBreed_organism_ = AnimalBreedsCode("131764007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ComisanaSheepBreed_organism_ = AnimalBreedsCode("131765008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ComebackSheepBreed_organism_ = AnimalBreedsCode("131766009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SicilianBarbarySheepBreed_organism_ = AnimalBreedsCode("131767000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AfricanaSheepBreed_organism_ = AnimalBreedsCode("131768005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshMountainBadgerFacedSheepBreed_organism_ = AnimalBreedsCode("131769002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HebrideanSheepBreed_organism_ = AnimalBreedsCode("131770001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HeidschnuckeSheepBreed_organism_ = AnimalBreedsCode("131771002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HerdwickSheepBreed_organism_ = AnimalBreedsCode("131772009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HillRadnorSheepBreed_organism_ = AnimalBreedsCode("131773004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IcelandicSheepBreed_organism_ = AnimalBreedsCode("131774005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HarnaiSheepBreed_organism_ = AnimalBreedsCode("131775006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IstrianPramenkaSheepBreed_organism_ = AnimalBreedsCode("131776007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JacobSheepBreed_organism_ = AnimalBreedsCode("131777003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JezerskosolcavskaSheepBreed_organism_ = AnimalBreedsCode("131778008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KachhiSheepBreed_organism_ = AnimalBreedsCode("131779000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WensleydaleSheepBreed_organism_ = AnimalBreedsCode("131780002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestAfricanDwarfSheepBreed_organism_ = AnimalBreedsCode("131781003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhiteSuffolkSheepBreed_organism_ = AnimalBreedsCode("131782005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhitefaceDartmoorSheepBreed_organism_ = AnimalBreedsCode("131783000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhitefaceWoodlandSheepBreed_organism_ = AnimalBreedsCode("131784006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     XinjiangFinewoolSheepBreed_organism_ = AnimalBreedsCode("131785007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KajliSheepBreed_organism_ = AnimalBreedsCode("131786008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HogIslandSheepBreed_organism_ = AnimalBreedsCode("131787004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BielleseSheepBreed_organism_ = AnimalBreedsCode("131788009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChiosSheepBreed_organism_ = AnimalBreedsCode("131789001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SantaCruzSheepBreed_organism_ = AnimalBreedsCode("131790005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CharollaisSheepBreed_organism_ = AnimalBreedsCode("131791009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CastlemilkMooritSheepBreed_organism_ = AnimalBreedsCode("131792002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CampanianBarbarySheepBreed_organism_ = AnimalBreedsCode("131793007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaliforniaVariegatedMutantSheepBreed_organism_ = AnimalBreedsCode("131794001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaliforniaRedSheepBreed_organism_ = AnimalBreedsCode("131795000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SopravissanaSheepBreed_organism_ = AnimalBreedsCode("131796004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SomaliSheepBreed_organism_ = AnimalBreedsCode("131797008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshHillSpeckledFaceSheepBreed_organism_ = AnimalBreedsCode("131798003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SkuddeSheepBreed_organism_ = AnimalBreedsCode("131799006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WaziriSheepBreed_organism_ = AnimalBreedsCode("131800005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShetlandSheepBreed_organism_ = AnimalBreedsCode("131801009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CambridgeSheepBreed_organism_ = AnimalBreedsCode("131802002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SolognoteSheepBreed_organism_ = AnimalBreedsCode("131803007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CayugaBreedDuck_organism_ = AnimalBreedsCode("131810001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RunnerBreedDuck_organism_ = AnimalBreedsCode("131811002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CallBreedDuck_organism_ = AnimalBreedsCode("131812009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrpingtonBreedDuck_organism_ = AnimalBreedsCode("131813004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CrestedBreedDuck_organism_ = AnimalBreedsCode("131814005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PommeranianBreedDuck_organism_ = AnimalBreedsCode("131815006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RoughFellSheepBreed_organism_ = AnimalBreedsCode("131816007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlueSwedishBreedDuck_organism_ = AnimalBreedsCode("131817003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Golden300HybridBreedDuck_organism_ = AnimalBreedsCode("131818008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnconaBreedDuck_organism_ = AnimalBreedsCode("131820006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianSpottedBreedDuck_organism_ = AnimalBreedsCode("131821005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwaledaleSheepBreed_organism_ = AnimalBreedsCode("131822003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolypaySheepBreed_organism_ = AnimalBreedsCode("131823008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AylesburyBreedDuck_organism_ = AnimalBreedsCode("131824002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackEastIndiesBreedDuck_organism_ = AnimalBreedsCode("131825001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CoastBreedDuck_organism_ = AnimalBreedsCode("131826000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KromsnaveleendBreedDuck_organism_ = AnimalBreedsCode("131827009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SilverAppleyardBreedDuck_organism_ = AnimalBreedsCode("131829007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PagliarolaSheepBreed_organism_ = AnimalBreedsCode("131830002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PomeranianCoarsewoolSheepBreed_organism_ = AnimalBreedsCode("131831003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Sheep_BreedUndeterminedSheepBreed_organism_ = AnimalBreedsCode("131832005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrkneySheepBreed_organism_ = AnimalBreedsCode("131833000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OldNorwegianSheepBreed_organism_ = AnimalBreedsCode("131834006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OldFormatSheepBreed_organism_ = AnimalBreedsCode("131835007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorwegianFurSheepBreed_organism_ = AnimalBreedsCode("131836008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorfolkHornSheepBreed_organism_ = AnimalBreedsCode("131837004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Navajo_ChurroSheepBreed_organism_ = AnimalBreedsCode("131838009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishYellowBreedDuck_organism_ = AnimalBreedsCode("131839001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DiepholzGooseBreed_organism_ = AnimalBreedsCode("131840004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AfricanGooseBreed_organism_ = AnimalBreedsCode("131841000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EmbdenGooseBreed_organism_ = AnimalBreedsCode("131843002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChineseWhiteGooseBreed_organism_ = AnimalBreedsCode("131844008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChineseBrownGooseBreed_organism_ = AnimalBreedsCode("131845009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanBuffGooseBreed_organism_ = AnimalBreedsCode("131847001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PomeranianGooseBreed_organism_ = AnimalBreedsCode("131848006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanGooseBreed_organism_ = AnimalBreedsCode("131849003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ScaniaGooseBreed_organism_ = AnimalBreedsCode("131850003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RackaSheepBreed_organism_ = AnimalBreedsCode("131851004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RasaAragonesaSheepBreed_organism_ = AnimalBreedsCode("131852006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedEngadineSheepBreed_organism_ = AnimalBreedsCode("131853001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RhoenschafSheepBreed_organism_ = AnimalBreedsCode("131854007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SebastopolGooseBreed_organism_ = AnimalBreedsCode("131855008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishIslandGooseBreed_organism_ = AnimalBreedsCode("131856009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Vend_enSheepBreed_organism_ = AnimalBreedsCode("131914009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SaxonyBreedDuck_organism_ = AnimalBreedsCode("131918007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BergamascaSheepBreed_organism_ = AnimalBreedsCode("132681007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PortlandSheepBreed_organism_ = AnimalBreedsCode("132682000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WeisseHornloseHeidschnuckeSheepBreed_organism_ = AnimalBreedsCode("132684004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DrentsHeideschaapSheepBreed_organism_ = AnimalBreedsCode("132685003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KameroenSheepBreed_organism_ = AnimalBreedsCode("132686002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MergellandSheepBreed_organism_ = AnimalBreedsCode("132687006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OuessantSheepBreed_organism_ = AnimalBreedsCode("132688001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianArcottSheepBreed_organism_ = AnimalBreedsCode("132689009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NoordhollanderSheepBreed_organism_ = AnimalBreedsCode("132690000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Rijnlam_ASheepBreed_organism_ = AnimalBreedsCode("132697002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SchoonebekerSheepBreed_organism_ = AnimalBreedsCode("132698007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WallisBlacknosedSheepBreed_organism_ = AnimalBreedsCode("132699004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KhakiCampbellBreedDuck_organism_ = AnimalBreedsCode("132700003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NewfoundlandSheepBreed_organism_ = AnimalBreedsCode("132701004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WallisCountrySheepBreed_organism_ = AnimalBreedsCode("132702006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RideauArcottSheepBreed_organism_ = AnimalBreedsCode("132703001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TukidaleSheepBreed_organism_ = AnimalBreedsCode("132704007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolwarthSheepBreed_organism_ = AnimalBreedsCode("132705008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RyelandSheepBreed_organism_ = AnimalBreedsCode("132706009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThalliSheepBreed_organism_ = AnimalBreedsCode("132707000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TongSheepBreed_organism_ = AnimalBreedsCode("132708005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TouabireSheepBreed_organism_ = AnimalBreedsCode("132709002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TunisSheepBreed_organism_ = AnimalBreedsCode("132710007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TyrolMountainSheepBreed_organism_ = AnimalBreedsCode("132711006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UdaSheepBreed_organism_ = AnimalBreedsCode("132712004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanMuttonMerinoSheepBreed_organism_ = AnimalBreedsCode("132716001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Medium_WoolMerinoSheepBreed_organism_ = AnimalBreedsCode("132717005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FonthillMerinoSheepBreed_organism_ = AnimalBreedsCode("132718000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthAfricanMuttonMerinoSheepBreed_organism_ = AnimalBreedsCode("132719008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     StrongWoolMerinoSheepBreed_organism_ = AnimalBreedsCode("132720002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PollMerinoSheepBreed_organism_ = AnimalBreedsCode("132721003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FineMerinoSheepBreed_organism_ = AnimalBreedsCode("132722005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthAfricanMerinoSheepBreed_organism_ = AnimalBreedsCode("132723000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuperfineMerinoSheepBreed_organism_ = AnimalBreedsCode("132724006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BooroolaMerinoSheepBreed_organism_ = AnimalBreedsCode("132735001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MiniatureHerefordCattleBreed_organism_ = AnimalBreedsCode("132770004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SarPlaninaSheepBreed_organism_ = AnimalBreedsCode("132783003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SantaIn_sSheepBreed_organism_ = AnimalBreedsCode("132784009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Sahel_typeSheepBreed_organism_ = AnimalBreedsCode("132785005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RygjaSheepBreed_organism_ = AnimalBreedsCode("132786006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RyaSheepBreed_organism_ = AnimalBreedsCode("132787002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoghaniSheepBreed_organism_ = AnimalBreedsCode("132788007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RougeDeL_QuestSheepBreed_organism_ = AnimalBreedsCode("132789004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SoaySheepBreed_organism_ = AnimalBreedsCode("132790008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthSuffolkSheepBreed_organism_ = AnimalBreedsCode("132791007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthWalesMountainSheepBreed_organism_ = AnimalBreedsCode("132792000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Sp_lsauSheepBreed_organism_ = AnimalBreedsCode("132793005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpiegelSheepBreed_organism_ = AnimalBreedsCode("132794004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     St_CroixSheepBreed_organism_ = AnimalBreedsCode("132795003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SteigarSheepBreed_organism_ = AnimalBreedsCode("132796002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SteinschafSheepBreed_organism_ = AnimalBreedsCode("132797006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshMountainSheepBreed_organism_ = AnimalBreedsCode("132798001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishFurSheepBreed_organism_ = AnimalBreedsCode("132799009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TeeswaterSheepBreed_organism_ = AnimalBreedsCode("132800008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TexelSheepBreed_organism_ = AnimalBreedsCode("132801007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Pelib_eySheepBreed_organism_ = AnimalBreedsCode("132802000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoradaNovaSheepBreed_organism_ = AnimalBreedsCode("132803005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BalkhiSheepBreed_organism_ = AnimalBreedsCode("132804004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BavarianForestSheepBreed_organism_ = AnimalBreedsCode("132805003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarbadosBlackbellySheepBreed_organism_ = AnimalBreedsCode("132806002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomneySheepBreed_organism_ = AnimalBreedsCode("132807006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AwassiSheepBreed_organism_ = AnimalBreedsCode("132808001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArapawaIslandSheepBreed_organism_ = AnimalBreedsCode("132809009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArabiSheepBreed_organism_ = AnimalBreedsCode("132810004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ApennineSheepBreed_organism_ = AnimalBreedsCode("132811000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanTunisSheepBreed_organism_ = AnimalBreedsCode("132812007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BalwenWelshMountainSheepBreed_organism_ = AnimalBreedsCode("132813002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PrianganSheepBreed_organism_ = AnimalBreedsCode("132814008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RaboLargoSheepBreed_organism_ = AnimalBreedsCode("132815009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AltaySheepBreed_organism_ = AnimalBreedsCode("132845007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FaeroesSheepBreed_organism_ = AnimalBreedsCode("132846008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PittIslandSheepBreed_organism_ = AnimalBreedsCode("132849001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PinziritaSheepBreed_organism_ = AnimalBreedsCode("132851002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SardinianSheepBreed_organism_ = AnimalBreedsCode("132852009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastFriesianSheepBreed_organism_ = AnimalBreedsCode("132853004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UjumqinSheepBreed_organism_ = AnimalBreedsCode("132854005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DLSSheepBreed_organism_ = AnimalBreedsCode("132855006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WalachenschafSheepBreed_organism_ = AnimalBreedsCode("132856007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OutaouaisArcottSheepBreed_organism_ = AnimalBreedsCode("132857003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OssimiSheepBreed_organism_ = AnimalBreedsCode("132858008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BentheimerLandschafSheepBreed_organism_ = AnimalBreedsCode("132859000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarbadoSheepBreed_organism_ = AnimalBreedsCode("132860005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaluchiSheepBreed_organism_ = AnimalBreedsCode("132861009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PoitouDonkeyBreed_organism_ = AnimalBreedsCode("132958007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MammothJackStockDonkeyBreed_organism_ = AnimalBreedsCode("132959004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LargeStandardDonkey_organism_ = AnimalBreedsCode("132987008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     StandardDonkey_organism_ = AnimalBreedsCode("132988003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MiniatureDonkey_organism_ = AnimalBreedsCode("132989006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GarranoTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132990002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KoninkTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132991003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AsturianTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132992005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PottokTarpanHorseXDomesticHorseBreed_organism_ = AnimalBreedsCode("132993000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GayalCattleBreed_organism_ = AnimalBreedsCode("133702003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanBisonXCattleBreed_organism_ = AnimalBreedsCode("133703008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianBrafordCattleBreed_organism_ = AnimalBreedsCode("133704002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianFriesianSahiwalCattleBreed_organism_ = AnimalBreedsCode("133715007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrafordCattleBreed_organism_ = AnimalBreedsCode("133716008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrahmousinCattleBreed_organism_ = AnimalBreedsCode("133717004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanchimCattleBreed_organism_ = AnimalBreedsCode("133718009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CharbrayCattleBreed_organism_ = AnimalBreedsCode("133719001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DroughtmasterCattleBreed_organism_ = AnimalBreedsCode("133720007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GelbrayCattleBreed_organism_ = AnimalBreedsCode("133731004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JamaicaBlackCattleBreed_organism_ = AnimalBreedsCode("133732006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JamaicaHopeCattleBreed_organism_ = AnimalBreedsCode("133733001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JamaicaRedCattleBreed_organism_ = AnimalBreedsCode("133734007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KaranFriesCattleBreed_organism_ = AnimalBreedsCode("133735008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KaranSwissCattleBreed_organism_ = AnimalBreedsCode("133736009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MandalongCattleBreed_organism_ = AnimalBreedsCode("133747002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianMilkingZebuCattleBreed_organism_ = AnimalBreedsCode("133748007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedBrangusCattleBreed_organism_ = AnimalBreedsCode("133749004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SantaCruzCattleBreed_organism_ = AnimalBreedsCode("133750004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiboneyCattleBreed_organism_ = AnimalBreedsCode("133751000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BambaraCattleBreed_organism_ = AnimalBreedsCode("133752007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BambeyCattleBreed_organism_ = AnimalBreedsCode("133763005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BatanesBlackCattleBreed_organism_ = AnimalBreedsCode("133764004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BorgouCattleBreed_organism_ = AnimalBreedsCode("133765003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrahornCattleBreed_organism_ = AnimalBreedsCode("133766002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BralersCattleBreed_organism_ = AnimalBreedsCode("133767006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Bra_MaineCattleBreed_organism_ = AnimalBreedsCode("133768001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Bra_SwissCattleBreed_organism_ = AnimalBreedsCode("133779006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BravonCattleBreed_organism_ = AnimalBreedsCode("133780009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrazilianDairyHybridCattle_organism_ = AnimalBreedsCode("133781008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BurmeseCattleBreed_organism_ = AnimalBreedsCode("133782001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BushuevCattleBreed_organism_ = AnimalBreedsCode("133783006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaiuaCattleBreed_organism_ = AnimalBreedsCode("133784000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CarazebuCattleBreed_organism_ = AnimalBreedsCode("133795006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CentralAsianZebuCattleBreed_organism_ = AnimalBreedsCode("133796007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CharfordCattleBreed_organism_ = AnimalBreedsCode("133797003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CubanCriolloCattleBreed_organism_ = AnimalBreedsCode("133798008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CubanZebuCattleBreed_organism_ = AnimalBreedsCode("133799000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DishtyCattleBreed_organism_ = AnimalBreedsCode("133800001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DjakoreCattleBreed_organism_ = AnimalBreedsCode("133801002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GambianN_DamaCattleBreed_organism_ = AnimalBreedsCode("133802009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GhanaSangaCattleBreed_organism_ = AnimalBreedsCode("133803004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GirolandoCattleBreed_organism_ = AnimalBreedsCode("133804005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuzerandoCattleBreed_organism_ = AnimalBreedsCode("133805006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HattonCattleBreed_organism_ = AnimalBreedsCode("133806007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IbageCattleBreed_organism_ = AnimalBreedsCode("133807003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IraqiCattleBreed_organism_ = AnimalBreedsCode("133808008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JerdiCattleBreed_organism_ = AnimalBreedsCode("133809000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JersindCattleBreed_organism_ = AnimalBreedsCode("133810005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JotkoCattleBreed_organism_ = AnimalBreedsCode("133811009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KanemCattleBreed_organism_ = AnimalBreedsCode("133812002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KetekuCattleBreed_organism_ = AnimalBreedsCode("133813007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LaviniaCattleBreed_organism_ = AnimalBreedsCode("133814001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LocalIndianDairyCattleBreed_organism_ = AnimalBreedsCode("133815000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MantiqueiraCattleBreed_organism_ = AnimalBreedsCode("133816004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NdaguCattleBreed_organism_ = AnimalBreedsCode("133817008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NormanzuCattleBreed_organism_ = AnimalBreedsCode("133818003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NubaMountainCattleBreed_organism_ = AnimalBreedsCode("133819006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PabnaCattleBreed_organism_ = AnimalBreedsCode("133820000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedPerijaneroCattleBreed_organism_ = AnimalBreedsCode("133821001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PitangueirasCattleBreed_organism_ = AnimalBreedsCode("133822008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     QuasahCattleBreed_organism_ = AnimalBreedsCode("133823003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RanaCattle_organism_ = AnimalBreedsCode("133824009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RangerCattle_organism_ = AnimalBreedsCode("133825005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ReniteloCattleBreed_organism_ = AnimalBreedsCode("133826006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RiopardenzeCattleBreed_organism_ = AnimalBreedsCode("133827002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RustaqiCattleBreed_organism_ = AnimalBreedsCode("133828007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SabreCattleBreed_organism_ = AnimalBreedsCode("133829004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SahfordCattleBreed_organism_ = AnimalBreedsCode("133830009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Schwyz_ZeboidCattleBreed_organism_ = AnimalBreedsCode("133831008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuiaCattleBreed_organism_ = AnimalBreedsCode("133832001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuisbuCattleBreed_organism_ = AnimalBreedsCode("133833006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SunandiniCattleBreed_organism_ = AnimalBreedsCode("133834000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TainoCattleBreed_organism_ = AnimalBreedsCode("133835004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThibarCattleBreed_organism_ = AnimalBreedsCode("133836003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToubouCattleBreed_organism_ = AnimalBreedsCode("133837007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TropicalCattleBreed_organism_ = AnimalBreedsCode("133838002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TSSH_1CattleBreed_organism_ = AnimalBreedsCode("133839005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VictoriaCattleBreed_organism_ = AnimalBreedsCode("133840007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WokalupCattleBreed_organism_ = AnimalBreedsCode("133841006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaduraCattleBreed_organism_ = AnimalBreedsCode("133842004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GalwaySheepBreed_organism_ = AnimalBreedsCode("406660008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedBreedSheep_organism_ = AnimalBreedsCode("406722006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoulardDuckBreed_organism_ = AnimalBreedsCode("409911001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CapraHircus_organism_ = AnimalBreedsCode("125097000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OvisAries_organism_ = AnimalBreedsCode("125099002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DorsetSheepSuperbreed_organism_ = AnimalBreedsCode("25327001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MerinoSheepSuperbreed_organism_ = AnimalBreedsCode("125101009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SaanenGoat_organism_ = AnimalBreedsCode("21208000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BisonBisonXSimmentalHybridCattleBreed_organism_ = AnimalBreedsCode("424705003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SaddlebredHorseSuperbreed_organism_ = AnimalBreedsCode("427136006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EquusCaballus_organism_ = AnimalBreedsCode("35354009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EquusCaballusGmeliniXEquusCaballusCaballus_organism_ = AnimalBreedsCode("125086000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AbtenauerHorseBreed_organism_ = AnimalBreedsCode("133068005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AdaevHorseBreed_organism_ = AnimalBreedsCode("133069002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlbanianHorseBreed_organism_ = AnimalBreedsCode("133070001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlterRealHorseBreed_organism_ = AnimalBreedsCode("133071002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AltaiHorseBreed_organism_ = AnimalBreedsCode("133120002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Akhal_TekeHorseBreed_organism_ = AnimalBreedsCode("133121003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AbyssinianHorseBreed_organism_ = AnimalBreedsCode("133122005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ClydesdaleHorse_organism_ = AnimalBreedsCode("1247002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanPaintHorse_organism_ = AnimalBreedsCode("7623008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianHorse_organism_ = AnimalBreedsCode("22720009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanCreamHorse_organism_ = AnimalBreedsCode("26837006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanTrotterHorse_organism_ = AnimalBreedsCode("26973000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ClevelandBayHorse_organism_ = AnimalBreedsCode("41092008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanAlbinoHorse_organism_ = AnimalBreedsCode("45790002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanPony_organism_ = AnimalBreedsCode("46408008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianHorse_organism_ = AnimalBreedsCode("47842004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArabianHorse_organism_ = AnimalBreedsCode("54098002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanMiniatureHorse_organism_ = AnimalBreedsCode("54699009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AppaloosaHorse_organism_ = AnimalBreedsCode("55167009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanTunisHorse_organism_ = AnimalBreedsCode("72394007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AndalusianHorse_organism_ = AnimalBreedsCode("80777007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanBuckskinHorse_organism_ = AnimalBreedsCode("90050009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AraAppaloosaHorseBreed_organism_ = AnimalBreedsCode("131862004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArgentineCriolloHorseBreed_organism_ = AnimalBreedsCode("131863009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArgentinePoloPonyHorseBreed_organism_ = AnimalBreedsCode("131864003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianPonyHorseBreed_organism_ = AnimalBreedsCode("131865002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AuxoisHorseBreed_organism_ = AnimalBreedsCode("131866001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AveligneseHorseBreed_organism_ = AnimalBreedsCode("131867005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AzerbaijanHorseBreed_organism_ = AnimalBreedsCode("131868000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AzoresHorseBreed_organism_ = AnimalBreedsCode("131869008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaliHorseBreed_organism_ = AnimalBreedsCode("131870009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BalikunHorseBreed_organism_ = AnimalBreedsCode("131871008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BankerHorseHorseBreed_organism_ = AnimalBreedsCode("131873006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BardigianoHorseBreed_organism_ = AnimalBreedsCode("131874000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BatakHorseBreed_organism_ = AnimalBreedsCode("131875004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianArdennaisHorseBreed_organism_ = AnimalBreedsCode("131877007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianHalfbloodHorseBreed_organism_ = AnimalBreedsCode("131878002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BhutiaHorseBreed_organism_ = AnimalBreedsCode("131880008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackSeaHorseHorseBreed_organism_ = AnimalBreedsCode("131881007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BosnianHorseBreed_organism_ = AnimalBreedsCode("131882000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoulonnaisHorseBreed_organism_ = AnimalBreedsCode("131883005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrandenburgHorseBreed_organism_ = AnimalBreedsCode("131884004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrazilianSportHorseHorseBreed_organism_ = AnimalBreedsCode("131885003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishAppaloosaHorseBreed_organism_ = AnimalBreedsCode("131886002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishRidingPonyHorseBreed_organism_ = AnimalBreedsCode("131887006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishSpottedPonyHorseBreed_organism_ = AnimalBreedsCode("131888001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BuohaiHorseBreed_organism_ = AnimalBreedsCode("131889009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BuryatHorseBreed_organism_ = AnimalBreedsCode("131890000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CalabrianHorseBreed_organism_ = AnimalBreedsCode("131891001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CamargueHorseBreed_organism_ = AnimalBreedsCode("131892008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianCuttingHorseHorseBreed_organism_ = AnimalBreedsCode("131893003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianRusticPonyHorseBreed_organism_ = AnimalBreedsCode("131894009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianSportHorseHorseBreed_organism_ = AnimalBreedsCode("131895005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanikHorseBreed_organism_ = AnimalBreedsCode("131896006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CapeHorseHorseBreed_organism_ = AnimalBreedsCode("131897002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CerbatHorseBreed_organism_ = AnimalBreedsCode("131898007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChakouyiHorseBreed_organism_ = AnimalBreedsCode("131899004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CharaHorseHorseBreed_organism_ = AnimalBreedsCode("131900009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChickasawHorseBreed_organism_ = AnimalBreedsCode("131901008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChiloteHorseBreed_organism_ = AnimalBreedsCode("131902001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChineseKazakhHorseBreed_organism_ = AnimalBreedsCode("131903006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChineseMongolianHorseBreed_organism_ = AnimalBreedsCode("131904000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChumbivilcasHorseBreed_organism_ = AnimalBreedsCode("131905004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChumyshHorseBreed_organism_ = AnimalBreedsCode("131906003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CiritHorseBreed_organism_ = AnimalBreedsCode("131907007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BadenWurttemburgHorseBreed_organism_ = AnimalBreedsCode("132731005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanIndianHorseHorseBreed_organism_ = AnimalBreedsCode("132951001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanMustangHorseBreed_organism_ = AnimalBreedsCode("132952008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanQuarterHorseHorseBreed_organism_ = AnimalBreedsCode("132953003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanShetlandPonyHorseBreed_organism_ = AnimalBreedsCode("132954009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnadoluHorseBreed_organism_ = AnimalBreedsCode("132955005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AndeanHorseBreed_organism_ = AnimalBreedsCode("132956006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Anglo_KabardaHorseBreed_organism_ = AnimalBreedsCode("132957002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Anglo_ArabHorseBreed_organism_ = AnimalBreedsCode("133044002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanBashkirCurlyHorseBreed_organism_ = AnimalBreedsCode("133072009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChincoteaguePonyHorseBreed_organism_ = AnimalBreedsCode("133101004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArdennesHorseBreed_organism_ = AnimalBreedsCode("133116001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanWalkingPonyHorseBreed_organism_ = AnimalBreedsCode("133117005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AztecaHorseBreed_organism_ = AnimalBreedsCode("133118000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanCreamDraftHorseBreed_organism_ = AnimalBreedsCode("133119008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BhirumPonyHorseBreed_organism_ = AnimalBreedsCode("133123000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChejuHorseBreed_organism_ = AnimalBreedsCode("133124006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CayuseHorseBreed_organism_ = AnimalBreedsCode("133125007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaspianHorseBreed_organism_ = AnimalBreedsCode("133126008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CarthusianHorseBreed_organism_ = AnimalBreedsCode("133127004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CampolinaHorseBreed_organism_ = AnimalBreedsCode("133128009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ByelorussianHarnessHorseBreed_organism_ = AnimalBreedsCode("133129001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BudyonnyHorseBreed_organism_ = AnimalBreedsCode("133130006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianBrumbyHorseBreed_organism_ = AnimalBreedsCode("133131005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianStockHorseHorseBreed_organism_ = AnimalBreedsCode("133132003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BasutoPonyHorseBreed_organism_ = AnimalBreedsCode("133133008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BashkirCurlyHorseBreed_organism_ = AnimalBreedsCode("133134002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BashkirHorseBreed_organism_ = AnimalBreedsCode("133135001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarbHorseBreed_organism_ = AnimalBreedsCode("133136000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Ban_eiHorseBreed_organism_ = AnimalBreedsCode("133137009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CarpathianPonyHorseBreed_organism_ = AnimalBreedsCode("133138004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaluchiHorseBreed_organism_ = AnimalBreedsCode("133139007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BalearicHorseBreed_organism_ = AnimalBreedsCode("133140009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChileanCorraleroHorseBreed_organism_ = AnimalBreedsCode("133141008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BretonHorseBreed_organism_ = AnimalBreedsCode("133142001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrabantHorse_organism_ = AnimalBreedsCode("406711007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GalicenoHorse_organism_ = AnimalBreedsCode("6220006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HunterHorse_organism_ = AnimalBreedsCode("19356005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HolsteinerHorse_organism_ = AnimalBreedsCode("25813002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LipizzanerHorse_organism_ = AnimalBreedsCode("41754002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HaflingerHorse_organism_ = AnimalBreedsCode("54447000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HanoverianHorse_organism_ = AnimalBreedsCode("66168008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IcelandicHorse_organism_ = AnimalBreedsCode("70457009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FjordHorse_organism_ = AnimalBreedsCode("89648005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HackneyHorse_organism_ = AnimalBreedsCode("112488001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EquusCaballusGmelini_organism_ = AnimalBreedsCode("125084002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ColombianCriolloHorseBreed_organism_ = AnimalBreedsCode("131804001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ComtoisHorseBreed_organism_ = AnimalBreedsCode("131805000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CorsicanHorseBreed_organism_ = AnimalBreedsCode("131806004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CostaRicanSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("131807008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CostenoHorseBreed_organism_ = AnimalBreedsCode("131808003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CubanPasoHorseBreed_organism_ = AnimalBreedsCode("131809006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuculHorseBreed_organism_ = AnimalBreedsCode("131861006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IrishDraftHorseBreed_organism_ = AnimalBreedsCode("131908002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IrishHunterHorseBreed_organism_ = AnimalBreedsCode("131909005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CubanTrotterHorseBreed_organism_ = AnimalBreedsCode("131910000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ItalianHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("131911001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JabeHorseBreed_organism_ = AnimalBreedsCode("131912008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JavaHorseBreed_organism_ = AnimalBreedsCode("131913003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JinhongHorseBreed_organism_ = AnimalBreedsCode("131916006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JinzhouHorseBreed_organism_ = AnimalBreedsCode("131917002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanubianHorseBreed_organism_ = AnimalBreedsCode("131919004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KarachaiHorseBreed_organism_ = AnimalBreedsCode("131920005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KarakacanHorseBreed_organism_ = AnimalBreedsCode("131921009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KathiawariHorseBreed_organism_ = AnimalBreedsCode("131922002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Ke_Er_QinHorseBreed_organism_ = AnimalBreedsCode("131923007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KirgizHorseBreed_organism_ = AnimalBreedsCode("131924001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KuznetHorseBreed_organism_ = AnimalBreedsCode("131925000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LandaisHorseBreed_organism_ = AnimalBreedsCode("131926004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LewitzerHorseBreed_organism_ = AnimalBreedsCode("131927008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LichuanHorseBreed_organism_ = AnimalBreedsCode("131928003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LijiangHorseBreed_organism_ = AnimalBreedsCode("131929006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LlaneroHorseBreed_organism_ = AnimalBreedsCode("131930001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LombokHorseBreed_organism_ = AnimalBreedsCode("131931002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LundyPonyHorseBreed_organism_ = AnimalBreedsCode("131932009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalakanHorseBreed_organism_ = AnimalBreedsCode("131933004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalopolskiHorseBreed_organism_ = AnimalBreedsCode("131934005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DatongHorseBreed_organism_ = AnimalBreedsCode("131935006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MangalargaPaulistaHorseBreed_organism_ = AnimalBreedsCode("131936007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DulmenPonyHorseBreed_organism_ = AnimalBreedsCode("131937003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchTuigpaardHorseBreed_organism_ = AnimalBreedsCode("131947000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastAndSoutheastAnadoluHorseBreed_organism_ = AnimalBreedsCode("131948005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EnglishHackHorseBreed_organism_ = AnimalBreedsCode("131964002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanRidingPonyHorseBreed_organism_ = AnimalBreedsCode("131972000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuanzhongHorseBreed_organism_ = AnimalBreedsCode("131973005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuizhouHorseBreed_organism_ = AnimalBreedsCode("131974004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuoxiaHorseBreed_organism_ = AnimalBreedsCode("131975003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ErlunchunHorseBreed_organism_ = AnimalBreedsCode("131976002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HalfSaddlebredHorseBreed_organism_ = AnimalBreedsCode("131977006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FloresHorseBreed_organism_ = AnimalBreedsCode("131978001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FreibergHorseBreed_organism_ = AnimalBreedsCode("131979009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HessenHorseBreed_organism_ = AnimalBreedsCode("131980007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HinisHorseBreed_organism_ = AnimalBreedsCode("131981006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HirzaiHorseBreed_organism_ = AnimalBreedsCode("131982004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianColdbloodHorseBreed_organism_ = AnimalBreedsCode("131983009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianDunHorseBreed_organism_ = AnimalBreedsCode("131984003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianSportHorseHorseBreed_organism_ = AnimalBreedsCode("131985002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     InternationalStripedHorseHorseBreed_organism_ = AnimalBreedsCode("131986001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IrishCobHorseBreed_organism_ = AnimalBreedsCode("131987005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchCobHorseBreed_organism_ = AnimalBreedsCode("131990004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchSaddlePonyHorseBreed_organism_ = AnimalBreedsCode("131991000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FinnhorseDraftHorseBreed_organism_ = AnimalBreedsCode("131993002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IsraeliHorseBreed_organism_ = AnimalBreedsCode("132733008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchArdennaisHorseBreed_organism_ = AnimalBreedsCode("132734002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CukurovaHorseBreed_organism_ = AnimalBreedsCode("132736000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CzechColdbloodHorseBreed_organism_ = AnimalBreedsCode("132737009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CzechoslovakianSmallRidingHorseHorseBreed_organism_ = AnimalBreedsCode("132738004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JianchangHorseBreed_organism_ = AnimalBreedsCode("132739007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JielinHorseBreed_organism_ = AnimalBreedsCode("132740009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EleiaHorseBreed_organism_ = AnimalBreedsCode("132742001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EnglishCobHorseBreed_organism_ = AnimalBreedsCode("132743006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EnglishHunterHorseBreed_organism_ = AnimalBreedsCode("132746003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EriskayPonyHorseBreed_organism_ = AnimalBreedsCode("132747007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HackneyPonyHorseBreed_organism_ = AnimalBreedsCode("132748002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EstonianDraftHorseBreed_organism_ = AnimalBreedsCode("132749005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HeiheHorseBreed_organism_ = AnimalBreedsCode("132750005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HeilongkaingHorseBreed_organism_ = AnimalBreedsCode("132751009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishSportPonyHorseBreed_organism_ = AnimalBreedsCode("132757008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KabardaHorseBreed_organism_ = AnimalBreedsCode("132758003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KalmykHorseBreed_organism_ = AnimalBreedsCode("132759006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MangalargaMarchadorHorseBreed_organism_ = AnimalBreedsCode("132760001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DonHorseBreed_organism_ = AnimalBreedsCode("132761002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastBulgarianHorseBreed_organism_ = AnimalBreedsCode("132765006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastFriesian_OldType_HorseBreed_organism_ = AnimalBreedsCode("132766007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchTrotterHorseBreed_organism_ = AnimalBreedsCode("132774008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FuriosoHorseBreed_organism_ = AnimalBreedsCode("132775009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishOldenborgHorseBreed_organism_ = AnimalBreedsCode("132779003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FellPonyHorseBreed_organism_ = AnimalBreedsCode("132996008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchDraftHorseBreed_organism_ = AnimalBreedsCode("133016003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EgyptianHorseBreed_organism_ = AnimalBreedsCode("133017007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EstonianNativeHorseBreed_organism_ = AnimalBreedsCode("133018002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ExmoorPonyHorseBreed_organism_ = AnimalBreedsCode("133019005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FaeroesIslandHorseHorseBreed_organism_ = AnimalBreedsCode("133020004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FalabellaHorseBreed_organism_ = AnimalBreedsCode("133021000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DongolaHorseBreed_organism_ = AnimalBreedsCode("133023002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     D_leHorseBreed_organism_ = AnimalBreedsCode("133024008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DjermaHorseBreed_organism_ = AnimalBreedsCode("133025009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DelibozHorseBreed_organism_ = AnimalBreedsCode("133026005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DartmoorPonyHorseBreed_organism_ = AnimalBreedsCode("133027001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CriouloHorseBreed_organism_ = AnimalBreedsCode("133028006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FinnhorseHorseBreed_organism_ = AnimalBreedsCode("133029003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     M_BayarHorseBreed_organism_ = AnimalBreedsCode("133034004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LusitanoHorseBreed_organism_ = AnimalBreedsCode("133035003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KisberFelverHorseBreed_organism_ = AnimalBreedsCode("133043008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IomudHorseBreed_organism_ = AnimalBreedsCode("133047009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JutlandHorseBreed_organism_ = AnimalBreedsCode("133048004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KarabairHorseBreed_organism_ = AnimalBreedsCode("133049007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KarabakhHorseBreed_organism_ = AnimalBreedsCode("133050007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KazakhHorseBreed_organism_ = AnimalBreedsCode("133051006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MangalargaHorseBreed_organism_ = AnimalBreedsCode("133052004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KirdiPonyHorseBreed_organism_ = AnimalBreedsCode("133053009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KisoHorseBreed_organism_ = AnimalBreedsCode("133054003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KladrubyHorseBreed_organism_ = AnimalBreedsCode("133055002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KnabstrupHorseBreed_organism_ = AnimalBreedsCode("133056001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KushumHorseBreed_organism_ = AnimalBreedsCode("133057005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KustanaiHorseBreed_organism_ = AnimalBreedsCode("133058000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LatvianHorseBreed_organism_ = AnimalBreedsCode("133059008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LithuanianHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133060003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LokaiHorseBreed_organism_ = AnimalBreedsCode("133061004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KigerMustangHorseBreed_organism_ = AnimalBreedsCode("133062006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CriolloHorseBreed_organism_ = AnimalBreedsCode("133095000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HequHorseBreed_organism_ = AnimalBreedsCode("133096004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ConnemaraPonyHorseBreed_organism_ = AnimalBreedsCode("133097008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ColoradoRangerHorseBreed_organism_ = AnimalBreedsCode("133098003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DalesPonyHorseBreed_organism_ = AnimalBreedsCode("133099006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GotlandHorseBreed_organism_ = AnimalBreedsCode("133100003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HokkaidoHorseBreed_organism_ = AnimalBreedsCode("133102006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HighlandPonyHorseBreed_organism_ = AnimalBreedsCode("133103001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GroningenHorseBreed_organism_ = AnimalBreedsCode("133104007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CubanPintoHorseBreed_organism_ = AnimalBreedsCode("133105008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FleuveHorseBreed_organism_ = AnimalBreedsCode("133106009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GidranHorseBreed_organism_ = AnimalBreedsCode("133108005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GelderlandHorseBreed_organism_ = AnimalBreedsCode("133109002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GalicianPonyHorseBreed_organism_ = AnimalBreedsCode("133110007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FriesianHorseBreed_organism_ = AnimalBreedsCode("133111006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrederiksborgHorseBreed_organism_ = AnimalBreedsCode("133112004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FoutaHorseBreed_organism_ = AnimalBreedsCode("133113009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FloridaCrackerHorseBreed_organism_ = AnimalBreedsCode("133114003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuangxiHorseBreed_organism_ = AnimalBreedsCode("133115002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GypsyVannerHorse_organism_ = AnimalBreedsCode("406714004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PercheronHorse_organism_ = AnimalBreedsCode("1006005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThoroughbredHorse_organism_ = AnimalBreedsCode("4288003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PeruvianPasoHorse_organism_ = AnimalBreedsCode("4960000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MissouriFoxTrottingHorse_organism_ = AnimalBreedsCode("12360007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShireHorse_organism_ = AnimalBreedsCode("13487004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MorganHorse_organism_ = AnimalBreedsCode("21295007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NewForestPony_organism_ = AnimalBreedsCode("26699009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     StandardbredHorse_organism_ = AnimalBreedsCode("34200004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NormanCoachHorse_organism_ = AnimalBreedsCode("39532001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PalominoHorse_organism_ = AnimalBreedsCode("41738000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TennesseeWalkingHorse_organism_ = AnimalBreedsCode("51023000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuffolkHorse_organism_ = AnimalBreedsCode("53567001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PasoFinoHorse_organism_ = AnimalBreedsCode("56086005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Pinto_organism_ = AnimalBreedsCode("58264006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShetlandPony_organism_ = AnimalBreedsCode("69067004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpanishMustangHorse_organism_ = AnimalBreedsCode("76302002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     QuarterHorse_organism_ = AnimalBreedsCode("76467006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaremmanaHorseBreed_organism_ = AnimalBreedsCode("131938008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MarwariHorseBreed_organism_ = AnimalBreedsCode("131939000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MegezhHorseBreed_organism_ = AnimalBreedsCode("131940003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MegrelHorseBreed_organism_ = AnimalBreedsCode("131941004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MerensHorseBreed_organism_ = AnimalBreedsCode("131942006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MessaraHorseBreed_organism_ = AnimalBreedsCode("131943001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SumbaHorseBreed_organism_ = AnimalBreedsCode("131944007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SumbawaHorseBreed_organism_ = AnimalBreedsCode("131945008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishArdennesHorseBreed_organism_ = AnimalBreedsCode("131946009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThaiPonyHorseBreed_organism_ = AnimalBreedsCode("131949002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThessalonianHorseBreed_organism_ = AnimalBreedsCode("131950002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TibetanHorseBreed_organism_ = AnimalBreedsCode("131951003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TielingHorseBreed_organism_ = AnimalBreedsCode("131952005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MezenHorseBreed_organism_ = AnimalBreedsCode("131988000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MezohegyesSportHorseHorseBreed_organism_ = AnimalBreedsCode("131989008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurakozHorseBreed_organism_ = AnimalBreedsCode("131992007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MecklenburgHorseBreed_organism_ = AnimalBreedsCode("131994008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManipuriHorseBreed_organism_ = AnimalBreedsCode("132762009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TavdaHorseBreed_organism_ = AnimalBreedsCode("132764005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinusinHorseBreed_organism_ = AnimalBreedsCode("132772007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MorochucoHorseBreed_organism_ = AnimalBreedsCode("132773002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurgheseHorseBreed_organism_ = AnimalBreedsCode("132776005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MytileneHorseBreed_organism_ = AnimalBreedsCode("132777001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NamibDesertHorseHorseBreed_organism_ = AnimalBreedsCode("132778006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NarymHorseBreed_organism_ = AnimalBreedsCode("132960009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NationalSpottedSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("132961008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NigerianHorseBreed_organism_ = AnimalBreedsCode("132962001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthSwedishTrotterHorseBreed_organism_ = AnimalBreedsCode("132963006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrientalHorseHorseBreed_organism_ = AnimalBreedsCode("132964000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RhinelandHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("132965004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("132966003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RottalHorseBreed_organism_ = AnimalBreedsCode("132967007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RoyalCanadianMountedPoliceHorseHorseBreed_organism_ = AnimalBreedsCode("132968002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("132969005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SableIslandHorseHorseBreed_organism_ = AnimalBreedsCode("132970006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PanjeHorseBreed_organism_ = AnimalBreedsCode("132971005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PatibarcinaHorseBreed_organism_ = AnimalBreedsCode("132972003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PechoraHorseBreed_organism_ = AnimalBreedsCode("132973008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PeneiaHorseBreed_organism_ = AnimalBreedsCode("132974002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PerianganHorseBreed_organism_ = AnimalBreedsCode("132975001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PersianArabHorseBreed_organism_ = AnimalBreedsCode("132976000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PetisoArgentinoHorseBreed_organism_ = AnimalBreedsCode("132977009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolishDraftHorseBreed_organism_ = AnimalBreedsCode("132978004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PriobHorseBreed_organism_ = AnimalBreedsCode("132979007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RahvanHorseBreed_organism_ = AnimalBreedsCode("132980005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SalernoHorseBreed_organism_ = AnimalBreedsCode("132981009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SandalwoodHorseBreed_organism_ = AnimalBreedsCode("132982002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SandanHorseBreed_organism_ = AnimalBreedsCode("132983007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PindosHorseBreed_organism_ = AnimalBreedsCode("132984001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PiquiraPonyHorseBreed_organism_ = AnimalBreedsCode("132985000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PlevenHorseBreed_organism_ = AnimalBreedsCode("132986004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianTrotterHorseBreed_organism_ = AnimalBreedsCode("132994006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NationalShowHorseHorseBreed_organism_ = AnimalBreedsCode("132997004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TawleedHorseBreed_organism_ = AnimalBreedsCode("133001001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NewKirgizHorseBreed_organism_ = AnimalBreedsCode("133010009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OldenburgHorseBreed_organism_ = AnimalBreedsCode("133011008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MisakiHorseBreed_organism_ = AnimalBreedsCode("133012001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MiyakoHorseBreed_organism_ = AnimalBreedsCode("133013006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MongolianHorseBreed_organism_ = AnimalBreedsCode("133014000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SanfratelloHorseBreed_organism_ = AnimalBreedsCode("133030008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MorabHorseBreed_organism_ = AnimalBreedsCode("133031007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoyleHorseBreed_organism_ = AnimalBreedsCode("133032000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MustangHorseBreed_organism_ = AnimalBreedsCode("133033005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NewfoundlandPonyHorseBreed_organism_ = AnimalBreedsCode("133036002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NomaHorseBreed_organism_ = AnimalBreedsCode("133037006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NooitgedachtPonyHorseBreed_organism_ = AnimalBreedsCode("133038001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NordlandHorseBreed_organism_ = AnimalBreedsCode("133039009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NoricHorseBreed_organism_ = AnimalBreedsCode("133040006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthSwedishHorseHorseBreed_organism_ = AnimalBreedsCode("133041005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NortheasternHorseBreed_organism_ = AnimalBreedsCode("133042003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NoniusHorseBreed_organism_ = AnimalBreedsCode("133045001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NooitgedachtHorseBreed_organism_ = AnimalBreedsCode("133046000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PonyOfTheAmericasHorseBreed_organism_ = AnimalBreedsCode("133063001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PintabianHorseBreed_organism_ = AnimalBreedsCode("133064007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PantaneiroHorseBreed_organism_ = AnimalBreedsCode("133065008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrlovTrotterHorseBreed_organism_ = AnimalBreedsCode("133066009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthernArdennaisHorseBreed_organism_ = AnimalBreedsCode("133067000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PoitouMuleProducerHorseBreed_organism_ = AnimalBreedsCode("133073004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolesianHorseBreed_organism_ = AnimalBreedsCode("133074005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SardinianAnglo_ArabHorseBreed_organism_ = AnimalBreedsCode("133075006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SardinianPonyHorseBreed_organism_ = AnimalBreedsCode("133076007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SarvarHorseBreed_organism_ = AnimalBreedsCode("133077003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SchleswigHorseBreed_organism_ = AnimalBreedsCode("133078008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SchwarzwalderFuchseHorseBreed_organism_ = AnimalBreedsCode("133079000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SenneHorseBreed_organism_ = AnimalBreedsCode("133080002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShanHorseBreed_organism_ = AnimalBreedsCode("133081003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SilesianHorseBreed_organism_ = AnimalBreedsCode("133082005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiniHorseBreed_organism_ = AnimalBreedsCode("133083000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SkyrosHorseBreed_organism_ = AnimalBreedsCode("133084006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SokolkaHorseBreed_organism_ = AnimalBreedsCode("133086008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthAfricanMiniatureHorseBreed_organism_ = AnimalBreedsCode("133087004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthGermanColdbloodHorseBreed_organism_ = AnimalBreedsCode("133088009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthwestSpanishMustangHorseBreed_organism_ = AnimalBreedsCode("133089001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Spanish_AmericanHorseHorseBreed_organism_ = AnimalBreedsCode("133090005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpanishAnglo_ArabHorseBreed_organism_ = AnimalBreedsCode("133091009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpanishColonialHorseHorseBreed_organism_ = AnimalBreedsCode("133092002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpitiHorseBreed_organism_ = AnimalBreedsCode("133093007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SulawesiHorseBreed_organism_ = AnimalBreedsCode("133094001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaishuhHorseBreed_organism_ = AnimalBreedsCode("133143006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SudanCountry_BredHorseBreed_organism_ = AnimalBreedsCode("133145004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Spanish_NormanHorseBreed_organism_ = AnimalBreedsCode("133146003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpanishBarbHorseBreed_organism_ = AnimalBreedsCode("133147007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SovietHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133148002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SorraiaHorseBreed_organism_ = AnimalBreedsCode("133149005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SomaliPonyHorseBreed_organism_ = AnimalBreedsCode("133150005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TerskHorseBreed_organism_ = AnimalBreedsCode("133151009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShagyaHorseBreed_organism_ = AnimalBreedsCode("133152002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SelleFrancaisHorseBreed_organism_ = AnimalBreedsCode("133153007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SanheHorseBreed_organism_ = AnimalBreedsCode("133154001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133155000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RockyMountainHorseHorseBreed_organism_ = AnimalBreedsCode("133156004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RackingHorseHorseBreed_organism_ = AnimalBreedsCode("133157008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     QuarterPonyHorseBreed_organism_ = AnimalBreedsCode("133158003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     QuarabHorseBreed_organism_ = AnimalBreedsCode("133159006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Single_FootingHorseHorseBreed_organism_ = AnimalBreedsCode("133160001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurgeseHorse_organism_ = AnimalBreedsCode("406715003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedBreedHorse_organism_ = AnimalBreedsCode("406721004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Pony_organism_ = AnimalBreedsCode("3997000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VikingHorse_organism_ = AnimalBreedsCode("1118004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TrakehnerHorse_organism_ = AnimalBreedsCode("1789009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshWalkingHorse_organism_ = AnimalBreedsCode("8089006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestphalianHorse_organism_ = AnimalBreedsCode("25369002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YorkshireCoachHorse_organism_ = AnimalBreedsCode("31633003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WaziriHorseBreed_organism_ = AnimalBreedsCode("131872001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TimorHorseBreed_organism_ = AnimalBreedsCode("131953000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TrakyaHorseBreed_organism_ = AnimalBreedsCode("131954006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TroteEnGallopeHorseBreed_organism_ = AnimalBreedsCode("131955007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TurkomanHorseBreed_organism_ = AnimalBreedsCode("131956008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TushinHorseBreed_organism_ = AnimalBreedsCode("131957004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TuvaHorseBreed_organism_ = AnimalBreedsCode("131958009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UzunyaylaHorseBreed_organism_ = AnimalBreedsCode("131959001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VoronezhCoachHorseHorseBreed_organism_ = AnimalBreedsCode("131960006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshCobHorseBreed_organism_ = AnimalBreedsCode("131962003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshMountainPonyHorseBreed_organism_ = AnimalBreedsCode("131963008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WurttembergHorseBreed_organism_ = AnimalBreedsCode("131965001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     XilingolHorseBreed_organism_ = AnimalBreedsCode("131966000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YanqiHorseBreed_organism_ = AnimalBreedsCode("131967009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YemeniHorsesHorseBreed_organism_ = AnimalBreedsCode("131968004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YiliHorseBreed_organism_ = AnimalBreedsCode("131969007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YiwuHorseBreed_organism_ = AnimalBreedsCode("131970008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YunnanHorseBreed_organism_ = AnimalBreedsCode("131971007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WielkopolskiHorseBreed_organism_ = AnimalBreedsCode("132741008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshPonyHorseBreed_organism_ = AnimalBreedsCode("132744000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshPonyOfCobTypeHorseBreed_organism_ = AnimalBreedsCode("132745004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestAfricanBarbHorseBreed_organism_ = AnimalBreedsCode("132995007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZhemaichuHorseBreed_organism_ = AnimalBreedsCode("132998009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YonaguniHorseBreed_organism_ = AnimalBreedsCode("132999001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YakutHorseBreed_organism_ = AnimalBreedsCode("133000000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WesternSudanPonyHorseBreed_organism_ = AnimalBreedsCode("133002008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WeleraPonyHorseBreed_organism_ = AnimalBreedsCode("133003003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VyatkaHorseBreed_organism_ = AnimalBreedsCode("133004009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VladimirHeavyDraftHorseBreed_organism_ = AnimalBreedsCode("133005005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VlaamperdHorseBreed_organism_ = AnimalBreedsCode("133006006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UkrainianSaddleHorseHorseBreed_organism_ = AnimalBreedsCode("133007002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToriHorseBreed_organism_ = AnimalBreedsCode("133008007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TokaraHorseBreed_organism_ = AnimalBreedsCode("133009004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WalerHorseBreed_organism_ = AnimalBreedsCode("133015004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanSaddlebredHorse_organism_ = AnimalBreedsCode("42724005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GoldenAmericanSaddlebredHorseBreed_organism_ = AnimalBreedsCode("133107000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Ari_geoisPonyBreed_organism_ = AnimalBreedsCode("396488006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131819000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BavarianWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131876003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131879005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CzechWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131915005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ElegantWarmbloodHorseBreed_organism_ = AnimalBreedsCode("131961005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("132732003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwissWarmbloodHorseBreed_organism_ = AnimalBreedsCode("132763004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastFriesianWarmblood_ModernType_HorseBreed_organism_ = AnimalBreedsCode(
         "132767003"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133022007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlovakWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133085007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishWarmbloodHorseBreed_organism_ = AnimalBreedsCode("133144000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BosFrontalis_organism_ = AnimalBreedsCode("125092006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AfricanderCattleBreed_organism_ = AnimalBreedsCode("131426006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AliabDinkaCattleBreed_organism_ = AnimalBreedsCode("131441006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlurCattleBreed_organism_ = AnimalBreedsCode("131442004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AbigarCattleBreed_organism_ = AnimalBreedsCode("131540009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AfricangusCattleBreed_organism_ = AnimalBreedsCode("131541008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AgeroleseCattleBreed_organism_ = AnimalBreedsCode("131542001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlbeseCattleBreed_organism_ = AnimalBreedsCode("131543006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Alb_resCattleBreed_organism_ = AnimalBreedsCode("131555000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlentejanaCattleBreed_organism_ = AnimalBreedsCode("131556004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanWhiteParkCattleBreed_organism_ = AnimalBreedsCode("131557008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmerifaxcattleBreed_organism_ = AnimalBreedsCode("131558003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnatolianBlackCattleBreed_organism_ = AnimalBreedsCode("131559006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AndalusianBlackCattleBreed_organism_ = AnimalBreedsCode("131560001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AndalusianGrayCattleBreed_organism_ = AnimalBreedsCode("131561002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Alistana_SanabresaCattleBreed_organism_ = AnimalBreedsCode("133290002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AndalusianBlondCattleBreed_organism_ = AnimalBreedsCode("133291003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AbondanceCattleBreed_organism_ = AnimalBreedsCode("133551002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Ala_TauCattleBreed_organism_ = AnimalBreedsCode("133552009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlbanianIllyrianCattleBreed_organism_ = AnimalBreedsCode("133553004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlbanianDwarfCattleBreed_organism_ = AnimalBreedsCode("133554005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AleppoCattleBreed_organism_ = AnimalBreedsCode("133575002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlmanzorenaCattleBreed_organism_ = AnimalBreedsCode("133591004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnkoleCattleBreed_organism_ = AnimalBreedsCode("131427002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Ankole_WatusiCattleBreed_organism_ = AnimalBreedsCode("131428007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnkinaCattleBreed_organism_ = AnimalBreedsCode("131443009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ApulianPodolianCattleBreed_organism_ = AnimalBreedsCode("131444003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AradoCattleBreed_organism_ = AnimalBreedsCode("131445002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AweilDinkaCattleBreed_organism_ = AnimalBreedsCode("131446001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BahimaCattleBreed_organism_ = AnimalBreedsCode("131447005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AngelnCattleBreed_organism_ = AnimalBreedsCode("131562009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AsturianMountainCattleBreed_organism_ = AnimalBreedsCode("131563004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AsturianValleyCattleBreed_organism_ = AnimalBreedsCode("131564005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AubracCattleBreed_organism_ = AnimalBreedsCode("131565006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Aulie_AtaCattleBreed_organism_ = AnimalBreedsCode("131566007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianLowlineCattleBreed_organism_ = AnimalBreedsCode("131567003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AostaBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133292005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AostaChestnutCattleBreed_organism_ = AnimalBreedsCode("133293000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AostaRedPiedCattleBreed_organism_ = AnimalBreedsCode("133294006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AracenaCattleBreed_organism_ = AnimalBreedsCode("133295007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArgentineFriesianCattleBreed_organism_ = AnimalBreedsCode("133296008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArmoricanCattleBreed_organism_ = AnimalBreedsCode("133297004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArouquesaCattleBreed_organism_ = AnimalBreedsCode("133298009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AureEtSaint_GironsCattleBreed_organism_ = AnimalBreedsCode("133299001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianWhiteCattleBreed_organism_ = AnimalBreedsCode("133300009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustrianSimmentalCattleBreed_organism_ = AnimalBreedsCode("133301008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustrianYellowCattleBreed_organism_ = AnimalBreedsCode("133302001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AvetonouCattleBreed_organism_ = AnimalBreedsCode("133303006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AvilenaCattleBreed_organism_ = AnimalBreedsCode("133304000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Avilena_BlackIberianCattleBreed_organism_ = AnimalBreedsCode("133305004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianShorthornCattleBreed_organism_ = AnimalBreedsCode("133472001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaladiCattleBreed_organism_ = AnimalBreedsCode("131429004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelmontRedCattleBreed_organism_ = AnimalBreedsCode("131430009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BonsmaraCattleBreed_organism_ = AnimalBreedsCode("131431008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BapediCattleBreed_organism_ = AnimalBreedsCode("131448000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Baria_Vietnam_Madagascar_CattleBreed_organism_ = AnimalBreedsCode("131449008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarotseCattleBreed_organism_ = AnimalBreedsCode("131450008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarraDoCuanzoCattleBreed_organism_ = AnimalBreedsCode("131451007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BashiCattleBreed_organism_ = AnimalBreedsCode("131452000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BasutoCattleBreed_organism_ = AnimalBreedsCode("131453005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BatangasCattleBreed_organism_ = AnimalBreedsCode("131454004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BavendaCattleBreed_organism_ = AnimalBreedsCode("131455003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BejaCattleBreed_organism_ = AnimalBreedsCode("131456002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Blonde_duCapBonCattleBreed_organism_ = AnimalBreedsCode("131458001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarzonaCattleBreed_organism_ = AnimalBreedsCode("131568008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BazadaisCattleBreed_organism_ = AnimalBreedsCode("131569000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeefmakerCattleBreed_organism_ = AnimalBreedsCode("131570004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelarusRedCattleBreed_organism_ = AnimalBreedsCode("131571000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianBlueCattleBreed_organism_ = AnimalBreedsCode("131572007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianRedCattleBreed_organism_ = AnimalBreedsCode("131573002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelmontAdaptaurCattleBreed_organism_ = AnimalBreedsCode("131574008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BerrendasCattleBreed_organism_ = AnimalBreedsCode("131575009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlacksidedTrondheimAndNorlandCattleBreed_organism_ = AnimalBreedsCode("131576005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlancoOrejinegroCattleBreed_organism_ = AnimalBreedsCode("131577001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BakosiCattleBreed_organism_ = AnimalBreedsCode("133306003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BakwiriCattleBreed_organism_ = AnimalBreedsCode("133307007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BalticBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133308002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaouleCattleBreed_organism_ = AnimalBreedsCode("133309005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarrosaCattleBreed_organism_ = AnimalBreedsCode("133310000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarrosoCattleBreed_organism_ = AnimalBreedsCode("133311001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BearnaisCattleBreed_organism_ = AnimalBreedsCode("133312008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeefShorthornCattleBreed_organism_ = AnimalBreedsCode("133313003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeefSyntheticCattleBreed_organism_ = AnimalBreedsCode("133314009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeijingBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133315005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeiroaCattleBreed_organism_ = AnimalBreedsCode("133316006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianBlackPiedHolsteincattleBreed_organism_ = AnimalBreedsCode("133317002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianRedPiedCattleBreed_organism_ = AnimalBreedsCode("133318007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianWhiteAndRedCattleBreed_organism_ = AnimalBreedsCode("133319004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeltedWelshCattleBreed_organism_ = AnimalBreedsCode("133320005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BestuzhevCattleBreed_organism_ = AnimalBreedsCode("133321009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BetizuakCattleBreed_organism_ = AnimalBreedsCode("133322002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackBaldyCattleBreed_organism_ = AnimalBreedsCode("133323007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackForestCattleBreed_organism_ = AnimalBreedsCode("133324001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackIberianCattleBreed_organism_ = AnimalBreedsCode("133325000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CalabrianCattleBreed_organism_ = AnimalBreedsCode("131457006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Chan_DocCattleBreed_organism_ = AnimalBreedsCode("131459009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChernigovCattleBreed_organism_ = AnimalBreedsCode("131460004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BraunviehCattleBreed_organism_ = AnimalBreedsCode("131578006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishWhiteCattleBreed_organism_ = AnimalBreedsCode("131579003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CachenaCattleBreed_organism_ = AnimalBreedsCode("131580000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanaryIslandCattleBreed_organism_ = AnimalBreedsCode("131581001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CarinthianBlondCattleBreed_organism_ = AnimalBreedsCode("131582008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaucasianCattleBreed_organism_ = AnimalBreedsCode("131583003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CharolaisCattleBreed_organism_ = AnimalBreedsCode("131584009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BragadoDoSorraiaCattleBreed_organism_ = AnimalBreedsCode("133327008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BragancaCattleBreed_organism_ = AnimalBreedsCode("133328003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrandroodLjsselveeCattleBreed_organism_ = AnimalBreedsCode("133329006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrazilianPolledCattleBreed_organism_ = AnimalBreedsCode("133330001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BretonBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133331002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrownAtlasCattleBreed_organism_ = AnimalBreedsCode("133332009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BulgarianBrownCattleBreed_organism_ = AnimalBreedsCode("133333004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BulgarianRedCattleBreed_organism_ = AnimalBreedsCode("133334005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BurlinaCattleBreed_organism_ = AnimalBreedsCode("133335006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BurwashCattleBreed_organism_ = AnimalBreedsCode("133336007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ByelorussianRedCattleBreed_organism_ = AnimalBreedsCode("133337003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ByelorussianSyntheticCattleBreed_organism_ = AnimalBreedsCode("133338008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CabanninaCattleBreed_organism_ = AnimalBreedsCode("133339000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaldeanoCattleBreed_organism_ = AnimalBreedsCode("133340003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaldelanaCattleBreed_organism_ = AnimalBreedsCode("133341004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CalvanaCattleBreed_organism_ = AnimalBreedsCode("133342006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CamargueCattleBreed_organism_ = AnimalBreedsCode("133343001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CambodianCattleBreed_organism_ = AnimalBreedsCode("133344007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaracuCattleBreed_organism_ = AnimalBreedsCode("133345008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CarpathianBrownCattleBreed_organism_ = AnimalBreedsCode("133346009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CasanarenoCattleBreed_organism_ = AnimalBreedsCode("133347000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CentralRussianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133348005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChaouiaCattleBreed_organism_ = AnimalBreedsCode("133349002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CharollandaisCattleBreed_organism_ = AnimalBreedsCode("133350002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Char_swissCattleBreed_organism_ = AnimalBreedsCode("133351003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChesiCattleBreed_organism_ = AnimalBreedsCode("133353000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CheurfaCattleBreed_organism_ = AnimalBreedsCode("133354006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BusaCattleBreed_organism_ = AnimalBreedsCode("133577005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChiangusCattleBreed_organism_ = AnimalBreedsCode("133578000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CalasparrenaCattleBreed_organism_ = AnimalBreedsCode("133593001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DamiettaCattleBreed_organism_ = AnimalBreedsCode("131432001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChinoSantandereanoCattleBreed_organism_ = AnimalBreedsCode("131461000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CinisaraCattleBreed_organism_ = AnimalBreedsCode("131462007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CupremHybridCattleBreed_organism_ = AnimalBreedsCode("131463002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DabieshanCattleBreed_organism_ = AnimalBreedsCode("131464008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DamaraCattleBreed_organism_ = AnimalBreedsCode("131465009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanakilCattleBreed_organism_ = AnimalBreedsCode("131466005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DnieperCattleBreed_organism_ = AnimalBreedsCode("131467001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DoayoCattleBreed_organism_ = AnimalBreedsCode("131468006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EasternNuerCattleBreed_organism_ = AnimalBreedsCode("131469003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EgyptianCattleBreed_organism_ = AnimalBreedsCode("131470002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FogeraCattleBreed_organism_ = AnimalBreedsCode("131471003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GarfagninaCattleBreed_organism_ = AnimalBreedsCode("131472005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GratiCattleBreed_organism_ = AnimalBreedsCode("131473000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GaunlingCattleBreed_organism_ = AnimalBreedsCode("131474006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DrakensbergerCattleBreed_organism_ = AnimalBreedsCode("131551009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChineseBlack_and_WhiteCattleBreed_organism_ = AnimalBreedsCode("131585005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CorrienteCattleBreed_organism_ = AnimalBreedsCode("131586006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Coste_oConCuernosCattleBreed_organism_ = AnimalBreedsCode("131587002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DamascusCattleBreed_organism_ = AnimalBreedsCode("131588007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishRedCattleBreed_organism_ = AnimalBreedsCode("131589004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DevonCattleBreed_organism_ = AnimalBreedsCode("131590008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     D_lafeCattleBreed_organism_ = AnimalBreedsCode("131591007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchBeltedCattleBreed_organism_ = AnimalBreedsCode("131592000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchFriesianCattleBreed_organism_ = AnimalBreedsCode("131593005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EnglishLonghornCattleBreed_organism_ = AnimalBreedsCode("131594004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EstonianRedCattleBreed_organism_ = AnimalBreedsCode("131595003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Evol_neCattleBreed_organism_ = AnimalBreedsCode("131596002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FightingBullCattleBreed_organism_ = AnimalBreedsCode("131597006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FjallCattleBreed_organism_ = AnimalBreedsCode("131598001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FloridaCracker_PineywoodsCattleBreed_organism_ = AnimalBreedsCode("131599009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GalicianBlondCattleBreed_organism_ = AnimalBreedsCode("131600007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GasconCattleBreed_organism_ = AnimalBreedsCode("131601006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanRedPiedCattleBreed_organism_ = AnimalBreedsCode("131602004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GlanCattleBreed_organism_ = AnimalBreedsCode("131603009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GloucesterCattleBreed_organism_ = AnimalBreedsCode("131604003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GroningenWhiteheadedCattleBreed_organism_ = AnimalBreedsCode("131605002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChifordCattleBreed_organism_ = AnimalBreedsCode("133355007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChimaineCattleBreed_organism_ = AnimalBreedsCode("133356008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChinampoCattleBreed_organism_ = AnimalBreedsCode("133357004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CildirCattleBreed_organism_ = AnimalBreedsCode("133358009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     COOPELSO93CattleBreed_organism_ = AnimalBreedsCode("133359001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CorsicanCattleBreed_organism_ = AnimalBreedsCode("133361005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CretanLowlandCattleBreed_organism_ = AnimalBreedsCode("133362003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CretanMountainCattleBreed_organism_ = AnimalBreedsCode("133363008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CroatianRedCattleBreed_organism_ = AnimalBreedsCode("133364002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CukurovaCattleBreed_organism_ = AnimalBreedsCode("133365001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CurraleiroCattleBreed_organism_ = AnimalBreedsCode("133366000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CyprusCattleBreed_organism_ = AnimalBreedsCode("133367009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CzechPiedCattleBreed_organism_ = AnimalBreedsCode("133368004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DagestanMountainCattleBreed_organism_ = AnimalBreedsCode("133369007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DairyShorthornCattleBreed_organism_ = AnimalBreedsCode("133370008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DairySyntheticCattleBreed_organism_ = AnimalBreedsCode("133371007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishRedPiedCattleBreed_organism_ = AnimalBreedsCode("133372000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DengchuanCattleBreed_organism_ = AnimalBreedsCode("133373005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Dexter_KerryCattleBreed_organism_ = AnimalBreedsCode("133374004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DoranCattleBreed_organism_ = AnimalBreedsCode("133375003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DornaCattleBreed_organism_ = AnimalBreedsCode("133376002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DortyolCattleBreed_organism_ = AnimalBreedsCode("133377006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastAnatolianRedCattleBreed_organism_ = AnimalBreedsCode("133378001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastFinnishCattleBreed_organism_ = AnimalBreedsCode("133379009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastMacedonianCattleBreed_organism_ = AnimalBreedsCode("133380007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EpirusCattleBreed_organism_ = AnimalBreedsCode("133381006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EstonianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133382004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FerrandaisCattleBreed_organism_ = AnimalBreedsCode("133383009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FinnishAyrshireCattleBreed_organism_ = AnimalBreedsCode("133384003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FlemishCattleBreed_organism_ = AnimalBreedsCode("133385002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FortCrossCattleBreed_organism_ = AnimalBreedsCode("133387005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FratiCattleBreed_organism_ = AnimalBreedsCode("133388000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EstonianNativeCattleBreed_organism_ = AnimalBreedsCode("133389008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FaeroesCattleBreed_organism_ = AnimalBreedsCode("133390004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchBrownCattleBreed_organism_ = AnimalBreedsCode("133391000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrijolilloCattleBreed_organism_ = AnimalBreedsCode("133392007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FRSCattleBreed_organism_ = AnimalBreedsCode("133393002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GackoCattleBreed_organism_ = AnimalBreedsCode("133394008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GadoDaTerraCattleBreed_organism_ = AnimalBreedsCode("133395009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GeorgianMountainCattleBreed_organism_ = AnimalBreedsCode("133396005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133397001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanBlackPiedDairyCattleBreed_organism_ = AnimalBreedsCode("133398006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanBrownCattleBreed_organism_ = AnimalBreedsCode("133405000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanShorthornCattleBreed_organism_ = AnimalBreedsCode("133406004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GhanaShorthornCattleBreed_organism_ = AnimalBreedsCode("133407008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Glan_DonnersbergCattleBreed_organism_ = AnimalBreedsCode("133408003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GoleCattleBreed_organism_ = AnimalBreedsCode("133409006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GolpayeganiCattleBreed_organism_ = AnimalBreedsCode("133410001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GorbatovRedCattleBreed_organism_ = AnimalBreedsCode("133411002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GorynCattleBreed_organism_ = AnimalBreedsCode("133412009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GreaterCaucasusCattleBreed_organism_ = AnimalBreedsCode("133413004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GreekShorthornCattleBreed_organism_ = AnimalBreedsCode("133420006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GreekSteppeCattleBreed_organism_ = AnimalBreedsCode("133421005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GrayAlpineCattleBreed_organism_ = AnimalBreedsCode("133422003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuadianaSpottedCattleBreed_organism_ = AnimalBreedsCode("133423008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuelmaCattleBreed_organism_ = AnimalBreedsCode("133424002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishJerseyCattleBreed_organism_ = AnimalBreedsCode("133580006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EnderbyIslandCattleBreed_organism_ = AnimalBreedsCode("133581005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanAngusCattleBreed_organism_ = AnimalBreedsCode("133582003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HorroCattleBreed_organism_ = AnimalBreedsCode("131433006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KuriCattleBreed_organism_ = AnimalBreedsCode("131434000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NguniCattleBreed_organism_ = AnimalBreedsCode("131435004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HalhinGolCattleBreed_organism_ = AnimalBreedsCode("131475007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HolmongerCattleBreed_organism_ = AnimalBreedsCode("131476008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IlocosCattleBreed_organism_ = AnimalBreedsCode("131477004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IloiloCattleBreed_organism_ = AnimalBreedsCode("131478009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     InkukuCattleBreed_organism_ = AnimalBreedsCode("131479001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IskarCattleBreed_organism_ = AnimalBreedsCode("131480003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IstrianCattleBreed_organism_ = AnimalBreedsCode("131481004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JavaneseOngoleCattleBreed_organism_ = AnimalBreedsCode("131482006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JavaneseZebuCattleBreed_organism_ = AnimalBreedsCode("131483001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JinnanCattleBreed_organism_ = AnimalBreedsCode("131484007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KalmykCattleBreed_organism_ = AnimalBreedsCode("131485008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KaokoveldCattleBreed_organism_ = AnimalBreedsCode("131486009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KazakhWhiteheadCattleBreed_organism_ = AnimalBreedsCode("131487000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Kedah_KelantanCattleBreed_organism_ = AnimalBreedsCode("131488005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KigeziCattleBreed_organism_ = AnimalBreedsCode("131489002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KisantuCattleBreed_organism_ = AnimalBreedsCode("131490006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KolubaraCattleBreed_organism_ = AnimalBreedsCode("131491005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KurganCattleBreed_organism_ = AnimalBreedsCode("131492003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KyogaCattleBreed_organism_ = AnimalBreedsCode("131493008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LucanianCattleBreed_organism_ = AnimalBreedsCode("131494002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaremmanaCattleBreed_organism_ = AnimalBreedsCode("131495001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MarianasCattleBreed_organism_ = AnimalBreedsCode("131496000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaryutiCattleBreed_organism_ = AnimalBreedsCode("131497009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MauritiusCr_oleCattleBreed_organism_ = AnimalBreedsCode("131498004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MenufiCattleBreed_organism_ = AnimalBreedsCode("131499007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MezzalinaCattleBreed_organism_ = AnimalBreedsCode("131500003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ModicanaCattleBreed_organism_ = AnimalBreedsCode("131501004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoiCattleBreed_organism_ = AnimalBreedsCode("131502006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NamaCattleBreed_organism_ = AnimalBreedsCode("131503001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NanyangCattleBreed_organism_ = AnimalBreedsCode("131504007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     N_DamaSangaCattleBreed_organism_ = AnimalBreedsCode("131505008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NgandaCattleBreed_organism_ = AnimalBreedsCode("131506009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NiloticSangaCattleBreed_organism_ = AnimalBreedsCode("131507000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NkoneCattleBreed_organism_ = AnimalBreedsCode("131508005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthMalawiAngoniCattleBreed_organism_ = AnimalBreedsCode("131509002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NuerCattleBreed_organism_ = AnimalBreedsCode("131510007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NurasCattleBreed_organism_ = AnimalBreedsCode("131511006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NyoroCattleBreed_organism_ = AnimalBreedsCode("131512004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OvamboCattleBreed_organism_ = AnimalBreedsCode("131513009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ModicanaLowlandCattleBreed_organism_ = AnimalBreedsCode("131552002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MengguCattleBreed_organism_ = AnimalBreedsCode("131554001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Hart_nCattleBreed_organism_ = AnimalBreedsCode("131606001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HerensCattleBreed_organism_ = AnimalBreedsCode("133231000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HinterwaldCattleBreed_organism_ = AnimalBreedsCode("133232007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianGrayCattleBreed_organism_ = AnimalBreedsCode("133233002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IcelandicCattleBreed_organism_ = AnimalBreedsCode("133234008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IllawarraCattleBreed_organism_ = AnimalBreedsCode("133235009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IrishMoiledCattleBreed_organism_ = AnimalBreedsCode("133236005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IsraeliHolsteinCattleBreed_organism_ = AnimalBreedsCode("133237001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IstobenCattleBreed_organism_ = AnimalBreedsCode("133238006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JaulanCattleBreed_organism_ = AnimalBreedsCode("133239003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KazakhCattleBreed_organism_ = AnimalBreedsCode("133240001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KerryCattleBreed_organism_ = AnimalBreedsCode("133241002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KholmogoryCattleBreed_organism_ = AnimalBreedsCode("133242009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LatvianBrownCattleBreed_organism_ = AnimalBreedsCode("133243004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LincolnRedShorthornCattleBreed_organism_ = AnimalBreedsCode("133244005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LithuanianRedCattleBreed_organism_ = AnimalBreedsCode("133245006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MashonaCattleBreed_organism_ = AnimalBreedsCode("133246007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MilkingDevonCattleBreed_organism_ = AnimalBreedsCode("133247003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MirandesaCattleBreed_organism_ = AnimalBreedsCode("133248008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedDairyCattleBreed_organism_ = AnimalBreedsCode("133249000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MongolianCattleBreed_organism_ = AnimalBreedsCode("133250000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoruchaCattleBreed_organism_ = AnimalBreedsCode("133251001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KurdiCattleBreed_organism_ = AnimalBreedsCode("133252008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     N_damaCattleBreed_organism_ = AnimalBreedsCode("133253003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorwegianRedCattleBreed_organism_ = AnimalBreedsCode("133254009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurbodenCattleBreed_organism_ = AnimalBreedsCode("133268002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthernBlueCattleBreed_organism_ = AnimalBreedsCode("133326004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KoreanBlackCattleBreed_organism_ = AnimalBreedsCode("133352005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HarzRedCattleBreed_organism_ = AnimalBreedsCode("133425001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HawaiianWildCattleBreed_organism_ = AnimalBreedsCode("133426000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HerelandCattleBreed_organism_ = AnimalBreedsCode("133427009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HolgusCattleBreed_organism_ = AnimalBreedsCode("133428004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HrbineckyCattleBreed_organism_ = AnimalBreedsCode("133429007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuertanaCattleBreed_organism_ = AnimalBreedsCode("133436008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianPiedCattleBreed_organism_ = AnimalBreedsCode("133437004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarofriesCattleBreed_organism_ = AnimalBreedsCode("133438009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ImprovedRodopiCattleBreed_organism_ = AnimalBreedsCode("133439001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     INRA95CattleBreed_organism_ = AnimalBreedsCode("133440004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ItalianBrownCattleBreed_organism_ = AnimalBreedsCode("133441000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ItalianRedPiedCattleBreed_organism_ = AnimalBreedsCode("133442007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JapaneseBlackCattleBreed_organism_ = AnimalBreedsCode("133443002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JapaneseBrownCattleBreed_organism_ = AnimalBreedsCode("133444008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JapanesePollCattleBreed_organism_ = AnimalBreedsCode("133445009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JapaneseShorthornCattleBreed_organism_ = AnimalBreedsCode("133452006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JarmelistaCattleBreed_organism_ = AnimalBreedsCode("133453001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KabyleCattleBreed_organism_ = AnimalBreedsCode("133454007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KapsikiCattleBreed_organism_ = AnimalBreedsCode("133455008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KateriniCattleBreed_organism_ = AnimalBreedsCode("133456009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KenranCattleBreed_organism_ = AnimalBreedsCode("133457000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KhevsurianCattleBreed_organism_ = AnimalBreedsCode("133458005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KilisCattleBreed_organism_ = AnimalBreedsCode("133459002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KochiCattleBreed_organism_ = AnimalBreedsCode("133460007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KoreanNativeCattleBreed_organism_ = AnimalBreedsCode("133461006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KostromaCattleBreed_organism_ = AnimalBreedsCode("133468000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KravarskyCattleBreed_organism_ = AnimalBreedsCode("133469008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KuchinoshimaCattleBreed_organism_ = AnimalBreedsCode("133470009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurrayGrayCattleBreed_organism_ = AnimalBreedsCode("133471008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KumamotoCattleBreed_organism_ = AnimalBreedsCode("133473006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LaguneCattleBreed_organism_ = AnimalBreedsCode("133474000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LakenvelderCattleBreed_organism_ = AnimalBreedsCode("133475004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LatvianBlueRoanCattleBreed_organism_ = AnimalBreedsCode("133476003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LaVelasquezCattleBreed_organism_ = AnimalBreedsCode("133477007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LebaneseCattleBreed_organism_ = AnimalBreedsCode("133484004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LebedinCattleBreed_organism_ = AnimalBreedsCode("133485003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LesserCaucasusCattleBreed_organism_ = AnimalBreedsCode("133486002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LiberianDwarfCattleBreed_organism_ = AnimalBreedsCode("133487006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LibyanCattleBreed_organism_ = AnimalBreedsCode("133488001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LimCattleBreed_organism_ = AnimalBreedsCode("133489009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LimianaCattleBreed_organism_ = AnimalBreedsCode("133490000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LimpurgerCattleBreed_organism_ = AnimalBreedsCode("133491001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LobiCattleBreed_organism_ = AnimalBreedsCode("133492008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LourdaisCattleBreed_organism_ = AnimalBreedsCode("133493003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LucernaCattleBreed_organism_ = AnimalBreedsCode("133500008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LuxiCattleBreed_organism_ = AnimalBreedsCode("133501007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MacedonianBusaCattleBreed_organism_ = AnimalBreedsCode("133502000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MakaweliCattleBreed_organism_ = AnimalBreedsCode("133503005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MarinhoaCattleBreed_organism_ = AnimalBreedsCode("133504004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaronesaCattleBreed_organism_ = AnimalBreedsCode("133505003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MazuryCattleBreed_organism_ = AnimalBreedsCode("133506002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MessaoriaCattleBreed_organism_ = AnimalBreedsCode("133507006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MetohijaRedCattleBreed_organism_ = AnimalBreedsCode("133508001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MingrelianRedCattleBreed_organism_ = AnimalBreedsCode("133509009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinhotaCattleBreed_organism_ = AnimalBreedsCode("133516005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinorcanCattleBreed_organism_ = AnimalBreedsCode("133517001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MishimaCattleBreed_organism_ = AnimalBreedsCode("133518006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ModeneseCattleBreed_organism_ = AnimalBreedsCode("133519003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MonchinaCattleBreed_organism_ = AnimalBreedsCode("133520009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MontafonCattleBreed_organism_ = AnimalBreedsCode("133521008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MontbeliardCattleBreed_organism_ = AnimalBreedsCode("133522001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MorenasDelNoroesteCattleBreed_organism_ = AnimalBreedsCode("133523006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurcianCattleBreed_organism_ = AnimalBreedsCode("133524000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Murnau_WerdenfelsCattleBreed_organism_ = AnimalBreedsCode("133525004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NantaisCattleBreed_organism_ = AnimalBreedsCode("133532008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NejdiCattleBreed_organism_ = AnimalBreedsCode("133533003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     N_GabouCattleBreed_organism_ = AnimalBreedsCode("133534009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthFinncattleCattleBreed_organism_ = AnimalBreedsCode("133535005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OropaCattleBreed_organism_ = AnimalBreedsCode("133536006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OulmesBlondCattleBreed_organism_ = AnimalBreedsCode("133537002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PajunaCattleBreed_organism_ = AnimalBreedsCode("133538007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PalmeraCattleBreed_organism_ = AnimalBreedsCode("133539004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HallingdalCattleBreed_organism_ = AnimalBreedsCode("133579008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IsraeliRedCattleBreed_organism_ = AnimalBreedsCode("133583008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LinebackCattleBreed_organism_ = AnimalBreedsCode("133584002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MertolengaCattleBreed_organism_ = AnimalBreedsCode("133585001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MontanaraCattleBreed_organism_ = AnimalBreedsCode("133590003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LorquinaCattleBreed_organism_ = AnimalBreedsCode("133592006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedBreedCattle_organism_ = AnimalBreedsCode("409906003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MasaiCattleBreed_organism_ = AnimalBreedsCode("409908002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HerefordCattleSuperbreed_organism_ = AnimalBreedsCode("125074003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PhilippineNativeCattleBreed_organism_ = AnimalBreedsCode("131436003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomagnolaCattleBreed_organism_ = AnimalBreedsCode("131437007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SanheCattleBreed_organism_ = AnimalBreedsCode("131438002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TswanaCattleBreed_organism_ = AnimalBreedsCode("131439005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TuliCattleBreed_organism_ = AnimalBreedsCode("131440007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PantelleriaCattleBreed_organism_ = AnimalBreedsCode("131514003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PinzhouCattleBreed_organism_ = AnimalBreedsCode("131515002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PortoAmboimCattleBreed_organism_ = AnimalBreedsCode("131516001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PosavinaCattleBreed_organism_ = AnimalBreedsCode("131517005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianSteppeCattleBreed_organism_ = AnimalBreedsCode("131518000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SaidiCattleBreed_organism_ = AnimalBreedsCode("131519008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Sardo_ModicanaCattleBreed_organism_ = AnimalBreedsCode("131520002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SengologaCattleBreed_organism_ = AnimalBreedsCode("131521003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SerereCattleBreed_organism_ = AnimalBreedsCode("131522005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SeshagaCattleBreed_organism_ = AnimalBreedsCode("131523000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiberianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("131524006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SocotraCattleBreed_organism_ = AnimalBreedsCode("131525007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthernTswanaCattleBreed_organism_ = AnimalBreedsCode("131526008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SprecaCattleBreed_organism_ = AnimalBreedsCode("131527004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SunkumaCattleBreed_organism_ = AnimalBreedsCode("131528009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaiwanZebuCattleBreed_organism_ = AnimalBreedsCode("131529001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThaiCattleBreed_organism_ = AnimalBreedsCode("131530006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThailandFightingZebuCattleBreed_organism_ = AnimalBreedsCode("131531005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Thanh_HoaCattleBreed_organism_ = AnimalBreedsCode("131532003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TibetanCattleBreed_organism_ = AnimalBreedsCode("131533008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TongaCattleBreed_organism_ = AnimalBreedsCode("131534002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToroCattleBreed_organism_ = AnimalBreedsCode("131535001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TuniCattleBreed_organism_ = AnimalBreedsCode("131536000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TurkishGraySteppeCattleBreed_organism_ = AnimalBreedsCode("131537009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Tuy_HoaCattleBreed_organism_ = AnimalBreedsCode("131538004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UjumqinCattleBreed_organism_ = AnimalBreedsCode("131539007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UkrainianGrayCattleBreed_organism_ = AnimalBreedsCode("131544000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VietnameseYellowCattleBreed_organism_ = AnimalBreedsCode("131545004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Watusi_UnitedStatesOfAmerica_CattleBreed_organism_ = AnimalBreedsCode("131546003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WenshanCattleBreed_organism_ = AnimalBreedsCode("131547007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YakutCattleBreed_organism_ = AnimalBreedsCode("131548002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaiwanYellowCattleBreed_organism_ = AnimalBreedsCode("131553007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VolynskCattleBreed_organism_ = AnimalBreedsCode("132780000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SenepolCattleBreed_organism_ = AnimalBreedsCode("132781001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShillukCattleBreed_organism_ = AnimalBreedsCode("132782008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ParthenaisCattleBreed_organism_ = AnimalBreedsCode("133255005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolishRedCattleBreed_organism_ = AnimalBreedsCode("133256006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     R_tienGrayCattleBreed_organism_ = AnimalBreedsCode("133257002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedAndWhiteCattleBreed_organism_ = AnimalBreedsCode("133258007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedPolled_stlandCattleBreed_organism_ = AnimalBreedsCode("133260009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedSteppeCattleBreed_organism_ = AnimalBreedsCode("133261008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ReggianaCattleBreed_organism_ = AnimalBreedsCode("133262001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RetintaCattleBreed_organism_ = AnimalBreedsCode("133263006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomosinuanoCattleBreed_organism_ = AnimalBreedsCode("133264000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133265004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RX3CattleBreed_organism_ = AnimalBreedsCode("133266003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SalornCattleBreed_organism_ = AnimalBreedsCode("133267007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SanMartineroCattleBreed_organism_ = AnimalBreedsCode("133269005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SarabiCattleBreed_organism_ = AnimalBreedsCode("133270006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SharabiCattleBreed_organism_ = AnimalBreedsCode("133271005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShetlandCattleBreed_organism_ = AnimalBreedsCode("133272003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SimbrahCattleBreed_organism_ = AnimalBreedsCode("133273008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthDevonCattleBreed_organism_ = AnimalBreedsCode("133274002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuffolkCattleBreed_organism_ = AnimalBreedsCode("133275001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SussexCattleBreed_organism_ = AnimalBreedsCode("133276000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishRedPolledCattleBreed_organism_ = AnimalBreedsCode("133277009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TelemarkCattleBreed_organism_ = AnimalBreedsCode("133278004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TexasLonghornCattleBreed_organism_ = AnimalBreedsCode("133279007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TexonCattleBreed_organism_ = AnimalBreedsCode("133280005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VestlandFjordCattleBreed_organism_ = AnimalBreedsCode("133281009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VestlandRedPolledCattleBreed_organism_ = AnimalBreedsCode("133282002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WagyuCattleBreed_organism_ = AnimalBreedsCode("133283007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhiteC_ceresCattleBreed_organism_ = AnimalBreedsCode("133284001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     XinjiangBrownCattleBreed_organism_ = AnimalBreedsCode("133285000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThraceCattleBreed_organism_ = AnimalBreedsCode("133360006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedFlemishCattleBreed_organism_ = AnimalBreedsCode("133386001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PechoraCattleBreed_organism_ = AnimalBreedsCode("133399003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PeeWeeCattleBreed_organism_ = AnimalBreedsCode("133400005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PeloponnesusCattleBreed_organism_ = AnimalBreedsCode("133401009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PesterCattleBreed_organism_ = AnimalBreedsCode("133402002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PieRougeDeL_EstCattleBreed_organism_ = AnimalBreedsCode("133403007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PisanaCattleBreed_organism_ = AnimalBreedsCode("133404001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolishBlackAndWhiteLowlandCattleBreed_organism_ = AnimalBreedsCode("133414005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolishSimmentalCattleBreed_organism_ = AnimalBreedsCode("133415006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledJerseyCattleBreed_organism_ = AnimalBreedsCode("133416007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledLincolnRedCattleBreed_organism_ = AnimalBreedsCode("133417003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledShorthorn_UnitedStatesOfAmerica_CattleBreed_organism_ = AnimalBreedsCode(
         "133418008"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledSimmentalCattleBreed_organism_ = AnimalBreedsCode("133419000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledSussexCattleBreed_organism_ = AnimalBreedsCode("133430002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledWelshBlackCattleBreed_organism_ = AnimalBreedsCode("133431003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PontremoleseCattleBreed_organism_ = AnimalBreedsCode("133432005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PretaCattleBreed_organism_ = AnimalBreedsCode("133433000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PuertoRicanCriolloCattleBreed_organism_ = AnimalBreedsCode("133434006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PyreneanCattleBreed_organism_ = AnimalBreedsCode("133435007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     QinchuanCattleBreed_organism_ = AnimalBreedsCode("133446005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RamoGrandeCattleBreed_organism_ = AnimalBreedsCode("133447001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RandallLinebackCattleBreed_organism_ = AnimalBreedsCode("133448006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedGallowayCattleBreed_organism_ = AnimalBreedsCode("133449003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RegusCattleBreed_organism_ = AnimalBreedsCode("133450003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RendenaCattleBreed_organism_ = AnimalBreedsCode("133451004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RhaetianGrayCattleBreed_organism_ = AnimalBreedsCode("133462004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RioLimonDairyCriolloCattleBreed_organism_ = AnimalBreedsCode("133463009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RodopiCattleBreed_organism_ = AnimalBreedsCode("133464003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianRedCattleBreed_organism_ = AnimalBreedsCode("133465002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianBrownCattleBreed_organism_ = AnimalBreedsCode("133466001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianBrownCattleBreed_organism_ = AnimalBreedsCode("133467005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SardinianCattleBreed_organism_ = AnimalBreedsCode("133478002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SardinianBrownCattleBreed_organism_ = AnimalBreedsCode("133479005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SavinjaGrayCattleBreed_organism_ = AnimalBreedsCode("133480008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SayaguesaCattleBreed_organism_ = AnimalBreedsCode("133481007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SeferihisarCattleBreed_organism_ = AnimalBreedsCode("133482000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShkodraRedCattleBreed_organism_ = AnimalBreedsCode("133483005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlovakianPiedCattleBreed_organism_ = AnimalBreedsCode("133494009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlovakianPinzgauCattleBreed_organism_ = AnimalBreedsCode("133495005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlovenianBrownCattleBreed_organism_ = AnimalBreedsCode("133496006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SombaCattleBreed_organism_ = AnimalBreedsCode("133497002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthAfricanBrownSwissCattleBreed_organism_ = AnimalBreedsCode("133498007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthAnatolianRedCattleBreed_organism_ = AnimalBreedsCode("133499004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthernUkrainianCattleBreed_organism_ = AnimalBreedsCode("133510004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpanishBrownAlpineCattleBreed_organism_ = AnimalBreedsCode("133511000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuksunCattleBreed_organism_ = AnimalBreedsCode("133512007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwissBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133513002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SychevkaCattleBreed_organism_ = AnimalBreedsCode("133514008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SykiaCattleBreed_organism_ = AnimalBreedsCode("133515009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TagilCattleBreed_organism_ = AnimalBreedsCode("133526003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TajmaCattleBreed_organism_ = AnimalBreedsCode("133527007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TambovRedCattleBreed_organism_ = AnimalBreedsCode("133528002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TarinaCattleBreed_organism_ = AnimalBreedsCode("133529005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThessalyCattleBreed_organism_ = AnimalBreedsCode("133530000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TinimaCattleBreed_organism_ = AnimalBreedsCode("133531001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PankotaRedCattleBreed_organism_ = AnimalBreedsCode("133540002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PaphosCattleBreed_organism_ = AnimalBreedsCode("133541003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TinosCattleBreed_organism_ = AnimalBreedsCode("133542005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TransylvanianPinzgauCattleBreed_organism_ = AnimalBreedsCode("133543000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TropicalDairyCattleCattleBreed_organism_ = AnimalBreedsCode("133544006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TropicanaCattleBreed_organism_ = AnimalBreedsCode("133545007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TudancaCattleBreed_organism_ = AnimalBreedsCode("133546008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TurinoCattleBreed_organism_ = AnimalBreedsCode("133547004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TurkishBrownCattleBreed_organism_ = AnimalBreedsCode("133548009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Tux_ZillertalCattleBreed_organism_ = AnimalBreedsCode("133549001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TyrolGrayCattleBreed_organism_ = AnimalBreedsCode("133550001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UkrainianWhiteheadedCattleBreed_organism_ = AnimalBreedsCode("133555006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UralBlackPiedCattleBreed_organism_ = AnimalBreedsCode("133556007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ValdresCattleBreed_organism_ = AnimalBreedsCode("133557003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VaynolCattleBreed_organism_ = AnimalBreedsCode("133558008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VerinesaCattleBreed_organism_ = AnimalBreedsCode("133559000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VianesaCattleBreed_organism_ = AnimalBreedsCode("133560005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Villard_de_LansCattleBreed_organism_ = AnimalBreedsCode("133561009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VogelsbergCattleBreed_organism_ = AnimalBreedsCode("133562002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PieRougeDesPlainesCattleBreed_organism_ = AnimalBreedsCode("133563007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VorderwaldCattleBreed_organism_ = AnimalBreedsCode("133564001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestAfricanDwarfShorthornCattleBreed_organism_ = AnimalBreedsCode("133565000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestFinnishCattleBreed_organism_ = AnimalBreedsCode("133566004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestMacedonianCattleBreed_organism_ = AnimalBreedsCode("133567008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhitebredShorthornCattleBreed_organism_ = AnimalBreedsCode("133568003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhiteGallowayCattleBreed_organism_ = AnimalBreedsCode("133569006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhiteWelshCattleBreed_organism_ = AnimalBreedsCode("133570007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WitrikCattleBreed_organism_ = AnimalBreedsCode("133571006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YacumentoCattleBreed_organism_ = AnimalBreedsCode("133572004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SchwyzCattleBreed_organism_ = AnimalBreedsCode("133576001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedFriesianCattleBreed_organism_ = AnimalBreedsCode("133586000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SenegusCattleBreed_organism_ = AnimalBreedsCode("133587009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthernCriouloCattleBreed_organism_ = AnimalBreedsCode("133588004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VosgesCattleBreed_organism_ = AnimalBreedsCode("133589007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PantaneiroCattleBreed_organism_ = AnimalBreedsCode("133673003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YunnanZebuCattleBreed_organism_ = AnimalBreedsCode("131549005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZambiaAngoniCattleBreed_organism_ = AnimalBreedsCode("131550005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YanbianCattleBreed_organism_ = AnimalBreedsCode("133286004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZaobeiCattleBreed_organism_ = AnimalBreedsCode("133287008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZavotCattleBreed_organism_ = AnimalBreedsCode("133288003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZnamenskCattleBreed_organism_ = AnimalBreedsCode("133289006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YaroslavlCattleBreed_organism_ = AnimalBreedsCode("133573009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YurinoCattleBreed_organism_ = AnimalBreedsCode("133574003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CommercialWhiteEggLayerTypeChicken_organism_ = AnimalBreedsCode("22330003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BraekelChickenBreed_organism_ = AnimalBreedsCode("132004000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Cochin_StandardChickenBreed_organism_ = AnimalBreedsCode("132005004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GotlandChickenBreed_organism_ = AnimalBreedsCode("132007007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GroningerMeeuwenChickenBreed_organism_ = AnimalBreedsCode("132008002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChocolateTurkeyBreed_organism_ = AnimalBreedsCode("132691001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LilacTurkeyBreed_organism_ = AnimalBreedsCode("132692008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SilverAuburnTurkeyBreed_organism_ = AnimalBreedsCode("132693003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WildCrossTurkey_organism_ = AnimalBreedsCode("132695005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MatrouhChickenBreed_organism_ = AnimalBreedsCode("132696006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GrayChickenBreed_organism_ = AnimalBreedsCode("132713009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HamburgsChickenBreed_organism_ = AnimalBreedsCode("132714003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GimmizahChickenBreed_organism_ = AnimalBreedsCode("132715002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SilverMontazahChickenBreed_organism_ = AnimalBreedsCode("132726008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwissHenChickenBreed_organism_ = AnimalBreedsCode("132727004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     StyrianChickenBreed_organism_ = AnimalBreedsCode("132728009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OldEnglishGameChickenBreed_organism_ = AnimalBreedsCode("132729001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AppenzellBeardedHenChickenBreed_organism_ = AnimalBreedsCode("132730006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SulmtalerChickenBreed_organism_ = AnimalBreedsCode("132752002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SvartH_naChickenBreed_organism_ = AnimalBreedsCode("132753007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VorwerksChickenBreed_organism_ = AnimalBreedsCode("132754001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestfalischeTotlegerChickenBreed_organism_ = AnimalBreedsCode("132755000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YamatoGunkeiChickenBreed_organism_ = AnimalBreedsCode("132756004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrieslandsChickenBreed_organism_ = AnimalBreedsCode("132816005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmeraucanaChickenBreed_organism_ = AnimalBreedsCode("132817001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     _sbosChickenBreed_organism_ = AnimalBreedsCode("132818006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AugsburgerChickenBreed_organism_ = AnimalBreedsCode("132819003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BielefelderChickenBreed_organism_ = AnimalBreedsCode("132820009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorfolkGrayChickenBreed_organism_ = AnimalBreedsCode("132821008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HedemoraChickenBreed_organism_ = AnimalBreedsCode("132822001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianYellowChickenBreed_organism_ = AnimalBreedsCode("132823006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IowaBlueChickenBreed_organism_ = AnimalBreedsCode("132824000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedJungleFowlTypeChicken_organism_ = AnimalBreedsCode("132825004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KraienkoppeChickenBreed_organism_ = AnimalBreedsCode("132827007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LincolnshireBuffChickenBreed_organism_ = AnimalBreedsCode("132828002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TomaruChickenBreed_organism_ = AnimalBreedsCode("132829005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OnagadoriChickenBreed_organism_ = AnimalBreedsCode("132830000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManxRumpiesChickenBreed_organism_ = AnimalBreedsCode("132831001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalineChickenBreed_organism_ = AnimalBreedsCode("132832008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NankinChickenBreed_organism_ = AnimalBreedsCode("132833003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     _landChickenBreed_organism_ = AnimalBreedsCode("132834009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrustChickenBreed_organism_ = AnimalBreedsCode("132836006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PenedesencaChickenBreed_organism_ = AnimalBreedsCode("132837002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RhodeIslandWhiteChickenBreed_organism_ = AnimalBreedsCode("132838007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SablepootChickenBreed_organism_ = AnimalBreedsCode("132840002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SaipanJungleFowlChickenBreed_organism_ = AnimalBreedsCode("132841003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ScotsDumpyChickenBreed_organism_ = AnimalBreedsCode("132842005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GreenChickenBreed_organism_ = AnimalBreedsCode("132847004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GallusInaurisChickenBreed_organism_ = AnimalBreedsCode("132848009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShamoChickenBreed_organism_ = AnimalBreedsCode("132862002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DomesticFowl_organism_ = AnimalBreedsCode("359839008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedBreedChicken_organism_ = AnimalBreedsCode("406723001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GallusGallus_organism_ = AnimalBreedsCode("47290002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MeleagrisGallopavo_organism_ = AnimalBreedsCode("20657003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhiteTurkey_organism_ = AnimalBreedsCode("2034000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaransChicken_organism_ = AnimalBreedsCode("2253004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JapaneseChicken_organism_ = AnimalBreedsCode("2333000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeltsvilleWhiteTurkey_organism_ = AnimalBreedsCode("3872000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FayoumiChicken_organism_ = AnimalBreedsCode("5114005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RhodeIslandRedChicken_organism_ = AnimalBreedsCode("5350006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WyandotteChicken_organism_ = AnimalBreedsCode("7598004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NebraskanSpottedTurkey_organism_ = AnimalBreedsCode("7700003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LamonaChicken_organism_ = AnimalBreedsCode("7767003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArucanaChicken_organism_ = AnimalBreedsCode("10643004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DelawareChicken_organism_ = AnimalBreedsCode("11830008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedcapChicken_organism_ = AnimalBreedsCode("12419001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CrevecoeurChicken_organism_ = AnimalBreedsCode("12874007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpanishChicken_organism_ = AnimalBreedsCode("13156006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrpingtonChicken_organism_ = AnimalBreedsCode("18299006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Black_wingedBronzeTurkey_organism_ = AnimalBreedsCode("23992007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PennaPalmTurkey_organism_ = AnimalBreedsCode("24886005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SmallWhiteTurkey_organism_ = AnimalBreedsCode("25854005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlateTurkey_organism_ = AnimalBreedsCode("28138009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FaverolleChicken_organism_ = AnimalBreedsCode("29546006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LaFlecheChicken_organism_ = AnimalBreedsCode("29615001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BroadBreastedBronzeTurkey_organism_ = AnimalBreedsCode("30432005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackTurkey_organism_ = AnimalBreedsCode("32509001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CommercialMeatTypeChicken_organism_ = AnimalBreedsCode("32540008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PhoenixChicken_organism_ = AnimalBreedsCode("33224000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ButtercupChicken_organism_ = AnimalBreedsCode("33607002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LeghornChicken_organism_ = AnimalBreedsCode("35839008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BroadBreastedWhiteTurkey_organism_ = AnimalBreedsCode("37812004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BuckeyeChicken_organism_ = AnimalBreedsCode("39571003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PlymouthRockChicken_organism_ = AnimalBreedsCode("41290008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JungleFowlChicken_organism_ = AnimalBreedsCode("41437006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinorcaChicken_organism_ = AnimalBreedsCode("42602001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JerseyGiantChicken_organism_ = AnimalBreedsCode("42840001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YokohamaChicken_organism_ = AnimalBreedsCode("43223009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RouenDuckBreed_organism_ = AnimalBreedsCode("43869002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MidgetWhiteTurkey_organism_ = AnimalBreedsCode("46830002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DarkBrownTurkey_organism_ = AnimalBreedsCode("47314009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JavaChicken_organism_ = AnimalBreedsCode("47745005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SilkieChicken_organism_ = AnimalBreedsCode("48255007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LankenvelderChicken_organism_ = AnimalBreedsCode("49407004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlueSlateTurkey_organism_ = AnimalBreedsCode("50710008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DominiqueChicken_organism_ = AnimalBreedsCode("52882006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NewHampshireChicken_organism_ = AnimalBreedsCode("54218009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralorpChicken_organism_ = AnimalBreedsCode("54251000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GrayTurkey_organism_ = AnimalBreedsCode("54604007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JerseyBuffTurkey_organism_ = AnimalBreedsCode("55074002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HollandChicken_organism_ = AnimalBreedsCode("56764001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrahmaChicken_organism_ = AnimalBreedsCode("57364006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpitzhaubenChicken_organism_ = AnimalBreedsCode("57950004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelsummerChicken_organism_ = AnimalBreedsCode("87530001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SumatraChicken_organism_ = AnimalBreedsCode("87833007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrabanterChickenBreed_organism_ = AnimalBreedsCode("132003006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KoShamoChickenBreed_organism_ = AnimalBreedsCode("132826003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GoldenMontazahChickenBreed_organism_ = AnimalBreedsCode("132850001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Bantam_organism_ = AnimalBreedsCode("409910000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianBeardedChicken_organism_ = AnimalBreedsCode("30221007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LilacBuffTurkey_organism_ = AnimalBreedsCode("60786005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DorkingChicken_organism_ = AnimalBreedsCode("61204004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CornishChicken_organism_ = AnimalBreedsCode("61839006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolishChicken_organism_ = AnimalBreedsCode("61843005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RoyalPalmTurkey_organism_ = AnimalBreedsCode("62124009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChanteclerChicken_organism_ = AnimalBreedsCode("63257005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LightBrownTurkey_organism_ = AnimalBreedsCode("65136005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarnevelderChicken_organism_ = AnimalBreedsCode("65873005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SebrightChicken_organism_ = AnimalBreedsCode("67021006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TurkenChicken_organism_ = AnimalBreedsCode("67209003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SultanChicken_organism_ = AnimalBreedsCode("68412000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnconaChicken_organism_ = AnimalBreedsCode("69575001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrloffChicken_organism_ = AnimalBreedsCode("70210006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LangshanChicken_organism_ = AnimalBreedsCode("70308007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CubalayaChicken_organism_ = AnimalBreedsCode("70326005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GameChicken_organism_ = AnimalBreedsCode("70429002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CommercialBrownEggLayerTypeChicken_organism_ = AnimalBreedsCode("71238008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PennaWhiteTurkey_organism_ = AnimalBreedsCode("73012007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CampineChicken_organism_ = AnimalBreedsCode("76268003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThuringerChicken_organism_ = AnimalBreedsCode("77839002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalayChicken_organism_ = AnimalBreedsCode("78154009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AndalusianChicken_organism_ = AnimalBreedsCode("78375007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianChicken_organism_ = AnimalBreedsCode("80204002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NarragansettTurkey_organism_ = AnimalBreedsCode("80610007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RosecombChicken_organism_ = AnimalBreedsCode("80886008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SussexChicken_organism_ = AnimalBreedsCode("80993008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaliforniaChicken_organism_ = AnimalBreedsCode("82249009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HoudanChicken_organism_ = AnimalBreedsCode("82848009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackSpanishTurkey_organism_ = AnimalBreedsCode("91401000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrizzleChicken_organism_ = AnimalBreedsCode("91427000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RumplessChicken_organism_ = AnimalBreedsCode("112495005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BronzeTurkeyBreed_organism_ = AnimalBreedsCode("131857000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AuburnTurkeyBreed_organism_ = AnimalBreedsCode("131858005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BourbonRedTurkeyBreed_organism_ = AnimalBreedsCode("131859002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BuffTurkeyBreed_organism_ = AnimalBreedsCode("131860007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaheijChickenBreed_organism_ = AnimalBreedsCode("131995009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AseelChickenBreed_organism_ = AnimalBreedsCode("131996005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BandaraChickenBreed_organism_ = AnimalBreedsCode("131997001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CatalanaChickenBreed_organism_ = AnimalBreedsCode("131998006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AustralianGamefowlChickenBreed_organism_ = AnimalBreedsCode("131999003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AyamCemaniChickenBreed_organism_ = AnimalBreedsCode("132000009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishSpottedHenChickenBreed_organism_ = AnimalBreedsCode("132001008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianBootedBantamChickenBreed_organism_ = AnimalBreedsCode("132002001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OldEnglishBantamGameChickenBreed_organism_ = AnimalBreedsCode("132006003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchBantamChickenBreed_organism_ = AnimalBreedsCode("132725007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     _lanskBantamChickenBreed_organism_ = AnimalBreedsCode("132835005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RosecombBantamChickenBreed_organism_ = AnimalBreedsCode("132839004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AntwerpBeardedBantam_organism_ = AnimalBreedsCode("409909005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MukotaPigBreed_organism_ = AnimalBreedsCode("132247006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinzhuPigBreed_organism_ = AnimalBreedsCode("132248001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NeijiangPigBreed_organism_ = AnimalBreedsCode("132249009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MulefootPigBreed_organism_ = AnimalBreedsCode("132250009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NormandPigBreed_organism_ = AnimalBreedsCode("132251008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AngelnSaddlebackPigBreed_organism_ = AnimalBreedsCode("132252001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GreekLocalPigBreed_organism_ = AnimalBreedsCode("132253006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IcelandicPigBreed_organism_ = AnimalBreedsCode("132254000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CasertanaPigBreed_organism_ = AnimalBreedsCode("132255004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Madonie_SicilianPigBreed_organism_ = AnimalBreedsCode("132256003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SardinianPigBreed_organism_ = AnimalBreedsCode("132257007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SicilianPigBreed_organism_ = AnimalBreedsCode("132258002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZlotnikiSpottedPigBreed_organism_ = AnimalBreedsCode("132259005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZlotnikiWhitePigBreed_organism_ = AnimalBreedsCode("132260000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SumadijaPigBreed_organism_ = AnimalBreedsCode("132262008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FroxfieldPygmyPigBreed_organism_ = AnimalBreedsCode("132263003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishLargeWhitePigBreed_organism_ = AnimalBreedsCode("132264009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishDurocPigBreed_organism_ = AnimalBreedsCode("132265005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishHampshirePigBreed_organism_ = AnimalBreedsCode("132266006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PigghamPigBreed_organism_ = AnimalBreedsCode("132267002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NewYorkRedPigBreed_organism_ = AnimalBreedsCode("132268007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FinnishYorkshirePigBreed_organism_ = AnimalBreedsCode("132269004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchYorkshirePigBreed_organism_ = AnimalBreedsCode("132270003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PulawyPigBreed_organism_ = AnimalBreedsCode("132271004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PomeranianPigBreed_organism_ = AnimalBreedsCode("132272006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolishLandracePigBreed_organism_ = AnimalBreedsCode("132273001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EstonianBaconPigBreed_organism_ = AnimalBreedsCode("132274007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LatvianWhitePigBreed_organism_ = AnimalBreedsCode("132275008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LithuanianWhitePigBreed_organism_ = AnimalBreedsCode("132276009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SusScrofa_organism_ = AnimalBreedsCode("78678003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CosentinaPigBreed_organism_ = AnimalBreedsCode("132180009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CuinoPigBreed_organism_ = AnimalBreedsCode("132181008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FriuliBlackPigBreed_organism_ = AnimalBreedsCode("132182001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FumatiPigBreed_organism_ = AnimalBreedsCode("132183006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GalicianPigBreed_organism_ = AnimalBreedsCode("132184000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanBerkshirePigBreed_organism_ = AnimalBreedsCode("132185004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GhoriPigBreed_organism_ = AnimalBreedsCode("132186003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JianliPigBreed_organism_ = AnimalBreedsCode("132187007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LucanianPigBreed_organism_ = AnimalBreedsCode("132188002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaremmanaPigBreed_organism_ = AnimalBreedsCode("132189005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MiamiPigBreed_organism_ = AnimalBreedsCode("132190001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MontmorillonPigBreed_organism_ = AnimalBreedsCode("132191002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OldSwedishSpottedPigBreed_organism_ = AnimalBreedsCode("132192009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OliventinaPigBreed_organism_ = AnimalBreedsCode("132193004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ParmensePigBreed_organism_ = AnimalBreedsCode("132194005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomagnolaPigBreed_organism_ = AnimalBreedsCode("132195006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiberianPigBreed_organism_ = AnimalBreedsCode("132196007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SmallWhitePigBreed_organism_ = AnimalBreedsCode("132197003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaltaretPigBreed_organism_ = AnimalBreedsCode("132198008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TunchangPigBreed_organism_ = AnimalBreedsCode("132199000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SterlingPigBreed_organism_ = AnimalBreedsCode("132200002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VichPigBreed_organism_ = AnimalBreedsCode("132201003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VietnamesePigBreed_organism_ = AnimalBreedsCode("132202005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VitoriaPigBreed_organism_ = AnimalBreedsCode("132203000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WaiChowPigBreed_organism_ = AnimalBreedsCode("132204006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YorkshireBlueAndWhitePigBreed_organism_ = AnimalBreedsCode("132205007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Dalland020PigBreed_organism_ = AnimalBreedsCode("132206008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WiltshirePigBreed_organism_ = AnimalBreedsCode("132207004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HamrocPigBreed_organism_ = AnimalBreedsCode("132208009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DRU_TM_TerminalsPigBreed_organism_ = AnimalBreedsCode("132209001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Camborough22PigBreed_organism_ = AnimalBreedsCode("132210006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Camborough15PigBreed_organism_ = AnimalBreedsCode("132211005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PR1050PigBreed_organism_ = AnimalBreedsCode("132212003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PR1075PigBreed_organism_ = AnimalBreedsCode("132213008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChryakPICPigBreed_organism_ = AnimalBreedsCode("132214002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianRoyalBluePigBreed_organism_ = AnimalBreedsCode("132215001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Line500DurocPigBreed_organism_ = AnimalBreedsCode("132216000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Bodmin950PigBreed_organism_ = AnimalBreedsCode("132217009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianDurocPigBreed_organism_ = AnimalBreedsCode("132218004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianHampshirePigBreed_organism_ = AnimalBreedsCode("132219007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaXuyenPigBreed_organism_ = AnimalBreedsCode("132220001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArapawaIslandPigBreed_organism_ = AnimalBreedsCode("132221002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WuzhishanPigBreed_organism_ = AnimalBreedsCode("132222009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PhilippineNativePigBreed_organism_ = AnimalBreedsCode("132223004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SinclairMiniaturePigBreed_organism_ = AnimalBreedsCode("132224005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SaddlebackPigBreed_organism_ = AnimalBreedsCode("132225006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YucatanMiniaturePigBreed_organism_ = AnimalBreedsCode("132226007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BantuPigBreed_organism_ = AnimalBreedsCode("132227003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TibetanPigBreed_organism_ = AnimalBreedsCode("132228008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TuropoljePigBreed_organism_ = AnimalBreedsCode("132229000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VietnamesePot_BelliedPigPigBreed_organism_ = AnimalBreedsCode("132230005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanLandracePigBreed_organism_ = AnimalBreedsCode("132231009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwallowBeliedMangalitzaPigBreed_organism_ = AnimalBreedsCode("132232002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FengjingPigBreed_organism_ = AnimalBreedsCode("132233007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FinnishLandracePigBreed_organism_ = AnimalBreedsCode("132234001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuineaHogPigBreed_organism_ = AnimalBreedsCode("132235000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HezuoPigBreed_organism_ = AnimalBreedsCode("132236004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OssabawIslandPigBreed_organism_ = AnimalBreedsCode("132237008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KelePigBreed_organism_ = AnimalBreedsCode("132238003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KrskopoljePigBreed_organism_ = AnimalBreedsCode("132239006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KunekunePigBreed_organism_ = AnimalBreedsCode("132240008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LargeBlack_WhitePigBreed_organism_ = AnimalBreedsCode("132241007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LithuanianNativePigBreed_organism_ = AnimalBreedsCode("132242000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MeishanPigBreed_organism_ = AnimalBreedsCode("132243005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JinhuaPigBreed_organism_ = AnimalBreedsCode("132244004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NingxiangPigBreed_organism_ = AnimalBreedsCode("132245003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoraRomagnolaPigBreed_organism_ = AnimalBreedsCode("132246002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiskaPigBreed_organism_ = AnimalBreedsCode("132261001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BKB_1PigBreed_organism_ = AnimalBreedsCode("132277000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelorusBlackPiedPigBreed_organism_ = AnimalBreedsCode("132278005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MirgorodPigBreed_organism_ = AnimalBreedsCode("132279002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LiangGuangSmallSpotted_LuchuanPigBreed_organism_ = AnimalBreedsCode("132280004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FujianSmallPigBreed_organism_ = AnimalBreedsCode("132281000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthFujianBlack_and_WhitePigBreed_organism_ = AnimalBreedsCode("132282007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FuanSpottedPigBreed_organism_ = AnimalBreedsCode("132283002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PutianPigBreed_organism_ = AnimalBreedsCode("132284008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FuzhouBlackPigBreed_organism_ = AnimalBreedsCode("132285009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinbeiSpottedPigBreed_organism_ = AnimalBreedsCode("132286005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LantangPigBreed_organism_ = AnimalBreedsCode("132287001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LiangGuangSmallSpotted_GuangdongSmallEarPigBreed_organism_ = AnimalBreedsCode(
         "132288006"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LonglinPigBreed_organism_ = AnimalBreedsCode("132289003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YuedongBlackPigBreed_organism_ = AnimalBreedsCode("132290007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     XiangPigBreed_organism_ = AnimalBreedsCode("132291006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CantonesePigBreed_organism_ = AnimalBreedsCode("132292004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Jinhua_DongyangPigBreed_organism_ = AnimalBreedsCode("132293009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Jinhua_YongkangPigBreed_organism_ = AnimalBreedsCode("132294003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DaweiziPigBreed_organism_ = AnimalBreedsCode("132295002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuazhongTwo_EndBlackPigBreed_organism_ = AnimalBreedsCode("132296001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuazhongTwo_EndBlack_JianliPigBreed_organism_ = AnimalBreedsCode("132297005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuazhongTwo_EndBlack_TongchengPigBreed_organism_ = AnimalBreedsCode("132298000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuazhongTwo_EndBlack_SatzelingPigBreed_organism_ = AnimalBreedsCode("132299008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GanzhongnanSpottedPigBreed_organism_ = AnimalBreedsCode("132300000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HangPigBreed_organism_ = AnimalBreedsCode("132301001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LepingPigBreed_organism_ = AnimalBreedsCode("132302008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LongyouBlackPigBreed_organism_ = AnimalBreedsCode("132303003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WuyiBlackPigBreed_organism_ = AnimalBreedsCode("132304009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Lee_SungPigBreed_organism_ = AnimalBreedsCode("132305005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Lan_YuPigBreed_organism_ = AnimalBreedsCode("132306006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VietnameseYorkshirePigBreed_organism_ = AnimalBreedsCode("132307002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YujiangPigBreed_organism_ = AnimalBreedsCode("132308007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WanzheSpottedPigBreed_organism_ = AnimalBreedsCode("132309004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WanzheSpotted_ChunanSpottedPigBreed_organism_ = AnimalBreedsCode("132310009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WanzheSpotted_WannanSpottedPigBreed_organism_ = AnimalBreedsCode("132311008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShengxianSpottedPigBreed_organism_ = AnimalBreedsCode("132312001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChinPigBreed_organism_ = AnimalBreedsCode("133167003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiamesePigBreed_organism_ = AnimalBreedsCode("133168008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HailumPigBreed_organism_ = AnimalBreedsCode("133169000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KwaiPigBreed_organism_ = AnimalBreedsCode("133170004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RaadPigBreed_organism_ = AnimalBreedsCode("133171000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AkhaPigBreed_organism_ = AnimalBreedsCode("133172007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthChinaPigBreed_organism_ = AnimalBreedsCode("133173002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthChinaBlackPigBreed_organism_ = AnimalBreedsCode("133174008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BalinesePigBreed_organism_ = AnimalBreedsCode("133175009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DianiPigBreed_organism_ = AnimalBreedsCode("133176005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KamanPigBreed_organism_ = AnimalBreedsCode("133177001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AshantiDwarfPigBreed_organism_ = AnimalBreedsCode("133178006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KoronadalPigBreed_organism_ = AnimalBreedsCode("133179003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OhminiPigBreed_organism_ = AnimalBreedsCode("133180000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ClawnPigBreed_organism_ = AnimalBreedsCode("133181001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SusScrofaDomesticPigXJapaneseWildBoarIntragenusHybrid_organism_ = AnimalBreedsCode(
         "133182008"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KangarooIslandPigBreed_organism_ = AnimalBreedsCode("133183003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CaptainCookerPigBreed_organism_ = AnimalBreedsCode("133184009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestAfricanPigBreed_organism_ = AnimalBreedsCode("133185005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NigerianPigBreed_organism_ = AnimalBreedsCode("133186006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BakosiPigBreed_organism_ = AnimalBreedsCode("133187002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WindsnyerPigBreed_organism_ = AnimalBreedsCode("133188007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KolbroekPigBreed_organism_ = AnimalBreedsCode("133189004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthAfricanLandracePigBreed_organism_ = AnimalBreedsCode("133190008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BulgarianWhitePigBreed_organism_ = AnimalBreedsCode("133191007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BulgarianLandracePigBreed_organism_ = AnimalBreedsCode("133192000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanubeWhitePigBreed_organism_ = AnimalBreedsCode("133193005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DermantsiPiedPigBreed_organism_ = AnimalBreedsCode("133194004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianNative_StocliPigBreed_organism_ = AnimalBreedsCode("133195003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianNative_BaltaretPigBreed_organism_ = AnimalBreedsCode("133196002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BanatWhitePigBreed_organism_ = AnimalBreedsCode("133197006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaznaPigBreed_organism_ = AnimalBreedsCode("133198001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DobrogeaBlackPigBreed_organism_ = AnimalBreedsCode("133199009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     StreiPigBreed_organism_ = AnimalBreedsCode("133200007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Slovhyb_1PigBreed_organism_ = AnimalBreedsCode("133218005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NitraHybridPigBreed_organism_ = AnimalBreedsCode("133219002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SyntheticSL98PigBreed_organism_ = AnimalBreedsCode("133220008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SL96PigBreed_organism_ = AnimalBreedsCode("133221007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HighConformationWhitePigBreed_organism_ = AnimalBreedsCode("132021009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Line32PigBreed_organism_ = AnimalBreedsCode("132022002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Line21PigBreed_organism_ = AnimalBreedsCode("132023007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MeatlinePigBreed_organism_ = AnimalBreedsCode("132024001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HamplinePigBreed_organism_ = AnimalBreedsCode("132025000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EurolinePigBreed_organism_ = AnimalBreedsCode("132026004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorlinePigBreed_organism_ = AnimalBreedsCode("132027008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PremierPigBreed_organism_ = AnimalBreedsCode("132028003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TribredPigBreed_organism_ = AnimalBreedsCode("132029006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanEssexPigBreed_organism_ = AnimalBreedsCode("132030001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Sino_GasconyPigBreed_organism_ = AnimalBreedsCode("132031002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuadeloupeCr_olePigBreed_organism_ = AnimalBreedsCode("132032009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManagraPigBreed_organism_ = AnimalBreedsCode("132033004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianLandracePigBreed_organism_ = AnimalBreedsCode("132034005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianYorkshirePigBreed_organism_ = AnimalBreedsCode("132035006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PineywoodsPigBreed_organism_ = AnimalBreedsCode("132037003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CatalinaIslandPigBreed_organism_ = AnimalBreedsCode("132038008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Ras_n_LansaPigBreed_organism_ = AnimalBreedsCode("132039000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Pitman_MooreMiniaturePigBreed_organism_ = AnimalBreedsCode("132040003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VitaVetLabMinipigPigBreed_organism_ = AnimalBreedsCode("132041004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackHampshirePigBreed_organism_ = AnimalBreedsCode("132043001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedHampracePigBreed_organism_ = AnimalBreedsCode("132044007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanYorkshirePigBreed_organism_ = AnimalBreedsCode("132045008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmericanBerkshirePigBreed_organism_ = AnimalBreedsCode("132046009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CamboroughBluePigBreed_organism_ = AnimalBreedsCode("132047000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Camborough12PigBreed_organism_ = AnimalBreedsCode("132048005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Canastr_o_JunqueiraPigBreed_organism_ = AnimalBreedsCode("132059001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Canastr_o_Capit_oChicoPigBreed_organism_ = AnimalBreedsCode("132060006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Canastr_o_ZabumbaPigBreed_organism_ = AnimalBreedsCode("132061005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Canastr_o_CabanoPigBreed_organism_ = AnimalBreedsCode("132062003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Canastr_o_VermelhoPigBreed_organism_ = AnimalBreedsCode("132063008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Piau_CarunchoPiauPigBreed_organism_ = AnimalBreedsCode("132064002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanastrinhoPigBreed_organism_ = AnimalBreedsCode("132065001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HondurasSwitch_TailPigBreed_organism_ = AnimalBreedsCode("132066000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MastergiltPigBreed_organism_ = AnimalBreedsCode("132067009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SovereignPigBreed_organism_ = AnimalBreedsCode("132068004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PoltavaPigBreed_organism_ = AnimalBreedsCode("132069007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LipetskPigBreed_organism_ = AnimalBreedsCode("132070008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SovietMeatPigBreed_organism_ = AnimalBreedsCode("132071007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChianinaPigBreed_organism_ = AnimalBreedsCode("132179006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     QingpingPigBreed_organism_ = AnimalBreedsCode("132313006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     XiangxiBlackPigBreed_organism_ = AnimalBreedsCode("132314000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BamaxiangPigBreed_organism_ = AnimalBreedsCode("132315004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaihuPigBreed_organism_ = AnimalBreedsCode("132316003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ErhulianPigBreed_organism_ = AnimalBreedsCode("132317007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JiaxingBlackPigBreed_organism_ = AnimalBreedsCode("132318002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MiPigBreed_organism_ = AnimalBreedsCode("132319005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShahutouPigBreed_organism_ = AnimalBreedsCode("132320004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JiaoxiPigBreed_organism_ = AnimalBreedsCode("132321000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShanghaiWhitePigBreed_organism_ = AnimalBreedsCode("132322007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HubeiWhitePigBreed_organism_ = AnimalBreedsCode("132323002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     XinjinPigBreed_organism_ = AnimalBreedsCode("132324008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Xinjin_JilinBlackPigBreed_organism_ = AnimalBreedsCode("132325009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Xinjin_Ning_anPigBreed_organism_ = AnimalBreedsCode("132326005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     _PigBreed_organism_ = AnimalBreedsCode("132327001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DBIPigBreed_organism_ = AnimalBreedsCode("132328006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Xinjin_XinjinPigBreed_organism_ = AnimalBreedsCode("132329003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MeixinPigBreed_organism_ = AnimalBreedsCode("132330008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthEastChinaSpottedPigBreed_organism_ = AnimalBreedsCode("132331007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FannongSpottedPigBreed_organism_ = AnimalBreedsCode("132332000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LaoshanPigBreed_organism_ = AnimalBreedsCode("132333005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NanjingBlackPigBreed_organism_ = AnimalBreedsCode("132334004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShanxiBlackPigBreed_organism_ = AnimalBreedsCode("132335003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GanzhouWhitePigBreed_organism_ = AnimalBreedsCode("132336002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuangxiWhitePigBreed_organism_ = AnimalBreedsCode("132337006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HanzhongWhitePigBreed_organism_ = AnimalBreedsCode("132338001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LutaiWhitePigBreed_organism_ = AnimalBreedsCode("132339009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YiliWhitePigBreed_organism_ = AnimalBreedsCode("132340006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     XinjiangWhitePigBreed_organism_ = AnimalBreedsCode("132341005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BSIPigBreed_organism_ = AnimalBreedsCode("132342003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MongCaiPigBreed_organism_ = AnimalBreedsCode("132343008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LangHongPigBreed_organism_ = AnimalBreedsCode("132344002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MuongKhuongPigBreed_organism_ = AnimalBreedsCode("132345001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MeoPigBreed_organism_ = AnimalBreedsCode("132346000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TongConPigBreed_organism_ = AnimalBreedsCode("132347009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HaBacPigBreed_organism_ = AnimalBreedsCode("132348004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThaiBinhPigBreed_organism_ = AnimalBreedsCode("132349007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CoPigBreed_organism_ = AnimalBreedsCode("132350007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwissImprovedLandracePigBreed_organism_ = AnimalBreedsCode("132351006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanLandraceBPigBreed_organism_ = AnimalBreedsCode("132352004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EdelschweinPigBreed_organism_ = AnimalBreedsCode("132353009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Swabian_HallPigBreed_organism_ = AnimalBreedsCode("132354003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BentheimBlackPiedPigBreed_organism_ = AnimalBreedsCode("132355002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaldingerSpottedPigBreed_organism_ = AnimalBreedsCode("132356001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanRedPiedPigBreed_organism_ = AnimalBreedsCode("132357005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanCornwallPigBreed_organism_ = AnimalBreedsCode("132358000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     G_ttingenMiniaturePigBreed_organism_ = AnimalBreedsCode("132359008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MunichMiniaturePigBreed_organism_ = AnimalBreedsCode("132360003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LeicomaPigBreed_organism_ = AnimalBreedsCode("132361004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SchwerfurtMeatPigBreed_organism_ = AnimalBreedsCode("132362006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungarianWhitePigBreed_organism_ = AnimalBreedsCode("132363001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HungahybPigBreed_organism_ = AnimalBreedsCode("132364007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BulgarianNativePigBreed_organism_ = AnimalBreedsCode("132365008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EastBalkanPigBreed_organism_ = AnimalBreedsCode("132366009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KulaPigBreed_organism_ = AnimalBreedsCode("132367000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NghiaBinhPigBreed_organism_ = AnimalBreedsCode("132368005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KakhetianPigBreed_organism_ = AnimalBreedsCode("132768008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestFrenchWhitePigBreed_organism_ = AnimalBreedsCode("132769000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MubanPigBreed_organism_ = AnimalBreedsCode("132843000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IbanPigBreed_organism_ = AnimalBreedsCode("132844006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TuyHoaHairlessPigBreed_organism_ = AnimalBreedsCode("133161002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HainanPigBreed_organism_ = AnimalBreedsCode("133162009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Sino_VietnamesePigBreed_organism_ = AnimalBreedsCode("133163004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoXuPigBreed_organism_ = AnimalBreedsCode("133164005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThuocNhieuPigBreed_organism_ = AnimalBreedsCode("133165006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BurmesePigBreed_organism_ = AnimalBreedsCode("133166007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianLargeWhitePigBreed_organism_ = AnimalBreedsCode("133201006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RomanianMeatPigPigBreed_organism_ = AnimalBreedsCode("133202004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GurktalPigBreed_organism_ = AnimalBreedsCode("133203009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackSlavonianPigBreed_organism_ = AnimalBreedsCode("133204003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ResavaPigBreed_organism_ = AnimalBreedsCode("133205002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoravaPigBreed_organism_ = AnimalBreedsCode("133206001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DzumaliaPigBreed_organism_ = AnimalBreedsCode("133207005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MacedonianPigBreed_organism_ = AnimalBreedsCode("133208000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlbanianNativePigBreed_organism_ = AnimalBreedsCode("133209008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShkodraPigBreed_organism_ = AnimalBreedsCode("133210003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlovenianWhitePigBreed_organism_ = AnimalBreedsCode("133211004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SuboticaWhitePigBreed_organism_ = AnimalBreedsCode("133212006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PresticePigBreed_organism_ = AnimalBreedsCode("133213001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlovakianBlackPiedPigBreed_organism_ = AnimalBreedsCode("133214007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CzechImprovedWhitePigBreed_organism_ = AnimalBreedsCode("133215008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MoravianLargeYorkshirePigBreed_organism_ = AnimalBreedsCode("133216009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SlovakianWhitePigBreed_organism_ = AnimalBreedsCode("133217000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CzechMeatPigBreed_organism_ = AnimalBreedsCode("133222000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CzechMiniaturePigBreed_organism_ = AnimalBreedsCode("133223005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SmallPolishPrick_EaredPigBreed_organism_ = AnimalBreedsCode("133224004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolesianPigBreed_organism_ = AnimalBreedsCode("133225003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NadbuzanskaPigBreed_organism_ = AnimalBreedsCode("133226002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SarnyPigBreed_organism_ = AnimalBreedsCode("133227006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KrolevetsPigBreed_organism_ = AnimalBreedsCode("133228001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolishMarshPigBreed_organism_ = AnimalBreedsCode("133229009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LargePolishLong_EaredPigBreed_organism_ = AnimalBreedsCode("133230004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UkrainianSteppeWhitePig_organism_ = AnimalBreedsCode("406663005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MixedBreedPig_organism_ = AnimalBreedsCode("417012009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DurocPig_organism_ = AnimalBreedsCode("3260001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OxfordSandyBlockPig_organism_ = AnimalBreedsCode("5227002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OICPig_organism_ = AnimalBreedsCode("9135003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YucaPig_organism_ = AnimalBreedsCode("15443006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishSaddlebackPig_organism_ = AnimalBreedsCode("15961007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HerefordPig_organism_ = AnimalBreedsCode("19770007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PietrainPig_organism_ = AnimalBreedsCode("20044005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HampshirePig_organism_ = AnimalBreedsCode("20280002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LargeBlackPig_organism_ = AnimalBreedsCode("21021000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishLopPig_organism_ = AnimalBreedsCode("22506004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ConnorPrairiePig_organism_ = AnimalBreedsCode("29881002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LacombePig_organism_ = AnimalBreedsCode("30448006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TamworthPig_organism_ = AnimalBreedsCode("30634003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SpottedPig_organism_ = AnimalBreedsCode("36187006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PalousePig_organism_ = AnimalBreedsCode("49240006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WelshPig_organism_ = AnimalBreedsCode("54232006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChesterWhitePig_organism_ = AnimalBreedsCode("69461005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WessexSaddlebackPig_organism_ = AnimalBreedsCode("73648005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedWattlePig_organism_ = AnimalBreedsCode("74568001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LargeWhitePig_organism_ = AnimalBreedsCode("77236002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolandChinaPig_organism_ = AnimalBreedsCode("79814001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LuciePig_organism_ = AnimalBreedsCode("80084005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SanPierrePig_organism_ = AnimalBreedsCode("80979001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MiddleWhitePig_organism_ = AnimalBreedsCode("82909008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YorkshirePig_organism_ = AnimalBreedsCode("85315007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HormelMiniaturePig_organism_ = AnimalBreedsCode("86694007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GloucesterOldSpotPig_organism_ = AnimalBreedsCode("90885005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HaitiCr_olePigBreed_organism_ = AnimalBreedsCode("132009005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManorHybridPigBreed_organism_ = AnimalBreedsCode("132010000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HamlinePigBreed_organism_ = AnimalBreedsCode("132011001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManorRangerPigBreed_organism_ = AnimalBreedsCode("132012008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManorMeishanPigBreed_organism_ = AnimalBreedsCode("132013003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CotswoldGoldPigBreed_organism_ = AnimalBreedsCode("132014009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CotswoldPlatinumPigBreed_organism_ = AnimalBreedsCode("132015005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Cotswold16PigBreed_organism_ = AnimalBreedsCode("132016006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Cotswold29PigBreed_organism_ = AnimalBreedsCode("132017002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Cotswold90PigBreed_organism_ = AnimalBreedsCode("132018007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HampenPigBreed_organism_ = AnimalBreedsCode("132019004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SPMPigBreed_organism_ = AnimalBreedsCode("132020005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HanfordMiniaturePigBreed_organism_ = AnimalBreedsCode("132042006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WestrainPigBreed_organism_ = AnimalBreedsCode("132049002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Dalland030PigBreed_organism_ = AnimalBreedsCode("132050002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Razor_BackPigBreed_organism_ = AnimalBreedsCode("132051003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MacauPigBreed_organism_ = AnimalBreedsCode("132052005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MouraPigBreed_organism_ = AnimalBreedsCode("132053000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanastraPigBreed_organism_ = AnimalBreedsCode("132054006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PirapetingaPigBreed_organism_ = AnimalBreedsCode("132055007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PiauPigBreed_organism_ = AnimalBreedsCode("132056008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Nilo_CanastraPigBreed_organism_ = AnimalBreedsCode("132057004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Canastr_oPigBreed_organism_ = AnimalBreedsCode("132058009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CentralRussianPigBreed_organism_ = AnimalBreedsCode("132072000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SteppeMeatPigBreed_organism_ = AnimalBreedsCode("132073005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GasconyPigBreed_organism_ = AnimalBreedsCode("132125002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LimousinPigBreed_organism_ = AnimalBreedsCode("132126001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HarbinWhitePigBreed_organism_ = AnimalBreedsCode("132127005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HeilongjiangSpottedPigBreed_organism_ = AnimalBreedsCode("132128000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LiaoningBlackPigBreed_organism_ = AnimalBreedsCode("132129008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Huang_Huai_HaiBlack_ShenxianPigBreed_organism_ = AnimalBreedsCode("132130003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Huang_Huai_HaiBlackPigBreed_organism_ = AnimalBreedsCode("132131004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BameiPigBreed_organism_ = AnimalBreedsCode("132132006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HanjiangBlackPigBreed_organism_ = AnimalBreedsCode("132133001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DingPigBreed_organism_ = AnimalBreedsCode("132134007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuaiPigBreed_organism_ = AnimalBreedsCode("132135008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NewHuaiPigBreed_organism_ = AnimalBreedsCode("132136009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MashenPigBreed_organism_ = AnimalBreedsCode("132137000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YimengBlackPigBreed_organism_ = AnimalBreedsCode("132138005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HetaoLop_EarPigBreed_organism_ = AnimalBreedsCode("132139002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KoreanNativePigBreed_organism_ = AnimalBreedsCode("132140000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KoreanImprovedPigBreed_organism_ = AnimalBreedsCode("132141001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PenbukPigBreed_organism_ = AnimalBreedsCode("132142008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeijingBlackPigBreed_organism_ = AnimalBreedsCode("132143003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChenghuaPigBreed_organism_ = AnimalBreedsCode("132144009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaoyuanPigBreed_organism_ = AnimalBreedsCode("132145005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaiwanSmallBlackPigBreed_organism_ = AnimalBreedsCode("132146006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaiwanSmallRedPigBreed_organism_ = AnimalBreedsCode("132147002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuanlingPigBreed_organism_ = AnimalBreedsCode("132148007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HuchuanMountainPigBreed_organism_ = AnimalBreedsCode("132149004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RongchangPigBreed_organism_ = AnimalBreedsCode("132150004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WujinPigBreed_organism_ = AnimalBreedsCode("132151000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DahePigBreed_organism_ = AnimalBreedsCode("132152007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YananPigBreed_organism_ = AnimalBreedsCode("132153002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthYunnanShort_EaredPigBreed_organism_ = AnimalBreedsCode("132154008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Hainan_LingaoPigBreed_organism_ = AnimalBreedsCode("132155009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Hainan_TunchangPigBreed_organism_ = AnimalBreedsCode("132156005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Hainan_WenchangPigBreed_organism_ = AnimalBreedsCode("132157001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LiangGuangSmallSpottedPigBreed_organism_ = AnimalBreedsCode("132158006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanPasturePigBreed_organism_ = AnimalBreedsCode("132159003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Piau_SorocabaPigBreed_organism_ = AnimalBreedsCode("132160008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NiloPigBreed_organism_ = AnimalBreedsCode("132161007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BahiaPigBreed_organism_ = AnimalBreedsCode("132162000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Perna_CurtaPigBreed_organism_ = AnimalBreedsCode("132163005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CarunchinhoPigBreed_organism_ = AnimalBreedsCode("132164004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MandiPigBreed_organism_ = AnimalBreedsCode("132165003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     OrehlaDeColherPigBreed_organism_ = AnimalBreedsCode("132166002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VenezuelanBlackPigBreed_organism_ = AnimalBreedsCode("132167006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BolivianPigBreed_organism_ = AnimalBreedsCode("132168001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MexicanWattledPigBreed_organism_ = AnimalBreedsCode("132170005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Dalland080PigBreed_organism_ = AnimalBreedsCode("132171009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MonarchPigBreed_organism_ = AnimalBreedsCode("132173007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BisaroPigBreed_organism_ = AnimalBreedsCode("132174001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackHairlessPigBreed_organism_ = AnimalBreedsCode("132175000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackMangalitsaPigBreed_organism_ = AnimalBreedsCode("132176004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine_organism_ = AnimalBreedsCode("74921000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LandracePig_organism_ = AnimalBreedsCode("80131009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCPig_organism_ = AnimalBreedsCode("89928000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PicPig_organism_ = AnimalBreedsCode("75709004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig_organism_ = AnimalBreedsCode("74899005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BerkshirePig_organism_ = AnimalBreedsCode("112489009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KleenLeenPig_organism_ = AnimalBreedsCode("69602006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinnesotaPig_organism_ = AnimalBreedsCode("61083001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine33_organism_ = AnimalBreedsCode("6053007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine51_organism_ = AnimalBreedsCode("8516002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanLandracePig_organism_ = AnimalBreedsCode("8763002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchLandracePig_organism_ = AnimalBreedsCode("8970009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgiumLandracePig_organism_ = AnimalBreedsCode("10261003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine77_organism_ = AnimalBreedsCode("11161001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwedishLandracePig_organism_ = AnimalBreedsCode("12407009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig9_organism_ = AnimalBreedsCode("14063001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PicCambourghPig_organism_ = AnimalBreedsCode("17717005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig72_organism_ = AnimalBreedsCode("18212001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig3_organism_ = AnimalBreedsCode("24111007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig414_organism_ = AnimalBreedsCode("24319000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig929_organism_ = AnimalBreedsCode("25856007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig565_organism_ = AnimalBreedsCode("29223008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PicLinePig26_organism_ = AnimalBreedsCode("29235007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig84_organism_ = AnimalBreedsCode("30720007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig48_organism_ = AnimalBreedsCode("32297006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig7_organism_ = AnimalBreedsCode("32683006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig616_organism_ = AnimalBreedsCode("33212007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KentuckyRedBerkshirePig_organism_ = AnimalBreedsCode("33551003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig828_organism_ = AnimalBreedsCode("34595003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KleenLeenBlackPig_organism_ = AnimalBreedsCode("36111002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine31_organism_ = AnimalBreedsCode("36570001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine30_organism_ = AnimalBreedsCode("41561001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorwegianLandracePig_organism_ = AnimalBreedsCode("42948007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig454_organism_ = AnimalBreedsCode("43500007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig1_organism_ = AnimalBreedsCode("45635003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig4_organism_ = AnimalBreedsCode("47795006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig656_organism_ = AnimalBreedsCode("48470006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig6_organism_ = AnimalBreedsCode("49462008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig59_organism_ = AnimalBreedsCode("53431006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig292_organism_ = AnimalBreedsCode("56084008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KleenLeenWhitePig_organism_ = AnimalBreedsCode("57613003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine61_organism_ = AnimalBreedsCode("61973002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig5_organism_ = AnimalBreedsCode("67720004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig141_organism_ = AnimalBreedsCode("68512002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ItalianLandracePig_organism_ = AnimalBreedsCode("71923001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig8_organism_ = AnimalBreedsCode("73005003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinnesotaPig_1_organism_ = AnimalBreedsCode("73944009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig161_organism_ = AnimalBreedsCode("74970001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig27_organism_ = AnimalBreedsCode("76364003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BritishLandracePig_organism_ = AnimalBreedsCode("78994007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig747_organism_ = AnimalBreedsCode("84081007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KleenLeenRedPig_organism_ = AnimalBreedsCode("84232003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig474_organism_ = AnimalBreedsCode("84315000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DanishLandracePig_organism_ = AnimalBreedsCode("84528008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PicLinePig24_organism_ = AnimalBreedsCode("86440008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig282_organism_ = AnimalBreedsCode("87061000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KharkovPigBreed_organism_ = AnimalBreedsCode("132074004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DnepropetrovskPigBreed_organism_ = AnimalBreedsCode("132075003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianLargeWhitePigBreed_organism_ = AnimalBreedsCode("132076002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ForestMountainPigBreed_organism_ = AnimalBreedsCode("132077006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DnieperPigBreed_organism_ = AnimalBreedsCode("132078001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IberianPigBreed_organism_ = AnimalBreedsCode("132079009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Iberian_ExtremaduraRedPigBreed_organism_ = AnimalBreedsCode("132080007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Iberian_JabugoSpottedPigBreed_organism_ = AnimalBreedsCode("132081006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Iberian_BlackIberianPigBreed_organism_ = AnimalBreedsCode("132082004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PhilippineNative_IlocosPigBreed_organism_ = AnimalBreedsCode("132083009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PhilippineNative_JalajalaPigBreed_organism_ = AnimalBreedsCode("132084003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MangaliztaPigBreed_organism_ = AnimalBreedsCode("132085002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlentejanaPigBreed_organism_ = AnimalBreedsCode("132086001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BelgianLandrace_BNPigBreed_organism_ = AnimalBreedsCode("132087005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FrenchLargeWhitePigBreed_organism_ = AnimalBreedsCode("132088000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HyperLargeWhitePigBreed_organism_ = AnimalBreedsCode("132089008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TiaMeslanPigBreed_organism_ = AnimalBreedsCode("132090004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PenArLan77PigBreed_organism_ = AnimalBreedsCode("132091000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PenshirePigBreed_organism_ = AnimalBreedsCode("132092007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LaconiePigBreed_organism_ = AnimalBreedsCode("132093002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurcianPigBreed_organism_ = AnimalBreedsCode("132094008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CavallinoPigBreed_organism_ = AnimalBreedsCode("132095009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CalabrianPigBreed_organism_ = AnimalBreedsCode("132096005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ApulianPigBreed_organism_ = AnimalBreedsCode("132097001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SienaBeltedPigBreed_organism_ = AnimalBreedsCode("132098006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CalascibettaPigBreed_organism_ = AnimalBreedsCode("132099003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     G_ssingForestPigPigBreed_organism_ = AnimalBreedsCode("132100006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SwissEdelschweinPigBreed_organism_ = AnimalBreedsCode("132101005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthCaucasusPigBreed_organism_ = AnimalBreedsCode("132102003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DonPigBreed_organism_ = AnimalBreedsCode("132103008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RostovPigBreed_organism_ = AnimalBreedsCode("132104002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianLong_EaredWhitePigBreed_organism_ = AnimalBreedsCode("132105001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RussianShort_EaredWhitePigBreed_organism_ = AnimalBreedsCode("132106000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PrisheksninskPigBreed_organism_ = AnimalBreedsCode("132107009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BreitovPigBreed_organism_ = AnimalBreedsCode("132108004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LivnyPigBreed_organism_ = AnimalBreedsCode("132109007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TsivilskPigBreed_organism_ = AnimalBreedsCode("132110002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UrzhumPigBreed_organism_ = AnimalBreedsCode("132111003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinisibPigBreed_organism_ = AnimalBreedsCode("132112005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SakhalinWhitePigBreed_organism_ = AnimalBreedsCode("132113000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthSiberianPigBreed_organism_ = AnimalBreedsCode("132114006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiberianBlackPiedPigBreed_organism_ = AnimalBreedsCode("132115007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KemerovoPigBreed_organism_ = AnimalBreedsCode("132116008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KM_1PigBreed_organism_ = AnimalBreedsCode("132117004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Aksa_BlackPiedPigBreed_organism_ = AnimalBreedsCode("132118009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SemirechenskPigBreed_organism_ = AnimalBreedsCode("132119001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MinPigBreed_organism_ = AnimalBreedsCode("132120007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SanjiangWhitePigBreed_organism_ = AnimalBreedsCode("132121006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BasqueBlackPiedPigBreed_organism_ = AnimalBreedsCode("132122004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CorsicanPigBreed_organism_ = AnimalBreedsCode("132123009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Cr_olePigBreed_organism_ = AnimalBreedsCode("132124003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Pel_nPigBreed_organism_ = AnimalBreedsCode("132169009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BorghigianaPigBreed_organism_ = AnimalBreedsCode("132178003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DutchLandracePig_organism_ = AnimalBreedsCode("58311005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FHCElitePig2_organism_ = AnimalBreedsCode("59667000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoarPowerPig545_organism_ = AnimalBreedsCode("61036003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DekalbHybridPigLine63_organism_ = AnimalBreedsCode("112490000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BosTaurus_organism_ = AnimalBreedsCode("34618005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedAngusCattleBreed_organism_ = AnimalBreedsCode("133259004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackAngusCattleBreed_organism_ = AnimalBreedsCode("409905004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MilkingShorthornCattleBreed_organism_ = AnimalBreedsCode("78541007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DexterCattleBreed_organism_ = AnimalBreedsCode("53031002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlondeD_Aquitaine_organism_ = AnimalBreedsCode("62153005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MarchigianaCattleBreed_organism_ = AnimalBreedsCode("65344003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LonghornCattleBreed_organism_ = AnimalBreedsCode("66314009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GallowayCattleBreed_organism_ = AnimalBreedsCode("66911005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GermanFleck_ViehCattleBreed_organism_ = AnimalBreedsCode("67448000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GelbveihCattleBreed_organism_ = AnimalBreedsCode("76497003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NormandieCattleBreed_organism_ = AnimalBreedsCode("81267004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShorthornCattleBreed_organism_ = AnimalBreedsCode("80835003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PinzgauerCattleBreed_organism_ = AnimalBreedsCode("400003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrownWelshCattleBreed_organism_ = AnimalBreedsCode("944009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LincolnRedCattleBreed_organism_ = AnimalBreedsCode("3216001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Meusse_Rhine_IjsselCattleBreed_organism_ = AnimalBreedsCode("6112002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AyrshireCattleBreed_organism_ = AnimalBreedsCode("8989009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeltedGallowayCattleBreed_organism_ = AnimalBreedsCode("13544004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LuingCattleBreed_organism_ = AnimalBreedsCode("21553004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CanadianCattleBreed_organism_ = AnimalBreedsCode("21921002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HaysConverterCattleBreed_organism_ = AnimalBreedsCode("23629009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Holstein_FriesianCattleBreed_organism_ = AnimalBreedsCode("26105007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhiteParkCattleBreed_organism_ = AnimalBreedsCode("26525003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SimmentalCattleBreed_organism_ = AnimalBreedsCode("28483003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BlackWelshCattleBreed_organism_ = AnimalBreedsCode("28744004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChianinaCattleBreed_organism_ = AnimalBreedsCode("35229007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrownSwissCattleBreed_organism_ = AnimalBreedsCode("44230005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaineAnjouCattleBreed_organism_ = AnimalBreedsCode("45284002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LimousinCattleBreed_organism_ = AnimalBreedsCode("48702000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TarentaiseCattleBreed_organism_ = AnimalBreedsCode("50959000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JerseyCattleBreed_organism_ = AnimalBreedsCode("51937006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ScottishHighlandCattleBreed_organism_ = AnimalBreedsCode("83173002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuernseyCattleBreed_organism_ = AnimalBreedsCode("84839000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedPollCattleBreed_organism_ = AnimalBreedsCode("88807001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SalersCattleBreed_organism_ = AnimalBreedsCode("90612002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GujaratiCattleBreed_organism_ = AnimalBreedsCode("112485003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AberdeenAngusCattleBreed_organism_ = AnimalBreedsCode("84923006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BrahmaCattleBreed_organism_ = AnimalBreedsCode("30384003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GirCattleBreed_organism_ = AnimalBreedsCode("32938007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Jem_JemZebuCattleBreed_organism_ = AnimalBreedsCode("132771000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AmritmahalCattleBreed_organism_ = AnimalBreedsCode("133594007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BachaurCattleBreed_organism_ = AnimalBreedsCode("133595008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BarkaCattleBreed_organism_ = AnimalBreedsCode("133596009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BengaliCattleBreed_organism_ = AnimalBreedsCode("133597000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BhagnariCattleBreed_organism_ = AnimalBreedsCode("133598005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BoranCattleBreed_organism_ = AnimalBreedsCode("133599002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChanniCattleBreed_organism_ = AnimalBreedsCode("133600004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CholistaniCattleBreed_organism_ = AnimalBreedsCode("133601000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DajalCattleBreed_organism_ = AnimalBreedsCode("133602007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DangiCattleBreed_organism_ = AnimalBreedsCode("133603002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DeoniCattleBreed_organism_ = AnimalBreedsCode("133604008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DhanniCattleBreed_organism_ = AnimalBreedsCode("133605009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GaolaoCattleBreed_organism_ = AnimalBreedsCode("133606005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HallikarCattleBreed_organism_ = AnimalBreedsCode("133607001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HarianaCattleBreed_organism_ = AnimalBreedsCode("133608006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Indo_BrazilianCattleBreed_organism_ = AnimalBreedsCode("133609003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KangayamCattleBreed_organism_ = AnimalBreedsCode("133610008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KankrejCattleBreed_organism_ = AnimalBreedsCode("133611007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KenkathaCattleBreed_organism_ = AnimalBreedsCode("133612000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ArsiCattleBreed_organism_ = AnimalBreedsCode("133631006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AtpadiMahalCattleBreed_organism_ = AnimalBreedsCode("133632004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AzaouakCattleBreed_organism_ = AnimalBreedsCode("133633009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AzerbaijanZebuCattleBreed_organism_ = AnimalBreedsCode("133634003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BaggaraCattleBreed_organism_ = AnimalBreedsCode("133635002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BambawaCattleBreed_organism_ = AnimalBreedsCode("133636001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BamiCattleBreed_organism_ = AnimalBreedsCode("133637005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BanyoCattleBreed_organism_ = AnimalBreedsCode("133638000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BargurCattleBreed_organism_ = AnimalBreedsCode("133639008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BariCattleBreed_organism_ = AnimalBreedsCode("133640005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BimalCattleBreed_organism_ = AnimalBreedsCode("133641009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BorneoZebuCattleBreed_organism_ = AnimalBreedsCode("133642002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ButanaCattleBreed_organism_ = AnimalBreedsCode("133643007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ChittagongRedCattleBreed_organism_ = AnimalBreedsCode("133644001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CutchiCattleBreed_organism_ = AnimalBreedsCode("133645000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DairyZebuOfUberabaCattleBreed_organism_ = AnimalBreedsCode("133646004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DashtiariCattleBreed_organism_ = AnimalBreedsCode("133647008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DialiCattleBreed_organism_ = AnimalBreedsCode("133648003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DidingaCattleBreed_organism_ = AnimalBreedsCode("133649006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DongolaCattleBreed_organism_ = AnimalBreedsCode("133650006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     FellataCattleBreed_organism_ = AnimalBreedsCode("133651005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AbyssinianHighlandZebuCattleBreed_organism_ = AnimalBreedsCode("133653008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AbyssinianShorthornedZebuCattleBreed_organism_ = AnimalBreedsCode("133654002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AcehCattleBreed_organism_ = AnimalBreedsCode("133655001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AchhamCattleBreed_organism_ = AnimalBreedsCode("133656000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GarreCattleBreed_organism_ = AnimalBreedsCode("133657009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GasaraCattleBreed_organism_ = AnimalBreedsCode("133658004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GobraCattleBreed_organism_ = AnimalBreedsCode("133659007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GoomsurCattleBreed_organism_ = AnimalBreedsCode("133660002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GujamavuCattleBreed_organism_ = AnimalBreedsCode("133661003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     HissarCattleBreed_organism_ = AnimalBreedsCode("133663000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IngessanaCattleBreed_organism_ = AnimalBreedsCode("133664006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JamaicaBrahmanCattleBreed_organism_ = AnimalBreedsCode("133665007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JellicutCattleBreed_organism_ = AnimalBreedsCode("133666008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AdamawaCattleBreed_organism_ = AnimalBreedsCode("133667004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AdenZebuCattleBreed_organism_ = AnimalBreedsCode("133668009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AfghanCattleBreed_organism_ = AnimalBreedsCode("133669001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AlambadiCattleBreed_organism_ = AnimalBreedsCode("133670000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JenubiCattleBreed_organism_ = AnimalBreedsCode("133674009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JidduCattleBreed_organism_ = AnimalBreedsCode("133675005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     JijjigaZebuCattleBreed_organism_ = AnimalBreedsCode("133676006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KabotaCattleBreed_organism_ = AnimalBreedsCode("133677002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KachchaSiriCattleBreed_organism_ = AnimalBreedsCode("133678007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KalakheriCattleBreed_organism_ = AnimalBreedsCode("133679004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KamdhinoCattleBreed_organism_ = AnimalBreedsCode("133680001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KandahariCattleBreed_organism_ = AnimalBreedsCode("133681002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KaninganCattleBreed_organism_ = AnimalBreedsCode("133682009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     IranianZebuCattleBreed_organism_ = AnimalBreedsCode("133686007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KappiliyanCattleBreed_organism_ = AnimalBreedsCode("133689000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KaramajongCattleBreed_organism_ = AnimalBreedsCode("133690009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KenanaCattleBreed_organism_ = AnimalBreedsCode("133691008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     GuzeratCattleBreed_organism_ = AnimalBreedsCode("133699005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     DeogirCattleBreed_organism_ = AnimalBreedsCode("133701005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NelloreCattleBreed_organism_ = AnimalBreedsCode("76604009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KherigarhCattleBreed_organism_ = AnimalBreedsCode("133613005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KhillariCattleBreed_organism_ = AnimalBreedsCode("133614004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KrishnaValleyCattleBreed_organism_ = AnimalBreedsCode("133615003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LohaniCattleBreed_organism_ = AnimalBreedsCode("133616002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalviCattleBreed_organism_ = AnimalBreedsCode("133617006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MewatiCattleBreed_organism_ = AnimalBreedsCode("133618001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NagoriCattleBreed_organism_ = AnimalBreedsCode("133619009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NeloreCattleBreed_organism_ = AnimalBreedsCode("133620003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NimariCattleBreed_organism_ = AnimalBreedsCode("133621004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PonwarCattleBreed_organism_ = AnimalBreedsCode("133622006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RathCattleBreed_organism_ = AnimalBreedsCode("133623001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RathiCattleBreed_organism_ = AnimalBreedsCode("133624007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedSindhiCattleBreed_organism_ = AnimalBreedsCode("133625008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RojhanCattleBreed_organism_ = AnimalBreedsCode("133626009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SahiwalCattleBreed_organism_ = AnimalBreedsCode("133627000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SiriZebuCattleBreed_organism_ = AnimalBreedsCode("133628005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TharparkarCattleBreed_organism_ = AnimalBreedsCode("133629002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ZanzibarZebuCattleBreed_organism_ = AnimalBreedsCode("133630007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TurkmenZebuCattleBreed_organism_ = AnimalBreedsCode("133652003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LeiqiongCattleBreed_organism_ = AnimalBreedsCode("133662005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     UmblacheryCattleBreed_organism_ = AnimalBreedsCode("133671001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     VenezuelanZebuCattleBreed_organism_ = AnimalBreedsCode("133672008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WakwaCattleBreed_organism_ = AnimalBreedsCode("133683004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WhiteFulaniCattleBreed_organism_ = AnimalBreedsCode("133684005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     YemeniZebuCattleBreed_organism_ = AnimalBreedsCode("133685006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KhorsanCattleBreed_organism_ = AnimalBreedsCode("133687003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledGirCattleBreed_organism_ = AnimalBreedsCode("133688008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KenyaBoranCattleBreed_organism_ = AnimalBreedsCode("133692001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KenyaZebuCattleBreed_organism_ = AnimalBreedsCode("133693006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KhamalaCattleBreed_organism_ = AnimalBreedsCode("133694000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KhurasaniZebuCattleBreed_organism_ = AnimalBreedsCode("133695004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KilaraCattleBreed_organism_ = AnimalBreedsCode("133696003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KinniyaCattleBreed_organism_ = AnimalBreedsCode("133697007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KonariCattleBreed_organism_ = AnimalBreedsCode("133698002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TadzhikZebuCattleBreed_organism_ = AnimalBreedsCode("133700006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KrishnagariCattleBreed_organism_ = AnimalBreedsCode("133705001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     KumauniCattleBreed_organism_ = AnimalBreedsCode("133706000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LadakhiCattleBreed_organism_ = AnimalBreedsCode("133707009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LatukaCattleBreed_organism_ = AnimalBreedsCode("133708004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     LugwareCattleBreed_organism_ = AnimalBreedsCode("133709007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MadagascarZebuCattleBreed_organism_ = AnimalBreedsCode("133710002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MadaripurCattleBreed_organism_ = AnimalBreedsCode("133711003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MagalCattleBreed_organism_ = AnimalBreedsCode("133712005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalawiZebuCattleBreed_organism_ = AnimalBreedsCode("133713000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MalnadGiddaCattleBreed_organism_ = AnimalBreedsCode("133714006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MampatiCattleBreed_organism_ = AnimalBreedsCode("133721006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ManapariCattleBreed_organism_ = AnimalBreedsCode("133722004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MaureCattleBreed_organism_ = AnimalBreedsCode("133723009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MazandaraniCattleBreed_organism_ = AnimalBreedsCode("133724003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MeraukeCattleBreed_organism_ = AnimalBreedsCode("133725002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MhaswadCattleBreed_organism_ = AnimalBreedsCode("133727005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MiniatureZebuCattleBreed_organism_ = AnimalBreedsCode("133728000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MongallaCattleBreed_organism_ = AnimalBreedsCode("133729008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MorangCattleBreed_organism_ = AnimalBreedsCode("133730003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MozambiqueAngoniCattleBreed_organism_ = AnimalBreedsCode("133737000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MpwapwaCattleBreed_organism_ = AnimalBreedsCode("133738005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MurleCattleBreed_organism_ = AnimalBreedsCode("133739002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NakaliCattleBreed_organism_ = AnimalBreedsCode("133740000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NepaleseHillZebuCattleBreed_organism_ = AnimalBreedsCode("133741001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     N_GaoundereCattleBreed_organism_ = AnimalBreedsCode("133742008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NkediCattleBreed_organism_ = AnimalBreedsCode("133743003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthBangladeshGrayCattleBreed_organism_ = AnimalBreedsCode("133744009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     NorthSomaliZebuCattleBreed_organism_ = AnimalBreedsCode("133745005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledGuzeratCattleBreed_organism_ = AnimalBreedsCode("133746006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledNeloreCattleBreed_organism_ = AnimalBreedsCode("133753002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PrewakwaCattleBreed_organism_ = AnimalBreedsCode("133754008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     Pul_M_borCattleBreed_organism_ = AnimalBreedsCode("133755009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PunganurCattleBreed_organism_ = AnimalBreedsCode("133756005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RamgarhiCattleBreed_organism_ = AnimalBreedsCode("133757001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedBororoCattleBreed_organism_ = AnimalBreedsCode("133758006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedDesertCattleBreed_organism_ = AnimalBreedsCode("133759003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RedKandhariCattleBreed_organism_ = AnimalBreedsCode("133760008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShakhansurriCattleBreed_organism_ = AnimalBreedsCode("133761007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShekoCattleBreed_organism_ = AnimalBreedsCode("133762000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShendiCattleBreed_organism_ = AnimalBreedsCode("133769009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ShuwaCattleBreed_organism_ = AnimalBreedsCode("133770005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SinhalaCattleBreed_organism_ = AnimalBreedsCode("133771009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SistaniCattleBreed_organism_ = AnimalBreedsCode("133772002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SmallEastAfricanZebuCattleBreed_organism_ = AnimalBreedsCode("133773007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SokotoGudaliCattleBreed_organism_ = AnimalBreedsCode("133774001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SomaliCattleBreed_organism_ = AnimalBreedsCode("133775000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SonkheriCattleBreed_organism_ = AnimalBreedsCode("133776004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SonValleyCattleBreed_organism_ = AnimalBreedsCode("133777008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthChinaZebuCattleBreed_organism_ = AnimalBreedsCode("133778003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SouthMalawiZebuCattleBreed_organism_ = AnimalBreedsCode("133785004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     SudaneseFulaniCattleBreed_organism_ = AnimalBreedsCode("133786003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TabapuaCattleBreed_organism_ = AnimalBreedsCode("133787007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TamankaduwaCattleBreed_organism_ = AnimalBreedsCode("133788002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TanzanianZebuCattleBreed_organism_ = AnimalBreedsCode("133789005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TaraiCattleBreed_organism_ = AnimalBreedsCode("133790001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ThillariCattleBreed_organism_ = AnimalBreedsCode("133791002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToposaCattleBreed_organism_ = AnimalBreedsCode("133792009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToronkeCattleBreed_organism_ = AnimalBreedsCode("133793004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToupouriCattleBreed_organism_ = AnimalBreedsCode("133794005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     PolledDorsetSheepBreed_organism_ = AnimalBreedsCode("440034003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnasPlatyrhynchos_organism_ = AnimalBreedsCode("125102002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnserAnserAnser_organism_ = AnimalBreedsCode("70881005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     AnserAnser_organism_ = AnimalBreedsCode("125104001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MagpieBreedDuck_organism_ = AnimalBreedsCode("131828004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     ToulouseGooseBreed_organism_ = AnimalBreedsCode("131846005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BisonBisonXBosTaurusHybrid_organism_ = AnimalBreedsCode("425181009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CriolloCattleBreed_organism_ = AnimalBreedsCode("83996001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MontanaPig_organism_ = AnimalBreedsCode("74517004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     MarylandPig_organism_ = AnimalBreedsCode("60958006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     CPFPig_organism_ = AnimalBreedsCode("24840008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     BeltsvillePig_organism_ = AnimalBreedsCode("48394005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     EquusAsinus_organism_ = AnimalBreedsCode("85626006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     TarpanHorseBreed_organism_ = AnimalBreedsCode("445729005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     WarmbloodHorseBreed_organism_ = AnimalBreedsCode("407402001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/animal-breeds in valuesets.xml
     """
     RhinelanderHorseBreed_organism_ = AnimalBreedsCode("441714000")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ObservationRangeCategoryCode(GenericTypeCode):
     """
     ObservationRangeCategory
+    From: http://hl7.org/fhir/observation-range-category in valuesets.xml
+        Codes identifying the category of observation range.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/observation-range-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/observation-range-category"
-
 
 class ObservationRangeCategoryCodeValues:
     """
     Reference (Normal) Range for Ordinal and Continuous Observations.
+    From: http://hl7.org/fhir/observation-range-category in valuesets.xml
     """
 
     ReferenceRange = ObservationRangeCategoryCode("reference")
     """
     Critical Range for Ordinal and Continuous Observations.
+    From: http://hl7.org/fhir/observation-range-category in valuesets.xml
     """
     CriticalRange = ObservationRangeCategoryCode("critical")
     """
-    Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
+    Absolute Range for Ordinal and Continuous Observations. Results outside this
+    range are not possible.
+    From: http://hl7.org/fhir/observation-range-category in valuesets.xml
     """
     AbsoluteRange = ObservationRangeCategoryCode("absolute")

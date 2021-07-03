@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ProvenanceEventCurrentState_AS(GenericTypeCode):
     """
-    ProvenanceEventCurrentState-AS
+    v3.ProvenanceEventCurrentState-AS
+    From: http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-AS in v3-codesystems.xml
+         Specifies the state change of a target Act, using ActStatus codes, from its
+    previous state as a predecessor Act. For example, if the target Act is the
+    result of a predecessor Act being "obsoleted" and replaced with the target
+    Act, the source ProvenanceEventCurrentState Act code would be "obsoleted".
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class PatientImportance(GenericTypeCode):
     """
-    PatientImportance
+    v3.PatientImportance
+    From: http://terminology.hl7.org/ValueSet/v3-PatientImportance in v3-codesystems.xml
+         Patient VIP code
     """
 
     def __init__(self, value: AutoMapperTextInputType):

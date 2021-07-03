@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,24 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ObservationReferenceRangeMeaningCodesCode(GenericTypeCode):
     """
     ObservationReferenceRangeMeaningCodes
+    From: http://terminology.hl7.org/CodeSystem/referencerange-meaning in valuesets.xml
+        This value set defines a set of codes that can be used to indicate the
+    meaning/use of a reference range for a particular target population.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/referencerange-meaning
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/referencerange-meaning"
-
 
 class ObservationReferenceRangeMeaningCodesCodeValues:
     """
     General types of reference range.
+    From: http://terminology.hl7.org/CodeSystem/referencerange-meaning in valuesets.xml
     """
 
     Type = ObservationReferenceRangeMeaningCodesCode("type")
     """
     Endocrine related states that change the expected value.
+    From: http://terminology.hl7.org/CodeSystem/referencerange-meaning in valuesets.xml
     """
     Endocrine = ObservationReferenceRangeMeaningCodesCode("endocrine")

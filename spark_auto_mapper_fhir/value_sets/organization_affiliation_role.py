@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,48 +10,58 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class OrganizationAffiliationRoleCode(GenericTypeCode):
     """
     OrganizationAffiliationRole
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate the
+    role of one Organization in relation to another.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/organization-role
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/organization-role"
-
 
 class OrganizationAffiliationRoleCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
 
     Provider = OrganizationAffiliationRoleCode("provider")
     """
-    An organization such as a public health agency, community/social services provider, etc.
+    An organization such as a public health agency, community/social services
+    provider, etc.
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
     Agency = OrganizationAffiliationRoleCode("agency")
     """
-    An organization providing research-related services such as conducting research, recruiting research participants, analyzing data, etc.
+    An organization providing research-related services such as conducting
+    research, recruiting research participants, analyzing data, etc.
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
     Research = OrganizationAffiliationRoleCode("research")
     """
     An organization providing reimbursement, payment, or related services
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
     Payer = OrganizationAffiliationRoleCode("payer")
     """
     An organization providing diagnostic testing/laboratory services
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
     Diagnostics = OrganizationAffiliationRoleCode("diagnostics")
     """
-    An organization that provides medical supplies (e.g. medical devices, equipment, pharmaceutical products, etc.)
+    An organization that provides medical supplies (e.g. medical devices,
+    equipment, pharmaceutical products, etc.)
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
     Supplier = OrganizationAffiliationRoleCode("supplier")
     """
-    An organization that facilitates electronic clinical data exchange between entities
+    An organization that facilitates electronic clinical data exchange between
+    entities
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
     HIE_HIO = OrganizationAffiliationRoleCode("HIE/HIO")
     """
-    A type of non-ownership relationship between entities (encompasses partnerships, collaboration, joint ventures, etc.)
+    A type of non-ownership relationship between entities (encompasses
+    partnerships, collaboration, joint ventures, etc.)
+    From: http://hl7.org/fhir/organization-role in valuesets.xml
     """
     Member = OrganizationAffiliationRoleCode("member")

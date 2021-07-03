@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,42 +10,37 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class Validation_processCode(GenericTypeCode):
     """
     validation-process
+    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
+        The primary process by which the target is validated
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/verificationresult-validation-process
-    """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/verificationresult-validation-process"
-    )
-
 
 class Validation_processCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
     """
 
     EditCheck = Validation_processCode("edit-check")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
     """
     ValueSet = Validation_processCode("valueset")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
     """
     PrimarySource = Validation_processCode("primary")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
     """
     MultipleSources = Validation_processCode("multi")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
     """
     Standalone = Validation_processCode("standalone")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
     """
     InContext = Validation_processCode("in-context")

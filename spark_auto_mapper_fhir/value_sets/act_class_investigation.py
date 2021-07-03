@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActClassInvestigation(GenericTypeCode):
     """
-    ActClassInvestigation
+    v3.ActClassInvestigation
+    From: http://terminology.hl7.org/ValueSet/v3-ActClassInvestigation in v3-codesystems.xml
+         An formalized inquiry into the circumstances surrounding a particular
+    unplanned event or potential event for the purposes of identifying possible
+    causes and contributing factors for the event. This investigation could be
+    conducted at a local institutional level or at the level of a local or
+    national government.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

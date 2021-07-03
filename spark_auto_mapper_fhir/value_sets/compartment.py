@@ -10,7 +10,19 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Compartment(GenericTypeCode):
     """
-    Compartment
+    v3.Compartment
+    From: http://terminology.hl7.org/ValueSet/v3-Compartment in v3-codesystems.xml
+         A named tag set for metadata used to populate a security category label field
+    that "segments" an IT resource per policy by indicating that access and use is
+    restricted to members of a defined community or project. (HL7 Healthcare
+    Privacy and Security Classification System)  Usage Note:
+    This is the healthcare analog to the US Intelligence Community's concept of a
+    Special Access Program.  Compartment codes may be used in as a field value in
+    an initiator's clearance to indicate permission to access and use an IT
+    Resource with a security label having the same compartment value in security
+    category label field. Map: Aligns with ISO 2382-8 definition of Compartment -
+    "A division of data into isolated blocks with separate security controls for
+    the purpose of reducing risk."
     """
 
     def __init__(self, value: AutoMapperTextInputType):

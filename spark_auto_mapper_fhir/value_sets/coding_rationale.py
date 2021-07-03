@@ -10,7 +10,19 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class CodingRationale(GenericTypeCode):
     """
-    CodingRationale
+    v3.CodingRationale
+    From: http://terminology.hl7.org/ValueSet/v3-CodingRationale in v3-codesystems.xml
+         Identifies how to interpret the instance of the code, codeSystem value in a
+    set of translations.  Since HL7 (or a government body) may mandate that codes
+    from certain code systems be sent in conformant messages, other synonyms that
+    are sent in the translation set need to be distinguished among the originally
+    captured source, the HL7 specified code, or some future role.  When this code
+    is NULL, it indicates that the translation is an undefined type.  When valued,
+    this property must contain one of the following values: SRC - Source (or
+    original) code HL7 - HL7 Specified or Mandated SH - both HL7 mandated and the
+    original code (precoordination) There may be additional values added to this
+    value set as we work through the use of codes in messages and determine other
+    Use Cases requiring special interpretation of the translations.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

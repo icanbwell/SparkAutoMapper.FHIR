@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class InstanceAvailabilityCode(GenericTypeCode):
     """
     InstanceAvailability
+    From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
+        Availability of the resource.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/instance-availability
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/instance-availability"
-
 
 class InstanceAvailabilityCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
     """
 
     ONLINE = InstanceAvailabilityCode("ONLINE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
     """
     OFFLINE = InstanceAvailabilityCode("OFFLINE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
     """
     NEARLINE = InstanceAvailabilityCode("NEARLINE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
     """
     UNAVAILABLE = InstanceAvailabilityCode("UNAVAILABLE")

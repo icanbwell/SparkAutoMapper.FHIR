@@ -11,68 +11,92 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MaritalStatusCodesCode(GenericTypeCode):
     """
     Marital Status Codes
+    From: http://hl7.org/fhir/ValueSet/marital-status in valuesets.xml
+        This value set defines the set of codes that can be used to indicate the
+    marital status of a person.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/marital-status
+    http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/marital-status"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
 
 
 class MaritalStatusCodesCodeValues:
     """
     Marriage contract has been declared null and to not have existed
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
 
     Annulled = MaritalStatusCodesCode("A")
     """
     Marriage contract has been declared dissolved and inactive
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     Divorced = MaritalStatusCodesCode("D")
     """
     Subject to an Interlocutory Decree.
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     Interlocutory = MaritalStatusCodesCode("I")
     """
     Legally Separated
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     LegallySeparated = MaritalStatusCodesCode("L")
     """
     A current marriage contract is active
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     Married = MaritalStatusCodesCode("M")
     """
     More than 1 current spouse
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     Polygamous = MaritalStatusCodesCode("P")
     """
     No marriage contract has ever been entered
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     NeverMarried = MaritalStatusCodesCode("S")
     """
     Person declares that a domestic partner relationship exists.
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     DomesticPartner = MaritalStatusCodesCode("T")
     """
     Currently not in a marriage contract.
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     Unmarried = MaritalStatusCodesCode("U")
     """
     The spouse has died
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
     """
     Widowed = MaritalStatusCodesCode("W")
     """
-    Description:The value is exceptional (missing, omitted, incomplete, improper). No information as to the reason for being an exceptional value is provided. This is the most general exceptional value. It is also the default exceptional value.
+    Description:The value is exceptional (missing, omitted, incomplete, improper).
+    No information as to the reason for being an exceptional value is provided.
+    This is the most general exceptional value. It is also the default exceptional
+    value.
+    From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
     """
     Noinformation = MaritalStatusCodesCode("NI")
     """
-    Value is not present in a message.  This is only defined in messages, never in application data!  All values not present in the message must be replaced by the applicable default, or no-information (NI) as the default of all defaults.
+    Value is not present in a message.  This is only defined in messages, never in
+    application data!  All values not present in the message must be replaced by
+    the applicable default, or no-information (NI) as the default of all defaults.
+    From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
     """
     NotPresent = MaritalStatusCodesCode("NP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/marital-status in valuesets.xml
     """
     UNK = MaritalStatusCodesCode("UNK")

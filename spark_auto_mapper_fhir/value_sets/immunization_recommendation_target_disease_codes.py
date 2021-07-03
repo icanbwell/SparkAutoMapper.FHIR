@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,54 +10,53 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ImmunizationRecommendationTargetDiseaseCodesCode(GenericTypeCode):
     """
     ImmunizationRecommendationTargetDiseaseCodes
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+        The value set to instantiate this attribute should be drawn from a
+    terminologically robust code system that consists of or contains concepts to
+    support describing the disease targeted by a vaccination recommendation. This
+    value set is provided as a suggestive example and includes the SNOMED CT
+    concepts from the 64572001 (Disease) hierarchy.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease
-    """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease"
-    )
-
 
 class ImmunizationRecommendationTargetDiseaseCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
 
     _1857005 = ImmunizationRecommendationTargetDiseaseCodesCode("1857005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _397430003 = ImmunizationRecommendationTargetDiseaseCodesCode("397430003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _14189004 = ImmunizationRecommendationTargetDiseaseCodesCode("14189004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _36989005 = ImmunizationRecommendationTargetDiseaseCodesCode("36989005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _36653000 = ImmunizationRecommendationTargetDiseaseCodesCode("36653000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _76902006 = ImmunizationRecommendationTargetDiseaseCodesCode("76902006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _709410003 = ImmunizationRecommendationTargetDiseaseCodesCode("709410003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _27836007 = ImmunizationRecommendationTargetDiseaseCodesCode("27836007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
     """
     _398102009 = ImmunizationRecommendationTargetDiseaseCodesCode("398102009")

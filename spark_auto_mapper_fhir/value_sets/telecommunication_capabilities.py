@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class TelecommunicationCapabilities(GenericTypeCode):
     """
-    TelecommunicationCapabilities
+    v3.TelecommunicationCapabilities
+    From: http://terminology.hl7.org/ValueSet/v3-TelecommunicationCapabilities in v3-codesystems.xml
+          Description:
+    Concepts that define the telecommunication capabilities of a particular
+    device. Used to identify the expected capabilities to be found at a particular
+    telecommunication address.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

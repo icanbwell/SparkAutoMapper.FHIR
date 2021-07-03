@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,26 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ClinicalImpressionStatusCode(GenericTypeCode):
     """
     ClinicalImpressionStatus
+    From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
+        Codes that reflect the current state of a clinical impression within its
+    overall lifecycle.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/clinicalimpression-status
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/clinicalimpression-status"
-
 
 class ClinicalImpressionStatusCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
     """
 
     In_progress = ClinicalImpressionStatusCode("in-progress")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
     """
     Completed = ClinicalImpressionStatusCode("completed")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
     """
     Entered_in_error = ClinicalImpressionStatusCode("entered-in-error")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,32 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class GoalAchievementStatusCode(GenericTypeCode):
     """
     GoalAchievementStatus
+    From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
+        Describes the progression, or lack thereof, towards the goal against the
+    target.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/goal-achievement
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/goal-achievement"
-
 
 class GoalAchievementStatusCodeValues:
     """
-    The goal is being sought but has not yet been reached. (Also applies if the goal was reached in the past but there has been regression and the goal is again being sought).
+    The goal is being sought but has not yet been reached. (Also applies if the
+    goal was reached in the past but there has been regression and the goal is
+    again being sought).
+    From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
     """
 
     InProgress = GoalAchievementStatusCode("in-progress")
     """
     The goal has been met.
+    From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
     """
     Achieved = GoalAchievementStatusCode("achieved")
     """
-    The goal has not been met and there might or might not have been progress towards target.
+    The goal has not been met and there might or might not have been progress
+    towards target.
+    From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
     """
     NotAchieved = GoalAchievementStatusCode("not-achieved")

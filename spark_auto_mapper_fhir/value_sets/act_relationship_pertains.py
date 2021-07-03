@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActRelationshipPertains(GenericTypeCode):
     """
-    ActRelationshipPertains
+    v3.ActRelationshipPertains
+    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipPertains in v3-codesystems.xml
+         This is a very unspecific relationship from one item of clinical information
+    to another.  It does not judge about the role the pertinent information plays.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

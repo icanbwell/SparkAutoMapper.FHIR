@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassMutualRelationship(GenericTypeCode):
     """
-    RoleClassMutualRelationship
+    v3.RoleClassMutualRelationship
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassMutualRelationship in v3-codesystems.xml
+         A relationship that is based on mutual behavior of the two Entities as being
+    related. The basis of such relationship may be agreements (e.g., spouses,
+    contract parties) or they may bede facto
+    behavior (e.g. friends) or may be an incidental involvement with each other
+    (e.g. parties over a dispute, siblings, children).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActRelationshipSplit(GenericTypeCode):
     """
-    ActRelationshipSplit
+    v3.ActRelationshipSplit
+    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipSplit in v3-codesystems.xml
+        **** MISSING DEFINITIONS ****
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Hl7PublishingDomain(GenericTypeCode):
     """
-    hl7PublishingDomain
+    v3.hl7PublishingDomain
+    From: http://terminology.hl7.org/ValueSet/v3-hl7PublishingDomain in v3-codesystems.xml
+          Description:
+    Codes for HL7 publishing domains (specific content area)
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Hl7ApprovalStatus(GenericTypeCode):
     """
-    hl7ApprovalStatus
+    v3.hl7ApprovalStatus
+    From: http://terminology.hl7.org/ValueSet/v3-hl7ApprovalStatus in v3-codesystems.xml
+          Description:
+    Codes for concepts describing the approval level of HL7 artifacts.  This code
+    system reflects the concepts expressed in HL7's Governance & Operations Manual
+    (GOM) past and present.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

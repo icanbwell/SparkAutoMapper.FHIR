@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class HL7UpdateMode(GenericTypeCode):
     """
-    HL7UpdateMode
+    v3.HL7UpdateMode
+    From: http://terminology.hl7.org/ValueSet/v3-HL7UpdateMode in v3-codesystems.xml
+         The possible modes of updating that occur when an attribute is received by a
+    system that already contains values for that attribute.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

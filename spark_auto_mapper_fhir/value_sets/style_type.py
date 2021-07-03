@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class StyleType(GenericTypeCode):
     """
-    styleType
+    v3.styleType
+    From: http://terminology.hl7.org/ValueSet/v3-styleType in v3-codesystems.xml
+         <ns1:p>The style code is used within the CDA/SPL narrative block to give the
+    instance author some control over various aspects of style</ns1:p>
     """
 
     def __init__(self, value: AutoMapperTextInputType):

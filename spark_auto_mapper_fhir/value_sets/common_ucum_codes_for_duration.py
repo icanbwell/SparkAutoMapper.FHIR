@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,48 +10,46 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CommonUCUMCodesForDurationCode(GenericTypeCode):
     """
     CommonUCUMCodesForDuration
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+        Unified Code for Units of Measure (UCUM). This value set includes all UCUM
+    codes
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/duration-units
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/duration-units"
-
 
 class CommonUCUMCodesForDurationCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
 
     Milliseconds = CommonUCUMCodesForDurationCode("ms")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
     Seconds = CommonUCUMCodesForDurationCode("s")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
     Minutes = CommonUCUMCodesForDurationCode("min")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
     Hours = CommonUCUMCodesForDurationCode("h")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
     Days = CommonUCUMCodesForDurationCode("d")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
     Weeks = CommonUCUMCodesForDurationCode("wk")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
     Months = CommonUCUMCodesForDurationCode("mo")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
     """
     Years = CommonUCUMCodesForDurationCode("a")

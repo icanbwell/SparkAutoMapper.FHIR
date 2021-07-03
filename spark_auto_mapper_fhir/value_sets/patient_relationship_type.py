@@ -11,188 +11,316 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class PatientRelationshipTypeCode(GenericTypeCode):
     """
     PatientRelationshipType
+    From: http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype in valuesets.xml
+        A set of codes that can be used to indicate the relationship between a Patient
+    and a Related Person.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
+    http://terminology.hl7.org/CodeSystem/v2-0131
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0131"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleCode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 
 
 class PatientRelationshipTypeCodeValues:
     """
-    Concepts characterizing the type of association formed by player and scoper when there is a recognized Affiliate role by which the two parties are related.
-
-
-                           Examples: Business Partner, Business Associate, Colleague
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
     """
 
+    BillingContactPerson = PatientRelationshipTypeCode("BP")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    EmergencyContact = PatientRelationshipTypeCode("C")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    ContactPerson = PatientRelationshipTypeCode("CP")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Employer = PatientRelationshipTypeCode("E")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    EmergencyContactPerson = PatientRelationshipTypeCode("EP")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    FederalAgency = PatientRelationshipTypeCode("F")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    InsuranceCompany = PatientRelationshipTypeCode("I")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Nextofkin = PatientRelationshipTypeCode("N")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Other = PatientRelationshipTypeCode("O")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    PersonPreparingReferral = PatientRelationshipTypeCode("PR")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    StateAgency = PatientRelationshipTypeCode("S")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+    """
+    Unknown = PatientRelationshipTypeCode("U")
+    """
+    Concepts characterizing the type of association formed by player and scoper
+    when there is a recognized Affiliate role by which the two parties are
+    related.
+    
+    
+                               Examples: Business Partner, Business Associate,
+    Colleague
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
+    """
     Affiliationroletype = PatientRelationshipTypeCode("_AffiliationRoleType")
     """
     AssignedRoleType
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Assignedroletype = PatientRelationshipTypeCode("_AssignedRoleType")
     """
     Defines types of certifications for all entities
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Certifiedentitytype = PatientRelationshipTypeCode("_CertifiedEntityType")
     """
-    A role type used to qualify a person's legal status within a country or nation.
+    A role type used to qualify a person's legal status within a country or
+    nation.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Citizenroletype = PatientRelationshipTypeCode("_CitizenRoleType")
     """
     Types of contact for Role code "CON"
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Contactroletype = PatientRelationshipTypeCode("_ContactRoleType")
     """
-    Definition: A code representing the type of identifier that has been assigned to the identified entity (IDENT).
-
-                        
-                           Examples: Example values include Social Insurance Number, Product Catalog ID, Product Model Number.
+    Definition: A code representing the type of identifier that has been assigned
+    to the identified entity (IDENT).
+    
+    
+                               Examples: Example values include Social Insurance
+    Number, Product Catalog ID, Product Model Number.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Identifiedentitytype = PatientRelationshipTypeCode("_IdentifiedEntityType")
     """
     Code indicating the primary use for which a living subject is bred or grown
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Livingsubjectproductionclass = PatientRelationshipTypeCode(
         "_LivingSubjectProductionClass"
     )
     """
-    Identifies the specific hierarchical relationship between the playing and scoping medications. 
-
-                        
-                           Examples: Generic, Generic Formulation, Therapeutic Class, etc.
+    Identifies the specific hierarchical relationship between the playing and
+    scoping medications.
+    
+    
+                               Examples: Generic, Generic Formulation, Therapeutic
+    Class, etc.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Medicationgeneralizationroletype = PatientRelationshipTypeCode(
         "_MedicationGeneralizationRoleType"
     )
     """
     Types of membership for Role code "MBR"
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Memberroletype = PatientRelationshipTypeCode("_MemberRoleType")
     """
     PersonalRelationshipRoleType
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Personalrelationshiproletype = PatientRelationshipTypeCode(
         "_PersonalRelationshipRoleType"
     )
     """
-    Description: A role recognized through the eligibility of an identified party for benefits covered under an insurance policy or a program based on meeting eligibility criteria.
-
-                        Eligibility as a covered party may be conditioned on the party meeting criteria to qualify for coverage under a policy or program, which may be mandated by law.  These criteria may be: 
-
-                        
-                           
-                              The sole basis for coverage, e.g., being differently abled may qualify a person for disability coverage
-
-                           
-                           
-                              May more fully qualify a covered party role e.g, being differently abled may qualify an adult child as a dependent
-
-                           
-                           
-                              May impact the level of coverage for a covered party under a policy or program, e.g., being differently abled may qualify a program eligible for additional benefits.
-
-                           
-                        
-                        
-                           Discussion:  The Abstract Value Set "CoverageRoleType", which was developed for use in the Canadian realm "pre-coordinate" coverage roles with other roles that a covered party must play in order to be eligible for coverage, e.g., "handicapped dependent".   These role.codes may only be used with COVPTY to avoid overlapping concepts that would result from using them to specify the specializations of COVPTY, e.g., the role.class DEPEN should not be used with the role.code family dependent because that relationship has overlapping concepts due to the role.code precoodination and is conveyed in FICO with the personal relationship role that has a PART role link to the covered party role.  For the same reasons, the role.class DEPEN should not be used with the role.code HANDIC (handicapped dependent); the role.code DIFFABLE (differently abled) should be used instead.
-
-                        In summary, the coded concepts in the Abstract Value Set "CoveredPartyRoleType" can be "post-coordinated" with the "RoleClassCoveredParty" Abstract Value Set.  Decoupling these concepts is intended to support an expansive range of covered party concepts and their semantic comparability.
+    Description: A role recognized through the eligibility of an identified party
+    for benefits covered under an insurance policy or a program based on meeting
+    eligibility criteria.
+    
+                            Eligibility as a covered party may be conditioned on
+    the party meeting criteria to qualify for coverage under a policy or program,
+    which may be mandated by law.  These criteria may be:
+    
+    
+    
+                                  The sole basis for coverage, e.g., being
+    differently abled may qualify a person for disability coverage
+    
+    
+    
+                                  May more fully qualify a covered party role e.g,
+    being differently abled may qualify an adult child as a dependent
+    
+    
+    
+                                  May impact the level of coverage for a covered
+    party under a policy or program, e.g., being differently abled may qualify a
+    program eligible for additional benefits.
+    
+    
+    
+    
+                               Discussion:  The Abstract Value Set
+    "CoverageRoleType", which was developed for use in the Canadian realm "pre-
+    coordinate" coverage roles with other roles that a covered party must play in
+    order to be eligible for coverage, e.g., "handicapped dependent".   These
+    role.codes may only be used with COVPTY to avoid overlapping concepts that
+    would result from using them to specify the specializations of COVPTY, e.g.,
+    the role.class DEPEN should not be used with the role.code family dependent
+    because that relationship has overlapping concepts due to the role.code
+    precoodination and is conveyed in FICO with the personal relationship role
+    that has a PART role link to the covered party role.  For the same reasons,
+    the role.class DEPEN should not be used with the role.code HANDIC (handicapped
+    dependent); the role.code DIFFABLE (differently abled) should be used instead.
+    
+                            In summary, the coded concepts in the Abstract Value
+    Set "CoveredPartyRoleType" can be "post-coordinated" with the
+    "RoleClassCoveredParty" Abstract Value Set.  Decoupling these concepts is
+    intended to support an expansive range of covered party concepts and their
+    semantic comparability.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Policyorprogramcoverageroletype = PatientRelationshipTypeCode(
         "_PolicyOrProgramCoverageRoleType"
     )
     """
-    Specifies the administrative functionality within a formal experimental design for which the ResearchSubject role was established.  Examples: screening - role is used for pre-enrollment evaluation portion of the design; enrolled - role is used for subjects admitted to the active treatment portion of the design.
+    Specifies the administrative functionality within a formal experimental design
+    for which the ResearchSubject role was established.  Examples: screening -
+    role is used for pre-enrollment evaluation portion of the design; enrolled -
+    role is used for subjects admitted to the active treatment portion of the
+    design.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Researchsubjectrolebasis = PatientRelationshipTypeCode("_ResearchSubjectRoleBasis")
     """
-    A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
+    A role of a place that further classifies the setting (e.g., accident site,
+    road side, work site, community location) in which services are delivered.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Servicedeliverylocationroletype = PatientRelationshipTypeCode(
         "_ServiceDeliveryLocationRoleType"
     )
     """
     SpecimenRoleType
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Specimenroletype = PatientRelationshipTypeCode("_SpecimenRoleType")
     """
     A party that makes a claim for coverage under a policy.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Claimant = PatientRelationshipTypeCode("CLAIM")
     """
     Community Laboratory
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     CommunityLaboratory = PatientRelationshipTypeCode("communityLaboratory")
     """
-    An individual or organization that makes or gives a promise, assurance, pledge to pay or has paid the healthcare service provider.
+    An individual or organization that makes or gives a promise, assurance, pledge
+    to pay or has paid the healthcare service provider.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Guarantor = PatientRelationshipTypeCode("GT")
     """
     Home Health
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     HomeHealth = PatientRelationshipTypeCode("homeHealth")
     """
     Laboratory
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Laboratory = PatientRelationshipTypeCode("laboratory")
     """
     Pathologist
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Pathologist = PatientRelationshipTypeCode("pathologist")
     """
     Policy holder for the insurance policy.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     PolicyHolder = PatientRelationshipTypeCode("PH")
     """
     Phlebotomist
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Phlebotomist = PatientRelationshipTypeCode("phlebotomist")
     """
     A party that meets the eligibility criteria for coverage under a program.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     ProgramEligible = PatientRelationshipTypeCode("PROG")
     """
-    The recipient for the service(s) and/or product(s) when they are not the covered party.
+    The recipient for the service(s) and/or product(s) when they are not the
+    covered party.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Patient = PatientRelationshipTypeCode("PT")
     """
     Self
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Self = PatientRelationshipTypeCode("subject")
     """
     Third Party
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     ThirdParty = PatientRelationshipTypeCode("thirdParty")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Dep = PatientRelationshipTypeCode("DEP")
     """
     A party covered under a policy based on association with a subscriber.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Dependent = PatientRelationshipTypeCode("DEPEN")
     """
-    A member of the covered party's family. This could be the spouse, a parent, a grand parent, a sibling, etc.
+    A member of the covered party's family. This could be the spouse, a parent, a
+    grand parent, a sibling, etc.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     FamilyMember = PatientRelationshipTypeCode("FM")
     """
     A party covered under a policy as the policyholder.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Individual = PatientRelationshipTypeCode("INDIV")
     """
-    A party to an insurance policy to whom the insurer agrees to indemnify for losses, provides benefits for, or renders services.
+    A party to an insurance policy to whom the insurer agrees to indemnify for
+    losses, provides benefits for, or renders services.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     NamedInsured = PatientRelationshipTypeCode("NAMED")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Psychcf = PatientRelationshipTypeCode("PSYCHCF")
     """
-    A party covered under a policy based on association with a sponsor who is the policy holder, and whose association may provide for the eligibility of dependents for coverage
+    A party covered under a policy based on association with a sponsor who is the
+    policy holder, and whose association may provide for the eligibility of
+    dependents for coverage
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
     Subscriber = PatientRelationshipTypeCode("SUBSCR")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,196 +10,194 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ProgramCode(GenericTypeCode):
     """
     Program
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+        This value set defines an example set of codes that could be can be used to
+    classify groupings of service-types/specialties.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/program
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/program"
-
 
 class ProgramCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
 
     AcquiredBrainInjury_ABI_Program_ = ProgramCode("1")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     ABISlowToRecover_ABISTR_Program = ProgramCode("2")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     AccessPrograms = ProgramCode("3")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     AdultAndFurtherEducation_ACFE_Program = ProgramCode("4")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     AdultDayActivityAndSupportServices_ADASS_Program = ProgramCode("5")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     AdultDayCareProgram = ProgramCode("6")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     ATSS_AdultTrainingSupportService_ = ProgramCode("7")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     CommunityAgedCarePackages_CACP_ = ProgramCode("8")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     CareCoordination_SupplementaryServices_CCSS_ = ProgramCode("9")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     CognitiveDementiaMemoryService_CDAMS_ = ProgramCode("10")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     ChildFIRST = ProgramCode("11")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     Children_sContactServices = ProgramCode("12")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     CommunityVisitorsScheme = ProgramCode("13")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     CPP_CommunityPartnersProgram_ = ProgramCode("14")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     ClosingTheGap_CTG_ = ProgramCode("15")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     CoordinatedVeterans_Care_CVC_Program = ProgramCode("16")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     DayProgram = ProgramCode("17")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     DropInProgram = ProgramCode("18")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     EarlyYearsProgram = ProgramCode("19")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     EmployeeAssistanceProgram = ProgramCode("20")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     HomeAndCommunityCare_HACC_ = ProgramCode("21")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     HospitalAdmissionRiskProgram_HARP_ = ProgramCode("22")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     HospitalInTheHome_HITH_Program = ProgramCode("23")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     ICTP_IntensiveCommunityTreatmentProgram_ = ProgramCode("24")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     IFSS_IntensiveFamilySupportProgram_ = ProgramCode("25")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     JPET_JobPlacement_EducationAndTraining_ = ProgramCode("26")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     KooriJuvenileJusticeProgram = ProgramCode("27")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     LanguageLiteracyAndNumeracyProgram = ProgramCode("28")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     LifeSkillsProgram = ProgramCode("29")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     LMP_LifestyleModificationProgram_ = ProgramCode("30")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     MedsCheckProgram = ProgramCode("31")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     Methadone_BuprenorphineProgram = ProgramCode("32")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     NationalDisabilitiesInsuranceScheme_NDIS_ = ProgramCode("33")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     NationalDiabetesServicesScheme_NDSS_ = ProgramCode("34")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     Needle_SyringeProgram = ProgramCode("35")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     NPEPProgram = ProgramCode("36")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     PersonalSupportProgram = ProgramCode("37")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     PartnersInRecovery_PIR_Program = ProgramCode("38")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     Pre_employmentProgram = ProgramCode("39")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     ReconnectProgram = ProgramCode("40")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     SexualAbuseCounsellingAndPreventionProgram_SACPP_ = ProgramCode("41")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     SocialSupportPrograms = ProgramCode("42")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     SupportedResidentialService_SRS_ = ProgramCode("43")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     TasmanianAboriginalCentre_TAC_ = ProgramCode("44")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
     """
     Victim_sAssistanceProgram = ProgramCode("45")

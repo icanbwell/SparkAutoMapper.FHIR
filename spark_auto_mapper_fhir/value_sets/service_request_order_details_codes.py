@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,45 +10,44 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ServiceRequestOrderDetailsCodesCode(GenericTypeCode):
     """
     ServiceRequestOrderDetailsCodes
+    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
+        An example value set of Codified order entry details concepts.  These concepts
+    only make sense in the context of what is being ordered.  This example is for
+    a patient ventilation order
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/servicerequest-orderdetail
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail"
-
 
 class ServiceRequestOrderDetailsCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
 
     ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_ = (
         ServiceRequestOrderDetailsCodesCode("47545007")
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
     PressureControlledVentilation_procedure_ = ServiceRequestOrderDetailsCodesCode(
         "286812008"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
     PatientTriggeredInspiratoryAssistance_procedure_ = (
         ServiceRequestOrderDetailsCodesCode("243144002")
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
     AssistedControlledMandatoryVentilation_procedure_ = (
         ServiceRequestOrderDetailsCodesCode("243150007")
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
     SynchronizedIntermittentMandatoryVentilation_procedure_ = (
         ServiceRequestOrderDetailsCodesCode("59427005")

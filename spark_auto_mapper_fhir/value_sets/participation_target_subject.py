@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationTargetSubject(GenericTypeCode):
     """
-    ParticipationTargetSubject
+    v3.ParticipationTargetSubject
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationTargetSubject in v3-codesystems.xml
+         The principle target that the service acts on.  E.g. the patient in physical
+    examination, a specimen in a lab observation. May also be a patient's family
+    member (teaching) or a device or room (cleaning, disinfecting, housekeeping).
+    Note: not all direct targets are subjects, consumables, and devices used as
+    tools for a service are not subjects.  However, a device may be a subject of a
+    maintenance service.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

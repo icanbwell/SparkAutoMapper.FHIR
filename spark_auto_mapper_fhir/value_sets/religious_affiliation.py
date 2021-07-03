@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ReligiousAffiliation(GenericTypeCode):
     """
-    ReligiousAffiliation
+    v3.ReligiousAffiliation
+    From: http://terminology.hl7.org/ValueSet/v3-ReligiousAffiliation in v3-codesystems.xml
+         Assigment of spiritual faith affiliation
     """
 
     def __init__(self, value: AutoMapperTextInputType):

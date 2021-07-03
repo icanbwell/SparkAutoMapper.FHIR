@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,240 +10,238 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CommonLanguagesCode(GenericTypeCode):
     """
     CommonLanguages
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+        This value set includes common codes from BCP-47
+    (http://tools.ietf.org/html/bcp47)
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/languages
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/languages"
-
 
 class CommonLanguagesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
 
     Arabic = CommonLanguagesCode("ar")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Bengali = CommonLanguagesCode("bn")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Czech = CommonLanguagesCode("cs")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Danish = CommonLanguagesCode("da")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     German = CommonLanguagesCode("de")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     German_Austria_ = CommonLanguagesCode("de-AT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     German_Switzerland_ = CommonLanguagesCode("de-CH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     German_Germany_ = CommonLanguagesCode("de-DE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Greek = CommonLanguagesCode("el")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English = CommonLanguagesCode("en")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English_Australia_ = CommonLanguagesCode("en-AU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English_Canada_ = CommonLanguagesCode("en-CA")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English_GreatBritain_ = CommonLanguagesCode("en-GB")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English_India_ = CommonLanguagesCode("en-IN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English_NewZeland_ = CommonLanguagesCode("en-NZ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English_Singapore_ = CommonLanguagesCode("en-SG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     English_UnitedStates_ = CommonLanguagesCode("en-US")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Spanish = CommonLanguagesCode("es")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Spanish_Argentina_ = CommonLanguagesCode("es-AR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Spanish_Spain_ = CommonLanguagesCode("es-ES")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Spanish_Uruguay_ = CommonLanguagesCode("es-UY")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Finnish = CommonLanguagesCode("fi")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     French = CommonLanguagesCode("fr")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     French_Belgium_ = CommonLanguagesCode("fr-BE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     French_Switzerland_ = CommonLanguagesCode("fr-CH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     French_France_ = CommonLanguagesCode("fr-FR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Frysian = CommonLanguagesCode("fy")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Frysian_Netherlands_ = CommonLanguagesCode("fy-NL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Hindi = CommonLanguagesCode("hi")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Croatian = CommonLanguagesCode("hr")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Italian = CommonLanguagesCode("it")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Italian_Switzerland_ = CommonLanguagesCode("it-CH")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Italian_Italy_ = CommonLanguagesCode("it-IT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Japanese = CommonLanguagesCode("ja")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Korean = CommonLanguagesCode("ko")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Dutch = CommonLanguagesCode("nl")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Dutch_Belgium_ = CommonLanguagesCode("nl-BE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Dutch_Netherlands_ = CommonLanguagesCode("nl-NL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Norwegian = CommonLanguagesCode("no")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Norwegian_Norway_ = CommonLanguagesCode("no-NO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Punjabi = CommonLanguagesCode("pa")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Polish = CommonLanguagesCode("pl")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Portuguese = CommonLanguagesCode("pt")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Portuguese_Brazil_ = CommonLanguagesCode("pt-BR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Russian = CommonLanguagesCode("ru")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Russian_Russia_ = CommonLanguagesCode("ru-RU")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Serbian = CommonLanguagesCode("sr")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Serbian_Serbia_ = CommonLanguagesCode("sr-RS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Swedish = CommonLanguagesCode("sv")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Swedish_Sweden_ = CommonLanguagesCode("sv-SE")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Telegu = CommonLanguagesCode("te")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Chinese = CommonLanguagesCode("zh")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Chinese_China_ = CommonLanguagesCode("zh-CN")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Chinese_HongKong_ = CommonLanguagesCode("zh-HK")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Chinese_Singapore_ = CommonLanguagesCode("zh-SG")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
     """
     Chinese_Taiwan_ = CommonLanguagesCode("zh-TW")

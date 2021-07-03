@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class PurposeOfUse(GenericTypeCode):
     """
-    PurposeOfUse
+    v3.PurposeOfUse
+    From: http://terminology.hl7.org/ValueSet/v3-PurposeOfUse in v3-codesystems.xml
+         Supports communication of purpose of use at a general level.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

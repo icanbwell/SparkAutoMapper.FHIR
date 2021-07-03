@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityNamePartQualifierR2(GenericTypeCode):
     """
-    EntityNamePartQualifierR2
+    v3.EntityNamePartQualifierR2
+    From: http://terminology.hl7.org/ValueSet/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
+          Description:
+    The qualifier is a set of codes each of which specifies a certain subcategory
+    of the name part in addition to the main name part type. For example, a given
+    name may be flagged as a nickname, a family name may be a pseudonym or a name
+    of public records.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

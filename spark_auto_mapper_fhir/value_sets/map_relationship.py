@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class MapRelationship(GenericTypeCode):
     """
-    MapRelationship
+    v3.MapRelationship
+    From: http://terminology.hl7.org/ValueSet/v3-MapRelationship in v3-codesystems.xml
+         The closeness or quality of the mapping between the HL7 concept (as
+    represented by the HL7 concept identifier) and the source coding system. The
+    values are patterned after the similar relationships used in the UMLS
+    Metathesaurus. Because the HL7 coding sy
     """
 
     def __init__(self, value: AutoMapperTextInputType):

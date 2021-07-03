@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class SecurityPolicy(GenericTypeCode):
     """
-    SecurityPolicy
+    v3.SecurityPolicy
+    From: http://terminology.hl7.org/ValueSet/v3-SecurityPolicy in v3-codesystems.xml
+         Types of security policies that further specify the ActClassPolicy value set.
+    Examples:
+      encrypt prohibit redisclosure without consent directive
     """
 
     def __init__(self, value: AutoMapperTextInputType):

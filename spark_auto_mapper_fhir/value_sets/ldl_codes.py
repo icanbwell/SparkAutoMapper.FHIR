@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,21 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class LDLCodesCode(GenericTypeCode):
     """
     LDLCodes
+    From: http://hl7.org/fhir/ValueSet/ldlcholesterol-codes in valuesets.xml
+        LDL Cholesterol codes - measured or calculated
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/ldlcholesterol-codes
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ldlcholesterol-codes"
-
 
 class LDLCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ldlcholesterol-codes in valuesets.xml
     """
 
     LDLCholesterol_Assay_ = LDLCodesCode("18262-6")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ldlcholesterol-codes in valuesets.xml
     """
     CholesterolInLDL_Mass_volume_InSerumOrPlasmaByCalculation = LDLCodesCode("13457-7")

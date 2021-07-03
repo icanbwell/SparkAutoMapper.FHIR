@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,38 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class GoalCategoryCode(GenericTypeCode):
     """
     GoalCategory
+    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
+        Example codes for grouping goals to use for filtering or presentation.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/goal-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/goal-category"
-
 
 class GoalCategoryCodeValues:
     """
     Goals related to the consumption of food and/or beverages.
+    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
     """
 
     Dietary = GoalCategoryCode("dietary")
     """
     Goals related to the personal protection of the subject.
+    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
     """
     Safety = GoalCategoryCode("safety")
     """
     Goals related to the manner in which the subject acts.
+    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
     """
     Behavioral = GoalCategoryCode("behavioral")
     """
     Goals related to the practice of nursing or established by nurses.
+    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
     """
     Nursing = GoalCategoryCode("nursing")
     """
     Goals related to the mobility and/or motor capability of the subject.
+    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
     """
     Physiotherapy = GoalCategoryCode("physiotherapy")

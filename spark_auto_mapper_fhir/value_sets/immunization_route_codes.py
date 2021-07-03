@@ -11,52 +11,59 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ImmunizationRouteCodesCode(GenericTypeCode):
     """
     ImmunizationRouteCodes
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+        The value set to instantiate this attribute should be drawn from a
+    terminologically robust code system that consists of or contains concepts to
+    support describing the administrative routes used during vaccination. This
+    value set is provided as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/immunization-route
+    http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/immunization-route"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
 
 
 class ImmunizationRouteCodesCodeValues:
     """
     Route of substance administration classified by administration method.
+    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
 
     Routebymethod = ImmunizationRouteCodesCode("_RouteByMethod")
     """
     Route of substance administration classified by site.
+    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
     Routebysite = ImmunizationRouteCodesCode("_RouteBySite")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """
     Injection_Intradermal = ImmunizationRouteCodesCode("IDINJ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """
     Injection_Intramuscular = ImmunizationRouteCodesCode("IM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """
     Inhalation_Nasal = ImmunizationRouteCodesCode("NASINHLC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """
     Injection_Intravenous = ImmunizationRouteCodesCode("IVINJ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """
     Swallow_Oral = ImmunizationRouteCodesCode("PO")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """
     Injection_Subcutaneous = ImmunizationRouteCodesCode("SQ")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """
     Transdermal = ImmunizationRouteCodesCode("TRNSDERM")

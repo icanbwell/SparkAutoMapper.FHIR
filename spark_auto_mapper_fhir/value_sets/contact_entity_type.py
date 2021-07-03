@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,40 +10,47 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ContactEntityTypeCode(GenericTypeCode):
     """
     ContactEntityType
+    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate the
+    purpose for which you would contact a contact party.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/contactentity-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/contactentity-type"
-
 
 class ContactEntityTypeCodeValues:
     """
-    Contact details for information regarding to billing/general finance enquiries.
+    Contact details for information regarding to billing/general finance
+    enquiries.
+    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
     """
 
     Billing = ContactEntityTypeCode("BILL")
     """
     Contact details for administrative enquiries.
+    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
     """
     Administrative = ContactEntityTypeCode("ADMIN")
     """
-    Contact details for issues related to Human Resources, such as staff matters, OH&S etc.
+    Contact details for issues related to Human Resources, such as staff matters,
+    OH&S etc.
+    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
     """
     HumanResource = ContactEntityTypeCode("HR")
     """
-    Contact details for dealing with issues related to insurance claims/adjudication/payment.
+    Contact details for dealing with issues related to insurance
+    claims/adjudication/payment.
+    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
     """
     Payor = ContactEntityTypeCode("PAYOR")
     """
     Generic information contact for patients.
+    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
     """
     Patient = ContactEntityTypeCode("PATINF")
     """
     Dedicated contact point for matters relating to press enquiries.
+    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
     """
     Press = ContactEntityTypeCode("PRESS")

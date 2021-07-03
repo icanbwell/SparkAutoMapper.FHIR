@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,40 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AllergyIntoleranceCertaintyCode(GenericTypeCode):
     """
     AllergyIntoleranceCertainty
+    From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
+        Statement about the degree of clinical certainty that a specific substance was
+    the cause of the manifestation in a reaction event.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/reaction-event-certainty
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/reaction-event-certainty"
-
 
 class AllergyIntoleranceCertaintyCodeValues:
     """
-    There is a low level of clinical certainty that the reaction was caused by the identified substance.
+    There is a low level of clinical certainty that the reaction was caused by the
+    identified substance.
+    From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
     """
 
     Unlikely = AllergyIntoleranceCertaintyCode("unlikely")
     """
-    There is a high level of clinical certainty that the reaction was caused by the identified substance.
+    There is a high level of clinical certainty that the reaction was caused by
+    the identified substance.
+    From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
     """
     Likely = AllergyIntoleranceCertaintyCode("likely")
     """
-    There is a very high level of clinical certainty that the reaction was due to the identified substance, which may include clinical evidence by testing or rechallenge.
+    There is a very high level of clinical certainty that the reaction was due to
+    the identified substance, which may include clinical evidence by testing or
+    rechallenge.
+    From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
     """
     Confirmed = AllergyIntoleranceCertaintyCode("confirmed")
     """
-    The clinical certainty that the reaction was caused by the identified substance is unknown.  It is an explicit assertion that certainty is not known.
+    The clinical certainty that the reaction was caused by the identified
+    substance is unknown.  It is an explicit assertion that certainty is not
+    known.
+    From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
     """
     Unknown = AllergyIntoleranceCertaintyCode("unknown")

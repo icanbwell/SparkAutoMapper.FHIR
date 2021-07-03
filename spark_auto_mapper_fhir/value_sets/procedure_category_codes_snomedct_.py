@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,44 +10,41 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ProcedureCategoryCodes_SNOMEDCT_Code(GenericTypeCode):
     """
     ProcedureCategoryCodes(SNOMEDCT)
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
+        Procedure Category code: A selection of relevant SNOMED CT codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/procedure-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/procedure-category"
-
 
 class ProcedureCategoryCodes_SNOMEDCT_CodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
     """
 
     _24642003 = ProcedureCategoryCodes_SNOMEDCT_Code("24642003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
     """
     _409063005 = ProcedureCategoryCodes_SNOMEDCT_Code("409063005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
     """
     _409073007 = ProcedureCategoryCodes_SNOMEDCT_Code("409073007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
     """
     _387713003 = ProcedureCategoryCodes_SNOMEDCT_Code("387713003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
     """
     _103693007 = ProcedureCategoryCodes_SNOMEDCT_Code("103693007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
     """
     _46947000 = ProcedureCategoryCodes_SNOMEDCT_Code("46947000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/procedure-category in valuesets.xml
     """
     _410606002 = ProcedureCategoryCodes_SNOMEDCT_Code("410606002")

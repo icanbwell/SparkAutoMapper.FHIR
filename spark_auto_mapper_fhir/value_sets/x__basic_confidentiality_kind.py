@@ -10,7 +10,18 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class X_BasicConfidentialityKind(GenericTypeCode):
     """
-    x_BasicConfidentialityKind
+    v3.x_BasicConfidentialityKind
+    From: http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind in v3-codesystems.xml
+          Description:
+    Used to enumerate the typical confidentiality constraints placed upon a
+    clinical document.  Usage Note:
+    x_BasicConfidentialityKind is a subset of Confidentiality codes that are used
+    as metadata indicating the receiver responsibility to comply with normally
+    applicable jurisdictional privacy law or disclosure authorization; that the
+    receiver may not disclose this information except as directed by the
+    information custodian, who may be the information subject; or that the
+    receiver may not disclose this information except as directed by the
+    information custodian, who may be the information subject.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class DeviceAlertLevel(GenericTypeCode):
     """
-    DeviceAlertLevel
+    v3.DeviceAlertLevel
+    From: http://terminology.hl7.org/ValueSet/v3-DeviceAlertLevel in v3-codesystems.xml
+         Domain values for the Device.Alert_levelCode
     """
 
     def __init__(self, value: AutoMapperTextInputType):

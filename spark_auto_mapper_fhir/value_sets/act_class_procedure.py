@@ -10,7 +10,17 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActClassProcedure(GenericTypeCode):
     """
-    ActClassProcedure
+    v3.ActClassProcedure
+    From: http://terminology.hl7.org/ValueSet/v3-ActClassProcedure in v3-codesystems.xml
+         An Act whose immediate and primary outcome (post-condition) is the alteration
+    of the physical condition of the subject.  Examples:
+    : Procedures may involve the disruption of some body surface (e.g. an incision
+    in a surgical procedure), but they also include conservative procedures such
+    as reduction of a luxated join, chiropractic treatment, massage,
+    balneotherapy, acupuncture, shiatsu, etc. Outside of clinical medicine,
+    procedures may be such things as alteration of environments (e.g.
+    straightening rivers, draining swamps, building dams) or the repair or change
+    of machinery etc.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

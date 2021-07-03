@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class AcknowledgementType(GenericTypeCode):
     """
-    AcknowledgementType
+    v3.AcknowledgementType
+    From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementType in v3-codesystems.xml
+         This attribute contains an acknowledgement code as described in the HL7
+    message processing rules.  OpenIssue:
+    Description was copied from attribute and needs to be improved to be
+    appropriate for a code system.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

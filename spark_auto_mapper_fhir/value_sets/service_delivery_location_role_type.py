@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ServiceDeliveryLocationRoleType(GenericTypeCode):
     """
-    ServiceDeliveryLocationRoleType
+    v3.ServiceDeliveryLocationRoleType
+    From: http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType in v3-codesystems.xml
+         A role of a place that further classifies the setting (e.g., accident site,
+    road side, work site, community location) in which services are delivered.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,44 +10,48 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class MedicationKnowledgeCharacteristicCodesCode(GenericTypeCode):
     """
     medicationKnowledge Characteristic Codes
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+        MedicationKnowledge Characteristic Codes
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic"
-
 
 class MedicationKnowledgeCharacteristicCodesCodeValues:
     """
     Identyifying marks on product
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
     """
 
     ImprintCode = MedicationKnowledgeCharacteristicCodesCode("imprintcd")
     """
     Description of size of the product
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
     """
     Size = MedicationKnowledgeCharacteristicCodesCode("size")
     """
     Description of the shape of the product
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
     """
     Shape = MedicationKnowledgeCharacteristicCodesCode("shape")
     """
     Description of the color of the product
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
     """
     Color = MedicationKnowledgeCharacteristicCodesCode("color")
     """
     Description of the coating of the product
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
     """
     Coating = MedicationKnowledgeCharacteristicCodesCode("coating")
     """
     Description of the scoring of the product
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
     """
     Scoring = MedicationKnowledgeCharacteristicCodesCode("scoring")
     """
     Description of the Logo of the product
+    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
     """
     Logo = MedicationKnowledgeCharacteristicCodesCode("logo")

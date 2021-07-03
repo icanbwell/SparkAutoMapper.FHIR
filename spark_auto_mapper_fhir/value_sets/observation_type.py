@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ObservationType(GenericTypeCode):
     """
-    ObservationType
+    v3.ObservationType
+    From: http://terminology.hl7.org/ValueSet/v3-ObservationType in v3-codesystems.xml
+         Identifies the kinds of observations that can be performed
     """
 
     def __init__(self, value: AutoMapperTextInputType):

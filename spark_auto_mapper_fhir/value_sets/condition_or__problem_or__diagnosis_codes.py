@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -10,21 +9,18 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class Condition_or_Problem_or_DiagnosisCodesCode(GenericTypeCode):
     """
-    Condition_or_Problem_or_DiagnosisCodes
+    Condition/Problem/DiagnosisCodes
+    From: http://hl7.org/fhir/ValueSet/condition-code in valuesets.xml
+        Example value set for Condition/Problem/Diagnosis codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/condition-code
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-code"
-
 
 class Condition_or_Problem_or_DiagnosisCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/condition-code in valuesets.xml
     """
 
     NoCurrentProblemsOrDisability = Condition_or_Problem_or_DiagnosisCodesCode(

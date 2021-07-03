@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class QueryParameterValue(GenericTypeCode):
     """
-    QueryParameterValue
+    v3.QueryParameterValue
+    From: http://terminology.hl7.org/ValueSet/v3-QueryParameterValue in v3-codesystems.xml
+         The domain of coded values used as parameters within QueryByParameter
+    queries.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

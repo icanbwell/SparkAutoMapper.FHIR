@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActPharmacySupplyType(GenericTypeCode):
     """
-    ActPharmacySupplyType
+    v3.ActPharmacySupplyType
+    From: http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType in v3-codesystems.xml
+         Identifies types of dispensing events
     """
 
     def __init__(self, value: AutoMapperTextInputType):

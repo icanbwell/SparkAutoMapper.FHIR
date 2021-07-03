@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,24 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ActionCardinalityBehaviorCode(GenericTypeCode):
     """
     ActionCardinalityBehavior
+    From: http://hl7.org/fhir/action-cardinality-behavior in valuesets.xml
+        Defines behavior for an action or a group for how many times that item may be
+    repeated.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/action-cardinality-behavior
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-cardinality-behavior"
-
 
 class ActionCardinalityBehaviorCodeValues:
     """
     The action may only be selected one time.
+    From: http://hl7.org/fhir/action-cardinality-behavior in valuesets.xml
     """
 
     Single = ActionCardinalityBehaviorCode("single")
     """
     The action may be selected multiple times.
+    From: http://hl7.org/fhir/action-cardinality-behavior in valuesets.xml
     """
     Multiple = ActionCardinalityBehaviorCode("multiple")

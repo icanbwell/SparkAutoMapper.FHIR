@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,48 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class CodeSystemContentModeCode(GenericTypeCode):
     """
     CodeSystemContentMode
+    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
+        The extent of the content of the code system (the concepts and codes it
+    defines) are represented in a code system resource.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/codesystem-content-mode
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/codesystem-content-mode"
-
 
 class CodeSystemContentModeCodeValues:
     """
-    None of the concepts defined by the code system are included in the code system resource.
+    None of the concepts defined by the code system are included in the code
+    system resource.
+    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
     """
 
     NotPresent = CodeSystemContentModeCode("not-present")
     """
-    A few representative concepts are included in the code system resource. There is no useful intent in the subset choice and there's no process to make it workable: it's not intended to be workable.
+    A few representative concepts are included in the code system resource. There
+    is no useful intent in the subset choice and there's no process to make it
+    workable: it's not intended to be workable.
+    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
     """
     Example = CodeSystemContentModeCode("example")
     """
-    A subset of the code system concepts are included in the code system resource. This is a curated subset released for a specific purpose under the governance of the code system steward, and that the intent, bounds and consequences of the fragmentation are clearly defined in the fragment or the code system documentation. Fragments are also known as partitions.
+    A subset of the code system concepts are included in the code system resource.
+    This is a curated subset released for a specific purpose under the governance
+    of the code system steward, and that the intent, bounds and consequences of
+    the fragmentation are clearly defined in the fragment or the code system
+    documentation. Fragments are also known as partitions.
+    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
     """
     Fragment = CodeSystemContentModeCode("fragment")
     """
-    All the concepts defined by the code system are included in the code system resource.
+    All the concepts defined by the code system are included in the code system
+    resource.
+    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
     """
     Complete = CodeSystemContentModeCode("complete")
     """
-    The resource doesn't define any new concepts; it just provides additional designations and properties to another code system.
+    The resource doesn't define any new concepts; it just provides additional
+    designations and properties to another code system.
+    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
     """
     Supplement = CodeSystemContentModeCode("supplement")

@@ -11,36 +11,41 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ProvenanceEventHistoryAgentRoleCodesCode(GenericTypeCode):
     """
     ProvenanceEventHistoryAgentRoleCodes
+    From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
+        Types of roles indicating how a particular agent was involved with the
+    creation or modification of a resource for use when exposing event history
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/provenance-history-agent-type
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/provenance-history-agent-type"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 
 
 class ProvenanceEventHistoryAgentRoleCodesCodeValues:
     """
-    Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
+    Indicates that the target of the participation is involved in some manner in
+    the act, but does not qualify how.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
     """
 
     Participation = ProvenanceEventHistoryAgentRoleCodesCode("PART")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
     """
     Author = ProvenanceEventHistoryAgentRoleCodesCode("AUT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
     """
     Informant = ProvenanceEventHistoryAgentRoleCodesCode("INF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
     """
     Verifier = ProvenanceEventHistoryAgentRoleCodesCode("VRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
     """
     DataEnterer = ProvenanceEventHistoryAgentRoleCodesCode("ENT")

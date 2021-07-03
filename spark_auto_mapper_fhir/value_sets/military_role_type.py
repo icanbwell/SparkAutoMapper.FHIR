@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class MilitaryRoleType(GenericTypeCode):
     """
-    MilitaryRoleType
+    v3.MilitaryRoleType
+    From: http://terminology.hl7.org/ValueSet/v3-MilitaryRoleType in v3-codesystems.xml
+          Definition:
+    A person playing the role of program eligible under a program based on
+    military status.  Discussion:
+    This CoveredPartyRoleType.code is typically used when the CoveredPartyRole
+    class code is either "program eligible" or "subscriber" and the person's
+    status as a member of the military meets jurisdictional or program criteria
     """
 
     def __init__(self, value: AutoMapperTextInputType):

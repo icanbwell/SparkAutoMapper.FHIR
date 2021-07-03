@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class QueryRequestLimit(GenericTypeCode):
     """
-    QueryRequestLimit
+    v3.QueryRequestLimit
+    From: http://terminology.hl7.org/ValueSet/v3-QueryRequestLimit in v3-codesystems.xml
+          Definition:
+    Defines the units associated with the magnitude of the maximum size limit of a
+    query response that can be accepted by the requesting application.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

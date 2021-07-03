@@ -11,131 +11,191 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class EntityNamePartQualifierCode(GenericTypeCode):
     """
     EntityNamePartQualifier
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
+        A set of codes each of which specifies a certain subcategory of the name part
+    in addition to the main name part type.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/name-part-qualifier
+    http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/name-part-qualifier"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2"
+    )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier"
+    )
 
 
 class EntityNamePartQualifierCodeValues:
     """
-    Description:A name part a person acquired.  The name part may be acquired by adoption, or the person may have chosen to use the name part for some other reason.
+    Description:A name part a person acquired.  The name part may be acquired by
+    adoption, or the person may have chosen to use the name part for some other
+    reason.
 
 
-                           Note: this differs from an Other/Psuedonym/Alias in that an acquired name part is acquired on a formal basis rather than an informal one (e.g. registered as part of the official name).
+                               Note: this differs from an Other/Psuedonym/Alias in
+    that an acquired name part is acquired on a formal basis rather than an
+    informal one (e.g. registered as part of the official name).
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
 
     Acquired = EntityNamePartQualifierCode("AD")
     """
-    Description:A name that a person was given at birth or established as a consequence of adoption. 
-
-                        
-                           Note: This is not used for temporary names assigned at birth such as "Baby of Smith" a" which is just a name with a use code of "TEMP".
+    Description:A name that a person was given at birth or established as a
+    consequence of adoption.
+    
+    
+                               Note: This is not used for temporary names assigned
+    at birth such as "Baby of Smith" a" which is just a name with a use code of
+    "TEMP".
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     Birth = EntityNamePartQualifierCode("BR")
     """
-    Description:Used to indicate which of the various name parts is used when interacting with the person.
+    Description:Used to indicate which of the various name parts is used when
+    interacting with the person.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     Callme = EntityNamePartQualifierCode("CL")
     """
-    Description:Indicates that a name part is just an initial.  Initials do not imply a trailing period since this would not work with non-Latin scripts.  In some languages, initials may consist of more than one letter, e.g., "Ph" could stand for "Philippe" or "Th" For "Thomas".
+    Description:Indicates that a name part is just an initial.  Initials do not
+    imply a trailing period since this would not work with non-Latin scripts.  In
+    some languages, initials may consist of more than one letter, e.g., "Ph" could
+    stand for "Philippe" or "Th" For "Thomas".
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     Initial = EntityNamePartQualifierCode("IN")
     """
-    Description:For organizations a suffix indicating the legal status, e.g., "Inc.", "Co.", "AG", "GmbH", "B.V." "S.A.", "Ltd." etc.
+    Description:For organizations a suffix indicating the legal status, e.g.,
+    "Inc.", "Co.", "AG", "GmbH", "B.V." "S.A.", "Ltd." etc.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     LegalStatus = EntityNamePartQualifierCode("LS")
     """
     Description:Indicates that the name part is a middle name.
-
-                        
-                           Usage Notes: In general, the english "middle name" concept is all of the given names after the first. This qualifier may be used to explicitly indicate which given names are considered to be middle names. The middle name qualifier may also be used with family names. This is a Scandinavian use case, matching the concept of "mellomnavn","mellannamn". Note that there are specific rules that indicate what names may be taken as a mellannamn in different Scandinavian countries.
+    
+    
+                               Usage Notes: In general, the english "middle name"
+    concept is all of the given names after the first. This qualifier may be used
+    to explicitly indicate which given names are considered to be middle names.
+    The middle name qualifier may also be used with family names. This is a
+    Scandinavian use case, matching the concept of "mellomnavn","mellannamn". Note
+    that there are specific rules that indicate what names may be taken as a
+    mellannamn in different Scandinavian countries.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     MiddleName = EntityNamePartQualifierCode("MID")
     """
-    Description:A prefix has a strong association to the immediately following name part. A prefix has no implicit trailing white space (it has implicit leading white space though).
+    Description:A prefix has a strong association to the immediately following
+    name part. A prefix has no implicit trailing white space (it has implicit
+    leading white space though).
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     Prefix = EntityNamePartQualifierCode("PFX")
     """
-    Description: Medication Name Parts are a means of specifying a range of acceptable "official" forms of the name of a product.  They are used as patterns against which input name strings may be matched for automatic identification of products from input text reports.   While they cover the concepts held under "doseForm" or "route" or "strength" the name parts are not the same and do not fit into a controlled vocabulary in the same way. By specifying up to 8 name parts a much larger range of possible names can be generated.
+    Description: Medication Name Parts are a means of specifying a range of
+    acceptable "official" forms of the name of a product.  They are used as
+    patterns against which input name strings may be matched for automatic
+    identification of products from input text reports.   While they cover the
+    concepts held under "doseForm" or "route" or "strength" the name parts are not
+    the same and do not fit into a controlled vocabulary in the same way. By
+    specifying up to 8 name parts a much larger range of possible names can be
+    generated.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode(
         "PharmaceuticalEntityNamePartQualifiers"
     )
     """
-    Description:A suffix has a strong association to the immediately preceding name part. A suffix has no implicit leading white space (it has implicit trailing white space though).
+    Description:A suffix has a strong association to the immediately preceding
+    name part. A suffix has no implicit leading white space (it has implicit
+    trailing white space though).
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     Suffix = EntityNamePartQualifierCode("SFX")
     """
     Description:Extra information about the style of a title
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
     Titlestyles = EntityNamePartQualifierCode("TitleStyles")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     LegalStatus = EntityNamePartQualifierCode("LS")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Academic = EntityNamePartQualifierCode("AC")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Nobility = EntityNamePartQualifierCode("NB")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Professional = EntityNamePartQualifierCode("PR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Honorific = EntityNamePartQualifierCode("HON")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Birth = EntityNamePartQualifierCode("BR")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Acquired = EntityNamePartQualifierCode("AD")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Spouse = EntityNamePartQualifierCode("SP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     MiddleName = EntityNamePartQualifierCode("MID")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     CallMe = EntityNamePartQualifierCode("CL")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Initial = EntityNamePartQualifierCode("IN")
     """
     OrganizationNamePartQualifier
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
     """
     Organizationnamepartqualifier = EntityNamePartQualifierCode(
         "_OrganizationNamePartQualifier"
     )
     """
-    Description: Medication Name Parts are a means of specifying a range of acceptable "official" forms of the name of a product.  They are used as patterns against which input name strings may be matched for automatic identification of products from input text reports.   While they cover the concepts held under "doseForm" or "route" or "strength" the name parts are not the same and do not fit into a controlled vocabulary in the same way. By specifying up to 8 name parts a much larger range of possible names can be generated.
+    Description: Medication Name Parts are a means of specifying a range of
+    acceptable "official" forms of the name of a product.  They are used as
+    patterns against which input name strings may be matched for automatic
+    identification of products from input text reports.   While they cover the
+    concepts held under "doseForm" or "route" or "strength" the name parts are not
+    the same and do not fit into a controlled vocabulary in the same way. By
+    specifying up to 8 name parts a much larger range of possible names can be
+    generated.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
     """
     Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode(
         "PharmaceuticalEntityNamePartQualifiers"
     )
     """
     PersonNamePartQualifier
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
     """
     Personnamepartqualifier = EntityNamePartQualifierCode("_PersonNamePartQualifier")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
     Voorvoegsel = EntityNamePartQualifierCode("VV")

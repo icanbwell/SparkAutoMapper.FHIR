@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,23 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class FormCodesCode(GenericTypeCode):
     """
     Form Codes
+    From: http://terminology.hl7.org/CodeSystem/forms-codes in valuesets.xml
+        This value set includes a sample set of Forms codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/forms
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/forms"
-
 
 class FormCodesCodeValues:
     """
     Example: The #1 form to be used when printing this information.
+    From: http://terminology.hl7.org/CodeSystem/forms-codes in valuesets.xml
     """
 
     Form_1 = FormCodesCode("1")
     """
     Example: The #2 form to be used when printing this information.
+    From: http://terminology.hl7.org/CodeSystem/forms-codes in valuesets.xml
     """
     Form_1 = FormCodesCode("2")

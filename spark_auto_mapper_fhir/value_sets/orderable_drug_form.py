@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class OrderableDrugForm(GenericTypeCode):
     """
-    orderableDrugForm
+    v3.orderableDrugForm
+    From: http://terminology.hl7.org/ValueSet/v3-orderableDrugForm in v3-codesystems.xml
+          OpenIssue:
+    Missing description.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,24 +10,23 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class BiologicallyDerivedProductStatusCode(GenericTypeCode):
     """
     BiologicallyDerivedProductStatus
+    From: http://hl7.org/fhir/product-status in valuesets.xml
+        Biologically Derived Product Status.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/product-status
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/product-status"
-
 
 class BiologicallyDerivedProductStatusCodeValues:
     """
     Product is currently available for use.
+    From: http://hl7.org/fhir/product-status in valuesets.xml
     """
 
     Available = BiologicallyDerivedProductStatusCode("available")
     """
     Product is not currently available for use.
+    From: http://hl7.org/fhir/product-status in valuesets.xml
     """
     Unavailable = BiologicallyDerivedProductStatusCode("unavailable")

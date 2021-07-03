@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationTargetLocation(GenericTypeCode):
     """
-    ParticipationTargetLocation
+    v3.ParticipationTargetLocation
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationTargetLocation in v3-codesystems.xml
+         The facility where the service is done.  May be a static building (or room
+    therein) or a moving location (e.g., ambulance, helicopter, aircraft, train,
+    truck, ship, etc.)
     """
 
     def __init__(self, value: AutoMapperTextInputType):

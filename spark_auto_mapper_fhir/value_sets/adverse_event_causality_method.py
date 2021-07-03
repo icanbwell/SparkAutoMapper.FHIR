@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,25 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AdverseEventCausalityMethodCode(GenericTypeCode):
     """
     AdverseEventCausalityMethod
+    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
+        TODO.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/adverse-event-causality-method
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/adverse-event-causality-method"
-
 
 class AdverseEventCausalityMethodCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
     """
 
     ProbabilityScale = AdverseEventCausalityMethodCode("ProbabilityScale")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
     """
     Bayesian = AdverseEventCausalityMethodCode("Bayesian")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
     """
     Checklist = AdverseEventCausalityMethodCode("Checklist")

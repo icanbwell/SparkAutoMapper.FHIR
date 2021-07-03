@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SystemRestfulInteractionCode(GenericTypeCode):
     """
     SystemRestfulInteraction
+    From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
+        Operations supported by REST at the system level.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/system-restful-interaction
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/system-restful-interaction"
-
 
 class SystemRestfulInteractionCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
     """
 
     Transaction = SystemRestfulInteractionCode("transaction")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
     """
     Batch = SystemRestfulInteractionCode("batch")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
     """
     Search_system = SystemRestfulInteractionCode("search-system")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
     """
     History_system = SystemRestfulInteractionCode("history-system")

@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActRelationshipHasComponent(GenericTypeCode):
     """
-    ActRelationshipHasComponent
+    v3.ActRelationshipHasComponent
+    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipHasComponent in v3-codesystems.xml
+         A collection of sub-services as steps or subtasks performed for the source
+    service. Services may be performed sequentially or concurrently.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActExposureLevelCode(GenericTypeCode):
     """
-    ActExposureLevelCode
+    v3.ActExposureLevelCode
+    From: http://terminology.hl7.org/ValueSet/v3-ActExposureLevelCode in v3-codesystems.xml
+         A qualitative measure of the degree of exposure to the causative agent.  This
+    includes concepts such as "low", "medium" and "high".  This quantifies how the
+    quantity that was available to be administered to the target differs from
+    typical or background levels of the substance.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

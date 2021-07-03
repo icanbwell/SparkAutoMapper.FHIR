@@ -11,68 +11,89 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SpecialCourtesyCode(GenericTypeCode):
     """
     SpecialCourtesy
+    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+        This value set defines a set of codes that can be used to indicate special
+    courtesies provided to the patient.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/encounter-special-courtesy
+    http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-special-courtesy"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
+    )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
 
 
 class SpecialCourtesyCodeValues:
     """
     extended courtesy
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
     """
 
     ExtendedCourtesy = SpecialCourtesyCode("EXT")
     """
     normal courtesy
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
     """
     NormalCourtesy = SpecialCourtesyCode("NRM")
     """
     professional courtesy
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
     """
     ProfessionalCourtesy = SpecialCourtesyCode("PRF")
     """
     Courtesies extended to the staff of the entity providing service.
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
     """
     Staff = SpecialCourtesyCode("STF")
     """
     very important person
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
     """
     VeryImportantPerson = SpecialCourtesyCode("VIP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
     """
     EXT = SpecialCourtesyCode("EXT")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
     """
     NRM = SpecialCourtesyCode("NRM")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
     """
     PRF = SpecialCourtesyCode("PRF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
     """
     STF = SpecialCourtesyCode("STF")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
     """
     VIP = SpecialCourtesyCode("VIP")
     """
-    Description:The value is exceptional (missing, omitted, incomplete, improper). No information as to the reason for being an exceptional value is provided. This is the most general exceptional value. It is also the default exceptional value.
+    Description:The value is exceptional (missing, omitted, incomplete, improper).
+    No information as to the reason for being an exceptional value is provided.
+    This is the most general exceptional value. It is also the default exceptional
+    value.
+    From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
     """
     Noinformation = SpecialCourtesyCode("NI")
     """
-    Value is not present in a message.  This is only defined in messages, never in application data!  All values not present in the message must be replaced by the applicable default, or no-information (NI) as the default of all defaults.
+    Value is not present in a message.  This is only defined in messages, never in
+    application data!  All values not present in the message must be replaced by
+    the applicable default, or no-information (NI) as the default of all defaults.
+    From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
     """
     NotPresent = SpecialCourtesyCode("NP")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
     """
     UNK = SpecialCourtesyCode("UNK")

@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class DocumentStorage(GenericTypeCode):
     """
-    DocumentStorage
+    v3.DocumentStorage
+    From: http://terminology.hl7.org/ValueSet/v3-DocumentStorage in v3-codesystems.xml
+         Identifies the storage status of a document.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

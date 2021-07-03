@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActConsentDirective(GenericTypeCode):
     """
-    ActConsentDirective
+    v3.ActConsentDirective
+    From: http://terminology.hl7.org/ValueSet/v3-ActConsentDirective in v3-codesystems.xml
+         ActConsentDirective codes are used to specify the type of Consent Directive
+    to which a Consent Directive Act conforms.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

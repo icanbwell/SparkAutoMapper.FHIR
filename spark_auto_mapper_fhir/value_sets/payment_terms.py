@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class PaymentTerms(GenericTypeCode):
     """
-    PaymentTerms
+    v3.PaymentTerms
+    From: http://terminology.hl7.org/ValueSet/v3-PaymentTerms in v3-codesystems.xml
+         Describes payment terms for a financial transaction, used in an invoice. This
+    is typically expressed as a responsibility of the acceptor or payor of an
+    invoice.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ContextControl(GenericTypeCode):
     """
-    ContextControl
+    v3.ContextControl
+    From: http://terminology.hl7.org/ValueSet/v3-ContextControl in v3-codesystems.xml
+         A code that specifies how an ActRelationship or Participation contributes to
+    the context of an Act, and whether it may be propagated to descendent Acts
+    whose association allows such propagation (see also attributes
+    Participation.contextControlCode, ActRelationship.contextControlCode,
+    ActRelationship.contextConductionInd).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

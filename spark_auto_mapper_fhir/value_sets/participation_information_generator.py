@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationInformationGenerator(GenericTypeCode):
     """
-    ParticipationInformationGenerator
+    v3.ParticipationInformationGenerator
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationInformationGenerator in v3-codesystems.xml
+         Parties that may or should contribute or have contributed information to the
+    Act. Such information includes information leading to the decision to perform
+    the Act and how to perform the Act (e.g., consultant), information that the
+    Act itself seeks to reveal (e.g., informant of clinical history), or
+    information about what Act was performed (e.g., informant witness).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

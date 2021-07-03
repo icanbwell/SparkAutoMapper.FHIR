@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,39 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class BeneficiaryRelationshipCodesCode(GenericTypeCode):
     """
     Beneficiary Relationship Codes
+    From: http://hl7.org/fhir/relationship in valuesets.xml
+        This value set includes the Patient to subscriber relationship codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/relationship
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/relationship"
-
 
 class BeneficiaryRelationshipCodesCodeValues:
     """
     The patient is the subscriber (policy holder)
+    From: http://hl7.org/fhir/relationship in valuesets.xml
     """
 
     Self = BeneficiaryRelationshipCodesCode("1")
     """
     The patient is the spouse or equivalent of the subscriber (policy holder)
+    From: http://hl7.org/fhir/relationship in valuesets.xml
     """
     Spouse = BeneficiaryRelationshipCodesCode("2")
     """
     The patient is the child of the subscriber (policy holder)
+    From: http://hl7.org/fhir/relationship in valuesets.xml
     """
     Child = BeneficiaryRelationshipCodesCode("3")
     """
     The patient is the common law spouse of the subscriber (policy holder)
+    From: http://hl7.org/fhir/relationship in valuesets.xml
     """
     CommonLawSpouse = BeneficiaryRelationshipCodesCode("4")
     """
-    The patient has some other relationship, such as parent, to the subscriber (policy holder)
+    The patient has some other relationship, such as parent, to the subscriber
+    (policy holder)
+    From: http://hl7.org/fhir/relationship in valuesets.xml
     """
     Other = BeneficiaryRelationshipCodesCode("5")

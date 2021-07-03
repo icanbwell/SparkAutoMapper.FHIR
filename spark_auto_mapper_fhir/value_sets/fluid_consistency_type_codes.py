@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,33 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class FluidConsistencyTypeCodesCode(GenericTypeCode):
     """
     FluidConsistencyTypeCodes
+    From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
+        FluidConsistencyType :  Codes used to represent the consistency of fluids and
+    liquids provided to the patient. This value set includes concepts from [SNOMED
+    CT](http://snomed.info/sct)(US Extension) where concept is a 435681000124103
+    (Dietary liquid consistency diet (regime/therapy)). It is provided as a
+    suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/consistency-type
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/consistency-type"
-
 
 class FluidConsistencyTypeCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
     """
 
     HoneyThickLiquid = FluidConsistencyTypeCodesCode("439031000124108")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
     """
     NectarThickLiquid = FluidConsistencyTypeCodesCode("439021000124105")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
     """
     SpoonThickLiquid = FluidConsistencyTypeCodesCode("439041000124103")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
     """
     ThinLiquid = FluidConsistencyTypeCodesCode("439081000124109")

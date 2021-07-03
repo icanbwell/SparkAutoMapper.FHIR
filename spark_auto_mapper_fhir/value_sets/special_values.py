@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,40 +10,44 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SpecialValuesCode(GenericTypeCode):
     """
     SpecialValues
+    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
+        A set of generally useful codes defined so they can be included in value sets.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/special-values
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/special-values"
-
 
 class SpecialValuesCodeValues:
     """
     Boolean true.
+    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
     """
 
     True_ = SpecialValuesCode("true")
     """
     Boolean false.
+    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
     """
     False_ = SpecialValuesCode("false")
     """
     The content is greater than zero, but too small to be quantified.
+    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
     """
     TraceAmountDetected = SpecialValuesCode("trace")
     """
-    The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material.
+    The specific quantity is not known, but is known to be non-zero and is not
+    specified because it makes up the bulk of the material.
+    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
     """
     SufficientQuantity = SpecialValuesCode("sufficient")
     """
     The value is no longer available.
+    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
     """
     ValueWithdrawn = SpecialValuesCode("withdrawn")
     """
     The are no known applicable values in this context.
+    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
     """
     NilKnown = SpecialValuesCode("nil-known")

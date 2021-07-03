@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class LivingArrangement(GenericTypeCode):
     """
-    LivingArrangement
+    v3.LivingArrangement
+    From: http://terminology.hl7.org/ValueSet/v3-LivingArrangement in v3-codesystems.xml
+         A code depicting the living arrangements of a person
     """
 
     def __init__(self, value: AutoMapperTextInputType):

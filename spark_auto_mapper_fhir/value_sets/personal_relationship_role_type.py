@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class PersonalRelationshipRoleType(GenericTypeCode):
     """
-    PersonalRelationshipRoleType
+    v3.PersonalRelationshipRoleType
+    From: http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType in v3-codesystems.xml
+         Types of personal relationships between two living subjects.  Example:
+    Parent, sibling, unrelated friend, neighbor
     """
 
     def __init__(self, value: AutoMapperTextInputType):

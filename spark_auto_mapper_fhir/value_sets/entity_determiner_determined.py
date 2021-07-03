@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityDeterminerDetermined(GenericTypeCode):
     """
-    EntityDeterminerDetermined
+    v3.EntityDeterminerDetermined
+    From: http://terminology.hl7.org/ValueSet/v3-EntityDeterminerDetermined in v3-codesystems.xml
+         The described determiner is used to indicate that the given Entity is taken
+    as a general description of a kind of thing that can be taken in whole, in
+    part, or in multiples.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

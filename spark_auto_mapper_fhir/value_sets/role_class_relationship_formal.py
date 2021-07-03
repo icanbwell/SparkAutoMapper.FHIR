@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassRelationshipFormal(GenericTypeCode):
     """
-    RoleClassRelationshipFormal
+    v3.RoleClassRelationshipFormal
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassRelationshipFormal in v3-codesystems.xml
+         A relationship between two entities that is formally recognized, frequently
+    by a contract or similar agreement.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

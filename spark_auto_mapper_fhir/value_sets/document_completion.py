@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class DocumentCompletion(GenericTypeCode):
     """
-    DocumentCompletion
+    v3.DocumentCompletion
+    From: http://terminology.hl7.org/ValueSet/v3-DocumentCompletion in v3-codesystems.xml
+         Identifies the current completion state of a clinical document.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

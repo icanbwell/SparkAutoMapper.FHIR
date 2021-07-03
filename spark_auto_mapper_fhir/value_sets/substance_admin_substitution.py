@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class SubstanceAdminSubstitution(GenericTypeCode):
     """
-    substanceAdminSubstitution
+    v3.substanceAdminSubstitution
+    From: http://terminology.hl7.org/ValueSet/v3-substanceAdminSubstitution in v3-codesystems.xml
+         Identifies what sort of change is permitted or has occurred between the
+    therapy that was ordered and the therapy that was/will be provided.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

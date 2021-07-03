@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class QueryResponse(GenericTypeCode):
     """
-    QueryResponse
+    v3.QueryResponse
+    From: http://terminology.hl7.org/ValueSet/v3-QueryResponse in v3-codesystems.xml
+         A code classifying the general nature of the response to a given query.
+    Includes whether or not data was found, or whether an error occurred.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

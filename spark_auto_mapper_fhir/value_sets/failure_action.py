@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,32 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class Failure_actionCode(GenericTypeCode):
     """
     failure-action
+    From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
+        The result if validation fails
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/verificationresult-failure-action
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/verificationresult-failure-action"
-
 
 class Failure_actionCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
     """
 
     Fatal = Failure_actionCode("fatal")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
     """
     Warning = Failure_actionCode("warn")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
     """
     RecordOnly = Failure_actionCode("rec-only")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
     """
     None_ = Failure_actionCode("none")

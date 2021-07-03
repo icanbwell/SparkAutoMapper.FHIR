@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,72 +10,72 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class TextureModifierCodesCode(GenericTypeCode):
     """
     TextureModifierCodes
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+        TextureModifier: Codes for food consistency types or texture modifications to
+    apply to foods. This value set is composed of SNOMED CT (US Extension and
+    Core) Concepts from SCTID 229961002 Food consistency types (substance)
+    hierarchy and is provided as a suggestive example.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/texture-code
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/texture-code"
-
 
 class TextureModifierCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
 
     Cut_upFood = TextureModifierCodesCode("228053002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     EasyToChewFood = TextureModifierCodesCode("439091000124107")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     ChoppedFood = TextureModifierCodesCode("228049004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     GroundFood = TextureModifierCodesCode("441881000124103")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     MincedFood = TextureModifierCodesCode("441761000124103")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     MashedFood = TextureModifierCodesCode("441751000124100")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     SoftFood = TextureModifierCodesCode("228059003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     StrainedFood = TextureModifierCodesCode("441791000124106")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     LiquidizedFood = TextureModifierCodesCode("228055009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     LumpyFood = TextureModifierCodesCode("228056005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     MoistFood = TextureModifierCodesCode("441771000124105")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     Semi_solidFood = TextureModifierCodesCode("228057001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     SingleTextureFood = TextureModifierCodesCode("228058006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
     """
     SolidFood = TextureModifierCodesCode("228060008")

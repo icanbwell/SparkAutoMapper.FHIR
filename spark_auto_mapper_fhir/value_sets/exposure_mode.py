@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ExposureMode(GenericTypeCode):
     """
-    ExposureMode
+    v3.ExposureMode
+    From: http://terminology.hl7.org/ValueSet/v3-ExposureMode in v3-codesystems.xml
+         Code for the mechanism by which the exposure agent was exchanged or
+    potentially exchanged by the participants involved in the exposure.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

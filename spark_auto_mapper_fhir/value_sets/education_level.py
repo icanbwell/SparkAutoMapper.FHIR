@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EducationLevel(GenericTypeCode):
     """
-    EducationLevel
+    v3.EducationLevel
+    From: http://terminology.hl7.org/ValueSet/v3-EducationLevel in v3-codesystems.xml
+         Years of education that a person has completed
     """
 
     def __init__(self, value: AutoMapperTextInputType):

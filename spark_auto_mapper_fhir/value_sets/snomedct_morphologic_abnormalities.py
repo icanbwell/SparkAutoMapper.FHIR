@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,12 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class SNOMEDCTMorphologicAbnormalitiesCode(GenericTypeCode):
     """
     SNOMEDCTMorphologicAbnormalities
+    From: http://hl7.org/fhir/ValueSet/bodystructure-code in valuesets.xml
+        This value set includes all codes from [SNOMED CT](http://snomed.info/sct)
+    where concept is-a 442083009 (Anatomical or acquired body site (body
+    structure)).
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
-
-    """
-    http://hl7.org/fhir/ValueSet/bodystructure-code
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/bodystructure-code"

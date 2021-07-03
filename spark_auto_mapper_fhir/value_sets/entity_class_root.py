@@ -10,7 +10,9 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityClassRoot(GenericTypeCode):
     """
-    EntityClassRoot
+    v3.EntityClassRoot
+    From: http://terminology.hl7.org/ValueSet/v3-EntityClassRoot in v3-codesystems.xml
+         Corresponds to the Entity class
     """
 
     def __init__(self, value: AutoMapperTextInputType):

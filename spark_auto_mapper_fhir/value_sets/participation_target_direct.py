@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationTargetDirect(GenericTypeCode):
     """
-    ParticipationTargetDirect
+    v3.ParticipationTargetDirect
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationTargetDirect in v3-codesystems.xml
+         Target that is substantially present in the service and which is directly
+    affected by the service action (includes consumed material, devices, etc.).
     """
 
     def __init__(self, value: AutoMapperTextInputType):

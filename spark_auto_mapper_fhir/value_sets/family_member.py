@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class FamilyMember(GenericTypeCode):
     """
-    FamilyMember
+    v3.FamilyMember
+    From: http://terminology.hl7.org/ValueSet/v3-FamilyMember in v3-codesystems.xml
+         A relationship between two people characterizing their "familial"
+    relationship
     """
 
     def __init__(self, value: AutoMapperTextInputType):

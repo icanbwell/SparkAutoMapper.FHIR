@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ParticipationIndirectTarget(GenericTypeCode):
     """
-    ParticipationIndirectTarget
+    v3.ParticipationIndirectTarget
+    From: http://terminology.hl7.org/ValueSet/v3-ParticipationIndirectTarget in v3-codesystems.xml
+         Target that is not substantially present in the act and which is not directly
+    affected by the act, but which will be a focus of the record or documentation
+    of the act.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActMoodPredicate(GenericTypeCode):
     """
-    ActMoodPredicate
+    v3.ActMoodPredicate
+    From: http://terminology.hl7.org/ValueSet/v3-ActMoodPredicate in v3-codesystems.xml
+         Any of the above service moods (e.g., event, intent, or goal) can be turned
+    into a predicate used as a criterion to express conditionals (or queries.)
+    However, currently we allow only criteria on service events.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

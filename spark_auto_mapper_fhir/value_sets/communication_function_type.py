@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class CommunicationFunctionType(GenericTypeCode):
     """
-    CommunicationFunctionType
+    v3.CommunicationFunctionType
+    From: http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType in v3-codesystems.xml
+         Describes the type of communication function that the associated entity plays
+    in the associated transmission.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

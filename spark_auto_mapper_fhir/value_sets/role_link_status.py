@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleLinkStatus(GenericTypeCode):
     """
-    RoleLinkStatus
+    v3.RoleLinkStatus
+    From: http://terminology.hl7.org/ValueSet/v3-RoleLinkStatus in v3-codesystems.xml
+          Description:
+    Codes representing possible states of a RoleLink, as defined by the RoleLink
+    class state machine.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActInvoiceGroupCode(GenericTypeCode):
     """
-    ActInvoiceGroupCode
+    v3.ActInvoiceGroupCode
+    From: http://terminology.hl7.org/ValueSet/v3-ActInvoiceGroupCode in v3-codesystems.xml
+         Type of invoice element that is used to assist in describing an Invoice that
+    is either submitted for adjudication or for which is returned on adjudication
+    results. Invoice elements of this type signify a grouping of one or more
+    children (detail) invoice elements.  They do not have intrinsic costing
+    associated with them, but merely reflect the sum of all costing for it's
+    immediate children invoice elements.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

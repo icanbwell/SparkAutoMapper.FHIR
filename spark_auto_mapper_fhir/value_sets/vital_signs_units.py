@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,64 +10,61 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class VitalSignsUnitsCode(GenericTypeCode):
     """
     VitalSignsUnits
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+        Common UCUM units for recording Vital Signs
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/ucum-vitals-common
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ucum-vitals-common"
-
 
 class VitalSignsUnitsCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
 
     Percent = VitalSignsUnitsCode("%")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     Centimeter = VitalSignsUnitsCode("cm")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     Inch_international_ = VitalSignsUnitsCode("[in_i]")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     Kilogram = VitalSignsUnitsCode("kg")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     Gram = VitalSignsUnitsCode("g")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     Pound_USAndBritish_ = VitalSignsUnitsCode("[lb_av]")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     DegreeCelsius = VitalSignsUnitsCode("Cel")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     DegreeFahrenheit = VitalSignsUnitsCode("[degF]")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     MillimeterOfMercury = VitalSignsUnitsCode("mm[Hg]")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     PerMinute = VitalSignsUnitsCode("/min")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     Kilogram_meter_2_ = VitalSignsUnitsCode("kg/m2")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
     """
     SquareMeter = VitalSignsUnitsCode("m2")

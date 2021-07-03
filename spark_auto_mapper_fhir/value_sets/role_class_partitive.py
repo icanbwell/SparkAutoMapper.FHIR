@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleClassPartitive(GenericTypeCode):
     """
-    RoleClassPartitive
+    v3.RoleClassPartitive
+    From: http://terminology.hl7.org/ValueSet/v3-RoleClassPartitive in v3-codesystems.xml
+         An association between two Entities where the playing Entity is considered in
+    some way "part" of the scoping Entity, e.g., as a member, component,
+    ingredient, or content. Being "part" in the broadest sense of the word can
+    mean anything from being an integral structural component to a mere incidental
+    temporary association of a playing Entity with a (generally larger) scoping
+    Entity.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

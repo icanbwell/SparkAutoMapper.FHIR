@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class EntityStatus(GenericTypeCode):
     """
-    EntityStatus
+    v3.EntityStatus
+    From: http://terminology.hl7.org/ValueSet/v3-EntityStatus in v3-codesystems.xml
+         Codes representing the defined possible states of an Entity, as defined by
+    the Entity class state machine.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

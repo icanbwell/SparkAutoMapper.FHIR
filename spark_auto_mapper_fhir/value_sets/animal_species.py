@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class AnimalSpeciesCode(GenericTypeCode):
     """
     AnimalSpecies
+    From: http://hl7.org/fhir/animal-species in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate
+    species of animal patients.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/animal-species
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/animal-species"
-
 
 class AnimalSpeciesCodeValues:
     """
     Canis lupus familiaris
+    From: http://hl7.org/fhir/animal-species in valuesets.xml
     """
 
     Dog = AnimalSpeciesCode("canislf")
     """
     Ovis aries
+    From: http://hl7.org/fhir/animal-species in valuesets.xml
     """
     Sheep = AnimalSpeciesCode("ovisa")
     """
     Serinus canaria domestica
+    From: http://hl7.org/fhir/animal-species in valuesets.xml
     """
     DomesticCanary = AnimalSpeciesCode("serinuscd")

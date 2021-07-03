@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ResponseMode(GenericTypeCode):
     """
-    ResponseMode
+    v3.ResponseMode
+    From: http://terminology.hl7.org/ValueSet/v3-ResponseMode in v3-codesystems.xml
+         Specifies the mode, immediate versus deferred or queued, by which a receiver
+    should communicate its receiver responsibilities.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

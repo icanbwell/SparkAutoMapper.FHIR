@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class MaritalStatus(GenericTypeCode):
     """
-    MaritalStatus
+    v3.MaritalStatus
+    From: http://terminology.hl7.org/ValueSet/v3-MaritalStatus in v3-codesystems.xml
+         * * * No description supplied * * *  Open Issue:
+    The specific meanings of these codes can vary somewhat by jurisdiction and
+    implementation so caution should be used when determining equivalency.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

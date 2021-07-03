@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,28 +10,29 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class ExpansionParameterSourceCode(GenericTypeCode):
     """
     ExpansionParameterSource
+    From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
+        Declares what the source of a parameter is.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/expansion-parameter-source
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/expansion-parameter-source"
-
 
 class ExpansionParameterSourceCodeValues:
     """
     The parameter was supplied by the client in the $expand request.
+    From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
     """
 
     ClientInput = ExpansionParameterSourceCode("input")
     """
     The parameter was added by the expansion engine on the server.
+    From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
     """
     ServerEngine = ExpansionParameterSourceCode("server")
     """
-    The parameter was added from one the code systems used in the $expand operation.
+    The parameter was added from one the code systems used in the $expand
+    operation.
+    From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
     """
     CodeSystem = ExpansionParameterSourceCode("codesystem")

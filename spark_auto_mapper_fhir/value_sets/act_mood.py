@@ -10,7 +10,13 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActMood(GenericTypeCode):
     """
-    ActMood
+    v3.ActMood
+    From: http://terminology.hl7.org/ValueSet/v3-ActMood in v3-codesystems.xml
+         OpenIssue:  In Ballot 2009May, a strong Negative vote was lodged against
+    several of the concept definitions in the vocabulary used for Act.moodCode.
+    The vote was found "Persuasive With Mod", with the understanding that M and M
+    would undertake a detailed review of these concept definitions for a future
+    release of the RIM.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

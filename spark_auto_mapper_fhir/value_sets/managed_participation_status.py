@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ManagedParticipationStatus(GenericTypeCode):
     """
-    ManagedParticipationStatus
+    v3.ManagedParticipationStatus
+    From: http://terminology.hl7.org/ValueSet/v3-ManagedParticipationStatus in v3-codesystems.xml
+         Codes representing the defined possible states of a Managed Participation, as
+    defined by the Managed Participation class state machine.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

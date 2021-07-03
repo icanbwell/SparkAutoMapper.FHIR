@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,44 +10,42 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class DiagnosisRoleCode(GenericTypeCode):
     """
     DiagnosisRole
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
+        This value set defines a set of codes that can be used to express the role of
+    a diagnosis on the Encounter or EpisodeOfCare record.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/diagnosis-role
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/diagnosis-role"
-
 
 class DiagnosisRoleCodeValues:
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
     """
 
     AdmissionDiagnosis = DiagnosisRoleCode("AD")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
     """
     DischargeDiagnosis = DiagnosisRoleCode("DD")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
     """
     ChiefComplaint = DiagnosisRoleCode("CC")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
     """
     ComorbidityDiagnosis = DiagnosisRoleCode("CM")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
     """
     Pre_opDiagnosis = DiagnosisRoleCode("pre-op")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
     """
     Post_opDiagnosis = DiagnosisRoleCode("post-op")
     """
-    None
+    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
     """
     Billing = DiagnosisRoleCode("billing")

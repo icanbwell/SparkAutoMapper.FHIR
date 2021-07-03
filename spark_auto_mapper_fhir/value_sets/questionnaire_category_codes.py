@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,33 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class QuestionnaireCategoryCodesCode(GenericTypeCode):
     """
     QuestionnaireCategoryCodes
+    From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
+        Example list of potential categories for questionnaires.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/questionnaire-category
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaire-category"
-
 
 class QuestionnaireCategoryCodesCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
     """
 
     MentalStatusQuestionnaire = QuestionnaireCategoryCodesCode("273601006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
     """
     SocialSupportQuestionnaire = QuestionnaireCategoryCodesCode("273820006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
     """
     GeneralHealthQuestionnaire = QuestionnaireCategoryCodesCode("273479001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
     """
     ConsumerSatisfactionQuestionnaire = QuestionnaireCategoryCodesCode("273384008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
     """
     AdministrativeForm = QuestionnaireCategoryCodesCode("304784009")

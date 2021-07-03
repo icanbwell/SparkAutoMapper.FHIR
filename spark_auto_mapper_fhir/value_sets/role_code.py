@@ -10,7 +10,10 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class RoleCode(GenericTypeCode):
     """
-    RoleCode
+    v3.RoleCode
+    From: http://terminology.hl7.org/ValueSet/v3-RoleCode in v3-codesystems.xml
+         A set of codes further specifying the kind of Role; specific classification
+    codes for further qualifying RoleClass codes.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

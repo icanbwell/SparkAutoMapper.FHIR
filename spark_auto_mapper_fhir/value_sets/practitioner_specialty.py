@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,36 +10,34 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class PractitionerSpecialtyCode(GenericTypeCode):
     """
     PractitionerSpecialty
+    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate the
+    specialty of a Practitioner.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/practitioner-specialty
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/practitioner-specialty"
-
 
 class PractitionerSpecialtyCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
     """
 
     Cardiologist = PractitionerSpecialtyCode("cardio")
     """
-    None
+    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
     """
     Dentist = PractitionerSpecialtyCode("dent")
     """
-    None
+    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
     """
     DietaryConsultant = PractitionerSpecialtyCode("dietary")
     """
-    None
+    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
     """
     Midwife = PractitionerSpecialtyCode("midw")
     """
-    None
+    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
     """
     SystemsArchitect = PractitionerSpecialtyCode("sysarch")

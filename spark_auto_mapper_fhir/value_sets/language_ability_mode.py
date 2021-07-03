@@ -10,7 +10,12 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class LanguageAbilityMode(GenericTypeCode):
     """
-    LanguageAbilityMode
+    v3.LanguageAbilityMode
+    From: http://terminology.hl7.org/ValueSet/v3-LanguageAbilityMode in v3-codesystems.xml
+         A value representing the method of expression of the language.  Example:
+    Expressed spoken, expressed written, expressed signed, received spoken,
+    received written, received signed.  OpenIssue:
+    Description copied from Concept Domain of same name.  Must be verified.
     """
 
     def __init__(self, value: AutoMapperTextInputType):

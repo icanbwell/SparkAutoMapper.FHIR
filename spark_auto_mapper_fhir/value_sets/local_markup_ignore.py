@@ -10,7 +10,11 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class LocalMarkupIgnore(GenericTypeCode):
     """
-    LocalMarkupIgnore
+    v3.LocalMarkupIgnore
+    From: http://terminology.hl7.org/ValueSet/v3-LocalMarkupIgnore in v3-codesystems.xml
+         Tells a receiver to ignore just the local markup tags (local_markup,
+    local_header, local_attr) when value="markup", or to ignore the local markup
+    tags and all contained content when value="all"
     """
 
     def __init__(self, value: AutoMapperTextInputType):

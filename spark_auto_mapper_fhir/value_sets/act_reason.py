@@ -10,7 +10,14 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 # noinspection PyPep8Naming
 class ActReason(GenericTypeCode):
     """
-    ActReason
+    v3.ActReason
+    From: http://terminology.hl7.org/ValueSet/v3-ActReason in v3-codesystems.xml
+         A set of codes specifying the motivation, cause, or rationale of an Act, when
+    such rationale is not reasonably represented as an ActRelationship of type
+    "has reason" linking to another Act.  Examples:
+    Example reasons that might qualify for being coded in this field might be:
+    "routine requirement", "infectious disease reporting requirement", "on patient
+    request", "required by law".
     """
 
     def __init__(self, value: AutoMapperTextInputType):

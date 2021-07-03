@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInputType
@@ -11,502 +10,503 @@ from spark_auto_mapper.type_definitions.defined_types import AutoMapperTextInput
 class PracticeSettingCodeValueSetCode(GenericTypeCode):
     """
     PracticeSettingCodeValueSet
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+        This is the code representing the clinical specialty of the clinician or
+    provider who interacted with, treated, or provided a service to/for the
+    patient. The value set used for clinical specialty has been limited by HITSP
+    to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty
+    Value Set Definition.
     """
 
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    """
-    http://hl7.org/fhir/ValueSet/c80-practice-codes
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/c80-practice-codes"
-
 
 class PracticeSettingCodeValueSetCodeValues:
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
 
     AdultMentalIllness = PracticeSettingCodeValueSetCode("408467006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Anesthetics = PracticeSettingCodeValueSetCode("394577000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     AudiologicalMedicine = PracticeSettingCodeValueSetCode("394578005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     BloodBankingAndTransfusionMedicine = PracticeSettingCodeValueSetCode("421661004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     BurnsCare = PracticeSettingCodeValueSetCode("408462000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Cardiology = PracticeSettingCodeValueSetCode("394579002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalCytogeneticsAndMolecularGenetics = PracticeSettingCodeValueSetCode(
         "394804000"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalGenetics = PracticeSettingCodeValueSetCode("394580004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalHematology = PracticeSettingCodeValueSetCode("394803006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalImmunology = PracticeSettingCodeValueSetCode("408480009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalMicrobiology = PracticeSettingCodeValueSetCode("408454008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalNeuro_physiology = PracticeSettingCodeValueSetCode("394809005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalOncology = PracticeSettingCodeValueSetCode("394592004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalPharmacology = PracticeSettingCodeValueSetCode("394600006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ClinicalPhysiology = PracticeSettingCodeValueSetCode("394601005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     CommunityMedicine = PracticeSettingCodeValueSetCode("394581000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     CriticalCareMedicine = PracticeSettingCodeValueSetCode("408478003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     DentalMedicineSpecialties = PracticeSettingCodeValueSetCode("394812008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Dental_GeneralDentalPractice = PracticeSettingCodeValueSetCode("408444009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Dermatology = PracticeSettingCodeValueSetCode("394582007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     DiabeticMedicine = PracticeSettingCodeValueSetCode("408475000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     DiveMedicine = PracticeSettingCodeValueSetCode("410005002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Endocrinology = PracticeSettingCodeValueSetCode("394583002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     FamilyPractice = PracticeSettingCodeValueSetCode("419772000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Gastroenterology = PracticeSettingCodeValueSetCode("394584008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     GeneralMedicalPractice = PracticeSettingCodeValueSetCode("408443003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     GeneralMedicine = PracticeSettingCodeValueSetCode("394802001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     GeneralPathology = PracticeSettingCodeValueSetCode("394915009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     GeneralPractice = PracticeSettingCodeValueSetCode("394814009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Genito_urinaryMedicine = PracticeSettingCodeValueSetCode("394808002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     GeriatricMedicine = PracticeSettingCodeValueSetCode("394811001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     GynecologicalOncology = PracticeSettingCodeValueSetCode("408446006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Gynecology = PracticeSettingCodeValueSetCode("394586005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Hematopathology = PracticeSettingCodeValueSetCode("394916005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Hepatology = PracticeSettingCodeValueSetCode("408472002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Histopathology = PracticeSettingCodeValueSetCode("394597005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Immunopathology = PracticeSettingCodeValueSetCode("394598000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     InfectiousDiseases = PracticeSettingCodeValueSetCode("394807007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     InternalMedicine = PracticeSettingCodeValueSetCode("419192003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     LearningDisability = PracticeSettingCodeValueSetCode("408468001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     MedicalOncology = PracticeSettingCodeValueSetCode("394593009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     MedicalOphthalmology = PracticeSettingCodeValueSetCode("394813003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     MilitaryMedicine = PracticeSettingCodeValueSetCode("410001006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Nephrology = PracticeSettingCodeValueSetCode("394589003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Neurology = PracticeSettingCodeValueSetCode("394591006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Neuropathology = PracticeSettingCodeValueSetCode("394599008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     NuclearMedicine = PracticeSettingCodeValueSetCode("394649004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Obstetrics = PracticeSettingCodeValueSetCode("408470005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ObstetricsAndGynecology = PracticeSettingCodeValueSetCode("394585009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     OccupationalMedicine = PracticeSettingCodeValueSetCode("394821009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     OphthalmicSurgery = PracticeSettingCodeValueSetCode("422191005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Ophthalmology = PracticeSettingCodeValueSetCode("394594003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     OsteopathicManipulativeMedicine = PracticeSettingCodeValueSetCode("416304004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Otolaryngology = PracticeSettingCodeValueSetCode("418960008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PainManagement = PracticeSettingCodeValueSetCode("394882004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PalliativeMedicine = PracticeSettingCodeValueSetCode("394806003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Pediatric_ChildAndAdolescent_Psychiatry = PracticeSettingCodeValueSetCode(
         "394588006"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricCardiology = PracticeSettingCodeValueSetCode("408459003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricDentistry = PracticeSettingCodeValueSetCode("394607009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricEndocrinology = PracticeSettingCodeValueSetCode("419610006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricGastroenterology = PracticeSettingCodeValueSetCode("418058008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricGenetics = PracticeSettingCodeValueSetCode("420208008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricHematology = PracticeSettingCodeValueSetCode("418652005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricImmunology = PracticeSettingCodeValueSetCode("418535003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricInfectiousDiseases = PracticeSettingCodeValueSetCode("418862001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricNephrology = PracticeSettingCodeValueSetCode("419365004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricOncology = PracticeSettingCodeValueSetCode("418002000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricOphthalmology = PracticeSettingCodeValueSetCode("419983000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricPulmonology = PracticeSettingCodeValueSetCode("419170002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricRheumatology = PracticeSettingCodeValueSetCode("419472004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricSurgery = PracticeSettingCodeValueSetCode("394539006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PediatricSurgery_boneMarrowTransplantation = PracticeSettingCodeValueSetCode(
         "420112009"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PreventiveMedicine = PracticeSettingCodeValueSetCode("409968004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Psychiatry = PracticeSettingCodeValueSetCode("394587001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Psychotherapy = PracticeSettingCodeValueSetCode("394913002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PublicHealthMedicine = PracticeSettingCodeValueSetCode("408440000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     PulmonaryMedicine = PracticeSettingCodeValueSetCode("418112009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     RadiationOncology = PracticeSettingCodeValueSetCode("419815003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Radiology = PracticeSettingCodeValueSetCode("394914008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Radiology_InterventionalRadiology = PracticeSettingCodeValueSetCode("408455009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Rehabilitation = PracticeSettingCodeValueSetCode("394602003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     RespiteCare = PracticeSettingCodeValueSetCode("408447002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Rheumatology = PracticeSettingCodeValueSetCode("394810000")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     SleepStudies = PracticeSettingCodeValueSetCode("408450004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_BoneAndMarrowTransplantation = PracticeSettingCodeValueSetCode("408476004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_BreastSurgery = PracticeSettingCodeValueSetCode("408469009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_CardiacSurgery = PracticeSettingCodeValueSetCode("408466002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_CardiothoracicTransplantation = PracticeSettingCodeValueSetCode("408471009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_ColorectalSurgery = PracticeSettingCodeValueSetCode("408464004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dental_Endodontics = PracticeSettingCodeValueSetCode("408441001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dental_OralAndMaxillofacialSurgery = PracticeSettingCodeValueSetCode(
         "408465003"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dental_OralSurgery = PracticeSettingCodeValueSetCode("394605001")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dental_Orthodontics = PracticeSettingCodeValueSetCode("394608004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dental_PeriodontalSurgery = PracticeSettingCodeValueSetCode("408461007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dental_ProstheticDentistry_Prosthodontics_ = (
         PracticeSettingCodeValueSetCode("408460008")
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dental_surgical_Prosthodontics = PracticeSettingCodeValueSetCode(
         "408460008"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dentistry_RestorativeDentistry = PracticeSettingCodeValueSetCode(
         "394606000"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dentistry_surgical = PracticeSettingCodeValueSetCode("408449004")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Dentistry_surgical_Orthodontics = PracticeSettingCodeValueSetCode(
         "394608004"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_DermatologicSurgery = PracticeSettingCodeValueSetCode("418018006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Ear_NoseAndThroatSurgery = PracticeSettingCodeValueSetCode("394604002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_general = PracticeSettingCodeValueSetCode("394609007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_HepatobiliaryAndPancreaticSurgery = PracticeSettingCodeValueSetCode(
         "408474001"
     )
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Neurosurgery = PracticeSettingCodeValueSetCode("394610002")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_PlasticSurgery = PracticeSettingCodeValueSetCode("394611003")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_TransplantationSurgery = PracticeSettingCodeValueSetCode("408477008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_TraumaAndOrthopedics = PracticeSettingCodeValueSetCode("394801008")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgery_Vascular = PracticeSettingCodeValueSetCode("408463005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     SurgicalOncology = PracticeSettingCodeValueSetCode("419321007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Surgical_Accident_Emergency = PracticeSettingCodeValueSetCode("394576009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     ThoracicMedicine = PracticeSettingCodeValueSetCode("394590007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Toxicology = PracticeSettingCodeValueSetCode("409967009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     TropicalMedicine = PracticeSettingCodeValueSetCode("408448007")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     UrologicalOncology = PracticeSettingCodeValueSetCode("419043006")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     Urology = PracticeSettingCodeValueSetCode("394612005")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     MedicalSpecialty_OTHER_NOTLISTED = PracticeSettingCodeValueSetCode("394733009")
     """
-    None
+    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
     SurgicalSpecialty_OTHER_NOTLISTED = PracticeSettingCodeValueSetCode("394732004")
