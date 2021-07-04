@@ -24,3 +24,22 @@ class ActSubstanceAdminSubstitutionCode(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
+    )
+
+
+class ActSubstanceAdminSubstitutionCodeValues:
+    """
+    Description: Substitution occurred or is permitted with another product that
+    may potentially have different ingredients, but having the same biological and
+    therapeutic effects.
+    From: http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution in v3-codesystems.xml
+    """
+
+    ActSubstanceAdminSubstitutionCode_ = ActSubstanceAdminSubstitutionCode(
+        "_ActSubstanceAdminSubstitutionCode"
+    )

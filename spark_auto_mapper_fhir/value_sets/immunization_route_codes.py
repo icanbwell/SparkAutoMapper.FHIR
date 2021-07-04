@@ -33,12 +33,12 @@ class ImmunizationRouteCodesCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
 
-    Routebymethod = ImmunizationRouteCodesCode("_RouteByMethod")
+    RouteByMethod = ImmunizationRouteCodesCode("_RouteByMethod")
     """
     Route of substance administration classified by site.
     From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
-    Routebysite = ImmunizationRouteCodesCode("_RouteBySite")
+    RouteBySite = ImmunizationRouteCodesCode("_RouteBySite")
     """
     From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
     """

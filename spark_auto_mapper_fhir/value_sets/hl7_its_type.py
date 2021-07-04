@@ -23,3 +23,21 @@ class Hl7ITSType(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-hl7ITSType
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7ITSType"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-hl7ITSType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7ITSType"
+
+
+class Hl7ITSTypeValues:
+    """
+    Description: ITS based on the Universal Modeling Language.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7ITSType in v3-codesystems.xml
+    """
+
+    UniversalModelingLanguage = Hl7ITSType("UML")
+    """
+    Description: ITS based on the Extensible Markup Language.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7ITSType in v3-codesystems.xml
+    """
+    ExtensibleMarkupLanguage = Hl7ITSType("XML")

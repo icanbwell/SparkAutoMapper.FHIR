@@ -48,7 +48,7 @@ class ObservationInterpretationCodesCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
 
-    Geneticobservationinterpretation = ObservationInterpretationCodesCode(
+    GeneticObservationInterpretation = ObservationInterpretationCodesCode(
         "_GeneticObservationInterpretation"
     )
     """
@@ -56,7 +56,7 @@ class ObservationInterpretationCodesCodeValues:
     and one of U or D allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    Observationinterpretationchange = ObservationInterpretationCodesCode(
+    ObservationInterpretationChange = ObservationInterpretationCodesCode(
         "_ObservationInterpretationChange"
     )
     """
@@ -64,7 +64,7 @@ class ObservationInterpretationCodesCodeValues:
     At most one allowed. Does not imply normality or severity.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    Observationinterpretationexceptions = ObservationInterpretationCodesCode(
+    ObservationInterpretationExceptions = ObservationInterpretationCodesCode(
         "_ObservationInterpretationExceptions"
     )
     """
@@ -73,7 +73,7 @@ class ObservationInterpretationCodesCodeValues:
     most one is allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    Observationinterpretationnormality = ObservationInterpretationCodesCode(
+    ObservationInterpretationNormality = ObservationInterpretationCodesCode(
         "_ObservationInterpretationNormality"
     )
     """
@@ -81,7 +81,7 @@ class ObservationInterpretationCodesCodeValues:
     (microbiology). At most one allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    Observationinterpretationsusceptibility = ObservationInterpretationCodesCode(
+    ObservationInterpretationSusceptibility = ObservationInterpretationCodesCode(
         "_ObservationInterpretationSusceptibility"
     )
     """
@@ -131,7 +131,7 @@ class ObservationInterpretationCodesCodeValues:
     observation.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    Observationinterpretationdetection = ObservationInterpretationCodesCode(
+    ObservationInterpretationDetection = ObservationInterpretationCodesCode(
         "ObservationInterpretationDetection"
     )
     """
@@ -140,7 +140,7 @@ class ObservationInterpretationCodesCodeValues:
     category are mutually exclusive, i.e., at most one is allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    Observationinterpretationexpectation = ObservationInterpretationCodesCode(
+    ObservationInterpretationExpectation = ObservationInterpretationCodesCode(
         "ObservationInterpretationExpectation"
     )
     """
@@ -152,7 +152,7 @@ class ObservationInterpretationCodesCodeValues:
     V2 Table 0078 "Interpretation Codes."
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    InterpretationQualifiersInSeparateObxSegments = ObservationInterpretationCodesCode(
+    InterpretationQualifiersInSeparateOBXSegments = ObservationInterpretationCodesCode(
         "OBX"
     )
     """
@@ -160,6 +160,6 @@ class ObservationInterpretationCodesCodeValues:
     component / analyte with the reagent in the performed laboratory test.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    Reactivityobservationinterpretation = ObservationInterpretationCodesCode(
+    ReactivityObservationInterpretation = ObservationInterpretationCodesCode(
         "ReactivityObservationInterpretation"
     )

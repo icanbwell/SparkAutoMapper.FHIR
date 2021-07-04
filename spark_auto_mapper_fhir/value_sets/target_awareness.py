@@ -22,3 +22,41 @@ class TargetAwareness(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TargetAwareness
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TargetAwareness"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TargetAwareness
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TargetAwareness"
+
+
+class TargetAwarenessValues:
+    """
+    Target person has been informed about the issue but currently denies it.
+    From: http://terminology.hl7.org/CodeSystem/v3-TargetAwareness in v3-codesystems.xml
+    """
+
+    Denying = TargetAwareness("D")
+    """
+    Target person is fully aware of the issue.
+    From: http://terminology.hl7.org/CodeSystem/v3-TargetAwareness in v3-codesystems.xml
+    """
+    FullAwareness = TargetAwareness("F")
+    """
+    Target person is not capable of comprehending the issue.
+    From: http://terminology.hl7.org/CodeSystem/v3-TargetAwareness in v3-codesystems.xml
+    """
+    Incapable = TargetAwareness("I")
+    """
+    Target person is marginally aware of the issue.
+    From: http://terminology.hl7.org/CodeSystem/v3-TargetAwareness in v3-codesystems.xml
+    """
+    Marginal = TargetAwareness("M")
+    """
+    Target person is partially aware of the issue.
+    From: http://terminology.hl7.org/CodeSystem/v3-TargetAwareness in v3-codesystems.xml
+    """
+    Partial = TargetAwareness("P")
+    """
+    Target person has not yet been informed of the issue.
+    From: http://terminology.hl7.org/CodeSystem/v3-TargetAwareness in v3-codesystems.xml
+    """
+    Uninformed = TargetAwareness("U")

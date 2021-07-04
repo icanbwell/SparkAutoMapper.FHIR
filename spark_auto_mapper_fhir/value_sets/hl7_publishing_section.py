@@ -23,3 +23,77 @@ class Hl7PublishingSection(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-hl7PublishingSection
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7PublishingSection"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection"
+
+
+class Hl7PublishingSectionValues:
+    """
+    Description: Represents the HL7 V3 publishing section that deals with the
+    administration and management of health care activities and organizations.
+
+
+                               UsageNote: V3 Specifications are published in a set
+    of "domains", which contain interactions and related specifications for a
+    single area of health care within which can be supported by a single, coherent
+    set of interoperability specifications.
+
+                            For publishing purposes, these domains are aggregated
+    into sub-sections of related health care areas and these sub-sections are
+    further aggregated into three major sets.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
+    """
+
+    AdministrativeManagement = Hl7PublishingSection("AM")
+    """
+    Description: Represents the HL7 V3 publishing section that deals with the
+    health care provision and clinical management.
+    
+    
+                               UsageNote: V3 Specifications are published in a set
+    of "domains", which contain interactions and related specifications for a
+    single area of health care within which can be supported by a single, coherent
+    set of interoperability specifications.
+    
+                            For publishing purposes, these domains are aggregated
+    into sub-sections of related health care areas and these sub-sections are
+    further aggregated into three major sets.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
+    """
+    HealthAndClinicalManagement = Hl7PublishingSection("HM")
+    """
+    Description: Represents the HL7 V3 publishing section that deals with the
+    definition and management of the computing and communication infrastructure
+    necessary to support health care.
+    
+    
+                               UsageNote: V3 Specifications are published in a set
+    of "domains", which contain interactions and related specifications for a
+    single area of health care within which can be supported by a single, coherent
+    set of interoperability specifications.
+    
+                            For publishing purposes, these domains are aggregated
+    into sub-sections of related health care areas and these sub-sections are
+    further aggregated into three major sets.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
+    """
+    InfrastructureManagement = Hl7PublishingSection("IM")
+    """
+    Description: Represents the HL7 V3 publishing section that holds
+    specifications that are unassigned - that have not yet been assigned to one of
+    the formal publishing sections.
+    
+    
+                               UsageNote: V3 Specifications are published in a set
+    of "domains", which contain interactions and related specifications for a
+    single area of health care within which can be supported by a single, coherent
+    set of interoperability specifications.
+    
+                            For publishing purposes, these domains are aggregated
+    into sub-sections of related health care areas and these sub-sections are
+    further aggregated into three major sets.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
+    """
+    Unknown = Hl7PublishingSection("UU")

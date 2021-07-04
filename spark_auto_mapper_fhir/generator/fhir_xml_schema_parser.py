@@ -1065,6 +1065,7 @@ class FhirXmlSchemaParser:
             result: OrderedDict[str, Any] = parse(contents)
             entries: List[OrderedDict[str, Any]] = result["Bundle"]["entry"]
 
+        # Have to do 2 passes since the compose includes may be later in the file
         value_set_entry: Dict[str, Any]
         for value_set_entry in entries:
             value_set_entry_resource: OrderedDict[str, Any] = value_set_entry[
@@ -1082,14 +1083,18 @@ class FhirXmlSchemaParser:
             id_: str = value_set["id"]["@value"]
             fhir_name: str = value_set["name"]["@value"]
             name: str = fhir_name.replace("v3.", "")
+            clean_name = FhirXmlSchemaParser.clean_name(name)
             description: Union[List[str], str] = value_set["description"]["@value"]
             if not isinstance(description, list):
                 description = [description]
             url = value_set["url"]["@value"]
             fhir_concepts: List[FhirValueSetConcept] = []
+            value_set_url_list: List[str] = []
             # value_set_url = None  # value_set["valueSet"]
             if "concept" in value_set:
                 concepts_list: List[OrderedDict[str, Any]] = value_set["concept"]
+                if url not in value_set_url_list:
+                    value_set_url_list.append(url)
                 if isinstance(concepts_list, OrderedDict):
                     concepts_list = [concepts_list]
                 concept: OrderedDict[str, Any]
@@ -1100,21 +1105,7 @@ class FhirXmlSchemaParser:
                         if "display" in concept
                         else concept["code"]["@value"]
                     )
-                    cleaned_display: str = (
-                        "".join([c.capitalize() for c in display.split(" ")])
-                        .replace("-", "")
-                        .replace(".", "")
-                        .replace("&", "")
-                        .replace("'", "")
-                        .replace("(", "")
-                        .replace(",", "")
-                        .replace(")", "")
-                        .replace("/", "")
-                        .replace("+", "")
-                    )
-                    cleaned_display = FhirXmlSchemaParser.fix_python_keywords(
-                        cleaned_display
-                    )
+                    cleaned_display = FhirXmlSchemaParser.clean_name(display)
                     definition: Optional[str] = (
                         concept["definition"]["@value"]
                         if "definition" in concept
@@ -1136,15 +1127,81 @@ class FhirXmlSchemaParser:
                     name=name,
                     fhir_name=fhir_name,
                     name_snake_case=FhirXmlSchemaParser.camel_to_snake(name),
-                    cleaned_name=FhirXmlSchemaParser.clean_name(name),
+                    cleaned_name=clean_name,
                     concepts=fhir_concepts,
                     url=url,
                     value_set_url="",
-                    value_set_url_list=[url],
+                    value_set_url_list=value_set_url_list or [url],
                     documentation=description,
                     source="v3-codesystems.xml",
                 )
             )
+
+        # Do second pass just for filling out compose.include entries
+        for value_set_entry in entries:
+            value_set_entry_resource = value_set_entry["resource"]
+            is_code_system = "CodeSystem" in value_set_entry_resource
+            is_value_set = "ValueSet" in value_set_entry_resource
+            value_set = (
+                value_set_entry_resource["ValueSet"]
+                if is_value_set
+                else value_set_entry_resource["CodeSystem"]
+                if is_code_system
+                else value_set_entry["resource"]
+            )
+            id_ = value_set["id"]["@value"]
+            fhir_concepts = []
+            value_set_url_list = []
+            if "compose" in value_set:
+                compose_includes: List[OrderedDict[str, Any]] = value_set["compose"][
+                    "include"
+                ]
+                if isinstance(compose_includes, OrderedDict):
+                    compose_includes = [compose_includes]
+                compose_include: OrderedDict[str, Any]
+                for compose_include in compose_includes:
+                    is_code_system = "system" in compose_include
+                    # is_value_set = "valueSet" in compose_include
+                    if is_code_system:
+                        compose_include_code_system: str = compose_include["system"][
+                            "@value"
+                        ]
+                        # find the corresponding item in code systems
+                        v3_code_systems: List[FhirValueSet] = [
+                            c
+                            for c in fhir_value_sets
+                            if c.url == compose_include_code_system
+                        ]
+                        if v3_code_systems:
+                            for code_system in v3_code_systems:
+                                fhir_concepts.extend(code_system.concepts)
+                                value_set_url_list.append(code_system.url)
+                        # v2_code_systems: List[FhirValueSet] = [
+                        #     c
+                        #     for c in fhir_v2_code_systems
+                        #     if c.url == compose_include_code_system
+                        # ]
+                        # if v2_code_systems:
+                        #     for code_system in v2_code_systems:
+                        #         fhir_concepts.extend(code_system.concepts)
+                        #         value_set_url_list.append(code_system.url)
+
+            # find the appropriate value set and add it there
+            found_value_sets = [c for c in fhir_value_sets if c.id_ == id_]
+            for found_value_set in found_value_sets:
+                # add concepts from compose.includes
+                missing_concepts = [
+                    c
+                    for c in fhir_concepts
+                    if c.code not in [b.code for b in found_value_set.concepts]
+                ]
+                if missing_concepts:
+                    found_value_set.concepts.extend(missing_concepts)
+                # add any missing value set urls
+                for value_set_url in value_set_url_list:
+                    if value_set_url not in found_value_set.value_set_url_list:
+                        found_value_set.value_set_url_list.append(value_set_url)
+
         return fhir_value_sets
 
     @staticmethod
@@ -1196,22 +1253,7 @@ class FhirXmlSchemaParser:
                         if "display" in concept
                         else concept["code"]["@value"]
                     )
-                    cleaned_display: str = (
-                        "".join([c.capitalize() for c in display.split(" ")])
-                        .replace("-", "")
-                        .replace(".", "")
-                        .replace("&", "")
-                        .replace("'", "")
-                        .replace("(", "")
-                        .replace(",", "")
-                        .replace(")", "")
-                        .replace("/", "")
-                        .replace("+", "")
-                        .replace("?", "")
-                    )
-                    cleaned_display = FhirXmlSchemaParser.fix_python_keywords(
-                        cleaned_display
-                    )
+                    cleaned_display = FhirXmlSchemaParser.clean_name(display)
                     definition: Optional[str] = (
                         concept["definition"]["@value"]
                         if "definition" in concept

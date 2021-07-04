@@ -22,3 +22,64 @@ class Hl7CMETAttribution(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-hl7CMETAttribution
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7CMETAttribution"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution"
+
+
+class Hl7CMETAttributionValues:
+    """
+    Description: Provides sufficient information to allow the object identified to
+    be contacted. This is likely to have the content of identified and confirmable
+    plus telephone number.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
+    """
+
+    Contact = Hl7CMETAttribution("contact")
+    """
+    Description: This variant is a proper subset of universal and is intended to
+    provide sufficient information to identify the object(s) modeled by the CMET.
+    This variant is only suitable for use within TIGHTLY COUPLED SYSTEMS ONLY.
+    This variant provides ONLY the ID (and code where applicable) and Name. Other
+    variants may not be substituted at runtime.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
+    """
+    Identified = Hl7CMETAttribution("identified")
+    """
+    Description: This extends the identified variant by adding just sufficient
+    additional information to allow the identity of object modeled to be confirmed
+    by a number of corroborating items of data; for instance a patient's date of
+    birth and current address. However, specific contact information, such as
+    telephone number, are not viewed as confirming information.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
+    """
+    Identified_confirmable = Hl7CMETAttribution("identified-confirmable")
+    """
+    Description: Generally the same information content as "contactable" but using
+    new "informational" CMETs as dependant CMETs. This flavor allows expression of
+    the CMET when non-focal class information is not known.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
+    """
+    Identified_informational = Hl7CMETAttribution("identified-informational")
+    """
+    Description: Generally the same information content as "contactable", but with
+    required (not mandatory) ids on entry point class. This flavor allows
+    expression of the CMET even when mandatory information is not known.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
+    """
+    Informational = Hl7CMETAttribution("informational")
+    """
+    Description: Provides more than identified, but not as much as universal.
+    There are not expected to be many of these.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
+    """
+    Minimal = Hl7CMETAttribution("minimal")
+    """
+    Description: This variant includes all attributes and associations present in
+    the R-MIM. Any of non-mandatory and non-required attributes and/or
+    associations may be present or absent, as permitted in the cardinality
+    constraints.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
+    """
+    Universal = Hl7CMETAttribution("universal")

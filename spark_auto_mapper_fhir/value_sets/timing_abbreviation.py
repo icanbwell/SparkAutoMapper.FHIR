@@ -30,7 +30,7 @@ class TimingAbbreviationCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
 
-    Am = TimingAbbreviationCode("AM")
+    AM = TimingAbbreviationCode("AM")
     """
     At bedtime (institution specified time).
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
@@ -40,22 +40,22 @@ class TimingAbbreviationCodeValues:
     Two times a day at institution specified time
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Bid = TimingAbbreviationCode("BID")
+    BID = TimingAbbreviationCode("BID")
     """
     Regular business days (Monday to Friday excluding holidays)
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Jb = TimingAbbreviationCode("JB")
+    JB = TimingAbbreviationCode("JB")
     """
     Regular weekends (Saturday and Sunday excluding holidays)
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Je = TimingAbbreviationCode("JE")
+    JE = TimingAbbreviationCode("JE")
     """
     Holidays
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Gtsabbreviationholidays = TimingAbbreviationCode("JH")
+    GTSAbbreviationHolidays = TimingAbbreviationCode("JH")
     """
     Monthly at institution specified time.
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
@@ -65,7 +65,7 @@ class TimingAbbreviationCodeValues:
     Every afternoon at institution specified times.
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Pm = TimingAbbreviationCode("PM")
+    PM = TimingAbbreviationCode("PM")
     """
     Every hour at institution specified times.
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
@@ -85,12 +85,12 @@ class TimingAbbreviationCodeValues:
     Every 4 hours at institution specified time
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Q4h = TimingAbbreviationCode("Q4H")
+    Q4H = TimingAbbreviationCode("Q4H")
     """
     Every 6 hours at institution specified time
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Q6h = TimingAbbreviationCode("Q6H")
+    Q6H = TimingAbbreviationCode("Q6H")
     """
     Every 8 hours at institution specified times.
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
@@ -100,22 +100,22 @@ class TimingAbbreviationCodeValues:
     Every day at institution specified times.
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Qd = TimingAbbreviationCode("QD")
+    QD = TimingAbbreviationCode("QD")
     """
     Four times a day at institution specified time
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Qid = TimingAbbreviationCode("QID")
+    QID = TimingAbbreviationCode("QID")
     """
     Every other day at institution specified times.
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Qod = TimingAbbreviationCode("QOD")
+    QOD = TimingAbbreviationCode("QOD")
     """
     Three times a day at institution specified time
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
     """
-    Tid = TimingAbbreviationCode("TID")
+    TID = TimingAbbreviationCode("TID")
     """
     Weekly at institution specified time.
     From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml

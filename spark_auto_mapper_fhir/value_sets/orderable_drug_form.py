@@ -23,3 +23,21 @@ class OrderableDrugForm(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-orderableDrugForm
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-orderableDrugForm"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+
+
+class OrderableDrugFormValues:
+    """
+    AdministrableDrugForm
+    From: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm in v3-codesystems.xml
+    """
+
+    AdministrableDrugForm = OrderableDrugForm("_AdministrableDrugForm")
+    """
+    DispensableDrugForm
+    From: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm in v3-codesystems.xml
+    """
+    DispensableDrugForm = OrderableDrugForm("_DispensableDrugForm")

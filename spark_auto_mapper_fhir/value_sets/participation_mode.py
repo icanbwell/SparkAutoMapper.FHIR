@@ -30,3 +30,39 @@ class ParticipationMode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ParticipationMode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ParticipationMode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationMode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
+
+
+class ParticipationModeValues:
+    """
+    Participation by non-human-languaged based electronic signal
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
+    """
+
+    ElectronicData = ParticipationMode("ELECTRONIC")
+    """
+    Participation by direct action where subject and actor are in the same
+    location. (The participation involves more than communication.)
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
+    """
+    PhysicalPresence = ParticipationMode("PHYSICAL")
+    """
+    Participation by direct action where subject and actor are in separate
+    locations, and the actions of the actor are transmitted by electronic or
+    mechanical means. (The participation involves more than communication.)
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
+    """
+    RemotePresence = ParticipationMode("REMOTE")
+    """
+    Participation by voice communication
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
+    """
+    Verbal = ParticipationMode("VERBAL")
+    """
+    Participation by human language recorded on a physical material
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
+    """
+    Written = ParticipationMode("WRITTEN")

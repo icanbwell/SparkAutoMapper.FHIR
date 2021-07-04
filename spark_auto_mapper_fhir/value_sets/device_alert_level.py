@@ -22,3 +22,31 @@ class DeviceAlertLevel(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-DeviceAlertLevel
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-DeviceAlertLevel"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel"
+
+
+class DeviceAlertLevelValues:
+    """
+    Shut Down, Fix Problem and Re-initialize
+    From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+    """
+
+    Critical = DeviceAlertLevel("C")
+    """
+    No Corrective Action Needed
+    From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+    """
+    Normal = DeviceAlertLevel("N")
+    """
+    Corrective Action Required
+    From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+    """
+    Serious = DeviceAlertLevel("S")
+    """
+    Corrective Action Anticipated
+    From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+    """
+    Warning = DeviceAlertLevel("W")

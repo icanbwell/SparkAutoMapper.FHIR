@@ -26,3 +26,33 @@ class LanguageAbilityProficiency(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency"
+    )
+
+
+class LanguageAbilityProficiencyValues:
+    """
+    Excellent
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+    """
+
+    Excellent = LanguageAbilityProficiency("E")
+    """
+    Fair
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+    """
+    Fair = LanguageAbilityProficiency("F")
+    """
+    Good
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+    """
+    Good = LanguageAbilityProficiency("G")
+    """
+    Poor
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+    """
+    Poor = LanguageAbilityProficiency("P")

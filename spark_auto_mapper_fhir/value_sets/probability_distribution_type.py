@@ -60,7 +60,7 @@ class ProbabilityDistributionTypeCodeValues:
     and variance s2 is m = a b and s2 = a b2.
     From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
     """
-    gamma = ProbabilityDistributionTypeCode("G")
+    _gamma_ = ProbabilityDistributionTypeCode("G")
     """
     The logarithmic normal distribution is used to transform skewed random
     variable X into a normally distributed random variable U = log X. The log-
@@ -73,7 +73,7 @@ class ProbabilityDistributionTypeCodeValues:
     mlog = log m - slog2/2.
     From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
     """
-    Lognormal = ProbabilityDistributionTypeCode("LN")
+    Log_normal = ProbabilityDistributionTypeCode("LN")
     """
     This is the well-known bell-shaped normal distribution.  Because of the
     central limit theorem, the normal distribution is the distribution of choice
@@ -83,7 +83,7 @@ class ProbabilityDistributionTypeCodeValues:
     away" from the bound of the scale measured in terms of standard deviations.
     From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
     """
-    Normalgaussian = ProbabilityDistributionTypeCode("N")
+    Normal_Gaussian_ = ProbabilityDistributionTypeCode("N")
     """
     Used to describe the quotient of a normal random variable and the square root
     of a c2 random variable.  The t-distribution has one parameter n, the number

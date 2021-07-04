@@ -23,3 +23,29 @@ class ResponseMode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ResponseMode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ResponseMode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ResponseMode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ResponseMode"
+
+
+class ResponseModeValues:
+    """
+    The receiver may respond in a non-immediate manner. Note: this will be the
+    default value.
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseMode in v3-codesystems.xml
+    """
+
+    Deferred = ResponseMode("D")
+    """
+    The receiver is required to assume that the sender is blocking and behave
+    appropriately by sending an immediate response.
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseMode in v3-codesystems.xml
+    """
+    Immediate = ResponseMode("I")
+    """
+    The receiver shall keep any application responses in a queue until such time
+    as the queue is polled.
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseMode in v3-codesystems.xml
+    """
+    Queue = ResponseMode("Q")

@@ -23,3 +23,32 @@ class QueryResponse(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-QueryResponse
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-QueryResponse"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-QueryResponse
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryResponse"
+
+
+class QueryResponseValues:
+    """
+    Query Error.  Application Error.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryResponse in v3-codesystems.xml
+    """
+
+    ApplicationError = QueryResponse("AE")
+    """
+    No errors, but no data was found matching the query request specification.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryResponse in v3-codesystems.xml
+    """
+    NoDataFound = QueryResponse("NF")
+    """
+    Query reponse data found for 1 or more result sets matching the query request
+    specification.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryResponse in v3-codesystems.xml
+    """
+    DataFound = QueryResponse("OK")
+    """
+    QueryError. Problem with input ParmetersError
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryResponse in v3-codesystems.xml
+    """
+    QueryParameterError = QueryResponse("QE")

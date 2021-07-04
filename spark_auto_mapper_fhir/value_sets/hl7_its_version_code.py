@@ -25,3 +25,16 @@ class Hl7ITSVersionCode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode"
+
+
+class Hl7ITSVersionCodeValues:
+    """
+    XML ITS version 1 pre-release 1.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode in v3-codesystems.xml
+    """
+
+    XMLV1PR1 = Hl7ITSVersionCode("XMLV1PR1")

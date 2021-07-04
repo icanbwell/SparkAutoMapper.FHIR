@@ -25,3 +25,41 @@ class LanguageAbilityMode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-LanguageAbilityMode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityMode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode"
+
+
+class LanguageAbilityModeValues:
+    """
+    Expressed signed
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+    """
+
+    ExpressedSigned = LanguageAbilityMode("ESGN")
+    """
+    Expressed spoken
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+    """
+    ExpressedSpoken = LanguageAbilityMode("ESP")
+    """
+    Expressed written
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+    """
+    ExpressedWritten = LanguageAbilityMode("EWR")
+    """
+    Received signed
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+    """
+    ReceivedSigned = LanguageAbilityMode("RSGN")
+    """
+    Received spoken
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+    """
+    ReceivedSpoken = LanguageAbilityMode("RSP")
+    """
+    Received written
+    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+    """
+    ReceivedWritten = LanguageAbilityMode("RWR")

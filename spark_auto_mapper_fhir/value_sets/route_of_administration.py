@@ -23,3 +23,23 @@ class RouteOfAdministration(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
+    )
+
+
+class RouteOfAdministrationValues:
+    """
+    Route of substance administration classified by administration method.
+    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
+    """
+
+    RouteByMethod = RouteOfAdministration("_RouteByMethod")
+    """
+    Route of substance administration classified by site.
+    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
+    """
+    RouteBySite = RouteOfAdministration("_RouteBySite")

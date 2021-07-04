@@ -23,3 +23,34 @@ class IdentifierReliability(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-IdentifierReliability
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-IdentifierReliability"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability"
+    )
+
+
+class IdentifierReliabilityValues:
+    """
+    Description: The identifier was issued by the system responsible for
+    constructing the instance.
+    From: http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability in v3-codesystems.xml
+    """
+
+    IssuedBySystem = IdentifierReliability("ISS")
+    """
+    Description: The identifier was provided to the system that constructed the
+    instance, but has not been verified. e.g. a Drivers  license entered manually
+    into a system by a user.
+    From: http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability in v3-codesystems.xml
+    """
+    UnverifiedBySystem = IdentifierReliability("UNV")
+    """
+    Description: The identifier was not issued by the system responsible for
+    constructing the instance, but the system that captured the id has verified
+    the identifier with the issuing authority, or with another system that has
+    verified the identifier.
+    From: http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability in v3-codesystems.xml
+    """
+    VerifiedBySystem = IdentifierReliability("VRF")

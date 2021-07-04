@@ -27,3 +27,19 @@ class TransmissionRelationshipTypeCode(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-TransmissionRelationshipTypeCode"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TransmissionRelationshipTypeCode
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TransmissionRelationshipTypeCode"
+    )
+
+
+class TransmissionRelationshipTypeCodeValues:
+    """
+    Description:A transmission relationship indicating that the source
+    transmission follows the target transmission.
+    From: http://terminology.hl7.org/CodeSystem/v3-TransmissionRelationshipTypeCode in v3-codesystems.xml
+    """
+
+    Sequence = TransmissionRelationshipTypeCode("SEQL")

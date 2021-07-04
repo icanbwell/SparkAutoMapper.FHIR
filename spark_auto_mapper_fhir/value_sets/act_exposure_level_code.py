@@ -25,3 +25,19 @@ class ActExposureLevelCode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActExposureLevelCode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActExposureLevelCode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode"
+
+
+class ActExposureLevelCodeValues:
+    """
+    A qualitative measure of the degree of exposure to the causative agent.  This
+    includes concepts such as "low", "medium" and "high".  This quantifies how the
+    quantity that was available to be administered to the target differs from
+    typical or background levels of the substance.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode in v3-codesystems.xml
+    """
+
+    ActExposureLevelCode_ = ActExposureLevelCode("_ActExposureLevelCode")

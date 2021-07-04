@@ -22,3 +22,27 @@ class CalendarCycle(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-CalendarCycle
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-CalendarCycle"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-CalendarCycle
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-CalendarCycle"
+
+
+class CalendarCycleValues:
+    """
+    CalendarCycleOneLetter
+    From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
+    """
+
+    CalendarCycleOneLetter = CalendarCycle("_CalendarCycleOneLetter")
+    """
+    CalendarCycleTwoLetter
+    From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
+    """
+    CalendarCycleTwoLetter = CalendarCycle("_CalendarCycleTwoLetter")
+    """
+    The week with the month's first Thursday in it (analagous to the ISO 8601
+    definition for week of the year).
+    From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
+    """
+    WeekOfTheMonth = CalendarCycle("WM")

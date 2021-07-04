@@ -23,3 +23,43 @@ class EntityCode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EntityCode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityCode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityCode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityCode"
+
+
+class EntityCodeValues:
+    """
+    Types of Material for EntityClass "MAT"
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
+    """
+
+    MaterialEntityClassType = EntityCode("_MaterialEntityClassType")
+    """
+    Indicates types of allergy and intolerance agents which are non-drugs.  (E.g.
+    foods, latex, etc.)
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
+    """
+    NonDrugAgentEntity = EntityCode("_NonDrugAgentEntity")
+    """
+    Further classifies entities of classCode ORG.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
+    """
+    OrganizationEntityType = EntityCode("_OrganizationEntityType")
+    """
+    Types of places for EntityClass "PLC"
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
+    """
+    PlaceEntityType = EntityCode("_PlaceEntityType")
+    """
+    Codes to characterize a Resource Group using categories that typify its
+    membership and/or function
+    
+                            .
+    
+    
+                               Example: PractitionerGroup
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
+    """
+    ResourceGroupEntityType = EntityCode("_ResourceGroupEntityType")

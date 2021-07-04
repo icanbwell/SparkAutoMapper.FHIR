@@ -24,3 +24,61 @@ class MaritalStatus(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-MaritalStatus
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-MaritalStatus"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+
+
+class MaritalStatusValues:
+    """
+    Marriage contract has been declared null and to not have existed
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+
+    Annulled = MaritalStatus("A")
+    """
+    Marriage contract has been declared dissolved and inactive
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    Divorced = MaritalStatus("D")
+    """
+    Subject to an Interlocutory Decree.
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    Interlocutory = MaritalStatus("I")
+    """
+    Legally Separated
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    LegallySeparated = MaritalStatus("L")
+    """
+    A current marriage contract is active
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    Married = MaritalStatus("M")
+    """
+    More than 1 current spouse
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    Polygamous = MaritalStatus("P")
+    """
+    No marriage contract has ever been entered
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    NeverMarried = MaritalStatus("S")
+    """
+    Person declares that a domestic partner relationship exists.
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    DomesticPartner = MaritalStatus("T")
+    """
+    Currently not in a marriage contract.
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    Unmarried = MaritalStatus("U")
+    """
+    The spouse has died
+    From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+    """
+    Widowed = MaritalStatus("W")

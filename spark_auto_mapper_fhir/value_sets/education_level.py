@@ -22,3 +22,56 @@ class EducationLevel(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EducationLevel
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EducationLevel"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EducationLevel
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EducationLevel"
+
+
+class EducationLevelValues:
+    """
+    Associate's or technical degree complete
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+
+    Associate_sOrTechnicalDegreeComplete = EducationLevel("ASSOC")
+    """
+    College or baccalaureate degree complete
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    CollegeOrBaccalaureateDegreeComplete = EducationLevel("BD")
+    """
+    Elementary School
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    ElementarySchool = EducationLevel("ELEM")
+    """
+    Graduate or professional Degree complete
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    GraduateOrProfessionalDegreeComplete = EducationLevel("GD")
+    """
+    High School or secondary school degree complete
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    HighSchoolOrSecondarySchoolDegreeComplete = EducationLevel("HS")
+    """
+    Some post-baccalaureate education
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    SomePost_baccalaureateEducation = EducationLevel("PB")
+    """
+    Doctoral or post graduate education
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    DoctoralOrPostGraduateEducation = EducationLevel("POSTG")
+    """
+    Some College education
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    SomeCollegeEducation = EducationLevel("SCOL")
+    """
+    Some secondary or high school education
+    From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+    """
+    SomeSecondaryOrHighSchoolEducation = EducationLevel("SEC")

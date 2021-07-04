@@ -22,3 +22,26 @@ class NullFlavor(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-NullFlavor
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-NullFlavor"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+
+
+class NullFlavorValues:
+    """
+    Description:The value is exceptional (missing, omitted, incomplete, improper).
+    No information as to the reason for being an exceptional value is provided.
+    This is the most general exceptional value. It is also the default exceptional
+    value.
+    From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
+    """
+
+    NoInformation = NullFlavor("NI")
+    """
+    Value is not present in a message.  This is only defined in messages, never in
+    application data!  All values not present in the message must be replaced by
+    the applicable default, or no-information (NI) as the default of all defaults.
+    From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
+    """
+    NotPresent = NullFlavor("NP")

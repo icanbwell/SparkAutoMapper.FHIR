@@ -35,20 +35,20 @@ class DetectedIssueMitigationActionCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
 
-    Actaccountcode = DetectedIssueMitigationActionCode("_ActAccountCode")
+    ActAccountCode = DetectedIssueMitigationActionCode("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationcode = DetectedIssueMitigationActionCode("_ActAdjudicationCode")
+    ActAdjudicationCode = DetectedIssueMitigationActionCode("_ActAdjudicationCode")
     """
     Actions to be carried out by the recipient of the Adjudication Result
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationresultactioncode = DetectedIssueMitigationActionCode(
+    ActAdjudicationResultActionCode = DetectedIssueMitigationActionCode(
         "_ActAdjudicationResultActionCode"
     )
     """
@@ -56,7 +56,7 @@ class DetectedIssueMitigationActionCodeValues:
     procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillablemodifiercode = DetectedIssueMitigationActionCode(
+    ActBillableModifierCode = DetectedIssueMitigationActionCode(
         "_ActBillableModifierCode"
     )
     """
@@ -64,14 +64,14 @@ class DetectedIssueMitigationActionCodeValues:
     services and/or goods provided by a Provider, over a specified period.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillingarrangementcode = DetectedIssueMitigationActionCode(
+    ActBillingArrangementCode = DetectedIssueMitigationActionCode(
         "_ActBillingArrangementCode"
     )
     """
     Type of bounded ROI.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actboundedroicode = DetectedIssueMitigationActionCode("_ActBoundedROICode")
+    ActBoundedROICode = DetectedIssueMitigationActionCode("_ActBoundedROICode")
     """
     Description:The type and scope of responsibility taken-on by the performer of
     the Act for a specific subject of care.
@@ -83,7 +83,7 @@ class DetectedIssueMitigationActionCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actclaimattachmentcategorycode = DetectedIssueMitigationActionCode(
+    ActClaimAttachmentCategoryCode = DetectedIssueMitigationActionCode(
         "_ActClaimAttachmentCategoryCode"
     )
     """
@@ -93,12 +93,12 @@ class DetectedIssueMitigationActionCodeValues:
     research.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actconsenttype = DetectedIssueMitigationActionCode("_ActConsentType")
+    ActConsentType = DetectedIssueMitigationActionCode("_ActConsentType")
     """
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontainerregistrationcode = DetectedIssueMitigationActionCode(
+    ActContainerRegistrationCode = DetectedIssueMitigationActionCode(
         "_ActContainerRegistrationCode"
     )
     """
@@ -120,30 +120,30 @@ class DetectedIssueMitigationActionCodeValues:
     diastolic blood pressure).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontrolvariable = DetectedIssueMitigationActionCode("_ActControlVariable")
+    ActControlVariable = DetectedIssueMitigationActionCode("_ActControlVariable")
     """
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoverageconfirmationcode = DetectedIssueMitigationActionCode(
+    ActCoverageConfirmationCode = DetectedIssueMitigationActionCode(
         "_ActCoverageConfirmationCode"
     )
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragelimitcode = DetectedIssueMitigationActionCode("_ActCoverageLimitCode")
+    ActCoverageLimitCode = DetectedIssueMitigationActionCode("_ActCoverageLimitCode")
     """
     Definition: Set of codes indicating the type of insurance policy or program
     that pays for the cost of benefits provided to covered parties.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragetypecode = DetectedIssueMitigationActionCode("_ActCoverageTypeCode")
+    ActCoverageTypeCode = DetectedIssueMitigationActionCode("_ActCoverageTypeCode")
     """
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actdetectedissuemanagementcode = DetectedIssueMitigationActionCode(
+    ActDetectedIssueManagementCode = DetectedIssueMitigationActionCode(
         "_ActDetectedIssueManagementCode"
     )
     """
@@ -152,25 +152,25 @@ class DetectedIssueMitigationActionCodeValues:
     substance", etc. to further describe the nature of interaction.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actexposurecode = DetectedIssueMitigationActionCode("_ActExposureCode")
+    ActExposureCode = DetectedIssueMitigationActionCode("_ActExposureCode")
     """
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actfinancialtransactioncode = DetectedIssueMitigationActionCode(
+    ActFinancialTransactionCode = DetectedIssueMitigationActionCode(
         "_ActFinancialTransactionCode"
     )
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actincidentcode = DetectedIssueMitigationActionCode("_ActIncidentCode")
+    ActIncidentCode = DetectedIssueMitigationActionCode("_ActIncidentCode")
     """
     Description: The type of health information to which the subject of the
     information or the subject's delegate consents or dissents.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscode = DetectedIssueMitigationActionCode(
+    ActInformationAccessCode = DetectedIssueMitigationActionCode(
         "_ActInformationAccessCode"
     )
     """
@@ -180,7 +180,7 @@ class DetectedIssueMitigationActionCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscontextcode = DetectedIssueMitigationActionCode(
+    ActInformationAccessContextCode = DetectedIssueMitigationActionCode(
         "_ActInformationAccessContextCode"
     )
     """
@@ -188,7 +188,7 @@ class DetectedIssueMitigationActionCodeValues:
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationcategorycode = DetectedIssueMitigationActionCode(
+    ActInformationCategoryCode = DetectedIssueMitigationActionCode(
         "_ActInformationCategoryCode"
     )
     """
@@ -197,7 +197,7 @@ class DetectedIssueMitigationActionCodeValues:
     results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementcode = DetectedIssueMitigationActionCode("_ActInvoiceElementCode")
+    ActInvoiceElementCode = DetectedIssueMitigationActionCode("_ActInvoiceElementCode")
     """
     Identifies the different types of summary information that can be reported by
     queries dealing with Statement of Financial Activity (SOFA).  The summary
@@ -205,7 +205,7 @@ class DetectedIssueMitigationActionCodeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementsummarycode = DetectedIssueMitigationActionCode(
+    ActInvoiceElementSummaryCode = DetectedIssueMitigationActionCode(
         "_ActInvoiceElementSummaryCode"
     )
     """
@@ -214,19 +214,19 @@ class DetectedIssueMitigationActionCodeValues:
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceoverridecode = DetectedIssueMitigationActionCode(
+    ActInvoiceOverrideCode = DetectedIssueMitigationActionCode(
         "_ActInvoiceOverrideCode"
     )
     """
     Provides codes associated with ActClass value of LIST (working list)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actlistcode = DetectedIssueMitigationActionCode("_ActListCode")
+    ActListCode = DetectedIssueMitigationActionCode("_ActListCode")
     """
     Identifies types of monitoring programs
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actmonitoringprotocolcode = DetectedIssueMitigationActionCode(
+    ActMonitoringProtocolCode = DetectedIssueMitigationActionCode(
         "_ActMonitoringProtocolCode"
     )
     """
@@ -234,7 +234,7 @@ class DetectedIssueMitigationActionCodeValues:
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actnonobservationindicationcode = DetectedIssueMitigationActionCode(
+    ActNonObservationIndicationCode = DetectedIssueMitigationActionCode(
         "_ActNonObservationIndicationCode"
     )
     """
@@ -294,38 +294,38 @@ class DetectedIssueMitigationActionCodeValues:
     (PaymentMethodCode)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpaymentcode = DetectedIssueMitigationActionCode("_ActPaymentCode")
+    ActPaymentCode = DetectedIssueMitigationActionCode("_ActPaymentCode")
     """
     Identifies types of dispensing events
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpharmacysupplytype = DetectedIssueMitigationActionCode("_ActPharmacySupplyType")
+    ActPharmacySupplyType = DetectedIssueMitigationActionCode("_ActPharmacySupplyType")
     """
     Description:Types of policies that further specify the ActClassPolicy value
     set.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpolicytype = DetectedIssueMitigationActionCode("_ActPolicyType")
+    ActPolicyType = DetectedIssueMitigationActionCode("_ActPolicyType")
     """
     The method that a product is obtained for use by the subject of the supply act
     (e.g. patient).  Product examples are consumable or durable goods.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actproductacquisitioncode = DetectedIssueMitigationActionCode(
+    ActProductAcquisitionCode = DetectedIssueMitigationActionCode(
         "_ActProductAcquisitionCode"
     )
     """
     Transportation of a specimen.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentransportcode = DetectedIssueMitigationActionCode(
+    ActSpecimenTransportCode = DetectedIssueMitigationActionCode(
         "_ActSpecimenTransportCode"
     )
     """
     Set of codes related to specimen treatments
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentreatmentcode = DetectedIssueMitigationActionCode(
+    ActSpecimenTreatmentCode = DetectedIssueMitigationActionCode(
         "_ActSpecimenTreatmentCode"
     )
     """
@@ -334,7 +334,7 @@ class DetectedIssueMitigationActionCodeValues:
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actsubstanceadministrationcode = DetectedIssueMitigationActionCode(
+    ActSubstanceAdministrationCode = DetectedIssueMitigationActionCode(
         "_ActSubstanceAdministrationCode"
     )
     """
@@ -343,7 +343,7 @@ class DetectedIssueMitigationActionCodeValues:
     review, problem list entry).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttaskcode = DetectedIssueMitigationActionCode("_ActTaskCode")
+    ActTaskCode = DetectedIssueMitigationActionCode("_ActTaskCode")
     """
     Characterizes how a transportation act was or will be carried out.
     
@@ -352,19 +352,19 @@ class DetectedIssueMitigationActionCodeValues:
     transit, via courier.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttransportationmodecode = DetectedIssueMitigationActionCode(
+    ActTransportationModeCode = DetectedIssueMitigationActionCode(
         "_ActTransportationModeCode"
     )
     """
     Identifies the kinds of observations that can be performed
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Observationtype = DetectedIssueMitigationActionCode("_ObservationType")
+    ObservationType = DetectedIssueMitigationActionCode("_ObservationType")
     """
     Shape of the region on the object being referenced
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Roioverlayshape = DetectedIssueMitigationActionCode("_ROIOverlayShape")
+    ROIOverlayShape = DetectedIssueMitigationActionCode("_ROIOverlayShape")
     """
     Description:Indicates that result data has been corrected.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -437,7 +437,7 @@ class DetectedIssueMitigationActionCodeValues:
     SecurityObservationValue code as the "security label tag".
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Securityobservationtype = DetectedIssueMitigationActionCode("SECOBS")
+    SecurityObservationType = DetectedIssueMitigationActionCode("SECOBS")
     """
     Definition: A government health program that provides coverage on a fee for
     service basis for health services to persons meeting eligibility criteria such
@@ -460,34 +460,34 @@ class DetectedIssueMitigationActionCodeValues:
     cost of coverage as well.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    workersCompensationProgram = DetectedIssueMitigationActionCode("WRKCOMP")
+    _workersCompensationProgram = DetectedIssueMitigationActionCode("WRKCOMP")
     """
     An identifying code for healthcare interventions/procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actprocedurecode = DetectedIssueMitigationActionCode("_ActProcedureCode")
+    ActProcedureCode = DetectedIssueMitigationActionCode("_ActProcedureCode")
     """
     Domain provides the root for HL7-defined detailed or rich codes for the Act
     classes.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Hl7definedactcodes = DetectedIssueMitigationActionCode("_HL7DefinedActCodes")
+    HL7DefinedActCodes = DetectedIssueMitigationActionCode("_HL7DefinedActCodes")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Copay = DetectedIssueMitigationActionCode("COPAY")
+    COPAY = DetectedIssueMitigationActionCode("COPAY")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Deduct = DetectedIssueMitigationActionCode("DEDUCT")
+    DEDUCT = DetectedIssueMitigationActionCode("DEDUCT")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Doseind = DetectedIssueMitigationActionCode("DOSEIND")
+    DOSEIND = DetectedIssueMitigationActionCode("DOSEIND")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Pra = DetectedIssueMitigationActionCode("PRA")
+    PRA = DetectedIssueMitigationActionCode("PRA")
     """
     The act of putting something away for safe keeping. The "something" may be
     physical object such as a specimen, or information, such as observations

@@ -88,7 +88,7 @@ class MaritalStatusCodesCodeValues:
     value.
     From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
     """
-    Noinformation = MaritalStatusCodesCode("NI")
+    NoInformation = MaritalStatusCodesCode("NI")
     """
     Value is not present in a message.  This is only defined in messages, never in
     application data!  All values not present in the message must be replaced by

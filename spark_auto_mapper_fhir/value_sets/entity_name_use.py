@@ -22,3 +22,57 @@ class EntityNameUse(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EntityNameUse
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityNameUse"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityNameUse
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"
+
+
+class EntityNameUseValues:
+    """
+    Identifies the different representations of a name.  The representation may
+    affect how the name is used.  (E.g. use of Ideographic for formal
+    communications.)
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+
+    NameRepresentationUse = EntityNameUse("_NameRepresentationUse")
+    """
+    A name assigned to a person. Reasons some organizations assign alternate names
+    may include not knowing the person's name, or to maintain anonymity. Some, but
+    not necessarily all, of the name types that people call "alias" may fit into
+    this category.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+    Assigned = EntityNameUse("ASGN")
+    """
+    As recorded on a license, record, certificate, etc. (only if different from
+    legal name)
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+    License = EntityNameUse("C")
+    """
+    e.g. Chief Red Cloud
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+    Indigenous_Tribal = EntityNameUse("I")
+    """
+    Known as/conventional/the one you use
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+    Legal = EntityNameUse("L")
+    """
+    A self asserted name that the person is using or has used.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+    Pseudonym = EntityNameUse("P")
+    """
+    e.g. Sister Mary Francis, Brother John
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+    Religious = EntityNameUse("R")
+    """
+    A name intended for use in searching or matching.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
+    """
+    Search = EntityNameUse("SRCH")

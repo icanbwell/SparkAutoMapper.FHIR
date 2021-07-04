@@ -22,3 +22,21 @@ class QueryPriority(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-QueryPriority
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-QueryPriority"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-QueryPriority
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryPriority"
+
+
+class QueryPriorityValues:
+    """
+    Query response is deferred.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryPriority in v3-codesystems.xml
+    """
+
+    Deferred = QueryPriority("D")
+    """
+    Query response is immediate.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryPriority in v3-codesystems.xml
+    """
+    Immediate = QueryPriority("I")

@@ -22,3 +22,52 @@ class RelationalOperator(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RelationalOperator
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RelationalOperator"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RelationalOperator
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RelationalOperator"
+
+
+class RelationalOperatorValues:
+    """
+    Specified set of things includes value being evaluated.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+
+    Contains = RelationalOperator("CT")
+    """
+    Equal condition applied to comparisons.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+    Equal = RelationalOperator("EQ")
+    """
+    Greater than or equal condition applied to comparisons.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+    GreaterThanOrEqual = RelationalOperator("GE")
+    """
+    A generic comparison selects a record for inclusion in the response if the
+    beginning of the designated element value matches the select string.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+    Generic = RelationalOperator("GN")
+    """
+    Greater than condition applied to comparisons.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+    GreaterThan = RelationalOperator("GT")
+    """
+    Less than or equal condition applied to comparisons.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+    LessThanOrEqual = RelationalOperator("LE")
+    """
+    Less than condition applied to comparisons.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+    LessThan = RelationalOperator("LT")
+    """
+    Not equal condition applied to comparisons.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationalOperator in v3-codesystems.xml
+    """
+    NotEqual = RelationalOperator("NE")

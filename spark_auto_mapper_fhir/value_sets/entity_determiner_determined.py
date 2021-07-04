@@ -26,3 +26,30 @@ class EntityDeterminerDetermined(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-EntityDeterminerDetermined"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer"
+
+
+class EntityDeterminerDeterminedValues:
+    """
+    Description:A determiner that specifies that the Entity object represents a
+    particular physical thing (as opposed to a universal, kind, or class of
+    physical thing).
+
+
+                               Discussion: It does not matter whether an INSTANCE
+    still exists as a whole at the point in time (or process) when we mention it,
+    for example, a drug product lot is an INSTANCE even though it has been
+    portioned out for retail purpose.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer in v3-codesystems.xml
+    """
+
+    Specific = EntityDeterminerDetermined("INSTANCE")
+    """
+    Description:A determiner that specifies that the Entity object represents a
+    universal, kind or class of physical thing (as opposed to a particular thing).
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer in v3-codesystems.xml
+    """
+    Described = EntityDeterminerDetermined("KIND")

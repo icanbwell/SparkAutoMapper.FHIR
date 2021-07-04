@@ -22,3 +22,33 @@ class TableCellVerticalAlign(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TableCellVerticalAlign
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableCellVerticalAlign"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign"
+    )
+
+
+class TableCellVerticalAlignValues:
+    """
+    baseline
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+    """
+
+    Baseline = TableCellVerticalAlign("baseline")
+    """
+    bottom
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+    """
+    Bottom = TableCellVerticalAlign("bottom")
+    """
+    middle
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+    """
+    Middle = TableCellVerticalAlign("middle")
+    """
+    top
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+    """
+    Top = TableCellVerticalAlign("top")

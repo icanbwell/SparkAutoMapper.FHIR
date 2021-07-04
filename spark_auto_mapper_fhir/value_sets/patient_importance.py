@@ -22,3 +22,56 @@ class PatientImportance(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-PatientImportance
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-PatientImportance"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-PatientImportance
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-PatientImportance"
+
+
+class PatientImportanceValues:
+    """
+    Board member of health care organization
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+
+    BoardMember = PatientImportance("BM")
+    """
+    Family member of staff physician
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    PhysicianFamilyMember = PatientImportance("DFM")
+    """
+    Member of the health care organization physician staff
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    StaffPhysician = PatientImportance("DR")
+    """
+    Financial donor to the health care organization
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    FinancialDonor = PatientImportance("FD")
+    """
+    Foreign citizen dignitary of interest to the health care organization
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    ForeignDignitary = PatientImportance("FOR")
+    """
+    Government dignitary of interest to the organization
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    GovernmentDignitary = PatientImportance("GOVT")
+    """
+    Family member of staff member
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    StaffFamilyMember = PatientImportance("SFM")
+    """
+    Staff member of the health care organization
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    StaffMember = PatientImportance("STF")
+    """
+    Very important person of interest to the health care organization
+    From: http://terminology.hl7.org/CodeSystem/v3-PatientImportance in v3-codesystems.xml
+    """
+    VeryImportantPerson = PatientImportance("VIP")

@@ -25,3 +25,46 @@ class RoleClassRelationshipFormal(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-RoleClassRelationshipFormal"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+
+
+class RoleClassRelationshipFormalValues:
+    """
+    Corresponds to the Role class
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+
+    Role = RoleClassRelationshipFormal("ROL")
+    """
+    The player of the role is a child of the scoping entity, in a generic sense.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Child = RoleClassRelationshipFormal("CHILD")
+    """
+    A role played by an entity that receives credentials from the scoping entity.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    CredentialedEntity = RoleClassRelationshipFormal("CRED")
+    """
+    nurse practitioner
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    NursePractitioner = RoleClassRelationshipFormal("NURPRAC")
+    """
+    nurse
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Nurse = RoleClassRelationshipFormal("NURS")
+    """
+    physician assistant
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    PhysicianAssistant = RoleClassRelationshipFormal("PA")
+    """
+    physician
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Physician = RoleClassRelationshipFormal("PHYS")

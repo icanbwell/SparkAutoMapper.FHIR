@@ -25,3 +25,25 @@ class ManagedParticipationStatus(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ManagedParticipationStatus"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus"
+    )
+
+
+class ManagedParticipationStatusValues:
+    """
+    The 'typical' state. Excludes "nullified" which represents the termination
+    state of a participation instance that was created in error.
+    From: http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus in v3-codesystems.xml
+    """
+
+    Normal = ManagedParticipationStatus("normal")
+    """
+    The state representing the termination of a Participation instance that was
+    created in error.
+    From: http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus in v3-codesystems.xml
+    """
+    Nullified = ManagedParticipationStatus("nullified")

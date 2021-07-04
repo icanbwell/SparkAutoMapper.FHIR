@@ -53,7 +53,7 @@ class DiagnosticServiceSectionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    CatScan = DiagnosticServiceSectionCodesCode("CT")
+    CATScan = DiagnosticServiceSectionCodesCode("CT")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
@@ -65,11 +65,11 @@ class DiagnosticServiceSectionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    ElectrocardiacegEkgEecHolter = DiagnosticServiceSectionCodesCode("EC")
+    Electrocardiac_e_g_EKG_EEC_Holter_ = DiagnosticServiceSectionCodesCode("EC")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    ElectroneuroeegEmgeppsg = DiagnosticServiceSectionCodesCode("EN")
+    Electroneuro_EEG_EMG_EP_PSG_ = DiagnosticServiceSectionCodesCode("EN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
@@ -81,7 +81,7 @@ class DiagnosticServiceSectionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    BedsideIcuMonitoring = DiagnosticServiceSectionCodesCode("ICU")
+    BedsideICUMonitoring = DiagnosticServiceSectionCodesCode("ICU")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
@@ -133,7 +133,7 @@ class DiagnosticServiceSectionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    ObUltrasound = DiagnosticServiceSectionCodesCode("OUS")
+    OBUltrasound = DiagnosticServiceSectionCodesCode("OUS")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
@@ -141,7 +141,7 @@ class DiagnosticServiceSectionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    PathologygrossHistopathNotSurgical = DiagnosticServiceSectionCodesCode("PAT")
+    Pathology_gross_Histopath_NotSurgical_ = DiagnosticServiceSectionCodesCode("PAT")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
@@ -153,7 +153,7 @@ class DiagnosticServiceSectionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    PhysicianhxDxAdmissionNoteEtc = DiagnosticServiceSectionCodesCode("PHY")
+    Physician_Hx_Dx_AdmissionNote_Etc_ = DiagnosticServiceSectionCodesCode("PHY")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
@@ -165,7 +165,7 @@ class DiagnosticServiceSectionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """
-    RespiratoryCaretherapy = DiagnosticServiceSectionCodesCode("RC")
+    RespiratoryCare_therapy_ = DiagnosticServiceSectionCodesCode("RC")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
     """

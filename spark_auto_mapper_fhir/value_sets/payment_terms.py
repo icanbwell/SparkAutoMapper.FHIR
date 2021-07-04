@@ -24,3 +24,35 @@ class PaymentTerms(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-PaymentTerms
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-PaymentTerms"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-PaymentTerms
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-PaymentTerms"
+
+
+class PaymentTermsValues:
+    """
+    Payment in full for products and/or services is required as soon as the
+    service is performed or goods delivered.
+    From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+    """
+
+    CashOnDelivery = PaymentTerms("COD")
+    """
+    Payment in full for products and/or services is required 30 days from the time
+    the service is performed or goods delivered.
+    From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+    """
+    Net30Days = PaymentTerms("N30")
+    """
+    Payment in full for products and/or services is required 60 days from the time
+    the service is performed or goods delivered.
+    From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+    """
+    Net60Days = PaymentTerms("N60")
+    """
+    Payment in full for products and/or services is required 90 days from the time
+    the service is performed or goods delivered.
+    From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+    """
+    Net90Days = PaymentTerms("N90")

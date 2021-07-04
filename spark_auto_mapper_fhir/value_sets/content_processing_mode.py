@@ -23,3 +23,23 @@ class ContentProcessingMode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode"
+    )
+
+
+class ContentProcessingModeValues:
+    """
+    Description:The content should be processed in a sequential fashion.
+    From: http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode in v3-codesystems.xml
+    """
+
+    Sequential = ContentProcessingMode("SEQL")
+    """
+    Description:The content may be processed in any order.
+    From: http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode in v3-codesystems.xml
+    """
+    Unordered = ContentProcessingMode("UNOR")

@@ -22,3 +22,18 @@ class Calendar(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-Calendar
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Calendar"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-Calendar
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Calendar"
+
+
+class CalendarValues:
+    """
+    The Gregorian calendar is the calendar in effect in most countries of
+    Christian influence since approximately 1582. This calendar superceded the
+    Julian calendar.
+    From: http://terminology.hl7.org/CodeSystem/v3-Calendar in v3-codesystems.xml
+    """
+
+    Gregorian = Calendar("GREG")

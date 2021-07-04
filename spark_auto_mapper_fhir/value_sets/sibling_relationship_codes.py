@@ -38,28 +38,28 @@ class SiblingRelationshipCodesCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
 
-    Affiliationroletype = SiblingRelationshipCodesCode("_AffiliationRoleType")
+    AffiliationRoleType = SiblingRelationshipCodesCode("_AffiliationRoleType")
     """
     AssignedRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Assignedroletype = SiblingRelationshipCodesCode("_AssignedRoleType")
+    AssignedRoleType = SiblingRelationshipCodesCode("_AssignedRoleType")
     """
     Defines types of certifications for all entities
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Certifiedentitytype = SiblingRelationshipCodesCode("_CertifiedEntityType")
+    CertifiedEntityType = SiblingRelationshipCodesCode("_CertifiedEntityType")
     """
     A role type used to qualify a person's legal status within a country or
     nation.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Citizenroletype = SiblingRelationshipCodesCode("_CitizenRoleType")
+    CitizenRoleType = SiblingRelationshipCodesCode("_CitizenRoleType")
     """
     Types of contact for Role code "CON"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Contactroletype = SiblingRelationshipCodesCode("_ContactRoleType")
+    ContactRoleType = SiblingRelationshipCodesCode("_ContactRoleType")
     """
     Definition: A code representing the type of identifier that has been assigned
     to the identified entity (IDENT).
@@ -69,12 +69,12 @@ class SiblingRelationshipCodesCodeValues:
     Number, Product Catalog ID, Product Model Number.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Identifiedentitytype = SiblingRelationshipCodesCode("_IdentifiedEntityType")
+    IdentifiedEntityType = SiblingRelationshipCodesCode("_IdentifiedEntityType")
     """
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Livingsubjectproductionclass = SiblingRelationshipCodesCode(
+    LivingSubjectProductionClass = SiblingRelationshipCodesCode(
         "_LivingSubjectProductionClass"
     )
     """
@@ -86,19 +86,19 @@ class SiblingRelationshipCodesCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Medicationgeneralizationroletype = SiblingRelationshipCodesCode(
+    MedicationGeneralizationRoleType = SiblingRelationshipCodesCode(
         "_MedicationGeneralizationRoleType"
     )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Memberroletype = SiblingRelationshipCodesCode("_MemberRoleType")
+    MemberRoleType = SiblingRelationshipCodesCode("_MemberRoleType")
     """
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Personalrelationshiproletype = SiblingRelationshipCodesCode(
+    PersonalRelationshipRoleType = SiblingRelationshipCodesCode(
         "_PersonalRelationshipRoleType"
     )
     """
@@ -149,7 +149,7 @@ class SiblingRelationshipCodesCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Policyorprogramcoverageroletype = SiblingRelationshipCodesCode(
+    PolicyOrProgramCoverageRoleType = SiblingRelationshipCodesCode(
         "_PolicyOrProgramCoverageRoleType"
     )
     """
@@ -160,20 +160,20 @@ class SiblingRelationshipCodesCodeValues:
     design.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Researchsubjectrolebasis = SiblingRelationshipCodesCode("_ResearchSubjectRoleBasis")
+    ResearchSubjectRoleBasis = SiblingRelationshipCodesCode("_ResearchSubjectRoleBasis")
     """
     A role of a place that further classifies the setting (e.g., accident site,
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Servicedeliverylocationroletype = SiblingRelationshipCodesCode(
+    ServiceDeliveryLocationRoleType = SiblingRelationshipCodesCode(
         "_ServiceDeliveryLocationRoleType"
     )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Specimenroletype = SiblingRelationshipCodesCode("_SpecimenRoleType")
+    SpecimenRoleType = SiblingRelationshipCodesCode("_SpecimenRoleType")
     """
     A party that makes a claim for coverage under a policy.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -239,7 +239,7 @@ class SiblingRelationshipCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Dep = SiblingRelationshipCodesCode("DEP")
+    DEP = SiblingRelationshipCodesCode("DEP")
     """
     A party covered under a policy based on association with a subscriber.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -265,7 +265,7 @@ class SiblingRelationshipCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Psychcf = SiblingRelationshipCodesCode("PSYCHCF")
+    PSYCHCF = SiblingRelationshipCodesCode("PSYCHCF")
     """
     A party covered under a policy based on association with a sponsor who is the
     policy holder, and whose association may provide for the eligibility of

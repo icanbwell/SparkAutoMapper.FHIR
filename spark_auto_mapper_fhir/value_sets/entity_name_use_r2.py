@@ -24,3 +24,74 @@ class EntityNameUseR2(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EntityNameUseR2
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityNameUseR2"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2"
+
+
+class EntityNameUseR2Values:
+    """
+    Description:A name that a person has assumed or has been assumed to them.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+
+    Assumed = EntityNameUseR2("Assumed")
+    """
+    Description:Known as/conventional/the one you normally use
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    Customary = EntityNameUseR2("C")
+    """
+    Description:A name used prior to marriage.Note that marriage naming customs
+    vary greatly around the world.  This name use is for use by applications that
+    collect and store maiden names.  Though the concept of maiden name is often
+    gender specific, the use of this term is not gender specific.  The use of this
+    term does not imply any particular history for a person's name, nor should the
+    maiden name be determined algorithmically
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    MaidenName = EntityNameUseR2("M")
+    """
+    Description:Identifies the different representations of a name .  The
+    representation may affect how the name is used .  (E.g .  use of Ideographic
+    for formal communications.)
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    NameRepresentationUse = EntityNameUseR2("NameRepresentationUse")
+    """
+    Description:This name is no longer in use (note: Names may also carry valid
+    time ranges .  This code is used to cover the situations where it is known
+    that the name is no longer valid, but no particular time range for its use is
+    known)
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    NoLongerInUse = EntityNameUseR2("OLD")
+    """
+    Description:The formal name as registered in an official (government)
+    registry, but which name might not be commonly used .  May correspond to the
+    concept of legal name
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    OfficialRegistryName = EntityNameUseR2("OR")
+    """
+    Description:The name as understood by the data enterer, i.e. a close
+    approximation of a phonetic spelling of the name, not based on a phonetic
+    algorithm.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    Phonetic = EntityNameUseR2("PHON")
+    """
+    Description:A name intended for use in searching or matching.  This is used
+    when the name is incomplete and contains enough details for search matching,
+    but not enough for other uses.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    Search = EntityNameUseR2("SRCH")
+    """
+    Description:A temporary name.  Note that a name valid time can provide more
+    detailed information.  This may also be used for temporary names assigned at
+    birth or in emergency situations.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUseR2 in v3-codesystems.xml
+    """
+    Temporary = EntityNameUseR2("T")

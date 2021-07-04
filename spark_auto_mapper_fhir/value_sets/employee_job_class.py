@@ -22,3 +22,23 @@ class EmployeeJobClass(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EmployeeJobClass
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EmployeeJobClass"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EmployeeJobClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EmployeeJobClass"
+
+
+class EmployeeJobClassValues:
+    """
+    Employment in which the employee is expected to work at least a standard work
+    week (defined by the US Bureau of Labor Statistics as 35-44 hours per week)
+    From: http://terminology.hl7.org/CodeSystem/v3-EmployeeJobClass in v3-codesystems.xml
+    """
+
+    Full_time = EmployeeJobClass("FT")
+    """
+    Employment in which the employee is expected to work less than a standard work
+    week (defined by the US Bureau of Labor Statistics as 35-44 hours per week)
+    From: http://terminology.hl7.org/CodeSystem/v3-EmployeeJobClass in v3-codesystems.xml
+    """
+    Part_time = EmployeeJobClass("PT")

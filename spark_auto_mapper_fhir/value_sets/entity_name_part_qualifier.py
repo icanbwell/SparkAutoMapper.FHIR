@@ -110,7 +110,7 @@ class EntityNamePartQualifierCodeValues:
     generated.
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
-    Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode(
+    PharmaceuticalEntityNamePartQualifiers = EntityNamePartQualifierCode(
         "PharmaceuticalEntityNamePartQualifiers"
     )
     """
@@ -124,7 +124,7 @@ class EntityNamePartQualifierCodeValues:
     Description:Extra information about the style of a title
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
-    Titlestyles = EntityNamePartQualifierCode("TitleStyles")
+    TitleStyles = EntityNamePartQualifierCode("TitleStyles")
     """
     From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """
@@ -173,7 +173,7 @@ class EntityNamePartQualifierCodeValues:
     OrganizationNamePartQualifier
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
     """
-    Organizationnamepartqualifier = EntityNamePartQualifierCode(
+    OrganizationNamePartQualifier = EntityNamePartQualifierCode(
         "_OrganizationNamePartQualifier"
     )
     """
@@ -187,14 +187,14 @@ class EntityNamePartQualifierCodeValues:
     generated.
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
     """
-    Pharmaceuticalentitynamepartqualifiers = EntityNamePartQualifierCode(
+    PharmaceuticalEntityNamePartQualifiers = EntityNamePartQualifierCode(
         "PharmaceuticalEntityNamePartQualifiers"
     )
     """
     PersonNamePartQualifier
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
     """
-    Personnamepartqualifier = EntityNamePartQualifierCode("_PersonNamePartQualifier")
+    PersonNamePartQualifier = EntityNamePartQualifierCode("_PersonNamePartQualifier")
     """
     From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
     """

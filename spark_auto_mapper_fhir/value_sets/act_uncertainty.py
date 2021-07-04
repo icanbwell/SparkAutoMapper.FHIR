@@ -23,3 +23,25 @@ class ActUncertainty(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActUncertainty
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActUncertainty"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActUncertainty
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActUncertainty"
+
+
+class ActUncertaintyValues:
+    """
+    Specifies that the act statement is made without explicit tagging of
+    uncertainty. This is the normal statement, meaning that it is not free of
+    errors and uncertainty may still exist.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActUncertainty in v3-codesystems.xml
+    """
+
+    StatedWithNoAssertionOfUncertainty = ActUncertainty("N")
+    """
+    Specifies that the originator of the Act statement does not have full
+    confidence in the applicability (i.e., in event mood: factual truth) of the
+    statement.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActUncertainty in v3-codesystems.xml
+    """
+    StatedWithUncertainty = ActUncertainty("U")

@@ -22,3 +22,64 @@ class EntityRisk(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EntityRisk
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityRisk"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityRisk
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityRisk"
+
+
+class EntityRiskValues:
+    """
+    A danger that can be associated with certain living subjects, including
+    humans.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+
+    Aggressive = EntityRisk("AGG")
+    """
+    The dangers associated with normal biological materials. I.e. potential risk
+    of unknown infections.  Routine biological materials from living subjects.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    Biological = EntityRisk("BIO")
+    """
+    Material is corrosive and may cause severe injury to skin, mucous membranes
+    and eyes. Avoid any unprotected contact.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    Corrosive = EntityRisk("COR")
+    """
+    The entity is at risk for escaping from containment or control.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    EscapeRisk = EntityRisk("ESC")
+    """
+    Material is highly inflammable and in certain mixtures (with air) may lead to
+    explosions.  Keep away from fire, sparks and excessive heat.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    Inflammable = EntityRisk("IFL")
+    """
+    Material known to be infectious with human pathogenic microorganisms.  Those
+    who handle this material must take precautions for their protection.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    Infectious = EntityRisk("INF")
+    """
+    Material is solid and sharp (e.g., cannulas).  Dispose in hard container.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    InjuryHazard = EntityRisk("INJ")
+    """
+    Material is poisonous to humans and/or animals.  Special care must be taken to
+    avoid incorporation, even of small amounts.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    Poison = EntityRisk("POI")
+    """
+    Material is a source for ionizing radiation and must be handled with special
+    care to avoid injury of those who handle it and to avoid environmental
+    hazards.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
+    """
+    Radioactive = EntityRisk("RAD")

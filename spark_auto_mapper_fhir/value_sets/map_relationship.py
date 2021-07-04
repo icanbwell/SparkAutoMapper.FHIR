@@ -25,3 +25,31 @@ class MapRelationship(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-MapRelationship
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-MapRelationship"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-MapRelationship
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-MapRelationship"
+
+
+class MapRelationshipValues:
+    """
+    The first concept is at a more abstract level than the second concept.  For
+    example, Hepatitis is broader than Hepatitis A, and endocrine disease is
+    broader than Diabetes Mellitus.  Broader than is the opposite of the narrower
+    than relationship.
+    From: http://terminology.hl7.org/CodeSystem/v3-MapRelationship in v3-codesystems.xml
+    """
+
+    BroaderThan = MapRelationship("BT")
+    """
+    The two concepts have identical meaning.
+    From: http://terminology.hl7.org/CodeSystem/v3-MapRelationship in v3-codesystems.xml
+    """
+    Exact = MapRelationship("E")
+    """
+    The first concept is at a more detailed level than the second concept.  For
+    example, Pennicillin G is narrower than Pennicillin, and vellus hair is
+    narrower than hair.  Narrower than is the opposite of broader than.
+    From: http://terminology.hl7.org/CodeSystem/v3-MapRelationship in v3-codesystems.xml
+    """
+    NarrowerThan = MapRelationship("NT")

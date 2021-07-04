@@ -62,7 +62,7 @@ class PatientRelationshipTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
     """
-    Nextofkin = PatientRelationshipTypeCode("N")
+    Next_of_Kin = PatientRelationshipTypeCode("N")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
     """
@@ -89,28 +89,28 @@ class PatientRelationshipTypeCodeValues:
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Affiliationroletype = PatientRelationshipTypeCode("_AffiliationRoleType")
+    AffiliationRoleType = PatientRelationshipTypeCode("_AffiliationRoleType")
     """
     AssignedRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Assignedroletype = PatientRelationshipTypeCode("_AssignedRoleType")
+    AssignedRoleType = PatientRelationshipTypeCode("_AssignedRoleType")
     """
     Defines types of certifications for all entities
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Certifiedentitytype = PatientRelationshipTypeCode("_CertifiedEntityType")
+    CertifiedEntityType = PatientRelationshipTypeCode("_CertifiedEntityType")
     """
     A role type used to qualify a person's legal status within a country or
     nation.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Citizenroletype = PatientRelationshipTypeCode("_CitizenRoleType")
+    CitizenRoleType = PatientRelationshipTypeCode("_CitizenRoleType")
     """
     Types of contact for Role code "CON"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Contactroletype = PatientRelationshipTypeCode("_ContactRoleType")
+    ContactRoleType = PatientRelationshipTypeCode("_ContactRoleType")
     """
     Definition: A code representing the type of identifier that has been assigned
     to the identified entity (IDENT).
@@ -120,12 +120,12 @@ class PatientRelationshipTypeCodeValues:
     Number, Product Catalog ID, Product Model Number.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Identifiedentitytype = PatientRelationshipTypeCode("_IdentifiedEntityType")
+    IdentifiedEntityType = PatientRelationshipTypeCode("_IdentifiedEntityType")
     """
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Livingsubjectproductionclass = PatientRelationshipTypeCode(
+    LivingSubjectProductionClass = PatientRelationshipTypeCode(
         "_LivingSubjectProductionClass"
     )
     """
@@ -137,19 +137,19 @@ class PatientRelationshipTypeCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Medicationgeneralizationroletype = PatientRelationshipTypeCode(
+    MedicationGeneralizationRoleType = PatientRelationshipTypeCode(
         "_MedicationGeneralizationRoleType"
     )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Memberroletype = PatientRelationshipTypeCode("_MemberRoleType")
+    MemberRoleType = PatientRelationshipTypeCode("_MemberRoleType")
     """
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Personalrelationshiproletype = PatientRelationshipTypeCode(
+    PersonalRelationshipRoleType = PatientRelationshipTypeCode(
         "_PersonalRelationshipRoleType"
     )
     """
@@ -200,7 +200,7 @@ class PatientRelationshipTypeCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Policyorprogramcoverageroletype = PatientRelationshipTypeCode(
+    PolicyOrProgramCoverageRoleType = PatientRelationshipTypeCode(
         "_PolicyOrProgramCoverageRoleType"
     )
     """
@@ -211,20 +211,20 @@ class PatientRelationshipTypeCodeValues:
     design.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Researchsubjectrolebasis = PatientRelationshipTypeCode("_ResearchSubjectRoleBasis")
+    ResearchSubjectRoleBasis = PatientRelationshipTypeCode("_ResearchSubjectRoleBasis")
     """
     A role of a place that further classifies the setting (e.g., accident site,
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Servicedeliverylocationroletype = PatientRelationshipTypeCode(
+    ServiceDeliveryLocationRoleType = PatientRelationshipTypeCode(
         "_ServiceDeliveryLocationRoleType"
     )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Specimenroletype = PatientRelationshipTypeCode("_SpecimenRoleType")
+    SpecimenRoleType = PatientRelationshipTypeCode("_SpecimenRoleType")
     """
     A party that makes a claim for coverage under a policy.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -290,7 +290,7 @@ class PatientRelationshipTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Dep = PatientRelationshipTypeCode("DEP")
+    DEP = PatientRelationshipTypeCode("DEP")
     """
     A party covered under a policy based on association with a subscriber.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -316,7 +316,7 @@ class PatientRelationshipTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Psychcf = PatientRelationshipTypeCode("PSYCHCF")
+    PSYCHCF = PatientRelationshipTypeCode("PSYCHCF")
     """
     A party covered under a policy based on association with a sponsor who is the
     policy holder, and whose association may provide for the eligibility of

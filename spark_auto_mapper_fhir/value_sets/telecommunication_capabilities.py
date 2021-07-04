@@ -27,3 +27,39 @@ class TelecommunicationCapabilities(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-TelecommunicationCapabilities"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities"
+    )
+
+
+class TelecommunicationCapabilitiesValues:
+    """
+    Description: This device can receive data calls (i.e. modem).
+    From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
+    """
+
+    Data = TelecommunicationCapabilities("data")
+    """
+    Description: This device can receive faxes.
+    From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
+    """
+    Fax = TelecommunicationCapabilities("fax")
+    """
+    Description: This device can receive SMS messages.
+    From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
+    """
+    Sms = TelecommunicationCapabilities("sms")
+    """
+    Description: This device is a text telephone.
+    From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
+    """
+    Text = TelecommunicationCapabilities("tty")
+    """
+    Description: This device can receive voice calls (i.e. talking to another
+    person, or a recording device, or a voice activated computer).
+    From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
+    """
+    Voice = TelecommunicationCapabilities("voice")

@@ -31,19 +31,19 @@ class PostalAddressUseCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
     """
 
-    _generaladdressuse = PostalAddressUseCode("_GeneralAddressUse")
+    _GeneralAddressUse = PostalAddressUseCode("_GeneralAddressUse")
     """
     Description: Address uses that only apply to postal addresses, not
     telecommunication addresses.
     From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
     """
-    _postaladdressuse = PostalAddressUseCode("_PostalAddressUse")
+    _PostalAddressUse = PostalAddressUseCode("_PostalAddressUse")
     """
     Description: Address uses that only apply to telecommunication addresses, not
     postal addresses.
     From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
     """
-    _telecommunicationaddressuse = PostalAddressUseCode("_TelecommunicationAddressUse")
+    _TelecommunicationAddressUse = PostalAddressUseCode("_TelecommunicationAddressUse")
     """
     From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
     """

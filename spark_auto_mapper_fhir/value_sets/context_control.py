@@ -26,3 +26,38 @@ class ContextControl(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ContextControl
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ContextControl"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ContextControl
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ContextControl"
+
+
+class ContextControlValues:
+    """
+    The association adds to the existing context associated with the Act.  Both
+    this association and any associations propagated from ancestor Acts are
+    interpreted as being related to this Act.
+    From: http://terminology.hl7.org/CodeSystem/v3-ContextControl in v3-codesystems.xml
+    """
+
+    ContextControlAdditive = ContextControl("_ContextControlAdditive")
+    """
+    The association applies only to the current Act and will not propagate to any
+    child Acts that are related via a conducting ActRelationship (refer to
+    contextConductionInd).
+    From: http://terminology.hl7.org/CodeSystem/v3-ContextControl in v3-codesystems.xml
+    """
+    ContextControlNonPropagating = ContextControl("_ContextControlNonPropagating")
+    """
+    The association adds to the existing context associated with the Act, but
+    replaces associations propagated from ancestor Acts whose typeCodes are the
+    same or more specific.
+    From: http://terminology.hl7.org/CodeSystem/v3-ContextControl in v3-codesystems.xml
+    """
+    ContextControlOverriding = ContextControl("_ContextControlOverriding")
+    """
+    The association propagates to any child Acts that are related via a conducting
+    ActRelationship (refer to contextConductionInd).
+    From: http://terminology.hl7.org/CodeSystem/v3-ContextControl in v3-codesystems.xml
+    """
+    ContextControlPropagating = ContextControl("_ContextControlPropagating")

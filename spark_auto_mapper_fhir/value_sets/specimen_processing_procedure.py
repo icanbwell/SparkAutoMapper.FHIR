@@ -45,7 +45,7 @@ class SpecimenProcessingProcedureCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
     """
-    LdlPrecipitation = SpecimenProcessingProcedureCode("LDLP")
+    LDLPrecipitation = SpecimenProcessingProcedureCode("LDLP")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
     """

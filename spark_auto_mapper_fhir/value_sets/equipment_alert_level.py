@@ -22,3 +22,31 @@ class EquipmentAlertLevel(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EquipmentAlertLevel
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EquipmentAlertLevel"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel"
+
+
+class EquipmentAlertLevelValues:
+    """
+    Shut Down, Fix Problem and Re-init
+    From: http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel in v3-codesystems.xml
+    """
+
+    Critical = EquipmentAlertLevel("C")
+    """
+    No Corrective Action Needed
+    From: http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel in v3-codesystems.xml
+    """
+    Normal = EquipmentAlertLevel("N")
+    """
+    Corrective Action Required
+    From: http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel in v3-codesystems.xml
+    """
+    Serious = EquipmentAlertLevel("S")
+    """
+    Corrective Action Anticipated
+    From: http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel in v3-codesystems.xml
+    """
+    Warning = EquipmentAlertLevel("W")

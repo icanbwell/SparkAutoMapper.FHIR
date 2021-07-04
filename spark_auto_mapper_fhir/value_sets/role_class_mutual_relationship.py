@@ -28,3 +28,46 @@ class RoleClassMutualRelationship(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-RoleClassMutualRelationship"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+
+
+class RoleClassMutualRelationshipValues:
+    """
+    Corresponds to the Role class
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+
+    Role = RoleClassMutualRelationship("ROL")
+    """
+    The player of the role is a child of the scoping entity, in a generic sense.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Child = RoleClassMutualRelationship("CHILD")
+    """
+    A role played by an entity that receives credentials from the scoping entity.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    CredentialedEntity = RoleClassMutualRelationship("CRED")
+    """
+    nurse practitioner
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    NursePractitioner = RoleClassMutualRelationship("NURPRAC")
+    """
+    nurse
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Nurse = RoleClassMutualRelationship("NURS")
+    """
+    physician assistant
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    PhysicianAssistant = RoleClassMutualRelationship("PA")
+    """
+    physician
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Physician = RoleClassMutualRelationship("PHYS")

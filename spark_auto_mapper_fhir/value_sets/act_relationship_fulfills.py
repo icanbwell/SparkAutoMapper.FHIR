@@ -23,3 +23,43 @@ class ActRelationshipFulfills(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+
+
+class ActRelationshipFulfillsValues:
+    """
+    Description: A directed association between a source Act and a target Act.
+
+
+                               Usage Note: This code should never be transmitted
+    in an instance as the value of ActRelationship.typeCode (attribute)
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+
+    ActRelationshipType = ActRelationshipFulfills("ART")
+    """
+    curative indication
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    CurativeIndication = ActRelationshipFulfills("CURE")
+    """
+    adjunct curative indication
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    AdjunctCurativeIndication = ActRelationshipFulfills("CURE.ADJ")
+    """
+    adjunct mitigation
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    AdjunctMitigation = ActRelationshipFulfills("MTGT.ADJ")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    RACT = ActRelationshipFulfills("RACT")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    SUGG = ActRelationshipFulfills("SUGG")

@@ -26,3 +26,54 @@ class ConfidentialityClassification(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+
+
+class ConfidentialityClassificationValues:
+    """
+    A specializable code and its leaf codes used in Confidentiality value sets to
+    value the Act.Confidentiality and Role.Confidentiality attribute in accordance
+    with the definition for concept domain "Confidentiality".
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+
+    Confidentiality = ConfidentialityClassification("_Confidentiality")
+    """
+    Description: By accessing subject / role and relationship based  rights
+    (These concepts are mutually exclusive, one and only one is required for a
+    valid confidentiality coding.)
+    
+    
+                               Deprecation Comment:Deprecated due to updated
+    confidentiality codes under ActCode
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+    ConfidentialityByAccessKind = ConfidentialityClassification(
+        "_ConfidentialityByAccessKind"
+    )
+    """
+    Description: By information type, only for service catalog entries (multiples
+    allowed). Not to be used with actual patient data!
+    
+    
+                               Deprecation Comment:Deprecated due to updated
+    confidentiality codes under ActCode
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+    ConfidentialityByInfoType = ConfidentialityClassification(
+        "_ConfidentialityByInfoType"
+    )
+    """
+    Description: Modifiers of role based access rights  (multiple allowed)
+    
+    
+                               Deprecation Comment:Deprecated due to updated
+    confidentiality codes under ActCode
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+    ConfidentialityModifiers = ConfidentialityClassification(
+        "_ConfidentialityModifiers"
+    )

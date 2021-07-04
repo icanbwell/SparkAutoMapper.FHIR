@@ -24,3 +24,42 @@ class EntityNamePartTypeR2(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EntityNamePartTypeR2
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityNamePartTypeR2"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2"
+
+
+class EntityNamePartTypeR2Values:
+    """
+    Description:A delimiter has no meaning other than being literally printed in
+    this name representation. A delimiter has no implicit leading and trailing
+    white space.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2 in v3-codesystems.xml
+    """
+
+    Delimiter = EntityNamePartTypeR2("DEL")
+    """
+    Description:Family name, this is the name that links to the genealogy. In some
+    cultures (e.g. Eritrea) the family name of a son is the first name of his
+    father.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2 in v3-codesystems.xml
+    """
+    Family = EntityNamePartTypeR2("FAM")
+    """
+    Description:Given name. Note: don't call it "first name" since the given names
+    do not always come first.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2 in v3-codesystems.xml
+    """
+    Given = EntityNamePartTypeR2("GIV")
+    """
+    Description:Part of the name that is acquired as a title due to academic,
+    legal, employment or nobility status etc.
+    
+    
+                               Note:Title name parts include name parts that come
+    after the name such as qualifications, even if they are not always considered
+    to be titles.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2 in v3-codesystems.xml
+    """
+    Title = EntityNamePartTypeR2("TITLE")

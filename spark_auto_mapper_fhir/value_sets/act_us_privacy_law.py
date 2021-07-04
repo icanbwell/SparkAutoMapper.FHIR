@@ -24,3 +24,24 @@ class ActUSPrivacyLaw(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActUSPrivacyLaw
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActUSPrivacyLaw"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw"
+
+
+class ActUSPrivacyLawValues:
+    """
+    Definition: A jurisdictional mandate in the U.S. relating to privacy.
+
+
+                               Usage Note: ActPrivacyLaw codes may be associated
+    with an Act or a Role to indicate the legal provision to which the assignment
+    of an Act.confidentialityCode or Role.confidentialtyCode complies.  May be
+    used to further specify rationale for assignment of other ActPrivacyPolicy
+    codes in the US realm, e.g., ETH and 42CFRPart2 can be differentiated from ETH
+    and Title38Part1.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw in v3-codesystems.xml
+    """
+
+    ActUSPrivacyLaw_ = ActUSPrivacyLaw("_ActUSPrivacyLaw")

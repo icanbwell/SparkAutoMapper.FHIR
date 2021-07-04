@@ -23,3 +23,16 @@ class EntityClassLivingSubject(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EntityClassLivingSubject
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityClassLivingSubject"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityClass"
+
+
+class EntityClassLivingSubjectValues:
+    """
+    Corresponds to the Entity class
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityClass in v3-codesystems.xml
+    """
+
+    Entity = EntityClassLivingSubject("ENT")

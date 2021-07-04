@@ -57,7 +57,7 @@ class PatientContactRelationshipCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
     """
-    Nextofkin = PatientContactRelationshipCode("N")
+    Next_of_Kin = PatientContactRelationshipCode("N")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
     """

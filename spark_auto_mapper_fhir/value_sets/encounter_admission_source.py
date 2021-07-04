@@ -22,3 +22,28 @@ class EncounterAdmissionSource(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource"
+    )
+
+
+class EncounterAdmissionSourceValues:
+    """
+    emergency
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource in v3-codesystems.xml
+    """
+
+    Emergency = EncounterAdmissionSource("E")
+    """
+    labor and delivery
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource in v3-codesystems.xml
+    """
+    LaborAndDelivery = EncounterAdmissionSource("LD")
+    """
+    newborn
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource in v3-codesystems.xml
+    """
+    Newborn = EncounterAdmissionSource("NB")

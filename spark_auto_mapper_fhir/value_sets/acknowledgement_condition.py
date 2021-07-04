@@ -25,3 +25,33 @@ class AcknowledgementCondition(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition"
+    )
+
+
+class AcknowledgementConditionValues:
+    """
+    Always send an acknowledgement.
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+    """
+
+    Always = AcknowledgementCondition("AL")
+    """
+    Send an acknowledgement for error/reject conditions only.
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+    """
+    Error_rejectOnly = AcknowledgementCondition("ER")
+    """
+    Never send an acknowledgement.
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+    """
+    Never = AcknowledgementCondition("NE")
+    """
+    Send an acknowledgement for successful completions only.
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+    """
+    SuccessfulOnly = AcknowledgementCondition("SU")

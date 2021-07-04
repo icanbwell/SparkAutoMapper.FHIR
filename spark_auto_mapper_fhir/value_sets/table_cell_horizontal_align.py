@@ -22,3 +22,38 @@ class TableCellHorizontalAlign(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TableCellHorizontalAlign
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableCellHorizontalAlign"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign"
+    )
+
+
+class TableCellHorizontalAlignValues:
+    """
+    center
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+    """
+
+    Center = TableCellHorizontalAlign("center")
+    """
+    char
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+    """
+    Char = TableCellHorizontalAlign("char")
+    """
+    justify
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+    """
+    Justify = TableCellHorizontalAlign("justify")
+    """
+    left
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+    """
+    Left = TableCellHorizontalAlign("left")
+    """
+    right
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+    """
+    Right = TableCellHorizontalAlign("right")

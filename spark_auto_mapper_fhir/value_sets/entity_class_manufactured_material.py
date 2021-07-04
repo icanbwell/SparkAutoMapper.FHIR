@@ -24,3 +24,16 @@ class EntityClassManufacturedMaterial(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-EntityClassManufacturedMaterial"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityClass"
+
+
+class EntityClassManufacturedMaterialValues:
+    """
+    Corresponds to the Entity class
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityClass in v3-codesystems.xml
+    """
+
+    Entity = EntityClassManufacturedMaterial("ENT")

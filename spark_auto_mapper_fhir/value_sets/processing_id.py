@@ -23,3 +23,26 @@ class ProcessingID(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ProcessingID
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ProcessingID"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ProcessingID
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ProcessingID"
+
+
+class ProcessingIDValues:
+    """
+    Identifies debugging type of processing.
+    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingID in v3-codesystems.xml
+    """
+
+    Debugging = ProcessingID("D")
+    """
+    Identifies production type of processing.
+    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingID in v3-codesystems.xml
+    """
+    Production = ProcessingID("P")
+    """
+    Identifies training type of processing.
+    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingID in v3-codesystems.xml
+    """
+    Training = ProcessingID("T")

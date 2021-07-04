@@ -37,3 +37,22 @@ class Ethnicity(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-Ethnicity
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Ethnicity"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-Ethnicity
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Ethnicity"
+
+
+class EthnicityValues:
+    """
+    Hispanic or Latino
+    From: http://terminology.hl7.org/CodeSystem/v3-Ethnicity in v3-codesystems.xml
+    """
+
+    HispanicOrLatino = Ethnicity("2135-2")
+    """
+    Note that this term remains in the table for completeness, even though within
+    HL7, the notion of "not otherwise coded" term is deprecated.
+    From: http://terminology.hl7.org/CodeSystem/v3-Ethnicity in v3-codesystems.xml
+    """
+    NotHispanicOrLatino = Ethnicity("2186-5")

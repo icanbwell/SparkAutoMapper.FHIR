@@ -27,3 +27,46 @@ class RoleClassPartitive(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RoleClassPartitive
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleClassPartitive"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+
+
+class RoleClassPartitiveValues:
+    """
+    Corresponds to the Role class
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+
+    Role = RoleClassPartitive("ROL")
+    """
+    The player of the role is a child of the scoping entity, in a generic sense.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Child = RoleClassPartitive("CHILD")
+    """
+    A role played by an entity that receives credentials from the scoping entity.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    CredentialedEntity = RoleClassPartitive("CRED")
+    """
+    nurse practitioner
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    NursePractitioner = RoleClassPartitive("NURPRAC")
+    """
+    nurse
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Nurse = RoleClassPartitive("NURS")
+    """
+    physician assistant
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    PhysicianAssistant = RoleClassPartitive("PA")
+    """
+    physician
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Physician = RoleClassPartitive("PHYS")

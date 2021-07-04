@@ -22,3 +22,22 @@ class RoleLinkType(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RoleLinkType
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleLinkType"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleLinkType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleLinkType"
+
+
+class RoleLinkTypeValues:
+    """
+    An action taken with respect to a subject Entity by a regulatory or
+    authoritative body with supervisory capacity over that entity. The action is
+    taken in response to behavior by the subject Entity that body finds to be
+    undesirable.
+
+                            Suspension, license restrictions, monetary fine,
+    letter of reprimand, mandated training, mandated supervision, etc.Examples:
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleLinkType in v3-codesystems.xml
+    """
+
+    Related = RoleLinkType("REL")

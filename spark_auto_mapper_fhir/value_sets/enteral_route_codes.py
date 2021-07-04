@@ -32,12 +32,12 @@ class EnteralRouteCodesCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
 
-    Routebymethod = EnteralRouteCodesCode("_RouteByMethod")
+    RouteByMethod = EnteralRouteCodesCode("_RouteByMethod")
     """
     Route of substance administration classified by site.
     From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
     """
-    Routebysite = EnteralRouteCodesCode("_RouteBySite")
+    RouteBySite = EnteralRouteCodesCode("_RouteBySite")
     """
     From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
     """

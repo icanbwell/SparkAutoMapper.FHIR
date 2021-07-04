@@ -22,3 +22,36 @@ class QueryStatusCode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-QueryStatusCode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-QueryStatusCode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode"
+
+
+class QueryStatusCodeValues:
+    """
+    Query status aborted
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
+    """
+
+    Aborted = QueryStatusCode("aborted")
+    """
+    Query Status delivered response
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
+    """
+    DeliveredResponse = QueryStatusCode("deliveredResponse")
+    """
+    Query Status executing
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
+    """
+    Executing = QueryStatusCode("executing")
+    """
+    Query Status new
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
+    """
+    New = QueryStatusCode("new")
+    """
+    Query Status wait continued
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
+    """
+    WaitContinuedQueryResponse = QueryStatusCode("waitContinuedQueryResponse")

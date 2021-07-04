@@ -26,3 +26,46 @@ class RoleClassPassive(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RoleClassPassive
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleClassPassive"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+
+
+class RoleClassPassiveValues:
+    """
+    Corresponds to the Role class
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+
+    Role = RoleClassPassive("ROL")
+    """
+    The player of the role is a child of the scoping entity, in a generic sense.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Child = RoleClassPassive("CHILD")
+    """
+    A role played by an entity that receives credentials from the scoping entity.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    CredentialedEntity = RoleClassPassive("CRED")
+    """
+    nurse practitioner
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    NursePractitioner = RoleClassPassive("NURPRAC")
+    """
+    nurse
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Nurse = RoleClassPassive("NURS")
+    """
+    physician assistant
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    PhysicianAssistant = RoleClassPassive("PA")
+    """
+    physician
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Physician = RoleClassPassive("PHYS")

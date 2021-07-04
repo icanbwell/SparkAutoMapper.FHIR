@@ -23,3 +23,17 @@ class ExposureMode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ExposureMode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ExposureMode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ExposureMode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ExposureMode"
+
+
+class ExposureModeValues:
+    """
+    Code for the mechanism by which the exposure agent was exchanged or
+    potentially exchanged by the participants involved in the exposure.
+    From: http://terminology.hl7.org/CodeSystem/v3-ExposureMode in v3-codesystems.xml
+    """
+
+    ExposureMode_ = ExposureMode("_ExposureMode")

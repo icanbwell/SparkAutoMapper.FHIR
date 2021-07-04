@@ -22,3 +22,16 @@ class ActSite(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActSite
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActSite"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActSite
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActSite"
+
+
+class ActSiteValues:
+    """
+    An anatomical location on a human which can be the focus of an act.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActSite in v3-codesystems.xml
+    """
+
+    HumanActSite = ActSite("_HumanActSite")

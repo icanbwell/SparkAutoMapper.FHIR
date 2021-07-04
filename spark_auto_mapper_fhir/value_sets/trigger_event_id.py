@@ -31,3 +31,66 @@ class TriggerEventID(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-triggerEventID
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-triggerEventID"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-triggerEventID
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-triggerEventID"
+
+
+class TriggerEventIDValues:
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+
+    ResultStatus = TriggerEventID("POLB_TE004000UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultConfirm = TriggerEventID("POLB_TE004001UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultReject = TriggerEventID("POLB_TE004002UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultTracking = TriggerEventID("POLB_TE004007UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultInProgress = TriggerEventID("POLB_TE004100UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultActivate = TriggerEventID("POLB_TE004102UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultCompleteWithFulfillment = TriggerEventID("POLB_TE004200UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultCorrected = TriggerEventID("POLB_TE004201UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultComplete = TriggerEventID("POLB_TE004202UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultAbort = TriggerEventID("POLB_TE004301UV")
+    """
+    Description:
+    From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+    """
+    ResultNullify = TriggerEventID("POLB_TE004500UV")

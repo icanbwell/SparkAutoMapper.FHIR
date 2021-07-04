@@ -25,3 +25,17 @@ class ParticipationTargetDirect(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ParticipationTargetDirect"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+
+
+class ParticipationTargetDirectValues:
+    """
+    Indicates that the target of the participation is involved in some manner in
+    the act, but does not qualify how.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
+    """
+
+    Participation = ParticipationTargetDirect("PART")

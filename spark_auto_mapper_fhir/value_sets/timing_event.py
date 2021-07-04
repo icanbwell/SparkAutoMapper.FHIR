@@ -22,3 +22,101 @@ class TimingEvent(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TimingEvent
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TimingEvent"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TimingEvent
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
+
+
+class TimingEventValues:
+    """
+    before meal (from lat. ante cibus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+
+    AC = TimingEvent("AC")
+    """
+    before lunch (from lat. ante cibus diurnus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    ACD = TimingEvent("ACD")
+    """
+    before breakfast (from lat. ante cibus matutinus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    ACM = TimingEvent("ACM")
+    """
+    before dinner (from lat. ante cibus vespertinus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    ACV = TimingEvent("ACV")
+    """
+    Description: meal (from lat. ante cibus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    C = TimingEvent("C")
+    """
+    Description: Prior to beginning a regular period of extended sleep (this would
+    exclude naps).  Note that this might occur at different times of day depending
+    on a person's regular sleep schedule.
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    HS = TimingEvent("HS")
+    """
+    between meals (from lat. inter cibus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    IC = TimingEvent("IC")
+    """
+    between lunch and dinner
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    ICD = TimingEvent("ICD")
+    """
+    between breakfast and lunch
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    ICM = TimingEvent("ICM")
+    """
+    between dinner and the hour of sleep
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    ICV = TimingEvent("ICV")
+    """
+    after meal (from lat. post cibus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    PC = TimingEvent("PC")
+    """
+    after lunch (from lat. post cibus diurnus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    PCD = TimingEvent("PCD")
+    """
+    after breakfast (from lat. post cibus matutinus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    PCM = TimingEvent("PCM")
+    """
+    after dinner (from lat. post cibus vespertinus)
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    PCV = TimingEvent("PCV")
+    """
+    Description: Upon waking up from a regular period of sleep, in order to start
+    regular activities (this would exclude waking up from a nap or temporarily
+    waking up during a period of sleep)
+    
+    
+                               Usage Notes: e.g.
+    
+                            Take pulse rate on waking in management of
+    thyrotoxicosis.
+    
+                            Take BP on waking in management of hypertension
+    
+                            Take basal body temperature on waking in establishing
+    date of ovulation
+    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
+    """
+    WAKE = TimingEvent("WAKE")

@@ -82,6 +82,10 @@ class {{fhir_entity.cleaned_name}}Values:
     From: {{ value_set_concept.value_set_url }} in {{ value_set_concept.source }}
     """
         {% endif %}
+        {% if value_set_concept.cleaned_display == fhir_entity.cleaned_name %}
+    {{ value_set_concept.cleaned_display }}_ = {{ fhir_entity.cleaned_name }}("{{ value_set_concept.code }}")
+        {% else %}
     {{ value_set_concept.cleaned_display }} = {{ fhir_entity.cleaned_name }}("{{ value_set_concept.code }}")
+        {%  endif %}
     {%  endfor %}
 {% endif %}

@@ -24,3 +24,22 @@ class ActMoodIntent(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActMoodIntent
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActMoodIntent"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActMood
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
+
+
+class ActMoodIntentValues:
+    """
+    These are moods describing activities as they progress in the business cycle,
+    from defined, through planned and ordered to completed.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
+    """
+
+    ActMoodCompletionTrack = ActMoodIntent("_ActMoodCompletionTrack")
+    """
+    Definition: An act that expresses condition statements for other acts.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
+    """
+    ActMoodPredicate = ActMoodIntent("_ActMoodPredicate")

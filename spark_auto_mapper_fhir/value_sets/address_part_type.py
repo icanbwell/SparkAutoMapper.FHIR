@@ -26,3 +26,177 @@ class AddressPartType(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-AddressPartType
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-AddressPartType"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-AddressPartType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-AddressPartType"
+
+
+class AddressPartTypeValues:
+    """
+    This can be a unit designator, such as apartment number, suite number, or
+    floor. There may be several unit designators in an address (e.g., "3rd floor,
+    Appt. 342"). This can also be a designator pointing away from the location,
+    rather than specifying a smaller location within some larger one (e.g., Dutch
+    "t.o." means "opposite to" for house boats located across the street facing
+    houses).
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+
+    AdditionalLocator = AddressPartType("ADL")
+    """
+    Description: An address line is for either an additional locator, a delivery
+    address or a street address.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    AddressLine = AddressPartType("AL")
+    """
+    The numeric portion of a building number
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    BuildingNumberNumeric = AddressPartType("BNN")
+    """
+    The number of a building, house or lot alongside the street.  Also known as
+    "primary street number".  This does not number the street but rather the
+    building.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    BuildingNumber = AddressPartType("BNR")
+    """
+    Any alphabetic character, fraction or other text that may appear after the
+    numeric portion of a building number
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    BuildingNumberSuffix = AddressPartType("BNS")
+    """
+    The name of the party who will take receipt at the specified address, and will
+    take on responsibility for ensuring delivery to the target recipient
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    CareOf = AddressPartType("CAR")
+    """
+    A geographic sub-unit delineated for demographic purposes.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    CensusTract = AddressPartType("CEN")
+    """
+    Country
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    Country = AddressPartType("CNT")
+    """
+    A sub-unit of a state or province. (49 of the United States of America use the
+    term "county;" Louisiana uses the term "parish".)
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    CountyOrParish = AddressPartType("CPA")
+    """
+    The name of the city, town, village, or other community or delivery center
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    Municipality = AddressPartType("CTY")
+    """
+    Delimiters are printed without framing white space.  If no value component is
+    provided, the delimiter appears as a line break.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    Delimiter = AddressPartType("DEL")
+    """
+    Indicates the type of delivery installation (the facility to which the mail
+    will be delivered prior to final shipping via the delivery mode.) Example:
+    post office, letter carrier depot, community mail center, station, etc.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    DeliveryInstallationType = AddressPartType("DINST")
+    """
+    The location of the delivery installation, usually a town or city, and is only
+    required if the area is different from the municipality. Area to which mail
+    delivery service is provided from any postal facility or service such as an
+    individual letter carrier, rural route, or postal route.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    DeliveryInstallationArea = AddressPartType("DINSTA")
+    """
+    A number, letter or name identifying a delivery installation.  E.g., for
+    Station A, the delivery installation qualifier would be 'A'.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    DeliveryInstallationQualifier = AddressPartType("DINSTQ")
+    """
+    Direction (e.g., N, S, W, E)
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    Direction = AddressPartType("DIR")
+    """
+    Indicates the type of service offered, method of delivery.  For example: post
+    office box, rural route, general delivery, etc.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    DeliveryMode = AddressPartType("DMOD")
+    """
+    Represents the routing information such as a letter carrier route number.  It
+    is the identifying number of the designator (the box number or rural route
+    number).
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    DeliveryModeIdentifier = AddressPartType("DMODID")
+    """
+    A value that uniquely identifies the postal address.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    DeliveryPointIdentifier = AddressPartType("DPID")
+    """
+    Description:An intersection denotes that the actual address is located AT or
+    CLOSE TO the intersection OF two or more streets.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    Intersection = AddressPartType("INT")
+    """
+    A numbered box located in a post station.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    PostBox = AddressPartType("POB")
+    """
+    A subsection of a municipality
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    Precinct = AddressPartType("PRE")
+    """
+    A sub-unit of a country with limited sovereignty in a federally organized
+    country.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    StateOrProvince = AddressPartType("STA")
+    """
+    The base name of a roadway or artery recognized by a municipality (excluding
+    street type and direction)
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    StreetNameBase = AddressPartType("STB")
+    """
+    street name
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    StreetName = AddressPartType("STR")
+    """
+    The designation given to the street.  (e.g. Street, Avenue, Crescent, etc.)
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    StreetType = AddressPartType("STTYP")
+    """
+    The number or name of a specific unit contained within a building or complex,
+    as assigned by that building or complex.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    UnitIdentifier = AddressPartType("UNID")
+    """
+    Indicates the type of specific unit contained within a building or complex.
+    E.g. Appartment, Floor
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    UnitDesignator = AddressPartType("UNIT")
+    """
+    A postal code designating a region defined by the postal service.
+    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
+    """
+    PostalCode = AddressPartType("ZIP")

@@ -23,3 +23,23 @@ class RoleStatus(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RoleStatus
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleStatus"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleStatus
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleStatus"
+
+
+class RoleStatusValues:
+    """
+    The 'typical' state. Excludes "nullified" which represents the termination
+    state of a Role instance that was created in error.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleStatus in v3-codesystems.xml
+    """
+
+    Normal = RoleStatus("normal")
+    """
+    The state representing the termination of a Role instance that was created in
+    error.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleStatus in v3-codesystems.xml
+    """
+    Nullified = RoleStatus("nullified")

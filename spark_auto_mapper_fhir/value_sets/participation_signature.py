@@ -27,3 +27,29 @@ class ParticipationSignature(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ParticipationSignature
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ParticipationSignature"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature"
+    )
+
+
+class ParticipationSignatureValues:
+    """
+    The particpant intends to provide a signature.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature in v3-codesystems.xml
+    """
+
+    Intended = ParticipationSignature("I")
+    """
+    Signature has been affixed, either written on file, or electronic (incl.
+    digital) signature in Participation.signatureText.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature in v3-codesystems.xml
+    """
+    Signed = ParticipationSignature("S")
+    """
+    A signature for the service is required of this actor.
+    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature in v3-codesystems.xml
+    """
+    Required = ParticipationSignature("X")

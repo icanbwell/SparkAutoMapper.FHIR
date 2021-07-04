@@ -24,3 +24,28 @@ class MessageWaitingPriority(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-MessageWaitingPriority
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-MessageWaitingPriority"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-MessageWaitingPriority
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-MessageWaitingPriority"
+    )
+
+
+class MessageWaitingPriorityValues:
+    """
+    High priority messages are available
+    From: http://terminology.hl7.org/CodeSystem/v3-MessageWaitingPriority in v3-codesystems.xml
+    """
+
+    High = MessageWaitingPriority("H")
+    """
+    Low priority messages are available
+    From: http://terminology.hl7.org/CodeSystem/v3-MessageWaitingPriority in v3-codesystems.xml
+    """
+    Low = MessageWaitingPriority("L")
+    """
+    Medium priority messages are available
+    From: http://terminology.hl7.org/CodeSystem/v3-MessageWaitingPriority in v3-codesystems.xml
+    """
+    Medium = MessageWaitingPriority("M")

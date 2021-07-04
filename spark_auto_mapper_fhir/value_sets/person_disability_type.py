@@ -22,3 +22,36 @@ class PersonDisabilityType(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-PersonDisabilityType
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-PersonDisabilityType"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType"
+
+
+class PersonDisabilityTypeValues:
+    """
+    Vision impaired
+    From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+    """
+
+    VisionImpaired = PersonDisabilityType("1")
+    """
+    Hearing impaired
+    From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+    """
+    HearingImpaired = PersonDisabilityType("2")
+    """
+    Speech impaired
+    From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+    """
+    SpeechImpaired = PersonDisabilityType("3")
+    """
+    Mentally impaired
+    From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+    """
+    MentallyImpaired = PersonDisabilityType("4")
+    """
+    Mobility impaired
+    From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+    """
+    MobilityImpaired = PersonDisabilityType("5")

@@ -42,20 +42,20 @@ class DetectedIssueCategoryCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
 
-    Actaccountcode = DetectedIssueCategoryCode("_ActAccountCode")
+    ActAccountCode = DetectedIssueCategoryCode("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationcode = DetectedIssueCategoryCode("_ActAdjudicationCode")
+    ActAdjudicationCode = DetectedIssueCategoryCode("_ActAdjudicationCode")
     """
     Actions to be carried out by the recipient of the Adjudication Result
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationresultactioncode = DetectedIssueCategoryCode(
+    ActAdjudicationResultActionCode = DetectedIssueCategoryCode(
         "_ActAdjudicationResultActionCode"
     )
     """
@@ -63,18 +63,18 @@ class DetectedIssueCategoryCodeValues:
     procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillablemodifiercode = DetectedIssueCategoryCode("_ActBillableModifierCode")
+    ActBillableModifierCode = DetectedIssueCategoryCode("_ActBillableModifierCode")
     """
     The type of provision(s)  made for reimbursing for the deliver of healthcare
     services and/or goods provided by a Provider, over a specified period.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillingarrangementcode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
+    ActBillingArrangementCode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
     """
     Type of bounded ROI.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actboundedroicode = DetectedIssueCategoryCode("_ActBoundedROICode")
+    ActBoundedROICode = DetectedIssueCategoryCode("_ActBoundedROICode")
     """
     Description:The type and scope of responsibility taken-on by the performer of
     the Act for a specific subject of care.
@@ -86,7 +86,7 @@ class DetectedIssueCategoryCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actclaimattachmentcategorycode = DetectedIssueCategoryCode(
+    ActClaimAttachmentCategoryCode = DetectedIssueCategoryCode(
         "_ActClaimAttachmentCategoryCode"
     )
     """
@@ -96,12 +96,12 @@ class DetectedIssueCategoryCodeValues:
     research.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actconsenttype = DetectedIssueCategoryCode("_ActConsentType")
+    ActConsentType = DetectedIssueCategoryCode("_ActConsentType")
     """
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontainerregistrationcode = DetectedIssueCategoryCode(
+    ActContainerRegistrationCode = DetectedIssueCategoryCode(
         "_ActContainerRegistrationCode"
     )
     """
@@ -123,30 +123,30 @@ class DetectedIssueCategoryCodeValues:
     diastolic blood pressure).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontrolvariable = DetectedIssueCategoryCode("_ActControlVariable")
+    ActControlVariable = DetectedIssueCategoryCode("_ActControlVariable")
     """
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoverageconfirmationcode = DetectedIssueCategoryCode(
+    ActCoverageConfirmationCode = DetectedIssueCategoryCode(
         "_ActCoverageConfirmationCode"
     )
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragelimitcode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
+    ActCoverageLimitCode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
     """
     Definition: Set of codes indicating the type of insurance policy or program
     that pays for the cost of benefits provided to covered parties.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragetypecode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
+    ActCoverageTypeCode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
     """
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actdetectedissuemanagementcode = DetectedIssueCategoryCode(
+    ActDetectedIssueManagementCode = DetectedIssueCategoryCode(
         "_ActDetectedIssueManagementCode"
     )
     """
@@ -155,25 +155,25 @@ class DetectedIssueCategoryCodeValues:
     substance", etc. to further describe the nature of interaction.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actexposurecode = DetectedIssueCategoryCode("_ActExposureCode")
+    ActExposureCode = DetectedIssueCategoryCode("_ActExposureCode")
     """
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actfinancialtransactioncode = DetectedIssueCategoryCode(
+    ActFinancialTransactionCode = DetectedIssueCategoryCode(
         "_ActFinancialTransactionCode"
     )
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actincidentcode = DetectedIssueCategoryCode("_ActIncidentCode")
+    ActIncidentCode = DetectedIssueCategoryCode("_ActIncidentCode")
     """
     Description: The type of health information to which the subject of the
     information or the subject's delegate consents or dissents.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscode = DetectedIssueCategoryCode("_ActInformationAccessCode")
+    ActInformationAccessCode = DetectedIssueCategoryCode("_ActInformationAccessCode")
     """
     Concepts conveying the context in which authorization given under
     jurisdictional law, by organizational policy, or by a patient consent
@@ -181,7 +181,7 @@ class DetectedIssueCategoryCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscontextcode = DetectedIssueCategoryCode(
+    ActInformationAccessContextCode = DetectedIssueCategoryCode(
         "_ActInformationAccessContextCode"
     )
     """
@@ -189,7 +189,7 @@ class DetectedIssueCategoryCodeValues:
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationcategorycode = DetectedIssueCategoryCode(
+    ActInformationCategoryCode = DetectedIssueCategoryCode(
         "_ActInformationCategoryCode"
     )
     """
@@ -198,7 +198,7 @@ class DetectedIssueCategoryCodeValues:
     results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementcode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
+    ActInvoiceElementCode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
     """
     Identifies the different types of summary information that can be reported by
     queries dealing with Statement of Financial Activity (SOFA).  The summary
@@ -206,7 +206,7 @@ class DetectedIssueCategoryCodeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementsummarycode = DetectedIssueCategoryCode(
+    ActInvoiceElementSummaryCode = DetectedIssueCategoryCode(
         "_ActInvoiceElementSummaryCode"
     )
     """
@@ -215,23 +215,23 @@ class DetectedIssueCategoryCodeValues:
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceoverridecode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
+    ActInvoiceOverrideCode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
     """
     Provides codes associated with ActClass value of LIST (working list)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actlistcode = DetectedIssueCategoryCode("_ActListCode")
+    ActListCode = DetectedIssueCategoryCode("_ActListCode")
     """
     Identifies types of monitoring programs
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actmonitoringprotocolcode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
+    ActMonitoringProtocolCode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
     """
     Description:Concepts representing indications (reasons for clinical action)
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actnonobservationindicationcode = DetectedIssueCategoryCode(
+    ActNonObservationIndicationCode = DetectedIssueCategoryCode(
         "_ActNonObservationIndicationCode"
     )
     """
@@ -291,41 +291,41 @@ class DetectedIssueCategoryCodeValues:
     (PaymentMethodCode)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpaymentcode = DetectedIssueCategoryCode("_ActPaymentCode")
+    ActPaymentCode = DetectedIssueCategoryCode("_ActPaymentCode")
     """
     Identifies types of dispensing events
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpharmacysupplytype = DetectedIssueCategoryCode("_ActPharmacySupplyType")
+    ActPharmacySupplyType = DetectedIssueCategoryCode("_ActPharmacySupplyType")
     """
     Description:Types of policies that further specify the ActClassPolicy value
     set.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpolicytype = DetectedIssueCategoryCode("_ActPolicyType")
+    ActPolicyType = DetectedIssueCategoryCode("_ActPolicyType")
     """
     The method that a product is obtained for use by the subject of the supply act
     (e.g. patient).  Product examples are consumable or durable goods.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actproductacquisitioncode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
+    ActProductAcquisitionCode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
     """
     Transportation of a specimen.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentransportcode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
+    ActSpecimenTransportCode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
     """
     Set of codes related to specimen treatments
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentreatmentcode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
+    ActSpecimenTreatmentCode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
     """
     Description: Describes the type of substance administration being performed.
     This should not be used to carry codes for identification of products.  Use an
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actsubstanceadministrationcode = DetectedIssueCategoryCode(
+    ActSubstanceAdministrationCode = DetectedIssueCategoryCode(
         "_ActSubstanceAdministrationCode"
     )
     """
@@ -334,7 +334,7 @@ class DetectedIssueCategoryCodeValues:
     review, problem list entry).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttaskcode = DetectedIssueCategoryCode("_ActTaskCode")
+    ActTaskCode = DetectedIssueCategoryCode("_ActTaskCode")
     """
     Characterizes how a transportation act was or will be carried out.
     
@@ -343,17 +343,17 @@ class DetectedIssueCategoryCodeValues:
     transit, via courier.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttransportationmodecode = DetectedIssueCategoryCode("_ActTransportationModeCode")
+    ActTransportationModeCode = DetectedIssueCategoryCode("_ActTransportationModeCode")
     """
     Identifies the kinds of observations that can be performed
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Observationtype = DetectedIssueCategoryCode("_ObservationType")
+    ObservationType = DetectedIssueCategoryCode("_ObservationType")
     """
     Shape of the region on the object being referenced
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Roioverlayshape = DetectedIssueCategoryCode("_ROIOverlayShape")
+    ROIOverlayShape = DetectedIssueCategoryCode("_ROIOverlayShape")
     """
     Description:Indicates that result data has been corrected.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -426,7 +426,7 @@ class DetectedIssueCategoryCodeValues:
     SecurityObservationValue code as the "security label tag".
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Securityobservationtype = DetectedIssueCategoryCode("SECOBS")
+    SecurityObservationType = DetectedIssueCategoryCode("SECOBS")
     """
     Definition: A government health program that provides coverage on a fee for
     service basis for health services to persons meeting eligibility criteria such
@@ -449,34 +449,34 @@ class DetectedIssueCategoryCodeValues:
     cost of coverage as well.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    workersCompensationProgram = DetectedIssueCategoryCode("WRKCOMP")
+    _workersCompensationProgram = DetectedIssueCategoryCode("WRKCOMP")
     """
     An identifying code for healthcare interventions/procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actprocedurecode = DetectedIssueCategoryCode("_ActProcedureCode")
+    ActProcedureCode = DetectedIssueCategoryCode("_ActProcedureCode")
     """
     Domain provides the root for HL7-defined detailed or rich codes for the Act
     classes.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Hl7definedactcodes = DetectedIssueCategoryCode("_HL7DefinedActCodes")
+    HL7DefinedActCodes = DetectedIssueCategoryCode("_HL7DefinedActCodes")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Copay = DetectedIssueCategoryCode("COPAY")
+    COPAY = DetectedIssueCategoryCode("COPAY")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Deduct = DetectedIssueCategoryCode("DEDUCT")
+    DEDUCT = DetectedIssueCategoryCode("DEDUCT")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Doseind = DetectedIssueCategoryCode("DOSEIND")
+    DOSEIND = DetectedIssueCategoryCode("DOSEIND")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Pra = DetectedIssueCategoryCode("PRA")
+    PRA = DetectedIssueCategoryCode("PRA")
     """
     The act of putting something away for safe keeping. The "something" may be
     physical object such as a specimen, or information, such as observations
@@ -491,20 +491,20 @@ class DetectedIssueCategoryCodeValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actaccountcode = DetectedIssueCategoryCode("_ActAccountCode")
+    ActAccountCode = DetectedIssueCategoryCode("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationcode = DetectedIssueCategoryCode("_ActAdjudicationCode")
+    ActAdjudicationCode = DetectedIssueCategoryCode("_ActAdjudicationCode")
     """
     Actions to be carried out by the recipient of the Adjudication Result
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationresultactioncode = DetectedIssueCategoryCode(
+    ActAdjudicationResultActionCode = DetectedIssueCategoryCode(
         "_ActAdjudicationResultActionCode"
     )
     """
@@ -512,18 +512,18 @@ class DetectedIssueCategoryCodeValues:
     procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillablemodifiercode = DetectedIssueCategoryCode("_ActBillableModifierCode")
+    ActBillableModifierCode = DetectedIssueCategoryCode("_ActBillableModifierCode")
     """
     The type of provision(s)  made for reimbursing for the deliver of healthcare
     services and/or goods provided by a Provider, over a specified period.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillingarrangementcode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
+    ActBillingArrangementCode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
     """
     Type of bounded ROI.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actboundedroicode = DetectedIssueCategoryCode("_ActBoundedROICode")
+    ActBoundedROICode = DetectedIssueCategoryCode("_ActBoundedROICode")
     """
     Description:The type and scope of responsibility taken-on by the performer of
     the Act for a specific subject of care.
@@ -535,7 +535,7 @@ class DetectedIssueCategoryCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actclaimattachmentcategorycode = DetectedIssueCategoryCode(
+    ActClaimAttachmentCategoryCode = DetectedIssueCategoryCode(
         "_ActClaimAttachmentCategoryCode"
     )
     """
@@ -545,12 +545,12 @@ class DetectedIssueCategoryCodeValues:
     research.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actconsenttype = DetectedIssueCategoryCode("_ActConsentType")
+    ActConsentType = DetectedIssueCategoryCode("_ActConsentType")
     """
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontainerregistrationcode = DetectedIssueCategoryCode(
+    ActContainerRegistrationCode = DetectedIssueCategoryCode(
         "_ActContainerRegistrationCode"
     )
     """
@@ -572,30 +572,30 @@ class DetectedIssueCategoryCodeValues:
     diastolic blood pressure).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontrolvariable = DetectedIssueCategoryCode("_ActControlVariable")
+    ActControlVariable = DetectedIssueCategoryCode("_ActControlVariable")
     """
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoverageconfirmationcode = DetectedIssueCategoryCode(
+    ActCoverageConfirmationCode = DetectedIssueCategoryCode(
         "_ActCoverageConfirmationCode"
     )
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragelimitcode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
+    ActCoverageLimitCode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
     """
     Definition: Set of codes indicating the type of insurance policy or program
     that pays for the cost of benefits provided to covered parties.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragetypecode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
+    ActCoverageTypeCode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
     """
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actdetectedissuemanagementcode = DetectedIssueCategoryCode(
+    ActDetectedIssueManagementCode = DetectedIssueCategoryCode(
         "_ActDetectedIssueManagementCode"
     )
     """
@@ -604,25 +604,25 @@ class DetectedIssueCategoryCodeValues:
     substance", etc. to further describe the nature of interaction.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actexposurecode = DetectedIssueCategoryCode("_ActExposureCode")
+    ActExposureCode = DetectedIssueCategoryCode("_ActExposureCode")
     """
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actfinancialtransactioncode = DetectedIssueCategoryCode(
+    ActFinancialTransactionCode = DetectedIssueCategoryCode(
         "_ActFinancialTransactionCode"
     )
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actincidentcode = DetectedIssueCategoryCode("_ActIncidentCode")
+    ActIncidentCode = DetectedIssueCategoryCode("_ActIncidentCode")
     """
     Description: The type of health information to which the subject of the
     information or the subject's delegate consents or dissents.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscode = DetectedIssueCategoryCode("_ActInformationAccessCode")
+    ActInformationAccessCode = DetectedIssueCategoryCode("_ActInformationAccessCode")
     """
     Concepts conveying the context in which authorization given under
     jurisdictional law, by organizational policy, or by a patient consent
@@ -630,7 +630,7 @@ class DetectedIssueCategoryCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscontextcode = DetectedIssueCategoryCode(
+    ActInformationAccessContextCode = DetectedIssueCategoryCode(
         "_ActInformationAccessContextCode"
     )
     """
@@ -638,7 +638,7 @@ class DetectedIssueCategoryCodeValues:
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationcategorycode = DetectedIssueCategoryCode(
+    ActInformationCategoryCode = DetectedIssueCategoryCode(
         "_ActInformationCategoryCode"
     )
     """
@@ -647,7 +647,7 @@ class DetectedIssueCategoryCodeValues:
     results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementcode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
+    ActInvoiceElementCode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
     """
     Identifies the different types of summary information that can be reported by
     queries dealing with Statement of Financial Activity (SOFA).  The summary
@@ -655,7 +655,7 @@ class DetectedIssueCategoryCodeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementsummarycode = DetectedIssueCategoryCode(
+    ActInvoiceElementSummaryCode = DetectedIssueCategoryCode(
         "_ActInvoiceElementSummaryCode"
     )
     """
@@ -664,23 +664,23 @@ class DetectedIssueCategoryCodeValues:
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceoverridecode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
+    ActInvoiceOverrideCode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
     """
     Provides codes associated with ActClass value of LIST (working list)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actlistcode = DetectedIssueCategoryCode("_ActListCode")
+    ActListCode = DetectedIssueCategoryCode("_ActListCode")
     """
     Identifies types of monitoring programs
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actmonitoringprotocolcode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
+    ActMonitoringProtocolCode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
     """
     Description:Concepts representing indications (reasons for clinical action)
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actnonobservationindicationcode = DetectedIssueCategoryCode(
+    ActNonObservationIndicationCode = DetectedIssueCategoryCode(
         "_ActNonObservationIndicationCode"
     )
     """
@@ -740,41 +740,41 @@ class DetectedIssueCategoryCodeValues:
     (PaymentMethodCode)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpaymentcode = DetectedIssueCategoryCode("_ActPaymentCode")
+    ActPaymentCode = DetectedIssueCategoryCode("_ActPaymentCode")
     """
     Identifies types of dispensing events
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpharmacysupplytype = DetectedIssueCategoryCode("_ActPharmacySupplyType")
+    ActPharmacySupplyType = DetectedIssueCategoryCode("_ActPharmacySupplyType")
     """
     Description:Types of policies that further specify the ActClassPolicy value
     set.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpolicytype = DetectedIssueCategoryCode("_ActPolicyType")
+    ActPolicyType = DetectedIssueCategoryCode("_ActPolicyType")
     """
     The method that a product is obtained for use by the subject of the supply act
     (e.g. patient).  Product examples are consumable or durable goods.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actproductacquisitioncode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
+    ActProductAcquisitionCode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
     """
     Transportation of a specimen.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentransportcode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
+    ActSpecimenTransportCode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
     """
     Set of codes related to specimen treatments
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentreatmentcode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
+    ActSpecimenTreatmentCode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
     """
     Description: Describes the type of substance administration being performed.
     This should not be used to carry codes for identification of products.  Use an
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actsubstanceadministrationcode = DetectedIssueCategoryCode(
+    ActSubstanceAdministrationCode = DetectedIssueCategoryCode(
         "_ActSubstanceAdministrationCode"
     )
     """
@@ -783,7 +783,7 @@ class DetectedIssueCategoryCodeValues:
     review, problem list entry).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttaskcode = DetectedIssueCategoryCode("_ActTaskCode")
+    ActTaskCode = DetectedIssueCategoryCode("_ActTaskCode")
     """
     Characterizes how a transportation act was or will be carried out.
     
@@ -792,17 +792,17 @@ class DetectedIssueCategoryCodeValues:
     transit, via courier.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttransportationmodecode = DetectedIssueCategoryCode("_ActTransportationModeCode")
+    ActTransportationModeCode = DetectedIssueCategoryCode("_ActTransportationModeCode")
     """
     Identifies the kinds of observations that can be performed
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Observationtype = DetectedIssueCategoryCode("_ObservationType")
+    ObservationType = DetectedIssueCategoryCode("_ObservationType")
     """
     Shape of the region on the object being referenced
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Roioverlayshape = DetectedIssueCategoryCode("_ROIOverlayShape")
+    ROIOverlayShape = DetectedIssueCategoryCode("_ROIOverlayShape")
     """
     Description:Indicates that result data has been corrected.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -875,7 +875,7 @@ class DetectedIssueCategoryCodeValues:
     SecurityObservationValue code as the "security label tag".
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Securityobservationtype = DetectedIssueCategoryCode("SECOBS")
+    SecurityObservationType = DetectedIssueCategoryCode("SECOBS")
     """
     Definition: A government health program that provides coverage on a fee for
     service basis for health services to persons meeting eligibility criteria such
@@ -898,34 +898,34 @@ class DetectedIssueCategoryCodeValues:
     cost of coverage as well.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    workersCompensationProgram = DetectedIssueCategoryCode("WRKCOMP")
+    _workersCompensationProgram = DetectedIssueCategoryCode("WRKCOMP")
     """
     An identifying code for healthcare interventions/procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actprocedurecode = DetectedIssueCategoryCode("_ActProcedureCode")
+    ActProcedureCode = DetectedIssueCategoryCode("_ActProcedureCode")
     """
     Domain provides the root for HL7-defined detailed or rich codes for the Act
     classes.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Hl7definedactcodes = DetectedIssueCategoryCode("_HL7DefinedActCodes")
+    HL7DefinedActCodes = DetectedIssueCategoryCode("_HL7DefinedActCodes")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Copay = DetectedIssueCategoryCode("COPAY")
+    COPAY = DetectedIssueCategoryCode("COPAY")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Deduct = DetectedIssueCategoryCode("DEDUCT")
+    DEDUCT = DetectedIssueCategoryCode("DEDUCT")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Doseind = DetectedIssueCategoryCode("DOSEIND")
+    DOSEIND = DetectedIssueCategoryCode("DOSEIND")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Pra = DetectedIssueCategoryCode("PRA")
+    PRA = DetectedIssueCategoryCode("PRA")
     """
     The act of putting something away for safe keeping. The "something" may be
     physical object such as a specimen, or information, such as observations
@@ -940,20 +940,20 @@ class DetectedIssueCategoryCodeValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actaccountcode = DetectedIssueCategoryCode("_ActAccountCode")
+    ActAccountCode = DetectedIssueCategoryCode("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationcode = DetectedIssueCategoryCode("_ActAdjudicationCode")
+    ActAdjudicationCode = DetectedIssueCategoryCode("_ActAdjudicationCode")
     """
     Actions to be carried out by the recipient of the Adjudication Result
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationresultactioncode = DetectedIssueCategoryCode(
+    ActAdjudicationResultActionCode = DetectedIssueCategoryCode(
         "_ActAdjudicationResultActionCode"
     )
     """
@@ -961,18 +961,18 @@ class DetectedIssueCategoryCodeValues:
     procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillablemodifiercode = DetectedIssueCategoryCode("_ActBillableModifierCode")
+    ActBillableModifierCode = DetectedIssueCategoryCode("_ActBillableModifierCode")
     """
     The type of provision(s)  made for reimbursing for the deliver of healthcare
     services and/or goods provided by a Provider, over a specified period.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillingarrangementcode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
+    ActBillingArrangementCode = DetectedIssueCategoryCode("_ActBillingArrangementCode")
     """
     Type of bounded ROI.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actboundedroicode = DetectedIssueCategoryCode("_ActBoundedROICode")
+    ActBoundedROICode = DetectedIssueCategoryCode("_ActBoundedROICode")
     """
     Description:The type and scope of responsibility taken-on by the performer of
     the Act for a specific subject of care.
@@ -984,7 +984,7 @@ class DetectedIssueCategoryCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actclaimattachmentcategorycode = DetectedIssueCategoryCode(
+    ActClaimAttachmentCategoryCode = DetectedIssueCategoryCode(
         "_ActClaimAttachmentCategoryCode"
     )
     """
@@ -994,12 +994,12 @@ class DetectedIssueCategoryCodeValues:
     research.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actconsenttype = DetectedIssueCategoryCode("_ActConsentType")
+    ActConsentType = DetectedIssueCategoryCode("_ActConsentType")
     """
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontainerregistrationcode = DetectedIssueCategoryCode(
+    ActContainerRegistrationCode = DetectedIssueCategoryCode(
         "_ActContainerRegistrationCode"
     )
     """
@@ -1021,30 +1021,30 @@ class DetectedIssueCategoryCodeValues:
     diastolic blood pressure).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontrolvariable = DetectedIssueCategoryCode("_ActControlVariable")
+    ActControlVariable = DetectedIssueCategoryCode("_ActControlVariable")
     """
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoverageconfirmationcode = DetectedIssueCategoryCode(
+    ActCoverageConfirmationCode = DetectedIssueCategoryCode(
         "_ActCoverageConfirmationCode"
     )
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragelimitcode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
+    ActCoverageLimitCode = DetectedIssueCategoryCode("_ActCoverageLimitCode")
     """
     Definition: Set of codes indicating the type of insurance policy or program
     that pays for the cost of benefits provided to covered parties.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragetypecode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
+    ActCoverageTypeCode = DetectedIssueCategoryCode("_ActCoverageTypeCode")
     """
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actdetectedissuemanagementcode = DetectedIssueCategoryCode(
+    ActDetectedIssueManagementCode = DetectedIssueCategoryCode(
         "_ActDetectedIssueManagementCode"
     )
     """
@@ -1053,25 +1053,25 @@ class DetectedIssueCategoryCodeValues:
     substance", etc. to further describe the nature of interaction.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actexposurecode = DetectedIssueCategoryCode("_ActExposureCode")
+    ActExposureCode = DetectedIssueCategoryCode("_ActExposureCode")
     """
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actfinancialtransactioncode = DetectedIssueCategoryCode(
+    ActFinancialTransactionCode = DetectedIssueCategoryCode(
         "_ActFinancialTransactionCode"
     )
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actincidentcode = DetectedIssueCategoryCode("_ActIncidentCode")
+    ActIncidentCode = DetectedIssueCategoryCode("_ActIncidentCode")
     """
     Description: The type of health information to which the subject of the
     information or the subject's delegate consents or dissents.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscode = DetectedIssueCategoryCode("_ActInformationAccessCode")
+    ActInformationAccessCode = DetectedIssueCategoryCode("_ActInformationAccessCode")
     """
     Concepts conveying the context in which authorization given under
     jurisdictional law, by organizational policy, or by a patient consent
@@ -1079,7 +1079,7 @@ class DetectedIssueCategoryCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscontextcode = DetectedIssueCategoryCode(
+    ActInformationAccessContextCode = DetectedIssueCategoryCode(
         "_ActInformationAccessContextCode"
     )
     """
@@ -1087,7 +1087,7 @@ class DetectedIssueCategoryCodeValues:
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationcategorycode = DetectedIssueCategoryCode(
+    ActInformationCategoryCode = DetectedIssueCategoryCode(
         "_ActInformationCategoryCode"
     )
     """
@@ -1096,7 +1096,7 @@ class DetectedIssueCategoryCodeValues:
     results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementcode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
+    ActInvoiceElementCode = DetectedIssueCategoryCode("_ActInvoiceElementCode")
     """
     Identifies the different types of summary information that can be reported by
     queries dealing with Statement of Financial Activity (SOFA).  The summary
@@ -1104,7 +1104,7 @@ class DetectedIssueCategoryCodeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementsummarycode = DetectedIssueCategoryCode(
+    ActInvoiceElementSummaryCode = DetectedIssueCategoryCode(
         "_ActInvoiceElementSummaryCode"
     )
     """
@@ -1113,23 +1113,23 @@ class DetectedIssueCategoryCodeValues:
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceoverridecode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
+    ActInvoiceOverrideCode = DetectedIssueCategoryCode("_ActInvoiceOverrideCode")
     """
     Provides codes associated with ActClass value of LIST (working list)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actlistcode = DetectedIssueCategoryCode("_ActListCode")
+    ActListCode = DetectedIssueCategoryCode("_ActListCode")
     """
     Identifies types of monitoring programs
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actmonitoringprotocolcode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
+    ActMonitoringProtocolCode = DetectedIssueCategoryCode("_ActMonitoringProtocolCode")
     """
     Description:Concepts representing indications (reasons for clinical action)
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actnonobservationindicationcode = DetectedIssueCategoryCode(
+    ActNonObservationIndicationCode = DetectedIssueCategoryCode(
         "_ActNonObservationIndicationCode"
     )
     """
@@ -1189,41 +1189,41 @@ class DetectedIssueCategoryCodeValues:
     (PaymentMethodCode)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpaymentcode = DetectedIssueCategoryCode("_ActPaymentCode")
+    ActPaymentCode = DetectedIssueCategoryCode("_ActPaymentCode")
     """
     Identifies types of dispensing events
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpharmacysupplytype = DetectedIssueCategoryCode("_ActPharmacySupplyType")
+    ActPharmacySupplyType = DetectedIssueCategoryCode("_ActPharmacySupplyType")
     """
     Description:Types of policies that further specify the ActClassPolicy value
     set.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpolicytype = DetectedIssueCategoryCode("_ActPolicyType")
+    ActPolicyType = DetectedIssueCategoryCode("_ActPolicyType")
     """
     The method that a product is obtained for use by the subject of the supply act
     (e.g. patient).  Product examples are consumable or durable goods.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actproductacquisitioncode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
+    ActProductAcquisitionCode = DetectedIssueCategoryCode("_ActProductAcquisitionCode")
     """
     Transportation of a specimen.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentransportcode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
+    ActSpecimenTransportCode = DetectedIssueCategoryCode("_ActSpecimenTransportCode")
     """
     Set of codes related to specimen treatments
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentreatmentcode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
+    ActSpecimenTreatmentCode = DetectedIssueCategoryCode("_ActSpecimenTreatmentCode")
     """
     Description: Describes the type of substance administration being performed.
     This should not be used to carry codes for identification of products.  Use an
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actsubstanceadministrationcode = DetectedIssueCategoryCode(
+    ActSubstanceAdministrationCode = DetectedIssueCategoryCode(
         "_ActSubstanceAdministrationCode"
     )
     """
@@ -1232,7 +1232,7 @@ class DetectedIssueCategoryCodeValues:
     review, problem list entry).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttaskcode = DetectedIssueCategoryCode("_ActTaskCode")
+    ActTaskCode = DetectedIssueCategoryCode("_ActTaskCode")
     """
     Characterizes how a transportation act was or will be carried out.
     
@@ -1241,17 +1241,17 @@ class DetectedIssueCategoryCodeValues:
     transit, via courier.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttransportationmodecode = DetectedIssueCategoryCode("_ActTransportationModeCode")
+    ActTransportationModeCode = DetectedIssueCategoryCode("_ActTransportationModeCode")
     """
     Identifies the kinds of observations that can be performed
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Observationtype = DetectedIssueCategoryCode("_ObservationType")
+    ObservationType = DetectedIssueCategoryCode("_ObservationType")
     """
     Shape of the region on the object being referenced
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Roioverlayshape = DetectedIssueCategoryCode("_ROIOverlayShape")
+    ROIOverlayShape = DetectedIssueCategoryCode("_ROIOverlayShape")
     """
     Description:Indicates that result data has been corrected.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -1324,7 +1324,7 @@ class DetectedIssueCategoryCodeValues:
     SecurityObservationValue code as the "security label tag".
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Securityobservationtype = DetectedIssueCategoryCode("SECOBS")
+    SecurityObservationType = DetectedIssueCategoryCode("SECOBS")
     """
     Definition: A government health program that provides coverage on a fee for
     service basis for health services to persons meeting eligibility criteria such
@@ -1347,34 +1347,34 @@ class DetectedIssueCategoryCodeValues:
     cost of coverage as well.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    workersCompensationProgram = DetectedIssueCategoryCode("WRKCOMP")
+    _workersCompensationProgram = DetectedIssueCategoryCode("WRKCOMP")
     """
     An identifying code for healthcare interventions/procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actprocedurecode = DetectedIssueCategoryCode("_ActProcedureCode")
+    ActProcedureCode = DetectedIssueCategoryCode("_ActProcedureCode")
     """
     Domain provides the root for HL7-defined detailed or rich codes for the Act
     classes.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Hl7definedactcodes = DetectedIssueCategoryCode("_HL7DefinedActCodes")
+    HL7DefinedActCodes = DetectedIssueCategoryCode("_HL7DefinedActCodes")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Copay = DetectedIssueCategoryCode("COPAY")
+    COPAY = DetectedIssueCategoryCode("COPAY")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Deduct = DetectedIssueCategoryCode("DEDUCT")
+    DEDUCT = DetectedIssueCategoryCode("DEDUCT")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Doseind = DetectedIssueCategoryCode("DOSEIND")
+    DOSEIND = DetectedIssueCategoryCode("DOSEIND")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Pra = DetectedIssueCategoryCode("PRA")
+    PRA = DetectedIssueCategoryCode("PRA")
     """
     The act of putting something away for safe keeping. The "something" may be
     physical object such as a specimen, or information, such as observations

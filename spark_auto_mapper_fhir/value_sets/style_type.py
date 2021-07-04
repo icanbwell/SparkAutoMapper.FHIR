@@ -23,3 +23,26 @@ class StyleType(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-styleType
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-styleType"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-styleType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-styleType"
+
+
+class StyleTypeValues:
+    """
+    Defines font rendering characteristics
+    From: http://terminology.hl7.org/CodeSystem/v3-styleType in v3-codesystems.xml
+    """
+
+    FontStyle = StyleType("_FontStyle")
+    """
+    Defines list rendering characteristics
+    From: http://terminology.hl7.org/CodeSystem/v3-styleType in v3-codesystems.xml
+    """
+    ListStyle = StyleType("_ListStyle")
+    """
+    Defines table cell rendering characteristics
+    From: http://terminology.hl7.org/CodeSystem/v3-styleType in v3-codesystems.xml
+    """
+    TableRuleStyle = StyleType("_TableRuleStyle")

@@ -23,3 +23,28 @@ class ActStatus(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActStatus
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActStatus"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActStatus
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
+
+
+class ActStatusValues:
+    """
+    Encompasses the expected states of an Act, but excludes "nullified" and
+    "obsolete" which represent unusual terminal states for the life-cycle.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActStatus in v3-codesystems.xml
+    """
+
+    Normal = ActStatus("normal")
+    """
+    This Act instance was created in error and has been 'removed' and is treated
+    as though it never existed.  A record is retained for audit purposes only.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActStatus in v3-codesystems.xml
+    """
+    Nullified = ActStatus("nullified")
+    """
+    This Act instance has been replaced by a new instance.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActStatus in v3-codesystems.xml
+    """
+    Obsolete = ActStatus("obsolete")

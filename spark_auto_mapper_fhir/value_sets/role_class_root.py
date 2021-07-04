@@ -22,3 +22,46 @@ class RoleClassRoot(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RoleClassRoot
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleClassRoot"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleClass
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+
+
+class RoleClassRootValues:
+    """
+    Corresponds to the Role class
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+
+    Role = RoleClassRoot("ROL")
+    """
+    The player of the role is a child of the scoping entity, in a generic sense.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Child = RoleClassRoot("CHILD")
+    """
+    A role played by an entity that receives credentials from the scoping entity.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    CredentialedEntity = RoleClassRoot("CRED")
+    """
+    nurse practitioner
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    NursePractitioner = RoleClassRoot("NURPRAC")
+    """
+    nurse
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Nurse = RoleClassRoot("NURS")
+    """
+    physician assistant
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    PhysicianAssistant = RoleClassRoot("PA")
+    """
+    physician
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
+    """
+    Physician = RoleClassRoot("PHYS")

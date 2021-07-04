@@ -26,3 +26,46 @@ class ActRelationshipSubset(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset"
+    )
+
+
+class ActRelationshipSubsetValues:
+    """
+    Used to indicate that the participation is a filtered subset of the total
+    participations of the same type owned by the Act.
+
+                            Used when there is a need to limit the participations
+    to the first, the last, the next or some other filtered subset.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
+    """
+
+    ParticipationSubset = ActRelationshipSubset("_ParticipationSubset")
+    """
+    ActRelationshipExpectedSubset
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
+    """
+    ActRelationshipExpectedSubset = ActRelationshipSubset(
+        "ActRelationshipExpectedSubset"
+    )
+    """
+    ActRelationshipPastSubset
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
+    """
+    ActRelationshipPastSubset = ActRelationshipSubset("ActRelationshipPastSubset")
+    """
+    The occurrence whose value attribute is greater than all other occurrences at
+    the time the instance is created.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
+    """
+    Maximum = ActRelationshipSubset("MAX")
+    """
+    The occurrence whose value attribute is less than all other occurrences at the
+    time the instance is created.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
+    """
+    Minimum = ActRelationshipSubset("MIN")

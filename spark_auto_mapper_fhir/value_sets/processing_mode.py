@@ -22,3 +22,31 @@ class ProcessingMode(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ProcessingMode
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ProcessingMode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ProcessingMode
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ProcessingMode"
+
+
+class ProcessingModeValues:
+    """
+    Identifies archive mode of processing.
+    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
+    """
+
+    Archive = ProcessingMode("A")
+    """
+    Identifies initial load mode of processing.
+    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
+    """
+    InitialLoad = ProcessingMode("I")
+    """
+    Identifies restore mode of processing.
+    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
+    """
+    RestoreFromArchive = ProcessingMode("R")
+    """
+    Identifies on-line mode of processing.
+    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
+    """
+    CurrentProcessing = ProcessingMode("T")

@@ -23,3 +23,23 @@ class EntityStatus(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EntityStatus
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityStatus"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityStatus
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityStatus"
+
+
+class EntityStatusValues:
+    """
+    The 'typical' state. Excludes "nullified" which represents the termination
+    state of an Entity record instance that was created in error.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityStatus in v3-codesystems.xml
+    """
+
+    Normal = EntityStatus("normal")
+    """
+    The state representing the termination of an Entity record instance that was
+    created in error.
+    From: http://terminology.hl7.org/CodeSystem/v3-EntityStatus in v3-codesystems.xml
+    """
+    Nullified = EntityStatus("nullified")

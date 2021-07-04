@@ -32,7 +32,7 @@ class NameRepresentationUseCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
 
-    Namerepresentationuse = NameRepresentationUseCode("_NameRepresentationUse")
+    NameRepresentationUse = NameRepresentationUseCode("_NameRepresentationUse")
     """
     A name assigned to a person. Reasons some organizations assign alternate names
     may include not knowing the person's name, or to maintain anonymity. Some, but
@@ -51,7 +51,7 @@ class NameRepresentationUseCodeValues:
     e.g. Chief Red Cloud
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml
     """
-    Indigenoustribal = NameRepresentationUseCode("I")
+    Indigenous_Tribal = NameRepresentationUseCode("I")
     """
     Known as/conventional/the one you use
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNameUse in v3-codesystems.xml

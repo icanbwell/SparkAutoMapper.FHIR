@@ -24,3 +24,23 @@ class RoleLinkStatus(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RoleLinkStatus
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleLinkStatus"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus"
+
+
+class RoleLinkStatusValues:
+    """
+    Description: The 'typical' state. Excludes "nullified" which represents the
+    termination state of a RoleLink instance that was created in error.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus in v3-codesystems.xml
+    """
+
+    Normal = RoleLinkStatus("NORMAL")
+    """
+    Description: The state representing the termination of a RoleLink instance
+    that was created in error.
+    From: http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus in v3-codesystems.xml
+    """
+    Nullified = RoleLinkStatus("NULLIFIED")

@@ -33,3 +33,50 @@ class X_BasicConfidentialityKind(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+
+
+class X_BasicConfidentialityKindValues:
+    """
+    A specializable code and its leaf codes used in Confidentiality value sets to
+    value the Act.Confidentiality and Role.Confidentiality attribute in accordance
+    with the definition for concept domain "Confidentiality".
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+
+    Confidentiality = X_BasicConfidentialityKind("_Confidentiality")
+    """
+    Description: By accessing subject / role and relationship based  rights
+    (These concepts are mutually exclusive, one and only one is required for a
+    valid confidentiality coding.)
+    
+    
+                               Deprecation Comment:Deprecated due to updated
+    confidentiality codes under ActCode
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+    ConfidentialityByAccessKind = X_BasicConfidentialityKind(
+        "_ConfidentialityByAccessKind"
+    )
+    """
+    Description: By information type, only for service catalog entries (multiples
+    allowed). Not to be used with actual patient data!
+    
+    
+                               Deprecation Comment:Deprecated due to updated
+    confidentiality codes under ActCode
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+    ConfidentialityByInfoType = X_BasicConfidentialityKind("_ConfidentialityByInfoType")
+    """
+    Description: Modifiers of role based access rights  (multiple allowed)
+    
+    
+                               Deprecation Comment:Deprecated due to updated
+    confidentiality codes under ActCode
+    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+    """
+    ConfidentialityModifiers = X_BasicConfidentialityKind("_ConfidentialityModifiers")

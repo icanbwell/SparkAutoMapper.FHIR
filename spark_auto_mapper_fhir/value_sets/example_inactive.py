@@ -31,9 +31,9 @@ class Example_inactiveCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
     """
 
-    Actmoodcompletiontrack = Example_inactiveCode("_ActMoodCompletionTrack")
+    ActMoodCompletionTrack = Example_inactiveCode("_ActMoodCompletionTrack")
     """
     Definition: An act that expresses condition statements for other acts.
     From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
     """
-    Actmoodpredicate = Example_inactiveCode("_ActMoodPredicate")
+    ActMoodPredicate = Example_inactiveCode("_ActMoodPredicate")

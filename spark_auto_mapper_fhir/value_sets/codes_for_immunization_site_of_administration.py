@@ -33,7 +33,7 @@ class CodesForImmunizationSiteOfAdministrationCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-ActSite in v3-codesystems.xml
     """
 
-    Humanactsite = CodesForImmunizationSiteOfAdministrationCode("_HumanActSite")
+    HumanActSite = CodesForImmunizationSiteOfAdministrationCode("_HumanActSite")
     """
     From: http://hl7.org/fhir/ValueSet/immunization-site in valuesets.xml
     """

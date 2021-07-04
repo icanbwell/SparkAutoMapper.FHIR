@@ -22,3 +22,38 @@ class EncounterSpecialCourtesy(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-EncounterSpecialCourtesy
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EncounterSpecialCourtesy"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
+    )
+
+
+class EncounterSpecialCourtesyValues:
+    """
+    extended courtesy
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+    """
+
+    ExtendedCourtesy = EncounterSpecialCourtesy("EXT")
+    """
+    normal courtesy
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+    """
+    NormalCourtesy = EncounterSpecialCourtesy("NRM")
+    """
+    professional courtesy
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+    """
+    ProfessionalCourtesy = EncounterSpecialCourtesy("PRF")
+    """
+    Courtesies extended to the staff of the entity providing service.
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+    """
+    Staff = EncounterSpecialCourtesy("STF")
+    """
+    very important person
+    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+    """
+    VeryImportantPerson = EncounterSpecialCourtesy("VIP")

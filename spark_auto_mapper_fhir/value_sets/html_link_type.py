@@ -23,3 +23,100 @@ class HtmlLinkType(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-HtmlLinkType
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-HtmlLinkType"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType"
+
+
+class HtmlLinkTypeValues:
+    """
+    Designates substitute versions for the document in which the link occurs. When
+    used together with the lang attribute, it implies a translated version of the
+    document. When used together with the media attribute, it implies a version
+    designed for a different medium (or media).
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+
+    Alternate = HtmlLinkType("alternate")
+    """
+    Refers to a document serving as an appendix in a collection of documents.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Appendix = HtmlLinkType("appendix")
+    """
+    Refers to a bookmark. A bookmark is a link to a key entry point within an
+    extended document. The title attribute may be used, for example, to label the
+    bookmark. Note that several bookmarks may be defined in each document.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Bookmark = HtmlLinkType("bookmark")
+    """
+    Refers to a document serving as a chapter in a collection of documents.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Chapter = HtmlLinkType("chapter")
+    """
+    Refers to a document serving as a table of contents. Some user agents also
+    support the synonym ToC (from "Table of Contents").
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Contents = HtmlLinkType("contents")
+    """
+    Refers to a copyright statement for the current document.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Copyright = HtmlLinkType("copyright")
+    """
+    Refers to a document providing a glossary of terms that pertain to the current
+    document.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Glossary = HtmlLinkType("glossary")
+    """
+    Refers to a document offering help (more information, links to other sources
+    of information, etc.).
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Help = HtmlLinkType("help")
+    """
+    Refers to a document providing an index for the current document.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Index = HtmlLinkType("index")
+    """
+    Refers to the next document in a linear sequence of documents. User agents may
+    choose to preload the "next" document, to reduce the perceived load time.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Next = HtmlLinkType("next")
+    """
+    Refers to the previous document in an ordered series of documents. Some user
+    agents also support the synonym "Previous".
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Prev = HtmlLinkType("prev")
+    """
+    Refers to a document serving as a section in a collection of documents.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Section = HtmlLinkType("section")
+    """
+    Refers to the first document in a collection of documents. This link type
+    tells search engines which document is considered by the author to be the
+    starting point of the collection.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Start = HtmlLinkType("start")
+    """
+    Refers to an external style sheet. See the section on external style sheets
+    for details. This is used together with the link type "Alternate" for user-
+    selectable alternate style sheets.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Stylesheet = HtmlLinkType("stylesheet")
+    """
+    Refers to a document serving as a subsection in a collection of documents.
+    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+    """
+    Subsection = HtmlLinkType("subsection")

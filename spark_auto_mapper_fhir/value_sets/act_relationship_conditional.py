@@ -25,3 +25,43 @@ class ActRelationshipConditional(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ActRelationshipConditional"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+
+
+class ActRelationshipConditionalValues:
+    """
+    Description: A directed association between a source Act and a target Act.
+
+
+                               Usage Note: This code should never be transmitted
+    in an instance as the value of ActRelationship.typeCode (attribute)
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+
+    ActRelationshipType = ActRelationshipConditional("ART")
+    """
+    curative indication
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    CurativeIndication = ActRelationshipConditional("CURE")
+    """
+    adjunct curative indication
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    AdjunctCurativeIndication = ActRelationshipConditional("CURE.ADJ")
+    """
+    adjunct mitigation
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    AdjunctMitigation = ActRelationshipConditional("MTGT.ADJ")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    RACT = ActRelationshipConditional("RACT")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+    """
+    SUGG = ActRelationshipConditional("SUGG")

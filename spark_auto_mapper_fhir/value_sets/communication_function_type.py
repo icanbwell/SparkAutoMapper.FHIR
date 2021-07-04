@@ -25,3 +25,29 @@ class CommunicationFunctionType(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType"
+    )
+
+
+class CommunicationFunctionTypeValues:
+    """
+    The entity is the receiver of the transmission.
+    From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
+    """
+
+    Receiver = CommunicationFunctionType("RCV")
+    """
+    The entity is the one to which the response or reply to the transmission
+    should be sent.
+    From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
+    """
+    RespondTo = CommunicationFunctionType("RSP")
+    """
+    The entity is the sender of the transmission.
+    From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
+    """
+    Sender = CommunicationFunctionType("SND")

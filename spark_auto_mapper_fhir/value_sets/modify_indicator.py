@@ -22,3 +22,21 @@ class ModifyIndicator(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ModifyIndicator
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ModifyIndicator"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ModifyIndicator
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ModifyIndicator"
+
+
+class ModifyIndicatorValues:
+    """
+    Modified subscription to a query server.
+    From: http://terminology.hl7.org/CodeSystem/v3-ModifyIndicator in v3-codesystems.xml
+    """
+
+    ModifiedSubscription = ModifyIndicator("M")
+    """
+    New subscription to a query server.
+    From: http://terminology.hl7.org/CodeSystem/v3-ModifyIndicator in v3-codesystems.xml
+    """
+    NewSubscription = ModifyIndicator("N")

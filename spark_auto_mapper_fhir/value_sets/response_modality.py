@@ -23,3 +23,27 @@ class ResponseModality(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ResponseModality
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ResponseModality"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ResponseModality
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ResponseModality"
+
+
+class ResponseModalityValues:
+    """
+    Query response to be sent as an HL7 Batch.
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseModality in v3-codesystems.xml
+    """
+
+    Batch = ResponseModality("B")
+    """
+    Query response to occur in real time.
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseModality in v3-codesystems.xml
+    """
+    RealTime = ResponseModality("R")
+    """
+    Query response to sent as a series of responses at the same time without the
+    use of batch formatting.
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseModality in v3-codesystems.xml
+    """
+    Bolus = ResponseModality("T")

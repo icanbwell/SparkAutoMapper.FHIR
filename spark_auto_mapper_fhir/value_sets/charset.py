@@ -22,3 +22,61 @@ class Charset(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-Charset
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Charset"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-Charset
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Charset"
+
+
+class CharsetValues:
+    """
+    HL7 is indifferent to the use of this Charset.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+
+    EBCDIC = Charset("EBCDIC")
+    """
+    Deprecated for HL7 use.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    ISO_10646_UCS_2 = Charset("ISO-10646-UCS-2")
+    """
+    Deprecated for HL7 use.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    ISO_10646_UCS_4 = Charset("ISO-10646-UCS-4")
+    """
+    HL7 is indifferent to the use of this Charset.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    ISO_8859_1 = Charset("ISO-8859-1")
+    """
+    HL7 is indifferent to the use of this Charset.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    ISO_8859_2 = Charset("ISO-8859-2")
+    """
+    HL7 is indifferent to the use of this Charset.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    ISO_8859_5 = Charset("ISO-8859-5")
+    """
+    HL7 is indifferent to the use of this Charset.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    JIS_2022_JP = Charset("JIS-2022-JP")
+    """
+    Required for HL7 use.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    US_ASCII = Charset("US-ASCII")
+    """
+    HL7 is indifferent to the use of this Charset.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    UTF_7 = Charset("UTF-7")
+    """
+    Required for Unicode support.
+    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
+    """
+    UTF_8 = Charset("UTF-8")

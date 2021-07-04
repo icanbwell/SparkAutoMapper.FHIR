@@ -30,11 +30,11 @@ class IdentifierTypeCodesCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
 
-    AccreditationcertificationIdentifier = IdentifierTypeCodesCode("AC")
+    Accreditation_CertificationIdentifier = IdentifierTypeCodesCode("AC")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    AccessionId = IdentifierTypeCodesCode("ACSN")
+    AccessionID = IdentifierTypeCodesCode("ACSN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -70,7 +70,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    AncestorSpecimenId = IdentifierTypeCodesCode("ASID")
+    AncestorSpecimenID = IdentifierTypeCodesCode("ASID")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -118,7 +118,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    DeathCertificateId = IdentifierTypeCodesCode("DC")
+    DeathCertificateID = IdentifierTypeCodesCode("DC")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -138,11 +138,11 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    DinersClubCard = IdentifierTypeCodesCode("DI")
+    Diner_sClubCard = IdentifierTypeCodesCode("DI")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    DriversLicenseNumber = IdentifierTypeCodesCode("DL")
+    Driver_sLicenseNumber = IdentifierTypeCodesCode("DL")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -182,7 +182,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    FetalDeathReportId = IdentifierTypeCodesCode("FDR")
+    FetalDeathReportID = IdentifierTypeCodesCode("FDR")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -190,7 +190,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    FacilityId = IdentifierTypeCodesCode("FI")
+    FacilityID = IdentifierTypeCodesCode("FI")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -214,15 +214,15 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    Indigenousaboriginal = IdentifierTypeCodesCode("IND")
+    Indigenous_Aboriginal = IdentifierTypeCodesCode("IND")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    JurisdictionalHealthNumbercanada = IdentifierTypeCodesCode("JHN")
+    JurisdictionalHealthNumber_Canada_ = IdentifierTypeCodesCode("JHN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    LaboratoryAccessionId = IdentifierTypeCodesCode("LACSN")
+    LaboratoryAccessionID = IdentifierTypeCodesCode("LACSN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -238,7 +238,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    LocalRegistryId = IdentifierTypeCodesCode("LR")
+    LocalRegistryID = IdentifierTypeCodesCode("LR")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -250,7 +250,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    PatientsMedicareNumber = IdentifierTypeCodesCode("MC")
+    Patient_sMedicareNumber = IdentifierTypeCodesCode("MC")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -274,7 +274,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    MilitaryIdNumber = IdentifierTypeCodesCode("MI")
+    MilitaryIDNumber = IdentifierTypeCodesCode("MI")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -286,7 +286,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    Mastercard = IdentifierTypeCodesCode("MS")
+    MasterCard = IdentifierTypeCodesCode("MS")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -314,11 +314,11 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    NationalInsurancePayorIdentifierpayor = IdentifierTypeCodesCode("NIIP")
+    NationalInsurancePayorIdentifier_Payor_ = IdentifierTypeCodesCode("NIIP")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    NationalPersonIdentifierWhereTheXxxIsTheIsoTable31663characteralphabeticCountryCode = IdentifierTypeCodesCode(
+    NationalPersonIdentifierWhereTheXxxIsTheISOTable31663_character_alphabetic_CountryCode = IdentifierTypeCodesCode(
         "NNxxx"
     )
     """
@@ -348,7 +348,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    PenitentiarycorrectionalInstitutionNumber = IdentifierTypeCodesCode("PCN")
+    Penitentiary_correctionalInstitutionNumber = IdentifierTypeCodesCode("PCN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -368,7 +368,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    PublicHealthOfficialId = IdentifierTypeCodesCode("PHO")
+    PublicHealthOfficialID = IdentifierTypeCodesCode("PHO")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -388,7 +388,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    MedicarecmsPerformingProviderIdentificationNumber = IdentifierTypeCodesCode("PPIN")
+    Medicare_CMSPerformingProviderIdentificationNumber = IdentifierTypeCodesCode("PPIN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -408,7 +408,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    QaNumber = IdentifierTypeCodesCode("QA")
+    QANumber = IdentifierTypeCodesCode("QA")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -428,7 +428,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    RegionalRegistryId = IdentifierTypeCodesCode("RRI")
+    RegionalRegistryID = IdentifierTypeCodesCode("RRI")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -440,7 +440,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    SpecimenId = IdentifierTypeCodesCode("SID")
+    SpecimenID = IdentifierTypeCodesCode("SID")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -452,7 +452,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    StateAssignedNdbsCardIdentifier = IdentifierTypeCodesCode("SNBSN")
+    StateAssignedNDBSCardIdentifier = IdentifierTypeCodesCode("SNBSN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -464,7 +464,7 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    StateRegistryId = IdentifierTypeCodesCode("SR")
+    StateRegistryID = IdentifierTypeCodesCode("SR")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -476,15 +476,15 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    TaxIdNumber = IdentifierTypeCodesCode("TAX")
+    TaxIDNumber = IdentifierTypeCodesCode("TAX")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    TreatyNumbercanada = IdentifierTypeCodesCode("TN")
+    TreatyNumber_Canada_ = IdentifierTypeCodesCode("TN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    TemporaryPermanentResidentcanada = IdentifierTypeCodesCode("TPR")
+    TemporaryPermanentResident_Canada_ = IdentifierTypeCodesCode("TPR")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -500,13 +500,13 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    MedicarecmsformerlyHcfasUniversalPhysicianIdentificationNumbers = (
+    Medicare_CMS_formerlyHCFA_sUniversalPhysicianIdentificationNumbers = (
         IdentifierTypeCodesCode("UPIN")
     )
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    UniqueSpecimenId = IdentifierTypeCodesCode("USID")
+    UniqueSpecimenID = IdentifierTypeCodesCode("USID")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
@@ -518,15 +518,15 @@ class IdentifierTypeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    Visa = IdentifierTypeCodesCode("VS")
+    VISA = IdentifierTypeCodesCode("VS")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    WicIdentifier = IdentifierTypeCodesCode("WC")
+    WICIdentifier = IdentifierTypeCodesCode("WC")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """
-    WorkersCompNumber = IdentifierTypeCodesCode("WCN")
+    Workers_CompNumber = IdentifierTypeCodesCode("WCN")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
     """

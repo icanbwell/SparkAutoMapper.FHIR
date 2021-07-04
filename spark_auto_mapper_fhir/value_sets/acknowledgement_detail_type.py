@@ -28,3 +28,63 @@ class AcknowledgementDetailType(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailType"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType"
+    )
+
+
+class AcknowledgementDetailTypeValues:
+    """
+    Definition:An issue which has prevented, or will prevent (unless a management
+    is provided for the issue by the sender), the successful processing of an
+    interaction.  Response interactions which include an issue which is an Error
+    are a 'rejection', indicating that the request was not successfully processed.
+
+
+                               Example:Unable to find specified patient.
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType in v3-codesystems.xml
+    """
+
+    Error = AcknowledgementDetailType("E")
+    """
+    Definition: The message relates to an issue which has no bearing on the
+    successful processing of the request.  Information issues cannot be overridden
+    by specifying a management.
+    
+    
+                               Example: A Patient's coverage will expire in 5
+    days.
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType in v3-codesystems.xml
+    """
+    Information = AcknowledgementDetailType("I")
+    """
+    Definition: The message relates to an issue which cannot prevent the
+    successful processing of a request, but which could result in the processing
+    not having the ideal or intended effect.  Managing a warning issue is not
+    required for successful processing, but will suppress the warning from being
+    raised.
+    
+    
+                               Example:
+    
+    
+                            Unexpected additional repetitions of phone number have
+    been ignored.
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType in v3-codesystems.xml
+    """
+    Warning = AcknowledgementDetailType("W")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType in v3-codesystems.xml
+    """
+    ERR = AcknowledgementDetailType("ERR")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType in v3-codesystems.xml
+    """
+    INFO = AcknowledgementDetailType("INFO")
+    """
+    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType in v3-codesystems.xml
+    """
+    WARN = AcknowledgementDetailType("WARN")

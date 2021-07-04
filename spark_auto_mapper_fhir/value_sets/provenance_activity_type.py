@@ -96,7 +96,7 @@ class ProvenanceActivityTypeCodeValues:
     A completion status in which a document is transcribed but not authenticated.
     From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
-    Preauthenticated = ProvenanceActivityTypeCode("PA")
+    Pre_authenticated = ProvenanceActivityTypeCode("PA")
     """
     A completion status where the document is complete and there is no expectation
     that the document will be signed.
@@ -114,20 +114,20 @@ class ProvenanceActivityTypeCodeValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actaccountcode = ProvenanceActivityTypeCode("_ActAccountCode")
+    ActAccountCode = ProvenanceActivityTypeCode("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationcode = ProvenanceActivityTypeCode("_ActAdjudicationCode")
+    ActAdjudicationCode = ProvenanceActivityTypeCode("_ActAdjudicationCode")
     """
     Actions to be carried out by the recipient of the Adjudication Result
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationresultactioncode = ProvenanceActivityTypeCode(
+    ActAdjudicationResultActionCode = ProvenanceActivityTypeCode(
         "_ActAdjudicationResultActionCode"
     )
     """
@@ -135,18 +135,18 @@ class ProvenanceActivityTypeCodeValues:
     procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillablemodifiercode = ProvenanceActivityTypeCode("_ActBillableModifierCode")
+    ActBillableModifierCode = ProvenanceActivityTypeCode("_ActBillableModifierCode")
     """
     The type of provision(s)  made for reimbursing for the deliver of healthcare
     services and/or goods provided by a Provider, over a specified period.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillingarrangementcode = ProvenanceActivityTypeCode("_ActBillingArrangementCode")
+    ActBillingArrangementCode = ProvenanceActivityTypeCode("_ActBillingArrangementCode")
     """
     Type of bounded ROI.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actboundedroicode = ProvenanceActivityTypeCode("_ActBoundedROICode")
+    ActBoundedROICode = ProvenanceActivityTypeCode("_ActBoundedROICode")
     """
     Description:The type and scope of responsibility taken-on by the performer of
     the Act for a specific subject of care.
@@ -158,7 +158,7 @@ class ProvenanceActivityTypeCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actclaimattachmentcategorycode = ProvenanceActivityTypeCode(
+    ActClaimAttachmentCategoryCode = ProvenanceActivityTypeCode(
         "_ActClaimAttachmentCategoryCode"
     )
     """
@@ -168,12 +168,12 @@ class ProvenanceActivityTypeCodeValues:
     research.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actconsenttype = ProvenanceActivityTypeCode("_ActConsentType")
+    ActConsentType = ProvenanceActivityTypeCode("_ActConsentType")
     """
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontainerregistrationcode = ProvenanceActivityTypeCode(
+    ActContainerRegistrationCode = ProvenanceActivityTypeCode(
         "_ActContainerRegistrationCode"
     )
     """
@@ -195,30 +195,30 @@ class ProvenanceActivityTypeCodeValues:
     diastolic blood pressure).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontrolvariable = ProvenanceActivityTypeCode("_ActControlVariable")
+    ActControlVariable = ProvenanceActivityTypeCode("_ActControlVariable")
     """
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoverageconfirmationcode = ProvenanceActivityTypeCode(
+    ActCoverageConfirmationCode = ProvenanceActivityTypeCode(
         "_ActCoverageConfirmationCode"
     )
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragelimitcode = ProvenanceActivityTypeCode("_ActCoverageLimitCode")
+    ActCoverageLimitCode = ProvenanceActivityTypeCode("_ActCoverageLimitCode")
     """
     Definition: Set of codes indicating the type of insurance policy or program
     that pays for the cost of benefits provided to covered parties.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragetypecode = ProvenanceActivityTypeCode("_ActCoverageTypeCode")
+    ActCoverageTypeCode = ProvenanceActivityTypeCode("_ActCoverageTypeCode")
     """
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actdetectedissuemanagementcode = ProvenanceActivityTypeCode(
+    ActDetectedIssueManagementCode = ProvenanceActivityTypeCode(
         "_ActDetectedIssueManagementCode"
     )
     """
@@ -227,25 +227,25 @@ class ProvenanceActivityTypeCodeValues:
     substance", etc. to further describe the nature of interaction.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actexposurecode = ProvenanceActivityTypeCode("_ActExposureCode")
+    ActExposureCode = ProvenanceActivityTypeCode("_ActExposureCode")
     """
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actfinancialtransactioncode = ProvenanceActivityTypeCode(
+    ActFinancialTransactionCode = ProvenanceActivityTypeCode(
         "_ActFinancialTransactionCode"
     )
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actincidentcode = ProvenanceActivityTypeCode("_ActIncidentCode")
+    ActIncidentCode = ProvenanceActivityTypeCode("_ActIncidentCode")
     """
     Description: The type of health information to which the subject of the
     information or the subject's delegate consents or dissents.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscode = ProvenanceActivityTypeCode("_ActInformationAccessCode")
+    ActInformationAccessCode = ProvenanceActivityTypeCode("_ActInformationAccessCode")
     """
     Concepts conveying the context in which authorization given under
     jurisdictional law, by organizational policy, or by a patient consent
@@ -253,7 +253,7 @@ class ProvenanceActivityTypeCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscontextcode = ProvenanceActivityTypeCode(
+    ActInformationAccessContextCode = ProvenanceActivityTypeCode(
         "_ActInformationAccessContextCode"
     )
     """
@@ -261,7 +261,7 @@ class ProvenanceActivityTypeCodeValues:
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationcategorycode = ProvenanceActivityTypeCode(
+    ActInformationCategoryCode = ProvenanceActivityTypeCode(
         "_ActInformationCategoryCode"
     )
     """
@@ -270,7 +270,7 @@ class ProvenanceActivityTypeCodeValues:
     results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementcode = ProvenanceActivityTypeCode("_ActInvoiceElementCode")
+    ActInvoiceElementCode = ProvenanceActivityTypeCode("_ActInvoiceElementCode")
     """
     Identifies the different types of summary information that can be reported by
     queries dealing with Statement of Financial Activity (SOFA).  The summary
@@ -278,7 +278,7 @@ class ProvenanceActivityTypeCodeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementsummarycode = ProvenanceActivityTypeCode(
+    ActInvoiceElementSummaryCode = ProvenanceActivityTypeCode(
         "_ActInvoiceElementSummaryCode"
     )
     """
@@ -287,23 +287,23 @@ class ProvenanceActivityTypeCodeValues:
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceoverridecode = ProvenanceActivityTypeCode("_ActInvoiceOverrideCode")
+    ActInvoiceOverrideCode = ProvenanceActivityTypeCode("_ActInvoiceOverrideCode")
     """
     Provides codes associated with ActClass value of LIST (working list)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actlistcode = ProvenanceActivityTypeCode("_ActListCode")
+    ActListCode = ProvenanceActivityTypeCode("_ActListCode")
     """
     Identifies types of monitoring programs
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actmonitoringprotocolcode = ProvenanceActivityTypeCode("_ActMonitoringProtocolCode")
+    ActMonitoringProtocolCode = ProvenanceActivityTypeCode("_ActMonitoringProtocolCode")
     """
     Description:Concepts representing indications (reasons for clinical action)
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actnonobservationindicationcode = ProvenanceActivityTypeCode(
+    ActNonObservationIndicationCode = ProvenanceActivityTypeCode(
         "_ActNonObservationIndicationCode"
     )
     """
@@ -363,41 +363,41 @@ class ProvenanceActivityTypeCodeValues:
     (PaymentMethodCode)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpaymentcode = ProvenanceActivityTypeCode("_ActPaymentCode")
+    ActPaymentCode = ProvenanceActivityTypeCode("_ActPaymentCode")
     """
     Identifies types of dispensing events
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpharmacysupplytype = ProvenanceActivityTypeCode("_ActPharmacySupplyType")
+    ActPharmacySupplyType = ProvenanceActivityTypeCode("_ActPharmacySupplyType")
     """
     Description:Types of policies that further specify the ActClassPolicy value
     set.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpolicytype = ProvenanceActivityTypeCode("_ActPolicyType")
+    ActPolicyType = ProvenanceActivityTypeCode("_ActPolicyType")
     """
     The method that a product is obtained for use by the subject of the supply act
     (e.g. patient).  Product examples are consumable or durable goods.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actproductacquisitioncode = ProvenanceActivityTypeCode("_ActProductAcquisitionCode")
+    ActProductAcquisitionCode = ProvenanceActivityTypeCode("_ActProductAcquisitionCode")
     """
     Transportation of a specimen.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentransportcode = ProvenanceActivityTypeCode("_ActSpecimenTransportCode")
+    ActSpecimenTransportCode = ProvenanceActivityTypeCode("_ActSpecimenTransportCode")
     """
     Set of codes related to specimen treatments
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentreatmentcode = ProvenanceActivityTypeCode("_ActSpecimenTreatmentCode")
+    ActSpecimenTreatmentCode = ProvenanceActivityTypeCode("_ActSpecimenTreatmentCode")
     """
     Description: Describes the type of substance administration being performed.
     This should not be used to carry codes for identification of products.  Use an
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actsubstanceadministrationcode = ProvenanceActivityTypeCode(
+    ActSubstanceAdministrationCode = ProvenanceActivityTypeCode(
         "_ActSubstanceAdministrationCode"
     )
     """
@@ -406,7 +406,7 @@ class ProvenanceActivityTypeCodeValues:
     review, problem list entry).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttaskcode = ProvenanceActivityTypeCode("_ActTaskCode")
+    ActTaskCode = ProvenanceActivityTypeCode("_ActTaskCode")
     """
     Characterizes how a transportation act was or will be carried out.
     
@@ -415,17 +415,17 @@ class ProvenanceActivityTypeCodeValues:
     transit, via courier.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttransportationmodecode = ProvenanceActivityTypeCode("_ActTransportationModeCode")
+    ActTransportationModeCode = ProvenanceActivityTypeCode("_ActTransportationModeCode")
     """
     Identifies the kinds of observations that can be performed
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Observationtype = ProvenanceActivityTypeCode("_ObservationType")
+    ObservationType = ProvenanceActivityTypeCode("_ObservationType")
     """
     Shape of the region on the object being referenced
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Roioverlayshape = ProvenanceActivityTypeCode("_ROIOverlayShape")
+    ROIOverlayShape = ProvenanceActivityTypeCode("_ROIOverlayShape")
     """
     Description:Indicates that result data has been corrected.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -498,7 +498,7 @@ class ProvenanceActivityTypeCodeValues:
     SecurityObservationValue code as the "security label tag".
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Securityobservationtype = ProvenanceActivityTypeCode("SECOBS")
+    SecurityObservationType = ProvenanceActivityTypeCode("SECOBS")
     """
     Definition: A government health program that provides coverage on a fee for
     service basis for health services to persons meeting eligibility criteria such
@@ -521,34 +521,34 @@ class ProvenanceActivityTypeCodeValues:
     cost of coverage as well.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    workersCompensationProgram = ProvenanceActivityTypeCode("WRKCOMP")
+    _workersCompensationProgram = ProvenanceActivityTypeCode("WRKCOMP")
     """
     An identifying code for healthcare interventions/procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actprocedurecode = ProvenanceActivityTypeCode("_ActProcedureCode")
+    ActProcedureCode = ProvenanceActivityTypeCode("_ActProcedureCode")
     """
     Domain provides the root for HL7-defined detailed or rich codes for the Act
     classes.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Hl7definedactcodes = ProvenanceActivityTypeCode("_HL7DefinedActCodes")
+    HL7DefinedActCodes = ProvenanceActivityTypeCode("_HL7DefinedActCodes")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Copay = ProvenanceActivityTypeCode("COPAY")
+    COPAY = ProvenanceActivityTypeCode("COPAY")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Deduct = ProvenanceActivityTypeCode("DEDUCT")
+    DEDUCT = ProvenanceActivityTypeCode("DEDUCT")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Doseind = ProvenanceActivityTypeCode("DOSEIND")
+    DOSEIND = ProvenanceActivityTypeCode("DOSEIND")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Pra = ProvenanceActivityTypeCode("PRA")
+    PRA = ProvenanceActivityTypeCode("PRA")
     """
     The act of putting something away for safe keeping. The "something" may be
     physical object such as a specimen, or information, such as observations

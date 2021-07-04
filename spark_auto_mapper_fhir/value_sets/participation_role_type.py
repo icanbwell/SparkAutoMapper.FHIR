@@ -203,28 +203,28 @@ class ParticipationRoleTypeCodeValues:
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Affiliationroletype = ParticipationRoleTypeCode("_AffiliationRoleType")
+    AffiliationRoleType = ParticipationRoleTypeCode("_AffiliationRoleType")
     """
     AssignedRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Assignedroletype = ParticipationRoleTypeCode("_AssignedRoleType")
+    AssignedRoleType = ParticipationRoleTypeCode("_AssignedRoleType")
     """
     Defines types of certifications for all entities
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Certifiedentitytype = ParticipationRoleTypeCode("_CertifiedEntityType")
+    CertifiedEntityType = ParticipationRoleTypeCode("_CertifiedEntityType")
     """
     A role type used to qualify a person's legal status within a country or
     nation.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Citizenroletype = ParticipationRoleTypeCode("_CitizenRoleType")
+    CitizenRoleType = ParticipationRoleTypeCode("_CitizenRoleType")
     """
     Types of contact for Role code "CON"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Contactroletype = ParticipationRoleTypeCode("_ContactRoleType")
+    ContactRoleType = ParticipationRoleTypeCode("_ContactRoleType")
     """
     Definition: A code representing the type of identifier that has been assigned
     to the identified entity (IDENT).
@@ -234,12 +234,12 @@ class ParticipationRoleTypeCodeValues:
     Number, Product Catalog ID, Product Model Number.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Identifiedentitytype = ParticipationRoleTypeCode("_IdentifiedEntityType")
+    IdentifiedEntityType = ParticipationRoleTypeCode("_IdentifiedEntityType")
     """
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Livingsubjectproductionclass = ParticipationRoleTypeCode(
+    LivingSubjectProductionClass = ParticipationRoleTypeCode(
         "_LivingSubjectProductionClass"
     )
     """
@@ -251,19 +251,19 @@ class ParticipationRoleTypeCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Medicationgeneralizationroletype = ParticipationRoleTypeCode(
+    MedicationGeneralizationRoleType = ParticipationRoleTypeCode(
         "_MedicationGeneralizationRoleType"
     )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Memberroletype = ParticipationRoleTypeCode("_MemberRoleType")
+    MemberRoleType = ParticipationRoleTypeCode("_MemberRoleType")
     """
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Personalrelationshiproletype = ParticipationRoleTypeCode(
+    PersonalRelationshipRoleType = ParticipationRoleTypeCode(
         "_PersonalRelationshipRoleType"
     )
     """
@@ -314,7 +314,7 @@ class ParticipationRoleTypeCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Policyorprogramcoverageroletype = ParticipationRoleTypeCode(
+    PolicyOrProgramCoverageRoleType = ParticipationRoleTypeCode(
         "_PolicyOrProgramCoverageRoleType"
     )
     """
@@ -325,20 +325,20 @@ class ParticipationRoleTypeCodeValues:
     design.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Researchsubjectrolebasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
+    ResearchSubjectRoleBasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
     """
     A role of a place that further classifies the setting (e.g., accident site,
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Servicedeliverylocationroletype = ParticipationRoleTypeCode(
+    ServiceDeliveryLocationRoleType = ParticipationRoleTypeCode(
         "_ServiceDeliveryLocationRoleType"
     )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Specimenroletype = ParticipationRoleTypeCode("_SpecimenRoleType")
+    SpecimenRoleType = ParticipationRoleTypeCode("_SpecimenRoleType")
     """
     A party that makes a claim for coverage under a policy.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -404,7 +404,7 @@ class ParticipationRoleTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Dep = ParticipationRoleTypeCode("DEP")
+    DEP = ParticipationRoleTypeCode("DEP")
     """
     A party covered under a policy based on association with a subscriber.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -430,7 +430,7 @@ class ParticipationRoleTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Psychcf = ParticipationRoleTypeCode("PSYCHCF")
+    PSYCHCF = ParticipationRoleTypeCode("PSYCHCF")
     """
     A party covered under a policy based on association with a sponsor who is the
     policy holder, and whose association may provide for the eligibility of
@@ -524,28 +524,28 @@ class ParticipationRoleTypeCodeValues:
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Affiliationroletype = ParticipationRoleTypeCode("_AffiliationRoleType")
+    AffiliationRoleType = ParticipationRoleTypeCode("_AffiliationRoleType")
     """
     AssignedRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Assignedroletype = ParticipationRoleTypeCode("_AssignedRoleType")
+    AssignedRoleType = ParticipationRoleTypeCode("_AssignedRoleType")
     """
     Defines types of certifications for all entities
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Certifiedentitytype = ParticipationRoleTypeCode("_CertifiedEntityType")
+    CertifiedEntityType = ParticipationRoleTypeCode("_CertifiedEntityType")
     """
     A role type used to qualify a person's legal status within a country or
     nation.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Citizenroletype = ParticipationRoleTypeCode("_CitizenRoleType")
+    CitizenRoleType = ParticipationRoleTypeCode("_CitizenRoleType")
     """
     Types of contact for Role code "CON"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Contactroletype = ParticipationRoleTypeCode("_ContactRoleType")
+    ContactRoleType = ParticipationRoleTypeCode("_ContactRoleType")
     """
     Definition: A code representing the type of identifier that has been assigned
     to the identified entity (IDENT).
@@ -555,12 +555,12 @@ class ParticipationRoleTypeCodeValues:
     Number, Product Catalog ID, Product Model Number.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Identifiedentitytype = ParticipationRoleTypeCode("_IdentifiedEntityType")
+    IdentifiedEntityType = ParticipationRoleTypeCode("_IdentifiedEntityType")
     """
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Livingsubjectproductionclass = ParticipationRoleTypeCode(
+    LivingSubjectProductionClass = ParticipationRoleTypeCode(
         "_LivingSubjectProductionClass"
     )
     """
@@ -572,19 +572,19 @@ class ParticipationRoleTypeCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Medicationgeneralizationroletype = ParticipationRoleTypeCode(
+    MedicationGeneralizationRoleType = ParticipationRoleTypeCode(
         "_MedicationGeneralizationRoleType"
     )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Memberroletype = ParticipationRoleTypeCode("_MemberRoleType")
+    MemberRoleType = ParticipationRoleTypeCode("_MemberRoleType")
     """
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Personalrelationshiproletype = ParticipationRoleTypeCode(
+    PersonalRelationshipRoleType = ParticipationRoleTypeCode(
         "_PersonalRelationshipRoleType"
     )
     """
@@ -635,7 +635,7 @@ class ParticipationRoleTypeCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Policyorprogramcoverageroletype = ParticipationRoleTypeCode(
+    PolicyOrProgramCoverageRoleType = ParticipationRoleTypeCode(
         "_PolicyOrProgramCoverageRoleType"
     )
     """
@@ -646,20 +646,20 @@ class ParticipationRoleTypeCodeValues:
     design.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Researchsubjectrolebasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
+    ResearchSubjectRoleBasis = ParticipationRoleTypeCode("_ResearchSubjectRoleBasis")
     """
     A role of a place that further classifies the setting (e.g., accident site,
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Servicedeliverylocationroletype = ParticipationRoleTypeCode(
+    ServiceDeliveryLocationRoleType = ParticipationRoleTypeCode(
         "_ServiceDeliveryLocationRoleType"
     )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Specimenroletype = ParticipationRoleTypeCode("_SpecimenRoleType")
+    SpecimenRoleType = ParticipationRoleTypeCode("_SpecimenRoleType")
     """
     A party that makes a claim for coverage under a policy.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -725,7 +725,7 @@ class ParticipationRoleTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Dep = ParticipationRoleTypeCode("DEP")
+    DEP = ParticipationRoleTypeCode("DEP")
     """
     A party covered under a policy based on association with a subscriber.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -751,7 +751,7 @@ class ParticipationRoleTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Psychcf = ParticipationRoleTypeCode("PSYCHCF")
+    PSYCHCF = ParticipationRoleTypeCode("PSYCHCF")
     """
     A party covered under a policy based on association with a sponsor who is the
     policy holder, and whose association may provide for the eligibility of
@@ -764,7 +764,7 @@ class ParticipationRoleTypeCodeValues:
     in a service in all necessary detail.
     From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
     """
-    Authorizedparticipationfunction = ParticipationRoleTypeCode(
+    AuthorizedParticipationFunction = ParticipationRoleTypeCode(
         "_AuthorizedParticipationFunction"
     )
     """
@@ -772,7 +772,7 @@ class ParticipationRoleTypeCodeValues:
     underwriters, and payers participate in a policy or program.
     From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
     """
-    Coverageparticipationfunction = ParticipationRoleTypeCode(
+    CoverageParticipationFunction = ParticipationRoleTypeCode(
         "_CoverageParticipationFunction"
     )
     """

@@ -24,3 +24,21 @@ class LocalMarkupIgnore(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-LocalMarkupIgnore
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-LocalMarkupIgnore"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore"
+
+
+class LocalMarkupIgnoreValues:
+    """
+    all
+    From: http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore in v3-codesystems.xml
+    """
+
+    All = LocalMarkupIgnore("all")
+    """
+    markup
+    From: http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore in v3-codesystems.xml
+    """
+    Markup = LocalMarkupIgnore("markup")

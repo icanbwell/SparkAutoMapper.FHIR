@@ -22,3 +22,16 @@ class SpecimenType(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-SpecimenType
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-SpecimenType"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-SpecimenType
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"
+
+
+class SpecimenTypeValues:
+    """
+    SpecimenEntityType
+    From: http://terminology.hl7.org/CodeSystem/v3-SpecimenType in v3-codesystems.xml
+    """
+
+    SpecimenEntityType = SpecimenType("_SpecimenEntityType")

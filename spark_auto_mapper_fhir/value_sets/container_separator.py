@@ -23,3 +23,21 @@ class ContainerSeparator(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ContainerSeparator
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ContainerSeparator"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ContainerSeparator
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ContainerSeparator"
+
+
+class ContainerSeparatorValues:
+    """
+    A gelatinous type of separator material.
+    From: http://terminology.hl7.org/CodeSystem/v3-ContainerSeparator in v3-codesystems.xml
+    """
+
+    Gel = ContainerSeparator("GEL")
+    """
+    No separator material is present in the container.
+    From: http://terminology.hl7.org/CodeSystem/v3-ContainerSeparator in v3-codesystems.xml
+    """
+    None_ = ContainerSeparator("NONE")

@@ -27,3 +27,28 @@ class ProvenanceEventCurrentState_AS(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-AS"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActStatus
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
+
+
+class ProvenanceEventCurrentState_ASValues:
+    """
+    Encompasses the expected states of an Act, but excludes "nullified" and
+    "obsolete" which represent unusual terminal states for the life-cycle.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActStatus in v3-codesystems.xml
+    """
+
+    Normal = ProvenanceEventCurrentState_AS("normal")
+    """
+    This Act instance was created in error and has been 'removed' and is treated
+    as though it never existed.  A record is retained for audit purposes only.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActStatus in v3-codesystems.xml
+    """
+    Nullified = ProvenanceEventCurrentState_AS("nullified")
+    """
+    This Act instance has been replaced by a new instance.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActStatus in v3-codesystems.xml
+    """
+    Obsolete = ProvenanceEventCurrentState_AS("obsolete")

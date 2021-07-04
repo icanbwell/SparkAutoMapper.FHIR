@@ -36,7 +36,7 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    AssistantalternateInterpreter = ImmunizationFunctionCodesCode("AI")
+    Assistant_AlternateInterpreter = ImmunizationFunctionCodesCode("AI")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
@@ -60,7 +60,7 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    EnteringProviderprobablyNotTheSameAsTranscriptionist = (
+    EnteringProvider_probablyNotTheSameAsTranscriptionist_ = (
         ImmunizationFunctionCodesCode("EP")
     )
     """
@@ -70,7 +70,7 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    InitiatingProviderasInActionBy = ImmunizationFunctionCodesCode("IP")
+    InitiatingProvider_asInActionBy_ = ImmunizationFunctionCodesCode("IP")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
@@ -82,7 +82,7 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    PharmacistnotSureHowToDissectPharmacisttreatmentSuppliersVerifierId = (
+    Pharmacist_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = (
         ImmunizationFunctionCodesCode("PH")
     )
     """
@@ -120,13 +120,13 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    VerifyingPharmaceuticalSuppliernotSureHowToDissectPharmacisttreatmentSuppliersVerifierId = ImmunizationFunctionCodesCode(
+    VerifyingPharmaceuticalSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = ImmunizationFunctionCodesCode(
         "VPS"
     )
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    VerifyingTreatmentSuppliernotSureHowToDissectPharmacisttreatmentSuppliersVerifierId = ImmunizationFunctionCodesCode(
+    VerifyingTreatmentSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = ImmunizationFunctionCodesCode(
         "VTS"
     )
     """

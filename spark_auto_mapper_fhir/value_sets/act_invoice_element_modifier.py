@@ -24,3 +24,34 @@ class ActInvoiceElementModifier(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier"
+    )
+
+
+class ActInvoiceElementModifierValues:
+    """
+    Electronic form with supporting information to follow.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+    """
+
+    ElectronicFormToFollow = ActInvoiceElementModifier("EFORM")
+    """
+    Fax with supporting information to follow.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+    """
+    FaxToFollow = ActInvoiceElementModifier("FAX")
+    """
+    Represents the last invoice from the perspective of the provider.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+    """
+    LastInvoice = ActInvoiceElementModifier("LINV")
+    """
+    Paper documentation (or other physical format) with supporting information to
+    follow.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+    """
+    PaperDocumentationToFollow = ActInvoiceElementModifier("PAPER")

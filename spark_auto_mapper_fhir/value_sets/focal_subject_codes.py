@@ -56,28 +56,28 @@ class FocalSubjectCodesCodeValues:
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Affiliationroletype = FocalSubjectCodesCode("_AffiliationRoleType")
+    AffiliationRoleType = FocalSubjectCodesCode("_AffiliationRoleType")
     """
     AssignedRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Assignedroletype = FocalSubjectCodesCode("_AssignedRoleType")
+    AssignedRoleType = FocalSubjectCodesCode("_AssignedRoleType")
     """
     Defines types of certifications for all entities
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Certifiedentitytype = FocalSubjectCodesCode("_CertifiedEntityType")
+    CertifiedEntityType = FocalSubjectCodesCode("_CertifiedEntityType")
     """
     A role type used to qualify a person's legal status within a country or
     nation.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Citizenroletype = FocalSubjectCodesCode("_CitizenRoleType")
+    CitizenRoleType = FocalSubjectCodesCode("_CitizenRoleType")
     """
     Types of contact for Role code "CON"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Contactroletype = FocalSubjectCodesCode("_ContactRoleType")
+    ContactRoleType = FocalSubjectCodesCode("_ContactRoleType")
     """
     Definition: A code representing the type of identifier that has been assigned
     to the identified entity (IDENT).
@@ -87,12 +87,12 @@ class FocalSubjectCodesCodeValues:
     Number, Product Catalog ID, Product Model Number.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Identifiedentitytype = FocalSubjectCodesCode("_IdentifiedEntityType")
+    IdentifiedEntityType = FocalSubjectCodesCode("_IdentifiedEntityType")
     """
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Livingsubjectproductionclass = FocalSubjectCodesCode(
+    LivingSubjectProductionClass = FocalSubjectCodesCode(
         "_LivingSubjectProductionClass"
     )
     """
@@ -104,19 +104,19 @@ class FocalSubjectCodesCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Medicationgeneralizationroletype = FocalSubjectCodesCode(
+    MedicationGeneralizationRoleType = FocalSubjectCodesCode(
         "_MedicationGeneralizationRoleType"
     )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Memberroletype = FocalSubjectCodesCode("_MemberRoleType")
+    MemberRoleType = FocalSubjectCodesCode("_MemberRoleType")
     """
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Personalrelationshiproletype = FocalSubjectCodesCode(
+    PersonalRelationshipRoleType = FocalSubjectCodesCode(
         "_PersonalRelationshipRoleType"
     )
     """
@@ -167,7 +167,7 @@ class FocalSubjectCodesCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Policyorprogramcoverageroletype = FocalSubjectCodesCode(
+    PolicyOrProgramCoverageRoleType = FocalSubjectCodesCode(
         "_PolicyOrProgramCoverageRoleType"
     )
     """
@@ -178,20 +178,20 @@ class FocalSubjectCodesCodeValues:
     design.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Researchsubjectrolebasis = FocalSubjectCodesCode("_ResearchSubjectRoleBasis")
+    ResearchSubjectRoleBasis = FocalSubjectCodesCode("_ResearchSubjectRoleBasis")
     """
     A role of a place that further classifies the setting (e.g., accident site,
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Servicedeliverylocationroletype = FocalSubjectCodesCode(
+    ServiceDeliveryLocationRoleType = FocalSubjectCodesCode(
         "_ServiceDeliveryLocationRoleType"
     )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Specimenroletype = FocalSubjectCodesCode("_SpecimenRoleType")
+    SpecimenRoleType = FocalSubjectCodesCode("_SpecimenRoleType")
     """
     A party that makes a claim for coverage under a policy.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -257,7 +257,7 @@ class FocalSubjectCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Dep = FocalSubjectCodesCode("DEP")
+    DEP = FocalSubjectCodesCode("DEP")
     """
     A party covered under a policy based on association with a subscriber.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -283,7 +283,7 @@ class FocalSubjectCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    Psychcf = FocalSubjectCodesCode("PSYCHCF")
+    PSYCHCF = FocalSubjectCodesCode("PSYCHCF")
     """
     A party covered under a policy based on association with a sponsor who is the
     policy holder, and whose association may provide for the eligibility of

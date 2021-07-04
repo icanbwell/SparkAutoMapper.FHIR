@@ -24,3 +24,23 @@ class Hl7VoteResolution(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution"
+
+
+class Hl7VoteResolutionValues:
+    """
+    Description: An abstract concept grouping resolutions that can be applied to
+    affirmative ballot comments.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution in v3-codesystems.xml
+    """
+
+    AffirmativeResolution = Hl7VoteResolution("affirmativeResolution")
+    """
+    Description: An abstract concept grouping resolutions that can be applied to
+    negative ballot comments.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution in v3-codesystems.xml
+    """
+    NegativeResolution = Hl7VoteResolution("negativeResolution")

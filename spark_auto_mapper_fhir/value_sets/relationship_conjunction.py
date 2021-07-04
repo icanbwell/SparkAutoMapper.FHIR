@@ -22,3 +22,28 @@ class RelationshipConjunction(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction"
+    )
+
+
+class RelationshipConjunctionValues:
+    """
+    This condition must be true.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction in v3-codesystems.xml
+    """
+
+    And = RelationshipConjunction("AND")
+    """
+    At least one of the condition among all OR conditions must be true.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction in v3-codesystems.xml
+    """
+    Or = RelationshipConjunction("OR")
+    """
+    One and only one of the XOR conditions must be true.
+    From: http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction in v3-codesystems.xml
+    """
+    ExclusiveOr = RelationshipConjunction("XOR")

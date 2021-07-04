@@ -34,20 +34,20 @@ class AccountTypesCodeValues:
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
 
-    Actaccountcode = AccountTypesCode("_ActAccountCode")
+    ActAccountCode = AccountTypesCode("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationcode = AccountTypesCode("_ActAdjudicationCode")
+    ActAdjudicationCode = AccountTypesCode("_ActAdjudicationCode")
     """
     Actions to be carried out by the recipient of the Adjudication Result
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actadjudicationresultactioncode = AccountTypesCode(
+    ActAdjudicationResultActionCode = AccountTypesCode(
         "_ActAdjudicationResultActionCode"
     )
     """
@@ -55,18 +55,18 @@ class AccountTypesCodeValues:
     procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillablemodifiercode = AccountTypesCode("_ActBillableModifierCode")
+    ActBillableModifierCode = AccountTypesCode("_ActBillableModifierCode")
     """
     The type of provision(s)  made for reimbursing for the deliver of healthcare
     services and/or goods provided by a Provider, over a specified period.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actbillingarrangementcode = AccountTypesCode("_ActBillingArrangementCode")
+    ActBillingArrangementCode = AccountTypesCode("_ActBillingArrangementCode")
     """
     Type of bounded ROI.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actboundedroicode = AccountTypesCode("_ActBoundedROICode")
+    ActBoundedROICode = AccountTypesCode("_ActBoundedROICode")
     """
     Description:The type and scope of responsibility taken-on by the performer of
     the Act for a specific subject of care.
@@ -78,7 +78,7 @@ class AccountTypesCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actclaimattachmentcategorycode = AccountTypesCode("_ActClaimAttachmentCategoryCode")
+    ActClaimAttachmentCategoryCode = AccountTypesCode("_ActClaimAttachmentCategoryCode")
     """
     Definition: The type of consent directive, e.g., to consent or dissent to
     collect, access, or use in specific ways within an EHRS or for health
@@ -86,12 +86,12 @@ class AccountTypesCodeValues:
     research.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actconsenttype = AccountTypesCode("_ActConsentType")
+    ActConsentType = AccountTypesCode("_ActConsentType")
     """
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontainerregistrationcode = AccountTypesCode("_ActContainerRegistrationCode")
+    ActContainerRegistrationCode = AccountTypesCode("_ActContainerRegistrationCode")
     """
     An observation form that determines parameters or attributes of an Act.
     Examples are the settings of a ventilator machine as parameters of a
@@ -111,51 +111,51 @@ class AccountTypesCodeValues:
     diastolic blood pressure).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcontrolvariable = AccountTypesCode("_ActControlVariable")
+    ActControlVariable = AccountTypesCode("_ActControlVariable")
     """
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoverageconfirmationcode = AccountTypesCode("_ActCoverageConfirmationCode")
+    ActCoverageConfirmationCode = AccountTypesCode("_ActCoverageConfirmationCode")
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragelimitcode = AccountTypesCode("_ActCoverageLimitCode")
+    ActCoverageLimitCode = AccountTypesCode("_ActCoverageLimitCode")
     """
     Definition: Set of codes indicating the type of insurance policy or program
     that pays for the cost of benefits provided to covered parties.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actcoveragetypecode = AccountTypesCode("_ActCoverageTypeCode")
+    ActCoverageTypeCode = AccountTypesCode("_ActCoverageTypeCode")
     """
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actdetectedissuemanagementcode = AccountTypesCode("_ActDetectedIssueManagementCode")
+    ActDetectedIssueManagementCode = AccountTypesCode("_ActDetectedIssueManagementCode")
     """
     Concepts that identify the type or nature of exposure interaction.  Examples
     include "household", "care giver", "intimate partner", "common space", "common
     substance", etc. to further describe the nature of interaction.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actexposurecode = AccountTypesCode("_ActExposureCode")
+    ActExposureCode = AccountTypesCode("_ActExposureCode")
     """
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actfinancialtransactioncode = AccountTypesCode("_ActFinancialTransactionCode")
+    ActFinancialTransactionCode = AccountTypesCode("_ActFinancialTransactionCode")
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actincidentcode = AccountTypesCode("_ActIncidentCode")
+    ActIncidentCode = AccountTypesCode("_ActIncidentCode")
     """
     Description: The type of health information to which the subject of the
     information or the subject's delegate consents or dissents.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscode = AccountTypesCode("_ActInformationAccessCode")
+    ActInformationAccessCode = AccountTypesCode("_ActInformationAccessCode")
     """
     Concepts conveying the context in which authorization given under
     jurisdictional law, by organizational policy, or by a patient consent
@@ -163,7 +163,7 @@ class AccountTypesCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationaccesscontextcode = AccountTypesCode(
+    ActInformationAccessContextCode = AccountTypesCode(
         "_ActInformationAccessContextCode"
     )
     """
@@ -171,14 +171,14 @@ class AccountTypesCodeValues:
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinformationcategorycode = AccountTypesCode("_ActInformationCategoryCode")
+    ActInformationCategoryCode = AccountTypesCode("_ActInformationCategoryCode")
     """
     Type of invoice element that is used to assist in describing an Invoice that
     is either submitted for adjudication or for which is returned on adjudication
     results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementcode = AccountTypesCode("_ActInvoiceElementCode")
+    ActInvoiceElementCode = AccountTypesCode("_ActInvoiceElementCode")
     """
     Identifies the different types of summary information that can be reported by
     queries dealing with Statement of Financial Activity (SOFA).  The summary
@@ -186,30 +186,30 @@ class AccountTypesCodeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceelementsummarycode = AccountTypesCode("_ActInvoiceElementSummaryCode")
+    ActInvoiceElementSummaryCode = AccountTypesCode("_ActInvoiceElementSummaryCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
     of the referenced adjudication results.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actinvoiceoverridecode = AccountTypesCode("_ActInvoiceOverrideCode")
+    ActInvoiceOverrideCode = AccountTypesCode("_ActInvoiceOverrideCode")
     """
     Provides codes associated with ActClass value of LIST (working list)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actlistcode = AccountTypesCode("_ActListCode")
+    ActListCode = AccountTypesCode("_ActListCode")
     """
     Identifies types of monitoring programs
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actmonitoringprotocolcode = AccountTypesCode("_ActMonitoringProtocolCode")
+    ActMonitoringProtocolCode = AccountTypesCode("_ActMonitoringProtocolCode")
     """
     Description:Concepts representing indications (reasons for clinical action)
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actnonobservationindicationcode = AccountTypesCode(
+    ActNonObservationIndicationCode = AccountTypesCode(
         "_ActNonObservationIndicationCode"
     )
     """
@@ -267,48 +267,48 @@ class AccountTypesCodeValues:
     (PaymentMethodCode)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpaymentcode = AccountTypesCode("_ActPaymentCode")
+    ActPaymentCode = AccountTypesCode("_ActPaymentCode")
     """
     Identifies types of dispensing events
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpharmacysupplytype = AccountTypesCode("_ActPharmacySupplyType")
+    ActPharmacySupplyType = AccountTypesCode("_ActPharmacySupplyType")
     """
     Description:Types of policies that further specify the ActClassPolicy value
     set.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actpolicytype = AccountTypesCode("_ActPolicyType")
+    ActPolicyType = AccountTypesCode("_ActPolicyType")
     """
     The method that a product is obtained for use by the subject of the supply act
     (e.g. patient).  Product examples are consumable or durable goods.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actproductacquisitioncode = AccountTypesCode("_ActProductAcquisitionCode")
+    ActProductAcquisitionCode = AccountTypesCode("_ActProductAcquisitionCode")
     """
     Transportation of a specimen.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentransportcode = AccountTypesCode("_ActSpecimenTransportCode")
+    ActSpecimenTransportCode = AccountTypesCode("_ActSpecimenTransportCode")
     """
     Set of codes related to specimen treatments
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actspecimentreatmentcode = AccountTypesCode("_ActSpecimenTreatmentCode")
+    ActSpecimenTreatmentCode = AccountTypesCode("_ActSpecimenTreatmentCode")
     """
     Description: Describes the type of substance administration being performed.
     This should not be used to carry codes for identification of products.  Use an
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actsubstanceadministrationcode = AccountTypesCode("_ActSubstanceAdministrationCode")
+    ActSubstanceAdministrationCode = AccountTypesCode("_ActSubstanceAdministrationCode")
     """
     Description: A task or action that a user may perform in a clinical
     information system (e.g., medication order entry, laboratory test results
     review, problem list entry).
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttaskcode = AccountTypesCode("_ActTaskCode")
+    ActTaskCode = AccountTypesCode("_ActTaskCode")
     """
     Characterizes how a transportation act was or will be carried out.
     
@@ -317,17 +317,17 @@ class AccountTypesCodeValues:
     transit, via courier.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Acttransportationmodecode = AccountTypesCode("_ActTransportationModeCode")
+    ActTransportationModeCode = AccountTypesCode("_ActTransportationModeCode")
     """
     Identifies the kinds of observations that can be performed
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Observationtype = AccountTypesCode("_ObservationType")
+    ObservationType = AccountTypesCode("_ObservationType")
     """
     Shape of the region on the object being referenced
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Roioverlayshape = AccountTypesCode("_ROIOverlayShape")
+    ROIOverlayShape = AccountTypesCode("_ROIOverlayShape")
     """
     Description:Indicates that result data has been corrected.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -400,7 +400,7 @@ class AccountTypesCodeValues:
     SecurityObservationValue code as the "security label tag".
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Securityobservationtype = AccountTypesCode("SECOBS")
+    SecurityObservationType = AccountTypesCode("SECOBS")
     """
     Definition: A government health program that provides coverage on a fee for
     service basis for health services to persons meeting eligibility criteria such
@@ -423,34 +423,34 @@ class AccountTypesCodeValues:
     cost of coverage as well.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    workersCompensationProgram = AccountTypesCode("WRKCOMP")
+    _workersCompensationProgram = AccountTypesCode("WRKCOMP")
     """
     An identifying code for healthcare interventions/procedures.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Actprocedurecode = AccountTypesCode("_ActProcedureCode")
+    ActProcedureCode = AccountTypesCode("_ActProcedureCode")
     """
     Domain provides the root for HL7-defined detailed or rich codes for the Act
     classes.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Hl7definedactcodes = AccountTypesCode("_HL7DefinedActCodes")
+    HL7DefinedActCodes = AccountTypesCode("_HL7DefinedActCodes")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Copay = AccountTypesCode("COPAY")
+    COPAY = AccountTypesCode("COPAY")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Deduct = AccountTypesCode("DEDUCT")
+    DEDUCT = AccountTypesCode("DEDUCT")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Doseind = AccountTypesCode("DOSEIND")
+    DOSEIND = AccountTypesCode("DOSEIND")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    Pra = AccountTypesCode("PRA")
+    PRA = AccountTypesCode("PRA")
     """
     The act of putting something away for safe keeping. The "something" may be
     physical object such as a specimen, or information, such as observations

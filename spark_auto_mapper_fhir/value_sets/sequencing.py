@@ -22,3 +22,26 @@ class Sequencing(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-Sequencing
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Sequencing"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-Sequencing
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Sequencing"
+
+
+class SequencingValues:
+    """
+    Ascending sequence order.
+    From: http://terminology.hl7.org/CodeSystem/v3-Sequencing in v3-codesystems.xml
+    """
+
+    Ascending = Sequencing("A")
+    """
+    Descending sequence order.
+    From: http://terminology.hl7.org/CodeSystem/v3-Sequencing in v3-codesystems.xml
+    """
+    Descending = Sequencing("D")
+    """
+    No enforced sequence order.
+    From: http://terminology.hl7.org/CodeSystem/v3-Sequencing in v3-codesystems.xml
+    """
+    None_ = Sequencing("N")

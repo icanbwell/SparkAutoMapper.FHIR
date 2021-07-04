@@ -22,3 +22,27 @@ class LivingArrangement(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-LivingArrangement
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-LivingArrangement"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-LivingArrangement
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-LivingArrangement"
+
+
+class LivingArrangementValues:
+    """
+    Definition: Living arrangements lacking a permanent residence.
+    From: http://terminology.hl7.org/CodeSystem/v3-LivingArrangement in v3-codesystems.xml
+    """
+
+    Homeless = LivingArrangement("HL")
+    """
+    Institution
+    From: http://terminology.hl7.org/CodeSystem/v3-LivingArrangement in v3-codesystems.xml
+    """
+    Institution = LivingArrangement("I")
+    """
+    Definition:  A living arrangement within a private residence for single
+    family.
+    From: http://terminology.hl7.org/CodeSystem/v3-LivingArrangement in v3-codesystems.xml
+    """
+    PrivateResidence = LivingArrangement("PR")

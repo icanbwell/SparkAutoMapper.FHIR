@@ -22,3 +22,24 @@ class LocalRemoteControlState(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-LocalRemoteControlState
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-LocalRemoteControlState"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-LocalRemoteControlState
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-LocalRemoteControlState"
+    )
+
+
+class LocalRemoteControlStateValues:
+    """
+    An equipment can either work autonomously ('Local' control state).
+    From: http://terminology.hl7.org/CodeSystem/v3-LocalRemoteControlState in v3-codesystems.xml
+    """
+
+    Local = LocalRemoteControlState("L")
+    """
+    An equipment can be controlled by another system, e.g., LAS computer ('Remote'
+    control state).
+    From: http://terminology.hl7.org/CodeSystem/v3-LocalRemoteControlState in v3-codesystems.xml
+    """
+    Remote = LocalRemoteControlState("R")

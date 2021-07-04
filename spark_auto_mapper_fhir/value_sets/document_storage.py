@@ -22,3 +22,27 @@ class DocumentStorage(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-DocumentStorage
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-DocumentStorage"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-DocumentStorage
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DocumentStorage"
+
+
+class DocumentStorageValues:
+    """
+    A storage status in which a document is available on-line.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentStorage in v3-codesystems.xml
+    """
+
+    Active = DocumentStorage("AC")
+    """
+    A storage status in which a document has been stored off-line for long-term
+    access.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentStorage in v3-codesystems.xml
+    """
+    Archived_notActive_ = DocumentStorage("AR")
+    """
+    A storage status in which a document is no longer available in this system.
+    From: http://terminology.hl7.org/CodeSystem/v3-DocumentStorage in v3-codesystems.xml
+    """
+    Purged = DocumentStorage("PU")

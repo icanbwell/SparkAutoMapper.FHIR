@@ -45,3 +45,24 @@ class Hl7Realm(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-hl7Realm
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7Realm"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-hl7Realm
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7Realm"
+
+
+class Hl7RealmValues:
+    """
+    Description: Concepts that can be used as Binding Realms when creating Binding
+    Statements.  These codes are permitted to appear in the
+    InfrastructureRoot.realmCode attribute.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7Realm in v3-codesystems.xml
+    """
+
+    BindingRealms = Hl7Realm("BindingRealms")
+    """
+    Description: Codes that can be used in the "realm" portion of HL7 v3 artifact
+    identifiers.
+    From: http://terminology.hl7.org/CodeSystem/v3-hl7Realm in v3-codesystems.xml
+    """
+    NamespaceRealms = Hl7Realm("NamespaceRealms")

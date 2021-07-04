@@ -22,3 +22,34 @@ class ActRelationshipJoin(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ActRelationshipJoin
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActRelationshipJoin"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin"
+
+
+class ActRelationshipJoinValues:
+    """
+    Detach this branch from the other branches so it will not be resynchronized
+    with the other branches.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
+    """
+
+    Detached = ActRelationshipJoin("D")
+    """
+    When all other concurrent branches are terminated, interrupt and discontinue
+    this branch.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
+    """
+    Kill = ActRelationshipJoin("K")
+    """
+    Wait for this branch to terminate.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
+    """
+    Wait = ActRelationshipJoin("W")
+    """
+    Wait for any one of the branches in the set of exclusive wait branches to
+    terminate, then discontinue all the other exclusive wait branches.
+    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
+    """
+    ExclusiveWait = ActRelationshipJoin("X")

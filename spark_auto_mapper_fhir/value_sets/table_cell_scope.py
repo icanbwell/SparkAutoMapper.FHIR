@@ -22,3 +22,31 @@ class TableCellScope(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TableCellScope
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableCellScope"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TableCellScope
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TableCellScope"
+
+
+class TableCellScopeValues:
+    """
+    col
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+    """
+
+    Col = TableCellScope("col")
+    """
+    colgroup
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+    """
+    Colgroup = TableCellScope("colgroup")
+    """
+    row
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+    """
+    Row = TableCellScope("row")
+    """
+    rowgroup
+    From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+    """
+    Rowgroup = TableCellScope("rowgroup")

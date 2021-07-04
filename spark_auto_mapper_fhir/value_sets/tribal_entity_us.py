@@ -23,3 +23,22 @@ class TribalEntityUS(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TribalEntityUS"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS"
+
+
+class TribalEntityUSValues:
+    """
+    NATIVE ENTITIES WITHIN THE STATE OF ALASKA RECOGNIZED AND ELIGIBLE TO RECEIVE
+    SERVICES FROM THE UNITED STATES BUREAU OF INDIAN AFFAIRS
+    From: http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS in v3-codesystems.xml
+    """
+
+    NativeEntityAlaska = TribalEntityUS("_NativeEntityAlaska")
+    """
+    NATIVE ENTITIES WITHIN THE CONTIGUOUS 48 STATES
+    From: http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS in v3-codesystems.xml
+    """
+    NativeEntityContiguous = TribalEntityUS("_NativeEntityContiguous")

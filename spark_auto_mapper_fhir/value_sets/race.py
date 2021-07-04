@@ -36,3 +36,42 @@ class Race(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-Race
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Race"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-Race
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Race"
+
+
+class RaceValues:
+    """
+    American Indian or Alaska Native
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+
+    AmericanIndianOrAlaskaNative = Race("1002-5")
+    """
+    Asian
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    Asian = Race("2028-9")
+    """
+    Black or African American
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    BlackOrAfricanAmerican = Race("2054-5")
+    """
+    Native Hawaiian or Other Pacific Islander
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    NativeHawaiianOrOtherPacificIslander = Race("2076-8")
+    """
+    White
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    White = Race("2106-3")
+    """
+    Note that this term remains in the table for completeness, even though within
+    HL7, the notion of Other code is deprecated.
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    OtherRace = Race("2131-1")

@@ -22,3 +22,24 @@ class IntegrityCheckAlgorithm(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-IntegrityCheckAlgorithm
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-IntegrityCheckAlgorithm"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm"
+    )
+
+
+class IntegrityCheckAlgorithmValues:
+    """
+    This algorithm is defined in FIPS PUB 180-1: Secure Hash Standard.  As of
+    April 17, 1995.
+    From: http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm in v3-codesystems.xml
+    """
+
+    SecureHashAlgorithm_1 = IntegrityCheckAlgorithm("SHA-1")
+    """
+    This algorithm is defined in FIPS PUB 180-2: Secure Hash Standard.
+    From: http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm in v3-codesystems.xml
+    """
+    SecureHashAlgorithm_256 = IntegrityCheckAlgorithm("SHA-256")

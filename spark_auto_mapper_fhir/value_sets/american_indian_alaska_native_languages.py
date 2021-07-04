@@ -25,3 +25,123 @@ class AmericanIndianAlaskaNativeLanguages(GenericTypeCode):
     codeset: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-AmericanIndianAlaskaNativeLanguages"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages"
+    )
+
+
+class AmericanIndianAlaskaNativeLanguagesValues:
+    """
+    Algic
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+
+    Algic = AmericanIndianAlaskaNativeLanguages("_Algic")
+    """
+    Caddoan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Caddoan = AmericanIndianAlaskaNativeLanguages("_Caddoan")
+    """
+    Chimakuan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Chimakuan = AmericanIndianAlaskaNativeLanguages("_Chimakuan")
+    """
+    EskimoAleut
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    EskimoAleut = AmericanIndianAlaskaNativeLanguages("_EskimoAleut")
+    """
+    Hokan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Hokan = AmericanIndianAlaskaNativeLanguages("_Hokan")
+    """
+    Iroquoian
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Iroquoian = AmericanIndianAlaskaNativeLanguages("_Iroquoian")
+    """
+    Keresan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Keresan = AmericanIndianAlaskaNativeLanguages("_Keresan")
+    """
+    KiowaTanoan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    KiowaTanoan = AmericanIndianAlaskaNativeLanguages("_KiowaTanoan")
+    """
+    Muskogean
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Muskogean = AmericanIndianAlaskaNativeLanguages("_Muskogean")
+    """
+    Nadene
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Nadene = AmericanIndianAlaskaNativeLanguages("_Nadene")
+    """
+    Penutian
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Penutian = AmericanIndianAlaskaNativeLanguages("_Penutian")
+    """
+    Pidgin
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Pidgin = AmericanIndianAlaskaNativeLanguages("_Pidgin")
+    """
+    Salishan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Salishan = AmericanIndianAlaskaNativeLanguages("_Salishan")
+    """
+    SiouanCatawba
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    SiouanCatawba = AmericanIndianAlaskaNativeLanguages("_SiouanCatawba")
+    """
+    UtoAztecan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    UtoAztecan = AmericanIndianAlaskaNativeLanguages("_UtoAztecan")
+    """
+    Wakashan
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Wakashan = AmericanIndianAlaskaNativeLanguages("_Wakashan")
+    """
+    Yukian
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Yukian = AmericanIndianAlaskaNativeLanguages("_Yukian")
+    """
+    Haida
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Haida = AmericanIndianAlaskaNativeLanguages("x-HAI")
+    """
+    Kootenai
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Kootenai = AmericanIndianAlaskaNativeLanguages("x-KUN")
+    """
+    Plains Indian Sign Language
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    PlainsIndianSignLanguage = AmericanIndianAlaskaNativeLanguages("x-PSD")
+    """
+    Yuchi
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Yuchi = AmericanIndianAlaskaNativeLanguages("x-YUC")
+    """
+    Zuni
+    From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+    """
+    Zuni = AmericanIndianAlaskaNativeLanguages("x-ZUN")

@@ -22,3 +22,56 @@ class TableFrame(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TableFrame
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableFrame"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TableFrame
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TableFrame"
+
+
+class TableFrameValues:
+    """
+    above
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+
+    Above = TableFrame("above")
+    """
+    below
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Below = TableFrame("below")
+    """
+    border
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Border = TableFrame("border")
+    """
+    box
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Box = TableFrame("box")
+    """
+    hsides
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Hsides = TableFrame("hsides")
+    """
+    lhs
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Lhs = TableFrame("lhs")
+    """
+    rhs
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Rhs = TableFrame("rhs")
+    """
+    void
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Void = TableFrame("void")
+    """
+    vsides
+    From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+    """
+    Vsides = TableFrame("vsides")

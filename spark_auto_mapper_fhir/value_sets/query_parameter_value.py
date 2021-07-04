@@ -23,3 +23,37 @@ class QueryParameterValue(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-QueryParameterValue
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-QueryParameterValue"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue"
+
+
+class QueryParameterValueValues:
+    """
+    Description:Filter codes used to manage volume of dispenses returned by  a
+    parameter-based queries.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue in v3-codesystems.xml
+    """
+
+    DispenseQueryFilterCode = QueryParameterValue("_DispenseQueryFilterCode")
+    """
+    Filter codes used to manage types of orders being returned by a parameter-
+    based query.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue in v3-codesystems.xml
+    """
+    _OrderFilterCode = QueryParameterValue("_OrderFilterCode")
+    """
+    A "helper" vocabulary used to construct complex query filters based on how and
+    whether a prescription has been dispensed.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue in v3-codesystems.xml
+    """
+    PrescriptionDispenseFilterCode = QueryParameterValue(
+        "_PrescriptionDispenseFilterCode"
+    )
+    """
+    Description:Indicates how result sets should be filtered based on whether they
+    have associated issues.
+    From: http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue in v3-codesystems.xml
+    """
+    QueryParameterValue_ = QueryParameterValue("_QueryParameterValue")

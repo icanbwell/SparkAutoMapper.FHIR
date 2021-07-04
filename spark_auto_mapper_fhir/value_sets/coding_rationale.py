@@ -32,3 +32,53 @@ class CodingRationale(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-CodingRationale
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-CodingRationale"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-CodingRationale
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-CodingRationale"
+
+
+class CodingRationaleValues:
+    """
+    Description: Originally produced code.
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+
+    OriginallyProducedCode = CodingRationale("O")
+    """
+    Originally produced code, required by the specification describing the use of
+    the coded concept.
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+    OriginalAndRequired = CodingRationale("OR")
+    """
+    Description: Post-coded from free text source</description>
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+    Post_coded = CodingRationale("P")
+    """
+    Post-coded from free text source, required by the specification describing the
+    use of the coded concept.
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+    Post_codedAndRequired = CodingRationale("PR")
+    """
+    Description: Required standard code for HL7.
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+    Required = CodingRationale("R")
+    """
+    HL7 Specified or Mandated
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+    HL7SpecifiedOrMandated = CodingRationale("HL7")
+    """
+    Both HL7 mandated and the original code (precoordination)
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+    BothHL7MandatedAndTheOriginalCode = CodingRationale("SH")
+    """
+    Source (or original) code
+    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+    """
+    Source_orOriginal_Code = CodingRationale("SRC")

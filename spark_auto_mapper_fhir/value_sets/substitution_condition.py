@@ -23,3 +23,30 @@ class SubstitutionCondition(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition
+    """
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition"
+    )
+
+
+class SubstitutionConditionValues:
+    """
+    Some conditions may be attached to an allowable substitution.  An allowable
+    substitution is based on a match to any other attributes that may be
+    specified.
+    From: http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition in v3-codesystems.xml
+    """
+
+    Conditional = SubstitutionCondition("_Conditional")
+    """
+    Substitution is not permitted.
+    From: http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition in v3-codesystems.xml
+    """
+    NoSubstitution = SubstitutionCondition("NOSUB")
+    """
+    No conditions are required.
+    From: http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition in v3-codesystems.xml
+    """
+    Unconditional = SubstitutionCondition("UNCOND")

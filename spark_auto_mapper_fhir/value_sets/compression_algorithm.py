@@ -22,3 +22,47 @@ class CompressionAlgorithm(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-CompressionAlgorithm
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-CompressionAlgorithm"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm"
+
+
+class CompressionAlgorithmValues:
+    """
+    bzip-2 compression format. See [http://www.bzip.org/] for more information.
+    From: http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm in v3-codesystems.xml
+    """
+
+    Bzip = CompressionAlgorithm("BZ")
+    """
+    The deflate compressed data format as specified in RFC 1951
+    [http://www.ietf.org/rfc/rfc1951.txt].
+    From: http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm in v3-codesystems.xml
+    """
+    Deflate = CompressionAlgorithm("DF")
+    """
+    A compressed data format that is compatible with the widely used GZIP utility
+    as specified in RFC 1952 [http://www.ietf.org/rfc/rfc1952.txt] (uses the
+    deflate algorithm).
+    From: http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm in v3-codesystems.xml
+    """
+    Gzip = CompressionAlgorithm("GZ")
+    """
+    Original UNIX compress algorithm and file format using the LZC algorithm (a
+    variant of LZW).  Patent encumbered and less efficient than deflate.
+    From: http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm in v3-codesystems.xml
+    """
+    Compress = CompressionAlgorithm("Z")
+    """
+    7z compression file format. See [http://www.7-zip.org/7z.html] for more
+    information.
+    From: http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm in v3-codesystems.xml
+    """
+    Z7 = CompressionAlgorithm("Z7")
+    """
+    A compressed data format that also uses the deflate algorithm.  Specified as
+    RFC 1950 [http://www.ietf.org/rfc/rfc1952.txt]
+    From: http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm in v3-codesystems.xml
+    """
+    Zlib = CompressionAlgorithm("ZL")

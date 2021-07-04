@@ -22,3 +22,16 @@ class DataOperation(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-DataOperation
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-DataOperation"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-DataOperation
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+
+
+class DataOperationValues:
+    """
+    Description:Act on an object or objects.
+    From: http://terminology.hl7.org/CodeSystem/v3-DataOperation in v3-codesystems.xml
+    """
+
+    Operate = DataOperation("OPERATE")

@@ -22,3 +22,36 @@ class TableRules(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-TableRules
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableRules"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-TableRules
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TableRules"
+
+
+class TableRulesValues:
+    """
+    all
+    From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+    """
+
+    All = TableRules("all")
+    """
+    cols
+    From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+    """
+    Cols = TableRules("cols")
+    """
+    groups
+    From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+    """
+    Groups = TableRules("groups")
+    """
+    none
+    From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+    """
+    None_ = TableRules("none")
+    """
+    rows
+    From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+    """
+    Rows = TableRules("rows")

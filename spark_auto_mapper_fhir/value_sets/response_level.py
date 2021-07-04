@@ -23,3 +23,50 @@ class ResponseLevel(GenericTypeCode):
     http://terminology.hl7.org/ValueSet/v3-ResponseLevel
     """
     codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ResponseLevel"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ResponseLevel
+    """
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ResponseLevel"
+
+
+class ResponseLevelValues:
+    """
+    Respond with exceptions and a notification of completion
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseLevel in v3-codesystems.xml
+    """
+
+    Completion = ResponseLevel("C")
+    """
+    Respond with exceptions, completion, modifications and include more detail
+    information (if applicable)
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseLevel in v3-codesystems.xml
+    """
+    Detail = ResponseLevel("D")
+    """
+    Respond with exceptions only
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseLevel in v3-codesystems.xml
+    """
+    Exception = ResponseLevel("E")
+    """
+    Respond with exceptions, completion, and modification with detail (as above),
+    and send positive confirmations even if no modifications are being made.
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseLevel in v3-codesystems.xml
+    """
+    Confirmation = ResponseLevel("F")
+    """
+    Respond only with message level acknowledgements, i.e., only notify acceptance
+    or rejection of the message, do not include any application-level detail
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseLevel in v3-codesystems.xml
+    """
+    Message_control = ResponseLevel("N")
+    """
+    Respond with exceptions, completions and modifications or revisions done
+    before completion
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseLevel in v3-codesystems.xml
+    """
+    Modification = ResponseLevel("R")
+    """
+    Do not send any kind of response
+    From: http://terminology.hl7.org/CodeSystem/v3-ResponseLevel in v3-codesystems.xml
+    """
+    None_ = ResponseLevel("X")
