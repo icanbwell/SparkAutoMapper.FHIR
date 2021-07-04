@@ -19,6 +19,6 @@ class HLACode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/allelename
+    http://www.ebi.ac.uk/ipd/imgt/hla
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/allelename"
+    codeset: FhirUri = "http://www.ebi.ac.uk/ipd/imgt/hla"

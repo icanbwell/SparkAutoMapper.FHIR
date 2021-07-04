@@ -20,9 +20,9 @@ class TemplateStatusCodeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/template-status-code
+    urn:oid:2.16.840.1.113883.3.1937.98.5.8
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/template-status-code"
+    codeset: FhirUri = "urn:oid:2.16.840.1.113883.3.1937.98.5.8"
 
 
 class TemplateStatusCodeCodeValues:

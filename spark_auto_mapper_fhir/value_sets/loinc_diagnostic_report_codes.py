@@ -19,6 +19,6 @@ class LOINCDiagnosticReportCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/report-codes
+    http://loinc.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/report-codes"
+    codeset: FhirUri = "http://loinc.org"

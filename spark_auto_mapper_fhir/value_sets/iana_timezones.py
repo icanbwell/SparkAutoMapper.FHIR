@@ -19,6 +19,6 @@ class IANATimezonesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/timezones
+    https://www.iana.org/time-zones
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/timezones"
+    codeset: FhirUri = "https://www.iana.org/time-zones"

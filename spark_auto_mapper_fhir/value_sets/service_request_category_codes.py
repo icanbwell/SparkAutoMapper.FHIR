@@ -20,9 +20,9 @@ class ServiceRequestCategoryCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/servicerequest-category
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/servicerequest-category"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class ServiceRequestCategoryCodesCodeValues:

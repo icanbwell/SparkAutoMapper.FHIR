@@ -20,9 +20,9 @@ class LOINCCodesForCholesterolInSerum_or_PlasmaCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/example-extensional
+    http://loinc.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/example-extensional"
+    codeset: FhirUri = "http://loinc.org"
 
 
 class LOINCCodesForCholesterolInSerum_or_PlasmaCodeValues:

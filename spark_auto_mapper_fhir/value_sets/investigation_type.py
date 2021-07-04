@@ -19,9 +19,9 @@ class InvestigationTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/investigation-sets
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/investigation-sets"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class InvestigationTypeCodeValues:

@@ -20,9 +20,9 @@ class ProcedureFollowUpCodes_SNOMEDCT_Code(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/procedure-followup
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/procedure-followup"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class ProcedureFollowUpCodes_SNOMEDCT_CodeValues:

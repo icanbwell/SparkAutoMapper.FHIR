@@ -22,9 +22,9 @@ class TextureModifierCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/texture-code
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/texture-code"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class TextureModifierCodesCodeValues:

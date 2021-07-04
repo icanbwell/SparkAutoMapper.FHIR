@@ -22,11 +22,9 @@ class ImmunizationRecommendationDateCriterionCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion
+    http://loinc.org
     """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion"
-    )
+    codeset: FhirUri = "http://loinc.org"
 
 
 class ImmunizationRecommendationDateCriterionCodesCodeValues:

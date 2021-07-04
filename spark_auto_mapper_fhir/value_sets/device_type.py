@@ -21,6 +21,6 @@ class DeviceTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/device-type
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/device-type"
+    codeset: FhirUri = "http://snomed.info/sct"

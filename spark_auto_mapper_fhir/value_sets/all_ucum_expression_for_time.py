@@ -20,6 +20,6 @@ class AllUCUMExpressionForTimeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/all-time-units
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/all-time-units"
+    codeset: FhirUri = "http://unitsofmeasure.org"

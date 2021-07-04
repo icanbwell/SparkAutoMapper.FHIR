@@ -20,6 +20,6 @@ class QuestionnaireAnswerCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/questionnaire-answers
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaire-answers"
+    codeset: FhirUri = "http://snomed.info/sct"

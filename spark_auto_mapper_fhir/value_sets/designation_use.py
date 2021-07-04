@@ -19,9 +19,9 @@ class DesignationUseCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/designation-use
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/designation-use"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class DesignationUseCodeValues:

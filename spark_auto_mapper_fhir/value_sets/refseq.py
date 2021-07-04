@@ -20,6 +20,6 @@ class REFSEQCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/ref-sequences
+    http://www.ncbi.nlm.nih.gov/nuccore
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ref-sequences"
+    codeset: FhirUri = "http://www.ncbi.nlm.nih.gov/nuccore"

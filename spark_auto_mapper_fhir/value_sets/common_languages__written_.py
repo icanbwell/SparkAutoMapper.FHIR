@@ -22,9 +22,9 @@ class CommonLanguages_Written_Code(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/written-language
+    urn:ietf:bcp:47
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/written-language"
+    codeset: FhirUri = "urn:ietf:bcp:47"
 
 
 class CommonLanguages_Written_CodeValues:

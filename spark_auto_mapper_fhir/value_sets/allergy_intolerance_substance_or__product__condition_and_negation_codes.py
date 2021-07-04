@@ -23,6 +23,6 @@ class AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode(
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/allergyintolerance-code
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/allergyintolerance-code"
+    codeset: FhirUri = "http://snomed.info/sct"

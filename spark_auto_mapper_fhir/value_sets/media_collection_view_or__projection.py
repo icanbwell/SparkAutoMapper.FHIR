@@ -19,6 +19,6 @@ class MediaCollectionView_or_ProjectionCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/media-view
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/media-view"
+    codeset: FhirUri = "http://snomed.info/sct"

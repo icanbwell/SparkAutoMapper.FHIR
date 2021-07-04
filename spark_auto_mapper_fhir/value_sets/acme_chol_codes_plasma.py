@@ -20,6 +20,6 @@ class ACMECholCodesPlasmaCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/example-filter
+    http://hl7.org/fhir/CodeSystem/example
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/example-filter"
+    codeset: FhirUri = "http://hl7.org/fhir/CodeSystem/example"

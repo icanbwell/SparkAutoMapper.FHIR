@@ -19,9 +19,9 @@ class ICD_10CodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/icd-10
+    http://hl7.org/fhir/sid/icd-10
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/icd-10"
+    codeset: FhirUri = "http://hl7.org/fhir/sid/icd-10"
 
 
 class ICD_10CodesCodeValues:

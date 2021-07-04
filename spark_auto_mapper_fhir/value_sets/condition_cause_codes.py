@@ -19,6 +19,6 @@ class ConditionCauseCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/condition-cause
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-cause"
+    codeset: FhirUri = "http://snomed.info/sct"

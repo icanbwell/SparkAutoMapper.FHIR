@@ -20,9 +20,9 @@ class DeviceDefinitionPropertyCodeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/device-component-property
+    urn:iso:std:iso:11073:10101
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/device-component-property"
+    codeset: FhirUri = "urn:iso:std:iso:11073:10101"
 
 
 class DeviceDefinitionPropertyCodeCodeValues:

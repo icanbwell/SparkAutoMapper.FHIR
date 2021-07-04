@@ -19,6 +19,6 @@ class ManifestationAndSymptomCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/manifestation-or-symptom
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/manifestation-or-symptom"
+    codeset: FhirUri = "http://snomed.info/sct"

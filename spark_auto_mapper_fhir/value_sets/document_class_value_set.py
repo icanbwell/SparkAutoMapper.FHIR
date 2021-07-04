@@ -26,9 +26,9 @@ class DocumentClassValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/document-classcodes
+    http://loinc.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/document-classcodes"
+    codeset: FhirUri = "http://loinc.org"
 
 
 class DocumentClassValueSetCodeValues:

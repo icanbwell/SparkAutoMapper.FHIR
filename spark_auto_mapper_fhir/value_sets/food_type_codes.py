@@ -21,6 +21,6 @@ class FoodTypeCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/food-type
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/food-type"
+    codeset: FhirUri = "http://snomed.info/sct"

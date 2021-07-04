@@ -21,6 +21,6 @@ class SNOMEDCTBodyStructuresCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/body-site
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/body-site"
+    codeset: FhirUri = "http://snomed.info/sct"

@@ -19,6 +19,6 @@ class SequenceOntologyCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/sequenceontology
+    http://www.sequenceontology.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/sequenceontology"
+    codeset: FhirUri = "http://www.sequenceontology.org"

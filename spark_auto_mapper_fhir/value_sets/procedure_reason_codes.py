@@ -20,6 +20,6 @@ class ProcedureReasonCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/procedure-reason
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/procedure-reason"
+    codeset: FhirUri = "http://snomed.info/sct"

@@ -20,9 +20,9 @@ class BodyLengthUnitsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/ucum-bodylength
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ucum-bodylength"
+    codeset: FhirUri = "http://unitsofmeasure.org"
 
 
 class BodyLengthUnitsCodeValues:

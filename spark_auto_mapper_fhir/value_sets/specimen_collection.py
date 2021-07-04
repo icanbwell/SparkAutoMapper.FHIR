@@ -19,9 +19,9 @@ class SpecimenCollectionCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/specimen-collection
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/specimen-collection"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class SpecimenCollectionCodeValues:

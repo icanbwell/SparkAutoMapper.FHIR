@@ -19,9 +19,9 @@ class Condition_or_DiagnosisSeverityCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/condition-severity
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-severity"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class Condition_or_DiagnosisSeverityCodeValues:

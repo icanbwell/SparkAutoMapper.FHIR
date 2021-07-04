@@ -19,9 +19,9 @@ class DocumentSectionCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/doc-section-codes
+    http://loinc.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/doc-section-codes"
+    codeset: FhirUri = "http://loinc.org"
 
 
 class DocumentSectionCodesCodeValues:

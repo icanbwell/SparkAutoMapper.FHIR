@@ -19,9 +19,9 @@ class ProcedureOutcomeCodes_SNOMEDCT_Code(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/procedure-outcome
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/procedure-outcome"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class ProcedureOutcomeCodes_SNOMEDCT_CodeValues:

@@ -19,6 +19,6 @@ class FDA_StandardSequenceCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/sequence-quality-standardSequence
+    https://precision.fda.gov/files/
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/sequence-quality-standardSequence"
+    codeset: FhirUri = "https://precision.fda.gov/files/"

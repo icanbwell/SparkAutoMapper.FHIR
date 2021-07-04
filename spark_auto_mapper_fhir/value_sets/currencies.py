@@ -20,6 +20,6 @@ class CurrenciesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/currencies
+    urn:iso:std:iso:4217
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/currencies"
+    codeset: FhirUri = "urn:iso:std:iso:4217"

@@ -19,6 +19,6 @@ class ClinicalImpressionPrognosisCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/clinicalimpression-prognosis
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/clinicalimpression-prognosis"
+    codeset: FhirUri = "http://snomed.info/sct"

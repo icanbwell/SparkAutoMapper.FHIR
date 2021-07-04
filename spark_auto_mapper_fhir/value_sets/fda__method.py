@@ -19,6 +19,10 @@ class FDA_MethodCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/sequence-quality-method
+    https://precision.fda.gov/apps/
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/sequence-quality-method"
+    codeset: FhirUri = "https://precision.fda.gov/apps/"
+    """
+    https://precision.fda.gov/jobs/
+    """
+    codeset_2: FhirUri = "https://precision.fda.gov/jobs/"

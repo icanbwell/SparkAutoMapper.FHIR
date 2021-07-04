@@ -21,6 +21,6 @@ class SNOMEDCTSupplyItemCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/supply-item
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/supply-item"
+    codeset: FhirUri = "http://snomed.info/sct"

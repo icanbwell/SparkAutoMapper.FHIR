@@ -20,9 +20,9 @@ class CarePlanIntentCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/care-plan-intent
+    http://hl7.org/fhir/request-intent
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/care-plan-intent"
+    codeset: FhirUri = "http://hl7.org/fhir/request-intent"
 
 
 class CarePlanIntentCodeValues:

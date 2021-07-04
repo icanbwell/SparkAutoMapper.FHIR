@@ -19,6 +19,6 @@ class HGVSCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/variants
+    http://varnomen.hgvs.org/
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/variants"
+    codeset: FhirUri = "http://varnomen.hgvs.org/"

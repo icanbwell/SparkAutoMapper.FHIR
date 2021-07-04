@@ -19,9 +19,9 @@ class LateralityCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/bodysite-laterality
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/bodysite-laterality"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class LateralityCodeValues:

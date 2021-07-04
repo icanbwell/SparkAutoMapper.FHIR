@@ -20,6 +20,6 @@ class EncounterReasonCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/encounter-reason
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/encounter-reason"
+    codeset: FhirUri = "http://snomed.info/sct"

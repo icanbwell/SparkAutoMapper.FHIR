@@ -19,9 +19,9 @@ class Iso3166_1_2Code(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/iso3166-1-2
+    urn:iso:std:iso:3166
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+    codeset: FhirUri = "urn:iso:std:iso:3166"
 
 
 class Iso3166_1_2CodeValues:

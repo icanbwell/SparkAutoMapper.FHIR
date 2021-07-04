@@ -22,9 +22,9 @@ class FacilityTypeCodeValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/c80-facilitycodes
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/c80-facilitycodes"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class FacilityTypeCodeValueSetCodeValues:

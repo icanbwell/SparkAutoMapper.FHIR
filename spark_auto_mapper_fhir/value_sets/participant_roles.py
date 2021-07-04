@@ -21,6 +21,6 @@ class ParticipantRolesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/participant-role
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/participant-role"
+    codeset: FhirUri = "http://snomed.info/sct"

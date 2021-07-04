@@ -20,6 +20,6 @@ class SNOMEDCTMedicationAsNeededReasonCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/medication-as-needed-reason
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/medication-as-needed-reason"
+    codeset: FhirUri = "http://snomed.info/sct"

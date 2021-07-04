@@ -19,9 +19,9 @@ class SubjectTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/subject-type
+    http://hl7.org/fhir/resource-types
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/subject-type"
+    codeset: FhirUri = "http://hl7.org/fhir/resource-types"
 
 
 class SubjectTypeCodeValues:

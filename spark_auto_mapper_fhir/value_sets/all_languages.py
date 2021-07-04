@@ -20,6 +20,6 @@ class AllLanguagesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/all-languages
+    urn:ietf:bcp:47
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/all-languages"
+    codeset: FhirUri = "urn:ietf:bcp:47"

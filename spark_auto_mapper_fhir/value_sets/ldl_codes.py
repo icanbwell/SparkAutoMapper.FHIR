@@ -19,9 +19,9 @@ class LDLCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/ldlcholesterol-codes
+    http://loinc.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ldlcholesterol-codes"
+    codeset: FhirUri = "http://loinc.org"
 
 
 class LDLCodesCodeValues:

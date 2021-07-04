@@ -22,6 +22,6 @@ class DietCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/diet-type
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/diet-type"
+    codeset: FhirUri = "http://snomed.info/sct"

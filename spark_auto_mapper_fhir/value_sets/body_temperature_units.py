@@ -19,9 +19,9 @@ class BodyTemperatureUnitsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/ucum-bodytemp
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ucum-bodytemp"
+    codeset: FhirUri = "http://unitsofmeasure.org"
 
 
 class BodyTemperatureUnitsCodeValues:

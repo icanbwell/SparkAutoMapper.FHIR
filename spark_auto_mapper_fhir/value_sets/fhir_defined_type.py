@@ -20,6 +20,10 @@ class FHIRDefinedTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/defined-types
+    http://hl7.org/fhir/data-types
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/defined-types"
+    codeset: FhirUri = "http://hl7.org/fhir/data-types"
+    """
+    http://hl7.org/fhir/resource-types
+    """
+    codeset_2: FhirUri = "http://hl7.org/fhir/resource-types"

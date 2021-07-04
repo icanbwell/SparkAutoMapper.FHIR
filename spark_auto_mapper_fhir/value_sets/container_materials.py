@@ -20,9 +20,9 @@ class ContainerMaterialsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/container-material
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/container-material"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class ContainerMaterialsCodeValues:

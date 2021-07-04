@@ -19,9 +19,9 @@ class CommonUCUMUnitsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/ucum-common
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ucum-common"
+    codeset: FhirUri = "http://unitsofmeasure.org"
 
 
 class CommonUCUMUnitsCodeValues:

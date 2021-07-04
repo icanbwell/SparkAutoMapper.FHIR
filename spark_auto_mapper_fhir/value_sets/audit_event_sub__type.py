@@ -20,9 +20,13 @@ class AuditEventSub_TypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/audit-event-sub-type
+    http://dicom.nema.org/resources/ontology/DCM
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/audit-event-sub-type"
+    codeset: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
+    """
+    http://hl7.org/fhir/restful-interaction
+    """
+    codeset_2: FhirUri = "http://hl7.org/fhir/restful-interaction"
 
 
 class AuditEventSub_TypeCodeValues:

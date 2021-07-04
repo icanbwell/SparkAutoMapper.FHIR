@@ -24,9 +24,9 @@ class VitalSignsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/observation-vitalsignresult
+    http://loinc.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/observation-vitalsignresult"
+    codeset: FhirUri = "http://loinc.org"
 
 
 class VitalSignsCodeValues:

@@ -23,9 +23,9 @@ class ImmunizationRecommendationReasonCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/immunization-recommendation-reason
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/immunization-recommendation-reason"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class ImmunizationRecommendationReasonCodesCodeValues:

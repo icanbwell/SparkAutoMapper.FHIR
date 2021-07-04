@@ -19,6 +19,6 @@ class HGNCCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/genenames
+    http://www.genenames.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/genenames"
+    codeset: FhirUri = "http://www.genenames.org"

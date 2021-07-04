@@ -21,6 +21,6 @@ class SNOMEDCTMorphologicAbnormalitiesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/bodystructure-code
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/bodystructure-code"
+    codeset: FhirUri = "http://snomed.info/sct"

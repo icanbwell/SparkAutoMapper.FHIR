@@ -21,6 +21,18 @@ class ContextOfUseValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/use-context
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/use-context"
+    codeset: FhirUri = "http://snomed.info/sct"
+    """
+    urn:iso:std:iso:3166
+    """
+    codeset_2: FhirUri = "urn:iso:std:iso:3166"
+    """
+    http://unstats.un.org/unsd/methods/m49/m49.htm
+    """
+    codeset_3: FhirUri = "http://unstats.un.org/unsd/methods/m49/m49.htm"
+    """
+    http://nucc.org/provider-taxonomy
+    """
+    codeset_4: FhirUri = "http://nucc.org/provider-taxonomy"

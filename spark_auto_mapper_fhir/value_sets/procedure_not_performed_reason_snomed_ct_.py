@@ -25,6 +25,6 @@ class ProcedureNotPerformedReason_SNOMED_CT_Code(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/procedure-not-performed-reason
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason"
+    codeset: FhirUri = "http://snomed.info/sct"

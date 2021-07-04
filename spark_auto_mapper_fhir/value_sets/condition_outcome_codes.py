@@ -19,6 +19,6 @@ class ConditionOutcomeCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/condition-outcome
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-outcome"
+    codeset: FhirUri = "http://snomed.info/sct"

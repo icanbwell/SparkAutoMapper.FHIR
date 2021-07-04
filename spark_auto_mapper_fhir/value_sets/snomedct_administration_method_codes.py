@@ -20,6 +20,6 @@ class SNOMEDCTAdministrationMethodCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/administration-method-codes
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/administration-method-codes"
+    codeset: FhirUri = "http://snomed.info/sct"

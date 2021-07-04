@@ -21,6 +21,6 @@ class ObservationMethodsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/observation-methods
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/observation-methods"
+    codeset: FhirUri = "http://snomed.info/sct"

@@ -19,9 +19,9 @@ class Yes_or_No_or_Don_tKnowCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/yesnodontknow
+    http://terminology.hl7.org/CodeSystem/data-absent-reason
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/yesnodontknow"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/data-absent-reason"
 
 
 class Yes_or_No_or_Don_tKnowCodeValues:

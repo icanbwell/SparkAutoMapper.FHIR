@@ -25,6 +25,14 @@ class JurisdictionValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/jurisdiction
+    urn:iso:std:iso:3166
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/jurisdiction"
+    codeset: FhirUri = "urn:iso:std:iso:3166"
+    """
+    urn:iso:std:iso:3166:-2
+    """
+    codeset_2: FhirUri = "urn:iso:std:iso:3166:-2"
+    """
+    http://unstats.un.org/unsd/methods/m49/m49.htm
+    """
+    codeset_3: FhirUri = "http://unstats.un.org/unsd/methods/m49/m49.htm"

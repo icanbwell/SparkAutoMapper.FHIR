@@ -19,9 +19,9 @@ class BodyWeightUnitsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/ucum-bodyweight
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ucum-bodyweight"
+    codeset: FhirUri = "http://unitsofmeasure.org"
 
 
 class BodyWeightUnitsCodeValues:

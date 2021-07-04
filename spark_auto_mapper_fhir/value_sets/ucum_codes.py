@@ -20,6 +20,6 @@ class UCUMCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/ucum-units
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/ucum-units"
+    codeset: FhirUri = "http://unitsofmeasure.org"

@@ -33,27 +33,41 @@ class ParticipationRoleTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
+    http://terminology.hl7.org/CodeSystem/contractsignertypecodes
+    """
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/contractsignertypecodes"
+    """
     http://terminology.hl7.org/CodeSystem/v3-RoleClass
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
-    """
-    http://terminology.hl7.org/CodeSystem/v3-RoleCode
-    """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
     codeset_3: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
     """
+    http://terminology.hl7.org/CodeSystem/v3-RoleCode
+    """
+    codeset_4: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction
     """
-    codeset_4: FhirUri = (
+    codeset_5: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset_5: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    codeset_6: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    """
+    http://terminology.hl7.org/CodeSystem/extra-security-role-type
+    """
+    codeset_7: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+    )
+    """
+    http://dicom.nema.org/resources/ontology/DCM
+    """
+    codeset_8: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
 
 
 class ParticipationRoleTypeCodeValues:

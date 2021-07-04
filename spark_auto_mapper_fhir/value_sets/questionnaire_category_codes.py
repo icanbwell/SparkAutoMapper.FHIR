@@ -19,9 +19,9 @@ class QuestionnaireCategoryCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/questionnaire-category
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/questionnaire-category"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class QuestionnaireCategoryCodesCodeValues:

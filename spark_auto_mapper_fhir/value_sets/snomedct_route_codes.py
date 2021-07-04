@@ -20,6 +20,6 @@ class SNOMEDCTRouteCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/route-codes
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/route-codes"
+    codeset: FhirUri = "http://snomed.info/sct"

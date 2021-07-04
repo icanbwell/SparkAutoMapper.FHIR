@@ -20,6 +20,6 @@ class MimeTypesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/mimetypes
+    urn:ietf:bcp:13
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/mimetypes"
+    codeset: FhirUri = "urn:ietf:bcp:13"

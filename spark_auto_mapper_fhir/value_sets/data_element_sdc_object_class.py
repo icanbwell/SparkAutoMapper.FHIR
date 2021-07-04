@@ -21,6 +21,14 @@ class DataElementSDCObjectClassCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/dataelement-sdcobjectclass
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/dataelement-sdcobjectclass"
+    codeset: FhirUri = "http://snomed.info/sct"
+    """
+    http://loinc.org
+    """
+    codeset_2: FhirUri = "http://loinc.org"
+    """
+    http://www.nlm.nih.gov/research/umls/rxnorm
+    """
+    codeset_3: FhirUri = "http://www.nlm.nih.gov/research/umls/rxnorm"

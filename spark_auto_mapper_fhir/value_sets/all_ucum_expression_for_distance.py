@@ -20,6 +20,6 @@ class AllUCUMExpressionForDistanceCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/all-distance-units
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/all-distance-units"
+    codeset: FhirUri = "http://unitsofmeasure.org"

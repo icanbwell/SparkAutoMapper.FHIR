@@ -19,9 +19,9 @@ class MediaTypeCodeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/dicm-405-mediatype
+    http://dicom.nema.org/resources/ontology/DCM
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/dicm-405-mediatype"
+    codeset: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
 
 
 class MediaTypeCodeCodeValues:

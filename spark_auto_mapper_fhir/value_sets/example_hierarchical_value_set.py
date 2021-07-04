@@ -19,9 +19,9 @@ class ExampleHierarchicalValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/example-hierarchical
+    #hacked
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/example-hierarchical"
+    codeset: FhirUri = "#hacked"
 
 
 class ExampleHierarchicalValueSetCodeValues:

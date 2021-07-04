@@ -21,6 +21,6 @@ class DeviceMetricAndComponentTypesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/devicemetric-type
+    urn:iso:std:iso:11073:10101
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/devicemetric-type"
+    codeset: FhirUri = "urn:iso:std:iso:11073:10101"

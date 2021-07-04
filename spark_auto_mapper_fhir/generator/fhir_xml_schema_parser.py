@@ -960,19 +960,21 @@ class FhirXmlSchemaParser:
                             for c in fhir_v3_code_systems
                             if c.url == compose_include_code_system
                         ]
-                        if v3_code_systems:
-                            for code_system in v3_code_systems:
-                                fhir_concepts.extend(code_system.concepts)
-                                value_set_url_list.append(code_system.url)
                         v2_code_systems: List[FhirValueSet] = [
                             c
                             for c in fhir_v2_code_systems
                             if c.url == compose_include_code_system
                         ]
-                        if v2_code_systems:
+                        if v3_code_systems:
+                            for code_system in v3_code_systems:
+                                fhir_concepts.extend(code_system.concepts)
+                                value_set_url_list.append(code_system.url)
+                        elif v2_code_systems:
                             for code_system in v2_code_systems:
                                 fhir_concepts.extend(code_system.concepts)
                                 value_set_url_list.append(code_system.url)
+                        elif compose_include_code_system not in value_set_url_list:
+                            value_set_url_list.append(compose_include_code_system)
                     if "concept" in compose_include:
                         concepts = compose_include["concept"]
                         if isinstance(concepts, OrderedDict):

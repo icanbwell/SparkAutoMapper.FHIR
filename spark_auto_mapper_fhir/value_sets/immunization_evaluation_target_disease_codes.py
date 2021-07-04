@@ -23,11 +23,9 @@ class ImmunizationEvaluationTargetDiseaseCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/immunization-evaluation-target-disease
+    http://snomed.info/sct
     """
-    codeset: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/immunization-evaluation-target-disease"
-    )
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class ImmunizationEvaluationTargetDiseaseCodesCodeValues:

@@ -19,9 +19,9 @@ class ConditionStageTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/condition-stage-type
+    http://snomed.info/sct
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/condition-stage-type"
+    codeset: FhirUri = "http://snomed.info/sct"
 
 
 class ConditionStageTypeCodeValues:
