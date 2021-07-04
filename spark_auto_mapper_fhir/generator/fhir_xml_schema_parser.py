@@ -560,37 +560,55 @@ class FhirXmlSchemaParser:
     def generate_properties_for_class(
         inner_complex_type: OrderedDict[str, Any]
     ) -> List[FhirProperty]:
-        properties: List[OrderedDict[str, Any]] = (
-            inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
-            if inner_complex_type.get("xs:sequence")
-            and inner_complex_type.get("xs:sequence").get("xs:element")  # type: ignore
-            else []
+        properties: List[OrderedDict[str, Any]] = []
+        sequences: Union[
+            OrderedDict[str, Any], List[OrderedDict[str, Any]]
+        ] = inner_complex_type.get(  # type: ignore
+            "xs:sequence"
         )
-        if isinstance(properties, OrderedDict):
-            properties = [properties]
-        # combine element properties with choice properties
-        choice_properties: List[OrderedDict[str, Any]] = (
-            inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
-            if inner_complex_type.get("xs:sequence")
-            and inner_complex_type.get("xs:sequence").get("xs:choice")  # type: ignore
-            else []
-        )
-        if isinstance(choice_properties, OrderedDict):
-            choice_properties = [choice_properties]
-        choice_properties = flatten([c["xs:element"] for c in choice_properties])
-        properties.extend(choice_properties)
+        if sequences:
+            if not isinstance(sequences, list):
+                sequences = [sequences]
+            for sequence_item in sequences:
+                if sequence_item.get("xs:element"):
+                    sequence_item_elements: Union[
+                        OrderedDict[str, Any], List[OrderedDict[str, Any]]
+                    ] = sequence_item.get(  # type: ignore
+                        "xs:element"
+                    )
+                    if not isinstance(sequence_item_elements, list):
+                        sequence_item_elements = [sequence_item_elements]
+                    properties.extend(sequence_item_elements)
+                if sequence_item.get("xs:choice"):
+                    sequence_item_choices: Union[
+                        OrderedDict[str, Any], List[OrderedDict[str, Any]]
+                    ] = sequence_item.get(  # type: ignore
+                        "xs:choice"
+                    )
+                    if not isinstance(sequence_item_choices, list):
+                        sequence_item_choices = [sequence_item_choices]
+                    choice_properties = flatten(
+                        [c["xs:element"] for c in sequence_item_choices]
+                    )
+                    properties.extend(choice_properties)
 
         fhir_properties: List[FhirProperty] = []
         property_: OrderedDict[str, Any]
         for property_ in properties:
-            property_name: str = str(property_.get("@name"))
+            if "ref" in property_:
+                ref_: str = str(property_.get("ref"))
+                property_name: str = ref_.split(":")[-1]
+                property_type: str = ref_.split(":")[0]
+            else:
+                property_name = str(property_.get("@name"))
+                property_type = str(property_.get("@type"))
+
             min_occurs: str = str(
                 property_.get("@minOccurs") if "@minOccurs" in property_ else 0
             )
             max_occurs: str = str(
                 property_.get("@maxOccurs") if "@maxOccurs" in property_ else 1
             )
-            property_type: str = str(property_.get("@type"))
             property_documentation_dict: Optional[OrderedDict[str, Any]] = (
                 property_.get("xs:annotation").get("xs:documentation")  # type: ignore
                 if property_.get("xs:annotation")
