@@ -133,7 +133,7 @@ class FhirXmlSchemaParser:
             contents = file.read()
             root: ObjectifiedElement = objectify.fromstring(contents)
             resource_item: ObjectifiedElement
-            for resource_item in root["xs:schema"]["xs:include"]:
+            for resource_item in root["include"]:
                 resources.append(resource_item.get("schemaLocation"))
 
         resource_xsd_file_name: str
@@ -487,7 +487,7 @@ class FhirXmlSchemaParser:
 
             # pprint(result)
         fhir_entities: List[FhirEntity] = []
-        complex_types: List[ObjectifiedElement] = root["xs:schema"]["xs:complexType"]
+        complex_types: List[ObjectifiedElement] = root["complexType"]
         complex_type: ObjectifiedElement
         for complex_type in complex_types:
             complex_type_name: str = complex_type.get("name")
@@ -497,15 +497,15 @@ class FhirXmlSchemaParser:
             )
             print(f"========== {complex_type_name} ===========")
             documentation_items: List[ObjectifiedElement] = (
-                complex_type["xs:annotation"]["xs:documentation"]
-                if "x:annotation" in complex_type
+                complex_type["annotation"]["documentation"]
+                if hasattr(complex_type, "annotation")
                 else []
             )
             documentation_item_dict: Union[ObjectifiedElement, str]
             documentation_entries: List[str] = []
             for documentation_item_dict in documentation_items:
-                if isinstance(documentation_item_dict, OrderedDict):
-                    documentation: str = documentation_item_dict["#text"]
+                if hasattr(documentation_item_dict, "text"):
+                    documentation: str = documentation_item_dict.text
                 elif isinstance(documentation_item_dict, str):
                     documentation = documentation_item_dict
                 else:
@@ -517,8 +517,8 @@ class FhirXmlSchemaParser:
                 documentation_entries.append(documentation)
 
             inner_complex_type: Optional[ObjectifiedElement] = (
-                complex_type.get("xs:complexContent").get("xs:extension")
-                if complex_type.get("xs:complexContent")
+                complex_type.get("complexContent").get("extension")
+                if complex_type.get("complexContent")
                 else None
             )
             entity_type: Optional[str] = None
@@ -528,7 +528,7 @@ class FhirXmlSchemaParser:
                 fhir_properties = FhirXmlSchemaParser.generate_properties_for_class(
                     inner_complex_type
                 )
-            elif "xs:sequence" in complex_type:
+            elif hasattr(complex_type, "sequence"):
                 entity_type = "Element"
                 fhir_properties = FhirXmlSchemaParser.generate_properties_for_class(
                     complex_type
@@ -555,26 +555,26 @@ class FhirXmlSchemaParser:
         properties: List[ObjectifiedElement] = []
         sequences: Union[
             ObjectifiedElement, List[ObjectifiedElement]
-        ] = inner_complex_type.get("xs:sequence")
+        ] = inner_complex_type["sequence"]
         if sequences:
             if not isinstance(sequences, list):
                 sequences = [sequences]
             for sequence_item in sequences:
-                if sequence_item.get("xs:element"):
+                if sequence_item.get(":element"):
                     sequence_item_elements: Union[
                         ObjectifiedElement, List[ObjectifiedElement]
-                    ] = sequence_item.get("xs:element")
+                    ] = sequence_item.get("element")
                     if not isinstance(sequence_item_elements, list):
                         sequence_item_elements = [sequence_item_elements]
                     properties.extend(sequence_item_elements)
-                if sequence_item.get("xs:choice"):
+                if sequence_item.get("choice"):
                     sequence_item_choices: Union[
                         ObjectifiedElement, List[ObjectifiedElement]
-                    ] = sequence_item.get("xs:choice")
+                    ] = sequence_item.get("choice")
                     if not isinstance(sequence_item_choices, list):
                         sequence_item_choices = [sequence_item_choices]
                     choice_properties = flatten(
-                        [c["xs:element"] for c in sequence_item_choices]
+                        [c["element"] for c in sequence_item_choices]
                     )
                     properties.extend(choice_properties)
 
@@ -596,8 +596,8 @@ class FhirXmlSchemaParser:
                 property_.get("maxOccurs") if hasattr(property_, "maxOccurs") else 1
             )
             property_documentation_dict: Optional[ObjectifiedElement] = (
-                property_.get("xs:annotation").get("xs:documentation")
-                if property_.get("xs:annotation")
+                property_.get("annotation").get("documentation")
+                if property_.get("annotation")
                 else None
             )
             property_documentation: str = str(
