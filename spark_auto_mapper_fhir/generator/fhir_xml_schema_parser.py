@@ -715,10 +715,10 @@ class FhirXmlSchemaParser:
                 .joinpath("dataelements.xml")
         )
 
-        with open(de_xml_file, "r") as file:
-            contents = file.read()
-            result: ObjectifiedElement = parse(contents)
-            entries: List[ObjectifiedElement] = result["Bundle"]["entry"]
+        with open(de_xml_file, "rb") as file:
+            contents: bytes = file.read()
+            root: ObjectifiedElement = objectify.fromstring(contents)
+            entries: ObjectifiedElement = root.entry
 
             fhir_properties: List[FhirProperty] = []
             entry: ObjectifiedElement
@@ -776,10 +776,10 @@ class FhirXmlSchemaParser:
                 .joinpath("dataelements.xml")
         )
 
-        with open(de_xml_file, "r") as file:
-            contents = file.read()
-            result: ObjectifiedElement = parse(contents)
-            entries: List[ObjectifiedElement] = result["Bundle"]["entry"]
+        with open(de_xml_file, "rb") as file:
+            contents: bytes = file.read()
+            root: ObjectifiedElement = objectify.fromstring(contents)
+            entries: ObjectifiedElement = root.entry
 
             fhir_references: List[FhirReferenceType] = []
             entry: ObjectifiedElement
@@ -835,10 +835,10 @@ class FhirXmlSchemaParser:
                 .joinpath("dataelements.xml")
         )
 
-        with open(de_xml_file, "r") as file:
-            contents = file.read()
-            result: ObjectifiedElement = parse(contents)
-            entries: List[ObjectifiedElement] = result["Bundle"]["entry"]
+        with open(de_xml_file, "rb") as file:
+            contents: bytes = file.read()
+            root: ObjectifiedElement = objectify.fromstring(contents)
+            entries: ObjectifiedElement = root.entry
 
             fhir_codeable_types: List[FhirCodeableType] = []
             entry: ObjectifiedElement
@@ -850,10 +850,8 @@ class FhirXmlSchemaParser:
                 snapshot_element: ObjectifiedElement = structure_definition[
                     "snapshot"
                 ]["element"]
-                if "binding" in snapshot_element:
+                if hasattr(snapshot_element, "binding"):
                     types: List[ObjectifiedElement] = snapshot_element["type"]
-                    if isinstance(types, OrderedDict):
-                        types = [types]
                     type_: ObjectifiedElement
                     if types:
                         type_ = types[0]
@@ -865,29 +863,23 @@ class FhirXmlSchemaParser:
                             bindings: List[ObjectifiedElement] = snapshot_element[
                                 "binding"
                             ]
-                            if isinstance(bindings, OrderedDict):
-                                bindings = [bindings]
                             binding: ObjectifiedElement
                             for binding in bindings:
                                 extension_code_list = binding["extension"]
-                                if isinstance(extension_code_list, OrderedDict):
-                                    extension_code_list = [extension_code_list]
                                 field_name: str = "@url"
                                 url: str = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
                                 value_set_url = (
                                     binding["valueSet"].get("value")
-                                    if "valueSet" in binding
+                                    if hasattr(binding, "valueSet")
                                     else None
                                 )
                                 codeable_type_list: List[ObjectifiedElement] = [
                                     bind
                                     for bind in extension_code_list
-                                    if bind[field_name] == url
+                                    if hasattr(bind, field_name) and bind[field_name] == url
                                 ]
                                 if codeable_type_list:
-                                    codeable_type_obj: OrderedDict[
-                                        str, Any
-                                    ] = codeable_type_list[0]
+                                    codeable_type_obj: ObjectifiedElement = codeable_type_list[0]
                                     codeable_type: str = codeable_type_obj[
                                         "valueString"
                                     ].get("value")
