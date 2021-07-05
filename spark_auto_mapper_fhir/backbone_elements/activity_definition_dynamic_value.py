@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class ActivityDefinitionDynamicValue(FhirBackboneElementBase):
     """
     ActivityDefinition.DynamicValue
+        This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.
     """
 
     # noinspection PyPep8Naming
@@ -34,6 +35,9 @@ class ActivityDefinitionDynamicValue(FhirBackboneElementBase):
         expression: Expression,
     ) -> None:
         """
+            This resource allows for the definition of some activity to be performed,
+        independent of a particular patient, practitioner, or other performance
+        context.
 
             :param id_: id of resource
             :param extension: extensions

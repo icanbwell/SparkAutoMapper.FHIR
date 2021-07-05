@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class NamingSystemUniqueId(FhirBackboneElementBase):
     """
     NamingSystem.UniqueId
+        A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +46,9 @@ class NamingSystemUniqueId(FhirBackboneElementBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            A curated namespace that issues unique symbols within that namespace for the
+        identification of concepts, people, devices, etc.  Represents a "System" used
+        within the Identifier and Coding data types.
 
             :param id_: id of resource
             :param extension: extensions

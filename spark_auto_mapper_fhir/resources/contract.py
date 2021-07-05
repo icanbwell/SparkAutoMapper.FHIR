@@ -89,6 +89,13 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for scope
+    # topicCodeableConcept (CodeableConcept)
+    # Import for CodeableConcept for topicCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
+    # End Import for CodeableConcept for topicCodeableConcept
+    # topicReference (Reference)
+    # Imports for References for topicReference
     # type_ (CodeableConcept)
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.contract_type_codes import (
@@ -131,13 +138,6 @@ if TYPE_CHECKING:
     # rule (Contract.Rule)
     from spark_auto_mapper_fhir.backbone_elements.contract_rule import ContractRule
 
-    # topicCodeableConcept (CodeableConcept)
-    # Import for CodeableConcept for topicCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
-    # End Import for CodeableConcept for topicCodeableConcept
-    # topicReference (Reference)
-    # Imports for References for topicReference
     # legallyBindingAttachment (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 
@@ -155,6 +155,9 @@ if TYPE_CHECKING:
 class Contract(FhirResourceBase):
     """
     Contract
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+    a policy or agreement.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -193,6 +196,8 @@ class Contract(FhirResourceBase):
             Reference[Union[Patient, Practitioner, PractitionerRole, Organization]]
         ] = None,
         scope: Optional[CodeableConcept[ContractResourceScopeCodesCode]] = None,
+        topicCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        topicReference: Optional[Reference[Union[Resource]]] = None,
         type_: Optional[CodeableConcept[ContractTypeCodesCode]] = None,
         subType: Optional[FhirList[CodeableConcept[ContractSubtypeCodesCode]]] = None,
         contentDefinition: Optional[ContractContentDefinition] = None,
@@ -203,8 +208,6 @@ class Contract(FhirResourceBase):
         friendly: Optional[FhirList[ContractFriendly]] = None,
         legal: Optional[FhirList[ContractLegal]] = None,
         rule: Optional[FhirList[ContractRule]] = None,
-        topicCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
-        topicReference: Optional[Reference[Union[Resource]]] = None,
         legallyBindingAttachment: Optional[Attachment] = None,
         legallyBindingReference: Optional[
             Reference[
@@ -213,6 +216,9 @@ class Contract(FhirResourceBase):
         ] = None,
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta
@@ -266,6 +272,8 @@ class Contract(FhirResourceBase):
         derivative, or instance in any legal state.
             :param scope: A selector of legal concerns for this Contract definition, derivative, or
         instance in any legal state.
+            :param topicCodeableConcept: None
+            :param topicReference: None
             :param type_: A high-level category for the legal instrument, whether constructed as a
         Contract definition, derivative, or instance in any legal state.  Provides
         additional information about its content within the context of the Contract's
@@ -298,8 +306,6 @@ class Contract(FhirResourceBase):
         actions, obligations, responsibilities, and implication of the agreement.
             :param legal: List of Legal expressions or representations of this Contract.
             :param rule: List of Computable Policy Rule Language Representations of this Contract.
-            :param topicCodeableConcept: None
-            :param topicReference: None
             :param legallyBindingAttachment: None
             :param legallyBindingReference: None
         """
@@ -329,6 +335,8 @@ class Contract(FhirResourceBase):
             alias=alias,
             author=author,
             scope=scope,
+            topicCodeableConcept=topicCodeableConcept,
+            topicReference=topicReference,
             type_=type_,
             subType=subType,
             contentDefinition=contentDefinition,
@@ -339,8 +347,6 @@ class Contract(FhirResourceBase):
             friendly=friendly,
             legal=legal,
             rule=rule,
-            topicCodeableConcept=topicCodeableConcept,
-            topicReference=topicReference,
             legallyBindingAttachment=legallyBindingAttachment,
             legallyBindingReference=legallyBindingReference,
         )

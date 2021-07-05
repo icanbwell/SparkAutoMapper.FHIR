@@ -71,6 +71,9 @@ if TYPE_CHECKING:
 class StructureMap(FhirResourceBase):
     """
     StructureMap
+        A Map of relationships between 2 structures that can be used to transform
+    data.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -102,6 +105,9 @@ class StructureMap(FhirResourceBase):
         group: FhirList[StructureMapGroup],
     ) -> None:
         """
+            A Map of relationships between 2 structures that can be used to transform
+        data.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

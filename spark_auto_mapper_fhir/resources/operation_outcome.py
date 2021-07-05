@@ -24,6 +24,9 @@ if TYPE_CHECKING:
 class OperationOutcome(FhirResourceBase):
     """
     OperationOutcome
+        A collection of error, warning, or information messages that result from a
+    system action.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -36,11 +39,14 @@ class OperationOutcome(FhirResourceBase):
         issue: FhirList[OperationOutcomeIssue],
     ) -> None:
         """
+            A collection of error, warning, or information messages that result from a
+        system action.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param issue: An error, warning, or information message that results from a system action.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param issue: An error, warning, or information message that results from a system action.
         """
         super().__init__(
             resourceType="OperationOutcome",

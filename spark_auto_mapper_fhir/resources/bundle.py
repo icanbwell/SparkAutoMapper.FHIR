@@ -40,6 +40,8 @@ if TYPE_CHECKING:
 class Bundle(FhirResourceBase):
     """
     Bundle
+        A container for a collection of resources.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -58,6 +60,8 @@ class Bundle(FhirResourceBase):
         signature: Optional[Signature] = None,
     ) -> None:
         """
+            A container for a collection of resources.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

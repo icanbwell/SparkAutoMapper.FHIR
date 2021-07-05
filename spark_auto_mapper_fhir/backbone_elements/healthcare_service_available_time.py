@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class HealthcareServiceAvailableTime(FhirBackboneElementBase):
     """
     HealthcareService.AvailableTime
+        The details of a healthcare service available at a location.
     """
 
     # noinspection PyPep8Naming
@@ -41,6 +42,7 @@ class HealthcareServiceAvailableTime(FhirBackboneElementBase):
         availableEndTime: Optional[FhirTime] = None,
     ) -> None:
         """
+            The details of a healthcare service available at a location.
 
             :param id_: id of resource
             :param extension: extensions

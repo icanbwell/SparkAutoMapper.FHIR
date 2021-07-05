@@ -39,7 +39,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class BiologicallyDerivedProductProcessing(FhirBackboneElementBase):
     """
-    BiologicallyDerivedProduct.Processing
+        BiologicallyDerivedProduct.Processing
+            A material substance originating from a biological entity intended to be transplanted or infused
+    into another (possibly the same) biological entity.
     """
 
     # noinspection PyPep8Naming
@@ -55,14 +57,17 @@ class BiologicallyDerivedProductProcessing(FhirBackboneElementBase):
         timePeriod: Optional[Period] = None,
     ) -> None:
         """
+            A material substance originating from a biological entity intended to be
+        transplanted or infused
+        into another (possibly the same) biological entity.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param description: Description of of processing.
-        :param procedure: Procesing code.
-        :param additive: Substance added during processing.
-        :param timeDateTime: None
-        :param timePeriod: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param description: Description of of processing.
+            :param procedure: Procesing code.
+            :param additive: Substance added during processing.
+            :param timeDateTime: None
+            :param timePeriod: None
         """
         super().__init__(
             id_=id_,

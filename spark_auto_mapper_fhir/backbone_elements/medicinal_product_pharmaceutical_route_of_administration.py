@@ -41,6 +41,7 @@ if TYPE_CHECKING:
 class MedicinalProductPharmaceuticalRouteOfAdministration(FhirBackboneElementBase):
     """
     MedicinalProductPharmaceutical.RouteOfAdministration
+        A pharmaceutical product described in terms of its composition and dose form.
     """
 
     # noinspection PyPep8Naming
@@ -60,6 +61,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministration(FhirBackboneElementBas
         ] = None,
     ) -> None:
         """
+            A pharmaceutical product described in terms of its composition and dose form.
 
             :param id_: id of resource
             :param extension: extensions

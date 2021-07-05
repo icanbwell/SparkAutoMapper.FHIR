@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class TestScriptVariable(FhirBackboneElementBase):
     """
     TestScript.Variable
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -46,6 +47,8 @@ class TestScriptVariable(FhirBackboneElementBase):
         sourceId: Optional[id] = None,
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
             :param id_: id of resource
             :param extension: extensions

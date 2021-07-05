@@ -39,6 +39,7 @@ if TYPE_CHECKING:
 class CoverageEligibilityResponseBenefit(FhirBackboneElementBase):
     """
     CoverageEligibilityResponse.Benefit
+        This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
     """
 
     # noinspection PyPep8Naming
@@ -56,16 +57,18 @@ class CoverageEligibilityResponseBenefit(FhirBackboneElementBase):
         usedMoney: Optional[Money] = None,
     ) -> None:
         """
+            This resource provides eligibility and plan details from the processing of an
+        CoverageEligibilityRequest resource.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Classification of benefit being provided.
-        :param allowedUnsignedInt: None
-        :param allowedString: None
-        :param allowedMoney: None
-        :param usedUnsignedInt: None
-        :param usedString: None
-        :param usedMoney: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Classification of benefit being provided.
+            :param allowedUnsignedInt: None
+            :param allowedString: None
+            :param allowedMoney: None
+            :param usedUnsignedInt: None
+            :param usedString: None
+            :param usedMoney: None
         """
         super().__init__(
             id_=id_,

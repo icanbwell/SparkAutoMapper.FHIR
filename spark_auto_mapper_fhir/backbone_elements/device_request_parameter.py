@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class DeviceRequestParameter(FhirBackboneElementBase):
     """
     DeviceRequest.Parameter
+        Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
     """
 
     # noinspection PyPep8Naming
@@ -53,14 +54,16 @@ class DeviceRequestParameter(FhirBackboneElementBase):
         valueBoolean: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            Represents a request for a patient to employ a medical device. The device may
+        be an implantable device, or an external assistive device, such as a walker.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: A code or string that identifies the device detail being asserted.
-        :param valueCodeableConcept: None
-        :param valueQuantity: None
-        :param valueRange: None
-        :param valueBoolean: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: A code or string that identifies the device detail being asserted.
+            :param valueCodeableConcept: None
+            :param valueQuantity: None
+            :param valueRange: None
+            :param valueBoolean: None
         """
         super().__init__(
             id_=id_,

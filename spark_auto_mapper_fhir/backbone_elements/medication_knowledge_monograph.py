@@ -32,6 +32,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeMonograph(FhirBackboneElementBase):
     """
     MedicationKnowledge.Monograph
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -44,6 +45,7 @@ class MedicationKnowledgeMonograph(FhirBackboneElementBase):
         source: Optional[Reference[Union[DocumentReference, Media]]] = None,
     ) -> None:
         """
+            Information about a medication that is used to support knowledge.
 
             :param id_: id of resource
             :param extension: extensions

@@ -37,6 +37,8 @@ if TYPE_CHECKING:
 class DosageDoseAndRate(FhirBackboneElementBase):
     """
     Dosage.DoseAndRate
+        Indicates how the medication is/was taken or should be taken by the patient.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -53,15 +55,18 @@ class DosageDoseAndRate(FhirBackboneElementBase):
         rateQuantity: Optional[Quantity] = None,
     ) -> None:
         """
+            Indicates how the medication is/was taken or should be taken by the patient.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The kind of dose or rate specified, for example, ordered or calculated.
-        :param doseRange: None
-        :param doseQuantity: None
-        :param rateRatio: None
-        :param rateRange: None
-        :param rateQuantity: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The kind of dose or rate specified, for example, ordered or calculated.
+            :param doseRange: None
+            :param doseQuantity: None
+            :param rateRatio: None
+            :param rateRange: None
+            :param rateQuantity: None
         """
         super().__init__(
             id_=id_,

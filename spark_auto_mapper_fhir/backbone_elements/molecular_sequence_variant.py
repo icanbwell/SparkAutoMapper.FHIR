@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class MolecularSequenceVariant(FhirBackboneElementBase):
     """
     MolecularSequence.Variant
+        Raw data describing a biological sequence.
     """
 
     # noinspection PyPep8Naming
@@ -46,6 +47,7 @@ class MolecularSequenceVariant(FhirBackboneElementBase):
         variantPointer: Optional[Reference[Union[Observation]]] = None,
     ) -> None:
         """
+            Raw data describing a biological sequence.
 
             :param id_: id of resource
             :param extension: extensions

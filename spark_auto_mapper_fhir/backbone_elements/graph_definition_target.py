@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 class GraphDefinitionTarget(FhirBackboneElementBase):
     """
     GraphDefinition.Target
+        A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
     """
 
     # noinspection PyPep8Naming
@@ -50,14 +51,17 @@ class GraphDefinitionTarget(FhirBackboneElementBase):
         link: Optional[FhirList[GraphDefinitionLink]] = None,
     ) -> None:
         """
+            A formal computable definition of a graph of resources - that is, a coherent
+        set of resources that form a graph by following references. The Graph
+        Definition resource defines a set and makes rules about the set.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Type of resource this link refers to.
-        :param params: A set of parameters to look up.
-        :param profile: Profile for the target resource.
-        :param compartment: Compartment Consistency Rules.
-        :param link: Additional links from target resource.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Type of resource this link refers to.
+            :param params: A set of parameters to look up.
+            :param profile: Profile for the target resource.
+            :param compartment: Compartment Consistency Rules.
+            :param link: Additional links from target resource.
         """
         super().__init__(
             id_=id_,

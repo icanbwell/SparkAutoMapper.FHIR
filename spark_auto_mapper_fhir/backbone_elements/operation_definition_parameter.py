@@ -49,6 +49,7 @@ if TYPE_CHECKING:
 class OperationDefinitionParameter(FhirBackboneElementBase):
     """
     OperationDefinition.Parameter
+        A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
     """
 
     # noinspection PyPep8Naming
@@ -70,6 +71,8 @@ class OperationDefinitionParameter(FhirBackboneElementBase):
         part: Optional[FhirList[OperationDefinitionParameter]] = None,
     ) -> None:
         """
+            A formal computable definition of an operation (on the RESTful interface) or a
+        named query (using the search interaction).
 
             :param id_: id of resource
             :param extension: extensions

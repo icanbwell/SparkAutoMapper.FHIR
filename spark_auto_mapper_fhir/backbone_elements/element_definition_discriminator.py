@@ -25,6 +25,8 @@ if TYPE_CHECKING:
 class ElementDefinitionDiscriminator(FhirBackboneElementBase):
     """
     ElementDefinition.Discriminator
+        Captures constraints on each element within the resource, profile, or extension.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +39,10 @@ class ElementDefinitionDiscriminator(FhirBackboneElementBase):
         path: FhirString,
     ) -> None:
         """
+            Captures constraints on each element within the resource, profile, or
+        extension.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

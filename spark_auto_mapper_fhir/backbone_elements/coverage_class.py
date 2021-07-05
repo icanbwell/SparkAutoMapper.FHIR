@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class CoverageClass(FhirBackboneElementBase):
     """
     Coverage.Class
+        Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,8 @@ class CoverageClass(FhirBackboneElementBase):
         name: Optional[FhirString] = None,
     ) -> None:
         """
+            Financial instrument which may be used to reimburse or pay for health care
+        products and services. Includes both insurance and self-payment.
 
             :param id_: id of resource
             :param extension: extensions

@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class ImplementationGuideGlobal(FhirBackboneElementBase):
     """
     ImplementationGuide.Global
+        A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
     """
 
     # noinspection PyPep8Naming
@@ -35,11 +36,15 @@ class ImplementationGuideGlobal(FhirBackboneElementBase):
         profile: FhirCanonical,
     ) -> None:
         """
+            A set of rules of how a particular interoperability or standards problem is
+        solved - typically through the use of FHIR resources. This resource is used to
+        gather all the parts of an implementation guide into a logical whole and to
+        publish a computable definition of all the parts.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The type of resource that all instances must conform to.
-        :param profile: A reference to the profile that all instances must conform to.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The type of resource that all instances must conform to.
+            :param profile: A reference to the profile that all instances must conform to.
         """
         super().__init__(
             id_=id_,

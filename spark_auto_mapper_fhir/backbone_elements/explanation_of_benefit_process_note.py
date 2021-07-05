@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class ExplanationOfBenefitProcessNote(FhirBackboneElementBase):
     """
     ExplanationOfBenefit.ProcessNote
+        This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
     """
 
     # noinspection PyPep8Naming
@@ -48,13 +49,16 @@ class ExplanationOfBenefitProcessNote(FhirBackboneElementBase):
         language: Optional[CodeableConcept[CommonLanguagesCode]] = None,
     ) -> None:
         """
+            This resource provides: the claim details; adjudication details from the
+        processing of a Claim; and optionally account balance information, for
+        informing the subscriber of the benefits provided.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param number: A number to uniquely identify a note entry.
-        :param type_: The business purpose of the note text.
-        :param text: The explanation or description associated with the processing.
-        :param language: A code to define the language used in the text of the note.
+            :param id_: id of resource
+            :param extension: extensions
+            :param number: A number to uniquely identify a note entry.
+            :param type_: The business purpose of the note text.
+            :param text: The explanation or description associated with the processing.
+            :param language: A code to define the language used in the text of the note.
         """
         super().__init__(
             id_=id_,

@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class EpisodeOfCareDiagnosis(FhirBackboneElementBase):
     """
     EpisodeOfCare.Diagnosis
+        An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
     """
 
     # noinspection PyPep8Naming
@@ -47,6 +48,9 @@ class EpisodeOfCareDiagnosis(FhirBackboneElementBase):
         rank: Optional[FhirPositiveInt] = None,
     ) -> None:
         """
+            An association between a patient and an organization / healthcare provider(s)
+        during which time encounters may occur. The managing organization assumes a
+        level of responsibility for the patient during this time.
 
             :param id_: id of resource
             :param extension: extensions

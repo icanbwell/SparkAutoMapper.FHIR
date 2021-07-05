@@ -66,6 +66,10 @@ if TYPE_CHECKING:
 class NamingSystem(FhirResourceBase):
     """
     NamingSystem
+        A curated namespace that issues unique symbols within that namespace for the
+    identification of concepts, people, devices, etc.  Represents a "System" used
+    within the Identifier and Coding data types.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -92,6 +96,10 @@ class NamingSystem(FhirResourceBase):
         uniqueId: FhirList[NamingSystemUniqueId],
     ) -> None:
         """
+            A curated namespace that issues unique symbols within that namespace for the
+        identification of concepts, people, devices, etc.  Represents a "System" used
+        within the Identifier and Coding data types.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

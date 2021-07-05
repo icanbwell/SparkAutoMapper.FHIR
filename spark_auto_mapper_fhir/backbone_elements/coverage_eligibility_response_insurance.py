@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class CoverageEligibilityResponseInsurance(FhirBackboneElementBase):
     """
     CoverageEligibilityResponse.Insurance
+        This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
     """
 
     # noinspection PyPep8Naming
@@ -47,6 +48,8 @@ class CoverageEligibilityResponseInsurance(FhirBackboneElementBase):
         item: Optional[FhirList[CoverageEligibilityResponseItem]] = None,
     ) -> None:
         """
+            This resource provides eligibility and plan details from the processing of an
+        CoverageEligibilityRequest resource.
 
             :param id_: id of resource
             :param extension: extensions

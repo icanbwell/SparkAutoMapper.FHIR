@@ -24,6 +24,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeKinetics(FhirBackboneElementBase):
     """
     MedicationKnowledge.Kinetics
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,7 @@ class MedicationKnowledgeKinetics(FhirBackboneElementBase):
         halfLifePeriod: Optional[Duration] = None,
     ) -> None:
         """
+            Information about a medication that is used to support knowledge.
 
             :param id_: id of resource
             :param extension: extensions

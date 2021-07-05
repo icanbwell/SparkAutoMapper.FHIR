@@ -44,6 +44,7 @@ if TYPE_CHECKING:
 class StructureMapTarget(FhirBackboneElementBase):
     """
     StructureMap.Target
+        A Map of relationships between 2 structures that can be used to transform data.
     """
 
     # noinspection PyPep8Naming
@@ -62,17 +63,19 @@ class StructureMapTarget(FhirBackboneElementBase):
         parameter: Optional[FhirList[StructureMapParameter]] = None,
     ) -> None:
         """
+            A Map of relationships between 2 structures that can be used to transform
+        data.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param context: Type or variable this rule applies to.
-        :param contextType: How to interpret the context.
-        :param element: Field to create in the context.
-        :param variable: Named context for field, if desired, and a field is specified.
-        :param listMode: If field is a list, how to manage the list.
-        :param listRuleId: Internal rule reference for shared list items.
-        :param transform: How the data is copied / created.
-        :param parameter: Parameters to the transform.
+            :param id_: id of resource
+            :param extension: extensions
+            :param context: Type or variable this rule applies to.
+            :param contextType: How to interpret the context.
+            :param element: Field to create in the context.
+            :param variable: Named context for field, if desired, and a field is specified.
+            :param listMode: If field is a list, how to manage the list.
+            :param listRuleId: Internal rule reference for shared list items.
+            :param transform: How the data is copied / created.
+            :param parameter: Parameters to the transform.
         """
         super().__init__(
             id_=id_,

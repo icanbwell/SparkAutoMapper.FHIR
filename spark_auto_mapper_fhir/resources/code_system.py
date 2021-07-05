@@ -93,6 +93,10 @@ if TYPE_CHECKING:
 class CodeSystem(FhirResourceBase):
     """
     CodeSystem
+        The CodeSystem resource is used to declare the existence of and describe a
+    code system or code system supplement and its key properties, and optionally
+    define a part or all of its content.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -132,6 +136,10 @@ class CodeSystem(FhirResourceBase):
         concept: Optional[FhirList[CodeSystemConcept]] = None,
     ) -> None:
         """
+            The CodeSystem resource is used to declare the existence of and describe a
+        code system or code system supplement and its key properties, and optionally
+        define a part or all of its content.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

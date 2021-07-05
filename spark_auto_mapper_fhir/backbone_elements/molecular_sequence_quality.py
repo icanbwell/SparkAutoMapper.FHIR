@@ -57,6 +57,7 @@ if TYPE_CHECKING:
 class MolecularSequenceQuality(FhirBackboneElementBase):
     """
     MolecularSequence.Quality
+        Raw data describing a biological sequence.
     """
 
     # noinspection PyPep8Naming
@@ -82,6 +83,7 @@ class MolecularSequenceQuality(FhirBackboneElementBase):
         roc: Optional[MolecularSequenceRoc] = None,
     ) -> None:
         """
+            Raw data describing a biological sequence.
 
             :param id_: id of resource
             :param extension: extensions

@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class RequestGroupCondition(FhirBackboneElementBase):
     """
     RequestGroup.Condition
+        A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,8 @@ class RequestGroupCondition(FhirBackboneElementBase):
         expression: Optional[Expression] = None,
     ) -> None:
         """
+            A group of related requests that can be used to capture intended activities
+        that have inter-dependencies such as "give this medication after that one".
 
             :param id_: id of resource
             :param extension: extensions

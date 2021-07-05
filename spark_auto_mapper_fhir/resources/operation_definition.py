@@ -85,6 +85,9 @@ if TYPE_CHECKING:
 class OperationDefinition(FhirResourceBase):
     """
     OperationDefinition
+        A formal computable definition of an operation (on the RESTful interface) or a
+    named query (using the search interaction).
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -124,6 +127,9 @@ class OperationDefinition(FhirResourceBase):
         overload: Optional[FhirList[OperationDefinitionOverload]] = None,
     ) -> None:
         """
+            A formal computable definition of an operation (on the RESTful interface) or a
+        named query (using the search interaction).
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class DeviceDefinitionProperty(FhirBackboneElementBase):
     """
     DeviceDefinition.Property
+        The characteristics, operational status and capabilities of a medical-related component of a medical device.
     """
 
     # noinspection PyPep8Naming
@@ -46,12 +47,14 @@ class DeviceDefinitionProperty(FhirBackboneElementBase):
         valueCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
     ) -> None:
         """
+            The characteristics, operational status and capabilities of a medical-related
+        component of a medical device.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
-        :param valueQuantity: Property value as a quantity.
-        :param valueCode: Property value as a code, e.g., NTP4 (synced to NTP).
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
+            :param valueQuantity: Property value as a quantity.
+            :param valueCode: Property value as a code, e.g., NTP4 (synced to NTP).
         """
         super().__init__(
             id_=id_,

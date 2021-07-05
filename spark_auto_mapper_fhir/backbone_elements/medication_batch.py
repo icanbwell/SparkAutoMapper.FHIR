@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class MedicationBatch(FhirBackboneElementBase):
     """
     Medication.Batch
+        This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
     """
 
     # noinspection PyPep8Naming
@@ -34,11 +35,14 @@ class MedicationBatch(FhirBackboneElementBase):
         expirationDate: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            This resource is primarily used for the identification and definition of a
+        medication for the purposes of prescribing, dispensing, and administering a
+        medication as well as for making statements about medication use.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param lotNumber: The assigned lot number of a batch of the specified product.
-        :param expirationDate: When this specific batch of product will expire.
+            :param id_: id of resource
+            :param extension: extensions
+            :param lotNumber: The assigned lot number of a batch of the specified product.
+            :param expirationDate: When this specific batch of product will expire.
         """
         super().__init__(
             id_=id_,

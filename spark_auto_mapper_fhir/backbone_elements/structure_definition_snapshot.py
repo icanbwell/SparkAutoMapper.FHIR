@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class StructureDefinitionSnapshot(FhirBackboneElementBase):
     """
     StructureDefinition.Snapshot
+        A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
     """
 
     # noinspection PyPep8Naming
@@ -33,10 +34,13 @@ class StructureDefinitionSnapshot(FhirBackboneElementBase):
         element: FhirList[ElementDefinition],
     ) -> None:
         """
+            A definition of a FHIR structure. This resource is used to describe the
+        underlying resources, data types defined in FHIR, and also for describing
+        extensions and constraints on resources and data types.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param element: Captures constraints on each element within the resource.
+            :param id_: id of resource
+            :param extension: extensions
+            :param element: Captures constraints on each element within the resource.
         """
         super().__init__(
             id_=id_,

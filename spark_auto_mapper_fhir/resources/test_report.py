@@ -64,6 +64,8 @@ if TYPE_CHECKING:
 class TestReport(FhirResourceBase):
     """
     TestReport
+        A summary of information based on the results of executing a TestScript.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -87,6 +89,8 @@ class TestReport(FhirResourceBase):
         teardown: Optional[TestReportTeardown] = None,
     ) -> None:
         """
+            A summary of information based on the results of executing a TestScript.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

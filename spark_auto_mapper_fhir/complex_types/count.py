@@ -14,6 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class Count(FhirComplexTypeBase):
     """
     Count
+        A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +26,14 @@ class Count(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            A measured amount (or an amount that can potentially be measured). Note that
+        measured amounts include amounts that are not precisely quantified, including
+        amounts involving arbitrary units and floating currencies.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

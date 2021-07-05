@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class PractitionerRoleNotAvailable(FhirBackboneElementBase):
     """
     PractitionerRole.NotAvailable
+        A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
     """
 
     # noinspection PyPep8Naming
@@ -34,6 +35,8 @@ class PractitionerRoleNotAvailable(FhirBackboneElementBase):
         during: Optional[Period] = None,
     ) -> None:
         """
+            A specific set of Roles/Locations/specialties/services that a practitioner may
+        perform at an organization for a period of time.
 
             :param id_: id of resource
             :param extension: extensions

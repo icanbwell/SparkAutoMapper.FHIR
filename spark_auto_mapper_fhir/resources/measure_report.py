@@ -74,6 +74,10 @@ if TYPE_CHECKING:
 class MeasureReport(FhirResourceBase):
     """
     MeasureReport
+        The MeasureReport resource contains the results of the calculation of a
+    measure; and optionally a reference to the resources involved in that
+    calculation.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -112,6 +116,10 @@ class MeasureReport(FhirResourceBase):
         evaluatedResource: Optional[FhirList[Reference[Union[Resource]]]] = None,
     ) -> None:
         """
+            The MeasureReport resource contains the results of the calculation of a
+        measure; and optionally a reference to the resources involved in that
+        calculation.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

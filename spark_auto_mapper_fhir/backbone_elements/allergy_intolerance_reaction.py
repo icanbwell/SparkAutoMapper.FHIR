@@ -53,6 +53,7 @@ if TYPE_CHECKING:
 class AllergyIntoleranceReaction(FhirBackboneElementBase):
     """
     AllergyIntolerance.Reaction
+        Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.
     """
 
     # noinspection PyPep8Naming
@@ -70,6 +71,8 @@ class AllergyIntoleranceReaction(FhirBackboneElementBase):
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
+            Risk of harmful or undesirable, physiological response which is unique to an
+        individual and associated with exposure to a substance.
 
             :param id_: id of resource
             :param extension: extensions

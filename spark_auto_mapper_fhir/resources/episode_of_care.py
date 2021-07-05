@@ -76,6 +76,10 @@ if TYPE_CHECKING:
 class EpisodeOfCare(FhirResourceBase):
     """
     EpisodeOfCare
+        An association between a patient and an organization / healthcare provider(s)
+    during which time encounters may occur. The managing organization assumes a
+    level of responsibility for the patient during this time.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -99,6 +103,10 @@ class EpisodeOfCare(FhirResourceBase):
         account: Optional[FhirList[Reference[Union[Account]]]] = None,
     ) -> None:
         """
+            An association between a patient and an organization / healthcare provider(s)
+        during which time encounters may occur. The managing organization assumes a
+        level of responsibility for the patient during this time.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

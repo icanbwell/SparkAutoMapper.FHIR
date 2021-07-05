@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class FhirMarkdown(FhirComplexTypeBase):
     """
     markdown
+        A string that may contain Github Flavored Markdown syntax for optional processing by a mark down presentation engine
+        Systems are not required to have markdown support, so the text should be readable without markdown processing. The markdown syntax is GFM - see https://github.github.com/gfm/
+        If the element is present, it must have either a @value, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +27,16 @@ class FhirMarkdown(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            A string that may contain Github Flavored Markdown syntax for optional
+        processing by a mark down presentation engine
+            Systems are not required to have markdown support, so the text should be
+        readable without markdown processing. The markdown syntax is GFM - see
+        https://github.github.com/gfm/
+            If the element is present, it must have either a @value, an @id referenced
+        from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

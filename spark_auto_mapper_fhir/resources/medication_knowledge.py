@@ -131,6 +131,8 @@ if TYPE_CHECKING:
 class MedicationKnowledge(FhirResourceBase):
     """
     MedicationKnowledge
+        Information about a medication that is used to support knowledge.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -176,6 +178,8 @@ class MedicationKnowledge(FhirResourceBase):
         kinetics: Optional[FhirList[MedicationKnowledgeKinetics]] = None,
     ) -> None:
         """
+            Information about a medication that is used to support knowledge.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

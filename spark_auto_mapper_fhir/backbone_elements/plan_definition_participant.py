@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class PlanDefinitionParticipant(FhirBackboneElementBase):
     """
     PlanDefinition.Participant
+        This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.
     """
 
     # noinspection PyPep8Naming
@@ -45,11 +46,15 @@ class PlanDefinitionParticipant(FhirBackboneElementBase):
         role: Optional[CodeableConcept[ActionParticipantRoleCode]] = None,
     ) -> None:
         """
+            This resource allows for the definition of various types of plans as a
+        sharable, consumable, and executable artifact. The resource is general enough
+        to support the description of a broad range of clinical artifacts such as
+        clinical decision support rules, order sets and protocols.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The type of participant in the action.
-        :param role: The role the participant should play in performing the described action.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The type of participant in the action.
+            :param role: The role the participant should play in performing the described action.
         """
         super().__init__(
             id_=id_,

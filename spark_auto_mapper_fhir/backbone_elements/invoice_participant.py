@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 class InvoiceParticipant(FhirBackboneElementBase):
     """
     Invoice.Participant
+        Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
     """
 
     # noinspection PyPep8Naming
@@ -57,6 +58,8 @@ class InvoiceParticipant(FhirBackboneElementBase):
         ],
     ) -> None:
         """
+            Invoice containing collected ChargeItems from an Account with calculated
+        individual and total price for Billing purpose.
 
             :param id_: id of resource
             :param extension: extensions

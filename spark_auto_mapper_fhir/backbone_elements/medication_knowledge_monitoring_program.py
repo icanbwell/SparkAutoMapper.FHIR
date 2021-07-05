@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeMonitoringProgram(FhirBackboneElementBase):
     """
     MedicationKnowledge.MonitoringProgram
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,7 @@ class MedicationKnowledgeMonitoringProgram(FhirBackboneElementBase):
         name: Optional[FhirString] = None,
     ) -> None:
         """
+        Information about a medication that is used to support knowledge.
 
         :param id_: id of resource
         :param extension: extensions

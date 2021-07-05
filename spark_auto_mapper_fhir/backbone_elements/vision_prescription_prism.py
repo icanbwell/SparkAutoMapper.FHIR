@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class VisionPrescriptionPrism(FhirBackboneElementBase):
     """
     VisionPrescription.Prism
+        An authorization for the provision of glasses and/or contact lenses to a patient.
     """
 
     # noinspection PyPep8Naming
@@ -35,11 +36,13 @@ class VisionPrescriptionPrism(FhirBackboneElementBase):
         base: VisionBaseCode,
     ) -> None:
         """
+            An authorization for the provision of glasses and/or contact lenses to a
+        patient.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param amount: Amount of prism to compensate for eye alignment in fractional units.
-        :param base: The relative base, or reference lens edge, for the prism.
+            :param id_: id of resource
+            :param extension: extensions
+            :param amount: Amount of prism to compensate for eye alignment in fractional units.
+            :param base: The relative base, or reference lens edge, for the prism.
         """
         super().__init__(
             id_=id_,

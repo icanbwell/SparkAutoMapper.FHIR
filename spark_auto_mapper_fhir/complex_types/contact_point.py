@@ -32,6 +32,8 @@ if TYPE_CHECKING:
 class ContactPoint(FhirComplexTypeBase):
     """
     ContactPoint
+        Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -47,6 +49,10 @@ class ContactPoint(FhirComplexTypeBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            Details for all kinds of technology mediated contact points for a person or
+        organization, including telephone, email, etc.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

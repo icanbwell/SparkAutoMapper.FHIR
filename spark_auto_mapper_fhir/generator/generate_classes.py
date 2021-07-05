@@ -90,6 +90,8 @@ def main() -> int:
                 template_contents = file.read()
                 from jinja2 import Template
 
+                file_path = value_sets_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing value_set: {entity_file_name} to {file_path}...")
                 template = Template(
                     template_contents, trim_blocks=True, lstrip_blocks=True
                 )
@@ -97,8 +99,6 @@ def main() -> int:
                     fhir_entity=fhir_entity,
                 )
 
-            file_path = value_sets_folder.joinpath(f"{entity_file_name}.py")
-            print(f"Writing value_set: {entity_file_name} to {file_path}...")
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
@@ -107,6 +107,8 @@ def main() -> int:
                 template_contents = file.read()
                 from jinja2 import Template
 
+                file_path = resources_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing domain resource: {entity_file_name} to {file_path}...")
                 template = Template(
                     template_contents, trim_blocks=True, lstrip_blocks=True
                 )
@@ -114,8 +116,6 @@ def main() -> int:
                     fhir_entity=fhir_entity,
                 )
 
-            file_path = resources_folder.joinpath(f"{entity_file_name}.py")
-            print(f"Writing resource: {entity_file_name} to {file_path}...")
             # print(result)
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
@@ -125,16 +125,14 @@ def main() -> int:
                 template_contents = file.read()
                 from jinja2 import Template
 
+                file_path = resources_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing resource: {entity_file_name} to {file_path}...")
                 template = Template(
                     template_contents, trim_blocks=True, lstrip_blocks=True
                 )
                 result = template.render(
                     fhir_entity=fhir_entity,
                 )
-
-            file_path = resources_folder.joinpath(f"{entity_file_name}.py")
-            print(f"Writing resource: {entity_file_name} to {file_path}...")
-            # print(result)
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
@@ -145,6 +143,10 @@ def main() -> int:
                 template_contents = file.read()
                 from jinja2 import Template
 
+                file_path = backbone_elements_folder.joinpath(f"{entity_file_name}.py")
+                print(
+                    f"Writing backbone_elements_folder: {entity_file_name} to {file_path}..."
+                )
                 template = Template(
                     template_contents, trim_blocks=True, lstrip_blocks=True
                 )
@@ -152,10 +154,6 @@ def main() -> int:
                     fhir_entity=fhir_entity,
                 )
 
-            file_path = backbone_elements_folder.joinpath(f"{entity_file_name}.py")
-            print(
-                f"Writing backbone_elements_folder: {entity_file_name} to {file_path}..."
-            )
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
@@ -164,6 +162,8 @@ def main() -> int:
                 template_contents = file.read()
                 from jinja2 import Template
 
+                file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing complex_type: {entity_file_name} to {file_path}...")
                 template = Template(
                     template_contents, trim_blocks=True, lstrip_blocks=True
                 )
@@ -171,8 +171,6 @@ def main() -> int:
                     fhir_entity=fhir_entity,
                 )
 
-            file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
-            print(f"Writing complex_type: {entity_file_name} to {file_path}...")
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
@@ -181,6 +179,8 @@ def main() -> int:
                 template_contents = file.read()
                 from jinja2 import Template
 
+                file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing complex_type: {entity_file_name} to {file_path}...")
                 template = Template(
                     template_contents, trim_blocks=True, lstrip_blocks=True
                 )
@@ -188,8 +188,6 @@ def main() -> int:
                     fhir_entity=fhir_entity,
                 )
 
-            file_path = complex_types_folder.joinpath(f"{entity_file_name}.py")
-            print(f"Writing complex_type: {entity_file_name} to {file_path}...")
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)

@@ -14,6 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class VariableType(FhirComplexTypeBase):
     """
     VariableType
+        The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive).
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +26,12 @@ class VariableType(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            The possible types of variables for exposures or outcomes (E.g. Dichotomous,
+        Continuous, Descriptive).
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

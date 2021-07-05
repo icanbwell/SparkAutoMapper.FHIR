@@ -39,6 +39,8 @@ if TYPE_CHECKING:
 class MarketingStatus(FhirBackboneElementBase):
     """
     MarketingStatus
+        The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -54,6 +56,10 @@ class MarketingStatus(FhirBackboneElementBase):
         restoreDate: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            The marketing status describes the date when a medicinal product is actually
+        put on the market or the date as of which it is no longer available.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

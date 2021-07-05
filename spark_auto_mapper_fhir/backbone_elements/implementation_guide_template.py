@@ -24,6 +24,7 @@ if TYPE_CHECKING:
 class ImplementationGuideTemplate(FhirBackboneElementBase):
     """
     ImplementationGuide.Template
+        A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
     """
 
     # noinspection PyPep8Naming
@@ -37,12 +38,16 @@ class ImplementationGuideTemplate(FhirBackboneElementBase):
         scope: Optional[FhirString] = None,
     ) -> None:
         """
+            A set of rules of how a particular interoperability or standards problem is
+        solved - typically through the use of FHIR resources. This resource is used to
+        gather all the parts of an implementation guide into a logical whole and to
+        publish a computable definition of all the parts.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: Type of template specified.
-        :param source: The source location for the template.
-        :param scope: The scope in which the template applies.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: Type of template specified.
+            :param source: The source location for the template.
+            :param scope: The scope in which the template applies.
         """
         super().__init__(
             id_=id_,

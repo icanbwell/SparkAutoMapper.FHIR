@@ -33,6 +33,8 @@ if TYPE_CHECKING:
 class SampledData(FhirComplexTypeBase):
     """
     SampledData
+        A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -50,6 +52,10 @@ class SampledData(FhirComplexTypeBase):
         data: Optional[SampledDataDataType] = None,
     ) -> None:
         """
+            A series of measurements taken by a device, with upper and lower limits. There
+        may be more than one dimension in the data.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

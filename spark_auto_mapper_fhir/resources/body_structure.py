@@ -58,6 +58,9 @@ if TYPE_CHECKING:
 class BodyStructure(FhirResourceBase):
     """
     BodyStructure
+        Record details about an anatomical structure.  This resource may be used when
+    a coded concept does not provide the necessary detail needed for the use case.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -81,6 +84,9 @@ class BodyStructure(FhirResourceBase):
         patient: Reference[Union[Patient]],
     ) -> None:
         """
+            Record details about an anatomical structure.  This resource may be used when
+        a coded concept does not provide the necessary detail needed for the use case.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

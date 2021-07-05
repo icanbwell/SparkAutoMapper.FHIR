@@ -22,6 +22,8 @@ if TYPE_CHECKING:
 class SubstanceAmountReferenceRange(FhirBackboneElementBase):
     """
     SubstanceAmount.ReferenceRange
+        Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -34,11 +36,19 @@ class SubstanceAmountReferenceRange(FhirBackboneElementBase):
         highLimit: Optional[Quantity] = None,
     ) -> None:
         """
+            Chemical substances are a single substance type whose primary defining element
+        is the molecular structure. Chemical substances shall be defined on the basis
+        of their complete covalent molecular structure; the presence of a salt
+        (counter-ion) and/or solvates (water, alcohols) is also captured. Purity,
+        grade, physical form or particle size are not taken into account in the
+        definition of a chemical substance or in the assignment of a Substance ID.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param lowLimit: Lower limit possible or expected.
-        :param highLimit: Upper limit possible or expected.
+            :param id_: id of resource
+            :param extension: extensions
+            :param lowLimit: Lower limit possible or expected.
+            :param highLimit: Upper limit possible or expected.
         """
         super().__init__(
             id_=id_,

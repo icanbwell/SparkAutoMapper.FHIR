@@ -33,6 +33,8 @@ if TYPE_CHECKING:
 class Timing(FhirBackboneElementBase):
     """
     Timing
+        Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -46,6 +48,13 @@ class Timing(FhirBackboneElementBase):
         code: Optional[CodeableConcept[TimingAbbreviationCode]] = None,
     ) -> None:
         """
+            Specifies an event that may occur multiple times. Timing schedules are used to
+        record when things are planned, expected or requested to occur. The most
+        common usage is in dosage instructions for medications. They are also used
+        when planning care of various kinds, and may be used for reporting the
+        schedule to which past regular activities were carried out.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

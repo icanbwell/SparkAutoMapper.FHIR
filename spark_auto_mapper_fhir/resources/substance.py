@@ -53,6 +53,8 @@ if TYPE_CHECKING:
 class Substance(FhirResourceBase):
     """
     Substance
+        A homogeneous material with a definite composition.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -73,6 +75,8 @@ class Substance(FhirResourceBase):
         ingredient: Optional[FhirList[SubstanceIngredient]] = None,
     ) -> None:
         """
+            A homogeneous material with a definite composition.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

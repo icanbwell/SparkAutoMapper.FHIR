@@ -37,6 +37,7 @@ if TYPE_CHECKING:
 class ListEntry(FhirBackboneElementBase):
     """
     List.Entry
+        A list is a curated collection of resources.
     """
 
     # noinspection PyPep8Naming
@@ -51,6 +52,7 @@ class ListEntry(FhirBackboneElementBase):
         item: Reference[Union[Resource]],
     ) -> None:
         """
+            A list is a curated collection of resources.
 
             :param id_: id of resource
             :param extension: extensions

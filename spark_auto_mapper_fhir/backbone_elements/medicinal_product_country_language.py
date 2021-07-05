@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class MedicinalProductCountryLanguage(FhirBackboneElementBase):
     """
     MedicinalProduct.CountryLanguage
+        Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
     """
 
     # noinspection PyPep8Naming
@@ -47,12 +48,14 @@ class MedicinalProductCountryLanguage(FhirBackboneElementBase):
         language: CodeableConcept[GenericTypeCode],
     ) -> None:
         """
+            Detailed definition of a medicinal product, typically for uses other than
+        direct patient care (e.g. regulatory use).
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param country: Country code for where this name applies.
-        :param jurisdiction: Jurisdiction code for where this name applies.
-        :param language: Language code for this name.
+            :param id_: id of resource
+            :param extension: extensions
+            :param country: Country code for where this name applies.
+            :param jurisdiction: Jurisdiction code for where this name applies.
+            :param language: Language code for this name.
         """
         super().__init__(
             id_=id_,

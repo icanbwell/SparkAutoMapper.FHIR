@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 class ExplanationOfBenefitAccident(FhirBackboneElementBase):
     """
     ExplanationOfBenefit.Accident
+        This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
     """
 
     # noinspection PyPep8Naming
@@ -50,6 +51,9 @@ class ExplanationOfBenefitAccident(FhirBackboneElementBase):
         locationReference: Optional[Reference[Union[Location]]] = None,
     ) -> None:
         """
+            This resource provides: the claim details; adjudication details from the
+        processing of a Claim; and optionally account balance information, for
+        informing the subscriber of the benefits provided.
 
             :param id_: id of resource
             :param extension: extensions

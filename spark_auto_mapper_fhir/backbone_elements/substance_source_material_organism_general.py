@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class SubstanceSourceMaterialOrganismGeneral(FhirBackboneElementBase):
     """
     SubstanceSourceMaterial.OrganismGeneral
+        Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
     """
 
     # noinspection PyPep8Naming
@@ -52,13 +53,27 @@ class SubstanceSourceMaterialOrganismGeneral(FhirBackboneElementBase):
         order: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """
+            Source material shall capture information on the taxonomic and anatomical
+        origins as well as the fraction of a material that can result in or can be
+        modified to form a substance. This set of data elements shall be used to
+        define polymer substances isolated from biological matrices. Taxonomic and
+        anatomical origins shall be described using a controlled vocabulary as
+        required. This information is captured for naturally derived polymers ( .
+        starch) and structurally diverse substances. For Organisms belonging to the
+        Kingdom Plantae the Substance level defines the fresh material of a single
+        species or infraspecies, the Herbal Drug and the Herbal preparation. For
+        Herbal preparations, the fraction information will be captured at the
+        Substance information level and additional information for herbal extracts
+        will be captured at the Specified Substance Group 1 information level. See for
+        further explanation the Substance Class: Structurally Diverse and the herbal
+        annex.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param kingdom: The kingdom of an organism shall be specified.
-        :param phylum: The phylum of an organism shall be specified.
-        :param class_: The class of an organism shall be specified.
-        :param order: The order of an organism shall be specified,.
+            :param id_: id of resource
+            :param extension: extensions
+            :param kingdom: The kingdom of an organism shall be specified.
+            :param phylum: The phylum of an organism shall be specified.
+            :param class_: The class of an organism shall be specified.
+            :param order: The order of an organism shall be specified,.
         """
         super().__init__(
             id_=id_,

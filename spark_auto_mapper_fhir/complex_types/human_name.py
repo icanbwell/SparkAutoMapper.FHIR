@@ -28,6 +28,8 @@ if TYPE_CHECKING:
 class HumanName(FhirComplexTypeBase):
     """
     HumanName
+        A human's name with the ability to identify parts and usage.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +47,9 @@ class HumanName(FhirComplexTypeBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            A human's name with the ability to identify parts and usage.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

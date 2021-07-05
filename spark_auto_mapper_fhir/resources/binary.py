@@ -31,6 +31,10 @@ if TYPE_CHECKING:
 class Binary(FhirResourceBase):
     """
     Binary
+        A resource that represents the data of a single raw artifact as digital
+    content accessible in its native format.  A Binary resource can contain any
+    content, whether text, image, pdf, zip archive, etc.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +49,10 @@ class Binary(FhirResourceBase):
         data: Optional[base64Binary] = None,
     ) -> None:
         """
+            A resource that represents the data of a single raw artifact as digital
+        content accessible in its native format.  A Binary resource can contain any
+        content, whether text, image, pdf, zip archive, etc.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

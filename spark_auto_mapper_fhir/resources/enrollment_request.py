@@ -48,6 +48,9 @@ if TYPE_CHECKING:
 class EnrollmentRequest(FhirResourceBase):
     """
     EnrollmentRequest
+        This resource provides the insurance enrollment details to the insurer
+    regarding a specified coverage.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -68,17 +71,20 @@ class EnrollmentRequest(FhirResourceBase):
         coverage: Optional[Reference[Union[Coverage]]] = None,
     ) -> None:
         """
+            This resource provides the insurance enrollment details to the insurer
+        regarding a specified coverage.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: The Response business identifier.
-        :param status: The status of the resource instance.
-        :param created: The date when this resource was created.
-        :param insurer: The Insurer who is target  of the request.
-        :param provider: The practitioner who is responsible for the services rendered to the patient.
-        :param candidate: Patient Resource.
-        :param coverage: Reference to the program or plan identification, underwriter or payor.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: The Response business identifier.
+            :param status: The status of the resource instance.
+            :param created: The date when this resource was created.
+            :param insurer: The Insurer who is target  of the request.
+            :param provider: The practitioner who is responsible for the services rendered to the patient.
+            :param candidate: Patient Resource.
+            :param coverage: Reference to the program or plan identification, underwriter or payor.
         """
         super().__init__(
             resourceType="EnrollmentRequest",

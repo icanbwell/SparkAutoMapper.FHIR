@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 class DetectedIssueMitigation(FhirBackboneElementBase):
     """
     DetectedIssue.Mitigation
+        Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
     """
 
     # noinspection PyPep8Naming
@@ -49,6 +50,9 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
         author: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
     ) -> None:
         """
+            Indicates an actual or potential clinical issue with or between one or more
+        active or proposed clinical actions for a patient; e.g. Drug-drug interaction,
+        Ineffective treatment frequency, Procedure-condition conflict, etc.
 
             :param id_: id of resource
             :param extension: extensions

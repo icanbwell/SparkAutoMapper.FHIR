@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 class SupplyDeliverySuppliedItem(FhirBackboneElementBase):
     """
     SupplyDelivery.SuppliedItem
+        Record of delivery of what is supplied.
     """
 
     # noinspection PyPep8Naming
@@ -49,6 +50,7 @@ class SupplyDeliverySuppliedItem(FhirBackboneElementBase):
         itemReference: Optional[Reference[Union[Medication, Substance, Device]]] = None,
     ) -> None:
         """
+        Record of delivery of what is supplied.
 
         :param id_: id of resource
         :param extension: extensions

@@ -55,6 +55,7 @@ if TYPE_CHECKING:
 class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
     """
     SpecimenDefinition.TypeTested
+        A kind of specimen with associated set of requirements.
     """
 
     # noinspection PyPep8Naming
@@ -75,6 +76,7 @@ class SpecimenDefinitionTypeTested(FhirBackboneElementBase):
         handling: Optional[FhirList[SpecimenDefinitionHandling]] = None,
     ) -> None:
         """
+            A kind of specimen with associated set of requirements.
 
             :param id_: id of resource
             :param extension: extensions

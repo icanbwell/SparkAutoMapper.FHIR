@@ -32,6 +32,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesVersion(FhirBackboneElementBase):
     """
     TerminologyCapabilities.Version
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -48,6 +49,9 @@ class TerminologyCapabilitiesVersion(FhirBackboneElementBase):
         property: Optional[FhirList[code]] = None,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
             :param id_: id of resource
             :param extension: extensions

@@ -78,6 +78,9 @@ if TYPE_CHECKING:
 class PractitionerRole(FhirResourceBase):
     """
     PractitionerRole
+        A specific set of Roles/Locations/specialties/services that a practitioner may
+    perform at an organization for a period of time.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -107,6 +110,9 @@ class PractitionerRole(FhirResourceBase):
         endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
     ) -> None:
         """
+            A specific set of Roles/Locations/specialties/services that a practitioner may
+        perform at an organization for a period of time.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

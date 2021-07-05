@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class FhirInteger(FhirComplexTypeBase):
     """
     integer
+        A whole number
+        32 bit number; for values larger than this, use decimal
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,6 +27,9 @@ class FhirInteger(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+        A whole number
+        32 bit number; for values larger than this, use decimal
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param extension: extensions

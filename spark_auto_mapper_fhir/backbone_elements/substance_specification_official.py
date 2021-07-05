@@ -32,6 +32,7 @@ if TYPE_CHECKING:
 class SubstanceSpecificationOfficial(FhirBackboneElementBase):
     """
     SubstanceSpecification.Official
+        The detailed description of a substance, typically at a level beyond what is used for prescribing.
     """
 
     # noinspection PyPep8Naming
@@ -45,12 +46,14 @@ class SubstanceSpecificationOfficial(FhirBackboneElementBase):
         date: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            The detailed description of a substance, typically at a level beyond what is
+        used for prescribing.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param authority: Which authority uses this official name.
-        :param status: The status of the official name.
-        :param date: Date of official name change.
+            :param id_: id of resource
+            :param extension: extensions
+            :param authority: Which authority uses this official name.
+            :param status: The status of the official name.
+            :param date: Date of official name change.
         """
         super().__init__(
             id_=id_,

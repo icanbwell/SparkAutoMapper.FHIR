@@ -21,6 +21,8 @@ if TYPE_CHECKING:
 class Ratio(FhirComplexTypeBase):
     """
     Ratio
+        A relationship of two Quantity values - expressed as a numerator and a denominator.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -33,11 +35,15 @@ class Ratio(FhirComplexTypeBase):
         denominator: Optional[Quantity] = None,
     ) -> None:
         """
+            A relationship of two Quantity values - expressed as a numerator and a
+        denominator.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param numerator: The value of the numerator.
-        :param denominator: The value of the denominator.
+            :param id_: id of resource
+            :param extension: extensions
+            :param numerator: The value of the numerator.
+            :param denominator: The value of the denominator.
         """
         super().__init__(
             id_=id_,

@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class DeviceDefinitionMaterial(FhirBackboneElementBase):
     """
     DeviceDefinition.Material
+        The characteristics, operational status and capabilities of a medical-related component of a medical device.
     """
 
     # noinspection PyPep8Naming
@@ -42,12 +43,14 @@ class DeviceDefinitionMaterial(FhirBackboneElementBase):
         allergenicIndicator: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            The characteristics, operational status and capabilities of a medical-related
+        component of a medical device.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param substance: The substance.
-        :param alternate: Indicates an alternative material of the device.
-        :param allergenicIndicator: Whether the substance is a known or suspected allergen.
+            :param id_: id of resource
+            :param extension: extensions
+            :param substance: The substance.
+            :param alternate: Indicates an alternative material of the device.
+            :param allergenicIndicator: Whether the substance is a known or suspected allergen.
         """
         super().__init__(
             id_=id_,

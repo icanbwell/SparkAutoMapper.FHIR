@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class OperationOutcomeIssue(FhirBackboneElementBase):
     """
     OperationOutcome.Issue
+        A collection of error, warning, or information messages that result from a system action.
     """
 
     # noinspection PyPep8Naming
@@ -54,6 +55,8 @@ class OperationOutcomeIssue(FhirBackboneElementBase):
         expression: Optional[FhirList[FhirString]] = None,
     ) -> None:
         """
+            A collection of error, warning, or information messages that result from a
+        system action.
 
             :param id_: id of resource
             :param extension: extensions

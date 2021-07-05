@@ -129,6 +129,8 @@ if TYPE_CHECKING:
 class Task(FhirResourceBase):
     """
     Task
+        A task to be performed.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -197,6 +199,8 @@ class Task(FhirResourceBase):
         output: Optional[FhirList[TaskOutput]] = None,
     ) -> None:
         """
+            A task to be performed.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

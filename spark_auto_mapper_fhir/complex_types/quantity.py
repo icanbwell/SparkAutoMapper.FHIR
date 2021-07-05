@@ -31,6 +31,8 @@ if TYPE_CHECKING:
 class Quantity(FhirComplexTypeBase):
     """
     Quantity
+        A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -46,6 +48,11 @@ class Quantity(FhirComplexTypeBase):
         code: Optional[code] = None,
     ) -> None:
         """
+            A measured amount (or an amount that can potentially be measured). Note that
+        measured amounts include amounts that are not precisely quantified, including
+        amounts involving arbitrary units and floating currencies.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

@@ -33,6 +33,8 @@ if TYPE_CHECKING:
 class Address(FhirComplexTypeBase):
     """
     Address
+        An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -53,6 +55,13 @@ class Address(FhirComplexTypeBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            An address expressed using postal conventions (as opposed to GPS or other
+        location definition formats).  This data type may be used to convey addresses
+        for use in delivering mail as well as for visiting locations which might not
+        be valid for mail delivery.  There are a variety of postal address formats
+        defined around the world.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

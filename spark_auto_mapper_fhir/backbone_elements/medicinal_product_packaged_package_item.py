@@ -69,6 +69,7 @@ if TYPE_CHECKING:
 class MedicinalProductPackagedPackageItem(FhirBackboneElementBase):
     """
     MedicinalProductPackaged.PackageItem
+        A medicinal product in a container or package.
     """
 
     # noinspection PyPep8Naming
@@ -95,6 +96,7 @@ class MedicinalProductPackagedPackageItem(FhirBackboneElementBase):
         manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
     ) -> None:
         """
+            A medicinal product in a container or package.
 
             :param id_: id of resource
             :param extension: extensions

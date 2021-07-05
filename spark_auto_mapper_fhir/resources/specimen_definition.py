@@ -48,6 +48,8 @@ if TYPE_CHECKING:
 class SpecimenDefinition(FhirResourceBase):
     """
     SpecimenDefinition
+        A kind of specimen with associated set of requirements.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -67,6 +69,8 @@ class SpecimenDefinition(FhirResourceBase):
         typeTested: Optional[FhirList[SpecimenDefinitionTypeTested]] = None,
     ) -> None:
         """
+        A kind of specimen with associated set of requirements.
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param meta: Meta

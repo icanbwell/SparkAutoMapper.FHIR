@@ -24,6 +24,8 @@ if TYPE_CHECKING:
 class Contributor(FhirComplexTypeBase):
     """
     Contributor
+        A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +39,10 @@ class Contributor(FhirComplexTypeBase):
         contact: Optional[FhirList[ContactDetail]] = None,
     ) -> None:
         """
+            A contributor to the content of a knowledge asset, including authors, editors,
+        reviewers, and endorsers.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

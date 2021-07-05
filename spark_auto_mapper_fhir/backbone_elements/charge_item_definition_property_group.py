@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class ChargeItemDefinitionPropertyGroup(FhirBackboneElementBase):
     """
     ChargeItemDefinition.PropertyGroup
+        The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
     """
 
     # noinspection PyPep8Naming
@@ -39,6 +40,10 @@ class ChargeItemDefinitionPropertyGroup(FhirBackboneElementBase):
         priceComponent: Optional[FhirList[ChargeItemDefinitionPriceComponent]] = None,
     ) -> None:
         """
+            The ChargeItemDefinition resource provides the properties that apply to the
+        (billing) codes necessary to calculate costs and prices. The properties may
+        differ largely depending on type and realm, therefore this resource gives only
+        a rough structure and requires profiling for each type of billing code system.
 
             :param id_: id of resource
             :param extension: extensions

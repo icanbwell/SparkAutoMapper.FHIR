@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class PlanDefinitionRelatedAction(FhirBackboneElementBase):
     """
     PlanDefinition.RelatedAction
+        This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.
     """
 
     # noinspection PyPep8Naming
@@ -45,13 +46,17 @@ class PlanDefinitionRelatedAction(FhirBackboneElementBase):
         offsetRange: Optional[Range] = None,
     ) -> None:
         """
+            This resource allows for the definition of various types of plans as a
+        sharable, consumable, and executable artifact. The resource is general enough
+        to support the description of a broad range of clinical artifacts such as
+        clinical decision support rules, order sets and protocols.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param actionId: The element id of the related action.
-        :param relationship: The relationship of this action to the related action.
-        :param offsetDuration: None
-        :param offsetRange: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param actionId: The element id of the related action.
+            :param relationship: The relationship of this action to the related action.
+            :param offsetDuration: None
+            :param offsetRange: None
         """
         super().__init__(
             id_=id_,

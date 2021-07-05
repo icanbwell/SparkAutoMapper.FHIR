@@ -43,6 +43,7 @@ if TYPE_CHECKING:
 class ContractSecurityLabel(FhirBackboneElementBase):
     """
     Contract.SecurityLabel
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -59,6 +60,8 @@ class ContractSecurityLabel(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
             :param id_: id of resource
             :param extension: extensions

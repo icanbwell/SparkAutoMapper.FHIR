@@ -144,6 +144,9 @@ if TYPE_CHECKING:
 class ClaimResponse(FhirResourceBase):
     """
     ClaimResponse
+        This resource provides the adjudication details from the processing of a Claim
+    resource.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -186,6 +189,9 @@ class ClaimResponse(FhirResourceBase):
         error: Optional[FhirList[ClaimResponseError]] = None,
     ) -> None:
         """
+            This resource provides the adjudication details from the processing of a Claim
+        resource.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -62,6 +62,10 @@ if TYPE_CHECKING:
 class Medication(FhirResourceBase):
     """
     Medication
+        This resource is primarily used for the identification and definition of a
+    medication for the purposes of prescribing, dispensing, and administering a
+    medication as well as for making statements about medication use.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -81,6 +85,10 @@ class Medication(FhirResourceBase):
         batch: Optional[MedicationBatch] = None,
     ) -> None:
         """
+            This resource is primarily used for the identification and definition of a
+        medication for the purposes of prescribing, dispensing, and administering a
+        medication as well as for making statements about medication use.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

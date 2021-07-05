@@ -14,6 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class FhirTime(FhirComplexTypeBase):
     """
     time
+        A time during the day, with no date specified
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,6 +26,8 @@ class FhirTime(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+        A time during the day, with no date specified
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param extension: extensions

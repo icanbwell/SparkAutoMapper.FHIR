@@ -70,6 +70,9 @@ if TYPE_CHECKING:
 class OrganizationAffiliation(FhirResourceBase):
     """
     OrganizationAffiliation
+        Defines an affiliation/assotiation/relationship between 2 distinct
+    oganizations, that is not a part-of relationship/sub-division relationship.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -99,6 +102,9 @@ class OrganizationAffiliation(FhirResourceBase):
         endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
     ) -> None:
         """
+            Defines an affiliation/assotiation/relationship between 2 distinct
+        oganizations, that is not a part-of relationship/sub-division relationship.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

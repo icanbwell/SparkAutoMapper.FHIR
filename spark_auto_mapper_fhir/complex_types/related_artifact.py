@@ -36,6 +36,8 @@ if TYPE_CHECKING:
 class RelatedArtifact(FhirComplexTypeBase):
     """
     RelatedArtifact
+        Related artifacts such as additional documentation, justification, or bibliographic references.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -53,6 +55,10 @@ class RelatedArtifact(FhirComplexTypeBase):
         resource: Optional[FhirCanonical] = None,
     ) -> None:
         """
+            Related artifacts such as additional documentation, justification, or
+        bibliographic references.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class ImplementationGuideParameter(FhirBackboneElementBase):
     """
     ImplementationGuide.Parameter
+        A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,10 @@ class ImplementationGuideParameter(FhirBackboneElementBase):
         value: FhirString,
     ) -> None:
         """
+            A set of rules of how a particular interoperability or standards problem is
+        solved - typically through the use of FHIR resources. This resource is used to
+        gather all the parts of an implementation guide into a logical whole and to
+        publish a computable definition of all the parts.
 
             :param id_: id of resource
             :param extension: extensions

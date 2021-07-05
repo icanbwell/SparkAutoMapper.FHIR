@@ -14,6 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class unsignedInt(FhirComplexTypeBase):
     """
     unsignedInt
+        An integer with a value that is not negative (e.g. >= 0)
+        If the element is present, it must have either a @value, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +26,12 @@ class unsignedInt(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            An integer with a value that is not negative (e.g. >= 0)
+            If the element is present, it must have either a @value, an @id referenced
+        from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

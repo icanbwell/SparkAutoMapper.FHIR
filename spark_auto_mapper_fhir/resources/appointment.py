@@ -112,6 +112,10 @@ if TYPE_CHECKING:
 class Appointment(FhirResourceBase):
     """
     Appointment
+        A booking of a healthcare event among patient(s), practitioner(s), related
+    person(s) and/or device(s) for a specific date/time. This may result in one or
+    more Encounter(s).
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -159,6 +163,10 @@ class Appointment(FhirResourceBase):
         requestedPeriod: Optional[FhirList[Period]] = None,
     ) -> None:
         """
+            A booking of a healthcare event among patient(s), practitioner(s), related
+        person(s) and/or device(s) for a specific date/time. This may result in one or
+        more Encounter(s).
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -85,6 +85,11 @@ if TYPE_CHECKING:
 class ImplementationGuide(FhirResourceBase):
     """
     ImplementationGuide
+        A set of rules of how a particular interoperability or standards problem is
+    solved - typically through the use of FHIR resources. This resource is used to
+    gather all the parts of an implementation guide into a logical whole and to
+    publish a computable definition of all the parts.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -118,6 +123,11 @@ class ImplementationGuide(FhirResourceBase):
         manifest: Optional[ImplementationGuideManifest] = None,
     ) -> None:
         """
+            A set of rules of how a particular interoperability or standards problem is
+        solved - typically through the use of FHIR resources. This resource is used to
+        gather all the parts of an implementation guide into a logical whole and to
+        publish a computable definition of all the parts.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

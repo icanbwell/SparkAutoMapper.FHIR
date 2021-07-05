@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class TestScriptAction2(FhirBackboneElementBase):
     """
     TestScript.Action2
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -33,10 +34,12 @@ class TestScriptAction2(FhirBackboneElementBase):
         operation: TestScriptOperation,
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param operation: An operation would involve a REST request to a server.
+            :param id_: id of resource
+            :param extension: extensions
+            :param operation: An operation would involve a REST request to a server.
         """
         super().__init__(
             id_=id_,

@@ -84,6 +84,10 @@ if TYPE_CHECKING:
 class Questionnaire(FhirResourceBase):
     """
     Questionnaire
+        A structured set of questions intended to guide the collection of answers from
+    end-users. Questionnaires provide detailed control over order, presentation,
+    phraseology and grouping to allow coherent, consistent data collection.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -119,6 +123,10 @@ class Questionnaire(FhirResourceBase):
         item: Optional[FhirList[QuestionnaireItem]] = None,
     ) -> None:
         """
+            A structured set of questions intended to guide the collection of answers from
+        end-users. Questionnaires provide detailed control over order, presentation,
+        phraseology and grouping to allow coherent, consistent data collection.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

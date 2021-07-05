@@ -26,6 +26,7 @@ if TYPE_CHECKING:
 class AccountCoverage(FhirBackboneElementBase):
     """
     Account.Coverage
+        A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
     """
 
     # noinspection PyPep8Naming
@@ -38,6 +39,8 @@ class AccountCoverage(FhirBackboneElementBase):
         priority: Optional[FhirPositiveInt] = None,
     ) -> None:
         """
+            A financial tool for tracking value accrued for a particular purpose.  In the
+        healthcare field, used to track charges for a patient, cost centers, etc.
 
             :param id_: id of resource
             :param extension: extensions

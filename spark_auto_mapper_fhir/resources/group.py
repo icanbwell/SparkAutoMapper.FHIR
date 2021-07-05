@@ -57,6 +57,11 @@ if TYPE_CHECKING:
 class Group(FhirResourceBase):
     """
     Group
+        Represents a defined collection of entities that may be discussed or acted
+    upon collectively but which are not expected to act collectively, and are not
+    formally or legally recognized; i.e. a collection of entities that isn't an
+    Organization.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -82,6 +87,11 @@ class Group(FhirResourceBase):
         member: Optional[FhirList[GroupMember]] = None,
     ) -> None:
         """
+            Represents a defined collection of entities that may be discussed or acted
+        upon collectively but which are not expected to act collectively, and are not
+        formally or legally recognized; i.e. a collection of entities that isn't an
+        Organization.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

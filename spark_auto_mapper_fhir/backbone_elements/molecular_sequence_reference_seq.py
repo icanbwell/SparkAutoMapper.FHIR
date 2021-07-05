@@ -50,6 +50,7 @@ if TYPE_CHECKING:
 class MolecularSequenceReferenceSeq(FhirBackboneElementBase):
     """
     MolecularSequence.ReferenceSeq
+        Raw data describing a biological sequence.
     """
 
     # noinspection PyPep8Naming
@@ -69,6 +70,7 @@ class MolecularSequenceReferenceSeq(FhirBackboneElementBase):
         windowEnd: Optional[FhirInteger] = None,
     ) -> None:
         """
+            Raw data describing a biological sequence.
 
             :param id_: id of resource
             :param extension: extensions

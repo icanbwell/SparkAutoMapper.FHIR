@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class EffectEvidenceSynthesisResultsByExposure(FhirBackboneElementBase):
     """
     EffectEvidenceSynthesis.ResultsByExposure
+        The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -54,6 +55,9 @@ class EffectEvidenceSynthesisResultsByExposure(FhirBackboneElementBase):
         riskEvidenceSynthesis: Reference[Union[RiskEvidenceSynthesis]],
     ) -> None:
         """
+            The EffectEvidenceSynthesis resource describes the difference in an outcome
+        between exposures states in a population where the effect estimate is derived
+        from a combination of research studies.
 
             :param id_: id of resource
             :param extension: extensions

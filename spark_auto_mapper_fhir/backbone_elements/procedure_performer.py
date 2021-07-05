@@ -41,6 +41,7 @@ if TYPE_CHECKING:
 class ProcedurePerformer(FhirBackboneElementBase):
     """
     Procedure.Performer
+        An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
     """
 
     # noinspection PyPep8Naming
@@ -63,6 +64,9 @@ class ProcedurePerformer(FhirBackboneElementBase):
         onBehalfOf: Optional[Reference[Union[Organization]]] = None,
     ) -> None:
         """
+            An action that is or was performed on or for a patient. This can be a physical
+        intervention like an operation, or less invasive like long term services,
+        counseling, or hypnotherapy.
 
             :param id_: id of resource
             :param extension: extensions

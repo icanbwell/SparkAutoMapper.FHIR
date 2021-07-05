@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class TestScriptCapability(FhirBackboneElementBase):
     """
     TestScript.Capability
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -47,6 +48,8 @@ class TestScriptCapability(FhirBackboneElementBase):
         capabilities: FhirCanonical,
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
             :param id_: id of resource
             :param extension: extensions

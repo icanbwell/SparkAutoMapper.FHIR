@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class LocationHoursOfOperation(FhirBackboneElementBase):
     """
     Location.HoursOfOperation
+        Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
     """
 
     # noinspection PyPep8Naming
@@ -41,6 +42,9 @@ class LocationHoursOfOperation(FhirBackboneElementBase):
         closingTime: Optional[FhirTime] = None,
     ) -> None:
         """
+            Details and position information for a physical place where services are
+        provided and resources and participants may be stored, found, contained, or
+        accommodated.
 
             :param id_: id of resource
             :param extension: extensions

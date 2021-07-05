@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class ConceptMapElement(FhirBackboneElementBase):
     """
     ConceptMap.Element
+        A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,9 @@ class ConceptMapElement(FhirBackboneElementBase):
         target: Optional[FhirList[ConceptMapTarget]] = None,
     ) -> None:
         """
+            A statement of relationships from one set of concepts to one or more other
+        concepts - either concepts in code systems, or data element/data element
+        concepts, or classes in class models.
 
             :param id_: id of resource
             :param extension: extensions

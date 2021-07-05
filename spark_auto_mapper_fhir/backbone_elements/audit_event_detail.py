@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class AuditEventDetail(FhirBackboneElementBase):
     """
     AuditEvent.Detail
+        A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
     """
 
     # noinspection PyPep8Naming
@@ -36,12 +37,15 @@ class AuditEventDetail(FhirBackboneElementBase):
         valueBase64Binary: Optional[base64Binary] = None,
     ) -> None:
         """
+            A record of an event made for purposes of maintaining a security log. Typical
+        uses include detection of intrusion attempts and monitoring for inappropriate
+        usage.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The type of extra detail provided in the value.
-        :param valueString: None
-        :param valueBase64Binary: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The type of extra detail provided in the value.
+            :param valueString: None
+            :param valueBase64Binary: None
         """
         super().__init__(
             id_=id_,

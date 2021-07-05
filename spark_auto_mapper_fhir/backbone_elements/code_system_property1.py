@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class CodeSystemProperty1(FhirBackboneElementBase):
     """
     CodeSystem.Property1
+        The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
     """
 
     # noinspection PyPep8Naming
@@ -58,17 +59,20 @@ class CodeSystemProperty1(FhirBackboneElementBase):
         valueDecimal: Optional[FhirDecimal] = None,
     ) -> None:
         """
+            The CodeSystem resource is used to declare the existence of and describe a
+        code system or code system supplement and its key properties, and optionally
+        define a part or all of its content.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: A code that is a reference to CodeSystem.property.code.
-        :param valueCode: None
-        :param valueCoding: None
-        :param valueString: None
-        :param valueInteger: None
-        :param valueBoolean: None
-        :param valueDateTime: None
-        :param valueDecimal: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: A code that is a reference to CodeSystem.property.code.
+            :param valueCode: None
+            :param valueCoding: None
+            :param valueString: None
+            :param valueInteger: None
+            :param valueBoolean: None
+            :param valueDateTime: None
+            :param valueDecimal: None
         """
         super().__init__(
             id_=id_,

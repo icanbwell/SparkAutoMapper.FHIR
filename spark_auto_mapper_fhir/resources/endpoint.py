@@ -65,6 +65,10 @@ if TYPE_CHECKING:
 class Endpoint(FhirResourceBase):
     """
     Endpoint
+        The technical details of an endpoint that can be used for electronic services,
+    such as for web services providing XDS.b or a REST endpoint for another FHIR
+    server. This may include any security context information.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -87,6 +91,10 @@ class Endpoint(FhirResourceBase):
         header: Optional[FhirList[FhirString]] = None,
     ) -> None:
         """
+            The technical details of an endpoint that can be used for electronic services,
+        such as for web services providing XDS.b or a REST endpoint for another FHIR
+        server. This may include any security context information.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

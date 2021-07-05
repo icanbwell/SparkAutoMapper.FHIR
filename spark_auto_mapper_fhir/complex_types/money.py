@@ -22,6 +22,8 @@ if TYPE_CHECKING:
 class Money(FhirComplexTypeBase):
     """
     Money
+        An amount of economic utility in some recognized currency.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -34,11 +36,14 @@ class Money(FhirComplexTypeBase):
         currency: Optional[CurrenciesCode] = None,
     ) -> None:
         """
+            An amount of economic utility in some recognized currency.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param value: Numerical value (with implicit precision).
-        :param currency: ISO 4217 Currency Code.
+            :param id_: id of resource
+            :param extension: extensions
+            :param value: Numerical value (with implicit precision).
+            :param currency: ISO 4217 Currency Code.
         """
         super().__init__(
             id_=id_,

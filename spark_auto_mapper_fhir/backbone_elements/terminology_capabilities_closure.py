@@ -20,6 +20,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesClosure(FhirBackboneElementBase):
     """
     TerminologyCapabilities.Closure
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -31,10 +32,13 @@ class TerminologyCapabilitiesClosure(FhirBackboneElementBase):
         translation: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param translation: If cross-system closure is supported.
+            :param id_: id of resource
+            :param extension: extensions
+            :param translation: If cross-system closure is supported.
         """
         super().__init__(
             id_=id_,

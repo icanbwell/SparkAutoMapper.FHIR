@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class MedicationRequestInitialFill(FhirBackboneElementBase):
     """
     MedicationRequest.InitialFill
+        An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
     """
 
     # noinspection PyPep8Naming
@@ -35,11 +36,16 @@ class MedicationRequestInitialFill(FhirBackboneElementBase):
         duration: Optional[Duration] = None,
     ) -> None:
         """
+            An order or request for both supply of the medication and the instructions for
+        administration of the medication to a patient. The resource is called
+        "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder"
+        to generalize the use across inpatient and outpatient settings, including care
+        plans, etc., and to harmonize with workflow patterns.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param quantity: The amount or quantity to provide as part of the first dispense.
-        :param duration: The length of time that the first dispense is expected to last.
+            :param id_: id of resource
+            :param extension: extensions
+            :param quantity: The amount or quantity to provide as part of the first dispense.
+            :param duration: The length of time that the first dispense is expected to last.
         """
         super().__init__(
             id_=id_,

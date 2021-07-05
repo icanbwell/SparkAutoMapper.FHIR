@@ -42,6 +42,7 @@ if TYPE_CHECKING:
 class SubstancePolymerRepeatUnit(FhirBackboneElementBase):
     """
     SubstancePolymer.RepeatUnit
+        Todo.
     """
 
     # noinspection PyPep8Naming
@@ -61,6 +62,7 @@ class SubstancePolymerRepeatUnit(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+        Todo.
 
         :param id_: id of resource
         :param extension: extensions

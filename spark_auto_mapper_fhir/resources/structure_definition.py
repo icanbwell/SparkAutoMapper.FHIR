@@ -108,6 +108,10 @@ if TYPE_CHECKING:
 class StructureDefinition(FhirResourceBase):
     """
     StructureDefinition
+        A definition of a FHIR structure. This resource is used to describe the
+    underlying resources, data types defined in FHIR, and also for describing
+    extensions and constraints on resources and data types.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -148,6 +152,10 @@ class StructureDefinition(FhirResourceBase):
         differential: Optional[StructureDefinitionDifferential] = None,
     ) -> None:
         """
+            A definition of a FHIR structure. This resource is used to describe the
+        underlying resources, data types defined in FHIR, and also for describing
+        extensions and constraints on resources and data types.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

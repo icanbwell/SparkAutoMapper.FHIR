@@ -127,6 +127,13 @@ if TYPE_CHECKING:
 class ResearchStudy(FhirResourceBase):
     """
     ResearchStudy
+        A process where a researcher or organization plans and then executes a series
+    of steps intended to increase the field of healthcare-related knowledge.  This
+    includes studies of safety, efficacy, comparative effectiveness and other
+    information about medications, devices, therapies and other interventional and
+    investigative techniques.  A ResearchStudy involves the gathering of
+    information about human or animal subjects.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -168,6 +175,13 @@ class ResearchStudy(FhirResourceBase):
         objective: Optional[FhirList[ResearchStudyObjective]] = None,
     ) -> None:
         """
+            A process where a researcher or organization plans and then executes a series
+        of steps intended to increase the field of healthcare-related knowledge.  This
+        includes studies of safety, efficacy, comparative effectiveness and other
+        information about medications, devices, therapies and other interventional and
+        investigative techniques.  A ResearchStudy involves the gathering of
+        information about human or animal subjects.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

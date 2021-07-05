@@ -32,6 +32,8 @@ _T = TypeVar("_T", bound=Union[FhirResourceBase])
 class Reference(FhirComplexTypeBase, Generic[_T]):
     """
     Reference
+        A reference from one resource to another.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -46,6 +48,9 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
         display: Optional[FhirString] = None,
     ) -> None:
         """
+            A reference from one resource to another.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

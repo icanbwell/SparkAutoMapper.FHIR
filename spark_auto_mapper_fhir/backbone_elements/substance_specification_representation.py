@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class SubstanceSpecificationRepresentation(FhirBackboneElementBase):
     """
     SubstanceSpecification.Representation
+        The detailed description of a substance, typically at a level beyond what is used for prescribing.
     """
 
     # noinspection PyPep8Naming
@@ -43,6 +44,8 @@ class SubstanceSpecificationRepresentation(FhirBackboneElementBase):
         attachment: Optional[Attachment] = None,
     ) -> None:
         """
+            The detailed description of a substance, typically at a level beyond what is
+        used for prescribing.
 
             :param id_: id of resource
             :param extension: extensions

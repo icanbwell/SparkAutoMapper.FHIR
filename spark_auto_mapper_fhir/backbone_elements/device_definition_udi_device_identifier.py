@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class DeviceDefinitionUdiDeviceIdentifier(FhirBackboneElementBase):
     """
     DeviceDefinition.UdiDeviceIdentifier
+        The characteristics, operational status and capabilities of a medical-related component of a medical device.
     """
 
     # noinspection PyPep8Naming
@@ -36,6 +37,8 @@ class DeviceDefinitionUdiDeviceIdentifier(FhirBackboneElementBase):
         jurisdiction: FhirUri,
     ) -> None:
         """
+            The characteristics, operational status and capabilities of a medical-related
+        component of a medical device.
 
             :param id_: id of resource
             :param extension: extensions

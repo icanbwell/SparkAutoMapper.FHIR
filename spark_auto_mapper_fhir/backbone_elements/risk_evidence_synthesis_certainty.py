@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 class RiskEvidenceSynthesisCertainty(FhirBackboneElementBase):
     """
     RiskEvidenceSynthesis.Certainty
+        The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -50,12 +51,15 @@ class RiskEvidenceSynthesisCertainty(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a
+        population plus exposure state where the risk estimate is derived from a
+        combination of research studies.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param rating: A rating of the certainty of the effect estimate.
-        :param note: A human-readable string to clarify or explain concepts about the resource.
-        :param certaintySubcomponent: A description of a component of the overall certainty.
+            :param id_: id of resource
+            :param extension: extensions
+            :param rating: A rating of the certainty of the effect estimate.
+            :param note: A human-readable string to clarify or explain concepts about the resource.
+            :param certaintySubcomponent: A description of a component of the overall certainty.
         """
         super().__init__(
             id_=id_,

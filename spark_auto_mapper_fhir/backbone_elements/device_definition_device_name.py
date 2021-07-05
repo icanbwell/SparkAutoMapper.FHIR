@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class DeviceDefinitionDeviceName(FhirBackboneElementBase):
     """
     DeviceDefinition.DeviceName
+        The characteristics, operational status and capabilities of a medical-related component of a medical device.
     """
 
     # noinspection PyPep8Naming
@@ -34,6 +35,8 @@ class DeviceDefinitionDeviceName(FhirBackboneElementBase):
         type_: DeviceNameTypeCode,
     ) -> None:
         """
+            The characteristics, operational status and capabilities of a medical-related
+        component of a medical device.
 
             :param id_: id of resource
             :param extension: extensions

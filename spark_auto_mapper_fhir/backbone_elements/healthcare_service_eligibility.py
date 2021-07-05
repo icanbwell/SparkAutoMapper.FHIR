@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class HealthcareServiceEligibility(FhirBackboneElementBase):
     """
     HealthcareService.Eligibility
+        The details of a healthcare service available at a location.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,7 @@ class HealthcareServiceEligibility(FhirBackboneElementBase):
         comment: Optional[FhirMarkdown] = None,
     ) -> None:
         """
+        The details of a healthcare service available at a location.
 
         :param id_: id of resource
         :param extension: extensions

@@ -74,6 +74,8 @@ if TYPE_CHECKING:
 class MedicinalProductAuthorization(FhirResourceBase):
     """
     MedicinalProductAuthorization
+        The regulatory authorization of a medicinal product.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -105,6 +107,8 @@ class MedicinalProductAuthorization(FhirResourceBase):
         procedure: Optional[MedicinalProductAuthorizationProcedure] = None,
     ) -> None:
         """
+            The regulatory authorization of a medicinal product.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

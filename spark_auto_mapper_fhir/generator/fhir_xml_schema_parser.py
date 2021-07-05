@@ -490,7 +490,7 @@ class FhirXmlSchemaParser:
 
             # pprint(result)
         fhir_entities: List[FhirEntity] = []
-        complex_types: List[ObjectifiedElement] = root["complexType"]
+        complex_types: ObjectifiedElement = root["complexType"]
         complex_type: ObjectifiedElement
         for complex_type in complex_types:
             complex_type_name: str = complex_type.get("name")
@@ -499,7 +499,7 @@ class FhirXmlSchemaParser:
                 cleaned_complex_type_name
             )
             print(f"========== {complex_type_name} ===========")
-            documentation_items: List[ObjectifiedElement] = (
+            documentation_items: ObjectifiedElement = (
                 complex_type["annotation"]["documentation"]
                 if hasattr(complex_type, "annotation")
                 else []
@@ -557,24 +557,22 @@ class FhirXmlSchemaParser:
         inner_complex_type: ObjectifiedElement,
     ) -> List[FhirProperty]:
         properties: List[ObjectifiedElement] = []
-        sequences: Union[ObjectifiedElement, List[ObjectifiedElement]] = (
+        sequences: ObjectifiedElement = (
             inner_complex_type["sequence"]
             if hasattr(inner_complex_type, "sequence")
             else None
         )
         if sequences:
-            for sequence_item in sequences:
+            for sequence_item in sequences.getchildren():
                 if hasattr(sequence_item, "element"):
-                    sequence_item_elements: Union[
-                        ObjectifiedElement, List[ObjectifiedElement]
-                    ] = sequence_item.element
+                    sequence_item_elements: ObjectifiedElement = sequence_item.element
                     properties.extend(sequence_item_elements)
-                if hasattr(sequence_item, "choice"):
-                    sequence_item_choices: Union[
-                        ObjectifiedElement, List[ObjectifiedElement]
-                    ] = sequence_item.choice
-                    choice_properties = [c["element"] for c in sequence_item_choices]
-                    properties.extend(choice_properties)
+                else:
+                    properties.append(sequence_item)
+                # if hasattr(sequence_item, "choice"):
+                #     sequence_item_choices: ObjectifiedElement = sequence_item.choice
+                #     choice_properties = [c["element"] for c in sequence_item_choices]
+                #     properties.extend(choice_properties)
 
         fhir_properties: List[FhirProperty] = []
         property_: ObjectifiedElement
@@ -715,7 +713,7 @@ class FhirXmlSchemaParser:
                 snapshot_element: ObjectifiedElement = structure_definition["snapshot"][
                     "element"
                 ]
-                types: List[ObjectifiedElement] = snapshot_element["type"]
+                types: ObjectifiedElement = snapshot_element["type"]
                 assert isinstance(types, OrderedDict)
 
                 # There are 3 main cases:
@@ -772,7 +770,7 @@ class FhirXmlSchemaParser:
                 snapshot_element: ObjectifiedElement = structure_definition["snapshot"][
                     "element"
                 ]
-                types: List[ObjectifiedElement] = snapshot_element["type"]
+                types: ObjectifiedElement = snapshot_element["type"]
                 type_: ObjectifiedElement
                 for type_ in types:
                     type_code_obj = type_["code"]
@@ -783,7 +781,7 @@ class FhirXmlSchemaParser:
                                 f'ASSERT: targetProfile not in {type_} for {snapshot_element["path"].get("value")}'
                             )
                         if hasattr(type_, "targetProfile"):
-                            target_profile_list: List[ObjectifiedElement] = type_[
+                            target_profile_list: ObjectifiedElement = type_[
                                 "targetProfile"
                             ]
                             target_profiles: List[str] = [
@@ -828,7 +826,7 @@ class FhirXmlSchemaParser:
                     "element"
                 ]
                 if hasattr(snapshot_element, "binding"):
-                    types: List[ObjectifiedElement] = snapshot_element["type"]
+                    types: ObjectifiedElement = snapshot_element["type"]
                     type_: ObjectifiedElement
                     if types:
                         type_ = types
@@ -837,9 +835,7 @@ class FhirXmlSchemaParser:
                             "CodeableConcept",
                             "code",
                         ]:
-                            bindings: List[ObjectifiedElement] = snapshot_element[
-                                "binding"
-                            ]
+                            bindings: ObjectifiedElement = snapshot_element["binding"]
                             binding: ObjectifiedElement
                             for binding in bindings:
                                 extension_code_list = binding["extension"]
@@ -926,7 +922,7 @@ class FhirXmlSchemaParser:
             value_set_url_list: List[str] = []
             fhir_concepts: List[FhirValueSetConcept] = []
             if hasattr(value_set, "concept"):
-                concepts: List[ObjectifiedElement] = value_set["concept"]
+                concepts: ObjectifiedElement = value_set["concept"]
                 concept: ObjectifiedElement
                 for concept in concepts:
                     fhir_concepts.append(
@@ -935,9 +931,7 @@ class FhirXmlSchemaParser:
                         )
                     )
             if hasattr(value_set, "compose"):
-                compose_includes: List[ObjectifiedElement] = value_set["compose"][
-                    "include"
-                ]
+                compose_includes: ObjectifiedElement = value_set["compose"]["include"]
                 compose_include: ObjectifiedElement
                 for compose_include in compose_includes:
                     is_code_system = hasattr(compose_include, "system")
@@ -1020,10 +1014,14 @@ class FhirXmlSchemaParser:
         concept: ObjectifiedElement, source: str, value_set_url: str
     ) -> FhirValueSetConcept:
         code: str = concept["code"].get("value")
-        display: str = concept["display"].get("value") if "display" in concept else code
+        display: str = (
+            concept["display"].get("value") if hasattr(concept, "display") else code
+        )
         cleaned_display: str = FhirXmlSchemaParser.clean_name(display)
         definition: Optional[str] = (
-            concept["definition"].get("value") if "definition" in concept else None
+            concept["definition"].get("value")
+            if hasattr(concept, "definition")
+            else None
         )
         return FhirValueSetConcept(
             code=code,
@@ -1082,7 +1080,7 @@ class FhirXmlSchemaParser:
             value_set_url_list: List[str] = []
             # value_set_url = None  # value_set["valueSet"]
             if hasattr(value_set, "concept"):
-                concepts_list: List[ObjectifiedElement] = value_set["concept"]
+                concepts_list: ObjectifiedElement = value_set["concept"]
                 if url not in value_set_url_list:
                     value_set_url_list.append(url)
                 concept: ObjectifiedElement
@@ -1090,13 +1088,13 @@ class FhirXmlSchemaParser:
                     code: str = str(concept["code"].get("value"))
                     display: str = str(
                         concept["display"].get("value")
-                        if "display" in concept
+                        if hasattr(concept, "display")
                         else concept["code"].get("value")
                     )
                     cleaned_display = FhirXmlSchemaParser.clean_name(display)
                     definition: Optional[str] = (
                         concept["definition"].get("value")
-                        if "definition" in concept
+                        if hasattr(concept, "definition")
                         else None
                     )
                     fhir_concepts.append(
@@ -1141,9 +1139,7 @@ class FhirXmlSchemaParser:
             fhir_concepts = []
             value_set_url_list = []
             if hasattr(value_set, "compose"):
-                compose_includes: List[ObjectifiedElement] = value_set["compose"][
-                    "include"
-                ]
+                compose_includes: ObjectifiedElement = value_set["compose"]["include"]
                 compose_include: ObjectifiedElement
                 for compose_include in compose_includes:
                     is_code_system = hasattr(compose_include, "system")
@@ -1202,7 +1198,7 @@ class FhirXmlSchemaParser:
         with open(value_sets_json_file, "rb") as file:
             contents: bytes = file.read()
             root: ObjectifiedElement = objectify.fromstring(contents)
-            entries: List[ObjectifiedElement] = root.entry
+            entries: ObjectifiedElement = root.entry
 
         value_set_entry: ObjectifiedElement
         for value_set_entry in entries:

@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class EncounterClassHistory(FhirBackboneElementBase):
     """
     Encounter.ClassHistory
+        An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
     """
 
     # noinspection PyPep8Naming
@@ -40,11 +41,13 @@ class EncounterClassHistory(FhirBackboneElementBase):
         period: Period,
     ) -> None:
         """
+            An interaction between a patient and healthcare provider(s) for the purpose of
+        providing healthcare service(s) or assessing the health status of a patient.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param class_: inpatient | outpatient | ambulatory | emergency +.
-        :param period: The time that the episode was in the specified class.
+            :param id_: id of resource
+            :param extension: extensions
+            :param class_: inpatient | outpatient | ambulatory | emergency +.
+            :param period: The time that the episode was in the specified class.
         """
         super().__init__(
             id_=id_,

@@ -56,6 +56,9 @@ if TYPE_CHECKING:
 class Practitioner(FhirResourceBase):
     """
     Practitioner
+        A person who is directly or indirectly involved in the provisioning of
+    healthcare.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -77,6 +80,9 @@ class Practitioner(FhirResourceBase):
         communication: Optional[FhirList[CodeableConcept[CommonLanguagesCode]]] = None,
     ) -> None:
         """
+            A person who is directly or indirectly involved in the provisioning of
+        healthcare.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

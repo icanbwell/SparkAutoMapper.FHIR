@@ -43,6 +43,7 @@ if TYPE_CHECKING:
 class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
     """
     MedicinalProduct.ManufacturingBusinessOperation
+        Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
     """
 
     # noinspection PyPep8Naming
@@ -59,15 +60,17 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
         regulator: Optional[Reference[Union[Organization]]] = None,
     ) -> None:
         """
+            Detailed definition of a medicinal product, typically for uses other than
+        direct patient care (e.g. regulatory use).
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param operationType: The type of manufacturing operation.
-        :param authorisationReferenceNumber: Regulatory authorization reference number.
-        :param effectiveDate: Regulatory authorization date.
-        :param confidentialityIndicator: To indicate if this proces is commercially confidential.
-        :param manufacturer: The manufacturer or establishment associated with the process.
-        :param regulator: A regulator which oversees the operation.
+            :param id_: id of resource
+            :param extension: extensions
+            :param operationType: The type of manufacturing operation.
+            :param authorisationReferenceNumber: Regulatory authorization reference number.
+            :param effectiveDate: Regulatory authorization date.
+            :param confidentialityIndicator: To indicate if this proces is commercially confidential.
+            :param manufacturer: The manufacturer or establishment associated with the process.
+            :param regulator: A regulator which oversees the operation.
         """
         super().__init__(
             id_=id_,

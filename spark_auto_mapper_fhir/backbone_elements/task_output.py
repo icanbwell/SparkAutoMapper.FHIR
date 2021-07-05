@@ -179,6 +179,7 @@ if TYPE_CHECKING:
 class TaskOutput(FhirBackboneElementBase):
     """
     Task.Output
+        A task to be performed.
     """
 
     # noinspection PyPep8Naming
@@ -240,6 +241,7 @@ class TaskOutput(FhirBackboneElementBase):
         valueMeta: Optional[Meta] = None,
     ) -> None:
         """
+        A task to be performed.
 
         :param id_: id of resource
         :param extension: extensions

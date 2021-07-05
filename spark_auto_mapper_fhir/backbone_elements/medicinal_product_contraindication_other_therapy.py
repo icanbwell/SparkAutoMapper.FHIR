@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class MedicinalProductContraindicationOtherTherapy(FhirBackboneElementBase):
     """
     MedicinalProductContraindication.OtherTherapy
+        The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
     """
 
     # noinspection PyPep8Naming
@@ -57,6 +58,8 @@ class MedicinalProductContraindicationOtherTherapy(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            The clinical particulars - indications, contraindications etc. of a medicinal
+        product, including for regulatory purposes.
 
             :param id_: id of resource
             :param extension: extensions

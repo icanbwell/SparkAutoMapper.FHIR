@@ -131,6 +131,9 @@ if TYPE_CHECKING:
 class Encounter(FhirResourceBase):
     """
     Encounter
+        An interaction between a patient and healthcare provider(s) for the purpose of
+    providing healthcare service(s) or assessing the health status of a patient.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -173,6 +176,9 @@ class Encounter(FhirResourceBase):
         partOf: Optional[Reference[Union[Encounter]]] = None,
     ) -> None:
         """
+            An interaction between a patient and healthcare provider(s) for the purpose of
+        providing healthcare service(s) or assessing the health status of a patient.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

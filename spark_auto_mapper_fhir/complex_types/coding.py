@@ -31,6 +31,8 @@ _T = TypeVar("_T", bound=Union[FhirValueSetBase])
 class Coding(FhirComplexTypeBase, Generic[_T]):
     """
     Coding
+        A reference to a code defined by a terminology system.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -46,6 +48,9 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
         userSelected: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            A reference to a code defined by a terminology system.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

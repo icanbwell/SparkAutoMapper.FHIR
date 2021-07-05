@@ -55,6 +55,8 @@ if TYPE_CHECKING:
 class CompartmentDefinition(FhirResourceBase):
     """
     CompartmentDefinition
+        A compartment definition that defines how resources are accessed on a server.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -80,6 +82,8 @@ class CompartmentDefinition(FhirResourceBase):
         resource: Optional[FhirList[CompartmentDefinitionResource]] = None,
     ) -> None:
         """
+            A compartment definition that defines how resources are accessed on a server.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

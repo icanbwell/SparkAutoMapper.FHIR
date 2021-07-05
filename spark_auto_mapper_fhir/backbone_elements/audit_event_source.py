@@ -41,6 +41,7 @@ if TYPE_CHECKING:
 class AuditEventSource(FhirBackboneElementBase):
     """
     AuditEvent.Source
+        A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
     """
 
     # noinspection PyPep8Naming
@@ -63,6 +64,9 @@ class AuditEventSource(FhirBackboneElementBase):
         type_: Optional[FhirList[Coding[AuditEventSourceTypeCode]]] = None,
     ) -> None:
         """
+            A record of an event made for purposes of maintaining a security log. Typical
+        uses include detection of intrusion attempts and monitoring for inappropriate
+        usage.
 
             :param id_: id of resource
             :param extension: extensions

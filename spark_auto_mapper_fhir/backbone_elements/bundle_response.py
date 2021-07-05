@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class BundleResponse(FhirBackboneElementBase):
     """
     Bundle.Response
+        A container for a collection of resources.
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +46,7 @@ class BundleResponse(FhirBackboneElementBase):
         outcome: Optional[ResourceContainer] = None,
     ) -> None:
         """
+            A container for a collection of resources.
 
             :param id_: id of resource
             :param extension: extensions

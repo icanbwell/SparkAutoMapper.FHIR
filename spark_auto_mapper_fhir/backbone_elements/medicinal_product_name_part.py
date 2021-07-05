@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class MedicinalProductNamePart(FhirBackboneElementBase):
     """
     MedicinalProduct.NamePart
+        Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
     """
 
     # noinspection PyPep8Naming
@@ -40,11 +41,13 @@ class MedicinalProductNamePart(FhirBackboneElementBase):
         type_: Coding[GenericTypeCode],
     ) -> None:
         """
+            Detailed definition of a medicinal product, typically for uses other than
+        direct patient care (e.g. regulatory use).
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param part: A fragment of a product name.
-        :param type_: Idenifying type for this part of the name (e.g. strength part).
+            :param id_: id of resource
+            :param extension: extensions
+            :param part: A fragment of a product name.
+            :param type_: Idenifying type for this part of the name (e.g. strength part).
         """
         super().__init__(
             id_=id_,

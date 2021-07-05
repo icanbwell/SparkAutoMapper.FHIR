@@ -50,6 +50,8 @@ if TYPE_CHECKING:
 class UsageContext(FhirComplexTypeBase):
     """
     UsageContext
+        Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -77,6 +79,12 @@ class UsageContext(FhirComplexTypeBase):
         ] = None,
     ) -> None:
         """
+            Specifies clinical/business/etc. metadata that can be used to retrieve, index
+        and/or categorize an artifact. This metadata can either be specific to the
+        applicable population (e.g., age category, DRG) or the specific context of
+        care (e.g., venue, care setting, provider of care).
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

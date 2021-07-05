@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class MeasureReportComponent(FhirBackboneElementBase):
     """
     MeasureReport.Component
+        The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
     """
 
     # noinspection PyPep8Naming
@@ -42,11 +43,14 @@ class MeasureReportComponent(FhirBackboneElementBase):
         value: CodeableConcept[GenericTypeCode],
     ) -> None:
         """
+            The MeasureReport resource contains the results of the calculation of a
+        measure; and optionally a reference to the resources involved in that
+        calculation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: The code for the stratum component value.
-        :param value: The stratum component value.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: The code for the stratum component value.
+            :param value: The stratum component value.
         """
         super().__init__(
             id_=id_,

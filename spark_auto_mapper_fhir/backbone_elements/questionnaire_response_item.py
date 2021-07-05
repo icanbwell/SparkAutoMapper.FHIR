@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class QuestionnaireResponseItem(FhirBackboneElementBase):
     """
     QuestionnaireResponse.Item
+        A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,9 @@ class QuestionnaireResponseItem(FhirBackboneElementBase):
         item: Optional[FhirList[QuestionnaireResponseItem]] = None,
     ) -> None:
         """
+            A structured set of questions and their answers. The questions are ordered and
+        grouped into coherent subsets, corresponding to the structure of the grouping
+        of the questionnaire being responded to.
 
             :param id_: id of resource
             :param extension: extensions

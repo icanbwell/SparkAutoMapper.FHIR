@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class EffectEvidenceSynthesisSampleSize(FhirBackboneElementBase):
     """
     EffectEvidenceSynthesis.SampleSize
+        The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -36,12 +37,15 @@ class EffectEvidenceSynthesisSampleSize(FhirBackboneElementBase):
         numberOfParticipants: Optional[FhirInteger] = None,
     ) -> None:
         """
+            The EffectEvidenceSynthesis resource describes the difference in an outcome
+        between exposures states in a population where the effect estimate is derived
+        from a combination of research studies.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param description: Human-readable summary of sample size.
-        :param numberOfStudies: Number of studies included in this evidence synthesis.
-        :param numberOfParticipants: Number of participants included in this evidence synthesis.
+            :param id_: id of resource
+            :param extension: extensions
+            :param description: Human-readable summary of sample size.
+            :param numberOfStudies: Number of studies included in this evidence synthesis.
+            :param numberOfParticipants: Number of participants included in this evidence synthesis.
         """
         super().__init__(
             id_=id_,

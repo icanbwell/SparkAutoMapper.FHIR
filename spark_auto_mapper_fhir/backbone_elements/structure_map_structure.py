@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class StructureMapStructure(FhirBackboneElementBase):
     """
     StructureMap.Structure
+        A Map of relationships between 2 structures that can be used to transform data.
     """
 
     # noinspection PyPep8Naming
@@ -43,13 +44,15 @@ class StructureMapStructure(FhirBackboneElementBase):
         documentation: Optional[FhirString] = None,
     ) -> None:
         """
+            A Map of relationships between 2 structures that can be used to transform
+        data.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param url: The canonical reference to the structure.
-        :param mode: How the referenced structure is used in this mapping.
-        :param alias: The name used for this type in the map.
-        :param documentation: Documentation that describes how the structure is used in the mapping.
+            :param id_: id of resource
+            :param extension: extensions
+            :param url: The canonical reference to the structure.
+            :param mode: How the referenced structure is used in this mapping.
+            :param alias: The name used for this type in the map.
+            :param documentation: Documentation that describes how the structure is used in the mapping.
         """
         super().__init__(
             id_=id_,

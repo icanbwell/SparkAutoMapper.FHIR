@@ -20,6 +20,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesTranslation(FhirBackboneElementBase):
     """
     TerminologyCapabilities.Translation
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -31,10 +32,13 @@ class TerminologyCapabilitiesTranslation(FhirBackboneElementBase):
         needsMap: FhirBoolean,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param needsMap: Whether the client must identify the map.
+            :param id_: id of resource
+            :param extension: extensions
+            :param needsMap: Whether the client must identify the map.
         """
         super().__init__(
             id_=id_,

@@ -30,6 +30,8 @@ _T = TypeVar("_T", bound=Union[FhirValueSetBase])
 class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
     """
     CodeableConcept
+        A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +44,10 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
         text: Optional[FhirString] = None,
     ) -> None:
         """
+            A concept that may be defined by a formal reference to a terminology or
+        ontology or may be provided by text.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

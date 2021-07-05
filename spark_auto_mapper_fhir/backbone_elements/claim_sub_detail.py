@@ -76,6 +76,7 @@ if TYPE_CHECKING:
 class ClaimSubDetail(FhirBackboneElementBase):
     """
     Claim.SubDetail
+        A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
     """
 
     # noinspection PyPep8Naming
@@ -99,6 +100,9 @@ class ClaimSubDetail(FhirBackboneElementBase):
         udi: Optional[FhirList[Reference[Union[Device]]]] = None,
     ) -> None:
         """
+            A provider issued list of professional services and products which have been
+        provided, or are to be provided, to a patient which is sent to an insurer for
+        reimbursement.
 
             :param id_: id of resource
             :param extension: extensions

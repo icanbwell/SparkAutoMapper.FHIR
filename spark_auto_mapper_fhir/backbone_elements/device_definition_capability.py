@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class DeviceDefinitionCapability(FhirBackboneElementBase):
     """
     DeviceDefinition.Capability
+        The characteristics, operational status and capabilities of a medical-related component of a medical device.
     """
 
     # noinspection PyPep8Naming
@@ -42,11 +43,13 @@ class DeviceDefinitionCapability(FhirBackboneElementBase):
         description: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
     ) -> None:
         """
+            The characteristics, operational status and capabilities of a medical-related
+        component of a medical device.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Type of capability.
-        :param description: Description of capability.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Type of capability.
+            :param description: Description of capability.
         """
         super().__init__(
             id_=id_,

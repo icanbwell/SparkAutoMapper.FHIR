@@ -45,6 +45,7 @@ if TYPE_CHECKING:
 class ObservationReferenceRange(FhirBackboneElementBase):
     """
     Observation.ReferenceRange
+        Measurements and simple assertions made about a patient, device or other subject.
     """
 
     # noinspection PyPep8Naming
@@ -65,6 +66,8 @@ class ObservationReferenceRange(FhirBackboneElementBase):
         text: Optional[FhirString] = None,
     ) -> None:
         """
+            Measurements and simple assertions made about a patient, device or other
+        subject.
 
             :param id_: id of resource
             :param extension: extensions

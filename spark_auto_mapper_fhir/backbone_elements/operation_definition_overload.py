@@ -21,6 +21,7 @@ if TYPE_CHECKING:
 class OperationDefinitionOverload(FhirBackboneElementBase):
     """
     OperationDefinition.Overload
+        A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
     """
 
     # noinspection PyPep8Naming
@@ -33,11 +34,13 @@ class OperationDefinitionOverload(FhirBackboneElementBase):
         comment: Optional[FhirString] = None,
     ) -> None:
         """
+            A formal computable definition of an operation (on the RESTful interface) or a
+        named query (using the search interaction).
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param parameterName: Name of parameter to include in overload.
-        :param comment: Comments to go on overload.
+            :param id_: id of resource
+            :param extension: extensions
+            :param parameterName: Name of parameter to include in overload.
+            :param comment: Comments to go on overload.
         """
         super().__init__(
             id_=id_,

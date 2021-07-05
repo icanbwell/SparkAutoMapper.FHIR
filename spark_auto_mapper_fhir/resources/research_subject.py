@@ -47,6 +47,9 @@ if TYPE_CHECKING:
 class ResearchSubject(FhirResourceBase):
     """
     ResearchSubject
+        A physical entity which is the primary unit of operational and/or
+    administrative interest in a study.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -66,6 +69,9 @@ class ResearchSubject(FhirResourceBase):
         consent: Optional[Reference[Union[Consent]]] = None,
     ) -> None:
         """
+            A physical entity which is the primary unit of operational and/or
+        administrative interest in a study.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -113,6 +113,10 @@ if TYPE_CHECKING:
 class RiskEvidenceSynthesis(FhirResourceBase):
     """
     RiskEvidenceSynthesis
+        The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a
+    population plus exposure state where the risk estimate is derived from a
+    combination of research studies.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -157,6 +161,10 @@ class RiskEvidenceSynthesis(FhirResourceBase):
         certainty: Optional[FhirList[RiskEvidenceSynthesisCertainty]] = None,
     ) -> None:
         """
+            The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a
+        population plus exposure state where the risk estimate is derived from a
+        combination of research studies.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

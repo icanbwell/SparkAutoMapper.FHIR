@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class MedicinalProductPharmaceuticalCharacteristics(FhirBackboneElementBase):
     """
     MedicinalProductPharmaceutical.Characteristics
+        A pharmaceutical product described in terms of its composition and dose form.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,7 @@ class MedicinalProductPharmaceuticalCharacteristics(FhirBackboneElementBase):
         status: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """
+        A pharmaceutical product described in terms of its composition and dose form.
 
         :param id_: id of resource
         :param extension: extensions

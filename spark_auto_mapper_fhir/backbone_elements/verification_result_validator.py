@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class VerificationResultValidator(FhirBackboneElementBase):
     """
     VerificationResult.Validator
+        Describes validation requirements, source(s), status and dates for one or more elements.
     """
 
     # noinspection PyPep8Naming
@@ -41,12 +42,14 @@ class VerificationResultValidator(FhirBackboneElementBase):
         attestationSignature: Optional[Signature] = None,
     ) -> None:
         """
+            Describes validation requirements, source(s), status and dates for one or more
+        elements.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param organization: Reference to the organization validating information.
-        :param identityCertificate: A digital identity certificate associated with the validator.
-        :param attestationSignature: Signed assertion by the validator that they have validated the information.
+            :param id_: id of resource
+            :param extension: extensions
+            :param organization: Reference to the organization validating information.
+            :param identityCertificate: A digital identity certificate associated with the validator.
+            :param attestationSignature: Signed assertion by the validator that they have validated the information.
         """
         super().__init__(
             id_=id_,

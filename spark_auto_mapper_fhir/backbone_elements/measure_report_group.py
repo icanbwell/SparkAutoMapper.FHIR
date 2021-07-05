@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class MeasureReportGroup(FhirBackboneElementBase):
     """
     MeasureReport.Group
+        The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
     """
 
     # noinspection PyPep8Naming
@@ -52,6 +53,9 @@ class MeasureReportGroup(FhirBackboneElementBase):
         stratifier: Optional[FhirList[MeasureReportStratifier]] = None,
     ) -> None:
         """
+            The MeasureReport resource contains the results of the calculation of a
+        measure; and optionally a reference to the resources involved in that
+        calculation.
 
             :param id_: id of resource
             :param extension: extensions

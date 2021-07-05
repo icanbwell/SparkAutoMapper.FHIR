@@ -52,6 +52,7 @@ if TYPE_CHECKING:
 class CarePlanActivity(FhirBackboneElementBase):
     """
     CarePlan.Activity
+        Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
     """
 
     # noinspection PyPep8Naming
@@ -83,6 +84,9 @@ class CarePlanActivity(FhirBackboneElementBase):
         detail: Optional[CarePlanDetail] = None,
     ) -> None:
         """
+            Describes the intention of how one or more practitioners intend to deliver
+        care for a particular patient, group or community for a period of time,
+        possibly limited to care for a specific condition or set of conditions.
 
             :param id_: id of resource
             :param extension: extensions

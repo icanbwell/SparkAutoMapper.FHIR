@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class base64Binary(FhirComplexTypeBase):
     """
     base64Binary
+        A stream of bytes
+        A stream of bytes, base64 encoded
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,6 +27,9 @@ class base64Binary(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+        A stream of bytes
+        A stream of bytes, base64 encoded
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param extension: extensions

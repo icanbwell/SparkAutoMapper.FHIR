@@ -41,6 +41,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeDrugCharacteristic(FhirBackboneElementBase):
     """
     MedicationKnowledge.DrugCharacteristic
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -58,6 +59,7 @@ class MedicationKnowledgeDrugCharacteristic(FhirBackboneElementBase):
         valueBase64Binary: Optional[base64Binary] = None,
     ) -> None:
         """
+            Information about a medication that is used to support knowledge.
 
             :param id_: id of resource
             :param extension: extensions

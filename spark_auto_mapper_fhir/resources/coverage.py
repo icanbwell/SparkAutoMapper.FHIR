@@ -81,6 +81,9 @@ if TYPE_CHECKING:
 class Coverage(FhirResourceBase):
     """
     Coverage
+        Financial instrument which may be used to reimburse or pay for health care
+    products and services. Includes both insurance and self-payment.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -111,6 +114,9 @@ class Coverage(FhirResourceBase):
         contract: Optional[FhirList[Reference[Union[Contract]]]] = None,
     ) -> None:
         """
+            Financial instrument which may be used to reimburse or pay for health care
+        products and services. Includes both insurance and self-payment.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

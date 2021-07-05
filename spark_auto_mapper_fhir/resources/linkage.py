@@ -32,6 +32,9 @@ if TYPE_CHECKING:
 class Linkage(FhirResourceBase):
     """
     Linkage
+        Identifies two or more records (resource instances) that refer to the same
+    real-world "occurrence".
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -48,6 +51,9 @@ class Linkage(FhirResourceBase):
         item: FhirList[LinkageItem],
     ) -> None:
         """
+            Identifies two or more records (resource instances) that refer to the same
+        real-world "occurrence".
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

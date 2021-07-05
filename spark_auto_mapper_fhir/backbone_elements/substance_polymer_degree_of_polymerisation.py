@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class SubstancePolymerDegreeOfPolymerisation(FhirBackboneElementBase):
     """
     SubstancePolymer.DegreeOfPolymerisation
+        Todo.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,7 @@ class SubstancePolymerDegreeOfPolymerisation(FhirBackboneElementBase):
         amount: Optional[SubstanceAmount] = None,
     ) -> None:
         """
+        Todo.
 
         :param id_: id of resource
         :param extension: extensions

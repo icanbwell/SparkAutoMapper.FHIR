@@ -41,6 +41,7 @@ if TYPE_CHECKING:
 class MedicationRequestDispenseRequest(FhirBackboneElementBase):
     """
     MedicationRequest.DispenseRequest
+        An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
     """
 
     # noinspection PyPep8Naming
@@ -58,6 +59,11 @@ class MedicationRequestDispenseRequest(FhirBackboneElementBase):
         performer: Optional[Reference[Union[Organization]]] = None,
     ) -> None:
         """
+            An order or request for both supply of the medication and the instructions for
+        administration of the medication to a patient. The resource is called
+        "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder"
+        to generalize the use across inpatient and outpatient settings, including care
+        plans, etc., and to harmonize with workflow patterns.
 
             :param id_: id of resource
             :param extension: extensions

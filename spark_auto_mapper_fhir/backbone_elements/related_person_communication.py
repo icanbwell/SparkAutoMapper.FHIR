@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class RelatedPersonCommunication(FhirBackboneElementBase):
     """
     RelatedPerson.Communication
+        Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,9 @@ class RelatedPersonCommunication(FhirBackboneElementBase):
         preferred: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            Information about a person that is involved in the care for a patient, but who
+        is not the target of healthcare, nor has a formal responsibility in the care
+        process.
 
             :param id_: id of resource
             :param extension: extensions

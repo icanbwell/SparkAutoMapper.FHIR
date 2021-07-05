@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class FhirCanonical(FhirComplexTypeBase):
     """
     canonical
+        A URI that is a reference to a canonical URL on a FHIR resource
+        see [Canonical References](references.html#canonical)
+        If the element is present, it must have either a @value, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +27,13 @@ class FhirCanonical(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            A URI that is a reference to a canonical URL on a FHIR resource
+            see [Canonical References](references.html#canonical)
+            If the element is present, it must have either a @value, an @id referenced
+        from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

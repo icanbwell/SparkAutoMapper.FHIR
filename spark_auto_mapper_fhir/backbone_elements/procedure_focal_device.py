@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class ProcedureFocalDevice(FhirBackboneElementBase):
     """
     Procedure.FocalDevice
+        An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
     """
 
     # noinspection PyPep8Naming
@@ -45,11 +46,14 @@ class ProcedureFocalDevice(FhirBackboneElementBase):
         manipulated: Reference[Union[Device]],
     ) -> None:
         """
+            An action that is or was performed on or for a patient. This can be a physical
+        intervention like an operation, or less invasive like long term services,
+        counseling, or hypnotherapy.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param action: The kind of change that happened to the device during the procedure.
-        :param manipulated: The device that was manipulated (changed) during the procedure.
+            :param id_: id of resource
+            :param extension: extensions
+            :param action: The kind of change that happened to the device during the procedure.
+            :param manipulated: The device that was manipulated (changed) during the procedure.
         """
         super().__init__(
             id_=id_,

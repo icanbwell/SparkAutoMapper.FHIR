@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class MedicinalProductPackagedBatchIdentifier(FhirBackboneElementBase):
     """
     MedicinalProductPackaged.BatchIdentifier
+        A medicinal product in a container or package.
     """
 
     # noinspection PyPep8Naming
@@ -34,6 +35,7 @@ class MedicinalProductPackagedBatchIdentifier(FhirBackboneElementBase):
         immediatePackaging: Optional[Identifier] = None,
     ) -> None:
         """
+        A medicinal product in a container or package.
 
         :param id_: id of resource
         :param extension: extensions

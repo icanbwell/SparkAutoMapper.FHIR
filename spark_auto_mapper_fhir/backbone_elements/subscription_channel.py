@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class SubscriptionChannel(FhirBackboneElementBase):
     """
     Subscription.Channel
+        The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +46,11 @@ class SubscriptionChannel(FhirBackboneElementBase):
         header: Optional[FhirList[FhirString]] = None,
     ) -> None:
         """
+            The subscription resource is used to define a push-based subscription from a
+        server to another system. Once a subscription is registered with the server,
+        the server checks every resource that is created or updated, and if the
+        resource matches the given criteria, it sends a message on the defined
+        "channel" so that another system can take an appropriate action.
 
             :param id_: id of resource
             :param extension: extensions

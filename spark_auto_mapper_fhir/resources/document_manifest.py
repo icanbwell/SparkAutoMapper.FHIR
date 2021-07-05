@@ -67,6 +67,9 @@ if TYPE_CHECKING:
 class DocumentManifest(FhirResourceBase):
     """
     DocumentManifest
+        A collection of documents compiled for a purpose together with metadata that
+    applies to the collection.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -117,6 +120,9 @@ class DocumentManifest(FhirResourceBase):
         related: Optional[FhirList[DocumentManifestRelated]] = None,
     ) -> None:
         """
+            A collection of documents compiled for a purpose together with metadata that
+        applies to the collection.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

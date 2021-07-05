@@ -74,6 +74,8 @@ if TYPE_CHECKING:
 class ExampleScenario(FhirResourceBase):
     """
     ExampleScenario
+        Example of workflow instance.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -104,6 +106,8 @@ class ExampleScenario(FhirResourceBase):
         workflow: Optional[FhirList[FhirCanonical]] = None,
     ) -> None:
         """
+            Example of workflow instance.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

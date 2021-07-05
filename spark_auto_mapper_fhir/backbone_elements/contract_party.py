@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class ContractParty(FhirBackboneElementBase):
     """
     Contract.Party
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -64,11 +65,13 @@ class ContractParty(FhirBackboneElementBase):
         role: CodeableConcept[ContractResourcePartyRoleCodesCode],
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param reference: Participant in the offer.
-        :param role: How the party participates in the offer.
+            :param id_: id of resource
+            :param extension: extensions
+            :param reference: Participant in the offer.
+            :param role: How the party participates in the offer.
         """
         super().__init__(
             id_=id_,

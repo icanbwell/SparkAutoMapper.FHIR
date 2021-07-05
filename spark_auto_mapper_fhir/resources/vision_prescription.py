@@ -50,6 +50,9 @@ if TYPE_CHECKING:
 class VisionPrescription(FhirResourceBase):
     """
     VisionPrescription
+        An authorization for the provision of glasses and/or contact lenses to a
+    patient.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -69,6 +72,9 @@ class VisionPrescription(FhirResourceBase):
         lensSpecification: FhirList[VisionPrescriptionLensSpecification],
     ) -> None:
         """
+            An authorization for the provision of glasses and/or contact lenses to a
+        patient.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

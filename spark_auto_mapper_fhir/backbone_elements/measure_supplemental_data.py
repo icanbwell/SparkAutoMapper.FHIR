@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class MeasureSupplementalData(FhirBackboneElementBase):
     """
     Measure.SupplementalData
+        The Measure resource provides the definition of a quality measure.
     """
 
     # noinspection PyPep8Naming
@@ -52,6 +53,7 @@ class MeasureSupplementalData(FhirBackboneElementBase):
         criteria: Expression,
     ) -> None:
         """
+            The Measure resource provides the definition of a quality measure.
 
             :param id_: id of resource
             :param extension: extensions

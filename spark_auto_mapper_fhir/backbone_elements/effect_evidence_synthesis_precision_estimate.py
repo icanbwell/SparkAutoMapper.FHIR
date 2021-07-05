@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class EffectEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
     """
     EffectEvidenceSynthesis.PrecisionEstimate
+        The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -47,13 +48,16 @@ class EffectEvidenceSynthesisPrecisionEstimate(FhirBackboneElementBase):
         to: Optional[FhirDecimal] = None,
     ) -> None:
         """
+            The EffectEvidenceSynthesis resource describes the difference in an outcome
+        between exposures states in a population where the effect estimate is derived
+        from a combination of research studies.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Examples include confidence interval and interquartile range.
-        :param level: Use 95 for a 95% confidence interval.
-        :param from_: Lower bound of confidence interval.
-        :param to: Upper bound of confidence interval.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Examples include confidence interval and interquartile range.
+            :param level: Use 95 for a 95% confidence interval.
+            :param from_: Lower bound of confidence interval.
+            :param to: Upper bound of confidence interval.
         """
         super().__init__(
             id_=id_,

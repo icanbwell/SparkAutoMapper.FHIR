@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 class SpecimenDefinitionHandling(FhirBackboneElementBase):
     """
     SpecimenDefinition.Handling
+        A kind of specimen with associated set of requirements.
     """
 
     # noinspection PyPep8Naming
@@ -52,6 +53,7 @@ class SpecimenDefinitionHandling(FhirBackboneElementBase):
         instruction: Optional[FhirString] = None,
     ) -> None:
         """
+            A kind of specimen with associated set of requirements.
 
             :param id_: id of resource
             :param extension: extensions

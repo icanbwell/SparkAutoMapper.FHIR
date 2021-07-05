@@ -103,6 +103,10 @@ if TYPE_CHECKING:
 class TerminologyCapabilities(FhirResourceBase):
     """
     TerminologyCapabilities
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+    of a FHIR Terminology Server that may be used as a statement of actual server
+    functionality or a statement of required or desired server implementation.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -140,6 +144,10 @@ class TerminologyCapabilities(FhirResourceBase):
         closure: Optional[TerminologyCapabilitiesClosure] = None,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

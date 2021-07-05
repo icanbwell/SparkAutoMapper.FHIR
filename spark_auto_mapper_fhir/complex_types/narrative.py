@@ -19,6 +19,8 @@ if TYPE_CHECKING:
 class Narrative(FhirComplexTypeBase):
     """
     Narrative
+        A human-readable summary of the resource conveying the essential clinical and business information for the resource.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -30,6 +32,10 @@ class Narrative(FhirComplexTypeBase):
         status: NarrativeStatusCode,
     ) -> None:
         """
+            A human-readable summary of the resource conveying the essential clinical and
+        business information for the resource.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

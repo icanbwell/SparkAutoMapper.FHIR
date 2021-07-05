@@ -70,6 +70,10 @@ if TYPE_CHECKING:
 class QuestionnaireResponse(FhirResourceBase):
     """
     QuestionnaireResponse
+        A structured set of questions and their answers. The questions are ordered and
+    grouped into coherent subsets, corresponding to the structure of the grouping
+    of the questionnaire being responded to.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -105,6 +109,10 @@ class QuestionnaireResponse(FhirResourceBase):
         item: Optional[FhirList[QuestionnaireResponseItem]] = None,
     ) -> None:
         """
+            A structured set of questions and their answers. The questions are ordered and
+        grouped into coherent subsets, corresponding to the structure of the grouping
+        of the questionnaire being responded to.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

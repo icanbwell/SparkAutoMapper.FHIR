@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 class NutritionOrderTexture(FhirBackboneElementBase):
     """
     NutritionOrder.Texture
+        A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
     """
 
     # noinspection PyPep8Naming
@@ -48,6 +49,8 @@ class NutritionOrderTexture(FhirBackboneElementBase):
         foodType: Optional[CodeableConcept[TextureModifiedFoodTypeCodesCode]] = None,
     ) -> None:
         """
+            A request to supply a diet, formula feeding (enteral) or oral nutritional
+        supplement to a patient/resident.
 
             :param id_: id of resource
             :param extension: extensions

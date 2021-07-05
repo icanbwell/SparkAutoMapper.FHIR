@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class SubstanceSpecificationIsotope(FhirBackboneElementBase):
     """
     SubstanceSpecification.Isotope
+        The detailed description of a substance, typically at a level beyond what is used for prescribing.
     """
 
     # noinspection PyPep8Naming
@@ -55,6 +56,8 @@ class SubstanceSpecificationIsotope(FhirBackboneElementBase):
         molecularWeight: Optional[SubstanceSpecificationMolecularWeight] = None,
     ) -> None:
         """
+            The detailed description of a substance, typically at a level beyond what is
+        used for prescribing.
 
             :param id_: id of resource
             :param extension: extensions

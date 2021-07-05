@@ -61,6 +61,8 @@ if TYPE_CHECKING:
 class Schedule(FhirResourceBase):
     """
     Schedule
+        A container for slots of time that may be available for booking appointments.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -96,6 +98,8 @@ class Schedule(FhirResourceBase):
         comment: Optional[FhirString] = None,
     ) -> None:
         """
+            A container for slots of time that may be available for booking appointments.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

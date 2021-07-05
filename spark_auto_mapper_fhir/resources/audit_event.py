@@ -73,6 +73,10 @@ if TYPE_CHECKING:
 class AuditEvent(FhirResourceBase):
     """
     AuditEvent
+        A record of an event made for purposes of maintaining a security log. Typical
+    uses include detection of intrusion attempts and monitoring for inappropriate
+    usage.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -95,6 +99,10 @@ class AuditEvent(FhirResourceBase):
         entity: Optional[FhirList[AuditEventEntity]] = None,
     ) -> None:
         """
+            A record of an event made for purposes of maintaining a security log. Typical
+        uses include detection of intrusion attempts and monitoring for inappropriate
+        usage.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

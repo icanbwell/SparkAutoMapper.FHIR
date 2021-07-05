@@ -53,6 +53,7 @@ if TYPE_CHECKING:
 class ContractContentDefinition(FhirBackboneElementBase):
     """
     Contract.ContentDefinition
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -73,6 +74,8 @@ class ContractContentDefinition(FhirBackboneElementBase):
         copyright: Optional[FhirMarkdown] = None,
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
             :param id_: id of resource
             :param extension: extensions

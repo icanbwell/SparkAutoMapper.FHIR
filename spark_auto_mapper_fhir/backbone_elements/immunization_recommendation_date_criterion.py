@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class ImmunizationRecommendationDateCriterion(FhirBackboneElementBase):
     """
     ImmunizationRecommendation.DateCriterion
+        A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,8 @@ class ImmunizationRecommendationDateCriterion(FhirBackboneElementBase):
         value: FhirDateTime,
     ) -> None:
         """
+            A patient's point-in-time set of recommendations (i.e. forecasting) according
+        to a published schedule with optional supporting justification.
 
             :param id_: id of resource
             :param extension: extensions

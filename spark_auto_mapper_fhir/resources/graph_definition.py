@@ -64,6 +64,10 @@ if TYPE_CHECKING:
 class GraphDefinition(FhirResourceBase):
     """
     GraphDefinition
+        A formal computable definition of a graph of resources - that is, a coherent
+    set of resources that form a graph by following references. The Graph
+    Definition resource defines a set and makes rules about the set.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -92,6 +96,10 @@ class GraphDefinition(FhirResourceBase):
         link: Optional[FhirList[GraphDefinitionLink]] = None,
     ) -> None:
         """
+            A formal computable definition of a graph of resources - that is, a coherent
+        set of resources that form a graph by following references. The Graph
+        Definition resource defines a set and makes rules about the set.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

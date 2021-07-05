@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesFilter(FhirBackboneElementBase):
     """
     TerminologyCapabilities.Filter
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -34,11 +35,14 @@ class TerminologyCapabilitiesFilter(FhirBackboneElementBase):
         op: FhirList[code],
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: Code of the property supported.
-        :param op: Operations supported for the property.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: Code of the property supported.
+            :param op: Operations supported for the property.
         """
         super().__init__(
             id_=id_,

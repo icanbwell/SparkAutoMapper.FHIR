@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class CoverageEligibilityRequestInsurance(FhirBackboneElementBase):
     """
     CoverageEligibilityRequest.Insurance
+        The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
     """
 
     # noinspection PyPep8Naming
@@ -41,6 +42,11 @@ class CoverageEligibilityRequestInsurance(FhirBackboneElementBase):
         businessArrangement: Optional[FhirString] = None,
     ) -> None:
         """
+            The CoverageEligibilityRequest provides patient and insurance coverage
+        information to an insurer for them to respond, in the form of an
+        CoverageEligibilityResponse, with information regarding whether the stated
+        coverage is valid and in-force and optionally to provide the insurance details
+        of the policy.
 
             :param id_: id of resource
             :param extension: extensions

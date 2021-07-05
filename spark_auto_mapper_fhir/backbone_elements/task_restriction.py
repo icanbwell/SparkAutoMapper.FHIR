@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class TaskRestriction(FhirBackboneElementBase):
     """
     Task.Restriction
+        A task to be performed.
     """
 
     # noinspection PyPep8Naming
@@ -60,6 +61,7 @@ class TaskRestriction(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            A task to be performed.
 
             :param id_: id of resource
             :param extension: extensions

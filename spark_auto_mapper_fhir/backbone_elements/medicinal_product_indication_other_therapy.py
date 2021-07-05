@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class MedicinalProductIndicationOtherTherapy(FhirBackboneElementBase):
     """
     MedicinalProductIndication.OtherTherapy
+        Indication for the Medicinal Product.
     """
 
     # noinspection PyPep8Naming
@@ -57,6 +58,7 @@ class MedicinalProductIndicationOtherTherapy(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            Indication for the Medicinal Product.
 
             :param id_: id of resource
             :param extension: extensions

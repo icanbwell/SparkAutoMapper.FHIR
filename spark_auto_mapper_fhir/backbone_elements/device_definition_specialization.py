@@ -21,6 +21,7 @@ if TYPE_CHECKING:
 class DeviceDefinitionSpecialization(FhirBackboneElementBase):
     """
     DeviceDefinition.Specialization
+        The characteristics, operational status and capabilities of a medical-related component of a medical device.
     """
 
     # noinspection PyPep8Naming
@@ -33,11 +34,13 @@ class DeviceDefinitionSpecialization(FhirBackboneElementBase):
         version: Optional[FhirString] = None,
     ) -> None:
         """
+            The characteristics, operational status and capabilities of a medical-related
+        component of a medical device.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param systemType: The standard that is used to operate and communicate.
-        :param version: The version of the standard that is used to operate and communicate.
+            :param id_: id of resource
+            :param extension: extensions
+            :param systemType: The standard that is used to operate and communicate.
+            :param version: The version of the standard that is used to operate and communicate.
         """
         super().__init__(
             id_=id_,

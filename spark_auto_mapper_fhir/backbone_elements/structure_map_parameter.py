@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class StructureMapParameter(FhirBackboneElementBase):
     """
     StructureMap.Parameter
+        A Map of relationships between 2 structures that can be used to transform data.
     """
 
     # noinspection PyPep8Naming
@@ -44,14 +45,16 @@ class StructureMapParameter(FhirBackboneElementBase):
         valueDecimal: Optional[FhirDecimal] = None,
     ) -> None:
         """
+            A Map of relationships between 2 structures that can be used to transform
+        data.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param valueId: None
-        :param valueString: None
-        :param valueBoolean: None
-        :param valueInteger: None
-        :param valueDecimal: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param valueId: None
+            :param valueString: None
+            :param valueBoolean: None
+            :param valueInteger: None
+            :param valueDecimal: None
         """
         super().__init__(
             id_=id_,

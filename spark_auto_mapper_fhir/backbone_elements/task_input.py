@@ -179,6 +179,7 @@ if TYPE_CHECKING:
 class TaskInput(FhirBackboneElementBase):
     """
     Task.Input
+        A task to be performed.
     """
 
     # noinspection PyPep8Naming
@@ -240,6 +241,7 @@ class TaskInput(FhirBackboneElementBase):
         valueMeta: Optional[Meta] = None,
     ) -> None:
         """
+            A task to be performed.
 
             :param id_: id of resource
             :param extension: extensions

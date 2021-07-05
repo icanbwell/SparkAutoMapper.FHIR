@@ -51,6 +51,7 @@ if TYPE_CHECKING:
 class EffectEvidenceSynthesisEffectEstimate(FhirBackboneElementBase):
     """
     EffectEvidenceSynthesis.EffectEstimate
+        The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -69,15 +70,18 @@ class EffectEvidenceSynthesisEffectEstimate(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            The EffectEvidenceSynthesis resource describes the difference in an outcome
+        between exposures states in a population where the effect estimate is derived
+        from a combination of research studies.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param description: Human-readable summary of effect estimate.
-        :param type_: Examples include relative risk and mean difference.
-        :param variantState: Used to define variant exposure states such as low-risk state.
-        :param value: The point estimate of the effect estimate.
-        :param unitOfMeasure: Specifies the UCUM unit for the outcome.
-        :param precisionEstimate: A description of the precision of the estimate for the effect.
+            :param id_: id of resource
+            :param extension: extensions
+            :param description: Human-readable summary of effect estimate.
+            :param type_: Examples include relative risk and mean difference.
+            :param variantState: Used to define variant exposure states such as low-risk state.
+            :param value: The point estimate of the effect estimate.
+            :param unitOfMeasure: Specifies the UCUM unit for the outcome.
+            :param precisionEstimate: A description of the precision of the estimate for the effect.
         """
         super().__init__(
             id_=id_,

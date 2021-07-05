@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class PatientLink(FhirBackboneElementBase):
     """
     Patient.Link
+        Demographics and other administrative information about an individual or animal receiving care or other health-related services.
     """
 
     # noinspection PyPep8Naming
@@ -39,11 +40,13 @@ class PatientLink(FhirBackboneElementBase):
         type_: LinkTypeCode,
     ) -> None:
         """
+            Demographics and other administrative information about an individual or
+        animal receiving care or other health-related services.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param other: The other patient resource that the link refers to.
-        :param type_: The type of link between this patient resource and another patient resource.
+            :param id_: id of resource
+            :param extension: extensions
+            :param other: The other patient resource that the link refers to.
+            :param type_: The type of link between this patient resource and another patient resource.
         """
         super().__init__(
             id_=id_,

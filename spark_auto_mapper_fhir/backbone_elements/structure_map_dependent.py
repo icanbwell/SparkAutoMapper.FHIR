@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class StructureMapDependent(FhirBackboneElementBase):
     """
     StructureMap.Dependent
+        A Map of relationships between 2 structures that can be used to transform data.
     """
 
     # noinspection PyPep8Naming
@@ -35,11 +36,13 @@ class StructureMapDependent(FhirBackboneElementBase):
         variable: FhirList[FhirString],
     ) -> None:
         """
+            A Map of relationships between 2 structures that can be used to transform
+        data.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param name: Name of a rule or group to apply.
-        :param variable: Variable to pass to the rule or group.
+            :param id_: id of resource
+            :param extension: extensions
+            :param name: Name of a rule or group to apply.
+            :param variable: Variable to pass to the rule or group.
         """
         super().__init__(
             id_=id_,

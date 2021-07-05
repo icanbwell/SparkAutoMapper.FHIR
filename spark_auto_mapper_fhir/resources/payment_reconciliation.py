@@ -79,6 +79,9 @@ if TYPE_CHECKING:
 class PaymentReconciliation(FhirResourceBase):
     """
     PaymentReconciliation
+        This resource provides the details including amount of a payment and allocates
+    the payment items being paid.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -107,6 +110,9 @@ class PaymentReconciliation(FhirResourceBase):
         processNote: Optional[FhirList[PaymentReconciliationProcessNote]] = None,
     ) -> None:
         """
+            This resource provides the details including amount of a payment and allocates
+        the payment items being paid.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -48,6 +48,7 @@ if TYPE_CHECKING:
 class InsurancePlanPlan(FhirBackboneElementBase):
     """
     InsurancePlan.Plan
+        Details of a Health Insurance product/plan provided by an organization.
     """
 
     # noinspection PyPep8Naming
@@ -64,6 +65,7 @@ class InsurancePlanPlan(FhirBackboneElementBase):
         specificCost: Optional[FhirList[InsurancePlanSpecificCost]] = None,
     ) -> None:
         """
+            Details of a Health Insurance product/plan provided by an organization.
 
             :param id_: id of resource
             :param extension: extensions

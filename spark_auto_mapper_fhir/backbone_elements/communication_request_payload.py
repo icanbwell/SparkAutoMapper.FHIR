@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class CommunicationRequestPayload(FhirBackboneElementBase):
     """
     CommunicationRequest.Payload
+        A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.
     """
 
     # noinspection PyPep8Naming
@@ -41,12 +42,15 @@ class CommunicationRequestPayload(FhirBackboneElementBase):
         contentReference: Optional[Reference[Union[Resource]]] = None,
     ) -> None:
         """
+            A request to convey information; e.g. the CDS system proposes that an alert be
+        sent to a responsible provider, the CDS system proposes that the public health
+        agency be notified about a reportable condition.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param contentString: None
-        :param contentAttachment: None
-        :param contentReference: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param contentString: None
+            :param contentAttachment: None
+            :param contentReference: None
         """
         super().__init__(
             id_=id_,

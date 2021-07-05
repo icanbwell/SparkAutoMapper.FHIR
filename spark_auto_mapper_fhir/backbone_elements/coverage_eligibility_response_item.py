@@ -92,6 +92,7 @@ if TYPE_CHECKING:
 class CoverageEligibilityResponseItem(FhirBackboneElementBase):
     """
     CoverageEligibilityResponse.Item
+        This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
     """
 
     # noinspection PyPep8Naming
@@ -118,6 +119,8 @@ class CoverageEligibilityResponseItem(FhirBackboneElementBase):
         authorizationUrl: Optional[FhirUri] = None,
     ) -> None:
         """
+            This resource provides eligibility and plan details from the processing of an
+        CoverageEligibilityRequest resource.
 
             :param id_: id of resource
             :param extension: extensions

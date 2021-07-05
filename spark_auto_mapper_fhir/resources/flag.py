@@ -62,6 +62,8 @@ if TYPE_CHECKING:
 class Flag(FhirResourceBase):
     """
     Flag
+        Prospective warnings of potential issues when providing care to the patient.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -96,6 +98,8 @@ class Flag(FhirResourceBase):
         ] = None,
     ) -> None:
         """
+            Prospective warnings of potential issues when providing care to the patient.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

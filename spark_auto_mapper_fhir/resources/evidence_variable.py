@@ -88,6 +88,9 @@ if TYPE_CHECKING:
 class EvidenceVariable(FhirResourceBase):
     """
     EvidenceVariable
+        The EvidenceVariable resource describes a "PICO" element that knowledge
+    (evidence, assertion, recommendation) is about.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -128,6 +131,9 @@ class EvidenceVariable(FhirResourceBase):
         characteristic: FhirList[EvidenceVariableCharacteristic],
     ) -> None:
         """
+            The EvidenceVariable resource describes a "PICO" element that knowledge
+        (evidence, assertion, recommendation) is about.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -61,6 +61,8 @@ if TYPE_CHECKING:
 class MedicinalProductIndication(FhirResourceBase):
     """
     MedicinalProductIndication
+        Indication for the Medicinal Product.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -85,6 +87,8 @@ class MedicinalProductIndication(FhirResourceBase):
         population: Optional[FhirList[Population]] = None,
     ) -> None:
         """
+            Indication for the Medicinal Product.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

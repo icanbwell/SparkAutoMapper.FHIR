@@ -65,6 +65,9 @@ if TYPE_CHECKING:
 class Account(FhirResourceBase):
     """
     Account
+        A financial tool for tracking value accrued for a particular purpose.  In the
+    healthcare field, used to track charges for a patient, cost centers, etc.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -101,6 +104,9 @@ class Account(FhirResourceBase):
         partOf: Optional[Reference[Union[Account]]] = None,
     ) -> None:
         """
+            A financial tool for tracking value accrued for a particular purpose.  In the
+        healthcare field, used to track charges for a patient, cost centers, etc.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

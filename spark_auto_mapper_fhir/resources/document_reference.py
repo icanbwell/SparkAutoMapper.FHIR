@@ -95,6 +95,12 @@ if TYPE_CHECKING:
 class DocumentReference(FhirResourceBase):
     """
     DocumentReference
+        A reference to a document of any kind for any purpose. Provides metadata about
+    the document so that the document can be discovered and managed. The scope of
+    a document is any seralized object with a mime-type, so includes formal
+    patient centric documents (CDA), cliical notes, scanned paper, and non-patient
+    specific documents like policy text.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -141,6 +147,12 @@ class DocumentReference(FhirResourceBase):
         context: Optional[DocumentReferenceContext] = None,
     ) -> None:
         """
+            A reference to a document of any kind for any purpose. Provides metadata about
+        the document so that the document can be discovered and managed. The scope of
+        a document is any seralized object with a mime-type, so includes formal
+        patient centric documents (CDA), cliical notes, scanned paper, and non-patient
+        specific documents like policy text.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

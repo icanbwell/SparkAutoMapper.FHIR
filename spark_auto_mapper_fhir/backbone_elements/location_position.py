@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class LocationPosition(FhirBackboneElementBase):
     """
     Location.Position
+        Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
     """
 
     # noinspection PyPep8Naming
@@ -36,6 +37,9 @@ class LocationPosition(FhirBackboneElementBase):
         altitude: Optional[FhirDecimal] = None,
     ) -> None:
         """
+            Details and position information for a physical place where services are
+        provided and resources and participants may be stored, found, contained, or
+        accommodated.
 
             :param id_: id of resource
             :param extension: extensions

@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class SubstanceReferenceInformationGeneElement(FhirBackboneElementBase):
     """
     SubstanceReferenceInformation.GeneElement
+        Todo.
     """
 
     # noinspection PyPep8Naming
@@ -47,6 +48,7 @@ class SubstanceReferenceInformationGeneElement(FhirBackboneElementBase):
         source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
     ) -> None:
         """
+        Todo.
 
         :param id_: id of resource
         :param extension: extensions

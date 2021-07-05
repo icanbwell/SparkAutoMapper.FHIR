@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 class OrganizationContact(FhirBackboneElementBase):
     """
     Organization.Contact
+        A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
     """
 
     # noinspection PyPep8Naming
@@ -50,6 +51,10 @@ class OrganizationContact(FhirBackboneElementBase):
         address: Optional[Address] = None,
     ) -> None:
         """
+            A formally or informally recognized grouping of people or organizations formed
+        for the purpose of achieving some form of collective action.  Includes
+        companies, institutions, corporations, departments, community groups,
+        healthcare practice groups, payer/insurer, etc.
 
             :param id_: id of resource
             :param extension: extensions

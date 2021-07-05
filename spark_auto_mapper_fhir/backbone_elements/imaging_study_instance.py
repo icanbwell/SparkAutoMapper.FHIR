@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class ImagingStudyInstance(FhirBackboneElementBase):
     """
     ImagingStudy.Instance
+        Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
     """
 
     # noinspection PyPep8Naming
@@ -48,13 +49,18 @@ class ImagingStudyInstance(FhirBackboneElementBase):
         title: Optional[FhirString] = None,
     ) -> None:
         """
+            Representation of the content produced in a DICOM imaging study. A study
+        comprises a set of series, each of which includes a set of Service-Object Pair
+        Instances (SOP Instances - images or other data) acquired or produced in a
+        common context.  A series is of only one modality (e.g. X-ray, CT, MR,
+        ultrasound), but a study may have multiple series of different modalities.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param uid: The DICOM SOP Instance UID for this image or other DICOM content.
-        :param sopClass: DICOM instance  type.
-        :param number: The number of instance in the series.
-        :param title: The description of the instance.
+            :param id_: id of resource
+            :param extension: extensions
+            :param uid: The DICOM SOP Instance UID for this image or other DICOM content.
+            :param sopClass: DICOM instance  type.
+            :param number: The number of instance in the series.
+            :param title: The description of the instance.
         """
         super().__init__(
             id_=id_,

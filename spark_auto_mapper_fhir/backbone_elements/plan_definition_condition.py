@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class PlanDefinitionCondition(FhirBackboneElementBase):
     """
     PlanDefinition.Condition
+        This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,10 @@ class PlanDefinitionCondition(FhirBackboneElementBase):
         expression: Optional[Expression] = None,
     ) -> None:
         """
+            This resource allows for the definition of various types of plans as a
+        sharable, consumable, and executable artifact. The resource is general enough
+        to support the description of a broad range of clinical artifacts such as
+        clinical decision support rules, order sets and protocols.
 
             :param id_: id of resource
             :param extension: extensions

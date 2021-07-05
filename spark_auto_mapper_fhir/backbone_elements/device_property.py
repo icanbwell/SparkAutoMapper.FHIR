@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class DeviceProperty(FhirBackboneElementBase):
     """
     Device.Property
+        A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
     """
 
     # noinspection PyPep8Naming
@@ -46,12 +47,15 @@ class DeviceProperty(FhirBackboneElementBase):
         valueCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
     ) -> None:
         """
+            A type of a manufactured item that is used in the provision of healthcare
+        without being substantially changed through that activity. The device may be a
+        medical or non-medical device.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
-        :param valueQuantity: Property value as a quantity.
-        :param valueCode: Property value as a code, e.g., NTP4 (synced to NTP).
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
+            :param valueQuantity: Property value as a quantity.
+            :param valueCode: Property value as a code, e.g., NTP4 (synced to NTP).
         """
         super().__init__(
             id_=id_,

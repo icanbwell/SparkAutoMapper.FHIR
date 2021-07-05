@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeMedicineClassification(FhirBackboneElementBase):
     """
     MedicationKnowledge.MedicineClassification
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,7 @@ class MedicationKnowledgeMedicineClassification(FhirBackboneElementBase):
         classification: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
     ) -> None:
         """
+            Information about a medication that is used to support knowledge.
 
             :param id_: id of resource
             :param extension: extensions

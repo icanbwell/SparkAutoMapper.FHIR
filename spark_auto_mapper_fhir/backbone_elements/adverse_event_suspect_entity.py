@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class AdverseEventSuspectEntity(FhirBackboneElementBase):
     """
     AdverseEvent.SuspectEntity
+        Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
     """
 
     # noinspection PyPep8Naming
@@ -60,6 +61,10 @@ class AdverseEventSuspectEntity(FhirBackboneElementBase):
         causality: Optional[FhirList[AdverseEventCausality]] = None,
     ) -> None:
         """
+            Actual or  potential/avoided event causing unintended physical injury
+        resulting from or contributed to by medical care, a research study or other
+        healthcare setting factors that requires additional monitoring, treatment, or
+        hospitalization, or that results in death.
 
             :param id_: id of resource
             :param extension: extensions

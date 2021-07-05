@@ -44,6 +44,8 @@ if TYPE_CHECKING:
 class MedicinalProductUndesirableEffect(FhirResourceBase):
     """
     MedicinalProductUndesirableEffect
+        Describe the undesirable effects of the medicinal product.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -62,6 +64,8 @@ class MedicinalProductUndesirableEffect(FhirResourceBase):
         population: Optional[FhirList[Population]] = None,
     ) -> None:
         """
+        Describe the undesirable effects of the medicinal product.
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param meta: Meta

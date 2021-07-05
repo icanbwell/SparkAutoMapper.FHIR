@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class SpecimenProcessing(FhirBackboneElementBase):
     """
     Specimen.Processing
+        A sample to be used for analysis.
     """
 
     # noinspection PyPep8Naming
@@ -55,6 +56,7 @@ class SpecimenProcessing(FhirBackboneElementBase):
         timePeriod: Optional[Period] = None,
     ) -> None:
         """
+        A sample to be used for analysis.
 
         :param id_: id of resource
         :param extension: extensions

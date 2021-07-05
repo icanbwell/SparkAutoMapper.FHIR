@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class CodeSystemDesignation(FhirBackboneElementBase):
     """
     CodeSystem.Designation
+        The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
     """
 
     # noinspection PyPep8Naming
@@ -44,12 +45,15 @@ class CodeSystemDesignation(FhirBackboneElementBase):
         value: FhirString,
     ) -> None:
         """
+            The CodeSystem resource is used to declare the existence of and describe a
+        code system or code system supplement and its key properties, and optionally
+        define a part or all of its content.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param language: The language this designation is defined for.
-        :param use: A code that details how this designation would be used.
-        :param value: The text value for this designation.
+            :param id_: id of resource
+            :param extension: extensions
+            :param language: The language this designation is defined for.
+            :param use: A code that details how this designation would be used.
+            :param value: The text value for this designation.
         """
         super().__init__(
             id_=id_,

@@ -19,6 +19,8 @@ if TYPE_CHECKING:
 class BackboneElement(FhirComplexTypeBase):
     """
     BackboneElement
+        Base definition for all elements that are defined inside a resource - but not those in a data type.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -30,6 +32,10 @@ class BackboneElement(FhirComplexTypeBase):
         modifierExtension: Optional[FhirList[Extension]] = None,
     ) -> None:
         """
+            Base definition for all elements that are defined inside a resource - but not
+        those in a data type.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

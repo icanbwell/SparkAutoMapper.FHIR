@@ -55,6 +55,7 @@ if TYPE_CHECKING:
 class QuestionnaireInitial(FhirBackboneElementBase):
     """
     Questionnaire.Initial
+        A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
     """
 
     # noinspection PyPep8Naming
@@ -77,21 +78,24 @@ class QuestionnaireInitial(FhirBackboneElementBase):
         valueReference: Optional[Reference[Union[Resource]]] = None,
     ) -> None:
         """
+            A structured set of questions intended to guide the collection of answers from
+        end-users. Questionnaires provide detailed control over order, presentation,
+        phraseology and grouping to allow coherent, consistent data collection.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param valueBoolean: None
-        :param valueDecimal: None
-        :param valueInteger: None
-        :param valueDate: None
-        :param valueDateTime: None
-        :param valueTime: None
-        :param valueString: None
-        :param valueUri: None
-        :param valueAttachment: None
-        :param valueCoding: None
-        :param valueQuantity: None
-        :param valueReference: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param valueBoolean: None
+            :param valueDecimal: None
+            :param valueInteger: None
+            :param valueDate: None
+            :param valueDateTime: None
+            :param valueTime: None
+            :param valueString: None
+            :param valueUri: None
+            :param valueAttachment: None
+            :param valueCoding: None
+            :param valueQuantity: None
+            :param valueReference: None
         """
         super().__init__(
             id_=id_,

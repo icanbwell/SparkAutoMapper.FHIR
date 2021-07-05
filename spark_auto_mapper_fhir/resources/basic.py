@@ -47,6 +47,10 @@ if TYPE_CHECKING:
 class Basic(FhirResourceBase):
     """
     Basic
+        Basic is used for handling concepts not yet defined in FHIR, narrative-only
+    resources that don't map to an existing resource, and custom resources not
+    appropriate for inclusion in the FHIR specification.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -69,6 +73,10 @@ class Basic(FhirResourceBase):
         ] = None,
     ) -> None:
         """
+            Basic is used for handling concepts not yet defined in FHIR, narrative-only
+        resources that don't map to an existing resource, and custom resources not
+        appropriate for inclusion in the FHIR specification.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

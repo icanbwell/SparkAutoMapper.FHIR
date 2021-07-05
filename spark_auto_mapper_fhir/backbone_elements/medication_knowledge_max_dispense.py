@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeMaxDispense(FhirBackboneElementBase):
     """
     MedicationKnowledge.MaxDispense
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -35,6 +36,7 @@ class MedicationKnowledgeMaxDispense(FhirBackboneElementBase):
         period: Optional[Duration] = None,
     ) -> None:
         """
+        Information about a medication that is used to support knowledge.
 
         :param id_: id of resource
         :param extension: extensions

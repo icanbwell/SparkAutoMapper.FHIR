@@ -77,6 +77,9 @@ if TYPE_CHECKING:
 class ObservationDefinition(FhirResourceBase):
     """
     ObservationDefinition
+        Set of definitional characteristics for a kind of observation or measurement
+    produced or consumed by an orderable health care service.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -105,6 +108,9 @@ class ObservationDefinition(FhirResourceBase):
         criticalCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
     ) -> None:
         """
+            Set of definitional characteristics for a kind of observation or measurement
+        produced or consumed by an orderable health care service.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

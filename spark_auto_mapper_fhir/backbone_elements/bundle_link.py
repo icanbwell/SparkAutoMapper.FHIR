@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class BundleLink(FhirBackboneElementBase):
     """
     Bundle.Link
+        A container for a collection of resources.
     """
 
     # noinspection PyPep8Naming
@@ -34,6 +35,7 @@ class BundleLink(FhirBackboneElementBase):
         url: FhirUri,
     ) -> None:
         """
+            A container for a collection of resources.
 
             :param id_: id of resource
             :param extension: extensions

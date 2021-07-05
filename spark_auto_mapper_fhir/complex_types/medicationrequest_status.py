@@ -14,6 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class medicationrequestStatus(FhirComplexTypeBase):
     """
     medicationrequestStatus
+        A coded concept specifying the state of the prescribing event. Describes the lifecycle of the prescription.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +26,12 @@ class medicationrequestStatus(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            A coded concept specifying the state of the prescribing event. Describes the
+        lifecycle of the prescription.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

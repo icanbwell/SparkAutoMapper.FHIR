@@ -59,6 +59,9 @@ if TYPE_CHECKING:
 class AppointmentResponse(FhirResourceBase):
     """
     AppointmentResponse
+        A reply to an appointment request for a patient and/or practitioner(s), such
+    as a confirmation or rejection.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -92,6 +95,9 @@ class AppointmentResponse(FhirResourceBase):
         comment: Optional[FhirString] = None,
     ) -> None:
         """
+            A reply to an appointment request for a patient and/or practitioner(s), such
+        as a confirmation or rejection.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

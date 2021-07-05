@@ -37,6 +37,7 @@ if TYPE_CHECKING:
 class MeasureGroup(FhirBackboneElementBase):
     """
     Measure.Group
+        The Measure resource provides the definition of a quality measure.
     """
 
     # noinspection PyPep8Naming
@@ -51,6 +52,7 @@ class MeasureGroup(FhirBackboneElementBase):
         stratifier: Optional[FhirList[MeasureStratifier]] = None,
     ) -> None:
         """
+            The Measure resource provides the definition of a quality measure.
 
             :param id_: id of resource
             :param extension: extensions

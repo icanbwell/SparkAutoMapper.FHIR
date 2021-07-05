@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class MedicinalProductPharmaceuticalWithdrawalPeriod(FhirBackboneElementBase):
     """
     MedicinalProductPharmaceutical.WithdrawalPeriod
+        A pharmaceutical product described in terms of its composition and dose form.
     """
 
     # noinspection PyPep8Naming
@@ -44,6 +45,7 @@ class MedicinalProductPharmaceuticalWithdrawalPeriod(FhirBackboneElementBase):
         supportingInformation: Optional[FhirString] = None,
     ) -> None:
         """
+            A pharmaceutical product described in terms of its composition and dose form.
 
             :param id_: id of resource
             :param extension: extensions

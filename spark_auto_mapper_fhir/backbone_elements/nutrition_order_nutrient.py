@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class NutritionOrderNutrient(FhirBackboneElementBase):
     """
     NutritionOrder.Nutrient
+        A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
     """
 
     # noinspection PyPep8Naming
@@ -42,11 +43,13 @@ class NutritionOrderNutrient(FhirBackboneElementBase):
         amount: Optional[Quantity] = None,
     ) -> None:
         """
+            A request to supply a diet, formula feeding (enteral) or oral nutritional
+        supplement to a patient/resident.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param modifier: The nutrient that is being modified such as carbohydrate or sodium.
-        :param amount: The quantity of the specified nutrient to include in diet.
+            :param id_: id of resource
+            :param extension: extensions
+            :param modifier: The nutrient that is being modified such as carbohydrate or sodium.
+            :param amount: The quantity of the specified nutrient to include in diet.
         """
         super().__init__(
             id_=id_,

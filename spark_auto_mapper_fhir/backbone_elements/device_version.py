@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class DeviceVersion(FhirBackboneElementBase):
     """
     Device.Version
+        A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
     """
 
     # noinspection PyPep8Naming
@@ -44,12 +45,15 @@ class DeviceVersion(FhirBackboneElementBase):
         value: FhirString,
     ) -> None:
         """
+            A type of a manufactured item that is used in the provision of healthcare
+        without being substantially changed through that activity. The device may be a
+        medical or non-medical device.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The type of the device version.
-        :param component: A single component of the device version.
-        :param value: The version text.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The type of the device version.
+            :param component: A single component of the device version.
+            :param value: The version text.
         """
         super().__init__(
             id_=id_,

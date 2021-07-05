@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class ImmunizationEducation(FhirBackboneElementBase):
     """
     Immunization.Education
+        Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
     """
 
     # noinspection PyPep8Naming
@@ -39,6 +40,8 @@ class ImmunizationEducation(FhirBackboneElementBase):
         presentationDate: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            Describes the event of a patient being administered a vaccine or a record of
+        an immunization as reported by a patient, a clinician or another party.
 
             :param id_: id of resource
             :param extension: extensions

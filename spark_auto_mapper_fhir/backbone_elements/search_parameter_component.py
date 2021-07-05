@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class SearchParameterComponent(FhirBackboneElementBase):
     """
     SearchParameter.Component
+        A search parameter that defines a named search item that can be used to search/filter on a resource.
     """
 
     # noinspection PyPep8Naming
@@ -35,6 +36,8 @@ class SearchParameterComponent(FhirBackboneElementBase):
         expression: FhirString,
     ) -> None:
         """
+            A search parameter that defines a named search item that can be used to
+        search/filter on a resource.
 
             :param id_: id of resource
             :param extension: extensions

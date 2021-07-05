@@ -46,6 +46,7 @@ if TYPE_CHECKING:
 class RiskEvidenceSynthesisRiskEstimate(FhirBackboneElementBase):
     """
     RiskEvidenceSynthesis.RiskEstimate
+        The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -65,16 +66,19 @@ class RiskEvidenceSynthesisRiskEstimate(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a
+        population plus exposure state where the risk estimate is derived from a
+        combination of research studies.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param description: Human-readable summary of risk estimate.
-        :param type_: Examples include proportion and mean.
-        :param value: The point estimate of the risk estimate.
-        :param unitOfMeasure: Specifies the UCUM unit for the outcome.
-        :param denominatorCount: The sample size for the group that was measured for this risk estimate.
-        :param numeratorCount: The number of group members with the outcome of interest.
-        :param precisionEstimate: A description of the precision of the estimate for the effect.
+            :param id_: id of resource
+            :param extension: extensions
+            :param description: Human-readable summary of risk estimate.
+            :param type_: Examples include proportion and mean.
+            :param value: The point estimate of the risk estimate.
+            :param unitOfMeasure: Specifies the UCUM unit for the outcome.
+            :param denominatorCount: The sample size for the group that was measured for this risk estimate.
+            :param numeratorCount: The number of group members with the outcome of interest.
+            :param precisionEstimate: A description of the precision of the estimate for the effect.
         """
         super().__init__(
             id_=id_,

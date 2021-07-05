@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class FhirInstant(FhirComplexTypeBase):
     """
     instant
+        An instant in time - known at least to the second
+        Note: This is intended for where precisely observed times are required, typically system logs etc., and not human-reported times - for them, see date and dateTime (which can be as precise as instant, but is not required to be) below. Time zone is always required
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +27,15 @@ class FhirInstant(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            An instant in time - known at least to the second
+            Note: This is intended for where precisely observed times are required,
+        typically system logs etc., and not human-reported times - for them, see date
+        and dateTime (which can be as precise as instant, but is not required to be)
+        below. Time zone is always required
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

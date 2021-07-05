@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class TestScriptTeardown(FhirBackboneElementBase):
     """
     TestScript.Teardown
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -33,10 +34,12 @@ class TestScriptTeardown(FhirBackboneElementBase):
         action: FhirList[TestScriptAction2],
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param action: The teardown action will only contain an operation.
+            :param id_: id of resource
+            :param extension: extensions
+            :param action: The teardown action will only contain an operation.
         """
         super().__init__(
             id_=id_,

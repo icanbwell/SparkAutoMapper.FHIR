@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class TestReportAssert(FhirBackboneElementBase):
     """
     TestReport.Assert
+        A summary of information based on the results of executing a TestScript.
     """
 
     # noinspection PyPep8Naming
@@ -41,6 +42,7 @@ class TestReportAssert(FhirBackboneElementBase):
         detail: Optional[FhirString] = None,
     ) -> None:
         """
+        A summary of information based on the results of executing a TestScript.
 
         :param id_: id of resource
         :param extension: extensions

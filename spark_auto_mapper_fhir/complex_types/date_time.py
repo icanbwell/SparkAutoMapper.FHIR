@@ -14,6 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class FhirDateTime(FhirComplexTypeBase):
     """
     dateTime
+        A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.                 Dates SHALL be valid dates.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +26,15 @@ class FhirDateTime(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            A date, date-time or partial date (e.g. just year or year + month).  If hours
+        and minutes are specified, a time zone SHALL be populated. The format is a
+        union of the schema types gYear, gYearMonth, date and dateTime. Seconds must
+        be provided due to schema type constraints but may be zero-filled and may be
+        ignored.                 Dates SHALL be valid dates.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

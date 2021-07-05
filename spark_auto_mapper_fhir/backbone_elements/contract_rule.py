@@ -26,6 +26,7 @@ if TYPE_CHECKING:
 class ContractRule(FhirBackboneElementBase):
     """
     Contract.Rule
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -38,11 +39,13 @@ class ContractRule(FhirBackboneElementBase):
         contentReference: Optional[Reference[Union[DocumentReference]]] = None,
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param contentAttachment: None
-        :param contentReference: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param contentAttachment: None
+            :param contentReference: None
         """
         super().__init__(
             id_=id_,

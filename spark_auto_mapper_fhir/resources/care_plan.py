@@ -100,6 +100,10 @@ if TYPE_CHECKING:
 class CarePlan(FhirResourceBase):
     """
     CarePlan
+        Describes the intention of how one or more practitioners intend to deliver
+    care for a particular patient, group or community for a period of time,
+    possibly limited to care for a specific condition or set of conditions.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -160,6 +164,10 @@ class CarePlan(FhirResourceBase):
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
+            Describes the intention of how one or more practitioners intend to deliver
+        care for a particular patient, group or community for a period of time,
+        possibly limited to care for a specific condition or set of conditions.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

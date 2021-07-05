@@ -32,6 +32,7 @@ if TYPE_CHECKING:
 class CapabilityStatementSecurity(FhirBackboneElementBase):
     """
     CapabilityStatement.Security
+        A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +46,10 @@ class CapabilityStatementSecurity(FhirBackboneElementBase):
         description: Optional[FhirMarkdown] = None,
     ) -> None:
         """
+            A Capability Statement documents a set of capabilities (behaviors) of a FHIR
+        Server for a particular version of FHIR that may be used as a statement of
+        actual server functionality or a statement of required or desired server
+        implementation.
 
             :param id_: id of resource
             :param extension: extensions

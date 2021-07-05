@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class MedicationDispensePerformer(FhirBackboneElementBase):
     """
     MedicationDispense.Performer
+        Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.
     """
 
     # noinspection PyPep8Naming
@@ -61,6 +62,11 @@ class MedicationDispensePerformer(FhirBackboneElementBase):
         ],
     ) -> None:
         """
+            Indicates that a medication product is to be or has been dispensed for a named
+        person/patient.  This includes a description of the medication product
+        (supply) provided and the instructions for administering the medication.  The
+        medication dispense is the result of a pharmacy system responding to a
+        medication order.
 
             :param id_: id of resource
             :param extension: extensions

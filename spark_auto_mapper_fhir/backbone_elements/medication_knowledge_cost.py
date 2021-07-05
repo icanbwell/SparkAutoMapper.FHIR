@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeCost(FhirBackboneElementBase):
     """
     MedicationKnowledge.Cost
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -43,6 +44,7 @@ class MedicationKnowledgeCost(FhirBackboneElementBase):
         cost: Money,
     ) -> None:
         """
+            Information about a medication that is used to support knowledge.
 
             :param id_: id of resource
             :param extension: extensions

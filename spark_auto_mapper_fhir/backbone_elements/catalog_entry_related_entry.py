@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class CatalogEntryRelatedEntry(FhirBackboneElementBase):
     """
     CatalogEntry.RelatedEntry
+        Catalog entries are wrappers that contextualize items included in a catalog.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,7 @@ class CatalogEntryRelatedEntry(FhirBackboneElementBase):
         item: Reference[Union[CatalogEntry]],
     ) -> None:
         """
+            Catalog entries are wrappers that contextualize items included in a catalog.
 
             :param id_: id of resource
             :param extension: extensions

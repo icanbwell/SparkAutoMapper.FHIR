@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class BundleSearch(FhirBackboneElementBase):
     """
     Bundle.Search
+        A container for a collection of resources.
     """
 
     # noinspection PyPep8Naming
@@ -35,6 +36,7 @@ class BundleSearch(FhirBackboneElementBase):
         score: Optional[FhirDecimal] = None,
     ) -> None:
         """
+            A container for a collection of resources.
 
             :param id_: id of resource
             :param extension: extensions

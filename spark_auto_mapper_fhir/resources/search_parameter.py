@@ -87,6 +87,9 @@ if TYPE_CHECKING:
 class SearchParameter(FhirResourceBase):
     """
     SearchParameter
+        A search parameter that defines a named search item that can be used to
+    search/filter on a resource.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -126,6 +129,9 @@ class SearchParameter(FhirResourceBase):
         component: Optional[FhirList[SearchParameterComponent]] = None,
     ) -> None:
         """
+            A search parameter that defines a named search item that can be used to
+        search/filter on a resource.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

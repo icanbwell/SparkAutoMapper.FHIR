@@ -68,6 +68,9 @@ if TYPE_CHECKING:
 class PaymentNotice(FhirResourceBase):
     """
     PaymentNotice
+        This resource provides the status of the payment for goods and services
+    rendered, and the request and response resource references.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -95,6 +98,9 @@ class PaymentNotice(FhirResourceBase):
         paymentStatus: Optional[CodeableConcept[PaymentStatusCodesCode]] = None,
     ) -> None:
         """
+            This resource provides the status of the payment for goods and services
+        rendered, and the request and response resource references.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

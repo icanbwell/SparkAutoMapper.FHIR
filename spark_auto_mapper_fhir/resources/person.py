@@ -52,6 +52,9 @@ if TYPE_CHECKING:
 class Person(FhirResourceBase):
     """
     Person
+        Demographics and administrative information about a person independent of a
+    specific health-related context.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -73,6 +76,9 @@ class Person(FhirResourceBase):
         link: Optional[FhirList[PersonLink]] = None,
     ) -> None:
         """
+            Demographics and administrative information about a person independent of a
+        specific health-related context.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

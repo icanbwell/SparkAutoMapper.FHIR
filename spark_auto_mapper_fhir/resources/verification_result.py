@@ -77,6 +77,9 @@ if TYPE_CHECKING:
 class VerificationResult(FhirResourceBase):
     """
     VerificationResult
+        Describes validation requirements, source(s), status and dates for one or more
+    elements.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -104,6 +107,9 @@ class VerificationResult(FhirResourceBase):
         validator: Optional[FhirList[VerificationResultValidator]] = None,
     ) -> None:
         """
+            Describes validation requirements, source(s), status and dates for one or more
+        elements.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

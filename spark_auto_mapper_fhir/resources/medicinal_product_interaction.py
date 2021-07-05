@@ -53,6 +53,9 @@ if TYPE_CHECKING:
 class MedicinalProductInteraction(FhirResourceBase):
     """
     MedicinalProductInteraction
+        The interactions of the medicinal product with other medicinal products, or
+    other forms of interactions.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -73,6 +76,9 @@ class MedicinalProductInteraction(FhirResourceBase):
         management: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """
+            The interactions of the medicinal product with other medicinal products, or
+        other forms of interactions.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

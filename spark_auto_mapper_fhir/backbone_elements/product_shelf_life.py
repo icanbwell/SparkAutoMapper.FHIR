@@ -36,6 +36,8 @@ if TYPE_CHECKING:
 class ProductShelfLife(FhirBackboneElementBase):
     """
     ProductShelfLife
+        The shelf-life and storage information for a medicinal product item or container can be described using this class.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -52,6 +54,10 @@ class ProductShelfLife(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            The shelf-life and storage information for a medicinal product item or
+        container can be described using this class.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

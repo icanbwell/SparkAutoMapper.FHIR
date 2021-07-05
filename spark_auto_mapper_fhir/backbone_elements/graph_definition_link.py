@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class GraphDefinitionLink(FhirBackboneElementBase):
     """
     GraphDefinition.Link
+        A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
     """
 
     # noinspection PyPep8Naming
@@ -45,15 +46,18 @@ class GraphDefinitionLink(FhirBackboneElementBase):
         target: Optional[FhirList[GraphDefinitionTarget]] = None,
     ) -> None:
         """
+            A formal computable definition of a graph of resources - that is, a coherent
+        set of resources that form a graph by following references. The Graph
+        Definition resource defines a set and makes rules about the set.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param path: A FHIR expression that identifies one of FHIR References to other resources.
-        :param sliceName: Which slice (if profiled).
-        :param min: Minimum occurrences for this link.
-        :param max: Maximum occurrences for this link.
-        :param description: Information about why this link is of interest in this graph definition.
-        :param target: Potential target for the link.
+            :param id_: id of resource
+            :param extension: extensions
+            :param path: A FHIR expression that identifies one of FHIR References to other resources.
+            :param sliceName: Which slice (if profiled).
+            :param min: Minimum occurrences for this link.
+            :param max: Maximum occurrences for this link.
+            :param description: Information about why this link is of interest in this graph definition.
+            :param target: Potential target for the link.
         """
         super().__init__(
             id_=id_,

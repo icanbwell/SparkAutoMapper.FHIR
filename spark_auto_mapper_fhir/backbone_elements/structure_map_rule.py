@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class StructureMapRule(FhirBackboneElementBase):
     """
     StructureMap.Rule
+        A Map of relationships between 2 structures that can be used to transform data.
     """
 
     # noinspection PyPep8Naming
@@ -54,15 +55,17 @@ class StructureMapRule(FhirBackboneElementBase):
         documentation: Optional[FhirString] = None,
     ) -> None:
         """
+            A Map of relationships between 2 structures that can be used to transform
+        data.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param name: Name of the rule for internal references.
-        :param source: Source inputs to the mapping.
-        :param target: Content to create because of this mapping rule.
-        :param rule: Rules contained in this rule.
-        :param dependent: Which other rules to apply in the context of this rule.
-        :param documentation: Documentation for this instance of data.
+            :param id_: id of resource
+            :param extension: extensions
+            :param name: Name of the rule for internal references.
+            :param source: Source inputs to the mapping.
+            :param target: Content to create because of this mapping rule.
+            :param rule: Rules contained in this rule.
+            :param dependent: Which other rules to apply in the context of this rule.
+            :param documentation: Documentation for this instance of data.
         """
         super().__init__(
             id_=id_,

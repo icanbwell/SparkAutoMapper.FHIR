@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class SpecimenDefinitionAdditive(FhirBackboneElementBase):
     """
     SpecimenDefinition.Additive
+        A kind of specimen with associated set of requirements.
     """
 
     # noinspection PyPep8Naming
@@ -43,6 +44,7 @@ class SpecimenDefinitionAdditive(FhirBackboneElementBase):
         additiveReference: Optional[Reference[Union[Substance]]] = None,
     ) -> None:
         """
+        A kind of specimen with associated set of requirements.
 
         :param id_: id of resource
         :param extension: extensions

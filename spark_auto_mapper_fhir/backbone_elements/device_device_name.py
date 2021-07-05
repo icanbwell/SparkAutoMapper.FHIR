@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class DeviceDeviceName(FhirBackboneElementBase):
     """
     Device.DeviceName
+        A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
     """
 
     # noinspection PyPep8Naming
@@ -34,6 +35,9 @@ class DeviceDeviceName(FhirBackboneElementBase):
         type_: DeviceNameTypeCode,
     ) -> None:
         """
+            A type of a manufactured item that is used in the provision of healthcare
+        without being substantially changed through that activity. The device may be a
+        medical or non-medical device.
 
             :param id_: id of resource
             :param extension: extensions

@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class ExampleScenarioAlternative(FhirBackboneElementBase):
     """
     ExampleScenario.Alternative
+        Example of workflow instance.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,7 @@ class ExampleScenarioAlternative(FhirBackboneElementBase):
         step: Optional[FhirList[ExampleScenarioStep]] = None,
     ) -> None:
         """
+            Example of workflow instance.
 
             :param id_: id of resource
             :param extension: extensions

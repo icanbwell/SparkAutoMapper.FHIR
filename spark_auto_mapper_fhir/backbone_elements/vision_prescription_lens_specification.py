@@ -54,6 +54,7 @@ if TYPE_CHECKING:
 class VisionPrescriptionLensSpecification(FhirBackboneElementBase):
     """
     VisionPrescription.LensSpecification
+        An authorization for the provision of glasses and/or contact lenses to a patient.
     """
 
     # noinspection PyPep8Naming
@@ -78,6 +79,8 @@ class VisionPrescriptionLensSpecification(FhirBackboneElementBase):
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
+            An authorization for the provision of glasses and/or contact lenses to a
+        patient.
 
             :param id_: id of resource
             :param extension: extensions

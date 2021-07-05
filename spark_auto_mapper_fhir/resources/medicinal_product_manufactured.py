@@ -55,6 +55,8 @@ if TYPE_CHECKING:
 class MedicinalProductManufactured(FhirResourceBase):
     """
     MedicinalProductManufactured
+        The manufactured item as contained in the packaged medicinal product.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -77,6 +79,8 @@ class MedicinalProductManufactured(FhirResourceBase):
         ] = None,
     ) -> None:
         """
+            The manufactured item as contained in the packaged medicinal product.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

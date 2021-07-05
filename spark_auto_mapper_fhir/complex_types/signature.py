@@ -48,6 +48,8 @@ if TYPE_CHECKING:
 class Signature(FhirComplexTypeBase):
     """
     Signature
+        A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -85,6 +87,13 @@ class Signature(FhirComplexTypeBase):
         data: Optional[base64Binary] = None,
     ) -> None:
         """
+            A signature along with supporting context. The signature may be a digital
+        signature that is cryptographic in nature, or some other signature acceptable
+        to the domain. This other signature may be as simple as a graphical image
+        representing a hand-written signature, or a signature ceremony Different
+        signature approaches have different utilities.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

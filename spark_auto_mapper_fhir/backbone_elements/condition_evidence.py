@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class ConditionEvidence(FhirBackboneElementBase):
     """
     Condition.Evidence
+        A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
     """
 
     # noinspection PyPep8Naming
@@ -47,11 +48,13 @@ class ConditionEvidence(FhirBackboneElementBase):
         detail: Optional[FhirList[Reference[Union[Resource]]]] = None,
     ) -> None:
         """
+            A clinical condition, problem, diagnosis, or other event, situation, issue, or
+        clinical concept that has risen to a level of concern.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: A manifestation or symptom that led to the recording of this condition.
-        :param detail: Links to other relevant information, including pathology reports.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: A manifestation or symptom that led to the recording of this condition.
+            :param detail: Links to other relevant information, including pathology reports.
         """
         super().__init__(
             id_=id_,

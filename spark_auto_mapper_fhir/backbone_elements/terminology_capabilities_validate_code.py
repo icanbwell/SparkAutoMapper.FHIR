@@ -20,6 +20,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesValidateCode(FhirBackboneElementBase):
     """
     TerminologyCapabilities.ValidateCode
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -31,10 +32,13 @@ class TerminologyCapabilitiesValidateCode(FhirBackboneElementBase):
         translations: FhirBoolean,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param translations: Whether translations are validated.
+            :param id_: id of resource
+            :param extension: extensions
+            :param translations: Whether translations are validated.
         """
         super().__init__(
             id_=id_,

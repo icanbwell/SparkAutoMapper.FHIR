@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class FhirUri(FhirComplexTypeBase):
     """
     uri
+        String of characters used to identify a name or a resource
+        see http://en.wikipedia.org/wiki/Uniform_resource_identifier
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,6 +27,9 @@ class FhirUri(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+        String of characters used to identify a name or a resource
+        see http://en.wikipedia.org/wiki/Uniform_resource_identifier
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param extension: extensions

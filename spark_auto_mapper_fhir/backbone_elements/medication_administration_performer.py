@@ -37,6 +37,7 @@ if TYPE_CHECKING:
 class MedicationAdministrationPerformer(FhirBackboneElementBase):
     """
     MedicationAdministration.Performer
+        Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
     """
 
     # noinspection PyPep8Naming
@@ -53,6 +54,11 @@ class MedicationAdministrationPerformer(FhirBackboneElementBase):
         ],
     ) -> None:
         """
+            Describes the event of a patient consuming or otherwise being administered a
+        medication.  This may be as simple as swallowing a tablet or it may be a long
+        running infusion.  Related resources tie this event to the authorizing
+        prescription, and the specific encounter between patient and health care
+        practitioner.
 
             :param id_: id of resource
             :param extension: extensions

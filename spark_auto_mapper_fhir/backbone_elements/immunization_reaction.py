@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class ImmunizationReaction(FhirBackboneElementBase):
     """
     Immunization.Reaction
+        Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
     """
 
     # noinspection PyPep8Naming
@@ -41,12 +42,14 @@ class ImmunizationReaction(FhirBackboneElementBase):
         reported: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            Describes the event of a patient being administered a vaccine or a record of
+        an immunization as reported by a patient, a clinician or another party.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param date: Date of reaction to the immunization.
-        :param detail: Details of the reaction.
-        :param reported: Self-reported indicator.
+            :param id_: id of resource
+            :param extension: extensions
+            :param date: Date of reaction to the immunization.
+            :param detail: Details of the reaction.
+            :param reported: Self-reported indicator.
         """
         super().__init__(
             id_=id_,

@@ -93,6 +93,16 @@ if TYPE_CHECKING:
 class Composition(FhirResourceBase):
     """
     Composition
+        A set of healthcare-related information that is assembled together into a
+    single logical package that provides a single coherent statement of meaning,
+    establishes its own context and that has clinical attestation with regard to
+    who is making the statement. A Composition defines the structure and narrative
+    content necessary for a document. However, a Composition alone does not
+    constitute a document. Rather, the Composition must be the first entry in a
+    Bundle where Bundle.type=document, and any other resources referenced from
+    Composition must be included as subsequent entries in the Bundle (for example
+    Patient, Practitioner, Encounter, etc.).
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -130,6 +140,16 @@ class Composition(FhirResourceBase):
         section: Optional[FhirList[CompositionSection]] = None,
     ) -> None:
         """
+            A set of healthcare-related information that is assembled together into a
+        single logical package that provides a single coherent statement of meaning,
+        establishes its own context and that has clinical attestation with regard to
+        who is making the statement. A Composition defines the structure and narrative
+        content necessary for a document. However, a Composition alone does not
+        constitute a document. Rather, the Composition must be the first entry in a
+        Bundle where Bundle.type=document, and any other resources referenced from
+        Composition must be included as subsequent entries in the Bundle (for example
+        Patient, Practitioner, Encounter, etc.).
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class id(FhirComplexTypeBase):
     """
     id
+        Any combination of letters, numerals, "-" and ".", with a length limit of 64 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Ids are case-insensitive.
+        RFC 4122
+        If the element is present, it must have either a @value, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +27,15 @@ class id(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            Any combination of letters, numerals, "-" and ".", with a length limit of 64
+        characters.  (This might be an integer, an unprefixed OID, UUID or any other
+        identifier pattern that meets these constraints.)  Ids are case-insensitive.
+            RFC 4122
+            If the element is present, it must have either a @value, an @id referenced
+        from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

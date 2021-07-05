@@ -37,6 +37,7 @@ if TYPE_CHECKING:
 class MedicinalProductInteractionInteractant(FhirBackboneElementBase):
     """
     MedicinalProductInteraction.Interactant
+        The interactions of the medicinal product with other medicinal products, or other forms of interactions.
     """
 
     # noinspection PyPep8Naming
@@ -53,11 +54,13 @@ class MedicinalProductInteractionInteractant(FhirBackboneElementBase):
         itemCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """
+            The interactions of the medicinal product with other medicinal products, or
+        other forms of interactions.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param itemReference: None
-        :param itemCodeableConcept: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param itemReference: None
+            :param itemCodeableConcept: None
         """
         super().__init__(
             id_=id_,

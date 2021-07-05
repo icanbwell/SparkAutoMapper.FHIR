@@ -50,6 +50,7 @@ if TYPE_CHECKING:
 class PatientContact(FhirBackboneElementBase):
     """
     Patient.Contact
+        Demographics and other administrative information about an individual or animal receiving care or other health-related services.
     """
 
     # noinspection PyPep8Naming
@@ -69,6 +70,8 @@ class PatientContact(FhirBackboneElementBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            Demographics and other administrative information about an individual or
+        animal receiving care or other health-related services.
 
             :param id_: id of resource
             :param extension: extensions

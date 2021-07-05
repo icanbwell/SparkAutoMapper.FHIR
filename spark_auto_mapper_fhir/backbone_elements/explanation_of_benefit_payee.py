@@ -37,6 +37,7 @@ if TYPE_CHECKING:
 class ExplanationOfBenefitPayee(FhirBackboneElementBase):
     """
     ExplanationOfBenefit.Payee
+        This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
     """
 
     # noinspection PyPep8Naming
@@ -55,11 +56,14 @@ class ExplanationOfBenefitPayee(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            This resource provides: the claim details; adjudication details from the
+        processing of a Claim; and optionally account balance information, for
+        informing the subscriber of the benefits provided.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Type of Party to be reimbursed: Subscriber, provider, other.
-        :param party: Reference to the individual or organization to whom any payment will be made.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Type of Party to be reimbursed: Subscriber, provider, other.
+            :param party: Reference to the individual or organization to whom any payment will be made.
         """
         super().__init__(
             id_=id_,

@@ -21,6 +21,8 @@ if TYPE_CHECKING:
 class DataRequirementSort(FhirComplexTypeBase):
     """
     DataRequirement.Sort
+        Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -33,6 +35,10 @@ class DataRequirementSort(FhirComplexTypeBase):
         direction: SortDirectionCode,
     ) -> None:
         """
+            Describes a required data item for evaluation in terms of the type of data,
+        and optional code or date-based filters of the data.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

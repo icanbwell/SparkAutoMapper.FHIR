@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class ClaimResponseDetail(FhirBackboneElementBase):
     """
     ClaimResponse.Detail
+        This resource provides the adjudication details from the processing of a Claim resource.
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +46,8 @@ class ClaimResponseDetail(FhirBackboneElementBase):
         subDetail: Optional[FhirList[ClaimResponseSubDetail]] = None,
     ) -> None:
         """
+            This resource provides the adjudication details from the processing of a Claim
+        resource.
 
             :param id_: id of resource
             :param extension: extensions

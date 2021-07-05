@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class ContractSubject(FhirBackboneElementBase):
     """
     Contract.Subject
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -64,11 +65,13 @@ class ContractSubject(FhirBackboneElementBase):
         role: Optional[CodeableConcept[ContractActorRoleCodesCode]] = None,
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param reference: The entity the action is performed or not performed on or for.
-        :param role: Role type of agent assigned roles in this Contract.
+            :param id_: id of resource
+            :param extension: extensions
+            :param reference: The entity the action is performed or not performed on or for.
+            :param role: Role type of agent assigned roles in this Contract.
         """
         super().__init__(
             id_=id_,

@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class ConceptMapUnmapped(FhirBackboneElementBase):
     """
     ConceptMap.Unmapped
+        A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
     """
 
     # noinspection PyPep8Naming
@@ -44,6 +45,9 @@ class ConceptMapUnmapped(FhirBackboneElementBase):
         url: Optional[FhirCanonical] = None,
     ) -> None:
         """
+            A statement of relationships from one set of concepts to one or more other
+        concepts - either concepts in code systems, or data element/data element
+        concepts, or classes in class models.
 
             :param id_: id of resource
             :param extension: extensions

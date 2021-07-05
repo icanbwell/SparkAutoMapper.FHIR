@@ -37,6 +37,7 @@ if TYPE_CHECKING:
 class PractitionerQualification(FhirBackboneElementBase):
     """
     Practitioner.Qualification
+        A person who is directly or indirectly involved in the provisioning of healthcare.
     """
 
     # noinspection PyPep8Naming
@@ -51,13 +52,15 @@ class PractitionerQualification(FhirBackboneElementBase):
         issuer: Optional[Reference[Union[Organization]]] = None,
     ) -> None:
         """
+            A person who is directly or indirectly involved in the provisioning of
+        healthcare.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param identifier: An identifier that applies to this person's qualification in this role.
-        :param code: Coded representation of the qualification.
-        :param period: Period during which the qualification is valid.
-        :param issuer: Organization that regulates and issues the qualification.
+            :param id_: id of resource
+            :param extension: extensions
+            :param identifier: An identifier that applies to this person's qualification in this role.
+            :param code: Coded representation of the qualification.
+            :param period: Period during which the qualification is valid.
+            :param issuer: Organization that regulates and issues the qualification.
         """
         super().__init__(
             id_=id_,

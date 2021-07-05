@@ -67,6 +67,7 @@ if TYPE_CHECKING:
 class QuestionnaireItem(FhirBackboneElementBase):
     """
     Questionnaire.Item
+        A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
     """
 
     # noinspection PyPep8Naming
@@ -93,6 +94,9 @@ class QuestionnaireItem(FhirBackboneElementBase):
         item: Optional[FhirList[QuestionnaireItem]] = None,
     ) -> None:
         """
+            A structured set of questions intended to guide the collection of answers from
+        end-users. Questionnaires provide detailed control over order, presentation,
+        phraseology and grouping to allow coherent, consistent data collection.
 
             :param id_: id of resource
             :param extension: extensions

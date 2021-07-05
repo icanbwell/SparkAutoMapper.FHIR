@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class MolecularSequenceRepository(FhirBackboneElementBase):
     """
     MolecularSequence.Repository
+        Raw data describing a biological sequence.
     """
 
     # noinspection PyPep8Naming
@@ -44,6 +45,7 @@ class MolecularSequenceRepository(FhirBackboneElementBase):
         readsetId: Optional[FhirString] = None,
     ) -> None:
         """
+            Raw data describing a biological sequence.
 
             :param id_: id of resource
             :param extension: extensions

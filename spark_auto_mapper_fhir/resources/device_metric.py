@@ -65,6 +65,9 @@ if TYPE_CHECKING:
 class DeviceMetric(FhirResourceBase):
     """
     DeviceMetric
+        Describes a measurement, calculation or setting capability of a medical
+    device.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -86,6 +89,9 @@ class DeviceMetric(FhirResourceBase):
         calibration: Optional[FhirList[DeviceMetricCalibration]] = None,
     ) -> None:
         """
+            Describes a measurement, calculation or setting capability of a medical
+        device.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

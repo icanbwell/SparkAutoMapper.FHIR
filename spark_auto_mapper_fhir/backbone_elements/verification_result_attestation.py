@@ -47,6 +47,7 @@ if TYPE_CHECKING:
 class VerificationResultAttestation(FhirBackboneElementBase):
     """
     VerificationResult.Attestation
+        Describes validation requirements, source(s), status and dates for one or more elements.
     """
 
     # noinspection PyPep8Naming
@@ -71,6 +72,8 @@ class VerificationResultAttestation(FhirBackboneElementBase):
         sourceSignature: Optional[Signature] = None,
     ) -> None:
         """
+            Describes validation requirements, source(s), status and dates for one or more
+        elements.
 
             :param id_: id of resource
             :param extension: extensions

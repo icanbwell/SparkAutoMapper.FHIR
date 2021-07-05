@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class PersonLink(FhirBackboneElementBase):
     """
     Person.Link
+        Demographics and administrative information about a person independent of a specific health-related context.
     """
 
     # noinspection PyPep8Naming
@@ -43,11 +44,13 @@ class PersonLink(FhirBackboneElementBase):
         assurance: Optional[IdentityAssuranceLevelCode] = None,
     ) -> None:
         """
+            Demographics and administrative information about a person independent of a
+        specific health-related context.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param target: The resource to which this actual person is associated.
-        :param assurance: Level of assurance that this link is associated with the target resource.
+            :param id_: id of resource
+            :param extension: extensions
+            :param target: The resource to which this actual person is associated.
+            :param assurance: Level of assurance that this link is associated with the target resource.
         """
         super().__init__(
             id_=id_,

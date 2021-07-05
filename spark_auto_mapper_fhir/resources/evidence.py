@@ -89,6 +89,10 @@ if TYPE_CHECKING:
 class Evidence(FhirResourceBase):
     """
     Evidence
+        The Evidence resource describes the conditional state (population and any
+    exposures being compared within the population) and outcome (if specified)
+    that the knowledge (evidence, assertion, recommendation) is about.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -130,6 +134,10 @@ class Evidence(FhirResourceBase):
         outcome: Optional[FhirList[Reference[Union[EvidenceVariable]]]] = None,
     ) -> None:
         """
+            The Evidence resource describes the conditional state (population and any
+        exposures being compared within the population) and outcome (if specified)
+        that the knowledge (evidence, assertion, recommendation) is about.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

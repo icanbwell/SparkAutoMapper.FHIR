@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class ResearchStudyArm(FhirBackboneElementBase):
     """
     ResearchStudy.Arm
+        A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,12 @@ class ResearchStudyArm(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
     ) -> None:
         """
+            A process where a researcher or organization plans and then executes a series
+        of steps intended to increase the field of healthcare-related knowledge.  This
+        includes studies of safety, efficacy, comparative effectiveness and other
+        information about medications, devices, therapies and other interventional and
+        investigative techniques.  A ResearchStudy involves the gathering of
+        information about human or animal subjects.
 
             :param id_: id of resource
             :param extension: extensions

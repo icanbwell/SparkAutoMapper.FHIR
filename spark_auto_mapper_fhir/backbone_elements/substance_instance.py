@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class SubstanceInstance(FhirBackboneElementBase):
     """
     Substance.Instance
+        A homogeneous material with a definite composition.
     """
 
     # noinspection PyPep8Naming
@@ -38,6 +39,7 @@ class SubstanceInstance(FhirBackboneElementBase):
         quantity: Optional[Quantity] = None,
     ) -> None:
         """
+            A homogeneous material with a definite composition.
 
             :param id_: id of resource
             :param extension: extensions

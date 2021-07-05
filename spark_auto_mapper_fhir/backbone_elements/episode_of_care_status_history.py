@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class EpisodeOfCareStatusHistory(FhirBackboneElementBase):
     """
     EpisodeOfCare.StatusHistory
+        An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
     """
 
     # noinspection PyPep8Naming
@@ -37,11 +38,14 @@ class EpisodeOfCareStatusHistory(FhirBackboneElementBase):
         period: Period,
     ) -> None:
         """
+            An association between a patient and an organization / healthcare provider(s)
+        during which time encounters may occur. The managing organization assumes a
+        level of responsibility for the patient during this time.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param status: planned | waitlist | active | onhold | finished | cancelled.
-        :param period: The period during this EpisodeOfCare that the specific status applied.
+            :param id_: id of resource
+            :param extension: extensions
+            :param status: planned | waitlist | active | onhold | finished | cancelled.
+            :param period: The period during this EpisodeOfCare that the specific status applied.
         """
         super().__init__(
             id_=id_,

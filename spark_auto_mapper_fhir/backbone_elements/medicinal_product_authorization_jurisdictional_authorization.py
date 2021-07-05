@@ -39,6 +39,7 @@ if TYPE_CHECKING:
 class MedicinalProductAuthorizationJurisdictionalAuthorization(FhirBackboneElementBase):
     """
     MedicinalProductAuthorization.JurisdictionalAuthorization
+        The regulatory authorization of a medicinal product.
     """
 
     # noinspection PyPep8Naming
@@ -54,6 +55,7 @@ class MedicinalProductAuthorizationJurisdictionalAuthorization(FhirBackboneEleme
         validityPeriod: Optional[Period] = None,
     ) -> None:
         """
+        The regulatory authorization of a medicinal product.
 
         :param id_: id of resource
         :param extension: extensions

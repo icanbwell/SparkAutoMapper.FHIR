@@ -56,6 +56,7 @@ if TYPE_CHECKING:
 class QuestionnaireEnableWhen(FhirBackboneElementBase):
     """
     Questionnaire.EnableWhen
+        A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
     """
 
     # noinspection PyPep8Naming
@@ -78,6 +79,9 @@ class QuestionnaireEnableWhen(FhirBackboneElementBase):
         answerReference: Optional[Reference[Union[Resource]]] = None,
     ) -> None:
         """
+            A structured set of questions intended to guide the collection of answers from
+        end-users. Questionnaires provide detailed control over order, presentation,
+        phraseology and grouping to allow coherent, consistent data collection.
 
             :param id_: id of resource
             :param extension: extensions

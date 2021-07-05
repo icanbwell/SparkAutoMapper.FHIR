@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class ClaimResponseProcessNote(FhirBackboneElementBase):
     """
     ClaimResponse.ProcessNote
+        This resource provides the adjudication details from the processing of a Claim resource.
     """
 
     # noinspection PyPep8Naming
@@ -48,13 +49,15 @@ class ClaimResponseProcessNote(FhirBackboneElementBase):
         language: Optional[CodeableConcept[CommonLanguagesCode]] = None,
     ) -> None:
         """
+            This resource provides the adjudication details from the processing of a Claim
+        resource.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param number: A number to uniquely identify a note entry.
-        :param type_: The business purpose of the note text.
-        :param text: The explanation or description associated with the processing.
-        :param language: A code to define the language used in the text of the note.
+            :param id_: id of resource
+            :param extension: extensions
+            :param number: A number to uniquely identify a note entry.
+            :param type_: The business purpose of the note text.
+            :param text: The explanation or description associated with the processing.
+            :param language: A code to define the language used in the text of the note.
         """
         super().__init__(
             id_=id_,

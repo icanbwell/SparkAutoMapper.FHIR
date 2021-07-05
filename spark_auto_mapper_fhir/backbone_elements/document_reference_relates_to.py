@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class DocumentReferenceRelatesTo(FhirBackboneElementBase):
     """
     DocumentReference.RelatesTo
+        A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
     """
 
     # noinspection PyPep8Naming
@@ -40,11 +41,16 @@ class DocumentReferenceRelatesTo(FhirBackboneElementBase):
         target: Reference[Union[DocumentReference]],
     ) -> None:
         """
+            A reference to a document of any kind for any purpose. Provides metadata about
+        the document so that the document can be discovered and managed. The scope of
+        a document is any seralized object with a mime-type, so includes formal
+        patient centric documents (CDA), cliical notes, scanned paper, and non-patient
+        specific documents like policy text.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: The type of relationship that this document has with anther document.
-        :param target: The target document of this relationship.
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: The type of relationship that this document has with anther document.
+            :param target: The target document of this relationship.
         """
         super().__init__(
             id_=id_,

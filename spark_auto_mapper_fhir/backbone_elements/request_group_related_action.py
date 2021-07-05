@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class RequestGroupRelatedAction(FhirBackboneElementBase):
     """
     RequestGroup.RelatedAction
+        A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
     """
 
     # noinspection PyPep8Naming
@@ -45,13 +46,15 @@ class RequestGroupRelatedAction(FhirBackboneElementBase):
         offsetRange: Optional[Range] = None,
     ) -> None:
         """
+            A group of related requests that can be used to capture intended activities
+        that have inter-dependencies such as "give this medication after that one".
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param actionId: The element id of the action this is related to.
-        :param relationship: The relationship of this action to the related action.
-        :param offsetDuration: None
-        :param offsetRange: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param actionId: The element id of the action this is related to.
+            :param relationship: The relationship of this action to the related action.
+            :param offsetDuration: None
+            :param offsetRange: None
         """
         super().__init__(
             id_=id_,

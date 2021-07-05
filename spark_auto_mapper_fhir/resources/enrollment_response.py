@@ -51,6 +51,9 @@ if TYPE_CHECKING:
 class EnrollmentResponse(FhirResourceBase):
     """
     EnrollmentResponse
+        This resource provides enrollment and plan details from the processing of an
+    EnrollmentRequest resource.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -72,18 +75,21 @@ class EnrollmentResponse(FhirResourceBase):
         ] = None,
     ) -> None:
         """
+            This resource provides enrollment and plan details from the processing of an
+        EnrollmentRequest resource.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: The Response business identifier.
-        :param status: The status of the resource instance.
-        :param request: Original request resource reference.
-        :param outcome: Processing status: error, complete.
-        :param disposition: A description of the status of the adjudication.
-        :param created: The date when the enclosed suite of services were performed or completed.
-        :param organization: The Insurer who produced this adjudicated response.
-        :param requestProvider: The practitioner who is responsible for the services rendered to the patient.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: The Response business identifier.
+            :param status: The status of the resource instance.
+            :param request: Original request resource reference.
+            :param outcome: Processing status: error, complete.
+            :param disposition: A description of the status of the adjudication.
+            :param created: The date when the enclosed suite of services were performed or completed.
+            :param organization: The Insurer who produced this adjudicated response.
+            :param requestProvider: The practitioner who is responsible for the services rendered to the patient.
         """
         super().__init__(
             resourceType="EnrollmentResponse",

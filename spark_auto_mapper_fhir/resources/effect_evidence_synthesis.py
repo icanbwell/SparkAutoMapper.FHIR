@@ -120,6 +120,10 @@ if TYPE_CHECKING:
 class EffectEvidenceSynthesis(FhirResourceBase):
     """
     EffectEvidenceSynthesis
+        The EffectEvidenceSynthesis resource describes the difference in an outcome
+    between exposures states in a population where the effect estimate is derived
+    from a combination of research studies.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -170,6 +174,9 @@ class EffectEvidenceSynthesis(FhirResourceBase):
         certainty: Optional[FhirList[EffectEvidenceSynthesisCertainty]] = None,
     ) -> None:
         """
+            The EffectEvidenceSynthesis resource describes the difference in an outcome
+        between exposures states in a population where the effect estimate is derived
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

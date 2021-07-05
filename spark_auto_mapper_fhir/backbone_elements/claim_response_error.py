@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class ClaimResponseError(FhirBackboneElementBase):
     """
     ClaimResponse.Error
+        This resource provides the adjudication details from the processing of a Claim resource.
     """
 
     # noinspection PyPep8Naming
@@ -47,6 +48,8 @@ class ClaimResponseError(FhirBackboneElementBase):
         code: CodeableConcept[AdjudicationErrorCodesCode],
     ) -> None:
         """
+            This resource provides the adjudication details from the processing of a Claim
+        resource.
 
             :param id_: id of resource
             :param extension: extensions

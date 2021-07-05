@@ -48,6 +48,7 @@ if TYPE_CHECKING:
 class SpecimenContainer(FhirBackboneElementBase):
     """
     Specimen.Container
+        A sample to be used for analysis.
     """
 
     # noinspection PyPep8Naming
@@ -65,6 +66,7 @@ class SpecimenContainer(FhirBackboneElementBase):
         additiveReference: Optional[Reference[Union[Substance]]] = None,
     ) -> None:
         """
+            A sample to be used for analysis.
 
             :param id_: id of resource
             :param extension: extensions

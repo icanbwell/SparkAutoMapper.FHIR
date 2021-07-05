@@ -42,6 +42,7 @@ if TYPE_CHECKING:
 class ImmunizationProtocolApplied(FhirBackboneElementBase):
     """
     Immunization.ProtocolApplied
+        Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
     """
 
     # noinspection PyPep8Naming
@@ -61,6 +62,8 @@ class ImmunizationProtocolApplied(FhirBackboneElementBase):
         seriesDosesString: Optional[FhirString] = None,
     ) -> None:
         """
+            Describes the event of a patient being administered a vaccine or a record of
+        an immunization as reported by a patient, a clinician or another party.
 
             :param id_: id of resource
             :param extension: extensions

@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class DiagnosticReportMedia(FhirBackboneElementBase):
     """
     DiagnosticReport.Media
+        The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,11 @@ class DiagnosticReportMedia(FhirBackboneElementBase):
         link: Reference[Union[Media]],
     ) -> None:
         """
+            The findings and interpretation of diagnostic  tests performed on patients,
+        groups of patients, devices, and locations, and/or specimens derived from
+        these. The report includes clinical context such as requesting and provider
+        information, and some mix of atomic results, images, textual and coded
+        interpretations, and formatted representation of diagnostic reports.
 
             :param id_: id of resource
             :param extension: extensions

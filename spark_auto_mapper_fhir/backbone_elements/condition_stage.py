@@ -42,6 +42,7 @@ if TYPE_CHECKING:
 class ConditionStage(FhirBackboneElementBase):
     """
     Condition.Stage
+        A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
     """
 
     # noinspection PyPep8Naming
@@ -59,6 +60,8 @@ class ConditionStage(FhirBackboneElementBase):
         type_: Optional[CodeableConcept[ConditionStageTypeCode]] = None,
     ) -> None:
         """
+            A clinical condition, problem, diagnosis, or other event, situation, issue, or
+        clinical concept that has risen to a level of concern.
 
             :param id_: id of resource
             :param extension: extensions

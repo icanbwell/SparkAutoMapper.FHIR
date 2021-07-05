@@ -14,6 +14,9 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class oid(FhirComplexTypeBase):
     """
     oid
+        An OID represented as a URI
+        RFC 3001. See also ISO/IEC 8824:1990 €
+        If the element is present, it must have either a @value, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,9 +27,13 @@ class oid(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+            An OID represented as a URI
+            RFC 3001. See also ISO/IEC 8824:1990 €
+            If the element is present, it must have either a @value, an @id referenced
+        from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
+            :param id_: id of resource
+            :param extension: extensions
         """
         super().__init__(
             id_=id_,

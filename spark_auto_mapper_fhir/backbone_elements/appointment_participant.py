@@ -50,6 +50,7 @@ if TYPE_CHECKING:
 class AppointmentParticipant(FhirBackboneElementBase):
     """
     Appointment.Participant
+        A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
     """
 
     # noinspection PyPep8Naming
@@ -77,6 +78,9 @@ class AppointmentParticipant(FhirBackboneElementBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            A booking of a healthcare event among patient(s), practitioner(s), related
+        person(s) and/or device(s) for a specific date/time. This may result in one or
+        more Encounter(s).
 
             :param id_: id of resource
             :param extension: extensions

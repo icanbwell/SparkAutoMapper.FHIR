@@ -41,6 +41,9 @@ if TYPE_CHECKING:
 class ImmunizationRecommendation(FhirResourceBase):
     """
     ImmunizationRecommendation
+        A patient's point-in-time set of recommendations (i.e. forecasting) according
+    to a published schedule with optional supporting justification.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -57,15 +60,18 @@ class ImmunizationRecommendation(FhirResourceBase):
         recommendation: FhirList[ImmunizationRecommendationRecommendation],
     ) -> None:
         """
+            A patient's point-in-time set of recommendations (i.e. forecasting) according
+        to a published schedule with optional supporting justification.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param identifier: A unique identifier assigned to this particular recommendation record.
-        :param patient: The patient the recommendation(s) are for.
-        :param date: The date the immunization recommendation(s) were created.
-        :param authority: Indicates the authority who published the protocol (e.g. ACIP).
-        :param recommendation: Vaccine administration recommendations.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param identifier: A unique identifier assigned to this particular recommendation record.
+            :param patient: The patient the recommendation(s) are for.
+            :param date: The date the immunization recommendation(s) were created.
+            :param authority: Indicates the authority who published the protocol (e.g. ACIP).
+            :param recommendation: Vaccine administration recommendations.
         """
         super().__init__(
             resourceType="ImmunizationRecommendation",

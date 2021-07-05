@@ -24,6 +24,7 @@ if TYPE_CHECKING:
 class SubstanceNucleicAcidSugar(FhirBackboneElementBase):
     """
     SubstanceNucleicAcid.Sugar
+        Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,10 @@ class SubstanceNucleicAcidSugar(FhirBackboneElementBase):
         residueSite: Optional[FhirString] = None,
     ) -> None:
         """
+            Nucleic acids are defined by three distinct elements: the base, sugar and
+        linkage. Individual substance/moiety IDs will be created for each of these
+        elements. The nucleotide sequence will be always entered in the 5’-3’
+        direction.
 
             :param id_: id of resource
             :param extension: extensions

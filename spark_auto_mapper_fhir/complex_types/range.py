@@ -21,6 +21,8 @@ if TYPE_CHECKING:
 class Range(FhirComplexTypeBase):
     """
     Range
+        A set of ordered Quantities defined by a low and high limit.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -33,11 +35,14 @@ class Range(FhirComplexTypeBase):
         high: Optional[Quantity] = None,
     ) -> None:
         """
+            A set of ordered Quantities defined by a low and high limit.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param low: The low limit. The boundary is inclusive.
-        :param high: The high limit. The boundary is inclusive.
+            :param id_: id of resource
+            :param extension: extensions
+            :param low: The low limit. The boundary is inclusive.
+            :param high: The high limit. The boundary is inclusive.
         """
         super().__init__(
             id_=id_,

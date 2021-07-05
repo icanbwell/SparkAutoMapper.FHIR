@@ -27,6 +27,8 @@ if TYPE_CHECKING:
 class ElementDefinitionMapping(FhirBackboneElementBase):
     """
     ElementDefinition.Mapping
+        Captures constraints on each element within the resource, profile, or extension.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -41,13 +43,17 @@ class ElementDefinitionMapping(FhirBackboneElementBase):
         comment: Optional[FhirString] = None,
     ) -> None:
         """
+            Captures constraints on each element within the resource, profile, or
+        extension.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param identity: An internal reference to the definition of a mapping.
-        :param language: Identifies the computable language in which mapping.map is expressed.
-        :param map: Expresses what part of the target specification corresponds to this element.
-        :param comment: Comments that provide information about the mapping or its use.
+            :param id_: id of resource
+            :param extension: extensions
+            :param identity: An internal reference to the definition of a mapping.
+            :param language: Identifies the computable language in which mapping.map is expressed.
+            :param map: Expresses what part of the target specification corresponds to this element.
+            :param comment: Comments that provide information about the mapping or its use.
         """
         super().__init__(
             id_=id_,

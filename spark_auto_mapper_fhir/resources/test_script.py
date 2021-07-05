@@ -102,6 +102,9 @@ if TYPE_CHECKING:
 class TestScript(FhirResourceBase):
     """
     TestScript
+        A structured set of tests against a FHIR server or client implementation to
+    determine compliance against the FHIR specification.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -139,6 +142,9 @@ class TestScript(FhirResourceBase):
         teardown: Optional[TestScriptTeardown] = None,
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

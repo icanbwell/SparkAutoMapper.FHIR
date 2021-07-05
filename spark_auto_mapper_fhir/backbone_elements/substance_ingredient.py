@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class SubstanceIngredient(FhirBackboneElementBase):
     """
     Substance.Ingredient
+        A homogeneous material with a definite composition.
     """
 
     # noinspection PyPep8Naming
@@ -47,6 +48,7 @@ class SubstanceIngredient(FhirBackboneElementBase):
         substanceReference: Optional[Reference[Union[Substance]]] = None,
     ) -> None:
         """
+        A homogeneous material with a definite composition.
 
         :param id_: id of resource
         :param extension: extensions

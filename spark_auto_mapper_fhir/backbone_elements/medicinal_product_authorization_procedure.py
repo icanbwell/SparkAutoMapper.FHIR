@@ -34,6 +34,7 @@ if TYPE_CHECKING:
 class MedicinalProductAuthorizationProcedure(FhirBackboneElementBase):
     """
     MedicinalProductAuthorization.Procedure
+        The regulatory authorization of a medicinal product.
     """
 
     # noinspection PyPep8Naming
@@ -44,26 +45,27 @@ class MedicinalProductAuthorizationProcedure(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         type_: CodeableConcept[GenericTypeCode],
-        application: Optional[FhirList[MedicinalProductAuthorizationProcedure]] = None,
         datePeriod: Optional[Period] = None,
         dateDateTime: Optional[FhirDateTime] = None,
+        application: Optional[FhirList[MedicinalProductAuthorizationProcedure]] = None,
     ) -> None:
         """
+        The regulatory authorization of a medicinal product.
 
         :param id_: id of resource
         :param extension: extensions
         :param identifier: Identifier for this procedure.
         :param type_: Type of procedure.
-        :param application: Applcations submitted to obtain a marketing authorization.
         :param datePeriod: None
         :param dateDateTime: None
+        :param application: Applcations submitted to obtain a marketing authorization.
         """
         super().__init__(
             id_=id_,
             extension=extension,
             identifier=identifier,
             type_=type_,
-            application=application,
             datePeriod=datePeriod,
             dateDateTime=dateDateTime,
+            application=application,
         )

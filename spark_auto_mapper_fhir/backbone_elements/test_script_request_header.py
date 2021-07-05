@@ -21,6 +21,7 @@ if TYPE_CHECKING:
 class TestScriptRequestHeader(FhirBackboneElementBase):
     """
     TestScript.RequestHeader
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -33,11 +34,13 @@ class TestScriptRequestHeader(FhirBackboneElementBase):
         value: FhirString,
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param field: The HTTP header field e.g. "Accept".
-        :param value: The value of the header e.g. "application/fhir+xml".
+            :param id_: id of resource
+            :param extension: extensions
+            :param field: The HTTP header field e.g. "Accept".
+            :param value: The value of the header e.g. "application/fhir+xml".
         """
         super().__init__(
             id_=id_,

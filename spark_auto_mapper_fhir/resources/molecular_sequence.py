@@ -78,6 +78,8 @@ if TYPE_CHECKING:
 class MolecularSequence(FhirResourceBase):
     """
     MolecularSequence
+        Raw data describing a biological sequence.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -105,6 +107,8 @@ class MolecularSequence(FhirResourceBase):
         structureVariant: Optional[FhirList[MolecularSequenceStructureVariant]] = None,
     ) -> None:
         """
+            Raw data describing a biological sequence.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class MedicinalProductPharmaceuticalTargetSpecies(FhirBackboneElementBase):
     """
     MedicinalProductPharmaceutical.TargetSpecies
+        A pharmaceutical product described in terms of its composition and dose form.
     """
 
     # noinspection PyPep8Naming
@@ -44,6 +45,7 @@ class MedicinalProductPharmaceuticalTargetSpecies(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            A pharmaceutical product described in terms of its composition and dose form.
 
             :param id_: id of resource
             :param extension: extensions

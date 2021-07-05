@@ -71,6 +71,10 @@ if TYPE_CHECKING:
 class BiologicallyDerivedProduct(FhirResourceBase):
     """
     BiologicallyDerivedProduct
+        A material substance originating from a biological entity intended to be
+    transplanted or infused
+    into another (possibly the same) biological entity.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -93,6 +97,10 @@ class BiologicallyDerivedProduct(FhirResourceBase):
         storage: Optional[FhirList[BiologicallyDerivedProductStorage]] = None,
     ) -> None:
         """
+            A material substance originating from a biological entity intended to be
+        transplanted or infused
+        into another (possibly the same) biological entity.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

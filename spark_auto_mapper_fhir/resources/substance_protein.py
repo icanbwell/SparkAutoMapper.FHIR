@@ -35,6 +35,15 @@ if TYPE_CHECKING:
 class SubstanceProtein(FhirResourceBase):
     """
     SubstanceProtein
+        A SubstanceProtein is defined as a single unit of a linear amino acid
+    sequence, or a combination of subunits that are either covalently linked or
+    have a defined invariant stoichiometric relationship. This includes all
+    synthetic, recombinant and purified SubstanceProteins of defined sequence,
+    whether the use is therapeutic or prophylactic. This set of elements will be
+    used to describe albumins, coagulation factors, cytokines, growth factors,
+    peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant
+    vaccines, and immunomodulators.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -50,6 +59,15 @@ class SubstanceProtein(FhirResourceBase):
         subunit: Optional[FhirList[SubstanceProteinSubunit]] = None,
     ) -> None:
         """
+            A SubstanceProtein is defined as a single unit of a linear amino acid
+        sequence, or a combination of subunits that are either covalently linked or
+        have a defined invariant stoichiometric relationship. This includes all
+        synthetic, recombinant and purified SubstanceProteins of defined sequence,
+        whether the use is therapeutic or prophylactic. This set of elements will be
+        used to describe albumins, coagulation factors, cytokines, growth factors,
+        peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant
+        vaccines, and immunomodulators.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

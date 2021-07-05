@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class ExplanationOfBenefitFinancial(FhirBackboneElementBase):
     """
     ExplanationOfBenefit.Financial
+        This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
     """
 
     # noinspection PyPep8Naming
@@ -54,15 +55,18 @@ class ExplanationOfBenefitFinancial(FhirBackboneElementBase):
         usedMoney: Optional[Money] = None,
     ) -> None:
         """
+            This resource provides: the claim details; adjudication details from the
+        processing of a Claim; and optionally account balance information, for
+        informing the subscriber of the benefits provided.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Classification of benefit being provided.
-        :param allowedUnsignedInt: None
-        :param allowedString: None
-        :param allowedMoney: None
-        :param usedUnsignedInt: None
-        :param usedMoney: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Classification of benefit being provided.
+            :param allowedUnsignedInt: None
+            :param allowedString: None
+            :param allowedMoney: None
+            :param usedUnsignedInt: None
+            :param usedMoney: None
         """
         super().__init__(
             id_=id_,

@@ -41,6 +41,7 @@ if TYPE_CHECKING:
 class ExplanationOfBenefitAdjudication(FhirBackboneElementBase):
     """
     ExplanationOfBenefit.Adjudication
+        This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
     """
 
     # noinspection PyPep8Naming
@@ -55,6 +56,9 @@ class ExplanationOfBenefitAdjudication(FhirBackboneElementBase):
         value: Optional[FhirDecimal] = None,
     ) -> None:
         """
+            This resource provides: the claim details; adjudication details from the
+        processing of a Claim; and optionally account balance information, for
+        informing the subscriber of the benefits provided.
 
             :param id_: id of resource
             :param extension: extensions

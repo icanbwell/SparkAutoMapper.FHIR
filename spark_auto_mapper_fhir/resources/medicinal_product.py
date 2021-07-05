@@ -101,6 +101,9 @@ if TYPE_CHECKING:
 class MedicinalProduct(FhirResourceBase):
     """
     MedicinalProduct
+        Detailed definition of a medicinal product, typically for uses other than
+    direct patient care (e.g. regulatory use).
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -150,6 +153,9 @@ class MedicinalProduct(FhirResourceBase):
         ] = None,
     ) -> None:
         """
+            Detailed definition of a medicinal product, typically for uses other than
+        direct patient care (e.g. regulatory use).
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

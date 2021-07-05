@@ -14,6 +14,8 @@ from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplex
 class vConfidentialityClassification(FhirComplexTypeBase):
     """
     vConfidentialityClassification
+        Codes specifying the level of confidentiality of the composition.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -24,6 +26,8 @@ class vConfidentialityClassification(FhirComplexTypeBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
     ) -> None:
         """
+        Codes specifying the level of confidentiality of the composition.
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param extension: extensions

@@ -19,6 +19,10 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
 
+    # collectedDateTime (dateTime)
+    # collectedPeriod (Period)
+    from spark_auto_mapper_fhir.complex_types.period import Period
+
     # duration (Duration)
     from spark_auto_mapper_fhir.complex_types.duration import Duration
 
@@ -43,10 +47,6 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for bodySite
-    # collectedDateTime (dateTime)
-    # collectedPeriod (Period)
-    from spark_auto_mapper_fhir.complex_types.period import Period
-
     # fastingStatusCodeableConcept (CodeableConcept)
     # End Import for References for fastingStatusCodeableConcept
     # Import for CodeableConcept for fastingStatusCodeableConcept
@@ -61,6 +61,7 @@ if TYPE_CHECKING:
 class SpecimenCollection(FhirBackboneElementBase):
     """
     Specimen.Collection
+        A sample to be used for analysis.
     """
 
     # noinspection PyPep8Naming
@@ -70,20 +71,23 @@ class SpecimenCollection(FhirBackboneElementBase):
         id_: Optional[FhirId] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         collector: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
+        collectedDateTime: Optional[FhirDateTime] = None,
+        collectedPeriod: Optional[Period] = None,
         duration: Optional[Duration] = None,
         quantity: Optional[Quantity] = None,
         method: Optional[CodeableConcept[FHIRSpecimenCollectionMethodCode]] = None,
         bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
-        collectedDateTime: Optional[FhirDateTime] = None,
-        collectedPeriod: Optional[Period] = None,
         fastingStatusCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         fastingStatusDuration: Optional[Duration] = None,
     ) -> None:
         """
+            A sample to be used for analysis.
 
             :param id_: id of resource
             :param extension: extensions
             :param collector: Person who collected the specimen.
+            :param collectedDateTime: None
+            :param collectedPeriod: None
             :param duration: The span of time over which the collection of a specimen occurred.
             :param quantity: The quantity of specimen collected; for instance the volume of a blood sample,
         or the physical measurement of an anatomic pathology sample.
@@ -91,8 +95,6 @@ class SpecimenCollection(FhirBackboneElementBase):
             :param bodySite: Anatomical location from which the specimen was collected (if subject is a
         patient). This is the target site.  This element is not used for environmental
         specimens.
-            :param collectedDateTime: None
-            :param collectedPeriod: None
             :param fastingStatusCodeableConcept: None
             :param fastingStatusDuration: None
         """
@@ -100,12 +102,12 @@ class SpecimenCollection(FhirBackboneElementBase):
             id_=id_,
             extension=extension,
             collector=collector,
+            collectedDateTime=collectedDateTime,
+            collectedPeriod=collectedPeriod,
             duration=duration,
             quantity=quantity,
             method=method,
             bodySite=bodySite,
-            collectedDateTime=collectedDateTime,
-            collectedPeriod=collectedPeriod,
             fastingStatusCodeableConcept=fastingStatusCodeableConcept,
             fastingStatusDuration=fastingStatusDuration,
         )

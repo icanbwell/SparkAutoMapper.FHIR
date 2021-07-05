@@ -87,6 +87,9 @@ if TYPE_CHECKING:
 class RequestGroup(FhirResourceBase):
     """
     RequestGroup
+        A group of related requests that can be used to capture intended activities
+    that have inter-dependencies such as "give this medication after that one".
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -124,6 +127,9 @@ class RequestGroup(FhirResourceBase):
         action: Optional[FhirList[RequestGroupAction]] = None,
     ) -> None:
         """
+            A group of related requests that can be used to capture intended activities
+        that have inter-dependencies such as "give this medication after that one".
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

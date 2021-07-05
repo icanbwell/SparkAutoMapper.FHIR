@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class NutritionOrderAdministration(FhirBackboneElementBase):
     """
     NutritionOrder.Administration
+        A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
     """
 
     # noinspection PyPep8Naming
@@ -41,6 +42,8 @@ class NutritionOrderAdministration(FhirBackboneElementBase):
         rateRatio: Optional[Ratio] = None,
     ) -> None:
         """
+            A request to supply a diet, formula feeding (enteral) or oral nutritional
+        supplement to a patient/resident.
 
             :param id_: id of resource
             :param extension: extensions

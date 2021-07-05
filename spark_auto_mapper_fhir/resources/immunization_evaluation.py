@@ -78,6 +78,10 @@ if TYPE_CHECKING:
 class ImmunizationEvaluation(FhirResourceBase):
     """
     ImmunizationEvaluation
+        Describes a comparison of an immunization event against published
+    recommendations to determine if the administration is "valid" in relation to
+    those  recommendations.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -106,6 +110,10 @@ class ImmunizationEvaluation(FhirResourceBase):
         seriesDosesString: Optional[FhirString] = None,
     ) -> None:
         """
+            Describes a comparison of an immunization event against published
+        recommendations to determine if the administration is "valid" in relation to
+        those  recommendations.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

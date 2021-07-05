@@ -42,6 +42,8 @@ if TYPE_CHECKING:
 class Meta(FhirComplexTypeBase):
     """
     Meta
+        The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -58,6 +60,11 @@ class Meta(FhirComplexTypeBase):
         tag: Optional[FhirList[Coding[CommonTagsCode]]] = None,
     ) -> None:
         """
+            The metadata about a resource. This is content in the resource that is
+        maintained by the infrastructure. Changes to the content might not always be
+        associated with version changes to the resource.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

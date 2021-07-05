@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class SupplyRequestParameter(FhirBackboneElementBase):
     """
     SupplyRequest.Parameter
+        A record of a request for a medication, substance or device used in the healthcare setting.
     """
 
     # noinspection PyPep8Naming
@@ -53,14 +54,16 @@ class SupplyRequestParameter(FhirBackboneElementBase):
         valueBoolean: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            A record of a request for a medication, substance or device used in the
+        healthcare setting.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param code: A code or string that identifies the device detail being asserted.
-        :param valueCodeableConcept: None
-        :param valueQuantity: None
-        :param valueRange: None
-        :param valueBoolean: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param code: A code or string that identifies the device detail being asserted.
+            :param valueCodeableConcept: None
+            :param valueQuantity: None
+            :param valueRange: None
+            :param valueBoolean: None
         """
         super().__init__(
             id_=id_,

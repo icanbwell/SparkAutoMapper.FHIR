@@ -25,6 +25,7 @@ if TYPE_CHECKING:
 class TestScriptMetadata(FhirBackboneElementBase):
     """
     TestScript.Metadata
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,8 @@ class TestScriptMetadata(FhirBackboneElementBase):
         capability: FhirList[TestScriptCapability],
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
             :param id_: id of resource
             :param extension: extensions

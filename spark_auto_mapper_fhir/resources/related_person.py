@@ -66,6 +66,10 @@ if TYPE_CHECKING:
 class RelatedPerson(FhirResourceBase):
     """
     RelatedPerson
+        Information about a person that is involved in the care for a patient, but who
+    is not the target of healthcare, nor has a formal responsibility in the care
+    process.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -91,6 +95,10 @@ class RelatedPerson(FhirResourceBase):
         communication: Optional[FhirList[RelatedPersonCommunication]] = None,
     ) -> None:
         """
+            Information about a person that is involved in the care for a patient, but who
+        is not the target of healthcare, nor has a formal responsibility in the care
+        process.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

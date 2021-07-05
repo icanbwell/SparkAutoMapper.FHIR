@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 class EffectEvidenceSynthesisCertainty(FhirBackboneElementBase):
     """
     EffectEvidenceSynthesis.Certainty
+        The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -50,12 +51,15 @@ class EffectEvidenceSynthesisCertainty(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            The EffectEvidenceSynthesis resource describes the difference in an outcome
+        between exposures states in a population where the effect estimate is derived
+        from a combination of research studies.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param rating: A rating of the certainty of the effect estimate.
-        :param note: A human-readable string to clarify or explain concepts about the resource.
-        :param certaintySubcomponent: A description of a component of the overall certainty.
+            :param id_: id of resource
+            :param extension: extensions
+            :param rating: A rating of the certainty of the effect estimate.
+            :param note: A human-readable string to clarify or explain concepts about the resource.
+            :param certaintySubcomponent: A description of a component of the overall certainty.
         """
         super().__init__(
             id_=id_,

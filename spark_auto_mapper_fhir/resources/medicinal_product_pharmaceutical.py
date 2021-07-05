@@ -56,6 +56,8 @@ if TYPE_CHECKING:
 class MedicinalProductPharmaceutical(FhirResourceBase):
     """
     MedicinalProductPharmaceutical
+        A pharmaceutical product described in terms of its composition and dose form.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -80,6 +82,8 @@ class MedicinalProductPharmaceutical(FhirResourceBase):
         ],
     ) -> None:
         """
+            A pharmaceutical product described in terms of its composition and dose form.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

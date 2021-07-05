@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class MedicinalProductIngredientSpecifiedSubstance(FhirBackboneElementBase):
     """
     MedicinalProductIngredient.SpecifiedSubstance
+        An ingredient of a manufactured item or pharmaceutical product.
     """
 
     # noinspection PyPep8Naming
@@ -52,6 +53,7 @@ class MedicinalProductIngredientSpecifiedSubstance(FhirBackboneElementBase):
         strength: Optional[FhirList[MedicinalProductIngredientStrength]] = None,
     ) -> None:
         """
+            An ingredient of a manufactured item or pharmaceutical product.
 
             :param id_: id of resource
             :param extension: extensions

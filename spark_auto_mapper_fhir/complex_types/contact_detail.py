@@ -21,6 +21,8 @@ if TYPE_CHECKING:
 class ContactDetail(FhirComplexTypeBase):
     """
     ContactDetail
+        Specifies contact information for a person or organization.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -33,6 +35,9 @@ class ContactDetail(FhirComplexTypeBase):
         telecom: Optional[FhirList[ContactPoint]] = None,
     ) -> None:
         """
+            Specifies contact information for a person or organization.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

@@ -76,6 +76,9 @@ if TYPE_CHECKING:
 class CareTeam(FhirResourceBase):
     """
     CareTeam
+        The Care Team includes all the people and organizations who plan to
+    participate in the coordination and delivery of care for a patient.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -102,6 +105,9 @@ class CareTeam(FhirResourceBase):
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
+            The Care Team includes all the people and organizations who plan to
+        participate in the coordination and delivery of care for a patient.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

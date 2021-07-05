@@ -82,6 +82,10 @@ if TYPE_CHECKING:
 class Location(FhirResourceBase):
     """
     Location
+        Details and position information for a physical place where services are
+    provided and resources and participants may be stored, found, contained, or
+    accommodated.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -112,6 +116,10 @@ class Location(FhirResourceBase):
         endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
     ) -> None:
         """
+            Details and position information for a physical place where services are
+        provided and resources and participants may be stored, found, contained, or
+        accommodated.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

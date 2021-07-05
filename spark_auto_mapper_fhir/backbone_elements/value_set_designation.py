@@ -31,6 +31,7 @@ if TYPE_CHECKING:
 class ValueSetDesignation(FhirBackboneElementBase):
     """
     ValueSet.Designation
+        A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
     """
 
     # noinspection PyPep8Naming
@@ -44,12 +45,16 @@ class ValueSetDesignation(FhirBackboneElementBase):
         value: FhirString,
     ) -> None:
         """
+            A ValueSet resource instance specifies a set of codes drawn from one or more
+        code systems, intended for use in a particular context. Value sets link
+        between [[[CodeSystem]]] definitions and their use in [coded
+        elements](terminologies.html).
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param language: The language this designation is defined for.
-        :param use: A code that represents types of uses of designations.
-        :param value: The text value for this designation.
+            :param id_: id of resource
+            :param extension: extensions
+            :param language: The language this designation is defined for.
+            :param use: A code that represents types of uses of designations.
+            :param value: The text value for this designation.
         """
         super().__init__(
             id_=id_,

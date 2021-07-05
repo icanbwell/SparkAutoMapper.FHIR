@@ -26,6 +26,7 @@ if TYPE_CHECKING:
 class MedicationKnowledgeSchedule(FhirBackboneElementBase):
     """
     MedicationKnowledge.Schedule
+        Information about a medication that is used to support knowledge.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,7 @@ class MedicationKnowledgeSchedule(FhirBackboneElementBase):
         schedule: CodeableConcept[GenericTypeCode],
     ) -> None:
         """
+        Information about a medication that is used to support knowledge.
 
         :param id_: id of resource
         :param extension: extensions

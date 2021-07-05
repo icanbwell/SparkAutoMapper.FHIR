@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesExpansion(FhirBackboneElementBase):
     """
     TerminologyCapabilities.Expansion
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -44,14 +45,17 @@ class TerminologyCapabilitiesExpansion(FhirBackboneElementBase):
         textFilter: Optional[FhirMarkdown] = None,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param hierarchical: Whether the server can return nested value sets.
-        :param paging: Whether the server supports paging on expansion.
-        :param incomplete: Allow request for incomplete expansions?
-        :param parameter: Supported expansion parameter.
-        :param textFilter: Documentation about text searching works.
+            :param id_: id of resource
+            :param extension: extensions
+            :param hierarchical: Whether the server can return nested value sets.
+            :param paging: Whether the server supports paging on expansion.
+            :param incomplete: Allow request for incomplete expansions?
+            :param parameter: Supported expansion parameter.
+            :param textFilter: Documentation about text searching works.
         """
         super().__init__(
             id_=id_,

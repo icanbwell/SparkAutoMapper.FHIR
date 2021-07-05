@@ -69,6 +69,11 @@ if TYPE_CHECKING:
 class ValueSet(FhirResourceBase):
     """
     ValueSet
+        A ValueSet resource instance specifies a set of codes drawn from one or more
+    code systems, intended for use in a particular context. Value sets link
+    between [[[CodeSystem]]] definitions and their use in [coded
+    elements](terminologies.html).
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -100,6 +105,11 @@ class ValueSet(FhirResourceBase):
         expansion: Optional[ValueSetExpansion] = None,
     ) -> None:
         """
+            A ValueSet resource instance specifies a set of codes drawn from one or more
+        code systems, intended for use in a particular context. Value sets link
+        between [[[CodeSystem]]] definitions and their use in [coded
+        elements](terminologies.html).
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

@@ -40,6 +40,7 @@ if TYPE_CHECKING:
 class ContractSigner(FhirBackboneElementBase):
     """
     Contract.Signer
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -55,12 +56,14 @@ class ContractSigner(FhirBackboneElementBase):
         signature: FhirList[Signature],
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Role of this Contract signer, e.g. notary, grantee.
-        :param party: Party which is a signator to this Contract.
-        :param signature: Legally binding Contract DSIG signature contents in Base64.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Role of this Contract signer, e.g. notary, grantee.
+            :param party: Party which is a signator to this Contract.
+            :param signature: Legally binding Contract DSIG signature contents in Base64.
         """
         super().__init__(
             id_=id_,

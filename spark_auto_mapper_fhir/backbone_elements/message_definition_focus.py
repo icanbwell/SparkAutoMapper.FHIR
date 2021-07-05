@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class MessageDefinitionFocus(FhirBackboneElementBase):
     """
     MessageDefinition.Focus
+        Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
     """
 
     # noinspection PyPep8Naming
@@ -43,6 +44,9 @@ class MessageDefinitionFocus(FhirBackboneElementBase):
         max: Optional[FhirString] = None,
     ) -> None:
         """
+            Defines the characteristics of a message that can be shared between systems,
+        including the type of event that initiates the message, the content to be
+        transmitted and what response(s), if any, are permitted.
 
             :param id_: id of resource
             :param extension: extensions

@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class SubstancePolymerMonomerSet(FhirBackboneElementBase):
     """
     SubstancePolymer.MonomerSet
+        Todo.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,7 @@ class SubstancePolymerMonomerSet(FhirBackboneElementBase):
         startingMaterial: Optional[FhirList[SubstancePolymerStartingMaterial]] = None,
     ) -> None:
         """
+        Todo.
 
         :param id_: id of resource
         :param extension: extensions

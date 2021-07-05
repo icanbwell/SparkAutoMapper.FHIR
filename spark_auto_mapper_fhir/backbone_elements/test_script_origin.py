@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class TestScriptOrigin(FhirBackboneElementBase):
     """
     TestScript.Origin
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,8 @@ class TestScriptOrigin(FhirBackboneElementBase):
         profile: Coding[TestScriptProfileOriginTypeCode],
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
             :param id_: id of resource
             :param extension: extensions

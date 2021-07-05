@@ -119,6 +119,10 @@ if TYPE_CHECKING:
 class Communication(FhirResourceBase):
     """
     Communication
+        An occurrence of information being transmitted; e.g. an alert that was sent to
+    a responsible provider, a public health agency that was notified about a
+    reportable condition.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -189,6 +193,10 @@ class Communication(FhirResourceBase):
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
+            An occurrence of information being transmitted; e.g. an alert that was sent to
+        a responsible provider, a public health agency that was notified about a
+        reportable condition.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

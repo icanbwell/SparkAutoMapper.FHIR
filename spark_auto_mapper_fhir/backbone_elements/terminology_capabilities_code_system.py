@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesCodeSystem(FhirBackboneElementBase):
     """
     TerminologyCapabilities.CodeSystem
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -41,12 +42,15 @@ class TerminologyCapabilitiesCodeSystem(FhirBackboneElementBase):
         subsumption: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param uri: URI for the Code System.
-        :param version: For the code system, a list of versions that are supported by the server.
-        :param subsumption: True if subsumption is supported for this version of the code system.
+            :param id_: id of resource
+            :param extension: extensions
+            :param uri: URI for the Code System.
+            :param version: For the code system, a list of versions that are supported by the server.
+            :param subsumption: True if subsumption is supported for this version of the code system.
         """
         super().__init__(
             id_=id_,

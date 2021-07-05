@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class RiskEvidenceSynthesisSampleSize(FhirBackboneElementBase):
     """
     RiskEvidenceSynthesis.SampleSize
+        The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
     """
 
     # noinspection PyPep8Naming
@@ -36,12 +37,15 @@ class RiskEvidenceSynthesisSampleSize(FhirBackboneElementBase):
         numberOfParticipants: Optional[FhirInteger] = None,
     ) -> None:
         """
+            The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a
+        population plus exposure state where the risk estimate is derived from a
+        combination of research studies.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param description: Human-readable summary of sample size.
-        :param numberOfStudies: Number of studies included in this evidence synthesis.
-        :param numberOfParticipants: Number of participants included in this evidence synthesis.
+            :param id_: id of resource
+            :param extension: extensions
+            :param description: Human-readable summary of sample size.
+            :param numberOfStudies: Number of studies included in this evidence synthesis.
+            :param numberOfParticipants: Number of participants included in this evidence synthesis.
         """
         super().__init__(
             id_=id_,

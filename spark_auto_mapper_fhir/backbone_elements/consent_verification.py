@@ -29,6 +29,7 @@ if TYPE_CHECKING:
 class ConsentVerification(FhirBackboneElementBase):
     """
     Consent.Verification
+        A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
     """
 
     # noinspection PyPep8Naming
@@ -42,12 +43,15 @@ class ConsentVerification(FhirBackboneElementBase):
         verificationDate: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            A record of a healthcare consumer’s  choices, which permits or denies
+        identified recipient(s) or recipient role(s) to perform one or more actions
+        within a given policy context, for specific purposes and periods of time.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param verified: Has the instruction been verified.
-        :param verifiedWith: Who verified the instruction (Patient, Relative or other Authorized Person).
-        :param verificationDate: Date verification was collected.
+            :param id_: id of resource
+            :param extension: extensions
+            :param verified: Has the instruction been verified.
+            :param verifiedWith: Who verified the instruction (Patient, Relative or other Authorized Person).
+            :param verificationDate: Date verification was collected.
         """
         super().__init__(
             id_=id_,

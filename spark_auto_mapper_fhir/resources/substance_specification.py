@@ -107,6 +107,9 @@ if TYPE_CHECKING:
 class SubstanceSpecification(FhirResourceBase):
     """
     SubstanceSpecification
+        The detailed description of a substance, typically at a level beyond what is
+    used for prescribing.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -141,6 +144,9 @@ class SubstanceSpecification(FhirResourceBase):
         sourceMaterial: Optional[Reference[Union[SubstanceSourceMaterial]]] = None,
     ) -> None:
         """
+            The detailed description of a substance, typically at a level beyond what is
+        used for prescribing.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

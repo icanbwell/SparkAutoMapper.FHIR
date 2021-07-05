@@ -75,6 +75,8 @@ if TYPE_CHECKING:
 class CatalogEntry(FhirResourceBase):
     """
     CatalogEntry
+        Catalog entries are wrappers that contextualize items included in a catalog.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -117,6 +119,8 @@ class CatalogEntry(FhirResourceBase):
         relatedEntry: Optional[FhirList[CatalogEntryRelatedEntry]] = None,
     ) -> None:
         """
+            Catalog entries are wrappers that contextualize items included in a catalog.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

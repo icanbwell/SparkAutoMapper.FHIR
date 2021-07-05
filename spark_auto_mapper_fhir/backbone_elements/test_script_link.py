@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class TestScriptLink(FhirBackboneElementBase):
     """
     TestScript.Link
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -34,11 +35,13 @@ class TestScriptLink(FhirBackboneElementBase):
         description: Optional[FhirString] = None,
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param url: URL to a particular requirement or feature within the FHIR specification.
-        :param description: Short description of the link.
+            :param id_: id of resource
+            :param extension: extensions
+            :param url: URL to a particular requirement or feature within the FHIR specification.
+            :param description: Short description of the link.
         """
         super().__init__(
             id_=id_,

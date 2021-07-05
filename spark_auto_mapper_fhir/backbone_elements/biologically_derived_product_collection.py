@@ -33,7 +33,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class BiologicallyDerivedProductCollection(FhirBackboneElementBase):
     """
-    BiologicallyDerivedProduct.Collection
+        BiologicallyDerivedProduct.Collection
+            A material substance originating from a biological entity intended to be transplanted or infused
+    into another (possibly the same) biological entity.
     """
 
     # noinspection PyPep8Naming
@@ -48,6 +50,9 @@ class BiologicallyDerivedProductCollection(FhirBackboneElementBase):
         collectedPeriod: Optional[Period] = None,
     ) -> None:
         """
+            A material substance originating from a biological entity intended to be
+        transplanted or infused
+        into another (possibly the same) biological entity.
 
             :param id_: id of resource
             :param extension: extensions

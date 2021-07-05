@@ -24,6 +24,7 @@ if TYPE_CHECKING:
 class CompartmentDefinitionResource(FhirBackboneElementBase):
     """
     CompartmentDefinition.Resource
+        A compartment definition that defines how resources are accessed on a server.
     """
 
     # noinspection PyPep8Naming
@@ -37,6 +38,7 @@ class CompartmentDefinitionResource(FhirBackboneElementBase):
         documentation: Optional[FhirString] = None,
     ) -> None:
         """
+            A compartment definition that defines how resources are accessed on a server.
 
             :param id_: id of resource
             :param extension: extensions

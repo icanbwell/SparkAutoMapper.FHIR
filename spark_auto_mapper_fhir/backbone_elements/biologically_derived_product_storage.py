@@ -29,7 +29,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class BiologicallyDerivedProductStorage(FhirBackboneElementBase):
     """
-    BiologicallyDerivedProduct.Storage
+        BiologicallyDerivedProduct.Storage
+            A material substance originating from a biological entity intended to be transplanted or infused
+    into another (possibly the same) biological entity.
     """
 
     # noinspection PyPep8Naming
@@ -44,13 +46,16 @@ class BiologicallyDerivedProductStorage(FhirBackboneElementBase):
         duration: Optional[Period] = None,
     ) -> None:
         """
+            A material substance originating from a biological entity intended to be
+        transplanted or infused
+        into another (possibly the same) biological entity.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param description: Description of storage.
-        :param temperature: Storage temperature.
-        :param scale: Temperature scale used.
-        :param duration: Storage timeperiod.
+            :param id_: id of resource
+            :param extension: extensions
+            :param description: Description of storage.
+            :param temperature: Storage temperature.
+            :param scale: Temperature scale used.
+            :param duration: Storage timeperiod.
         """
         super().__init__(
             id_=id_,

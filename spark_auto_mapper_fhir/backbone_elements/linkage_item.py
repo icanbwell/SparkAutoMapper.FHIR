@@ -26,6 +26,7 @@ if TYPE_CHECKING:
 class LinkageItem(FhirBackboneElementBase):
     """
     Linkage.Item
+        Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
     """
 
     # noinspection PyPep8Naming
@@ -38,6 +39,8 @@ class LinkageItem(FhirBackboneElementBase):
         resource: Reference[Union[Resource]],
     ) -> None:
         """
+            Identifies two or more records (resource instances) that refer to the same
+        real-world "occurrence".
 
             :param id_: id of resource
             :param extension: extensions

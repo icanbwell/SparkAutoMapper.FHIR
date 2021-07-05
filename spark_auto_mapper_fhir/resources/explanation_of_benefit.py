@@ -204,6 +204,10 @@ if TYPE_CHECKING:
 class ExplanationOfBenefit(FhirResourceBase):
     """
     ExplanationOfBenefit
+        This resource provides: the claim details; adjudication details from the
+    processing of a Claim; and optionally account balance information, for
+    informing the subscriber of the benefits provided.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -262,6 +266,10 @@ class ExplanationOfBenefit(FhirResourceBase):
         benefitBalance: Optional[FhirList[ExplanationOfBenefitBenefitBalance]] = None,
     ) -> None:
         """
+            This resource provides: the claim details; adjudication details from the
+        processing of a Claim; and optionally account balance information, for
+        informing the subscriber of the benefits provided.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

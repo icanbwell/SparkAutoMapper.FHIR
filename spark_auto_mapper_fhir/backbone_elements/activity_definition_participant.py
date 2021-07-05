@@ -33,6 +33,7 @@ if TYPE_CHECKING:
 class ActivityDefinitionParticipant(FhirBackboneElementBase):
     """
     ActivityDefinition.Participant
+        This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.
     """
 
     # noinspection PyPep8Naming
@@ -45,11 +46,14 @@ class ActivityDefinitionParticipant(FhirBackboneElementBase):
         role: Optional[CodeableConcept[ActionParticipantRoleCode]] = None,
     ) -> None:
         """
+            This resource allows for the definition of some activity to be performed,
+        independent of a particular patient, practitioner, or other performance
+        context.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The type of participant in the action.
-        :param role: The role the participant should play in performing the described action.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The type of participant in the action.
+            :param role: The role the participant should play in performing the described action.
         """
         super().__init__(
             id_=id_,

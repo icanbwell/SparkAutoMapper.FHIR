@@ -74,6 +74,7 @@ if TYPE_CHECKING:
 class ConsentProvision(FhirBackboneElementBase):
     """
     Consent.Provision
+        A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
     """
 
     # noinspection PyPep8Naming
@@ -95,6 +96,9 @@ class ConsentProvision(FhirBackboneElementBase):
         provision: Optional[FhirList[ConsentProvision]] = None,
     ) -> None:
         """
+            A record of a healthcare consumer’s  choices, which permits or denies
+        identified recipient(s) or recipient role(s) to perform one or more actions
+        within a given policy context, for specific purposes and periods of time.
 
             :param id_: id of resource
             :param extension: extensions

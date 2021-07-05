@@ -30,6 +30,8 @@ if TYPE_CHECKING:
 class Expression(FhirComplexTypeBase):
     """
     Expression
+        A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +47,11 @@ class Expression(FhirComplexTypeBase):
         reference: Optional[FhirUri] = None,
     ) -> None:
         """
+            A expression that is evaluated in a specified context and returns a value. The
+        context of use of the expression must specify the context in which the
+        expression is evaluated, and how the result of the expression is used.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

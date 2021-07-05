@@ -38,6 +38,7 @@ if TYPE_CHECKING:
 class StructureMapGroup(FhirBackboneElementBase):
     """
     StructureMap.Group
+        A Map of relationships between 2 structures that can be used to transform data.
     """
 
     # noinspection PyPep8Naming
@@ -54,6 +55,8 @@ class StructureMapGroup(FhirBackboneElementBase):
         rule: FhirList[StructureMapRule],
     ) -> None:
         """
+            A Map of relationships between 2 structures that can be used to transform
+        data.
 
             :param id_: id of resource
             :param extension: extensions

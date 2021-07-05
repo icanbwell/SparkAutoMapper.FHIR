@@ -32,6 +32,7 @@ if TYPE_CHECKING:
 class SubstanceSpecificationMolecularWeight(FhirBackboneElementBase):
     """
     SubstanceSpecification.MolecularWeight
+        The detailed description of a substance, typically at a level beyond what is used for prescribing.
     """
 
     # noinspection PyPep8Naming
@@ -45,6 +46,8 @@ class SubstanceSpecificationMolecularWeight(FhirBackboneElementBase):
         amount: Optional[Quantity] = None,
     ) -> None:
         """
+            The detailed description of a substance, typically at a level beyond what is
+        used for prescribing.
 
             :param id_: id of resource
             :param extension: extensions

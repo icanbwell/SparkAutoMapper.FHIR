@@ -20,6 +20,8 @@ if TYPE_CHECKING:
 class Period(FhirComplexTypeBase):
     """
     Period
+        A time period defined by a start and end date and optionally time.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -32,6 +34,9 @@ class Period(FhirComplexTypeBase):
         end: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            A time period defined by a start and end date and optionally time.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

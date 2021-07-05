@@ -24,6 +24,10 @@ if TYPE_CHECKING:
 class Parameters(FhirResourceBase):
     """
     Parameters
+        This resource is a non-persisted resource used to pass information into and
+    back from an [operation](operations.html). It has no other use, and there is
+    no RESTful endpoint associated with it.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -36,11 +40,15 @@ class Parameters(FhirResourceBase):
         parameter: Optional[FhirList[ParametersParameter]] = None,
     ) -> None:
         """
+            This resource is a non-persisted resource used to pass information into and
+        back from an [operation](operations.html). It has no other use, and there is
+        no RESTful endpoint associated with it.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
-        :param parameter: A parameter passed to or received from the operation.
+            :param id_: id of resource
+            :param meta: Meta
+            :param extension: extensions
+            :param parameter: A parameter passed to or received from the operation.
         """
         super().__init__(
             resourceType="Parameters",

@@ -74,6 +74,8 @@ if TYPE_CHECKING:
 class Specimen(FhirResourceBase):
     """
     Specimen
+        A sample to be used for analysis.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -100,6 +102,8 @@ class Specimen(FhirResourceBase):
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
+            A sample to be used for analysis.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

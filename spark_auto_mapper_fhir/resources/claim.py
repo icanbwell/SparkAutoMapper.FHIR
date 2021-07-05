@@ -128,6 +128,10 @@ if TYPE_CHECKING:
 class Claim(FhirResourceBase):
     """
     Claim
+        A provider issued list of professional services and products which have been
+    provided, or are to be provided, to a patient which is sent to an insurer for
+    reimbursement.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -170,6 +174,10 @@ class Claim(FhirResourceBase):
         total: Optional[Money] = None,
     ) -> None:
         """
+            A provider issued list of professional services and products which have been
+        provided, or are to be provided, to a patient which is sent to an insurer for
+        reimbursement.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta

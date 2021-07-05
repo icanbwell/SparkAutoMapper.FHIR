@@ -176,6 +176,8 @@ if TYPE_CHECKING:
 class ElementDefinitionExample(FhirBackboneElementBase):
     """
     ElementDefinition.Example
+        Captures constraints on each element within the resource, profile, or extension.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -237,60 +239,64 @@ class ElementDefinitionExample(FhirBackboneElementBase):
         valueMeta: Optional[Meta] = None,
     ) -> None:
         """
+            Captures constraints on each element within the resource, profile, or
+        extension.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param label: Describes the purpose of this example amoung the set of examples.
-        :param valueBase64Binary: None
-        :param valueBoolean: None
-        :param valueCanonical: None
-        :param valueCode: None
-        :param valueDate: None
-        :param valueDateTime: None
-        :param valueDecimal: None
-        :param valueId: None
-        :param valueInstant: None
-        :param valueInteger: None
-        :param valueMarkdown: None
-        :param valueOid: None
-        :param valuePositiveInt: None
-        :param valueString: None
-        :param valueTime: None
-        :param valueUnsignedInt: None
-        :param valueUri: None
-        :param valueUrl: None
-        :param valueUuid: None
-        :param valueAddress: None
-        :param valueAge: None
-        :param valueAnnotation: None
-        :param valueAttachment: None
-        :param valueCodeableConcept: None
-        :param valueCoding: None
-        :param valueContactPoint: None
-        :param valueCount: None
-        :param valueDistance: None
-        :param valueDuration: None
-        :param valueHumanName: None
-        :param valueIdentifier: None
-        :param valueMoney: None
-        :param valuePeriod: None
-        :param valueQuantity: None
-        :param valueRange: None
-        :param valueRatio: None
-        :param valueReference: None
-        :param valueSampledData: None
-        :param valueSignature: None
-        :param valueTiming: None
-        :param valueContactDetail: None
-        :param valueContributor: None
-        :param valueDataRequirement: None
-        :param valueExpression: None
-        :param valueParameterDefinition: None
-        :param valueRelatedArtifact: None
-        :param valueTriggerDefinition: None
-        :param valueUsageContext: None
-        :param valueDosage: None
-        :param valueMeta: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param label: Describes the purpose of this example amoung the set of examples.
+            :param valueBase64Binary: None
+            :param valueBoolean: None
+            :param valueCanonical: None
+            :param valueCode: None
+            :param valueDate: None
+            :param valueDateTime: None
+            :param valueDecimal: None
+            :param valueId: None
+            :param valueInstant: None
+            :param valueInteger: None
+            :param valueMarkdown: None
+            :param valueOid: None
+            :param valuePositiveInt: None
+            :param valueString: None
+            :param valueTime: None
+            :param valueUnsignedInt: None
+            :param valueUri: None
+            :param valueUrl: None
+            :param valueUuid: None
+            :param valueAddress: None
+            :param valueAge: None
+            :param valueAnnotation: None
+            :param valueAttachment: None
+            :param valueCodeableConcept: None
+            :param valueCoding: None
+            :param valueContactPoint: None
+            :param valueCount: None
+            :param valueDistance: None
+            :param valueDuration: None
+            :param valueHumanName: None
+            :param valueIdentifier: None
+            :param valueMoney: None
+            :param valuePeriod: None
+            :param valueQuantity: None
+            :param valueRange: None
+            :param valueRatio: None
+            :param valueReference: None
+            :param valueSampledData: None
+            :param valueSignature: None
+            :param valueTiming: None
+            :param valueContactDetail: None
+            :param valueContributor: None
+            :param valueDataRequirement: None
+            :param valueExpression: None
+            :param valueParameterDefinition: None
+            :param valueRelatedArtifact: None
+            :param valueTriggerDefinition: None
+            :param valueUsageContext: None
+            :param valueDosage: None
+            :param valueMeta: None
         """
         super().__init__(
             id_=id_,

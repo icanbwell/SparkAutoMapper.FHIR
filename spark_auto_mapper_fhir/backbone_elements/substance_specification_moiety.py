@@ -44,6 +44,7 @@ if TYPE_CHECKING:
 class SubstanceSpecificationMoiety(FhirBackboneElementBase):
     """
     SubstanceSpecification.Moiety
+        The detailed description of a substance, typically at a level beyond what is used for prescribing.
     """
 
     # noinspection PyPep8Naming
@@ -62,17 +63,19 @@ class SubstanceSpecificationMoiety(FhirBackboneElementBase):
         amountString: Optional[FhirString] = None,
     ) -> None:
         """
+            The detailed description of a substance, typically at a level beyond what is
+        used for prescribing.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param role: Role that the moiety is playing.
-        :param identifier: Identifier by which this moiety substance is known.
-        :param name: Textual name for this moiety substance.
-        :param stereochemistry: Stereochemistry type.
-        :param opticalActivity: Optical activity type.
-        :param molecularFormula: Molecular formula.
-        :param amountQuantity: None
-        :param amountString: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param role: Role that the moiety is playing.
+            :param identifier: Identifier by which this moiety substance is known.
+            :param name: Textual name for this moiety substance.
+            :param stereochemistry: Stereochemistry type.
+            :param opticalActivity: Optical activity type.
+            :param molecularFormula: Molecular formula.
+            :param amountQuantity: None
+            :param amountString: None
         """
         super().__init__(
             id_=id_,

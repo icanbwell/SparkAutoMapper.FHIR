@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class SubstancePolymerStructuralRepresentation(FhirBackboneElementBase):
     """
     SubstancePolymer.StructuralRepresentation
+        Todo.
     """
 
     # noinspection PyPep8Naming
@@ -43,6 +44,7 @@ class SubstancePolymerStructuralRepresentation(FhirBackboneElementBase):
         attachment: Optional[Attachment] = None,
     ) -> None:
         """
+        Todo.
 
         :param id_: id of resource
         :param extension: extensions

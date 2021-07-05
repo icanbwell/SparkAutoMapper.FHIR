@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class TestReportParticipant(FhirBackboneElementBase):
     """
     TestReport.Participant
+        A summary of information based on the results of executing a TestScript.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,7 @@ class TestReportParticipant(FhirBackboneElementBase):
         display: Optional[FhirString] = None,
     ) -> None:
         """
+        A summary of information based on the results of executing a TestScript.
 
         :param id_: id of resource
         :param extension: extensions

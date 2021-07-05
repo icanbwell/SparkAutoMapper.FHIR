@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class CoverageException(FhirBackboneElementBase):
     """
     Coverage.Exception
+        Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
     """
 
     # noinspection PyPep8Naming
@@ -42,11 +43,13 @@ class CoverageException(FhirBackboneElementBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            Financial instrument which may be used to reimburse or pay for health care
+        products and services. Includes both insurance and self-payment.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The code for the specific exception.
-        :param period: The timeframe during when the exception is in force.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The code for the specific exception.
+            :param period: The timeframe during when the exception is in force.
         """
         super().__init__(
             id_=id_,

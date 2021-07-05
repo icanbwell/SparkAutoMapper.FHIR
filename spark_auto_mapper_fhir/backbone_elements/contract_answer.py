@@ -55,6 +55,7 @@ if TYPE_CHECKING:
 class ContractAnswer(FhirBackboneElementBase):
     """
     Contract.Answer
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -77,21 +78,23 @@ class ContractAnswer(FhirBackboneElementBase):
         valueReference: Optional[Reference[Union[Resource]]] = None,
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param valueBoolean: None
-        :param valueDecimal: None
-        :param valueInteger: None
-        :param valueDate: None
-        :param valueDateTime: None
-        :param valueTime: None
-        :param valueString: None
-        :param valueUri: None
-        :param valueAttachment: None
-        :param valueCoding: None
-        :param valueQuantity: None
-        :param valueReference: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param valueBoolean: None
+            :param valueDecimal: None
+            :param valueInteger: None
+            :param valueDate: None
+            :param valueDateTime: None
+            :param valueTime: None
+            :param valueString: None
+            :param valueUri: None
+            :param valueAttachment: None
+            :param valueCoding: None
+            :param valueQuantity: None
+            :param valueReference: None
         """
         super().__init__(
             id_=id_,

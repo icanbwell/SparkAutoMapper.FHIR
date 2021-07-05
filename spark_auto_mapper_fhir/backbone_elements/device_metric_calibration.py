@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class DeviceMetricCalibration(FhirBackboneElementBase):
     """
     DeviceMetric.Calibration
+        Describes a measurement, calculation or setting capability of a medical device.
     """
 
     # noinspection PyPep8Naming
@@ -43,12 +44,14 @@ class DeviceMetricCalibration(FhirBackboneElementBase):
         time: Optional[FhirInstant] = None,
     ) -> None:
         """
+            Describes a measurement, calculation or setting capability of a medical
+        device.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Describes the type of the calibration method.
-        :param state: Describes the state of the calibration.
-        :param time: Describes the time last calibration has been performed.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Describes the type of the calibration method.
+            :param state: Describes the state of the calibration.
+            :param time: Describes the time last calibration has been performed.
         """
         super().__init__(
             id_=id_,

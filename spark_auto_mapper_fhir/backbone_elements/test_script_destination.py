@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class TestScriptDestination(FhirBackboneElementBase):
     """
     TestScript.Destination
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -42,6 +43,8 @@ class TestScriptDestination(FhirBackboneElementBase):
         profile: Coding[TestScriptProfileDestinationTypeCode],
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
             :param id_: id of resource
             :param extension: extensions

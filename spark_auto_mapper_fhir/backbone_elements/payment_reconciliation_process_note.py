@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class PaymentReconciliationProcessNote(FhirBackboneElementBase):
     """
     PaymentReconciliation.ProcessNote
+        This resource provides the details including amount of a payment and allocates the payment items being paid.
     """
 
     # noinspection PyPep8Naming
@@ -35,11 +36,13 @@ class PaymentReconciliationProcessNote(FhirBackboneElementBase):
         text: Optional[FhirString] = None,
     ) -> None:
         """
+            This resource provides the details including amount of a payment and allocates
+        the payment items being paid.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The business purpose of the note text.
-        :param text: The explanation or description associated with the processing.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: The business purpose of the note text.
+            :param text: The explanation or description associated with the processing.
         """
         super().__init__(
             id_=id_,

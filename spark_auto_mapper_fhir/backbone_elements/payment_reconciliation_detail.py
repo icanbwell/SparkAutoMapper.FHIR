@@ -53,6 +53,7 @@ if TYPE_CHECKING:
 class PaymentReconciliationDetail(FhirBackboneElementBase):
     """
     PaymentReconciliation.Detail
+        This resource provides the details including amount of a payment and allocates the payment items being paid.
     """
 
     # noinspection PyPep8Naming
@@ -77,6 +78,8 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
         amount: Optional[Money] = None,
     ) -> None:
         """
+            This resource provides the details including amount of a payment and allocates
+        the payment items being paid.
 
             :param id_: id of resource
             :param extension: extensions

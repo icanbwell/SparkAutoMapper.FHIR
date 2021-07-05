@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class ValueSetConcept(FhirBackboneElementBase):
     """
     ValueSet.Concept
+        A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,10 @@ class ValueSetConcept(FhirBackboneElementBase):
         designation: Optional[FhirList[ValueSetDesignation]] = None,
     ) -> None:
         """
+            A ValueSet resource instance specifies a set of codes drawn from one or more
+        code systems, intended for use in a particular context. Value sets link
+        between [[[CodeSystem]]] definitions and their use in [coded
+        elements](terminologies.html).
 
             :param id_: id of resource
             :param extension: extensions

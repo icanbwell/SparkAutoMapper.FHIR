@@ -41,6 +41,8 @@ if TYPE_CHECKING:
 class Identifier(FhirComplexTypeBase):
     """
     Identifier
+        An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -57,6 +59,10 @@ class Identifier(FhirComplexTypeBase):
         assigner: Optional[Reference[Union[Organization]]] = None,
     ) -> None:
         """
+            An identifier - identifies some entity uniquely and unambiguously. Typically
+        this is used for business identifiers.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

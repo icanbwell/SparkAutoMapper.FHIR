@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 class GroupMember(FhirBackboneElementBase):
     """
     Group.Member
+        Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
     """
 
     # noinspection PyPep8Naming
@@ -58,6 +59,10 @@ class GroupMember(FhirBackboneElementBase):
         inactive: Optional[FhirBoolean] = None,
     ) -> None:
         """
+            Represents a defined collection of entities that may be discussed or acted
+        upon collectively but which are not expected to act collectively, and are not
+        formally or legally recognized; i.e. a collection of entities that isn't an
+        Organization.
 
             :param id_: id of resource
             :param extension: extensions

@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 class ResearchStudyObjective(FhirBackboneElementBase):
     """
     ResearchStudy.Objective
+        A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
     """
 
     # noinspection PyPep8Naming
@@ -42,11 +43,17 @@ class ResearchStudyObjective(FhirBackboneElementBase):
         type_: Optional[CodeableConcept[ResearchStudyObjectiveTypeCode]] = None,
     ) -> None:
         """
+            A process where a researcher or organization plans and then executes a series
+        of steps intended to increase the field of healthcare-related knowledge.  This
+        includes studies of safety, efficacy, comparative effectiveness and other
+        information about medications, devices, therapies and other interventional and
+        investigative techniques.  A ResearchStudy involves the gathering of
+        information about human or animal subjects.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param name: Unique, human-readable label for this objective of the study.
-        :param type_: The kind of study objective.
+            :param id_: id of resource
+            :param extension: extensions
+            :param name: Unique, human-readable label for this objective of the study.
+            :param type_: The kind of study objective.
         """
         super().__init__(
             id_=id_,

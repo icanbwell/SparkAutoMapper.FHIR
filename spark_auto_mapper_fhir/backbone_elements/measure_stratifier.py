@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 class MeasureStratifier(FhirBackboneElementBase):
     """
     Measure.Stratifier
+        The Measure resource provides the definition of a quality measure.
     """
 
     # noinspection PyPep8Naming
@@ -49,6 +50,7 @@ class MeasureStratifier(FhirBackboneElementBase):
         component: Optional[FhirList[MeasureComponent]] = None,
     ) -> None:
         """
+            The Measure resource provides the definition of a quality measure.
 
             :param id_: id of resource
             :param extension: extensions

@@ -90,6 +90,7 @@ if TYPE_CHECKING:
 class ContractAsset(FhirBackboneElementBase):
     """
     Contract.Asset
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
 
     # noinspection PyPep8Naming
@@ -121,6 +122,8 @@ class ContractAsset(FhirBackboneElementBase):
         valuedItem: Optional[FhirList[ContractValuedItem]] = None,
     ) -> None:
         """
+            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+        a policy or agreement.
 
             :param id_: id of resource
             :param extension: extensions

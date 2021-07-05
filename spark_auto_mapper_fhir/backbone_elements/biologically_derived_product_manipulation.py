@@ -23,7 +23,9 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 class BiologicallyDerivedProductManipulation(FhirBackboneElementBase):
     """
-    BiologicallyDerivedProduct.Manipulation
+        BiologicallyDerivedProduct.Manipulation
+            A material substance originating from a biological entity intended to be transplanted or infused
+    into another (possibly the same) biological entity.
     """
 
     # noinspection PyPep8Naming
@@ -37,12 +39,15 @@ class BiologicallyDerivedProductManipulation(FhirBackboneElementBase):
         timePeriod: Optional[Period] = None,
     ) -> None:
         """
+            A material substance originating from a biological entity intended to be
+        transplanted or infused
+        into another (possibly the same) biological entity.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param description: Description of manipulation.
-        :param timeDateTime: None
-        :param timePeriod: None
+            :param id_: id of resource
+            :param extension: extensions
+            :param description: Description of manipulation.
+            :param timeDateTime: None
+            :param timePeriod: None
         """
         super().__init__(
             id_=id_,

@@ -37,6 +37,8 @@ if TYPE_CHECKING:
 class Attachment(FhirComplexTypeBase):
     """
     Attachment
+        For referring to data content defined in other formats.
+        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -55,6 +57,9 @@ class Attachment(FhirComplexTypeBase):
         creation: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            For referring to data content defined in other formats.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
             :param id_: id of resource
             :param extension: extensions

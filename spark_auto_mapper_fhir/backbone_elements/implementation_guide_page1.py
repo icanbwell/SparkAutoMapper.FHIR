@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class ImplementationGuidePage1(FhirBackboneElementBase):
     """
     ImplementationGuide.Page1
+        A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
     """
 
     # noinspection PyPep8Naming
@@ -35,12 +36,16 @@ class ImplementationGuidePage1(FhirBackboneElementBase):
         anchor: Optional[FhirList[FhirString]] = None,
     ) -> None:
         """
+            A set of rules of how a particular interoperability or standards problem is
+        solved - typically through the use of FHIR resources. This resource is used to
+        gather all the parts of an implementation guide into a logical whole and to
+        publish a computable definition of all the parts.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param name: Relative path to the page.
-        :param title: Label for the page intended for human display.
-        :param anchor: The name of an anchor available on the page.
+            :param id_: id of resource
+            :param extension: extensions
+            :param name: Relative path to the page.
+            :param title: Label for the page intended for human display.
+            :param anchor: The name of an anchor available on the page.
         """
         super().__init__(
             id_=id_,

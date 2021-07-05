@@ -27,6 +27,7 @@ if TYPE_CHECKING:
 class TestScriptAction(FhirBackboneElementBase):
     """
     TestScript.Action
+        A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
 
     # noinspection PyPep8Naming
@@ -39,6 +40,8 @@ class TestScriptAction(FhirBackboneElementBase):
         assert_: Optional[TestScriptAssert] = None,
     ) -> None:
         """
+            A structured set of tests against a FHIR server or client implementation to
+        determine compliance against the FHIR specification.
 
             :param id_: id of resource
             :param extension: extensions

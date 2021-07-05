@@ -26,6 +26,7 @@ if TYPE_CHECKING:
 class StructureDefinitionMapping(FhirBackboneElementBase):
     """
     StructureDefinition.Mapping
+        A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
     """
 
     # noinspection PyPep8Naming
@@ -40,6 +41,9 @@ class StructureDefinitionMapping(FhirBackboneElementBase):
         comment: Optional[FhirString] = None,
     ) -> None:
         """
+            A definition of a FHIR structure. This resource is used to describe the
+        underlying resources, data types defined in FHIR, and also for describing
+        extensions and constraints on resources and data types.
 
             :param id_: id of resource
             :param extension: extensions

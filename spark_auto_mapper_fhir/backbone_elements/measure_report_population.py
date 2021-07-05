@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 class MeasureReportPopulation(FhirBackboneElementBase):
     """
     MeasureReport.Population
+        The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
     """
 
     # noinspection PyPep8Naming
@@ -48,6 +49,9 @@ class MeasureReportPopulation(FhirBackboneElementBase):
         subjectResults: Optional[Reference[Union[List_]]] = None,
     ) -> None:
         """
+            The MeasureReport resource contains the results of the calculation of a
+        measure; and optionally a reference to the resources involved in that
+        calculation.
 
             :param id_: id of resource
             :param extension: extensions

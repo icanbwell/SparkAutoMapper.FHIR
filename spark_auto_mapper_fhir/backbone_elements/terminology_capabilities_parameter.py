@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class TerminologyCapabilitiesParameter(FhirBackboneElementBase):
     """
     TerminologyCapabilities.Parameter
+        A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -35,11 +36,14 @@ class TerminologyCapabilitiesParameter(FhirBackboneElementBase):
         documentation: Optional[FhirString] = None,
     ) -> None:
         """
+            A TerminologyCapabilities resource documents a set of capabilities (behaviors)
+        of a FHIR Terminology Server that may be used as a statement of actual server
+        functionality or a statement of required or desired server implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param name: Expansion Parameter name.
-        :param documentation: Description of support for parameter.
+            :param id_: id of resource
+            :param extension: extensions
+            :param name: Expansion Parameter name.
+            :param documentation: Description of support for parameter.
         """
         super().__init__(
             id_=id_,

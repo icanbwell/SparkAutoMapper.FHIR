@@ -44,6 +44,8 @@ if TYPE_CHECKING:
 class SubstancePolymer(FhirResourceBase):
     """
     SubstancePolymer
+        Todo.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -63,6 +65,8 @@ class SubstancePolymer(FhirResourceBase):
         repeat: Optional[FhirList[SubstancePolymerRepeat]] = None,
     ) -> None:
         """
+        Todo.
+        If the element is present, it must have either a @value, an @id, or extensions
 
         :param id_: id of resource
         :param meta: Meta

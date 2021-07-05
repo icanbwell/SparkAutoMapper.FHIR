@@ -23,6 +23,7 @@ if TYPE_CHECKING:
 class CapabilityStatementSoftware(FhirBackboneElementBase):
     """
     CapabilityStatement.Software
+        A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
 
     # noinspection PyPep8Naming
@@ -36,12 +37,16 @@ class CapabilityStatementSoftware(FhirBackboneElementBase):
         releaseDate: Optional[FhirDateTime] = None,
     ) -> None:
         """
+            A Capability Statement documents a set of capabilities (behaviors) of a FHIR
+        Server for a particular version of FHIR that may be used as a statement of
+        actual server functionality or a statement of required or desired server
+        implementation.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param name: Name the software is known by.
-        :param version: The version identifier for the software covered by this statement.
-        :param releaseDate: Date this version of the software was released.
+            :param id_: id of resource
+            :param extension: extensions
+            :param name: Name the software is known by.
+            :param version: The version identifier for the software covered by this statement.
+            :param releaseDate: Date this version of the software was released.
         """
         super().__init__(
             id_=id_,

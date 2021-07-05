@@ -41,6 +41,7 @@ if TYPE_CHECKING:
 class CareTeamParticipant(FhirBackboneElementBase):
     """
     CareTeam.Participant
+        The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
     """
 
     # noinspection PyPep8Naming
@@ -66,6 +67,8 @@ class CareTeamParticipant(FhirBackboneElementBase):
         period: Optional[Period] = None,
     ) -> None:
         """
+            The Care Team includes all the people and organizations who plan to
+        participate in the coordination and delivery of care for a patient.
 
             :param id_: id of resource
             :param extension: extensions

@@ -37,6 +37,7 @@ if TYPE_CHECKING:
 class ClaimPayee(FhirBackboneElementBase):
     """
     Claim.Payee
+        A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
     """
 
     # noinspection PyPep8Naming
@@ -55,11 +56,14 @@ class ClaimPayee(FhirBackboneElementBase):
         ] = None,
     ) -> None:
         """
+            A provider issued list of professional services and products which have been
+        provided, or are to be provided, to a patient which is sent to an insurer for
+        reimbursement.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: Type of Party to be reimbursed: subscriber, provider, other.
-        :param party: Reference to the individual or organization to whom any payment will be made.
+            :param id_: id of resource
+            :param extension: extensions
+            :param type_: Type of Party to be reimbursed: subscriber, provider, other.
+            :param party: Reference to the individual or organization to whom any payment will be made.
         """
         super().__init__(
             id_=id_,

@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 class ObservationDefinitionQuantitativeDetails(FhirBackboneElementBase):
     """
     ObservationDefinition.QuantitativeDetails
+        Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
     """
 
     # noinspection PyPep8Naming
@@ -49,6 +50,8 @@ class ObservationDefinitionQuantitativeDetails(FhirBackboneElementBase):
         decimalPrecision: Optional[FhirInteger] = None,
     ) -> None:
         """
+            Set of definitional characteristics for a kind of observation or measurement
+        produced or consumed by an orderable health care service.
 
             :param id_: id of resource
             :param extension: extensions

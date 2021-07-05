@@ -26,6 +26,7 @@ if TYPE_CHECKING:
 class DocumentManifestRelated(FhirBackboneElementBase):
     """
     DocumentManifest.Related
+        A collection of documents compiled for a purpose together with metadata that applies to the collection.
     """
 
     # noinspection PyPep8Naming
@@ -38,6 +39,8 @@ class DocumentManifestRelated(FhirBackboneElementBase):
         ref: Optional[Reference[Union[Resource]]] = None,
     ) -> None:
         """
+            A collection of documents compiled for a purpose together with metadata that
+        applies to the collection.
 
             :param id_: id of resource
             :param extension: extensions

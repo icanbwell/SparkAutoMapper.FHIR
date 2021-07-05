@@ -79,6 +79,9 @@ if TYPE_CHECKING:
 class Invoice(FhirResourceBase):
     """
     Invoice
+        Invoice containing collected ChargeItems from an Account with calculated
+    individual and total price for Billing purpose.
+        If the element is present, it must have either a @value, an @id, or extensions
     """
 
     # noinspection PyPep8Naming
@@ -108,6 +111,9 @@ class Invoice(FhirResourceBase):
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
+            Invoice containing collected ChargeItems from an Account with calculated
+        individual and total price for Billing purpose.
+            If the element is present, it must have either a @value, an @id, or extensions
 
             :param id_: id of resource
             :param meta: Meta
