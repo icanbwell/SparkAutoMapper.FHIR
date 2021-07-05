@@ -588,10 +588,10 @@ class FhirXmlSchemaParser:
                 property_type = str(property_.get("type"))
 
             min_occurs: str = str(
-                property_.get("minOccurs") if hasattr(property_, "minOccurs") else 0
+                property_.get("minOccurs") if property_.get("minOccurs") else 0
             )
             max_occurs: str = str(
-                property_.get("maxOccurs") if hasattr(property_, "maxOccurs") else 1
+                property_.get("maxOccurs") if property_.get("maxOccurs") else 1
             )
             property_documentation_dict: Optional[ObjectifiedElement] = (
                 property_["annotation"]["documentation"]
