@@ -517,7 +517,7 @@ class FhirXmlSchemaParser:
                 documentation_entries.append(documentation)
 
             inner_complex_type: Optional[ObjectifiedElement] = (
-                complex_type.get("xs:complexContent").get("xs:extension")  # type: ignore
+                complex_type.get("xs:complexContent").get("xs:extension")
                 if complex_type.get("xs:complexContent")
                 else None
             )
@@ -555,9 +555,7 @@ class FhirXmlSchemaParser:
         properties: List[ObjectifiedElement] = []
         sequences: Union[
             ObjectifiedElement, List[ObjectifiedElement]
-        ] = inner_complex_type.get(  # type: ignore
-            "xs:sequence"
-        )
+        ] = inner_complex_type.get("xs:sequence")
         if sequences:
             if not isinstance(sequences, list):
                 sequences = [sequences]
@@ -565,18 +563,14 @@ class FhirXmlSchemaParser:
                 if sequence_item.get("xs:element"):
                     sequence_item_elements: Union[
                         ObjectifiedElement, List[ObjectifiedElement]
-                    ] = sequence_item.get(  # type: ignore
-                        "xs:element"
-                    )
+                    ] = sequence_item.get("xs:element")
                     if not isinstance(sequence_item_elements, list):
                         sequence_item_elements = [sequence_item_elements]
                     properties.extend(sequence_item_elements)
                 if sequence_item.get("xs:choice"):
                     sequence_item_choices: Union[
                         ObjectifiedElement, List[ObjectifiedElement]
-                    ] = sequence_item.get(  # type: ignore
-                        "xs:choice"
-                    )
+                    ] = sequence_item.get("xs:choice")
                     if not isinstance(sequence_item_choices, list):
                         sequence_item_choices = [sequence_item_choices]
                     choice_properties = flatten(
@@ -602,7 +596,7 @@ class FhirXmlSchemaParser:
                 property_.get("maxOccurs") if hasattr(property_, "maxOccurs") else 1
             )
             property_documentation_dict: Optional[ObjectifiedElement] = (
-                property_.get("xs:annotation").get("xs:documentation")  # type: ignore
+                property_.get("xs:annotation").get("xs:documentation")
                 if property_.get("xs:annotation")
                 else None
             )
