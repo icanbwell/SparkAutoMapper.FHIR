@@ -1,12 +1,11 @@
 import dataclasses
+import re
 from pathlib import Path
 from typing import OrderedDict, Any, List, Union, Dict, Optional
-import re
 
-from lxml.objectify import ObjectifiedElement, StringElement
-from spark_pipeline_framework.utilities.flattener import flatten  # type: ignore
-from xmltodict import parse
 from lxml import objectify
+from lxml.objectify import ObjectifiedElement
+from spark_pipeline_framework.utilities.flattener import flatten  # type: ignore
 
 
 @dataclasses.dataclass
@@ -124,32 +123,32 @@ class FhirXmlSchemaParser:
         # first read fhir-all.xsd to get a list of resources
         fhir_xsd_all_file: Path = (
             data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("fhir-all-xsd")
-                .joinpath("fhir-all.xsd")
+            .joinpath("definitions.xml")
+            .joinpath("fhir-all-xsd")
+            .joinpath("fhir-all.xsd")
         )
         resources: List[str] = ["fhir-base.xsd"]
 
-        with open(fhir_xsd_all_file, "r") as file:
+        with open(fhir_xsd_all_file, "rb") as file:
             contents = file.read()
-            result: ObjectifiedElement = parse(contents)
+            root: ObjectifiedElement = objectify.fromstring(contents)
             resource_item: ObjectifiedElement
-            for resource_item in result["xs:schema"]["xs:include"]:
-                resources.append(resource_item["@schemaLocation"])
+            for resource_item in root["xs:schema"]["xs:include"]:
+                resources.append(resource_item.get("schemaLocation"))
 
         resource_xsd_file_name: str
         for resource_xsd_file_name in resources:
             if (
-                    filter_to_resource
-                    and not resource_xsd_file_name.startswith(filter_to_resource)
-                    and not resource_xsd_file_name == "fhir-base.xsd"
+                filter_to_resource
+                and not resource_xsd_file_name.startswith(filter_to_resource)
+                and not resource_xsd_file_name == "fhir-base.xsd"
             ):
                 continue
             resource_xsd_file: Path = (
                 data_dir.joinpath("xsd")
-                    .joinpath("definitions.xml")
-                    .joinpath("fhir-all-xsd")
-                    .joinpath(resource_xsd_file_name)
+                .joinpath("definitions.xml")
+                .joinpath("fhir-all-xsd")
+                .joinpath(resource_xsd_file_name)
             )
             fhir_entities.extend(
                 FhirXmlSchemaParser._generate_classes_for_resource(resource_xsd_file)
@@ -194,7 +193,7 @@ class FhirXmlSchemaParser:
             c
             for c in fhir_entities
             if c.fhir_name not in [b.name for b in value_sets]
-               or c.cleaned_name in ["PractitionerRole", "ElementDefinition"]
+            or c.cleaned_name in ["PractitionerRole", "ElementDefinition"]
         ]
         fhir_entities.extend(
             [
@@ -264,7 +263,7 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def process_types_for_codeable_concepts(
-            fhir_entities: List[FhirEntity], value_sets: List[FhirValueSet]
+        fhir_entities: List[FhirEntity], value_sets: List[FhirValueSet]
     ) -> None:
         codeable_types: List[
             FhirCodeableType
@@ -334,19 +333,19 @@ class FhirXmlSchemaParser:
                         c
                         for c in value_sets
                         if (
-                                   c.url
-                                   and codeable_type.codeable_type_url
-                                   and c.url.split("|")[0]
-                                   == codeable_type.codeable_type_url.split("|")[0]
-                           )
-                           or (
-                                   c.value_set_url
-                                   and codeable_type.codeable_type_url
-                                   and (
-                                           c.value_set_url.split("|")[0]
-                                           == codeable_type.codeable_type_url.split("|")[0]
-                                   )
-                           )
+                            c.url
+                            and codeable_type.codeable_type_url
+                            and c.url.split("|")[0]
+                            == codeable_type.codeable_type_url.split("|")[0]
+                        )
+                        or (
+                            c.value_set_url
+                            and codeable_type.codeable_type_url
+                            and (
+                                c.value_set_url.split("|")[0]
+                                == codeable_type.codeable_type_url.split("|")[0]
+                            )
+                        )
                     ]
                     if value_set_matching:
                         value_set = value_set_matching[0]
@@ -366,8 +365,8 @@ class FhirXmlSchemaParser:
         for fhir_entity in fhir_entities:
             for property_ in fhir_entity.properties:
                 if (
-                        property_.cleaned_type in ["CodeableConcept", "Coding"]
-                        and not property_.codeable_type
+                    property_.cleaned_type in ["CodeableConcept", "Coding"]
+                    and not property_.codeable_type
                 ):
                     property_.codeable_type = SmartName(
                         name="generic_type",
@@ -435,14 +434,14 @@ class FhirXmlSchemaParser:
                         p
                         for p in fhir_entity.properties
                         if p.name.startswith(property_name_prefix)
-                           and p.type_ == "Reference"
+                        and p.type_ == "Reference"
                     ]
                 else:
                     fhir_property_list = [
                         p
                         for p in fhir_entity.properties
                         if p.name
-                           == FhirXmlSchemaParser.fix_python_keywords(property_name)
+                        == FhirXmlSchemaParser.fix_python_keywords(property_name)
                     ]
                 if fhir_property_list:
                     fhir_property = fhir_property_list[0]
@@ -467,8 +466,8 @@ class FhirXmlSchemaParser:
         for fhir_entity in fhir_entities:
             for property_ in fhir_entity.properties:
                 if (
-                        property_.cleaned_type in ["Reference"]
-                        and not property_.reference_target_resources
+                    property_.cleaned_type in ["Reference"]
+                    and not property_.reference_target_resources
                 ):
                     property_.reference_target_resources = [
                         SmartName(
@@ -482,23 +481,16 @@ class FhirXmlSchemaParser:
     @staticmethod
     def _generate_classes_for_resource(resource_xsd_file: Path) -> List[FhirEntity]:
         print(f"++++++ PROCESSING FILE {resource_xsd_file.name} +++++++++ ")
-        with open(resource_xsd_file, "r") as file:
+        with open(resource_xsd_file, "rb") as file:
             contents = file.read()
-            result = parse(contents)
+            root: ObjectifiedElement = objectify.fromstring(contents)
+
             # pprint(result)
         fhir_entities: List[FhirEntity] = []
-        complex_types: List[ObjectifiedElement] = result["xs:schema"][
-            "xs:complexType"
-        ]
-        # if there is only one entry, then xml_to_dict makes it an object instead of a list
-        if isinstance(complex_types, OrderedDict):
-            complex_types = [complex_types]
+        complex_types: List[ObjectifiedElement] = root["xs:schema"]["xs:complexType"]
         complex_type: ObjectifiedElement
         for complex_type in complex_types:
-            if not isinstance(complex_type, OrderedDict):
-                print(f"ASSERT: complex_type is not OrderedDict.  {type(complex_type)}")
-            assert isinstance(complex_type, OrderedDict), type(complex_type)
-            complex_type_name: str = complex_type["@name"]
+            complex_type_name: str = complex_type.get("name")
             cleaned_complex_type_name: str = complex_type_name.replace(".", "")
             complex_type_name_snake_case: str = FhirXmlSchemaParser.camel_to_snake(
                 cleaned_complex_type_name
@@ -509,8 +501,6 @@ class FhirXmlSchemaParser:
                 if "x:annotation" in complex_type
                 else []
             )
-            if isinstance(documentation_items, OrderedDict):
-                documentation_items = [documentation_items]
             documentation_item_dict: Union[ObjectifiedElement, str]
             documentation_entries: List[str] = []
             for documentation_item_dict in documentation_items:
@@ -533,7 +523,7 @@ class FhirXmlSchemaParser:
             )
             entity_type: Optional[str] = None
             if inner_complex_type:
-                entity_type = str(inner_complex_type.get("@base"))
+                entity_type = str(inner_complex_type.get("base"))
                 print(f"type={entity_type}")
                 fhir_properties = FhirXmlSchemaParser.generate_properties_for_class(
                     inner_complex_type
@@ -560,7 +550,7 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def generate_properties_for_class(
-            inner_complex_type: ObjectifiedElement
+        inner_complex_type: ObjectifiedElement,
     ) -> List[FhirProperty]:
         properties: List[ObjectifiedElement] = []
         sequences: Union[
@@ -602,14 +592,14 @@ class FhirXmlSchemaParser:
                 property_name: str = ref_.split(":")[-1]
                 property_type: str = ref_.split(":")[0]
             else:
-                property_name = str(property_.get("@name"))
-                property_type = str(property_.get("@type"))
+                property_name = str(property_.get("name"))
+                property_type = str(property_.get("type"))
 
             min_occurs: str = str(
-                property_.get("@minOccurs") if "@minOccurs" in property_ else 0
+                property_.get("minOccurs") if hasattr(property_, "minOccurs") else 0
             )
             max_occurs: str = str(
-                property_.get("@maxOccurs") if "@maxOccurs" in property_ else 1
+                property_.get("maxOccurs") if hasattr(property_, "maxOccurs") else 1
             )
             property_documentation_dict: Optional[ObjectifiedElement] = (
                 property_.get("xs:annotation").get("xs:documentation")  # type: ignore
@@ -647,7 +637,7 @@ class FhirXmlSchemaParser:
                         reference_target_resources_names=[],
                         is_back_bone_element="." in property_type,
                         is_basic_type=cleaned_type
-                                      in FhirXmlSchemaParser.cleaned_type_mapping,
+                        in FhirXmlSchemaParser.cleaned_type_mapping,
                         codeable_type=None,
                     )
                 )
@@ -658,46 +648,46 @@ class FhirXmlSchemaParser:
         result: str = (
             name
             if name
-               not in [
-                   "False",
-                   "None",
-                   "True",
-                   "and",
-                   "as",
-                   "assert",
-                   "async",
-                   "await",
-                   "break",
-                   "class",
-                   "continue",
-                   "def",
-                   "del",
-                   "elif",
-                   "else",
-                   "except",
-                   "finally",
-                   "for",
-                   "from",
-                   "global",
-                   "if",
-                   "import",
-                   "in",
-                   "is",
-                   "lambda",
-                   "nonlocal",
-                   "not",
-                   "or",
-                   "pass",
-                   "raise",
-                   "return",
-                   "try",
-                   "while",
-                   "with",
-                   "yield",
-                   "id",
-                   "type",
-                   "List",
-               ]
+            not in [
+                "False",
+                "None",
+                "True",
+                "and",
+                "as",
+                "assert",
+                "async",
+                "await",
+                "break",
+                "class",
+                "continue",
+                "def",
+                "del",
+                "elif",
+                "else",
+                "except",
+                "finally",
+                "for",
+                "from",
+                "global",
+                "if",
+                "import",
+                "in",
+                "is",
+                "lambda",
+                "nonlocal",
+                "not",
+                "or",
+                "pass",
+                "raise",
+                "return",
+                "try",
+                "while",
+                "with",
+                "yield",
+                "id",
+                "type",
+                "List",
+            ]
             else f"{name}_"
         )
         if result and result[0].isdigit():
@@ -711,8 +701,8 @@ class FhirXmlSchemaParser:
         # first read fhir-all.xsd to get a list of resources
         de_xml_file: Path = (
             data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("dataelements.xml")
+            .joinpath("definitions.xml")
+            .joinpath("dataelements.xml")
         )
 
         with open(de_xml_file, "rb") as file:
@@ -727,15 +717,14 @@ class FhirXmlSchemaParser:
                     "StructureDefinition"
                 ]
                 name: str = structure_definition["name"].get("value")
-                documentation: List[str] = structure_definition["description"].get("value")
-                # if isinstance(documentation, OrderedDict):
-                #     documentation = [documentation]
-                snapshot_element: ObjectifiedElement = structure_definition[
-                    "snapshot"
-                ]["element"]
+                documentation: List[str] = structure_definition["description"].get(
+                    "value"
+                )
+                snapshot_element: ObjectifiedElement = structure_definition["snapshot"][
+                    "element"
+                ]
                 types: List[ObjectifiedElement] = snapshot_element["type"]
-                if isinstance(types, OrderedDict):
-                    types = [types]
+                assert isinstance(types, OrderedDict)
 
                 # There are 3 main cases:
                 # 1. A simple scalar type
@@ -772,8 +761,8 @@ class FhirXmlSchemaParser:
         # first read fhir-all.xsd to get a list of resources
         de_xml_file: Path = (
             data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("dataelements.xml")
+            .joinpath("definitions.xml")
+            .joinpath("dataelements.xml")
         )
 
         with open(de_xml_file, "rb") as file:
@@ -788,12 +777,10 @@ class FhirXmlSchemaParser:
                     "StructureDefinition"
                 ]
                 # name: str = structure_definition["name"].get("value")
-                snapshot_element: ObjectifiedElement = structure_definition[
-                    "snapshot"
-                ]["element"]
+                snapshot_element: ObjectifiedElement = structure_definition["snapshot"][
+                    "element"
+                ]
                 types: List[ObjectifiedElement] = snapshot_element["type"]
-                if isinstance(types, OrderedDict):
-                    types = [types]
                 type_: ObjectifiedElement
                 for type_ in types:
                     type_code_obj = type_["code"]
@@ -807,8 +794,6 @@ class FhirXmlSchemaParser:
                             target_profile_list: List[ObjectifiedElement] = type_[
                                 "targetProfile"
                             ]
-                            if isinstance(target_profile_list, OrderedDict):
-                                target_profile_list = [target_profile_list]
                             target_profiles: List[str] = [
                                 c.get("value") for c in target_profile_list
                             ]
@@ -831,8 +816,8 @@ class FhirXmlSchemaParser:
         # first read fhir-all.xsd to get a list of resources
         de_xml_file: Path = (
             data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("dataelements.xml")
+            .joinpath("definitions.xml")
+            .joinpath("dataelements.xml")
         )
 
         with open(de_xml_file, "rb") as file:
@@ -847,9 +832,9 @@ class FhirXmlSchemaParser:
                     "StructureDefinition"
                 ]
                 # name: str = structure_definition["name"].get("value")
-                snapshot_element: ObjectifiedElement = structure_definition[
-                    "snapshot"
-                ]["element"]
+                snapshot_element: ObjectifiedElement = structure_definition["snapshot"][
+                    "element"
+                ]
                 if hasattr(snapshot_element, "binding"):
                     types: List[ObjectifiedElement] = snapshot_element["type"]
                     type_: ObjectifiedElement
@@ -866,7 +851,7 @@ class FhirXmlSchemaParser:
                             binding: ObjectifiedElement
                             for binding in bindings:
                                 extension_code_list = binding["extension"]
-                                field_name: str = "@url"
+                                field_name: str = "url"
                                 url: str = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
                                 value_set_url = (
                                     binding["valueSet"].get("value")
@@ -876,10 +861,13 @@ class FhirXmlSchemaParser:
                                 codeable_type_list: List[ObjectifiedElement] = [
                                     bind
                                     for bind in extension_code_list
-                                    if hasattr(bind, field_name) and bind[field_name] == url
+                                    if hasattr(bind, field_name)
+                                    and bind.get(field_name) == url
                                 ]
                                 if codeable_type_list:
-                                    codeable_type_obj: ObjectifiedElement = codeable_type_list[0]
+                                    codeable_type_obj: ObjectifiedElement = (
+                                        codeable_type_list[0]
+                                    )
                                     codeable_type: str = codeable_type_obj[
                                         "valueString"
                                     ].get("value")
@@ -888,8 +876,10 @@ class FhirXmlSchemaParser:
                                             path=snapshot_element["path"].get("value"),
                                             codeable_type=codeable_type,
                                             codeable_type_url=value_set_url,
-                                            is_codeable_concept=type_["code"].get("value")
-                                                                in ["Coding", "CodeableConcept"],
+                                            is_codeable_concept=type_["code"].get(
+                                                "value"
+                                            )
+                                            in ["Coding", "CodeableConcept"],
                                         )
                                     )
             return fhir_codeable_types
@@ -910,8 +900,8 @@ class FhirXmlSchemaParser:
 
         value_sets_file: Path = (
             data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("valuesets.xml")
+            .joinpath("definitions.xml")
+            .joinpath("valuesets.xml")
         )
         with open(value_sets_file, "rb") as file:
             contents: bytes = file.read()
@@ -931,20 +921,22 @@ class FhirXmlSchemaParser:
             fhir_name: str = value_set["name"].get("value")
             name: str = fhir_name.replace("v3.", "")
             description: Union[List[str], str] = (
-                value_set["description"].get("value") if hasattr(value_set, "description") else ""
+                value_set["description"].get("value")
+                if hasattr(value_set, "description")
+                else ""
             )
             if not isinstance(description, list):
                 description = [description]
             url = value_set["url"].get("value")
             value_set_url = (
-                value_set["valueSet"].get("value") if hasattr(value_set, "valueSet") else None
+                value_set["valueSet"].get("value")
+                if hasattr(value_set, "valueSet")
+                else None
             )
             value_set_url_list: List[str] = []
             fhir_concepts: List[FhirValueSetConcept] = []
             if hasattr(value_set, "concept"):
                 concepts: List[ObjectifiedElement] = value_set["concept"]
-                if isinstance(concepts, OrderedDict):
-                    concepts = [concepts]
                 concept: ObjectifiedElement
                 for concept in concepts:
                     fhir_concepts.append(
@@ -956,14 +948,14 @@ class FhirXmlSchemaParser:
                 compose_includes: List[ObjectifiedElement] = value_set["compose"][
                     "include"
                 ]
-                if isinstance(compose_includes, OrderedDict):
-                    compose_includes = [compose_includes]
                 compose_include: ObjectifiedElement
                 for compose_include in compose_includes:
                     is_code_system = hasattr(compose_include, "system")
                     # is_value_set = "valueSet" in compose_include
                     if is_code_system:
-                        compose_include_code_system: str = compose_include["system"].get("value")
+                        compose_include_code_system: str = compose_include[
+                            "system"
+                        ].get("value")
                         # find the corresponding item in code systems
                         v3_code_systems: List[FhirValueSet] = [
                             c
@@ -987,8 +979,6 @@ class FhirXmlSchemaParser:
                             value_set_url_list.append(compose_include_code_system)
                     if hasattr(compose_include, "concept"):
                         concepts = compose_include["concept"]
-                        if isinstance(concepts, OrderedDict):
-                            concepts = [concepts]
                         for concept in concepts:
                             fhir_concepts.append(
                                 FhirXmlSchemaParser.create_concept(
@@ -1037,7 +1027,7 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def create_concept(
-            concept: ObjectifiedElement, source: str, value_set_url: str
+        concept: ObjectifiedElement, source: str, value_set_url: str
     ) -> FhirValueSetConcept:
         code: str = concept["code"].get("value")
         display: str = concept["display"].get("value") if "display" in concept else code
@@ -1069,8 +1059,8 @@ class FhirXmlSchemaParser:
 
         value_sets_json_file: Path = (
             data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("v3-codesystems.xml")
+            .joinpath("definitions.xml")
+            .joinpath("v3-codesystems.xml")
         )
         with open(value_sets_json_file, "rb") as file:
             contents: bytes = file.read()
@@ -1080,9 +1070,7 @@ class FhirXmlSchemaParser:
         # Have to do 2 passes since the compose includes may be later in the file
         value_set_entry: Dict[str, Any]
         for value_set_entry in entries:
-            value_set_entry_resource: ObjectifiedElement = value_set_entry[
-                "resource"
-            ]
+            value_set_entry_resource: ObjectifiedElement = value_set_entry["resource"]
             is_code_system: bool = hasattr(value_set_entry_resource, "CodeSystem")
             is_value_set: bool = hasattr(value_set_entry_resource, "ValueSet")
             value_set: ObjectifiedElement = (
@@ -1152,7 +1140,7 @@ class FhirXmlSchemaParser:
             value_set_entry_resource = value_set_entry["resource"]
             is_code_system = hasattr(value_set_entry_resource, "CodeSystem")
             is_value_set = hasattr(value_set_entry_resource, "ValueSet")
-            value_set: ObjectifiedElement = (
+            value_set = (
                 value_set_entry_resource["ValueSet"]
                 if is_value_set
                 else value_set_entry_resource["CodeSystem"]
@@ -1171,7 +1159,9 @@ class FhirXmlSchemaParser:
                     is_code_system = hasattr(compose_include, "system")
                     # is_value_set = "valueSet" in compose_include
                     if is_code_system:
-                        compose_include_code_system: str = compose_include["system"].get("value")
+                        compose_include_code_system: str = compose_include[
+                            "system"
+                        ].get("value")
                         # find the corresponding item in code systems
                         v3_code_systems: List[FhirValueSet] = [
                             c
@@ -1216,8 +1206,8 @@ class FhirXmlSchemaParser:
 
         value_sets_json_file: Path = (
             data_dir.joinpath("xsd")
-                .joinpath("definitions.xml")
-                .joinpath("v2-tables.xml")
+            .joinpath("definitions.xml")
+            .joinpath("v2-tables.xml")
         )
         with open(value_sets_json_file, "rb") as file:
             contents: bytes = file.read()
