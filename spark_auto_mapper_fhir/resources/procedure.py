@@ -87,7 +87,7 @@ class Procedure(FhirResourceBase):
         performedString: Optional[FhirString] = None,
         performedAge: Optional[FhirAge] = None,
         performedRange: Optional[Range] = None,
-        encounter: Optional["Encounter"] = None,
+        encounter: Optional[Reference["Encounter"]] = None,
         recorder: Optional[
             Reference[Union[Patient, RelatedPerson, Practitioner, PractitionerRole]]
         ] = None,
