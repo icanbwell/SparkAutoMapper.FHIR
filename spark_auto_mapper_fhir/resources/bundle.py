@@ -5,14 +5,20 @@ from typing import Optional, TYPE_CHECKING, Union
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
 from spark_fhir_schemas.r4.resources.bundle import BundleSchema
 
 if TYPE_CHECKING:
     pass
+    # id_ (id)
+    # meta (Meta)
+    # implicitRules (uri)
+    # language (CommonLanguages)
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
+
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -48,9 +54,10 @@ class Bundle(FhirResourceBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
+        id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        implicitRules: Optional[FhirUri] = None,
+        language: Optional[CommonLanguagesCode] = None,
         identifier: Optional[Identifier] = None,
         type_: BundleTypeCode,
         timestamp: Optional[FhirInstant] = None,
@@ -63,9 +70,16 @@ class Bundle(FhirResourceBase):
             A container for a collection of resources.
             If the element is present, it must have either a @value, an @id, or extensions
 
-            :param id_: id of resource
-            :param meta: Meta
-            :param extension: extensions
+            :param id_: The logical id of the resource, as used in the URL for the resource. Once
+        assigned, this value never changes.
+            :param meta: The metadata about the resource. This is content that is maintained by the
+        infrastructure. Changes to the content might not always be associated with
+        version changes to the resource.
+            :param implicitRules: A reference to a set of rules that were followed when the resource was
+        constructed, and which must be understood when processing the content. Often,
+        this is a reference to an implementation guide that defines the special rules
+        along with other profiles etc.
+            :param language: The base language in which the resource is written.
             :param identifier: A persistent identifier for the bundle that won't change as a bundle is copied
         from server to server.
             :param type_: Indicates the purpose of this bundle - how it is intended to be used.
@@ -84,7 +98,8 @@ class Bundle(FhirResourceBase):
             resourceType="Bundle",
             id_=id_,
             meta=meta,
-            extension=extension,
+            implicitRules=implicitRules,
+            language=language,
             identifier=identifier,
             type_=type_,
             timestamp=timestamp,

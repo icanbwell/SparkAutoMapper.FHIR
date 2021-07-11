@@ -3,8 +3,6 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -12,6 +10,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # strength (BindingStrength)
     from spark_auto_mapper_fhir.value_sets.binding_strength import BindingStrengthCode
 
@@ -33,8 +35,8 @@ class ElementDefinitionBinding(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         strength: BindingStrengthCode,
         description: Optional[FhirString] = None,
         valueSet: Optional[FhirCanonical] = None,
@@ -45,8 +47,24 @@ class ElementDefinitionBinding(FhirBackboneElementBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param strength: Indicates the degree of conformance expectations associated with this binding
         - that is, the degree to which the provided value set must be adhered to in
         the instances.
@@ -55,8 +73,8 @@ class ElementDefinitionBinding(FhirBackboneElementBase):
         to.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             strength=strength,
             description=description,
             valueSet=valueSet,

@@ -4,8 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -14,6 +12,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # kind (CarePlanActivityKind)
     from spark_auto_mapper_fhir.value_sets.care_plan_activity_kind import (
         CarePlanActivityKindCode,
@@ -91,6 +93,10 @@ if TYPE_CHECKING:
     # productCodeableConcept (CodeableConcept)
     # End Import for References for productCodeableConcept
     # Import for CodeableConcept for productCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.snomedct_medication_codes import (
+        SNOMEDCTMedicationCodesCode,
+    )
+
     # End Import for CodeableConcept for productCodeableConcept
     # productReference (Reference)
     # Imports for References for productReference
@@ -116,8 +122,8 @@ class CarePlanDetail(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         kind: Optional[CarePlanActivityKindCode] = None,
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
@@ -156,7 +162,9 @@ class CarePlanDetail(FhirBackboneElementBase):
                 ]
             ]
         ] = None,
-        productCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        productCodeableConcept: Optional[
+            CodeableConcept[SNOMEDCTMedicationCodesCode]
+        ] = None,
         productReference: Optional[Reference[Union[Medication, Substance]]] = None,
         dailyAmount: Optional[Quantity] = None,
         quantity: Optional[Quantity] = None,
@@ -167,8 +175,24 @@ class CarePlanDetail(FhirBackboneElementBase):
         care for a particular patient, group or community for a period of time,
         possibly limited to care for a specific condition or set of conditions.
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param kind: A description of the kind of resource the in-line definition of a care plan
         activity is representing.  The CarePlan.activity.detail is an in-line
         definition when a resource is not referenced using
@@ -211,8 +235,8 @@ class CarePlanDetail(FhirBackboneElementBase):
         specifics about the activity such as body site, method, route, etc.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             kind=kind,
             instantiatesCanonical=instantiatesCanonical,
             instantiatesUri=instantiatesUri,

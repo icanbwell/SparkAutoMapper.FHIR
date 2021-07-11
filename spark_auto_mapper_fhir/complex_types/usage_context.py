@@ -3,13 +3,14 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # code (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
@@ -23,7 +24,9 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for valueCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.context_of_use_value_set import (
+        ContextOfUseValueSetCode,
+    )
 
     # End Import for CodeableConcept for valueCodeableConcept
     # valueQuantity (Quantity)
@@ -58,10 +61,11 @@ class UsageContext(FhirComplexTypeBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
         code: Coding[UsageContextTypeCode],
-        valueCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        valueCodeableConcept: Optional[
+            CodeableConcept[ContextOfUseValueSetCode]
+        ] = None,
         valueQuantity: Optional[Quantity] = None,
         valueRange: Optional[Range] = None,
         valueReference: Optional[
@@ -86,8 +90,11 @@ class UsageContext(FhirComplexTypeBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
             :param code: A code that identifies the type of context being specified by this usage
         context.
             :param valueCodeableConcept: None
@@ -96,7 +103,6 @@ class UsageContext(FhirComplexTypeBase):
             :param valueReference: None
         """
         super().__init__(
-            id_=id_,
             extension=extension,
             code=code,
             valueCodeableConcept=valueCodeableConcept,

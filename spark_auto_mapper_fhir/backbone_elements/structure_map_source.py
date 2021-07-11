@@ -7,7 +7,6 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -18,9 +17,11 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
-    # context (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
 
+    # modifierExtension (Extension)
+    # context (id)
     # min (integer)
     # max (string)
     # type_ (string)
@@ -197,9 +198,9 @@ class StructureMapSource(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
-        context: id,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        context: FhirId,
         min: Optional[FhirInteger] = None,
         max: Optional[FhirString] = None,
         type_: Optional[FhirString] = None,
@@ -210,7 +211,7 @@ class StructureMapSource(FhirBackboneElementBase):
         defaultValueDate: Optional[FhirDate] = None,
         defaultValueDateTime: Optional[FhirDateTime] = None,
         defaultValueDecimal: Optional[FhirDecimal] = None,
-        defaultValueId: Optional[id] = None,
+        defaultValueId: Optional[FhirId] = None,
         defaultValueInstant: Optional[FhirInstant] = None,
         defaultValueInteger: Optional[FhirInteger] = None,
         defaultValueMarkdown: Optional[FhirMarkdown] = None,
@@ -255,7 +256,7 @@ class StructureMapSource(FhirBackboneElementBase):
         defaultValueMeta: Optional[Meta] = None,
         element: Optional[FhirString] = None,
         listMode: Optional[StructureMapSourceListModeCode] = None,
-        variable: Optional[id] = None,
+        variable: Optional[FhirId] = None,
         condition: Optional[FhirString] = None,
         check: Optional[FhirString] = None,
         logMessage: Optional[FhirString] = None,
@@ -264,8 +265,24 @@ class StructureMapSource(FhirBackboneElementBase):
             A Map of relationships between 2 structures that can be used to transform
         data.
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param context: Type or variable this rule applies to.
             :param min: Specified minimum cardinality for the element. This is optional; if present,
         it acts an implicit check on the input content.
@@ -334,8 +351,8 @@ class StructureMapSource(FhirBackboneElementBase):
         when content matching the source rule is found.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             context=context,
             min=min,
             max=max,

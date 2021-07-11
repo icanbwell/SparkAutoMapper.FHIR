@@ -3,16 +3,16 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # reference (string)
     # type_ (uri)
     # identifier (Identifier)
@@ -40,9 +40,8 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
-        reference: Optional[FhirReference] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        reference: Optional[FhirString] = None,
         type_: Optional[FhirUri] = None,
         identifier: Optional[Identifier] = None,
         display: Optional[FhirString] = None,
@@ -52,8 +51,11 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
             :param reference: A reference to a location at which the other resource is found. The reference
         may be a relative reference, in which case it is relative to the service base
         URL, or an absolute URL that resolves to the location where the resource is
@@ -82,7 +84,6 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
         reference.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
             reference=reference,
             type_=type_,

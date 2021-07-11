@@ -5,8 +5,6 @@ from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -15,6 +13,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # required (boolean)
     # validated (boolean)
     # description (string)
@@ -37,8 +39,8 @@ class TestScriptCapability(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         required: FhirBoolean,
         validated: FhirBoolean,
         description: Optional[FhirString] = None,
@@ -51,8 +53,24 @@ class TestScriptCapability(FhirBackboneElementBase):
             A structured set of tests against a FHIR server or client implementation to
         determine compliance against the FHIR specification.
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param required: Whether or not the test execution will require the given capabilities of the
         server in order for this test script to execute.
             :param validated: Whether or not the test execution will validate the given capabilities of the
@@ -68,8 +86,8 @@ class TestScriptCapability(FhirBackboneElementBase):
         statement, then all tests in this script are skipped.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             required=required,
             validated=validated,
             description=description,

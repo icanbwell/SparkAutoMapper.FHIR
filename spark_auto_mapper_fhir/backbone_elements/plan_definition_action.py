@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -14,6 +13,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # prefix (string)
     # title (string)
     # description (string)
@@ -37,11 +40,11 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.related_artifact import RelatedArtifact
 
     # goalId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # subjectCodeableConcept (CodeableConcept)
     # End Import for References for subjectCodeableConcept
     # Import for CodeableConcept for subjectCodeableConcept
+    from spark_auto_mapper_fhir.value_sets.subject_type import SubjectTypeCode
+
     # End Import for CodeableConcept for subjectCodeableConcept
     # subjectReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -143,8 +146,8 @@ class PlanDefinitionAction(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         prefix: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
@@ -153,8 +156,8 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         code: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         reason: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         documentation: Optional[FhirList[RelatedArtifact]] = None,
-        goalId: Optional[FhirList[id]] = None,
-        subjectCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        goalId: Optional[FhirList[FhirId]] = None,
+        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Union[Group]]] = None,
         trigger: Optional[FhirList[TriggerDefinition]] = None,
         condition: Optional[FhirList[PlanDefinitionCondition]] = None,
@@ -186,8 +189,24 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         to support the description of a broad range of clinical artifacts such as
         clinical decision support rules, order sets and protocols.
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param prefix: A user-visible prefix for the action.
             :param title: The title of the action displayed to a user.
             :param description: A brief description of the action used to provide a summary to display to the
@@ -242,8 +261,8 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         chosen as part of realizing the action definition.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             prefix=prefix,
             title=title,
             description=description,

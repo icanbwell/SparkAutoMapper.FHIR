@@ -7,7 +7,6 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -18,6 +17,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # path (string)
     # representation (PropertyRepresentation)
     from spark_auto_mapper_fhir.value_sets.property_representation import (
@@ -78,8 +81,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # defaultValueId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # defaultValueInstant (instant)
     from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
@@ -381,8 +382,8 @@ class ElementDefinition(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         path: FhirString,
         representation: Optional[FhirList[PropertyRepresentationCode]] = None,
         sliceName: Optional[FhirString] = None,
@@ -407,7 +408,7 @@ class ElementDefinition(FhirBackboneElementBase):
         defaultValueDate: Optional[FhirDate] = None,
         defaultValueDateTime: Optional[FhirDateTime] = None,
         defaultValueDecimal: Optional[FhirDecimal] = None,
-        defaultValueId: Optional[id] = None,
+        defaultValueId: Optional[FhirId] = None,
         defaultValueInstant: Optional[FhirInstant] = None,
         defaultValueInteger: Optional[FhirInteger] = None,
         defaultValueMarkdown: Optional[FhirMarkdown] = None,
@@ -459,7 +460,7 @@ class ElementDefinition(FhirBackboneElementBase):
         fixedDate: Optional[FhirDate] = None,
         fixedDateTime: Optional[FhirDateTime] = None,
         fixedDecimal: Optional[FhirDecimal] = None,
-        fixedId: Optional[id] = None,
+        fixedId: Optional[FhirId] = None,
         fixedInstant: Optional[FhirInstant] = None,
         fixedInteger: Optional[FhirInteger] = None,
         fixedMarkdown: Optional[FhirMarkdown] = None,
@@ -509,7 +510,7 @@ class ElementDefinition(FhirBackboneElementBase):
         patternDate: Optional[FhirDate] = None,
         patternDateTime: Optional[FhirDateTime] = None,
         patternDecimal: Optional[FhirDecimal] = None,
-        patternId: Optional[id] = None,
+        patternId: Optional[FhirId] = None,
         patternInstant: Optional[FhirInstant] = None,
         patternInteger: Optional[FhirInteger] = None,
         patternMarkdown: Optional[FhirMarkdown] = None,
@@ -572,7 +573,7 @@ class ElementDefinition(FhirBackboneElementBase):
         maxValueUnsignedInt: Optional[unsignedInt] = None,
         maxValueQuantity: Optional[Quantity] = None,
         maxLength: Optional[FhirInteger] = None,
-        condition: Optional[FhirList[id]] = None,
+        condition: Optional[FhirList[FhirId]] = None,
         constraint: Optional[FhirList[ElementDefinitionConstraint]] = None,
         mustSupport: Optional[FhirBoolean] = None,
         isModifier: Optional[FhirBoolean] = None,
@@ -587,8 +588,24 @@ class ElementDefinition(FhirBackboneElementBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param path: The path identifies the element and is expressed as a "."-separated list of
         ancestor elements, beginning with the name of the resource or extension.
             :param representation: Codes that define how this element is represented in instances, when the
@@ -846,8 +863,8 @@ class ElementDefinition(FhirBackboneElementBase):
         to this element.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             path=path,
             representation=representation,
             sliceName=sliceName,

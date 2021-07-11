@@ -3,13 +3,14 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # origin (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
 
@@ -41,8 +42,7 @@ class SampledData(FhirComplexTypeBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
         origin: Quantity,
         period: FhirDecimal,
         factor: Optional[FhirDecimal] = None,
@@ -57,8 +57,11 @@ class SampledData(FhirComplexTypeBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
             :param origin: The base quantity that a measured value of zero represents. In addition, this
         provides the units of the entire measurement series.
             :param period: The length of time between sampling times, measured in milliseconds.
@@ -76,7 +79,6 @@ class SampledData(FhirComplexTypeBase):
         and "U" (above detection limit) can also be used in place of a decimal value.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
             origin=origin,
             period=period,

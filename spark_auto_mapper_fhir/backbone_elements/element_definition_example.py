@@ -7,7 +7,6 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -18,6 +17,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # label (string)
     # valueBase64Binary (base64Binary)
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
@@ -35,8 +38,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # valueId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # valueInstant (instant)
     from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
@@ -184,8 +185,8 @@ class ElementDefinitionExample(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         label: FhirString,
         valueBase64Binary: Optional[base64Binary] = None,
         valueBoolean: Optional[FhirBoolean] = None,
@@ -194,7 +195,7 @@ class ElementDefinitionExample(FhirBackboneElementBase):
         valueDate: Optional[FhirDate] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valueDecimal: Optional[FhirDecimal] = None,
-        valueId: Optional[id] = None,
+        valueId: Optional[FhirId] = None,
         valueInstant: Optional[FhirInstant] = None,
         valueInteger: Optional[FhirInteger] = None,
         valueMarkdown: Optional[FhirMarkdown] = None,
@@ -244,8 +245,24 @@ class ElementDefinitionExample(FhirBackboneElementBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param label: Describes the purpose of this example amoung the set of examples.
             :param valueBase64Binary: None
             :param valueBoolean: None
@@ -299,8 +316,8 @@ class ElementDefinitionExample(FhirBackboneElementBase):
             :param valueMeta: None
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             label=label,
             valueBase64Binary=valueBase64Binary,
             valueBoolean=valueBoolean,

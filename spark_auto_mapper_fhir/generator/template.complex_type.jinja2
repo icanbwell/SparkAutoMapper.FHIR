@@ -94,43 +94,21 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
-    {% if fhir_entity.cleaned_name == "Reference" %}
-        reference: Optional[FhirReference] = None,
-        type_: Optional[FhirUri] = None,
-        identifier: Optional[Identifier] = None,
-        display: Optional[FhirString] = None,
-    {% elif fhir_entity.cleaned_name == "CodeableConcept" %}
-        coding: Optional[FhirList[Coding[_T]]] = None,
-        text: Optional[FhirString] = None,
-    {% elif fhir_entity.cleaned_name == "Coding" %}
-        system: Optional[FhirUri] = None,
-        version: Optional[FhirString] = None,
-        code: Optional[_T] = None,
-        display: Optional[FhirString] = None,
-        userSelected: Optional[FhirBoolean] = None,
-    {% else %}
     {% for property in fhir_entity.properties %}
         {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.cleaned_type | replace(".","")}}{% if property.codeable_type %}[{{ property.codeable_type.cleaned_name }}]{% endif %} {% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
 
     {% endfor %}
-    {% endif %}
     ) -> None:
         """
     {% for documentation_item in fhir_entity.documentation %}
         {{ documentation_item | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {%  endfor %}
 
-        :param id_: id of resource
-        :param extension: extensions
     {% for property in fhir_entity.properties %}
         :param {{ property.name }}: {{ property.documentation[0] | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {% endfor %}
         """
         super().__init__(
-            id_=id_,
-            extension=extension,
         {% for property in fhir_entity.properties %}
             {{ property.name }}={{ property.name }},
         {% endfor %}

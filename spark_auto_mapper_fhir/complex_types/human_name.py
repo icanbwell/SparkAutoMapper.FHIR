@@ -4,13 +4,14 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # use (NameUse)
     from spark_auto_mapper_fhir.value_sets.name_use import NameUseCode
 
@@ -36,8 +37,7 @@ class HumanName(FhirComplexTypeBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
         use: Optional[NameUseCode] = None,
         text: Optional[FhirString] = None,
         family: Optional[FhirString] = None,
@@ -51,8 +51,11 @@ class HumanName(FhirComplexTypeBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
             :param use: Identifies the purpose for this name.
             :param text: Specifies the entire name as it should be displayed e.g. on an application UI.
         This may be provided instead of or as well as the specific parts.
@@ -66,7 +69,6 @@ class HumanName(FhirComplexTypeBase):
             :param period: Indicates the period of time when this name was valid for the named person.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
             use=use,
             text=text,

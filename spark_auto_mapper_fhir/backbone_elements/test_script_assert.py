@@ -4,7 +4,6 @@ from typing import Optional, TYPE_CHECKING
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -13,6 +12,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # label (string)
     # description (string)
     # direction (AssertionDirectionType)
@@ -23,8 +26,8 @@ if TYPE_CHECKING:
     # compareToSourceId (string)
     # compareToSourceExpression (string)
     # compareToSourcePath (string)
-    # contentType (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # contentType (Mime Types)
+    from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
 
     # expression (string)
     # headerField (string)
@@ -42,7 +45,9 @@ if TYPE_CHECKING:
     )
 
     # requestURL (string)
-    # resource (code)
+    # resource (FHIRDefinedType)
+    from spark_auto_mapper_fhir.value_sets.fhir_defined_type import FHIRDefinedTypeCode
+
     # response (AssertionResponseTypes)
     from spark_auto_mapper_fhir.value_sets.assertion_response_types import (
         AssertionResponseTypesCode,
@@ -50,8 +55,6 @@ if TYPE_CHECKING:
 
     # responseCode (string)
     # sourceId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # validateProfileId (id)
     # value (string)
     # warningOnly (boolean)
@@ -69,15 +72,15 @@ class TestScriptAssert(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         label: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
         direction: Optional[AssertionDirectionTypeCode] = None,
         compareToSourceId: Optional[FhirString] = None,
         compareToSourceExpression: Optional[FhirString] = None,
         compareToSourcePath: Optional[FhirString] = None,
-        contentType: Optional[code] = None,
+        contentType: Optional[MimeTypesCode] = None,
         expression: Optional[FhirString] = None,
         headerField: Optional[FhirString] = None,
         minimumId: Optional[FhirString] = None,
@@ -86,11 +89,11 @@ class TestScriptAssert(FhirBackboneElementBase):
         path: Optional[FhirString] = None,
         requestMethod: Optional[TestScriptRequestMethodCodeCode] = None,
         requestURL: Optional[FhirString] = None,
-        resource: Optional[code] = None,
+        resource: Optional[FHIRDefinedTypeCode] = None,
         response: Optional[AssertionResponseTypesCode] = None,
         responseCode: Optional[FhirString] = None,
-        sourceId: Optional[id] = None,
-        validateProfileId: Optional[id] = None,
+        sourceId: Optional[FhirId] = None,
+        validateProfileId: Optional[FhirId] = None,
         value: Optional[FhirString] = None,
         warningOnly: FhirBoolean,
     ) -> None:
@@ -98,8 +101,24 @@ class TestScriptAssert(FhirBackboneElementBase):
             A structured set of tests against a FHIR server or client implementation to
         determine compliance against the FHIR specification.
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
             :param label: The label would be used for tracking/logging purposes by test engines.
             :param description: The description would be used by test engines for tracking and reporting
         purposes.
@@ -139,8 +158,8 @@ class TestScriptAssert(FhirBackboneElementBase):
         this assert.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             label=label,
             description=description,
             direction=direction,

@@ -7,7 +7,6 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -18,6 +17,10 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
+    # modifierExtension (Extension)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -42,8 +45,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
     # valueId (id)
-    from spark_auto_mapper_fhir.complex_types.id import id
-
     # valueInstant (instant)
     from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
@@ -186,8 +187,8 @@ class TaskOutput(FhirBackboneElementBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
         type_: CodeableConcept[GenericTypeCode],
         valueBase64Binary: Optional[base64Binary] = None,
         valueBoolean: Optional[FhirBoolean] = None,
@@ -196,7 +197,7 @@ class TaskOutput(FhirBackboneElementBase):
         valueDate: Optional[FhirDate] = None,
         valueDateTime: Optional[FhirDateTime] = None,
         valueDecimal: Optional[FhirDecimal] = None,
-        valueId: Optional[id] = None,
+        valueId: Optional[FhirId] = None,
         valueInstant: Optional[FhirInstant] = None,
         valueInteger: Optional[FhirInteger] = None,
         valueMarkdown: Optional[FhirMarkdown] = None,
@@ -241,65 +242,81 @@ class TaskOutput(FhirBackboneElementBase):
         valueMeta: Optional[Meta] = None,
     ) -> None:
         """
-        A task to be performed.
+            A task to be performed.
 
-        :param id_: id of resource
-        :param extension: extensions
-        :param type_: The name of the Output parameter.
-        :param valueBase64Binary: None
-        :param valueBoolean: None
-        :param valueCanonical: None
-        :param valueCode: None
-        :param valueDate: None
-        :param valueDateTime: None
-        :param valueDecimal: None
-        :param valueId: None
-        :param valueInstant: None
-        :param valueInteger: None
-        :param valueMarkdown: None
-        :param valueOid: None
-        :param valuePositiveInt: None
-        :param valueString: None
-        :param valueTime: None
-        :param valueUnsignedInt: None
-        :param valueUri: None
-        :param valueUrl: None
-        :param valueUuid: None
-        :param valueAddress: None
-        :param valueAge: None
-        :param valueAnnotation: None
-        :param valueAttachment: None
-        :param valueCodeableConcept: None
-        :param valueCoding: None
-        :param valueContactPoint: None
-        :param valueCount: None
-        :param valueDistance: None
-        :param valueDuration: None
-        :param valueHumanName: None
-        :param valueIdentifier: None
-        :param valueMoney: None
-        :param valuePeriod: None
-        :param valueQuantity: None
-        :param valueRange: None
-        :param valueRatio: None
-        :param valueReference: None
-        :param valueSampledData: None
-        :param valueSignature: None
-        :param valueTiming: None
-        :param valueContactDetail: None
-        :param valueContributor: None
-        :param valueDataRequirement: None
-        :param valueExpression: None
-        :param valueParameterDefinition: None
-        :param valueRelatedArtifact: None
-        :param valueTriggerDefinition: None
-        :param valueUsageContext: None
-        :param valueDosage: None
-        :param valueMeta: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param type_: The name of the Output parameter.
+            :param valueBase64Binary: None
+            :param valueBoolean: None
+            :param valueCanonical: None
+            :param valueCode: None
+            :param valueDate: None
+            :param valueDateTime: None
+            :param valueDecimal: None
+            :param valueId: None
+            :param valueInstant: None
+            :param valueInteger: None
+            :param valueMarkdown: None
+            :param valueOid: None
+            :param valuePositiveInt: None
+            :param valueString: None
+            :param valueTime: None
+            :param valueUnsignedInt: None
+            :param valueUri: None
+            :param valueUrl: None
+            :param valueUuid: None
+            :param valueAddress: None
+            :param valueAge: None
+            :param valueAnnotation: None
+            :param valueAttachment: None
+            :param valueCodeableConcept: None
+            :param valueCoding: None
+            :param valueContactPoint: None
+            :param valueCount: None
+            :param valueDistance: None
+            :param valueDuration: None
+            :param valueHumanName: None
+            :param valueIdentifier: None
+            :param valueMoney: None
+            :param valuePeriod: None
+            :param valueQuantity: None
+            :param valueRange: None
+            :param valueRatio: None
+            :param valueReference: None
+            :param valueSampledData: None
+            :param valueSignature: None
+            :param valueTiming: None
+            :param valueContactDetail: None
+            :param valueContributor: None
+            :param valueDataRequirement: None
+            :param valueExpression: None
+            :param valueParameterDefinition: None
+            :param valueRelatedArtifact: None
+            :param valueTriggerDefinition: None
+            :param valueUsageContext: None
+            :param valueDosage: None
+            :param valueMeta: None
         """
         super().__init__(
-            id_=id_,
             extension=extension,
+            modifierExtension=modifierExtension,
             type_=type_,
             valueBase64Binary=valueBase64Binary,
             valueBoolean=valueBoolean,

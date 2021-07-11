@@ -102,7 +102,7 @@ def main() -> int:
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
-        elif fhir_entity.type_ == "DomainResource":
+        elif fhir_entity.is_resource:
             with open(data_dir.joinpath("template.resource.jinja2"), "r") as file:
                 template_contents = file.read()
                 from jinja2 import Template
@@ -117,22 +117,6 @@ def main() -> int:
                 )
 
             # print(result)
-            if not path.exists(file_path):
-                with open(file_path, "w") as file2:
-                    file2.write(result)
-        elif fhir_entity.type_ == "Resource":
-            with open(data_dir.joinpath("template.resource.jinja2"), "r") as file:
-                template_contents = file.read()
-                from jinja2 import Template
-
-                file_path = resources_folder.joinpath(f"{entity_file_name}.py")
-                print(f"Writing resource: {entity_file_name} to {file_path}...")
-                template = Template(
-                    template_contents, trim_blocks=True, lstrip_blocks=True
-                )
-                result = template.render(
-                    fhir_entity=fhir_entity,
-                )
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
@@ -196,6 +180,23 @@ def main() -> int:
             print(f"{resource_name}: {fhir_entity.type_} is not supported")
         # print(result)
 
+    copy_files_from_base_types_folder(
+        backbone_elements_folder=backbone_elements_folder,
+        complex_types_folder=complex_types_folder,
+        resources_folder=resources_folder,
+        value_sets_folder=value_sets_folder,
+    )
+
+    return 0
+
+
+def copy_files_from_base_types_folder(
+    *,
+    backbone_elements_folder: Path,
+    complex_types_folder: Path,
+    resources_folder: Path,
+    value_sets_folder: Path,
+) -> None:
     # copy resource.py
     print(
         f'Copying {resources_folder.joinpath("../base_types/resources")} to {resources_folder}'
@@ -228,7 +229,6 @@ def main() -> int:
     #         ),
     #         value_sets_folder.joinpath(value_set_file),
     #     )
-
     my_copytree(
         value_sets_folder.joinpath("../base_types/value_sets"), value_sets_folder
     )
@@ -245,14 +245,12 @@ def main() -> int:
             ),
             complex_types_folder.joinpath(complex_type_file),
         )
-
     # remove duplicate imports
     resource_files = [
         f for f in listdir(resources_folder) if isfile(join(resources_folder, f))
     ]
     for resource_file in resource_files:
         clean_duplicate_lines(resources_folder.joinpath(resource_file))
-
     backbone_files = [
         f
         for f in listdir(backbone_elements_folder)
@@ -260,7 +258,6 @@ def main() -> int:
     ]
     for backbone_file in backbone_files:
         clean_duplicate_lines(backbone_elements_folder.joinpath(backbone_file))
-
     complex_types_files = [
         f
         for f in listdir(complex_types_folder)
@@ -268,14 +265,11 @@ def main() -> int:
     ]
     for complex_types_file in complex_types_files:
         clean_duplicate_lines(complex_types_folder.joinpath(complex_types_file))
-
     value_sets_files = [
         f for f in listdir(value_sets_folder) if isfile(join(value_sets_folder, f))
     ]
     for value_sets_file in value_sets_files:
         clean_duplicate_lines(value_sets_folder.joinpath(value_sets_file))
-
-    return 0
 
 
 if __name__ == "__main__":

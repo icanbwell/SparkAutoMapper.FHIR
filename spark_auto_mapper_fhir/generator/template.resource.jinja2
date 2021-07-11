@@ -15,7 +15,9 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
+{% if fhir_entity.cleaned_name not in ["DomainResource", "Resource"] %}
 from spark_fhir_schemas.r4.resources.{{ fhir_entity.cleaned_name.lower() }} import {{ fhir_entity.cleaned_name }}Schema
+{% endif %}
 
 if TYPE_CHECKING:
     pass
@@ -69,11 +71,6 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
     def __init__(
         self,
         *,
-        id_: FhirId,
-        meta: Optional[Meta] = None,
-    {% if fhir_entity.cleaned_name != "DomainResource" %}
-        extension: Optional[FhirList[ExtensionBase]] = None,
-    {%  endif %}
     {% for property in fhir_entity.properties %}
         {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.cleaned_type | replace(".","")}}{% if property.codeable_type %}[{{ property.codeable_type.cleaned_name }}]{% endif %} {% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
 
@@ -84,20 +81,12 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
         {{ documentation_item | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ')}}
     {%  endfor %}
 
-        :param id_: id of resource
-        :param meta: Meta
-        :param extension: extensions
     {% for property in fhir_entity.properties %}
         :param {{ property.name }}: {{ property.documentation[0] | wordwrap(78) | replace('\n', '\n    ') | replace('\r', '\n    ') }}
     {% endfor %}
         """
         super().__init__(
             resourceType="{{fhir_entity.cleaned_name}}",
-            id_=id_,
-            meta=meta,
-        {% if fhir_entity.cleaned_name != "DomainResource" %}
-            extension=extension,
-        {%  endif %}
         {% for property in fhir_entity.properties %}
             {{ property.name }}={{ property.name }},
         {% endfor %}
@@ -106,5 +95,8 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
     def get_schema(
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
+{% if fhir_entity.cleaned_name not in ["DomainResource", "Resource"] %}
         return {{ fhir_entity.cleaned_name }}Schema.get_schema(include_extension=include_extension)
-
+{% else %}
+        return None
+{% endif %}

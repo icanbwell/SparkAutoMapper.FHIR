@@ -3,13 +3,14 @@ from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # status (NarrativeStatus)
     from spark_auto_mapper_fhir.value_sets.narrative_status import NarrativeStatusCode
 
@@ -27,8 +28,7 @@ class Narrative(FhirComplexTypeBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
         status: NarrativeStatusCode,
     ) -> None:
         """
@@ -37,14 +37,16 @@ class Narrative(FhirComplexTypeBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
             :param status: The status of the narrative - whether it's entirely generated (from just the
         defined data or the extensions too), or whether a human authored it and it may
         contain additional data.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
             status=status,
         )

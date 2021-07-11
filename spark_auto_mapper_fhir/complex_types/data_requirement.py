@@ -4,13 +4,14 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # type_ (FHIRAllTypes)
     from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
 
@@ -21,7 +22,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
     # Import for CodeableConcept for subjectCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+    from spark_auto_mapper_fhir.value_sets.subject_type import SubjectTypeCode
 
     # End Import for CodeableConcept for subjectCodeableConcept
     # subjectReference (Reference)
@@ -63,11 +64,10 @@ class DataRequirement(FhirComplexTypeBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[Extension]] = None,
         type_: FHIRAllTypesCode,
         profile: Optional[FhirList[FhirCanonical]] = None,
-        subjectCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Union[Group]]] = None,
         mustSupport: Optional[FhirList[FhirString]] = None,
         codeFilter: Optional[FhirList[DataRequirementCodeFilter]] = None,
@@ -81,8 +81,11 @@ class DataRequirement(FhirComplexTypeBase):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
             :param type_: The type of the required data, specified as the type name of a resource. For
         profiles, this value is set to the type of the base resource of the profile.
             :param profile: The profile of the required data, specified as the uri of the profile
@@ -110,7 +113,6 @@ class DataRequirement(FhirComplexTypeBase):
             :param sort: Specifies the order of the results to be returned.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
             type_=type_,
             profile=profile,

@@ -4,17 +4,20 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # extension (Extension)
+    from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # coding (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for coding
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
     # End Import for CodeableConcept for coding
     # text (string)
 
@@ -38,9 +41,8 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
-        coding: Optional[FhirList[Coding[_T]]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        coding: Optional[FhirList[Coding[GenericTypeCode]]] = None,
         text: Optional[FhirString] = None,
     ) -> None:
         """
@@ -49,15 +51,17 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
             If the element is present, it must have a value for at least one of the
         defined elements, an @id referenced from the Narrative, or extensions
 
-            :param id_: id of resource
-            :param extension: extensions
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
             :param coding: A reference to a code defined by a terminology system.
             :param text: A human language representation of the concept as seen/selected/uttered by the
         user who entered the data and/or which represents the intended meaning of the
         user.
         """
         super().__init__(
-            id_=id_,
             extension=extension,
             coding=coding,
             text=text,

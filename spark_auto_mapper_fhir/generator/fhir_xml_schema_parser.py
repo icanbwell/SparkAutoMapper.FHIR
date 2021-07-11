@@ -2,6 +2,7 @@ import dataclasses
 import re
 from pathlib import Path
 from typing import OrderedDict, Any, List, Union, Dict, Optional
+import logging
 
 # noinspection PyPackageRequirements
 from lxml import objectify
@@ -59,6 +60,7 @@ class FhirReferenceType:
 @dataclasses.dataclass
 class FhirProperty:
     name: str
+    fhir_name: str
     type_: str
     cleaned_type: str
     type_snake_case: str
@@ -83,12 +85,23 @@ class FhirEntity:
     documentation: List[str]
     type_: Optional[str]
     is_back_bone_element: bool
+    base_type: Optional[str]
+    base_type_list: List[str]
     is_value_set: bool = False
     value_set_concepts: Optional[List[FhirValueSetConcept]] = None
     value_set_url: Optional[str] = None
     is_basic_type: bool = False
     value_set_url_list: Optional[List[str]] = None
     source: Optional[str] = None
+    is_resource: bool = False
+
+
+logging.basicConfig(
+    format="[%(filename)s:%(lineno)d] %(message)s",
+    datefmt="%Y-%m-%d:%H:%M:%S",
+    level=logging.DEBUG,
+)
+logger = logging.getLogger(__name__)
 
 
 class FhirXmlSchemaParser:
@@ -108,6 +121,7 @@ class FhirXmlSchemaParser:
         "List": "List_",
         "uri": "FhirUri",
         "url": "FhirUrl",
+        "id": "FhirId",
     }
 
     @staticmethod
@@ -164,15 +178,42 @@ class FhirXmlSchemaParser:
         }
 
         for fhir_entity in fhir_entities:
-            print(f"2nd pass: checking {fhir_entity.fhir_name}")
+            logger.info(f"2nd pass: checking {fhir_entity.fhir_name}")
+            # set types on properties that are not set
             for fhir_property in fhir_entity.properties:
-                print(f"---- {fhir_property.name}: {fhir_property.type_} ----")
+                logger.info(f"---- {fhir_property.name}: {fhir_property.type_} ----")
                 if fhir_property.type_ not in property_type_mapping.keys():
-                    print(
+                    logger.warning(
                         f"WARNING: 2nd pass: {fhir_property.type_} not found in property_type_mapping"
                     )
                 else:
                     fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
+
+        for fhir_entity in fhir_entities:
+            logger.info(f"3rd pass: checking {fhir_entity.fhir_name}")
+            if fhir_entity.fhir_name == "Resource":
+                fhir_entity.is_resource = True
+            # add properties from base_types
+            if fhir_entity.base_type:
+                fhir_base_entity = [
+                    c for c in fhir_entities if c.fhir_name == fhir_entity.base_type
+                ]
+                if not fhir_base_entity:
+                    logger.warning(
+                        f"WARNING: base type {fhir_entity.base_type} not found"
+                    )
+                else:
+                    fhir_entity.properties = (
+                        fhir_base_entity[0].properties + fhir_entity.properties
+                    )
+                    # add the base class
+                    fhir_entity.base_type_list.append(fhir_base_entity[0].fhir_name)
+                    # and any base classes of the base class
+                    fhir_entity.base_type_list.extend(
+                        fhir_base_entity[0].base_type_list
+                    )
+                    if "Resource" in fhir_entity.base_type_list:
+                        fhir_entity.is_resource = True
 
         # and the target resources for references
         FhirXmlSchemaParser.process_types_for_references(fhir_entities)
@@ -212,6 +253,8 @@ class FhirXmlSchemaParser:
                     value_set_url_list=c.value_set_url_list,
                     value_set_url=c.url,
                     source=c.source,
+                    base_type=None,
+                    base_type_list=[],
                 )
                 for c in value_sets
             ]
@@ -230,9 +273,9 @@ class FhirXmlSchemaParser:
         #         fhir_entity.fhir_name = cleaned_type_mapping[fhir_entity.fhir_name]
 
         exclude_entities: List[str] = [
-            "Resource",
-            "DomainResource",
-            "Element",
+            # "Resource",
+            # "DomainResource",
+            # "Element",
         ]
 
         fhir_entities = [
@@ -285,7 +328,7 @@ class FhirXmlSchemaParser:
                         f for f in fhir_entities if f.fhir_name == entity_name_part
                     ]
                     if not fhir_entity_list:
-                        print(
+                        logger.warning(
                             f"WARNING: {entity_name_part} not found in fhir_entity_list"
                         )
                     else:
@@ -295,10 +338,18 @@ class FhirXmlSchemaParser:
                     fhir_property_list = [
                         p
                         for p in parent_fhir_entity.properties
-                        if p.name == entity_name_part
+                        if p.name
+                        == FhirXmlSchemaParser.fix_python_keywords(entity_name_part)
+                        or (
+                            entity_name_part.endswith("[x]")
+                            and p.name
+                            == FhirXmlSchemaParser.fix_python_keywords(
+                                entity_name_part.replace("[x]", "") + "CodeableConcept"
+                            )
+                        )
                     ]
                     if not fhir_property_list:
-                        print(
+                        logger.warning(
                             f"WARNING: {entity_name_part} not found in properties of {parent_fhir_entity.fhir_name}"
                         )
                     else:
@@ -310,7 +361,7 @@ class FhirXmlSchemaParser:
                             if f.cleaned_name == parent_entity_name
                         ]
                         if not fhir_entity_list:
-                            print(
+                            logger.warning(
                                 f"WARNING: No FHIR entity list for {parent_entity_name}"
                             )
                         else:
@@ -323,10 +374,17 @@ class FhirXmlSchemaParser:
                     p
                     for p in fhir_entity.properties
                     if p.name == FhirXmlSchemaParser.fix_python_keywords(property_name)
+                    or (
+                        property_name.endswith("[x]")
+                        and p.name
+                        == FhirXmlSchemaParser.fix_python_keywords(
+                            property_name.replace("[x]", "") + "CodeableConcept"
+                        )
+                    )
                 ]
 
                 if not fhir_property_list:
-                    print(
+                    logger.warning(
                         f"WARNING: property {property_name} not found in {fhir_entity.fhir_name}"
                     )
                 if fhir_property_list:
@@ -352,6 +410,13 @@ class FhirXmlSchemaParser:
                     if value_set_matching:
                         value_set = value_set_matching[0]
                         if codeable_type.is_codeable_concept:
+                            # if property already has a codeable_type then we have a problem
+                            if fhir_property.codeable_type:
+                                logger.warning(
+                                    f"WARNING: {fhir_property.name} in {fhir_entity.fhir_name} "
+                                    f"already has a codeable type {fhir_property.codeable_type.name} "
+                                    f"but we're trying to set it to {value_set.name}"
+                                )
                             fhir_property.codeable_type = SmartName(
                                 name=value_set.name,
                                 cleaned_name=value_set.cleaned_name,
@@ -396,7 +461,7 @@ class FhirXmlSchemaParser:
                         f for f in fhir_entities if f.fhir_name == entity_name_part
                     ]
                     if not fhir_entity_list:
-                        print(
+                        logger.warning(
                             f"WARNING: References: {entity_name_part} not found in fhir_entities"
                         )
                     else:
@@ -409,7 +474,7 @@ class FhirXmlSchemaParser:
                         if p.name == entity_name_part
                     ]
                     if not fhir_property_list:
-                        print(
+                        logger.warning(
                             f"WARNING: References: {entity_name_part} not found in properties of"
                             f" {parent_fhir_entity.fhir_name}"
                         )
@@ -422,7 +487,7 @@ class FhirXmlSchemaParser:
                             if f.cleaned_name == parent_entity_name
                         ]
                         if not fhir_entity_list:
-                            print(
+                            logger.warning(
                                 f"WARNING: References: {parent_entity_name} not found in fhir_entities"
                             )
                         else:
@@ -483,7 +548,7 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def _generate_classes_for_resource(resource_xsd_file: Path) -> List[FhirEntity]:
-        print(f"++++++ PROCESSING FILE {resource_xsd_file.name} +++++++++ ")
+        logger.info(f"++++++ PROCESSING FILE {resource_xsd_file.name} +++++++++ ")
         with open(resource_xsd_file, "rb") as file:
             contents = file.read()
             root: ObjectifiedElement = objectify.fromstring(contents)
@@ -498,7 +563,7 @@ class FhirXmlSchemaParser:
             complex_type_name_snake_case: str = FhirXmlSchemaParser.camel_to_snake(
                 cleaned_complex_type_name
             )
-            print(f"========== {complex_type_name} ===========")
+            logger.info(f"========== {complex_type_name} ===========")
             documentation_items: ObjectifiedElement = (
                 complex_type["annotation"]["documentation"]
                 if hasattr(complex_type, "annotation")
@@ -516,7 +581,7 @@ class FhirXmlSchemaParser:
                     assert isinstance(documentation_item_dict, OrderedDict), type(
                         documentation_item_dict
                     )
-                print(f"// {documentation}")
+                # print(f"// {documentation}")
                 if documentation:
                     documentation_entries.append(documentation)
 
@@ -528,17 +593,18 @@ class FhirXmlSchemaParser:
             entity_type: Optional[str] = None
             if inner_complex_type:
                 entity_type = str(inner_complex_type.get("base"))
-                print(f"type={entity_type}")
+                # logger.info(f"type={entity_type}")
                 fhir_properties = FhirXmlSchemaParser.generate_properties_for_class(
-                    inner_complex_type
+                    entity_name=complex_type_name, inner_complex_type=inner_complex_type
                 )
             elif hasattr(complex_type, "sequence"):
                 entity_type = "Element"
                 fhir_properties = FhirXmlSchemaParser.generate_properties_for_class(
-                    complex_type
+                    entity_name=complex_type_name, inner_complex_type=complex_type
                 )
             else:
                 fhir_properties = []
+
             # now create the entity
             fhir_entity: FhirEntity = FhirEntity(
                 fhir_name=complex_type_name,
@@ -548,14 +614,23 @@ class FhirXmlSchemaParser:
                 documentation=documentation_entries,
                 properties=fhir_properties,
                 is_back_bone_element="." in entity_type if entity_type else False,
+                base_type=inner_complex_type.get("base")
+                if hasattr(inner_complex_type, "base")
+                else None,
+                base_type_list=[inner_complex_type.get("base")]
+                if hasattr(inner_complex_type, "base")
+                else [],
             )
             fhir_entities.append(fhir_entity)
         return fhir_entities
 
     @staticmethod
     def generate_properties_for_class(
+        *,
+        entity_name: str,
         inner_complex_type: ObjectifiedElement,
     ) -> List[FhirProperty]:
+        logger.debug(f"Processing properties for {entity_name}")
         properties: List[ObjectifiedElement] = []
         sequences: ObjectifiedElement = (
             inner_complex_type["sequence"]
@@ -611,6 +686,7 @@ class FhirXmlSchemaParser:
             if property_type and property_name and property_type != "None":
                 fhir_properties.append(
                     FhirProperty(
+                        fhir_name=property_name,
                         name=FhirXmlSchemaParser.fix_python_keywords(property_name),
                         type_=property_type,
                         cleaned_type=cleaned_type
@@ -727,6 +803,7 @@ class FhirXmlSchemaParser:
                 fhir_properties.append(
                     FhirProperty(
                         name=name,
+                        fhir_name=name,
                         type_=type_,
                         cleaned_type=type_,
                         type_snake_case=type_,
@@ -777,7 +854,7 @@ class FhirXmlSchemaParser:
                     type_code: str = type_code_obj.get("value")
                     if type_code.endswith("Reference"):
                         if not hasattr(type_, "targetProfile"):
-                            print(
+                            logger.warning(
                                 f'ASSERT: targetProfile not in {type_} for {snapshot_element["path"].get("value")}'
                             )
                         if hasattr(type_, "targetProfile"):
@@ -990,7 +1067,7 @@ class FhirXmlSchemaParser:
                     )
                 )
             else:
-                print(f"WARNING: value set {name} contains /")
+                logger.warning(f"WARNING: value set {name} contains /")
 
         fhir_value_sets.extend(
             [
