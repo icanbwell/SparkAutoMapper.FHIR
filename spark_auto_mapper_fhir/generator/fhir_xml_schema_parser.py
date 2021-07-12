@@ -94,6 +94,7 @@ class FhirEntity:
     is_basic_type: bool = False
     value_set_url_list: Optional[List[str]] = None
     is_resource: bool = False
+    is_extension: bool = False
 
 
 logging.basicConfig(
@@ -197,6 +198,8 @@ class FhirXmlSchemaParser:
             logger.info(f"3rd pass: checking {fhir_entity.fhir_name}")
             if fhir_entity.fhir_name == "Resource":
                 fhir_entity.is_resource = True
+            if fhir_entity.fhir_name == "Extension":
+                fhir_entity.is_extension = True
             # add properties from base_types
             if fhir_entity.base_type:
                 fhir_base_entity = [
@@ -690,6 +693,10 @@ class FhirXmlSchemaParser:
             # string-primitive is the same thing as string
             if property_name != "value" and property_type.endswith("-primitive"):
                 property_type = property_type.replace("-primitive", "")
+
+            # This is specified wrong in the xsd
+            if property_type == "SampledDataDataType" and property_name == "data":
+                property_type = "string"
 
             min_occurs: str = str(
                 property_.get("minOccurs") if property_.get("minOccurs") else 0
