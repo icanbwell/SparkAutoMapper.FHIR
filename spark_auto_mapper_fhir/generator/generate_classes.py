@@ -60,6 +60,8 @@ def main() -> int:
     os.mkdir(complex_types_folder)
     complex_types_folder.joinpath("__init__.py").touch()
 
+    extensions_folder = parent_dir.joinpath("extensions")
+
     backbone_elements_folder = parent_dir.joinpath("backbone_elements")
     if os.path.exists(backbone_elements_folder):
         shutil.rmtree(backbone_elements_folder)
@@ -141,6 +143,22 @@ def main() -> int:
             if not path.exists(file_path):
                 with open(file_path, "w") as file2:
                     file2.write(result)
+        elif fhir_entity.is_extension:  # valueset
+            with open(data_dir.joinpath("template.complex_type.jinja2"), "r") as file:
+                template_contents = file.read()
+                from jinja2 import Template
+
+                file_path = extensions_folder.joinpath(f"{entity_file_name}.py")
+                print(f"Writing extension: {entity_file_name} to {file_path}...")
+                template = Template(
+                    template_contents, trim_blocks=True, lstrip_blocks=True
+                )
+                result = template.render(
+                    fhir_entity=fhir_entity,
+                )
+
+            with open(file_path, "w") as file2:
+                file2.write(result)
         elif fhir_entity.type_ == "Element":  # valueset
             with open(data_dir.joinpath("template.complex_type.jinja2"), "r") as file:
                 template_contents = file.read()
@@ -185,6 +203,7 @@ def main() -> int:
         complex_types_folder=complex_types_folder,
         resources_folder=resources_folder,
         value_sets_folder=value_sets_folder,
+        extensions_folder=extensions_folder,
     )
 
     return 0
@@ -196,6 +215,7 @@ def copy_files_from_base_types_folder(
     complex_types_folder: Path,
     resources_folder: Path,
     value_sets_folder: Path,
+    extensions_folder: Path,
 ) -> None:
     # copy resource.py
     print(
@@ -270,6 +290,12 @@ def copy_files_from_base_types_folder(
     ]
     for value_sets_file in value_sets_files:
         clean_duplicate_lines(value_sets_folder.joinpath(value_sets_file))
+
+    extension_files = [
+        f for f in listdir(extensions_folder) if isfile(join(extensions_folder, f))
+    ]
+    for extension_file in extension_files:
+        clean_duplicate_lines(extensions_folder.joinpath(extension_file))
 
 
 if __name__ == "__main__":

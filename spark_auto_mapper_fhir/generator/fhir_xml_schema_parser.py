@@ -73,6 +73,8 @@ class FhirProperty:
     is_back_bone_element: bool
     is_basic_type: bool
     codeable_type: Optional[SmartName]
+    is_resource: bool = False
+    is_extension: bool = False
     is_code: bool = False
 
 
@@ -175,15 +177,22 @@ class FhirXmlSchemaParser:
                 FhirXmlSchemaParser._generate_classes_for_resource(resource_xsd_file)
             )
 
+        for fhir_entity in fhir_entities:
+            logger.info(f"2nd pass: setting flags on {fhir_entity.fhir_name}")
+            if fhir_entity.fhir_name == "Resource":
+                fhir_entity.is_resource = True
+            if fhir_entity.fhir_name == "Extension":
+                fhir_entity.is_extension = True
+
         # now set the types in each property
-        property_type_mapping: Dict[str, str] = {
-            fhir_entity.fhir_name: fhir_entity.type_
+        property_type_mapping: Dict[str, FhirEntity] = {
+            fhir_entity.fhir_name: fhir_entity
             for fhir_entity in fhir_entities
             if fhir_entity.type_
         }
 
         for fhir_entity in fhir_entities:
-            logger.info(f"2nd pass: checking {fhir_entity.fhir_name}")
+            logger.info(f"3rd pass: setting property types on {fhir_entity.fhir_name}")
             # set types on properties that are not set
             for fhir_property in fhir_entity.properties:
                 logger.info(f"---- {fhir_property.name}: {fhir_property.type_} ----")
@@ -192,14 +201,17 @@ class FhirXmlSchemaParser:
                         f"WARNING: 2nd pass: {fhir_property.type_} not found in property_type_mapping"
                     )
                 else:
-                    fhir_property.fhir_type = property_type_mapping[fhir_property.type_]
+                    property_fhir_entity: FhirEntity = property_type_mapping[
+                        fhir_property.type_
+                    ]
+                    fhir_property.fhir_type = property_fhir_entity.type_
+                    fhir_property.is_resource = property_fhir_entity.is_resource
+                    fhir_property.is_extension = property_fhir_entity.is_extension
 
         for fhir_entity in fhir_entities:
-            logger.info(f"3rd pass: checking {fhir_entity.fhir_name}")
-            if fhir_entity.fhir_name == "Resource":
-                fhir_entity.is_resource = True
-            if fhir_entity.fhir_name == "Extension":
-                fhir_entity.is_extension = True
+            logger.info(
+                f"4th pass: inheriting properties from base {fhir_entity.fhir_name}"
+            )
             # add properties from base_types
             if fhir_entity.base_type:
                 fhir_base_entity = [

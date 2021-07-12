@@ -30,7 +30,7 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.complex_types.extension import Extension
+    from spark_auto_mapper_fhir.extensions.extension import Extension
 
     # modifierExtension (Extension)
     # manufacturedDoseForm (CodeableConcept)

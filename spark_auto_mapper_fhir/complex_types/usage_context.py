@@ -11,7 +11,7 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.complex_types.extension import Extension
+    from spark_auto_mapper_fhir.extensions.extension import Extension
 
     # code (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding

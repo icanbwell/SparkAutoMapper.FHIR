@@ -12,7 +12,7 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.complex_types.extension import Extension
+    from spark_auto_mapper_fhir.extensions.extension import Extension
 
     # contentType (Mime Types)
     from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
