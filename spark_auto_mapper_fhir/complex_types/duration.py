@@ -5,6 +5,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -12,8 +13,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # value (decimal)
     from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
 
@@ -43,7 +42,7 @@ class Duration(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         value: Optional[FhirDecimal] = None,
         comparator: Optional[QuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,

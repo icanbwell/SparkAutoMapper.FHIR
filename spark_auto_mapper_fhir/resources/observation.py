@@ -9,6 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -32,8 +33,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -225,8 +224,8 @@ class Observation(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         basedOn: Optional[
             FhirList[
@@ -262,8 +261,8 @@ class Observation(FhirResourceBase):
         ] = None,
         code: CodeableConcept[LOINCCodesCode],
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
-        focus: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        focus: Optional[FhirList[Reference[Resource]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         effectiveDateTime: Optional[FhirDateTime] = None,
         effectivePeriod: Optional[Period] = None,
         effectiveTiming: Optional[Timing] = None,
@@ -301,7 +300,7 @@ class Observation(FhirResourceBase):
         note: Optional[FhirList[Annotation]] = None,
         bodySite: Optional[CodeableConcept[SNOMEDCTBodyStructuresCode]] = None,
         method: Optional[CodeableConcept[ObservationMethodsCode]] = None,
-        specimen: Optional[Reference[Union[Specimen]]] = None,
+        specimen: Optional[Reference[Specimen]] = None,
         device: Optional[Reference[Union[Device, DeviceMetric]]] = None,
         referenceRange: Optional[FhirList[ObservationReferenceRange]] = None,
         hasMember: Optional[

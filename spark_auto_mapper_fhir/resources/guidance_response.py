@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # requestIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -120,8 +119,8 @@ class GuidanceResponse(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         requestIdentifier: Optional[Identifier] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         moduleUri: Optional[FhirUri] = None,
@@ -129,9 +128,9 @@ class GuidanceResponse(FhirResourceBase):
         moduleCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         status: GuidanceResponseStatusCode,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         occurrenceDateTime: Optional[FhirDateTime] = None,
-        performer: Optional[Reference[Union[Device]]] = None,
+        performer: Optional[Reference[Device]] = None,
         reasonCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         reasonReference: Optional[
             FhirList[
@@ -141,10 +140,8 @@ class GuidanceResponse(FhirResourceBase):
             ]
         ] = None,
         note: Optional[FhirList[Annotation]] = None,
-        evaluationMessage: Optional[
-            FhirList[Reference[Union[OperationOutcome]]]
-        ] = None,
-        outputParameters: Optional[Reference[Union[Parameters]]] = None,
+        evaluationMessage: Optional[FhirList[Reference[OperationOutcome]]] = None,
+        outputParameters: Optional[Reference[Parameters]] = None,
         result: Optional[Reference[Union[CarePlan, RequestGroup]]] = None,
         dataRequirement: Optional[FhirList[DataRequirement]] = None,
     ) -> None:

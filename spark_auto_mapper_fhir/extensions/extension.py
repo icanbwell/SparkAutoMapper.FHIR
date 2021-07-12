@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -180,7 +180,7 @@ class Extension(ExtensionBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         url: Optional[FhirUri] = None,
         valueBase64Binary: Optional[FhirBase64Binary] = None,
         valueBoolean: Optional[FhirBoolean] = None,
@@ -218,7 +218,7 @@ class Extension(ExtensionBase):
         valueQuantity: Optional[Quantity] = None,
         valueRange: Optional[Range] = None,
         valueRatio: Optional[Ratio] = None,
-        valueReference: Optional[Reference[Union[Resource]]] = None,
+        valueReference: Optional[Reference[Resource]] = None,
         valueSampledData: Optional[SampledData] = None,
         valueSignature: Optional[Signature] = None,
         valueTiming: Optional[Timing] = None,

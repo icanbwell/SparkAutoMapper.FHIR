@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -31,8 +32,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -141,20 +140,18 @@ class SubstanceSpecification(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         status: Optional[CodeableConcept[GenericTypeCode]] = None,
         domain: Optional[CodeableConcept[GenericTypeCode]] = None,
         description: Optional[FhirString] = None,
-        source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
+        source: Optional[FhirList[Reference[DocumentReference]]] = None,
         comment: Optional[FhirString] = None,
         moiety: Optional[FhirList[SubstanceSpecificationMoiety]] = None,
         property: Optional[FhirList[SubstanceSpecificationProperty]] = None,
-        referenceInformation: Optional[
-            Reference[Union[SubstanceReferenceInformation]]
-        ] = None,
+        referenceInformation: Optional[Reference[SubstanceReferenceInformation]] = None,
         structure: Optional[SubstanceSpecificationStructure] = None,
         code: Optional[FhirList[SubstanceSpecificationCode]] = None,
         name: Optional[FhirList[SubstanceSpecificationName]] = None,
@@ -162,10 +159,10 @@ class SubstanceSpecification(FhirResourceBase):
             FhirList[SubstanceSpecificationMolecularWeight]
         ] = None,
         relationship: Optional[FhirList[SubstanceSpecificationRelationship]] = None,
-        nucleicAcid: Optional[Reference[Union[SubstanceNucleicAcid]]] = None,
-        polymer: Optional[Reference[Union[SubstancePolymer]]] = None,
-        protein: Optional[Reference[Union[SubstanceProtein]]] = None,
-        sourceMaterial: Optional[Reference[Union[SubstanceSourceMaterial]]] = None,
+        nucleicAcid: Optional[Reference[SubstanceNucleicAcid]] = None,
+        polymer: Optional[Reference[SubstancePolymer]] = None,
+        protein: Optional[Reference[SubstanceProtein]] = None,
+        sourceMaterial: Optional[Reference[SubstanceSourceMaterial]] = None,
     ) -> None:
         """
             The detailed description of a substance, typically at a level beyond what is

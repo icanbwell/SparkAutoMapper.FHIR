@@ -3,6 +3,7 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.resource import Resource
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -13,8 +14,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # title (string)
     # code (CodeableConcept)
@@ -77,8 +76,8 @@ class CompositionSection(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         title: Optional[FhirString] = None,
         code: Optional[CodeableConcept[DocumentSectionCodesCode]] = None,
         author: Optional[
@@ -95,11 +94,11 @@ class CompositionSection(FhirBackboneElementBase):
                 ]
             ]
         ] = None,
-        focus: Optional[Reference[Union[Resource]]] = None,
+        focus: Optional[Reference[Resource]] = None,
         text: Optional[Narrative] = None,
         mode: Optional[ListModeCode] = None,
         orderedBy: Optional[CodeableConcept[ListOrderCodesCode]] = None,
-        entry: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        entry: Optional[FhirList[Reference[Resource]]] = None,
         emptyReason: Optional[CodeableConcept[ListEmptyReasonsCode]] = None,
         section: Optional[FhirList[CompositionSection]] = None,
     ) -> None:

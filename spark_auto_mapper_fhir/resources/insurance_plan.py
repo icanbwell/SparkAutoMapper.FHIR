@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -108,20 +107,20 @@ class InsurancePlan(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[PublicationStatusCode] = None,
         type_: Optional[FhirList[CodeableConcept[InsurancePlanTypeCode]]] = None,
         name: Optional[FhirString] = None,
         alias: Optional[FhirList[FhirString]] = None,
         period: Optional[Period] = None,
-        ownedBy: Optional[Reference[Union[Organization]]] = None,
-        administeredBy: Optional[Reference[Union[Organization]]] = None,
-        coverageArea: Optional[FhirList[Reference[Union[Location]]]] = None,
+        ownedBy: Optional[Reference[Organization]] = None,
+        administeredBy: Optional[Reference[Organization]] = None,
+        coverageArea: Optional[FhirList[Reference[Location]]] = None,
         contact: Optional[FhirList[InsurancePlanContact]] = None,
-        endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
-        network: Optional[FhirList[Reference[Union[Organization]]]] = None,
+        endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
+        network: Optional[FhirList[Reference[Organization]]] = None,
         coverage: Optional[FhirList[InsurancePlanCoverage]] = None,
         plan: Optional[FhirList[InsurancePlanPlan]] = None,
     ) -> None:

@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -138,14 +137,14 @@ class DeviceDefinition(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         udiDeviceIdentifier: Optional[
             FhirList[DeviceDefinitionUdiDeviceIdentifier]
         ] = None,
         manufacturerString: Optional[FhirString] = None,
-        manufacturerReference: Optional[Reference[Union[Organization]]] = None,
+        manufacturerReference: Optional[Reference[Organization]] = None,
         deviceName: Optional[FhirList[DeviceDefinitionDeviceName]] = None,
         modelNumber: Optional[FhirString] = None,
         type_: Optional[CodeableConcept[FHIRDeviceTypesCode]] = None,
@@ -157,13 +156,13 @@ class DeviceDefinition(FhirResourceBase):
         languageCode: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         capability: Optional[FhirList[DeviceDefinitionCapability]] = None,
         property: Optional[FhirList[DeviceDefinitionProperty]] = None,
-        owner: Optional[Reference[Union[Organization]]] = None,
+        owner: Optional[Reference[Organization]] = None,
         contact: Optional[FhirList[ContactPoint]] = None,
         url: Optional[FhirUri] = None,
         onlineInformation: Optional[FhirUri] = None,
         note: Optional[FhirList[Annotation]] = None,
         quantity: Optional[Quantity] = None,
-        parentDevice: Optional[Reference[Union[DeviceDefinition]]] = None,
+        parentDevice: Optional[Reference[DeviceDefinition]] = None,
         material: Optional[FhirList[DeviceDefinitionMaterial]] = None,
     ) -> None:
         """

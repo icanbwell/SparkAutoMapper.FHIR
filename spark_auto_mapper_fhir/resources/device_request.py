@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -158,22 +157,22 @@ class DeviceRequest(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
-        basedOn: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        priorRequest: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        basedOn: Optional[FhirList[Reference[Resource]]] = None,
+        priorRequest: Optional[FhirList[Reference[Resource]]] = None,
         groupIdentifier: Optional[Identifier] = None,
         status: Optional[RequestStatusCode] = None,
         intent: RequestIntentCode,
         priority: Optional[RequestPriorityCode] = None,
-        codeReference: Optional[Reference[Union[Device]]] = None,
+        codeReference: Optional[Reference[Device]] = None,
         codeCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         parameter: Optional[FhirList[DeviceRequestParameter]] = None,
         subject: Reference[Union[Patient, Group, Location, Device]],
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         occurrenceDateTime: Optional[FhirDateTime] = None,
         occurrencePeriod: Optional[Period] = None,
         occurrenceTiming: Optional[Timing] = None,
@@ -207,9 +206,9 @@ class DeviceRequest(FhirResourceBase):
             ]
         ] = None,
         insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
-        supportingInfo: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        supportingInfo: Optional[FhirList[Reference[Resource]]] = None,
         note: Optional[FhirList[Annotation]] = None,
-        relevantHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        relevantHistory: Optional[FhirList[Reference[Provenance]]] = None,
     ) -> None:
         """
             Represents a request for a patient to employ a medical device. The device may

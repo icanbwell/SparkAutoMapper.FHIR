@@ -5,6 +5,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # subject (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -94,8 +93,8 @@ class MedicinalProductIndication(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         subject: Optional[
             FhirList[Reference[Union[MedicinalProduct, Medication]]]
         ] = None,
@@ -106,7 +105,7 @@ class MedicinalProductIndication(FhirResourceBase):
         duration: Optional[Quantity] = None,
         otherTherapy: Optional[FhirList[MedicinalProductIndicationOtherTherapy]] = None,
         undesirableEffect: Optional[
-            FhirList[Reference[Union[MedicinalProductUndesirableEffect]]]
+            FhirList[Reference[MedicinalProductUndesirableEffect]]
         ] = None,
         population: Optional[FhirList[Population]] = None,
     ) -> None:

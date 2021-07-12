@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -31,8 +32,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -172,8 +171,8 @@ class MedicationStatement(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         basedOn: Optional[
             FhirList[Reference[Union[MedicationRequest, CarePlan, ServiceRequest]]]
@@ -199,7 +198,7 @@ class MedicationStatement(FhirResourceBase):
         medicationCodeableConcept: Optional[
             CodeableConcept[SNOMEDCTMedicationCodesCode]
         ] = None,
-        medicationReference: Optional[Reference[Union[Medication]]] = None,
+        medicationReference: Optional[Reference[Medication]] = None,
         subject: Reference[Union[Patient, Group]],
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
         effectiveDateTime: Optional[FhirDateTime] = None,
@@ -212,7 +211,7 @@ class MedicationStatement(FhirResourceBase):
                 ]
             ]
         ] = None,
-        derivedFrom: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        derivedFrom: Optional[FhirList[Reference[Resource]]] = None,
         reasonCode: Optional[
             FhirList[CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]]
         ] = None,

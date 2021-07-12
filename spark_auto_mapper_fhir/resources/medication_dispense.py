@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -165,40 +164,40 @@ class MedicationDispense(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        partOf: Optional[FhirList[Reference[Union[Procedure]]]] = None,
+        partOf: Optional[FhirList[Reference[Procedure]]] = None,
         status: MedicationDispenseStatusCodesCode,
         statusReasonCodeableConcept: Optional[
             CodeableConcept[MedicationDispenseStatusReasonCodesCode]
         ] = None,
-        statusReasonReference: Optional[Reference[Union[DetectedIssue]]] = None,
+        statusReasonReference: Optional[Reference[DetectedIssue]] = None,
         category: Optional[CodeableConcept[MedicationDispenseCategoryCodesCode]] = None,
         medicationCodeableConcept: Optional[
             CodeableConcept[SNOMEDCTMedicationCodesCode]
         ] = None,
-        medicationReference: Optional[Reference[Union[Medication]]] = None,
+        medicationReference: Optional[Reference[Medication]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
-        supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        supportingInformation: Optional[FhirList[Reference[Resource]]] = None,
         performer: Optional[FhirList[MedicationDispensePerformer]] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        location: Optional[Reference[Location]] = None,
         authorizingPrescription: Optional[
-            FhirList[Reference[Union[MedicationRequest]]]
+            FhirList[Reference[MedicationRequest]]
         ] = None,
         type_: Optional[CodeableConcept[ActPharmacySupplyType]] = None,
         quantity: Optional[Quantity] = None,
         daysSupply: Optional[Quantity] = None,
         whenPrepared: Optional[FhirDateTime] = None,
         whenHandedOver: Optional[FhirDateTime] = None,
-        destination: Optional[Reference[Union[Location]]] = None,
+        destination: Optional[Reference[Location]] = None,
         receiver: Optional[FhirList[Reference[Union[Patient, Practitioner]]]] = None,
         note: Optional[FhirList[Annotation]] = None,
         dosageInstruction: Optional[FhirList[Dosage]] = None,
         substitution: Optional[MedicationDispenseSubstitution] = None,
-        detectedIssue: Optional[FhirList[Reference[Union[DetectedIssue]]]] = None,
-        eventHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        detectedIssue: Optional[FhirList[Reference[DetectedIssue]]] = None,
+        eventHistory: Optional[FhirList[Reference[Provenance]]] = None,
     ) -> None:
         """
             Indicates that a medication product is to be or has been dispensed for a named

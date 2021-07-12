@@ -1,9 +1,10 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -11,8 +12,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # type_ (FHIRAllTypes)
     from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
 
@@ -67,11 +66,11 @@ class DataRequirement(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         type_: FHIRAllTypesCode,
         profile: Optional[FhirList[FhirCanonical]] = None,
         subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
-        subjectReference: Optional[Reference[Union[Group]]] = None,
+        subjectReference: Optional[Reference[Group]] = None,
         mustSupport: Optional[FhirList[FhirString]] = None,
         codeFilter: Optional[FhirList[DataRequirementCodeFilter]] = None,
         dateFilter: Optional[FhirList[DataRequirementDateFilter]] = None,

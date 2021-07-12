@@ -1,9 +1,10 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -13,8 +14,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # operationType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -55,14 +54,14 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         operationType: Optional[CodeableConcept[GenericTypeCode]] = None,
         authorisationReferenceNumber: Optional[Identifier] = None,
         effectiveDate: Optional[FhirDateTime] = None,
         confidentialityIndicator: Optional[CodeableConcept[GenericTypeCode]] = None,
-        manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
-        regulator: Optional[Reference[Union[Organization]]] = None,
+        manufacturer: Optional[FhirList[Reference[Organization]]] = None,
+        regulator: Optional[Reference[Organization]] = None,
     ) -> None:
         """
             Detailed definition of a medicinal product, typically for uses other than

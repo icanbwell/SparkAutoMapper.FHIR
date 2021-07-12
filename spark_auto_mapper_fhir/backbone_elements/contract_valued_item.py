@@ -4,6 +4,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.resource import Resource
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -14,8 +15,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # entityCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -74,10 +73,10 @@ class ContractValuedItem(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         entityCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
-        entityReference: Optional[Reference[Union[Resource]]] = None,
+        entityReference: Optional[Reference[Resource]] = None,
         identifier: Optional[Identifier] = None,
         effectiveTime: Optional[FhirDateTime] = None,
         quantity: Optional[Quantity] = None,

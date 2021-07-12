@@ -5,6 +5,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -28,8 +29,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -111,20 +110,20 @@ class EpisodeOfCare(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: EpisodeOfCareStatusCode,
         statusHistory: Optional[FhirList[EpisodeOfCareStatusHistory]] = None,
         type_: Optional[FhirList[CodeableConcept[EpisodeOfCareTypeCode]]] = None,
         diagnosis: Optional[FhirList[EpisodeOfCareDiagnosis]] = None,
-        patient: Reference[Union[Patient]],
-        managingOrganization: Optional[Reference[Union[Organization]]] = None,
+        patient: Reference[Patient],
+        managingOrganization: Optional[Reference[Organization]] = None,
         period: Optional[Period] = None,
-        referralRequest: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
+        referralRequest: Optional[FhirList[Reference[ServiceRequest]]] = None,
         careManager: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
-        team: Optional[FhirList[Reference[Union[CareTeam]]]] = None,
-        account: Optional[FhirList[Reference[Union[Account]]]] = None,
+        team: Optional[FhirList[Reference[CareTeam]]] = None,
+        account: Optional[FhirList[Reference[Account]]] = None,
     ) -> None:
         """
             An association between a patient and an organization / healthcare provider(s)

@@ -76,8 +76,36 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
         self,
         *,
     {% for property in fhir_entity.properties %}
-        {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.cleaned_type | replace(".","")}}{% if property.codeable_type %}[{{ property.codeable_type.cleaned_name }}]{% endif %} {% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
-
+        {{ property.name -}} {{ ': ' -}}
+            {% if property.optional -%}
+                {{ 'Optional[' -}}
+            {% endif -%}
+            {% if property.is_list -%}
+                {{ 'FhirList[' -}}
+            {% endif -%}
+            {% if property.cleaned_type == "Extension" %}
+            {{ 'ExtensionBase' -}}
+            {% else %}
+            {{ property.cleaned_type | replace(".","") -}}
+            {%  endif %}
+            {% if property.codeable_type -%}
+                [{{ property.codeable_type.cleaned_name -}}]
+            {% endif -%}
+            {% if property.reference_target_resources -%}
+                {% if property.reference_target_resources | length > 1  %}
+                [Union[{{ property.reference_target_resources_names | join(", ") -}}]]
+                {% else %}
+                [{{ property.reference_target_resources_names | join(", ") -}}]
+                {%  endif %}
+            {% endif -%}
+            {% if property.is_list -%}
+                {{ ']' -}}
+            {% endif -%}
+            {% if property.optional -%}
+                {{- '] = None,' -}}
+            {% else -%}
+                {{ ',' -}}
+            {% endif %}
     {% endfor %}
     ) -> None:
         """

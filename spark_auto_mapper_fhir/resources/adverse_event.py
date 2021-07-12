@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -156,19 +155,19 @@ class AdverseEvent(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         actuality: AdverseEventActualityCode,
         category: Optional[FhirList[CodeableConcept[AdverseEventCategoryCode]]] = None,
         event: Optional[CodeableConcept[SNOMEDCTClinicalFindingsCode]] = None,
         subject: Reference[Union[Patient, Group, Practitioner, RelatedPerson]],
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         date: Optional[FhirDateTime] = None,
         detected: Optional[FhirDateTime] = None,
         recordedDate: Optional[FhirDateTime] = None,
-        resultingCondition: Optional[FhirList[Reference[Union[Condition]]]] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        resultingCondition: Optional[FhirList[Reference[Condition]]] = None,
+        location: Optional[Reference[Location]] = None,
         seriousness: Optional[CodeableConcept[AdverseEventSeriousnessCode]] = None,
         severity: Optional[CodeableConcept[AdverseEventSeverityCode]] = None,
         outcome: Optional[CodeableConcept[AdverseEventOutcomeCode]] = None,
@@ -195,10 +194,8 @@ class AdverseEvent(FhirResourceBase):
                 ]
             ]
         ] = None,
-        referenceDocument: Optional[
-            FhirList[Reference[Union[DocumentReference]]]
-        ] = None,
-        study: Optional[FhirList[Reference[Union[ResearchStudy]]]] = None,
+        referenceDocument: Optional[FhirList[Reference[DocumentReference]]] = None,
+        study: Optional[FhirList[Reference[ResearchStudy]]] = None,
     ) -> None:
         """
             Actual or  potential/avoided event causing unintended physical injury

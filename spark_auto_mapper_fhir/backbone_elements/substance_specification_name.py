@@ -1,9 +1,10 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -13,8 +14,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # name (string)
     # type_ (CodeableConcept)
@@ -67,8 +66,8 @@ class SubstanceSpecificationName(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         name: FhirString,
         type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         status: Optional[CodeableConcept[GenericTypeCode]] = None,
@@ -79,7 +78,7 @@ class SubstanceSpecificationName(FhirBackboneElementBase):
         synonym: Optional[FhirList[SubstanceSpecificationName]] = None,
         translation: Optional[FhirList[SubstanceSpecificationName]] = None,
         official: Optional[FhirList[SubstanceSpecificationOfficial]] = None,
-        source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
+        source: Optional[FhirList[Reference[DocumentReference]]] = None,
     ) -> None:
         """
             The detailed description of a substance, typically at a level beyond what is

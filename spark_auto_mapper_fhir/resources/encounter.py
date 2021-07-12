@@ -5,6 +5,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -28,8 +29,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -165,8 +164,8 @@ class Encounter(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: EncounterStatusCode,
         statusHistory: Optional[FhirList[EncounterStatusHistory]] = None,
@@ -176,10 +175,10 @@ class Encounter(FhirResourceBase):
         serviceType: Optional[CodeableConcept[ServiceTypeCode]] = None,
         priority: Optional[CodeableConcept[ActPriority]] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
-        episodeOfCare: Optional[FhirList[Reference[Union[EpisodeOfCare]]]] = None,
-        basedOn: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
+        episodeOfCare: Optional[FhirList[Reference[EpisodeOfCare]]] = None,
+        basedOn: Optional[FhirList[Reference[ServiceRequest]]] = None,
         participant: Optional[FhirList[EncounterParticipant]] = None,
-        appointment: Optional[FhirList[Reference[Union[Appointment]]]] = None,
+        appointment: Optional[FhirList[Reference[Appointment]]] = None,
         period: Optional[Period] = None,
         length: Optional[Duration] = None,
         reasonCode: Optional[
@@ -193,11 +192,11 @@ class Encounter(FhirResourceBase):
             ]
         ] = None,
         diagnosis: Optional[FhirList[EncounterDiagnosis]] = None,
-        account: Optional[FhirList[Reference[Union[Account]]]] = None,
+        account: Optional[FhirList[Reference[Account]]] = None,
         hospitalization: Optional[EncounterHospitalization] = None,
         location: Optional[FhirList[EncounterLocation]] = None,
-        serviceProvider: Optional[Reference[Union[Organization]]] = None,
-        partOf: Optional[Reference[Union[Encounter]]] = None,
+        serviceProvider: Optional[Reference[Organization]] = None,
+        partOf: Optional[Reference[Encounter]] = None,
     ) -> None:
         """
             An interaction between a patient and healthcare provider(s) for the purpose of

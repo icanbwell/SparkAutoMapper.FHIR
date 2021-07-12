@@ -1,10 +1,11 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.resource import Resource
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -15,8 +16,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -78,8 +77,8 @@ class ExplanationOfBenefitSupportingInfo(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         sequence: FhirPositiveInt,
         category: CodeableConcept[ClaimInformationCategoryCodesCode],
         code: Optional[CodeableConcept[ExceptionCodesCode]] = None,
@@ -89,7 +88,7 @@ class ExplanationOfBenefitSupportingInfo(FhirBackboneElementBase):
         valueString: Optional[FhirString] = None,
         valueQuantity: Optional[Quantity] = None,
         valueAttachment: Optional[Attachment] = None,
-        valueReference: Optional[Reference[Union[Resource]]] = None,
+        valueReference: Optional[Reference[Resource]] = None,
         reason: Optional[Coding[MissingToothReasonCodesCode]] = None,
     ) -> None:
         """

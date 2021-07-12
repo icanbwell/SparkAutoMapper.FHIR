@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -161,14 +160,14 @@ class Task(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirCanonical] = None,
         instantiatesUri: Optional[FhirUri] = None,
-        basedOn: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        basedOn: Optional[FhirList[Reference[Resource]]] = None,
         groupIdentifier: Optional[Identifier] = None,
-        partOf: Optional[FhirList[Reference[Union[Task]]]] = None,
+        partOf: Optional[FhirList[Reference[Task]]] = None,
         status: TaskStatusCode,
         statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         businessStatus: Optional[CodeableConcept[GenericTypeCode]] = None,
@@ -176,9 +175,9 @@ class Task(FhirResourceBase):
         priority: Optional[RequestPriorityCode] = None,
         code: Optional[CodeableConcept[TaskCodeCode]] = None,
         description: Optional[FhirString] = None,
-        focus: Optional[Reference[Union[Resource]]] = None,
-        for_: Optional[Reference[Union[Resource]]] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        focus: Optional[Reference[Resource]] = None,
+        for_: Optional[Reference[Resource]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         executionPeriod: Optional[Period] = None,
         authoredOn: Optional[FhirDateTime] = None,
         lastModified: Optional[FhirDateTime] = None,
@@ -211,12 +210,12 @@ class Task(FhirResourceBase):
                 ]
             ]
         ] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        location: Optional[Reference[Location]] = None,
         reasonCode: Optional[CodeableConcept[GenericTypeCode]] = None,
-        reasonReference: Optional[Reference[Union[Resource]]] = None,
+        reasonReference: Optional[Reference[Resource]] = None,
         insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
         note: Optional[FhirList[Annotation]] = None,
-        relevantHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        relevantHistory: Optional[FhirList[Reference[Provenance]]] = None,
         restriction: Optional[TaskRestriction] = None,
         input: Optional[FhirList[TaskInput]] = None,
         output: Optional[FhirList[TaskOutput]] = None,

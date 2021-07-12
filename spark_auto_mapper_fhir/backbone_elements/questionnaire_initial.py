@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -18,8 +19,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # valueBoolean (boolean)
     # valueDecimal (decimal)
@@ -66,8 +65,8 @@ class QuestionnaireInitial(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         valueBoolean: Optional[FhirBoolean] = None,
         valueDecimal: Optional[FhirDecimal] = None,
         valueInteger: Optional[FhirInteger] = None,
@@ -79,7 +78,7 @@ class QuestionnaireInitial(FhirBackboneElementBase):
         valueAttachment: Optional[Attachment] = None,
         valueCoding: Optional[Coding[GenericTypeCode]] = None,
         valueQuantity: Optional[Quantity] = None,
-        valueReference: Optional[Reference[Union[Resource]]] = None,
+        valueReference: Optional[Reference[Resource]] = None,
     ) -> None:
         """
             A structured set of questions intended to guide the collection of answers from

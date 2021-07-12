@@ -21,14 +21,14 @@ class DataElementSDCObjectClassCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://www.nlm.nih.gov/research/umls/rxnorm
+    http://loinc.org
     """
-    codeset_rxnorm: FhirUri = "http://www.nlm.nih.gov/research/umls/rxnorm"
+    codeset_loinc_org: FhirUri = "http://loinc.org"
     """
     http://snomed.info/sct
     """
     codeset_sct: FhirUri = "http://snomed.info/sct"
     """
-    http://loinc.org
+    http://www.nlm.nih.gov/research/umls/rxnorm
     """
-    codeset_loinc_org: FhirUri = "http://loinc.org"
+    codeset_rxnorm: FhirUri = "http://www.nlm.nih.gov/research/umls/rxnorm"

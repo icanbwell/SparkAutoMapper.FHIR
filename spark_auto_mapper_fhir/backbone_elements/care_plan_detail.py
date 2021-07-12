@@ -4,6 +4,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -14,8 +15,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # kind (CarePlanActivityKind)
     from spark_auto_mapper_fhir.value_sets.care_plan_activity_kind import (
@@ -124,8 +123,8 @@ class CarePlanDetail(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         kind: Optional[CarePlanActivityKindCode] = None,
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
@@ -140,14 +139,14 @@ class CarePlanDetail(FhirBackboneElementBase):
                 ]
             ]
         ] = None,
-        goal: Optional[FhirList[Reference[Union[Goal]]]] = None,
+        goal: Optional[FhirList[Reference[Goal]]] = None,
         status: CarePlanActivityStatusCode,
         statusReason: Optional[CodeableConcept[GenericTypeCode]] = None,
         doNotPerform: Optional[FhirBoolean] = None,
         scheduledTiming: Optional[Timing] = None,
         scheduledPeriod: Optional[Period] = None,
         scheduledString: Optional[FhirString] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        location: Optional[Reference[Location]] = None,
         performer: Optional[
             FhirList[
                 Reference[

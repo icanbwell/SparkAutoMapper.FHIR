@@ -4,6 +4,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -13,8 +14,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # itemSequence (positiveInt)
     from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -119,8 +118,8 @@ class ClaimResponseAddItem(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         itemSequence: Optional[FhirList[FhirPositiveInt]] = None,
         detailSequence: Optional[FhirList[FhirPositiveInt]] = None,
         subdetailSequence: Optional[FhirList[FhirPositiveInt]] = None,
@@ -138,7 +137,7 @@ class ClaimResponseAddItem(FhirBackboneElementBase):
             CodeableConcept[ExampleServicePlaceCodesCode]
         ] = None,
         locationAddress: Optional[Address] = None,
-        locationReference: Optional[Reference[Union[Location]]] = None,
+        locationReference: Optional[Reference[Location]] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
         factor: Optional[FhirDecimal] = None,

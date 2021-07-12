@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # target (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
@@ -106,14 +105,14 @@ class Provenance(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        target: FhirList[Reference[Union[Resource]]],
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
+        target: FhirList[Reference[Resource]],
         occurredPeriod: Optional[Period] = None,
         occurredDateTime: Optional[FhirDateTime] = None,
         recorded: FhirInstant,
         policy: Optional[FhirList[FhirUri]] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        location: Optional[Reference[Location]] = None,
         reason: Optional[FhirList[CodeableConcept[PurposeOfUse]]] = None,
         activity: Optional[CodeableConcept[ProvenanceActivityTypeCode]] = None,
         agent: FhirList[ProvenanceAgent],

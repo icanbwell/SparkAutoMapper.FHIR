@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -188,8 +187,8 @@ class Contract(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         url: Optional[FhirUri] = None,
         version: Optional[FhirString] = None,
@@ -197,7 +196,7 @@ class Contract(FhirResourceBase):
         legalState: Optional[
             CodeableConcept[ContractResourceLegalStateCodesCode]
         ] = None,
-        instantiatesCanonical: Optional[Reference[Union[Contract]]] = None,
+        instantiatesCanonical: Optional[Reference[Contract]] = None,
         instantiatesUri: Optional[FhirUri] = None,
         contentDerivative: Optional[
             CodeableConcept[ContractContentDerivationCodesCode]
@@ -207,10 +206,10 @@ class Contract(FhirResourceBase):
         expirationType: Optional[
             CodeableConcept[ContractResourceExpirationTypeCodesCode]
         ] = None,
-        subject: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        authority: Optional[FhirList[Reference[Union[Organization]]]] = None,
-        domain: Optional[FhirList[Reference[Union[Location]]]] = None,
-        site: Optional[FhirList[Reference[Union[Location]]]] = None,
+        subject: Optional[FhirList[Reference[Resource]]] = None,
+        authority: Optional[FhirList[Reference[Organization]]] = None,
+        domain: Optional[FhirList[Reference[Location]]] = None,
+        site: Optional[FhirList[Reference[Location]]] = None,
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         subtitle: Optional[FhirString] = None,
@@ -220,13 +219,13 @@ class Contract(FhirResourceBase):
         ] = None,
         scope: Optional[CodeableConcept[ContractResourceScopeCodesCode]] = None,
         topicCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
-        topicReference: Optional[Reference[Union[Resource]]] = None,
+        topicReference: Optional[Reference[Resource]] = None,
         type_: Optional[CodeableConcept[ContractTypeCodesCode]] = None,
         subType: Optional[FhirList[CodeableConcept[ContractSubtypeCodesCode]]] = None,
         contentDefinition: Optional[ContractContentDefinition] = None,
         term: Optional[FhirList[ContractTerm]] = None,
-        supportingInfo: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        relevantHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        supportingInfo: Optional[FhirList[Reference[Resource]]] = None,
+        relevantHistory: Optional[FhirList[Reference[Provenance]]] = None,
         signer: Optional[FhirList[ContractSigner]] = None,
         friendly: Optional[FhirList[ContractFriendly]] = None,
         legal: Optional[FhirList[ContractLegal]] = None,

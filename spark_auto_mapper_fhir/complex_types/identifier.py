@@ -1,10 +1,11 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -12,8 +13,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # use (IdentifierUse)
     from spark_auto_mapper_fhir.value_sets.identifier_use import IdentifierUseCode
 
@@ -53,13 +52,13 @@ class Identifier(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
         use: Optional[IdentifierUseCode] = None,
         type_: Optional[CodeableConcept[IdentifierTypeCodesCode]] = None,
         system: Optional[FhirUri] = None,
         value: Optional[FhirString] = None,
         period: Optional[Period] = None,
-        assigner: Optional[Reference[Union[Organization]]] = None,
+        assigner: Optional[Reference[Organization]] = None,
     ) -> None:
         """
             An identifier - identifies some entity uniquely and unambiguously. Typically

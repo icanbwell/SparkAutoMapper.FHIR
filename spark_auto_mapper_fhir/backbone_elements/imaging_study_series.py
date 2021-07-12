@@ -1,9 +1,10 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -14,8 +15,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # uid (id)
     # number (unsignedInt)
@@ -80,17 +79,17 @@ class ImagingStudySeries(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         uid: FhirId,
         number: Optional[FhirUnsignedInt] = None,
         modality: Coding[GenericTypeCode],
         description: Optional[FhirString] = None,
         numberOfInstances: Optional[FhirUnsignedInt] = None,
-        endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
+        endpoint: Optional[FhirList[Reference[Endpoint]]] = None,
         bodySite: Optional[Coding[SNOMEDCTBodyStructuresCode]] = None,
         laterality: Optional[Coding[LateralityCode]] = None,
-        specimen: Optional[FhirList[Reference[Union[Specimen]]]] = None,
+        specimen: Optional[FhirList[Reference[Specimen]]] = None,
         started: Optional[FhirDateTime] = None,
         performer: Optional[FhirList[ImagingStudyPerformer]] = None,
         instance: Optional[FhirList[ImagingStudyInstance]] = None,

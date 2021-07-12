@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -134,14 +133,14 @@ class Composition(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         status: CompositionStatusCode,
         type_: CodeableConcept[FHIRDocumentTypeCodesCode],
         category: Optional[FhirList[CodeableConcept[DocumentClassValueSetCode]]] = None,
-        subject: Optional[Reference[Union[Resource]]] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        subject: Optional[Reference[Resource]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         date: FhirDateTime,
         author: FhirList[
             Reference[
@@ -158,7 +157,7 @@ class Composition(FhirResourceBase):
         title: FhirString,
         confidentiality: Optional[ConfidentialityClassification] = None,
         attester: Optional[FhirList[CompositionAttester]] = None,
-        custodian: Optional[Reference[Union[Organization]]] = None,
+        custodian: Optional[Reference[Organization]] = None,
         relatesTo: Optional[FhirList[CompositionRelatesTo]] = None,
         event: Optional[FhirList[CompositionEvent]] = None,
         section: Optional[FhirList[CompositionSection]] = None,

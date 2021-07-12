@@ -4,6 +4,7 @@ from typing import Optional, TYPE_CHECKING, Union
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.resource import Resource
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -14,8 +15,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -65,18 +64,18 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[Identifier] = None,
         predecessor: Optional[Identifier] = None,
         type_: CodeableConcept[PaymentTypeCodesCode],
-        request: Optional[Reference[Union[Resource]]] = None,
+        request: Optional[Reference[Resource]] = None,
         submitter: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
-        response: Optional[Reference[Union[Resource]]] = None,
+        response: Optional[Reference[Resource]] = None,
         date: Optional[FhirDate] = None,
-        responsible: Optional[Reference[Union[PractitionerRole]]] = None,
+        responsible: Optional[Reference[PractitionerRole]] = None,
         payee: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,

@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -206,8 +205,8 @@ class MedicationRequest(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: MedicationrequestStatusCode,
         statusReason: Optional[
@@ -230,10 +229,10 @@ class MedicationRequest(FhirResourceBase):
         medicationCodeableConcept: Optional[
             CodeableConcept[SNOMEDCTMedicationCodesCode]
         ] = None,
-        medicationReference: Optional[Reference[Union[Medication]]] = None,
+        medicationReference: Optional[Reference[Medication]] = None,
         subject: Reference[Union[Patient, Group]],
-        encounter: Optional[Reference[Union[Encounter]]] = None,
-        supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
+        supportingInformation: Optional[FhirList[Reference[Resource]]] = None,
         authoredOn: Optional[FhirDateTime] = None,
         requester: Optional[
             Reference[
@@ -293,9 +292,9 @@ class MedicationRequest(FhirResourceBase):
         dosageInstruction: Optional[FhirList[Dosage]] = None,
         dispenseRequest: Optional[MedicationRequestDispenseRequest] = None,
         substitution: Optional[MedicationRequestSubstitution] = None,
-        priorPrescription: Optional[Reference[Union[MedicationRequest]]] = None,
-        detectedIssue: Optional[FhirList[Reference[Union[DetectedIssue]]]] = None,
-        eventHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        priorPrescription: Optional[Reference[MedicationRequest]] = None,
+        detectedIssue: Optional[FhirList[Reference[DetectedIssue]]] = None,
+        eventHistory: Optional[FhirList[Reference[Provenance]]] = None,
     ) -> None:
         """
             An order or request for both supply of the medication and the instructions for

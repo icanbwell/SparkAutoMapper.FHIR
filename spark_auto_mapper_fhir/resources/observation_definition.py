@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -32,8 +33,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -111,8 +110,8 @@ class ObservationDefinition(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         category: Optional[
             FhirList[CodeableConcept[ObservationCategoryCodesCode]]
         ] = None,
@@ -126,10 +125,10 @@ class ObservationDefinition(FhirResourceBase):
         qualifiedInterval: Optional[
             FhirList[ObservationDefinitionQualifiedInterval]
         ] = None,
-        validCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
-        normalCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
-        abnormalCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
-        criticalCodedValueSet: Optional[Reference[Union[ValueSet]]] = None,
+        validCodedValueSet: Optional[Reference[ValueSet]] = None,
+        normalCodedValueSet: Optional[Reference[ValueSet]] = None,
+        abnormalCodedValueSet: Optional[Reference[ValueSet]] = None,
+        criticalCodedValueSet: Optional[Reference[ValueSet]] = None,
     ) -> None:
         """
             Set of definitional characteristics for a kind of observation or measurement

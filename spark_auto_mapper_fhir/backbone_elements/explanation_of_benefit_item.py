@@ -1,9 +1,10 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -13,8 +14,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
@@ -139,8 +138,8 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         sequence: FhirPositiveInt,
         careTeamSequence: Optional[FhirList[FhirPositiveInt]] = None,
         diagnosisSequence: Optional[FhirList[FhirPositiveInt]] = None,
@@ -159,15 +158,15 @@ class ExplanationOfBenefitItem(FhirBackboneElementBase):
             CodeableConcept[ExampleServicePlaceCodesCode]
         ] = None,
         locationAddress: Optional[Address] = None,
-        locationReference: Optional[Reference[Union[Location]]] = None,
+        locationReference: Optional[Reference[Location]] = None,
         quantity: Optional[Quantity] = None,
         unitPrice: Optional[Money] = None,
         factor: Optional[FhirDecimal] = None,
         net: Optional[Money] = None,
-        udi: Optional[FhirList[Reference[Union[Device]]]] = None,
+        udi: Optional[FhirList[Reference[Device]]] = None,
         bodySite: Optional[CodeableConcept[OralSiteCodesCode]] = None,
         subSite: Optional[FhirList[CodeableConcept[SurfaceCodesCode]]] = None,
-        encounter: Optional[FhirList[Reference[Union[Encounter]]]] = None,
+        encounter: Optional[FhirList[Reference[Encounter]]] = None,
         noteNumber: Optional[FhirList[FhirPositiveInt]] = None,
         adjudication: Optional[FhirList[ExplanationOfBenefitAdjudication]] = None,
         detail: Optional[FhirList[ExplanationOfBenefitDetail]] = None,

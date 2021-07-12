@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -135,8 +134,8 @@ class MedicinalProduct(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[CodeableConcept[GenericTypeCode]] = None,
         domain: Optional[Coding[GenericTypeCode]] = None,
@@ -154,19 +153,17 @@ class MedicinalProduct(FhirResourceBase):
         ] = None,
         marketingStatus: Optional[FhirList[MarketingStatus]] = None,
         pharmaceuticalProduct: Optional[
-            FhirList[Reference[Union[MedicinalProductPharmaceutical]]]
+            FhirList[Reference[MedicinalProductPharmaceutical]]
         ] = None,
         packagedMedicinalProduct: Optional[
-            FhirList[Reference[Union[MedicinalProductPackaged]]]
+            FhirList[Reference[MedicinalProductPackaged]]
         ] = None,
-        attachedDocument: Optional[
-            FhirList[Reference[Union[DocumentReference]]]
-        ] = None,
-        masterFile: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
+        attachedDocument: Optional[FhirList[Reference[DocumentReference]]] = None,
+        masterFile: Optional[FhirList[Reference[DocumentReference]]] = None,
         contact: Optional[
             FhirList[Reference[Union[Organization, PractitionerRole]]]
         ] = None,
-        clinicalTrial: Optional[FhirList[Reference[Union[ResearchStudy]]]] = None,
+        clinicalTrial: Optional[FhirList[Reference[ResearchStudy]]] = None,
         name: FhirList[MedicinalProductName],
         crossReference: Optional[FhirList[Identifier]] = None,
         manufacturingBusinessOperation: Optional[

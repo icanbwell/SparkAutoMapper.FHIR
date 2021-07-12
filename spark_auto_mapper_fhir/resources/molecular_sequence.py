@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -111,15 +110,15 @@ class MolecularSequence(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: Optional[SequenceTypeCode] = None,
         coordinateSystem: FhirInteger,
-        patient: Optional[Reference[Union[Patient]]] = None,
-        specimen: Optional[Reference[Union[Specimen]]] = None,
-        device: Optional[Reference[Union[Device]]] = None,
-        performer: Optional[Reference[Union[Organization]]] = None,
+        patient: Optional[Reference[Patient]] = None,
+        specimen: Optional[Reference[Specimen]] = None,
+        device: Optional[Reference[Device]] = None,
+        performer: Optional[Reference[Organization]] = None,
         quantity: Optional[Quantity] = None,
         referenceSeq: Optional[MolecularSequenceReferenceSeq] = None,
         variant: Optional[FhirList[MolecularSequenceVariant]] = None,
@@ -127,7 +126,7 @@ class MolecularSequence(FhirResourceBase):
         quality: Optional[FhirList[MolecularSequenceQuality]] = None,
         readCoverage: Optional[FhirInteger] = None,
         repository: Optional[FhirList[MolecularSequenceRepository]] = None,
-        pointer: Optional[FhirList[Reference[Union[MolecularSequence]]]] = None,
+        pointer: Optional[FhirList[Reference[MolecularSequence]]] = None,
         structureVariant: Optional[FhirList[MolecularSequenceStructureVariant]] = None,
     ) -> None:
         """

@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -32,8 +33,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -239,18 +238,18 @@ class ExplanationOfBenefit(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: ExplanationOfBenefitStatusCode,
         type_: CodeableConcept[ClaimTypeCodesCode],
         subType: Optional[CodeableConcept[ExampleClaimSubTypeCodesCode]] = None,
         use: UseCode,
-        patient: Reference[Union[Patient]],
+        patient: Reference[Patient],
         billablePeriod: Optional[Period] = None,
         created: FhirDateTime,
         enterer: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
-        insurer: Reference[Union[Organization]],
+        insurer: Reference[Organization],
         provider: Reference[Union[Practitioner, PractitionerRole, Organization]],
         priority: Optional[CodeableConcept[ProcessPriorityCodesCode]] = None,
         fundsReserveRequested: Optional[
@@ -261,12 +260,12 @@ class ExplanationOfBenefit(FhirResourceBase):
         prescription: Optional[
             Reference[Union[MedicationRequest, VisionPrescription]]
         ] = None,
-        originalPrescription: Optional[Reference[Union[MedicationRequest]]] = None,
+        originalPrescription: Optional[Reference[MedicationRequest]] = None,
         payee: Optional[ExplanationOfBenefitPayee] = None,
-        referral: Optional[Reference[Union[ServiceRequest]]] = None,
-        facility: Optional[Reference[Union[Location]]] = None,
-        claim: Optional[Reference[Union[Claim]]] = None,
-        claimResponse: Optional[Reference[Union[ClaimResponse]]] = None,
+        referral: Optional[Reference[ServiceRequest]] = None,
+        facility: Optional[Reference[Location]] = None,
+        claim: Optional[Reference[Claim]] = None,
+        claimResponse: Optional[Reference[ClaimResponse]] = None,
         outcome: ClaimProcessingCodesCode,
         disposition: Optional[FhirString] = None,
         preAuthRef: Optional[FhirList[FhirString]] = None,

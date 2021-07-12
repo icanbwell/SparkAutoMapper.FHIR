@@ -9,6 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -32,8 +33,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # url (uri)
     # identifier (Identifier)
@@ -210,8 +209,8 @@ class ActivityDefinition(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         url: Optional[FhirUri] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         version: Optional[FhirString] = None,
@@ -221,7 +220,7 @@ class ActivityDefinition(FhirResourceBase):
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
-        subjectReference: Optional[Reference[Union[Group]]] = None,
+        subjectReference: Optional[Reference[Group]] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
@@ -255,7 +254,7 @@ class ActivityDefinition(FhirResourceBase):
         timingPeriod: Optional[Period] = None,
         timingRange: Optional[Range] = None,
         timingDuration: Optional[Duration] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        location: Optional[Reference[Location]] = None,
         participant: Optional[FhirList[ActivityDefinitionParticipant]] = None,
         productReference: Optional[Reference[Union[Medication, Substance]]] = None,
         productCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
@@ -264,14 +263,12 @@ class ActivityDefinition(FhirResourceBase):
         bodySite: Optional[
             FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
         ] = None,
-        specimenRequirement: Optional[
-            FhirList[Reference[Union[SpecimenDefinition]]]
-        ] = None,
+        specimenRequirement: Optional[FhirList[Reference[SpecimenDefinition]]] = None,
         observationRequirement: Optional[
-            FhirList[Reference[Union[ObservationDefinition]]]
+            FhirList[Reference[ObservationDefinition]]
         ] = None,
         observationResultRequirement: Optional[
-            FhirList[Reference[Union[ObservationDefinition]]]
+            FhirList[Reference[ObservationDefinition]]
         ] = None,
         transform: Optional[FhirCanonical] = None,
         dynamicValue: Optional[FhirList[ActivityDefinitionDynamicValue]] = None,

@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -31,8 +32,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -157,8 +156,8 @@ class MedicationAdministration(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiates: Optional[FhirList[FhirUri]] = None,
         partOf: Optional[
@@ -174,10 +173,10 @@ class MedicationAdministration(FhirResourceBase):
         medicationCodeableConcept: Optional[
             CodeableConcept[SNOMEDCTMedicationCodesCode]
         ] = None,
-        medicationReference: Optional[Reference[Union[Medication]]] = None,
+        medicationReference: Optional[Reference[Medication]] = None,
         subject: Reference[Union[Patient, Group]],
         context: Optional[Reference[Union[Encounter, EpisodeOfCare]]] = None,
-        supportingInformation: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        supportingInformation: Optional[FhirList[Reference[Resource]]] = None,
         effectiveDateTime: Optional[FhirDateTime] = None,
         effectivePeriod: Optional[Period] = None,
         performer: Optional[FhirList[MedicationAdministrationPerformer]] = None,
@@ -187,11 +186,11 @@ class MedicationAdministration(FhirResourceBase):
         reasonReference: Optional[
             FhirList[Reference[Union[Condition, Observation, DiagnosticReport]]]
         ] = None,
-        request: Optional[Reference[Union[MedicationRequest]]] = None,
-        device: Optional[FhirList[Reference[Union[Device]]]] = None,
+        request: Optional[Reference[MedicationRequest]] = None,
+        device: Optional[FhirList[Reference[Device]]] = None,
         note: Optional[FhirList[Annotation]] = None,
         dosage: Optional[MedicationAdministrationDosage] = None,
-        eventHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        eventHistory: Optional[FhirList[Reference[Provenance]]] = None,
     ) -> None:
         """
             Describes the event of a patient consuming or otherwise being administered a

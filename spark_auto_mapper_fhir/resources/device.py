@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -140,10 +139,10 @@ class Device(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        definition: Optional[Reference[Union[DeviceDefinition]]] = None,
+        definition: Optional[Reference[DeviceDefinition]] = None,
         udiCarrier: Optional[FhirList[DeviceUdiCarrier]] = None,
         status: Optional[FHIRDeviceStatusCode] = None,
         statusReason: Optional[
@@ -162,14 +161,14 @@ class Device(FhirResourceBase):
         specialization: Optional[FhirList[DeviceSpecialization]] = None,
         version: Optional[FhirList[DeviceVersion]] = None,
         property: Optional[FhirList[DeviceProperty]] = None,
-        patient: Optional[Reference[Union[Patient]]] = None,
-        owner: Optional[Reference[Union[Organization]]] = None,
+        patient: Optional[Reference[Patient]] = None,
+        owner: Optional[Reference[Organization]] = None,
         contact: Optional[FhirList[ContactPoint]] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        location: Optional[Reference[Location]] = None,
         url: Optional[FhirUri] = None,
         note: Optional[FhirList[Annotation]] = None,
         safety: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        parent: Optional[Reference[Union[Device]]] = None,
+        parent: Optional[Reference[Device]] = None,
     ) -> None:
         """
             A type of a manufactured item that is used in the provision of healthcare

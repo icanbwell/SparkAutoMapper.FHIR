@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
@@ -19,8 +20,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -187,8 +186,8 @@ class TaskOutput(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         type_: CodeableConcept[GenericTypeCode],
         valueBase64Binary: Optional[FhirBase64Binary] = None,
         valueBoolean: Optional[FhirBoolean] = None,
@@ -226,7 +225,7 @@ class TaskOutput(FhirBackboneElementBase):
         valueQuantity: Optional[Quantity] = None,
         valueRange: Optional[Range] = None,
         valueRatio: Optional[Ratio] = None,
-        valueReference: Optional[Reference[Union[Resource]]] = None,
+        valueReference: Optional[Reference[Resource]] = None,
         valueSampledData: Optional[SampledData] = None,
         valueSignature: Optional[Signature] = None,
         valueTiming: Optional[Timing] = None,

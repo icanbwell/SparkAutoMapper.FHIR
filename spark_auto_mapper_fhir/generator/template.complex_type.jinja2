@@ -112,12 +112,20 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
             {% if property.is_list -%}
                 {{ 'FhirList[' -}}
             {% endif -%}
+            {% if property.cleaned_type == "Extension" %}
+            {{ 'ExtensionBase' -}}
+            {% else %}
             {{ property.cleaned_type | replace(".","") -}}
+            {%  endif %}
             {% if property.codeable_type -%}
                 [{{ property.codeable_type.cleaned_name -}}]
             {% endif -%}
             {% if property.reference_target_resources -%}
+                {% if property.reference_target_resources | length > 1  %}
                 [Union[{{ property.reference_target_resources_names | join(", ") -}}]]
+                {% else %}
+                [{{ property.reference_target_resources_names | join(", ") -}}]
+                {%  endif %}
             {% endif -%}
             {% if property.is_list -%}
                 {{ ']' -}}

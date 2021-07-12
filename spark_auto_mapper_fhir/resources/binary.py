@@ -52,7 +52,7 @@ class Binary(FhirResourceBase):
         implicitRules: Optional[FhirUri] = None,
         language: Optional[CommonLanguagesCode] = None,
         contentType: MimeTypesCode,
-        securityContext: Optional[Reference[Union[Resource]]] = None,
+        securityContext: Optional[Reference[Resource]] = None,
         data: Optional[FhirBase64Binary] = None,
     ) -> None:
         """

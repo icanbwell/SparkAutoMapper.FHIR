@@ -6,6 +6,7 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -29,8 +30,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -110,21 +109,21 @@ class CareTeam(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: Optional[CareTeamStatusCode] = None,
         category: Optional[FhirList[CodeableConcept[CareTeamCategoryCode]]] = None,
         name: Optional[FhirString] = None,
         subject: Optional[Reference[Union[Patient, Group]]] = None,
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         period: Optional[Period] = None,
         participant: Optional[FhirList[CareTeamParticipant]] = None,
         reasonCode: Optional[
             FhirList[CodeableConcept[SNOMEDCTClinicalFindingsCode]]
         ] = None,
-        reasonReference: Optional[FhirList[Reference[Union[Condition]]]] = None,
-        managingOrganization: Optional[FhirList[Reference[Union[Organization]]]] = None,
+        reasonReference: Optional[FhirList[Reference[Condition]]] = None,
+        managingOrganization: Optional[FhirList[Reference[Organization]]] = None,
         telecom: Optional[FhirList[ContactPoint]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:

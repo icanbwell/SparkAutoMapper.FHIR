@@ -9,6 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -32,8 +33,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # url (uri)
     # identifier (Identifier)
@@ -163,8 +162,8 @@ class Measure(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         url: Optional[FhirUri] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         version: Optional[FhirString] = None,
@@ -174,7 +173,7 @@ class Measure(FhirResourceBase):
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
-        subjectReference: Optional[Reference[Union[Group]]] = None,
+        subjectReference: Optional[Reference[Group]] = None,
         date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,

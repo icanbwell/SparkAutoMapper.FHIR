@@ -1,8 +1,9 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -12,8 +13,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -81,16 +80,16 @@ class MedicinalProductPackagedPackageItem(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         type_: CodeableConcept[GenericTypeCode],
         quantity: Quantity,
         material: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
         alternateMaterial: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        device: Optional[FhirList[Reference[Union[DeviceDefinition]]]] = None,
+        device: Optional[FhirList[Reference[DeviceDefinition]]] = None,
         manufacturedItem: Optional[
-            FhirList[Reference[Union[MedicinalProductManufactured]]]
+            FhirList[Reference[MedicinalProductManufactured]]
         ] = None,
         packageItem: Optional[FhirList[MedicinalProductPackagedPackageItem]] = None,
         physicalCharacteristics: Optional[ProdCharacteristic] = None,
@@ -98,7 +97,7 @@ class MedicinalProductPackagedPackageItem(FhirBackboneElementBase):
             FhirList[CodeableConcept[GenericTypeCode]]
         ] = None,
         shelfLifeStorage: Optional[FhirList[ProductShelfLife]] = None,
-        manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
+        manufacturer: Optional[FhirList[Reference[Organization]]] = None,
     ) -> None:
         """
             A medicinal product in a container or package.

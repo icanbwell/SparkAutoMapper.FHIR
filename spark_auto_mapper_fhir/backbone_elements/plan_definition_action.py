@@ -1,9 +1,10 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, TYPE_CHECKING
 
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -15,8 +16,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # prefix (string)
     # title (string)
@@ -148,8 +147,8 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         prefix: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         description: Optional[FhirString] = None,
@@ -160,7 +159,7 @@ class PlanDefinitionAction(FhirBackboneElementBase):
         documentation: Optional[FhirList[RelatedArtifact]] = None,
         goalId: Optional[FhirList[FhirId]] = None,
         subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
-        subjectReference: Optional[Reference[Union[Group]]] = None,
+        subjectReference: Optional[Reference[Group]] = None,
         trigger: Optional[FhirList[TriggerDefinition]] = None,
         condition: Optional[FhirList[PlanDefinitionCondition]] = None,
         input: Optional[FhirList[DataRequirement]] = None,

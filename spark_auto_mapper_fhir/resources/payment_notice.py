@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -102,22 +101,22 @@ class PaymentNotice(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         status: FinancialResourceStatusCodesCode,
-        request: Optional[Reference[Union[Resource]]] = None,
-        response: Optional[Reference[Union[Resource]]] = None,
+        request: Optional[Reference[Resource]] = None,
+        response: Optional[Reference[Resource]] = None,
         created: FhirDateTime,
         provider: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
-        payment: Reference[Union[PaymentReconciliation]],
+        payment: Reference[PaymentReconciliation],
         paymentDate: Optional[FhirDate] = None,
         payee: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
-        recipient: Reference[Union[Organization]],
+        recipient: Reference[Organization],
         amount: Money,
         paymentStatus: Optional[CodeableConcept[PaymentStatusCodesCode]] = None,
     ) -> None:

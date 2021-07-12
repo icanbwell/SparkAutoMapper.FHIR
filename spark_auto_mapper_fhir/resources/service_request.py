@@ -8,6 +8,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -31,8 +32,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -208,15 +207,15 @@ class ServiceRequest(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
         basedOn: Optional[
             FhirList[Reference[Union[CarePlan, ServiceRequest, MedicationRequest]]]
         ] = None,
-        replaces: Optional[FhirList[Reference[Union[ServiceRequest]]]] = None,
+        replaces: Optional[FhirList[Reference[ServiceRequest]]] = None,
         requisition: Optional[Identifier] = None,
         status: RequestStatusCode,
         intent: RequestIntentCode,
@@ -233,7 +232,7 @@ class ServiceRequest(FhirResourceBase):
         quantityRatio: Optional[Ratio] = None,
         quantityRange: Optional[Range] = None,
         subject: Reference[Union[Patient, Group, Location, Device]],
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         occurrenceDateTime: Optional[FhirDateTime] = None,
         occurrencePeriod: Optional[Period] = None,
         occurrenceTiming: Optional[Timing] = None,
@@ -272,7 +271,7 @@ class ServiceRequest(FhirResourceBase):
         locationCode: Optional[
             FhirList[CodeableConcept[ServiceDeliveryLocationRoleType]]
         ] = None,
-        locationReference: Optional[FhirList[Reference[Union[Location]]]] = None,
+        locationReference: Optional[FhirList[Reference[Location]]] = None,
         reasonCode: Optional[
             FhirList[CodeableConcept[ProcedureReasonCodesCode]]
         ] = None,
@@ -284,14 +283,14 @@ class ServiceRequest(FhirResourceBase):
             ]
         ] = None,
         insurance: Optional[FhirList[Reference[Union[Coverage, ClaimResponse]]]] = None,
-        supportingInfo: Optional[FhirList[Reference[Union[Resource]]]] = None,
-        specimen: Optional[FhirList[Reference[Union[Specimen]]]] = None,
+        supportingInfo: Optional[FhirList[Reference[Resource]]] = None,
+        specimen: Optional[FhirList[Reference[Specimen]]] = None,
         bodySite: Optional[
             FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
         ] = None,
         note: Optional[FhirList[Annotation]] = None,
         patientInstruction: Optional[FhirString] = None,
-        relevantHistory: Optional[FhirList[Reference[Union[Provenance]]]] = None,
+        relevantHistory: Optional[FhirList[Reference[Provenance]]] = None,
     ) -> None:
         """
             A record of a request for service such as diagnostic investigations,

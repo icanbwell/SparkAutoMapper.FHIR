@@ -7,6 +7,7 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -30,8 +31,6 @@ if TYPE_CHECKING:
     )
 
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -207,8 +206,8 @@ class Procedure(FhirResourceBase):
         language: Optional[CommonLanguagesCode] = None,
         text: Optional[Narrative] = None,
         contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
         instantiatesUri: Optional[FhirList[FhirUri]] = None,
@@ -225,7 +224,7 @@ class Procedure(FhirResourceBase):
         ] = None,
         code: Optional[CodeableConcept[ProcedureCodes_SNOMEDCT_Code]] = None,
         subject: Reference[Union[Patient, Group]],
-        encounter: Optional[Reference[Union[Encounter]]] = None,
+        encounter: Optional[Reference[Encounter]] = None,
         performedDateTime: Optional[FhirDateTime] = None,
         performedPeriod: Optional[Period] = None,
         performedString: Optional[FhirString] = None,
@@ -238,7 +237,7 @@ class Procedure(FhirResourceBase):
             Reference[Union[Patient, RelatedPerson, Practitioner, PractitionerRole]]
         ] = None,
         performer: Optional[FhirList[ProcedurePerformer]] = None,
-        location: Optional[Reference[Union[Location]]] = None,
+        location: Optional[Reference[Location]] = None,
         reasonCode: Optional[
             FhirList[CodeableConcept[ProcedureReasonCodesCode]]
         ] = None,
@@ -265,7 +264,7 @@ class Procedure(FhirResourceBase):
         complication: Optional[
             FhirList[CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]]
         ] = None,
-        complicationDetail: Optional[FhirList[Reference[Union[Condition]]]] = None,
+        complicationDetail: Optional[FhirList[Reference[Condition]]] = None,
         followUp: Optional[
             FhirList[CodeableConcept[ProcedureFollowUpCodes_SNOMEDCT_Code]]
         ] = None,

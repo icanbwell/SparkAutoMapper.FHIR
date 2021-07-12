@@ -20,6 +20,10 @@ class ConsentContentClassCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
+    urn:ietf:bcp:13
+    """
+    codeset_urn_ietf_bcp_13: FhirUri = "urn:ietf:bcp:13"
+    """
     urn:ietf:rfc:3986
     """
     codeset_urn_ietf_rfc_3986: FhirUri = "urn:ietf:rfc:3986"
@@ -27,10 +31,6 @@ class ConsentContentClassCode(GenericTypeCode):
     http://hl7.org/fhir/resource-types
     """
     codeset_resource_types: FhirUri = "http://hl7.org/fhir/resource-types"
-    """
-    urn:ietf:bcp:13
-    """
-    codeset_urn_ietf_bcp_13: FhirUri = "urn:ietf:bcp:13"
 
 
 class ConsentContentClassCodeValues:

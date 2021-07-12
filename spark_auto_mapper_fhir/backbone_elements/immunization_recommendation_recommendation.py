@@ -3,6 +3,7 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.resources.resource import Resource
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -13,8 +14,6 @@ if TYPE_CHECKING:
     pass
     # id_ (string)
     # extension (Extension)
-    from spark_auto_mapper_fhir.extensions.extension import Extension
-
     # modifierExtension (Extension)
     # vaccineCode (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
@@ -93,8 +92,8 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         vaccineCode: Optional[
             FhirList[CodeableConcept[VaccineAdministeredValueSetCode]]
         ] = None,
@@ -120,9 +119,7 @@ class ImmunizationRecommendationRecommendation(FhirBackboneElementBase):
         supportingImmunization: Optional[
             FhirList[Reference[Union[Immunization, ImmunizationEvaluation]]]
         ] = None,
-        supportingPatientInformation: Optional[
-            FhirList[Reference[Union[Resource]]]
-        ] = None,
+        supportingPatientInformation: Optional[FhirList[Reference[Resource]]] = None,
     ) -> None:
         """
             A patient's point-in-time set of recommendations (i.e. forecasting) according
