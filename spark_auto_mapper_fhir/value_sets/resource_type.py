@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -14,7 +24,6 @@ class ResourceTypeCode(GenericTypeCode):
     From: http://hl7.org/fhir/resource-types in valuesets.xml
         One of the resource types defined as part of this version of FHIR.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -30,7 +39,6 @@ class ResourceTypeCodeValues:
     healthcare field, used to track charges for a patient, cost centers, etc.
     From: http://hl7.org/fhir/resource-types in valuesets.xml
     """
-
     Account = ResourceTypeCode("Account")
     """
     This resource allows for the definition of some activity to be performed,
@@ -612,9 +620,7 @@ class ResourceTypeCodeValues:
     product, including for regulatory purposes.
     From: http://hl7.org/fhir/resource-types in valuesets.xml
     """
-    MedicinalProductContraindication = ResourceTypeCode(
-        "MedicinalProductContraindication"
-    )
+    MedicinalProductContraindication = ResourceTypeCode("MedicinalProductContraindication")
     """
     Indication for the Medicinal Product.
     From: http://hl7.org/fhir/resource-types in valuesets.xml
@@ -650,9 +656,7 @@ class ResourceTypeCodeValues:
     Describe the undesirable effects of the medicinal product.
     From: http://hl7.org/fhir/resource-types in valuesets.xml
     """
-    MedicinalProductUndesirableEffect = ResourceTypeCode(
-        "MedicinalProductUndesirableEffect"
-    )
+    MedicinalProductUndesirableEffect = ResourceTypeCode("MedicinalProductUndesirableEffect")
     """
     Defines the characteristics of a message that can be shared between systems,
     including the type of event that initiates the message, the content to be

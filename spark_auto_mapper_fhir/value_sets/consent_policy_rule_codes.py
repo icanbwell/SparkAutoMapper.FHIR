@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class ConsentPolicyRuleCodesCode(GenericTypeCode):
         This value set includes sample Regulatory consent policy types from the US and
     other regions.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -32,7 +41,6 @@ class ConsentPolicyRuleCodesCodeValues:
     https://www.gpo.gov/fdsys/pkg/FR-2017-01-19/pdf/2017-01058.pdf
     From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
     """
-
     CommonRuleInformedConsent = ConsentPolicyRuleCodesCode("cric")
     """
     The consent to the performance of a medical or surgical procedure by a
@@ -50,9 +58,7 @@ class ConsentPolicyRuleCodesCodeValues:
     http://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=1539&ChapterID=35
     From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
     """
-    IllinoisConsentByMinorsToMedicalProcedures = ConsentPolicyRuleCodesCode(
-        "illinois-minor-procedure"
-    )
+    IllinoisConsentByMinorsToMedicalProcedures = ConsentPolicyRuleCodesCode("illinois-minor-procedure")
     """
     HIPAA 45 CFR Section 164.508 Uses and disclosures for which an authorization
     is required. (a) Standard: Authorizations for uses and disclosures. (1)
@@ -146,9 +152,7 @@ class ConsentPolicyRuleCodesCodeValues:
     _Consent_Form_Background_Information_548864_7.pdf
     From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
     """
-    MichiganMDHHS_5515ConsentToShareBehavioralHealthInformationForCareCoordinationPurposes = ConsentPolicyRuleCodesCode(
-        "mdhhs-5515"
-    )
+    MichiganMDHHS_5515ConsentToShareBehavioralHealthInformationForCareCoordinationPurposes = ConsentPolicyRuleCodesCode("mdhhs-5515")
     """
     The New York State Surgical and Invasive Procedure Protocol (NYSSIPP) applies
     to all operative and invasive procedures including endoscopy, general surgery
@@ -165,9 +169,7 @@ class ConsentPolicyRuleCodesCodeValues:
     sent_CT_with_contrast.pdf
     From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
     """
-    NewYorkStateSurgicalAndInvasiveProcedureProtocol = ConsentPolicyRuleCodesCode(
-        "nyssipp"
-    )
+    NewYorkStateSurgicalAndInvasiveProcedureProtocol = ConsentPolicyRuleCodesCode("nyssipp")
     """
     VA Form 10-0484 Revocation for Release of Individually-Identifiable Health
     Information enables a veteran to revoke authorization for the VA to release
@@ -321,9 +323,7 @@ class ConsentPolicyRuleCodesCodeValues:
     of use. https://rarediseases.info.nih.gov/files/informed_consent_template.pdf
     From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
     """
-    NIHGlobalRareDiseasePatientRegistryAndDataRepositoryConsent = (
-        ConsentPolicyRuleCodesCode("nih-grdr")
-    )
+    NIHGlobalRareDiseasePatientRegistryAndDataRepositoryConsent = ConsentPolicyRuleCodesCode("nih-grdr")
     """
     NIH Authorization for the Release of Medical Information is a patient’s
     consent for the National Institutes of Health Clinical Center to release
@@ -331,9 +331,7 @@ class ConsentPolicyRuleCodesCodeValues:
     Form available @ http://cc.nih.gov/participate/_pdf/NIH-527.pdf
     From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
     """
-    NIHAuthorizationForTheReleaseOfMedicalInformation = ConsentPolicyRuleCodesCode(
-        "nih-527"
-    )
+    NIHAuthorizationForTheReleaseOfMedicalInformation = ConsentPolicyRuleCodesCode("nih-527")
     """
     Global Alliance for Genomic Health Data Sharing Consent Form is an example of
     the GA4GH Population origins and ancestry research consent form. Consenters

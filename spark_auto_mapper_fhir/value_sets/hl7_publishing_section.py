@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class Hl7PublishingSection(GenericTypeCode):
           Description:
     Codes for HL7 publishing sections (major business categories)
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -33,19 +42,18 @@ class Hl7PublishingSectionValues:
     """
     Description: Represents the HL7 V3 publishing section that deals with the
     administration and management of health care activities and organizations.
-
-
+    
+    
                                UsageNote: V3 Specifications are published in a set
     of "domains", which contain interactions and related specifications for a
     single area of health care within which can be supported by a single, coherent
     set of interoperability specifications.
-
+    
                             For publishing purposes, these domains are aggregated
     into sub-sections of related health care areas and these sub-sections are
     further aggregated into three major sets.
     From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
     """
-
     AdministrativeManagement = Hl7PublishingSection("AM")
     """
     Description: Represents the HL7 V3 publishing section that deals with the

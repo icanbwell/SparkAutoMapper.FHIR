@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -14,7 +24,6 @@ class VaccineManufacturer(GenericTypeCode):
     From: http://terminology.hl7.org/ValueSet/v3-VaccineManufacturer in v3-codesystems.xml
          The manufacturer of a vaccine.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -33,7 +42,6 @@ class VaccineManufacturerValues:
     Abbott Laboratories (includes Ross Products Division)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-
     AbbottLaboratories_includesRossProductsDivision_ = VaccineManufacturer("AB")
     """
     Adams Laboratories
@@ -64,9 +72,7 @@ class VaccineManufacturerValues:
     Bayer Corporation (includes Miles, Inc. and Cutter Laboratories)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    BayerCorporation_includesMiles_Inc_AndCutterLaboratories_ = VaccineManufacturer(
-        "BAY"
-    )
+    BayerCorporation_includesMiles_Inc_AndCutterLaboratories_ = VaccineManufacturer("BAY")
     """
     Berna Products [Inactive-use BPC]
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
@@ -76,9 +82,7 @@ class VaccineManufacturerValues:
     Berna Products Corporation (includes Swiss Serum and Vaccine Institute Berne)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    BernaProductsCorporation_includesSwissSerumAndVaccineInstituteBerne_ = (
-        VaccineManufacturer("BPC")
-    )
+    BernaProductsCorporation_includesSwissSerumAndVaccineInstituteBerne_ = VaccineManufacturer("BPC")
     """
     Centeon L.L.C. (includes Armour Pharmaceutical Company)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
@@ -98,9 +102,7 @@ class VaccineManufacturerValues:
     Evans Medical Limited (an affiliate of Medeva Pharmaceuticals, Inc.)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    EvansMedicalLimited_anAffiliateOfMedevaPharmaceuticals_Inc_ = VaccineManufacturer(
-        "EVN"
-    )
+    EvansMedicalLimited_anAffiliateOfMedevaPharmaceuticals_Inc_ = VaccineManufacturer("EVN")
     """
     Greer Laboratories, Inc.
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
@@ -125,9 +127,7 @@ class VaccineManufacturerValues:
     The Research Foundation for Microbial Diseases of Osaka University (BIKEN)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    TheResearchFoundationForMicrobialDiseasesOfOsakaUniversity_BIKEN_ = (
-        VaccineManufacturer("JPN")
-    )
+    TheResearchFoundationForMicrobialDiseasesOfOsakaUniversity_BIKEN_ = VaccineManufacturer("JPN")
     """
     Korea Green Cross Corporation
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
@@ -157,9 +157,7 @@ class VaccineManufacturerValues:
     Bioport Corporation (formerly Michigan Biologic Products Institute)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    BioportCorporation_formerlyMichiganBiologicProductsInstitute_ = VaccineManufacturer(
-        "MIP"
-    )
+    BioportCorporation_formerlyMichiganBiologicProductsInstitute_ = VaccineManufacturer("MIP")
     """
     Merck & Co., Inc.
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
@@ -180,9 +178,7 @@ class VaccineManufacturerValues:
     Limited)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    NovartisPharmaceuticalCorporation_includesCiba_GeigyLimitedAndSandozLimited_ = (
-        VaccineManufacturer("NOV")
-    )
+    NovartisPharmaceuticalCorporation_includesCiba_GeigyLimitedAndSandozLimited_ = VaccineManufacturer("NOV")
     """
     New York Blood Center
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
@@ -208,9 +204,7 @@ class VaccineManufacturerValues:
     Laboratories and Pasteur Merieux)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    AventisPasteurInc_formerlyPasteurMerieuxConnaught_IncludesConnaughtLaboratoriesAndPasteurMerieux_ = VaccineManufacturer(
-        "PMC"
-    )
+    AventisPasteurInc_formerlyPasteurMerieuxConnaught_IncludesConnaughtLaboratoriesAndPasteurMerieux_ = VaccineManufacturer("PMC")
     """
     Praxis Biologics [Inactive-use WAL]
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
@@ -246,6 +240,4 @@ class VaccineManufacturerValues:
     Laboratories, Lederle Laboratories, and Praxis Biologics)
     From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
     """
-    Wyeth_Ayerst_includesWyeth_LederleVaccinesAndPediatrics_WyethLaboratories_LederleLaboratories_AndPraxisBiologics_ = VaccineManufacturer(
-        "WAL"
-    )
+    Wyeth_Ayerst_includesWyeth_LederleVaccinesAndPediatrics_WyethLaboratories_LederleLaboratories_AndPraxisBiologics_ = VaccineManufacturer("WAL")

@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -23,7 +33,6 @@ class ActClassClinicalDocument(GenericTypeCode):
     document without the full context of the document; (5) Human readability - A
     clinical document is human readable."
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -41,8 +50,8 @@ class ActClassClinicalDocumentValues:
     """
     A record of something that is being done, has been done, can be done, or is
     intended or requested to be done.
-
-
+    
+    
                                Examples:The kinds of acts that are common in
     health care are (1) a clinical observation, (2) an assessment of health
     condition (such as problems and diagnoses), (3) healthcare goals, (4)
@@ -51,14 +60,14 @@ class ActClassClinicalDocumentValues:
     services to patients and their next of kin, (7) and notary services (such as
     advanced directives or living will), (8)  editing and maintaining documents,
     and many others.
-
-
+    
+    
                                Discussion and Rationale: Acts are the pivot of the
     RIM; all domain information and processes are represented primarily in Acts.
     Any profession or business, including healthcare, is primarily constituted of
     intentional and occasionally non-intentional actions, performed and recorded
     by responsible actors. An Act-instance is a record of such an action.
-
+    
                             Acts connect to Entities in their Roles through
     Participations and connect to other Acts through ActRelationships.
     Participations are the authors, performers and other responsible parties as
@@ -67,7 +76,7 @@ class ActClassClinicalDocumentValues:
     distinguishes between Acts that are meant as factual records, vs. records of
     intended or ordered services, and the other modalities in which act can
     appear.
-
+    
                             One of the Participations that all acts have (at least
     implicitly) is a primary author, who is responsible of the Act and who "owns"
     the act. Responsibility for the act means responsibility for what is being
@@ -83,7 +92,7 @@ class ActClassClinicalDocumentValues:
     because each is properly attributed to its author, such disagreements can
     exist side by side and left to arbitration by a recipient of these Act-
     instances.
-
+    
                             In this sense, an Act-instance represents a
     "statement" according to Rector and Nowlan (1991) [Foundations for an
     electronic medical record. Methods Inf Med. 30.]  Rector and Nowlan have
@@ -96,7 +105,7 @@ class ActClassClinicalDocumentValues:
     state-transition model, see Act.statusCode) versus generating new Act-
     instances are designed according to this principle of permanent attributable
     statements.
-
+    
                             Rector and Nolan focus on the electronic medical
     record as a collection of statements, while attributed statements, these are
     still mostly factual statements. However, the Act class goes beyond this
@@ -109,7 +118,7 @@ class ActClassClinicalDocumentValues:
     adequately) will cause the ordered action to be physically performed. The
     speech act theory has culminated in the seminal work by Austin (1962) [How to
     do things with words. Oxford University Press].
-
+    
                             An activity in the real world may progress from
     defined, through planned and ordered to executed, which is represented as the
     mood of the Act. Even though one might think of a single activity as
@@ -123,7 +132,7 @@ class ActClassClinicalDocumentValues:
     comparing actions with their earlier specifications. Act-instances that
     describe this progression of the same real world activity are linked through
     the ActRelationships (of the relationship category "sequel").
-
+    
                             Act as statements or speech-acts are the only
     representation of real world facts or processes in the HL7 RIM. The truth
     about the real world is constructed through a combination (and arbitration) of
@@ -142,7 +151,6 @@ class ActClassClinicalDocumentValues:
     completeness of the information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
     """
-
     Act = ActClassClinicalDocument("ACT")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml

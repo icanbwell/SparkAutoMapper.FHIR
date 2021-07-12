@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,7 +34,6 @@ class CodingRationale(GenericTypeCode):
     value set as we work through the use of codes in messages and determine other
     Use Cases requiring special interpretation of the translations.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -43,7 +52,6 @@ class CodingRationaleValues:
     Description: Originally produced code.
     From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
     """
-
     OriginallyProducedCode = CodingRationale("O")
     """
     Originally produced code, required by the specification describing the use of

@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class Hl7PublishingSubSection(GenericTypeCode):
           Description:
     Codes for HL7 publishing sub-sections (business sub-categories)
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -26,28 +35,25 @@ class Hl7PublishingSubSection(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection
     """
-    codeset_2: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection"
-    )
+    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection"
 
 
 class Hl7PublishingSubSectionValues:
     """
     Description: Represents the HL7 V3 publishing sub-section that holds common or
     shared specifications within the Infrastructure Management (IM) section.
-
-
+    
+    
                                UsageNote: V3 Specifications are published in a set
     of "domains", which contain interactions and related specifications for a
     single area of health care within which can be supported by a single, coherent
     set of interoperability specifications.
-
+    
                             For publishing purposes, these domains are aggregated
     into sub-sections of related health care areas and these sub-sections are
     further aggregated into three major sets.
     From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
     """
-
     Common = Hl7PublishingSubSection("CO")
     """
     Description: Represents the HL7 V3 publishing sub-section that holds

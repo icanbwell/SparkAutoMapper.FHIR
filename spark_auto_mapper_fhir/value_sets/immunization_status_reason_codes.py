@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -17,7 +27,6 @@ class ImmunizationStatusReasonCodesCode(GenericTypeCode):
     support describing the reason why a dose of vaccine was not administered. This
     value set is provided as a suggestive example.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -36,10 +45,7 @@ class ImmunizationStatusReasonCodesCodeValues:
     Identifies the reason the patient is assigned to this accommodation type
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-
-    ActAccommodationReason = ImmunizationStatusReasonCodesCode(
-        "_ActAccommodationReason"
-    )
+    ActAccommodationReason = ImmunizationStatusReasonCodesCode("_ActAccommodationReason")
     """
     Description:Codes used to specify reasons or criteria relating to coverage
     provided under a policy or program.  May be used to convey reasons pertaining
@@ -55,9 +61,7 @@ class ImmunizationStatusReasonCodesCodeValues:
     enterprise data retention policy.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ActInformationManagementReason = ImmunizationStatusReasonCodesCode(
-        "_ActInformationManagementReason"
-    )
+    ActInformationManagementReason = ImmunizationStatusReasonCodesCode("_ActInformationManagementReason")
     """
     Description: Types of reasons why a substance is invalid for use.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
@@ -68,9 +72,7 @@ class ImmunizationStatusReasonCodesCodeValues:
     cancelling an Invoice or Invoice Grouping.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ActInvoiceCancelReason = ImmunizationStatusReasonCodesCode(
-        "_ActInvoiceCancelReason"
-    )
+    ActInvoiceCancelReason = ImmunizationStatusReasonCodesCode("_ActInvoiceCancelReason")
     """
     A coded description of the reason for why a patient did not receive a
     scheduled immunization.
@@ -78,9 +80,7 @@ class ImmunizationStatusReasonCodesCodeValues:
                             (important for public health strategy
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ActNoImmunizationReason = ImmunizationStatusReasonCodesCode(
-        "_ActNoImmunizationReason"
-    )
+    ActNoImmunizationReason = ImmunizationStatusReasonCodesCode("_ActNoImmunizationReason")
     """
     Indicates why a fulfiller refused to fulfill a supply order, and considered it
     important to notify other providers of their decision.  E.g. "Suspect fraud",
@@ -89,17 +89,13 @@ class ImmunizationStatusReasonCodesCodeValues:
                             (used when capturing 'refusal to fill' annotations)
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ActSupplyFulfillmentRefusalReason = ImmunizationStatusReasonCodesCode(
-        "_ActSupplyFulfillmentRefusalReason"
-    )
+    ActSupplyFulfillmentRefusalReason = ImmunizationStatusReasonCodesCode("_ActSupplyFulfillmentRefusalReason")
     """
     Definition:Specifies the reason that an event occurred in a clinical research
     study.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ClinicalResearchEventReason = ImmunizationStatusReasonCodesCode(
-        "_ClinicalResearchEventReason"
-    )
+    ClinicalResearchEventReason = ImmunizationStatusReasonCodesCode("_ClinicalResearchEventReason")
     """
     Definition:SSpecifies the reason that a test was performed or observation
     collected in a clinical research study.
@@ -112,31 +108,23 @@ class ImmunizationStatusReasonCodesCodeValues:
     specifications.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ClinicalResearchObservationReason = ImmunizationStatusReasonCodesCode(
-        "_ClinicalResearchObservationReason"
-    )
+    ClinicalResearchObservationReason = ImmunizationStatusReasonCodesCode("_ClinicalResearchObservationReason")
     """
     Description:Indicates why the prescription should be suspended.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    CombinedPharmacyOrderSuspendReasonCode = ImmunizationStatusReasonCodesCode(
-        "_CombinedPharmacyOrderSuspendReasonCode"
-    )
+    CombinedPharmacyOrderSuspendReasonCode = ImmunizationStatusReasonCodesCode("_CombinedPharmacyOrderSuspendReasonCode")
     """
     Description:Identifies reasons for nullifying (retracting) a particular
     control act.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ControlActNullificationReasonCode = ImmunizationStatusReasonCodesCode(
-        "_ControlActNullificationReasonCode"
-    )
+    ControlActNullificationReasonCode = ImmunizationStatusReasonCodesCode("_ControlActNullificationReasonCode")
     """
     Description: Reasons to refuse a transaction to be undone.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ControlActNullificationRefusalReasonType = ImmunizationStatusReasonCodesCode(
-        "_ControlActNullificationRefusalReasonType"
-    )
+    ControlActNullificationRefusalReasonType = ImmunizationStatusReasonCodesCode("_ControlActNullificationRefusalReasonType")
     """
     Identifies why a specific query, request, or other trigger event occurred.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
@@ -146,27 +134,19 @@ class ImmunizationStatusReasonCodesCodeValues:
     Description:Identifies why a change is being made to a  record.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    GenericUpdateReasonCode = ImmunizationStatusReasonCodesCode(
-        "_GenericUpdateReasonCode"
-    )
+    GenericUpdateReasonCode = ImmunizationStatusReasonCodesCode("_GenericUpdateReasonCode")
     """
     Definition:A collection of concepts identifying why the patient's profile is
     being queried.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    PatientProfileQueryReason = ImmunizationStatusReasonCodesCode(
-        "_PatientProfileQueryReasonCode"
-    )
+    PatientProfileQueryReason = ImmunizationStatusReasonCodesCode("_PatientProfileQueryReasonCode")
     """
     Definition:Indicates why the request to transfer a prescription from one
     dispensing facility to another has been refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    PharmacySupplyRequestFulfillerRevisionRefusalReasonCode = (
-        ImmunizationStatusReasonCodesCode(
-            "_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode"
-        )
-    )
+    PharmacySupplyRequestFulfillerRevisionRefusalReasonCode = ImmunizationStatusReasonCodesCode("_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode")
     """
     Description: Identifies why a request to add (or activate) a record is being
     refused.  Examples include the receiving system not able to match the
@@ -184,34 +164,24 @@ class ImmunizationStatusReasonCodesCodeValues:
     Indicates why the act revision (status update) is being refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    StatusRevisionRefusalReasonCode = ImmunizationStatusReasonCodesCode(
-        "_StatusRevisionRefusalReasonCode"
-    )
+    StatusRevisionRefusalReasonCode = ImmunizationStatusReasonCodesCode("_StatusRevisionRefusalReasonCode")
     """
     Definition:Indicates why the requested authorization to prescribe or dispense
     a medication has been refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdministrationPermissionRefusalReasonCode = (
-        ImmunizationStatusReasonCodesCode(
-            "_SubstanceAdministrationPermissionRefusalReasonCode"
-        )
-    )
+    SubstanceAdministrationPermissionRefusalReasonCode = ImmunizationStatusReasonCodesCode("_SubstanceAdministrationPermissionRefusalReasonCode")
     """
     Reasons why substitution of a substance administration request is not
     permitted.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdminSubstitutionNotAllowedReason = ImmunizationStatusReasonCodesCode(
-        "_SubstanceAdminSubstitutionNotAllowedReason"
-    )
+    SubstanceAdminSubstitutionNotAllowedReason = ImmunizationStatusReasonCodesCode("_SubstanceAdminSubstitutionNotAllowedReason")
     """
     SubstanceAdminSubstitutionReason
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdminSubstitutionReason = ImmunizationStatusReasonCodesCode(
-        "_SubstanceAdminSubstitutionReason"
-    )
+    SubstanceAdminSubstitutionReason = ImmunizationStatusReasonCodesCode("_SubstanceAdminSubstitutionReason")
     """
     The explanation for why a patient is moved from one location to another within
     the organization
@@ -224,9 +194,7 @@ class ImmunizationStatusReasonCodesCodeValues:
     services.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ActBillableServiceReason = ImmunizationStatusReasonCodesCode(
-        "_ActBillableServiceReason"
-    )
+    ActBillableServiceReason = ImmunizationStatusReasonCodesCode("_ActBillableServiceReason")
     """
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """

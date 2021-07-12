@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -27,16 +37,13 @@ class InformationSensitivityPolicy(GenericTypeCode):
     specializable Sensitivity Act.code may be useful in some scenarious if used in
     combination with a sensitivity identifier and/or Act.title.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-InformationSensitivityPolicy
     """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-InformationSensitivityPolicy"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-InformationSensitivityPolicy"
     """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
@@ -51,7 +58,6 @@ class InformationSensitivityPolicyValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-
     ActAccountCode = InformationSensitivityPolicy("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
@@ -65,9 +71,7 @@ class InformationSensitivityPolicyValues:
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActAdjudicationResultActionCode = InformationSensitivityPolicy(
-        "_ActAdjudicationResultActionCode"
-    )
+    ActAdjudicationResultActionCode = InformationSensitivityPolicy("_ActAdjudicationResultActionCode")
     """
     Definition:An identifying modifier code for healthcare interventions or
     procedures.
@@ -79,9 +83,7 @@ class InformationSensitivityPolicyValues:
     services and/or goods provided by a Provider, over a specified period.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActBillingArrangementCode = InformationSensitivityPolicy(
-        "_ActBillingArrangementCode"
-    )
+    ActBillingArrangementCode = InformationSensitivityPolicy("_ActBillingArrangementCode")
     """
     Type of bounded ROI.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -98,9 +100,7 @@ class InformationSensitivityPolicyValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActClaimAttachmentCategoryCode = InformationSensitivityPolicy(
-        "_ActClaimAttachmentCategoryCode"
-    )
+    ActClaimAttachmentCategoryCode = InformationSensitivityPolicy("_ActClaimAttachmentCategoryCode")
     """
     Definition: The type of consent directive, e.g., to consent or dissent to
     collect, access, or use in specific ways within an EHRS or for health
@@ -113,9 +113,7 @@ class InformationSensitivityPolicyValues:
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActContainerRegistrationCode = InformationSensitivityPolicy(
-        "_ActContainerRegistrationCode"
-    )
+    ActContainerRegistrationCode = InformationSensitivityPolicy("_ActContainerRegistrationCode")
     """
     An observation form that determines parameters or attributes of an Act.
     Examples are the settings of a ventilator machine as parameters of a
@@ -140,9 +138,7 @@ class InformationSensitivityPolicyValues:
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActCoverageConfirmationCode = InformationSensitivityPolicy(
-        "_ActCoverageConfirmationCode"
-    )
+    ActCoverageConfirmationCode = InformationSensitivityPolicy("_ActCoverageConfirmationCode")
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -158,9 +154,7 @@ class InformationSensitivityPolicyValues:
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActDetectedIssueManagementCode = InformationSensitivityPolicy(
-        "_ActDetectedIssueManagementCode"
-    )
+    ActDetectedIssueManagementCode = InformationSensitivityPolicy("_ActDetectedIssueManagementCode")
     """
     Concepts that identify the type or nature of exposure interaction.  Examples
     include "household", "care giver", "intimate partner", "common space", "common
@@ -172,9 +166,7 @@ class InformationSensitivityPolicyValues:
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActFinancialTransactionCode = InformationSensitivityPolicy(
-        "_ActFinancialTransactionCode"
-    )
+    ActFinancialTransactionCode = InformationSensitivityPolicy("_ActFinancialTransactionCode")
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -193,17 +185,13 @@ class InformationSensitivityPolicyValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationAccessContextCode = InformationSensitivityPolicy(
-        "_ActInformationAccessContextCode"
-    )
+    ActInformationAccessContextCode = InformationSensitivityPolicy("_ActInformationAccessContextCode")
     """
     Definition:Indicates the set of information types which may be manipulated or
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationCategoryCode = InformationSensitivityPolicy(
-        "_ActInformationCategoryCode"
-    )
+    ActInformationCategoryCode = InformationSensitivityPolicy("_ActInformationCategoryCode")
     """
     Type of invoice element that is used to assist in describing an Invoice that
     is either submitted for adjudication or for which is returned on adjudication
@@ -218,9 +206,7 @@ class InformationSensitivityPolicyValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInvoiceElementSummaryCode = InformationSensitivityPolicy(
-        "_ActInvoiceElementSummaryCode"
-    )
+    ActInvoiceElementSummaryCode = InformationSensitivityPolicy("_ActInvoiceElementSummaryCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
@@ -237,17 +223,13 @@ class InformationSensitivityPolicyValues:
     Identifies types of monitoring programs
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActMonitoringProtocolCode = InformationSensitivityPolicy(
-        "_ActMonitoringProtocolCode"
-    )
+    ActMonitoringProtocolCode = InformationSensitivityPolicy("_ActMonitoringProtocolCode")
     """
     Description:Concepts representing indications (reasons for clinical action)
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActNonObservationIndicationCode = InformationSensitivityPolicy(
-        "_ActNonObservationIndicationCode"
-    )
+    ActNonObservationIndicationCode = InformationSensitivityPolicy("_ActNonObservationIndicationCode")
     """
     Identifies the type of verification investigation being undertaken with
     respect to the subject of the verification activity.
@@ -295,9 +277,7 @@ class InformationSensitivityPolicyValues:
     National Provider Data Bank, Health Integrity Protection Data Base (HIPDB)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActObservationVerification = InformationSensitivityPolicy(
-        "_ActObservationVerificationType"
-    )
+    ActObservationVerification = InformationSensitivityPolicy("_ActObservationVerificationType")
     """
     Code identifying the method or the movement of payment instructions.
     
@@ -322,9 +302,7 @@ class InformationSensitivityPolicyValues:
     (e.g. patient).  Product examples are consumable or durable goods.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActProductAcquisitionCode = InformationSensitivityPolicy(
-        "_ActProductAcquisitionCode"
-    )
+    ActProductAcquisitionCode = InformationSensitivityPolicy("_ActProductAcquisitionCode")
     """
     Transportation of a specimen.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -341,9 +319,7 @@ class InformationSensitivityPolicyValues:
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActSubstanceAdministrationCode = InformationSensitivityPolicy(
-        "_ActSubstanceAdministrationCode"
-    )
+    ActSubstanceAdministrationCode = InformationSensitivityPolicy("_ActSubstanceAdministrationCode")
     """
     Description: A task or action that a user may perform in a clinical
     information system (e.g., medication order entry, laboratory test results
@@ -359,9 +335,7 @@ class InformationSensitivityPolicyValues:
     transit, via courier.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActTransportationModeCode = InformationSensitivityPolicy(
-        "_ActTransportationModeCode"
-    )
+    ActTransportationModeCode = InformationSensitivityPolicy("_ActTransportationModeCode")
     """
     Identifies the kinds of observations that can be performed
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml

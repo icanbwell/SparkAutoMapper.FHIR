@@ -1,8 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -10,25 +19,18 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # code (code)
     from spark_auto_mapper_fhir.complex_types.code import code
-
     # display (string)
     # equivalence (ConceptMapEquivalence)
-    from spark_auto_mapper_fhir.value_sets.concept_map_equivalence import (
-        ConceptMapEquivalenceCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.concept_map_equivalence import ConceptMapEquivalenceCode
     # comment (string)
     # dependsOn (ConceptMap.DependsOn)
-    from spark_auto_mapper_fhir.backbone_elements.concept_map_depends_on import (
-        ConceptMapDependsOn,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.concept_map_depends_on import ConceptMapDependsOn
     # product (ConceptMap.DependsOn)
 
 
@@ -39,61 +41,63 @@ class ConceptMapTarget(FhirBackboneElementBase):
     ConceptMap.Target
         A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        code: Optional[code] = None,
-        display: Optional[FhirString] = None,
-        equivalence: ConceptMapEquivalenceCode,
-        comment: Optional[FhirString] = None,
-        dependsOn: Optional[FhirList[ConceptMapDependsOn]] = None,
-        product: Optional[FhirList[ConceptMapDependsOn]] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        code: Optional[code ] = None,
+        display: Optional[FhirString ] = None,
+        equivalence: ConceptMapEquivalenceCode ,
+        comment: Optional[FhirString ] = None,
+        dependsOn: Optional[FhirList[ConceptMapDependsOn ]] = None,
+        product: Optional[FhirList[ConceptMapDependsOn ]] = None,
     ) -> None:
         """
-            A statement of relationships from one set of concepts to one or more other
-        concepts - either concepts in code systems, or data element/data element
-        concepts, or classes in class models.
+        A statement of relationships from one set of concepts to one or more other
+    concepts - either concepts in code systems, or data element/data element
+    concepts, or classes in class models.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param code: Identity (code or path) or the element/item that the map refers to.
-            :param display: The display for the code. The display is only provided to help editors when
-        editing the concept map.
-            :param equivalence: The equivalence between the source and target concepts (counting for the
-        dependencies and products). The equivalence is read from target to source
-        (e.g. the target is 'wider' than the source).
-            :param comment: A description of status/issues in mapping that conveys additional information
-        not represented in  the structured data.
-            :param dependsOn: A set of additional dependencies for this mapping to hold. This mapping is
-        only applicable if the specified element can be resolved, and it has the
-        specified value.
-            :param product: A set of additional outcomes from this mapping to other elements. To properly
-        execute this mapping, the specified element must be mapped to some data
-        element or source that is in context. The mapping may still be useful without
-        a place for the additional data elements, but the equivalence cannot be relied
-        on.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param code: Identity (code or path) or the element/item that the map refers to.
+        :param display: The display for the code. The display is only provided to help editors when
+    editing the concept map.
+        :param equivalence: The equivalence between the source and target concepts (counting for the
+    dependencies and products). The equivalence is read from target to source
+    (e.g. the target is 'wider' than the source).
+        :param comment: A description of status/issues in mapping that conveys additional information
+    not represented in  the structured data.
+        :param dependsOn: A set of additional dependencies for this mapping to hold. This mapping is
+    only applicable if the specified element can be resolved, and it has the
+    specified value.
+        :param product: A set of additional outcomes from this mapping to other elements. To properly
+    execute this mapping, the specified element must be mapped to some data
+    element or source that is in context. The mapping may still be useful without
+    a place for the additional data elements, but the equivalence cannot be relied
+    on.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             code=code,

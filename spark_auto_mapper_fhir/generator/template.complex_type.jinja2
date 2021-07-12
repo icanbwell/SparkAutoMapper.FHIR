@@ -86,6 +86,7 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
 {% endif %}
     """
     {{fhir_entity.fhir_name}}
+    {{ fhir_entity.source }}
     {% for documentation_item in fhir_entity.documentation %}
         {{ documentation_item }}
     {%  endfor %}

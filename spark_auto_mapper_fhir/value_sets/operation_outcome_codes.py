@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class OperationOutcomeCodesCode(GenericTypeCode):
         Operation Outcome codes used by FHIR test servers (see Implementation file
     translations.xml)
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -29,16 +38,11 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-
-    Error_MultipleMatchesExistForTheConditionalDelete = OperationOutcomeCodesCode(
-        "DELETE_MULTIPLE_MATCHES"
-    )
+    Error_MultipleMatchesExistForTheConditionalDelete = OperationOutcomeCodesCode("DELETE_MULTIPLE_MATCHES")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    YouMustAuthenticateBeforeYouCanUseThisService = OperationOutcomeCodesCode(
-        "MSG_AUTH_REQUIRED"
-    )
+    YouMustAuthenticateBeforeYouCanUseThisService = OperationOutcomeCodesCode("MSG_AUTH_REQUIRED")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -50,15 +54,11 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    UnableToParseFeed_entryContentType_s_ = OperationOutcomeCodesCode(
-        "MSG_CANT_PARSE_CONTENT"
-    )
+    UnableToParseFeed_entryContentType_s_ = OperationOutcomeCodesCode("MSG_CANT_PARSE_CONTENT")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    UnableToParseFeed_rootElementName_s_ = OperationOutcomeCodesCode(
-        "MSG_CANT_PARSE_ROOT"
-    )
+    UnableToParseFeed_rootElementName_s_ = OperationOutcomeCodesCode("MSG_CANT_PARSE_ROOT")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -66,9 +66,7 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    TheDateValue_sIsNotInTheCorrectFormat_XmlDateFormatRequired_ = (
-        OperationOutcomeCodesCode("MSG_DATE_FORMAT")
-    )
+    TheDateValue_sIsNotInTheCorrectFormat_XmlDateFormatRequired_ = OperationOutcomeCodesCode("MSG_DATE_FORMAT")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -104,15 +102,11 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    JsonSourceForAResourceShouldStartWithAnObject = OperationOutcomeCodesCode(
-        "MSG_JSON_OBJECT"
-    )
+    JsonSourceForAResourceShouldStartWithAnObject = OperationOutcomeCodesCode("MSG_JSON_OBJECT")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    UnableToResolveLocalReferenceToResource_s = OperationOutcomeCodesCode(
-        "MSG_LOCAL_FAIL"
-    )
+    UnableToResolveLocalReferenceToResource_s = OperationOutcomeCodesCode("MSG_LOCAL_FAIL")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -124,9 +118,7 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    NoModuleCouldBeFoundToHandleTheRequest_s_ = OperationOutcomeCodesCode(
-        "MSG_NO_MODULE"
-    )
+    NoModuleCouldBeFoundToHandleTheRequest_s_ = OperationOutcomeCodesCode("MSG_NO_MODULE")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -134,9 +126,7 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    Operation_sNotAllowedForResource_s_dueToLocalConfiguration_ = (
-        OperationOutcomeCodesCode("MSG_OP_NOT_ALLOWED")
-    )
+    Operation_sNotAllowedForResource_s_dueToLocalConfiguration_ = OperationOutcomeCodesCode("MSG_OP_NOT_ALLOWED")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -148,9 +138,7 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    Parameter_s_ModifierIsInvalid = OperationOutcomeCodesCode(
-        "MSG_PARAM_MODIFIER_INVALID"
-    )
+    Parameter_s_ModifierIsInvalid = OperationOutcomeCodesCode("MSG_PARAM_MODIFIER_INVALID")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -162,9 +150,7 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    ResourcesWithIdentity_example_CannotBeDeleted_forTesting_trainingPurposes_ = (
-        OperationOutcomeCodesCode("MSG_RESOURCE_EXAMPLE_PROTECTED")
-    )
+    ResourcesWithIdentity_example_CannotBeDeleted_forTesting_trainingPurposes_ = OperationOutcomeCodesCode("MSG_RESOURCE_EXAMPLE_PROTECTED")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -180,9 +166,7 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    NotAllowedToSubmitAResourceForThisOperation = OperationOutcomeCodesCode(
-        "MSG_RESOURCE_NOT_ALLOWED"
-    )
+    NotAllowedToSubmitAResourceForThisOperation = OperationOutcomeCodesCode("MSG_RESOURCE_NOT_ALLOWED")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -198,15 +182,11 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    DuplicateIdentifierInTransaction_s = OperationOutcomeCodesCode(
-        "MSG_TRANSACTION_DUPLICATE_ID"
-    )
+    DuplicateIdentifierInTransaction_s = OperationOutcomeCodesCode("MSG_TRANSACTION_DUPLICATE_ID")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    MissingIdentifierInTransaction_AnEntry_idMustBeProvided = OperationOutcomeCodesCode(
-        "MSG_TRANSACTION_MISSING_ID"
-    )
+    MissingIdentifierInTransaction_AnEntry_idMustBeProvided = OperationOutcomeCodesCode("MSG_TRANSACTION_MISSING_ID")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -230,15 +210,11 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    VersionAwareUpdatesAreRequiredForThisResource = OperationOutcomeCodesCode(
-        "MSG_VERSION_AWARE"
-    )
+    VersionAwareUpdatesAreRequiredForThisResource = OperationOutcomeCodesCode("MSG_VERSION_AWARE")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    UpdateConflict_serverCurrentVersion_s_ClientVersionReferenced_s_ = (
-        OperationOutcomeCodesCode("MSG_VERSION_AWARE_CONFLICT")
-    )
+    UpdateConflict_serverCurrentVersion_s_ClientVersionReferenced_s_ = OperationOutcomeCodesCode("MSG_VERSION_AWARE_CONFLICT")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
@@ -246,24 +222,16 @@ class OperationOutcomeCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    ThisDoesNotAppearToBeAFHIRElementOrResource_wrongNamespace_s_ = (
-        OperationOutcomeCodesCode("MSG_WRONG_NS")
-    )
+    ThisDoesNotAppearToBeAFHIRElementOrResource_wrongNamespace_s_ = OperationOutcomeCodesCode("MSG_WRONG_NS")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    Error_MultipleMatchesExistFor_sSearchParameters_s_ = OperationOutcomeCodesCode(
-        "SEARCH_MULTIPLE"
-    )
+    Error_MultipleMatchesExistFor_sSearchParameters_s_ = OperationOutcomeCodesCode("SEARCH_MULTIPLE")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    Error_NoProcessableSearchFoundFor_sSearchParameters_s_ = OperationOutcomeCodesCode(
-        "SEARCH_NONE"
-    )
+    Error_NoProcessableSearchFoundFor_sSearchParameters_s_ = OperationOutcomeCodesCode("SEARCH_NONE")
     """
     From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
     """
-    Error_MultipleMatchesExistForTheConditionalUpdate = OperationOutcomeCodesCode(
-        "UPDATE_MULTIPLE_MATCHES"
-    )
+    Error_MultipleMatchesExistForTheConditionalUpdate = OperationOutcomeCodesCode("UPDATE_MULTIPLE_MATCHES")

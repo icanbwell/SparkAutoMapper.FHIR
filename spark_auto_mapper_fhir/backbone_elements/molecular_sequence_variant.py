@@ -1,9 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -11,9 +19,9 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # start (integer)
     # end (integer)
@@ -22,7 +30,6 @@ if TYPE_CHECKING:
     # cigar (string)
     # variantPointer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for variantPointer
     from spark_auto_mapper_fhir.resources.observation import Observation
 
@@ -34,66 +41,68 @@ class MolecularSequenceVariant(FhirBackboneElementBase):
     MolecularSequence.Variant
         Raw data describing a biological sequence.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        start: Optional[FhirInteger] = None,
-        end: Optional[FhirInteger] = None,
-        observedAllele: Optional[FhirString] = None,
-        referenceAllele: Optional[FhirString] = None,
-        cigar: Optional[FhirString] = None,
-        variantPointer: Optional[Reference[Union[Observation]]] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        start: Optional[FhirInteger ] = None,
+        end: Optional[FhirInteger ] = None,
+        observedAllele: Optional[FhirString ] = None,
+        referenceAllele: Optional[FhirString ] = None,
+        cigar: Optional[FhirString ] = None,
+        variantPointer: Optional[Reference [Union[Observation]]] = None,
     ) -> None:
         """
-            Raw data describing a biological sequence.
+        Raw data describing a biological sequence.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param start: Start position of the variant on the  reference sequence. If the coordinate
-        system is either 0-based or 1-based, then start position is inclusive.
-            :param end: End position of the variant on the reference sequence. If the coordinate
-        system is 0-based then end is exclusive and does not include the last
-        position. If the coordinate system is 1-base, then end is inclusive and
-        includes the last position.
-            :param observedAllele: An allele is one of a set of coexisting sequence variants of a gene ([SO:00010
-        23](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
-        Nucleotide(s)/amino acids from start position of sequence to stop position of
-        sequence on the positive (+) strand of the observed  sequence. When the
-        sequence  type is DNA, it should be the sequence on the positive (+) strand.
-        This will lay in the range between variant.start and variant.end.
-            :param referenceAllele: An allele is one of a set of coexisting sequence variants of a gene ([SO:00010
-        23](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
-        Nucleotide(s)/amino acids from start position of sequence to stop position of
-        sequence on the positive (+) strand of the reference sequence. When the
-        sequence  type is DNA, it should be the sequence on the positive (+) strand.
-        This will lay in the range between variant.start and variant.end.
-            :param cigar: Extended CIGAR string for aligning the sequence with reference bases. See
-        detailed documentation [here](http://support.illumina.com/help/SequencingAnaly
-        sisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_Ext
-        endedCIGARFormat.htm).
-            :param variantPointer: A pointer to an Observation containing variant information.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param start: Start position of the variant on the  reference sequence. If the coordinate
+    system is either 0-based or 1-based, then start position is inclusive.
+        :param end: End position of the variant on the reference sequence. If the coordinate
+    system is 0-based then end is exclusive and does not include the last
+    position. If the coordinate system is 1-base, then end is inclusive and
+    includes the last position.
+        :param observedAllele: An allele is one of a set of coexisting sequence variants of a gene ([SO:00010
+    23](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+    Nucleotide(s)/amino acids from start position of sequence to stop position of
+    sequence on the positive (+) strand of the observed  sequence. When the
+    sequence  type is DNA, it should be the sequence on the positive (+) strand.
+    This will lay in the range between variant.start and variant.end.
+        :param referenceAllele: An allele is one of a set of coexisting sequence variants of a gene ([SO:00010
+    23](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
+    Nucleotide(s)/amino acids from start position of sequence to stop position of
+    sequence on the positive (+) strand of the reference sequence. When the
+    sequence  type is DNA, it should be the sequence on the positive (+) strand.
+    This will lay in the range between variant.start and variant.end.
+        :param cigar: Extended CIGAR string for aligning the sequence with reference bases. See
+    detailed documentation [here](http://support.illumina.com/help/SequencingAnaly
+    sisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_Ext
+    endedCIGARFormat.htm).
+        :param variantPointer: A pointer to an Observation containing variant information.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             start=start,

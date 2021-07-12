@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class FHIRDefinedConceptPropertiesCode(GenericTypeCode):
         A set of common concept properties for use on coded systems throughout the
     FHIR eco-system.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -31,7 +40,6 @@ class FHIRDefinedConceptPropertiesCodeValues:
     more. Property type is boolean, default value is false
     From: http://hl7.org/fhir/concept-properties in valuesets.xml
     """
-
     Inactive = FHIRDefinedConceptPropertiesCode("inactive")
     """
     The date at which a concept was deprecated. Concepts that are deprecated but

@@ -1,9 +1,19 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -11,12 +21,8 @@ if TYPE_CHECKING:
     pass
     # value (decimal)
     from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
-
     # comparator (QuantityComparator)
-    from spark_auto_mapper_fhir.value_sets.quantity_comparator import (
-        QuantityComparatorCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.quantity_comparator import QuantityComparatorCode
     # unit (string)
     # system (uri)
     # code (code)
@@ -28,35 +34,35 @@ if TYPE_CHECKING:
 class Count(FhirComplexTypeBase):
     """
     Count
+    fhir-base.xsd
         A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        value: Optional[FhirDecimal] = None,
-        comparator: Optional[QuantityComparatorCode] = None,
-        unit: Optional[FhirString] = None,
-        system: Optional[FhirUri] = None,
-        code: Optional[code] = None,
+        value: Optional[FhirDecimal ] = None,
+        comparator: Optional[QuantityComparatorCode ] = None,
+        unit: Optional[FhirString ] = None,
+        system: Optional[FhirUri ] = None,
+        code: Optional[code ] = None,
     ) -> None:
         """
-            A measured amount (or an amount that can potentially be measured). Note that
-        measured amounts include amounts that are not precisely quantified, including
-        amounts involving arbitrary units and floating currencies.
-            If the element is present, it must have a value for at least one of the
-        defined elements, an @id referenced from the Narrative, or extensions
+        A measured amount (or an amount that can potentially be measured). Note that
+    measured amounts include amounts that are not precisely quantified, including
+    amounts involving arbitrary units and floating currencies.
+        If the element is present, it must have a value for at least one of the
+    defined elements, an @id referenced from the Narrative, or extensions
 
-            :param value: The value of the measured amount. The value includes an implicit precision in
-        the presentation of the value.
-            :param comparator: How the value should be understood and represented - whether the actual value
-        is greater or less than the stated value due to measurement issues; e.g. if
-        the comparator is "<" , then the real value is < stated value.
-            :param unit: A human-readable form of the unit.
-            :param system: The identification of the system that provides the coded form of the unit.
-            :param code: A computer processable form of the unit in some unit representation system.
+        :param value: The value of the measured amount. The value includes an implicit precision in
+    the presentation of the value.
+        :param comparator: How the value should be understood and represented - whether the actual value
+    is greater or less than the stated value due to measurement issues; e.g. if
+    the comparator is "<" , then the real value is < stated value.
+        :param unit: A human-readable form of the unit.
+        :param system: The identification of the system that provides the coded form of the unit.
+        :param code: A computer processable form of the unit in some unit representation system.
         """
         super().__init__(
             value=value,

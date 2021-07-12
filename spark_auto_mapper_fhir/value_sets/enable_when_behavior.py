@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class EnableWhenBehaviorCode(GenericTypeCode):
         Controls how multiple enableWhen values are interpreted -  whether all or any
     must be true.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -30,7 +39,6 @@ class EnableWhenBehaviorCodeValues:
     Enable the question when all the enableWhen criteria are satisfied.
     From: http://hl7.org/fhir/questionnaire-enable-behavior in valuesets.xml
     """
-
     All = EnableWhenBehaviorCode("all")
     """
     Enable the question when any of the enableWhen criteria are satisfied.

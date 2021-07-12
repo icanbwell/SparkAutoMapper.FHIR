@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -19,7 +29,6 @@ class RoleClassPartitive(GenericTypeCode):
     temporary association of a playing Entity with a (generally larger) scoping
     Entity.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -38,7 +47,6 @@ class RoleClassPartitiveValues:
     Corresponds to the Role class
     From: http://terminology.hl7.org/CodeSystem/v3-RoleClass in v3-codesystems.xml
     """
-
     Role = RoleClassPartitive("ROL")
     """
     The player of the role is a child of the scoping entity, in a generic sense.

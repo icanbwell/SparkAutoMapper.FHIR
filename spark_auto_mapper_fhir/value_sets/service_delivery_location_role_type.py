@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,16 +25,13 @@ class ServiceDeliveryLocationRoleType(GenericTypeCode):
          A role of a place that further classifies the setting (e.g., accident site,
     road side, work site, community location) in which services are delivered.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
     """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
@@ -36,13 +43,12 @@ class ServiceDeliveryLocationRoleTypeValues:
     Concepts characterizing the type of association formed by player and scoper
     when there is a recognized Affiliate role by which the two parties are
     related.
-
-
+    
+    
                                Examples: Business Partner, Business Associate,
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-
     AffiliationRoleType = ServiceDeliveryLocationRoleType("_AffiliationRoleType")
     """
     AssignedRoleType
@@ -79,9 +85,7 @@ class ServiceDeliveryLocationRoleTypeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = ServiceDeliveryLocationRoleType(
-        "_LivingSubjectProductionClass"
-    )
+    LivingSubjectProductionClass = ServiceDeliveryLocationRoleType("_LivingSubjectProductionClass")
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -91,9 +95,7 @@ class ServiceDeliveryLocationRoleTypeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = ServiceDeliveryLocationRoleType(
-        "_MedicationGeneralizationRoleType"
-    )
+    MedicationGeneralizationRoleType = ServiceDeliveryLocationRoleType("_MedicationGeneralizationRoleType")
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -103,9 +105,7 @@ class ServiceDeliveryLocationRoleTypeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType = ServiceDeliveryLocationRoleType(
-        "_PersonalRelationshipRoleType"
-    )
+    PersonalRelationshipRoleType = ServiceDeliveryLocationRoleType("_PersonalRelationshipRoleType")
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -154,9 +154,7 @@ class ServiceDeliveryLocationRoleTypeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = ServiceDeliveryLocationRoleType(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    PolicyOrProgramCoverageRoleType = ServiceDeliveryLocationRoleType("_PolicyOrProgramCoverageRoleType")
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -165,17 +163,13 @@ class ServiceDeliveryLocationRoleTypeValues:
     design.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ResearchSubjectRoleBasis = ServiceDeliveryLocationRoleType(
-        "_ResearchSubjectRoleBasis"
-    )
+    ResearchSubjectRoleBasis = ServiceDeliveryLocationRoleType("_ResearchSubjectRoleBasis")
     """
     A role of a place that further classifies the setting (e.g., accident site,
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType_ = ServiceDeliveryLocationRoleType(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    ServiceDeliveryLocationRoleType_ = ServiceDeliveryLocationRoleType("_ServiceDeliveryLocationRoleType")
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml

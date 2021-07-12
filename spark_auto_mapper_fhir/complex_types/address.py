@@ -1,23 +1,31 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # use (AddressUse)
     from spark_auto_mapper_fhir.value_sets.address_use import AddressUseCode
-
     # type_ (AddressType)
     from spark_auto_mapper_fhir.value_sets.address_type import AddressTypeCode
-
     # text (string)
     # line (string)
     # city (string)
@@ -34,59 +42,62 @@ if TYPE_CHECKING:
 class Address(FhirComplexTypeBase):
     """
     Address
+    fhir-base.xsd
         An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        use: Optional[AddressUseCode] = None,
-        type_: Optional[AddressTypeCode] = None,
-        text: Optional[FhirString] = None,
-        line: Optional[FhirList[FhirString]] = None,
-        city: Optional[FhirString] = None,
-        district: Optional[FhirString] = None,
-        state: Optional[FhirString] = None,
-        postalCode: Optional[FhirString] = None,
-        country: Optional[FhirString] = None,
-        period: Optional[Period] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        use: Optional[AddressUseCode ] = None,
+        type_: Optional[AddressTypeCode ] = None,
+        text: Optional[FhirString ] = None,
+        line: Optional[FhirList[FhirString ]] = None,
+        city: Optional[FhirString ] = None,
+        district: Optional[FhirString ] = None,
+        state: Optional[FhirString ] = None,
+        postalCode: Optional[FhirString ] = None,
+        country: Optional[FhirString ] = None,
+        period: Optional[Period ] = None,
     ) -> None:
         """
-            An address expressed using postal conventions (as opposed to GPS or other
-        location definition formats).  This data type may be used to convey addresses
-        for use in delivering mail as well as for visiting locations which might not
-        be valid for mail delivery.  There are a variety of postal address formats
-        defined around the world.
-            If the element is present, it must have a value for at least one of the
-        defined elements, an @id referenced from the Narrative, or extensions
+        An address expressed using postal conventions (as opposed to GPS or other
+    location definition formats).  This data type may be used to convey addresses
+    for use in delivering mail as well as for visiting locations which might not
+    be valid for mail delivery.  There are a variety of postal address formats
+    defined around the world.
+        If the element is present, it must have a value for at least one of the
+    defined elements, an @id referenced from the Narrative, or extensions
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param use: The purpose of this address.
-            :param type_: Distinguishes between physical addresses (those you can visit) and mailing
-        addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
-            :param text: Specifies the entire address as it should be displayed e.g. on a postal label.
-        This may be provided instead of or as well as the specific parts.
-            :param line: This component contains the house number, apartment number, street name,
-        street direction,  P.O. Box number, delivery hints, and similar address
-        information.
-            :param city: The name of the city, town, suburb, village or other community or delivery
-        center.
-            :param district: The name of the administrative area (county).
-            :param state: Sub-unit of a country with limited sovereignty in a federally organized
-        country. A code may be used if codes are in common use (e.g. US 2 letter state
-        codes).
-            :param postalCode: A postal code designating a region defined by the postal service.
-            :param country: Country - a nation as commonly understood or generally accepted.
-            :param period: Time period when address was/is in use.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param use: The purpose of this address.
+        :param type_: Distinguishes between physical addresses (those you can visit) and mailing
+    addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+        :param text: Specifies the entire address as it should be displayed e.g. on a postal label.
+    This may be provided instead of or as well as the specific parts.
+        :param line: This component contains the house number, apartment number, street name,
+    street direction,  P.O. Box number, delivery hints, and similar address
+    information.
+        :param city: The name of the city, town, suburb, village or other community or delivery
+    center.
+        :param district: The name of the administrative area (county).
+        :param state: Sub-unit of a country with limited sovereignty in a federally organized
+    country. A code may be used if codes are in common use (e.g. US 2 letter state
+    codes).
+        :param postalCode: A postal code designating a region defined by the postal service.
+        :param country: Country - a nation as commonly understood or generally accepted.
+        :param period: Time period when address was/is in use.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             use=use,
             type_=type_,

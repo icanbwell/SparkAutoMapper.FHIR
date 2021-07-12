@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class Hl7PublishingDomain(GenericTypeCode):
           Description:
     Codes for HL7 publishing domains (specific content area)
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -36,15 +45,14 @@ class Hl7PublishingDomainValues:
     patient billing accounts and the post of financial transactions against
     patient billing accounts for the purpose of aggregating financial transactions
     that will be submitted as claims or invoices for reimbursemen"
-
-
+    
+    
                                UsageNote: V3 Specifications are published in a set
     of "domains", which contain interactions and related specifications for a
     single area of health care within which can be supported by a single, coherent
     set of interoperability specifications.
     From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
     """
-
     Accounting_Billing = Hl7PublishingDomain("AB")
     """
     Description: Represents the HL7 content "domain" that supports trigger event

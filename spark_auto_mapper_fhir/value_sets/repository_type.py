@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -14,7 +24,6 @@ class RepositoryTypeCode(GenericTypeCode):
     From: http://hl7.org/fhir/repository-type in valuesets.xml
         Type for access of external URI.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -30,7 +39,6 @@ class RepositoryTypeCodeValues:
     download link format).
     From: http://hl7.org/fhir/repository-type in valuesets.xml
     """
-
     ClickAndSee = RepositoryTypeCode("directlink")
     """
     When the API method (e.g. [base_url]/[parameter]) related with the URL of the
@@ -38,9 +46,7 @@ class RepositoryTypeCodeValues:
     format).
     From: http://hl7.org/fhir/repository-type in valuesets.xml
     """
-    TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult_ = RepositoryTypeCode(
-        "openapi"
-    )
+    TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult_ = RepositoryTypeCode("openapi")
     """
     When logged into the website, the resource can be seen.
     From: http://hl7.org/fhir/repository-type in valuesets.xml
@@ -51,13 +57,9 @@ class RepositoryTypeCodeValues:
     resource can be seen.
     From: http://hl7.org/fhir/repository-type in valuesets.xml
     """
-    ResultNeedToBeFetchedWithAPIAndNeedLOGIN_OrCookiesAreRequiredWhenVisitingTheLinkOfResource_ = RepositoryTypeCode(
-        "oauth"
-    )
+    ResultNeedToBeFetchedWithAPIAndNeedLOGIN_OrCookiesAreRequiredWhenVisitingTheLinkOfResource_ = RepositoryTypeCode("oauth")
     """
     Some other complicated or particular way to get resource from URL.
     From: http://hl7.org/fhir/repository-type in valuesets.xml
     """
-    SomeOtherComplicatedOrParticularWayToGetResourceFromURL_ = RepositoryTypeCode(
-        "other"
-    )
+    SomeOtherComplicatedOrParticularWayToGetResourceFromURL_ = RepositoryTypeCode("other")

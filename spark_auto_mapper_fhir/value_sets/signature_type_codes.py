@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -17,7 +27,6 @@ class SignatureTypeCodesCode(GenericTypeCode):
     determining accountability for various actions concerning the document.
     Examples include: author, transcriptionist/recorder, and witness.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -33,7 +42,6 @@ class SignatureTypeCodesCodeValues:
     There can be only one primary author of a health information document.
     From: urn:iso-astm:E1762-95:2013 in valuesets.xml
     """
-
     Author_sSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.1")
     """
     the signature of a health information document coauthor. There can be multiple
@@ -54,9 +62,7 @@ class SignatureTypeCodesCodeValues:
     recorded written text into a digital machine readable format.
     From: urn:iso-astm:E1762-95:2013 in valuesets.xml
     """
-    Transcriptionist_RecorderSignature = SignatureTypeCodesCode(
-        "1.2.840.10065.1.12.1.4"
-    )
+    Transcriptionist_RecorderSignature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.4")
     """
     a signature verifying the information contained in a document. (Example a
     physician is required to countersign a verbal order that has previously been
@@ -164,9 +170,7 @@ class SignatureTypeCodesCodeValues:
     permanent patient record.
     From: urn:iso-astm:E1762-95:2013 in valuesets.xml
     """
-    Administrative_Error_Edit_Signature = SignatureTypeCodesCode(
-        "1.2.840.10065.1.12.1.17"
-    )
+    Administrative_Error_Edit_Signature = SignatureTypeCodesCode("1.2.840.10065.1.12.1.17")
     """
     the signature by an entity or device trusted to provide accurate timestamps.
     This timestamp might be provided, for example, in the signature time

@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -14,7 +24,6 @@ class ConditionalReadStatusCode(GenericTypeCode):
     From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
         A code that indicates how the server supports conditional read.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -29,7 +38,6 @@ class ConditionalReadStatusCodeValues:
     No support for conditional reads.
     From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
     """
-
     NotSupported = ConditionalReadStatusCode("not-supported")
     """
     Conditional reads are supported, but only with the If-Modified-Since HTTP

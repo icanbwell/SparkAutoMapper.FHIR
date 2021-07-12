@@ -1,8 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -10,21 +19,18 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # operationType (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for operationType
     # Import for CodeableConcept for operationType
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for operationType
     # authorisationReferenceNumber (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # effectiveDate (dateTime)
     # confidentialityIndicator (CodeableConcept)
     # End Import for References for confidentialityIndicator
@@ -32,10 +38,8 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for confidentialityIndicator
     # manufacturer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
-
     # regulator (Reference)
     # Imports for References for regulator
 
@@ -47,50 +51,52 @@ class MedicinalProductManufacturingBusinessOperation(FhirBackboneElementBase):
     MedicinalProduct.ManufacturingBusinessOperation
         Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        operationType: Optional[CodeableConcept[GenericTypeCode]] = None,
-        authorisationReferenceNumber: Optional[Identifier] = None,
-        effectiveDate: Optional[FhirDateTime] = None,
-        confidentialityIndicator: Optional[CodeableConcept[GenericTypeCode]] = None,
-        manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
-        regulator: Optional[Reference[Union[Organization]]] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        operationType: Optional[CodeableConcept[GenericTypeCode] ] = None,
+        authorisationReferenceNumber: Optional[Identifier ] = None,
+        effectiveDate: Optional[FhirDateTime ] = None,
+        confidentialityIndicator: Optional[CodeableConcept[GenericTypeCode] ] = None,
+        manufacturer: Optional[FhirList[Reference [Union[Organization]]]] = None,
+        regulator: Optional[Reference [Union[Organization]]] = None,
     ) -> None:
         """
-            Detailed definition of a medicinal product, typically for uses other than
-        direct patient care (e.g. regulatory use).
+        Detailed definition of a medicinal product, typically for uses other than
+    direct patient care (e.g. regulatory use).
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param operationType: The type of manufacturing operation.
-            :param authorisationReferenceNumber: Regulatory authorization reference number.
-            :param effectiveDate: Regulatory authorization date.
-            :param confidentialityIndicator: To indicate if this proces is commercially confidential.
-            :param manufacturer: The manufacturer or establishment associated with the process.
-            :param regulator: A regulator which oversees the operation.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param operationType: The type of manufacturing operation.
+        :param authorisationReferenceNumber: Regulatory authorization reference number.
+        :param effectiveDate: Regulatory authorization date.
+        :param confidentialityIndicator: To indicate if this proces is commercially confidential.
+        :param manufacturer: The manufacturer or establishment associated with the process.
+        :param regulator: A regulator which oversees the operation.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             operationType=operationType,

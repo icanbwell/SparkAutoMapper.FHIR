@@ -1,8 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -10,13 +19,12 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # entity (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for entity
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -25,10 +33,8 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.medication import Medication
     from spark_auto_mapper_fhir.resources.substance import Substance
     from spark_auto_mapper_fhir.resources.group import Group
-
     # period (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
-
     # inactive (boolean)
 
 
@@ -39,59 +45,51 @@ class GroupMember(FhirBackboneElementBase):
     Group.Member
         Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        entity: Reference[
-            Union[
-                Patient,
-                Practitioner,
-                PractitionerRole,
-                Device,
-                Medication,
-                Substance,
-                Group,
-            ]
-        ],
-        period: Optional[Period] = None,
-        inactive: Optional[FhirBoolean] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        entity: Reference [Union[Patient, Practitioner, PractitionerRole, Device, Medication, Substance, Group]],
+        period: Optional[Period ] = None,
+        inactive: Optional[FhirBoolean ] = None,
     ) -> None:
         """
-            Represents a defined collection of entities that may be discussed or acted
-        upon collectively but which are not expected to act collectively, and are not
-        formally or legally recognized; i.e. a collection of entities that isn't an
-        Organization.
+        Represents a defined collection of entities that may be discussed or acted
+    upon collectively but which are not expected to act collectively, and are not
+    formally or legally recognized; i.e. a collection of entities that isn't an
+    Organization.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param entity: A reference to the entity that is a member of the group. Must be consistent
-        with Group.type. If the entity is another group, then the type must be the
-        same.
-            :param period: The period that the member was in the group, if known.
-            :param inactive: A flag to indicate that the member is no longer in the group, but previously
-        may have been a member.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param entity: A reference to the entity that is a member of the group. Must be consistent
+    with Group.type. If the entity is another group, then the type must be the
+    same.
+        :param period: The period that the member was in the group, if known.
+        :param inactive: A flag to indicate that the member is no longer in the group, but previously
+    may have been a member.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             entity=entity,

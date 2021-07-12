@@ -1,43 +1,43 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # code (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.usage_context_type import (
-        UsageContextTypeCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.usage_context_type import UsageContextTypeCode
     # End Import for CodeableConcept for code
     # valueCodeableConcept (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for valueCodeableConcept
-    from spark_auto_mapper_fhir.value_sets.context_of_use_value_set import (
-        ContextOfUseValueSetCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.context_of_use_value_set import ContextOfUseValueSetCode
     # End Import for CodeableConcept for valueCodeableConcept
     # valueQuantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # valueRange (Range)
     from spark_auto_mapper_fhir.complex_types.range import Range
-
     # valueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for valueReference
     from spark_auto_mapper_fhir.resources.plan_definition import PlanDefinition
     from spark_auto_mapper_fhir.resources.research_study import ResearchStudy
@@ -53,56 +53,45 @@ if TYPE_CHECKING:
 class UsageContext(FhirComplexTypeBase):
     """
     UsageContext
+    fhir-base.xsd
         Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        code: Coding[UsageContextTypeCode],
-        valueCodeableConcept: Optional[
-            CodeableConcept[ContextOfUseValueSetCode]
-        ] = None,
-        valueQuantity: Optional[Quantity] = None,
-        valueRange: Optional[Range] = None,
-        valueReference: Optional[
-            Reference[
-                Union[
-                    PlanDefinition,
-                    ResearchStudy,
-                    InsurancePlan,
-                    HealthcareService,
-                    Group,
-                    Location,
-                    Organization,
-                ]
-            ]
-        ] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        code: Coding[UsageContextTypeCode] ,
+        valueCodeableConcept: Optional[CodeableConcept[ContextOfUseValueSetCode] ] = None,
+        valueQuantity: Optional[Quantity ] = None,
+        valueRange: Optional[Range ] = None,
+        valueReference: Optional[Reference [Union[PlanDefinition, ResearchStudy, InsurancePlan, HealthcareService, Group, Location, Organization]]] = None,
     ) -> None:
         """
-            Specifies clinical/business/etc. metadata that can be used to retrieve, index
-        and/or categorize an artifact. This metadata can either be specific to the
-        applicable population (e.g., age category, DRG) or the specific context of
-        care (e.g., venue, care setting, provider of care).
-            If the element is present, it must have a value for at least one of the
-        defined elements, an @id referenced from the Narrative, or extensions
+        Specifies clinical/business/etc. metadata that can be used to retrieve, index
+    and/or categorize an artifact. This metadata can either be specific to the
+    applicable population (e.g., age category, DRG) or the specific context of
+    care (e.g., venue, care setting, provider of care).
+        If the element is present, it must have a value for at least one of the
+    defined elements, an @id referenced from the Narrative, or extensions
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param code: A code that identifies the type of context being specified by this usage
-        context.
-            :param valueCodeableConcept: None
-            :param valueQuantity: None
-            :param valueRange: None
-            :param valueReference: None
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param code: A code that identifies the type of context being specified by this usage
+    context.
+        :param valueCodeableConcept: None
+        :param valueQuantity: None
+        :param valueRange: None
+        :param valueReference: None
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             code=code,
             valueCodeableConcept=valueCodeableConcept,

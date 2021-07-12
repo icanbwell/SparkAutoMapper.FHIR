@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -19,7 +29,6 @@ class ObligationPolicy(GenericTypeCode):
     that is performed in conjunction with the enforcement of an access control
     decision.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -41,7 +50,6 @@ class ObligationPolicyValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-
     ActAccountCode = ObligationPolicy("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
@@ -55,9 +63,7 @@ class ObligationPolicyValues:
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActAdjudicationResultActionCode = ObligationPolicy(
-        "_ActAdjudicationResultActionCode"
-    )
+    ActAdjudicationResultActionCode = ObligationPolicy("_ActAdjudicationResultActionCode")
     """
     Definition:An identifying modifier code for healthcare interventions or
     procedures.
@@ -171,9 +177,7 @@ class ObligationPolicyValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationAccessContextCode = ObligationPolicy(
-        "_ActInformationAccessContextCode"
-    )
+    ActInformationAccessContextCode = ObligationPolicy("_ActInformationAccessContextCode")
     """
     Definition:Indicates the set of information types which may be manipulated or
     referenced, such as for recommending access restrictions.
@@ -217,9 +221,7 @@ class ObligationPolicyValues:
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActNonObservationIndicationCode = ObligationPolicy(
-        "_ActNonObservationIndicationCode"
-    )
+    ActNonObservationIndicationCode = ObligationPolicy("_ActNonObservationIndicationCode")
     """
     Identifies the type of verification investigation being undertaken with
     respect to the subject of the verification activity.

@@ -1,9 +1,16 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -17,16 +24,12 @@ if TYPE_CHECKING:
     # implicitRules (uri)
     # language (CommonLanguages)
     from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
-
     # contentType (Mime Types)
     from spark_auto_mapper_fhir.value_sets.mime_types import MimeTypesCode
-
     # securityContext (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for securityContext
     from spark_auto_mapper_fhir.resources.resource import Resource
-
     # data (base64Binary)
     from spark_auto_mapper_fhir.complex_types.base64_binary import base64Binary
 
@@ -36,52 +39,52 @@ if TYPE_CHECKING:
 class Binary(FhirResourceBase):
     """
     Binary
+    binary.xsd
         A resource that represents the data of a single raw artifact as digital
     content accessible in its native format.  A Binary resource can contain any
     content, whether text, image, pdf, zip archive, etc.
         If the element is present, it must have either a @value, an @id, or extensions
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
-        implicitRules: Optional[FhirUri] = None,
-        language: Optional[CommonLanguagesCode] = None,
-        contentType: MimeTypesCode,
-        securityContext: Optional[Reference[Union[Resource]]] = None,
-        data: Optional[base64Binary] = None,
+        id_: Optional[FhirId ] = None,
+        meta: Optional[Meta ] = None,
+        implicitRules: Optional[FhirUri ] = None,
+        language: Optional[CommonLanguagesCode ] = None,
+        contentType: MimeTypesCode ,
+        securityContext: Optional[Reference [Union[Resource]]] = None,
+        data: Optional[base64Binary ] = None,
     ) -> None:
         """
-            A resource that represents the data of a single raw artifact as digital
-        content accessible in its native format.  A Binary resource can contain any
-        content, whether text, image, pdf, zip archive, etc.
-            If the element is present, it must have either a @value, an @id, or extensions
+        A resource that represents the data of a single raw artifact as digital
+    content accessible in its native format.  A Binary resource can contain any
+    content, whether text, image, pdf, zip archive, etc.
+        If the element is present, it must have either a @value, an @id, or extensions
 
-            :param id_: The logical id of the resource, as used in the URL for the resource. Once
-        assigned, this value never changes.
-            :param meta: The metadata about the resource. This is content that is maintained by the
-        infrastructure. Changes to the content might not always be associated with
-        version changes to the resource.
-            :param implicitRules: A reference to a set of rules that were followed when the resource was
-        constructed, and which must be understood when processing the content. Often,
-        this is a reference to an implementation guide that defines the special rules
-        along with other profiles etc.
-            :param language: The base language in which the resource is written.
-            :param contentType: MimeType of the binary content represented as a standard MimeType (BCP 13).
-            :param securityContext: This element identifies another resource that can be used as a proxy of the
-        security sensitivity to use when deciding and enforcing access control rules
-        for the Binary resource. Given that the Binary resource contains very few
-        elements that can be used to determine the sensitivity of the data and
-        relationships to individuals, the referenced resource stands in as a proxy
-        equivalent for this purpose. This referenced resource may be related to the
-        Binary (e.g. Media, DocumentReference), or may be some non-related Resource
-        purely as a security proxy. E.g. to identify that the binary resource relates
-        to a patient, and access should only be granted to applications that have
-        access to the patient.
-            :param data: The actual content, base64 encoded.
+        :param id_: The logical id of the resource, as used in the URL for the resource. Once
+    assigned, this value never changes.
+        :param meta: The metadata about the resource. This is content that is maintained by the
+    infrastructure. Changes to the content might not always be associated with
+    version changes to the resource.
+        :param implicitRules: A reference to a set of rules that were followed when the resource was
+    constructed, and which must be understood when processing the content. Often,
+    this is a reference to an implementation guide that defines the special rules
+    along with other profiles etc.
+        :param language: The base language in which the resource is written.
+        :param contentType: MimeType of the binary content represented as a standard MimeType (BCP 13).
+        :param securityContext: This element identifies another resource that can be used as a proxy of the
+    security sensitivity to use when deciding and enforcing access control rules
+    for the Binary resource. Given that the Binary resource contains very few
+    elements that can be used to determine the sensitivity of the data and
+    relationships to individuals, the referenced resource stands in as a proxy
+    equivalent for this purpose. This referenced resource may be related to the
+    Binary (e.g. Media, DocumentReference), or may be some non-related Resource
+    purely as a security proxy. E.g. to identify that the binary resource relates
+    to a patient, and access should only be granted to applications that have
+    access to the patient.
+        :param data: The actual content, base64 encoded.
         """
         super().__init__(
             resourceType="Binary",

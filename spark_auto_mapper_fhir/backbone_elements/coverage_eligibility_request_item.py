@@ -1,8 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -10,60 +19,43 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # supportingInfoSequence (positiveInt)
     from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for category
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
-        BenefitCategoryCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import BenefitCategoryCodesCode
     # End Import for CodeableConcept for category
     # productOrService (CodeableConcept)
     # End Import for References for productOrService
     # Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodesCode
-
     # End Import for CodeableConcept for productOrService
     # modifier (CodeableConcept)
     # End Import for References for modifier
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
-        ModifierTypeCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodesCode
     # End Import for CodeableConcept for modifier
     # provider (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for provider
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # unitPrice (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
-
     # facility (Reference)
     # Imports for References for facility
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.resources.organization import Organization
-
     # diagnosis (CoverageEligibilityRequest.Diagnosis)
-    from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_diagnosis import (
-        CoverageEligibilityRequestDiagnosis,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_diagnosis import CoverageEligibilityRequestDiagnosis
     # detail (Reference)
     # Imports for References for detail
 
@@ -75,65 +67,67 @@ class CoverageEligibilityRequestItem(FhirBackboneElementBase):
     CoverageEligibilityRequest.Item
         The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        supportingInfoSequence: Optional[FhirList[FhirPositiveInt]] = None,
-        category: Optional[CodeableConcept[BenefitCategoryCodesCode]] = None,
-        productOrService: Optional[CodeableConcept[USCLSCodesCode]] = None,
-        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode]]] = None,
-        provider: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
-        quantity: Optional[Quantity] = None,
-        unitPrice: Optional[Money] = None,
-        facility: Optional[Reference[Union[Location, Organization]]] = None,
-        diagnosis: Optional[FhirList[CoverageEligibilityRequestDiagnosis]] = None,
-        detail: Optional[FhirList[Reference[Union[Resource]]]] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        supportingInfoSequence: Optional[FhirList[FhirPositiveInt ]] = None,
+        category: Optional[CodeableConcept[BenefitCategoryCodesCode] ] = None,
+        productOrService: Optional[CodeableConcept[USCLSCodesCode] ] = None,
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode] ]] = None,
+        provider: Optional[Reference [Union[Practitioner, PractitionerRole]]] = None,
+        quantity: Optional[Quantity ] = None,
+        unitPrice: Optional[Money ] = None,
+        facility: Optional[Reference [Union[Location, Organization]]] = None,
+        diagnosis: Optional[FhirList[CoverageEligibilityRequestDiagnosis ]] = None,
+        detail: Optional[FhirList[Reference [Union[Resource]]]] = None,
     ) -> None:
         """
-            The CoverageEligibilityRequest provides patient and insurance coverage
-        information to an insurer for them to respond, in the form of an
-        CoverageEligibilityResponse, with information regarding whether the stated
-        coverage is valid and in-force and optionally to provide the insurance details
-        of the policy.
+        The CoverageEligibilityRequest provides patient and insurance coverage
+    information to an insurer for them to respond, in the form of an
+    CoverageEligibilityResponse, with information regarding whether the stated
+    coverage is valid and in-force and optionally to provide the insurance details
+    of the policy.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param supportingInfoSequence: Exceptions, special conditions and supporting information applicable for this
-        service or product line.
-            :param category: Code to identify the general type of benefits under which products and
-        services are provided.
-            :param productOrService: This contains the product, service, drug or other billing code for the item.
-            :param modifier: Item typification or modifiers codes to convey additional context for the
-        product or service.
-            :param provider: The practitioner who is responsible for the product or service to be rendered
-        to the patient.
-            :param quantity: The number of repetitions of a service or product.
-            :param unitPrice: The amount charged to the patient by the provider for a single unit.
-            :param facility: Facility where the services will be provided.
-            :param diagnosis: Patient diagnosis for which care is sought.
-            :param detail: The plan/proposal/order describing the proposed service in detail.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param supportingInfoSequence: Exceptions, special conditions and supporting information applicable for this
+    service or product line.
+        :param category: Code to identify the general type of benefits under which products and
+    services are provided.
+        :param productOrService: This contains the product, service, drug or other billing code for the item.
+        :param modifier: Item typification or modifiers codes to convey additional context for the
+    product or service.
+        :param provider: The practitioner who is responsible for the product or service to be rendered
+    to the patient.
+        :param quantity: The number of repetitions of a service or product.
+        :param unitPrice: The amount charged to the patient by the provider for a single unit.
+        :param facility: Facility where the services will be provided.
+        :param diagnosis: Patient diagnosis for which care is sought.
+        :param detail: The plan/proposal/order describing the proposed service in detail.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             supportingInfoSequence=supportingInfoSequence,

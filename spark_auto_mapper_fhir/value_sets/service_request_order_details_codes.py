@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -16,7 +26,6 @@ class ServiceRequestOrderDetailsCodesCode(GenericTypeCode):
     only make sense in the context of what is being ordered.  This example is for
     a patient ventilation order
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -30,31 +39,20 @@ class ServiceRequestOrderDetailsCodesCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
-
-    ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_ = (
-        ServiceRequestOrderDetailsCodesCode("47545007")
-    )
+    ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_ = ServiceRequestOrderDetailsCodesCode("47545007")
     """
     From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
-    PressureControlledVentilation_procedure_ = ServiceRequestOrderDetailsCodesCode(
-        "286812008"
-    )
+    PressureControlledVentilation_procedure_ = ServiceRequestOrderDetailsCodesCode("286812008")
     """
     From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
-    PatientTriggeredInspiratoryAssistance_procedure_ = (
-        ServiceRequestOrderDetailsCodesCode("243144002")
-    )
+    PatientTriggeredInspiratoryAssistance_procedure_ = ServiceRequestOrderDetailsCodesCode("243144002")
     """
     From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
-    AssistedControlledMandatoryVentilation_procedure_ = (
-        ServiceRequestOrderDetailsCodesCode("243150007")
-    )
+    AssistedControlledMandatoryVentilation_procedure_ = ServiceRequestOrderDetailsCodesCode("243150007")
     """
     From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
     """
-    SynchronizedIntermittentMandatoryVentilation_procedure_ = (
-        ServiceRequestOrderDetailsCodesCode("59427005")
-    )
+    SynchronizedIntermittentMandatoryVentilation_procedure_ = ServiceRequestOrderDetailsCodesCode("59427005")

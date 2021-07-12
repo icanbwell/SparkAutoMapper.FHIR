@@ -1,7 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -9,31 +19,23 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # initialFill (MedicationRequest.InitialFill)
-    from spark_auto_mapper_fhir.backbone_elements.medication_request_initial_fill import (
-        MedicationRequestInitialFill,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.medication_request_initial_fill import MedicationRequestInitialFill
     # dispenseInterval (Duration)
     from spark_auto_mapper_fhir.complex_types.duration import Duration
-
     # validityPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
-
     # numberOfRepeatsAllowed (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # expectedSupplyDuration (Duration)
     # performer (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for performer
     from spark_auto_mapper_fhir.resources.organization import Organization
 
@@ -45,64 +47,66 @@ class MedicationRequestDispenseRequest(FhirBackboneElementBase):
     MedicationRequest.DispenseRequest
         An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        initialFill: Optional[MedicationRequestInitialFill] = None,
-        dispenseInterval: Optional[Duration] = None,
-        validityPeriod: Optional[Period] = None,
-        numberOfRepeatsAllowed: Optional[unsignedInt] = None,
-        quantity: Optional[Quantity] = None,
-        expectedSupplyDuration: Optional[Duration] = None,
-        performer: Optional[Reference[Union[Organization]]] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        initialFill: Optional[MedicationRequestInitialFill ] = None,
+        dispenseInterval: Optional[Duration ] = None,
+        validityPeriod: Optional[Period ] = None,
+        numberOfRepeatsAllowed: Optional[unsignedInt ] = None,
+        quantity: Optional[Quantity ] = None,
+        expectedSupplyDuration: Optional[Duration ] = None,
+        performer: Optional[Reference [Union[Organization]]] = None,
     ) -> None:
         """
-            An order or request for both supply of the medication and the instructions for
-        administration of the medication to a patient. The resource is called
-        "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder"
-        to generalize the use across inpatient and outpatient settings, including care
-        plans, etc., and to harmonize with workflow patterns.
+        An order or request for both supply of the medication and the instructions for
+    administration of the medication to a patient. The resource is called
+    "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder"
+    to generalize the use across inpatient and outpatient settings, including care
+    plans, etc., and to harmonize with workflow patterns.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param initialFill: Indicates the quantity or duration for the first dispense of the medication.
-            :param dispenseInterval: The minimum period of time that must occur between dispenses of the
-        medication.
-            :param validityPeriod: This indicates the validity period of a prescription (stale dating the
-        Prescription).
-            :param numberOfRepeatsAllowed: An integer indicating the number of times, in addition to the original
-        dispense, (aka refills or repeats) that the patient can receive the prescribed
-        medication. Usage Notes: This integer does not include the original order
-        dispense. This means that if an order indicates dispense 30 tablets plus "3
-        repeats", then the order can be dispensed a total of 4 times and the patient
-        can receive a total of 120 tablets.  A prescriber may explicitly say that zero
-        refills are permitted after the initial dispense.
-            :param quantity: The amount that is to be dispensed for one fill.
-            :param expectedSupplyDuration: Identifies the period time over which the supplied product is expected to be
-        used, or the length of time the dispense is expected to last.
-            :param performer: Indicates the intended dispensing Organization specified by the prescriber.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param initialFill: Indicates the quantity or duration for the first dispense of the medication.
+        :param dispenseInterval: The minimum period of time that must occur between dispenses of the
+    medication.
+        :param validityPeriod: This indicates the validity period of a prescription (stale dating the
+    Prescription).
+        :param numberOfRepeatsAllowed: An integer indicating the number of times, in addition to the original
+    dispense, (aka refills or repeats) that the patient can receive the prescribed
+    medication. Usage Notes: This integer does not include the original order
+    dispense. This means that if an order indicates dispense 30 tablets plus "3
+    repeats", then the order can be dispensed a total of 4 times and the patient
+    can receive a total of 120 tablets.  A prescriber may explicitly say that zero
+    refills are permitted after the initial dispense.
+        :param quantity: The amount that is to be dispensed for one fill.
+        :param expectedSupplyDuration: Identifies the period time over which the supplied product is expected to be
+    used, or the length of time the dispense is expected to last.
+        :param performer: Indicates the intended dispensing Organization specified by the prescriber.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             initialFill=initialFill,

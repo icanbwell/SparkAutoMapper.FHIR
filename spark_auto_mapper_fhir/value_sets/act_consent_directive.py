@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class ActConsentDirective(GenericTypeCode):
          ActConsentDirective codes are used to specify the type of Consent Directive
     to which a Consent Directive Act conforms.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -37,7 +46,6 @@ class ActConsentDirectiveValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-
     ActAccountCode = ActConsentDirective("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
@@ -51,9 +59,7 @@ class ActConsentDirectiveValues:
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActAdjudicationResultActionCode = ActConsentDirective(
-        "_ActAdjudicationResultActionCode"
-    )
+    ActAdjudicationResultActionCode = ActConsentDirective("_ActAdjudicationResultActionCode")
     """
     Definition:An identifying modifier code for healthcare interventions or
     procedures.
@@ -82,9 +88,7 @@ class ActConsentDirectiveValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActClaimAttachmentCategoryCode = ActConsentDirective(
-        "_ActClaimAttachmentCategoryCode"
-    )
+    ActClaimAttachmentCategoryCode = ActConsentDirective("_ActClaimAttachmentCategoryCode")
     """
     Definition: The type of consent directive, e.g., to consent or dissent to
     collect, access, or use in specific ways within an EHRS or for health
@@ -138,9 +142,7 @@ class ActConsentDirectiveValues:
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActDetectedIssueManagementCode = ActConsentDirective(
-        "_ActDetectedIssueManagementCode"
-    )
+    ActDetectedIssueManagementCode = ActConsentDirective("_ActDetectedIssueManagementCode")
     """
     Concepts that identify the type or nature of exposure interaction.  Examples
     include "household", "care giver", "intimate partner", "common space", "common
@@ -171,9 +173,7 @@ class ActConsentDirectiveValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationAccessContextCode = ActConsentDirective(
-        "_ActInformationAccessContextCode"
-    )
+    ActInformationAccessContextCode = ActConsentDirective("_ActInformationAccessContextCode")
     """
     Definition:Indicates the set of information types which may be manipulated or
     referenced, such as for recommending access restrictions.
@@ -217,9 +217,7 @@ class ActConsentDirectiveValues:
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActNonObservationIndicationCode = ActConsentDirective(
-        "_ActNonObservationIndicationCode"
-    )
+    ActNonObservationIndicationCode = ActConsentDirective("_ActNonObservationIndicationCode")
     """
     Identifies the type of verification investigation being undertaken with
     respect to the subject of the verification activity.
@@ -309,9 +307,7 @@ class ActConsentDirectiveValues:
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActSubstanceAdministrationCode = ActConsentDirective(
-        "_ActSubstanceAdministrationCode"
-    )
+    ActSubstanceAdministrationCode = ActConsentDirective("_ActSubstanceAdministrationCode")
     """
     Description: A task or action that a user may perform in a clinical
     information system (e.g., medication order entry, laboratory test results

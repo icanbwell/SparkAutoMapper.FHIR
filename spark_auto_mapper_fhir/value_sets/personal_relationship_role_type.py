@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,16 +25,13 @@ class PersonalRelationshipRoleType(GenericTypeCode):
          Types of personal relationships between two living subjects.  Example:
     Parent, sibling, unrelated friend, neighbor
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType
     """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType"
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
@@ -36,13 +43,12 @@ class PersonalRelationshipRoleTypeValues:
     Concepts characterizing the type of association formed by player and scoper
     when there is a recognized Affiliate role by which the two parties are
     related.
-
-
+    
+    
                                Examples: Business Partner, Business Associate,
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-
     AffiliationRoleType = PersonalRelationshipRoleType("_AffiliationRoleType")
     """
     AssignedRoleType
@@ -79,9 +85,7 @@ class PersonalRelationshipRoleTypeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = PersonalRelationshipRoleType(
-        "_LivingSubjectProductionClass"
-    )
+    LivingSubjectProductionClass = PersonalRelationshipRoleType("_LivingSubjectProductionClass")
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -91,9 +95,7 @@ class PersonalRelationshipRoleTypeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = PersonalRelationshipRoleType(
-        "_MedicationGeneralizationRoleType"
-    )
+    MedicationGeneralizationRoleType = PersonalRelationshipRoleType("_MedicationGeneralizationRoleType")
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -103,9 +105,7 @@ class PersonalRelationshipRoleTypeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType_ = PersonalRelationshipRoleType(
-        "_PersonalRelationshipRoleType"
-    )
+    PersonalRelationshipRoleType_ = PersonalRelationshipRoleType("_PersonalRelationshipRoleType")
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -154,9 +154,7 @@ class PersonalRelationshipRoleTypeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = PersonalRelationshipRoleType(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    PolicyOrProgramCoverageRoleType = PersonalRelationshipRoleType("_PolicyOrProgramCoverageRoleType")
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -171,9 +169,7 @@ class PersonalRelationshipRoleTypeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = PersonalRelationshipRoleType(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    ServiceDeliveryLocationRoleType = PersonalRelationshipRoleType("_ServiceDeliveryLocationRoleType")
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml

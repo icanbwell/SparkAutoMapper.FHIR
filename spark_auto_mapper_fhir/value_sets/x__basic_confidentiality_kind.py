@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -23,16 +33,13 @@ class X_BasicConfidentialityKind(GenericTypeCode):
     receiver may not disclose this information except as directed by the
     information custodian, who may be the information subject.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind
     """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind"
     """
     http://terminology.hl7.org/CodeSystem/v3-Confidentiality
     """
@@ -46,7 +53,6 @@ class X_BasicConfidentialityKindValues:
     with the definition for concept domain "Confidentiality".
     From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
     """
-
     Confidentiality = X_BasicConfidentialityKind("_Confidentiality")
     """
     Description: By accessing subject / role and relationship based  rights
@@ -58,9 +64,7 @@ class X_BasicConfidentialityKindValues:
     confidentiality codes under ActCode
     From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
     """
-    ConfidentialityByAccessKind = X_BasicConfidentialityKind(
-        "_ConfidentialityByAccessKind"
-    )
+    ConfidentialityByAccessKind = X_BasicConfidentialityKind("_ConfidentialityByAccessKind")
     """
     Description: By information type, only for service catalog entries (multiples
     allowed). Not to be used with actual patient data!

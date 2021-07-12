@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -16,7 +26,6 @@ class FocalSubjectCodesCode(GenericTypeCode):
     targets such as donor, fetus or spouse. As use cases are discovered, more
     values may be added.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -38,7 +47,6 @@ class FocalSubjectCodesCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/focal-subject in valuesets.xml
     """
-
     Fetus = FocalSubjectCodesCode("83418008")
     """
     Indicates that the target of the participation is involved in some manner in
@@ -96,9 +104,7 @@ class FocalSubjectCodesCodeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = FocalSubjectCodesCode(
-        "_LivingSubjectProductionClass"
-    )
+    LivingSubjectProductionClass = FocalSubjectCodesCode("_LivingSubjectProductionClass")
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -108,9 +114,7 @@ class FocalSubjectCodesCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = FocalSubjectCodesCode(
-        "_MedicationGeneralizationRoleType"
-    )
+    MedicationGeneralizationRoleType = FocalSubjectCodesCode("_MedicationGeneralizationRoleType")
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -120,9 +124,7 @@ class FocalSubjectCodesCodeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType = FocalSubjectCodesCode(
-        "_PersonalRelationshipRoleType"
-    )
+    PersonalRelationshipRoleType = FocalSubjectCodesCode("_PersonalRelationshipRoleType")
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -171,9 +173,7 @@ class FocalSubjectCodesCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = FocalSubjectCodesCode(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    PolicyOrProgramCoverageRoleType = FocalSubjectCodesCode("_PolicyOrProgramCoverageRoleType")
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -188,9 +188,7 @@ class FocalSubjectCodesCodeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = FocalSubjectCodesCode(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    ServiceDeliveryLocationRoleType = FocalSubjectCodesCode("_ServiceDeliveryLocationRoleType")
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml

@@ -1,9 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -11,15 +19,14 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # autocreate (boolean)
     # autodelete (boolean)
     # resource (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for resource
 
 
@@ -30,51 +37,53 @@ class TestScriptFixture(FhirBackboneElementBase):
     TestScript.Fixture
         A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        autocreate: FhirBoolean,
-        autodelete: FhirBoolean,
-        resource: Optional[Reference[Union[Resource]]] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        autocreate: FhirBoolean ,
+        autodelete: FhirBoolean ,
+        resource: Optional[Reference [Union[Resource]]] = None,
     ) -> None:
         """
-            A structured set of tests against a FHIR server or client implementation to
-        determine compliance against the FHIR specification.
+        A structured set of tests against a FHIR server or client implementation to
+    determine compliance against the FHIR specification.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param autocreate: Whether or not to implicitly create the fixture during setup. If true, the
-        fixture is automatically created on each server being tested during setup,
-        therefore no create operation is required for this fixture in the
-        TestScript.setup section.
-            :param autodelete: Whether or not to implicitly delete the fixture during teardown. If true, the
-        fixture is automatically deleted on each server being tested during teardown,
-        therefore no delete operation is required for this fixture in the
-        TestScript.teardown section.
-            :param resource: Reference to the resource (containing the contents of the resource needed for
-        operations).
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param autocreate: Whether or not to implicitly create the fixture during setup. If true, the
+    fixture is automatically created on each server being tested during setup,
+    therefore no create operation is required for this fixture in the
+    TestScript.setup section.
+        :param autodelete: Whether or not to implicitly delete the fixture during teardown. If true, the
+    fixture is automatically deleted on each server being tested during teardown,
+    therefore no delete operation is required for this fixture in the
+    TestScript.teardown section.
+        :param resource: Reference to the resource (containing the contents of the resource needed for
+    operations).
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             autocreate=autocreate,

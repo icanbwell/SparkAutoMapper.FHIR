@@ -1,7 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -9,22 +19,17 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # number (unsignedInt)
     from spark_auto_mapper_fhir.complex_types.unsigned_int import unsignedInt
-
     # classification (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
-
     # End Import for References for classification
     # Import for CodeableConcept for classification
-    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import (
-        ContractResourceScopeCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes import ContractResourceScopeCodesCode
     # End Import for CodeableConcept for classification
     # category (Coding)
     # End Import for References for category
@@ -33,10 +38,7 @@ if TYPE_CHECKING:
     # control (Coding)
     # End Import for References for control
     # Import for CodeableConcept for control
-    from spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes import (
-        ContractResourceSecurityControlCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes import ContractResourceSecurityControlCodesCode
     # End Import for CodeableConcept for control
 
 
@@ -47,52 +49,52 @@ class ContractSecurityLabel(FhirBackboneElementBase):
     Contract.SecurityLabel
         Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        number: Optional[FhirList[unsignedInt]] = None,
-        classification: Coding[ContractResourceScopeCodesCode],
-        category: Optional[FhirList[Coding[ContractResourceScopeCodesCode]]] = None,
-        control: Optional[
-            FhirList[Coding[ContractResourceSecurityControlCodesCode]]
-        ] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        number: Optional[FhirList[unsignedInt ]] = None,
+        classification: Coding[ContractResourceScopeCodesCode] ,
+        category: Optional[FhirList[Coding[ContractResourceScopeCodesCode] ]] = None,
+        control: Optional[FhirList[Coding[ContractResourceSecurityControlCodesCode] ]] = None,
     ) -> None:
         """
-            Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
-        a policy or agreement.
+        Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+    a policy or agreement.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param number: Number used to link this term or term element to the applicable Security
-        Label.
-            :param classification: Security label privacy tag that species the level of confidentiality
-        protection required for this term and/or term elements.
-            :param category: Security label privacy tag that species the applicable privacy and security
-        policies governing this term and/or term elements.
-            :param control: Security label privacy tag that species the manner in which term and/or term
-        elements are to be protected.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param number: Number used to link this term or term element to the applicable Security
+    Label.
+        :param classification: Security label privacy tag that species the level of confidentiality
+    protection required for this term and/or term elements.
+        :param category: Security label privacy tag that species the applicable privacy and security
+    policies governing this term and/or term elements.
+        :param control: Security label privacy tag that species the manner in which term and/or term
+    elements are to be protected.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             number=number,

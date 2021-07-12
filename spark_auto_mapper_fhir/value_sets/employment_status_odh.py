@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,7 +25,6 @@ class EmploymentStatusODH(GenericTypeCode):
          Concepts representing whether a person does or does not currently have a job
     or is not currently in the labor pool seeking employment.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -37,10 +46,7 @@ class EmploymentStatusODHValues:
     observation values.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-
-    ActCoverageAssessmentObservationValue = EmploymentStatusODH(
-        "_ActCoverageAssessmentObservationValue"
-    )
+    ActCoverageAssessmentObservationValue = EmploymentStatusODH("_ActCoverageAssessmentObservationValue")
     """
     Indicates the result of a particular allergy test.  E.g. Negative, Mild,
     Moderate, Severe
@@ -58,9 +64,7 @@ class EmploymentStatusODHValues:
     of claims or types of parties covered under a policy or program.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    CoverageLimitObservationValue = EmploymentStatusODH(
-        "_CoverageLimitObservationValue"
-    )
+    CoverageLimitObservationValue = EmploymentStatusODH("_CoverageLimitObservationValue")
     """
     A clinical judgment as to the worst case result of a future exposure
     (including substance administration). When the worst case result is assessed
@@ -98,9 +102,7 @@ class EmploymentStatusODHValues:
     into.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    ObservationPopulationInclusion = EmploymentStatusODH(
-        "_ObservationPopulationInclusion"
-    )
+    ObservationPopulationInclusion = EmploymentStatusODH("_ObservationPopulationInclusion")
     """
     PartialCompletionScale
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
@@ -157,9 +159,7 @@ class EmploymentStatusODHValues:
     the grouping will facilitate the management of these domains.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    IndividualCaseSafetyReportValueDomains = EmploymentStatusODH(
-        "_IndividualCaseSafetyReportValueDomains"
-    )
+    IndividualCaseSafetyReportValueDomains = EmploymentStatusODH("_IndividualCaseSafetyReportValueDomains")
     """
     Indicates the specific observation result which is the reason for the action
     (prescription, lab test, etc.). E.g. Headache, Ear infection, planned

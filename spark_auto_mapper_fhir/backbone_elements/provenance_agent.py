@@ -1,7 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -9,31 +19,23 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for type_
     # Import for CodeableConcept for type_
-    from spark_auto_mapper_fhir.value_sets.provenance_participant_type import (
-        ProvenanceParticipantTypeCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.provenance_participant_type import ProvenanceParticipantTypeCode
     # End Import for CodeableConcept for type_
     # role (CodeableConcept)
     # End Import for References for role
     # Import for CodeableConcept for role
-    from spark_auto_mapper_fhir.value_sets.security_role_type import (
-        SecurityRoleTypeCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.security_role_type import SecurityRoleTypeCode
     # End Import for CodeableConcept for role
     # who (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for who
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
@@ -41,7 +43,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.patient import Patient
     from spark_auto_mapper_fhir.resources.device import Device
     from spark_auto_mapper_fhir.resources.organization import Organization
-
     # onBehalfOf (Reference)
     # Imports for References for onBehalfOf
 
@@ -53,74 +54,56 @@ class ProvenanceAgent(FhirBackboneElementBase):
     Provenance.Agent
         Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        type_: Optional[CodeableConcept[ProvenanceParticipantTypeCode]] = None,
-        role: Optional[FhirList[CodeableConcept[SecurityRoleTypeCode]]] = None,
-        who: Reference[
-            Union[
-                Practitioner,
-                PractitionerRole,
-                RelatedPerson,
-                Patient,
-                Device,
-                Organization,
-            ]
-        ],
-        onBehalfOf: Optional[
-            Reference[
-                Union[
-                    Practitioner,
-                    PractitionerRole,
-                    RelatedPerson,
-                    Patient,
-                    Device,
-                    Organization,
-                ]
-            ]
-        ] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        type_: Optional[CodeableConcept[ProvenanceParticipantTypeCode] ] = None,
+        role: Optional[FhirList[CodeableConcept[SecurityRoleTypeCode] ]] = None,
+        who: Reference [Union[Practitioner, PractitionerRole, RelatedPerson, Patient, Device, Organization]],
+        onBehalfOf: Optional[Reference [Union[Practitioner, PractitionerRole, RelatedPerson, Patient, Device, Organization]]] = None,
     ) -> None:
         """
-            Provenance of a resource is a record that describes entities and processes
-        involved in producing and delivering or otherwise influencing that resource.
-        Provenance provides a critical foundation for assessing authenticity, enabling
-        trust, and allowing reproducibility. Provenance assertions are a form of
-        contextual metadata and can themselves become important records with their own
-        provenance. Provenance statement indicates clinical significance in terms of
-        confidence in authenticity, reliability, and trustworthiness, integrity, and
-        stage in lifecycle (e.g. Document Completion - has the artifact been legally
-        authenticated), all of which may impact security, privacy, and trust policies.
+        Provenance of a resource is a record that describes entities and processes
+    involved in producing and delivering or otherwise influencing that resource.
+    Provenance provides a critical foundation for assessing authenticity, enabling
+    trust, and allowing reproducibility. Provenance assertions are a form of
+    contextual metadata and can themselves become important records with their own
+    provenance. Provenance statement indicates clinical significance in terms of
+    confidence in authenticity, reliability, and trustworthiness, integrity, and
+    stage in lifecycle (e.g. Document Completion - has the artifact been legally
+    authenticated), all of which may impact security, privacy, and trust policies.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param type_: The participation the agent had with respect to the activity.
-            :param role: The function of the agent with respect to the activity. The security role
-        enabling the agent with respect to the activity.
-            :param who: The individual, device or organization that participated in the event.
-            :param onBehalfOf: The individual, device, or organization for whom the change was made.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param type_: The participation the agent had with respect to the activity.
+        :param role: The function of the agent with respect to the activity. The security role
+    enabling the agent with respect to the activity.
+        :param who: The individual, device or organization that participated in the event.
+        :param onBehalfOf: The individual, device, or organization for whom the change was made.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             type_=type_,

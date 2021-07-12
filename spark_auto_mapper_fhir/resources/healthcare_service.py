@@ -1,12 +1,16 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -20,86 +24,59 @@ if TYPE_CHECKING:
     # implicitRules (uri)
     # language (CommonLanguages)
     from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
-
     # text (Narrative)
     from spark_auto_mapper_fhir.complex_types.narrative import Narrative
-
     # contained (ResourceContainer)
-    from spark_auto_mapper_fhir.complex_types.resource_container import (
-        ResourceContainer,
-    )
-
+    from spark_auto_mapper_fhir.complex_types.resource_container import ResourceContainer
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-
     # active (boolean)
     # providedBy (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for providedBy
     from spark_auto_mapper_fhir.resources.organization import Organization
-
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # Import for CodeableConcept for category
     from spark_auto_mapper_fhir.value_sets.service_category import ServiceCategoryCode
-
     # End Import for CodeableConcept for category
     # type_ (CodeableConcept)
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.service_type import ServiceTypeCode
-
     # End Import for CodeableConcept for type_
     # specialty (CodeableConcept)
     # Import for CodeableConcept for specialty
-    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import (
-        PracticeSettingCodeValueSetCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set import PracticeSettingCodeValueSetCode
     # End Import for CodeableConcept for specialty
     # location (Reference)
     # Imports for References for location
     from spark_auto_mapper_fhir.resources.location import Location
-
     # name (string)
     # comment (string)
     # extraDetails (markdown)
     from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
-
     # photo (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
-
     # telecom (ContactPoint)
     from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
-
     # coverageArea (Reference)
     # Imports for References for coverageArea
     # serviceProvisionCode (CodeableConcept)
     # Import for CodeableConcept for serviceProvisionCode
-    from spark_auto_mapper_fhir.value_sets.service_provision_conditions import (
-        ServiceProvisionConditionsCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.service_provision_conditions import ServiceProvisionConditionsCode
     # End Import for CodeableConcept for serviceProvisionCode
     # eligibility (HealthcareService.Eligibility)
-    from spark_auto_mapper_fhir.backbone_elements.healthcare_service_eligibility import (
-        HealthcareServiceEligibility,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.healthcare_service_eligibility import HealthcareServiceEligibility
     # program (CodeableConcept)
     # Import for CodeableConcept for program
     from spark_auto_mapper_fhir.value_sets.program import ProgramCode
-
     # End Import for CodeableConcept for program
     # characteristic (CodeableConcept)
     # Import for CodeableConcept for characteristic
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for characteristic
     # communication (CodeableConcept)
     # Import for CodeableConcept for communication
@@ -107,19 +84,12 @@ if TYPE_CHECKING:
     # referralMethod (CodeableConcept)
     # Import for CodeableConcept for referralMethod
     from spark_auto_mapper_fhir.value_sets.referral_method import ReferralMethodCode
-
     # End Import for CodeableConcept for referralMethod
     # appointmentRequired (boolean)
     # availableTime (HealthcareService.AvailableTime)
-    from spark_auto_mapper_fhir.backbone_elements.healthcare_service_available_time import (
-        HealthcareServiceAvailableTime,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.healthcare_service_available_time import HealthcareServiceAvailableTime
     # notAvailable (HealthcareService.NotAvailable)
-    from spark_auto_mapper_fhir.backbone_elements.healthcare_service_not_available import (
-        HealthcareServiceNotAvailable,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.healthcare_service_not_available import HealthcareServiceNotAvailable
     # availabilityExceptions (string)
     # endpoint (Reference)
     # Imports for References for endpoint
@@ -131,136 +101,132 @@ if TYPE_CHECKING:
 class HealthcareService(FhirResourceBase):
     """
     HealthcareService
+    healthcareservice.xsd
         The details of a healthcare service available at a location.
         If the element is present, it must have either a @value, an @id, or extensions
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
-        implicitRules: Optional[FhirUri] = None,
-        language: Optional[CommonLanguagesCode] = None,
-        text: Optional[Narrative] = None,
-        contained: Optional[FhirList[ResourceContainer]] = None,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
-        active: Optional[FhirBoolean] = None,
-        providedBy: Optional[Reference[Union[Organization]]] = None,
-        category: Optional[FhirList[CodeableConcept[ServiceCategoryCode]]] = None,
-        type_: Optional[FhirList[CodeableConcept[ServiceTypeCode]]] = None,
-        specialty: Optional[
-            FhirList[CodeableConcept[PracticeSettingCodeValueSetCode]]
-        ] = None,
-        location: Optional[FhirList[Reference[Union[Location]]]] = None,
-        name: Optional[FhirString] = None,
-        comment: Optional[FhirString] = None,
-        extraDetails: Optional[FhirMarkdown] = None,
-        photo: Optional[Attachment] = None,
-        telecom: Optional[FhirList[ContactPoint]] = None,
-        coverageArea: Optional[FhirList[Reference[Union[Location]]]] = None,
-        serviceProvisionCode: Optional[
-            FhirList[CodeableConcept[ServiceProvisionConditionsCode]]
-        ] = None,
-        eligibility: Optional[FhirList[HealthcareServiceEligibility]] = None,
-        program: Optional[FhirList[CodeableConcept[ProgramCode]]] = None,
-        characteristic: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        communication: Optional[FhirList[CodeableConcept[CommonLanguagesCode]]] = None,
-        referralMethod: Optional[FhirList[CodeableConcept[ReferralMethodCode]]] = None,
-        appointmentRequired: Optional[FhirBoolean] = None,
-        availableTime: Optional[FhirList[HealthcareServiceAvailableTime]] = None,
-        notAvailable: Optional[FhirList[HealthcareServiceNotAvailable]] = None,
-        availabilityExceptions: Optional[FhirString] = None,
-        endpoint: Optional[FhirList[Reference[Union[Endpoint]]]] = None,
+        id_: Optional[FhirId ] = None,
+        meta: Optional[Meta ] = None,
+        implicitRules: Optional[FhirUri ] = None,
+        language: Optional[CommonLanguagesCode ] = None,
+        text: Optional[Narrative ] = None,
+        contained: Optional[FhirList[ResourceContainer ]] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        identifier: Optional[FhirList[Identifier ]] = None,
+        active: Optional[FhirBoolean ] = None,
+        providedBy: Optional[Reference [Union[Organization]]] = None,
+        category: Optional[FhirList[CodeableConcept[ServiceCategoryCode] ]] = None,
+        type_: Optional[FhirList[CodeableConcept[ServiceTypeCode] ]] = None,
+        specialty: Optional[FhirList[CodeableConcept[PracticeSettingCodeValueSetCode] ]] = None,
+        location: Optional[FhirList[Reference [Union[Location]]]] = None,
+        name: Optional[FhirString ] = None,
+        comment: Optional[FhirString ] = None,
+        extraDetails: Optional[FhirMarkdown ] = None,
+        photo: Optional[Attachment ] = None,
+        telecom: Optional[FhirList[ContactPoint ]] = None,
+        coverageArea: Optional[FhirList[Reference [Union[Location]]]] = None,
+        serviceProvisionCode: Optional[FhirList[CodeableConcept[ServiceProvisionConditionsCode] ]] = None,
+        eligibility: Optional[FhirList[HealthcareServiceEligibility ]] = None,
+        program: Optional[FhirList[CodeableConcept[ProgramCode] ]] = None,
+        characteristic: Optional[FhirList[CodeableConcept[GenericTypeCode] ]] = None,
+        communication: Optional[FhirList[CodeableConcept[CommonLanguagesCode] ]] = None,
+        referralMethod: Optional[FhirList[CodeableConcept[ReferralMethodCode] ]] = None,
+        appointmentRequired: Optional[FhirBoolean ] = None,
+        availableTime: Optional[FhirList[HealthcareServiceAvailableTime ]] = None,
+        notAvailable: Optional[FhirList[HealthcareServiceNotAvailable ]] = None,
+        availabilityExceptions: Optional[FhirString ] = None,
+        endpoint: Optional[FhirList[Reference [Union[Endpoint]]]] = None,
     ) -> None:
         """
-            The details of a healthcare service available at a location.
-            If the element is present, it must have either a @value, an @id, or extensions
+        The details of a healthcare service available at a location.
+        If the element is present, it must have either a @value, an @id, or extensions
 
-            :param id_: The logical id of the resource, as used in the URL for the resource. Once
-        assigned, this value never changes.
-            :param meta: The metadata about the resource. This is content that is maintained by the
-        infrastructure. Changes to the content might not always be associated with
-        version changes to the resource.
-            :param implicitRules: A reference to a set of rules that were followed when the resource was
-        constructed, and which must be understood when processing the content. Often,
-        this is a reference to an implementation guide that defines the special rules
-        along with other profiles etc.
-            :param language: The base language in which the resource is written.
-            :param text: A human-readable narrative that contains a summary of the resource and can be
-        used to represent the content of the resource to a human. The narrative need
-        not encode all the structured data, but is required to contain sufficient
-        detail to make it "clinically safe" for a human to just read the narrative.
-        Resource definitions may define what content should be represented in the
-        narrative to ensure clinical safety.
-            :param contained: These resources do not have an independent existence apart from the resource
-        that contains them - they cannot be identified independently, and nor can they
-        have their own independent transaction scope.
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the resource. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the resource and that modifies the understanding of the element
-        that contains it and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer is allowed to define an extension, there is a set of requirements
-        that SHALL be met as part of the definition of the extension. Applications
-        processing a resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param identifier: External identifiers for this item.
-            :param active: This flag is used to mark the record to not be used. This is not used when a
-        center is closed for maintenance, or for holidays, the notAvailable period is
-        to be used for this.
-            :param providedBy: The organization that provides this healthcare service.
-            :param category: Identifies the broad category of service being performed or delivered.
-            :param type_: The specific type of service that may be delivered or performed.
-            :param specialty: Collection of specialties handled by the service site. This is more of a
-        medical term.
-            :param location: The location(s) where this healthcare service may be provided.
-            :param name: Further description of the service as it would be presented to a consumer
-        while searching.
-            :param comment: Any additional description of the service and/or any specific issues not
-        covered by the other attributes, which can be displayed as further detail
-        under the serviceName.
-            :param extraDetails: Extra details about the service that can't be placed in the other fields.
-            :param photo: If there is a photo/symbol associated with this HealthcareService, it may be
-        included here to facilitate quick identification of the service in a list.
-            :param telecom: List of contacts related to this specific healthcare service.
-            :param coverageArea: The location(s) that this service is available to (not where the service is
-        provided).
-            :param serviceProvisionCode: The code(s) that detail the conditions under which the healthcare service is
-        available/offered.
-            :param eligibility: Does this service have specific eligibility requirements that need to be met
-        in order to use the service?
-            :param program: Programs that this service is applicable to.
-            :param characteristic: Collection of characteristics (attributes).
-            :param communication: Some services are specifically made available in multiple languages, this
-        property permits a directory to declare the languages this is offered in.
-        Typically this is only provided where a service operates in communities with
-        mixed languages used.
-            :param referralMethod: Ways that the service accepts referrals, if this is not provided then it is
-        implied that no referral is required.
-            :param appointmentRequired: Indicates whether or not a prospective consumer will require an appointment
-        for a particular service at a site to be provided by the Organization.
-        Indicates if an appointment is required for access to this service.
-            :param availableTime: A collection of times that the Service Site is available.
-            :param notAvailable: The HealthcareService is not available during this period of time due to the
-        provided reason.
-            :param availabilityExceptions: A description of site availability exceptions, e.g. public holiday
-        availability. Succinctly describing all possible exceptions to normal site
-        availability as details in the available Times and not available Times.
-            :param endpoint: Technical endpoints providing access to services operated for the specific
-        healthcare services defined at this resource.
+        :param id_: The logical id of the resource, as used in the URL for the resource. Once
+    assigned, this value never changes.
+        :param meta: The metadata about the resource. This is content that is maintained by the
+    infrastructure. Changes to the content might not always be associated with
+    version changes to the resource.
+        :param implicitRules: A reference to a set of rules that were followed when the resource was
+    constructed, and which must be understood when processing the content. Often,
+    this is a reference to an implementation guide that defines the special rules
+    along with other profiles etc.
+        :param language: The base language in which the resource is written.
+        :param text: A human-readable narrative that contains a summary of the resource and can be
+    used to represent the content of the resource to a human. The narrative need
+    not encode all the structured data, but is required to contain sufficient
+    detail to make it "clinically safe" for a human to just read the narrative.
+    Resource definitions may define what content should be represented in the
+    narrative to ensure clinical safety.
+        :param contained: These resources do not have an independent existence apart from the resource
+    that contains them - they cannot be identified independently, and nor can they
+    have their own independent transaction scope.
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the resource. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the resource and that modifies the understanding of the element
+    that contains it and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer is allowed to define an extension, there is a set of requirements
+    that SHALL be met as part of the definition of the extension. Applications
+    processing a resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param identifier: External identifiers for this item.
+        :param active: This flag is used to mark the record to not be used. This is not used when a
+    center is closed for maintenance, or for holidays, the notAvailable period is
+    to be used for this.
+        :param providedBy: The organization that provides this healthcare service.
+        :param category: Identifies the broad category of service being performed or delivered.
+        :param type_: The specific type of service that may be delivered or performed.
+        :param specialty: Collection of specialties handled by the service site. This is more of a
+    medical term.
+        :param location: The location(s) where this healthcare service may be provided.
+        :param name: Further description of the service as it would be presented to a consumer
+    while searching.
+        :param comment: Any additional description of the service and/or any specific issues not
+    covered by the other attributes, which can be displayed as further detail
+    under the serviceName.
+        :param extraDetails: Extra details about the service that can't be placed in the other fields.
+        :param photo: If there is a photo/symbol associated with this HealthcareService, it may be
+    included here to facilitate quick identification of the service in a list.
+        :param telecom: List of contacts related to this specific healthcare service.
+        :param coverageArea: The location(s) that this service is available to (not where the service is
+    provided).
+        :param serviceProvisionCode: The code(s) that detail the conditions under which the healthcare service is
+    available/offered.
+        :param eligibility: Does this service have specific eligibility requirements that need to be met
+    in order to use the service?
+        :param program: Programs that this service is applicable to.
+        :param characteristic: Collection of characteristics (attributes).
+        :param communication: Some services are specifically made available in multiple languages, this
+    property permits a directory to declare the languages this is offered in.
+    Typically this is only provided where a service operates in communities with
+    mixed languages used.
+        :param referralMethod: Ways that the service accepts referrals, if this is not provided then it is
+    implied that no referral is required.
+        :param appointmentRequired: Indicates whether or not a prospective consumer will require an appointment
+    for a particular service at a site to be provided by the Organization.
+    Indicates if an appointment is required for access to this service.
+        :param availableTime: A collection of times that the Service Site is available.
+        :param notAvailable: The HealthcareService is not available during this period of time due to the
+    provided reason.
+        :param availabilityExceptions: A description of site availability exceptions, e.g. public holiday
+    availability. Succinctly describing all possible exceptions to normal site
+    availability as details in the available Times and not available Times.
+        :param endpoint: Technical endpoints providing access to services operated for the specific
+    healthcare services defined at this resource.
         """
         super().__init__(
             resourceType="HealthcareService",

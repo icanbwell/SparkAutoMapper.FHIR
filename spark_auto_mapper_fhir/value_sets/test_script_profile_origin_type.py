@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,16 +25,13 @@ class TestScriptProfileOriginTypeCode(GenericTypeCode):
         This value set defines a set of codes that are used to indicate the profile
     type of a test system when acting as the origin within a TestScript.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types
     """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
 
 
 class TestScriptProfileOriginTypeCodeValues:
@@ -32,7 +39,6 @@ class TestScriptProfileOriginTypeCodeValues:
     General FHIR client used to initiate operations against a FHIR server.
     From: http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types in valuesets.xml
     """
-
     FHIRClient = TestScriptProfileOriginTypeCode("FHIR-Client")
     """
     A FHIR client acting as a Structured Data Capture Form Filler.

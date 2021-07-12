@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -19,7 +29,6 @@ class ISO21089_2017HealthRecordLifecycleEventsCode(GenericTypeCode):
     Lifecycle Event Implementation Guide, balloted and (to be) published with FHIR
     STU-3.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -35,10 +44,7 @@ class ISO21089_2017HealthRecordLifecycleEventsCodeValues:
     inspection or review.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-
-    Access_ViewRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "access"
-    )
+    Access_ViewRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("access")
     """
     Occurs when an agent causes the system to tag or otherwise indicate special
     access management and suspension of record entry deletion/destruction, if
@@ -47,25 +53,19 @@ class ISO21089_2017HealthRecordLifecycleEventsCodeValues:
     to preserve”.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    AddLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "hold"
-    )
+    AddLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("hold")
     """
     Occurs when an agent makes any change to record entry content currently
     residing in storage considered permanent (persistent).
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Amend_Update_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "amend"
-    )
+    Amend_Update_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("amend")
     """
     Occurs when an agent causes the system to create and move archive artifacts
     containing record entry content, typically to long-term offline storage.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    ArchiveRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "archive"
-    )
+    ArchiveRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("archive")
     """
     Occurs when an agent causes the system to capture the agent’s digital
     signature (or equivalent indication) during formal validation of record entry
@@ -78,58 +78,44 @@ class ISO21089_2017HealthRecordLifecycleEventsCodeValues:
     cipher.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    DecryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "decrypt"
-    )
+    DecryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("decrypt")
     """
     Occurs when an agent causes the system to scrub record entry content to reduce
     the association between a set of identifying data and the data subject in a
     way that might or might not be reversible.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    De_Identify_Anononymize_RecordLifecycleEvent = (
-        ISO21089_2017HealthRecordLifecycleEventsCode("deidentify")
-    )
+    De_Identify_Anononymize_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("deidentify")
     """
     Occurs when an agent causes the system to tag record entry(ies) as obsolete,
     erroneous or untrustworthy, to warn against its future use.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    DeprecateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "deprecate"
-    )
+    DeprecateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("deprecate")
     """
     Occurs when an agent causes the system to permanently erase record entry
     content from the system.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Destroy_DeleteRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "destroy"
-    )
+    Destroy_DeleteRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("destroy")
     """
     Occurs when an agent causes the system to release, transfer, provision access
     to, or otherwise divulge record entry content.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    DiscloseRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "disclose"
-    )
+    DiscloseRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("disclose")
     """
     Occurs when an agent causes the system to encode record entry content in a
     cipher.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    EncryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "encrypt"
-    )
+    EncryptRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("encrypt")
     """
     Occurs when an agent causes the system to selectively pull out a subset of
     record entry content, based on explicit criteria.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    ExtractRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "extract"
-    )
+    ExtractRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("extract")
     """
     Occurs when an agent causes the system to connect related record entries.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
@@ -147,84 +133,64 @@ class ISO21089_2017HealthRecordLifecycleEventsCodeValues:
     permanent part of the health record.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Originate_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "originate"
-    )
+    Originate_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("originate")
     """
     Occurs when an agent causes the system to remove record entry content to
     reduce the association between a set of identifying data and the data subject
     in a way that may be reversible.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    PseudonymizeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "pseudonymize"
-    )
+    PseudonymizeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("pseudonymize")
     """
     Occurs when an agent causes the system to recreate or restore full status to
     record entries previously deleted or deprecated.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Re_activateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "reactivate"
-    )
+    Re_activateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("reactivate")
     """
     Occurs when an agent causes the system to a) initiate capture of data content
     from elsewhere, and b) incorporate that content into the storage considered a
     permanent part of the health record.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Receive_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "receive"
-    )
+    Receive_RetainRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("receive")
     """
     Occurs when an agent causes the system to restore information to data that
     allows identification of information source and/or information subject.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Re_identifyRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "reidentify"
-    )
+    Re_identifyRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("reidentify")
     """
     Occurs when an agent causes the system to remove a tag or other cues for
     special access management had required to fulfill organizational policy under
     the legal doctrine of “duty to preserve”.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    RemoveLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "unhold"
-    )
+    RemoveLegalHoldRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("unhold")
     """
     Occurs when an agent causes the system to produce and deliver record entry
     content in a particular form and manner.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Report_Output_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "report"
-    )
+    Report_Output_RecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("report")
     """
     Occurs when an agent causes the system to recreate record entries and their
     content from a previous created archive artefact.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    RestoreRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "restore"
-    )
+    RestoreRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("restore")
     """
     Occurs when an agent causes the system to change the form, language or code
     system used to represent record entry content.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    Transform_TranslateRecordLifecycleEvent = (
-        ISO21089_2017HealthRecordLifecycleEventsCode("transform")
-    )
+    Transform_TranslateRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("transform")
     """
     Occurs when an agent causes the system to send record entry content from one
     (EHR/PHR/other) system to another.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    TransmitRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "transmit"
-    )
+    TransmitRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("transmit")
     """
     Occurs when an agent causes the system to disconnect two or more record
     entries previously connected, rendering them separate (disconnected) again.
@@ -236,9 +202,7 @@ class ISO21089_2017HealthRecordLifecycleEventsCodeValues:
     merge operation, rendering them separate again.
     From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
     """
-    UnmergeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode(
-        "unmerge"
-    )
+    UnmergeRecordLifecycleEvent = ISO21089_2017HealthRecordLifecycleEventsCode("unmerge")
     """
     Occurs when an agent causes the system to confirm compliance of data or data
     objects with regulations, requirements, specifications, or other imposed

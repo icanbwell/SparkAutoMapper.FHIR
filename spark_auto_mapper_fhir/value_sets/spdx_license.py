@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -16,7 +26,6 @@ class SPDXLicenseCode(GenericTypeCode):
     Identifiers, or 'not-open-source'). The binding is required but new SPDX
     license Identifiers are allowed to be used (https://spdx.org/licenses/).
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -31,7 +40,6 @@ class SPDXLicenseCodeValues:
     Not an open source license.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-
     NotOpenSource = SPDXLicenseCode("not-open-source")
     """
     BSD Zero Clause License.
@@ -277,9 +285,7 @@ class SPDXLicenseCodeValues:
     BSD 3-Clause No Nuclear License 2014.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    BSD3_ClauseNoNuclearLicense2014 = SPDXLicenseCode(
-        "BSD-3-Clause-No-Nuclear-License-2014"
-    )
+    BSD3_ClauseNoNuclearLicense2014 = SPDXLicenseCode("BSD-3-Clause-No-Nuclear-License-2014")
     """
     BSD 3-Clause No Nuclear License.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
@@ -389,79 +395,57 @@ class SPDXLicenseCodeValues:
     Creative Commons Attribution Non Commercial 4.0 International.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercial4_0International = SPDXLicenseCode(
-        "CC-BY-NC-4.0"
-    )
+    CreativeCommonsAttributionNonCommercial4_0International = SPDXLicenseCode("CC-BY-NC-4.0")
     """
     Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialNoDerivatives1_0Generic = SPDXLicenseCode(
-        "CC-BY-NC-ND-1.0"
-    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives1_0Generic = SPDXLicenseCode("CC-BY-NC-ND-1.0")
     """
     Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialNoDerivatives2_0Generic = SPDXLicenseCode(
-        "CC-BY-NC-ND-2.0"
-    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives2_0Generic = SPDXLicenseCode("CC-BY-NC-ND-2.0")
     """
     Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialNoDerivatives2_5Generic = SPDXLicenseCode(
-        "CC-BY-NC-ND-2.5"
-    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives2_5Generic = SPDXLicenseCode("CC-BY-NC-ND-2.5")
     """
     Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialNoDerivatives3_0Unported = SPDXLicenseCode(
-        "CC-BY-NC-ND-3.0"
-    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives3_0Unported = SPDXLicenseCode("CC-BY-NC-ND-3.0")
     """
     Creative Commons Attribution Non Commercial No Derivatives 4.0 International.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialNoDerivatives4_0International = (
-        SPDXLicenseCode("CC-BY-NC-ND-4.0")
-    )
+    CreativeCommonsAttributionNonCommercialNoDerivatives4_0International = SPDXLicenseCode("CC-BY-NC-ND-4.0")
     """
     Creative Commons Attribution Non Commercial Share Alike 1.0 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialShareAlike1_0Generic = SPDXLicenseCode(
-        "CC-BY-NC-SA-1.0"
-    )
+    CreativeCommonsAttributionNonCommercialShareAlike1_0Generic = SPDXLicenseCode("CC-BY-NC-SA-1.0")
     """
     Creative Commons Attribution Non Commercial Share Alike 2.0 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialShareAlike2_0Generic = SPDXLicenseCode(
-        "CC-BY-NC-SA-2.0"
-    )
+    CreativeCommonsAttributionNonCommercialShareAlike2_0Generic = SPDXLicenseCode("CC-BY-NC-SA-2.0")
     """
     Creative Commons Attribution Non Commercial Share Alike 2.5 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialShareAlike2_5Generic = SPDXLicenseCode(
-        "CC-BY-NC-SA-2.5"
-    )
+    CreativeCommonsAttributionNonCommercialShareAlike2_5Generic = SPDXLicenseCode("CC-BY-NC-SA-2.5")
     """
     Creative Commons Attribution Non Commercial Share Alike 3.0 Unported.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialShareAlike3_0Unported = SPDXLicenseCode(
-        "CC-BY-NC-SA-3.0"
-    )
+    CreativeCommonsAttributionNonCommercialShareAlike3_0Unported = SPDXLicenseCode("CC-BY-NC-SA-3.0")
     """
     Creative Commons Attribution Non Commercial Share Alike 4.0 International.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNonCommercialShareAlike4_0International = SPDXLicenseCode(
-        "CC-BY-NC-SA-4.0"
-    )
+    CreativeCommonsAttributionNonCommercialShareAlike4_0International = SPDXLicenseCode("CC-BY-NC-SA-4.0")
     """
     Creative Commons Attribution No Derivatives 1.0 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
@@ -486,9 +470,7 @@ class SPDXLicenseCodeValues:
     Creative Commons Attribution No Derivatives 4.0 International.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionNoDerivatives4_0International = SPDXLicenseCode(
-        "CC-BY-ND-4.0"
-    )
+    CreativeCommonsAttributionNoDerivatives4_0International = SPDXLicenseCode("CC-BY-ND-4.0")
     """
     Creative Commons Attribution Share Alike 1.0 Generic.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
@@ -513,9 +495,7 @@ class SPDXLicenseCodeValues:
     Creative Commons Attribution Share Alike 4.0 International.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CreativeCommonsAttributionShareAlike4_0International = SPDXLicenseCode(
-        "CC-BY-SA-4.0"
-    )
+    CreativeCommonsAttributionShareAlike4_0International = SPDXLicenseCode("CC-BY-SA-4.0")
     """
     Creative Commons Zero v1.0 Universal.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
@@ -585,9 +565,7 @@ class SPDXLicenseCodeValues:
     CNRI Python Open Source GPL Compatible License Agreement.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    CNRIPythonOpenSourceGPLCompatibleLicenseAgreement = SPDXLicenseCode(
-        "CNRI-Python-GPL-Compatible"
-    )
+    CNRIPythonOpenSourceGPLCompatibleLicenseAgreement = SPDXLicenseCode("CNRI-Python-GPL-Compatible")
     """
     CNRI Python License.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
@@ -1137,9 +1115,7 @@ class SPDXLicenseCodeValues:
     Mozilla Public License 2.0 (no copyleft exception).
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    MozillaPublicLicense2_0_noCopyleftException_ = SPDXLicenseCode(
-        "MPL-2.0-no-copyleft-exception"
-    )
+    MozillaPublicLicense2_0_noCopyleftException_ = SPDXLicenseCode("MPL-2.0-no-copyleft-exception")
     """
     Mozilla Public License 2.0.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
@@ -1634,16 +1610,12 @@ class SPDXLicenseCodeValues:
     Unicode License Agreement - Data Files and Software (2015).
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    UnicodeLicenseAgreement_DataFilesAndSoftware_2015_ = SPDXLicenseCode(
-        "Unicode-DFS-2015"
-    )
+    UnicodeLicenseAgreement_DataFilesAndSoftware_2015_ = SPDXLicenseCode("Unicode-DFS-2015")
     """
     Unicode License Agreement - Data Files and Software (2016).
     From: http://hl7.org/fhir/spdx-license in valuesets.xml
     """
-    UnicodeLicenseAgreement_DataFilesAndSoftware_2016_ = SPDXLicenseCode(
-        "Unicode-DFS-2016"
-    )
+    UnicodeLicenseAgreement_DataFilesAndSoftware_2016_ = SPDXLicenseCode("Unicode-DFS-2016")
     """
     Unicode Terms of Use.
     From: http://hl7.org/fhir/spdx-license in valuesets.xml

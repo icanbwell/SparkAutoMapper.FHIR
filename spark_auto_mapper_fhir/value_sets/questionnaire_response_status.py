@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -14,7 +24,6 @@ class QuestionnaireResponseStatusCode(GenericTypeCode):
     From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
         Lifecycle status of the questionnaire response.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -30,7 +39,6 @@ class QuestionnaireResponseStatusCodeValues:
     changes or additions are still expected to be made to it.
     From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
     """
-
     InProgress = QuestionnaireResponseStatusCode("in-progress")
     """
     This QuestionnaireResponse has been filled out with answers and the current

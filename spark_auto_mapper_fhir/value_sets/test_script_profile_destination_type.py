@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -15,16 +25,13 @@ class TestScriptProfileDestinationTypeCode(GenericTypeCode):
         This value set defines a set of codes that are used to indicate the profile
     type of a test system when acting as the destination within a TestScript.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types
     """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
 
 
 class TestScriptProfileDestinationTypeCodeValues:
@@ -32,7 +39,6 @@ class TestScriptProfileDestinationTypeCodeValues:
     General FHIR server used to respond to operations sent from a FHIR client.
     From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml
     """
-
     FHIRServer = TestScriptProfileDestinationTypeCode("FHIR-Server")
     """
     A FHIR server acting as a Structured Data Capture Form Manager.
@@ -43,9 +49,7 @@ class TestScriptProfileDestinationTypeCodeValues:
     A FHIR server acting as a Structured Data Capture Form Processor.
     From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml
     """
-    FHIRSDCFormProcessor = TestScriptProfileDestinationTypeCode(
-        "FHIR-SDC-FormProcessor"
-    )
+    FHIRSDCFormProcessor = TestScriptProfileDestinationTypeCode("FHIR-SDC-FormProcessor")
     """
     A FHIR server acting as a Structured Data Capture Form Receiver.
     From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml

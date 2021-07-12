@@ -1,11 +1,16 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -14,9 +19,9 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # name (string)
     # valueString (string)
@@ -24,11 +29,9 @@ if TYPE_CHECKING:
     # valueInteger (integer)
     # valueDecimal (decimal)
     from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
-
     # valueUri (uri)
     # valueCode (code)
     from spark_auto_mapper_fhir.complex_types.code import code
-
     # valueDateTime (dateTime)
 
 
@@ -39,58 +42,60 @@ class ValueSetParameter(FhirBackboneElementBase):
     ValueSet.Parameter
         A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        name: FhirString,
-        valueString: Optional[FhirString] = None,
-        valueBoolean: Optional[FhirBoolean] = None,
-        valueInteger: Optional[FhirInteger] = None,
-        valueDecimal: Optional[FhirDecimal] = None,
-        valueUri: Optional[FhirUri] = None,
-        valueCode: Optional[code] = None,
-        valueDateTime: Optional[FhirDateTime] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        name: FhirString ,
+        valueString: Optional[FhirString ] = None,
+        valueBoolean: Optional[FhirBoolean ] = None,
+        valueInteger: Optional[FhirInteger ] = None,
+        valueDecimal: Optional[FhirDecimal ] = None,
+        valueUri: Optional[FhirUri ] = None,
+        valueCode: Optional[code ] = None,
+        valueDateTime: Optional[FhirDateTime ] = None,
     ) -> None:
         """
-            A ValueSet resource instance specifies a set of codes drawn from one or more
-        code systems, intended for use in a particular context. Value sets link
-        between [[[CodeSystem]]] definitions and their use in [coded
-        elements](terminologies.html).
+        A ValueSet resource instance specifies a set of codes drawn from one or more
+    code systems, intended for use in a particular context. Value sets link
+    between [[[CodeSystem]]] definitions and their use in [coded
+    elements](terminologies.html).
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param name: Name of the input parameter to the $expand operation; may be a server-assigned
-        name for additional default or other server-supplied parameters used to
-        control the expansion process.
-            :param valueString: None
-            :param valueBoolean: None
-            :param valueInteger: None
-            :param valueDecimal: None
-            :param valueUri: None
-            :param valueCode: None
-            :param valueDateTime: None
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param name: Name of the input parameter to the $expand operation; may be a server-assigned
+    name for additional default or other server-supplied parameters used to
+    control the expansion process.
+        :param valueString: None
+        :param valueBoolean: None
+        :param valueInteger: None
+        :param valueDecimal: None
+        :param valueUri: None
+        :param valueCode: None
+        :param valueDateTime: None
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             name=name,

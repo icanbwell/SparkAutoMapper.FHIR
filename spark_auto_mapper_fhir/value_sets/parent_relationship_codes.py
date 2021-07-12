@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -16,7 +26,6 @@ class ParentRelationshipCodesCode(GenericTypeCode):
     their specializations.  It covers the relationships needed to establish
     genetic pedigree relationships between family members.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -35,13 +44,12 @@ class ParentRelationshipCodesCodeValues:
     Concepts characterizing the type of association formed by player and scoper
     when there is a recognized Affiliate role by which the two parties are
     related.
-
-
+    
+    
                                Examples: Business Partner, Business Associate,
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-
     AffiliationRoleType = ParentRelationshipCodesCode("_AffiliationRoleType")
     """
     AssignedRoleType
@@ -78,9 +86,7 @@ class ParentRelationshipCodesCodeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = ParentRelationshipCodesCode(
-        "_LivingSubjectProductionClass"
-    )
+    LivingSubjectProductionClass = ParentRelationshipCodesCode("_LivingSubjectProductionClass")
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -90,9 +96,7 @@ class ParentRelationshipCodesCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = ParentRelationshipCodesCode(
-        "_MedicationGeneralizationRoleType"
-    )
+    MedicationGeneralizationRoleType = ParentRelationshipCodesCode("_MedicationGeneralizationRoleType")
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -102,9 +106,7 @@ class ParentRelationshipCodesCodeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType = ParentRelationshipCodesCode(
-        "_PersonalRelationshipRoleType"
-    )
+    PersonalRelationshipRoleType = ParentRelationshipCodesCode("_PersonalRelationshipRoleType")
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -153,9 +155,7 @@ class ParentRelationshipCodesCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = ParentRelationshipCodesCode(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    PolicyOrProgramCoverageRoleType = ParentRelationshipCodesCode("_PolicyOrProgramCoverageRoleType")
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -170,9 +170,7 @@ class ParentRelationshipCodesCodeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = ParentRelationshipCodesCode(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    ServiceDeliveryLocationRoleType = ParentRelationshipCodesCode("_ServiceDeliveryLocationRoleType")
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -323,9 +321,7 @@ class ParentRelationshipCodesCodeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = ParentRelationshipCodesCode(
-        "_LivingSubjectProductionClass"
-    )
+    LivingSubjectProductionClass = ParentRelationshipCodesCode("_LivingSubjectProductionClass")
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -335,9 +331,7 @@ class ParentRelationshipCodesCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = ParentRelationshipCodesCode(
-        "_MedicationGeneralizationRoleType"
-    )
+    MedicationGeneralizationRoleType = ParentRelationshipCodesCode("_MedicationGeneralizationRoleType")
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -347,9 +341,7 @@ class ParentRelationshipCodesCodeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType = ParentRelationshipCodesCode(
-        "_PersonalRelationshipRoleType"
-    )
+    PersonalRelationshipRoleType = ParentRelationshipCodesCode("_PersonalRelationshipRoleType")
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -398,9 +390,7 @@ class ParentRelationshipCodesCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = ParentRelationshipCodesCode(
-        "_PolicyOrProgramCoverageRoleType"
-    )
+    PolicyOrProgramCoverageRoleType = ParentRelationshipCodesCode("_PolicyOrProgramCoverageRoleType")
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -415,9 +405,7 @@ class ParentRelationshipCodesCodeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = ParentRelationshipCodesCode(
-        "_ServiceDeliveryLocationRoleType"
-    )
+    ServiceDeliveryLocationRoleType = ParentRelationshipCodesCode("_ServiceDeliveryLocationRoleType")
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml

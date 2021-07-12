@@ -1,9 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -11,18 +19,16 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # name (string)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for type_
     # status (CodeableConcept)
     # End Import for References for status
@@ -42,13 +48,9 @@ if TYPE_CHECKING:
     # Import for CodeableConcept for jurisdiction
     # End Import for CodeableConcept for jurisdiction
     # official (SubstanceSpecification.Official)
-    from spark_auto_mapper_fhir.backbone_elements.substance_specification_official import (
-        SubstanceSpecificationOfficial,
-    )
-
+    from spark_auto_mapper_fhir.backbone_elements.substance_specification_official import SubstanceSpecificationOfficial
     # source (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
-
     # Imports for References for source
     from spark_auto_mapper_fhir.resources.document_reference import DocumentReference
 
@@ -60,61 +62,63 @@ class SubstanceSpecificationName(FhirBackboneElementBase):
     SubstanceSpecification.Name
         The detailed description of a substance, typically at a level beyond what is used for prescribing.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        name: FhirString,
-        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
-        status: Optional[CodeableConcept[GenericTypeCode]] = None,
-        preferred: Optional[FhirBoolean] = None,
-        language: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        domain: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        jurisdiction: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
-        synonym: Optional[FhirList[SubstanceSpecificationName]] = None,
-        translation: Optional[FhirList[SubstanceSpecificationName]] = None,
-        official: Optional[FhirList[SubstanceSpecificationOfficial]] = None,
-        source: Optional[FhirList[Reference[Union[DocumentReference]]]] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        name: FhirString ,
+        type_: Optional[CodeableConcept[GenericTypeCode] ] = None,
+        status: Optional[CodeableConcept[GenericTypeCode] ] = None,
+        preferred: Optional[FhirBoolean ] = None,
+        language: Optional[FhirList[CodeableConcept[GenericTypeCode] ]] = None,
+        domain: Optional[FhirList[CodeableConcept[GenericTypeCode] ]] = None,
+        jurisdiction: Optional[FhirList[CodeableConcept[GenericTypeCode] ]] = None,
+        synonym: Optional[FhirList[SubstanceSpecificationName ]] = None,
+        translation: Optional[FhirList[SubstanceSpecificationName ]] = None,
+        official: Optional[FhirList[SubstanceSpecificationOfficial ]] = None,
+        source: Optional[FhirList[Reference [Union[DocumentReference]]]] = None,
     ) -> None:
         """
-            The detailed description of a substance, typically at a level beyond what is
-        used for prescribing.
+        The detailed description of a substance, typically at a level beyond what is
+    used for prescribing.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param name: The actual name.
-            :param type_: Name type.
-            :param status: The status of the name.
-            :param preferred: If this is the preferred name for this substance.
-            :param language: Language of the name.
-            :param domain: The use context of this name for example if there is a different name a drug
-        active ingredient as opposed to a food colour additive.
-            :param jurisdiction: The jurisdiction where this name applies.
-            :param synonym: A synonym of this name.
-            :param translation: A translation for this name.
-            :param official: Details of the official nature of this name.
-            :param source: Supporting literature.
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param name: The actual name.
+        :param type_: Name type.
+        :param status: The status of the name.
+        :param preferred: If this is the preferred name for this substance.
+        :param language: Language of the name.
+        :param domain: The use context of this name for example if there is a different name a drug
+    active ingredient as opposed to a food colour additive.
+        :param jurisdiction: The jurisdiction where this name applies.
+        :param synonym: A synonym of this name.
+        :param translation: A translation for this name.
+        :param official: Details of the official nature of this name.
+        :param source: Supporting literature.
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             name=name,

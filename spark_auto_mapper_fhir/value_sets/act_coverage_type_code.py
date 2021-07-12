@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -16,7 +26,6 @@ class ActCoverageTypeCode(GenericTypeCode):
     Set of codes indicating the type of insurance policy or program that pays for
     the cost of benefits provided to covered parties.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -38,7 +47,6 @@ class ActCoverageTypeCodeValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-
     ActAccountCode = ActCoverageTypeCode("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
@@ -52,9 +60,7 @@ class ActCoverageTypeCodeValues:
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActAdjudicationResultActionCode = ActCoverageTypeCode(
-        "_ActAdjudicationResultActionCode"
-    )
+    ActAdjudicationResultActionCode = ActCoverageTypeCode("_ActAdjudicationResultActionCode")
     """
     Definition:An identifying modifier code for healthcare interventions or
     procedures.
@@ -83,9 +89,7 @@ class ActCoverageTypeCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActClaimAttachmentCategoryCode = ActCoverageTypeCode(
-        "_ActClaimAttachmentCategoryCode"
-    )
+    ActClaimAttachmentCategoryCode = ActCoverageTypeCode("_ActClaimAttachmentCategoryCode")
     """
     Definition: The type of consent directive, e.g., to consent or dissent to
     collect, access, or use in specific ways within an EHRS or for health
@@ -139,9 +143,7 @@ class ActCoverageTypeCodeValues:
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActDetectedIssueManagementCode = ActCoverageTypeCode(
-        "_ActDetectedIssueManagementCode"
-    )
+    ActDetectedIssueManagementCode = ActCoverageTypeCode("_ActDetectedIssueManagementCode")
     """
     Concepts that identify the type or nature of exposure interaction.  Examples
     include "household", "care giver", "intimate partner", "common space", "common
@@ -172,9 +174,7 @@ class ActCoverageTypeCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationAccessContextCode = ActCoverageTypeCode(
-        "_ActInformationAccessContextCode"
-    )
+    ActInformationAccessContextCode = ActCoverageTypeCode("_ActInformationAccessContextCode")
     """
     Definition:Indicates the set of information types which may be manipulated or
     referenced, such as for recommending access restrictions.
@@ -218,9 +218,7 @@ class ActCoverageTypeCodeValues:
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActNonObservationIndicationCode = ActCoverageTypeCode(
-        "_ActNonObservationIndicationCode"
-    )
+    ActNonObservationIndicationCode = ActCoverageTypeCode("_ActNonObservationIndicationCode")
     """
     Identifies the type of verification investigation being undertaken with
     respect to the subject of the verification activity.
@@ -310,9 +308,7 @@ class ActCoverageTypeCodeValues:
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActSubstanceAdministrationCode = ActCoverageTypeCode(
-        "_ActSubstanceAdministrationCode"
-    )
+    ActSubstanceAdministrationCode = ActCoverageTypeCode("_ActSubstanceAdministrationCode")
     """
     Description: A task or action that a user may perform in a clinical
     information system (e.g., medication order entry, laboratory test results

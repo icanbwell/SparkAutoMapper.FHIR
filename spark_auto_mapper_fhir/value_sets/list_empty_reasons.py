@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -16,7 +26,6 @@ class ListEmptyReasonsCode(GenericTypeCode):
     summary list (i.e. problem or medication list) or to a workflow related list
     (i.e. consultation list).
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -39,7 +48,6 @@ class ListEmptyReasonsCodeValues:
     patient's agent/guardian has asserted that there is no known event to record.
     From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
     """
-
     NilKnown = ListEmptyReasonsCode("nilknown")
     """
     The investigation to find out whether there are items for this list has not

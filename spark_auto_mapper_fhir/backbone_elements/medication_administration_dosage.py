@@ -1,8 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.resources.resource import Resource
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -10,43 +19,31 @@ from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
 
 if TYPE_CHECKING:
     pass
+    # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-
     # modifierExtension (Extension)
     # text (string)
     # site (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
-
     # End Import for References for site
     # Import for CodeableConcept for site
-    from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import (
-        SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes import SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode
     # End Import for CodeableConcept for site
     # route (CodeableConcept)
     # End Import for References for route
     # Import for CodeableConcept for route
-    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import (
-        SNOMEDCTRouteCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_route_codes import SNOMEDCTRouteCodesCode
     # End Import for CodeableConcept for route
     # method (CodeableConcept)
     # End Import for References for method
     # Import for CodeableConcept for method
-    from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import (
-        SNOMEDCTAdministrationMethodCodesCode,
-    )
-
+    from spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes import SNOMEDCTAdministrationMethodCodesCode
     # End Import for CodeableConcept for method
     # dose (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
-
     # rateRatio (Ratio)
     from spark_auto_mapper_fhir.complex_types.ratio import Ratio
-
     # rateQuantity (Quantity)
 
 
@@ -57,70 +54,70 @@ class MedicationAdministrationDosage(FhirBackboneElementBase):
     MedicationAdministration.Dosage
         Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
     """
-
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        extension: Optional[FhirList[Extension]] = None,
-        modifierExtension: Optional[FhirList[Extension]] = None,
-        text: Optional[FhirString] = None,
-        site: Optional[
-            CodeableConcept[SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode]
-        ] = None,
-        route: Optional[CodeableConcept[SNOMEDCTRouteCodesCode]] = None,
-        method: Optional[CodeableConcept[SNOMEDCTAdministrationMethodCodesCode]] = None,
-        dose: Optional[Quantity] = None,
-        rateRatio: Optional[Ratio] = None,
-        rateQuantity: Optional[Quantity] = None,
+        id_: Optional[FhirString ] = None,
+        extension: Optional[FhirList[Extension ]] = None,
+        modifierExtension: Optional[FhirList[Extension ]] = None,
+        text: Optional[FhirString ] = None,
+        site: Optional[CodeableConcept[SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode] ] = None,
+        route: Optional[CodeableConcept[SNOMEDCTRouteCodesCode] ] = None,
+        method: Optional[CodeableConcept[SNOMEDCTAdministrationMethodCodesCode] ] = None,
+        dose: Optional[Quantity ] = None,
+        rateRatio: Optional[Ratio ] = None,
+        rateQuantity: Optional[Quantity ] = None,
     ) -> None:
         """
-            Describes the event of a patient consuming or otherwise being administered a
-        medication.  This may be as simple as swallowing a tablet or it may be a long
-        running infusion.  Related resources tie this event to the authorizing
-        prescription, and the specific encounter between patient and health care
-        practitioner.
+        Describes the event of a patient consuming or otherwise being administered a
+    medication.  This may be as simple as swallowing a tablet or it may be a long
+    running infusion.  Related resources tie this event to the authorizing
+    prescription, and the specific encounter between patient and health care
+    practitioner.
 
-            :param extension: May be used to represent additional information that is not part of the basic
-        definition of the element. To make the use of extensions safe and manageable,
-        there is a strict set of governance  applied to the definition and use of
-        extensions. Though any implementer can define an extension, there is a set of
-        requirements that SHALL be met as part of the definition of the extension.
-            :param modifierExtension: May be used to represent additional information that is not part of the basic
-        definition of the element and that modifies the understanding of the element
-        in which it is contained and/or the understanding of the containing element's
-        descendants. Usually modifier elements provide negation or qualification. To
-        make the use of extensions safe and manageable, there is a strict set of
-        governance applied to the definition and use of extensions. Though any
-        implementer can define an extension, there is a set of requirements that SHALL
-        be met as part of the definition of the extension. Applications processing a
-        resource are required to check for modifier extensions.
-
-        Modifier extensions SHALL NOT change the meaning of any elements on Resource
-        or DomainResource (including cannot change the meaning of modifierExtension
-        itself).
-            :param text: Free text dosage can be used for cases where the dosage administered is too
-        complex to code. When coded dosage is present, the free text dosage may still
-        be present for display to humans.
-
-        The dosage instructions should reflect the dosage of the medication that was
-        administered.
-            :param site: A coded specification of the anatomic site where the medication first entered
-        the body.  For example, "left arm".
-            :param route: A code specifying the route or physiological path of administration of a
-        therapeutic agent into or onto the patient.  For example, topical,
-        intravenous, etc.
-            :param method: A coded value indicating the method by which the medication is intended to be
-        or was introduced into or on the body.  This attribute will most often NOT be
-        populated.  It is most commonly used for injections.  For example, Slow Push,
-        Deep IV.
-            :param dose: The amount of the medication given at one administration event.   Use this
-        value when the administration is essentially an instantaneous event such as a
-        swallowing a tablet or giving an injection.
-            :param rateRatio: None
-            :param rateQuantity: None
+        :param id_: None
+        :param extension: May be used to represent additional information that is not part of the basic
+    definition of the element. To make the use of extensions safe and manageable,
+    there is a strict set of governance  applied to the definition and use of
+    extensions. Though any implementer can define an extension, there is a set of
+    requirements that SHALL be met as part of the definition of the extension.
+        :param modifierExtension: May be used to represent additional information that is not part of the basic
+    definition of the element and that modifies the understanding of the element
+    in which it is contained and/or the understanding of the containing element's
+    descendants. Usually modifier elements provide negation or qualification. To
+    make the use of extensions safe and manageable, there is a strict set of
+    governance applied to the definition and use of extensions. Though any
+    implementer can define an extension, there is a set of requirements that SHALL
+    be met as part of the definition of the extension. Applications processing a
+    resource are required to check for modifier extensions.
+    
+    Modifier extensions SHALL NOT change the meaning of any elements on Resource
+    or DomainResource (including cannot change the meaning of modifierExtension
+    itself).
+        :param text: Free text dosage can be used for cases where the dosage administered is too
+    complex to code. When coded dosage is present, the free text dosage may still
+    be present for display to humans.
+    
+    The dosage instructions should reflect the dosage of the medication that was
+    administered.
+        :param site: A coded specification of the anatomic site where the medication first entered
+    the body.  For example, "left arm".
+        :param route: A code specifying the route or physiological path of administration of a
+    therapeutic agent into or onto the patient.  For example, topical,
+    intravenous, etc.
+        :param method: A coded value indicating the method by which the medication is intended to be
+    or was introduced into or on the body.  This attribute will most often NOT be
+    populated.  It is most commonly used for injections.  For example, Slow Push,
+    Deep IV.
+        :param dose: The amount of the medication given at one administration event.   Use this
+    value when the administration is essentially an instantaneous event such as a
+    swallowing a tablet or giving an injection.
+        :param rateRatio: None
+        :param rateQuantity: None
         """
         super().__init__(
+            id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
             text=text,

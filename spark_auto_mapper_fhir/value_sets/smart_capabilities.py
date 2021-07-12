@@ -1,5 +1,15 @@
 from __future__ import annotations
+from typing import Optional, Union, List, Any, TYPE_CHECKING
 
+from pyspark.sql.types import StructType, DataType
+from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
+from spark_auto_mapper_fhir.fhir_types.date import FhirDate
+from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -14,7 +24,6 @@ class SmartCapabilitiesCode(GenericTypeCode):
     From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
         Codes that define what the server is capable of.
     """
-
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -29,7 +38,6 @@ class SmartCapabilitiesCodeValues:
     support for SMART’s EHR Launch mode.
     From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
     """
-
     EHRLaunchMode = SmartCapabilitiesCode("launch-ehr")
     """
     support for SMART’s Standalone Launch mode.
@@ -75,25 +83,19 @@ class SmartCapabilitiesCodeValues:
     scope, conveyed via encounter token parameter).
     From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
     """
-    Allows_EncounterLevelLaunchContext_EHR_ = SmartCapabilitiesCode(
-        "context-ehr-encounter"
-    )
+    Allows_EncounterLevelLaunchContext_EHR_ = SmartCapabilitiesCode("context-ehr-encounter")
     """
     support for patient-level launch context (requested by launch/patient scope,
     conveyed via patient token parameter).
     From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
     """
-    Allows_PatientLevelLaunchContext_STANDALONE_ = SmartCapabilitiesCode(
-        "context-standalone-patient"
-    )
+    Allows_PatientLevelLaunchContext_STANDALONE_ = SmartCapabilitiesCode("context-standalone-patient")
     """
     support for encounter-level launch context (requested by launch/encounter
     scope, conveyed via encounter token parameter).
     From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
     """
-    Allows_EncounterLevelLaunchContext_STANDALONE_ = SmartCapabilitiesCode(
-        "context-standalone-encounter"
-    )
+    Allows_EncounterLevelLaunchContext_STANDALONE_ = SmartCapabilitiesCode("context-standalone-encounter")
     """
     support for refresh tokens (requested by offline_access scope).
     From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
