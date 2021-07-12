@@ -38,10 +38,10 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
     source_df: DataFrame = spark_session.table("groups")
 
     df = source_df.select("practitioner_id")
-    df.createOrReplaceTempView("practioners")
+    df.createOrReplaceTempView("view_group")
 
     mapper = AutoMapper(
-        view="practioners", source_view="groups", keys=["practitioner_id"]
+        view="view_group", source_view="groups", keys=["practitioner_id"]
     ).complex(
         Group(
             id_=FhirId(A.column("practitioner_id")),
@@ -78,7 +78,7 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
                                 A.column("affiliated_id"),
                             )
                         ),
-                        inactive=False,
+                        # inactive=False,
                     ),
                 ]
             ),
