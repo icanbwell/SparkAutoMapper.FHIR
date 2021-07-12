@@ -24,13 +24,13 @@ class TransmissionRelationshipTypeCode(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-TransmissionRelationshipTypeCode
     """
-    codeset: FhirUri = (
+    codeset_v3_TransmissionRelationshipTypeCode: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-TransmissionRelationshipTypeCode"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-TransmissionRelationshipTypeCode
     """
-    codeset_2: FhirUri = (
+    codeset_v3_TransmissionRelationshipTypeCode: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-TransmissionRelationshipTypeCode"
     )
 

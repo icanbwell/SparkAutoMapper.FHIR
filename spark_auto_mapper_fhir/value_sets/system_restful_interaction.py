@@ -19,9 +19,9 @@ class SystemRestfulInteractionCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/restful-interaction
+    
     """
-    codeset: FhirUri = "http://hl7.org/fhir/restful-interaction"
+    codeset: FhirUri = ""
 
 
 class SystemRestfulInteractionCodeValues:

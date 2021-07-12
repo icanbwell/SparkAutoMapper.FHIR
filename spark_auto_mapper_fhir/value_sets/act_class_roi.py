@@ -24,11 +24,13 @@ class ActClassROI(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActClassROI
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActClassROI"
+    codeset_v3_ActClassROI: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActClassROI"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
+    codeset_v3_ActClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
 
 
 class ActClassROIValues:

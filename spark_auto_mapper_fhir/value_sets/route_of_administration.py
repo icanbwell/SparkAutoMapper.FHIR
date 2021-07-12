@@ -20,14 +20,16 @@ class RouteOfAdministration(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration"
-    """
     http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
     """
-    codeset_2: FhirUri = (
+    codeset_v3_RouteOfAdministration: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration
+    """
+    codeset_v3_RouteOfAdministration: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration"
     )
 
 

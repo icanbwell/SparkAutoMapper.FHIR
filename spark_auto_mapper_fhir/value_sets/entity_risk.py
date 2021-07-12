@@ -21,11 +21,13 @@ class EntityRisk(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-EntityRisk
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityRisk"
+    codeset_v3_EntityRisk: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityRisk"
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityRisk
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityRisk"
+    codeset_v3_EntityRisk: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityRisk"
+    )
 
 
 class EntityRiskValues:

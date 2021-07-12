@@ -24,11 +24,15 @@ class ObservationValue(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ObservationValue
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ObservationValue"
+    codeset_v3_ObservationValue: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ObservationValue"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ObservationValue
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
+    codeset_v3_ObservationValue: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
+    )
 
 
 class ObservationValueValues:

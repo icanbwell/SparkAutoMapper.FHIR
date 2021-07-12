@@ -19,13 +19,17 @@ class CompressionAlgorithm(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-CompressionAlgorithm
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-CompressionAlgorithm"
-    """
     http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm"
+    codeset_v3_CompressionAlgorithm: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-CompressionAlgorithm"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-CompressionAlgorithm
+    """
+    codeset_v3_CompressionAlgorithm: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-CompressionAlgorithm"
+    )
 
 
 class CompressionAlgorithmValues:

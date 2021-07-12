@@ -19,16 +19,16 @@ class ActRelationshipCheckpoint(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActRelationshipCheckpoint
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipCheckpoint"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ActRelationshipCheckpoint: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActRelationshipCheckpoint
+    """
+    codeset_v3_ActRelationshipCheckpoint: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipCheckpoint"
     )
 
 

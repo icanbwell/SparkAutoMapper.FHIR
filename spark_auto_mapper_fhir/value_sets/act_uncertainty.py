@@ -22,11 +22,15 @@ class ActUncertainty(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActUncertainty
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActUncertainty"
+    codeset_v3_ActUncertainty: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActUncertainty"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActUncertainty
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActUncertainty"
+    codeset_v3_ActUncertainty: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ActUncertainty"
+    )
 
 
 class ActUncertaintyValues:

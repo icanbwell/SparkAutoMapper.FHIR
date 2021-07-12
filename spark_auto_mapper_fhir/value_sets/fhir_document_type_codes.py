@@ -19,6 +19,6 @@ class FHIRDocumentTypeCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://loinc.org
+    
     """
-    codeset: FhirUri = "http://loinc.org"
+    codeset: FhirUri = ""

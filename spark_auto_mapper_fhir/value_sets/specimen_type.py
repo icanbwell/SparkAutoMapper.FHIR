@@ -19,13 +19,17 @@ class SpecimenType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-SpecimenType
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-SpecimenType"
-    """
     http://terminology.hl7.org/CodeSystem/v3-SpecimenType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"
+    codeset_v3_SpecimenType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-SpecimenType
+    """
+    codeset_v3_SpecimenType: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-SpecimenType"
+    )
 
 
 class SpecimenTypeValues:

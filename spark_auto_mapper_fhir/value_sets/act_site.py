@@ -19,13 +19,13 @@ class ActSite(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActSite
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActSite"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActSite
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActSite"
+    codeset_v3_ActSite: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActSite"
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActSite
+    """
+    codeset_v3_ActSite: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActSite"
 
 
 class ActSiteValues:

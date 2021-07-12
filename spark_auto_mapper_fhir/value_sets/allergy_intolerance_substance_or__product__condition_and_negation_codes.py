@@ -25,4 +25,8 @@ class AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode(
     """
     http://snomed.info/sct
     """
-    codeset: FhirUri = "http://snomed.info/sct"
+    codeset_sct: FhirUri = "http://snomed.info/sct"
+    """
+    http://hl7.org/fhir/ValueSet/substance-code
+    """
+    codeset_substance_code: FhirUri = "http://hl7.org/fhir/ValueSet/substance-code"

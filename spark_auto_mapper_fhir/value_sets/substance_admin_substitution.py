@@ -22,13 +22,13 @@ class SubstanceAdminSubstitution(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-substanceAdminSubstitution
     """
-    codeset: FhirUri = (
+    codeset_v3_substanceAdminSubstitution: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-substanceAdminSubstitution"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
     """
-    codeset_2: FhirUri = (
+    codeset_v3_substanceAdminSubstitution: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
     )
 

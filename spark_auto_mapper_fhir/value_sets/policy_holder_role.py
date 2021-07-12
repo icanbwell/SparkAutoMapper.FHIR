@@ -30,8 +30,12 @@ class PolicyHolderRole(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-policyHolderRole
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-policyHolderRole"
+    codeset_v3_policyHolderRole: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-policyHolderRole"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-policyHolderRole
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-policyHolderRole"
+    codeset_v3_policyHolderRole: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-policyHolderRole"
+    )

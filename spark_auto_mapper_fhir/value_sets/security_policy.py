@@ -23,11 +23,13 @@ class SecurityPolicy(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-SecurityPolicy
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-SecurityPolicy"
+    codeset_v3_SecurityPolicy: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-SecurityPolicy"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 
 
 class SecurityPolicyValues:

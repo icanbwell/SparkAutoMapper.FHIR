@@ -20,15 +20,15 @@ class PersonalRelationshipRoleType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    codeset_v3_RoleCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    """
+    http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType
+    """
+    codeset_v3_PersonalRelationshipRoleType: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-PersonalRelationshipRoleType"
+    )
 
 
 class PersonalRelationshipRoleTypeValues:

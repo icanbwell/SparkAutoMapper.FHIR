@@ -19,6 +19,6 @@ class ActionParticipantRoleCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/action-participant-role
+    
     """
-    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/action-participant-role"
+    codeset: FhirUri = ""

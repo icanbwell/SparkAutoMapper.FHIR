@@ -21,13 +21,13 @@ class ActInvoiceElementModifier(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier
     """
-    codeset: FhirUri = (
+    codeset_v3_ActInvoiceElementModifier: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ActInvoiceElementModifier: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier"
     )
 

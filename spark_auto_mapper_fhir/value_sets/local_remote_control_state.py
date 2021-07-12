@@ -21,11 +21,13 @@ class LocalRemoteControlState(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-LocalRemoteControlState
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-LocalRemoteControlState"
+    codeset_v3_LocalRemoteControlState: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-LocalRemoteControlState"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-LocalRemoteControlState
     """
-    codeset_2: FhirUri = (
+    codeset_v3_LocalRemoteControlState: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-LocalRemoteControlState"
     )
 

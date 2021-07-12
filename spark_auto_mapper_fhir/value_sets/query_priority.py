@@ -21,11 +21,15 @@ class QueryPriority(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-QueryPriority
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-QueryPriority"
+    codeset_v3_QueryPriority: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-QueryPriority"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-QueryPriority
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryPriority"
+    codeset_v3_QueryPriority: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-QueryPriority"
+    )
 
 
 class QueryPriorityValues:

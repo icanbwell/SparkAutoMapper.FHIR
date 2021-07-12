@@ -23,15 +23,17 @@ class ParticipationInformationGenerator(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ParticipationInformationGenerator
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ParticipationInformationGenerator"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    codeset_v3_ParticipationType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ParticipationInformationGenerator
+    """
+    codeset_v3_ParticipationInformationGenerator: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ParticipationInformationGenerator"
+    )
 
 
 class ParticipationInformationGeneratorValues:

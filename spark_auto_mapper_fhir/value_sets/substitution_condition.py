@@ -22,11 +22,13 @@ class SubstitutionCondition(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition"
+    codeset_v3_SubstitutionCondition: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition
     """
-    codeset_2: FhirUri = (
+    codeset_v3_SubstitutionCondition: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition"
     )
 

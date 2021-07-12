@@ -19,6 +19,6 @@ class ENSEMBLCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://www.ensembl.org
+    
     """
-    codeset: FhirUri = "http://www.ensembl.org"
+    codeset: FhirUri = ""

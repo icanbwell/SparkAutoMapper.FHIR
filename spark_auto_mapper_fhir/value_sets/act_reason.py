@@ -26,11 +26,11 @@ class ActReason(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActReason
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActReason"
+    codeset_v3_ActReason: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActReason"
     """
     http://terminology.hl7.org/CodeSystem/v3-ActReason
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+    codeset_v3_ActReason: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
 
 
 class ActReasonValues:

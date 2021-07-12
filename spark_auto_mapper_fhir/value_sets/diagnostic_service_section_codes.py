@@ -19,9 +19,9 @@ class DiagnosticServiceSectionCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v2-0074
+    
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0074"
+    codeset: FhirUri = ""
 
 
 class DiagnosticServiceSectionCodesCodeValues:

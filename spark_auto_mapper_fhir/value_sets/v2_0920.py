@@ -20,6 +20,6 @@ class V2_0920(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v2-0920
+    
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v2-0920"
+    codeset: FhirUri = ""

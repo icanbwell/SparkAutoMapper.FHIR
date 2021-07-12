@@ -22,11 +22,11 @@ class ActStatus(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActStatus
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActStatus"
+    codeset_v3_ActStatus: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActStatus"
     """
     http://terminology.hl7.org/CodeSystem/v3-ActStatus
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
+    codeset_v3_ActStatus: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
 
 
 class ActStatusValues:

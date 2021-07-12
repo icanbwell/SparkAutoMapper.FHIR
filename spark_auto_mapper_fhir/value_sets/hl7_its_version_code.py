@@ -22,13 +22,17 @@ class Hl7ITSVersionCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode"
-    """
     http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode"
+    codeset_v3_hl7ITSVersionCode: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode
+    """
+    codeset_v3_hl7ITSVersionCode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode"
+    )
 
 
 class Hl7ITSVersionCodeValues:

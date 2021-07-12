@@ -21,14 +21,16 @@ class WorkClassificationODH(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH"
-    """
     http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH
     """
-    codeset_2: FhirUri = (
+    codeset_v3_WorkClassificationODH: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH
+    """
+    codeset_v3_WorkClassificationODH: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH"
     )
 
 

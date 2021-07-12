@@ -20,13 +20,17 @@ class ActRelationshipFulfills(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+    codeset_v3_ActRelationshipType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills
+    """
+    codeset_v3_ActRelationshipFulfills: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills"
+    )
 
 
 class ActRelationshipFulfillsValues:

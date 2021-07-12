@@ -19,13 +19,15 @@ class TableRules(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-TableRules
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableRules"
-    """
     http://terminology.hl7.org/CodeSystem/v3-TableRules
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TableRules"
+    codeset_v3_TableRules: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TableRules"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-TableRules
+    """
+    codeset_v3_TableRules: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableRules"
 
 
 class TableRulesValues:

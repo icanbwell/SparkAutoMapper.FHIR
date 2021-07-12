@@ -20,16 +20,16 @@ class HL7ContextConductionStyle(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle
     """
-    codeset_2: FhirUri = (
+    codeset_v3_HL7ContextConductionStyle: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle
+    """
+    codeset_v3_HL7ContextConductionStyle: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle"
     )
 
 

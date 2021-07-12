@@ -19,13 +19,15 @@ class RoleClassRoot(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-RoleClassRoot
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleClassRoot"
-    """
     http://terminology.hl7.org/CodeSystem/v3-RoleClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+    codeset_v3_RoleClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+    """
+    http://terminology.hl7.org/ValueSet/v3-RoleClassRoot
+    """
+    codeset_v3_RoleClassRoot: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-RoleClassRoot"
+    )
 
 
 class RoleClassRootValues:

@@ -22,13 +22,13 @@ class AmericanIndianAlaskaNativeLanguages(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-AmericanIndianAlaskaNativeLanguages
     """
-    codeset: FhirUri = (
+    codeset_v3_AmericanIndianAlaskaNativeLanguages: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-AmericanIndianAlaskaNativeLanguages"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages
     """
-    codeset_2: FhirUri = (
+    codeset_v3_AmericanIndianAlaskaNativeLanguages: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages"
     )
 

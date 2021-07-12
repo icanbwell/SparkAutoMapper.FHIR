@@ -22,13 +22,13 @@ class ManagedParticipationStatus(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ManagedParticipationStatus
     """
-    codeset: FhirUri = (
+    codeset_v3_ManagedParticipationStatus: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ManagedParticipationStatus"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ManagedParticipationStatus: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus"
     )
 

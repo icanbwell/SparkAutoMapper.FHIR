@@ -25,13 +25,15 @@ class ProvenanceEventCurrentState_DC(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC
     """
-    codeset: FhirUri = (
+    codeset_v3_ProvenanceEventCurrentState_DC: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+    codeset_v3_DocumentCompletion: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+    )
 
 
 class ProvenanceEventCurrentState_DCValues:

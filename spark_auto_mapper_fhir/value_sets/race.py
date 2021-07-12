@@ -33,13 +33,13 @@ class Race(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-Race
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Race"
-    """
     http://terminology.hl7.org/CodeSystem/v3-Race
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Race"
+    codeset_v3_Race: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Race"
+    """
+    http://terminology.hl7.org/ValueSet/v3-Race
+    """
+    codeset_v3_Race: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Race"
 
 
 class RaceValues:

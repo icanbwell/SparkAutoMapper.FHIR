@@ -21,11 +21,11 @@ class Dentition(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-Dentition
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Dentition"
+    codeset_v3_Dentition: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Dentition"
     """
     http://terminology.hl7.org/CodeSystem/v3-Dentition
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Dentition"
+    codeset_v3_Dentition: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Dentition"
 
 
 class DentitionValues:

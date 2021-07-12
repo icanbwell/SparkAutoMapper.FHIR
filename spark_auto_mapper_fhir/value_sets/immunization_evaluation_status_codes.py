@@ -22,9 +22,9 @@ class ImmunizationEvaluationStatusCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/medication-admin-status
+    
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/medication-admin-status"
+    codeset: FhirUri = ""
 
 
 class ImmunizationEvaluationStatusCodesCodeValues:

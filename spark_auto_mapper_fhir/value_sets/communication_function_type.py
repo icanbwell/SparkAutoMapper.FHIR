@@ -20,16 +20,16 @@ class CommunicationFunctionType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType
     """
-    codeset_2: FhirUri = (
+    codeset_v3_CommunicationFunctionType: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType
+    """
+    codeset_v3_CommunicationFunctionType: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType"
     )
 
 

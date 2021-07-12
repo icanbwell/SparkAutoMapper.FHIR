@@ -21,11 +21,15 @@ class CalendarCycle(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-CalendarCycle
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-CalendarCycle"
+    codeset_v3_CalendarCycle: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-CalendarCycle"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-CalendarCycle
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-CalendarCycle"
+    codeset_v3_CalendarCycle: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-CalendarCycle"
+    )
 
 
 class CalendarCycleValues:

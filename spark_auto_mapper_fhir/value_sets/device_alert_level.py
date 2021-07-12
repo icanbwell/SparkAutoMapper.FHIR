@@ -21,11 +21,15 @@ class DeviceAlertLevel(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-DeviceAlertLevel
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-DeviceAlertLevel"
+    codeset_v3_DeviceAlertLevel: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-DeviceAlertLevel"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel"
+    codeset_v3_DeviceAlertLevel: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel"
+    )
 
 
 class DeviceAlertLevelValues:

@@ -19,13 +19,17 @@ class SetOperator(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-SetOperator
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-SetOperator"
-    """
     http://terminology.hl7.org/CodeSystem/v3-SetOperator
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-SetOperator"
+    codeset_v3_SetOperator: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-SetOperator"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-SetOperator
+    """
+    codeset_v3_SetOperator: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-SetOperator"
+    )
 
 
 class SetOperatorValues:

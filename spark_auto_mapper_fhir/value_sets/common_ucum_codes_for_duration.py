@@ -20,9 +20,9 @@ class CommonUCUMCodesForDurationCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://unitsofmeasure.org
+    
     """
-    codeset: FhirUri = "http://unitsofmeasure.org"
+    codeset: FhirUri = ""
 
 
 class CommonUCUMCodesForDurationCodeValues:

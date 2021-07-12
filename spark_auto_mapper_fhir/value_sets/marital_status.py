@@ -21,13 +21,17 @@ class MaritalStatus(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-MaritalStatus
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-MaritalStatus"
-    """
     http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+    codeset_v3_MaritalStatus: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-MaritalStatus
+    """
+    codeset_v3_MaritalStatus: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-MaritalStatus"
+    )
 
 
 class MaritalStatusValues:

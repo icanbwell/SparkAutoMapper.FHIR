@@ -21,13 +21,15 @@ class ActMoodIntent(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActMoodIntent
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActMoodIntent"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActMood
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
+    codeset_v3_ActMood: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActMoodIntent
+    """
+    codeset_v3_ActMoodIntent: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActMoodIntent"
+    )
 
 
 class ActMoodIntentValues:

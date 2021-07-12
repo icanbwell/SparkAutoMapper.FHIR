@@ -19,13 +19,17 @@ class EntityNamePartType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-EntityNamePartType
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityNamePartType"
-    """
     http://terminology.hl7.org/CodeSystem/v3-EntityNamePartType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartType"
+    codeset_v3_EntityNamePartType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartType"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-EntityNamePartType
+    """
+    codeset_v3_EntityNamePartType: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EntityNamePartType"
+    )
 
 
 class EntityNamePartTypeValues:

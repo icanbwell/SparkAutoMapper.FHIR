@@ -20,9 +20,9 @@ class CommonLanguagesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    urn:ietf:bcp:47
+    
     """
-    codeset: FhirUri = "urn:ietf:bcp:47"
+    codeset: FhirUri = ""
 
 
 class CommonLanguagesCodeValues:

@@ -22,13 +22,15 @@ class ActRelationshipConditional(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActRelationshipConditional
     """
-    codeset: FhirUri = (
+    codeset_v3_ActRelationshipConditional: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ActRelationshipConditional"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+    codeset_v3_ActRelationshipType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+    )
 
 
 class ActRelationshipConditionalValues:

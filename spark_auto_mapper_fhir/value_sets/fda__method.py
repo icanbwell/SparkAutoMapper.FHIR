@@ -21,8 +21,8 @@ class FDA_MethodCode(GenericTypeCode):
     """
     https://precision.fda.gov/apps/
     """
-    codeset: FhirUri = "https://precision.fda.gov/apps/"
+    codeset_: FhirUri = "https://precision.fda.gov/apps/"
     """
     https://precision.fda.gov/jobs/
     """
-    codeset_2: FhirUri = "https://precision.fda.gov/jobs/"
+    codeset_: FhirUri = "https://precision.fda.gov/jobs/"

@@ -20,13 +20,17 @@ class EntityStatus(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-EntityStatus
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityStatus"
-    """
     http://terminology.hl7.org/CodeSystem/v3-EntityStatus
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityStatus"
+    codeset_v3_EntityStatus: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityStatus"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-EntityStatus
+    """
+    codeset_v3_EntityStatus: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EntityStatus"
+    )
 
 
 class EntityStatusValues:

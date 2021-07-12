@@ -20,13 +20,13 @@ class StyleType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-styleType
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-styleType"
-    """
     http://terminology.hl7.org/CodeSystem/v3-styleType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-styleType"
+    codeset_v3_styleType: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-styleType"
+    """
+    http://terminology.hl7.org/ValueSet/v3-styleType
+    """
+    codeset_v3_styleType: FhirUri = "http://terminology.hl7.org/ValueSet/v3-styleType"
 
 
 class StyleTypeValues:

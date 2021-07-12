@@ -22,13 +22,15 @@ class ParticipationTargetDirect(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ParticipationTargetDirect
     """
-    codeset: FhirUri = (
+    codeset_v3_ParticipationTargetDirect: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ParticipationTargetDirect"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    codeset_v3_ParticipationType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    )
 
 
 class ParticipationTargetDirectValues:

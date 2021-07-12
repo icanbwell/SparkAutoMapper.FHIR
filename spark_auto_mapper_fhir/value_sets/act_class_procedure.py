@@ -27,13 +27,15 @@ class ActClassProcedure(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActClassProcedure
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActClassProcedure"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
+    codeset_v3_ActClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActClassProcedure
+    """
+    codeset_v3_ActClassProcedure: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActClassProcedure"
+    )
 
 
 class ActClassProcedureValues:

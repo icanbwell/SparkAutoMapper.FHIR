@@ -22,13 +22,13 @@ class ImmunizationStatusReasonCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v3-ActReason
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
-    """
     http://snomed.info/sct
     """
-    codeset_2: FhirUri = "http://snomed.info/sct"
+    codeset_sct: FhirUri = "http://snomed.info/sct"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActReason
+    """
+    codeset_v3_ActReason: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
 
 
 class ImmunizationStatusReasonCodesCodeValues:

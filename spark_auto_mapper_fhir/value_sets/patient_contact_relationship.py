@@ -19,9 +19,9 @@ class PatientContactRelationshipCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v2-0131
+    
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0131"
+    codeset: FhirUri = ""
 
 
 class PatientContactRelationshipCodeValues:

@@ -20,13 +20,17 @@ class ResponseLevel(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ResponseLevel
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ResponseLevel"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ResponseLevel
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ResponseLevel"
+    codeset_v3_ResponseLevel: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ResponseLevel"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ResponseLevel
+    """
+    codeset_v3_ResponseLevel: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ResponseLevel"
+    )
 
 
 class ResponseLevelValues:

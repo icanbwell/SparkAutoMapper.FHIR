@@ -19,6 +19,6 @@ class ProviderTaxonomyCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://nucc.org/provider-taxonomy
+    
     """
-    codeset: FhirUri = "http://nucc.org/provider-taxonomy"
+    codeset: FhirUri = ""

@@ -21,16 +21,16 @@ class LanguageAbilityProficiency(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency
     """
-    codeset_2: FhirUri = (
+    codeset_v3_LanguageAbilityProficiency: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency
+    """
+    codeset_v3_LanguageAbilityProficiency: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency"
     )
 
 

@@ -19,13 +19,17 @@ class TableCellScope(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-TableCellScope
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableCellScope"
-    """
     http://terminology.hl7.org/CodeSystem/v3-TableCellScope
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TableCellScope"
+    codeset_v3_TableCellScope: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TableCellScope"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-TableCellScope
+    """
+    codeset_v3_TableCellScope: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-TableCellScope"
+    )
 
 
 class TableCellScopeValues:

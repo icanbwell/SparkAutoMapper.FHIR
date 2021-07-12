@@ -24,13 +24,13 @@ class ProvenanceEventCurrentState_AS(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-AS
     """
-    codeset: FhirUri = (
+    codeset_v3_ProvenanceEventCurrentState_AS: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-AS"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActStatus
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
+    codeset_v3_ActStatus: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
 
 
 class ProvenanceEventCurrentState_ASValues:

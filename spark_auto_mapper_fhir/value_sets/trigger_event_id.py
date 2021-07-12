@@ -28,13 +28,17 @@ class TriggerEventID(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-triggerEventID
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-triggerEventID"
-    """
     http://terminology.hl7.org/CodeSystem/v3-triggerEventID
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-triggerEventID"
+    codeset_v3_triggerEventID: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-triggerEventID"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-triggerEventID
+    """
+    codeset_v3_triggerEventID: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-triggerEventID"
+    )
 
 
 class TriggerEventIDValues:

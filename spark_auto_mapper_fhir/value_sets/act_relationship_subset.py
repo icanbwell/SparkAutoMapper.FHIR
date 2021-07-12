@@ -23,14 +23,16 @@ class ActRelationshipSubset(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ActRelationshipSubset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset
+    """
+    codeset_v3_ActRelationshipSubset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset"
     )
 
 

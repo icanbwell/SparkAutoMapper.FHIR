@@ -19,10 +19,10 @@ class VaccineAdministeredValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/sid/cvx
-    """
-    codeset: FhirUri = "http://hl7.org/fhir/sid/cvx"
-    """
     urn:oid:1.2.36.1.2001.1005.17
     """
-    codeset_2: FhirUri = "urn:oid:1.2.36.1.2001.1005.17"
+    codeset_urn_oid_1_2_36_1_2001_1005_17: FhirUri = "urn:oid:1.2.36.1.2001.1005.17"
+    """
+    http://hl7.org/fhir/sid/cvx
+    """
+    codeset_cvx: FhirUri = "http://hl7.org/fhir/sid/cvx"

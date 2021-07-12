@@ -20,13 +20,17 @@ class HL7UpdateMode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-HL7UpdateMode
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-HL7UpdateMode"
-    """
     http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode"
+    codeset_v3_HL7UpdateMode: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-HL7UpdateMode
+    """
+    codeset_v3_HL7UpdateMode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-HL7UpdateMode"
+    )
 
 
 class HL7UpdateModeValues:

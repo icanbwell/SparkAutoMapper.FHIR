@@ -26,11 +26,13 @@ class ParticipationSignature(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ParticipationSignature
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ParticipationSignature"
+    codeset_v3_ParticipationSignature: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ParticipationSignature"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ParticipationSignature: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature"
     )
 

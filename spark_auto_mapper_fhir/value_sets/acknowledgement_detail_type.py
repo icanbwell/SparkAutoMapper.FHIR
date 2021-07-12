@@ -25,13 +25,13 @@ class AcknowledgementDetailType(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailType
     """
-    codeset: FhirUri = (
+    codeset_v3_AcknowledgementDetailType: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailType"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType
     """
-    codeset_2: FhirUri = (
+    codeset_v3_AcknowledgementDetailType: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType"
     )
 

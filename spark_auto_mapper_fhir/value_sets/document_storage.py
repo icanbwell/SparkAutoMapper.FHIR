@@ -19,13 +19,17 @@ class DocumentStorage(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-DocumentStorage
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-DocumentStorage"
-    """
     http://terminology.hl7.org/CodeSystem/v3-DocumentStorage
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DocumentStorage"
+    codeset_v3_DocumentStorage: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-DocumentStorage"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-DocumentStorage
+    """
+    codeset_v3_DocumentStorage: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-DocumentStorage"
+    )
 
 
 class DocumentStorageValues:

@@ -26,11 +26,13 @@ class ActInvoiceGroupCode(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActInvoiceGroupCode
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActInvoiceGroupCode"
+    codeset_v3_ActInvoiceGroupCode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActInvoiceGroupCode"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 
 
 class ActInvoiceGroupCodeValues:

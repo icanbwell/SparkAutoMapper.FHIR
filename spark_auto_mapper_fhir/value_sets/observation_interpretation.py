@@ -23,16 +23,16 @@ class ObservationInterpretation(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ObservationInterpretation: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
+    """
+    codeset_v3_ObservationInterpretation: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation"
     )
 
 

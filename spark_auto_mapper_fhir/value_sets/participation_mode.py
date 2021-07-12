@@ -29,11 +29,15 @@ class ParticipationMode(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ParticipationMode
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ParticipationMode"
+    codeset_v3_ParticipationMode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ParticipationMode"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationMode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
+    codeset_v3_ParticipationMode: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
+    )
 
 
 class ParticipationModeValues:

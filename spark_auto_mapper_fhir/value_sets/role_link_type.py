@@ -19,13 +19,17 @@ class RoleLinkType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-RoleLinkType
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleLinkType"
-    """
     http://terminology.hl7.org/CodeSystem/v3-RoleLinkType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleLinkType"
+    codeset_v3_RoleLinkType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-RoleLinkType"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-RoleLinkType
+    """
+    codeset_v3_RoleLinkType: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-RoleLinkType"
+    )
 
 
 class RoleLinkTypeValues:

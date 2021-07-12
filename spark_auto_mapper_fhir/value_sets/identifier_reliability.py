@@ -22,11 +22,13 @@ class IdentifierReliability(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-IdentifierReliability
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-IdentifierReliability"
+    codeset_v3_IdentifierReliability: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-IdentifierReliability"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability
     """
-    codeset_2: FhirUri = (
+    codeset_v3_IdentifierReliability: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability"
     )
 

@@ -23,12 +23,12 @@ class DataElementSDCObjectClassCode(GenericTypeCode):
     """
     http://snomed.info/sct
     """
-    codeset: FhirUri = "http://snomed.info/sct"
-    """
-    http://loinc.org
-    """
-    codeset_2: FhirUri = "http://loinc.org"
+    codeset_sct: FhirUri = "http://snomed.info/sct"
     """
     http://www.nlm.nih.gov/research/umls/rxnorm
     """
-    codeset_3: FhirUri = "http://www.nlm.nih.gov/research/umls/rxnorm"
+    codeset_rxnorm: FhirUri = "http://www.nlm.nih.gov/research/umls/rxnorm"
+    """
+    http://loinc.org
+    """
+    codeset_loinc_org: FhirUri = "http://loinc.org"

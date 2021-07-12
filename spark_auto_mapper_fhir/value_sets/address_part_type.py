@@ -23,13 +23,17 @@ class AddressPartType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-AddressPartType
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-AddressPartType"
-    """
     http://terminology.hl7.org/CodeSystem/v3-AddressPartType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-AddressPartType"
+    codeset_v3_AddressPartType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-AddressPartType"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-AddressPartType
+    """
+    codeset_v3_AddressPartType: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-AddressPartType"
+    )
 
 
 class AddressPartTypeValues:

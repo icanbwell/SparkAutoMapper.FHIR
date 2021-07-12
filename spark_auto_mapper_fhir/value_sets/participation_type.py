@@ -21,11 +21,15 @@ class ParticipationType(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ParticipationType
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ParticipationType"
+    codeset_v3_ParticipationType: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ParticipationType"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    codeset_v3_ParticipationType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    )
 
 
 class ParticipationTypeValues:

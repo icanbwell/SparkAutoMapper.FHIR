@@ -22,9 +22,9 @@ class CodesForImmunizationSiteOfAdministrationCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v3-ActSite
+    
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActSite"
+    codeset: FhirUri = ""
 
 
 class CodesForImmunizationSiteOfAdministrationCodeValues:

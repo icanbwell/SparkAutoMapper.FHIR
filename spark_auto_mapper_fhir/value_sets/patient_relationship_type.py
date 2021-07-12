@@ -22,11 +22,11 @@ class PatientRelationshipTypeCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v2-0131
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0131"
+    codeset_v2_0131: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0131"
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    codeset_v3_RoleCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 
 
 class PatientRelationshipTypeCodeValues:

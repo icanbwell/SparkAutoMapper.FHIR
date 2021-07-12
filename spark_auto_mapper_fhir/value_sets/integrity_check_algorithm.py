@@ -21,11 +21,13 @@ class IntegrityCheckAlgorithm(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-IntegrityCheckAlgorithm
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-IntegrityCheckAlgorithm"
+    codeset_v3_IntegrityCheckAlgorithm: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-IntegrityCheckAlgorithm"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm
     """
-    codeset_2: FhirUri = (
+    codeset_v3_IntegrityCheckAlgorithm: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm"
     )
 

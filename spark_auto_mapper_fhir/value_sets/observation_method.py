@@ -28,11 +28,15 @@ class ObservationMethod(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ObservationMethod
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ObservationMethod"
+    codeset_v3_ObservationMethod: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ObservationMethod"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ObservationMethod
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"
+    codeset_v3_ObservationMethod: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"
+    )
 
 
 class ObservationMethodValues:

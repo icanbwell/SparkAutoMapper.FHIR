@@ -19,14 +19,16 @@ class TableCellHorizontalAlign(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-TableCellHorizontalAlign
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableCellHorizontalAlign"
-    """
     http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign
     """
-    codeset_2: FhirUri = (
+    codeset_v3_TableCellHorizontalAlign: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-TableCellHorizontalAlign
+    """
+    codeset_v3_TableCellHorizontalAlign: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-TableCellHorizontalAlign"
     )
 
 

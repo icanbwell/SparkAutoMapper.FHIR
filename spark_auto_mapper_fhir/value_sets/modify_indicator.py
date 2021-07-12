@@ -19,13 +19,17 @@ class ModifyIndicator(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ModifyIndicator
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ModifyIndicator"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ModifyIndicator
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ModifyIndicator"
+    codeset_v3_ModifyIndicator: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ModifyIndicator"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ModifyIndicator
+    """
+    codeset_v3_ModifyIndicator: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ModifyIndicator"
+    )
 
 
 class ModifyIndicatorValues:

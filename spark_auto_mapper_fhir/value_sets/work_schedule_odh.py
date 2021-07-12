@@ -20,13 +20,17 @@ class WorkScheduleODH(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-WorkScheduleODH
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-WorkScheduleODH"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ObservationValue
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
+    codeset_v3_ObservationValue: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-WorkScheduleODH
+    """
+    codeset_v3_WorkScheduleODH: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-WorkScheduleODH"
+    )
 
 
 class WorkScheduleODHValues:

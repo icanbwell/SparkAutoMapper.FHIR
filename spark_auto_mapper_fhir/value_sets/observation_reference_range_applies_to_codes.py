@@ -20,16 +20,57 @@ class ObservationReferenceRangeAppliesToCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
+    http://terminology.hl7.org/CodeSystem/v3-Race
+    """
+    codeset_v3_Race: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Race"
+    """
     http://snomed.info/sct
     """
-    codeset: FhirUri = "http://snomed.info/sct"
+    codeset_sct: FhirUri = "http://snomed.info/sct"
+    """
+    http://terminology.hl7.org/ValueSet/v3-Race
+    """
+    codeset_v3_Race: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Race"
 
 
 class ObservationReferenceRangeAppliesToCodesCodeValues:
     """
-    From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
+    American Indian or Alaska Native
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
     """
 
+    AmericanIndianOrAlaskaNative = ObservationReferenceRangeAppliesToCodesCode("1002-5")
+    """
+    Asian
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    Asian = ObservationReferenceRangeAppliesToCodesCode("2028-9")
+    """
+    Black or African American
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    BlackOrAfricanAmerican = ObservationReferenceRangeAppliesToCodesCode("2054-5")
+    """
+    Native Hawaiian or Other Pacific Islander
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    NativeHawaiianOrOtherPacificIslander = ObservationReferenceRangeAppliesToCodesCode(
+        "2076-8"
+    )
+    """
+    White
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    White = ObservationReferenceRangeAppliesToCodesCode("2106-3")
+    """
+    Note that this term remains in the table for completeness, even though within
+    HL7, the notion of Other code is deprecated.
+    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+    """
+    OtherRace = ObservationReferenceRangeAppliesToCodesCode("2131-1")
+    """
+    From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
+    """
     _248153007 = ObservationReferenceRangeAppliesToCodesCode("248153007")
     """
     From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml

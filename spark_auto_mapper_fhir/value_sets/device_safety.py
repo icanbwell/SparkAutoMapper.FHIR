@@ -22,9 +22,9 @@ class DeviceSafetyCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    urn:oid:2.16.840.1.113883.3.26.1.1
+    
     """
-    codeset: FhirUri = "urn:oid:2.16.840.1.113883.3.26.1.1"
+    codeset: FhirUri = ""
 
 
 class DeviceSafetyCodeValues:

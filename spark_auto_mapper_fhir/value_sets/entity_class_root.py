@@ -21,11 +21,15 @@ class EntityClassRoot(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-EntityClassRoot
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityClassRoot"
+    codeset_v3_EntityClassRoot: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EntityClassRoot"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityClass"
+    codeset_v3_EntityClass: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityClass"
+    )
 
 
 class EntityClassRootValues:

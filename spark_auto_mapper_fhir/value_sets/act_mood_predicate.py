@@ -23,11 +23,13 @@ class ActMoodPredicate(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActMoodPredicate
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActMoodPredicate"
+    codeset_v3_ActMoodPredicate: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActMoodPredicate"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActMood
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
+    codeset_v3_ActMood: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
 
 
 class ActMoodPredicateValues:

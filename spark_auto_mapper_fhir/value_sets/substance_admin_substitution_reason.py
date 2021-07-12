@@ -19,15 +19,15 @@ class SubstanceAdminSubstitutionReason(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActReason
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+    codeset_v3_ActReason: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+    """
+    http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason
+    """
+    codeset_v3_SubstanceAdminSubstitutionReason: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason"
+    )
 
 
 class SubstanceAdminSubstitutionReasonValues:

@@ -21,6 +21,6 @@ class DiagnosticAttachmentTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://snomed.info/sct
+    
     """
-    codeset: FhirUri = "http://snomed.info/sct"
+    codeset: FhirUri = ""

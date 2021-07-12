@@ -24,11 +24,15 @@ class MapRelationship(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-MapRelationship
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-MapRelationship"
+    codeset_v3_MapRelationship: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-MapRelationship"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-MapRelationship
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-MapRelationship"
+    codeset_v3_MapRelationship: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-MapRelationship"
+    )
 
 
 class MapRelationshipValues:

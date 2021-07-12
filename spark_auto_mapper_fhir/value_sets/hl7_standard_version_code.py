@@ -22,11 +22,13 @@ class HL7StandardVersionCode(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-HL7StandardVersionCode
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-HL7StandardVersionCode"
+    codeset_v3_HL7StandardVersionCode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-HL7StandardVersionCode"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode
     """
-    codeset_2: FhirUri = (
+    codeset_v3_HL7StandardVersionCode: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode"
     )
 

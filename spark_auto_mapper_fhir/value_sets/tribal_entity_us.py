@@ -20,13 +20,17 @@ class TribalEntityUS(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TribalEntityUS"
-    """
     http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS"
+    codeset_v3_TribalEntityUS: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
+    """
+    codeset_v3_TribalEntityUS: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-TribalEntityUS"
+    )
 
 
 class TribalEntityUSValues:

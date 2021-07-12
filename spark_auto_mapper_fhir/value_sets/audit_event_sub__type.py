@@ -22,11 +22,11 @@ class AuditEventSub_TypeCode(GenericTypeCode):
     """
     http://dicom.nema.org/resources/ontology/DCM
     """
-    codeset: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
+    codeset_DCM: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
     """
     http://hl7.org/fhir/restful-interaction
     """
-    codeset_2: FhirUri = "http://hl7.org/fhir/restful-interaction"
+    codeset_restful_interaction: FhirUri = "http://hl7.org/fhir/restful-interaction"
 
 
 class AuditEventSub_TypeCodeValues:

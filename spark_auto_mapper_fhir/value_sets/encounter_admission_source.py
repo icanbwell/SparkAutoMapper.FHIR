@@ -19,14 +19,16 @@ class EncounterAdmissionSource(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource"
-    """
     http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource
     """
-    codeset_2: FhirUri = (
+    codeset_v3_EncounterAdmissionSource: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource
+    """
+    codeset_v3_EncounterAdmissionSource: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource"
     )
 
 

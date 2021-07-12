@@ -56,16 +56,19 @@ class {{fhir_entity.cleaned_name}}(GenericTypeCode):
         super().__init__(value=value)
 
     {%  if fhir_entity.value_set_url_list %}
-        {% for value_set_url in fhir_entity.value_set_url_list %}
+        {% if fhir_entity.value_set_url_list|length > 1 %}
+            {% for value_set_url in fhir_entity.value_set_url_list %}
     """
     {{ value_set_url }}
     """
-            {% if loop.index == 1 %}
-    codeset: FhirUri = "{{ value_set_url}}"
-            {% else %}
-    codeset_{{ loop.index }}: FhirUri = "{{ value_set_url}}"
-            {% endif %}
-        {% endfor %}
+    codeset_{{ value_set_url.split("/")[-1].replace("-", "_").replace(":","_").replace(".","_") }}: FhirUri = "{{ value_set_url}}"
+            {% endfor %}
+        {% else %}
+    """
+    {{ fhir_entity.value_set_url_list[0] }}
+    """
+    codeset: FhirUri = "{{ fhir_entity.value_set_url_list[0] }}"
+        {% endif %}
     {% endif %}
 
 

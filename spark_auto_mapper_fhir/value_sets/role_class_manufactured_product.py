@@ -19,15 +19,15 @@ class RoleClassManufacturedProduct(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-RoleClassManufacturedProduct
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RoleClassManufacturedProduct"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-RoleClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+    codeset_v3_RoleClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+    """
+    http://terminology.hl7.org/ValueSet/v3-RoleClassManufacturedProduct
+    """
+    codeset_v3_RoleClassManufacturedProduct: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-RoleClassManufacturedProduct"
+    )
 
 
 class RoleClassManufacturedProductValues:

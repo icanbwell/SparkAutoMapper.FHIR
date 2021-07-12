@@ -21,6 +21,6 @@ class DeviceMetricAndComponentTypesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    urn:iso:std:iso:11073:10101
+    
     """
-    codeset: FhirUri = "urn:iso:std:iso:11073:10101"
+    codeset: FhirUri = ""

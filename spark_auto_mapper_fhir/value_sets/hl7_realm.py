@@ -44,11 +44,11 @@ class Hl7Realm(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-hl7Realm
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7Realm"
+    codeset_v3_hl7Realm: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7Realm"
     """
     http://terminology.hl7.org/CodeSystem/v3-hl7Realm
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7Realm"
+    codeset_v3_hl7Realm: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7Realm"
 
 
 class Hl7RealmValues:

@@ -21,11 +21,15 @@ class VerificationMethod(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-VerificationMethod
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-VerificationMethod"
+    codeset_v3_VerificationMethod: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-VerificationMethod"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ObservationMethod
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"
+    codeset_v3_ObservationMethod: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"
+    )
 
 
 class VerificationMethodValues:

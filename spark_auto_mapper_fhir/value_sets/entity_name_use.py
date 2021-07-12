@@ -21,11 +21,15 @@ class EntityNameUse(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-EntityNameUse
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityNameUse"
+    codeset_v3_EntityNameUse: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EntityNameUse"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityNameUse
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"
+    codeset_v3_EntityNameUse: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"
+    )
 
 
 class EntityNameUseValues:

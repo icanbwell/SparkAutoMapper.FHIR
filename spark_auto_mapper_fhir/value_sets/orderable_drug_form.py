@@ -20,13 +20,17 @@ class OrderableDrugForm(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-orderableDrugForm
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-orderableDrugForm"
-    """
     http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+    codeset_v3_orderableDrugForm: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-orderableDrugForm
+    """
+    codeset_v3_orderableDrugForm: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-orderableDrugForm"
+    )
 
 
 class OrderableDrugFormValues:

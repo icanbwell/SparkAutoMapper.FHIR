@@ -26,13 +26,15 @@ class ParticipationTargetSubject(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ParticipationTargetSubject
     """
-    codeset: FhirUri = (
+    codeset_v3_ParticipationTargetSubject: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ParticipationTargetSubject"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    codeset_v3_ParticipationType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    )
 
 
 class ParticipationTargetSubjectValues:

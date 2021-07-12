@@ -19,9 +19,9 @@ class ExampleHierarchicalValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    #hacked
+    
     """
-    codeset: FhirUri = "#hacked"
+    codeset: FhirUri = ""
 
 
 class ExampleHierarchicalValueSetCodeValues:

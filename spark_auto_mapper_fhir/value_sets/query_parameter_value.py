@@ -20,13 +20,17 @@ class QueryParameterValue(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-QueryParameterValue
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-QueryParameterValue"
-    """
     http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue"
+    codeset_v3_QueryParameterValue: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-QueryParameterValue"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-QueryParameterValue
+    """
+    codeset_v3_QueryParameterValue: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-QueryParameterValue"
+    )
 
 
 class QueryParameterValueValues:

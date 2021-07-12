@@ -19,14 +19,16 @@ class RelationshipConjunction(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction"
-    """
     http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction
     """
-    codeset_2: FhirUri = (
+    codeset_v3_RelationshipConjunction: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction
+    """
+    codeset_v3_RelationshipConjunction: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction"
     )
 
 

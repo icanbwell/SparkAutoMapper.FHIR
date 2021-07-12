@@ -19,13 +19,13 @@ class Charset(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-Charset
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Charset"
-    """
     http://terminology.hl7.org/CodeSystem/v3-Charset
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Charset"
+    codeset_v3_Charset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Charset"
+    """
+    http://terminology.hl7.org/ValueSet/v3-Charset
+    """
+    codeset_v3_Charset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Charset"
 
 
 class CharsetValues:

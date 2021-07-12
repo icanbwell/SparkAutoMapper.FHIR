@@ -30,13 +30,15 @@ class X_BasicConfidentialityKind(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind
     """
-    codeset: FhirUri = (
+    codeset_v3_xBasicConfidentialityKind: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-Confidentiality
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+    codeset_v3_Confidentiality: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+    )
 
 
 class X_BasicConfidentialityKindValues:

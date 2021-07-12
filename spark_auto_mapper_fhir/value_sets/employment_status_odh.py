@@ -20,13 +20,17 @@ class EmploymentStatusODH(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-employmentStatusODH
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-employmentStatusODH"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ObservationValue
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
+    codeset_v3_ObservationValue: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-employmentStatusODH
+    """
+    codeset_v3_employmentStatusODH: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-employmentStatusODH"
+    )
 
 
 class EmploymentStatusODHValues:

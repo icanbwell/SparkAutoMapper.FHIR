@@ -20,16 +20,16 @@ class AcknowledgementDetailCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailCode
-    """
-    codeset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailCode"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode
     """
-    codeset_2: FhirUri = (
+    codeset_v3_AcknowledgementDetailCode: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailCode
+    """
+    codeset_v3_AcknowledgementDetailCode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailCode"
     )
 
 

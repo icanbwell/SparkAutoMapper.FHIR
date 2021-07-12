@@ -1,7 +1,7 @@
 import dataclasses
 import re
 from pathlib import Path
-from typing import OrderedDict, Any, List, Union, Dict, Optional
+from typing import OrderedDict, Any, List, Union, Dict, Optional, Set
 import logging
 
 # noinspection PyPackageRequirements
@@ -38,7 +38,7 @@ class FhirValueSet:
     concepts: List[FhirValueSetConcept]
     url: str
     value_set_url: str
-    value_set_url_list: List[str]
+    value_set_url_list: Set[str]
     documentation: List[str]
     source: str
 
@@ -94,7 +94,7 @@ class FhirEntity:
     value_set_concepts: Optional[List[FhirValueSetConcept]] = None
     value_set_url: Optional[str] = None
     is_basic_type: bool = False
-    value_set_url_list: Optional[List[str]] = None
+    value_set_url_list: Optional[Set[str]] = None
     is_resource: bool = False
     is_extension: bool = False
 
@@ -1046,7 +1046,7 @@ class FhirXmlSchemaParser:
                 if hasattr(value_set, "valueSet")
                 else None
             )
-            value_set_url_list: List[str] = []
+            value_set_url_list: Set[str] = set()
             fhir_concepts: List[FhirValueSetConcept] = []
             if hasattr(value_set, "concept"):
                 concepts: ObjectifiedElement = value_set["concept"]
@@ -1062,11 +1062,13 @@ class FhirXmlSchemaParser:
                 compose_include: ObjectifiedElement
                 for compose_include in compose_includes:
                     is_code_system = hasattr(compose_include, "system")
-                    # is_value_set = "valueSet" in compose_include
-                    if is_code_system:
-                        compose_include_code_system: str = compose_include[
-                            "system"
-                        ].get("value")
+                    is_value_set = hasattr(compose_include, "valueSet")
+                    if is_code_system or is_value_set:
+                        compose_include_code_system: str = (
+                            compose_include["system"].get("value")
+                            if is_code_system
+                            else compose_include["valueSet"].get("value")
+                        )
                         # find the corresponding item in code systems
                         v3_code_systems: List[FhirValueSet] = [
                             c
@@ -1081,13 +1083,20 @@ class FhirXmlSchemaParser:
                         if v3_code_systems:
                             for code_system in v3_code_systems:
                                 fhir_concepts.extend(code_system.concepts)
-                                value_set_url_list.append(code_system.url)
+                                # value_set_url_list.append(code_system.url)
+                                value_set_url_list.update(
+                                    code_system.value_set_url_list
+                                )
                         elif v2_code_systems:
                             for code_system in v2_code_systems:
                                 fhir_concepts.extend(code_system.concepts)
-                                value_set_url_list.append(code_system.url)
+                                # value_set_url_list.append(code_system.url)
+                                value_set_url_list.update(
+                                    code_system.value_set_url_list
+                                )
                         elif compose_include_code_system not in value_set_url_list:
-                            value_set_url_list.append(compose_include_code_system)
+                            if compose_include_code_system not in value_set_url_list:
+                                value_set_url_list.add(compose_include_code_system)
                     if hasattr(compose_include, "concept"):
                         concepts = compose_include["concept"]
                         for concept in concepts:
@@ -1244,7 +1253,7 @@ class FhirXmlSchemaParser:
                     concepts=fhir_concepts,
                     url=url,
                     value_set_url="",
-                    value_set_url_list=value_set_url_list or [url],
+                    value_set_url_list=value_set_url_list or {url},
                     documentation=description,
                     source="v3-codesystems.xml",
                 )
@@ -1284,7 +1293,8 @@ class FhirXmlSchemaParser:
                         if v3_code_systems:
                             for code_system in v3_code_systems:
                                 fhir_concepts.extend(code_system.concepts)
-                                value_set_url_list.append(code_system.url)
+                                if code_system.url not in value_set_url_list:
+                                    value_set_url_list.append(code_system.url)
                         # v2_code_systems: List[FhirValueSet] = [
                         #     c
                         #     for c in fhir_v2_code_systems
@@ -1309,7 +1319,7 @@ class FhirXmlSchemaParser:
                 # add any missing value set urls
                 for value_set_url in value_set_url_list:
                     if value_set_url not in found_value_set.value_set_url_list:
-                        found_value_set.value_set_url_list.append(value_set_url)
+                        found_value_set.value_set_url_list.add(value_set_url)
 
         return fhir_value_sets
 
@@ -1383,7 +1393,7 @@ class FhirXmlSchemaParser:
                     concepts=fhir_concepts,
                     url=url,
                     value_set_url="",
-                    value_set_url_list=[url],
+                    value_set_url_list={url},
                     documentation=[description],
                     source="v2-tables.xml",
                 )

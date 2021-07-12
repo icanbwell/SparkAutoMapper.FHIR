@@ -21,13 +21,13 @@ class ActSubstanceAdminSubstitutionCode(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode
     """
-    codeset: FhirUri = (
+    codeset_v3_ActSubstanceAdminSubstitutionCode: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
     """
-    codeset_2: FhirUri = (
+    codeset_v3_substanceAdminSubstitution: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
     )
 

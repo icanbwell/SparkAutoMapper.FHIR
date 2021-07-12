@@ -19,13 +19,17 @@ class EquipmentAlertLevel(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-EquipmentAlertLevel
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EquipmentAlertLevel"
-    """
     http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel"
+    codeset_v3_EquipmentAlertLevel: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EquipmentAlertLevel"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-EquipmentAlertLevel
+    """
+    codeset_v3_EquipmentAlertLevel: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EquipmentAlertLevel"
+    )
 
 
 class EquipmentAlertLevelValues:

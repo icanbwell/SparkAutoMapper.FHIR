@@ -22,13 +22,15 @@ class SpecialCourtesyCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
     """
-    codeset: FhirUri = (
+    codeset_v3_EncounterSpecialCourtesy: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-NullFlavor
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+    codeset_v3_NullFlavor: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+    )
 
 
 class SpecialCourtesyCodeValues:

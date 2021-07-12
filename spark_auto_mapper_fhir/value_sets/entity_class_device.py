@@ -25,11 +25,15 @@ class EntityClassDevice(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-EntityClassDevice
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityClassDevice"
+    codeset_v3_EntityClassDevice: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EntityClassDevice"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityClass"
+    codeset_v3_EntityClass: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityClass"
+    )
 
 
 class EntityClassDeviceValues:

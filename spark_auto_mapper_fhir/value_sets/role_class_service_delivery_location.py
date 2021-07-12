@@ -21,13 +21,13 @@ class RoleClassServiceDeliveryLocation(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-RoleClassServiceDeliveryLocation
     """
-    codeset: FhirUri = (
+    codeset_v3_RoleClassServiceDeliveryLocation: FhirUri = (
         "http://terminology.hl7.org/ValueSet/v3-RoleClassServiceDeliveryLocation"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+    codeset_v3_RoleClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
 
 
 class RoleClassServiceDeliveryLocationValues:

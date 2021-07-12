@@ -22,8 +22,8 @@ class FHIRDefinedTypeCode(GenericTypeCode):
     """
     http://hl7.org/fhir/data-types
     """
-    codeset: FhirUri = "http://hl7.org/fhir/data-types"
+    codeset_data_types: FhirUri = "http://hl7.org/fhir/data-types"
     """
     http://hl7.org/fhir/resource-types
     """
-    codeset_2: FhirUri = "http://hl7.org/fhir/resource-types"
+    codeset_resource_types: FhirUri = "http://hl7.org/fhir/resource-types"

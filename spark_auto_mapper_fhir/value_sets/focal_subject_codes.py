@@ -23,15 +23,17 @@ class FocalSubjectCodesCode(GenericTypeCode):
     """
     http://snomed.info/sct
     """
-    codeset: FhirUri = "http://snomed.info/sct"
-    """
-    http://terminology.hl7.org/CodeSystem/v3-ParticipationType
-    """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    codeset_sct: FhirUri = "http://snomed.info/sct"
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
-    codeset_3: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    codeset_v3_RoleCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+    """
+    codeset_v3_ParticipationType: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+    )
 
 
 class FocalSubjectCodesCodeValues:

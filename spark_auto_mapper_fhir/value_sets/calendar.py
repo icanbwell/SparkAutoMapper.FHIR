@@ -19,13 +19,13 @@ class Calendar(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-Calendar
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Calendar"
-    """
     http://terminology.hl7.org/CodeSystem/v3-Calendar
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Calendar"
+    codeset_v3_Calendar: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Calendar"
+    """
+    http://terminology.hl7.org/ValueSet/v3-Calendar
+    """
+    codeset_v3_Calendar: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Calendar"
 
 
 class CalendarValues:

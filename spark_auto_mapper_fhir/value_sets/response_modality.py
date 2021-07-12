@@ -20,13 +20,17 @@ class ResponseModality(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ResponseModality
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ResponseModality"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ResponseModality
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ResponseModality"
+    codeset_v3_ResponseModality: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ResponseModality"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ResponseModality
+    """
+    codeset_v3_ResponseModality: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ResponseModality"
+    )
 
 
 class ResponseModalityValues:

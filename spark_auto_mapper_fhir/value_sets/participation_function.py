@@ -20,14 +20,16 @@ class ParticipationFunction(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ParticipationFunction
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ParticipationFunction"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ParticipationFunction: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ParticipationFunction
+    """
+    codeset_v3_ParticipationFunction: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ParticipationFunction"
     )
 
 

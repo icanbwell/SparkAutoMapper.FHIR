@@ -20,13 +20,15 @@ class RoleClassAgent(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-RoleClassAgent
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleClassAgent"
-    """
     http://terminology.hl7.org/CodeSystem/v3-RoleClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+    codeset_v3_RoleClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
+    """
+    http://terminology.hl7.org/ValueSet/v3-RoleClassAgent
+    """
+    codeset_v3_RoleClassAgent: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-RoleClassAgent"
+    )
 
 
 class RoleClassAgentValues:

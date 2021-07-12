@@ -21,11 +21,15 @@ class VaccineManufacturer(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-VaccineManufacturer
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-VaccineManufacturer"
+    codeset_v3_VaccineManufacturer: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-VaccineManufacturer"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer"
+    codeset_v3_VaccineManufacturer: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer"
+    )
 
 
 class VaccineManufacturerValues:

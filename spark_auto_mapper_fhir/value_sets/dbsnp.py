@@ -19,6 +19,6 @@ class DBSNPCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://www.ncbi.nlm.nih.gov/projects/SNP
+    
     """
-    codeset: FhirUri = "http://www.ncbi.nlm.nih.gov/projects/SNP"
+    codeset: FhirUri = ""

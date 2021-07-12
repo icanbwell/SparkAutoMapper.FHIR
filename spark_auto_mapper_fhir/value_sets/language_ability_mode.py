@@ -24,11 +24,15 @@ class LanguageAbilityMode(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-LanguageAbilityMode
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityMode"
+    codeset_v3_LanguageAbilityMode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityMode"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode"
+    codeset_v3_LanguageAbilityMode: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode"
+    )
 
 
 class LanguageAbilityModeValues:

@@ -23,11 +23,15 @@ class PaymentTerms(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-PaymentTerms
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-PaymentTerms"
+    codeset_v3_PaymentTerms: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-PaymentTerms"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-PaymentTerms
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-PaymentTerms"
+    codeset_v3_PaymentTerms: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-PaymentTerms"
+    )
 
 
 class PaymentTermsValues:

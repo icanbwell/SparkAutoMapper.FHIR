@@ -20,14 +20,16 @@ class ContentProcessingMode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode
     """
-    codeset_2: FhirUri = (
+    codeset_v3_ContentProcessingMode: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode
+    """
+    codeset_v3_ContentProcessingMode: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode"
     )
 
 

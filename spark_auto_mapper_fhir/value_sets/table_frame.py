@@ -19,13 +19,15 @@ class TableFrame(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-TableFrame
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableFrame"
-    """
     http://terminology.hl7.org/CodeSystem/v3-TableFrame
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TableFrame"
+    codeset_v3_TableFrame: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-TableFrame"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-TableFrame
+    """
+    codeset_v3_TableFrame: FhirUri = "http://terminology.hl7.org/ValueSet/v3-TableFrame"
 
 
 class TableFrameValues:

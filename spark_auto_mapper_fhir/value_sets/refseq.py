@@ -20,6 +20,6 @@ class REFSEQCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://www.ncbi.nlm.nih.gov/nuccore
+    
     """
-    codeset: FhirUri = "http://www.ncbi.nlm.nih.gov/nuccore"
+    codeset: FhirUri = ""

@@ -24,11 +24,13 @@ class AcknowledgementCondition(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition"
+    codeset_v3_AcknowledgementCondition: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition
     """
-    codeset_2: FhirUri = (
+    codeset_v3_AcknowledgementCondition: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition"
     )
 

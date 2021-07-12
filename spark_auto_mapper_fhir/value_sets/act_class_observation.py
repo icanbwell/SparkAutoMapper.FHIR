@@ -66,13 +66,15 @@ class ActClassObservation(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActClassObservation
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActClassObservation"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActClass
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
+    codeset_v3_ActClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActClassObservation
+    """
+    codeset_v3_ActClassObservation: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActClassObservation"
+    )
 
 
 class ActClassObservationValues:

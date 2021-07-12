@@ -20,14 +20,16 @@ class Hl7PublishingSubSection(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection"
-    """
     http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection
     """
-    codeset_2: FhirUri = (
+    codeset_v3_hl7PublishingSubSection: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection
+    """
+    codeset_v3_hl7PublishingSubSection: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection"
     )
 
 

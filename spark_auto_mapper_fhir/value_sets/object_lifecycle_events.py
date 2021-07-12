@@ -21,10 +21,14 @@ class ObjectLifecycleEventsCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle"
-    """
     http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
+    codeset_iso_21089_lifecycle: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
+    )
+    """
+    http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
+    """
+    codeset_dicom_audit_lifecycle: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle"
+    )

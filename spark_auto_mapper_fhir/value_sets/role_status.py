@@ -22,11 +22,13 @@ class RoleStatus(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-RoleStatus
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleStatus"
+    codeset_v3_RoleStatus: FhirUri = "http://terminology.hl7.org/ValueSet/v3-RoleStatus"
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleStatus
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleStatus"
+    codeset_v3_RoleStatus: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-RoleStatus"
+    )
 
 
 class RoleStatusValues:

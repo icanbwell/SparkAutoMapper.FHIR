@@ -21,13 +21,17 @@ class Hl7VoteResolution(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution"
-    """
     http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution"
+    codeset_v3_hl7VoteResolution: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution
+    """
+    codeset_v3_hl7VoteResolution: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution"
+    )
 
 
 class Hl7VoteResolutionValues:

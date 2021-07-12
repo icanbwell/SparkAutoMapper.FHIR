@@ -22,11 +22,15 @@ class MaritalStatusCodesCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+    codeset_v3_MaritalStatus: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-NullFlavor
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+    codeset_v3_NullFlavor: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+    )
 
 
 class MaritalStatusCodesCodeValues:

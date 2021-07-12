@@ -21,11 +21,15 @@ class DocumentCompletion(GenericTypeCode):
     """
     http://terminology.hl7.org/ValueSet/v3-DocumentCompletion
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-DocumentCompletion"
+    codeset_v3_DocumentCompletion: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-DocumentCompletion"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+    codeset_v3_DocumentCompletion: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+    )
 
 
 class DocumentCompletionValues:

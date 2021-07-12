@@ -19,13 +19,17 @@ class ActRelationshipSplit(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActRelationshipSplit
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActRelationshipSplit"
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit"
+    codeset_v3_ActRelationshipSplit: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-ActRelationshipSplit
+    """
+    codeset_v3_ActRelationshipSplit: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipSplit"
+    )
 
 
 class ActRelationshipSplitValues:

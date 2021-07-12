@@ -20,13 +20,17 @@ class Hl7V3Conformance(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-hl7V3Conformance
-    """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7V3Conformance"
-    """
     http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance"
+    codeset_v3_hl7V3Conformance: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance"
+    )
+    """
+    http://terminology.hl7.org/ValueSet/v3-hl7V3Conformance
+    """
+    codeset_v3_hl7V3Conformance: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-hl7V3Conformance"
+    )
 
 
 class Hl7V3ConformanceValues:
